@@ -1,6 +1,6 @@
 # Gemini TTS Factory — API & Operations Guide
 
-This repository is an **asynchronous TTS factory**. GitHub Actions is the worker/control plane, Gemini generates the speech, and Cloudinary is the durable output store. A caller submits a JSON request, receives/chooses a stable `job_id`, and the worker uploads the generated audio to Cloudinary.
+This repository is an **asynchronous TTS factory**. GitHub Actions is the worker/control plane, Gemini generates the speech, Gemini 3.5 Transcribe derives word-level timing from the rendered audio, and Cloudinary is the durable output store. A caller submits a JSON request, receives/chooses a stable `job_id`, and the worker publishes audio plus transcript deliverables.
 
 The implementation deliberately keeps the external request format stable even when Google changes model-specific request schemas.
 
@@ -13,8 +13,10 @@ The worker:
 3. selects a Gemini API key using deterministic distribution based on `job_id`;
 4. retries other eligible key/model combinations on quota, auth, timeout, or transient server errors;
 5. normalizes the generated audio;
-6. uploads the result to Cloudinary under `gemini-tts/<job_id>`;
-7. writes `result.json` and also stores the result/audio as a short-lived GitHub Actions artifact.
+6. sends the **rendered audio** to `gemini-3.5-transcribe` in verbatim mode with `timestamp_granularities: ["word"]`;
+7. writes `<job_id>.transcript.json` with start/end timestamps for every recognized word and, by default, `<job_id>.transcript.vtt`;
+8. uploads audio, transcript JSON, and VTT to Cloudinary;
+9. writes `result.json` and also stores all deliverables as a short-lived GitHub Actions artifact.
 
 This is intentionally asynchronous. GitHub Actions is not a low-latency HTTP server.
 
@@ -136,6 +138,10 @@ The conservative legacy restrictions are intentional. They keep a single stable 
 | `format` | enum | `wav` | `wav`, `l16`, `mulaw`, `alaw`. |
 | `sample_rate` | number | 24000 / 8000 | Defaults to 8000 for μ-law/A-law, otherwise 24000. |
 | `temperature` | number | `1` | Range `0..2`. |
+| `transcript` | object or `false` | enabled | Word-timestamp transcript configuration. Set `false` only if you intentionally do not want transcript deliverables. |
+| `transcript.language_codes` | string[] | `[]` | Optional BCP-47 language hints such as `["ar-EG"]` or `["en-US"]`. Empty means automatic language detection. |
+| `transcript.diarization` | boolean | multi-speaker: `true` | Adds Gemini speaker labels (`spk_1`, `spk_2`, …). Automatically enabled for multi-speaker TTS. |
+| `transcript.write_vtt` | boolean | `true` | Also generate a WebVTT caption file. |
 | `metadata` | object | `{}` | Passed through to `result.json`; never sent to Gemini. |
 
 ## 6. Speech control
@@ -165,7 +171,105 @@ Example:
 
 Punctuation still matters. Commas, em-dashes, and ellipses can shape pacing naturally.
 
-## 7. Routing modes
+
+## 7. Transcript and word-timestamp deliverables
+
+Transcript generation is **on by default** because timing is treated as a first-class output of the factory, not an optional afterthought.
+
+The important detail is that timestamps are derived from the **actual generated audio**, not estimated from character count or text length. After TTS completes, the factory uploads that rendered audio to `gemini-3.5-transcribe` and requests verbatim word-level annotations. This is the same core approach used by the older Video Factory alignment implementation in `addvaluewithai-hub/tts`.
+
+Example request with an Arabic language hint:
+
+```json
+{
+  "text": "صباح الخير. <short pause> عاملين إيه النهاردة؟",
+  "voice": "Kore",
+  "format": "wav",
+  "transcript": {
+    "language_codes": ["ar-EG"],
+    "write_vtt": true
+  }
+}
+```
+
+For multi-speaker generation, diarization is enabled automatically:
+
+```json
+{
+  "turns": [
+    {"speaker": "Host", "text": "Good morning."},
+    {"speaker": "Guest", "text": "Morning! Great to be here."}
+  ],
+  "speakers": {
+    "Host": "Puck",
+    "Guest": "Kore"
+  },
+  "transcript": {
+    "language_codes": ["en-US"]
+  }
+}
+```
+
+The transcript JSON is intentionally separate from `result.json`, because a long narration can contain thousands of word objects. `result.json` carries the URLs and summary metadata; consumers fetch the transcript only when they need timing data.
+
+A transcript JSON looks like:
+
+```json
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "duration_ms": 2840,
+  "word_count": 6,
+  "recognized_text": "Good morning everyone.",
+  "source_text": "Good morning everyone.",
+  "source_turns": [
+    {"index": 0, "text": "Good morning everyone."}
+  ],
+  "words": [
+    {
+      "start_ms": 120,
+      "end_ms": 430,
+      "text": "Good"
+    },
+    {
+      "start_ms": 450,
+      "end_ms": 920,
+      "text": "morning"
+    }
+  ]
+}
+```
+
+When diarization is enabled, individual word objects can additionally contain:
+
+```json
+{
+  "start_ms": 450,
+  "end_ms": 920,
+  "text": "morning",
+  "speaker": "spk_1"
+}
+```
+
+`source_text` is the requested lexical transcript with inline non-verbal tags such as `<short pause>` removed. `recognized_text` and `words[]` come from listening back to the rendered audio. This distinction is useful when a TTS engine pronounces or normalizes something differently than expected.
+
+The VTT file is derived from the timed words and grouped into compact caption cues. It is suitable for captions/previews, while the JSON remains the authoritative machine-readable timing deliverable.
+
+To deliberately skip the extra transcription call:
+
+```json
+{
+  "text": "No timing needed for this job.",
+  "transcript": false
+}
+```
+
+Transcript routing also rotates through the configured Gemini key pool. A transcript failure is treated as a job failure by default because the transcript is part of the delivery contract.
+
+## 8. Routing modes
 
 ### `balanced` — default
 
@@ -213,7 +317,7 @@ Uses only 3.1 then 2.5. Intended for compatibility/testing.
 }
 ```
 
-## 8. Key selection and retries
+## 9. Key selection and retries
 
 The worker builds a model/key attempt plan from the `job_id`. For each model, it rotates the key pool deterministically.
 
@@ -229,7 +333,7 @@ A non-retryable request error such as a normal `400` stops immediately because a
 
 This design is stateless across GitHub runners and avoids race-prone "current key index" files.
 
-## 9. Trigger from GitHub UI
+## 10. Trigger from GitHub UI
 
 Open:
 
@@ -244,7 +348,7 @@ Provide:
 
 The workflow summary will contain `result.json`. The audio is uploaded to Cloudinary and also retained as a GitHub Actions artifact for 3 days.
 
-## 10. Trigger as an API using `repository_dispatch`
+## 11. Trigger as an API using `repository_dispatch`
 
 This is the cleanest automation interface when GitHub Actions is the worker.
 
@@ -276,7 +380,7 @@ GitHub accepts the dispatch asynchronously. The worker then generates and upload
 
 Do **not** embed a GitHub token in browser-side JavaScript. Call the dispatch endpoint from a trusted backend/automation environment.
 
-## 11. Local worker usage
+## 12. Local worker usage
 
 With secrets exported locally:
 
@@ -308,7 +412,7 @@ Run unit tests:
 npm test
 ```
 
-## 12. Output
+## 13. Output
 
 Successful `result.json` resembles:
 
@@ -325,6 +429,17 @@ Successful `result.json` resembles:
   "sample_rate": 24000,
   "bytes": 183240,
   "audio_url": "https://res.cloudinary.com/.../video/upload/.../gemini-tts/demo-001.wav",
+  "transcript_url": "https://res.cloudinary.com/.../raw/upload/.../gemini-tts/demo-001.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/.../raw/upload/.../gemini-tts/demo-001.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 83,
+    "duration_ms": 7420,
+    "diarization": false
+  },
   "cloudinary": {
     "secure_url": "https://res.cloudinary.com/.../demo-001.wav",
     "public_id": "gemini-tts/demo-001",
@@ -347,7 +462,7 @@ gemini-tts/<job_id>
 
 Using the same `job_id` overwrites that asset. Use unique job IDs if every generation should be preserved.
 
-## 13. Audio formats
+## 14. Audio formats
 
 - `wav`: normal WAV file; best default for playback/download.
 - `l16`: headerless signed 16-bit linear PCM.
@@ -356,13 +471,13 @@ Using the same `job_id` overwrites that asset. Use unique job IDs if every gener
 
 For old preview models, the provider may return headerless PCM. When the requested public format is WAV, the factory detects that and adds a standard mono 16-bit WAV header.
 
-## 14. Cloudinary behavior
+## 15. Cloudinary behavior
 
-WAV output is uploaded as Cloudinary `video` resource type because Cloudinary handles audio media under the video/audio pipeline. Headerless/telephony formats are stored as `raw`.
+WAV output is uploaded as Cloudinary `video` resource type because Cloudinary handles audio media under the video/audio pipeline. Headerless/telephony formats are stored as `raw`. Transcript JSON and WebVTT are also uploaded as `raw` assets with deterministic IDs: `gemini-tts/<job_id>.transcript.json` and `gemini-tts/<job_id>.transcript.vtt`.
 
 The worker uses authenticated server-side upload. Nothing in this repository requires exposing the Cloudinary API secret to users.
 
-## 15. Public repository safety
+## 16. Public repository safety
 
 The repository may be public, but secrets must stay in GitHub Actions Secrets.
 
@@ -370,15 +485,17 @@ Also remember that **public GitHub Actions logs and summaries can be public**. T
 
 The generated Cloudinary asset is public by default in this implementation. If private delivery is required, change the upload storage policy before sending sensitive content.
 
-## 16. Current limitations
+## 17. Current limitations
 
 - GitHub Actions is asynchronous; it is not suitable for live voice-agent latency.
 - Multi-speaker generation is intentionally limited to Gemini 3.8 and exactly two prebuilt voices in one request.
 - Custom/replicated `voice_...` / `voicekey_...` IDs are supported only for single-speaker requests in this factory.
 - A dispatch request does not directly return the completed audio URL. Read the workflow summary/artifact, or add a thin HTTP gateway later if you need `POST /v1/tts -> 202 + status URL`.
 - The router does not persist daily quota counters. It learns quota exhaustion from Gemini responses and falls back during the current job.
+- Every transcript-enabled job uses one successful `gemini-3.5-transcribe` request in addition to the TTS request. Word timestamps are supported for audio up to 30 minutes per request.
+- Gemini word timestamps describe what the transcription model heard. `source_text` is retained separately so downstream systems can compare the intended script with recognized speech.
 
-## 17. Recommended next layer
+## 18. Recommended next layer
 
 If you need a conventional external API, keep this repository as the worker and put a tiny trusted gateway in front of it:
 

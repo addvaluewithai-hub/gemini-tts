@@ -25,30 +25,26 @@ export function getCloudinaryConfig(env = process.env) {
   );
 }
 
-function resourceTypeFor(format) {
-  return format === "wav" ? "video" : "raw";
-}
-
-export async function uploadAudioToCloudinary({
-  audio,
-  format,
+async function uploadBuffer({
+  buffer,
+  filename,
   mimeType,
-  jobId,
-  model,
-  env = process.env,
+  publicId,
+  resourceType,
+  tags,
+  context,
+  env,
 }) {
   const { cloudName, apiKey, apiSecret } = getCloudinaryConfig(env);
-  const resourceType = resourceTypeFor(format);
   const endpoint = `https://api.cloudinary.com/v1_1/${encodeURIComponent(cloudName)}/${resourceType}/upload`;
 
   const form = new FormData();
-  const extension = format === "wav" ? "wav" : format === "l16" ? "pcm" : format;
-  form.append("file", new Blob([audio], { type: mimeType }), `${jobId}.${extension}`);
-  form.append("public_id", `gemini-tts/${jobId}`);
+  form.append("file", new Blob([buffer], { type: mimeType }), filename);
+  form.append("public_id", publicId);
   form.append("overwrite", "true");
   form.append("unique_filename", "false");
-  form.append("tags", "gemini-tts,generated-audio");
-  form.append("context", `job_id=${jobId}|model=${model}`);
+  if (tags) form.append("tags", tags);
+  if (context) form.append("context", context);
 
   const authorization = Buffer.from(`${apiKey}:${apiSecret}`).toString("base64");
   const response = await fetch(endpoint, {
@@ -74,6 +70,53 @@ export async function uploadAudioToCloudinary({
     asset_id: payload.asset_id,
     resource_type: payload.resource_type,
     bytes: payload.bytes,
-    format: payload.format || extension,
+    format: payload.format || null,
+    duration: payload.duration ?? null,
   };
+}
+
+function resourceTypeFor(format) {
+  return format === "wav" ? "video" : "raw";
+}
+
+export async function uploadAudioToCloudinary({
+  audio,
+  format,
+  mimeType,
+  jobId,
+  model,
+  env = process.env,
+}) {
+  const extension = format === "wav" ? "wav" : format === "l16" ? "pcm" : format;
+  return uploadBuffer({
+    buffer: audio,
+    filename: `${jobId}.${extension}`,
+    mimeType,
+    publicId: `gemini-tts/${jobId}`,
+    resourceType: resourceTypeFor(format),
+    tags: "gemini-tts,generated-audio",
+    context: `job_id=${jobId}|model=${model}`,
+    env,
+  });
+}
+
+export async function uploadTextArtifactToCloudinary({
+  content,
+  jobId,
+  suffix,
+  mimeType,
+  model,
+  env = process.env,
+}) {
+  const buffer = Buffer.from(String(content), "utf8");
+  return uploadBuffer({
+    buffer,
+    filename: `${jobId}.${suffix}`,
+    mimeType,
+    publicId: `gemini-tts/${jobId}.${suffix}`,
+    resourceType: "raw",
+    tags: "gemini-tts,transcript",
+    context: `job_id=${jobId}|model=${model}|artifact=${suffix}`,
+    env,
+  });
 }

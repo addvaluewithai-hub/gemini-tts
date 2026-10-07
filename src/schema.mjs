@@ -50,6 +50,39 @@ function normalizeTurns(input) {
   });
 }
 
+function normalizeTranscript(input, isMultiSpeaker) {
+  if (input === false) {
+    return {
+      enabled: false,
+      model: "gemini-3.5-transcribe",
+      language_codes: [],
+      diarization: false,
+      write_vtt: false,
+    };
+  }
+
+  if (input != null && (typeof input !== "object" || Array.isArray(input))) {
+    fail("transcript must be an object or false");
+  }
+
+  const block = input ?? {};
+  let languageCodes = [];
+  if (block.language_codes != null) {
+    if (!Array.isArray(block.language_codes)) fail("transcript.language_codes must be an array");
+    languageCodes = block.language_codes.map((value, index) =>
+      nonEmptyString(value, `transcript.language_codes[${index}]`));
+    if (languageCodes.length > 10) fail("transcript.language_codes supports at most 10 language hints");
+  }
+
+  return {
+    enabled: block.enabled !== false,
+    model: "gemini-3.5-transcribe",
+    language_codes: languageCodes,
+    diarization: block.diarization == null ? isMultiSpeaker : Boolean(block.diarization),
+    write_vtt: block.write_vtt !== false,
+  };
+}
+
 export function normalizeRequest(input) {
   if (!input || typeof input !== "object" || Array.isArray(input)) fail("Request body must be a JSON object");
 
@@ -118,6 +151,7 @@ export function normalizeRequest(input) {
     routing,
     model: requestedModel,
     allow_model_fallback: input.allow_model_fallback !== false,
+    transcript: normalizeTranscript(input.transcript, isMultiSpeaker),
     metadata: input.metadata && typeof input.metadata === "object" && !Array.isArray(input.metadata)
       ? input.metadata
       : {},

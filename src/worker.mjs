@@ -3,7 +3,11 @@ import path from "node:path";
 import { normalizeRequest } from "./schema.mjs";
 import { buildAttemptPlan, collectGeminiKeys, isRetryableStatus } from "./router.mjs";
 import { generateWithGemini, GeminiHttpError } from "./providers/gemini.mjs";
-import { uploadAudioToCloudinary } from "./storage/cloudinary.mjs";
+import { transcribeWithGemini } from "./transcript.mjs";
+import {
+  uploadAudioToCloudinary,
+  uploadTextArtifactToCloudinary,
+} from "./storage/cloudinary.mjs";
 
 function safeJobId(value) {
   const source = String(value || "").trim();
@@ -74,7 +78,34 @@ export async function runTtsJob({
   const audioPath = path.join(outputDir, `${id}.${generated.extension}`);
   await writeFile(audioPath, generated.audio);
 
+  let transcriptResult = null;
+  let transcriptJson = null;
+  let transcriptPath = null;
+  let vttPath = null;
+
+  if (request.transcript.enabled) {
+    transcriptResult = await transcribeWithGemini({
+      audioPath,
+      mimeType: generated.mime_type,
+      request,
+      keys,
+      jobId: id,
+    });
+
+    transcriptJson = `${JSON.stringify(transcriptResult.transcript, null, 2)}\n`;
+    transcriptPath = path.join(outputDir, `${id}.transcript.json`);
+    await writeFile(transcriptPath, transcriptJson, "utf8");
+
+    if (transcriptResult.vtt) {
+      vttPath = path.join(outputDir, `${id}.transcript.vtt`);
+      await writeFile(vttPath, transcriptResult.vtt, "utf8");
+    }
+  }
+
   let cloudinary = null;
+  let transcriptCloudinary = null;
+  let vttCloudinary = null;
+
   if (upload) {
     cloudinary = await uploadAudioToCloudinary({
       audio: generated.audio,
@@ -84,6 +115,28 @@ export async function runTtsJob({
       model: selected.model,
       env,
     });
+
+    if (transcriptJson) {
+      transcriptCloudinary = await uploadTextArtifactToCloudinary({
+        content: transcriptJson,
+        jobId: id,
+        suffix: "transcript.json",
+        mimeType: "application/json",
+        model: transcriptResult.model,
+        env,
+      });
+    }
+
+    if (transcriptResult?.vtt) {
+      vttCloudinary = await uploadTextArtifactToCloudinary({
+        content: transcriptResult.vtt,
+        jobId: id,
+        suffix: "transcript.vtt",
+        mimeType: "text/vtt",
+        model: transcriptResult.model,
+        env,
+      });
+    }
   }
 
   return {
@@ -98,7 +151,25 @@ export async function runTtsJob({
     sample_rate: request.sample_rate,
     bytes: generated.audio.length,
     audio_url: cloudinary?.secure_url || null,
+    transcript_url: transcriptCloudinary?.secure_url || null,
+    vtt_url: vttCloudinary?.secure_url || null,
+    transcript: request.transcript.enabled ? {
+      status: "completed",
+      provider: "gemini",
+      model: transcriptResult.model,
+      key_slot: transcriptResult.key_slot,
+      word_count: transcriptResult.transcript.word_count,
+      duration_ms: transcriptResult.transcript.duration_ms,
+      diarization: transcriptResult.transcript.diarization,
+      failed_attempts: transcriptResult.attempts,
+      local_json: transcriptPath,
+      local_vtt: vttPath,
+    } : {
+      status: "disabled",
+    },
     cloudinary,
+    transcript_cloudinary: transcriptCloudinary,
+    vtt_cloudinary: vttCloudinary,
     local_file: audioPath,
     attempts_before_success: failures.length,
     failed_attempts: failures,
