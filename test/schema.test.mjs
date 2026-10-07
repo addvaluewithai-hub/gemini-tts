@@ -8,10 +8,28 @@ test("normalizes a simple request", () => {
   assert.equal(request.format, "wav");
   assert.equal(request.routing, "balanced");
   assert.equal(request.sample_rate, 24000);
+  assert.equal(request.transcript.enabled, true);
+  assert.equal(request.transcript.model, "gemini-3.5-transcribe");
+  assert.equal(request.transcript.diarization, false);
 });
 
 test("telephony formats default to 8 kHz", () => {
   assert.equal(normalizeRequest({ text: "hello", format: "mulaw" }).sample_rate, 8000);
+});
+
+test("multi speaker enables transcript diarization by default", () => {
+  const request = normalizeRequest({
+    turns: [
+      { speaker: "A", text: "one" },
+      { speaker: "B", text: "two" }
+    ]
+  });
+  assert.equal(request.transcript.diarization, true);
+});
+
+test("transcript can be disabled explicitly", () => {
+  const request = normalizeRequest({ text: "hello", transcript: false });
+  assert.equal(request.transcript.enabled, false);
 });
 
 test("multi speaker rejects more than two unique speakers", () => {
