@@ -1,0 +1,11 @@
+{
+  "text": "Good morning! It's 68 degrees and sunny outside. <short pause> I hope you have a great day.",
+  "style": "Bright, sunny, welcoming morning greeting with a subtle vocal smile and crisp pacing.",
+  "voice": "Kore",
+  "routing": "quality",
+  "format": "wav",
+  "temperature": 1,
+  "metadata": {
+    "example": "single-speaker"
+  }
+}
