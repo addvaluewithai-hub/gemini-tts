@@ -1,0 +1,12 @@
+{
+  "name": "gemini-tts-factory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Async Gemini TTS factory with GitHub Actions routing and Cloudinary delivery",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "test": "node --test",
+    "tts": "node src/cli.mjs"
+  }
+}
