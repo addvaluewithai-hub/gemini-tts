@@ -22,6 +22,7 @@ async function main() {
       ok: true,
       gemini_key_count: keys.length,
       cloudinary_cloud_name: cloud.cloudName,
+      transcript_model: "gemini-3.5-transcribe",
     }, null, 2));
     return;
   }
@@ -51,6 +52,9 @@ async function main() {
       model: result.model,
       key_slot: result.key_slot,
       audio_url: result.audio_url,
+      transcript_url: result.transcript_url,
+      vtt_url: result.vtt_url,
+      word_count: result.transcript?.word_count ?? null,
     }, null, 2));
   } catch (error) {
     const failure = {
