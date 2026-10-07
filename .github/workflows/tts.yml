@@ -1,0 +1,103 @@
+name: Gemini TTS Factory
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "Stable job ID used for the Cloudinary public ID"
+        required: false
+        type: string
+      request_json:
+        description: "TTS request JSON. See docs/API.md"
+        required: true
+        type: string
+  repository_dispatch:
+    types: [tts.generate]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tts-${{ github.event_name }}-${{ inputs.job_id || github.event.client_payload.job_id || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    env:
+      GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+      GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+      GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+
+      # Recommended: set CLOUDINARY_URL to the full cloudinary://... value.
+      # Compatibility: CLOUDINARY_API_TOKEN may contain the same full value.
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      CLOUDINARY_API_TOKEN: ${{ secrets.CLOUDINARY_API_TOKEN }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run tests
+        run: npm test
+
+      - name: Validate secret configuration
+        run: node src/cli.mjs --check-config
+
+      - name: Prepare request from workflow_dispatch
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          REQUEST_JSON: ${{ inputs.request_json }}
+        run: |
+          printf '%s' "$REQUEST_JSON" > request.json
+
+      - name: Prepare request from repository_dispatch
+        if: github.event_name == 'repository_dispatch'
+        env:
+          REQUEST_JSON: ${{ toJson(github.event.client_payload.request) }}
+        run: |
+          printf '%s' "$REQUEST_JSON" > request.json
+
+      - name: Generate and upload
+        id: tts
+        env:
+          JOB_ID: ${{ inputs.job_id || github.event.client_payload.job_id || format('run-{0}', github.run_id) }}
+        run: |
+          node src/cli.mjs \
+            --file request.json \
+            --job-id "$JOB_ID" \
+            --result result.json \
+            --output-dir out
+
+      - name: Add result to workflow summary
+        if: always()
+        run: |
+          if [ -f result.json ]; then
+            echo '## TTS result' >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat result.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Keep result as GitHub artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tts-${{ inputs.job_id || github.event.client_payload.job_id || github.run_id }}
+          path: |
+            result.json
+            out/
+          if-no-files-found: ignore
+          retention-days: 3
