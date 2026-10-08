@@ -62,6 +62,7 @@ jobs:
         run: npm test
 
       - name: Validate secret configuration
+        if: github.event_name != 'push'
         run: node src/cli.mjs --check-config
 
       - name: Prepare request from workflow_dispatch
@@ -87,11 +88,16 @@ jobs:
         env:
           JOB_ID: ${{ inputs.job_id || github.event.client_payload.job_id || format('run-{0}', github.run_id) }}
         run: |
+          upload_args=()
+          if [ "${{ github.event_name }}" = "push" ]; then
+            upload_args+=(--no-upload)
+          fi
           node src/cli.mjs \
             --file request.json \
             --job-id "$JOB_ID" \
             --result result.json \
-            --output-dir out
+            --output-dir out \
+            "${upload_args[@]}"
 
       - name: Add result to workflow summary
         if: always()
