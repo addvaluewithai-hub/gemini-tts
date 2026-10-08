@@ -45,6 +45,7 @@ function modelEligible(modelId, request) {
   const model = MODEL_REGISTRY[modelId];
   if (!model) return false;
   if (request.isMultiSpeaker && !model.supportsMultiSpeaker) return false;
+  if (request.voice_requires_38 && model.generation !== "3.8") return false;
   if ((request.format === "mulaw" || request.format === "alaw") && !model.supportsTelephonyFormats) return false;
   return true;
 }
