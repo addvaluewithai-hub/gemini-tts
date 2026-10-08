@@ -1,0 +1,27 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "learn-chem-gas-boyles-law-r2-Q04-t01-20261008",
+    "request": {
+      "text": "Write Boyle's law relating the initial and final pressure and volume.\n\nيعني: اكتب المعادلة اللي تربط الضغط والحجم في الحالة الأولى بالحالة التانية، لنفس كمية الغاز عند حرارة ثابتة. استخدم الرموز.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "style": "Mature, warm, calm Egyptian private chemistry teacher. Natural medium pace and short pauses between ideas. Read the English sentence clearly, then switch naturally to Egyptian Arabic. Speak verbatim; no additions or stage directions.",
+      "transcript": {
+        "language_codes": [],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "lesson-question",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-boyles-law",
+        "contentVersion": "lesson03-boyles-r2-20261008",
+        "clipId": "Q04",
+        "role": "question"
+      }
+    }
+  }
+}

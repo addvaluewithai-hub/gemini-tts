@@ -1,0 +1,73 @@
+name: Learn Lesson 03 bilingual pilot — Gacrux audio production
+on:
+  push:
+    branches:
+      - experiment/learn-lesson03-pilot-20261008
+    paths:
+      - lesson-production/lesson03/START_ONCE.md
+
+permissions:
+  contents: read
+
+concurrency:
+  group: learn-lesson03-pilot-gacrux-20261008
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+      GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+      GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install --no-audit --no-fund
+      - run: npm test
+      - run: node src/cli.mjs --check-config
+
+  generate:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        clip: [Q04]
+    env:
+      GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+      GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+      GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      JOB_FILE: lesson-production/lesson03/jobs/${{ matrix.clip }}.dispatch.json
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install --no-audit --no-fund
+      - name: Load exact reviewed request
+        run: |
+          node -e 'const fs = require("fs"); const d = JSON.parse(fs.readFileSync(process.env.JOB_FILE, "utf8")); if (d.event_type !== "tts.generate") process.exit(2); fs.writeFileSync("request.json", JSON.stringify(d.client_payload.request)); fs.appendFileSync(process.env.GITHUB_ENV, "TTS_JOB_ID=" + d.client_payload.job_id + "\n");'
+      - name: Generate and transcribe
+        run: node src/cli.mjs --file request.json --job-id "$TTS_JOB_ID" --result result.json --output-dir out
+      - name: Save completed result and timing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tts-lesson03-pilot-${{ matrix.clip }}
+          path: |
+            result.json
+            out/
+          retention-days: 3
+          if-no-files-found: ignore
