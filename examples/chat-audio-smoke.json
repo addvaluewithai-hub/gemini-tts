@@ -1,0 +1,17 @@
+{
+  "text": "أهلًا بيك في إنجلوتي! النهارده هنتعلم إزاي نفتح كلام مع حد نعرفه، من غير ما نحفظ حوار. <short pause> مثلًا، ممكن تقول: It's been a while! How have you been? <short pause> اسمع، جرّب، وفي الآخر علّم أوتي اللي اتعلمته.",
+  "style": "Warm, natural Egyptian Arabic teacher, conversational and clear. Speak the English examples naturally and distinctly, with medium pacing.",
+  "voice": "Kore",
+  "routing": "quality",
+  "format": "wav",
+  "transcript": {
+    "language_codes": [
+      "ar-EG",
+      "en-US"
+    ],
+    "write_vtt": true
+  },
+  "metadata": {
+    "purpose": "Englotti B1 audio capability smoke test"
+  }
+}
