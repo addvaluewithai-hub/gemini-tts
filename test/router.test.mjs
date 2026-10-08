@@ -41,3 +41,20 @@ test("multi-speaker route excludes legacy models", () => {
     ["gemini-3.8-flash-lite-tts", "gemini-3.8-flash-tts"].sort(),
   );
 });
+
+test("extended-library voice routes only to Gemini 3.8", () => {
+  const request = normalizeRequest({ text: "hello", voice: "Fola" });
+  const keys = collectGeminiKeys({ GEMINI_API_KEY_1: "a" });
+  const plan = buildAttemptPlan(request, keys, "job-fola");
+  assert.deepEqual(
+    [...new Set(plan.map((x) => x.modelId))].sort(),
+    ["gemini-3.8-flash-lite-tts", "gemini-3.8-flash-tts"].sort(),
+  );
+});
+
+test("custom voice ID routes only to Gemini 3.8", () => {
+  const request = normalizeRequest({ text: "hello", voice: "voice_abc123" });
+  const keys = collectGeminiKeys({ GEMINI_API_KEY_1: "a" });
+  const plan = buildAttemptPlan(request, keys, "job-custom");
+  assert.equal(new Set(plan.map((x) => x.modelId)).size, 2);
+});

@@ -73,7 +73,81 @@ The current factory knows these models:
 
 The conservative legacy restrictions are intentional. They keep a single stable API contract while newer 3.8 requests use structured `speech_metadata`, audio output format controls, and multi-speaker configuration.
 
-## 5. Request schema
+
+## 5. Voices: names, discovery, and compatibility
+
+The factory accepts four voice forms in the same `voice` field:
+
+1. one of the 30 curated studio voice names below;
+2. a prebuilt voice ID from Gemini's Extended Voice Library, for example a catalog ID returned by `GET /v1beta/voices`;
+3. a persistent designed or replicated custom voice ID beginning with `voice_`;
+4. a stateless replicated voice key beginning with `voicekey_`.
+
+### 30 curated studio voices
+
+These are safe default choices and are documented directly in the repository so an agent can choose without making a discovery call:
+
+| Voice | Character | Voice | Character | Voice | Character |
+|---|---|---|---|---|---|
+| `Zephyr` | Bright | `Puck` | Upbeat | `Charon` | Informative |
+| `Kore` | Firm | `Fenrir` | Excitable | `Leda` | Youthful |
+| `Orus` | Firm | `Aoede` | Breezy | `Callirrhoe` | Easy-going |
+| `Autonoe` | Bright | `Enceladus` | Breathy | `Iapetus` | Clear |
+| `Umbriel` | Easy-going | `Algieba` | Smooth | `Despina` | Smooth |
+| `Erinome` | Clear | `Algenib` | Gravelly | `Rasalgethi` | Informative |
+| `Laomedeia` | Upbeat | `Achernar` | Soft | `Alnilam` | Firm |
+| `Schedar` | Even | `Gacrux` | Mature | `Pulcherrima` | Forward |
+| `Achird` | Friendly | `Zubenelgenubi` | Casual | `Vindemiatrix` | Gentle |
+| `Sadachbia` | Lively | `Sadaltager` | Knowledgeable | `Sulafat` | Warm |
+
+### Extended Voice Library
+
+Gemini 3.8 also exposes a much larger catalog through the Voices API. Do not hardcode that catalog in an agent because it can grow or change. Discover it at runtime.
+
+Without any API call, print the 30 curated voices:
+
+```bash
+node src/cli.mjs --studio-voices
+```
+
+List the live catalog available to the current Gemini project:
+
+```bash
+node src/cli.mjs --list-voices
+```
+
+Useful filters:
+
+```bash
+node src/cli.mjs --list-voices --voice-language ar-EG
+node src/cli.mjs --list-voices --voice-search Egyptian
+node src/cli.mjs --list-voices --voice-accent American
+node src/cli.mjs --list-voices --voice-persona Narrator
+node src/cli.mjs --list-voices --voice-type prebuilt --voice-limit 200
+```
+
+The discovery output includes fields such as `id`, `display_name`, `type`, `language_code`, `accent`, `gender`, `pitch`, `persona`, `context`, and `description` when Google provides them.
+
+The value to send in this factory is the returned `id` (or a returned `voicekey_...` key for stateless replication):
+
+```json
+{
+  "text": "أهلا بيكم",
+  "voice": "VOICE_ID_FROM_LIST_VOICES"
+}
+```
+
+A name such as `Fola` may be valid as an Extended Voice Library ID even though it is not one of the 30 curated studio names. The factory therefore treats any non-curated voice as a Gemini 3.8 voice and will not fall back to older TTS models that may not support the newer voice ecosystem.
+
+### Voice selection guidance for agents
+
+If the user did not specify a voice, use `Kore` as the stable default. If the user describes a desired personality but does not require a specific regional voice, choose the closest curated voice from the table. If the user asks for a particular accent, language, region, persona, or a larger set of choices, query `--list-voices` and select a matching returned `id`.
+
+Do not invent a voice name. If the requested voice is not in the curated table and was not returned by the live Voices API, treat it as invalid rather than guessing.
+
+For single-speaker Gemini 3.8 requests, curated voices, Extended Voice Library IDs, `voice_...`, and `voicekey_...` are accepted. For one-request multi-speaker generation, this factory supports exactly two speakers and prebuilt voices; custom designed/replicated voices must be rendered turn-by-turn instead.
+
+## 6. Request schema
 
 ### Single speaker
 
@@ -144,7 +218,7 @@ The conservative legacy restrictions are intentional. They keep a single stable 
 | `transcript.write_vtt` | boolean | `true` | Also generate a WebVTT caption file. |
 | `metadata` | object | `{}` | Passed through to `result.json`; never sent to Gemini. |
 
-## 6. Speech control
+## 7. Speech control
 
 For Gemini 3.8, transcript text is treated as text to be spoken. Put sustained acting instructions in `style`, not in the transcript.
 
@@ -172,7 +246,7 @@ Example:
 Punctuation still matters. Commas, em-dashes, and ellipses can shape pacing naturally.
 
 
-## 7. Transcript and word-timestamp deliverables
+## 8. Transcript and word-timestamp deliverables
 
 Transcript generation is **on by default** because timing is treated as a first-class output of the factory, not an optional afterthought.
 
@@ -269,7 +343,7 @@ To deliberately skip the extra transcription call:
 
 Transcript routing also rotates through the configured Gemini key pool. A transcript failure is treated as a job failure by default because the transcript is part of the delivery contract.
 
-## 8. Routing modes
+## 9. Routing modes
 
 ### `balanced` — default
 
@@ -317,7 +391,7 @@ Uses only 3.1 then 2.5. Intended for compatibility/testing.
 }
 ```
 
-## 9. Key selection and retries
+## 10. Key selection and retries
 
 The worker builds a model/key attempt plan from the `job_id`. For each model, it rotates the key pool deterministically.
 
@@ -333,7 +407,7 @@ A non-retryable request error such as a normal `400` stops immediately because a
 
 This design is stateless across GitHub runners and avoids race-prone "current key index" files.
 
-## 10. Trigger from GitHub UI
+## 11. Trigger from GitHub UI
 
 Open:
 
@@ -348,7 +422,7 @@ Provide:
 
 The workflow summary will contain `result.json`. The audio is uploaded to Cloudinary and also retained as a GitHub Actions artifact for 3 days.
 
-## 11. Trigger as an API using `repository_dispatch`
+## 12. Trigger as an API using `repository_dispatch`
 
 This is the cleanest automation interface when GitHub Actions is the worker.
 
@@ -380,7 +454,7 @@ GitHub accepts the dispatch asynchronously. The worker then generates and upload
 
 Do **not** embed a GitHub token in browser-side JavaScript. Call the dispatch endpoint from a trusted backend/automation environment.
 
-## 12. Local worker usage
+## 13. Local worker usage
 
 With secrets exported locally:
 
@@ -412,7 +486,7 @@ Run unit tests:
 npm test
 ```
 
-## 13. Output
+## 14. Output
 
 Successful `result.json` resembles:
 
@@ -462,7 +536,7 @@ gemini-tts/<job_id>
 
 Using the same `job_id` overwrites that asset. Use unique job IDs if every generation should be preserved.
 
-## 14. Audio formats
+## 15. Audio formats
 
 - `wav`: normal WAV file; best default for playback/download.
 - `l16`: headerless signed 16-bit linear PCM.
@@ -471,13 +545,13 @@ Using the same `job_id` overwrites that asset. Use unique job IDs if every gener
 
 For old preview models, the provider may return headerless PCM. When the requested public format is WAV, the factory detects that and adds a standard mono 16-bit WAV header.
 
-## 15. Cloudinary behavior
+## 16. Cloudinary behavior
 
 WAV output is uploaded as Cloudinary `video` resource type because Cloudinary handles audio media under the video/audio pipeline. Headerless/telephony formats are stored as `raw`. Transcript JSON and WebVTT are also uploaded as `raw` assets with deterministic IDs: `gemini-tts/<job_id>.transcript.json` and `gemini-tts/<job_id>.transcript.vtt`.
 
 The worker uses authenticated server-side upload. Nothing in this repository requires exposing the Cloudinary API secret to users.
 
-## 16. Public repository safety
+## 17. Public repository safety
 
 The repository may be public, but secrets must stay in GitHub Actions Secrets.
 
@@ -485,7 +559,7 @@ Also remember that **public GitHub Actions logs and summaries can be public**. T
 
 The generated Cloudinary asset is public by default in this implementation. If private delivery is required, change the upload storage policy before sending sensitive content.
 
-## 17. Current limitations
+## 18. Current limitations
 
 - GitHub Actions is asynchronous; it is not suitable for live voice-agent latency.
 - Multi-speaker generation is intentionally limited to Gemini 3.8 and exactly two prebuilt voices in one request.
@@ -495,7 +569,7 @@ The generated Cloudinary asset is public by default in this implementation. If p
 - Every transcript-enabled job uses one successful `gemini-3.5-transcribe` request in addition to the TTS request. Word timestamps are supported for audio up to 30 minutes per request.
 - Gemini word timestamps describe what the transcription model heard. `source_text` is retained separately so downstream systems can compare the intended script with recognized speech.
 
-## 18. Recommended next layer
+## 19. Recommended next layer
 
 If you need a conventional external API, keep this repository as the worker and put a tiny trusted gateway in front of it:
 
