@@ -1,6 +1,6 @@
 {
   "name": "gemini-tts-factory",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "type": "module",
   "description": "Async Gemini TTS factory with GitHub Actions routing, word timestamps, and Cloudinary delivery",
@@ -8,7 +8,8 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@google/genai": "^2.24.0"
+    "@google/genai": "^2.24.0",
+    "cloudinary": "^2.0.0"
   },
   "scripts": {
     "test": "node --test",
