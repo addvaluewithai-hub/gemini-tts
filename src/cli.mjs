@@ -3,6 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { runTtsJob } from "./worker.mjs";
 import { collectGeminiKeys } from "./router.mjs";
 import { getCloudinaryConfig } from "./storage/cloudinary.mjs";
+import { listGeminiVoices, STUDIO_VOICES } from "./voices.mjs";
 
 function argValue(name) {
   const index = process.argv.indexOf(name);
@@ -14,6 +15,36 @@ function has(name) {
 }
 
 async function main() {
+  if (has("--studio-voices")) {
+    console.log(JSON.stringify({
+      count: STUDIO_VOICES.length,
+      voices: STUDIO_VOICES,
+    }, null, 2));
+    return;
+  }
+
+  if (has("--list-voices")) {
+    const keys = collectGeminiKeys(process.env);
+    if (!keys.length) throw new Error("No Gemini API keys configured");
+
+    const result = await listGeminiVoices({
+      apiKey: keys[0].value,
+      search: argValue("--voice-search"),
+      languageCode: argValue("--voice-language"),
+      type: argValue("--voice-type"),
+      accent: argValue("--voice-accent"),
+      persona: argValue("--voice-persona"),
+      context: argValue("--voice-context"),
+      gender: argValue("--voice-gender"),
+      pitch: argValue("--voice-pitch"),
+      regionCode: argValue("--voice-region"),
+      maxVoices: Number(argValue("--voice-limit") || 500),
+    });
+
+    console.log(JSON.stringify(result, null, 2));
+    return;
+  }
+
   if (has("--check-config")) {
     const keys = collectGeminiKeys(process.env);
     if (!keys.length) throw new Error("No Gemini API keys configured");
