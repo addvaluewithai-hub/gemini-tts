@@ -36,23 +36,27 @@ The code accepts up to `GEMINI_API_KEY_20`, so the pool can grow without changin
 
 ### Cloudinary
 
-**Recommended:** create one GitHub secret named `CLOUDINARY_URL` containing the complete backend environment value copied from Cloudinary:
+Cloudinary is configured with **one GitHub Actions secret only**:
+
+```text
+Secret name:
+CLOUDINARY_URL
+
+Secret value:
+cloudinary://API_KEY:API_SECRET@CLOUD_NAME
+```
+
+In GitHub's secret-value box, paste **only the value**:
 
 ```text
 cloudinary://API_KEY:API_SECRET@CLOUD_NAME
 ```
 
-For compatibility, `CLOUDINARY_API_TOKEN` is also accepted **only when its value is that same complete `cloudinary://...` string**.
+Do **not** paste `CLOUDINARY_URL=` in front of it. GitHub already supplies the environment-variable name from the secret name.
 
-Alternatively, set all three:
+The worker now uses Cloudinary's official Node SDK and reads only `CLOUDINARY_URL`. The older compatibility variables `CLOUDINARY_API_TOKEN`, `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET` are intentionally not used by the workflow.
 
-```text
-CLOUDINARY_CLOUD_NAME
-CLOUDINARY_API_KEY
-CLOUDINARY_API_SECRET
-```
-
-A plain OAuth/API token by itself is not enough for this Upload API implementation. The server-side Cloudinary Upload API needs the cloud name plus API key/secret (or an equivalent complete `CLOUDINARY_URL`). Never commit these values.
+Never commit the real `CLOUDINARY_URL` value to the repository, logs, examples, or client-side code.
 
 ## 3. Quota note: keys are not automatically separate quota
 
@@ -549,7 +553,7 @@ For old preview models, the provider may return headerless PCM. When the request
 
 WAV output is uploaded as Cloudinary `video` resource type because Cloudinary handles audio media under the video/audio pipeline. Headerless/telephony formats are stored as `raw`. Transcript JSON and WebVTT are also uploaded as `raw` assets with deterministic IDs: `gemini-tts/<job_id>.transcript.json` and `gemini-tts/<job_id>.transcript.vtt`.
 
-The worker uses authenticated server-side upload. Nothing in this repository requires exposing the Cloudinary API secret to users.
+The worker uses Cloudinary's official Node SDK for authenticated server-side uploads. Credentials are loaded from the single `CLOUDINARY_URL` GitHub secret. Nothing in this repository requires exposing the Cloudinary API key or secret to callers.
 
 ## 17. Public repository safety
 
