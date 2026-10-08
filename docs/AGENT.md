@@ -14,6 +14,25 @@ Submit a TTS job and receive a complete delivery package:
 
 For the exhaustive field-by-field reference, read [`API.md`](API.md).
 
+## Infrastructure assumptions
+
+The GitHub repository is expected to have these secrets configured before an agent dispatches production jobs:
+
+```text
+GEMINI_API_KEY_1
+GEMINI_API_KEY_2
+...
+CLOUDINARY_URL
+```
+
+Cloudinary uses exactly one secret named `CLOUDINARY_URL`. Its value is the raw Cloudinary environment URL:
+
+```text
+cloudinary://API_KEY:API_SECRET@CLOUD_NAME
+```
+
+The secret value must **not** include the prefix `CLOUDINARY_URL=`. Agents must never request, print, log, or commit the real value.
+
 ## Default behavior
 
 If the caller does not specify otherwise:
@@ -299,6 +318,7 @@ Treat the job as incomplete if transcript generation was requested but the trans
 - GitHub Actions is asynchronous and is not a real-time streaming API.
 - One-request multi-speaker synthesis is limited to exactly two speakers.
 - Do not expose Gemini, GitHub, or Cloudinary secrets in requests, logs, output, or client-side code.
+- Cloudinary configuration is `CLOUDINARY_URL` only; do not look for legacy split Cloudinary credentials.
 - Public repository Actions logs may be visible. Do not send highly sensitive transcripts without reviewing that exposure model.
 - Reusing the same `job_id` overwrites deterministic Cloudinary assets.
 - Multiple API keys only represent independent quota when their underlying Google project quotas are independent.

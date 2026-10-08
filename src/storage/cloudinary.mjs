@@ -1,101 +1,126 @@
-function parseCloudinaryUrl(raw) {
-  if (!raw || typeof raw !== "string") return null;
-  if (!raw.startsWith("cloudinary://")) return null;
+import { Readable } from "node:stream";
+import { v2 as cloudinary } from "cloudinary";
 
-  const url = new URL(raw);
-  const apiKey = decodeURIComponent(url.username);
-  const apiSecret = decodeURIComponent(url.password);
+export function parseCloudinaryUrl(raw) {
+  if (!raw || typeof raw !== "string" || !raw.startsWith("cloudinary://")) {
+    throw new Error(
+      "CLOUDINARY_URL must be the full Cloudinary environment URL: cloudinary://API_KEY:API_SECRET@CLOUD_NAME",
+    );
+  }
+
+  let url;
+  try {
+    url = new URL(raw);
+  } catch {
+    throw new Error("CLOUDINARY_URL is not a valid URL");
+  }
+
+  const apiKey = decodeURIComponent(url.username || "");
+  const apiSecret = decodeURIComponent(url.password || "");
   const cloudName = url.hostname;
-  if (!apiKey || !apiSecret || !cloudName) return null;
+
+  if (!apiKey || !apiSecret || !cloudName) {
+    throw new Error(
+      "CLOUDINARY_URL must contain API key, API secret, and cloud name",
+    );
+  }
+
   return { cloudName, apiKey, apiSecret };
 }
 
 export function getCloudinaryConfig(env = process.env) {
-  const fromUrl = parseCloudinaryUrl(env.CLOUDINARY_URL)
-    || parseCloudinaryUrl(env.CLOUDINARY_API_TOKEN);
-  if (fromUrl) return fromUrl;
-
-  const cloudName = env.CLOUDINARY_CLOUD_NAME?.trim();
-  const apiKey = env.CLOUDINARY_API_KEY?.trim();
-  const apiSecret = env.CLOUDINARY_API_SECRET?.trim();
-  if (cloudName && apiKey && apiSecret) return { cloudName, apiKey, apiSecret };
-
-  throw new Error(
-    "Cloudinary is not configured. Set CLOUDINARY_URL, set CLOUDINARY_API_TOKEN to the full cloudinary://API_KEY:API_SECRET@CLOUD_NAME value, or provide CLOUDINARY_CLOUD_NAME + CLOUDINARY_API_KEY + CLOUDINARY_API_SECRET.",
-  );
+  const raw = env.CLOUDINARY_URL?.trim();
+  if (!raw) {
+    throw new Error(
+      "Cloudinary is not configured. Add the GitHub secret CLOUDINARY_URL with value cloudinary://API_KEY:API_SECRET@CLOUD_NAME.",
+    );
+  }
+  return parseCloudinaryUrl(raw);
 }
 
-async function uploadBuffer({
-  buffer,
-  filename,
-  mimeType,
-  publicId,
-  resourceType,
-  tags,
-  context,
-  env,
-}) {
+function configureCloudinary(env = process.env) {
   const { cloudName, apiKey, apiSecret } = getCloudinaryConfig(env);
-  const endpoint = `https://api.cloudinary.com/v1_1/${encodeURIComponent(cloudName)}/${resourceType}/upload`;
-
-  const form = new FormData();
-  form.append("file", new Blob([buffer], { type: mimeType }), filename);
-  form.append("public_id", publicId);
-  form.append("overwrite", "true");
-  form.append("unique_filename", "false");
-  if (tags) form.append("tags", tags);
-  if (context) form.append("context", context);
-
-  const authorization = Buffer.from(`${apiKey}:${apiSecret}`).toString("base64");
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: { Authorization: `Basic ${authorization}` },
-    body: form,
+  cloudinary.config({
+    cloud_name: cloudName,
+    api_key: apiKey,
+    api_secret: apiSecret,
+    secure: true,
   });
-
-  let payload;
-  try {
-    payload = await response.json();
-  } catch {
-    payload = null;
-  }
-
-  if (!response.ok) {
-    throw new Error(payload?.error?.message || `Cloudinary upload failed with HTTP ${response.status}`);
-  }
-
-  return {
-    secure_url: payload.secure_url,
-    public_id: payload.public_id,
-    asset_id: payload.asset_id,
-    resource_type: payload.resource_type,
-    bytes: payload.bytes,
-    format: payload.format || null,
-    duration: payload.duration ?? null,
-  };
+  return { cloudName, apiKey };
 }
 
 function resourceTypeFor(format) {
   return format === "wav" ? "video" : "raw";
 }
 
+function uploadBuffer({
+  buffer,
+  publicId,
+  resourceType,
+  tags,
+  context,
+  format,
+  env = process.env,
+}) {
+  configureCloudinary(env);
+
+  return new Promise((resolve, reject) => {
+    const upload = cloudinary.uploader.upload_stream(
+      {
+        resource_type: resourceType,
+        public_id: publicId,
+        overwrite: true,
+        unique_filename: false,
+        use_filename: false,
+        tags,
+        context,
+        ...(format ? { format } : {}),
+      },
+      (error, payload) => {
+        if (error) {
+          reject(new Error(error.message || "Cloudinary upload failed"));
+          return;
+        }
+
+        resolve({
+          secure_url: payload.secure_url,
+          public_id: payload.public_id,
+          asset_id: payload.asset_id,
+          resource_type: payload.resource_type,
+          bytes: payload.bytes,
+          format: payload.format || format || null,
+          duration: payload.duration ?? null,
+        });
+      },
+    );
+
+    Readable.from([buffer]).pipe(upload);
+  });
+}
+
 export async function uploadAudioToCloudinary({
   audio,
   format,
-  mimeType,
+  mimeType: _mimeType,
   jobId,
   model,
   env = process.env,
 }) {
   const extension = format === "wav" ? "wav" : format === "l16" ? "pcm" : format;
+  const resourceType = resourceTypeFor(format);
+
   return uploadBuffer({
     buffer: audio,
-    filename: `${jobId}.${extension}`,
-    mimeType,
-    publicId: `gemini-tts/${jobId}`,
-    resourceType: resourceTypeFor(format),
-    tags: "gemini-tts,generated-audio",
-    context: `job_id=${jobId}|model=${model}`,
+    publicId: resourceType === "raw"
+      ? `gemini-tts/${jobId}.${extension}`
+      : `gemini-tts/${jobId}`,
+    resourceType,
+    format: resourceType === "video" ? extension : undefined,
+    tags: ["gemini-tts", "generated-audio"],
+    context: {
+      job_id: jobId,
+      model,
+    },
     env,
   });
 }
@@ -104,19 +129,20 @@ export async function uploadTextArtifactToCloudinary({
   content,
   jobId,
   suffix,
-  mimeType,
+  mimeType: _mimeType,
   model,
   env = process.env,
 }) {
-  const buffer = Buffer.from(String(content), "utf8");
   return uploadBuffer({
-    buffer,
-    filename: `${jobId}.${suffix}`,
-    mimeType,
+    buffer: Buffer.from(String(content), "utf8"),
     publicId: `gemini-tts/${jobId}.${suffix}`,
     resourceType: "raw",
-    tags: "gemini-tts,transcript",
-    context: `job_id=${jobId}|model=${model}|artifact=${suffix}`,
+    tags: ["gemini-tts", "transcript"],
+    context: {
+      job_id: jobId,
+      model,
+      artifact: suffix,
+    },
     env,
   });
 }
