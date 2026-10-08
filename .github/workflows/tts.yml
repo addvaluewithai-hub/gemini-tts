@@ -1,6 +1,11 @@
 name: Gemini TTS Factory
 
 on:
+  push:
+    branches: [chat/tts-audio-smoke-20261008]
+    paths:
+      - .github/workflows/tts.yml
+      - examples/chat-audio-smoke.json
   workflow_dispatch:
     inputs:
       job_id:
@@ -72,6 +77,10 @@ jobs:
           REQUEST_JSON: ${{ toJson(github.event.client_payload.request) }}
         run: |
           printf '%s' "$REQUEST_JSON" > request.json
+
+      - name: Prepare smoke request from push
+        if: github.event_name == 'push'
+        run: cp examples/chat-audio-smoke.json request.json
 
       - name: Generate, transcribe, and upload
         id: tts
