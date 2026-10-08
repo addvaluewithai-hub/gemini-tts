@@ -1,4 +1,5 @@
 import { isKnownModel } from "./models.mjs";
+import { voiceRequires38 } from "./voices.mjs";
 
 const FORMATS = new Set(["wav", "l16", "mulaw", "alaw"]);
 const ROUTING = new Set(["balanced", "quality", "speed", "legacy", "explicit"]);
@@ -151,6 +152,8 @@ export function normalizeRequest(input) {
     routing,
     model: requestedModel,
     allow_model_fallback: input.allow_model_fallback !== false,
+    voice_requires_38: voiceRequires38(defaultVoice)
+      || Object.values(speakerVoices).some((voice) => voiceRequires38(voice)),
     transcript: normalizeTranscript(input.transcript, isMultiSpeaker),
     metadata: input.metadata && typeof input.metadata === "object" && !Array.isArray(input.metadata)
       ? input.metadata
