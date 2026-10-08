@@ -1,0 +1,43 @@
+name: Learn Lesson 02 original audio recovery
+on:
+  push:
+    branches: [experiment/learn-lesson02-recovery-20261008]
+    paths: [lesson-production/recovery/START_ONCE.md]
+permissions:
+  contents: read
+concurrency:
+  group: learn-lesson02-recovery-20261008
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        clip: [N01, N02, Q01, N03, Q02, N04, Q03, N05, Q04, F01, F02, F03, F04]
+    env:
+      GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+      GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+      GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      CLIP_ID: ${{ matrix.clip }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install --no-audit --no-fund
+      - name: Recover alignment and independently inspect original audio
+        run: node lesson-production/recovery/recover.mjs
+      - name: Retain review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lesson02-recovery-${{ matrix.clip }}
+          path: recovered/review.json
+          retention-days: 7
+          if-no-files-found: ignore
