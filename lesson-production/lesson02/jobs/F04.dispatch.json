@@ -1,0 +1,35 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "chem-gas-phase-changes-v2-20261008-F04-t01-246eda19",
+    "request": {
+      "text": "One: Sublimation. A solid changes directly into a gas.\n\nيعني: تسامٍ، من صلب لغاز مباشرة.\n\nTwo: Freezing. A liquid changes into a solid.\n\nيعني: تجمّد، من سائل لصلب.\n\nThree: Condensation. A gas changes into a liquid.\n\nيعني: تكاثف، من غاز لسائل.\n\nThe third change is condensation, not deposition, because condensation ends in a liquid, while deposition ends directly in a solid.\n\nيعني: في التكاثف بنبدأ من غاز وننتهي بسائل. أما الترسيب المباشر، فبنبدأ من غاز وننتهي بصلب، من غير مرحلة سائلة.\n\nكده جمعنا فكرة الدرس: كل تحوّل له بداية ونهاية، وبعض التحوّلات بتكون مباشرة من غير المرور بالسائل. وربطنا التغيّر بحركة الجسيمات وترتيبها، من غير ما المادة نفسها تختفي.\n\nالدرس الجاي هنرجع للغاز جوه سرنجة مقفولة. هنشوف العلاقة بين الـPressure، يعني الضغط، والـVolume، يعني الحجم، لما كمية الغاز والـTemperature يفضلوا ثابتين. وده هيكون مدخلنا لـBoyle's Law، قانون بويل.",
+      "style": "Mature warm calm Egyptian teacher. Natural medium pace, short pauses and clear English terms. Friendly, precise, no advertising performance.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG",
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "narration",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-phase-changes",
+        "contentVersion": "lesson02-script-v2-review-2026-10-08",
+        "curriculumRevision": "curriculum-v3-english-2026-10-06",
+        "clipId": "F04",
+        "role": "feedback",
+        "clipType": "feedback",
+        "sourceTextSha256": "246eda199901aa8eece8a86073f5cb838b5ae9407ce676e7b7fd9b1a13a445f9",
+        "authoringJsonSha256": "31ba4670fda5ffcb605c776cd5c3454146fd0aef8942af3f7c44e4ac5abd6d41",
+        "take": "01"
+      }
+    }
+  }
+}

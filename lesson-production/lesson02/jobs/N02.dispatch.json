@@ -1,0 +1,35 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "chem-gas-phase-changes-v2-20261008-N02-t01-cbd38a6e",
+    "request": {
+      "text": "تخيّل مكعب تلج في طبق. قبل ما يدوب، المكعب محتفظ بشكله. المية هنا في الحالة الصلبة، Solid.\n\nلما التلج يمتص طاقة حرارية كفاية، وفي ظروف تسمح بده، يبدأ يتحوّل لمية سائلة، Liquid. ركّز في اللي حصل: المية نفسها ما اختفتش، وما بقاش عندنا نوع جديد من المادة. اللي اتغيّر هو حالتها.\n\nفي الـSolid، جسيمات المية قريبة، وبتتحرك اهتزازيًا حوالين مواضعها. بعد الانصهار، في الـLiquid، الجسيمات تقدر تتحرك وتتبدّل أماكنها بصورة أسهل، وعشان كده المية السائلة تقدر تجري وتاخد شكل الوعاء. الجسيمات نفسها ما صغرتش وما اختفتش.\n\nالتحوّل من Solid إلى Liquid اسمه Melting، يعني الانصهار. يبقى لما تسمع Melting، تخيّل التلج وهو بيتحوّل لمية: صلب إلى سائل.\n\nطيب، لو حطّينا المية في ظروف تبريد مناسبة، وفقدت طاقة كفاية لحد ما تتجمّد؟ هترجع من Liquid إلى Solid. التحوّل ده اسمه Freezing، يعني التجمّد.\n\nإذن عندنا عمليتان عكس بعض. الاسم بيتحدد من اتجاه الحركة بين الحالتين، مش من كلمة سخن أو برد وحدها.\n\nتعالى نجرب سؤال بسيط على أول زوج من التحوّلات.",
+      "style": "Mature warm calm Egyptian teacher. Natural medium pace, short pauses and clear English terms. Friendly, precise, no advertising performance.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG",
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "narration",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-phase-changes",
+        "contentVersion": "lesson02-script-v2-review-2026-10-08",
+        "curriculumRevision": "curriculum-v3-english-2026-10-06",
+        "clipId": "N02",
+        "role": "teaching",
+        "clipType": "teaching",
+        "sourceTextSha256": "cbd38a6e422e645d07cb88538a90e2bf4ba6e5b31b46f45a48ee8fc6b5c43382",
+        "authoringJsonSha256": "31ba4670fda5ffcb605c776cd5c3454146fd0aef8942af3f7c44e4ac5abd6d41",
+        "take": "01"
+      }
+    }
+  }
+}

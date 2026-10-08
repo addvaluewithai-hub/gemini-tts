@@ -1,0 +1,35 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "chem-gas-phase-changes-v2-20261008-N03-t01-08c07e8e",
+    "request": {
+      "text": "دلوقتي نكمل من السائل للغاز.\n\nتخيّل شوية مية في طبق مفتوح. مع الوقت، تلاقي كمية المية قلّت. طب المية راحت فين؟ جزء منها تحوّل من سائل لبخار ماء، واختلط بالهوا اللي حواليه.\n\nده اسمه Evaporation، يعني التبخّر: انتقال من Liquid إلى Gas. التبخّر ممكن يحصل من سطح المية حتى لو المية ما غليتش. عشان كده الهدوم المبلولة ممكن تنشف من غير ما المية اللي فيها تغلي.\n\nوخد بالك من نقطة مهمة: بخار المية الغازي نفسه مش مرئي. وجوده مش معناه إن لازم نشوف سحابة بيضا قدامنا.\n\nطيب، هل نقدر نرجّع بخار المية لسائل؟ تخيّل كوباية ساقعة، وظهرت نقط مية على سطحها الخارجي. في الظروف المناسبة، بخار المية الموجود في الهوا يبرد عند السطح، ويتحوّل لقطرات مية سائلة.\n\nإحنا بدأنا بـGas، وانتهينا بـLiquid. التحوّل ده اسمه Condensation، يعني التكاثف.\n\nفي النموذج اللي اتعلمناه، جسيمات الماء في الحالة الغازية متباعدة أكتر. ولما تتكوّن قطرات سائلة، تبقى الجسيمات أقرب لبعض. ما فيش جسيمات اختفت أو اتحوّلت لنوع تاني.\n\nإذن عندنا زوج جديد من الاتجاهات. وفي السؤال الجاي، هنبص على حالة البداية والنهاية قبل ما نختار الاسم.",
+      "style": "Mature warm calm Egyptian teacher. Natural medium pace, short pauses and clear English terms. Friendly, precise, no advertising performance.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG",
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "narration",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-phase-changes",
+        "contentVersion": "lesson02-script-v2-review-2026-10-08",
+        "curriculumRevision": "curriculum-v3-english-2026-10-06",
+        "clipId": "N03",
+        "role": "teaching",
+        "clipType": "teaching",
+        "sourceTextSha256": "08c07e8eba9b5dc4904533b32a856424c2036f2d4017c10ac27a090324348e9a",
+        "authoringJsonSha256": "31ba4670fda5ffcb605c776cd5c3454146fd0aef8942af3f7c44e4ac5abd6d41",
+        "take": "01"
+      }
+    }
+  }
+}

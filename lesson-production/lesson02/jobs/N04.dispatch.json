@@ -1,0 +1,35 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "chem-gas-phase-changes-v2-20261008-N04-t01-4f9a4739",
+    "request": {
+      "text": "لحد دلوقتي، شفنا التحوّل بين الصلب والسائل، وبين السائل والغاز.\n\nبس هل كل مادة لازم تعدّي بالحالة السائلة لو هتتحوّل من Solid إلى Gas؟\n\nلأ. في ظروف مناسبة، بعض المواد ممكن تنتقل من صلب لغاز مباشرة.\n\nمثال معروف هو الثلج الجاف، Dry ice. ده ثاني أكسيد الكربون في الحالة الصلبة. عند الضغط الجوي المعتاد، ممكن يتحوّل مباشرة لغاز من غير ما يعدّي بسائل.\n\nالتحوّل ده اسمه Sublimation، يعني التسامي. الكلمة المفتاح هنا Directly، يعني مباشرة.\n\nليه بنأكد على الكلمة دي؟ لأن لو مادة اتحوّلت من صلب لسائل، وبعدين من السائل لغاز، ده مسار من خطوتين. مش هو التسامي المباشر.\n\nطيب، لو حصل الاتجاه العكسي؟ لو الغاز اتحوّل لصلب مباشرة، من غير مرحلة سائلة؟\n\nاسم التحوّل ده Deposition، يعني الترسيب المباشر. مثال عليه تكوّن الصقيع: في ظروف مناسبة، بخار الماء ممكن يتحوّل لبلورات تلج مباشرة على سطح شديد البرودة.\n\nخد بالك من الفرق بين الترسيب المباشر والتجمّد. الاتنين ممكن ينتهوا بصلب، لكن واحد بيبدأ من غاز، والتاني بيبدأ من سائل. يعني حالة النهاية وحدها مش كفاية.\n\nخلّينا نجرّب سؤال يفرّق بين الطريقين.",
+      "style": "Mature warm calm Egyptian teacher. Natural medium pace, short pauses and clear English terms. Friendly, precise, no advertising performance.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG",
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "narration",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-phase-changes",
+        "contentVersion": "lesson02-script-v2-review-2026-10-08",
+        "curriculumRevision": "curriculum-v3-english-2026-10-06",
+        "clipId": "N04",
+        "role": "teaching",
+        "clipType": "teaching",
+        "sourceTextSha256": "4f9a4739955f1250cc9345aaf70476cc7f4d9ce99ae97f04bbcb1d44a356e0ad",
+        "authoringJsonSha256": "31ba4670fda5ffcb605c776cd5c3454146fd0aef8942af3f7c44e4ac5abd6d41",
+        "take": "01"
+      }
+    }
+  }
+}

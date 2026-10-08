@@ -1,0 +1,35 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "chem-gas-phase-changes-v2-20261008-Q01-t01-a59519f8",
+    "request": {
+      "text": "What is the reverse of melting? Describe the change of state.\n\nيعني: إيه اسم العملية العكسية للانصهار؟ وبتبدأ من أنهي حالة، وتنتهي لأنهي حالة؟\n\nجرّب تقول اسم التحوّل بالإنجليزي، وبعده اتجاهه. مش محتاج جملة طويلة.",
+      "style": "Mature warm calm Egyptian teacher. Natural medium pace, short pauses and clear English terms. Friendly, precise, no advertising performance.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG",
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "narration",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-phase-changes",
+        "contentVersion": "lesson02-script-v2-review-2026-10-08",
+        "curriculumRevision": "curriculum-v3-english-2026-10-06",
+        "clipId": "Q01",
+        "role": "teaching",
+        "clipType": "question",
+        "sourceTextSha256": "a59519f8dfcd567bcf53097f3b9d00c6dc2c76e4506324c633e199a2a39f9af4",
+        "authoringJsonSha256": "31ba4670fda5ffcb605c776cd5c3454146fd0aef8942af3f7c44e4ac5abd6d41",
+        "take": "01"
+      }
+    }
+  }
+}
