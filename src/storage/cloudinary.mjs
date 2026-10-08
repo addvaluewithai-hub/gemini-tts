@@ -94,7 +94,7 @@ function uploadBuffer({
       },
     );
 
-    Readable.from(buffer).pipe(upload);
+    Readable.from([buffer]).pipe(upload);
   });
 }
 
