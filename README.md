@@ -2,6 +2,9 @@
 
 An asynchronous Gemini speech factory that delivers generated audio **plus word-timestamp transcripts**, with GitHub Actions orchestration, model/key routing, and Cloudinary delivery.
 
-The public README stays intentionally short. **Start here: [`docs/API.md`](docs/API.md)** — it contains the full request schema, transcript/timestamp contract, supported parameters, model routing, GitHub dispatch examples, Cloudinary setup, response format, limits, and troubleshooting.
+- **Humans / implementation details:** read [`docs/API.md`](docs/API.md).
+- **Autonomous agents:** read [`docs/AGENT.md`](docs/AGENT.md) first.
+
+Those internal docs cover the full request schema, the 30 curated studio voices, live Extended Voice Library discovery, custom voice IDs, transcript/timestamp behavior, model routing, GitHub dispatch, Cloudinary outputs, limits, and failure handling.
 
 > Important: multiple Gemini API keys only provide independent quota when the underlying Google projects/quotas are independent. Keys from the same project normally share that project's quota.
