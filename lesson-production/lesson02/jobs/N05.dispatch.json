@@ -1,0 +1,35 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "chem-gas-phase-changes-v2-20261008-N05-t01-3f78e008",
+    "request": {
+      "text": "تعالى نجمع الصورة كلها من غير ما نحفظ ست كلمات منفصلة.\n\nبين الـSolid والـLiquid، عندنا اتجاهين. وبين الـLiquid والـGas، اتجاهين تانيين. وكمان فيه انتقال مباشر بين الـSolid والـGas في الاتجاهين.\n\nكل ما تشوف وصفًا لتحوّل، ابدأ بسؤالين: المادة كانت في أنهي حالة؟ وبقت في أنهي حالة؟ ولو البداية صلب والنهاية غاز، أو العكس، اسأل كمان: هل كان التحوّل مباشر، ولا فيه مرحلة سائلة؟\n\nواربط الكلام باللي اتعلمناه عن الجسيمات. في الصلب، الجسيمات بتتهز حوالين مواضعها. في السائل، بتتحرك وتتبدّل أماكنها. وفي الغاز، بتبقى متباعدة أكتر وبتتحرك في الحيز. الرسمة بالنقط مجرد نموذج يساعدنا نفهم؛ مش صورة حقيقية ولا الأحجام مرسومة بالمقياس.\n\nوفي تغيّرات الحالة الفيزيائية اللي درسناها، المادة نفسها ما اختفتش. اللي اتغيّر حالتها وترتيب الجسيمات وطريقة حركتها.\n\nدلوقتي عندنا سؤال أخير يجمع أكتر من اتجاه. اقرا كل وصف لوحده، وحدد البداية والنهاية قبل الاسم. ولما تقارن بين عمليتين، ركّز على الفرق اللي بيميزهم.",
+      "style": "Mature warm calm Egyptian teacher. Natural medium pace, short pauses and clear English terms. Friendly, precise, no advertising performance.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG",
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "narration",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-phase-changes",
+        "contentVersion": "lesson02-script-v2-review-2026-10-08",
+        "curriculumRevision": "curriculum-v3-english-2026-10-06",
+        "clipId": "N05",
+        "role": "teaching",
+        "clipType": "teaching",
+        "sourceTextSha256": "3f78e0081251d540e69341af88c7b1469c67f455057b34f13c80c2b1bd4af80e",
+        "authoringJsonSha256": "31ba4670fda5ffcb605c776cd5c3454146fd0aef8942af3f7c44e4ac5abd6d41",
+        "take": "01"
+      }
+    }
+  }
+}

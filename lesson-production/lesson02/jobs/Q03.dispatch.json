@@ -1,0 +1,35 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "chem-gas-phase-changes-v2-20261008-Q03-t01-63d97686",
+    "request": {
+      "text": "Water vapor changes directly into a solid. Is this freezing or deposition? Explain the difference in the initial state.\n\nيعني: بخار مية اتحوّل مباشرة إلى صلب. هل ده Freezing ولا Deposition؟ وفسّر الفرق في حالة البداية بين العمليتين.\n\nخد وقتك، وافتكر إننا بنتابع الاتجاه، مش بس الحالة اللي وصلنا لها.",
+      "style": "Mature warm calm Egyptian teacher. Natural medium pace, short pauses and clear English terms. Friendly, precise, no advertising performance.",
+      "voice": "Gacrux",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG",
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "purpose": "narration",
+        "curriculumId": "chemistry-gas-laws",
+        "lessonId": "chem-gas-phase-changes",
+        "contentVersion": "lesson02-script-v2-review-2026-10-08",
+        "curriculumRevision": "curriculum-v3-english-2026-10-06",
+        "clipId": "Q03",
+        "role": "teaching",
+        "clipType": "question",
+        "sourceTextSha256": "63d9768670497ef7ef9b662aa8c2444be8ad81abe9ef2a82b90c62f30d0f5bf6",
+        "authoringJsonSha256": "31ba4670fda5ffcb605c776cd5c3454146fd0aef8942af3f7c44e4ac5abd6d41",
+        "take": "01"
+      }
+    }
+  }
+}
