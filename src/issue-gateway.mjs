@@ -12,7 +12,8 @@ const sha=v=>createHash("sha256").update(v,"utf8").digest("hex");
 const fail=m=>{throw Error(m);};
 
 export function parseEvent(event) {
-  if (event.action!=="labeled" || event.label?.name!=="tts-run") fail("Wrong label event");
+  if (event.action!=="opened" && (event.action!=="labeled" || event.label?.name!=="tts-run"))
+    fail("Wrong issue event");
   if (event.repository?.full_name!==FACTORY) fail("Wrong factory repository");
   if (event.issue?.pull_request || event.issue?.state!=="open" ||
       !Number.isInteger(event.issue.number)) fail("Expected open GitHub Issue");

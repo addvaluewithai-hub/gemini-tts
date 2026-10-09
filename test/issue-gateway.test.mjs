@@ -22,6 +22,7 @@ const event={action:"labeled",label:{name:"tts-run"},repository:{full_name:"addv
 
 test("reject untrusted labeler and bad source paths",()=>{
   assert.equal(parseEvent(event).mode,"dry-run");
+  assert.equal(parseEvent({...event,action:"opened",label:undefined}).mode,"dry-run");
   assert.throws(()=>parseEvent({...event,sender:{login:"attacker"}}),/Only owner/);
   const bad={...cfg,jobs:[{path:"../../secret",sceneId:"S01"}]};
   assert.throws(()=>parseEvent({...event,issue:{...event.issue,body:"~~~json\n"+JSON.stringify(bad)+"\n~~~"}}),/Invalid job path/);
