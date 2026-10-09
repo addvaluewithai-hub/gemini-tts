@@ -5,8 +5,8 @@ on:
     types: [opened, labeled]
 
 permissions:
-  contents: read
-  issues: write
+  contents: write # GitHub repository_dispatch API requires contents:write
+  issues: write # Claim and per-job receipts as Issue comments
 
 concurrency:
   group: issue-tts-${{ github.event.issue.number }}
