@@ -1,0 +1,34 @@
+name: Issue TTS Gateway
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: issue-tts-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  gateway:
+    if: >-
+      github.event.label.name == 'tts-run' &&
+      github.event.issue.state == 'open' &&
+      github.event.issue.user.login == 'addvaluewithai-hub' &&
+      github.actor == 'addvaluewithai-hub'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Authorize, verify pinned clips, optionally submit five factory dispatches
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node src/issue-gateway.mjs --send
