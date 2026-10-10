@@ -1,7 +1,7 @@
 import {test} from "node:test";
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
-import {parseEvent,validatePayload,compilePlan,claim,send} from "../src/issue-gateway.mjs";
+import {parseEvent,validatePayload,compilePlan,compileSceneRange,claim,send} from "../src/issue-gateway.mjs";
 
 const script="شرح مصري عن Statics.";
 const hash=createHash("sha256").update(script).digest("hex");
@@ -48,4 +48,30 @@ test("a controlled produce action dispatches exactly one verified job",async()=>
   assert.equal(calls[0].endpoint,"/dispatches");
   assert.equal(calls[0].body.client_payload.request.text,script);
   assert.equal(calls.length,3);
+});
+
+test("bounded canonical B01 scene range generates unique job payloads and skips pilot",async()=>{
+  const input={schemaVersion:1,command:"tts.issue.scene-range",mode:"dry-run",
+    sourceRepo:"addvaluewithai-hub/learn-curriculums",sourceCommit:"a".repeat(40),
+    courseId:"engineering-mechanics-statics-y1",lessonId:"ems-y1-foundations-models",
+    startScene:1,endScene:2};
+  const e={...event,action:"opened",issue:{...event.issue,number:99,body:"~~~json\n"+JSON.stringify(input)+"\n~~~"}};
+  const plan=parseEvent(e);
+  const lesson={id:input.lessonId,scenes:["S01","S02"]};
+  const map={
+    "lesson.json":lesson,
+    "S01.json":{id:"S01",narration:{id:"N01",role:"teaching",script:"شرح بالأول عن Mechanics."}},
+    "S02.json":{id:"S02",narration:{id:"N02",role:"teaching",script:"Skip pilot."}}
+  };
+  const items=await compileSceneRange(plan,async (p,path)=>map[path.split("/").at(-1)]);
+  assert.equal(items.length,1);
+  assert.equal(items[0].clipId,"N01");
+  assert.equal(items[0].request.metadata.scriptHash,
+    createHash("sha256").update("شرح بالأول عن Mechanics.").digest("hex"));
+  assert.equal(items[0].request.voice,"Gacrux");
+  assert.equal(items[0].request.sample_rate,24000);
+  assert.match(items[0].id,/-b01full-i99-/);
+  await assert.rejects(()=>send(plan,items,"token",()=>{throw Error("paid");}),/Dry-run/);
+  const tampered={...input,endScene:10};
+  assert.throws(()=>parseEvent({...e,issue:{...e.issue,body:"~~~json\n"+JSON.stringify(tampered)+"\n~~~"}}),/1 to 5/);
 });

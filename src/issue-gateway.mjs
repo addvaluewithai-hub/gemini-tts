@@ -24,20 +24,32 @@ export function parseEvent(event) {
   const m=body.match(/^\s*~~~json\s*\n([\s\S]+?)\n~~~\s*$/);
   if (!m) fail("Issue body must be fenced ~~~json only");
   const cfg=JSON.parse(m[1]);
-  if (cfg.schemaVersion!==1 || cfg.command!=="tts.issue.batch") fail("Unexpected command");
+  if (cfg.schemaVersion!==1 || !["tts.issue.batch","tts.issue.scene-range"].includes(cfg.command))
+    fail("Unexpected command");
   if (!["dry-run","produce"].includes(cfg.mode)) fail("Unexpected mode");
   if (cfg.sourceRepo!==SOURCE || !/^[0-9a-f]{40}$/.test(cfg.sourceCommit))
     fail("Pinned 40-digit source revision required");
-  if (!Array.isArray(cfg.jobs) || !cfg.jobs.length || cfg.jobs.length>5)
-    fail("Expected 1 to 5 jobs");
-  const unique=new Set();
-  for (const j of cfg.jobs) {
-    if (!/^S[0-9]{2}$/.test(j.sceneId)) fail("Invalid scene ID");
-    if (typeof j.path!=="string" || j.path.includes("..") ||
-      !/^curricula\/[a-zA-Z0-9._-]+\/lessons\/[a-zA-Z0-9._-]+\/jobs\/[a-zA-Z0-9._-]+\.json$/.test(j.path))
-      fail("Invalid job path");
-    if (unique.has(j.path)) fail("Duplicate job path");
-    unique.add(j.path);
+  if (cfg.command==="tts.issue.batch") {
+    if (!Array.isArray(cfg.jobs) || !cfg.jobs.length || cfg.jobs.length>5)
+      fail("Expected 1 to 5 jobs");
+    const unique=new Set();
+    for (const j of cfg.jobs) {
+      if (!/^S[0-9]{2}$/.test(j.sceneId)) fail("Invalid scene ID");
+      if (typeof j.path!=="string" || j.path.includes("..") ||
+        !/^curricula\/[a-zA-Z0-9._-]+\/lessons\/[a-zA-Z0-9._-]+\/jobs\/[a-zA-Z0-9._-]+\.json$/.test(j.path))
+        fail("Invalid job path");
+      if (unique.has(j.path)) fail("Duplicate job path");
+      unique.add(j.path);
+    }
+  } else {
+    const lessons=["ems-y1-foundations-models","ems-y1-newton-gravity","ems-y1-units-conversions"];
+    if (cfg.courseId!=="engineering-mechanics-statics-y1" ||
+        !lessons.includes(cfg.lessonId)) fail("Scene-range scope must be existing B01 lesson");
+    if (!Number.isInteger(cfg.startScene) || !Number.isInteger(cfg.endScene) ||
+        cfg.startScene<1 || cfg.endScene>25 || cfg.endScene<cfg.startScene ||
+        cfg.endScene-cfg.startScene>=5) fail("Scene range must contain 1 to 5 scenes");
+    if (cfg.jobs!==undefined || cfg.excludeClipIds!==undefined)
+      fail("Scene-range clips and prior pilot exclusions are determined by canonical source");
   }
   return {issueNumber:event.issue.number,...cfg};
 }
@@ -82,6 +94,52 @@ export async function compilePlan(plan,read=sourceFile) {
   if (new Set(out.map(j=>j.id)).size!==out.length) fail("Duplicate job IDs");
   return out;
 }
+// B01-only bounded production from pinned canonical scenes. Historical five-clip
+// pilot is never re-dispatched in the bulk pass (no Cloudinary overwrite).
+const PREVIOUS_PILOT=Object.freeze({
+  "ems-y1-foundations-models":["N02"],
+  "ems-y1-newton-gravity":["N09","N13","F02"],
+  "ems-y1-units-conversions":["N12"]
+});
+const B01_STYLE="Mature warm calm Egyptian private teacher. Natural medium pace, short pauses between ideas, clear English terms. Friendly and precise; no advertising performance.";
+
+export async function compileSceneRange(plan,read=sourceFile) {
+  if (plan.command!=="tts.issue.scene-range") fail("Not a bounded canonical scene-range request");
+  const root="curricula/"+plan.courseId+"/lessons/"+plan.lessonId+"/";
+  const lesson=await read(plan,root+"lesson.json");
+  if (lesson.id!==plan.lessonId || !Array.isArray(lesson.scenes) ||
+      plan.endScene>lesson.scenes.length) fail("Invalid lesson or out-of-bounds scene range");
+  const selected=lesson.scenes.slice(plan.startScene-1,plan.endScene);
+  const scenes=await Promise.all(selected.map(id=>read(plan,root+"scenes/"+id+".json")));
+  const items=[];
+  for (let i=0;i<selected.length;i++) {
+    const scene=scenes[i];
+    if (scene.id!==selected[i] || !/^S[0-9]{2}$/.test(scene.id))
+      fail("Canonical scene identity mismatch");
+    const clips=[scene.narration,...(scene.question?[scene.question.feedback]:[])];
+    for (const clip of clips) {
+      if (PREVIOUS_PILOT[plan.lessonId].includes(clip?.id)) continue;
+      if (!clip || !/^[NF][0-9]{2}$/.test(clip.id) ||
+          !["teaching","question","feedback"].includes(clip.role) ||
+          typeof clip.script!=="string" || clip.script.length<3 || clip.script.length>7500)
+        fail("Invalid canonical audio clip");
+      const scriptHash=sha(clip.script);
+      const jobId=plan.lessonId+"-"+clip.id+"-b01full-i"+plan.issueNumber+"-"+scriptHash.slice(0,16);
+      if (jobId.length>139) fail("Generated job ID is too long");
+      const request={
+        text:clip.script,voice:"Gacrux",style:B01_STYLE,routing:"quality",format:"wav",
+        sample_rate:24000,transcript:{language_codes:[],write_vtt:true},
+        metadata:{curriculumId:plan.courseId,lessonId:plan.lessonId,clipId:clip.id,
+          role:clip.role,scriptHash}
+      };
+      items.push({id:jobId,clipId:clip.id,lesson:plan.lessonId,sceneId:scene.id,
+        request,scriptHash});
+    }
+  }
+  if (!items.length || items.length>8 ||
+      new Set(items.map(x=>x.id)).size!==items.length) fail("Expected 1 to 8 unique, non-pilot clips");
+  return items;
+}
 async function gh(path,token,method="GET",body) {
   if (!token) fail("Missing GitHub issue-write token");
   const r=await fetch("https://api.github.com/repos/"+FACTORY+path,{
@@ -123,7 +181,8 @@ export async function send(plan,items,token,api=gh) {
 async function main() {
   const event=JSON.parse(await readFile(process.env.GITHUB_EVENT_PATH||"event.json","utf8"));
   const plan=parseEvent(event);
-  const requests=await compilePlan(plan);
+  const requests=plan.command==="tts.issue.scene-range"
+    ? await compileSceneRange(plan) : await compilePlan(plan);
   console.log("Verified "+requests.length+" canonical requests; mode="+plan.mode);
   if (plan.mode==="dry-run") return console.log("DRY RUN: no dispatch or billing");
   if (!process.argv.includes("--send")) fail("Missing explicit --send");
