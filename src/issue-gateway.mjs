@@ -3,6 +3,7 @@
 // No Gemini/Cloudinary secrets or untrusted code execution in this control plane.
 import {createHash} from "node:crypto";
 import {readFile} from "node:fs/promises";
+import {validateMathBulkPlan,compileMathBulkGroup} from "./math-bulk-gateway.mjs";
 
 const FACTORY="addvaluewithai-hub/gemini-tts";
 const SOURCE="addvaluewithai-hub/learn-curriculums";
@@ -24,7 +25,7 @@ export function parseEvent(event) {
   const m=body.match(/^\s*~~~json\s*\n([\s\S]+?)\n~~~\s*$/);
   if (!m) fail("Issue body must be fenced ~~~json only");
   const cfg=JSON.parse(m[1]);
-  if (cfg.schemaVersion!==1 || !["tts.issue.batch","tts.issue.scene-range","tts.issue.audio-batch"].includes(cfg.command))
+  if (cfg.schemaVersion!==1 || !["tts.issue.batch","tts.issue.scene-range","tts.issue.audio-batch","tts.issue.math-bulk"].includes(cfg.command))
     fail("Unexpected command");
   if (!["dry-run","produce"].includes(cfg.mode)) fail("Unexpected mode");
   if (cfg.sourceRepo!==SOURCE || !/^[0-9a-f]{40}$/.test(cfg.sourceCommit))
@@ -41,6 +42,8 @@ export function parseEvent(event) {
       if (unique.has(j.path)) fail("Duplicate job path");
       unique.add(j.path);
     }
+  } else if (cfg.command==="tts.issue.math-bulk") {
+    validateMathBulkPlan(cfg);
   } else if (cfg.command==="tts.issue.audio-batch") {
     if (typeof cfg.job!=="string" ||
         !/^curricula\/engineering-math-1\/batches\/jobs\/[a-zA-Z0-9._-]+\.json$/.test(cfg.job))
@@ -261,7 +264,9 @@ async function main() {
   const requests=plan.command==="tts.issue.scene-range"
     ? await compileSceneRange(plan)
     : plan.command==="tts.issue.audio-batch"
-      ? await compileAudioBatch(plan) : await compilePlan(plan);
+      ? await compileAudioBatch(plan)
+      : plan.command==="tts.issue.math-bulk"
+        ? await compileMathBulkGroup(plan,sourceFile) : await compilePlan(plan);
   console.log("Verified "+requests.length+" canonical requests; mode="+plan.mode);
   if (plan.mode==="dry-run") return console.log("DRY RUN: no dispatch or billing");
   if (!process.argv.includes("--send")) fail("Missing explicit --send");
