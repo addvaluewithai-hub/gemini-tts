@@ -63,3 +63,29 @@ Gacrux/quality WAV 24kHz style, verbatim canonical clip scripts, and automatic
 bilingual word transcript + VTT. Claims are idempotent per Issue and accepted jobs
 are individually recorded. Audio quality, listening, academic approval and timed
 preview are *not* implied by successful generation.
+
+## Zephyr issue-driven original multi-clip pilot (Mathematics I ONLY)
+
+The new `tts.issue.audio-batch` command accepts **ONE** previously saved, pinned `tts.generate` job bundling up to **8 original clips** and **200 total original words**. Factory settings must be **Zephyr**, the identical warm/calm Egyptian tutor style, explicit **gemini-3.8-flash-tts** without fallback, 24-kHz WAV and bilingual word transcript/VTT. Historical Gacrux per-clip / Statics scene-range commands remain unchanged.
+
+Open an owner-authored GitHub Issue on `addvaluewithai-hub/gemini-tts` with ONLY this `~~~json` fenced object, substituting the actual 40-character source commit:
+
+~~~json
+{
+  "schemaVersion": 1,
+  "command": "tts.issue.audio-batch",
+  "mode": "dry-run",
+  "sourceRepo": "addvaluewithai-hub/learn-curriculums",
+  "sourceCommit": "PINNED_40_HEX_SOURCE_COMMIT",
+  "job": "curricula/engineering-math-1/batches/jobs/batch-zephyr-em1-pilot01-20261011-a63f27c1.json",
+  "clips": [
+    {"lessonId":"em1-prelim-absolute-value","sceneId":"S02","clipId":"N02"},
+    {"lessonId":"em1-limits-trigonometric","sceneId":"S05","clipId":"N05"},
+    {"lessonId":"em1-limits-trigonometric","sceneId":"S05","clipId":"F01"}
+  ]
+}
+~~~
+
+The gateway independently fetches the pinned job, issued lesson and scene JSON for each item, and rejects changed original scripts/roles/hashes, wrong order, altered batch text, invalid style/model/voice and excessive words. **Dry-run** validates with zero paid dispatch. Once it passes and this code has been deployed to the factory's **default branch**, a NEW owner-created Issue with the same job, source commit, clip references and `mode: "produce"` sends exactly **ONE paid factory request** for the previously approved Zephyr pilot. Issue claim comments guard against accidental resends; accepted is not delivered audio.
+
+After real WAV/transcript delivery, actually listen to Egyptian Arabic, English, numbers and math signs, inspect quiet cuts, and stage source-clip slices before importing. A gateway success is NOT listening, timing, academic or device-playback approval. This pilot gate intentionally does not authorize mass batch dispatch or other voices.
