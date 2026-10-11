@@ -31,7 +31,7 @@ export async function compileMathBulkGroup(plan,read) {
   for (let index=0;index<group.batches.length;index++) {
     const bucket=group.batches[index];
     if (!Array.isArray(bucket.clips) || bucket.clips.length<1 ||
-        bucket.clips.length>10) fail("Bad per-request clip count");
+        bucket.clips.length>12) fail("Bad per-request clip count");
     let words=0;const scripts=[],segments=[];
     for (const loc of bucket.clips) {
       if (!loc || typeof loc.lessonId!=="string" ||
