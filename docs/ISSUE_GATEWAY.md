@@ -89,3 +89,42 @@ Open an owner-authored GitHub Issue on `addvaluewithai-hub/gemini-tts` with ONLY
 The gateway independently fetches the pinned job, issued lesson and scene JSON for each item, and rejects changed original scripts/roles/hashes, wrong order, altered batch text, invalid style/model/voice and excessive words. **Dry-run** validates with zero paid dispatch. Once it passes and this code has been deployed to the factory's **default branch**, a NEW owner-created Issue with the same job, source commit, clip references and `mode: "produce"` sends exactly **ONE paid factory request** for the previously approved Zephyr pilot. Issue claim comments guard against accidental resends; accepted is not delivered audio.
 
 After real WAV/transcript delivery, actually listen to Egyptian Arabic, English, numbers and math signs, inspect quiet cuts, and stage source-clip slices before importing. A gateway success is NOT listening, timing, academic or device-playback approval. This pilot gate intentionally does not authorize mass batch dispatch or other voices.
+
+## Full Mathematics I Zephyr production (216 remaining clips; 54 requests in 11 Issues)
+
+The separate `tts.issue.math-bulk` command is the **explicitly owner-approved**
+source-pinned follow-up to the successful three-clip Zephyr pilot. It reads
+one of 11 immutable, pre-audited group manifests under
+`curricula/engineering-math-1/batches/campaigns/zephyr-remaining-20261011/`.
+Each owner-created Issue dispatches **up to FIVE distinct factory requests**,
+each containing only original canonical teaching/question/feedback clips,
+never more than **200 original source words / 120 planning seconds**.
+
+~~~json
+{
+  "schemaVersion": 1,
+  "command": "tts.issue.math-bulk",
+  "mode": "dry-run",
+  "sourceRepo": "addvaluewithai-hub/learn-curriculums",
+  "sourceCommit": "f6e5a5c9d5180228eb5762fa433cf45a4e4b4933",
+  "group": "curricula/engineering-math-1/batches/campaigns/zephyr-remaining-20261011/group-01.json"
+}
+~~~
+
+After a passing no-cost dry-run, create a NEW separate Issue with `mode: "produce"`
+for **each group 01..11**, reusing the exact pinned source commit and group path.
+Never relabel or reopen a claimed production Issue: inspect its issue comments
+and factory job IDs and reconcile any partial dispatches before trying again.
+Group issues should be admitted in manageable waves to avoid key concurrency.
+
+The compiler independently fetches each original lesson/scene under the pinned
+source SHA, recomputes original word counts and SHA-256 for each source clip,
+checks role, uniqueness, full combined text, voice `Zephyr`, identical calm
+Egyptian tutor style, explicit `gemini-3.8-flash-tts`, WAV 24 kHz, and
+Gemini transcribe JSON/VTT. Previously generated pilot clip IDs
+`em1-prelim-absolute-value/N02`, `em1-limits-trigonometric/N05`, and
+`em1-limits-trigonometric/F01` are **explicitly refused** for re-synthesis.
+All job IDs are deterministically tied to group/batch and the full text SHA.
+
+The existing Gacrux and initial Zephyr pilot commands are unaffected. Passing
+factory synthesis is not actual listened or split student audio acceptance.
