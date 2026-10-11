@@ -5,6 +5,7 @@ import {parseEvent,validatePayload,compilePlan,compileSceneRange,compileAudioBat
 
 const script="شرح مصري عن Statics.";
 const hash=createHash("sha256").update(script).digest("hex");
+const sha=value=>createHash("sha256").update(value,"utf8").digest("hex");
 const id="my-lesson-N01-t01-0123456789abcdef0123456789abcdef";
 const path="curricula/my-course/lessons/my-lesson/jobs/"+id+".json";
 const style="Mature warm calm Egyptian private teacher. Natural medium pace, short pauses between ideas, clear English terms. Friendly and precise; no advertising performance.";
