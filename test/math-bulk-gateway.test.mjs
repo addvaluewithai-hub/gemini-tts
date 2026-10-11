@@ -60,3 +60,32 @@ test("wrong words, duplicate, paid pilot or altered scenes fail closed",async()=
     {lessonId:"em1-prelim-absolute-value",sceneId:"S02",clipId:"N02"};
   await assert.rejects(compileMathBulkGroup(cfg,async(p,loc)=>loc===path?pilot:reader(p,loc)),/pilot/);
 });
+
+test("last real group can pack 12 short source clips without exceeding 200 words",async()=>{
+  const lessonId="em1-functions-domain-range";
+  const refs=Array.from({length:12},(_,i)=>({
+    lessonId,sceneId:"S"+String(i+1).padStart(2,"0"),
+    clipId:"N"+String(i+1).padStart(2,"0")
+  }));
+  const content="شرح بسيط";
+  const count=refs.length*2;
+  const seconds=Math.round((count/1.9+(refs.length-1)+3)*10)/10;
+  const manifest={...group,batches:[{words:count,
+    estimatedSeconds:seconds,clips:refs}]};
+  const fake={
+    [path]:manifest,
+    [base+"lessons/"+lessonId+"/lesson.json"]:
+      {id:lessonId,scenes:refs.map(x=>x.sceneId)}
+  };
+  for(const item of refs)fake[base+"lessons/"+lessonId+
+    "/scenes/"+item.sceneId+".json"]=
+    {id:item.sceneId,narration:{id:item.clipId,role:"teaching",script:content}};
+  const load=async(_plan,p)=>{assert.ok(p in fake,p);return structuredClone(fake[p]);};
+  const result=await compileMathBulkGroup(cfg,load);
+  assert.equal(result.length,1);
+  assert.equal(result[0].request.metadata.segments.length,12);
+  const thirteen=structuredClone(manifest);
+  thirteen.batches[0].clips.push({lessonId,sceneId:"S13",clipId:"N13"});
+  await assert.rejects(compileMathBulkGroup(cfg,
+    async (plan,p)=>p===path?thirteen:load(plan,p)),/Bad per-request clip count/);
+});
