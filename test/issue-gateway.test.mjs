@@ -1,10 +1,11 @@
 import {test} from "node:test";
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
-import {parseEvent,validatePayload,compilePlan,compileSceneRange,claim,send} from "../src/issue-gateway.mjs";
+import {parseEvent,validatePayload,compilePlan,compileSceneRange,compileAudioBatch,claim,send} from "../src/issue-gateway.mjs";
 
 const script="شرح مصري عن Statics.";
 const hash=createHash("sha256").update(script).digest("hex");
+const sha=value=>createHash("sha256").update(value,"utf8").digest("hex");
 const id="my-lesson-N01-t01-0123456789abcdef0123456789abcdef";
 const path="curricula/my-course/lessons/my-lesson/jobs/"+id+".json";
 const style="Mature warm calm Egyptian private teacher. Natural medium pace, short pauses between ideas, clear English terms. Friendly and precise; no advertising performance.";
@@ -74,4 +75,59 @@ test("bounded canonical B01 scene range generates unique job payloads and skips 
   await assert.rejects(()=>send(plan,items,"token",()=>{throw Error("paid");}),/Dry-run/);
   const tampered={...input,endScene:10};
   assert.throws(()=>parseEvent({...e,issue:{...e.issue,body:"~~~json\n"+JSON.stringify(tampered)+"\n~~~"}}),/1 to 5/);
+});
+
+
+test("Zephyr canonical mixed audio batch validates original teaching/question/feedback",async()=>{
+  const batchId="batch-zephyr-em1-pilot01-20261011-a63f27c1";
+  const scripts=["شرح القيمة المطلقة |x| بالمصري.","In radians calculate sin x over x.","The result is one. والإجابة واحد."];
+  const [a,b,c]=scripts;
+  const clips=[
+    {lessonId:"em1-prelim-absolute-value",sceneId:"S02",clipId:"N02"},
+    {lessonId:"em1-limits-trigonometric",sceneId:"S05",clipId:"N05"},
+    {lessonId:"em1-limits-trigonometric",sceneId:"S05",clipId:"F01"}
+  ];
+  const setting={schemaVersion:1,command:"tts.issue.audio-batch",mode:"dry-run",
+    sourceRepo:"addvaluewithai-hub/learn-curriculums",sourceCommit:"a".repeat(40),
+    job:"curricula/engineering-math-1/batches/jobs/"+batchId+".json",clips};
+  const combined=scripts.join(" <short pause> ");
+  const segments=clips.map((item,i)=>({courseId:"engineering-math-1",
+    lessonId:item.lessonId,clipId:item.clipId,
+    role:["teaching","question","feedback"][i],scriptHash:sha(scripts[i]),
+    wordCount:scripts[i].trim().split(/\s+/u).length}));
+  const payload={event_type:"tts.generate",client_payload:{job_id:batchId,
+    request:{text:combined,voice:"Zephyr",style,
+      routing:"explicit",model:"gemini-3.8-flash-tts",allow_model_fallback:false,
+      format:"wav",sample_rate:24000,transcript:{language_codes:[],write_vtt:true},
+      metadata:{batchVersion:1,batchId,courseId:"engineering-math-1",
+        segments,batchScriptHash:sha(combined)}}}};
+  const files={
+    [setting.job]:payload,
+    "curricula/engineering-math-1/lessons/em1-prelim-absolute-value/lesson.json":
+      {id:clips[0].lessonId,scenes:["S02"]},
+    "curricula/engineering-math-1/lessons/em1-prelim-absolute-value/scenes/S02.json":
+      {id:"S02",narration:{id:"N02",role:"teaching",script:a}},
+    "curricula/engineering-math-1/lessons/em1-limits-trigonometric/lesson.json":
+      {id:clips[1].lessonId,scenes:["S05"]},
+    "curricula/engineering-math-1/lessons/em1-limits-trigonometric/scenes/S05.json":
+      {id:"S05",narration:{id:"N05",role:"question",script:b},
+        question:{feedback:{id:"F01",role:"feedback",script:c}}}
+  };
+  const reader=async(_plan,path)=>{if (!(path in files))throw Error("unexpected file "+path);return structuredClone(files[path]);};
+  const evt={...event,action:"opened",issue:{...event.issue,body:"~~~json\n"+JSON.stringify(setting)+"\n~~~"}};
+  const parsed=parseEvent(evt);
+  assert.equal(parsed.command,"tts.issue.audio-batch");
+  const items=await compileAudioBatch(parsed,reader);
+  assert.equal(items.length,1);assert.equal(items[0].id,batchId);
+  await assert.rejects(send(parsed,items,"token",()=>{throw Error("DO NOT PAY");}),/Dry-run/);
+  const duplicate={...setting,clips:[...clips,{...clips[0]}]};
+  assert.throws(()=>parseEvent({...evt,issue:{...evt.issue,body:"~~~json\n"+JSON.stringify(duplicate)+"\n~~~"}}),/Duplicate original source clip/);
+  const alteredVoice=structuredClone(payload);alteredVoice.client_payload.request.voice="Gacrux";
+  await assert.rejects(compileAudioBatch(parsed,async(plan,path)=>path===setting.job?alteredVoice:reader(plan,path)),/Unexpected Zephyr/);
+  const badHash=structuredClone(payload);badHash.client_payload.request.metadata.segments[2].scriptHash="0".repeat(64);
+  await assert.rejects(compileAudioBatch(parsed,async(plan,path)=>path===setting.job?badHash:reader(plan,path)),/SHA-256/);
+  const changedText=structuredClone(payload);changedText.client_payload.request.text+=" altered";
+  await assert.rejects(compileAudioBatch(parsed,async(plan,path)=>path===setting.job?changedText:reader(plan,path)),/combined source words/);
+  const tooMany={...setting,clips:Array.from({length:9},(_,i)=>({lessonId:"lesson"+i,sceneId:"S01",clipId:"N01"}))};
+  assert.throws(()=>parseEvent({...evt,issue:{...evt.issue,body:"~~~json\n"+JSON.stringify(tooMany)+"\n~~~"}}),/1 to 8/);
 });
