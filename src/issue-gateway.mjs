@@ -24,7 +24,7 @@ export function parseEvent(event) {
   const m=body.match(/^\s*~~~json\s*\n([\s\S]+?)\n~~~\s*$/);
   if (!m) fail("Issue body must be fenced ~~~json only");
   const cfg=JSON.parse(m[1]);
-  if (cfg.schemaVersion!==1 || !["tts.issue.batch","tts.issue.scene-range"].includes(cfg.command))
+  if (cfg.schemaVersion!==1 || !["tts.issue.batch","tts.issue.scene-range","tts.issue.audio-batch"].includes(cfg.command))
     fail("Unexpected command");
   if (!["dry-run","produce"].includes(cfg.mode)) fail("Unexpected mode");
   if (cfg.sourceRepo!==SOURCE || !/^[0-9a-f]{40}$/.test(cfg.sourceCommit))
@@ -41,6 +41,25 @@ export function parseEvent(event) {
       if (unique.has(j.path)) fail("Duplicate job path");
       unique.add(j.path);
     }
+  } else if (cfg.command==="tts.issue.audio-batch") {
+    if (typeof cfg.job!=="string" ||
+        !/^curricula\/engineering-math-1\/batches\/jobs\/[a-zA-Z0-9._-]+\.json$/.test(cfg.job))
+      fail("Expected pinned Mathematics I batch-job path");
+    if (!Array.isArray(cfg.clips) || cfg.clips.length<1 || cfg.clips.length>8)
+      fail("Expected 1 to 8 original source clip references");
+    const seen=new Set();
+    for (const c of cfg.clips) {
+      if (!c || typeof c.lessonId!=="string" ||
+          !/^[a-zA-Z0-9._-]+$/.test(c.lessonId) ||
+          !/^S[0-9]{2}$/.test(c.sceneId||"") ||
+          !/^[NF][0-9]{2}$/.test(c.clipId||""))
+        fail("Invalid source clip locator");
+      const key=c.lessonId+"/"+c.clipId;
+      if (seen.has(key)) fail("Duplicate original source clip");
+      seen.add(key);
+    }
+    if (cfg.jobs!==undefined || cfg.courseId!==undefined)
+      fail("Ambiguous Issue batch fields");
   } else {
     const lessons=["ems-y1-foundations-models","ems-y1-newton-gravity","ems-y1-units-conversions"];
     if (cfg.courseId!=="engineering-mechanics-statics-y1" ||
@@ -140,6 +159,64 @@ export async function compileSceneRange(plan,read=sourceFile) {
       new Set(items.map(x=>x.id)).size!==items.length) fail("Expected 1 to 8 unique, non-pilot clips");
   return items;
 }
+
+// Source-verified Zephyr packing: one factory request, original N/F clip identities.
+// Legacy owner-Gacrux commands remain unchanged.
+export async function compileAudioBatch(plan,read=sourceFile) {
+  if (plan.command!=="tts.issue.audio-batch") fail("Not a canonical audio batch Issue");
+  const payload=await read(plan,plan.job);
+  if (payload?.event_type!=="tts.generate") fail("Not a source-bound TTS job");
+  const info=payload.client_payload||{},req=info.request||{},meta=req.metadata||{};
+  const pathId=plan.job.split("/").at(-1).replace(/\.json$/,"");
+  if (info.job_id!==pathId || meta.batchId!==pathId ||
+      !/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,139}$/.test(pathId) ||
+      meta.batchVersion!==1 || meta.courseId!=="engineering-math-1")
+    fail("Batch job id/version/course mismatch");
+  const style="Mature warm calm Egyptian private teacher. Natural medium pace, short pauses between ideas, clear English terms. Friendly and precise; no advertising performance.";
+  if (req.voice!=="Zephyr" || req.style!==style ||
+      req.routing!=="explicit" || req.model!=="gemini-3.8-flash-tts" ||
+      req.allow_model_fallback!==false || req.format!=="wav" ||
+      req.sample_rate!==24000 || !Array.isArray(req.transcript?.language_codes) ||
+      req.transcript.language_codes.length!==0 || req.transcript.write_vtt!==true)
+    fail("Unexpected Zephyr math teacher voice/model/audio/transcript settings");
+  const segments=meta.segments;
+  if (!Array.isArray(segments) || segments.length!==plan.clips.length)
+    fail("Canonical batch manifest / Issue references mismatch");
+  const scripts=[],lessons=new Map();let totalWords=0;
+  for (let i=0;i<plan.clips.length;i++) {
+    const loc=plan.clips[i],seg=segments[i];
+    if (seg?.courseId!=="engineering-math-1" ||
+        seg.lessonId!==loc.lessonId || seg.clipId!==loc.clipId)
+      fail("Pinned original clip does not match batch manifest");
+    const prefix="curricula/engineering-math-1/lessons/"+loc.lessonId+"/";
+    if (!lessons.has(loc.lessonId))
+      lessons.set(loc.lessonId,await read(plan,prefix+"lesson.json"));
+    const lesson=lessons.get(loc.lessonId);
+    if (lesson.id!==loc.lessonId || !lesson.scenes?.includes(loc.sceneId))
+      fail("Scene not issued in canonical lesson");
+    const scene=await read(plan,prefix+"scenes/"+loc.sceneId+".json");
+    if (scene.id!==loc.sceneId) fail("Scene identity mismatch");
+    const clip=loc.clipId.startsWith("F")?scene.question?.feedback:scene.narration;
+    if (!clip || clip.id!==loc.clipId || clip.role!==seg.role ||
+        !["teaching","question","feedback"].includes(clip.role) ||
+        typeof clip.script!=="string" || clip.script.length<3 ||
+        clip.script.length>7500 || clip.script.includes("<short pause>"))
+      fail("Invalid original source clip/role/script");
+    if (sha(clip.script)!==seg.scriptHash)
+      fail("Stale or altered canonical clip SHA-256");
+    const words=clip.script.trim().split(/\s+/u).length;
+    if (seg.wordCount!==words) fail("Mismatched source word count");
+    totalWords+=words;scripts.push(clip.script.trim());
+  }
+  // This first Issue bridge intentionally excludes bulk audio until pilot QA.
+  if (totalWords>200 || typeof req.text!=="string" ||
+      req.text.length>7500 || totalWords<1) fail("Pilot batch exceeds bound");
+  const expected=scripts.join(" <short pause> ");
+  if (req.text!==expected || meta.batchScriptHash!==sha(expected))
+    fail("Stale or modified combined source words");
+  return [{id:info.job_id,request:req,lesson:"engineering-math-1",clipId:"batch"}];
+}
+
 async function gh(path,token,method="GET",body) {
   if (!token) fail("Missing GitHub issue-write token");
   const r=await fetch("https://api.github.com/repos/"+FACTORY+path,{
@@ -182,7 +259,9 @@ async function main() {
   const event=JSON.parse(await readFile(process.env.GITHUB_EVENT_PATH||"event.json","utf8"));
   const plan=parseEvent(event);
   const requests=plan.command==="tts.issue.scene-range"
-    ? await compileSceneRange(plan) : await compilePlan(plan);
+    ? await compileSceneRange(plan)
+    : plan.command==="tts.issue.audio-batch"
+      ? await compileAudioBatch(plan) : await compilePlan(plan);
   console.log("Verified "+requests.length+" canonical requests; mode="+plan.mode);
   if (plan.mode==="dry-run") return console.log("DRY RUN: no dispatch or billing");
   if (!process.argv.includes("--send")) fail("Missing explicit --send");
