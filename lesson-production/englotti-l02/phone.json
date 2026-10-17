@@ -1,0 +1,27 @@
+{
+  "text": "Hello. This is a practice number: five, zero, two, six, eight, three, six, eight. Thank you.",
+  "voice": "Erinome",
+  "style": "A clear recorded American English voicemail recording with neutral customer-service pacing, independent of the preceding students' dialogue. Say each digit clearly as a separate word, with a slight pause between digits; do not omit or rearrange digits.",
+  "routing": "explicit",
+  "model": "gemini-3.8-flash-tts",
+  "allow_model_fallback": false,
+  "format": "wav",
+  "sample_rate": 24000,
+  "temperature": 1,
+  "transcript": {
+    "language_codes": [
+      "en-US"
+    ],
+    "diarization": false,
+    "write_vtt": true
+  },
+  "metadata": {
+    "lessonId": "a1-u1-l02-age-review",
+    "sourceLessonId": "U1-L02",
+    "edition": "v01-phone-preview",
+    "jobId": "englotti-a1-u1-l02-phone-v01-20261017",
+    "digits": "50268368",
+    "source": "english-course Draft PR #14 U1-L02 separate phone clip",
+    "scope": "preview-only-not-public-phone-number"
+  }
+}
