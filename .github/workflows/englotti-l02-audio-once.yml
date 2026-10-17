@@ -1,0 +1,90 @@
+name: One-shot EnglishLive A1 U1-L02 BOTH recordings (PREVIEW only)
+on:
+  push:
+    branches:
+      - experiment/englotti-u1-l02-audio-20261017
+    paths:
+      - lesson-production/englotti-l02/START_ONCE.md
+
+permissions:
+  contents: read
+
+concurrency:
+  group: englotti-u1-l02-20261017-once
+  cancel-in-progress: false
+
+jobs:
+  create-two-recordings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    env:
+      GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+      GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+      GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install factory packages
+        run: npm install --no-audit --no-fund
+      - name: Validate factory and pinned source scripts before any billable call
+        run: |
+          npm test
+          node src/cli.mjs --check-config
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          import assert from 'node:assert/strict';
+          const d=JSON.parse(readFileSync('lesson-production/englotti-l02/dialogue.json','utf8'));
+          const p=JSON.parse(readFileSync('lesson-production/englotti-l02/phone.json','utf8'));
+          const turns=[["Maya","Here's your English class card, Leo."],["Leo","Thanks! What do I write?"],["Maya","Your name and age. How old are you?"],["Leo","I'm nineteen years old. What about you?"],["Maya","I'm twenty-one."],["Leo","Nineteen goes here, right?"],["Maya","Yes. Write nineteen in this box."],["Leo","Great, thank you!"]];
+          assert.deepEqual(d.turns.map(x=>[x.speaker,x.text]),turns);
+          assert.deepEqual(d.speakers,{Maya:'Aoede',Leo:'Achird'});
+          assert.equal(d.model,'gemini-3.8-flash-tts');
+          assert.equal(d.routing,'explicit');
+          assert.equal(d.allow_model_fallback,false);
+          assert.equal(d.metadata.jobId,'englotti-a1-u1-l02-dialogue-v01-20261017');
+          assert.equal(p.text,"Hello. This is a practice number: five, zero, two, six, eight, three, six, eight. Thank you.");
+          assert.equal(p.metadata.digits,'50268368');
+          assert.equal(p.voice,'Erinome');
+          assert.equal(p.model,'gemini-3.8-flash-tts');
+          assert.equal(p.allow_model_fallback,false);
+          assert.equal(p.metadata.jobId,'englotti-a1-u1-l02-phone-v01-20261017');
+          assert.equal(d.format,'wav'); assert.equal(p.format,'wav');
+          assert.equal(d.transcript.write_vtt,true); assert.equal(p.transcript.write_vtt,true);
+          console.log('PASS exact one lesson dialogue + independent phone message. Two jobs only.');
+          NODE
+      - name: Generate L02 dialogue only
+        run: |
+          node src/cli.mjs --file lesson-production/englotti-l02/dialogue.json \
+            --job-id englotti-a1-u1-l02-dialogue-v01-20261017 \
+            --result dialogue-result.json --output-dir out-dialogue
+      - name: Generate L02 separate recorded fictional voicemail only
+        run: |
+          node src/cli.mjs --file lesson-production/englotti-l02/phone.json \
+            --job-id englotti-a1-u1-l02-phone-v01-20261017 \
+            --result phone-result.json --output-dir out-phone
+      - name: Save WAV word-transcripts VTT and job results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: englotti-u1-l02-two-real-recordings-20261017
+          path: |
+            dialogue-result.json
+            phone-result.json
+            out-dialogue/
+            out-phone/
+          retention-days: 3
+          if-no-files-found: ignore
+      - name: Summarize both independent recordings
+        if: always()
+        run: |
+          for result in dialogue-result.json phone-result.json; do
+            if [ -f "$result" ]; then
+              echo "## $result" >> "$GITHUB_STEP_SUMMARY"
+              cat "$result" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
