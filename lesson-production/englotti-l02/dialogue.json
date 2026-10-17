@@ -1,0 +1,69 @@
+{
+  "turns": [
+    {
+      "speaker": "Maya",
+      "text": "Here's your English class card, Leo.",
+      "style": "Natural friendly American English, clear A1 pace, she helps a classmate fill out a form; little pauses after questions."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Thanks! What do I write?",
+      "style": "Young adult friendly American English with clear A1 pace, sincere and conversational. Deliberate articulation of nineteen, not ninety; no dramatic voice."
+    },
+    {
+      "speaker": "Maya",
+      "text": "Your name and age. How old are you?",
+      "style": "Natural friendly American English, clear A1 pace, she helps a classmate fill out a form; little pauses after questions."
+    },
+    {
+      "speaker": "Leo",
+      "text": "I'm nineteen years old. What about you?",
+      "style": "Young adult friendly American English with clear A1 pace, sincere and conversational. Deliberate articulation of nineteen, not ninety; no dramatic voice."
+    },
+    {
+      "speaker": "Maya",
+      "text": "I'm twenty-one.",
+      "style": "Natural friendly American English, clear A1 pace, she helps a classmate fill out a form; little pauses after questions."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Nineteen goes here, right?",
+      "style": "Young adult friendly American English with clear A1 pace, sincere and conversational. Deliberate articulation of nineteen, not ninety; no dramatic voice."
+    },
+    {
+      "speaker": "Maya",
+      "text": "Yes. Write nineteen in this box.",
+      "style": "Natural friendly American English, clear A1 pace, she helps a classmate fill out a form; little pauses after questions."
+    },
+    {
+      "speaker": "Leo",
+      "text": "Great, thank you!",
+      "style": "Young adult friendly American English with clear A1 pace, sincere and conversational. Deliberate articulation of nineteen, not ninety; no dramatic voice."
+    }
+  ],
+  "speakers": {
+    "Maya": "Aoede",
+    "Leo": "Achird"
+  },
+  "routing": "explicit",
+  "model": "gemini-3.8-flash-tts",
+  "allow_model_fallback": false,
+  "format": "wav",
+  "sample_rate": 24000,
+  "temperature": 1,
+  "transcript": {
+    "language_codes": [
+      "en-US"
+    ],
+    "diarization": true,
+    "write_vtt": true
+  },
+  "metadata": {
+    "lessonId": "a1-u1-l02-age-review",
+    "sourceLessonId": "U1-L02",
+    "edition": "v01-first-preview",
+    "jobId": "englotti-a1-u1-l02-dialogue-v01-20261017",
+    "source": "english-course Draft PR #14 U1-L02 lesson-v01",
+    "scope": "preview-only-no-owner-source-relocation-no-release"
+  }
+}
