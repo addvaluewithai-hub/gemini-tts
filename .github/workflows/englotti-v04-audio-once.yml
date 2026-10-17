@@ -1,0 +1,92 @@
+name: One-shot EnglishLive U1-L01 v04 audio (evaluation ONLY)
+on:
+  push:
+    branches:
+      - experiment/englotti-v04-audio-20261017
+    paths:
+      - lesson-production/englotti-v04/START_ONCE.md
+
+permissions:
+  contents: read
+
+concurrency:
+  group: englotti-v04-audio-20261017-once
+  cancel-in-progress: false
+
+jobs:
+  generate-one-exact-job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+      GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+      GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      TTS_JOB_ID: englotti-a1-u1-l01-v04-preview-20261017-01
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install factory dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run existing factory regression tests
+        run: npm test
+      - name: Validate stored Gemini/Cloudinary configuration
+        run: node src/cli.mjs --check-config
+      - name: Verify exact v04 script, two original voices and no model fallback
+        run: |
+          node --input-type=module <<'NODE'
+          import {readFileSync} from 'node:fs';
+          import assert from 'node:assert/strict';
+          const r=JSON.parse(readFileSync('lesson-production/englotti-v04/request.json','utf8'));
+          const turns=[
+            ["Maya","Good morning! I'm Maya. What's your name?"],
+            ["Leo","Hi! My name is Leo."],
+            ["Maya","Nice to meet you, Leo. How are you?"],
+            ["Leo","Pretty good, thanks. I'm feeling excited about our English class. And you?"],
+            ["Maya","Really good, thank you. I'm excited, too."],
+            ["Leo","Great! Is this your first class?"],
+            ["Maya","Yes, it is. See you inside!"],
+            ["Leo","See you, Maya!"]
+          ];
+          assert.deepEqual(r.turns.map(x=>[x.speaker,x.text]),turns);
+          assert.deepEqual(r.speakers,{Maya:'Aoede',Leo:'Achird'});
+          assert.equal(r.routing,'explicit');
+          assert.equal(r.model,'gemini-3.8-flash-tts');
+          assert.equal(r.allow_model_fallback,false);
+          assert.equal(r.format,'wav');
+          assert.equal(r.sample_rate,24000);
+          assert.deepEqual(r.transcript,{language_codes:['en-US'],diarization:true,write_vtt:true});
+          assert.equal(r.metadata.jobId,process.env.TTS_JOB_ID);
+          assert.equal(r.metadata.lessonId,'a1-u1-l01-v04-review');
+          assert.equal(r.metadata.edition,'v04-preview01');
+          assert.equal(r.turns.length,8);
+          console.log('PASS exact v04 script, Aoede/Achird, one job, no model fallback');
+          NODE
+      - name: Generate ONE real v04 WAV plus Gemini word-transcript and VTT
+        run: |
+          node src/cli.mjs \
+            --file lesson-production/englotti-v04/request.json \
+            --job-id "$TTS_JOB_ID" \
+            --result result.json \
+            --output-dir out
+      - name: Save result and real-audio artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: englotti-v04-audio-20261017
+          path: |
+            result.json
+            out/
+          retention-days: 3
+          if-no-files-found: ignore
+      - name: Final summary
+        if: always()
+        run: |
+          if [ -f result.json ]; then
+            echo "## EnglishLive v04 audio (not yet manually auditioned)" >> "$GITHUB_STEP_SUMMARY"
+            cat result.json >> "$GITHUB_STEP_SUMMARY"
+          fi
