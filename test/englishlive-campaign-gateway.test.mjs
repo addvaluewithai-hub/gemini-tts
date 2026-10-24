@@ -13,7 +13,8 @@ const pilot=[
   "b1-explain-a-mix-up-cafe",
   "b1-explain-a-mix-up-room"
 ];
-const slugs=[...pilot,...Array.from({length:19},(_,i)=>"b1-test-"+String(i+1).padStart(2,"0"))];
+const slugs=[...pilot,"b1-keep-a-conversation-going-lunch",
+  ...Array.from({length:18},(_,i)=>"b1-test-"+String(i+1).padStart(2,"0"))];
 const sha=s=>createHash("sha256").update(s,"utf8").digest("hex");
 const words=t=>t.trim().split(/\s+/u).length;
 const plan={schemaVersion:1,command:"tts.issue.campaign",mode:"dry-run",
@@ -80,6 +81,16 @@ test("five original requests, no modifications, five dispatches maximum",async()
     assert.equal(dispatches[i].body.client_payload.job_id,items[i].id);
     assert.strictEqual(dispatches[i].body.client_payload.request,items[i].request);
   }
+});
+
+test("Nadia lunch dialogue has precisely the documented voice swap",async()=>{
+  const x=fixture();
+  const items=await compileEnglishliveCampaign({...plan,group:2},x.read);
+  const lunch=items.find(x=>x.lesson==="b1-keep-a-conversation-going-lunch");
+  assert.ok(lunch);
+  assert.deepEqual(lunch.request.speakers,{Partner:"Kore",Learner:"Puck"});
+  x.files[ROOT+"jobs/b1-keep-a-conversation-going-lunch.json"].request.speakers.Partner="Puck";
+  await assert.rejects(compileEnglishliveCampaign({...plan,group:2},x.read),/voice/);
 });
 
 test("group 5 has four jobs and no overlap with pilot",async()=>{
