@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb",
+  "status": "completed",
+  "created_at": "2026-10-24T19:36:00.912Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 2,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2763236,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792870559/gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870560/gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870560/gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 3,
+    "word_count": 161,
+    "duration_ms": 57300,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.json",
+    "local_vtt": "out/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792870559/gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.wav",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb",
+    "asset_id": "a5a00173b8d536fd93c1c3a900c43d5c",
+    "resource_type": "video",
+    "bytes": 2757198,
+    "format": "wav",
+    "duration": 57.44
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870560/gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.json",
+    "asset_id": "4479ba890d05bfbdc87fab2a5100b300",
+    "resource_type": "raw",
+    "bytes": 21167,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870560/gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.transcript.vtt",
+    "asset_id": "32359279b07431b0956ab9c9376b554e",
+    "resource_type": "raw",
+    "bytes": 1822,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 2,
+    "sha256": "f5d932eb42597fcc5754a7f12d5f08df010b3d26513c394d3a03b4a7377b13fe",
+    "slug": "b1-explain-a-mix-up-cafe"
+  }
+}
