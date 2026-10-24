@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-keep-a-conversation-going-lunch-r2-cb68c30a",
+  "job_id": "englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff",
   "lesson": {
     "slug": "b1-keep-a-conversation-going-lunch",
-    "revision": 2,
-    "sha256": "cb68c30ae742fa8f6c68ba2d230cab7fd6861c58636991779c3eb9284cf65a60",
-    "words": 193,
+    "revision": 3,
+    "sha256": "3b21dafff074c483fbbf401297482364328a39279b37e57aa6fe049f4a659774",
+    "words": 195,
     "turns": 13
   },
   "request": {
@@ -12,72 +12,72 @@
       {
         "speaker": "Partner",
         "text": "Hi! Can I sit here? I'm Nadia. I started in marketing last week.",
-        "style": "bright, curious and friendly"
+        "style": "Nadia, a bright, friendly new colleague, a little shy at first. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Of course, please sit down. Nice to meet you. How's your first week going?",
-        "style": "interested, relaxed and upbeat"
+        "style": "relaxed, friendly and interested. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Busy, but everyone's friendly. Did you do anything nice at the weekend?",
-        "style": "bright, curious and friendly"
+        "text": "Busy, but everyone's friendly. Did you do anything nice on the weekend?",
+        "style": "Nadia, a bright, friendly new colleague, a little shy at first. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "Nothing special. I watched a football match with my brother on Saturday, and on Sunday I just relaxed at home. What about you?",
-        "style": "interested, relaxed and upbeat"
+        "text": "Nothing special. I watched a soccer game with my brother on Saturday, and on Sunday I just relaxed at home. What about you?",
+        "style": "relaxed, friendly and interested. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I went hiking in the mountains with some friends. My legs still hurt!",
-        "style": "bright, curious and friendly"
+        "style": "Nadia, a bright, friendly new colleague, a little shy at first. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That sounds great, but climbing a mountain is a bit too much for me! I prefer the beach, because I can swim and relax.",
-        "style": "interested, relaxed and upbeat"
+        "style": "relaxed, friendly and interested. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Ha, fair enough. Where do you usually go?",
-        "style": "bright, curious and friendly"
+        "style": "Nadia, a bright, friendly new colleague, a little shy at first. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Usually to the north coast in the summer. The water is really clear there. Have you been to the coast yet?",
-        "style": "interested, relaxed and upbeat"
+        "style": "relaxed, friendly and interested. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Not yet. I've only been here for two months.",
-        "style": "bright, curious and friendly"
+        "text": "Not yet. I only moved to the city two months ago.",
+        "style": "Nadia, a bright, friendly new colleague, a little shy at first. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Oh, you should go in June, before it gets busy. And by the way, what do you do in marketing exactly?",
-        "style": "interested, relaxed and upbeat"
+        "style": "relaxed, friendly and interested. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Mostly social media for our products. I really enjoy it.",
-        "style": "bright, curious and friendly"
+        "style": "Nadia, a bright, friendly new colleague, a little shy at first. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That sounds interesting. Oh, it's almost two. I should get back to work, but it was nice to meet you.",
-        "style": "interested, relaxed and upbeat"
+        "style": "relaxed, friendly and interested. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "You too. See you later!",
-        "style": "bright, curious and friendly"
+        "style": "Nadia, a bright, friendly new colleague, a little shy at first. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Kore",
-      "Learner": "Puck"
+      "Partner": "Autonoe",
+      "Learner": "Iapetus"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -95,8 +95,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-keep-a-conversation-going-lunch",
-      "revision": 2,
-      "sha256": "cb68c30ae742fa8f6c68ba2d230cab7fd6861c58636991779c3eb9284cf65a60"
+      "revision": 3,
+      "sha256": "3b21dafff074c483fbbf401297482364328a39279b37e57aa6fe049f4a659774"
     }
   }
 }

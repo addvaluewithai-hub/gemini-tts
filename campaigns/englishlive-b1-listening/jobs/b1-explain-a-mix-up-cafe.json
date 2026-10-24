@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb",
+  "job_id": "englishlive-b1-explain-a-mix-up-cafe-r3-fccf4a41",
   "lesson": {
     "slug": "b1-explain-a-mix-up-cafe",
-    "revision": 2,
-    "sha256": "f5d932eb42597fcc5754a7f12d5f08df010b3d26513c394d3a03b4a7377b13fe",
-    "words": 165,
+    "revision": 3,
+    "sha256": "fccf4a41d6ec7bc87d0a3c6ce5238fa114226133d8b0cb7f5245bf5463eb4a28",
+    "words": 166,
     "turns": 11
   },
   "request": {
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Hi! Where are you? I've been at the Museum Café for fifteen minutes.",
-        "style": "bright, curious and friendly"
+        "style": "casual friend, confused at first, then apologetic and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Hi! I'm at the Library Café. I think we've mixed something up.",
-        "style": "interested, relaxed and upbeat"
+        "style": "friendly and calm, sure about the message, practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Really? I was sure you said the museum. We met there last week.",
-        "style": "bright, curious and friendly"
+        "style": "casual friend, confused at first, then apologetic and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "We were supposed to meet at the Library Café. My message said \"Library Café at six\". It's the one next to the City Library.",
-        "style": "interested, relaxed and upbeat"
+        "style": "friendly and calm, sure about the message, practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Oh, you're right. I can see it now. Sorry! So what should we do? The film starts at seven thirty.",
-        "style": "bright, curious and friendly"
+        "text": "Oh, you're right. I can see it now. Sorry! So what should we do? The movie starts at seven thirty.",
+        "style": "casual friend, confused at first, then apologetic and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "The cafés are about twenty minutes apart. How far is the cinema from you?",
-        "style": "interested, relaxed and upbeat"
+        "text": "The cafés are about twenty minutes apart. How far is the movie theater from you?",
+        "style": "friendly and calm, sure about the message, practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "It's only ten minutes from here. From the library it's about fifteen.",
-        "style": "bright, curious and friendly"
+        "style": "casual friend, confused at first, then apologetic and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Then I could walk to you now. I'd be there at about six thirty-five, so we'd still have time for a coffee.",
-        "style": "interested, relaxed and upbeat"
+        "style": "friendly and calm, sure about the message, practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That makes sense. I'll order for you. What would you like?",
-        "style": "bright, curious and friendly"
+        "style": "casual friend, confused at first, then apologetic and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "A cappuccino, please. So, the Museum Café at about six thirty-five, then the cinema at seven thirty.",
-        "style": "interested, relaxed and upbeat"
+        "text": "A cappuccino, please. So, the Museum Café at about six thirty-five, then the movie at seven thirty.",
+        "style": "friendly and calm, sure about the message, practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Perfect. See you soon. And sorry again!",
-        "style": "bright, curious and friendly"
+        "style": "casual friend, confused at first, then apologetic and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Zubenelgenubi",
+      "Learner": "Iapetus"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,8 +85,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-explain-a-mix-up-cafe",
-      "revision": 2,
-      "sha256": "f5d932eb42597fcc5754a7f12d5f08df010b3d26513c394d3a03b4a7377b13fe"
+      "revision": 3,
+      "sha256": "fccf4a41d6ec7bc87d0a3c6ce5238fa114226133d8b0cb7f5245bf5463eb4a28"
     }
   }
 }

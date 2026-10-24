@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-explain-a-mix-up-room-r2-91c3bcba",
+  "job_id": "englishlive-b1-explain-a-mix-up-room-r3-80887ebb",
   "lesson": {
     "slug": "b1-explain-a-mix-up-room",
-    "revision": 2,
-    "sha256": "91c3bcba41a149664e4e0a3646fc7a7013111f1b97f118deff67765d892d573f",
+    "revision": 3,
+    "sha256": "80887ebbfbca43e85ad139bbf46f1da857af9eb0d0612747fa4231b3db34b115",
     "words": 120,
     "turns": 11
   },
@@ -11,63 +11,63 @@
     "turns": [
       {
         "speaker": "Partner",
-        "text": "Hey, where are you? We're all in Room 30 and we're about to start.",
-        "style": "welcoming, helpful and natural"
+        "text": "Hey, where are you? We're all in Room thirty, and we're about to start.",
+        "style": "lively classmate in a hurry, then apologetic and friendly. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Learner",
         "text": "Room thirty? But I'm in Room thirteen, and it's empty.",
-        "style": "polite, curious and natural"
+        "style": "surprised, then calm and practical. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Partner",
         "text": "Thirteen? Why are you there?",
-        "style": "welcoming, helpful and natural"
+        "style": "lively classmate in a hurry, then apologetic and friendly. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Learner",
         "text": "I thought you said thirteen in your voice message.",
-        "style": "polite, curious and natural"
+        "style": "surprised, then calm and practical. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Partner",
         "text": "Oh no! I said thirty. Sorry, maybe it wasn't very clear.",
-        "style": "welcoming, helpful and natural"
+        "style": "lively classmate in a hurry, then apologetic and friendly. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Learner",
         "text": "It's okay, it was my mistake. So Room thirty is on the third floor, right?",
-        "style": "polite, curious and natural"
+        "style": "surprised, then calm and practical. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Partner",
         "text": "Yes, third floor. If you like, you can join by video call from there.",
-        "style": "welcoming, helpful and natural"
+        "style": "lively classmate in a hurry, then apologetic and friendly. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Learner",
         "text": "I have the printed copies for everyone, so I should come up. It's only about five minutes.",
-        "style": "polite, curious and natural"
+        "style": "surprised, then calm and practical. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Partner",
         "text": "Great, that makes sense. We'll start with the slides, then.",
-        "style": "welcoming, helpful and natural"
+        "style": "lively classmate in a hurry, then apologetic and friendly. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Learner",
         "text": "Okay. Room thirty, third floor. I'm on my way.",
-        "style": "polite, curious and natural"
+        "style": "surprised, then calm and practical. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       },
       {
         "speaker": "Partner",
         "text": "Perfect. See you in a minute.",
-        "style": "welcoming, helpful and natural"
+        "style": "lively classmate in a hurry, then apologetic and friendly. American English accent. Clear, natural pace for B1 English learners, not rushed. Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Sadachbia",
+      "Learner": "Leda"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,8 +85,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-explain-a-mix-up-room",
-      "revision": 2,
-      "sha256": "91c3bcba41a149664e4e0a3646fc7a7013111f1b97f118deff67765d892d573f"
+      "revision": 3,
+      "sha256": "80887ebbfbca43e85ad139bbf46f1da857af9eb0d0612747fa4231b3db34b115"
     }
   }
 }

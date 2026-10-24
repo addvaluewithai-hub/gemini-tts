@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-explain-a-mix-up-salon-r2-9f061c3f",
+  "job_id": "englishlive-b1-explain-a-mix-up-salon-r3-b3ec42c8",
   "lesson": {
     "slug": "b1-explain-a-mix-up-salon",
-    "revision": 2,
-    "sha256": "9f061c3f9af62c3f8ded5314bce7e5aafd6ab06f36084dfc8478f5f71a6891a3",
+    "revision": 3,
+    "sha256": "b3ec42c8687dc9de87cfc08f233a6a75bf4cb6ef336599e93f628d8df894de5f",
     "words": 161,
     "turns": 11
   },
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Good morning. How can I help?",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite salon receptionist, apologetic about the mistake, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Hi. I have an appointment for a haircut at ten. My name's Alex.",
-        "style": "polite, concerned but composed"
+        "style": "surprised, a little worried about the time, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Let me check. I have you here for Wednesday at ten, not today.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite salon receptionist, apologetic about the mistake, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Wednesday? Are you sure? I booked it on the phone on Monday, and the text message says Tuesday at ten.",
-        "style": "polite, concerned but composed"
+        "style": "surprised, a little worried about the time, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Oh, I see. I'm sorry, it looks like we typed the wrong day.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite salon receptionist, apologetic about the mistake, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That's okay, but I really need it today. I have to be at work at twelve. Is anyone free this morning?",
-        "style": "polite, concerned but composed"
+        "style": "surprised, a little worried about the time, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "A stylist is free at ten forty. It takes about forty-five minutes. Or there's another free appointment at one thirty.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite salon receptionist, apologetic about the mistake, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "One thirty doesn't work, because I'll be at work. If I start at ten forty, I'll finish at about eleven thirty, right?",
-        "style": "polite, concerned but composed"
+        "style": "surprised, a little worried about the time, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Yes, at about eleven twenty-five.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite salon receptionist, apologetic about the mistake, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "Great, I'll wait. Could you also cancel the Wednesday booking, please?",
-        "style": "polite, concerned but composed"
+        "text": "Great, I'll wait. Could you also cancel the Wednesday appointment, please?",
+        "style": "surprised, a little worried about the time, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Of course. Ten forty today, and Wednesday is cancelled. Would you like a coffee while you wait?",
-        "style": "attentive, sympathetic and reassuring"
+        "text": "Of course. Ten forty today, and Wednesday is canceled. Would you like a coffee while you wait?",
+        "style": "polite salon receptionist, apologetic about the mistake, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Achird",
+      "Learner": "Erinome"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,8 +85,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-explain-a-mix-up-salon",
-      "revision": 2,
-      "sha256": "9f061c3f9af62c3f8ded5314bce7e5aafd6ab06f36084dfc8478f5f71a6891a3"
+      "revision": 3,
+      "sha256": "b3ec42c8687dc9de87cfc08f233a6a75bf4cb6ef336599e93f628d8df894de5f"
     }
   }
 }

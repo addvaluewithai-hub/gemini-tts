@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-explain-a-travel-problem-metro-r2-651a5b20",
+  "job_id": "englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f",
   "lesson": {
     "slug": "b1-explain-a-travel-problem-metro",
-    "revision": 2,
-    "sha256": "651a5b20d96ef1ed80c85d66ab55f7ce395e71da5a4b0b0ea49cbfe0a39bf7b1",
-    "words": 156,
+    "revision": 3,
+    "sha256": "6a9be06f32c45e1b601d6129e7e30d5958fee4c5aa12e457a3595991dc25791e",
+    "words": 155,
     "turns": 11
   },
   "request": {
@@ -12,61 +12,61 @@
       {
         "speaker": "Partner",
         "text": "Hi there. Can I help?",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, reassuring information desk worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Yes, please. I was going to take the metro to Central Square, but the gates are closed. What's happening?",
-        "style": "polite, curious and natural"
+        "style": "worried and in a hurry because of a job interview, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I'm afraid the green line is closed this morning for repairs. When do you need to be there?",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, reassuring information desk worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "At ten. I have a job interview, and I really don't want to be late.",
-        "style": "polite, curious and natural"
+        "style": "worried and in a hurry because of a job interview, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Okay. There's a free shuttle bus every ten minutes. It takes about twenty-five minutes. Or you can take a taxi. That's about fifteen minutes and costs around fifteen dollars.",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, reassuring information desk worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "If I take the shuttle, will I get there before ten?",
-        "style": "polite, curious and natural"
+        "style": "worried and in a hurry because of a job interview, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Yes. The next one leaves in five minutes, so you should arrive at about ten to ten.",
-        "style": "welcoming, helpful and natural"
+        "text": "Yes. The next one leaves in five minutes, so you should arrive at about nine fifty.",
+        "style": "calm, reassuring information desk worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That's fine, and it's free. I'll take the shuttle. Where do I catch it?",
-        "style": "polite, curious and natural"
+        "style": "worried and in a hurry because of a job interview, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Right outside this exit, next to the flower shop.",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, reassuring information desk worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Perfect. Outside this exit, next to the flower shop. Thanks a lot!",
-        "style": "polite, curious and natural"
+        "style": "worried and in a hurry because of a job interview, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "You're welcome. Good luck with your interview!",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, reassuring information desk worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
+      "Partner": "Sadaltager",
       "Learner": "Kore"
     },
     "routing": "explicit",
@@ -85,8 +85,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-explain-a-travel-problem-metro",
-      "revision": 2,
-      "sha256": "651a5b20d96ef1ed80c85d66ab55f7ce395e71da5a4b0b0ea49cbfe0a39bf7b1"
+      "revision": 3,
+      "sha256": "6a9be06f32c45e1b601d6129e7e30d5958fee4c5aa12e457a3595991dc25791e"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-recurring-problem-internet-r2-23708220",
+  "job_id": "englishlive-b1-recurring-problem-internet-r3-8fa90169",
   "lesson": {
     "slug": "b1-recurring-problem-internet",
-    "revision": 2,
-    "sha256": "2370822078bb5a383e54cd2dff47d3ef47f5db50c0bd0e2a8d2443a0e0b5654b",
+    "revision": 3,
+    "sha256": "8fa9016987695c514dc3766b38de34b0b07f4255ced70c46f2de69dff36d7e35",
     "words": 203,
     "turns": 12
   },
@@ -12,67 +12,67 @@
       {
         "speaker": "Partner",
         "text": "Good morning, customer service. How can I help you?",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, professional customer service agent, sympathetic. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Hi. I'm calling about my internet again. It keeps stopping every evening.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, firm, wants it fixed soon. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I'm sorry to hear that. When did it start?",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, professional customer service agent, sympathetic. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "About a week ago. It stops at around eight and comes back at about ten. A technician came last Tuesday and reset the router, but it's happened every night since then.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, firm, wants it fixed soon. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I see. Is it causing you a lot of problems?",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, professional customer service agent, sympathetic. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Yes, it's a real problem, because I have online classes in the evening. I've missed two classes this week.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, firm, wants it fixed soon. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "I understand. I can send a technician on Thursday between nine and twelve. Or, because you need it for your classes, we can send you a new router by courier tomorrow.",
-        "style": "welcoming, helpful and natural"
+        "text": "I understand. I can send a technician on Thursday between nine and twelve. Or, because you need it for your classes, we can send you a new router tomorrow.",
+        "style": "calm, professional customer service agent, sympathetic. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Is the new router easy to set up? I'd like to fix this as soon as possible.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, firm, wants it fixed soon. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Yes, it takes about ten minutes. You just follow the card in the box.",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, professional customer service agent, sympathetic. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Then please send the new router tomorrow. And if it still doesn't work, can the technician come on Thursday?",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, firm, wants it fixed soon. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Of course. I'll book Thursday too, and you can cancel it if everything's fine.",
-        "style": "welcoming, helpful and natural"
+        "style": "calm, professional customer service agent, sympathetic. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "Great. So a new router tomorrow, and a technician on Thursday between nine and twelve, just in case.",
-        "style": "polite, curious and natural"
+        "text": "Great. So a new router tomorrow, and a technician on Thursday between nine and twelve, just in case. Thanks, bye.",
+        "style": "frustrated but polite, firm, wants it fixed soon. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Rasalgethi",
+      "Learner": "Pulcherrima"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -90,8 +90,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-recurring-problem-internet",
-      "revision": 2,
-      "sha256": "2370822078bb5a383e54cd2dff47d3ef47f5db50c0bd0e2a8d2443a0e0b5654b"
+      "revision": 3,
+      "sha256": "8fa9016987695c514dc3766b38de34b0b07f4255ced70c46f2de69dff36d7e35"
     }
   }
 }

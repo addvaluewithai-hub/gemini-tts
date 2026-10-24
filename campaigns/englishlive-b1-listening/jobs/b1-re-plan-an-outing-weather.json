@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-re-plan-an-outing-weather-r2-32e0636e",
+  "job_id": "englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5",
   "lesson": {
     "slug": "b1-re-plan-an-outing-weather",
-    "revision": 2,
-    "sha256": "32e0636eaffeb67f1744e07c15b33feb6bcb33c4888c992f0b898b59cbe62a8f",
-    "words": 202,
+    "revision": 3,
+    "sha256": "e421cfd572a6201faeeb563ce84834f4ff12cd589a27377c7efa5e2f87092978",
+    "words": 204,
     "turns": 13
   },
   "request": {
@@ -12,72 +12,72 @@
       {
         "speaker": "Partner",
         "text": "Hi! Are you ready for Saturday? I've already bought snacks for the beach!",
-        "style": "welcoming, helpful and natural"
+        "style": "Omar, excited at first, then disappointed, then easy-going. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Hi, Omar. Actually, I've just heard the weather forecast. It says there'll be strong wind and rain on Saturday.",
-        "style": "polite, curious and natural"
+        "style": "friendly and positive, gently persuasive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Oh no, really? So the beach isn't a good idea.",
-        "style": "welcoming, helpful and natural"
+        "style": "Omar, excited at first, then disappointed, then easy-going. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "No, not on Saturday. Sunday will be sunny, but you work until three, don't you?",
-        "style": "polite, curious and natural"
+        "style": "friendly and positive, gently persuasive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Yes. If we leave at three thirty, we'll get there at five. It gets dark at six.",
-        "style": "welcoming, helpful and natural"
+        "style": "Omar, excited at first, then disappointed, then easy-going. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That's too short. What do you think about going next Saturday instead? The forecast says it'll be sunny.",
-        "style": "polite, curious and natural"
+        "style": "friendly and positive, gently persuasive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Good idea. But what do we do this Saturday? I don't want to stay at home all day.",
-        "style": "welcoming, helpful and natural"
+        "style": "Omar, excited at first, then disappointed, then easy-going. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "How about the new science museum in the morning, and then lunch at the fish restaurant near the river? It's indoors, so the rain won't matter.",
-        "style": "polite, curious and natural"
+        "text": "How about the new science museum at ten in the morning, and then lunch at the fish restaurant near the river? It's indoors, so the rain won't matter.",
+        "style": "friendly and positive, gently persuasive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Hmm, museums aren't really my thing. What about the cinema?",
-        "style": "welcoming, helpful and natural"
+        "text": "Hmm, museums aren't really my thing. What about a movie?",
+        "style": "Omar, excited at first, then disappointed, then easy-going. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "I'd prefer the museum. It has interactive rooms, so it isn't boring. But we could see a film in the evening too.",
-        "style": "polite, curious and natural"
+        "text": "I'd prefer the museum. It has interactive rooms, so it isn't boring. But we could see a movie in the evening too.",
+        "style": "friendly and positive, gently persuasive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Okay, that works for me.",
-        "style": "welcoming, helpful and natural"
+        "style": "Omar, excited at first, then disappointed, then easy-going. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "Great. So this Saturday, the museum at ten, then lunch, and a film in the evening. And the beach next Saturday.",
-        "style": "polite, curious and natural"
+        "text": "Great. So this Saturday, the museum at ten, then lunch, and a movie in the evening. And the beach next Saturday.",
+        "style": "friendly and positive, gently persuasive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Perfect. I'll keep the snacks for next week!",
-        "style": "welcoming, helpful and natural"
+        "style": "Omar, excited at first, then disappointed, then easy-going. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Fenrir",
+      "Learner": "Charon"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -95,8 +95,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-re-plan-an-outing-weather",
-      "revision": 2,
-      "sha256": "32e0636eaffeb67f1744e07c15b33feb6bcb33c4888c992f0b898b59cbe62a8f"
+      "revision": 3,
+      "sha256": "e421cfd572a6201faeeb563ce84834f4ff12cd589a27377c7efa5e2f87092978"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
-  "job_id": "englishlive-b1-resolve-wrong-order-restaurant-r10-f2f4aa7b",
+  "job_id": "englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b",
   "lesson": {
     "slug": "b1-resolve-wrong-order-restaurant",
-    "revision": 10,
+    "revision": 11,
     "sha256": "f2f4aa7b04da50b5c11432d8bc029dd6188c3f27c0e47707ecd6cbac73b013ce",
     "words": 165,
     "turns": 11
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Hi. Is everything all right with your meal?",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "attentive, apologetic waiter, calm and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Not really. I ordered the vegetable pasta, but this has chicken in it.",
-        "style": "polite, concerned but composed"
+        "style": "polite but firm about being vegetarian, watching the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Oh, I'm really sorry. The kitchen mixed up two orders. The soup of the day is ready now, if you'd like that instead. It's chicken soup.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "attentive, apologetic waiter, calm and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Thanks, but I'm vegetarian. I don't eat meat or chicken. And my lunch break ends in thirty minutes.",
-        "style": "polite, concerned but composed"
+        "style": "polite but firm about being vegetarian, watching the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I see. The kitchen can make a new vegetable pasta in about fifteen minutes. Or there's a vegetable salad with bread ready now. It's seven dollars, so I'd give you two dollars back.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "attentive, apologetic waiter, calm and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Is the salad big enough for lunch?",
-        "style": "polite, concerned but composed"
+        "style": "polite but firm about being vegetarian, watching the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "It's quite big, and it comes with bread. But the pasta is a bigger meal.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "attentive, apologetic waiter, calm and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "My office is only five minutes away, so I can wait. I'll have the new pasta, please.",
-        "style": "polite, concerned but composed"
+        "style": "polite but firm about being vegetarian, watching the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "No problem. A new vegetable pasta, no meat, in about fifteen minutes.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "attentive, apologetic waiter, calm and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Great. Please make sure there's no chicken this time.",
-        "style": "polite, concerned but composed"
+        "style": "polite but firm about being vegetarian, watching the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Of course. It's completely vegetarian. Sorry again.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "attentive, apologetic waiter, calm and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Algieba",
+      "Learner": "Aoede"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,7 +85,7 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-resolve-wrong-order-restaurant",
-      "revision": 10,
+      "revision": 11,
       "sha256": "f2f4aa7b04da50b5c11432d8bc029dd6188c3f27c0e47707ecd6cbac73b013ce"
     }
   }

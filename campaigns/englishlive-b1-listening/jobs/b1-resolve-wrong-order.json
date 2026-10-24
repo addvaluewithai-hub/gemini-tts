@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-resolve-wrong-order-r10-3bb29b44",
+  "job_id": "englishlive-b1-resolve-wrong-order-r11-6d2035d3",
   "lesson": {
     "slug": "b1-resolve-wrong-order",
-    "revision": 10,
-    "sha256": "3bb29b443735c57c7230b015d596f2135980803b7b93090a8c9cf0ba974164f6",
-    "words": 111,
+    "revision": 11,
+    "sha256": "6d2035d3a07942c500545cadcc7d54db1ef017186331fdfe335a70b3b42d1624",
+    "words": 116,
     "turns": 9
   },
   "request": {
@@ -12,51 +12,51 @@
       {
         "speaker": "Partner",
         "text": "Hi. Is everything okay with your drink?",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite, apologetic café worker, quick and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "I ordered a hot coffee, but this is cold tea.",
-        "style": "polite, concerned but composed"
+        "style": "polite but in a hurry, a little impatient about the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I'm sorry about that. I can make your coffee again, but it will take ten minutes.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite, apologetic café worker, quick and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "I need to leave in five minutes. Is there something quicker?",
-        "style": "polite, concerned but composed"
+        "style": "polite but in a hurry, a little impatient about the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "I can make you a medium one right now and give you a dollar back, or I can give you a full refund.",
-        "style": "attentive, sympathetic and reassuring"
+        "text": "The machine is busy, but I have filter coffee ready now in a medium cup. I can give you that and a dollar back, or a full refund.",
+        "style": "polite, apologetic café worker, quick and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Can I have the medium with milk and no sugar?",
-        "style": "polite, concerned but composed"
+        "style": "polite but in a hurry, a little impatient about the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Yes, of course. Would that work for you?",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite, apologetic café worker, quick and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Yes, I'll take that, please. I still want a coffee before I go.",
-        "style": "polite, concerned but composed"
+        "style": "polite but in a hurry, a little impatient about the time. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Medium coffee with milk, no sugar, and one dollar back. Sorry about that.",
-        "style": "attentive, sympathetic and reassuring"
+        "style": "polite, apologetic café worker, quick and helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
+      "Partner": "Schedar",
       "Learner": "Kore"
     },
     "routing": "explicit",
@@ -75,8 +75,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-resolve-wrong-order",
-      "revision": 10,
-      "sha256": "3bb29b443735c57c7230b015d596f2135980803b7b93090a8c9cf0ba974164f6"
+      "revision": 11,
+      "sha256": "6d2035d3a07942c500545cadcc7d54db1ef017186331fdfe335a70b3b42d1624"
     }
   }
 }

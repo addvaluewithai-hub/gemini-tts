@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-change-a-hotel-booking-dates-r2-d6498b15",
+  "job_id": "englishlive-b1-change-a-hotel-booking-dates-r3-d62929d5",
   "lesson": {
     "slug": "b1-change-a-hotel-booking-dates",
-    "revision": 2,
-    "sha256": "d6498b157c83ce4c74c8f0e08327951b01ac8fc0f17853f4e142efc741e49010",
-    "words": 167,
+    "revision": 3,
+    "sha256": "d62929d5d30a47fa358d1bfe79315f87b4ffe50f64faf6095b1291fc359341d5",
+    "words": 170,
     "turns": 11
   },
   "request": {
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Hello, Sea View Hotel. How can I help?",
-        "style": "welcoming, helpful and natural"
+        "style": "warm, professional hotel receptionist, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "Hi. I have a booking for next Tuesday and Wednesday, under the name Sam. Could I possibly change the dates? My work trip has moved one day later.",
-        "style": "polite, curious and natural"
+        "text": "Hi. I have a reservation for next Tuesday and Wednesday, under the name Sam. Could I possibly change the dates? My work trip has moved one day later.",
+        "style": "polite and practical, a little worried about the desk, pleased at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Of course. So you'd like Wednesday and Thursday instead?",
-        "style": "welcoming, helpful and natural"
+        "style": "warm, professional hotel receptionist, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Yes, that's right. And I need a desk, because I'll be working in my room.",
-        "style": "polite, curious and natural"
+        "style": "polite and practical, a little worried about the desk, pleased at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Your room is free on Wednesday, but not on Thursday. On Thursday I have a smaller room for sixty dollars, but it doesn't have a desk.",
-        "style": "welcoming, helpful and natural"
+        "style": "warm, professional hotel receptionist, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Thank you, but I really need a desk. Without one, I can't work. Is there another room with a desk?",
-        "style": "polite, curious and natural"
+        "style": "polite and practical, a little worried about the desk, pleased at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "There's a larger room with a desk for ninety dollars, so twenty more.",
-        "style": "welcoming, helpful and natural"
+        "text": "There's a larger room with a desk for ninety dollars. That's twenty more than your room.",
+        "style": "warm, professional hotel receptionist, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "It's only for one night, so that's fine. I'll take the larger room on Thursday.",
-        "style": "polite, curious and natural"
+        "style": "polite and practical, a little worried about the desk, pleased at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Okay. Your room on Wednesday for seventy, and the larger room on Thursday for ninety.",
-        "style": "welcoming, helpful and natural"
+        "style": "warm, professional hotel receptionist, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Great. And there's no charge for changing the dates, right?",
-        "style": "polite, curious and natural"
+        "style": "polite and practical, a little worried about the desk, pleased at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "No charge at all. See you on Wednesday!",
-        "style": "welcoming, helpful and natural"
+        "style": "warm, professional hotel receptionist, helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Charon",
+      "Learner": "Aoede"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,8 +85,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-change-a-hotel-booking-dates",
-      "revision": 2,
-      "sha256": "d6498b157c83ce4c74c8f0e08327951b01ac8fc0f17853f4e142efc741e49010"
+      "revision": 3,
+      "sha256": "d62929d5d30a47fa358d1bfe79315f87b4ffe50f64faf6095b1291fc359341d5"
     }
   }
 }

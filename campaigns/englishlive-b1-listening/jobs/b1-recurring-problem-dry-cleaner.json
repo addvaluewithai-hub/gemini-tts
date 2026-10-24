@@ -1,8 +1,8 @@
 {
-  "job_id": "englishlive-b1-recurring-problem-dry-cleaner-r2-19b7c9fd",
+  "job_id": "englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd",
   "lesson": {
     "slug": "b1-recurring-problem-dry-cleaner",
-    "revision": 2,
+    "revision": 3,
     "sha256": "19b7c9fd9a4aae89ea4956fb6091a8333e606e047259f1557c3ba91a14b09c00",
     "words": 178,
     "turns": 11
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Hi. Can I help you?",
-        "style": "welcoming, helpful and natural"
+        "style": "apologetic, helpful dry cleaner worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Hi. I picked up this shirt yesterday, and there's still a stain on it. It's the second time this has happened.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, clear and firm about the interview. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Oh, I'm sorry. Yes, I can see it. When was the first time?",
-        "style": "welcoming, helpful and natural"
+        "style": "apologetic, helpful dry cleaner worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Two weeks ago, with my white shirt. You cleaned it again and it was fine, but now it's happened again with this one.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, clear and firm about the interview. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I'm really sorry. We can clean it again for free. It will be ready tomorrow at five.",
-        "style": "welcoming, helpful and natural"
+        "style": "apologetic, helpful dry cleaner worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "The problem is, I need it for a job interview tomorrow morning at nine. Tomorrow at five is too late.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, clear and firm about the interview. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I see. In that case, we can do an express clean. It can be ready today at six, or tomorrow at eight in the morning. Both are free.",
-        "style": "welcoming, helpful and natural"
+        "style": "apologetic, helpful dry cleaner worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Eight is too close to my interview, so I'll come back today at six. Could you check it carefully this time, please?",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, clear and firm about the interview. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Of course. I'll check it myself before you come.",
-        "style": "welcoming, helpful and natural"
+        "style": "apologetic, helpful dry cleaner worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Thank you. So it'll be ready today at six, and there's no charge.",
-        "style": "polite, curious and natural"
+        "style": "frustrated but polite, clear and firm about the interview. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That's right. Good luck with your interview!",
-        "style": "welcoming, helpful and natural"
+        "style": "apologetic, helpful dry cleaner worker. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Orus",
+      "Learner": "Callirrhoe"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,7 +85,7 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-recurring-problem-dry-cleaner",
-      "revision": 2,
+      "revision": 3,
       "sha256": "19b7c9fd9a4aae89ea4956fb6091a8333e606e047259f1557c3ba91a14b09c00"
     }
   }

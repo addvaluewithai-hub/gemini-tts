@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r2-87ebe420",
+  "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c",
   "lesson": {
     "slug": "b1-change-a-hotel-booking-extra-night",
-    "revision": 2,
-    "sha256": "87ebe42096091313e509fbd2ec9299209c307f820f8bbf7bed697c7585975697",
+    "revision": 3,
+    "sha256": "82f52e3cc3704eb2ac31bb237dbec1488a6753b71220373c58bb481ea6a1bffb",
     "words": 166,
     "turns": 11
   },
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Reception, good afternoon. How can I help you?",
-        "style": "welcoming, helpful and natural"
+        "style": "friendly, professional receptionist, sorry about the full room, then helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Hi. I'm staying in a standard room until Sunday. My name's Sam.",
-        "style": "polite, curious and natural"
+        "style": "polite, a little stressed about the changed flight, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Yes, I have your booking here. What can I do for you?",
-        "style": "welcoming, helpful and natural"
+        "text": "Yes, I have your reservation here. What can I do for you?",
+        "style": "friendly, professional receptionist, sorry about the full room, then helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "My flight has been changed to Monday morning, so I'd like to stay one more night, on Sunday. Is that possible?",
-        "style": "polite, curious and natural"
+        "style": "polite, a little stressed about the changed flight, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I'm sorry, your room is booked on Sunday night. But our sister hotel is a ten-minute walk away, and it has a room for seventy-five dollars.",
-        "style": "welcoming, helpful and natural"
+        "style": "friendly, professional receptionist, sorry about the full room, then helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Thanks, but I'd rather not move to another hotel with all my bags. Is there anything here instead?",
-        "style": "polite, curious and natural"
+        "style": "polite, a little stressed about the changed flight, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "We have a superior room for Sunday night. It's a hundred dollars, so twenty more than your room.",
-        "style": "welcoming, helpful and natural"
+        "style": "friendly, professional receptionist, sorry about the full room, then helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That's okay. Would I need to move my things myself?",
-        "style": "polite, curious and natural"
+        "style": "polite, a little stressed about the changed flight, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "No, housekeeping can move your bags on Sunday morning while you're out.",
-        "style": "welcoming, helpful and natural"
+        "style": "friendly, professional receptionist, sorry about the full room, then helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Perfect. So, the superior room on Sunday night for a hundred dollars, and you'll move my bags.",
-        "style": "polite, curious and natural"
+        "style": "polite, a little stressed about the changed flight, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "That's right. I've added Sunday to your booking. Have a nice day!",
-        "style": "welcoming, helpful and natural"
+        "text": "That's right. I've added Sunday to your reservation. Have a nice day!",
+        "style": "friendly, professional receptionist, sorry about the full room, then helpful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Rasalgethi",
+      "Learner": "Erinome"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,8 +85,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-change-a-hotel-booking-extra-night",
-      "revision": 2,
-      "sha256": "87ebe42096091313e509fbd2ec9299209c307f820f8bbf7bed697c7585975697"
+      "revision": 3,
+      "sha256": "82f52e3cc3704eb2ac31bb237dbec1488a6753b71220373c58bb481ea6a1bffb"
     }
   }
 }

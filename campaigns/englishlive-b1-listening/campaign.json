@@ -6,266 +6,266 @@
   "jobs": [
     {
       "slug": "b1-change-a-hotel-booking-dates",
-      "job_id": "englishlive-b1-change-a-hotel-booking-dates-r2-d6498b15",
+      "job_id": "englishlive-b1-change-a-hotel-booking-dates-r3-d62929d5",
       "path": "jobs/b1-change-a-hotel-booking-dates.json",
-      "words": 167,
-      "sha256": "d6498b157c83ce4c74c8f0e08327951b01ac8fc0f17853f4e142efc741e49010",
+      "words": 170,
+      "sha256": "d62929d5d30a47fa358d1bfe79315f87b4ffe50f64faf6095b1291fc359341d5",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Charon",
+        "Learner": "Aoede"
       }
     },
     {
       "slug": "b1-change-a-hotel-booking-extra-night",
-      "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r2-87ebe420",
+      "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c",
       "path": "jobs/b1-change-a-hotel-booking-extra-night.json",
       "words": 166,
-      "sha256": "87ebe42096091313e509fbd2ec9299209c307f820f8bbf7bed697c7585975697",
+      "sha256": "82f52e3cc3704eb2ac31bb237dbec1488a6753b71220373c58bb481ea6a1bffb",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Rasalgethi",
+        "Learner": "Erinome"
       }
     },
     {
       "slug": "b1-change-a-hotel-booking-friend",
-      "job_id": "englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc",
+      "job_id": "englishlive-b1-change-a-hotel-booking-friend-r3-2787b635",
       "path": "jobs/b1-change-a-hotel-booking-friend.json",
-      "words": 171,
-      "sha256": "129d7bdc2eef40e0cde971fedf4a593ca7676d3c976218fa6f46b1ac3713a73d",
+      "words": 173,
+      "sha256": "2787b6352cac6e41be0514ff90537cbd06c8c8dfc855c0c097ad27916a75e453",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Zubenelgenubi",
+        "Learner": "Alnilam"
       }
     },
     {
       "slug": "b1-explain-a-mix-up-cafe",
-      "job_id": "englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb",
+      "job_id": "englishlive-b1-explain-a-mix-up-cafe-r3-fccf4a41",
       "path": "jobs/b1-explain-a-mix-up-cafe.json",
-      "words": 165,
-      "sha256": "f5d932eb42597fcc5754a7f12d5f08df010b3d26513c394d3a03b4a7377b13fe",
+      "words": 166,
+      "sha256": "fccf4a41d6ec7bc87d0a3c6ce5238fa114226133d8b0cb7f5245bf5463eb4a28",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Zubenelgenubi",
+        "Learner": "Iapetus"
       }
     },
     {
       "slug": "b1-explain-a-mix-up-room",
-      "job_id": "englishlive-b1-explain-a-mix-up-room-r2-91c3bcba",
+      "job_id": "englishlive-b1-explain-a-mix-up-room-r3-80887ebb",
       "path": "jobs/b1-explain-a-mix-up-room.json",
       "words": 120,
-      "sha256": "91c3bcba41a149664e4e0a3646fc7a7013111f1b97f118deff67765d892d573f",
+      "sha256": "80887ebbfbca43e85ad139bbf46f1da857af9eb0d0612747fa4231b3db34b115",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Sadachbia",
+        "Learner": "Leda"
       }
     },
     {
       "slug": "b1-explain-a-mix-up-salon",
-      "job_id": "englishlive-b1-explain-a-mix-up-salon-r2-9f061c3f",
+      "job_id": "englishlive-b1-explain-a-mix-up-salon-r3-b3ec42c8",
       "path": "jobs/b1-explain-a-mix-up-salon.json",
       "words": 161,
-      "sha256": "9f061c3f9af62c3f8ded5314bce7e5aafd6ab06f36084dfc8478f5f71a6891a3",
+      "sha256": "b3ec42c8687dc9de87cfc08f233a6a75bf4cb6ef336599e93f628d8df894de5f",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Achird",
+        "Learner": "Erinome"
       }
     },
     {
       "slug": "b1-explain-a-travel-problem-coach",
-      "job_id": "englishlive-b1-explain-a-travel-problem-coach-r2-3e762d39",
+      "job_id": "englishlive-b1-explain-a-travel-problem-coach-r3-db6bf01c",
       "path": "jobs/b1-explain-a-travel-problem-coach.json",
       "words": 163,
-      "sha256": "3e762d3929c8d5336840d4a73380bba55eed0f96075bf36060b45def0a42531b",
+      "sha256": "db6bf01ccd2a16ea36a20a0a394ddc589769ab8a7ce6c9d1e7c3a554e6b61851",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Schedar",
+        "Learner": "Autonoe"
       }
     },
     {
       "slug": "b1-explain-a-travel-problem-metro",
-      "job_id": "englishlive-b1-explain-a-travel-problem-metro-r2-651a5b20",
+      "job_id": "englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f",
       "path": "jobs/b1-explain-a-travel-problem-metro.json",
-      "words": 156,
-      "sha256": "651a5b20d96ef1ed80c85d66ab55f7ce395e71da5a4b0b0ea49cbfe0a39bf7b1",
+      "words": 155,
+      "sha256": "6a9be06f32c45e1b601d6129e7e30d5958fee4c5aa12e457a3595991dc25791e",
       "voices": {
-        "Partner": "Puck",
+        "Partner": "Sadaltager",
         "Learner": "Kore"
       }
     },
     {
       "slug": "b1-explain-a-travel-problem-train",
-      "job_id": "englishlive-b1-explain-a-travel-problem-train-r2-3572524b",
+      "job_id": "englishlive-b1-explain-a-travel-problem-train-r3-9fc88875",
       "path": "jobs/b1-explain-a-travel-problem-train.json",
-      "words": 221,
-      "sha256": "3572524b32648e02d2fcfb7ed45b50d7dae124ea496726d825b6720b037d83c8",
+      "words": 204,
+      "sha256": "9fc88875f4e1e63b87d4b4bbdbace8e1376a11815738c095e2ae313a0ddba0c0",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Umbriel",
+        "Learner": "Vindemiatrix"
       }
     },
     {
       "slug": "b1-keep-a-conversation-going-lunch",
-      "job_id": "englishlive-b1-keep-a-conversation-going-lunch-r2-cb68c30a",
+      "job_id": "englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff",
       "path": "jobs/b1-keep-a-conversation-going-lunch.json",
-      "words": 193,
-      "sha256": "cb68c30ae742fa8f6c68ba2d230cab7fd6861c58636991779c3eb9284cf65a60",
+      "words": 195,
+      "sha256": "3b21dafff074c483fbbf401297482364328a39279b37e57aa6fe049f4a659774",
       "voices": {
-        "Partner": "Kore",
-        "Learner": "Puck"
+        "Partner": "Autonoe",
+        "Learner": "Iapetus"
       }
     },
     {
       "slug": "b1-keep-a-conversation-going-neighbour",
-      "job_id": "englishlive-b1-keep-a-conversation-going-neighbour-r2-5898460d",
+      "job_id": "englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e",
       "path": "jobs/b1-keep-a-conversation-going-neighbour.json",
-      "words": 174,
-      "sha256": "5898460da0c1d64900547d138524b54f16aad8b6312c90079ac4bca140d62d78",
+      "words": 170,
+      "sha256": "8ee6740e8b3295e83f993e4cca3b93e96577179efe6f82f0284844cf561315db",
       "voices": {
         "Partner": "Puck",
-        "Learner": "Kore"
+        "Learner": "Despina"
       }
     },
     {
       "slug": "b1-keep-a-conversation-going-train",
-      "job_id": "englishlive-b1-keep-a-conversation-going-train-r2-5ccfab92",
+      "job_id": "englishlive-b1-keep-a-conversation-going-train-r3-5e052f48",
       "path": "jobs/b1-keep-a-conversation-going-train.json",
-      "words": 135,
-      "sha256": "5ccfab921bc10c4092bab2613f7df17c9b2f6a202a9c2345eb8888bb29e48d73",
+      "words": 136,
+      "sha256": "5e052f488dd9d9251f67d63d8496e67661a0c5ca793ff32f375f89a07f45565e",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Achird",
+        "Learner": "Laomedeia"
       }
     },
     {
       "slug": "b1-re-plan-an-outing-match",
-      "job_id": "englishlive-b1-re-plan-an-outing-match-r2-d77b1df5",
+      "job_id": "englishlive-b1-re-plan-an-outing-match-r3-d18d13bd",
       "path": "jobs/b1-re-plan-an-outing-match.json",
       "words": 164,
-      "sha256": "d77b1df5acee2bc664d13413a985df0a377684f1681732a28b063592ce8e9cda",
+      "sha256": "d18d13bd21c31dea8c20ad9e26152660b2d5f7793d295f2042f822bc7a6a2e10",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Sadachbia",
+        "Learner": "Alnilam"
       }
     },
     {
       "slug": "b1-re-plan-an-outing-restaurant",
-      "job_id": "englishlive-b1-re-plan-an-outing-restaurant-r2-6ae257ee",
+      "job_id": "englishlive-b1-re-plan-an-outing-restaurant-r3-faecfb27",
       "path": "jobs/b1-re-plan-an-outing-restaurant.json",
-      "words": 165,
-      "sha256": "6ae257ee52001c0e3f98f65ed61db07f7b5312505c4acc19fdc6cf3c648eb5bb",
+      "words": 168,
+      "sha256": "faecfb270160f2a9572711edeea0f59fc06966d8ae908d63fce2075ebf1e6ff4",
       "voices": {
         "Partner": "Puck",
-        "Learner": "Kore"
+        "Learner": "Algieba"
       }
     },
     {
       "slug": "b1-re-plan-an-outing-weather",
-      "job_id": "englishlive-b1-re-plan-an-outing-weather-r2-32e0636e",
+      "job_id": "englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5",
       "path": "jobs/b1-re-plan-an-outing-weather.json",
-      "words": 202,
-      "sha256": "32e0636eaffeb67f1744e07c15b33feb6bcb33c4888c992f0b898b59cbe62a8f",
+      "words": 204,
+      "sha256": "e421cfd572a6201faeeb563ce84834f4ff12cd589a27377c7efa5e2f87092978",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Fenrir",
+        "Learner": "Charon"
       }
     },
     {
       "slug": "b1-recurring-problem-dry-cleaner",
-      "job_id": "englishlive-b1-recurring-problem-dry-cleaner-r2-19b7c9fd",
+      "job_id": "englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd",
       "path": "jobs/b1-recurring-problem-dry-cleaner.json",
       "words": 178,
       "sha256": "19b7c9fd9a4aae89ea4956fb6091a8333e606e047259f1557c3ba91a14b09c00",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Orus",
+        "Learner": "Callirrhoe"
       }
     },
     {
       "slug": "b1-recurring-problem-hot-water",
-      "job_id": "englishlive-b1-recurring-problem-hot-water-r2-0de5e9ca",
+      "job_id": "englishlive-b1-recurring-problem-hot-water-r3-25ff4cff",
       "path": "jobs/b1-recurring-problem-hot-water.json",
-      "words": 163,
-      "sha256": "0de5e9ca8e32c7892aee9543747f3508eeb160bd1a2fef8e1f7109a9c0ba85c8",
+      "words": 166,
+      "sha256": "25ff4cff3c7e0c1e43430d2268c303c90cc3166effaf6f72cbba826fe8c47a29",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Algenib",
+        "Learner": "Zephyr"
       }
     },
     {
       "slug": "b1-recurring-problem-internet",
-      "job_id": "englishlive-b1-recurring-problem-internet-r2-23708220",
+      "job_id": "englishlive-b1-recurring-problem-internet-r3-8fa90169",
       "path": "jobs/b1-recurring-problem-internet.json",
       "words": 203,
-      "sha256": "2370822078bb5a383e54cd2dff47d3ef47f5db50c0bd0e2a8d2443a0e0b5654b",
+      "sha256": "8fa9016987695c514dc3766b38de34b0b07f4255ced70c46f2de69dff36d7e35",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Rasalgethi",
+        "Learner": "Pulcherrima"
       }
     },
     {
       "slug": "b1-resolve-a-misunderstanding-essay",
-      "job_id": "englishlive-b1-resolve-a-misunderstanding-essay-r2-fee6ab03",
+      "job_id": "englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03",
       "path": "jobs/b1-resolve-a-misunderstanding-essay.json",
       "words": 132,
       "sha256": "fee6ab035b4067ea1e7cfb258ea44e797095cd42ea262510a84c010c92523730",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Sadaltager",
+        "Learner": "Achernar"
       }
     },
     {
       "slug": "b1-resolve-a-misunderstanding-project",
-      "job_id": "englishlive-b1-resolve-a-misunderstanding-project-r2-b41cb767",
+      "job_id": "englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767",
       "path": "jobs/b1-resolve-a-misunderstanding-project.json",
       "words": 155,
       "sha256": "b41cb767ccc77f20cf9079eb9c82fae5041c9a2b2540ea1d44cc2143f98f7bdf",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Fenrir",
+        "Learner": "Sulafat"
       }
     },
     {
       "slug": "b1-resolve-a-misunderstanding-shift",
-      "job_id": "englishlive-b1-resolve-a-misunderstanding-shift-r2-f06f6ccc",
+      "job_id": "englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc",
       "path": "jobs/b1-resolve-a-misunderstanding-shift.json",
       "words": 163,
       "sha256": "f06f6ccc55a26eab9b112b155636502fa691dda91c1f6168bd8544edd4812c70",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Umbriel",
+        "Learner": "Gacrux"
       }
     },
     {
       "slug": "b1-resolve-wrong-order",
-      "job_id": "englishlive-b1-resolve-wrong-order-r10-3bb29b44",
+      "job_id": "englishlive-b1-resolve-wrong-order-r11-6d2035d3",
       "path": "jobs/b1-resolve-wrong-order.json",
-      "words": 111,
-      "sha256": "3bb29b443735c57c7230b015d596f2135980803b7b93090a8c9cf0ba974164f6",
+      "words": 116,
+      "sha256": "6d2035d3a07942c500545cadcc7d54db1ef017186331fdfe335a70b3b42d1624",
       "voices": {
-        "Partner": "Puck",
+        "Partner": "Schedar",
         "Learner": "Kore"
       }
     },
     {
       "slug": "b1-resolve-wrong-order-bakery",
-      "job_id": "englishlive-b1-resolve-wrong-order-bakery-r10-66565ad8",
+      "job_id": "englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49",
       "path": "jobs/b1-resolve-wrong-order-bakery.json",
       "words": 164,
-      "sha256": "66565ad8982a7d950af82527c0303afad792bc000e584f3b65b1bc6d7a473a1a",
+      "sha256": "0f8ade49f131dd04df3d5d348b9e33514d78b82d8d88fced5e0e52abe3aa5734",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Iapetus",
+        "Learner": "Leda"
       }
     },
     {
       "slug": "b1-resolve-wrong-order-restaurant",
-      "job_id": "englishlive-b1-resolve-wrong-order-restaurant-r10-f2f4aa7b",
+      "job_id": "englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b",
       "path": "jobs/b1-resolve-wrong-order-restaurant.json",
       "words": 165,
       "sha256": "f2f4aa7b04da50b5c11432d8bc029dd6188c3f27c0e47707ecd6cbac73b013ce",
       "voices": {
-        "Partner": "Puck",
-        "Learner": "Kore"
+        "Partner": "Algieba",
+        "Learner": "Aoede"
       }
     }
   ],

@@ -1,8 +1,8 @@
 {
-  "job_id": "englishlive-b1-resolve-a-misunderstanding-essay-r2-fee6ab03",
+  "job_id": "englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03",
   "lesson": {
     "slug": "b1-resolve-a-misunderstanding-essay",
-    "revision": 2,
+    "revision": 3,
     "sha256": "fee6ab035b4067ea1e7cfb258ea44e797095cd42ea262510a84c010c92523730",
     "words": 132,
     "turns": 10
@@ -12,57 +12,57 @@
       {
         "speaker": "Partner",
         "text": "Hi. I wanted to talk to you about your essay. It isn't on the LMS, and the deadline was Friday.",
-        "style": "welcoming, helpful and natural"
+        "style": "teacher, calm and a little serious, then kind. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Really? I sent it to you by email on Thursday evening. Sorry, what's the LMS?",
-        "style": "polite, curious and natural"
+        "style": "surprised and a bit worried, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "The Learning Management System. It's the course website. I said, 'Send it through the LMS.'",
-        "style": "welcoming, helpful and natural"
+        "style": "teacher, calm and a little serious, then kind. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Oh, I understand now. I only heard 'send it', so I thought email was fine. I didn't know it had to go on the website.",
-        "style": "polite, curious and natural"
+        "style": "surprised and a bit worried, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That's okay. A few students made the same mistake.",
-        "style": "welcoming, helpful and natural"
+        "style": "teacher, calm and a little serious, then kind. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Can I upload it today? I can do it right after this.",
-        "style": "polite, curious and natural"
+        "style": "surprised and a bit worried, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Yes. If it's there before five, it counts as on time.",
-        "style": "welcoming, helpful and natural"
+        "style": "teacher, calm and a little serious, then kind. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Great, thank you. Where do I put it on the website?",
-        "style": "polite, curious and natural"
+        "style": "surprised and a bit worried, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Under 'Week 6', then 'Essay'.",
-        "style": "welcoming, helpful and natural"
+        "style": "teacher, calm and a little serious, then kind. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Okay. Week 6, then 'Essay', before five. Thank you.",
-        "style": "polite, curious and natural"
+        "style": "surprised and a bit worried, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Sadaltager",
+      "Learner": "Achernar"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -80,7 +80,7 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-resolve-a-misunderstanding-essay",
-      "revision": 2,
+      "revision": 3,
       "sha256": "fee6ab035b4067ea1e7cfb258ea44e797095cd42ea262510a84c010c92523730"
     }
   }

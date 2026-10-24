@@ -9,9 +9,11 @@
 - `results/<job_id>.json`: the factory's `result.json` for each delivered job, copied here once it completes. englishlive
   imports from this folder (`scripts/audio/import-listening-results.ts`).
 
-Settings for every job: `gemini-3.8-flash-tts`, no model fallback, two speakers (Partner and Learner; Puck and Kore,
-swapped for the one lesson whose partner is a woman), WAV 24 kHz, en-US word transcript and VTT. About 3,960 words
-in total, roughly one minute of audio per conversation.
+Settings for every job: `gemini-3.8-flash-tts`, no model fallback, two speakers (Partner and Learner), WAV 24 kHz,
+en-US word transcript and VTT. Each lesson has its own cast and tone, authored in `speaking-practice` (29 prebuilt
+voices across the 24; the voice's gender matches the character and the Arabic translation). Every turn's style ends
+with the same delivery: American English accent, clear and natural pace for B1 learners, not rushed. About 3,960
+words in total, 50–90 seconds of audio per conversation.
 
 Paid synthesis needs the owner's explicit approval per issue; a dispatch that was accepted is not a delivered or
 listened-to recording.

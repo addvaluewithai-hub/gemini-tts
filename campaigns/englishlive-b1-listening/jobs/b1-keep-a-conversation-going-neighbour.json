@@ -1,83 +1,83 @@
 {
-  "job_id": "englishlive-b1-keep-a-conversation-going-neighbour-r2-5898460d",
+  "job_id": "englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e",
   "lesson": {
     "slug": "b1-keep-a-conversation-going-neighbour",
-    "revision": 2,
-    "sha256": "5898460da0c1d64900547d138524b54f16aad8b6312c90079ac4bca140d62d78",
-    "words": 174,
+    "revision": 3,
+    "sha256": "8ee6740e8b3295e83f993e4cca3b93e96577179efe6f82f0284844cf561315db",
+    "words": 170,
     "turns": 13
   },
   "request": {
     "turns": [
       {
         "speaker": "Partner",
-        "text": "Hi! I think we're neighbours. I've just moved in next door.",
-        "style": "bright, curious and friendly"
+        "text": "Hi! I think we're neighbors. I've just moved in next door.",
+        "style": "Mark, friendly and upbeat, a bit tired from moving. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Oh, hi! Welcome to the building. When did you move in?",
-        "style": "interested, relaxed and upbeat"
+        "style": "warm, welcoming and chatty. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "On Saturday. There are boxes everywhere! How long have you lived here?",
-        "style": "bright, curious and friendly"
+        "style": "Mark, friendly and upbeat, a bit tired from moving. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "For about three years. It's a quiet building, and the neighbours are really friendly. Where did you live before?",
-        "style": "interested, relaxed and upbeat"
+        "text": "For about three years. It's a quiet building, and the neighbors are really friendly. Where did you live before?",
+        "style": "warm, welcoming and chatty. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "In the city centre. It was fun, but so noisy.",
-        "style": "bright, curious and friendly"
+        "text": "Downtown. It was fun, but so noisy.",
+        "style": "Mark, friendly and upbeat, a bit tired from moving. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "I know what you mean. I used to live there too, and I couldn't sleep! I think this area is much better.",
-        "style": "interested, relaxed and upbeat"
+        "style": "warm, welcoming and chatty. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That's good to hear. Is there a gym near here?",
-        "style": "bright, curious and friendly"
+        "style": "Mark, friendly and upbeat, a bit tired from moving. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Yes, there's one near the metro station. It's small, but it's cheap. Do you like running? The park five minutes away is great for that.",
-        "style": "interested, relaxed and upbeat"
+        "style": "warm, welcoming and chatty. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "I do! I run at the weekends.",
-        "style": "bright, curious and friendly"
+        "text": "I do! I run on weekends.",
+        "style": "Mark, friendly and upbeat, a bit tired from moving. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Me too. And I think the bakery on the corner is the best in the area. You should try their bread.",
-        "style": "interested, relaxed and upbeat"
+        "style": "warm, welcoming and chatty. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Thanks, I will!",
-        "style": "bright, curious and friendly"
+        "style": "Mark, friendly and upbeat, a bit tired from moving. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Well, I'll let you get back to your boxes. Let me know if you need anything.",
-        "style": "interested, relaxed and upbeat"
+        "style": "warm, welcoming and chatty. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That's very kind. Nice to meet you!",
-        "style": "bright, curious and friendly"
+        "style": "Mark, friendly and upbeat, a bit tired from moving. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
       "Partner": "Puck",
-      "Learner": "Kore"
+      "Learner": "Despina"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -95,8 +95,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-keep-a-conversation-going-neighbour",
-      "revision": 2,
-      "sha256": "5898460da0c1d64900547d138524b54f16aad8b6312c90079ac4bca140d62d78"
+      "revision": 3,
+      "sha256": "8ee6740e8b3295e83f993e4cca3b93e96577179efe6f82f0284844cf561315db"
     }
   }
 }

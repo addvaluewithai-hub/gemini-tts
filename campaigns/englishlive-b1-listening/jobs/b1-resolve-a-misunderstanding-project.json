@@ -1,8 +1,8 @@
 {
-  "job_id": "englishlive-b1-resolve-a-misunderstanding-project-r2-b41cb767",
+  "job_id": "englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767",
   "lesson": {
     "slug": "b1-resolve-a-misunderstanding-project",
-    "revision": 2,
+    "revision": 3,
     "sha256": "b41cb767ccc77f20cf9079eb9c82fae5041c9a2b2540ea1d44cc2143f98f7bdf",
     "words": 155,
     "turns": 11
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Hi! How are the slides going? We present on Thursday.",
-        "style": "bright, curious and friendly"
+        "style": "Karim, cheerful at first, then a bit embarrassed. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "The slides? I thought you were making the slides. I finished the research notes yesterday.",
-        "style": "interested, relaxed and upbeat"
+        "style": "surprised, then calm and organized. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Really? In the meeting I said I'd do the design. I meant the handout.",
-        "style": "bright, curious and friendly"
+        "style": "Karim, cheerful at first, then a bit embarrassed. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Oh, I see. When you said 'design', I thought you meant the slides. So nobody has started them?",
-        "style": "interested, relaxed and upbeat"
+        "style": "surprised, then calm and organized. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "No, I'm afraid not. Sorry, I wasn't very clear.",
-        "style": "bright, curious and friendly"
+        "style": "Karim, cheerful at first, then a bit embarrassed. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Don't worry, it happens. We need about twelve slides. Why don't we split them? I can do the first six tonight, because I know the research.",
-        "style": "interested, relaxed and upbeat"
+        "style": "surprised, then calm and organized. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Good idea. I work tonight, but I can do the other six tomorrow morning.",
-        "style": "bright, curious and friendly"
+        "style": "Karim, cheerful at first, then a bit embarrassed. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Great. And can you finish the handout by tomorrow evening too?",
-        "style": "interested, relaxed and upbeat"
+        "style": "surprised, then calm and organized. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Yes, it's almost done.",
-        "style": "bright, curious and friendly"
+        "style": "Karim, cheerful at first, then a bit embarrassed. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Perfect. So I do slides one to six tonight, you do seven to twelve tomorrow morning, and we check everything tomorrow evening.",
-        "style": "interested, relaxed and upbeat"
+        "style": "surprised, then calm and organized. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That makes sense. I'll send you a message when my part's ready.",
-        "style": "bright, curious and friendly"
+        "style": "Karim, cheerful at first, then a bit embarrassed. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Fenrir",
+      "Learner": "Sulafat"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,7 +85,7 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-resolve-a-misunderstanding-project",
-      "revision": 2,
+      "revision": 3,
       "sha256": "b41cb767ccc77f20cf9079eb9c82fae5041c9a2b2540ea1d44cc2143f98f7bdf"
     }
   }

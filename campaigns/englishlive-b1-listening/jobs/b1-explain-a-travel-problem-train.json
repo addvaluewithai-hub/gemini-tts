@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-explain-a-travel-problem-train-r2-3572524b",
+  "job_id": "englishlive-b1-explain-a-travel-problem-train-r3-9fc88875",
   "lesson": {
     "slug": "b1-explain-a-travel-problem-train",
-    "revision": 2,
-    "sha256": "3572524b32648e02d2fcfb7ed45b50d7dae124ea496726d825b6720b037d83c8",
-    "words": 221,
+    "revision": 3,
+    "sha256": "9fc88875f4e1e63b87d4b4bbdbace8e1376a11815738c095e2ae313a0ddba0c0",
+    "words": 204,
     "turns": 13
   },
   "request": {
@@ -12,72 +12,72 @@
       {
         "speaker": "Partner",
         "text": "Hello. How can I help you?",
-        "style": "welcoming, helpful and natural"
+        "style": "patient, sympathetic ticket office worker, explains options clearly. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "Hi. My train to Riverside at three fifteen has been cancelled.",
-        "style": "polite, curious and natural"
+        "text": "Hi. My train to Riverside at three fifteen has been canceled.",
+        "style": "disappointed and a little worried, then decisive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "I'm sorry about that. The train has a technical problem. When do you need to get there?",
-        "style": "welcoming, helpful and natural"
+        "style": "patient, sympathetic ticket office worker, explains options clearly. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
-        "text": "Before six. I'm invited to a family dinner, and I don't want to miss it.",
-        "style": "polite, curious and natural"
+        "text": "Before six. I have a family dinner, and I don't want to miss it.",
+        "style": "disappointed and a little worried, then decisive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "The next train is at four forty, but it arrives at ten past six.",
-        "style": "welcoming, helpful and natural"
+        "style": "patient, sympathetic ticket office worker, explains options clearly. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That's too late for me. Is there any other way to get there before six?",
-        "style": "polite, curious and natural"
+        "style": "disappointed and a little worried, then decisive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "There's a replacement bus at three forty-five. It takes about two hours, so it arrives at about five forty-five. Your ticket is valid on it.",
-        "style": "welcoming, helpful and natural"
+        "style": "patient, sympathetic ticket office worker, explains options clearly. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Oh, that's good news. Is there anything faster? I'd like to arrive a bit earlier.",
-        "style": "polite, curious and natural"
+        "style": "disappointed and a little worried, then decisive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "There's an express coach at four from the bus station across the road. It arrives at about five thirty. Your train ticket isn't valid on it, but I can refund your ticket. The coach is twenty dollars, so it's eight dollars more.",
-        "style": "welcoming, helpful and natural"
+        "text": "There's also an express bus at four, from the bus station across the street. It arrives at about five thirty, but it costs eight dollars more.",
+        "style": "patient, sympathetic ticket office worker, explains options clearly. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Then I'll save the money and take the replacement bus. Where does it leave from?",
-        "style": "polite, curious and natural"
+        "style": "disappointed and a little worried, then decisive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "From the bus stop on the left as you leave the station. Look for the yellow sign.",
-        "style": "welcoming, helpful and natural"
+        "style": "patient, sympathetic ticket office worker, explains options clearly. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Great. So, the bus at three forty-five, from the stop on the left, and I don't need a new ticket.",
-        "style": "polite, curious and natural"
+        "style": "disappointed and a little worried, then decisive. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That's right. I hope you get there in time.",
-        "style": "welcoming, helpful and natural"
+        "style": "patient, sympathetic ticket office worker, explains options clearly. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
-      "Partner": "Puck",
-      "Learner": "Kore"
+      "Partner": "Umbriel",
+      "Learner": "Vindemiatrix"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -95,8 +95,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-explain-a-travel-problem-train",
-      "revision": 2,
-      "sha256": "3572524b32648e02d2fcfb7ed45b50d7dae124ea496726d825b6720b037d83c8"
+      "revision": 3,
+      "sha256": "9fc88875f4e1e63b87d4b4bbdbace8e1376a11815738c095e2ae313a0ddba0c0"
     }
   }
 }

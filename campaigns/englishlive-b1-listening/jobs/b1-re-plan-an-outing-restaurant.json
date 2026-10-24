@@ -1,10 +1,10 @@
 {
-  "job_id": "englishlive-b1-re-plan-an-outing-restaurant-r2-6ae257ee",
+  "job_id": "englishlive-b1-re-plan-an-outing-restaurant-r3-faecfb27",
   "lesson": {
     "slug": "b1-re-plan-an-outing-restaurant",
-    "revision": 2,
-    "sha256": "6ae257ee52001c0e3f98f65ed61db07f7b5312505c4acc19fdc6cf3c648eb5bb",
-    "words": 165,
+    "revision": 3,
+    "sha256": "faecfb270160f2a9572711edeea0f59fc06966d8ae908d63fce2075ebf1e6ff4",
+    "words": 168,
     "turns": 11
   },
   "request": {
@@ -12,62 +12,62 @@
       {
         "speaker": "Partner",
         "text": "Hi! I'm on my way. Are you at the restaurant already?",
-        "style": "welcoming, helpful and natural"
+        "style": "Youssef, surprised and a bit annoyed, then cooperative and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Yes, but there's a problem. Luna is closed tonight. There's a sign on the door that says 'private event'.",
-        "style": "polite, curious and natural"
+        "style": "a little stressed, then organized and practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "What? But we booked a table for eight! Didn't they call you?",
-        "style": "welcoming, helpful and natural"
+        "text": "What? But we booked a table for eight o'clock! Didn't they call you?",
+        "style": "Youssef, surprised and a bit annoyed, then cooperative and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "No, nobody called me. I think they made a mistake. Anyway, we need another place. Any ideas?",
-        "style": "polite, curious and natural"
+        "style": "a little stressed, then organized and practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "There's a pizza place two streets away. We could just go there.",
-        "style": "welcoming, helpful and natural"
+        "style": "Youssef, surprised and a bit annoyed, then cooperative and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "That's easy, but it's Salma's birthday, and she loves fish. What about the fish restaurant by the river?",
-        "style": "polite, curious and natural"
+        "style": "a little stressed, then organized and practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "That's twenty minutes by taxi. Will they have a table?",
-        "style": "welcoming, helpful and natural"
+        "style": "Youssef, surprised and a bit annoyed, then cooperative and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "I'll call them now. If they have a table, we go there. If not, we can still go for pizza.",
-        "style": "polite, curious and natural"
+        "style": "a little stressed, then organized and practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
         "text": "Good plan. I'll tell Salma and Karim there might be a change.",
-        "style": "welcoming, helpful and natural"
+        "style": "Youssef, surprised and a bit annoyed, then cooperative and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Learner",
         "text": "Great. So, the fish restaurant if they have a table, the pizza place if not. I'll message everyone in ten minutes.",
-        "style": "polite, curious and natural"
+        "style": "a little stressed, then organized and practical. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
         "speaker": "Partner",
-        "text": "Perfect. And let's not tell Salma what happened. She'll think we planned it!",
-        "style": "welcoming, helpful and natural"
+        "text": "Perfect. And let's not tell Salma what happened. The new place can be a surprise!",
+        "style": "Youssef, surprised and a bit annoyed, then cooperative and cheerful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       }
     ],
     "speakers": {
       "Partner": "Puck",
-      "Learner": "Kore"
+      "Learner": "Algieba"
     },
     "routing": "explicit",
     "model": "gemini-3.8-flash-tts",
@@ -85,8 +85,8 @@
       "app": "englishlive",
       "campaign": "englishlive-b1-listening",
       "slug": "b1-re-plan-an-outing-restaurant",
-      "revision": 2,
-      "sha256": "6ae257ee52001c0e3f98f65ed61db07f7b5312505c4acc19fdc6cf3c648eb5bb"
+      "revision": 3,
+      "sha256": "faecfb270160f2a9572711edeea0f59fc06966d8ae908d63fce2075ebf1e6ff4"
     }
   }
 }
