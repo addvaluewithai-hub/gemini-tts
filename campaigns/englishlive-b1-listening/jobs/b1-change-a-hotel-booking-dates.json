@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-b1-change-a-hotel-booking-dates-r2-d6498b15",
+  "lesson": {
+    "slug": "b1-change-a-hotel-booking-dates",
+    "revision": 2,
+    "sha256": "d6498b157c83ce4c74c8f0e08327951b01ac8fc0f17853f4e142efc741e49010",
+    "words": 167,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hello, Sea View Hotel. How can I help?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. I have a booking for next Tuesday and Wednesday, under the name Sam. Could I possibly change the dates? My work trip has moved one day later.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. So you'd like Wednesday and Thursday instead?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, that's right. And I need a desk, because I'll be working in my room.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Your room is free on Wednesday, but not on Thursday. On Thursday I have a smaller room for sixty dollars, but it doesn't have a desk.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Thank you, but I really need a desk. Without one, I can't work. Is there another room with a desk?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "There's a larger room with a desk for ninety dollars, so twenty more.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "It's only for one night, so that's fine. I'll take the larger room on Thursday.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Okay. Your room on Wednesday for seventy, and the larger room on Thursday for ninety.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. And there's no charge for changing the dates, right?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "No charge at all. See you on Wednesday!",
+        "style": "welcoming, helpful and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-change-a-hotel-booking-dates",
+      "revision": 2,
+      "sha256": "d6498b157c83ce4c74c8f0e08327951b01ac8fc0f17853f4e142efc741e49010"
+    }
+  }
+}

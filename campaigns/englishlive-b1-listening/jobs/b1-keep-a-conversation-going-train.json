@@ -1,0 +1,97 @@
+{
+  "job_id": "englishlive-b1-keep-a-conversation-going-train-r2-5ccfab92",
+  "lesson": {
+    "slug": "b1-keep-a-conversation-going-train",
+    "revision": 2,
+    "sha256": "5ccfab921bc10c4092bab2613f7df17c9b2f6a202a9c2345eb8888bb29e48d73",
+    "words": 135,
+    "turns": 12
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Excuse me, is this seat free?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, go ahead. Are you going all the way to the coast?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, to the last stop. First time there. Have you been?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, I've been there a few times. Last summer I stayed for a week with my family.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Lucky you! What's it like?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I love it. The beaches are lovely, and the fish restaurants are amazing. But it gets really busy in August.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Good thing it's June, then!",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Exactly. Are you going on holiday?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Not really. I'm meeting my fiancée's family for the first time, so I'm a bit nervous.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Oh, don't worry. I'm sure they'll like you. Just be yourself, and maybe bring them something sweet from the city.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Good idea! I'm going to the buffet. Want anything?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "No, thanks, I'm fine. Good luck this weekend!",
+        "style": "polite, curious and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-keep-a-conversation-going-train",
+      "revision": 2,
+      "sha256": "5ccfab921bc10c4092bab2613f7df17c9b2f6a202a9c2345eb8888bb29e48d73"
+    }
+  }
+}

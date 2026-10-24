@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "campaign": "englishlive-b1-listening",
+  "app": "addvaluewithai-hub/englishlive",
+  "totalWords": 3957,
+  "jobs": [
+    {
+      "slug": "b1-change-a-hotel-booking-dates",
+      "job_id": "englishlive-b1-change-a-hotel-booking-dates-r2-d6498b15",
+      "path": "jobs/b1-change-a-hotel-booking-dates.json",
+      "words": 167,
+      "sha256": "d6498b157c83ce4c74c8f0e08327951b01ac8fc0f17853f4e142efc741e49010",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-change-a-hotel-booking-extra-night",
+      "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r2-87ebe420",
+      "path": "jobs/b1-change-a-hotel-booking-extra-night.json",
+      "words": 166,
+      "sha256": "87ebe42096091313e509fbd2ec9299209c307f820f8bbf7bed697c7585975697",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-change-a-hotel-booking-friend",
+      "job_id": "englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc",
+      "path": "jobs/b1-change-a-hotel-booking-friend.json",
+      "words": 171,
+      "sha256": "129d7bdc2eef40e0cde971fedf4a593ca7676d3c976218fa6f46b1ac3713a73d",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-explain-a-mix-up-cafe",
+      "job_id": "englishlive-b1-explain-a-mix-up-cafe-r2-f5d932eb",
+      "path": "jobs/b1-explain-a-mix-up-cafe.json",
+      "words": 165,
+      "sha256": "f5d932eb42597fcc5754a7f12d5f08df010b3d26513c394d3a03b4a7377b13fe",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-explain-a-mix-up-room",
+      "job_id": "englishlive-b1-explain-a-mix-up-room-r2-91c3bcba",
+      "path": "jobs/b1-explain-a-mix-up-room.json",
+      "words": 120,
+      "sha256": "91c3bcba41a149664e4e0a3646fc7a7013111f1b97f118deff67765d892d573f",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-explain-a-mix-up-salon",
+      "job_id": "englishlive-b1-explain-a-mix-up-salon-r2-9f061c3f",
+      "path": "jobs/b1-explain-a-mix-up-salon.json",
+      "words": 161,
+      "sha256": "9f061c3f9af62c3f8ded5314bce7e5aafd6ab06f36084dfc8478f5f71a6891a3",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-explain-a-travel-problem-coach",
+      "job_id": "englishlive-b1-explain-a-travel-problem-coach-r2-3e762d39",
+      "path": "jobs/b1-explain-a-travel-problem-coach.json",
+      "words": 163,
+      "sha256": "3e762d3929c8d5336840d4a73380bba55eed0f96075bf36060b45def0a42531b",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-explain-a-travel-problem-metro",
+      "job_id": "englishlive-b1-explain-a-travel-problem-metro-r2-651a5b20",
+      "path": "jobs/b1-explain-a-travel-problem-metro.json",
+      "words": 156,
+      "sha256": "651a5b20d96ef1ed80c85d66ab55f7ce395e71da5a4b0b0ea49cbfe0a39bf7b1",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-explain-a-travel-problem-train",
+      "job_id": "englishlive-b1-explain-a-travel-problem-train-r2-3572524b",
+      "path": "jobs/b1-explain-a-travel-problem-train.json",
+      "words": 221,
+      "sha256": "3572524b32648e02d2fcfb7ed45b50d7dae124ea496726d825b6720b037d83c8",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-keep-a-conversation-going-lunch",
+      "job_id": "englishlive-b1-keep-a-conversation-going-lunch-r2-cb68c30a",
+      "path": "jobs/b1-keep-a-conversation-going-lunch.json",
+      "words": 193,
+      "sha256": "cb68c30ae742fa8f6c68ba2d230cab7fd6861c58636991779c3eb9284cf65a60",
+      "voices": {
+        "Partner": "Kore",
+        "Learner": "Puck"
+      }
+    },
+    {
+      "slug": "b1-keep-a-conversation-going-neighbour",
+      "job_id": "englishlive-b1-keep-a-conversation-going-neighbour-r2-5898460d",
+      "path": "jobs/b1-keep-a-conversation-going-neighbour.json",
+      "words": 174,
+      "sha256": "5898460da0c1d64900547d138524b54f16aad8b6312c90079ac4bca140d62d78",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-keep-a-conversation-going-train",
+      "job_id": "englishlive-b1-keep-a-conversation-going-train-r2-5ccfab92",
+      "path": "jobs/b1-keep-a-conversation-going-train.json",
+      "words": 135,
+      "sha256": "5ccfab921bc10c4092bab2613f7df17c9b2f6a202a9c2345eb8888bb29e48d73",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-re-plan-an-outing-match",
+      "job_id": "englishlive-b1-re-plan-an-outing-match-r2-d77b1df5",
+      "path": "jobs/b1-re-plan-an-outing-match.json",
+      "words": 164,
+      "sha256": "d77b1df5acee2bc664d13413a985df0a377684f1681732a28b063592ce8e9cda",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-re-plan-an-outing-restaurant",
+      "job_id": "englishlive-b1-re-plan-an-outing-restaurant-r2-6ae257ee",
+      "path": "jobs/b1-re-plan-an-outing-restaurant.json",
+      "words": 165,
+      "sha256": "6ae257ee52001c0e3f98f65ed61db07f7b5312505c4acc19fdc6cf3c648eb5bb",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-re-plan-an-outing-weather",
+      "job_id": "englishlive-b1-re-plan-an-outing-weather-r2-32e0636e",
+      "path": "jobs/b1-re-plan-an-outing-weather.json",
+      "words": 202,
+      "sha256": "32e0636eaffeb67f1744e07c15b33feb6bcb33c4888c992f0b898b59cbe62a8f",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-recurring-problem-dry-cleaner",
+      "job_id": "englishlive-b1-recurring-problem-dry-cleaner-r2-19b7c9fd",
+      "path": "jobs/b1-recurring-problem-dry-cleaner.json",
+      "words": 178,
+      "sha256": "19b7c9fd9a4aae89ea4956fb6091a8333e606e047259f1557c3ba91a14b09c00",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-recurring-problem-hot-water",
+      "job_id": "englishlive-b1-recurring-problem-hot-water-r2-0de5e9ca",
+      "path": "jobs/b1-recurring-problem-hot-water.json",
+      "words": 163,
+      "sha256": "0de5e9ca8e32c7892aee9543747f3508eeb160bd1a2fef8e1f7109a9c0ba85c8",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-recurring-problem-internet",
+      "job_id": "englishlive-b1-recurring-problem-internet-r2-23708220",
+      "path": "jobs/b1-recurring-problem-internet.json",
+      "words": 203,
+      "sha256": "2370822078bb5a383e54cd2dff47d3ef47f5db50c0bd0e2a8d2443a0e0b5654b",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-resolve-a-misunderstanding-essay",
+      "job_id": "englishlive-b1-resolve-a-misunderstanding-essay-r2-fee6ab03",
+      "path": "jobs/b1-resolve-a-misunderstanding-essay.json",
+      "words": 132,
+      "sha256": "fee6ab035b4067ea1e7cfb258ea44e797095cd42ea262510a84c010c92523730",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-resolve-a-misunderstanding-project",
+      "job_id": "englishlive-b1-resolve-a-misunderstanding-project-r2-b41cb767",
+      "path": "jobs/b1-resolve-a-misunderstanding-project.json",
+      "words": 155,
+      "sha256": "b41cb767ccc77f20cf9079eb9c82fae5041c9a2b2540ea1d44cc2143f98f7bdf",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-resolve-a-misunderstanding-shift",
+      "job_id": "englishlive-b1-resolve-a-misunderstanding-shift-r2-f06f6ccc",
+      "path": "jobs/b1-resolve-a-misunderstanding-shift.json",
+      "words": 163,
+      "sha256": "f06f6ccc55a26eab9b112b155636502fa691dda91c1f6168bd8544edd4812c70",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-resolve-wrong-order",
+      "job_id": "englishlive-b1-resolve-wrong-order-r10-3bb29b44",
+      "path": "jobs/b1-resolve-wrong-order.json",
+      "words": 111,
+      "sha256": "3bb29b443735c57c7230b015d596f2135980803b7b93090a8c9cf0ba974164f6",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-resolve-wrong-order-bakery",
+      "job_id": "englishlive-b1-resolve-wrong-order-bakery-r10-66565ad8",
+      "path": "jobs/b1-resolve-wrong-order-bakery.json",
+      "words": 164,
+      "sha256": "66565ad8982a7d950af82527c0303afad792bc000e584f3b65b1bc6d7a473a1a",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "b1-resolve-wrong-order-restaurant",
+      "job_id": "englishlive-b1-resolve-wrong-order-restaurant-r10-f2f4aa7b",
+      "path": "jobs/b1-resolve-wrong-order-restaurant.json",
+      "words": 165,
+      "sha256": "f2f4aa7b04da50b5c11432d8bc029dd6188c3f27c0e47707ecd6cbac73b013ce",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Kore"
+      }
+    }
+  ],
+  "issues": [
+    [
+      "b1-change-a-hotel-booking-dates",
+      "b1-change-a-hotel-booking-extra-night",
+      "b1-change-a-hotel-booking-friend",
+      "b1-explain-a-mix-up-cafe",
+      "b1-explain-a-mix-up-room"
+    ],
+    [
+      "b1-explain-a-mix-up-salon",
+      "b1-explain-a-travel-problem-coach",
+      "b1-explain-a-travel-problem-metro",
+      "b1-explain-a-travel-problem-train",
+      "b1-keep-a-conversation-going-lunch"
+    ],
+    [
+      "b1-keep-a-conversation-going-neighbour",
+      "b1-keep-a-conversation-going-train",
+      "b1-re-plan-an-outing-match",
+      "b1-re-plan-an-outing-restaurant",
+      "b1-re-plan-an-outing-weather"
+    ],
+    [
+      "b1-recurring-problem-dry-cleaner",
+      "b1-recurring-problem-hot-water",
+      "b1-recurring-problem-internet",
+      "b1-resolve-a-misunderstanding-essay",
+      "b1-resolve-a-misunderstanding-project"
+    ],
+    [
+      "b1-resolve-a-misunderstanding-shift",
+      "b1-resolve-wrong-order",
+      "b1-resolve-wrong-order-bakery",
+      "b1-resolve-wrong-order-restaurant"
+    ]
+  ]
+}

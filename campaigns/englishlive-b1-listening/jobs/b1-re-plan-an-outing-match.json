@@ -1,0 +1,82 @@
+{
+  "job_id": "englishlive-b1-re-plan-an-outing-match-r2-d77b1df5",
+  "lesson": {
+    "slug": "b1-re-plan-an-outing-match",
+    "revision": 2,
+    "sha256": "d77b1df5acee2bc664d13413a985df0a377684f1681732a28b063592ce8e9cda",
+    "words": 164,
+    "turns": 9
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hey, I'm really sorry, but I have bad news. My manager asked me to finish a report tonight, so I can't leave until eight.",
+        "style": "bright, curious and friendly"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Oh no, but the match starts at seven! That's a shame. So you'll miss most of it?",
+        "style": "interested, relaxed and upbeat"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I know. From here to our café is about forty minutes. You could start watching without me.",
+        "style": "bright, curious and friendly"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I don't want to watch the whole match alone. Is there a café near your office? Then you could join me sooner.",
+        "style": "interested, relaxed and upbeat"
+      },
+      {
+        "speaker": "Partner",
+        "text": "There's a good one across the street, with a big screen. I could be there at ten past eight. But it's far from your home.",
+        "style": "bright, curious and friendly"
+      },
+      {
+        "speaker": "Learner",
+        "text": "That's okay, it's about thirty minutes by metro. I'd rather go a bit further and watch the second half together.",
+        "style": "interested, relaxed and upbeat"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Great! I'll try to finish early. I'll send you the name of the café.",
+        "style": "bright, curious and friendly"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Perfect. So I'll be at the café near your office before seven, and you'll come at about ten past eight.",
+        "style": "interested, relaxed and upbeat"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Deal. Save me a seat!",
+        "style": "bright, curious and friendly"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-re-plan-an-outing-match",
+      "revision": 2,
+      "sha256": "d77b1df5acee2bc664d13413a985df0a377684f1681732a28b063592ce8e9cda"
+    }
+  }
+}

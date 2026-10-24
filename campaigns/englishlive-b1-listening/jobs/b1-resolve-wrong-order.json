@@ -1,0 +1,82 @@
+{
+  "job_id": "englishlive-b1-resolve-wrong-order-r10-3bb29b44",
+  "lesson": {
+    "slug": "b1-resolve-wrong-order",
+    "revision": 10,
+    "sha256": "3bb29b443735c57c7230b015d596f2135980803b7b93090a8c9cf0ba974164f6",
+    "words": 111,
+    "turns": 9
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi. Is everything okay with your drink?",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I ordered a hot coffee, but this is cold tea.",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I'm sorry about that. I can make your coffee again, but it will take ten minutes.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I need to leave in five minutes. Is there something quicker?",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I can make you a medium one right now and give you a dollar back, or I can give you a full refund.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Can I have the medium with milk and no sugar?",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, of course. Would that work for you?",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, I'll take that, please. I still want a coffee before I go.",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Medium coffee with milk, no sugar, and one dollar back. Sorry about that.",
+        "style": "attentive, sympathetic and reassuring"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-resolve-wrong-order",
+      "revision": 10,
+      "sha256": "3bb29b443735c57c7230b015d596f2135980803b7b93090a8c9cf0ba974164f6"
+    }
+  }
+}

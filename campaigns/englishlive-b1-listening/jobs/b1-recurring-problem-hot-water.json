@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-b1-recurring-problem-hot-water-r2-0de5e9ca",
+  "lesson": {
+    "slug": "b1-recurring-problem-hot-water",
+    "revision": 2,
+    "sha256": "0de5e9ca8e32c7892aee9543747f3508eeb160bd1a2fef8e1f7109a9c0ba85c8",
+    "words": 163,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hello?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi, it's your tenant from flat 5B. I'm afraid the hot water stopped again this morning.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Again? I'm sorry. When did it happen before?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "This is the third time this month. The plumber came on Monday and last Friday, and both times it worked for a day or two, then stopped again.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "That's strange. Is it only in the mornings?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Mostly, yes, which is a problem, because I need to shower before work. I leave at half past eight.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I see. The plumber can come again tomorrow at eight. Or I can get the heater replaced on Saturday, but someone has to be at home from nine to one.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "The same fix hasn't worked twice, so I think a new heater is better. Saturday is fine. I'll be at home.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Okay, I'll arrange it. A new heater on Saturday, between nine and one.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Thanks. And could you ask them to call me before they come?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. I'll give them your number.",
+        "style": "welcoming, helpful and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-recurring-problem-hot-water",
+      "revision": 2,
+      "sha256": "0de5e9ca8e32c7892aee9543747f3508eeb160bd1a2fef8e1f7109a9c0ba85c8"
+    }
+  }
+}

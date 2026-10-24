@@ -1,0 +1,97 @@
+{
+  "job_id": "englishlive-b1-recurring-problem-internet-r2-23708220",
+  "lesson": {
+    "slug": "b1-recurring-problem-internet",
+    "revision": 2,
+    "sha256": "2370822078bb5a383e54cd2dff47d3ef47f5db50c0bd0e2a8d2443a0e0b5654b",
+    "words": 203,
+    "turns": 12
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good morning, customer service. How can I help you?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. I'm calling about my internet again. It keeps stopping every evening.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I'm sorry to hear that. When did it start?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "About a week ago. It stops at around eight and comes back at about ten. A technician came last Tuesday and reset the router, but it's happened every night since then.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I see. Is it causing you a lot of problems?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, it's a real problem, because I have online classes in the evening. I've missed two classes this week.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I understand. I can send a technician on Thursday between nine and twelve. Or, because you need it for your classes, we can send you a new router by courier tomorrow.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Is the new router easy to set up? I'd like to fix this as soon as possible.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, it takes about ten minutes. You just follow the card in the box.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Then please send the new router tomorrow. And if it still doesn't work, can the technician come on Thursday?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. I'll book Thursday too, and you can cancel it if everything's fine.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. So a new router tomorrow, and a technician on Thursday between nine and twelve, just in case.",
+        "style": "polite, curious and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-recurring-problem-internet",
+      "revision": 2,
+      "sha256": "2370822078bb5a383e54cd2dff47d3ef47f5db50c0bd0e2a8d2443a0e0b5654b"
+    }
+  }
+}

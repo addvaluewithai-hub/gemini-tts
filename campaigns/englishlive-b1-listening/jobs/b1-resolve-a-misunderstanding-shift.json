@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-b1-resolve-a-misunderstanding-shift-r2-f06f6ccc",
+  "lesson": {
+    "slug": "b1-resolve-a-misunderstanding-shift",
+    "revision": 2,
+    "sha256": "f06f6ccc55a26eab9b112b155636502fa691dda91c1f6168bd8544edd4812c70",
+    "words": 163,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hey, thanks again for working my Saturday morning. So I'll do your Monday, right?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Monday? I think there's a misunderstanding. I don't work on Mondays. We agreed you'd do my Sunday shift, from twelve to six.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Oh! I was sure you said Monday. Sunday is difficult for me. I have a dentist appointment at eleven.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I see. But I really need Sunday, because I have a family lunch at one. What time does your appointment finish?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "At about one. I could be here by two.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Then could you work from two to six? I'll do twelve to two and go to the lunch after that. I'll be about an hour late, but that's better than missing it.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Sorry about the confusion. Should we tell the manager?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, let's send her a message now, so she knows who's working when.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Good idea. So you do Saturday morning and Sunday from twelve to two, and I do Sunday from two to six.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Exactly. Thanks, Tom.",
+        "style": "polite, curious and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-resolve-a-misunderstanding-shift",
+      "revision": 2,
+      "sha256": "f06f6ccc55a26eab9b112b155636502fa691dda91c1f6168bd8544edd4812c70"
+    }
+  }
+}

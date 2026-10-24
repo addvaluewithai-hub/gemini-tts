@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-b1-resolve-wrong-order-bakery-r10-66565ad8",
+  "lesson": {
+    "slug": "b1-resolve-wrong-order-bakery",
+    "revision": 10,
+    "sha256": "66565ad8982a7d950af82527c0303afad792bc000e584f3b65b1bc6d7a473a1a",
+    "words": 164,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Here's your cake. Is everything okay?",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sorry, I think there's a problem. I ordered a chocolate cake, and this one is vanilla. Also, the name is wrong. It says Nona, not Mona.",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Oh no, I'm really sorry. I can change the name on this one right now. It only takes five minutes.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Thanks, but she really wants chocolate. It's her favourite. Do you have a chocolate cake I could take today?",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "We have a chocolate cake ready in the fridge, but there's no writing on it yet. Writing the name would take about fifteen minutes.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "The party starts in fifty minutes, and it takes thirty minutes to get there. So fifteen minutes is okay. Is it the same size?",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, same size and same price, so there's nothing extra to pay.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great, I'll take the chocolate cake, please. Can you check the spelling this time? M-O-N-A.",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. Chocolate cake, \"Happy Birthday, Mona\", ready in fifteen minutes.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Perfect, thank you. I'll wait here.",
+        "style": "polite, concerned but composed"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-resolve-wrong-order-bakery",
+      "revision": 10,
+      "sha256": "66565ad8982a7d950af82527c0303afad792bc000e584f3b65b1bc6d7a473a1a"
+    }
+  }
+}

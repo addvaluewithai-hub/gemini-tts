@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-b1-explain-a-mix-up-salon-r2-9f061c3f",
+  "lesson": {
+    "slug": "b1-explain-a-mix-up-salon",
+    "revision": 2,
+    "sha256": "9f061c3f9af62c3f8ded5314bce7e5aafd6ab06f36084dfc8478f5f71a6891a3",
+    "words": 161,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good morning. How can I help?",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. I have an appointment for a haircut at ten. My name's Alex.",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Let me check. I have you here for Wednesday at ten, not today.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Wednesday? Are you sure? I booked it on the phone on Monday, and the text message says Tuesday at ten.",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Oh, I see. I'm sorry, it looks like we typed the wrong day.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "That's okay, but I really need it today. I have to be at work at twelve. Is anyone free this morning?",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "A stylist is free at ten forty. It takes about forty-five minutes. Or there's another free appointment at one thirty.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "One thirty doesn't work, because I'll be at work. If I start at ten forty, I'll finish at about eleven thirty, right?",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, at about eleven twenty-five.",
+        "style": "attentive, sympathetic and reassuring"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great, I'll wait. Could you also cancel the Wednesday booking, please?",
+        "style": "polite, concerned but composed"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. Ten forty today, and Wednesday is cancelled. Would you like a coffee while you wait?",
+        "style": "attentive, sympathetic and reassuring"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-explain-a-mix-up-salon",
+      "revision": 2,
+      "sha256": "9f061c3f9af62c3f8ded5314bce7e5aafd6ab06f36084dfc8478f5f71a6891a3"
+    }
+  }
+}

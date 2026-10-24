@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-b1-re-plan-an-outing-restaurant-r2-6ae257ee",
+  "lesson": {
+    "slug": "b1-re-plan-an-outing-restaurant",
+    "revision": 2,
+    "sha256": "6ae257ee52001c0e3f98f65ed61db07f7b5312505c4acc19fdc6cf3c648eb5bb",
+    "words": 165,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! I'm on my way. Are you at the restaurant already?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, but there's a problem. Luna is closed tonight. There's a sign on the door that says 'private event'.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "What? But we booked a table for eight! Didn't they call you?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "No, nobody called me. I think they made a mistake. Anyway, we need another place. Any ideas?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "There's a pizza place two streets away. We could just go there.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "That's easy, but it's Salma's birthday, and she loves fish. What about the fish restaurant by the river?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "That's twenty minutes by taxi. Will they have a table?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I'll call them now. If they have a table, we go there. If not, we can still go for pizza.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Good plan. I'll tell Salma and Karim there might be a change.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. So, the fish restaurant if they have a table, the pizza place if not. I'll message everyone in ten minutes.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Perfect. And let's not tell Salma what happened. She'll think we planned it!",
+        "style": "welcoming, helpful and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-re-plan-an-outing-restaurant",
+      "revision": 2,
+      "sha256": "6ae257ee52001c0e3f98f65ed61db07f7b5312505c4acc19fdc6cf3c648eb5bb"
+    }
+  }
+}

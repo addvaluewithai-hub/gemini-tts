@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-b1-explain-a-mix-up-room-r2-91c3bcba",
+  "lesson": {
+    "slug": "b1-explain-a-mix-up-room",
+    "revision": 2,
+    "sha256": "91c3bcba41a149664e4e0a3646fc7a7013111f1b97f118deff67765d892d573f",
+    "words": 120,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hey, where are you? We're all in Room 30 and we're about to start.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Room thirty? But I'm in Room thirteen, and it's empty.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Thirteen? Why are you there?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I thought you said thirteen in your voice message.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Oh no! I said thirty. Sorry, maybe it wasn't very clear.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "It's okay, it was my mistake. So Room thirty is on the third floor, right?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, third floor. If you like, you can join by video call from there.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "I have the printed copies for everyone, so I should come up. It's only about five minutes.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Great, that makes sense. We'll start with the slides, then.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Okay. Room thirty, third floor. I'm on my way.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "Perfect. See you in a minute.",
+        "style": "welcoming, helpful and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-explain-a-mix-up-room",
+      "revision": 2,
+      "sha256": "91c3bcba41a149664e4e0a3646fc7a7013111f1b97f118deff67765d892d573f"
+    }
+  }
+}

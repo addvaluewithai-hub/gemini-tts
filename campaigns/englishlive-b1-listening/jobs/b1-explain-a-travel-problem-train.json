@@ -1,0 +1,102 @@
+{
+  "job_id": "englishlive-b1-explain-a-travel-problem-train-r2-3572524b",
+  "lesson": {
+    "slug": "b1-explain-a-travel-problem-train",
+    "revision": 2,
+    "sha256": "3572524b32648e02d2fcfb7ed45b50d7dae124ea496726d825b6720b037d83c8",
+    "words": 221,
+    "turns": 13
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hello. How can I help you?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. My train to Riverside at three fifteen has been cancelled.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "I'm sorry about that. The train has a technical problem. When do you need to get there?",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Before six. I'm invited to a family dinner, and I don't want to miss it.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "The next train is at four forty, but it arrives at ten past six.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "That's too late for me. Is there any other way to get there before six?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "There's a replacement bus at three forty-five. It takes about two hours, so it arrives at about five forty-five. Your ticket is valid on it.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Oh, that's good news. Is there anything faster? I'd like to arrive a bit earlier.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "There's an express coach at four from the bus station across the road. It arrives at about five thirty. Your train ticket isn't valid on it, but I can refund your ticket. The coach is twenty dollars, so it's eight dollars more.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Then I'll save the money and take the replacement bus. Where does it leave from?",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "From the bus stop on the left as you leave the station. Look for the yellow sign.",
+        "style": "welcoming, helpful and natural"
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. So, the bus at three forty-five, from the stop on the left, and I don't need a new ticket.",
+        "style": "polite, curious and natural"
+      },
+      {
+        "speaker": "Partner",
+        "text": "That's right. I hope you get there in time.",
+        "style": "welcoming, helpful and natural"
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-b1-listening",
+      "slug": "b1-explain-a-travel-problem-train",
+      "revision": 2,
+      "sha256": "3572524b32648e02d2fcfb7ed45b50d7dae124ea496726d825b6720b037d83c8"
+    }
+  }
+}
