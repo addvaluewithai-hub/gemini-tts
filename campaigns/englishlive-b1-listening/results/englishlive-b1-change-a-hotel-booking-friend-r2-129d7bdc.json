@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc",
+  "status": "completed",
+  "created_at": "2026-10-24T19:36:09.838Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 5,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2780516,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792870568/gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870569/gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870569/gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 5,
+    "word_count": 161,
+    "duration_ms": 57600,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.json",
+    "local_vtt": "out/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792870568/gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.wav",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc",
+    "asset_id": "d98d48c1c4e72cae188da572b2b6f351",
+    "resource_type": "video",
+    "bytes": 2774478,
+    "format": "wav",
+    "duration": 57.8
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870569/gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.json",
+    "asset_id": "494080e51fcb265326f09174690a8de3",
+    "resource_type": "raw",
+    "bytes": 21159,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792870569/gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.transcript.vtt",
+    "asset_id": "24a0bf74f54983c39a4b5960526821fe",
+    "resource_type": "raw",
+    "bytes": 1646,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-change-a-hotel-booking-friend-r2-129d7bdc.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 2,
+    "sha256": "129d7bdc2eef40e0cde971fedf4a593ca7676d3c976218fa6f46b1ac3713a73d",
+    "slug": "b1-change-a-hotel-booking-friend"
+  }
+}
