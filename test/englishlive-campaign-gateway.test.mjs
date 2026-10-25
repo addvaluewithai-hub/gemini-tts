@@ -4,7 +4,7 @@ import {createHash} from "node:crypto";
 import {parseEvent,send} from "../src/issue-gateway.mjs";
 import {validateEnglishliveCampaignPlan,compileEnglishliveCampaign} from "../src/englishlive-campaign-gateway.mjs";
 
-const PIN="409ce47ad08fbf454fe09edf94598c05c0bde467";
+const PIN="a96a7b29dff919e294c7ca4ce5a185a79fb849d7";
 const ROOT="campaigns/englishlive-b1-listening/";
 const pilot=[
   "b1-change-a-hotel-booking-dates",
@@ -17,6 +17,7 @@ const slugs=[...pilot,"b1-keep-a-conversation-going-lunch",
   ...Array.from({length:18},(_,i)=>"b1-test-"+String(i+1).padStart(2,"0"))];
 const sha=s=>createHash("sha256").update(s,"utf8").digest("hex");
 const words=t=>t.trim().split(/\s+/u).length;
+const ending=". American English accent. Clear, natural pace for B1 English learners, not rushed.";
 const plan={schemaVersion:1,command:"tts.issue.campaign",mode:"dry-run",
   sourceRepo:"addvaluewithai-hub/gemini-tts",sourceCommit:PIN,group:1};
 const issueEvent=cfg=>({action:"opened",repository:{full_name:"addvaluewithai-hub/gemini-tts"},
@@ -27,22 +28,22 @@ function fixture() {
   const files={},entries=[];
   for (const slug of slugs) {
     const turns=[
-      {speaker:"Partner",text:"Hello, can you help me with a booking?",style:"warm and helpful"},
-      {speaker:"Learner",text:"Yes, please. Tell me what needs changing.",style:"friendly and clear"}
+      {speaker:"Partner",text:"Hello, can you help me with a booking?",style:"warm and helpful"+ending},
+      {speaker:"Learner",text:"Yes, please. Tell me what needs changing.",style:"friendly and clear"+ending}
     ];
     const digest=sha(turns.map(t=>t.speaker+": "+t.text).join("\n"));
     const w=turns.reduce((n,t)=>n+words(t.text),0);
     const voices=slug==="b1-keep-a-conversation-going-lunch"
-      ? {Partner:"Kore",Learner:"Puck"} : {Partner:"Puck",Learner:"Kore"};
-    const job_id="englishlive-"+slug+"-r2-"+digest.slice(0,8);
+      ? {Partner:"Autonoe",Learner:"Iapetus"} : {Partner:"Charon",Learner:"Aoede"};
+    const job_id="englishlive-"+slug+"-r3-"+digest.slice(0,8);
     const entry={slug,job_id,path:"jobs/"+slug+".json",words:w,sha256:digest,voices};
     entries.push(entry);
-    files[ROOT+entry.path]={job_id,lesson:{slug,revision:2,sha256:digest,words:w,turns:2},
+    files[ROOT+entry.path]={job_id,lesson:{slug,revision:3,sha256:digest,words:w,turns:2},
       request:{turns,speakers:{...voices},routing:"explicit",model:"gemini-3.8-flash-tts",
         allow_model_fallback:false,format:"wav",sample_rate:24000,temperature:1,
         transcript:{language_codes:["en-US"],write_vtt:true},
         metadata:{app:"englishlive",campaign:"englishlive-b1-listening",
-          slug,revision:2,sha256:digest}}};
+          slug,revision:3,sha256:digest}}};
   }
   const manifest={schemaVersion:1,campaign:"englishlive-b1-listening",
     app:"addvaluewithai-hub/englishlive",
@@ -83,12 +84,12 @@ test("five original requests, no modifications, five dispatches maximum",async()
   }
 });
 
-test("Nadia lunch dialogue has precisely the documented voice swap",async()=>{
+test("Nadia lunch dialogue has its revised per-lesson voice cast",async()=>{
   const x=fixture();
   const items=await compileEnglishliveCampaign({...plan,group:2},x.read);
   const lunch=items.find(x=>x.lesson==="b1-keep-a-conversation-going-lunch");
   assert.ok(lunch);
-  assert.deepEqual(lunch.request.speakers,{Partner:"Kore",Learner:"Puck"});
+  assert.deepEqual(lunch.request.speakers,{Partner:"Autonoe",Learner:"Iapetus"});
   x.files[ROOT+"jobs/b1-keep-a-conversation-going-lunch.json"].request.speakers.Partner="Puck";
   await assert.rejects(compileEnglishliveCampaign({...plan,group:2},x.read),/voice/);
 });
@@ -106,6 +107,7 @@ test("tampered manifest group, totals, voices, paths and duplicate jobs fail clo
     x=>x.manifest.totalWords++,
     x=>x.entries[0].path="../wrong.json",
     x=>x.entries[0].voices.Partner="Kore",
+    x=>x.entries[0].voices.Partner="voice_custom",
     x=>x.entries[1].job_id=x.entries[0].job_id
   ]) {
     const x=fixture();mutate(x);
@@ -119,6 +121,7 @@ test("tampered script, SHA, word count, settings, voice, identity or metadata fa
     job=>{job.lesson.sha256="0".repeat(64);},
     job=>{job.lesson.words++;},
     job=>{job.request.model="gemini-3.8-flash-lite-tts";},
+    job=>{job.request.turns[0].style="quick and rushed";},
     job=>{job.request.allow_model_fallback=true;},
     job=>{job.request.speakers.Partner="Kore";},
     job=>{job.request.turns[0].voice="Kore";},
