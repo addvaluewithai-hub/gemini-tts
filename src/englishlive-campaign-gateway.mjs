@@ -88,7 +88,7 @@ function validateManifest(manifest) {
   return jobs;
 }
 
-function validateJob(entry,job) {
+export function validateEnglishliveJob(entry,job) {
   if (!object(job)||job.job_id!==entry.job_id||
       !object(job.lesson)||!object(job.request))
     fail("Pinned Englotti job ID/payload mismatch");
@@ -147,7 +147,7 @@ export async function compileEnglishliveCampaign(plan,read) {
   for (const slug of selected) {
     const entry=entries.get(slug);
     const job=await read(plan,ROOT+entry.path);
-    out.push(validateJob(entry,job));
+    out.push(validateEnglishliveJob(entry,job));
   }
   if (new Set(out.map(x=>x.id)).size!==out.length)
     fail("Duplicate Englotti factory job IDs");
