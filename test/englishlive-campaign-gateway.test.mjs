@@ -14,7 +14,8 @@ const pilot=[
   "b1-explain-a-mix-up-room"
 ];
 const slugs=[...pilot,"b1-keep-a-conversation-going-lunch",
-  ...Array.from({length:18},(_,i)=>"b1-test-"+String(i+1).padStart(2,"0"))];
+  ...Array.from({length:17},(_,i)=>"b1-test-"+String(i+1).padStart(2,"0")),
+  "b1-resolve-wrong-order-bakery"];
 const sha=s=>createHash("sha256").update(s,"utf8").digest("hex");
 const words=t=>t.trim().split(/\s+/u).length;
 const ending=". American English accent. Clear, natural pace for B1 English learners, not rushed.";
@@ -33,6 +34,8 @@ function fixture() {
     ];
     if (slug==="b1-explain-a-mix-up-room")
       for(const t of turns)t.style+=" Make thirteen and thirty clearly different: thir-TEEN, THIR-ty.";
+    if (slug==="b1-resolve-wrong-order-bakery")
+      for(const t of turns)t.style+=" Make Nona and Mona clearly different, and spell M-O-N-A letter by letter.";
     const digest=sha(turns.map(t=>t.speaker+": "+t.text).join("\n"));
     const w=turns.reduce((n,t)=>n+words(t.text),0);
     const voices=slug==="b1-keep-a-conversation-going-lunch"
@@ -112,6 +115,14 @@ test("previously approved study-room pronunciation is independently validated, n
   assert.equal(validateEnglishliveJob(x.entries.find(e=>e.slug===slug),room).id,room.job_id);
   room.request.turns[0].style="fast";
   assert.throws(()=>validateEnglishliveJob(x.entries.find(e=>e.slug===slug),room),/Invalid or overridden/);
+});
+
+test("bakery original spelling guidance passes while corrupted guidance fails",async()=>{
+  const x=fixture(), slug="b1-resolve-wrong-order-bakery";
+  const job=x.files[ROOT+"jobs/"+slug+".json"],entry=x.entries.find(e=>e.slug===slug);
+  assert.equal(validateEnglishliveJob(entry,job).id,job.job_id);
+  job.request.turns[0].style="fast";
+  assert.throws(()=>validateEnglishliveJob(entry,job),/Invalid or overridden/);
 });
 
 test("group 5 has four jobs and no overlap with pilot",async()=>{
