@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-re-plan-an-outing-match-r3-d18d13bd",
+  "status": "completed",
+  "created_at": "2026-10-25T11:34:29.753Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 2,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2759396,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928068/gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928069/gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928069/gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 160,
+    "duration_ms": 57100,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.json",
+    "local_vtt": "out/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928068/gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.wav",
+    "public_id": "gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd",
+    "asset_id": "8df6cd445b850d2f5b0d3ac6deb84db3",
+    "resource_type": "video",
+    "bytes": 2753358,
+    "format": "wav",
+    "duration": 57.36
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928069/gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.json",
+    "asset_id": "4a893f049367c7364010cdf5a73c6d71",
+    "resource_type": "raw",
+    "bytes": 20811,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928069/gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.transcript.vtt",
+    "asset_id": "693467098476b357a9d84be05338bbae",
+    "resource_type": "raw",
+    "bytes": 1643,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-re-plan-an-outing-match-r3-d18d13bd.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "d18d13bd21c31dea8c20ad9e26152660b2d5f7793d295f2042f822bc7a6a2e10",
+    "slug": "b1-re-plan-an-outing-match"
+  }
+}

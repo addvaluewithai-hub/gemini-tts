@@ -1,0 +1,902 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:34:26.962Z",
+  "duration_ms": 52200,
+  "word_count": 137,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Excuse me, is this seat free? Yes, go ahead. Are you going all the way to the coast? Yes, to the last stop. First time there. Have you been? Yes, I've been there a few times. Last summer I stayed for a week with my family. Lucky you. What's it like? I love it. The beaches are beautiful and the fish restaurants are amazing. But it gets really busy in August. Good thing it's June then. Exactly. Are you going on vacation? Mm, not really. I'm meeting my fiance's family for the first time, so I'm a bit nervous. Oh, don't worry. I'm sure they'll like you. Just be yourself and maybe bring them something sweet from the city. Good idea. I'm going to get a coffee. Want anything? No, thanks. I'm fine. Good luck this weekend.",
+  "source_text": "Excuse me, is this seat free? Yes, go ahead. Are you going all the way to the coast? Yes, to the last stop. First time there. Have you been? Yes, I've been there a few times. Last summer I stayed for a week with my family. Lucky you! What's it like? I love it. The beaches are beautiful, and the fish restaurants are amazing. But it gets really busy in August. Good thing it's June, then! Exactly. Are you going on vacation? Not really. I'm meeting my fiancée's family for the first time, so I'm a bit nervous. Oh, don't worry. I'm sure they'll like you. Just be yourself, and maybe bring them something sweet from the city. Good idea! I'm going to get a coffee. Want anything? No, thanks, I'm fine. Good luck this weekend!",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Excuse me, is this seat free?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Yes, go ahead. Are you going all the way to the coast?"
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Yes, to the last stop. First time there. Have you been?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "Yes, I've been there a few times. Last summer I stayed for a week with my family."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "Lucky you! What's it like?"
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "I love it. The beaches are beautiful, and the fish restaurants are amazing. But it gets really busy in August."
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "Good thing it's June, then!"
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "Exactly. Are you going on vacation?"
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Not really. I'm meeting my fiancée's family for the first time, so I'm a bit nervous."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Oh, don't worry. I'm sure they'll like you. Just be yourself, and maybe bring them something sweet from the city."
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Good idea! I'm going to get a coffee. Want anything?"
+    },
+    {
+      "index": 11,
+      "speaker": "Learner",
+      "text": "No, thanks, I'm fine. Good luck this weekend!"
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 200,
+      "end_ms": 500,
+      "text": "Excuse",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 500,
+      "end_ms": 800,
+      "text": "me,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 800,
+      "end_ms": 900,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 800,
+      "end_ms": 11300,
+      "text": "Yes,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 1100,
+      "text": "this",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1100,
+      "end_ms": 1300,
+      "text": "seat",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1300,
+      "end_ms": 1600,
+      "text": "free?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2400,
+      "end_ms": 2900,
+      "text": "Yes,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3100,
+      "text": "go",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3100,
+      "end_ms": 3500,
+      "text": "ahead.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3300,
+      "end_ms": 13700,
+      "text": "Last",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4100,
+      "end_ms": 4300,
+      "text": "Are",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4300,
+      "end_ms": 4400,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4400,
+      "end_ms": 4700,
+      "text": "going",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4700,
+      "end_ms": 4800,
+      "text": "all",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4800,
+      "end_ms": 4900,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4900,
+      "end_ms": 5100,
+      "text": "way",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5200,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5200,
+      "end_ms": 5300,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5300,
+      "end_ms": 5800,
+      "text": "coast?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6400,
+      "end_ms": 26600,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 6500,
+      "end_ms": 7000,
+      "text": "Yes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 16900,
+      "text": "Lucky",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7100,
+      "end_ms": 7200,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7200,
+      "end_ms": 7300,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7300,
+      "end_ms": 7500,
+      "text": "last",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7500,
+      "end_ms": 7800,
+      "text": "stop.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8300,
+      "end_ms": 29000,
+      "text": "Exactly.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8600,
+      "end_ms": 8700,
+      "text": "First",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8700,
+      "end_ms": 8800,
+      "text": "time",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8700,
+      "end_ms": 18800,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8800,
+      "end_ms": 9400,
+      "text": "there.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 9800,
+      "text": "Have",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 9801,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 10100,
+      "text": "been?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11500,
+      "end_ms": 11700,
+      "text": "I've",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11700,
+      "end_ms": 11900,
+      "text": "been",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11900,
+      "end_ms": 12100,
+      "text": "there",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12100,
+      "end_ms": 12200,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12200,
+      "end_ms": 12400,
+      "text": "few",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12400,
+      "end_ms": 12900,
+      "text": "times.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13700,
+      "end_ms": 14200,
+      "text": "summer",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14200,
+      "end_ms": 14300,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14300,
+      "end_ms": 14600,
+      "text": "stayed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14600,
+      "end_ms": 14800,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14800,
+      "end_ms": 14801,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14800,
+      "end_ms": 15100,
+      "text": "week",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15100,
+      "end_ms": 15200,
+      "text": "with",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15200,
+      "end_ms": 15400,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15400,
+      "end_ms": 15900,
+      "text": "family.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16900,
+      "end_ms": 17400,
+      "text": "you.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17500,
+      "end_ms": 17600,
+      "text": "What's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17600,
+      "end_ms": 17800,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 18000,
+      "text": "like?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 19100,
+      "text": "love",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19100,
+      "end_ms": 19300,
+      "text": "it.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19900,
+      "end_ms": 20000,
+      "text": "The",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20000,
+      "end_ms": 20400,
+      "text": "beaches",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20400,
+      "end_ms": 20500,
+      "text": "are",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20500,
+      "end_ms": 21200,
+      "text": "beautiful",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21400,
+      "end_ms": 21600,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21600,
+      "end_ms": 21700,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21700,
+      "end_ms": 21900,
+      "text": "fish",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21900,
+      "end_ms": 22500,
+      "text": "restaurants",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22500,
+      "end_ms": 22700,
+      "text": "are",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22700,
+      "end_ms": 23300,
+      "text": "amazing.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24000,
+      "end_ms": 24300,
+      "text": "But",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24400,
+      "end_ms": 24500,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24500,
+      "end_ms": 24800,
+      "text": "gets",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24800,
+      "end_ms": 25000,
+      "text": "really",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25300,
+      "text": "busy",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25300,
+      "end_ms": 25400,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25400,
+      "end_ms": 26000,
+      "text": "August.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26600,
+      "end_ms": 26800,
+      "text": "thing",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 27000,
+      "text": "it's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27200,
+      "text": "June",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27200,
+      "end_ms": 27600,
+      "text": "then.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29600,
+      "end_ms": 29700,
+      "text": "Are",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29700,
+      "end_ms": 29800,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29800,
+      "end_ms": 30000,
+      "text": "going",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 30200,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30200,
+      "end_ms": 30700,
+      "text": "vacation?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31400,
+      "end_ms": 31500,
+      "text": "Mm,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31600,
+      "end_ms": 32100,
+      "text": "not",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32100,
+      "end_ms": 32700,
+      "text": "really.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33000,
+      "end_ms": 33300,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33600,
+      "text": "meeting",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33600,
+      "end_ms": 33800,
+      "text": "my",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33800,
+      "end_ms": 34400,
+      "text": "fiance's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 34800,
+      "text": "family",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34800,
+      "end_ms": 34900,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34900,
+      "end_ms": 35000,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35000,
+      "end_ms": 35300,
+      "text": "first",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35300,
+      "end_ms": 35700,
+      "text": "time,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35700,
+      "end_ms": 36300,
+      "text": "so",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36400,
+      "end_ms": 36500,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36500,
+      "end_ms": 36501,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36500,
+      "end_ms": 36700,
+      "text": "bit",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36700,
+      "end_ms": 37200,
+      "text": "nervous.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37800,
+      "end_ms": 38300,
+      "text": "Oh,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38300,
+      "end_ms": 38600,
+      "text": "don't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38600,
+      "end_ms": 39100,
+      "text": "worry.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39300,
+      "end_ms": 39400,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39400,
+      "end_ms": 39700,
+      "text": "sure",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39700,
+      "end_ms": 39900,
+      "text": "they'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39900,
+      "end_ms": 40200,
+      "text": "like",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40200,
+      "end_ms": 40500,
+      "text": "you.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40900,
+      "end_ms": 41200,
+      "text": "Just",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41200,
+      "end_ms": 41400,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41400,
+      "end_ms": 42100,
+      "text": "yourself",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42600,
+      "end_ms": 42900,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42900,
+      "end_ms": 43200,
+      "text": "maybe",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43200,
+      "end_ms": 43400,
+      "text": "bring",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43400,
+      "end_ms": 43600,
+      "text": "them",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43600,
+      "end_ms": 43900,
+      "text": "something",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43900,
+      "end_ms": 44200,
+      "text": "sweet",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44200,
+      "end_ms": 44400,
+      "text": "from",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44500,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44500,
+      "end_ms": 44800,
+      "text": "city.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45700,
+      "end_ms": 45800,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45800,
+      "end_ms": 46200,
+      "text": "idea.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47000,
+      "end_ms": 47200,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47200,
+      "end_ms": 47400,
+      "text": "going",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47400,
+      "end_ms": 47401,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47400,
+      "end_ms": 47500,
+      "text": "get",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47500,
+      "end_ms": 47600,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47600,
+      "end_ms": 48000,
+      "text": "coffee.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48300,
+      "end_ms": 48400,
+      "text": "Want",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48400,
+      "end_ms": 48800,
+      "text": "anything?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49400,
+      "end_ms": 49600,
+      "text": "No,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49600,
+      "end_ms": 50000,
+      "text": "thanks.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50100,
+      "end_ms": 50300,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50300,
+      "end_ms": 50600,
+      "text": "fine.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51200,
+      "end_ms": 51400,
+      "text": "Good",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51400,
+      "end_ms": 51500,
+      "text": "luck",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51500,
+      "end_ms": 51700,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51700,
+      "end_ms": 52200,
+      "text": "weekend.",
+      "speaker": "spk:1"
+    }
+  ]
+}

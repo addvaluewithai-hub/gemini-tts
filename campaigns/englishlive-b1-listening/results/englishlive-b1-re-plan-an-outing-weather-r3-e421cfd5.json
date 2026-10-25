@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5",
+  "status": "completed",
+  "created_at": "2026-10-25T11:34:34.359Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 3,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 3281636,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928073/gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928073/gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928074/gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 4,
+    "word_count": 204,
+    "duration_ms": 68000,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.json",
+    "local_vtt": "out/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928073/gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.wav",
+    "public_id": "gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5",
+    "asset_id": "a79084cd4e26331348542cb6b55a97b5",
+    "resource_type": "video",
+    "bytes": 3275598,
+    "format": "wav",
+    "duration": 68.24
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928073/gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.json",
+    "asset_id": "8c26776b2c661ee7ec03a129acbbe74c",
+    "resource_type": "raw",
+    "bytes": 26694,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928074/gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.transcript.vtt",
+    "asset_id": "f497dcbf7d18a615ca586aac0d551c85",
+    "resource_type": "raw",
+    "bytes": 2173,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-re-plan-an-outing-weather-r3-e421cfd5.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "e421cfd572a6201faeeb563ce84834f4ff12cd589a27377c7efa5e2f87092978",
+    "slug": "b1-re-plan-an-outing-weather"
+  }
+}

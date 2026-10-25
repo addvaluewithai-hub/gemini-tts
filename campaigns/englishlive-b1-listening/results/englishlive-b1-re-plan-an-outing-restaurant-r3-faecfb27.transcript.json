@@ -1,0 +1,1077 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:34:29.406Z",
+  "duration_ms": 57800,
+  "word_count": 167,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hi. I'm on my way. Are you at the restaurant already? Yes, but there's a problem. Luna is closed tonight. There's a sign on the door that says private event. What? But we booked a table for 8:00. Didn't they call you? No, nobody called me. I think they made a mistake. Anyway, we need another place. Any ideas? There's a pizza place two streets away. We could just go there. That's easy, but it's Salma's birthday and she loves fish. What about the fish restaurant by the river? That's 20 minutes by taxi. Will they have a table? I'll call them now. If they have a table, we go there. If not, we can still go for pizza. Good plan. I'll tell Salma and Kareem there might be a change. Great. So the fish restaurant if they have a table, the pizza place if not. I'll message everyone in 10 minutes. Perfect. And let's not tell Salma what happened. The new place can be a surprise.",
+  "source_text": "Hi! I'm on my way. Are you at the restaurant already? Yes, but there's a problem. Luna is closed tonight. There's a sign on the door that says 'private event'. What? But we booked a table for eight o'clock! Didn't they call you? No, nobody called me. I think they made a mistake. Anyway, we need another place. Any ideas? There's a pizza place two streets away. We could just go there. That's easy, but it's Salma's birthday, and she loves fish. What about the fish restaurant by the river? That's twenty minutes by taxi. Will they have a table? I'll call them now. If they have a table, we go there. If not, we can still go for pizza. Good plan. I'll tell Salma and Karim there might be a change. Great. So, the fish restaurant if they have a table, the pizza place if not. I'll message everyone in ten minutes. Perfect. And let's not tell Salma what happened. The new place can be a surprise!",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hi! I'm on my way. Are you at the restaurant already?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Yes, but there's a problem. Luna is closed tonight. There's a sign on the door that says 'private event'."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "What? But we booked a table for eight o'clock! Didn't they call you?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "No, nobody called me. I think they made a mistake. Anyway, we need another place. Any ideas?"
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "There's a pizza place two streets away. We could just go there."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "That's easy, but it's Salma's birthday, and she loves fish. What about the fish restaurant by the river?"
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "That's twenty minutes by taxi. Will they have a table?"
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "I'll call them now. If they have a table, we go there. If not, we can still go for pizza."
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Good plan. I'll tell Salma and Karim there might be a change."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Great. So, the fish restaurant if they have a table, the pizza place if not. I'll message everyone in ten minutes."
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Perfect. And let's not tell Salma what happened. The new place can be a surprise!"
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 200,
+      "end_ms": 600,
+      "text": "Hi.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1200,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1300,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1300,
+      "end_ms": 1400,
+      "text": "my",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1400,
+      "end_ms": 1700,
+      "text": "way.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2300,
+      "end_ms": 2400,
+      "text": "Are",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2400,
+      "end_ms": 2500,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2500,
+      "end_ms": 2600,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2600,
+      "end_ms": 2700,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2700,
+      "end_ms": 3100,
+      "text": "restaurant",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3100,
+      "end_ms": 3400,
+      "text": "already?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4500,
+      "text": "Yes,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4500,
+      "end_ms": 4900,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4900,
+      "end_ms": 5100,
+      "text": "there's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5101,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5600,
+      "text": "problem.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6300,
+      "end_ms": 6600,
+      "text": "Luna",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 6800,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6800,
+      "end_ms": 7400,
+      "text": "closed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 7800,
+      "text": "tonight.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8300,
+      "end_ms": 8500,
+      "text": "There's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8500,
+      "end_ms": 8600,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8600,
+      "end_ms": 9000,
+      "text": "sign",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9100,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9100,
+      "end_ms": 9200,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9200,
+      "end_ms": 9600,
+      "text": "door",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 9800,
+      "text": "that",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 10100,
+      "text": "says",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 10300,
+      "end_ms": 10800,
+      "text": "private",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 10800,
+      "end_ms": 11400,
+      "text": "event.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12200,
+      "end_ms": 12700,
+      "text": "What?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13100,
+      "end_ms": 13400,
+      "text": "But",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13400,
+      "end_ms": 13600,
+      "text": "we",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 13900,
+      "text": "booked",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13900,
+      "end_ms": 14000,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14400,
+      "text": "table",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14400,
+      "end_ms": 14600,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14600,
+      "end_ms": 15300,
+      "text": "8:00.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15900,
+      "end_ms": 16100,
+      "text": "Didn't",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16100,
+      "end_ms": 16200,
+      "text": "they",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16600,
+      "text": "call",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16600,
+      "end_ms": 16800,
+      "text": "you?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17500,
+      "end_ms": 18000,
+      "text": "No,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18000,
+      "end_ms": 18300,
+      "text": "nobody",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18300,
+      "end_ms": 18600,
+      "text": "called",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18600,
+      "end_ms": 18800,
+      "text": "me.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 18900,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19100,
+      "end_ms": 19300,
+      "text": "think",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19300,
+      "end_ms": 19400,
+      "text": "they",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19400,
+      "end_ms": 19500,
+      "text": "made",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19500,
+      "end_ms": 19600,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19600,
+      "end_ms": 20000,
+      "text": "mistake.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20800,
+      "end_ms": 21200,
+      "text": "Anyway,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21200,
+      "end_ms": 21500,
+      "text": "we",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21500,
+      "end_ms": 21700,
+      "text": "need",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21700,
+      "end_ms": 22000,
+      "text": "another",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 22400,
+      "text": "place.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23000,
+      "end_ms": 23100,
+      "text": "Any",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23100,
+      "end_ms": 23600,
+      "text": "ideas?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24400,
+      "end_ms": 24500,
+      "text": "There's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24500,
+      "end_ms": 24600,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24600,
+      "end_ms": 25000,
+      "text": "pizza",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25300,
+      "text": "place",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25300,
+      "end_ms": 25500,
+      "text": "two",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25500,
+      "end_ms": 25800,
+      "text": "streets",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25800,
+      "end_ms": 26300,
+      "text": "away.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26500,
+      "end_ms": 26600,
+      "text": "We",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26600,
+      "end_ms": 26700,
+      "text": "could",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26700,
+      "end_ms": 26800,
+      "text": "just",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 27000,
+      "text": "go",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27200,
+      "text": "there.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28000,
+      "end_ms": 28300,
+      "text": "That's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28300,
+      "end_ms": 28700,
+      "text": "easy,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28700,
+      "end_ms": 29100,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29100,
+      "end_ms": 29400,
+      "text": "it's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29400,
+      "end_ms": 29800,
+      "text": "Salma's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29800,
+      "end_ms": 30300,
+      "text": "birthday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30300,
+      "end_ms": 30600,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 30800,
+      "text": "she",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30800,
+      "end_ms": 31100,
+      "text": "loves",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31100,
+      "end_ms": 31500,
+      "text": "fish.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32100,
+      "end_ms": 32200,
+      "text": "What",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32200,
+      "end_ms": 32400,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32400,
+      "end_ms": 32500,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32500,
+      "end_ms": 32800,
+      "text": "fish",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32800,
+      "end_ms": 33200,
+      "text": "restaurant",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33200,
+      "end_ms": 33300,
+      "text": "by",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33400,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33400,
+      "end_ms": 33700,
+      "text": "river?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34200,
+      "end_ms": 34400,
+      "text": "That's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 34800,
+      "text": "20",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34800,
+      "end_ms": 35100,
+      "text": "minutes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35100,
+      "end_ms": 35300,
+      "text": "by",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35300,
+      "end_ms": 35900,
+      "text": "taxi.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36300,
+      "end_ms": 36400,
+      "text": "Will",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36400,
+      "end_ms": 36500,
+      "text": "they",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36500,
+      "end_ms": 36700,
+      "text": "have",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36700,
+      "end_ms": 36800,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 37200,
+      "text": "table?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37900,
+      "end_ms": 38000,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38000,
+      "end_ms": 38200,
+      "text": "call",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38200,
+      "end_ms": 38400,
+      "text": "them",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38400,
+      "end_ms": 38600,
+      "text": "now.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39600,
+      "end_ms": 39700,
+      "text": "If",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39700,
+      "end_ms": 39800,
+      "text": "they",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39800,
+      "end_ms": 40000,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 40001,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 40300,
+      "text": "table,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40300,
+      "end_ms": 40500,
+      "text": "we",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40500,
+      "end_ms": 40600,
+      "text": "go",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40600,
+      "end_ms": 41100,
+      "text": "there.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41100,
+      "end_ms": 41300,
+      "text": "If",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41300,
+      "end_ms": 41600,
+      "text": "not,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41600,
+      "end_ms": 41700,
+      "text": "we",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41700,
+      "end_ms": 41900,
+      "text": "can",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41900,
+      "end_ms": 42100,
+      "text": "still",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42100,
+      "end_ms": 42300,
+      "text": "go",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42300,
+      "end_ms": 42400,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42400,
+      "end_ms": 42800,
+      "text": "pizza.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43500,
+      "end_ms": 43700,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 43700,
+      "end_ms": 44000,
+      "text": "plan.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44600,
+      "text": "I'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44600,
+      "end_ms": 44800,
+      "text": "tell",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 45100,
+      "text": "Salma",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45100,
+      "end_ms": 45200,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45200,
+      "end_ms": 45600,
+      "text": "Kareem",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45600,
+      "end_ms": 45700,
+      "text": "there",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45700,
+      "end_ms": 45900,
+      "text": "might",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 46000,
+      "text": "be",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46000,
+      "end_ms": 46001,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46000,
+      "end_ms": 46400,
+      "text": "change.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47200,
+      "end_ms": 47600,
+      "text": "Great.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47700,
+      "end_ms": 48000,
+      "text": "So",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48000,
+      "end_ms": 48100,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48100,
+      "end_ms": 48400,
+      "text": "fish",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48400,
+      "end_ms": 48700,
+      "text": "restaurant",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48700,
+      "end_ms": 48800,
+      "text": "if",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48800,
+      "end_ms": 48900,
+      "text": "they",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48900,
+      "end_ms": 49000,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49000,
+      "end_ms": 49001,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49000,
+      "end_ms": 49500,
+      "text": "table,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49800,
+      "end_ms": 49900,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49900,
+      "end_ms": 50300,
+      "text": "pizza",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50300,
+      "end_ms": 50600,
+      "text": "place",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50600,
+      "end_ms": 50700,
+      "text": "if",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50700,
+      "end_ms": 50900,
+      "text": "not.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51500,
+      "end_ms": 51700,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51700,
+      "end_ms": 52000,
+      "text": "message",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52000,
+      "end_ms": 52300,
+      "text": "everyone",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52300,
+      "end_ms": 52500,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52500,
+      "end_ms": 52700,
+      "text": "10",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52700,
+      "end_ms": 53100,
+      "text": "minutes.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53800,
+      "end_ms": 54400,
+      "text": "Perfect.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54400,
+      "end_ms": 54700,
+      "text": "And",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54700,
+      "end_ms": 54900,
+      "text": "let's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54900,
+      "end_ms": 55100,
+      "text": "not",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55100,
+      "end_ms": 55200,
+      "text": "tell",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55200,
+      "end_ms": 55600,
+      "text": "Salma",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55600,
+      "end_ms": 55800,
+      "text": "what",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55800,
+      "end_ms": 56300,
+      "text": "happened.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56500,
+      "end_ms": 56600,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56600,
+      "end_ms": 56700,
+      "text": "new",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56700,
+      "end_ms": 57000,
+      "text": "place",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57000,
+      "end_ms": 57100,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57100,
+      "end_ms": 57200,
+      "text": "be",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57200,
+      "end_ms": 57300,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57300,
+      "end_ms": 57800,
+      "text": "surprise.",
+      "speaker": "spk:0"
+    }
+  ]
+}

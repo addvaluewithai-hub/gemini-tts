@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e",
+  "status": "completed",
+  "created_at": "2026-10-25T11:34:41.988Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 1,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2949476,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928080/gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928081/gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928081/gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 4,
+    "word_count": 170,
+    "duration_ms": 61000,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.json",
+    "local_vtt": "out/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928080/gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.wav",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e",
+    "asset_id": "4f13a450de9c1095ccb640208561bbbe",
+    "resource_type": "video",
+    "bytes": 2943438,
+    "format": "wav",
+    "duration": 61.32
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928081/gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.json",
+    "asset_id": "ed986282ec21be701bf207093cc58c25",
+    "resource_type": "raw",
+    "bytes": 22339,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928081/gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.transcript.vtt",
+    "asset_id": "95a6c25bc3b4b2d8c08d4e78747af181",
+    "resource_type": "raw",
+    "bytes": 1876,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-keep-a-conversation-going-neighbour-r3-8ee6740e.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "8ee6740e8b3295e83f993e4cca3b93e96577179efe6f82f0284844cf561315db",
+    "slug": "b1-keep-a-conversation-going-neighbour"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-keep-a-conversation-going-train-r3-5e052f48",
+  "status": "completed",
+  "created_at": "2026-10-25T11:34:29.660Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 5,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2523236,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928068/gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928068/gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928069/gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 137,
+    "duration_ms": 52200,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.json",
+    "local_vtt": "out/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928068/gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.wav",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48",
+    "asset_id": "d1fc43085fe7013e3b6dbac1b9cbbbd7",
+    "resource_type": "video",
+    "bytes": 2517198,
+    "format": "wav",
+    "duration": 52.44
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928068/gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.json",
+    "asset_id": "89d2829ebbe08dbf9f14ac97627a4763",
+    "resource_type": "raw",
+    "bytes": 18266,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928069/gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.transcript.vtt",
+    "asset_id": "817ce959f670e5bbf169534bd228ead5",
+    "resource_type": "raw",
+    "bytes": 1731,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-keep-a-conversation-going-train-r3-5e052f48.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "5e052f488dd9d9251f67d63d8496e67661a0c5ca793ff32f375f89a07f45565e",
+    "slug": "b1-keep-a-conversation-going-train"
+  }
+}
