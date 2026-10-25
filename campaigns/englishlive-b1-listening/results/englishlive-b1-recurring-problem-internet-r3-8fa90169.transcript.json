@@ -1,0 +1,1298 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:36:02.946Z",
+  "duration_ms": 69300,
+  "word_count": 203,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Good morning. Customer service. How can I help you? Hi. I'm calling about my internet again. It keeps stopping every evening. I'm sorry to hear that. When did it start? About a week ago. It stops at around 8:00 and comes back at about 10:00. A technician came last Tuesday and reset the router, but it's happened every night since then. I see. Is it causing you a lot of problems? Yes, it's a real problem because I have online classes in the evening. I've missed two classes this week. I understand. I can send a technician on Thursday between 9:00 and 12:00. Or because you need it for your classes, we can send you a new router tomorrow. Is the new router easy to set up? I'd like to fix this as soon as possible. Yes, it takes about 10 minutes. You just follow the card in the box. Then please send the new router tomorrow. And if it still doesn't work, can the technician come on Thursday? Of course. I'll book Thursday too, and you can cancel it if everything's fine. Great. So a new router tomorrow and a technician on Thursday between 9:00 and 12:00, just in case. Thanks. Bye.",
+  "source_text": "Good morning, customer service. How can I help you? Hi. I'm calling about my internet again. It keeps stopping every evening. I'm sorry to hear that. When did it start? About a week ago. It stops at around eight and comes back at about ten. A technician came last Tuesday and reset the router, but it's happened every night since then. I see. Is it causing you a lot of problems? Yes, it's a real problem, because I have online classes in the evening. I've missed two classes this week. I understand. I can send a technician on Thursday between nine and twelve. Or, because you need it for your classes, we can send you a new router tomorrow. Is the new router easy to set up? I'd like to fix this as soon as possible. Yes, it takes about ten minutes. You just follow the card in the box. Then please send the new router tomorrow. And if it still doesn't work, can the technician come on Thursday? Of course. I'll book Thursday too, and you can cancel it if everything's fine. Great. So a new router tomorrow, and a technician on Thursday between nine and twelve, just in case. Thanks, bye.",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Good morning, customer service. How can I help you?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Hi. I'm calling about my internet again. It keeps stopping every evening."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "I'm sorry to hear that. When did it start?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "About a week ago. It stops at around eight and comes back at about ten. A technician came last Tuesday and reset the router, but it's happened every night since then."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "I see. Is it causing you a lot of problems?"
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "Yes, it's a real problem, because I have online classes in the evening. I've missed two classes this week."
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "I understand. I can send a technician on Thursday between nine and twelve. Or, because you need it for your classes, we can send you a new router tomorrow."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "Is the new router easy to set up? I'd like to fix this as soon as possible."
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Yes, it takes about ten minutes. You just follow the card in the box."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Then please send the new router tomorrow. And if it still doesn't work, can the technician come on Thursday?"
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Of course. I'll book Thursday too, and you can cancel it if everything's fine."
+    },
+    {
+      "index": 11,
+      "speaker": "Learner",
+      "text": "Great. So a new router tomorrow, and a technician on Thursday between nine and twelve, just in case. Thanks, bye."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 300,
+      "end_ms": 400,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 400,
+      "end_ms": 800,
+      "text": "morning.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 1300,
+      "text": "Customer",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1300,
+      "end_ms": 1800,
+      "text": "service.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 2000,
+      "text": "How",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2100,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2100,
+      "end_ms": 2200,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2200,
+      "end_ms": 2400,
+      "text": "help",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2400,
+      "end_ms": 2500,
+      "text": "you?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3300,
+      "end_ms": 3700,
+      "text": "Hi.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3700,
+      "end_ms": 4000,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4300,
+      "text": "calling",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4300,
+      "end_ms": 4500,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4500,
+      "end_ms": 4600,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4600,
+      "end_ms": 5100,
+      "text": "internet",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5600,
+      "text": "again.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5900,
+      "end_ms": 6000,
+      "text": "It",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6000,
+      "end_ms": 6300,
+      "text": "keeps",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6300,
+      "end_ms": 6800,
+      "text": "stopping",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6800,
+      "end_ms": 7100,
+      "text": "every",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7100,
+      "end_ms": 7500,
+      "text": "evening.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8200,
+      "end_ms": 8400,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8400,
+      "end_ms": 8700,
+      "text": "sorry",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8700,
+      "end_ms": 8800,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8800,
+      "end_ms": 9000,
+      "text": "hear",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9400,
+      "text": "that.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9500,
+      "end_ms": 9800,
+      "text": "When",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 9900,
+      "text": "did",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9900,
+      "end_ms": 10000,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10000,
+      "end_ms": 10400,
+      "text": "start?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11200,
+      "text": "About",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11200,
+      "end_ms": 11300,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11300,
+      "end_ms": 11500,
+      "text": "week",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11500,
+      "end_ms": 12000,
+      "text": "ago.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12300,
+      "end_ms": 12500,
+      "text": "It",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12500,
+      "end_ms": 13000,
+      "text": "stops",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13000,
+      "end_ms": 13400,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13400,
+      "end_ms": 13800,
+      "text": "around",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13800,
+      "end_ms": 14300,
+      "text": "8:00",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14400,
+      "end_ms": 14600,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14600,
+      "end_ms": 14800,
+      "text": "comes",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14800,
+      "end_ms": 15100,
+      "text": "back",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15100,
+      "end_ms": 15200,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15200,
+      "end_ms": 15500,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15500,
+      "end_ms": 15900,
+      "text": "10:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16500,
+      "end_ms": 16600,
+      "text": "A",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16600,
+      "end_ms": 17100,
+      "text": "technician",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17100,
+      "end_ms": 17400,
+      "text": "came",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17400,
+      "end_ms": 17700,
+      "text": "last",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17700,
+      "end_ms": 18200,
+      "text": "Tuesday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18200,
+      "end_ms": 18400,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18400,
+      "end_ms": 18700,
+      "text": "reset",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18700,
+      "end_ms": 18800,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 19300,
+      "text": "router,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19500,
+      "end_ms": 19600,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19600,
+      "end_ms": 19800,
+      "text": "it's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19800,
+      "end_ms": 20100,
+      "text": "happened",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20100,
+      "end_ms": 20300,
+      "text": "every",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20300,
+      "end_ms": 20500,
+      "text": "night",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20500,
+      "end_ms": 20700,
+      "text": "since",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20700,
+      "end_ms": 21000,
+      "text": "then.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21600,
+      "end_ms": 21700,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21700,
+      "end_ms": 22200,
+      "text": "see.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22300,
+      "end_ms": 22500,
+      "text": "Is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22500,
+      "end_ms": 22700,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22700,
+      "end_ms": 23100,
+      "text": "causing",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23100,
+      "end_ms": 23200,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23200,
+      "end_ms": 23201,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23200,
+      "end_ms": 23400,
+      "text": "lot",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23400,
+      "end_ms": 23500,
+      "text": "of",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23500,
+      "end_ms": 24000,
+      "text": "problems?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24500,
+      "end_ms": 24900,
+      "text": "Yes,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24900,
+      "end_ms": 25200,
+      "text": "it's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25201,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25500,
+      "text": "real",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25500,
+      "end_ms": 26000,
+      "text": "problem",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26000,
+      "end_ms": 26300,
+      "text": "because",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26300,
+      "end_ms": 26400,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26400,
+      "end_ms": 26700,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26700,
+      "end_ms": 27000,
+      "text": "online",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27400,
+      "text": "classes",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 27500,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27500,
+      "end_ms": 27600,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 28200,
+      "text": "evening.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28300,
+      "end_ms": 28400,
+      "text": "I've",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28400,
+      "end_ms": 28700,
+      "text": "missed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28700,
+      "end_ms": 28900,
+      "text": "two",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28900,
+      "end_ms": 29400,
+      "text": "classes",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29400,
+      "end_ms": 29600,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29600,
+      "end_ms": 29900,
+      "text": "week.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30400,
+      "end_ms": 30500,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30500,
+      "end_ms": 31200,
+      "text": "understand.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 32000,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32000,
+      "end_ms": 32200,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32200,
+      "end_ms": 32500,
+      "text": "send",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32500,
+      "end_ms": 32600,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32600,
+      "end_ms": 33200,
+      "text": "technician",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33200,
+      "end_ms": 33500,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33500,
+      "end_ms": 34400,
+      "text": "Thursday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 35000,
+      "text": "between",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35000,
+      "end_ms": 35300,
+      "text": "9:00",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35300,
+      "end_ms": 35400,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35400,
+      "end_ms": 35900,
+      "text": "12:00.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36600,
+      "end_ms": 36900,
+      "text": "Or",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36900,
+      "end_ms": 37400,
+      "text": "because",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37400,
+      "end_ms": 37500,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37500,
+      "end_ms": 37600,
+      "text": "need",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37600,
+      "end_ms": 37800,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37800,
+      "end_ms": 37900,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37900,
+      "end_ms": 38000,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38000,
+      "end_ms": 38600,
+      "text": "classes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38900,
+      "end_ms": 39000,
+      "text": "we",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39000,
+      "end_ms": 39200,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39200,
+      "end_ms": 39400,
+      "text": "send",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39400,
+      "end_ms": 39500,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39500,
+      "end_ms": 39600,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39600,
+      "end_ms": 39800,
+      "text": "new",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39800,
+      "end_ms": 40100,
+      "text": "router",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40100,
+      "end_ms": 40600,
+      "text": "tomorrow.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41400,
+      "end_ms": 41600,
+      "text": "Is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41600,
+      "end_ms": 41700,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41700,
+      "end_ms": 41900,
+      "text": "new",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41900,
+      "end_ms": 42400,
+      "text": "router",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42400,
+      "end_ms": 42700,
+      "text": "easy",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42700,
+      "end_ms": 42800,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42800,
+      "end_ms": 43000,
+      "text": "set",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43000,
+      "end_ms": 43500,
+      "text": "up?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43600,
+      "end_ms": 43800,
+      "text": "I'd",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43800,
+      "end_ms": 44000,
+      "text": "like",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 44100,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44100,
+      "end_ms": 44400,
+      "text": "fix",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44500,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44500,
+      "end_ms": 44600,
+      "text": "as",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44600,
+      "end_ms": 44800,
+      "text": "soon",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 44900,
+      "text": "as",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44900,
+      "end_ms": 45500,
+      "text": "possible.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46300,
+      "end_ms": 46800,
+      "text": "Yes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46900,
+      "end_ms": 47100,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47100,
+      "end_ms": 47400,
+      "text": "takes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47400,
+      "end_ms": 47600,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47600,
+      "end_ms": 47900,
+      "text": "10",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47900,
+      "end_ms": 48300,
+      "text": "minutes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48600,
+      "end_ms": 48800,
+      "text": "You",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48800,
+      "end_ms": 49000,
+      "text": "just",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49000,
+      "end_ms": 49300,
+      "text": "follow",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49300,
+      "end_ms": 49400,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49400,
+      "end_ms": 49600,
+      "text": "card",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49600,
+      "end_ms": 49700,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49700,
+      "end_ms": 49800,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49800,
+      "end_ms": 50200,
+      "text": "box.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 51500,
+      "text": "Then",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51500,
+      "end_ms": 51800,
+      "text": "please",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51800,
+      "end_ms": 52000,
+      "text": "send",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52000,
+      "end_ms": 52100,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52100,
+      "end_ms": 52300,
+      "text": "new",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52300,
+      "end_ms": 52600,
+      "text": "router",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52600,
+      "end_ms": 53200,
+      "text": "tomorrow.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53600,
+      "end_ms": 53700,
+      "text": "And",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53700,
+      "end_ms": 53701,
+      "text": "if",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53700,
+      "end_ms": 53900,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53900,
+      "end_ms": 54100,
+      "text": "still",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54100,
+      "end_ms": 54400,
+      "text": "doesn't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54400,
+      "end_ms": 54600,
+      "text": "work,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54600,
+      "end_ms": 54800,
+      "text": "can",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54800,
+      "end_ms": 54900,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54900,
+      "end_ms": 55400,
+      "text": "technician",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55400,
+      "end_ms": 55600,
+      "text": "come",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55600,
+      "end_ms": 55700,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55700,
+      "end_ms": 56200,
+      "text": "Thursday?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56800,
+      "end_ms": 56900,
+      "text": "Of",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56900,
+      "end_ms": 57500,
+      "text": "course.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57700,
+      "end_ms": 57800,
+      "text": "I'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57800,
+      "end_ms": 58000,
+      "text": "book",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58000,
+      "end_ms": 58400,
+      "text": "Thursday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58400,
+      "end_ms": 58800,
+      "text": "too,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59100,
+      "end_ms": 59300,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59300,
+      "end_ms": 59400,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59400,
+      "end_ms": 59500,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59500,
+      "end_ms": 59900,
+      "text": "cancel",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59900,
+      "end_ms": 60000,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60000,
+      "end_ms": 60100,
+      "text": "if",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60100,
+      "end_ms": 60400,
+      "text": "everything's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60400,
+      "end_ms": 60700,
+      "text": "fine.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61400,
+      "end_ms": 62000,
+      "text": "Great.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 62100,
+      "end_ms": 62300,
+      "text": "So",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 62300,
+      "end_ms": 62301,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 62300,
+      "end_ms": 62600,
+      "text": "new",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 62600,
+      "end_ms": 62900,
+      "text": "router",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 62900,
+      "end_ms": 63600,
+      "text": "tomorrow",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 63700,
+      "end_ms": 64000,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 64000,
+      "end_ms": 64200,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 64200,
+      "end_ms": 64700,
+      "text": "technician",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 64700,
+      "end_ms": 64800,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 64800,
+      "end_ms": 65400,
+      "text": "Thursday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 65500,
+      "end_ms": 65900,
+      "text": "between",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 65900,
+      "end_ms": 66100,
+      "text": "9:00",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 66100,
+      "end_ms": 66200,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 66200,
+      "end_ms": 66700,
+      "text": "12:00,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 66900,
+      "end_ms": 67100,
+      "text": "just",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 67100,
+      "end_ms": 67200,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 67200,
+      "end_ms": 67500,
+      "text": "case.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 68400,
+      "end_ms": 68700,
+      "text": "Thanks.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 69100,
+      "end_ms": 69300,
+      "text": "Bye.",
+      "speaker": "spk:1"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd",
+  "status": "completed",
+  "created_at": "2026-10-25T11:36:01.808Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 1,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2947556,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928159/gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928160/gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928161/gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 1,
+    "word_count": 178,
+    "duration_ms": 61000,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.json",
+    "local_vtt": "out/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928159/gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.wav",
+    "public_id": "gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd",
+    "asset_id": "fb231fcc28a79ba0e5035a1ccf5581b8",
+    "resource_type": "video",
+    "bytes": 2941518,
+    "format": "wav",
+    "duration": 61.28
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928160/gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.json",
+    "asset_id": "1ab039802f461acaae568bc71544a225",
+    "resource_type": "raw",
+    "bytes": 23120,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928161/gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.transcript.vtt",
+    "asset_id": "226471a48a8e874d21e9104729176f12",
+    "resource_type": "raw",
+    "bytes": 1861,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-recurring-problem-dry-cleaner-r3-19b7c9fd.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "19b7c9fd9a4aae89ea4956fb6091a8333e606e047259f1557c3ba91a14b09c00",
+    "slug": "b1-recurring-problem-dry-cleaner"
+  }
+}

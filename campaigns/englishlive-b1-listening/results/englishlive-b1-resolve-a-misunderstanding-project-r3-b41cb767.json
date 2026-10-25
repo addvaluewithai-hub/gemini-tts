@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767",
+  "status": "completed",
+  "created_at": "2026-10-25T11:36:05.939Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 4,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2888036,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928164/gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928165/gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928165/gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 155,
+    "duration_ms": 59700,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.json",
+    "local_vtt": "out/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928164/gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.wav",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767",
+    "asset_id": "e77b84cfad81f7908f24c4ee5ac759c3",
+    "resource_type": "video",
+    "bytes": 2881998,
+    "format": "wav",
+    "duration": 60.04
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928165/gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.json",
+    "asset_id": "4259d80d945e03039bd43f416464fdb2",
+    "resource_type": "raw",
+    "bytes": 20519,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928165/gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.transcript.vtt",
+    "asset_id": "247284b499d13c94010942d151dd2203",
+    "resource_type": "raw",
+    "bytes": 1710,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-resolve-a-misunderstanding-project-r3-b41cb767.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "b41cb767ccc77f20cf9079eb9c82fae5041c9a2b2540ea1d44cc2143f98f7bdf",
+    "slug": "b1-resolve-a-misunderstanding-project"
+  }
+}

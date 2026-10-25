@@ -1,0 +1,862 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:36:03.776Z",
+  "duration_ms": 54300,
+  "word_count": 132,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hi. I wanted to talk to you about your essay. It isn' on the LMS and the deadline was Friday. Really? I sent it to you by email on Thursday evening. Sorry. What's the LMS? The learning management system. It's the course website. I said send it through the LMS. Oh, I understand now. I only heard send it, so I thought email was fine. I didn't know it had to go on the website. That's okay. A few students made the same mistake. Can I upload it today? I can do it right after this. Yes. If it's there before 5, it counts as on time. Great. Thank you. Where do I put it on the website? Under week 6, then essay. Okay. Week 6, then essay before 5. Thank you.",
+  "source_text": "Hi. I wanted to talk to you about your essay. It isn't on the LMS, and the deadline was Friday. Really? I sent it to you by email on Thursday evening. Sorry, what's the LMS? The Learning Management System. It's the course website. I said, 'Send it through the LMS.' Oh, I understand now. I only heard 'send it', so I thought email was fine. I didn't know it had to go on the website. That's okay. A few students made the same mistake. Can I upload it today? I can do it right after this. Yes. If it's there before five, it counts as on time. Great, thank you. Where do I put it on the website? Under 'Week 6', then 'Essay'. Okay. Week 6, then 'Essay', before five. Thank you.",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hi. I wanted to talk to you about your essay. It isn't on the LMS, and the deadline was Friday."
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Really? I sent it to you by email on Thursday evening. Sorry, what's the LMS?"
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "The Learning Management System. It's the course website. I said, 'Send it through the LMS.'"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "Oh, I understand now. I only heard 'send it', so I thought email was fine. I didn't know it had to go on the website."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "That's okay. A few students made the same mistake."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "Can I upload it today? I can do it right after this."
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "Yes. If it's there before five, it counts as on time."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "Great, thank you. Where do I put it on the website?"
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Under 'Week 6', then 'Essay'."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Okay. Week 6, then 'Essay', before five. Thank you."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 300,
+      "end_ms": 700,
+      "text": "Hi.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1100,
+      "end_ms": 1500,
+      "text": "wanted",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1500,
+      "end_ms": 1600,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1600,
+      "end_ms": 1900,
+      "text": "talk",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1900,
+      "end_ms": 2000,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2100,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2100,
+      "end_ms": 2300,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2300,
+      "end_ms": 2500,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2500,
+      "end_ms": 3000,
+      "text": "essay.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3400,
+      "end_ms": 3600,
+      "text": "It",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3600,
+      "end_ms": 4000,
+      "text": "isn'",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4200,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4200,
+      "end_ms": 4400,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4400,
+      "end_ms": 5300,
+      "text": "LMS",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 5500,
+      "end_ms": 5800,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 5800,
+      "end_ms": 5801,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 5800,
+      "end_ms": 6300,
+      "text": "deadline",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 6300,
+      "end_ms": 6500,
+      "text": "was",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 6500,
+      "end_ms": 7000,
+      "text": "Friday.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7600,
+      "end_ms": 8000,
+      "text": "Really?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8700,
+      "end_ms": 8800,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8800,
+      "end_ms": 9100,
+      "text": "sent",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9100,
+      "end_ms": 9200,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9200,
+      "end_ms": 9300,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9300,
+      "end_ms": 9400,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9600,
+      "text": "by",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 10000,
+      "text": "email",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 10000,
+      "end_ms": 10200,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 10200,
+      "end_ms": 10700,
+      "text": "Thursday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 10700,
+      "end_ms": 11200,
+      "text": "evening.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12000,
+      "end_ms": 12400,
+      "text": "Sorry.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13000,
+      "end_ms": 13300,
+      "text": "What's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13300,
+      "end_ms": 13600,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 14300,
+      "text": "LMS?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15000,
+      "end_ms": 15100,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15100,
+      "end_ms": 15500,
+      "text": "learning",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15500,
+      "end_ms": 16200,
+      "text": "management",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16700,
+      "text": "system.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17000,
+      "end_ms": 17300,
+      "text": "It's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17300,
+      "end_ms": 17500,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17500,
+      "end_ms": 17800,
+      "text": "course",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 18400,
+      "text": "website.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18900,
+      "end_ms": 19000,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19000,
+      "end_ms": 19500,
+      "text": "said",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19500,
+      "end_ms": 19800,
+      "text": "send",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19800,
+      "end_ms": 20000,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20000,
+      "end_ms": 20300,
+      "text": "through",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20300,
+      "end_ms": 20500,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20500,
+      "end_ms": 21200,
+      "text": "LMS.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21800,
+      "end_ms": 22500,
+      "text": "Oh,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22500,
+      "end_ms": 22700,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22700,
+      "end_ms": 23300,
+      "text": "understand",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23300,
+      "end_ms": 23700,
+      "text": "now.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24200,
+      "end_ms": 24400,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24400,
+      "end_ms": 24600,
+      "text": "only",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24600,
+      "end_ms": 25000,
+      "text": "heard",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25400,
+      "text": "send",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25400,
+      "end_ms": 25800,
+      "text": "it,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25800,
+      "end_ms": 26300,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26300,
+      "end_ms": 26400,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26400,
+      "end_ms": 26700,
+      "text": "thought",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26700,
+      "end_ms": 27000,
+      "text": "email",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27200,
+      "text": "was",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27200,
+      "end_ms": 27800,
+      "text": "fine.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28100,
+      "end_ms": 28200,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28200,
+      "end_ms": 28500,
+      "text": "didn't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28500,
+      "end_ms": 28700,
+      "text": "know",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28700,
+      "end_ms": 28800,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28800,
+      "end_ms": 29000,
+      "text": "had",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29000,
+      "end_ms": 29100,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29100,
+      "end_ms": 29200,
+      "text": "go",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29200,
+      "end_ms": 29300,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29300,
+      "end_ms": 29400,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29400,
+      "end_ms": 30000,
+      "text": "website.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 30800,
+      "text": "That's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30800,
+      "end_ms": 31200,
+      "text": "okay.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31500,
+      "end_ms": 31600,
+      "text": "A",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31600,
+      "end_ms": 31800,
+      "text": "few",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 32300,
+      "text": "students",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32300,
+      "end_ms": 32500,
+      "text": "made",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32500,
+      "end_ms": 32600,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32600,
+      "end_ms": 32800,
+      "text": "same",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32800,
+      "end_ms": 33300,
+      "text": "mistake.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33900,
+      "end_ms": 34000,
+      "text": "Can",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 34200,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34200,
+      "end_ms": 34500,
+      "text": "upload",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34500,
+      "end_ms": 34700,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34700,
+      "end_ms": 35200,
+      "text": "today?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35500,
+      "end_ms": 35600,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35600,
+      "end_ms": 35800,
+      "text": "can",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35800,
+      "end_ms": 35900,
+      "text": "do",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35900,
+      "end_ms": 36000,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36000,
+      "end_ms": 36200,
+      "text": "right",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36200,
+      "end_ms": 36400,
+      "text": "after",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36400,
+      "end_ms": 36800,
+      "text": "this.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37200,
+      "end_ms": 37900,
+      "text": "Yes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38100,
+      "end_ms": 38300,
+      "text": "If",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38300,
+      "end_ms": 38500,
+      "text": "it's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38500,
+      "end_ms": 38700,
+      "text": "there",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38700,
+      "end_ms": 39100,
+      "text": "before",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39800,
+      "text": "5,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39800,
+      "end_ms": 40000,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 40300,
+      "text": "counts",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40300,
+      "end_ms": 40500,
+      "text": "as",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40500,
+      "end_ms": 40700,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40700,
+      "end_ms": 41100,
+      "text": "time.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42100,
+      "end_ms": 42600,
+      "text": "Great.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42600,
+      "end_ms": 43000,
+      "text": "Thank",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43000,
+      "end_ms": 43300,
+      "text": "you.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43700,
+      "end_ms": 43900,
+      "text": "Where",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43900,
+      "end_ms": 44000,
+      "text": "do",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 44100,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44100,
+      "end_ms": 44300,
+      "text": "put",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44300,
+      "end_ms": 44400,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44500,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44500,
+      "end_ms": 44600,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44600,
+      "end_ms": 45100,
+      "text": "website?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45800,
+      "end_ms": 46200,
+      "text": "Under",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46200,
+      "end_ms": 46600,
+      "text": "week",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46600,
+      "end_ms": 47200,
+      "text": "6,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47300,
+      "end_ms": 47700,
+      "text": "then",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47700,
+      "end_ms": 48100,
+      "text": "essay.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49000,
+      "end_ms": 49400,
+      "text": "Okay.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 50400,
+      "text": "Week",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50400,
+      "end_ms": 51000,
+      "text": "6,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51200,
+      "end_ms": 51500,
+      "text": "then",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51500,
+      "end_ms": 52100,
+      "text": "essay",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52400,
+      "end_ms": 52700,
+      "text": "before",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52700,
+      "end_ms": 53100,
+      "text": "5.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53800,
+      "end_ms": 54000,
+      "text": "Thank",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54000,
+      "end_ms": 54300,
+      "text": "you.",
+      "speaker": "spk:1"
+    }
+  ]
+}

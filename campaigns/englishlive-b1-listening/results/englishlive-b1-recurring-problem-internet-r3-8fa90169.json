@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-recurring-problem-internet-r3-8fa90169",
+  "status": "completed",
+  "created_at": "2026-10-25T11:36:07.687Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 3,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 3346916,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928164/gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928166/gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928167/gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 203,
+    "duration_ms": 69300,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.json",
+    "local_vtt": "out/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928164/gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.wav",
+    "public_id": "gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169",
+    "asset_id": "d238f03d9d69a8796507915d956f6d9d",
+    "resource_type": "video",
+    "bytes": 3340878,
+    "format": "wav",
+    "duration": 69.6
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928166/gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.json",
+    "asset_id": "ac6ee6d0170a599dd27062cb3270a369",
+    "resource_type": "raw",
+    "bytes": 26529,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928167/gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-recurring-problem-internet-r3-8fa90169.transcript.vtt",
+    "asset_id": "078ab4fd766ad22a3dcb6c9d2f871128",
+    "resource_type": "raw",
+    "bytes": 2093,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-recurring-problem-internet-r3-8fa90169.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "8fa9016987695c514dc3766b38de34b0b07f4255ced70c46f2de69dff36d7e35",
+    "slug": "b1-recurring-problem-internet"
+  }
+}

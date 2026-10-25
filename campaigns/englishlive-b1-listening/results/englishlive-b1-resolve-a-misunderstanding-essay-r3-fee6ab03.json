@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03",
+  "status": "completed",
+  "created_at": "2026-10-25T11:36:07.165Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 2,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2623076,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928164/gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928166/gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928166/gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 132,
+    "duration_ms": 54300,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.json",
+    "local_vtt": "out/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928164/gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.wav",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03",
+    "asset_id": "7a800bad42c268a91aa90d19435002a2",
+    "resource_type": "video",
+    "bytes": 2617038,
+    "format": "wav",
+    "duration": 54.52
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928166/gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.json",
+    "asset_id": "96ddc1a20eaea99002171f5007466dfc",
+    "resource_type": "raw",
+    "bytes": 17379,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928166/gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.transcript.vtt",
+    "asset_id": "6d275102bd9140b67a0302745abde76a",
+    "resource_type": "raw",
+    "bytes": 1453,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-resolve-a-misunderstanding-essay-r3-fee6ab03.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "fee6ab035b4067ea1e7cfb258ea44e797095cd42ea262510a84c010c92523730",
+    "slug": "b1-resolve-a-misunderstanding-essay"
+  }
+}

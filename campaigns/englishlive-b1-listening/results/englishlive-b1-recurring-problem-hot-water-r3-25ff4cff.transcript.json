@@ -1,0 +1,1065 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:35:59.292Z",
+  "duration_ms": 61600,
+  "word_count": 165,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hello? Hi. It's your tenant from apartment 5B. I'm afraid the hot water stopped again this morning. Again? Oh, I'm sorry. When did it happen before? This is the third time this month. The plumber came on Monday and last Friday, and both times it worked for a day or two, then stopped again. That's strange. Is it only in the mornings? Mostly, yes, which is a problem because I need to shower before work. I leave at 8:30. I see. The plumber can come again tomorrow at 8:00 or I can get the heater replaced on Saturday, but someone has to be at home from 9:00 to 1:00. The same fix hasn't worked twice, so I think a new heater is better. Saturday is fine. I'll be at home. Okay, I'll arrange it. A new heater on Saturday between 9:00 and 1:00. Thanks. And could you ask them to call me before they come? Of course. I'll give them your number. Bye for now.",
+  "source_text": "Hello? Hi, it's your tenant from apartment five B. I'm afraid the hot water stopped again this morning. Again? I'm sorry. When did it happen before? This is the third time this month. The plumber came on Monday and last Friday, and both times it worked for a day or two, then stopped again. That's strange. Is it only in the mornings? Mostly, yes, which is a problem, because I need to shower before work. I leave at eight thirty. I see. The plumber can come again tomorrow at eight. Or I can get the heater replaced on Saturday, but someone has to be at home from nine to one. The same fix hasn't worked twice, so I think a new heater is better. Saturday is fine. I'll be at home. Okay, I'll arrange it. A new heater on Saturday, between nine and one. Thanks. And could you ask them to call me before they come? Of course. I'll give them your number. Bye for now.",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hello?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Hi, it's your tenant from apartment five B. I'm afraid the hot water stopped again this morning."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Again? I'm sorry. When did it happen before?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "This is the third time this month. The plumber came on Monday and last Friday, and both times it worked for a day or two, then stopped again."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "That's strange. Is it only in the mornings?"
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "Mostly, yes, which is a problem, because I need to shower before work. I leave at eight thirty."
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "I see. The plumber can come again tomorrow at eight. Or I can get the heater replaced on Saturday, but someone has to be at home from nine to one."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "The same fix hasn't worked twice, so I think a new heater is better. Saturday is fine. I'll be at home."
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Okay, I'll arrange it. A new heater on Saturday, between nine and one."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Thanks. And could you ask them to call me before they come?"
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Of course. I'll give them your number. Bye for now."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 300,
+      "end_ms": 600,
+      "text": "Hello?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 2000,
+      "text": "Hi.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2100,
+      "end_ms": 2300,
+      "text": "It's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2300,
+      "end_ms": 2400,
+      "text": "your",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2400,
+      "end_ms": 2800,
+      "text": "tenant",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2800,
+      "end_ms": 3000,
+      "text": "from",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3400,
+      "text": "apartment",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3400,
+      "end_ms": 4000,
+      "text": "5B.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4700,
+      "end_ms": 4800,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4800,
+      "end_ms": 5100,
+      "text": "afraid",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5200,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5200,
+      "end_ms": 5500,
+      "text": "hot",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5500,
+      "end_ms": 5800,
+      "text": "water",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5800,
+      "end_ms": 6200,
+      "text": "stopped",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6200,
+      "end_ms": 6400,
+      "text": "again",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6400,
+      "end_ms": 6600,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 7100,
+      "text": "morning.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7900,
+      "end_ms": 8400,
+      "text": "Again?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9500,
+      "text": "Oh,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9500,
+      "end_ms": 9600,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 10100,
+      "text": "sorry.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10500,
+      "end_ms": 10700,
+      "text": "When",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10700,
+      "end_ms": 10800,
+      "text": "did",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10800,
+      "end_ms": 10900,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10900,
+      "end_ms": 11200,
+      "text": "happen",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11200,
+      "end_ms": 11600,
+      "text": "before?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12400,
+      "end_ms": 12600,
+      "text": "This",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12600,
+      "end_ms": 12700,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12700,
+      "end_ms": 12800,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12800,
+      "end_ms": 13200,
+      "text": "third",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13200,
+      "end_ms": 13400,
+      "text": "time",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13400,
+      "end_ms": 13600,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 14100,
+      "text": "month.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14100,
+      "end_ms": 14200,
+      "text": "The",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14200,
+      "end_ms": 14500,
+      "text": "plumber",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14500,
+      "end_ms": 14800,
+      "text": "came",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14800,
+      "end_ms": 14900,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14900,
+      "end_ms": 15600,
+      "text": "Monday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15600,
+      "end_ms": 15900,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15900,
+      "end_ms": 16200,
+      "text": "last",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16800,
+      "text": "Friday,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17100,
+      "end_ms": 17300,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17300,
+      "end_ms": 17600,
+      "text": "both",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17600,
+      "end_ms": 18000,
+      "text": "times",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18000,
+      "end_ms": 18200,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18200,
+      "end_ms": 18500,
+      "text": "worked",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18500,
+      "end_ms": 18600,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18600,
+      "end_ms": 18700,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18700,
+      "end_ms": 18900,
+      "text": "day",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18900,
+      "end_ms": 18901,
+      "text": "or",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18900,
+      "end_ms": 19300,
+      "text": "two,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19300,
+      "end_ms": 19700,
+      "text": "then",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19700,
+      "end_ms": 20000,
+      "text": "stopped",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20000,
+      "end_ms": 20300,
+      "text": "again.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21200,
+      "end_ms": 21700,
+      "text": "That's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22400,
+      "end_ms": 23300,
+      "text": "strange.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24200,
+      "end_ms": 24400,
+      "text": "Is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24400,
+      "end_ms": 24600,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24600,
+      "end_ms": 24900,
+      "text": "only",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24900,
+      "end_ms": 24901,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24900,
+      "end_ms": 25000,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25500,
+      "text": "mornings?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26200,
+      "end_ms": 26800,
+      "text": "Mostly,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 27300,
+      "text": "yes,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27300,
+      "end_ms": 27600,
+      "text": "which",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 27700,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27700,
+      "end_ms": 27800,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27800,
+      "end_ms": 28200,
+      "text": "problem",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28200,
+      "end_ms": 28500,
+      "text": "because",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28500,
+      "end_ms": 28600,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28600,
+      "end_ms": 28800,
+      "text": "need",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28800,
+      "end_ms": 28900,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28900,
+      "end_ms": 29200,
+      "text": "shower",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29200,
+      "end_ms": 29500,
+      "text": "before",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29500,
+      "end_ms": 30000,
+      "text": "work.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30100,
+      "end_ms": 30200,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30200,
+      "end_ms": 30400,
+      "text": "leave",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30400,
+      "end_ms": 30600,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 31100,
+      "text": "8:30.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31500,
+      "end_ms": 31600,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31600,
+      "end_ms": 32200,
+      "text": "see.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32800,
+      "end_ms": 32900,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32900,
+      "end_ms": 33200,
+      "text": "plumber",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33200,
+      "end_ms": 33400,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33400,
+      "end_ms": 33600,
+      "text": "come",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33600,
+      "end_ms": 33900,
+      "text": "again",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33900,
+      "end_ms": 34400,
+      "text": "tomorrow",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 34600,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34800,
+      "end_ms": 35500,
+      "text": "8:00",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35600,
+      "end_ms": 36300,
+      "text": "or",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 36801,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 37000,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37000,
+      "end_ms": 37100,
+      "text": "get",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37100,
+      "end_ms": 37200,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37200,
+      "end_ms": 37500,
+      "text": "heater",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37500,
+      "end_ms": 38100,
+      "text": "replaced",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38100,
+      "end_ms": 38400,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38400,
+      "end_ms": 39200,
+      "text": "Saturday,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39300,
+      "end_ms": 39700,
+      "text": "but",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39700,
+      "end_ms": 40200,
+      "text": "someone",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40200,
+      "end_ms": 40400,
+      "text": "has",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40400,
+      "end_ms": 40401,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40400,
+      "end_ms": 40500,
+      "text": "be",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40500,
+      "end_ms": 40600,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40600,
+      "end_ms": 41000,
+      "text": "home",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41000,
+      "end_ms": 41300,
+      "text": "from",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41300,
+      "end_ms": 41600,
+      "text": "9:00",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41600,
+      "end_ms": 41700,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41700,
+      "end_ms": 41900,
+      "text": "1:00.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 43200,
+      "end_ms": 43300,
+      "text": "The",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43300,
+      "end_ms": 43600,
+      "text": "same",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43600,
+      "end_ms": 44000,
+      "text": "fix",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 44400,
+      "text": "hasn't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44800,
+      "text": "worked",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 45400,
+      "text": "twice,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45400,
+      "end_ms": 45900,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46000,
+      "end_ms": 46100,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46100,
+      "end_ms": 46400,
+      "text": "think",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46400,
+      "end_ms": 46401,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46400,
+      "end_ms": 46600,
+      "text": "new",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46600,
+      "end_ms": 46900,
+      "text": "heater",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46900,
+      "end_ms": 47000,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47000,
+      "end_ms": 47400,
+      "text": "better.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47700,
+      "end_ms": 48100,
+      "text": "Saturday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48100,
+      "end_ms": 48200,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48200,
+      "end_ms": 48600,
+      "text": "fine.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48800,
+      "end_ms": 48900,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48900,
+      "end_ms": 49100,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49100,
+      "end_ms": 49200,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49200,
+      "end_ms": 49500,
+      "text": "home.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50400,
+      "end_ms": 50700,
+      "text": "Okay,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50800,
+      "end_ms": 50900,
+      "text": "I'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50900,
+      "end_ms": 51200,
+      "text": "arrange",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51200,
+      "end_ms": 51400,
+      "text": "it.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51700,
+      "end_ms": 51800,
+      "text": "A",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51800,
+      "end_ms": 52000,
+      "text": "new",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52000,
+      "end_ms": 52400,
+      "text": "heater",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52400,
+      "end_ms": 52600,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52600,
+      "end_ms": 53200,
+      "text": "Saturday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53300,
+      "end_ms": 53700,
+      "text": "between",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53700,
+      "end_ms": 54100,
+      "text": "9:00",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54100,
+      "end_ms": 54300,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54300,
+      "end_ms": 54500,
+      "text": "1:00.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55400,
+      "end_ms": 55900,
+      "text": "Thanks.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56300,
+      "end_ms": 56600,
+      "text": "And",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56600,
+      "end_ms": 56800,
+      "text": "could",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56800,
+      "end_ms": 56900,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56900,
+      "end_ms": 57200,
+      "text": "ask",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57200,
+      "end_ms": 57400,
+      "text": "them",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57400,
+      "end_ms": 57500,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57500,
+      "end_ms": 57800,
+      "text": "call",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57800,
+      "end_ms": 58000,
+      "text": "me",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 58000,
+      "end_ms": 58200,
+      "text": "before",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 58200,
+      "end_ms": 58400,
+      "text": "they",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 58400,
+      "end_ms": 58700,
+      "text": "come?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 59600,
+      "end_ms": 59700,
+      "text": "Of",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59700,
+      "end_ms": 60100,
+      "text": "course.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60200,
+      "end_ms": 60300,
+      "text": "I'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60300,
+      "end_ms": 60400,
+      "text": "give",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60400,
+      "end_ms": 60500,
+      "text": "them",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60500,
+      "end_ms": 60600,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60600,
+      "end_ms": 61000,
+      "text": "number.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61200,
+      "end_ms": 61400,
+      "text": "Bye",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61400,
+      "end_ms": 61500,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61500,
+      "end_ms": 61600,
+      "text": "now.",
+      "speaker": "spk:0"
+    }
+  ]
+}

@@ -1,0 +1,1143 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:35:58.915Z",
+  "duration_ms": 61000,
+  "word_count": 178,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hi, can I help you? Hi, I picked up this shirt yesterday and there's still a stain on it. It's the second time this is happened. Oh, I'm sorry. Yes, I can see it. When was the first time? Two weeks ago with my white shirt. You cleaned it again and it was fine, but now it's happened again with this one. I'm really sorry. We can clean it again for free. It will be ready tomorrow at 5:00. The problem is I need it for a job interview tomorrow morning at 9:00. Tomorrow at 5:00 is too late. I see. In that case, we can do an express clean. It can be ready today at 6:00 or tomorrow at 8:00 in the morning. Both are free. 8:00 is too close to my interview, so I'll come back today at 6:00. Could you check it carefully this time, please? Of course, I'll check it myself before you come. Thank you. So it'll be ready today at 6:00 and there's no charge. That's right. Good luck with your interview.",
+  "source_text": "Hi. Can I help you? Hi. I picked up this shirt yesterday, and there's still a stain on it. It's the second time this has happened. Oh, I'm sorry. Yes, I can see it. When was the first time? Two weeks ago, with my white shirt. You cleaned it again and it was fine, but now it's happened again with this one. I'm really sorry. We can clean it again for free. It will be ready tomorrow at five. The problem is, I need it for a job interview tomorrow morning at nine. Tomorrow at five is too late. I see. In that case, we can do an express clean. It can be ready today at six, or tomorrow at eight in the morning. Both are free. Eight is too close to my interview, so I'll come back today at six. Could you check it carefully this time, please? Of course. I'll check it myself before you come. Thank you. So it'll be ready today at six, and there's no charge. That's right. Good luck with your interview!",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hi. Can I help you?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Hi. I picked up this shirt yesterday, and there's still a stain on it. It's the second time this has happened."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Oh, I'm sorry. Yes, I can see it. When was the first time?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "Two weeks ago, with my white shirt. You cleaned it again and it was fine, but now it's happened again with this one."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "I'm really sorry. We can clean it again for free. It will be ready tomorrow at five."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "The problem is, I need it for a job interview tomorrow morning at nine. Tomorrow at five is too late."
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "I see. In that case, we can do an express clean. It can be ready today at six, or tomorrow at eight in the morning. Both are free."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "Eight is too close to my interview, so I'll come back today at six. Could you check it carefully this time, please?"
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Of course. I'll check it myself before you come."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Thank you. So it'll be ready today at six, and there's no charge."
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "That's right. Good luck with your interview!"
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 200,
+      "end_ms": 700,
+      "text": "Hi,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 800,
+      "end_ms": 900,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 901,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 1100,
+      "text": "help",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1100,
+      "end_ms": 1200,
+      "text": "you?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2600,
+      "text": "Hi,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2700,
+      "end_ms": 3000,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3400,
+      "text": "picked",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3400,
+      "end_ms": 3500,
+      "text": "up",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3500,
+      "end_ms": 3700,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3700,
+      "end_ms": 4000,
+      "text": "shirt",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4900,
+      "text": "yesterday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5000,
+      "end_ms": 5300,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5300,
+      "end_ms": 5600,
+      "text": "there's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5600,
+      "end_ms": 6100,
+      "text": "still",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6100,
+      "end_ms": 6200,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6200,
+      "end_ms": 6600,
+      "text": "stain",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 6700,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6700,
+      "end_ms": 7400,
+      "text": "it.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 7600,
+      "text": "It's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7600,
+      "end_ms": 7700,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7700,
+      "end_ms": 8100,
+      "text": "second",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8100,
+      "end_ms": 8400,
+      "text": "time",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8400,
+      "end_ms": 8600,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8600,
+      "end_ms": 8601,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8600,
+      "end_ms": 9200,
+      "text": "happened.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9900,
+      "end_ms": 10100,
+      "text": "Oh,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10200,
+      "end_ms": 10400,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10400,
+      "end_ms": 10800,
+      "text": "sorry.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11400,
+      "end_ms": 11900,
+      "text": "Yes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11900,
+      "end_ms": 12100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12100,
+      "end_ms": 12300,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12300,
+      "end_ms": 12500,
+      "text": "see",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12500,
+      "end_ms": 12800,
+      "text": "it.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13500,
+      "end_ms": 13700,
+      "text": "When",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13700,
+      "end_ms": 13800,
+      "text": "was",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13800,
+      "end_ms": 13900,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13900,
+      "end_ms": 14200,
+      "text": "first",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14200,
+      "end_ms": 14500,
+      "text": "time?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15300,
+      "end_ms": 15500,
+      "text": "Two",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15500,
+      "end_ms": 15700,
+      "text": "weeks",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15700,
+      "end_ms": 16300,
+      "text": "ago",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16400,
+      "end_ms": 16600,
+      "text": "with",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16600,
+      "end_ms": 16700,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16700,
+      "end_ms": 17000,
+      "text": "white",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17000,
+      "end_ms": 17400,
+      "text": "shirt.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18000,
+      "end_ms": 18100,
+      "text": "You",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18100,
+      "end_ms": 18400,
+      "text": "cleaned",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18400,
+      "end_ms": 18500,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18500,
+      "end_ms": 19000,
+      "text": "again",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19000,
+      "end_ms": 19200,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19200,
+      "end_ms": 19300,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19300,
+      "end_ms": 19500,
+      "text": "was",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19500,
+      "end_ms": 20000,
+      "text": "fine,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20100,
+      "end_ms": 20500,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20500,
+      "end_ms": 20800,
+      "text": "now",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20800,
+      "end_ms": 21000,
+      "text": "it's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21000,
+      "end_ms": 21400,
+      "text": "happened",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21400,
+      "end_ms": 21800,
+      "text": "again",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21800,
+      "end_ms": 22000,
+      "text": "with",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 22200,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22200,
+      "end_ms": 22400,
+      "text": "one.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23300,
+      "end_ms": 23400,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23400,
+      "end_ms": 23700,
+      "text": "really",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23700,
+      "end_ms": 24200,
+      "text": "sorry.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25001,
+      "text": "We",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25200,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25400,
+      "text": "clean",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25400,
+      "end_ms": 25500,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25500,
+      "end_ms": 25700,
+      "text": "again",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25700,
+      "end_ms": 25800,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25800,
+      "end_ms": 26300,
+      "text": "free.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26600,
+      "end_ms": 26700,
+      "text": "It",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26700,
+      "end_ms": 26800,
+      "text": "will",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 26900,
+      "text": "be",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26900,
+      "end_ms": 27100,
+      "text": "ready",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27100,
+      "end_ms": 27500,
+      "text": "tomorrow",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27500,
+      "end_ms": 27600,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 28000,
+      "text": "5:00.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28700,
+      "end_ms": 28800,
+      "text": "The",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28800,
+      "end_ms": 29200,
+      "text": "problem",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29200,
+      "end_ms": 29500,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29500,
+      "end_ms": 29700,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29700,
+      "end_ms": 29900,
+      "text": "need",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29900,
+      "end_ms": 30000,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 30200,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30200,
+      "end_ms": 30300,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30300,
+      "end_ms": 30600,
+      "text": "job",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 30900,
+      "text": "interview",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30900,
+      "end_ms": 31300,
+      "text": "tomorrow",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31300,
+      "end_ms": 31700,
+      "text": "morning",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31700,
+      "end_ms": 31800,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 32400,
+      "text": "9:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32800,
+      "end_ms": 33200,
+      "text": "Tomorrow",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33200,
+      "end_ms": 33300,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33600,
+      "text": "5:00",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33600,
+      "end_ms": 33800,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33800,
+      "end_ms": 34000,
+      "text": "too",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 34300,
+      "text": "late.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35000,
+      "end_ms": 35100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35100,
+      "end_ms": 35600,
+      "text": "see.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36000,
+      "end_ms": 36100,
+      "text": "In",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36100,
+      "end_ms": 36300,
+      "text": "that",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36300,
+      "end_ms": 36800,
+      "text": "case,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 37000,
+      "text": "we",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37000,
+      "end_ms": 37400,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37400,
+      "end_ms": 37500,
+      "text": "do",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37500,
+      "end_ms": 37600,
+      "text": "an",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37600,
+      "end_ms": 38200,
+      "text": "express",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38200,
+      "end_ms": 38600,
+      "text": "clean.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39000,
+      "end_ms": 39100,
+      "text": "It",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39200,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39200,
+      "end_ms": 39400,
+      "text": "be",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39400,
+      "end_ms": 39600,
+      "text": "ready",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39600,
+      "end_ms": 39900,
+      "text": "today",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39900,
+      "end_ms": 40100,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40100,
+      "end_ms": 40700,
+      "text": "6:00",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40700,
+      "end_ms": 41000,
+      "text": "or",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41000,
+      "end_ms": 41500,
+      "text": "tomorrow",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41500,
+      "end_ms": 41700,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41700,
+      "end_ms": 41800,
+      "text": "8:00",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41800,
+      "end_ms": 41900,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41900,
+      "end_ms": 42000,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42000,
+      "end_ms": 42500,
+      "text": "morning.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42600,
+      "end_ms": 42800,
+      "text": "Both",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42800,
+      "end_ms": 42900,
+      "text": "are",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42900,
+      "end_ms": 43200,
+      "text": "free.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44100,
+      "end_ms": 44300,
+      "text": "8:00",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44300,
+      "end_ms": 44500,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44500,
+      "end_ms": 44700,
+      "text": "too",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44700,
+      "end_ms": 44900,
+      "text": "close",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44900,
+      "end_ms": 45000,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45000,
+      "end_ms": 45100,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45100,
+      "end_ms": 45600,
+      "text": "interview,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45600,
+      "end_ms": 45900,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46300,
+      "end_ms": 46500,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46500,
+      "end_ms": 46600,
+      "text": "come",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46600,
+      "end_ms": 46800,
+      "text": "back",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46800,
+      "end_ms": 47100,
+      "text": "today",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47100,
+      "end_ms": 47200,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47200,
+      "end_ms": 47800,
+      "text": "6:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48400,
+      "end_ms": 48500,
+      "text": "Could",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48500,
+      "end_ms": 48600,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48600,
+      "end_ms": 48800,
+      "text": "check",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48800,
+      "end_ms": 49000,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49000,
+      "end_ms": 49500,
+      "text": "carefully",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49500,
+      "end_ms": 49700,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49700,
+      "end_ms": 50000,
+      "text": "time,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 50500,
+      "text": "please?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51200,
+      "end_ms": 51300,
+      "text": "Of",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51300,
+      "end_ms": 51900,
+      "text": "course,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52200,
+      "end_ms": 52300,
+      "text": "I'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52300,
+      "end_ms": 52500,
+      "text": "check",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52500,
+      "end_ms": 52600,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52600,
+      "end_ms": 53100,
+      "text": "myself",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53100,
+      "end_ms": 53400,
+      "text": "before",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53400,
+      "end_ms": 53500,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53500,
+      "end_ms": 53800,
+      "text": "come.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54500,
+      "end_ms": 54800,
+      "text": "Thank",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54800,
+      "end_ms": 55100,
+      "text": "you.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55300,
+      "end_ms": 55600,
+      "text": "So",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55600,
+      "end_ms": 55800,
+      "text": "it'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55800,
+      "end_ms": 55900,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55900,
+      "end_ms": 56200,
+      "text": "ready",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56200,
+      "end_ms": 56600,
+      "text": "today",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56600,
+      "end_ms": 56800,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56800,
+      "end_ms": 57300,
+      "text": "6:00",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57700,
+      "end_ms": 57800,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57800,
+      "end_ms": 58000,
+      "text": "there's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 58000,
+      "end_ms": 58100,
+      "text": "no",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 58100,
+      "end_ms": 58600,
+      "text": "charge.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 59300,
+      "end_ms": 59500,
+      "text": "That's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59500,
+      "end_ms": 59800,
+      "text": "right.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60100,
+      "end_ms": 60300,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60300,
+      "end_ms": 60500,
+      "text": "luck",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60500,
+      "end_ms": 60600,
+      "text": "with",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60600,
+      "end_ms": 60700,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60700,
+      "end_ms": 61000,
+      "text": "interview.",
+      "speaker": "spk:0"
+    }
+  ]
+}
