@@ -31,6 +31,8 @@ function fixture() {
       {speaker:"Partner",text:"Hello, can you help me with a booking?",style:"warm and helpful"+ending},
       {speaker:"Learner",text:"Yes, please. Tell me what needs changing.",style:"friendly and clear"+ending}
     ];
+    if (slug==="b1-explain-a-mix-up-room")
+      for(const t of turns)t.style+=" Make thirteen and thirty clearly different: thir-TEEN, THIR-ty.";
     const digest=sha(turns.map(t=>t.speaker+": "+t.text).join("\n"));
     const w=turns.reduce((n,t)=>n+words(t.text),0);
     const voices=slug==="b1-keep-a-conversation-going-lunch"
@@ -92,6 +94,15 @@ test("Nadia lunch dialogue has its revised per-lesson voice cast",async()=>{
   assert.deepEqual(lunch.request.speakers,{Partner:"Autonoe",Learner:"Iapetus"});
   x.files[ROOT+"jobs/b1-keep-a-conversation-going-lunch.json"].request.speakers.Partner="Puck";
   await assert.rejects(compileEnglishliveCampaign({...plan,group:2},x.read),/voice/);
+});
+
+test("special room pronunciation remains intact after learner-pace sentence",async()=>{
+  const x=fixture(),items=await compileEnglishliveCampaign(plan,x.read);
+  const room=items.find(j=>j.lesson==="b1-explain-a-mix-up-room");
+  assert.ok(room);
+  assert.ok(room.request.turns.every(t=>t.style.includes("thir-TEEN, THIR-ty.")));
+  x.files[ROOT+"jobs/b1-explain-a-mix-up-room.json"].request.turns[0].style="fast";
+  await assert.rejects(compileEnglishliveCampaign(plan,x.read),/Invalid or overridden/);
 });
 
 test("group 5 has four jobs and no overlap with pilot",async()=>{
