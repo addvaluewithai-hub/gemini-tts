@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-change-a-hotel-booking-dates-r3-908a025f",
+  "status": "completed",
+  "created_at": "2026-10-25T11:30:23.259Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 3,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2882276,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792927821/gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927822/gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927822/gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 5,
+    "word_count": 167,
+    "duration_ms": 59600,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.json",
+    "local_vtt": "out/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792927821/gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.wav",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f",
+    "asset_id": "11da7791c12ec0bf70222b719dd659f3",
+    "resource_type": "video",
+    "bytes": 2876238,
+    "format": "wav",
+    "duration": 59.92
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927822/gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.json",
+    "asset_id": "00fc1d088c173af1d68894b06028d9e9",
+    "resource_type": "raw",
+    "bytes": 21965,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927822/gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.transcript.vtt",
+    "asset_id": "9713252854a0aa8a308580008a63f4bf",
+    "resource_type": "raw",
+    "bytes": 1712,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-change-a-hotel-booking-dates-r3-908a025f.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "908a025fe935e3738bd5ebfe213cf9ab291b97ac2e3bf23920206b2f2313d309",
+    "slug": "b1-change-a-hotel-booking-dates"
+  }
+}

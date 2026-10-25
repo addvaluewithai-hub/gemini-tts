@@ -1,0 +1,1041 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:30:18.042Z",
+  "duration_ms": 56700,
+  "word_count": 161,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Reception, good afternoon. How can I help you? Hi, I'm staying in a standard room until Sunday. My name's Lena. Yes, I have your reservation here. What can I do for you? My flight has been changed to Monday morning, so I'd like to stay one more night on Sunday. Is that possible? I'm sorry, your room is booked on Sunday night. But our sister hotel is a 10-minute walk away, and it has a room for $75. Thanks, but I'd rather not move to another hotel with all my bags. Is there anything here instead? We have a superior room for Sunday night. It's $100, so 20 more than your room. That's okay. Would I need to move my things myself? No, housekeeping can move your bags on Sunday morning while you're out. Perfect. So the superior room on Sunday night for $100 and you'll move my bags. That's right. I've added Sunday to your reservation. Have a nice day.",
+  "source_text": "Reception, good afternoon. How can I help you? Hi. I'm staying in a standard room until Sunday. My name's Lina. Yes, I have your reservation here. What can I do for you? My flight has been changed to Monday morning, so I'd like to stay one more night, on Sunday. Is that possible? I'm sorry, your room is booked on Sunday night. But our sister hotel is a ten-minute walk away, and it has a room for seventy-five dollars. Thanks, but I'd rather not move to another hotel with all my bags. Is there anything here instead? We have a superior room for Sunday night. It's a hundred dollars, so twenty more than your room. That's okay. Would I need to move my things myself? No, housekeeping can move your bags on Sunday morning while you're out. Perfect. So, the superior room on Sunday night for a hundred dollars, and you'll move my bags. That's right. I've added Sunday to your reservation. Have a nice day!",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Reception, good afternoon. How can I help you?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Hi. I'm staying in a standard room until Sunday. My name's Lina."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Yes, I have your reservation here. What can I do for you?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "My flight has been changed to Monday morning, so I'd like to stay one more night, on Sunday. Is that possible?"
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "I'm sorry, your room is booked on Sunday night. But our sister hotel is a ten-minute walk away, and it has a room for seventy-five dollars."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "Thanks, but I'd rather not move to another hotel with all my bags. Is there anything here instead?"
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "We have a superior room for Sunday night. It's a hundred dollars, so twenty more than your room."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "That's okay. Would I need to move my things myself?"
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "No, housekeeping can move your bags on Sunday morning while you're out."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Perfect. So, the superior room on Sunday night for a hundred dollars, and you'll move my bags."
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "That's right. I've added Sunday to your reservation. Have a nice day!"
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 300,
+      "end_ms": 800,
+      "text": "Reception,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 1000,
+      "text": "good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1600,
+      "text": "afternoon.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1700,
+      "end_ms": 1800,
+      "text": "How",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 2000,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2001,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2200,
+      "text": "help",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2200,
+      "end_ms": 2400,
+      "text": "you?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3600,
+      "text": "Hi,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3600,
+      "end_ms": 3900,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3900,
+      "end_ms": 4300,
+      "text": "staying",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4300,
+      "end_ms": 4400,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4400,
+      "end_ms": 4500,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4500,
+      "end_ms": 5100,
+      "text": "standard",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5200,
+      "text": "room",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5200,
+      "end_ms": 5500,
+      "text": "until",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5500,
+      "end_ms": 6100,
+      "text": "Sunday.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6100,
+      "end_ms": 6200,
+      "text": "My",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6200,
+      "end_ms": 6600,
+      "text": "name's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 7000,
+      "text": "Lena.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7800,
+      "end_ms": 8300,
+      "text": "Yes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8400,
+      "end_ms": 8401,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8400,
+      "end_ms": 8600,
+      "text": "have",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8600,
+      "end_ms": 8700,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8700,
+      "end_ms": 9200,
+      "text": "reservation",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9200,
+      "end_ms": 9600,
+      "text": "here.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 9900,
+      "text": "What",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9900,
+      "end_ms": 10000,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10000,
+      "end_ms": 10100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10100,
+      "end_ms": 10200,
+      "text": "do",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10200,
+      "end_ms": 10400,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10400,
+      "end_ms": 10600,
+      "text": "you?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11400,
+      "end_ms": 11600,
+      "text": "My",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11600,
+      "end_ms": 12000,
+      "text": "flight",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12000,
+      "end_ms": 12200,
+      "text": "has",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12200,
+      "end_ms": 12300,
+      "text": "been",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12300,
+      "end_ms": 12700,
+      "text": "changed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12700,
+      "end_ms": 12800,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12800,
+      "end_ms": 13100,
+      "text": "Monday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13100,
+      "end_ms": 13600,
+      "text": "morning,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 14000,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14100,
+      "text": "I'd",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14100,
+      "end_ms": 14300,
+      "text": "like",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14300,
+      "end_ms": 14400,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14400,
+      "end_ms": 14600,
+      "text": "stay",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14600,
+      "end_ms": 14800,
+      "text": "one",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14800,
+      "end_ms": 15000,
+      "text": "more",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15000,
+      "end_ms": 15400,
+      "text": "night",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15400,
+      "end_ms": 15600,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15600,
+      "end_ms": 16100,
+      "text": "Sunday.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16400,
+      "text": "Is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16400,
+      "end_ms": 16500,
+      "text": "that",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16500,
+      "end_ms": 17000,
+      "text": "possible?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17700,
+      "end_ms": 17900,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17900,
+      "end_ms": 18500,
+      "text": "sorry,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18500,
+      "end_ms": 18800,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 19000,
+      "text": "room",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19000,
+      "end_ms": 19200,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19200,
+      "end_ms": 19500,
+      "text": "booked",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19500,
+      "end_ms": 19600,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19600,
+      "end_ms": 20000,
+      "text": "Sunday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20000,
+      "end_ms": 20200,
+      "text": "night.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20800,
+      "end_ms": 21000,
+      "text": "But",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21000,
+      "end_ms": 21100,
+      "text": "our",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21100,
+      "end_ms": 21400,
+      "text": "sister",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21400,
+      "end_ms": 21800,
+      "text": "hotel",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21800,
+      "end_ms": 21900,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21900,
+      "end_ms": 22000,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 22400,
+      "text": "10-minute",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22400,
+      "end_ms": 22700,
+      "text": "walk",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22700,
+      "end_ms": 23100,
+      "text": "away,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23300,
+      "end_ms": 23500,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23500,
+      "end_ms": 23600,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23600,
+      "end_ms": 23800,
+      "text": "has",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23800,
+      "end_ms": 23801,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23800,
+      "end_ms": 24000,
+      "text": "room",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24000,
+      "end_ms": 24100,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24100,
+      "end_ms": 25100,
+      "text": "$75.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25700,
+      "end_ms": 26100,
+      "text": "Thanks,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26100,
+      "end_ms": 26400,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26700,
+      "end_ms": 26800,
+      "text": "I'd",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 27100,
+      "text": "rather",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27100,
+      "end_ms": 27400,
+      "text": "not",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 27800,
+      "text": "move",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27800,
+      "end_ms": 27900,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27900,
+      "end_ms": 28300,
+      "text": "another",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28300,
+      "end_ms": 28800,
+      "text": "hotel",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28800,
+      "end_ms": 29100,
+      "text": "with",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29100,
+      "end_ms": 29300,
+      "text": "all",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29300,
+      "end_ms": 29500,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29500,
+      "end_ms": 30200,
+      "text": "bags.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30500,
+      "end_ms": 30700,
+      "text": "Is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30700,
+      "end_ms": 31000,
+      "text": "there",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 31500,
+      "text": "anything",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31500,
+      "end_ms": 31900,
+      "text": "here",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31900,
+      "end_ms": 32400,
+      "text": "instead?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33500,
+      "text": "We",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33500,
+      "end_ms": 33700,
+      "text": "have",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33700,
+      "end_ms": 33800,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33800,
+      "end_ms": 34400,
+      "text": "superior",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 34800,
+      "text": "room",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34800,
+      "end_ms": 34900,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34900,
+      "end_ms": 35200,
+      "text": "Sunday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35200,
+      "end_ms": 35600,
+      "text": "night.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36000,
+      "end_ms": 36200,
+      "text": "It's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36200,
+      "end_ms": 37000,
+      "text": "$100,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37100,
+      "end_ms": 37300,
+      "text": "so",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37300,
+      "end_ms": 37600,
+      "text": "20",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37600,
+      "end_ms": 37800,
+      "text": "more",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37800,
+      "end_ms": 38000,
+      "text": "than",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38000,
+      "end_ms": 38200,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38200,
+      "end_ms": 38400,
+      "text": "room.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39200,
+      "end_ms": 39400,
+      "text": "That's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39400,
+      "end_ms": 40000,
+      "text": "okay.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40700,
+      "end_ms": 40800,
+      "text": "Would",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40800,
+      "end_ms": 40900,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40900,
+      "end_ms": 41100,
+      "text": "need",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41100,
+      "end_ms": 41300,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41300,
+      "end_ms": 41600,
+      "text": "move",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41600,
+      "end_ms": 41700,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41700,
+      "end_ms": 42000,
+      "text": "things",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42000,
+      "end_ms": 42500,
+      "text": "myself?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43000,
+      "end_ms": 43400,
+      "text": "No,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 43500,
+      "end_ms": 44000,
+      "text": "housekeeping",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 44100,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44100,
+      "end_ms": 44300,
+      "text": "move",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44300,
+      "end_ms": 44400,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44700,
+      "text": "bags",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44700,
+      "end_ms": 44800,
+      "text": "on",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 45200,
+      "text": "Sunday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45200,
+      "end_ms": 45500,
+      "text": "morning",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45500,
+      "end_ms": 45700,
+      "text": "while",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45700,
+      "end_ms": 45900,
+      "text": "you're",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 46000,
+      "text": "out.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46700,
+      "end_ms": 47300,
+      "text": "Perfect.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47400,
+      "end_ms": 47700,
+      "text": "So",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47700,
+      "end_ms": 47900,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47900,
+      "end_ms": 48400,
+      "text": "superior",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48400,
+      "end_ms": 48800,
+      "text": "room",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48800,
+      "end_ms": 48900,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48900,
+      "end_ms": 49300,
+      "text": "Sunday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49300,
+      "end_ms": 49700,
+      "text": "night",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49700,
+      "end_ms": 50000,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 51000,
+      "text": "$100",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 51300,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51300,
+      "end_ms": 51600,
+      "text": "you'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51600,
+      "end_ms": 51800,
+      "text": "move",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51800,
+      "end_ms": 51900,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51900,
+      "end_ms": 52300,
+      "text": "bags.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53000,
+      "end_ms": 53200,
+      "text": "That's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53200,
+      "end_ms": 53700,
+      "text": "right.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53800,
+      "end_ms": 54000,
+      "text": "I've",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54000,
+      "end_ms": 54200,
+      "text": "added",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54200,
+      "end_ms": 54600,
+      "text": "Sunday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54600,
+      "end_ms": 54700,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54700,
+      "end_ms": 54800,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54800,
+      "end_ms": 55400,
+      "text": "reservation.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56100,
+      "end_ms": 56200,
+      "text": "Have",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56200,
+      "end_ms": 56300,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56300,
+      "end_ms": 56400,
+      "text": "nice",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56400,
+      "end_ms": 56700,
+      "text": "day.",
+      "speaker": "spk:0"
+    }
+  ]
+}
