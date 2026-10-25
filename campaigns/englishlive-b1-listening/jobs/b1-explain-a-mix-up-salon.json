@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-explain-a-mix-up-salon-r3-b3ec42c8",
+  "job_id": "englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023",
   "lesson": {
     "slug": "b1-explain-a-mix-up-salon",
     "revision": 3,
-    "sha256": "b3ec42c8687dc9de87cfc08f233a6a75bf4cb6ef336599e93f628d8df894de5f",
+    "sha256": "5ccb9023d50c470bd3e7713eda5fa61eb45ae23de2c6d6ee74a73b6b358f5bc2",
     "words": 161,
     "turns": 11
   },
@@ -16,7 +16,7 @@
       },
       {
         "speaker": "Learner",
-        "text": "Hi. I have an appointment for a haircut at ten. My name's Alex.",
+        "text": "Hi. I have an appointment for a haircut at ten. My name's Dina.",
         "style": "surprised, a little worried about the time, then relieved and polite. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
@@ -86,7 +86,7 @@
       "campaign": "englishlive-b1-listening",
       "slug": "b1-explain-a-mix-up-salon",
       "revision": 3,
-      "sha256": "b3ec42c8687dc9de87cfc08f233a6a75bf4cb6ef336599e93f628d8df894de5f"
+      "sha256": "5ccb9023d50c470bd3e7713eda5fa61eb45ae23de2c6d6ee74a73b6b358f5bc2"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c",
+  "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r3-b93cc756",
   "lesson": {
     "slug": "b1-change-a-hotel-booking-extra-night",
     "revision": 3,
-    "sha256": "82f52e3cc3704eb2ac31bb237dbec1488a6753b71220373c58bb481ea6a1bffb",
+    "sha256": "b93cc756fbde10a0ae9b11c89d68c1fa956546a4fc566788e9ccee9e3d3cfac2",
     "words": 166,
     "turns": 11
   },
@@ -16,7 +16,7 @@
       },
       {
         "speaker": "Learner",
-        "text": "Hi. I'm staying in a standard room until Sunday. My name's Sam.",
+        "text": "Hi. I'm staying in a standard room until Sunday. My name's Lina.",
         "style": "polite, a little stressed about the changed flight, relieved at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
@@ -86,7 +86,7 @@
       "campaign": "englishlive-b1-listening",
       "slug": "b1-change-a-hotel-booking-extra-night",
       "revision": 3,
-      "sha256": "82f52e3cc3704eb2ac31bb237dbec1488a6753b71220373c58bb481ea6a1bffb"
+      "sha256": "b93cc756fbde10a0ae9b11c89d68c1fa956546a4fc566788e9ccee9e3d3cfac2"
     }
   }
 }

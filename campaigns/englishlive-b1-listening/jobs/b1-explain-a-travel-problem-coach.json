@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-explain-a-travel-problem-coach-r3-db6bf01c",
+  "job_id": "englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f",
   "lesson": {
     "slug": "b1-explain-a-travel-problem-coach",
     "revision": 3,
-    "sha256": "db6bf01ccd2a16ea36a20a0a394ddc589769ab8a7ce6c9d1e7c3a554e6b61851",
+    "sha256": "6b1b0a0f08a67eb92193f00e24545ec410d8555749b9f85711f7ba62d7bb397a",
     "words": 163,
     "turns": 12
   },
@@ -26,7 +26,7 @@
       },
       {
         "speaker": "Learner",
-        "text": "Sam. I booked it online two days ago.",
+        "text": "Maya. I booked it online two days ago.",
         "style": "worried at first about the meeting, then relieved and grateful. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
@@ -91,7 +91,7 @@
       "campaign": "englishlive-b1-listening",
       "slug": "b1-explain-a-travel-problem-coach",
       "revision": 3,
-      "sha256": "db6bf01ccd2a16ea36a20a0a394ddc589769ab8a7ce6c9d1e7c3a554e6b61851"
+      "sha256": "6b1b0a0f08a67eb92193f00e24545ec410d8555749b9f85711f7ba62d7bb397a"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
-  "job_id": "englishlive-b1-change-a-hotel-booking-dates-r3-d62929d5",
+  "job_id": "englishlive-b1-change-a-hotel-booking-dates-r3-908a025f",
   "lesson": {
     "slug": "b1-change-a-hotel-booking-dates",
     "revision": 3,
-    "sha256": "d62929d5d30a47fa358d1bfe79315f87b4ffe50f64faf6095b1291fc359341d5",
+    "sha256": "908a025fe935e3738bd5ebfe213cf9ab291b97ac2e3bf23920206b2f2313d309",
     "words": 170,
     "turns": 11
   },
@@ -16,7 +16,7 @@
       },
       {
         "speaker": "Learner",
-        "text": "Hi. I have a reservation for next Tuesday and Wednesday, under the name Sam. Could I possibly change the dates? My work trip has moved one day later.",
+        "text": "Hi. I have a reservation for next Tuesday and Wednesday, under the name Sara. Could I possibly change the dates? My work trip has moved one day later.",
         "style": "polite and practical, a little worried about the desk, pleased at the end. American English accent. Clear, natural pace for B1 English learners, not rushed."
       },
       {
@@ -86,7 +86,7 @@
       "campaign": "englishlive-b1-listening",
       "slug": "b1-change-a-hotel-booking-dates",
       "revision": 3,
-      "sha256": "d62929d5d30a47fa358d1bfe79315f87b4ffe50f64faf6095b1291fc359341d5"
+      "sha256": "908a025fe935e3738bd5ebfe213cf9ab291b97ac2e3bf23920206b2f2313d309"
     }
   }
 }

@@ -6,10 +6,10 @@
   "jobs": [
     {
       "slug": "b1-change-a-hotel-booking-dates",
-      "job_id": "englishlive-b1-change-a-hotel-booking-dates-r3-d62929d5",
+      "job_id": "englishlive-b1-change-a-hotel-booking-dates-r3-908a025f",
       "path": "jobs/b1-change-a-hotel-booking-dates.json",
       "words": 170,
-      "sha256": "d62929d5d30a47fa358d1bfe79315f87b4ffe50f64faf6095b1291fc359341d5",
+      "sha256": "908a025fe935e3738bd5ebfe213cf9ab291b97ac2e3bf23920206b2f2313d309",
       "voices": {
         "Partner": "Charon",
         "Learner": "Aoede"
@@ -17,10 +17,10 @@
     },
     {
       "slug": "b1-change-a-hotel-booking-extra-night",
-      "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c",
+      "job_id": "englishlive-b1-change-a-hotel-booking-extra-night-r3-b93cc756",
       "path": "jobs/b1-change-a-hotel-booking-extra-night.json",
       "words": 166,
-      "sha256": "82f52e3cc3704eb2ac31bb237dbec1488a6753b71220373c58bb481ea6a1bffb",
+      "sha256": "b93cc756fbde10a0ae9b11c89d68c1fa956546a4fc566788e9ccee9e3d3cfac2",
       "voices": {
         "Partner": "Rasalgethi",
         "Learner": "Erinome"
@@ -61,10 +61,10 @@
     },
     {
       "slug": "b1-explain-a-mix-up-salon",
-      "job_id": "englishlive-b1-explain-a-mix-up-salon-r3-b3ec42c8",
+      "job_id": "englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023",
       "path": "jobs/b1-explain-a-mix-up-salon.json",
       "words": 161,
-      "sha256": "b3ec42c8687dc9de87cfc08f233a6a75bf4cb6ef336599e93f628d8df894de5f",
+      "sha256": "5ccb9023d50c470bd3e7713eda5fa61eb45ae23de2c6d6ee74a73b6b358f5bc2",
       "voices": {
         "Partner": "Achird",
         "Learner": "Erinome"
@@ -72,10 +72,10 @@
     },
     {
       "slug": "b1-explain-a-travel-problem-coach",
-      "job_id": "englishlive-b1-explain-a-travel-problem-coach-r3-db6bf01c",
+      "job_id": "englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f",
       "path": "jobs/b1-explain-a-travel-problem-coach.json",
       "words": 163,
-      "sha256": "db6bf01ccd2a16ea36a20a0a394ddc589769ab8a7ce6c9d1e7c3a554e6b61851",
+      "sha256": "6b1b0a0f08a67eb92193f00e24545ec410d8555749b9f85711f7ba62d7bb397a",
       "voices": {
         "Partner": "Schedar",
         "Learner": "Autonoe"
