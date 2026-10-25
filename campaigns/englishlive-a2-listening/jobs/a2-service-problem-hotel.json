@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-service-problem-hotel-r1-64bee998",
+  "lesson": {
+    "slug": "a2-service-problem-hotel",
+    "revision": 1,
+    "sha256": "64bee998e1b4905115041504ab6e97457468274acc7a8d4e75890cb462d7c740",
+    "words": 101,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good evening, reception. How can I help you?",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. This is room three oh four. The air conditioner in my room isn't working.",
+        "style": "hot and a little tired, but polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Oh, I'm sorry. What happens when you turn it on?",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "It turns on, but the air is warm, not cold.",
+        "style": "hot and a little tired, but polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "I see. When did it start?",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "About an hour ago. It's very hot in the room right now.",
+        "style": "hot and a little tired, but polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Our technician can come in twenty minutes. Is that OK?",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, that's fine. Can he bring a fan too, please?",
+        "style": "hot and a little tired, but polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. He'll bring a fan.",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. Room three oh four, in twenty minutes. Thank you.",
+        "style": "hot and a little tired, but polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "You're welcome. Sorry again.",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Charon",
+      "Learner": "Pulcherrima"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-service-problem-hotel",
+      "revision": 1,
+      "sha256": "64bee998e1b4905115041504ab6e97457468274acc7a8d4e75890cb462d7c740"
+    }
+  }
+}

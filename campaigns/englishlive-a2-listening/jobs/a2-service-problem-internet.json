@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-service-problem-internet-r1-2b3ba361",
+  "lesson": {
+    "slug": "a2-service-problem-internet",
+    "revision": 1,
+    "sha256": "2b3ba361f397eed6fc3f1d19f35eccac74c288b9aabbc6ee3e5b98692dcdf29e",
+    "words": 99,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good morning, Fast Net. How can I help you?",
+        "style": "calm, kind customer service agent. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. My internet isn't working.",
+        "style": "a little worried, polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "I'm sorry to hear that. When did it stop?",
+        "style": "calm, kind customer service agent. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "This morning, at about eight. I can't open any websites.",
+        "style": "a little worried, polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK. Is the light on your router green or red?",
+        "style": "calm, kind customer service agent. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "It's red.",
+        "style": "a little worried, polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Then we need to send a technician. He can come tomorrow between ten and twelve, or between four and six.",
+        "style": "calm, kind customer service agent. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Between four and six, please. I'm at work in the morning.",
+        "style": "a little worried, polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No problem. Tomorrow between four and six. The technician will call you before he comes.",
+        "style": "calm, kind customer service agent. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. Tomorrow, four to six. Thank you. Bye!",
+        "style": "a little worried, polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Algieba",
+      "Learner": "Gacrux"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-service-problem-internet",
+      "revision": 1,
+      "sha256": "2b3ba361f397eed6fc3f1d19f35eccac74c288b9aabbc6ee3e5b98692dcdf29e"
+    }
+  }
+}

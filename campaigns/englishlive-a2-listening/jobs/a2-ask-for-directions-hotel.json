@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-ask-for-directions-hotel-r1-175c17fd",
+  "lesson": {
+    "slug": "a2-ask-for-directions-hotel",
+    "revision": 1,
+    "sha256": "175c17fda2e097101967a0d1cfea53b566e5abf777ec4fa85f4094d7a597b7f1",
+    "words": 116,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good evening. How can I help you?",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. Is there a pharmacy near the hotel?",
+        "style": "polite, a little tired after a long day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, there's one on Park Street. It's about five minutes on foot.",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. How do I get there?",
+        "style": "polite, a little tired after a long day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Go out of the hotel and turn left. Walk to the traffic lights, then turn right. The pharmacy is next to a bank.",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sorry, did you say right at the traffic lights?",
+        "style": "polite, a little tired after a long day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, right at the traffic lights. Then it's on your left, next to the bank.",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. Left out of the hotel, right at the lights, and it's next to the bank. Is it open now?",
+        "style": "polite, a little tired after a long day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, it's open until ten.",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Perfect. Thank you very much.",
+        "style": "polite, a little tired after a long day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "You're welcome. Have a good evening.",
+        "style": "calm, helpful hotel receptionist. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Charon",
+      "Learner": "Kore"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-ask-for-directions-hotel",
+      "revision": 1,
+      "sha256": "175c17fda2e097101967a0d1cfea53b566e5abf777ec4fa85f4094d7a597b7f1"
+    }
+  }
+}

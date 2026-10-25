@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-clarify-instructions-office-r1-a68ddb04",
+  "lesson": {
+    "slug": "a2-clarify-instructions-office",
+    "revision": 1,
+    "sha256": "a68ddb04a47472239d2e55367506904333566c69cc167ce1fe5566e0978bbdd0",
+    "words": 104,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi, Nour. Can you help me? I have a meeting at eleven.",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sure. What do you need?",
+        "style": "helpful and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Can you print twenty copies of this report and take them to the meeting room?",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Twenty copies, OK. Which meeting room? There are two.",
+        "style": "helpful and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "The big one, on the second floor, next to the kitchen.",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. Should I put them on the table?",
+        "style": "helpful and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, please. One in front of every chair.",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No problem. So, twenty copies in the big meeting room on the second floor, one in front of every chair. When do you need them?",
+        "style": "helpful and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Before eleven, please.",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. I'll print them now.",
+        "style": "helpful and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Thanks a lot!",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Zephyr"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-clarify-instructions-office",
+      "revision": 1,
+      "sha256": "a68ddb04a47472239d2e55367506904333566c69cc167ce1fe5566e0978bbdd0"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-plan-an-outing-friday-r1-29860e53",
+  "lesson": {
+    "slug": "a2-plan-an-outing-friday",
+    "revision": 1,
+    "sha256": "29860e5396ccd7f0484940498e0f4158b63ae86a36dbdaa8b30f23a3b71bbd1e",
+    "words": 96,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Are you free on Friday evening?",
+        "style": "Ahmed, a lively, happy friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, I am. Do you want to do something?",
+        "style": "friendly and positive. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "How about a movie? There's a new action movie.",
+        "style": "Ahmed, a lively, happy friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hmm, the weather is really nice now. Why don't we go to the park? We can walk by the lake and eat there.",
+        "style": "friendly and positive. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK, sounds good. What time?",
+        "style": "Ahmed, a lively, happy friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "How about five o'clock? It's not so hot then.",
+        "style": "friendly and positive. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Great. Where should we meet?",
+        "style": "Ahmed, a lively, happy friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Let's meet at the main gate of the park. I'll bring some sandwiches.",
+        "style": "friendly and positive. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Perfect. I'll bring the drinks.",
+        "style": "Ahmed, a lively, happy friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great! The park on Friday at five. See you!",
+        "style": "friendly and positive. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "See you!",
+        "style": "Ahmed, a lively, happy friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Sadachbia",
+      "Learner": "Achird"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-plan-an-outing-friday",
+      "revision": 1,
+      "sha256": "29860e5396ccd7f0484940498e0f4158b63ae86a36dbdaa8b30f23a3b71bbd1e"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-change-a-reservation-bus-r1-b1646d7e",
+  "lesson": {
+    "slug": "a2-change-a-reservation-bus",
+    "revision": 1,
+    "sha256": "b1646d7ee3f9f127a2a208951d55db97ba866aaef3f57db022400701e2c85b8a",
+    "words": 101,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good morning. How can I help you?",
+        "style": "friendly, efficient ticket desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. I have a ticket for the ten o'clock bus to Lakeside. Can I change the time?",
+        "style": "polite and calm. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Sure. What's your name, please?",
+        "style": "friendly, efficient ticket desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Laila Hassan.",
+        "style": "polite and calm. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK, I have your ticket. What time would you like?",
+        "style": "friendly, efficient ticket desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Is there a bus in the afternoon? My meeting is in the afternoon now.",
+        "style": "polite and calm. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, there's one at two and one at four.",
+        "style": "friendly, efficient ticket desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "The two o'clock bus, please. Is it the same price?",
+        "style": "polite and calm. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, the same price. You don't need to pay anything.",
+        "style": "friendly, efficient ticket desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. So, the two o'clock bus today.",
+        "style": "polite and calm. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "That's right. Here's your new ticket. Have a good trip!",
+        "style": "friendly, efficient ticket desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Alnilam",
+      "Learner": "Callirrhoe"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-change-a-reservation-bus",
+      "revision": 1,
+      "sha256": "b1646d7ee3f9f127a2a208951d55db97ba866aaef3f57db022400701e2c85b8a"
+    }
+  }
+}

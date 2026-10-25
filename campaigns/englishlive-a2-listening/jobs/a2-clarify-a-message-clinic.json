@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-clarify-a-message-clinic-r1-f97a11fc",
+  "lesson": {
+    "slug": "a2-clarify-a-message-clinic",
+    "revision": 1,
+    "sha256": "f97a11fcdeed05c388ef183c5aa47042b1ab533154ce68eb1572fe7c10f3a209",
+    "words": 82,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hello, this is the City Clinic. We need to move your appointment with Dr. Lee to Thursday at eleven fifteen. Is that OK?",
+        "style": "polite clinic receptionist on the phone. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sorry, the line isn't very good. Which day did you say?",
+        "style": "polite, listening carefully. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Thursday. Thursday at eleven fifteen.",
+        "style": "polite clinic receptionist on the phone. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Eleven fifteen or eleven fifty?",
+        "style": "polite, listening carefully. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Eleven fifteen. One, five.",
+        "style": "polite clinic receptionist on the phone. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK, eleven fifteen. Is it with the same doctor?",
+        "style": "polite, listening carefully. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, with Dr. Lee.",
+        "style": "polite clinic receptionist on the phone. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. So, Thursday at eleven fifteen with Dr. Lee. That's fine.",
+        "style": "polite, listening carefully. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Thank you. We're sorry for the change.",
+        "style": "polite clinic receptionist on the phone. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No problem. Goodbye!",
+        "style": "polite, listening carefully. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Schedar",
+      "Learner": "Autonoe"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-clarify-a-message-clinic",
+      "revision": 1,
+      "sha256": "f97a11fcdeed05c388ef183c5aa47042b1ab533154ce68eb1572fe7c10f3a209"
+    }
+  }
+}

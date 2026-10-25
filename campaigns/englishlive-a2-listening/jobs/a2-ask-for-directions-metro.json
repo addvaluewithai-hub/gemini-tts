@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-ask-for-directions-metro-r1-d153645c",
+  "lesson": {
+    "slug": "a2-ask-for-directions-metro",
+    "revision": 1,
+    "sha256": "d153645c72cda03c8d64e74461a5766ecc27af5f47c8b7873bc336595d886aab",
+    "words": 104,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi there. Can I help you?",
+        "style": "friendly, clear information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, please. How do I get to the City Museum from here?",
+        "style": "relaxed tourist, curious and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Take exit B. Then walk straight along the river for about ten minutes. The museum is on the other side of the bridge.",
+        "style": "friendly, clear information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sorry, which exit? A or B?",
+        "style": "relaxed tourist, curious and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Exit B. It's at the end of the station, near the stairs.",
+        "style": "friendly, clear information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. Exit B, then along the river, and across the bridge. Is it far?",
+        "style": "relaxed tourist, curious and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Not really. About ten minutes on foot. Or you can take bus number twelve.",
+        "style": "friendly, clear information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "I think I'll walk. The weather is nice today.",
+        "style": "relaxed tourist, curious and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Good idea. Enjoy the museum!",
+        "style": "friendly, clear information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Thanks a lot!",
+        "style": "relaxed tourist, curious and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Sadaltager",
+      "Learner": "Zubenelgenubi"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-ask-for-directions-metro",
+      "revision": 1,
+      "sha256": "d153645c72cda03c8d64e74461a5766ecc27af5f47c8b7873bc336595d886aab"
+    }
+  }
+}

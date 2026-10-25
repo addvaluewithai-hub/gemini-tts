@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-clarify-a-message-office-r1-e1b68054",
+  "lesson": {
+    "slug": "a2-clarify-a-message-office",
+    "revision": 1,
+    "sha256": "e1b6805479c6dd0c0f126ebd5effb90ca1a5bab896dd7a5db1da5e227f328621",
+    "words": 99,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Did you see my message about tomorrow?",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, thanks. But one part wasn't clear. Which report do I need to bring?",
+        "style": "polite and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Sorry! The sales report from last month.",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "The sales report from last month, OK. And is the meeting still at ten?",
+        "style": "polite and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No, at ten thirty now. It's in the message too.",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Oh, I'm sorry, I didn't see that. Ten thirty. In the same room?",
+        "style": "polite and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, the same room, on the third floor.",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. So, tomorrow at ten thirty on the third floor, and I'll bring last month's sales report.",
+        "style": "polite and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "That's right. Thanks!",
+        "style": "friendly coworker, a little busy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No problem. See you tomorrow.",
+        "style": "polite and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Achird",
+      "Learner": "Aoede"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-clarify-a-message-office",
+      "revision": 1,
+      "sha256": "e1b6805479c6dd0c0f126ebd5effb90ca1a5bab896dd7a5db1da5e227f328621"
+    }
+  }
+}

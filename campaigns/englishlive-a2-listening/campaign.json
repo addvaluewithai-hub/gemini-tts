@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "campaign": "englishlive-a2-listening",
+  "level": "A2",
+  "app": "addvaluewithai-hub/englishlive",
+  "totalWords": 2403,
+  "jobs": [
+    {
+      "slug": "a2-ask-for-directions-hotel",
+      "job_id": "englishlive-a2-ask-for-directions-hotel-r1-175c17fd",
+      "path": "jobs/a2-ask-for-directions-hotel.json",
+      "words": 116,
+      "sha256": "175c17fda2e097101967a0d1cfea53b566e5abf777ec4fa85f4094d7a597b7f1",
+      "voices": {
+        "Partner": "Charon",
+        "Learner": "Kore"
+      }
+    },
+    {
+      "slug": "a2-ask-for-directions-mall",
+      "job_id": "englishlive-a2-ask-for-directions-mall-r1-efe32a52",
+      "path": "jobs/a2-ask-for-directions-mall.json",
+      "words": 85,
+      "sha256": "efe32a524f22649f042937a0c8e3fb95dc9cdf26f4315e634ac836f56eb7d7ec",
+      "voices": {
+        "Partner": "Orus",
+        "Learner": "Laomedeia"
+      }
+    },
+    {
+      "slug": "a2-ask-for-directions-metro",
+      "job_id": "englishlive-a2-ask-for-directions-metro-r1-d153645c",
+      "path": "jobs/a2-ask-for-directions-metro.json",
+      "words": 104,
+      "sha256": "d153645c72cda03c8d64e74461a5766ecc27af5f47c8b7873bc336595d886aab",
+      "voices": {
+        "Partner": "Sadaltager",
+        "Learner": "Zubenelgenubi"
+      }
+    },
+    {
+      "slug": "a2-change-a-reservation-bus",
+      "job_id": "englishlive-a2-change-a-reservation-bus-r1-b1646d7e",
+      "path": "jobs/a2-change-a-reservation-bus.json",
+      "words": 101,
+      "sha256": "b1646d7ee3f9f127a2a208951d55db97ba866aaef3f57db022400701e2c85b8a",
+      "voices": {
+        "Partner": "Alnilam",
+        "Learner": "Callirrhoe"
+      }
+    },
+    {
+      "slug": "a2-change-a-reservation-tour",
+      "job_id": "englishlive-a2-change-a-reservation-tour-r1-fd97c13b",
+      "path": "jobs/a2-change-a-reservation-tour.json",
+      "words": 92,
+      "sha256": "fd97c13b97b3a4675d58b69e5c67670e284a9419eccbd9231f5be4da308cd5b2",
+      "voices": {
+        "Partner": "Umbriel",
+        "Learner": "Vindemiatrix"
+      }
+    },
+    {
+      "slug": "a2-change-a-reservation-train",
+      "job_id": "englishlive-a2-change-a-reservation-train-r1-a9cc7bb9",
+      "path": "jobs/a2-change-a-reservation-train.json",
+      "words": 105,
+      "sha256": "a9cc7bb9365d6efe56098e6a051460bf9799d54a24b3e9058b2c9c3f196725b8",
+      "voices": {
+        "Partner": "Achird",
+        "Learner": "Sadachbia"
+      }
+    },
+    {
+      "slug": "a2-clarify-a-message-clinic",
+      "job_id": "englishlive-a2-clarify-a-message-clinic-r1-f97a11fc",
+      "path": "jobs/a2-clarify-a-message-clinic.json",
+      "words": 82,
+      "sha256": "f97a11fcdeed05c388ef183c5aa47042b1ab533154ce68eb1572fe7c10f3a209",
+      "voices": {
+        "Partner": "Schedar",
+        "Learner": "Autonoe"
+      }
+    },
+    {
+      "slug": "a2-clarify-a-message-office",
+      "job_id": "englishlive-a2-clarify-a-message-office-r1-e1b68054",
+      "path": "jobs/a2-clarify-a-message-office.json",
+      "words": 99,
+      "sha256": "e1b6805479c6dd0c0f126ebd5effb90ca1a5bab896dd7a5db1da5e227f328621",
+      "voices": {
+        "Partner": "Achird",
+        "Learner": "Aoede"
+      }
+    },
+    {
+      "slug": "a2-clarify-a-message-party",
+      "job_id": "englishlive-a2-clarify-a-message-party-r1-10659cea",
+      "path": "jobs/a2-clarify-a-message-party.json",
+      "words": 101,
+      "sha256": "10659cea68b8cc73e2fd465c58825d15d29bde5324edcc6139807f546f6b1fc2",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Iapetus"
+      }
+    },
+    {
+      "slug": "a2-clarify-instructions-cafe",
+      "job_id": "englishlive-a2-clarify-instructions-cafe-r1-c83695a3",
+      "path": "jobs/a2-clarify-instructions-cafe.json",
+      "words": 110,
+      "sha256": "c83695a332951110e9bb02a103a888fa9a6065a1a6b20bd15eb7738b0f8391f3",
+      "voices": {
+        "Partner": "Algenib",
+        "Learner": "Achernar"
+      }
+    },
+    {
+      "slug": "a2-clarify-instructions-homework",
+      "job_id": "englishlive-a2-clarify-instructions-homework-r1-8b58e5ec",
+      "path": "jobs/a2-clarify-instructions-homework.json",
+      "words": 99,
+      "sha256": "8b58e5ecfc3cb1cc70ebccf41bf7776eddbf3f482419c801b3925ce89fd9525b",
+      "voices": {
+        "Partner": "Iapetus",
+        "Learner": "Puck"
+      }
+    },
+    {
+      "slug": "a2-clarify-instructions-office",
+      "job_id": "englishlive-a2-clarify-instructions-office-r1-a68ddb04",
+      "path": "jobs/a2-clarify-instructions-office.json",
+      "words": 104,
+      "sha256": "a68ddb04a47472239d2e55367506904333566c69cc167ce1fe5566e0978bbdd0",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Zephyr"
+      }
+    },
+    {
+      "slug": "a2-get-to-know-someone-class",
+      "job_id": "englishlive-a2-get-to-know-someone-class-r1-366b93d8",
+      "path": "jobs/a2-get-to-know-someone-class.json",
+      "words": 124,
+      "sha256": "366b93d86835abac6c36a14abc65e49d6ca575a52c1f86f01213cdadc4c47fe1",
+      "voices": {
+        "Partner": "Despina",
+        "Learner": "Umbriel"
+      }
+    },
+    {
+      "slug": "a2-get-to-know-someone-club",
+      "job_id": "englishlive-a2-get-to-know-someone-club-r1-14e41b67",
+      "path": "jobs/a2-get-to-know-someone-club.json",
+      "words": 118,
+      "sha256": "14e41b6742d1e89e6e45ea15fd16d27f1cf0a972eac6feb5f7e9e16b47deec0f",
+      "voices": {
+        "Partner": "Algieba",
+        "Learner": "Sulafat"
+      }
+    },
+    {
+      "slug": "a2-get-to-know-someone-work",
+      "job_id": "englishlive-a2-get-to-know-someone-work-r1-13afd0ef",
+      "path": "jobs/a2-get-to-know-someone-work.json",
+      "words": 111,
+      "sha256": "13afd0ef8066825e1cbf647552cad8a4e2423fed0c3858d52a2da8d41d4d5cf3",
+      "voices": {
+        "Partner": "Rasalgethi",
+        "Learner": "Erinome"
+      }
+    },
+    {
+      "slug": "a2-order-with-preferences-cafe",
+      "job_id": "englishlive-a2-order-with-preferences-cafe-r1-baeabfb4",
+      "path": "jobs/a2-order-with-preferences-cafe.json",
+      "words": 85,
+      "sha256": "baeabfb4ac2b1276fd3bc3ded6e2cea3ce3b176706112022be6e38616f3c4664",
+      "voices": {
+        "Partner": "Schedar",
+        "Learner": "Aoede"
+      }
+    },
+    {
+      "slug": "a2-order-with-preferences-juice",
+      "job_id": "englishlive-a2-order-with-preferences-juice-r1-f58b1650",
+      "path": "jobs/a2-order-with-preferences-juice.json",
+      "words": 95,
+      "sha256": "f58b1650047db8ca865fca9fcc3b282485bc53f49be48723f2feb8df034978c6",
+      "voices": {
+        "Partner": "Puck",
+        "Learner": "Leda"
+      }
+    },
+    {
+      "slug": "a2-order-with-preferences-sandwich",
+      "job_id": "englishlive-a2-order-with-preferences-sandwich-r1-fc1f6819",
+      "path": "jobs/a2-order-with-preferences-sandwich.json",
+      "words": 90,
+      "sha256": "fc1f6819171da1c14471e8b040902a4eed1b41b7ebb941ff9f6f48ad1b209872",
+      "voices": {
+        "Partner": "Iapetus",
+        "Learner": "Achird"
+      }
+    },
+    {
+      "slug": "a2-plan-an-outing-friday",
+      "job_id": "englishlive-a2-plan-an-outing-friday-r1-29860e53",
+      "path": "jobs/a2-plan-an-outing-friday.json",
+      "words": 96,
+      "sha256": "29860e5396ccd7f0484940498e0f4158b63ae86a36dbdaa8b30f23a3b71bbd1e",
+      "voices": {
+        "Partner": "Sadachbia",
+        "Learner": "Achird"
+      }
+    },
+    {
+      "slug": "a2-plan-an-outing-lunch",
+      "job_id": "englishlive-a2-plan-an-outing-lunch-r1-ce54c53e",
+      "path": "jobs/a2-plan-an-outing-lunch.json",
+      "words": 98,
+      "sha256": "ce54c53e129af9a886d07eaf12d66e3a306433276e8a049916e21369e7c9d13b",
+      "voices": {
+        "Partner": "Zubenelgenubi",
+        "Learner": "Despina"
+      }
+    },
+    {
+      "slug": "a2-plan-an-outing-study",
+      "job_id": "englishlive-a2-plan-an-outing-study-r1-fe201b8c",
+      "path": "jobs/a2-plan-an-outing-study.json",
+      "words": 86,
+      "sha256": "fe201b8c610c26c5aedfe5aefd96758f77b88a9a3ad66bdbe4f59d5d1b9f79ff",
+      "voices": {
+        "Partner": "Leda",
+        "Learner": "Orus"
+      }
+    },
+    {
+      "slug": "a2-service-problem-hotel",
+      "job_id": "englishlive-a2-service-problem-hotel-r1-64bee998",
+      "path": "jobs/a2-service-problem-hotel.json",
+      "words": 101,
+      "sha256": "64bee998e1b4905115041504ab6e97457468274acc7a8d4e75890cb462d7c740",
+      "voices": {
+        "Partner": "Charon",
+        "Learner": "Pulcherrima"
+      }
+    },
+    {
+      "slug": "a2-service-problem-internet",
+      "job_id": "englishlive-a2-service-problem-internet-r1-2b3ba361",
+      "path": "jobs/a2-service-problem-internet.json",
+      "words": 99,
+      "sha256": "2b3ba361f397eed6fc3f1d19f35eccac74c288b9aabbc6ee3e5b98692dcdf29e",
+      "voices": {
+        "Partner": "Algieba",
+        "Learner": "Gacrux"
+      }
+    },
+    {
+      "slug": "a2-service-problem-light",
+      "job_id": "englishlive-a2-service-problem-light-r1-d3239b28",
+      "path": "jobs/a2-service-problem-light.json",
+      "words": 102,
+      "sha256": "d3239b28b9bd1b469f83bd7927df4a942d74cf2b2e801fbb516b6cb2df6c443b",
+      "voices": {
+        "Partner": "Fenrir",
+        "Learner": "Alnilam"
+      }
+    }
+  ],
+  "issues": [
+    [
+      "a2-ask-for-directions-hotel",
+      "a2-ask-for-directions-mall",
+      "a2-ask-for-directions-metro",
+      "a2-change-a-reservation-bus",
+      "a2-change-a-reservation-tour"
+    ],
+    [
+      "a2-change-a-reservation-train",
+      "a2-clarify-a-message-clinic",
+      "a2-clarify-a-message-office",
+      "a2-clarify-a-message-party",
+      "a2-clarify-instructions-cafe"
+    ],
+    [
+      "a2-clarify-instructions-homework",
+      "a2-clarify-instructions-office",
+      "a2-get-to-know-someone-class",
+      "a2-get-to-know-someone-club",
+      "a2-get-to-know-someone-work"
+    ],
+    [
+      "a2-order-with-preferences-cafe",
+      "a2-order-with-preferences-juice",
+      "a2-order-with-preferences-sandwich",
+      "a2-plan-an-outing-friday",
+      "a2-plan-an-outing-lunch"
+    ],
+    [
+      "a2-plan-an-outing-study",
+      "a2-service-problem-hotel",
+      "a2-service-problem-internet",
+      "a2-service-problem-light"
+    ]
+  ]
+}

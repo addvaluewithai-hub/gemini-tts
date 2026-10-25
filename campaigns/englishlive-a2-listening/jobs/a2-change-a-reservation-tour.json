@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-change-a-reservation-tour-r1-fd97c13b",
+  "lesson": {
+    "slug": "a2-change-a-reservation-tour",
+    "revision": 1,
+    "sha256": "fd97c13b97b3a4675d58b69e5c67670e284a9419eccbd9231f5be4da308cd5b2",
+    "words": 92,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good afternoon. Can I help you?",
+        "style": "easy-going, friendly hotel tour desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. I booked the city tour for Saturday morning. Can I change it to Sunday?",
+        "style": "gentle and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Sure. What's your room number?",
+        "style": "easy-going, friendly hotel tour desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Two oh five.",
+        "style": "gentle and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Thank you. On Sunday, there's a tour at nine in the morning and one at two in the afternoon.",
+        "style": "easy-going, friendly hotel tour desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "The morning tour, please. It's not so hot in the morning.",
+        "style": "gentle and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Good idea. Sunday at nine. The bus leaves from the hotel door.",
+        "style": "easy-going, friendly hotel tour desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Do I need to pay again?",
+        "style": "gentle and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No, it's the same ticket.",
+        "style": "easy-going, friendly hotel tour desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. Sunday at nine, from the hotel door. Thank you!",
+        "style": "gentle and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Umbriel",
+      "Learner": "Vindemiatrix"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-change-a-reservation-tour",
+      "revision": 1,
+      "sha256": "fd97c13b97b3a4675d58b69e5c67670e284a9419eccbd9231f5be4da308cd5b2"
+    }
+  }
+}

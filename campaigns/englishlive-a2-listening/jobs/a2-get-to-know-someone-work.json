@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-get-to-know-someone-work-r1-13afd0ef",
+  "lesson": {
+    "slug": "a2-get-to-know-someone-work",
+    "revision": 1,
+    "sha256": "13afd0ef8066825e1cbf647552cad8a4e2423fed0c3858d52a2da8d41d4d5cf3",
+    "words": 111,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good morning! I'm Ben. It's my first day today.",
+        "style": "Ben, polite and friendly, on his first day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Oh, welcome! I'm Mona. I work in sales. Which team are you in?",
+        "style": "welcoming and friendly. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "I'm in IT. Do you live near here?",
+        "style": "Ben, polite and friendly, on his first day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, I walk to work. It only takes ten minutes. And you?",
+        "style": "welcoming and friendly. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No, it's about an hour by train.",
+        "style": "Ben, polite and friendly, on his first day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "That's a long way! What do you do on the train?",
+        "style": "welcoming and friendly. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "I listen to music or read.",
+        "style": "Ben, polite and friendly, on his first day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Good idea. I love music too. I listen to it when I cook. What kind of music do you like?",
+        "style": "welcoming and friendly. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Mostly rock. Oh, I have a meeting now.",
+        "style": "Ben, polite and friendly, on his first day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. If you need anything, I'm in room four. See you at lunch!",
+        "style": "welcoming and friendly. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Thanks, Mona. See you!",
+        "style": "Ben, polite and friendly, on his first day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Rasalgethi",
+      "Learner": "Erinome"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-get-to-know-someone-work",
+      "revision": 1,
+      "sha256": "13afd0ef8066825e1cbf647552cad8a4e2423fed0c3858d52a2da8d41d4d5cf3"
+    }
+  }
+}

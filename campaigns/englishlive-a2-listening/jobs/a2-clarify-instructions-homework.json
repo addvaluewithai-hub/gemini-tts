@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-clarify-instructions-homework-r1-8b58e5ec",
+  "lesson": {
+    "slug": "a2-clarify-instructions-homework",
+    "revision": 1,
+    "sha256": "8b58e5ecfc3cb1cc70ebccf41bf7776eddbf3f482419c801b3925ce89fd9525b",
+    "words": 99,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi. You came late today, so let me tell you the homework.",
+        "style": "kind, patient English teacher. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Thank you. What do I need to do?",
+        "style": "student, a little embarrassed for being late, then relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Read the story on page thirty. Then answer questions one to five. After that, write five sentences about your weekend.",
+        "style": "kind, patient English teacher. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sorry, which questions? One to nine?",
+        "style": "student, a little embarrassed for being late, then relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No, one to five.",
+        "style": "kind, patient English teacher. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK, one to five. Do I write the answers in my notebook?",
+        "style": "student, a little embarrassed for being late, then relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, in your notebook. Bring it on Tuesday.",
+        "style": "kind, patient English teacher. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. So, read page thirty, answer questions one to five, and write five sentences. For Tuesday.",
+        "style": "student, a little embarrassed for being late, then relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "That's right. Any other questions?",
+        "style": "kind, patient English teacher. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No, that's clear. I'll start tonight. Thank you!",
+        "style": "student, a little embarrassed for being late, then relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Iapetus",
+      "Learner": "Puck"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-clarify-instructions-homework",
+      "revision": 1,
+      "sha256": "8b58e5ecfc3cb1cc70ebccf41bf7776eddbf3f482419c801b3925ce89fd9525b"
+    }
+  }
+}

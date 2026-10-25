@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-change-a-reservation-train-r1-a9cc7bb9",
+  "lesson": {
+    "slug": "a2-change-a-reservation-train",
+    "revision": 1,
+    "sha256": "a9cc7bb9365d6efe56098e6a051460bf9799d54a24b3e9058b2c9c3f196725b8",
+    "words": 105,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hello. Can I help you?",
+        "style": "friendly train ticket office worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, please. I'm on the eleven fifteen train to Lakeside, in seat thirty-four. Can I change my seat?",
+        "style": "lively and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. Where would you like to sit?",
+        "style": "friendly train ticket office worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "My brother is in seat twelve, in car C. I'd like to sit next to him.",
+        "style": "lively and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Let me see. Seat eleven, next to your brother, is free. There's also a window seat, number fifteen.",
+        "style": "friendly train ticket office worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Seat eleven, please. Then we can talk on the trip.",
+        "style": "lively and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK. Your new seat is eleven, in car C.",
+        "style": "friendly train ticket office worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Do I need to pay for the change?",
+        "style": "lively and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No, there's nothing to pay.",
+        "style": "friendly train ticket office worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Perfect. Seat eleven, car C. Thanks a lot.",
+        "style": "lively and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Achird",
+      "Learner": "Sadachbia"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-change-a-reservation-train",
+      "revision": 1,
+      "sha256": "a9cc7bb9365d6efe56098e6a051460bf9799d54a24b3e9058b2c9c3f196725b8"
+    }
+  }
+}

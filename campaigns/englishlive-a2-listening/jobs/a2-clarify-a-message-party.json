@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-clarify-a-message-party-r1-10659cea",
+  "lesson": {
+    "slug": "a2-clarify-a-message-party",
+    "revision": 1,
+    "sha256": "10659cea68b8cc73e2fd465c58825d15d29bde5324edcc6139807f546f6b1fc2",
+    "words": 101,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Did you get my message about Saturday?",
+        "style": "Tarek, a cheerful friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, but it wasn't very clear. I didn't hear the time.",
+        "style": "friendly and careful. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Oh, sorry! It's at seven thirty.",
+        "style": "Tarek, a cheerful friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Seven thirty, OK. And is it at your apartment?",
+        "style": "friendly and careful. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No, at my sister's house. It's next to the big supermarket on Green Street.",
+        "style": "Tarek, a cheerful friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Next to the supermarket, I know it. You also said something about food. What should I bring?",
+        "style": "friendly and careful. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Can you bring some drinks? We have a lot of food.",
+        "style": "Tarek, a cheerful friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sure. So, Saturday at seven thirty, at your sister's house, and I'll bring drinks.",
+        "style": "friendly and careful. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Perfect. Sorry about the message!",
+        "style": "Tarek, a cheerful friend. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No problem. See you on Saturday!",
+        "style": "friendly and careful. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Iapetus"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-clarify-a-message-party",
+      "revision": 1,
+      "sha256": "10659cea68b8cc73e2fd465c58825d15d29bde5324edcc6139807f546f6b1fc2"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "job_id": "englishlive-a2-plan-an-outing-study-r1-fe201b8c",
+  "lesson": {
+    "slug": "a2-plan-an-outing-study",
+    "revision": 1,
+    "sha256": "fe201b8c610c26c5aedfe5aefd96758f77b88a9a3ad66bdbe4f59d5d1b9f79ff",
+    "words": 86,
+    "turns": 9
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Do you want to study together for the exam?",
+        "style": "Mariam, a friendly, cheerful classmate. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, good idea. How about Saturday? I'm free all day.",
+        "style": "calm and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Good. Let's go to the café on Main Street.",
+        "style": "Mariam, a friendly, cheerful classmate. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hmm, I'd prefer the library. It's quiet, and there are big tables for our books.",
+        "style": "calm and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK, the library. What time?",
+        "style": "Mariam, a friendly, cheerful classmate. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Is ten o'clock OK? The library opens at nine.",
+        "style": "calm and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Ten is fine. I'll bring my notes.",
+        "style": "Mariam, a friendly, cheerful classmate. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. So, ten o'clock at the library on Saturday. I'll bring some snacks for the break. See you then!",
+        "style": "calm and organized. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "See you!",
+        "style": "Mariam, a friendly, cheerful classmate. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Leda",
+      "Learner": "Orus"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-plan-an-outing-study",
+      "revision": 1,
+      "sha256": "fe201b8c610c26c5aedfe5aefd96758f77b88a9a3ad66bdbe4f59d5d1b9f79ff"
+    }
+  }
+}

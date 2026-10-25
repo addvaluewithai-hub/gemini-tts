@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-clarify-instructions-cafe-r1-c83695a3",
+  "lesson": {
+    "slug": "a2-clarify-instructions-cafe",
+    "revision": 1,
+    "sha256": "c83695a332951110e9bb02a103a888fa9a6065a1a6b20bd15eb7738b0f8391f3",
+    "words": 110,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Thanks for staying today. Let me tell you how we close the café.",
+        "style": "kind café manager, a little tired at the end of the day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sure. What do I need to do?",
+        "style": "new worker, careful and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "First, wash the cups. Then clean the tables and put the chairs on them. At nine, turn off the coffee machine.",
+        "style": "kind café manager, a little tired at the end of the day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sorry, what do I do with the chairs?",
+        "style": "new worker, careful and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Put them on the tables, so we can clean the floor.",
+        "style": "kind café manager, a little tired at the end of the day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. And why at nine for the machine?",
+        "style": "new worker, careful and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Because some people come late for a coffee.",
+        "style": "kind café manager, a little tired at the end of the day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "That makes sense. So, the cups first, then the tables and chairs, and the machine at nine.",
+        "style": "new worker, careful and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Perfect. Let me know if you have a question.",
+        "style": "kind café manager, a little tired at the end of the day. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Thanks. I'll start with the cups now.",
+        "style": "new worker, careful and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Algenib",
+      "Learner": "Achernar"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-clarify-instructions-cafe",
+      "revision": 1,
+      "sha256": "c83695a332951110e9bb02a103a888fa9a6065a1a6b20bd15eb7738b0f8391f3"
+    }
+  }
+}

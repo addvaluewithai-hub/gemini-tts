@@ -1,0 +1,87 @@
+{
+  "job_id": "englishlive-a2-plan-an-outing-lunch-r1-ce54c53e",
+  "lesson": {
+    "slug": "a2-plan-an-outing-lunch",
+    "revision": 1,
+    "sha256": "ce54c53e129af9a886d07eaf12d66e3a306433276e8a049916e21369e7c9d13b",
+    "words": 98,
+    "turns": 10
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Do you want to have lunch together on Thursday?",
+        "style": "Ziad, a casual, friendly coworker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sure, that's a nice idea. Where do you want to go?",
+        "style": "warm and sure of her idea. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "What about the burger place across the street?",
+        "style": "Ziad, a casual, friendly coworker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "I'd prefer the Thai place near the park. It's quieter, so we can talk. And the food is really good.",
+        "style": "warm and sure of her idea. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK! I've never been there. Is it far?",
+        "style": "Ziad, a casual, friendly coworker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No, it's only five minutes on foot. Let's go at one, before it gets busy.",
+        "style": "warm and sure of her idea. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "One is good for me.",
+        "style": "Ziad, a casual, friendly coworker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great. Let's meet at the front door at one.",
+        "style": "warm and sure of her idea. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Perfect. See you on Thursday!",
+        "style": "Ziad, a casual, friendly coworker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "See you! You're going to love it.",
+        "style": "warm and sure of her idea. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Zubenelgenubi",
+      "Learner": "Despina"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-plan-an-outing-lunch",
+      "revision": 1,
+      "sha256": "ce54c53e129af9a886d07eaf12d66e3a306433276e8a049916e21369e7c9d13b"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "job_id": "englishlive-a2-ask-for-directions-mall-r1-efe32a52",
+  "lesson": {
+    "slug": "a2-ask-for-directions-mall",
+    "revision": 1,
+    "sha256": "efe32a524f22649f042937a0c8e3fb95dc9cdf26f4315e634ac836f56eb7d7ec",
+    "words": 85,
+    "turns": 9
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hello. Can I help you?",
+        "style": "polite, helpful mall information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. Where's the bookstore, please?",
+        "style": "friendly, a little in a hurry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "It's on the second floor. Take the escalator over there, then turn right. It's after the phone store.",
+        "style": "polite, helpful mall information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Sorry, can you say that again? After which store?",
+        "style": "friendly, a little in a hurry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "After the phone store. There's a big blue sign.",
+        "style": "polite, helpful mall information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "OK. Second floor, turn right, after the phone store. Is there an elevator? I have a lot of bags.",
+        "style": "friendly, a little in a hurry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Yes, the elevator is next to the café, on your left.",
+        "style": "polite, helpful mall information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Great, thank you!",
+        "style": "friendly, a little in a hurry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "You're welcome. Have a nice day.",
+        "style": "polite, helpful mall information desk worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Orus",
+      "Learner": "Laomedeia"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-ask-for-directions-mall",
+      "revision": 1,
+      "sha256": "efe32a524f22649f042937a0c8e3fb95dc9cdf26f4315e634ac836f56eb7d7ec"
+    }
+  }
+}

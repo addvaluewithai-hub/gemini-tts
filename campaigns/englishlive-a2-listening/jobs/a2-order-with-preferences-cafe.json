@@ -1,0 +1,97 @@
+{
+  "job_id": "englishlive-a2-order-with-preferences-cafe-r1-baeabfb4",
+  "lesson": {
+    "slug": "a2-order-with-preferences-cafe",
+    "revision": 1,
+    "sha256": "baeabfb4ac2b1276fd3bc3ded6e2cea3ce3b176706112022be6e38616f3c4664",
+    "words": 85,
+    "turns": 12
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Good morning! What would you like?",
+        "style": "warm, cheerful café worker in the morning. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Good morning. A latte, please.",
+        "style": "friendly, in a good mood. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Hot or iced?",
+        "style": "warm, cheerful café worker in the morning. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Iced, please. It's really hot today.",
+        "style": "friendly, in a good mood. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "What size? We have small, medium, and large.",
+        "style": "warm, cheerful café worker in the morning. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Medium, please. How much is it?",
+        "style": "friendly, in a good mood. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "It's four dollars. Would you like something to eat? The chocolate cakes are fresh today.",
+        "style": "warm, cheerful café worker in the morning. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No, thank you. I had breakfast at home.",
+        "style": "friendly, in a good mood. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK. Would you like sugar or vanilla in it?",
+        "style": "warm, cheerful café worker in the morning. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "A little vanilla, please. No sugar.",
+        "style": "friendly, in a good mood. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "One medium iced latte with vanilla. Four dollars, please.",
+        "style": "warm, cheerful café worker in the morning. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Here you are. Thanks!",
+        "style": "friendly, in a good mood. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Schedar",
+      "Learner": "Aoede"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-order-with-preferences-cafe",
+      "revision": 1,
+      "sha256": "baeabfb4ac2b1276fd3bc3ded6e2cea3ce3b176706112022be6e38616f3c4664"
+    }
+  }
+}

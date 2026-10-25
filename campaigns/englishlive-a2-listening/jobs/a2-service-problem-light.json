@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-service-problem-light-r1-d3239b28",
+  "lesson": {
+    "slug": "a2-service-problem-light",
+    "revision": 1,
+    "sha256": "d3239b28b9bd1b469f83bd7927df4a942d74cf2b2e801fbb516b6cb2df6c443b",
+    "words": 102,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! How can I help you?",
+        "style": "friendly, energetic building manager. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. I'm in apartment seven B. The light in my kitchen doesn't work.",
+        "style": "calm and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Oh, sorry. Since when?",
+        "style": "friendly, energetic building manager. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Since last night. I turned it on, and nothing happened.",
+        "style": "calm and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Is it only the kitchen light? Are the other lights OK?",
+        "style": "friendly, energetic building manager. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, only the kitchen. The other lights are fine.",
+        "style": "calm and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK. An electrician can come today at five, or tomorrow morning at nine.",
+        "style": "friendly, energetic building manager. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Today at five, please. I want to cook dinner tonight.",
+        "style": "calm and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Sure. Will you be at home at five?",
+        "style": "friendly, energetic building manager. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, I'll be at home. Thank you very much.",
+        "style": "calm and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "You're welcome. He'll come to your door at five.",
+        "style": "friendly, energetic building manager. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Fenrir",
+      "Learner": "Alnilam"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-service-problem-light",
+      "revision": 1,
+      "sha256": "d3239b28b9bd1b469f83bd7927df4a942d74cf2b2e801fbb516b6cb2df6c443b"
+    }
+  }
+}

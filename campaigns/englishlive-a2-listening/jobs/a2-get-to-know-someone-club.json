@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-get-to-know-someone-club-r1-14e41b67",
+  "lesson": {
+    "slug": "a2-get-to-know-someone-club",
+    "revision": 1,
+    "sha256": "14e41b6742d1e89e6e45ea15fd16d27f1cf0a972eac6feb5f7e9e16b47deec0f",
+    "words": 118,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! I see you here every Monday. I'm Leo.",
+        "style": "Leo, friendly and relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi, Leo. I'm Nour. Yes, I come to the swimming class on Mondays and Wednesdays.",
+        "style": "warm, chatty and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Nice! When did you start?",
+        "style": "Leo, friendly and relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Last year. I wanted to do some sport after work. What about you? What do you do here?",
+        "style": "warm, chatty and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "I play tennis, usually on Saturday mornings.",
+        "style": "Leo, friendly and relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Tennis looks fun, but I'm not very good with a ball! Do you play with friends?",
+        "style": "warm, chatty and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "With my brother. He's better than me.",
+        "style": "Leo, friendly and relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Ha! Maybe I can try it one day. Is it hard to learn?",
+        "style": "warm, chatty and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Not really. There's a class on Sunday mornings.",
+        "style": "Leo, friendly and relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "That sounds good. I'll ask at the desk. Nice to meet you, Leo.",
+        "style": "warm, chatty and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "You too, Nour. See you on Monday!",
+        "style": "Leo, friendly and relaxed. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Algieba",
+      "Learner": "Sulafat"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-get-to-know-someone-club",
+      "revision": 1,
+      "sha256": "14e41b6742d1e89e6e45ea15fd16d27f1cf0a972eac6feb5f7e9e16b47deec0f"
+    }
+  }
+}

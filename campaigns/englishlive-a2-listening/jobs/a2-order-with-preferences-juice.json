@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-order-with-preferences-juice-r1-f58b1650",
+  "lesson": {
+    "slug": "a2-order-with-preferences-juice",
+    "revision": 1,
+    "sha256": "f58b1650047db8ca865fca9fcc3b282485bc53f49be48723f2feb8df034978c6",
+    "words": 95,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! What can I get you?",
+        "style": "friendly, upbeat juice bar worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Hi. Can I have a mango juice, please?",
+        "style": "relaxed and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Sorry, we don't have any mango today. We have orange, strawberry, or lemon with mint.",
+        "style": "friendly, upbeat juice bar worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Oh, OK. Strawberry, please. I like sweet juice.",
+        "style": "relaxed and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Small or large?",
+        "style": "friendly, upbeat juice bar worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Large, please. And no ice, because I don't like it too cold.",
+        "style": "relaxed and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "No problem. Would you like any sugar?",
+        "style": "friendly, upbeat juice bar worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "No sugar, thanks. Strawberries are sweet.",
+        "style": "relaxed and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK. A large strawberry juice, no ice, no sugar. That's five dollars. For here or to go?",
+        "style": "friendly, upbeat juice bar worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "To go, please. Here you are.",
+        "style": "relaxed and polite. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Thank you. It's ready in two minutes.",
+        "style": "friendly, upbeat juice bar worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Puck",
+      "Learner": "Leda"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-order-with-preferences-juice",
+      "revision": 1,
+      "sha256": "f58b1650047db8ca865fca9fcc3b282485bc53f49be48723f2feb8df034978c6"
+    }
+  }
+}

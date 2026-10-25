@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-get-to-know-someone-class-r1-366b93d8",
+  "lesson": {
+    "slug": "a2-get-to-know-someone-class",
+    "revision": 1,
+    "sha256": "366b93d86835abac6c36a14abc65e49d6ca575a52c1f86f01213cdadc4c47fe1",
+    "words": 124,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hi! Is this seat free? I'm Hana. I'm new in this class.",
+        "style": "Hana, friendly and a little shy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Yes, sit down. I'm Ali. Nice to meet you. Why are you learning English?",
+        "style": "easy-going, friendly and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "For my studies. And you?",
+        "style": "Hana, friendly and a little shy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "For my job. I work at a hotel, so I speak English with guests every day. What do you do in your free time?",
+        "style": "easy-going, friendly and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "I read a lot. What about you?",
+        "style": "Hana, friendly and a little shy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "I usually play soccer with my friends on Fridays. I also like cooking, but I'm not very good at it!",
+        "style": "easy-going, friendly and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Ha! What do you cook?",
+        "style": "Hana, friendly and a little shy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Mostly pasta, because it's easy and quick. Do you like cooking?",
+        "style": "easy-going, friendly and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Not really. I prefer eating!",
+        "style": "Hana, friendly and a little shy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Me too! Oh, the break is over. It was nice to talk to you. See you after class.",
+        "style": "easy-going, friendly and curious. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "See you, Ali!",
+        "style": "Hana, friendly and a little shy. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Despina",
+      "Learner": "Umbriel"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-get-to-know-someone-class",
+      "revision": 1,
+      "sha256": "366b93d86835abac6c36a14abc65e49d6ca575a52c1f86f01213cdadc4c47fe1"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "job_id": "englishlive-a2-order-with-preferences-sandwich-r1-fc1f6819",
+  "lesson": {
+    "slug": "a2-order-with-preferences-sandwich",
+    "revision": 1,
+    "sha256": "fc1f6819171da1c14471e8b040902a4eed1b41b7ebb941ff9f6f48ad1b209872",
+    "words": 90,
+    "turns": 11
+  },
+  "request": {
+    "turns": [
+      {
+        "speaker": "Partner",
+        "text": "Hello. What would you like?",
+        "style": "calm, helpful sandwich shop worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "I'd like a chicken sandwich, please.",
+        "style": "friendly and a little hungry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Sure. White bread or brown bread?",
+        "style": "calm, helpful sandwich shop worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Brown bread, please.",
+        "style": "friendly and a little hungry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Would you like cheese and vegetables in it?",
+        "style": "calm, helpful sandwich shop worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Cheese, yes. But no onions, please. I don't really like them.",
+        "style": "friendly and a little hungry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "OK. It comes with fries or a salad. Which one would you like?",
+        "style": "calm, helpful sandwich shop worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "A salad, please. I'm not very hungry.",
+        "style": "friendly and a little hungry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Great. A chicken sandwich on brown bread with cheese, no onions, and a salad. That's eight dollars.",
+        "style": "calm, helpful sandwich shop worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Learner",
+        "text": "Can I pay by card?",
+        "style": "friendly and a little hungry. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      },
+      {
+        "speaker": "Partner",
+        "text": "Of course. Your order is ready in five minutes.",
+        "style": "calm, helpful sandwich shop worker. American English accent. Slow, clear and natural pace for A2 English learners, with a short pause between sentences."
+      }
+    ],
+    "speakers": {
+      "Partner": "Iapetus",
+      "Learner": "Achird"
+    },
+    "routing": "explicit",
+    "model": "gemini-3.8-flash-tts",
+    "allow_model_fallback": false,
+    "format": "wav",
+    "sample_rate": 24000,
+    "temperature": 1,
+    "transcript": {
+      "language_codes": [
+        "en-US"
+      ],
+      "write_vtt": true
+    },
+    "metadata": {
+      "app": "englishlive",
+      "campaign": "englishlive-a2-listening",
+      "slug": "a2-order-with-preferences-sandwich",
+      "revision": 1,
+      "sha256": "fc1f6819171da1c14471e8b040902a4eed1b41b7ebb941ff9f6f48ad1b209872"
+    }
+  }
+}
