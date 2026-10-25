@@ -3,9 +3,15 @@
 import {createHash} from "node:crypto";
 
 const SOURCE="addvaluewithai-hub/gemini-tts";
-const PIN="a96a7b29dff919e294c7ca4ce5a185a79fb849d7";
+const PIN="8150af60d71eaa2eb56b5213b7cba6af9f008bbe";
 const ROOT="campaigns/englishlive-b1-listening/";
 const CAMPAIGN="englishlive-b1-listening";
+// Three unchanged group-1 recordings have already been delivered and accepted.
+// Permit only the two newly revised IDs on the new pinned source; never re-dispatch the other three.
+const REVISED_GROUP_ONE=[
+  "b1-change-a-hotel-booking-dates",
+  "b1-change-a-hotel-booking-extra-night"
+];
 const PILOT=[
   "b1-change-a-hotel-booking-dates",
   "b1-change-a-hotel-booking-extra-night",
@@ -31,9 +37,15 @@ export function validateEnglishliveCampaignPlan(cfg) {
       cfg.sourceCommit!==PIN) fail("Expected the approved pinned Englotti B1 source commit");
   if (!Number.isInteger(cfg.group)||cfg.group<1||cfg.group>5)
     fail("Englotti campaign group must be 1 to 5");
-  if (cfg.jobs!==undefined||cfg.slugs!==undefined||cfg.job!==undefined||
+  if (cfg.jobs!==undefined||cfg.job!==undefined||
       cfg.clips!==undefined||cfg.courseId!==undefined||cfg.lessonId!==undefined)
     fail("Conflicting or unapproved Englotti campaign scope");
+  if (cfg.group===1) {
+    if (!Array.isArray(cfg.slugs)||cfg.slugs.length!==2||
+        cfg.slugs.join("\n")!==REVISED_GROUP_ONE.join("\n"))
+      fail("Group 1 must dispatch only the two revised hotel lessons");
+  } else if (cfg.slugs!==undefined)
+    fail("Groups 2-5 must use the complete manifest Issue group");
 }
 
 function validateManifest(manifest) {
@@ -127,8 +139,12 @@ export async function compileEnglishliveCampaign(plan,read) {
   validateEnglishliveCampaignPlan(plan);
   const manifest=await read(plan,ROOT+"campaign.json");
   const entries=validateManifest(manifest);
-  const group=manifest.issues[plan.group-1],out=[];
-  for (const slug of group) {
+  const group=manifest.issues[plan.group-1];
+  if (plan.group===1 &&
+      !plan.slugs.every(slug=>group.includes(slug)))
+    fail("Unlisted revised pilot slug");
+  const selected=plan.group===1?plan.slugs:group,out=[];
+  for (const slug of selected) {
     const entry=entries.get(slug);
     const job=await read(plan,ROOT+entry.path);
     out.push(validateJob(entry,job));
