@@ -2,7 +2,7 @@ import {test} from "node:test";
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
 import {parseEvent,send} from "../src/issue-gateway.mjs";
-import {validateEnglishliveCampaignPlan,compileEnglishliveCampaign} from "../src/englishlive-campaign-gateway.mjs";
+import {validateEnglishliveCampaignPlan,compileEnglishliveCampaign,validateEnglishliveJob} from "../src/englishlive-campaign-gateway.mjs";
 
 const PIN="8150af60d71eaa2eb56b5213b7cba6af9f008bbe";
 const ROOT="campaigns/englishlive-b1-listening/";
@@ -103,13 +103,15 @@ test("Nadia lunch dialogue has its revised per-lesson voice cast",async()=>{
   await assert.rejects(compileEnglishliveCampaign({...plan,group:2,slugs:undefined},x.read),/voice/);
 });
 
-test("special room pronunciation remains intact after learner-pace sentence",async()=>{
+test("previously approved study-room pronunciation is independently validated, not re-dispatched",async()=>{
   const x=fixture(),items=await compileEnglishliveCampaign(plan,x.read);
-  const room=items.find(j=>j.lesson==="b1-explain-a-mix-up-room");
-  assert.ok(room);
+  assert.equal(items.some(j=>j.lesson==="b1-explain-a-mix-up-room"),false);
+  const slug="b1-explain-a-mix-up-room";
+  const room=x.files[ROOT+"jobs/"+slug+".json"];
   assert.ok(room.request.turns.every(t=>t.style.includes("thir-TEEN, THIR-ty.")));
-  x.files[ROOT+"jobs/b1-explain-a-mix-up-room.json"].request.turns[0].style="fast";
-  await assert.rejects(compileEnglishliveCampaign(plan,x.read),/Invalid or overridden/);
+  assert.equal(validateEnglishliveJob(x.entries.find(e=>e.slug===slug),room).id,room.job_id);
+  room.request.turns[0].style="fast";
+  assert.throws(()=>validateEnglishliveJob(x.entries.find(e=>e.slug===slug),room),/Invalid or overridden/);
 });
 
 test("group 5 has four jobs and no overlap with pilot",async()=>{
