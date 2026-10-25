@@ -4,7 +4,7 @@ import {createHash} from "node:crypto";
 import {parseEvent,send} from "../src/issue-gateway.mjs";
 import {validateEnglishliveCampaignPlan,compileEnglishliveCampaign} from "../src/englishlive-campaign-gateway.mjs";
 
-const PIN="a96a7b29dff919e294c7ca4ce5a185a79fb849d7";
+const PIN="8150af60d71eaa2eb56b5213b7cba6af9f008bbe";
 const ROOT="campaigns/englishlive-b1-listening/";
 const pilot=[
   "b1-change-a-hotel-booking-dates",
@@ -19,7 +19,7 @@ const sha=s=>createHash("sha256").update(s,"utf8").digest("hex");
 const words=t=>t.trim().split(/\s+/u).length;
 const ending=". American English accent. Clear, natural pace for B1 English learners, not rushed.";
 const plan={schemaVersion:1,command:"tts.issue.campaign",mode:"dry-run",
-  sourceRepo:"addvaluewithai-hub/gemini-tts",sourceCommit:PIN,group:1};
+  sourceRepo:"addvaluewithai-hub/gemini-tts",sourceCommit:PIN,group:1,slugs:pilot.slice(0,2)};
 const issueEvent=cfg=>({action:"opened",repository:{full_name:"addvaluewithai-hub/gemini-tts"},
   issue:{number:321,state:"open",user:{login:"addvaluewithai-hub"},
     body:"~~~json\n"+JSON.stringify(cfg)+"\n~~~"},sender:{login:"addvaluewithai-hub"}});
@@ -68,19 +68,26 @@ test("only the owner and the immutable Englotti group are allowed",()=>{
   assert.throws(()=>validateEnglishliveCampaignPlan({...plan,group:1,jobs:[]}),/scope/);
 });
 
-test("five original requests, no modifications, five dispatches maximum",async()=>{
+test("strict scope rejects all accepted old pilot jobs and unauthorized group-2 subsets",()=>{
+  assert.throws(()=>validateEnglishliveCampaignPlan({...plan,slugs:pilot}),/two revised/);
+  assert.throws(()=>validateEnglishliveCampaignPlan({...plan,slugs:pilot.slice(1,3)}),/two revised/);
+  assert.throws(()=>validateEnglishliveCampaignPlan({...plan,group:2,slugs:pilot.slice(0,2)}),/complete manifest/);
+  assert.doesNotThrow(()=>validateEnglishliveCampaignPlan({...plan,group:2,slugs:undefined}));
+});
+
+test("only two revised hotel requests dispatch unchanged; no duplicate old pilot",async()=>{
   const x=fixture(),parsed=parseEvent(issueEvent(plan));
   const items=await compileEnglishliveCampaign(parsed,x.read);
-  assert.equal(items.length,5);
-  assert.deepEqual(items.map(j=>j.lesson),pilot);
+  assert.equal(items.length,2);
+  assert.deepEqual(items.map(j=>j.lesson),pilot.slice(0,2));
   assert.strictEqual(items[0].request,x.files[ROOT+"jobs/"+pilot[0]+".json"].request);
   await assert.rejects(send(parsed,items,"token",()=>{throw Error("paid call");}),/Dry-run/);
   const calls=[];
   await send({...parsed,mode:"produce"},items,"fake-token",
     async(endpoint,token,method,body)=>{calls.push({endpoint,body});return {};});
   const dispatches=calls.filter(c=>c.endpoint==="/dispatches");
-  assert.equal(dispatches.length,5);
-  for (let i=0;i<5;i++) {
+  assert.equal(dispatches.length,2);
+  for (let i=0;i<2;i++) {
     assert.equal(dispatches[i].body.client_payload.job_id,items[i].id);
     assert.strictEqual(dispatches[i].body.client_payload.request,items[i].request);
   }
@@ -88,12 +95,12 @@ test("five original requests, no modifications, five dispatches maximum",async()
 
 test("Nadia lunch dialogue has its revised per-lesson voice cast",async()=>{
   const x=fixture();
-  const items=await compileEnglishliveCampaign({...plan,group:2},x.read);
+  const items=await compileEnglishliveCampaign({...plan,group:2,slugs:undefined},x.read);
   const lunch=items.find(x=>x.lesson==="b1-keep-a-conversation-going-lunch");
   assert.ok(lunch);
   assert.deepEqual(lunch.request.speakers,{Partner:"Autonoe",Learner:"Iapetus"});
   x.files[ROOT+"jobs/b1-keep-a-conversation-going-lunch.json"].request.speakers.Partner="Puck";
-  await assert.rejects(compileEnglishliveCampaign({...plan,group:2},x.read),/voice/);
+  await assert.rejects(compileEnglishliveCampaign({...plan,group:2,slugs:undefined},x.read),/voice/);
 });
 
 test("special room pronunciation remains intact after learner-pace sentence",async()=>{
@@ -106,7 +113,7 @@ test("special room pronunciation remains intact after learner-pace sentence",asy
 });
 
 test("group 5 has four jobs and no overlap with pilot",async()=>{
-  const x=fixture(),items=await compileEnglishliveCampaign({...plan,group:5},x.read);
+  const x=fixture(),items=await compileEnglishliveCampaign({...plan,group:5,slugs:undefined},x.read);
   assert.equal(items.length,4);
   assert.ok(items.every(j=>!pilot.includes(j.lesson)));
 });
