@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49",
+  "status": "completed",
+  "created_at": "2026-10-25T11:37:25.557Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 1,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 3045476,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928244/gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928244/gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928245/gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 5,
+    "word_count": 167,
+    "duration_ms": 63100,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.json",
+    "local_vtt": "out/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928244/gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.wav",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49",
+    "asset_id": "588931b97b0eae9645aa3f01027bbf47",
+    "resource_type": "video",
+    "bytes": 3039438,
+    "format": "wav",
+    "duration": 63.32
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928244/gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.json",
+    "asset_id": "fc3fcd817e4483d823370f59f026542b",
+    "resource_type": "raw",
+    "bytes": 21918,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928245/gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.transcript.vtt",
+    "asset_id": "56d6dbc1e08adedca63fc48c57b7aaec",
+    "resource_type": "raw",
+    "bytes": 1764,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-resolve-wrong-order-bakery-r11-0f8ade49.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 11,
+    "sha256": "0f8ade49f131dd04df3d5d348b9e33514d78b82d8d88fced5e0e52abe3aa5734",
+    "slug": "b1-resolve-wrong-order-bakery"
+  }
+}

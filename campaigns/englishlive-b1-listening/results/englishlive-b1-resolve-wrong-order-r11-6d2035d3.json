@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-resolve-wrong-order-r11-6d2035d3",
+  "status": "completed",
+  "created_at": "2026-10-25T11:38:04.331Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 5,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 1766756,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928282/gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928283/gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928283/gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 3,
+    "word_count": 115,
+    "duration_ms": 36400,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.json",
+    "local_vtt": "out/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928282/gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.wav",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3",
+    "asset_id": "09e5a1c61b8a5a37f0d3048ed07cee3f",
+    "resource_type": "video",
+    "bytes": 1760718,
+    "format": "wav",
+    "duration": 36.68
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928283/gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.json",
+    "asset_id": "c23b864b2c5f9e4f17f9109c425f31ff",
+    "resource_type": "raw",
+    "bytes": 15188,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928283/gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-r11-6d2035d3.transcript.vtt",
+    "asset_id": "70ead74e0c8e4db2b5603fa605d0aa95",
+    "resource_type": "raw",
+    "bytes": 1200,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-resolve-wrong-order-r11-6d2035d3.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 11,
+    "sha256": "6d2035d3a07942c500545cadcc7d54db1ef017186331fdfe335a70b3b42d1624",
+    "slug": "b1-resolve-wrong-order"
+  }
+}

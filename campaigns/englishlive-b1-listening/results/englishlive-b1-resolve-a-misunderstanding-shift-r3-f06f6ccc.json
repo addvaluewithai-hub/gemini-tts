@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc",
+  "status": "completed",
+  "created_at": "2026-10-25T11:37:27.359Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 3,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2966756,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928245/gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928246/gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928247/gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 3,
+    "word_count": 163,
+    "duration_ms": 61400,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.json",
+    "local_vtt": "out/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928245/gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.wav",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc",
+    "asset_id": "d042f1f198e1cd2502a3415873b6bafb",
+    "resource_type": "video",
+    "bytes": 2960718,
+    "format": "wav",
+    "duration": 61.68
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928246/gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.json",
+    "asset_id": "63981c6b1afbe63f9a1711350a2430d4",
+    "resource_type": "raw",
+    "bytes": 21257,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928247/gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.transcript.vtt",
+    "asset_id": "c6e277c0d75cb628b3970c0acaeac252",
+    "resource_type": "raw",
+    "bytes": 1823,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-resolve-a-misunderstanding-shift-r3-f06f6ccc.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "f06f6ccc55a26eab9b112b155636502fa691dda91c1f6168bd8544edd4812c70",
+    "slug": "b1-resolve-a-misunderstanding-shift"
+  }
+}

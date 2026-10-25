@@ -1,0 +1,1053 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:37:27.344Z",
+  "duration_ms": 58500,
+  "word_count": 163,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hi. Is everything all right with your meal? Not really. I ordered the vegetable pasta, but this has chicken in it. Oh, I'm really sorry. The kitchen mixed up two orders. The soup of the day is ready now if you'd like that instead. It's chicken soup. Thanks, but I'm vegetarian. I don't eat meat or chicken. And my lunch break ends in 30 minutes. I see. The kitchen can make a new vegetable pasta in about 15 minutes. Or there's a vegetable salad with bread ready now. It's $7 so I'd give you $2 back. Is the salad big enough for lunch? It's quite big and it comes with bread. But the pasta is a bigger meal. My office is only 5 minutes away so I can wait. I'll have the new pasta, please. No problem. A new vegetable pasta, no meat in about 15 minutes. Great. Please make sure there's no chicken this time. Of course. It's completely vegetarian. Sorry again.",
+  "source_text": "Hi. Is everything all right with your meal? Not really. I ordered the vegetable pasta, but this has chicken in it. Oh, I'm really sorry. The kitchen mixed up two orders. The soup of the day is ready now, if you'd like that instead. It's chicken soup. Thanks, but I'm vegetarian. I don't eat meat or chicken. And my lunch break ends in thirty minutes. I see. The kitchen can make a new vegetable pasta in about fifteen minutes. Or there's a vegetable salad with bread ready now. It's seven dollars, so I'd give you two dollars back. Is the salad big enough for lunch? It's quite big, and it comes with bread. But the pasta is a bigger meal. My office is only five minutes away, so I can wait. I'll have the new pasta, please. No problem. A new vegetable pasta, no meat, in about fifteen minutes. Great. Please make sure there's no chicken this time. Of course. It's completely vegetarian. Sorry again.",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hi. Is everything all right with your meal?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Not really. I ordered the vegetable pasta, but this has chicken in it."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Oh, I'm really sorry. The kitchen mixed up two orders. The soup of the day is ready now, if you'd like that instead. It's chicken soup."
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "Thanks, but I'm vegetarian. I don't eat meat or chicken. And my lunch break ends in thirty minutes."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "I see. The kitchen can make a new vegetable pasta in about fifteen minutes. Or there's a vegetable salad with bread ready now. It's seven dollars, so I'd give you two dollars back."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "Is the salad big enough for lunch?"
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "It's quite big, and it comes with bread. But the pasta is a bigger meal."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "My office is only five minutes away, so I can wait. I'll have the new pasta, please."
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "No problem. A new vegetable pasta, no meat, in about fifteen minutes."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Great. Please make sure there's no chicken this time."
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Of course. It's completely vegetarian. Sorry again."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 300,
+      "end_ms": 900,
+      "text": "Hi.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1200,
+      "text": "Is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1600,
+      "text": "everything",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1600,
+      "end_ms": 1700,
+      "text": "all",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1700,
+      "end_ms": 1900,
+      "text": "right",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1900,
+      "end_ms": 2000,
+      "text": "with",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2200,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2200,
+      "end_ms": 2400,
+      "text": "meal?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3200,
+      "end_ms": 3500,
+      "text": "Not",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3500,
+      "end_ms": 4000,
+      "text": "really.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4100,
+      "end_ms": 4300,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4300,
+      "end_ms": 4600,
+      "text": "ordered",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4600,
+      "end_ms": 4700,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4700,
+      "end_ms": 5100,
+      "text": "vegetable",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5600,
+      "text": "pasta,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5600,
+      "end_ms": 5700,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5700,
+      "end_ms": 5900,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5900,
+      "end_ms": 6000,
+      "text": "has",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6000,
+      "end_ms": 6400,
+      "text": "chicken",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6400,
+      "end_ms": 6600,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 6700,
+      "text": "it.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 7800,
+      "text": "Oh,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8000,
+      "end_ms": 8400,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8400,
+      "end_ms": 8900,
+      "text": "really",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8900,
+      "end_ms": 9600,
+      "text": "sorry.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9700,
+      "end_ms": 9800,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 10300,
+      "text": "kitchen",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10300,
+      "end_ms": 10600,
+      "text": "mixed",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10600,
+      "end_ms": 10700,
+      "text": "up",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10700,
+      "end_ms": 11000,
+      "text": "two",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11400,
+      "text": "orders.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12200,
+      "end_ms": 12400,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12400,
+      "end_ms": 12700,
+      "text": "soup",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12700,
+      "end_ms": 12800,
+      "text": "of",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12800,
+      "end_ms": 12900,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12900,
+      "end_ms": 13200,
+      "text": "day",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13200,
+      "end_ms": 13300,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13300,
+      "end_ms": 13500,
+      "text": "ready",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13500,
+      "end_ms": 13900,
+      "text": "now",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13900,
+      "end_ms": 14000,
+      "text": "if",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14100,
+      "text": "you'd",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14100,
+      "end_ms": 14300,
+      "text": "like",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14300,
+      "end_ms": 14500,
+      "text": "that",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14500,
+      "end_ms": 15200,
+      "text": "instead.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15300,
+      "end_ms": 15700,
+      "text": "It's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15700,
+      "end_ms": 16000,
+      "text": "chicken",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16000,
+      "end_ms": 16200,
+      "text": "soup.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17000,
+      "end_ms": 17400,
+      "text": "Thanks,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17400,
+      "end_ms": 17700,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 17900,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17900,
+      "end_ms": 18800,
+      "text": "vegetarian.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 18900,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18900,
+      "end_ms": 19200,
+      "text": "don't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19200,
+      "end_ms": 19300,
+      "text": "eat",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19300,
+      "end_ms": 19600,
+      "text": "meat",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19700,
+      "end_ms": 19800,
+      "text": "or",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19800,
+      "end_ms": 20200,
+      "text": "chicken.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20700,
+      "end_ms": 20900,
+      "text": "And",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20900,
+      "end_ms": 21000,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21000,
+      "end_ms": 21300,
+      "text": "lunch",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21300,
+      "end_ms": 21500,
+      "text": "break",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21500,
+      "end_ms": 21700,
+      "text": "ends",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21700,
+      "end_ms": 21900,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21900,
+      "end_ms": 22200,
+      "text": "30",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22200,
+      "end_ms": 22600,
+      "text": "minutes.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23300,
+      "end_ms": 23400,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23400,
+      "end_ms": 23900,
+      "text": "see.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24600,
+      "end_ms": 24800,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24800,
+      "end_ms": 25200,
+      "text": "kitchen",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25400,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25400,
+      "end_ms": 25600,
+      "text": "make",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25600,
+      "end_ms": 25700,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25700,
+      "end_ms": 26000,
+      "text": "new",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26000,
+      "end_ms": 26400,
+      "text": "vegetable",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26400,
+      "end_ms": 27000,
+      "text": "pasta",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27100,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27100,
+      "end_ms": 27400,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 28000,
+      "text": "15",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28000,
+      "end_ms": 28400,
+      "text": "minutes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29000,
+      "end_ms": 29200,
+      "text": "Or",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29200,
+      "end_ms": 29700,
+      "text": "there's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29700,
+      "end_ms": 29800,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29800,
+      "end_ms": 30300,
+      "text": "vegetable",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30300,
+      "end_ms": 30800,
+      "text": "salad",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30800,
+      "end_ms": 31000,
+      "text": "with",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 31500,
+      "text": "bread",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31500,
+      "end_ms": 31700,
+      "text": "ready",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31700,
+      "end_ms": 32100,
+      "text": "now.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32600,
+      "end_ms": 32800,
+      "text": "It's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32800,
+      "end_ms": 33700,
+      "text": "$7",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33800,
+      "end_ms": 34000,
+      "text": "so",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 34200,
+      "text": "I'd",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34200,
+      "end_ms": 34300,
+      "text": "give",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34300,
+      "end_ms": 34400,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 34900,
+      "text": "$2",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34900,
+      "end_ms": 35200,
+      "text": "back.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35700,
+      "end_ms": 35900,
+      "text": "Is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35900,
+      "end_ms": 36100,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36100,
+      "end_ms": 36600,
+      "text": "salad",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36600,
+      "end_ms": 36800,
+      "text": "big",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 37000,
+      "text": "enough",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37000,
+      "end_ms": 37100,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37100,
+      "end_ms": 37500,
+      "text": "lunch?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38100,
+      "end_ms": 38300,
+      "text": "It's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38300,
+      "end_ms": 38600,
+      "text": "quite",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38600,
+      "end_ms": 39000,
+      "text": "big",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39200,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39200,
+      "end_ms": 39300,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39300,
+      "end_ms": 39500,
+      "text": "comes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39500,
+      "end_ms": 39700,
+      "text": "with",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39700,
+      "end_ms": 40000,
+      "text": "bread.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40300,
+      "end_ms": 40500,
+      "text": "But",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40500,
+      "end_ms": 40700,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40700,
+      "end_ms": 41100,
+      "text": "pasta",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41100,
+      "end_ms": 41300,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41300,
+      "end_ms": 41301,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41300,
+      "end_ms": 41600,
+      "text": "bigger",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41600,
+      "end_ms": 41800,
+      "text": "meal.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42600,
+      "end_ms": 42800,
+      "text": "My",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42800,
+      "end_ms": 43200,
+      "text": "office",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43200,
+      "end_ms": 43500,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43500,
+      "end_ms": 43700,
+      "text": "only",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43700,
+      "end_ms": 43900,
+      "text": "5",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43900,
+      "end_ms": 44200,
+      "text": "minutes",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44200,
+      "end_ms": 44400,
+      "text": "away",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44700,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44700,
+      "end_ms": 44800,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 45000,
+      "text": "can",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45000,
+      "end_ms": 45400,
+      "text": "wait.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45800,
+      "end_ms": 45900,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 46100,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46100,
+      "end_ms": 46200,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46200,
+      "end_ms": 46300,
+      "text": "new",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46300,
+      "end_ms": 46600,
+      "text": "pasta,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46600,
+      "end_ms": 47000,
+      "text": "please.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47500,
+      "end_ms": 47600,
+      "text": "No",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47600,
+      "end_ms": 48100,
+      "text": "problem.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48300,
+      "end_ms": 48400,
+      "text": "A",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48400,
+      "end_ms": 48700,
+      "text": "new",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48700,
+      "end_ms": 49200,
+      "text": "vegetable",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49200,
+      "end_ms": 49700,
+      "text": "pasta,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49700,
+      "end_ms": 49900,
+      "text": "no",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49900,
+      "end_ms": 50400,
+      "text": "meat",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50400,
+      "end_ms": 50500,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50500,
+      "end_ms": 50700,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50700,
+      "end_ms": 51100,
+      "text": "15",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51100,
+      "end_ms": 51500,
+      "text": "minutes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52100,
+      "end_ms": 52500,
+      "text": "Great.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53000,
+      "end_ms": 53300,
+      "text": "Please",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53300,
+      "end_ms": 53500,
+      "text": "make",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53500,
+      "end_ms": 53700,
+      "text": "sure",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53700,
+      "end_ms": 53900,
+      "text": "there's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53900,
+      "end_ms": 54100,
+      "text": "no",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54100,
+      "end_ms": 54400,
+      "text": "chicken",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54400,
+      "end_ms": 54600,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54600,
+      "end_ms": 54900,
+      "text": "time.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55500,
+      "end_ms": 55600,
+      "text": "Of",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55600,
+      "end_ms": 56100,
+      "text": "course.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56200,
+      "end_ms": 56300,
+      "text": "It's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56300,
+      "end_ms": 56800,
+      "text": "completely",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56800,
+      "end_ms": 57400,
+      "text": "vegetarian.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58000,
+      "end_ms": 58300,
+      "text": "Sorry",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58300,
+      "end_ms": 58500,
+      "text": "again.",
+      "speaker": "spk:0"
+    }
+  ]
+}

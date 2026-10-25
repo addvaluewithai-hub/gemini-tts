@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b",
+  "status": "completed",
+  "created_at": "2026-10-25T11:37:29.175Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 4,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2826596,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928247/gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928248/gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928248/gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 1,
+    "word_count": 163,
+    "duration_ms": 58500,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.json",
+    "local_vtt": "out/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928247/gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.wav",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b",
+    "asset_id": "d31c76d74291bddc965cb69b0c25d5e9",
+    "resource_type": "video",
+    "bytes": 2820558,
+    "format": "wav",
+    "duration": 58.76
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928248/gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.json",
+    "asset_id": "b1a6f12ed270244e011eec0a9994ca5b",
+    "resource_type": "raw",
+    "bytes": 21506,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928248/gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.transcript.vtt",
+    "asset_id": "34f3ff0eed53332fccbc2fd683b08e15",
+    "resource_type": "raw",
+    "bytes": 1740,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-resolve-wrong-order-restaurant-r11-f2f4aa7b.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 11,
+    "sha256": "f2f4aa7b04da50b5c11432d8bc029dd6188c3f27c0e47707ecd6cbac73b013ce",
+    "slug": "b1-resolve-wrong-order-restaurant"
+  }
+}

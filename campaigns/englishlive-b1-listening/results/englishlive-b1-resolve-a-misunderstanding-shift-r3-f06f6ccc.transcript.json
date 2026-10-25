@@ -1,0 +1,1048 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:37:24.961Z",
+  "duration_ms": 61400,
+  "word_count": 163,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hey, thanks again for working my Saturday morning. So I'll do your Monday, right? Monday? I think there's a misunderstanding. I don't work on Mondays. We agreed you'd do my Sunday shift from 12 to 6. Oh. I was sure you said Monday. Sunday is difficult for me. I have a dentist appointment at 11. I see. But I really need Sunday because I have a family lunch at 1. What time does your appointment finish? At about 1 I could be here by 2. Then could you work from 2 to 6? I'll do 12 to 2 and go to the lunch after that. I'll be about an hour late, but that's better than missing it. Sorry about the confusion. Should we tell the manager? Yes, let's send her a message now so she knows who's working when. Good idea. So you do Saturday morning and Sunday from 12 to 2 and I do Sunday from 2 to 6. Exactly. Thanks, Tom.",
+  "source_text": "Hey, thanks again for working my Saturday morning. So I'll do your Monday, right? Monday? I think there's a misunderstanding. I don't work on Mondays. We agreed you'd do my Sunday shift, from twelve to six. Oh! I was sure you said Monday. Sunday is difficult for me. I have a dentist appointment at eleven. I see. But I really need Sunday, because I have a family lunch at one. What time does your appointment finish? At about one. I could be here by two. Then could you work from two to six? I'll do twelve to two and go to the lunch after that. I'll be about an hour late, but that's better than missing it. Sorry about the confusion. Should we tell the manager? Yes, let's send her a message now, so she knows who's working when. Good idea. So you do Saturday morning and Sunday from twelve to two, and I do Sunday from two to six. Exactly. Thanks, Tom.",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hey, thanks again for working my Saturday morning. So I'll do your Monday, right?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Monday? I think there's a misunderstanding. I don't work on Mondays. We agreed you'd do my Sunday shift, from twelve to six."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Oh! I was sure you said Monday. Sunday is difficult for me. I have a dentist appointment at eleven."
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "I see. But I really need Sunday, because I have a family lunch at one. What time does your appointment finish?"
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "At about one. I could be here by two."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "Then could you work from two to six? I'll do twelve to two and go to the lunch after that. I'll be about an hour late, but that's better than missing it."
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "Sorry about the confusion. Should we tell the manager?"
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "Yes, let's send her a message now, so she knows who's working when."
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Good idea. So you do Saturday morning and Sunday from twelve to two, and I do Sunday from two to six."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Exactly. Thanks, Tom."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 100,
+      "end_ms": 400,
+      "text": "Hey,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 1200,
+      "text": "thanks",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1500,
+      "text": "again",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1500,
+      "end_ms": 1700,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1700,
+      "end_ms": 2000,
+      "text": "working",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2100,
+      "text": "my",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2100,
+      "end_ms": 2500,
+      "text": "Saturday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2500,
+      "end_ms": 2900,
+      "text": "morning.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3300,
+      "end_ms": 3600,
+      "text": "So",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3500,
+      "end_ms": 13800,
+      "text": "from",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3700,
+      "end_ms": 3800,
+      "text": "I'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3800,
+      "end_ms": 3900,
+      "text": "do",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3900,
+      "end_ms": 4100,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4100,
+      "end_ms": 4500,
+      "text": "Monday,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4500,
+      "end_ms": 4800,
+      "text": "right?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 5500,
+      "end_ms": 6000,
+      "text": "Monday?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5600,
+      "end_ms": 16000,
+      "text": "Oh.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 6800,
+      "end_ms": 6801,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6800,
+      "end_ms": 7100,
+      "text": "think",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7100,
+      "end_ms": 7400,
+      "text": "there's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 7401,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 8300,
+      "text": "misunderstanding.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9100,
+      "end_ms": 9200,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9200,
+      "end_ms": 9400,
+      "text": "don't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9600,
+      "text": "work",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 9700,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9700,
+      "end_ms": 10300,
+      "text": "Mondays.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11300,
+      "text": "We",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11300,
+      "end_ms": 11700,
+      "text": "agreed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11700,
+      "end_ms": 11900,
+      "text": "you'd",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11900,
+      "end_ms": 12000,
+      "text": "do",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12000,
+      "end_ms": 12200,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12200,
+      "end_ms": 12700,
+      "text": "Sunday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12700,
+      "end_ms": 13200,
+      "text": "shift",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13800,
+      "end_ms": 14200,
+      "text": "12",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14200,
+      "end_ms": 14300,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14300,
+      "end_ms": 14800,
+      "text": "6.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17000,
+      "end_ms": 17100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17100,
+      "end_ms": 17300,
+      "text": "was",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17300,
+      "end_ms": 17800,
+      "text": "sure",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 17900,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17900,
+      "end_ms": 18200,
+      "text": "said",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18200,
+      "end_ms": 18900,
+      "text": "Monday.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19600,
+      "end_ms": 20000,
+      "text": "Sunday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20000,
+      "end_ms": 20300,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20900,
+      "end_ms": 21400,
+      "text": "difficult",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21400,
+      "end_ms": 21500,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21500,
+      "end_ms": 21700,
+      "text": "me.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 22100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22100,
+      "end_ms": 22200,
+      "text": "have",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22200,
+      "end_ms": 22300,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22300,
+      "end_ms": 22600,
+      "text": "dentist",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22600,
+      "end_ms": 23000,
+      "text": "appointment",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23000,
+      "end_ms": 23200,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23200,
+      "end_ms": 23500,
+      "text": "11.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24100,
+      "end_ms": 24200,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24200,
+      "end_ms": 24600,
+      "text": "see.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25500,
+      "text": "But",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25500,
+      "end_ms": 25600,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25600,
+      "end_ms": 26100,
+      "text": "really",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26100,
+      "end_ms": 26400,
+      "text": "need",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26400,
+      "end_ms": 26900,
+      "text": "Sunday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27300,
+      "text": "because",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27300,
+      "end_ms": 27400,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 27600,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 27700,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27700,
+      "end_ms": 28000,
+      "text": "family",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28000,
+      "end_ms": 28300,
+      "text": "lunch",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28300,
+      "end_ms": 28500,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28500,
+      "end_ms": 28900,
+      "text": "1.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 30200,
+      "text": "What",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30200,
+      "end_ms": 30500,
+      "text": "time",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30500,
+      "end_ms": 30600,
+      "text": "does",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 30800,
+      "text": "your",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30800,
+      "end_ms": 31300,
+      "text": "appointment",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31300,
+      "end_ms": 31800,
+      "text": "finish?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32500,
+      "end_ms": 32600,
+      "text": "At",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32600,
+      "end_ms": 33000,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33000,
+      "end_ms": 33300,
+      "text": "1",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 34100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34100,
+      "end_ms": 34200,
+      "text": "could",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34200,
+      "end_ms": 34300,
+      "text": "be",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34300,
+      "end_ms": 34400,
+      "text": "here",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 34600,
+      "text": "by",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34600,
+      "end_ms": 35100,
+      "text": "2.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35600,
+      "end_ms": 35900,
+      "text": "Then",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36000,
+      "end_ms": 36300,
+      "text": "could",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36300,
+      "end_ms": 36500,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36500,
+      "end_ms": 36800,
+      "text": "work",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 37100,
+      "text": "from",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37100,
+      "end_ms": 37300,
+      "text": "2",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37300,
+      "end_ms": 37400,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37400,
+      "end_ms": 38000,
+      "text": "6?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38500,
+      "end_ms": 38700,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38700,
+      "end_ms": 38800,
+      "text": "do",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38800,
+      "end_ms": 39100,
+      "text": "12",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39200,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39200,
+      "end_ms": 39700,
+      "text": "2",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39900,
+      "end_ms": 40100,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40100,
+      "end_ms": 40300,
+      "text": "go",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40300,
+      "end_ms": 40400,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40400,
+      "end_ms": 40500,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40500,
+      "end_ms": 40800,
+      "text": "lunch",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40800,
+      "end_ms": 41100,
+      "text": "after",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41100,
+      "end_ms": 41400,
+      "text": "that.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42100,
+      "end_ms": 42200,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42200,
+      "end_ms": 42300,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42300,
+      "end_ms": 42600,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42600,
+      "end_ms": 42700,
+      "text": "an",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42700,
+      "end_ms": 43000,
+      "text": "hour",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43000,
+      "end_ms": 43300,
+      "text": "late,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43300,
+      "end_ms": 43500,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43500,
+      "end_ms": 43900,
+      "text": "that's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43900,
+      "end_ms": 44100,
+      "text": "better",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44100,
+      "end_ms": 44300,
+      "text": "than",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44300,
+      "end_ms": 44600,
+      "text": "missing",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44600,
+      "end_ms": 44900,
+      "text": "it.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45500,
+      "end_ms": 45800,
+      "text": "Sorry",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 45800,
+      "end_ms": 46000,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46000,
+      "end_ms": 46100,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 46100,
+      "end_ms": 46800,
+      "text": "confusion.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47200,
+      "end_ms": 47400,
+      "text": "Should",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47400,
+      "end_ms": 47500,
+      "text": "we",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47500,
+      "end_ms": 47700,
+      "text": "tell",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47700,
+      "end_ms": 47800,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 47800,
+      "end_ms": 48300,
+      "text": "manager?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48900,
+      "end_ms": 49200,
+      "text": "Yes,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49200,
+      "end_ms": 49600,
+      "text": "let's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49600,
+      "end_ms": 49800,
+      "text": "send",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49800,
+      "end_ms": 49900,
+      "text": "her",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49900,
+      "end_ms": 50000,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 50400,
+      "text": "message",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50400,
+      "end_ms": 50700,
+      "text": "now",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50700,
+      "end_ms": 50800,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50800,
+      "end_ms": 51000,
+      "text": "she",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 51300,
+      "text": "knows",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51300,
+      "end_ms": 51600,
+      "text": "who's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 51600,
+      "end_ms": 52000,
+      "text": "working",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52000,
+      "end_ms": 52300,
+      "text": "when.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52900,
+      "end_ms": 53000,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53000,
+      "end_ms": 53300,
+      "text": "idea.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53800,
+      "end_ms": 54000,
+      "text": "So",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54100,
+      "end_ms": 54300,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54300,
+      "end_ms": 54500,
+      "text": "do",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54500,
+      "end_ms": 54800,
+      "text": "Saturday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 54800,
+      "end_ms": 55300,
+      "text": "morning",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55300,
+      "end_ms": 55500,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55500,
+      "end_ms": 55900,
+      "text": "Sunday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 55900,
+      "end_ms": 56100,
+      "text": "from",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56100,
+      "end_ms": 56500,
+      "text": "12",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56500,
+      "end_ms": 56600,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 56600,
+      "end_ms": 57100,
+      "text": "2",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57300,
+      "end_ms": 57500,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57500,
+      "end_ms": 57600,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57600,
+      "end_ms": 57900,
+      "text": "do",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57900,
+      "end_ms": 58300,
+      "text": "Sunday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58300,
+      "end_ms": 58600,
+      "text": "from",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58600,
+      "end_ms": 58700,
+      "text": "2",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58700,
+      "end_ms": 58800,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58800,
+      "end_ms": 59300,
+      "text": "6.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59800,
+      "end_ms": 60400,
+      "text": "Exactly.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 60800,
+      "end_ms": 61100,
+      "text": "Thanks,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 61100,
+      "end_ms": 61400,
+      "text": "Tom.",
+      "speaker": "spk:1"
+    }
+  ]
+}
