@@ -1,0 +1,999 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:33:15.889Z",
+  "duration_ms": 63400,
+  "word_count": 154,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Good morning. How can I help? Hi. I have an appointment for a haircut at 10:00. My name's Dina. Let me check. I have you here for Wednesday at 10:00, not today. Wednesday? Are you sure? I booked it on the phone on Monday and the text message says Tuesday at 10:00. Oh, I see. I'm sorry. It looks like we typed the wrong day. That's okay, but I really need it today. I have to be at work at 12:00. Is anyone free this morning? A stylist is free at 10:40. It takes about 45 minutes. Or there's another free appointment at 1:30. 1:30 doesn't work because I'll be at work. If I start at 10:40, I'll finish at about 11:30, right? Yes, at about 11:25. Great. I'll wait. Could you also cancel the Wednesday appointment, please? Of course. 10:40 today and Wednesday is canceled. Would you like a coffee while you wait?",
+  "source_text": "Good morning. How can I help? Hi. I have an appointment for a haircut at ten. My name's Dina. Let me check. I have you here for Wednesday at ten, not today. Wednesday? Are you sure? I booked it on the phone on Monday, and the text message says Tuesday at ten. Oh, I see. I'm sorry, it looks like we typed the wrong day. That's okay, but I really need it today. I have to be at work at twelve. Is anyone free this morning? A stylist is free at ten forty. It takes about forty-five minutes. Or there's another free appointment at one thirty. One thirty doesn't work, because I'll be at work. If I start at ten forty, I'll finish at about eleven thirty, right? Yes, at about eleven twenty-five. Great, I'll wait. Could you also cancel the Wednesday appointment, please? Of course. Ten forty today, and Wednesday is canceled. Would you like a coffee while you wait?",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Good morning. How can I help?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Hi. I have an appointment for a haircut at ten. My name's Dina."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Let me check. I have you here for Wednesday at ten, not today."
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "Wednesday? Are you sure? I booked it on the phone on Monday, and the text message says Tuesday at ten."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "Oh, I see. I'm sorry, it looks like we typed the wrong day."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "That's okay, but I really need it today. I have to be at work at twelve. Is anyone free this morning?"
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "A stylist is free at ten forty. It takes about forty-five minutes. Or there's another free appointment at one thirty."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "One thirty doesn't work, because I'll be at work. If I start at ten forty, I'll finish at about eleven thirty, right?"
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Yes, at about eleven twenty-five."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Great, I'll wait. Could you also cancel the Wednesday appointment, please?"
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Of course. Ten forty today, and Wednesday is canceled. Would you like a coffee while you wait?"
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 300,
+      "end_ms": 400,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 400,
+      "end_ms": 1200,
+      "text": "morning.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1300,
+      "end_ms": 1500,
+      "text": "How",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1500,
+      "end_ms": 1600,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1600,
+      "end_ms": 1700,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1700,
+      "end_ms": 2000,
+      "text": "help?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2900,
+      "end_ms": 3400,
+      "text": "Hi.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3400,
+      "end_ms": 3500,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3500,
+      "end_ms": 3700,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3700,
+      "end_ms": 3800,
+      "text": "an",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3800,
+      "end_ms": 4300,
+      "text": "appointment",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4300,
+      "end_ms": 4500,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4500,
+      "end_ms": 4501,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4500,
+      "end_ms": 5000,
+      "text": "haircut",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5000,
+      "end_ms": 5100,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5800,
+      "text": "10:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5800,
+      "end_ms": 5900,
+      "text": "My",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5900,
+      "end_ms": 6100,
+      "text": "name's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6100,
+      "end_ms": 6600,
+      "text": "Dina.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7600,
+      "end_ms": 7700,
+      "text": "Let",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7700,
+      "end_ms": 7800,
+      "text": "me",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7800,
+      "end_ms": 8500,
+      "text": "check.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9900,
+      "end_ms": 10200,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10200,
+      "end_ms": 10400,
+      "text": "have",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10400,
+      "end_ms": 10500,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10500,
+      "end_ms": 11000,
+      "text": "here",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11600,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11600,
+      "end_ms": 12300,
+      "text": "Wednesday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12300,
+      "end_ms": 12500,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12500,
+      "end_ms": 12900,
+      "text": "10:00,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12900,
+      "end_ms": 13100,
+      "text": "not",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13100,
+      "end_ms": 13500,
+      "text": "today.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14400,
+      "end_ms": 15200,
+      "text": "Wednesday?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15600,
+      "end_ms": 15700,
+      "text": "Are",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15700,
+      "end_ms": 15900,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15900,
+      "end_ms": 16500,
+      "text": "sure?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16800,
+      "end_ms": 17000,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17000,
+      "end_ms": 17200,
+      "text": "booked",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17200,
+      "end_ms": 17300,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17300,
+      "end_ms": 17400,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17400,
+      "end_ms": 17500,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17500,
+      "end_ms": 17800,
+      "text": "phone",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 18000,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18000,
+      "end_ms": 18600,
+      "text": "Monday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18600,
+      "end_ms": 18900,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18900,
+      "end_ms": 19000,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19000,
+      "end_ms": 19400,
+      "text": "text",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19400,
+      "end_ms": 19800,
+      "text": "message",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19800,
+      "end_ms": 20200,
+      "text": "says",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20200,
+      "end_ms": 20700,
+      "text": "Tuesday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20700,
+      "end_ms": 20800,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20800,
+      "end_ms": 21200,
+      "text": "10:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 22300,
+      "text": "Oh,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22300,
+      "end_ms": 22400,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22400,
+      "end_ms": 22900,
+      "text": "see.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23500,
+      "end_ms": 23600,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23600,
+      "end_ms": 24200,
+      "text": "sorry.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24200,
+      "end_ms": 24400,
+      "text": "It",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24400,
+      "end_ms": 24600,
+      "text": "looks",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24600,
+      "end_ms": 24700,
+      "text": "like",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24700,
+      "end_ms": 24800,
+      "text": "we",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24800,
+      "end_ms": 25100,
+      "text": "typed",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25100,
+      "end_ms": 25200,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25400,
+      "text": "wrong",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25400,
+      "end_ms": 25800,
+      "text": "day.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26500,
+      "end_ms": 26700,
+      "text": "That's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 26700,
+      "end_ms": 27300,
+      "text": "okay,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 27600,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27700,
+      "end_ms": 27800,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27800,
+      "end_ms": 28400,
+      "text": "really",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28400,
+      "end_ms": 28600,
+      "text": "need",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28600,
+      "end_ms": 28700,
+      "text": "it",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28700,
+      "end_ms": 29200,
+      "text": "today.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29600,
+      "end_ms": 29601,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29600,
+      "end_ms": 29800,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29800,
+      "end_ms": 29900,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29900,
+      "end_ms": 30000,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 30100,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30100,
+      "end_ms": 30400,
+      "text": "work",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30400,
+      "end_ms": 30500,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30500,
+      "end_ms": 31200,
+      "text": "12:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31500,
+      "end_ms": 31600,
+      "text": "Is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31600,
+      "end_ms": 32000,
+      "text": "anyone",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32000,
+      "end_ms": 32300,
+      "text": "free",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32300,
+      "end_ms": 32500,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32500,
+      "end_ms": 32900,
+      "text": "morning?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33500,
+      "end_ms": 33600,
+      "text": "A",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33600,
+      "end_ms": 34300,
+      "text": "stylist",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34300,
+      "end_ms": 34600,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34600,
+      "end_ms": 35100,
+      "text": "free",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35100,
+      "end_ms": 35600,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 35600,
+      "end_ms": 36400,
+      "text": "10:40.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 37000,
+      "text": "It",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37000,
+      "end_ms": 37200,
+      "text": "takes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37200,
+      "end_ms": 37500,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37500,
+      "end_ms": 38000,
+      "text": "45",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38000,
+      "end_ms": 38600,
+      "text": "minutes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39600,
+      "text": "Or",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39600,
+      "end_ms": 40000,
+      "text": "there's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 40300,
+      "text": "another",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40300,
+      "end_ms": 40500,
+      "text": "free",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40500,
+      "end_ms": 41200,
+      "text": "appointment",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41200,
+      "end_ms": 41400,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41400,
+      "end_ms": 42000,
+      "text": "1:30.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 43100,
+      "end_ms": 43700,
+      "text": "1:30",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43700,
+      "end_ms": 44000,
+      "text": "doesn't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 44400,
+      "text": "work",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44800,
+      "text": "because",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 45000,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45000,
+      "end_ms": 45200,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45200,
+      "end_ms": 45300,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45300,
+      "end_ms": 45800,
+      "text": "work.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 46100,
+      "text": "If",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46100,
+      "end_ms": 46200,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46200,
+      "end_ms": 46400,
+      "text": "start",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46400,
+      "end_ms": 46600,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46600,
+      "end_ms": 47600,
+      "text": "10:40,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47600,
+      "end_ms": 47800,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47800,
+      "end_ms": 48200,
+      "text": "finish",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48200,
+      "end_ms": 48300,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48300,
+      "end_ms": 48700,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48700,
+      "end_ms": 49400,
+      "text": "11:30,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 49400,
+      "end_ms": 49800,
+      "text": "right?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 50600,
+      "end_ms": 51000,
+      "text": "Yes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51100,
+      "end_ms": 51200,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51200,
+      "end_ms": 51600,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51600,
+      "end_ms": 52600,
+      "text": "11:25.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 53300,
+      "end_ms": 53700,
+      "text": "Great.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53900,
+      "end_ms": 54100,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54100,
+      "end_ms": 54400,
+      "text": "wait.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54800,
+      "end_ms": 55000,
+      "text": "Could",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55000,
+      "end_ms": 55100,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55100,
+      "end_ms": 55400,
+      "text": "also",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55400,
+      "end_ms": 55800,
+      "text": "cancel",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55800,
+      "end_ms": 55900,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55900,
+      "end_ms": 56200,
+      "text": "Wednesday",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56200,
+      "end_ms": 56700,
+      "text": "appointment,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56700,
+      "end_ms": 57000,
+      "text": "please?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57700,
+      "end_ms": 57800,
+      "text": "Of",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 57800,
+      "end_ms": 58400,
+      "text": "course.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 58700,
+      "end_ms": 59300,
+      "text": "10:40",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59300,
+      "end_ms": 60000,
+      "text": "today",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60200,
+      "end_ms": 60600,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60600,
+      "end_ms": 61000,
+      "text": "Wednesday",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61000,
+      "end_ms": 61100,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61100,
+      "end_ms": 61800,
+      "text": "canceled.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 62200,
+      "end_ms": 62300,
+      "text": "Would",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 62300,
+      "end_ms": 62400,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 62400,
+      "end_ms": 62500,
+      "text": "like",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 62500,
+      "end_ms": 62600,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 62600,
+      "end_ms": 62900,
+      "text": "coffee",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 62900,
+      "end_ms": 63100,
+      "text": "while",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 63100,
+      "end_ms": 63200,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 63200,
+      "end_ms": 63400,
+      "text": "wait?",
+      "speaker": "spk:0"
+    }
+  ]
+}

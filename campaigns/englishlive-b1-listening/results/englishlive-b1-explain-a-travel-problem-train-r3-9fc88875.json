@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-explain-a-travel-problem-train-r3-9fc88875",
+  "status": "completed",
+  "created_at": "2026-10-25T11:33:23.604Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 4,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 3423716,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928001/gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928002/gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928003/gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 3,
+    "word_count": 197,
+    "duration_ms": 70900,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.json",
+    "local_vtt": "out/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928001/gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.wav",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875",
+    "asset_id": "a5f607c341177d79a1bbfb66bb9ac357",
+    "resource_type": "video",
+    "bytes": 3417678,
+    "format": "wav",
+    "duration": 71.2
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928002/gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.json",
+    "asset_id": "445ae80745897c570c0ba2502473f88d",
+    "resource_type": "raw",
+    "bytes": 25691,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928003/gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.transcript.vtt",
+    "asset_id": "c5409636d16a850687796ef7e1e240e1",
+    "resource_type": "raw",
+    "bytes": 2023,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-explain-a-travel-problem-train-r3-9fc88875.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "9fc88875f4e1e63b87d4b4bbdbace8e1376a11815738c095e2ae313a0ddba0c0",
+    "slug": "b1-explain-a-travel-problem-train"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023",
+  "status": "completed",
+  "created_at": "2026-10-25T11:33:18.045Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 2,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 3068516,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792927996/gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927997/gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927997/gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 154,
+    "duration_ms": 63400,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.json",
+    "local_vtt": "out/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792927996/gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.wav",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023",
+    "asset_id": "a7f428de10c5b26c8089bdd2680e1484",
+    "resource_type": "video",
+    "bytes": 3062478,
+    "format": "wav",
+    "duration": 63.8
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927997/gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.json",
+    "asset_id": "1594e513b3b312f76d87a2aac48e37ec",
+    "resource_type": "raw",
+    "bytes": 20412,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792927997/gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.transcript.vtt",
+    "asset_id": "8e37cc486cf9ae967e9160f82dafeac0",
+    "resource_type": "raw",
+    "bytes": 1692,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-explain-a-mix-up-salon-r3-5ccb9023.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "5ccb9023d50c470bd3e7713eda5fa61eb45ae23de2c6d6ee74a73b6b358f5bc2",
+    "slug": "b1-explain-a-mix-up-salon"
+  }
+}

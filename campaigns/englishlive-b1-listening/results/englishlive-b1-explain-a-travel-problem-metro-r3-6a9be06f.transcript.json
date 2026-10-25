@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:33:18.422Z",
+  "duration_ms": 50600,
+  "word_count": 153,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hi there. Can I help? Yes, please. I was going to take the metro to Central Square, but the gates are closed. What's happening? I'm afraid the green line is closed this morning for repairs. When do you need to be there? At 10:00. I have a job interview, and I really don't want to be late. Okay. There's a free shuttle bus every 10 minutes. It takes about 25 minutes, or you can take a taxi. That's about 15 minutes and costs around $15. If I take the shuttle, will I get there before 10:00? Yes. The next one leaves in 5 minutes, so you should arrive at about 9:50. That's fine. And it's free? I'll take the shuttle. Where do I catch it? Right outside this exit, next to the flower shop. Perfect. Outside this exit, next to the flower shop. Thanks a lot. You're welcome. Good luck with your interview.",
+  "source_text": "Hi there. Can I help? Yes, please. I was going to take the metro to Central Square, but the gates are closed. What's happening? I'm afraid the green line is closed this morning for repairs. When do you need to be there? At ten. I have a job interview, and I really don't want to be late. Okay. There's a free shuttle bus every ten minutes. It takes about twenty-five minutes. Or you can take a taxi. That's about fifteen minutes and costs around fifteen dollars. If I take the shuttle, will I get there before ten? Yes. The next one leaves in five minutes, so you should arrive at about nine fifty. That's fine, and it's free. I'll take the shuttle. Where do I catch it? Right outside this exit, next to the flower shop. Perfect. Outside this exit, next to the flower shop. Thanks a lot! You're welcome. Good luck with your interview!",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hi there. Can I help?"
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Yes, please. I was going to take the metro to Central Square, but the gates are closed. What's happening?"
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "I'm afraid the green line is closed this morning for repairs. When do you need to be there?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "At ten. I have a job interview, and I really don't want to be late."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "Okay. There's a free shuttle bus every ten minutes. It takes about twenty-five minutes. Or you can take a taxi. That's about fifteen minutes and costs around fifteen dollars."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "If I take the shuttle, will I get there before ten?"
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "Yes. The next one leaves in five minutes, so you should arrive at about nine fifty."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "That's fine, and it's free. I'll take the shuttle. Where do I catch it?"
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Right outside this exit, next to the flower shop."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Perfect. Outside this exit, next to the flower shop. Thanks a lot!"
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "You're welcome. Good luck with your interview!"
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 200,
+      "end_ms": 300,
+      "text": "Hi",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 300,
+      "end_ms": 700,
+      "text": "there.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 1000,
+      "text": "Can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1100,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1100,
+      "end_ms": 1400,
+      "text": "help?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 2200,
+      "text": "Yes,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2200,
+      "end_ms": 2600,
+      "text": "please.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2700,
+      "end_ms": 2800,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 2800,
+      "end_ms": 3000,
+      "text": "was",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3200,
+      "text": "going",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3200,
+      "end_ms": 3300,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3300,
+      "end_ms": 3500,
+      "text": "take",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3500,
+      "end_ms": 3600,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3600,
+      "end_ms": 3900,
+      "text": "metro",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 3900,
+      "end_ms": 4000,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4300,
+      "text": "Central",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4300,
+      "end_ms": 4700,
+      "text": "Square,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4800,
+      "end_ms": 4900,
+      "text": "but",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 4900,
+      "end_ms": 5000,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5000,
+      "end_ms": 5300,
+      "text": "gates",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5300,
+      "end_ms": 5400,
+      "text": "are",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5400,
+      "end_ms": 5900,
+      "text": "closed.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5900,
+      "end_ms": 6100,
+      "text": "What's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6100,
+      "end_ms": 6600,
+      "text": "happening?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7000,
+      "end_ms": 7200,
+      "text": "I'm",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7200,
+      "end_ms": 7600,
+      "text": "afraid",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7600,
+      "end_ms": 7700,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 7700,
+      "end_ms": 8000,
+      "text": "green",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8000,
+      "end_ms": 8300,
+      "text": "line",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8300,
+      "end_ms": 8500,
+      "text": "is",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8500,
+      "end_ms": 8900,
+      "text": "closed",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 8900,
+      "end_ms": 9100,
+      "text": "this",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9100,
+      "end_ms": 9400,
+      "text": "morning",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9600,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 10200,
+      "text": "repairs.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10600,
+      "end_ms": 10800,
+      "text": "When",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10800,
+      "end_ms": 10900,
+      "text": "do",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 10900,
+      "end_ms": 11000,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11200,
+      "text": "need",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11200,
+      "end_ms": 11201,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11200,
+      "end_ms": 11400,
+      "text": "be",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11400,
+      "end_ms": 11600,
+      "text": "there?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12100,
+      "end_ms": 12300,
+      "text": "At",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12300,
+      "end_ms": 12800,
+      "text": "10:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12900,
+      "end_ms": 13000,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13000,
+      "end_ms": 13200,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13200,
+      "end_ms": 13300,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13300,
+      "end_ms": 13500,
+      "text": "job",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13500,
+      "end_ms": 14000,
+      "text": "interview,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14300,
+      "end_ms": 14500,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14500,
+      "end_ms": 14600,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14600,
+      "end_ms": 15100,
+      "text": "really",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15100,
+      "end_ms": 15300,
+      "text": "don't",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15300,
+      "end_ms": 15400,
+      "text": "want",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15400,
+      "end_ms": 15401,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15400,
+      "end_ms": 15600,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15600,
+      "end_ms": 15900,
+      "text": "late.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16600,
+      "end_ms": 17000,
+      "text": "Okay.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17300,
+      "end_ms": 17600,
+      "text": "There's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17600,
+      "end_ms": 17700,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17700,
+      "end_ms": 17900,
+      "text": "free",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 17900,
+      "end_ms": 18200,
+      "text": "shuttle",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18200,
+      "end_ms": 18500,
+      "text": "bus",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18500,
+      "end_ms": 18700,
+      "text": "every",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18700,
+      "end_ms": 18900,
+      "text": "10",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18900,
+      "end_ms": 19500,
+      "text": "minutes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19600,
+      "end_ms": 19900,
+      "text": "It",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19900,
+      "end_ms": 20100,
+      "text": "takes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20100,
+      "end_ms": 20300,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20300,
+      "end_ms": 20800,
+      "text": "25",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20800,
+      "end_ms": 21200,
+      "text": "minutes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21600,
+      "end_ms": 21900,
+      "text": "or",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 21900,
+      "end_ms": 22000,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 22200,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22200,
+      "end_ms": 22400,
+      "text": "take",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22400,
+      "end_ms": 22401,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 22400,
+      "end_ms": 23000,
+      "text": "taxi.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23400,
+      "end_ms": 23600,
+      "text": "That's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23600,
+      "end_ms": 23800,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 23800,
+      "end_ms": 24300,
+      "text": "15",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24300,
+      "end_ms": 24700,
+      "text": "minutes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24700,
+      "end_ms": 25000,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25400,
+      "text": "costs",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25400,
+      "end_ms": 25700,
+      "text": "around",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25700,
+      "end_ms": 26500,
+      "text": "$15.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27200,
+      "end_ms": 27400,
+      "text": "If",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 27401,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 27600,
+      "text": "take",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 27700,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 27700,
+      "end_ms": 28000,
+      "text": "shuttle,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28000,
+      "end_ms": 28200,
+      "text": "will",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28200,
+      "end_ms": 28300,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28300,
+      "end_ms": 28400,
+      "text": "get",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28400,
+      "end_ms": 28600,
+      "text": "there",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28600,
+      "end_ms": 28900,
+      "text": "before",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 28900,
+      "end_ms": 29200,
+      "text": "10:00?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 29600,
+      "end_ms": 30200,
+      "text": "Yes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30400,
+      "end_ms": 30600,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 31000,
+      "text": "next",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 31200,
+      "text": "one",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31200,
+      "end_ms": 31600,
+      "text": "leaves",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31600,
+      "end_ms": 31800,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 32100,
+      "text": "5",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32100,
+      "end_ms": 32600,
+      "text": "minutes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32900,
+      "end_ms": 33300,
+      "text": "so",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33500,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33500,
+      "end_ms": 33600,
+      "text": "should",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 33600,
+      "end_ms": 34000,
+      "text": "arrive",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34000,
+      "end_ms": 34100,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34100,
+      "end_ms": 34600,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 34600,
+      "end_ms": 35300,
+      "text": "9:50.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 36200,
+      "end_ms": 36400,
+      "text": "That's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36400,
+      "end_ms": 36800,
+      "text": "fine.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 37100,
+      "text": "And",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37100,
+      "end_ms": 37300,
+      "text": "it's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 37300,
+      "end_ms": 37700,
+      "text": "free?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38100,
+      "end_ms": 38200,
+      "text": "I'll",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38200,
+      "end_ms": 38400,
+      "text": "take",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38400,
+      "end_ms": 38500,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38500,
+      "end_ms": 38900,
+      "text": "shuttle.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 38900,
+      "end_ms": 39100,
+      "text": "Where",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39200,
+      "text": "do",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39200,
+      "end_ms": 39300,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39300,
+      "end_ms": 39600,
+      "text": "catch",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 39600,
+      "end_ms": 39700,
+      "text": "it?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40500,
+      "end_ms": 40700,
+      "text": "Right",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40700,
+      "end_ms": 41100,
+      "text": "outside",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41100,
+      "end_ms": 41300,
+      "text": "this",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41300,
+      "end_ms": 41800,
+      "text": "exit,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41900,
+      "end_ms": 42200,
+      "text": "next",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42200,
+      "end_ms": 42300,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42300,
+      "end_ms": 42400,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42400,
+      "end_ms": 42700,
+      "text": "flower",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 42700,
+      "end_ms": 42900,
+      "text": "shop.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 43800,
+      "end_ms": 44400,
+      "text": "Perfect.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44500,
+      "end_ms": 44800,
+      "text": "Outside",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 45000,
+      "text": "this",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45000,
+      "end_ms": 45700,
+      "text": "exit,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45700,
+      "end_ms": 45900,
+      "text": "next",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 46000,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46000,
+      "end_ms": 46100,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46100,
+      "end_ms": 46400,
+      "text": "flower",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46400,
+      "end_ms": 46800,
+      "text": "shop.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47000,
+      "end_ms": 47200,
+      "text": "Thanks",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47200,
+      "end_ms": 47300,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47300,
+      "end_ms": 47600,
+      "text": "lot.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48500,
+      "end_ms": 48700,
+      "text": "You're",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48700,
+      "end_ms": 49100,
+      "text": "welcome.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49700,
+      "end_ms": 49800,
+      "text": "Good",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49800,
+      "end_ms": 50000,
+      "text": "luck",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 50100,
+      "text": "with",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50100,
+      "end_ms": 50300,
+      "text": "your",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50300,
+      "end_ms": 50600,
+      "text": "interview.",
+      "speaker": "spk:0"
+    }
+  ]
+}

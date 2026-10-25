@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f",
+  "status": "completed",
+  "created_at": "2026-10-25T11:33:21.073Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 5,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 3026276,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792927999/gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 157,
+    "duration_ms": 62700,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.json",
+    "local_vtt": "out/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792927999/gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.wav",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f",
+    "asset_id": "7681ca66656efe81f00e2399488ee478",
+    "resource_type": "video",
+    "bytes": 3020238,
+    "format": "wav",
+    "duration": 62.92
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.json",
+    "asset_id": "5f8c752b16bab3eedd0edbf11228f793",
+    "resource_type": "raw",
+    "bytes": 20735,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.transcript.vtt",
+    "asset_id": "4ff1eaf14d82414ec3c0132d88cc0509",
+    "resource_type": "raw",
+    "bytes": 1667,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-explain-a-travel-problem-coach-r3-6b1b0a0f.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "6b1b0a0f08a67eb92193f00e24545ec410d8555749b9f85711f7ba62d7bb397a",
+    "slug": "b1-explain-a-travel-problem-coach"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff",
+  "status": "completed",
+  "created_at": "2026-10-25T11:33:22.200Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 5,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 3185636,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928000/gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928001/gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928001/gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 5,
+    "word_count": 194,
+    "duration_ms": 65900,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.json",
+    "local_vtt": "out/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928000/gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.wav",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff",
+    "asset_id": "5a878bf50497907179effa10106ac179",
+    "resource_type": "video",
+    "bytes": 3179598,
+    "format": "wav",
+    "duration": 66.24
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928001/gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.json",
+    "asset_id": "227664f541a3c8c3e980edda8eecd034",
+    "resource_type": "raw",
+    "bytes": 25352,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928001/gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.transcript.vtt",
+    "asset_id": "3dc2ac93548eef4f5a20ae87f0677a07",
+    "resource_type": "raw",
+    "bytes": 2136,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-keep-a-conversation-going-lunch-r3-3b21daff.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "3b21dafff074c483fbbf401297482364328a39279b37e57aa6fe049f4a659774",
+    "slug": "b1-keep-a-conversation-going-lunch"
+  }
+}

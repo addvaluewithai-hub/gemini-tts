@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f",
+  "status": "completed",
+  "created_at": "2026-10-25T11:33:21.466Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 2,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2450276,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928001/gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 1,
+    "word_count": 153,
+    "duration_ms": 50600,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.json",
+    "local_vtt": "out/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.wav",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f",
+    "asset_id": "b21289704280523ee749823ac6348413",
+    "resource_type": "video",
+    "bytes": 2444238,
+    "format": "wav",
+    "duration": 50.92
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928000/gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.json",
+    "asset_id": "290e875149b8ef62f5c3711155a12ba0",
+    "resource_type": "raw",
+    "bytes": 20213,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792928001/gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.transcript.vtt",
+    "asset_id": "2342c58692d0338388e765530dc84c1c",
+    "resource_type": "raw",
+    "bytes": 1642,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-explain-a-travel-problem-metro-r3-6a9be06f.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "6a9be06f32c45e1b601d6129e7e30d5958fee4c5aa12e457a3595991dc25791e",
+    "slug": "b1-explain-a-travel-problem-metro"
+  }
+}
