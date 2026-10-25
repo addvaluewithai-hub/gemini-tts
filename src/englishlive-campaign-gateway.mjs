@@ -118,7 +118,8 @@ export function validateEnglishliveJob(entry,job) {
         typeof turn.text!=="string"||!turn.text.trim()||
         typeof turn.style!=="string"||turn.style.indexOf(B1_STYLE_END)<=0||
         (turn.style.slice(turn.style.indexOf(B1_STYLE_END)+B1_STYLE_END.length)!=="" &&
-         !turn.style.endsWith("Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."))||
+         !turn.style.endsWith("Make thirteen and thirty clearly different: thir-TEEN, THIR-ty.") &&
+         !turn.style.endsWith("Make Nona and Mona clearly different, and spell M-O-N-A letter by letter."))||
         Object.hasOwn(turn,"voice"))
       fail("Invalid or overridden Englotti dialogue turn");
     lines.push(turn.speaker+": "+turn.text);
