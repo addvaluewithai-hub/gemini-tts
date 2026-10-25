@@ -104,8 +104,9 @@ function validateJob(entry,job) {
   for (const turn of req.turns) {
     if (!object(turn)||!["Partner","Learner"].includes(turn.speaker)||
         typeof turn.text!=="string"||!turn.text.trim()||
-        typeof turn.style!=="string"||!turn.style.endsWith(B1_STYLE_END)||
-        turn.style.length<=B1_STYLE_END.length||
+        typeof turn.style!=="string"||turn.style.indexOf(B1_STYLE_END)<=0||
+        (turn.style.slice(turn.style.indexOf(B1_STYLE_END)+B1_STYLE_END.length)!=="" &&
+         !turn.style.endsWith("Make thirteen and thirty clearly different: thir-TEEN, THIR-ty."))||
         Object.hasOwn(turn,"voice"))
       fail("Invalid or overridden Englotti dialogue turn");
     lines.push(turn.speaker+": "+turn.text);
