@@ -1,0 +1,1047 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:07:09.192Z",
+  "duration_ms": 61900,
+  "word_count": 162,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hi. Where are you? I've been at the museum cafe for 15 minutes. Hi. I'm at the library cafe. I think we've mixed something up. Really? I was sure you said the museum. We met there last week. We were supposed to meet at the library cafe. My message said library cafe at 6:00. It's the one next to the city library. Oh, you're right. I can see it now. Sorry. So what should we do? The movie starts at 7:30. The cafes are about 20 minutes apart. How far is the movie theater from you? It's only 10 minutes from here. From the library, it's about 15. Then I could walk to you now. I'd be there at about 6:35, so we'd still have time for a coffee. That makes sense. I'll order for you. What would you like? A cappuccino, please. So the museum cafe at about 6:35, then the movie at 7:30. Perfect. See you soon. And sorry again.",
+  "source_text": "Hi! Where are you? I've been at the Museum Café for fifteen minutes. Hi! I'm at the Library Café. I think we've mixed something up. Really? I was sure you said the museum. We met there last week. We were supposed to meet at the Library Café. My message said \"Library Café at six\". It's the one next to the City Library. Oh, you're right. I can see it now. Sorry! So what should we do? The movie starts at seven thirty. The cafés are about twenty minutes apart. How far is the movie theater from you? It's only ten minutes from here. From the library it's about fifteen. Then I could walk to you now. I'd be there at about six thirty-five, so we'd still have time for a coffee. That makes sense. I'll order for you. What would you like? A cappuccino, please. So, the Museum Café at about six thirty-five, then the movie at seven thirty. Perfect. See you soon. And sorry again!",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hi! Where are you? I've been at the Museum Café for fifteen minutes."
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Hi! I'm at the Library Café. I think we've mixed something up."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Really? I was sure you said the museum. We met there last week."
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "We were supposed to meet at the Library Café. My message said \"Library Café at six\". It's the one next to the City Library."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "Oh, you're right. I can see it now. Sorry! So what should we do? The movie starts at seven thirty."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "The cafés are about twenty minutes apart. How far is the movie theater from you?"
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "It's only ten minutes from here. From the library it's about fifteen."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "Then I could walk to you now. I'd be there at about six thirty-five, so we'd still have time for a coffee."
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "That makes sense. I'll order for you. What would you like?"
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "A cappuccino, please. So, the Museum Café at about six thirty-five, then the movie at seven thirty."
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Perfect. See you soon. And sorry again!"
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 200,
+      "end_ms": 1000,
+      "text": "Hi.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 800,
+      "end_ms": 11200,
+      "text": "Really?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1200,
+      "text": "Where",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1201,
+      "text": "are",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1700,
+      "text": "you?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2100,
+      "end_ms": 2200,
+      "text": "I've",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2200,
+      "end_ms": 2400,
+      "text": "been",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2400,
+      "end_ms": 2500,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2500,
+      "end_ms": 2600,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2600,
+      "end_ms": 3000,
+      "text": "museum",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3400,
+      "text": "cafe",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3400,
+      "end_ms": 3600,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3600,
+      "end_ms": 4200,
+      "text": "15",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4200,
+      "end_ms": 4600,
+      "text": "minutes.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 5200,
+      "end_ms": 5600,
+      "text": "Hi.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6300,
+      "end_ms": 6500,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6500,
+      "end_ms": 6600,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 6800,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6800,
+      "end_ms": 7500,
+      "text": "library",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7500,
+      "end_ms": 8000,
+      "text": "cafe.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8500,
+      "end_ms": 8700,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8700,
+      "end_ms": 9000,
+      "text": "think",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9300,
+      "text": "we've",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9300,
+      "end_ms": 9500,
+      "text": "mixed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9500,
+      "end_ms": 9800,
+      "text": "something",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 10100,
+      "text": "up.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 11600,
+      "end_ms": 11700,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11700,
+      "end_ms": 11800,
+      "text": "was",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11800,
+      "end_ms": 12300,
+      "text": "sure",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12300,
+      "end_ms": 12500,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12500,
+      "end_ms": 12600,
+      "text": "said",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12600,
+      "end_ms": 12700,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12700,
+      "end_ms": 13300,
+      "text": "museum.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 13700,
+      "text": "We",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13700,
+      "end_ms": 13900,
+      "text": "met",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 13900,
+      "end_ms": 14000,
+      "text": "there",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14300,
+      "text": "last",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 14300,
+      "end_ms": 14600,
+      "text": "week.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15200,
+      "end_ms": 15400,
+      "text": "We",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15400,
+      "end_ms": 15500,
+      "text": "were",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15500,
+      "end_ms": 15800,
+      "text": "supposed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15800,
+      "end_ms": 15900,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15900,
+      "end_ms": 16100,
+      "text": "meet",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16100,
+      "end_ms": 16200,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16400,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16400,
+      "end_ms": 16900,
+      "text": "library",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 16900,
+      "end_ms": 17400,
+      "text": "cafe.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 17900,
+      "end_ms": 18000,
+      "text": "My",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18000,
+      "end_ms": 18500,
+      "text": "message",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 18500,
+      "end_ms": 18900,
+      "text": "said",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19100,
+      "end_ms": 19700,
+      "text": "library",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 19700,
+      "end_ms": 20200,
+      "text": "cafe",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20200,
+      "end_ms": 20400,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20400,
+      "end_ms": 20900,
+      "text": "6:00.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21300,
+      "end_ms": 21600,
+      "text": "It's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21600,
+      "end_ms": 21700,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21700,
+      "end_ms": 21800,
+      "text": "one",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21800,
+      "end_ms": 22100,
+      "text": "next",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22100,
+      "end_ms": 22200,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22200,
+      "end_ms": 22300,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22300,
+      "end_ms": 22500,
+      "text": "city",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22500,
+      "end_ms": 23100,
+      "text": "library.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23800,
+      "end_ms": 24300,
+      "text": "Oh,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24500,
+      "end_ms": 24700,
+      "text": "you're",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 24700,
+      "end_ms": 25300,
+      "text": "right.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 25900,
+      "end_ms": 26000,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26000,
+      "end_ms": 26200,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26200,
+      "end_ms": 26400,
+      "text": "see",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26400,
+      "end_ms": 26500,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26500,
+      "end_ms": 26700,
+      "text": "now.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 28000,
+      "text": "Sorry.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28400,
+      "end_ms": 28800,
+      "text": "So",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28800,
+      "end_ms": 29000,
+      "text": "what",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29000,
+      "end_ms": 29100,
+      "text": "should",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29100,
+      "end_ms": 29200,
+      "text": "we",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29200,
+      "end_ms": 29600,
+      "text": "do?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29800,
+      "end_ms": 29900,
+      "text": "The",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29900,
+      "end_ms": 30200,
+      "text": "movie",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30200,
+      "end_ms": 30400,
+      "text": "starts",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30400,
+      "end_ms": 30600,
+      "text": "at",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 31300,
+      "text": "7:30.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 32000,
+      "end_ms": 32100,
+      "text": "The",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32100,
+      "end_ms": 32500,
+      "text": "cafes",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32500,
+      "end_ms": 32600,
+      "text": "are",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32600,
+      "end_ms": 33000,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33000,
+      "end_ms": 33300,
+      "text": "20",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33600,
+      "text": "minutes",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33600,
+      "end_ms": 34100,
+      "text": "apart.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34800,
+      "end_ms": 35000,
+      "text": "How",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35000,
+      "end_ms": 35200,
+      "text": "far",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35200,
+      "end_ms": 35300,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35300,
+      "end_ms": 35400,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35400,
+      "end_ms": 35600,
+      "text": "movie",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35600,
+      "end_ms": 35900,
+      "text": "theater",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35900,
+      "end_ms": 36100,
+      "text": "from",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36100,
+      "end_ms": 36300,
+      "text": "you?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36900,
+      "end_ms": 37200,
+      "text": "It's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37200,
+      "end_ms": 37500,
+      "text": "only",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37500,
+      "end_ms": 37800,
+      "text": "10",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37800,
+      "end_ms": 38000,
+      "text": "minutes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38000,
+      "end_ms": 38200,
+      "text": "from",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38200,
+      "end_ms": 38600,
+      "text": "here.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39300,
+      "text": "From",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39300,
+      "end_ms": 39400,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39400,
+      "end_ms": 39900,
+      "text": "library,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39900,
+      "end_ms": 40300,
+      "text": "it's",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40300,
+      "end_ms": 40600,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40600,
+      "end_ms": 40900,
+      "text": "15.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 41900,
+      "end_ms": 42400,
+      "text": "Then",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42400,
+      "end_ms": 42500,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42500,
+      "end_ms": 42700,
+      "text": "could",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42700,
+      "end_ms": 43000,
+      "text": "walk",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43000,
+      "end_ms": 43100,
+      "text": "to",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43100,
+      "end_ms": 43200,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43200,
+      "end_ms": 43700,
+      "text": "now.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43800,
+      "end_ms": 44000,
+      "text": "I'd",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 44200,
+      "text": "be",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44200,
+      "end_ms": 44400,
+      "text": "there",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44500,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44500,
+      "end_ms": 44800,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 44800,
+      "end_ms": 45800,
+      "text": "6:35,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 46100,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46100,
+      "end_ms": 46300,
+      "text": "we'd",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46300,
+      "end_ms": 46500,
+      "text": "still",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46500,
+      "end_ms": 46700,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46700,
+      "end_ms": 46900,
+      "text": "time",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 46900,
+      "end_ms": 47000,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47000,
+      "end_ms": 47100,
+      "text": "a",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 47100,
+      "end_ms": 47500,
+      "text": "coffee.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 48400,
+      "end_ms": 48500,
+      "text": "That",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48500,
+      "end_ms": 48700,
+      "text": "makes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 48700,
+      "end_ms": 49100,
+      "text": "sense.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49700,
+      "end_ms": 49900,
+      "text": "I'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 49900,
+      "end_ms": 50100,
+      "text": "order",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50100,
+      "end_ms": 50300,
+      "text": "for",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50300,
+      "end_ms": 50500,
+      "text": "you.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50700,
+      "end_ms": 50800,
+      "text": "What",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 50800,
+      "end_ms": 51000,
+      "text": "would",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 51001,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 51300,
+      "text": "like?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 52000,
+      "end_ms": 52100,
+      "text": "A",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52100,
+      "end_ms": 52600,
+      "text": "cappuccino,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 52600,
+      "end_ms": 52900,
+      "text": "please.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 53600,
+      "end_ms": 53900,
+      "text": "So",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54100,
+      "end_ms": 54200,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54200,
+      "end_ms": 54700,
+      "text": "museum",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 54700,
+      "end_ms": 55200,
+      "text": "cafe",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55200,
+      "end_ms": 55300,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55300,
+      "end_ms": 55600,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 55600,
+      "end_ms": 56600,
+      "text": "6:35,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56600,
+      "end_ms": 56800,
+      "text": "then",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56800,
+      "end_ms": 56900,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 56900,
+      "end_ms": 57400,
+      "text": "movie",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57400,
+      "end_ms": 57600,
+      "text": "at",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 57600,
+      "end_ms": 58100,
+      "text": "7:30.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 59100,
+      "end_ms": 59700,
+      "text": "Perfect.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 59900,
+      "end_ms": 60100,
+      "text": "See",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60100,
+      "end_ms": 60200,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60200,
+      "end_ms": 60600,
+      "text": "soon.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 60800,
+      "end_ms": 61100,
+      "text": "And",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61100,
+      "end_ms": 61600,
+      "text": "sorry",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 61600,
+      "end_ms": 61900,
+      "text": "again.",
+      "speaker": "spk:0"
+    }
+  ]
+}

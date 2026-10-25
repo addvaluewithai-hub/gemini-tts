@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-explain-a-mix-up-room-r3-80887ebb",
+  "status": "completed",
+  "created_at": "2026-10-25T11:07:07.554Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 3,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2181476,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792926426/gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926426/gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926427/gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 3,
+    "word_count": 121,
+    "duration_ms": 45000,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.json",
+    "local_vtt": "out/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792926426/gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.wav",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb",
+    "asset_id": "f0d062a8852cf450cc33f2b384ac90d7",
+    "resource_type": "video",
+    "bytes": 2175438,
+    "format": "wav",
+    "duration": 45.32
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926426/gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.json",
+    "asset_id": "fb479e01fd94e3b209708db71085ceec",
+    "resource_type": "raw",
+    "bytes": 16131,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926427/gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.transcript.vtt",
+    "asset_id": "8f5bae88cce11fa8134a503de48b70e6",
+    "resource_type": "raw",
+    "bytes": 1268,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-explain-a-mix-up-room-r3-80887ebb.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "80887ebbfbca43e85ad139bbf46f1da857af9eb0d0612747fa4231b3db34b115",
+    "slug": "b1-explain-a-mix-up-room"
+  }
+}

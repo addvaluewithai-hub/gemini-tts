@@ -1,0 +1,64 @@
+{
+  "id": "englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c",
+  "status": "completed",
+  "created_at": "2026-10-25T11:07:06.557Z",
+  "model": "gemini-3.8-flash-tts",
+  "routing": "explicit",
+  "key_slot": 3,
+  "format": "wav",
+  "mime_type": "audio/wav",
+  "sample_rate": 24000,
+  "bytes": 2920676,
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792926425/gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926425/gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926426/gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.vtt",
+  "transcript": {
+    "status": "completed",
+    "provider": "gemini",
+    "model": "gemini-3.5-transcribe",
+    "key_slot": 2,
+    "word_count": 161,
+    "duration_ms": 60400,
+    "diarization": true,
+    "failed_attempts": [],
+    "local_json": "out/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.json",
+    "local_vtt": "out/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.vtt"
+  },
+  "cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/video/upload/v1792926425/gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.wav",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c",
+    "asset_id": "d53741369e1cb7a975595a7c8ce8ecef",
+    "resource_type": "video",
+    "bytes": 2914638,
+    "format": "wav",
+    "duration": 60.72
+  },
+  "transcript_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926425/gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.json",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.json",
+    "asset_id": "e4ac6b46110cde23f3b32bfefaa5ed21",
+    "resource_type": "raw",
+    "bytes": 21305,
+    "format": null,
+    "duration": null
+  },
+  "vtt_cloudinary": {
+    "secure_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1792926426/gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.vtt",
+    "public_id": "gemini-tts/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.transcript.vtt",
+    "asset_id": "9f6b845b94b6ae3632030cc0c221d4b4",
+    "resource_type": "raw",
+    "bytes": 1777,
+    "format": null,
+    "duration": null
+  },
+  "local_file": "out/englishlive-b1-change-a-hotel-booking-extra-night-r3-82f52e3c.wav",
+  "attempts_before_success": 0,
+  "failed_attempts": [],
+  "metadata": {
+    "app": "englishlive",
+    "campaign": "englishlive-b1-listening",
+    "revision": 3,
+    "sha256": "82f52e3cc3704eb2ac31bb237dbec1488a6753b71220373c58bb481ea6a1bffb",
+    "slug": "b1-change-a-hotel-booking-extra-night"
+  }
+}

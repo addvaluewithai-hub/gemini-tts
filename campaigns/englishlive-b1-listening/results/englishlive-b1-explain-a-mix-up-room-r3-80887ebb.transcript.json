@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-10-25T11:07:04.966Z",
+  "duration_ms": 45000,
+  "word_count": 121,
+  "diarization": true,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Hey, where are you? We're all in room 30 and we're about to start. Room 30? But I'm in room 13 and it's empty. 13? Why are you there? I thought you said 13 in your voice message. Oh no, I said 30. Sorry, maybe it wasn't very clear. It's okay. It was my mistake. So room 30 is on the third floor, right? Yes, third floor. If you like, you can join by video call from there. Oh, I have the printed copies for everyone, so I should come up. It's only about 5 minutes. Great, that makes sense. We'll start with the slides then. Okay, room 30, third floor. I'm on my way. Perfect, see you in a minute.",
+  "source_text": "Hey, where are you? We're all in Room thirty, and we're about to start. Room thirty? But I'm in Room thirteen, and it's empty. Thirteen? Why are you there? I thought you said thirteen in your voice message. Oh no! I said thirty. Sorry, maybe it wasn't very clear. It's okay, it was my mistake. So Room thirty is on the third floor, right? Yes, third floor. If you like, you can join by video call from there. I have the printed copies for everyone, so I should come up. It's only about five minutes. Great, that makes sense. We'll start with the slides, then. Okay. Room thirty, third floor. I'm on my way. Perfect. See you in a minute.",
+  "source_turns": [
+    {
+      "index": 0,
+      "speaker": "Partner",
+      "text": "Hey, where are you? We're all in Room thirty, and we're about to start."
+    },
+    {
+      "index": 1,
+      "speaker": "Learner",
+      "text": "Room thirty? But I'm in Room thirteen, and it's empty."
+    },
+    {
+      "index": 2,
+      "speaker": "Partner",
+      "text": "Thirteen? Why are you there?"
+    },
+    {
+      "index": 3,
+      "speaker": "Learner",
+      "text": "I thought you said thirteen in your voice message."
+    },
+    {
+      "index": 4,
+      "speaker": "Partner",
+      "text": "Oh no! I said thirty. Sorry, maybe it wasn't very clear."
+    },
+    {
+      "index": 5,
+      "speaker": "Learner",
+      "text": "It's okay, it was my mistake. So Room thirty is on the third floor, right?"
+    },
+    {
+      "index": 6,
+      "speaker": "Partner",
+      "text": "Yes, third floor. If you like, you can join by video call from there."
+    },
+    {
+      "index": 7,
+      "speaker": "Learner",
+      "text": "I have the printed copies for everyone, so I should come up. It's only about five minutes."
+    },
+    {
+      "index": 8,
+      "speaker": "Partner",
+      "text": "Great, that makes sense. We'll start with the slides, then."
+    },
+    {
+      "index": 9,
+      "speaker": "Learner",
+      "text": "Okay. Room thirty, third floor. I'm on my way."
+    },
+    {
+      "index": 10,
+      "speaker": "Partner",
+      "text": "Perfect. See you in a minute."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 200,
+      "end_ms": 600,
+      "text": "Hey,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 800,
+      "end_ms": 1000,
+      "text": "where",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1200,
+      "text": "are",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1600,
+      "text": "you?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 2000,
+      "text": "We're",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2001,
+      "text": "all",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2100,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2100,
+      "end_ms": 2300,
+      "text": "room",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2300,
+      "end_ms": 2700,
+      "text": "30",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2700,
+      "end_ms": 2800,
+      "text": "and",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 2800,
+      "end_ms": 3000,
+      "text": "we're",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3200,
+      "text": "about",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3200,
+      "end_ms": 3300,
+      "text": "to",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 3300,
+      "end_ms": 3800,
+      "text": "start.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 4600,
+      "end_ms": 5100,
+      "text": "Room",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5900,
+      "text": "30?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6100,
+      "end_ms": 6500,
+      "text": "But",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6600,
+      "end_ms": 6800,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6800,
+      "end_ms": 6900,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 6900,
+      "end_ms": 7200,
+      "text": "room",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 7200,
+      "end_ms": 8000,
+      "text": "13",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8100,
+      "end_ms": 8200,
+      "text": "and",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8200,
+      "end_ms": 8400,
+      "text": "it's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 8400,
+      "end_ms": 8800,
+      "text": "empty.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 9900,
+      "end_ms": 10800,
+      "text": "13?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11100,
+      "text": "Why",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11100,
+      "end_ms": 11200,
+      "text": "are",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11200,
+      "end_ms": 11300,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 11300,
+      "end_ms": 11700,
+      "text": "there?",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 12300,
+      "end_ms": 12500,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12500,
+      "end_ms": 12700,
+      "text": "thought",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12700,
+      "end_ms": 12800,
+      "text": "you",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 12800,
+      "end_ms": 13100,
+      "text": "said",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13100,
+      "end_ms": 13800,
+      "text": "13",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13800,
+      "end_ms": 13900,
+      "text": "in",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 13900,
+      "end_ms": 14000,
+      "text": "your",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14300,
+      "text": "voice",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 14300,
+      "end_ms": 14700,
+      "text": "message.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 15600,
+      "end_ms": 15800,
+      "text": "Oh",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 15800,
+      "end_ms": 16400,
+      "text": "no,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16500,
+      "end_ms": 16600,
+      "text": "I",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16600,
+      "end_ms": 16800,
+      "text": "said",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 16800,
+      "end_ms": 17500,
+      "text": "30.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18100,
+      "end_ms": 18500,
+      "text": "Sorry,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18600,
+      "end_ms": 18800,
+      "text": "maybe",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 18801,
+      "text": "it",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 19000,
+      "text": "wasn't",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19000,
+      "end_ms": 19200,
+      "text": "very",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 19200,
+      "end_ms": 19500,
+      "text": "clear.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 20100,
+      "end_ms": 20300,
+      "text": "It's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20300,
+      "end_ms": 20800,
+      "text": "okay.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 20900,
+      "end_ms": 21000,
+      "text": "It",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21000,
+      "end_ms": 21100,
+      "text": "was",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21100,
+      "end_ms": 21300,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 21300,
+      "end_ms": 21900,
+      "text": "mistake.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22300,
+      "end_ms": 22600,
+      "text": "So",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22600,
+      "end_ms": 22900,
+      "text": "room",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 22900,
+      "end_ms": 23500,
+      "text": "30",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23500,
+      "end_ms": 23700,
+      "text": "is",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23700,
+      "end_ms": 23800,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23800,
+      "end_ms": 23900,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 23900,
+      "end_ms": 24400,
+      "text": "third",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24400,
+      "end_ms": 24900,
+      "text": "floor,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 24900,
+      "end_ms": 25200,
+      "text": "right?",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 25900,
+      "end_ms": 26400,
+      "text": "Yes,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26500,
+      "end_ms": 26800,
+      "text": "third",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 27200,
+      "text": "floor.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27500,
+      "end_ms": 27600,
+      "text": "If",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 27700,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 27700,
+      "end_ms": 28000,
+      "text": "like,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28000,
+      "end_ms": 28100,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28100,
+      "end_ms": 28400,
+      "text": "can",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28400,
+      "end_ms": 28700,
+      "text": "join",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28700,
+      "end_ms": 28900,
+      "text": "by",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 28900,
+      "end_ms": 29200,
+      "text": "video",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29200,
+      "end_ms": 29400,
+      "text": "call",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29400,
+      "end_ms": 29600,
+      "text": "from",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 29600,
+      "end_ms": 29800,
+      "text": "there.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 30500,
+      "end_ms": 30600,
+      "text": "Oh,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 30700,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30700,
+      "end_ms": 30900,
+      "text": "have",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 30900,
+      "end_ms": 31000,
+      "text": "the",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 31400,
+      "text": "printed",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31400,
+      "end_ms": 31800,
+      "text": "copies",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 31900,
+      "text": "for",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 31900,
+      "end_ms": 32400,
+      "text": "everyone,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32400,
+      "end_ms": 32800,
+      "text": "so",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32800,
+      "end_ms": 32900,
+      "text": "I",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 32900,
+      "end_ms": 33200,
+      "text": "should",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33200,
+      "end_ms": 33400,
+      "text": "come",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 33400,
+      "end_ms": 33700,
+      "text": "up.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34100,
+      "end_ms": 34300,
+      "text": "It's",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34300,
+      "end_ms": 34500,
+      "text": "only",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34500,
+      "end_ms": 34800,
+      "text": "about",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 34800,
+      "end_ms": 35100,
+      "text": "5",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 35100,
+      "end_ms": 35700,
+      "text": "minutes.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 36600,
+      "end_ms": 37100,
+      "text": "Great,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37200,
+      "end_ms": 37300,
+      "text": "that",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37300,
+      "end_ms": 37500,
+      "text": "makes",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 37500,
+      "end_ms": 38000,
+      "text": "sense.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38200,
+      "end_ms": 38400,
+      "text": "We'll",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38400,
+      "end_ms": 38600,
+      "text": "start",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38600,
+      "end_ms": 38700,
+      "text": "with",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38700,
+      "end_ms": 38800,
+      "text": "the",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 38800,
+      "end_ms": 39200,
+      "text": "slides",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 39200,
+      "end_ms": 39400,
+      "text": "then.",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 40400,
+      "text": "Okay,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 40600,
+      "end_ms": 41000,
+      "text": "room",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41000,
+      "end_ms": 41600,
+      "text": "30,",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 41700,
+      "end_ms": 42000,
+      "text": "third",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42000,
+      "end_ms": 42400,
+      "text": "floor.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42800,
+      "end_ms": 42900,
+      "text": "I'm",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 42900,
+      "end_ms": 43000,
+      "text": "on",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43000,
+      "end_ms": 43100,
+      "text": "my",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43100,
+      "end_ms": 43400,
+      "text": "way.",
+      "speaker": "spk:1"
+    },
+    {
+      "start_ms": 43800,
+      "end_ms": 44400,
+      "text": "Perfect,",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44500,
+      "text": "see",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44500,
+      "end_ms": 44600,
+      "text": "you",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44600,
+      "end_ms": 44601,
+      "text": "in",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44600,
+      "end_ms": 44700,
+      "text": "a",
+      "speaker": "spk:0"
+    },
+    {
+      "start_ms": 44700,
+      "end_ms": 45000,
+      "text": "minute.",
+      "speaker": "spk:0"
+    }
+  ]
+}
