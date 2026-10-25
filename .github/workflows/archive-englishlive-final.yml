@@ -1,0 +1,56 @@
+name: Archive final Englotti B1 results
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  actions: read
+  issues: read
+
+concurrency:
+  group: englishlive-b1-final-archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    if: >-
+      github.event.issue.user.login == 'addvaluewithai-hub' &&
+      github.event.comment.user.login == 'addvaluewithai-hub' &&
+      github.actor == 'addvaluewithai-hub' &&
+      github.event.comment.body == 'archive-englishlive-final'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout trusted archiver
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: control
+          persist-credentials: false
+      - name: Checkout results branch without deleting older results
+        uses: actions/checkout@v4
+        with:
+          ref: campaign/englishlive-b1-listening
+          path: campaign
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate original pinned source and archive factory bytes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CAMPAIGN_CHECKOUT: campaign
+        run: node control/src/archive-englishlive-final.mjs
+      - name: Commit result and transcript JSON without modifying old results
+        working-directory: campaign
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add campaigns/englishlive-b1-listening/results/
+          if git diff --cached --quiet; then
+            echo 'No new archive files; refusing empty/repeated run'
+            exit 1
+          fi
+          git commit -m 'Archive final Englotti B1 results and transcripts'
+          git push origin HEAD:campaign/englishlive-b1-listening
