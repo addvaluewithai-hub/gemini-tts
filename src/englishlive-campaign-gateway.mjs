@@ -3,7 +3,7 @@
 import {createHash} from "node:crypto";
 
 const SOURCE="addvaluewithai-hub/gemini-tts";
-const PIN="409ce47ad08fbf454fe09edf94598c05c0bde467";
+const PIN="a96a7b29dff919e294c7ca4ce5a185a79fb849d7";
 const ROOT="campaigns/englishlive-b1-listening/";
 const CAMPAIGN="englishlive-b1-listening";
 const PILOT=[
@@ -17,8 +17,11 @@ const sha=s=>createHash("sha256").update(s,"utf8").digest("hex");
 const fail=s=>{throw Error(s);};
 const object=o=>o!==null&&typeof o==="object"&&!Array.isArray(o);
 const slugOK=s=>typeof s==="string"&&/^b1-[a-z0-9-]+$/.test(s);
-const voicesFor=s=>s==="b1-keep-a-conversation-going-lunch"
-  ? {Partner:"Kore",Learner:"Puck"} : {Partner:"Puck",Learner:"Kore"};
+const STUDIO_VOICES=new Set(("Zephyr Puck Charon Kore Fenrir Leda Orus Aoede Callirrhoe "+
+  "Autonoe Enceladus Iapetus Umbriel Algieba Despina Erinome Algenib Rasalgethi "+
+  "Laomedeia Achernar Alnilam Schedar Gacrux Pulcherrima Achird Zubenelgenubi "+
+  "Vindemiatrix Sadachbia Sadaltager Sulafat").split(" "));
+const B1_STYLE_END=". American English accent. Clear, natural pace for B1 English learners, not rushed.";
 const sameVoices=(actual,expected)=>object(actual)&&
   Object.keys(actual).sort().join(",")==="Learner,Partner"&&
   actual.Partner===expected.Partner&&actual.Learner===expected.Learner;
@@ -47,7 +50,11 @@ function validateManifest(manifest) {
         !/^[a-f0-9]{64}$/.test(entry.sha256||"")||
         typeof entry.job_id!=="string"||
         !/^englishlive-b1-[a-z0-9-]+-r[0-9]+-[a-f0-9]{8}$/.test(entry.job_id)||
-        ids.has(entry.job_id)||!sameVoices(entry.voices,voicesFor(entry.slug)))
+        ids.has(entry.job_id)||!object(entry.voices)||
+        Object.keys(entry.voices).sort().join(",")!=="Learner,Partner"||
+        !STUDIO_VOICES.has(entry.voices.Partner)||
+        !STUDIO_VOICES.has(entry.voices.Learner)||
+        entry.voices.Partner===entry.voices.Learner)
       fail("Untrusted Englotti job manifest entry");
     jobs.set(entry.slug,entry);ids.add(entry.job_id);total+=entry.words;
   }
@@ -82,9 +89,7 @@ function validateJob(entry,job) {
     fail("Pinned lesson identity, script count or SHA-256 mismatch");
   const expectedId="englishlive-"+entry.slug+"-r"+lesson.revision+"-"+entry.sha256.slice(0,8);
   if (job.job_id!==expectedId) fail("Englotti job ID does not bind revision and script hash");
-  const expectedVoices=voicesFor(entry.slug);
   if (!sameVoices(req.speakers,entry.voices)||
-      !sameVoices(req.speakers,expectedVoices)||
       req.routing!=="explicit"||req.model!=="gemini-3.8-flash-tts"||
       req.allow_model_fallback!==false||req.format!=="wav"||
       req.sample_rate!==24000||req.temperature!==1||
@@ -99,7 +104,8 @@ function validateJob(entry,job) {
   for (const turn of req.turns) {
     if (!object(turn)||!["Partner","Learner"].includes(turn.speaker)||
         typeof turn.text!=="string"||!turn.text.trim()||
-        typeof turn.style!=="string"||!turn.style.trim()||
+        typeof turn.style!=="string"||!turn.style.endsWith(B1_STYLE_END)||
+        turn.style.length<=B1_STYLE_END.length||
         Object.hasOwn(turn,"voice"))
       fail("Invalid or overridden Englotti dialogue turn");
     lines.push(turn.speaker+": "+turn.text);
