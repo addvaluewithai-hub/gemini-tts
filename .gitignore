@@ -3,6 +3,6 @@ node_modules/
 .env.*
 !.env.example
 out/
-request.json
-result.json
+/request.json
+/result.json
 .DS_Store
