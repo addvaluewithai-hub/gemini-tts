@@ -1,0 +1,12 @@
+{
+  "id": "techforbadguys-ep001",
+  "status": "completed",
+  "model": "gemini-3.8-flash-tts",
+  "key_slot": 5,
+  "workflow_run": "https://github.com/addvaluewithai-hub/gemini-tts/actions/runs/41183626668",
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/v1793434400/gemini-tts/techforbadguys-ep001.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1793434402/gemini-tts/techforbadguys-ep001.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/v1793434402/gemini-tts/techforbadguys-ep001.transcript.vtt",
+  "word_count": 895,
+  "duration_ms": 409600
+}

@@ -16,7 +16,16 @@ episodes/techforbadguys/
     script.md       human-readable script with source links
     request.json    factory request (docs/API.md schema), single host, per-segment style
     dispatch.json   ready-to-send repository_dispatch body with a stable job_id
+    result.json     factory result: model, Cloudinary audio/transcript/VTT URLs, duration
+    ep001.vtt       caption cues derived from the rendered audio
+    ep001.transcript.json  word-level timestamps
+    card.png        1920x1080 title card used as the video background
+  card.py           generates the title card with Pillow (edit the title and bullets per episode)
+  build.sh          ffmpeg render: card + live waveform strip + burned-in captions -> MP4
 ```
+
+Rendered `.mp4` and `.wav` files are ignored by git on purpose. The audio stays on
+Cloudinary at the URL in `result.json`; the MP4 is re-creatable with `build.sh`.
 
 ## House style
 
@@ -47,3 +56,17 @@ Through GitHub Actions, post `dispatch.json` as the body of a
 
 The validity of every `request.json` under this directory is checked by
 `test/episodes.test.mjs`.
+
+## Building the video
+
+```bash
+python3 episodes/techforbadguys/card.py episodes/techforbadguys/ep001-2026-10-31/card.png
+curl -sSfL -o /tmp/ep001.wav "$(jq -r .audio_url episodes/techforbadguys/ep001-2026-10-31/result.json)"
+episodes/techforbadguys/build.sh \
+  episodes/techforbadguys/ep001-2026-10-31/card.png \
+  /tmp/ep001.wav \
+  episodes/techforbadguys/ep001-2026-10-31/ep001.vtt \
+  episodes/techforbadguys/ep001-2026-10-31/techforbadguys-ep001.mp4
+```
+
+Needs ffmpeg with libass and the Inter font (falls back to DejaVu).

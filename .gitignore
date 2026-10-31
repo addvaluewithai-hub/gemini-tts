@@ -6,3 +6,7 @@ out/
 /request.json
 /result.json
 .DS_Store
+
+# Rendered episode media lives on Cloudinary (see each episode result.json); keep git light.
+episodes/**/*.mp4
+episodes/**/*.wav

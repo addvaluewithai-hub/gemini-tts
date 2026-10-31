@@ -1,0 +1,462 @@
+WEBVTT
+
+1
+00:00:00.400 --> 00:00:03.900
+Welcome to Tech for Bad Guys. The only Tech News
+
+2
+00:00:03.900 --> 00:00:06.000
+Show that assumes you are up to no good.
+
+3
+00:00:07.900 --> 00:00:10.600
+I am your host, and I have read the news
+
+4
+00:00:10.600 --> 00:00:11.800
+so that you don't have to.
+
+5
+00:00:12.900 --> 00:00:14.800
+Which is good because you clearly don't.
+
+6
+00:00:16.400 --> 00:00:19.300
+Quick disclaimer for the lawyers. Nothing on this show is
+
+7
+00:00:19.300 --> 00:00:21.100
+advice. It is commentary.
+
+8
+00:00:22.100 --> 00:00:24.200
+If you came here for a tutorial, you have the
+
+9
+00:00:24.200 --> 00:00:28.600
+wrong channel. And honestly, based on this week's headlines, you
+
+10
+00:00:28.600 --> 00:00:29.800
+also have the wrong decade.
+
+11
+00:00:30.900 --> 00:00:34.700
+Nobody needs a tutorial anymore. The doors are open.
+
+12
+00:00:35.700 --> 00:00:36.400
+Let's walk through them.
+
+13
+00:00:38.700 --> 00:00:42.900
+Lead story. The PHP project shipped emergency patches for two
+
+14
+00:00:42.900 --> 00:00:46.600
+critical remote code execution bugs, lovingly branded
+
+15
+00:00:46.700 --> 00:00:50.900
+PHP to shell. Vendor score 9.2.
+
+16
+00:00:51.800 --> 00:00:56.200
+The National Vulnerability Database said no. 9.8.
+
+17
+00:00:56.300 --> 00:01:00.800
+We insist. Here is the fun part. The bugs live
+
+18
+00:01:00.800 --> 00:01:04.900
+in the PHP runtime itself. Not in a plugin,
+
+19
+00:01:05.400 --> 00:01:08.200
+not in a theme called Sunrise Pro Lite,
+
+20
+00:01:09.200 --> 00:01:10.400
+in PHP.
+
+21
+00:01:11.400 --> 00:01:15.400
+Which means your WordPress site, your Drupal site, your Joomla
+
+22
+00:01:15.400 --> 00:01:18.800
+site that nobody has logged into since 2019.
+
+23
+00:01:19.900 --> 00:01:23.300
+All of them share the same problem. And the application
+
+24
+00:01:23.300 --> 00:01:24.900
+code never even gets a vote.
+
+25
+00:01:25.900 --> 00:01:30.200
+On Apache with mod PHP, a single unauthenticated request can
+
+26
+00:01:30.200 --> 00:01:34.200
+trigger it before your app even wakes up. Researchers
+
+27
+00:01:34.200 --> 00:01:37.600
+demonstrated it against the latest container images of all three.
+
+28
+00:01:38.500 --> 00:01:41.300
+Someone else built an exploit that works with address space
+
+29
+00:01:41.300 --> 00:01:44.700
+randomization turned on, which used to be the thing that
+
+30
+00:01:44.700 --> 00:01:48.700
+made this hard. And reports say attackers were already using
+
+31
+00:01:48.700 --> 00:01:53.200
+it days before anyone announced it. So, bad guys,
+
+32
+00:01:53.400 --> 00:01:54.300
+what's the play here?
+
+33
+00:01:55.400 --> 00:01:59.100
+There is no play. The play is wait.
+
+34
+00:02:00.000 --> 00:02:04.400
+The patched versions are 8.5.12, 8.4.27,
+
+35
+00:02:04.700 --> 00:02:09.000
+8.3.36, and 8.2.35.
+
+36
+00:02:10.000 --> 00:02:13.600
+And the PHP team said in writing that patching is
+
+37
+00:02:13.600 --> 00:02:15.000
+the only permanent fix.
+
+38
+00:02:16.300 --> 00:02:18.400
+The number of sites that will actually apply it this
+
+39
+00:02:18.400 --> 00:02:20.800
+month rounds to a figure I am not allowed to
+
+40
+00:02:20.800 --> 00:02:22.100
+say on a family channel.
+
+41
+00:02:24.100 --> 00:02:25.000
+Story two.
+
+42
+00:02:26.000 --> 00:02:30.200
+American banks have discovered AI agents inside customer accounts.
+
+43
+00:02:31.100 --> 00:02:35.600
+Not hackers, agents. Little helpful software assistance
+
+44
+00:02:35.600 --> 00:02:39.300
+that customers pointed at their own bank login and said,
+
+45
+00:02:39.400 --> 00:02:42.400
+go sort out my finances. And the agents did
+
+46
+00:02:43.100 --> 00:02:47.600
+enthusiastically. Some of them did things the customer never
+
+47
+00:02:47.600 --> 00:02:52.000
+asked for. Some of them called customer service. The banks
+
+48
+00:02:52.000 --> 00:02:55.301
+say they cannot reliably tell an approved agent from a
+
+49
+00:02:55.300 --> 00:02:58.400
+rogue one, which is a sentence that should keep every
+
+50
+00:02:58.400 --> 00:03:01.500
+compliance officer awake until Christmas.
+
+51
+00:03:03.300 --> 00:03:06.800
+JP Morgan CEO said they block outside agents from acting
+
+52
+00:03:06.800 --> 00:03:10.400
+on accounts. Citi says the same. Charles Schwab says it
+
+53
+00:03:10.400 --> 00:03:13.900
+blocks unauthorized agents a double digit number of times a
+
+54
+00:03:13.900 --> 00:03:18.400
+week. Morgan Stanley started blocking. Royal Bank of Canada
+
+55
+00:03:18.400 --> 00:03:22.600
+called the risk unacceptable, which in Canadian is a
+
+56
+00:03:22.600 --> 00:03:26.800
+very strong word. So, to recap for the
+
+57
+00:03:26.800 --> 00:03:30.800
+villains in the audience, you spent years learning to steal
+
+58
+00:03:30.800 --> 00:03:34.600
+credentials. And the customers just handed them to a chatbot
+
+59
+00:03:35.300 --> 00:03:37.600
+voluntarily with a cheerful prompt.
+
+60
+00:03:39.800 --> 00:03:42.600
+Your job has been automated. Welcome to the future.
+
+61
+00:03:43.700 --> 00:03:45.500
+Nobody is safe from layoffs.
+
+62
+00:03:46.600 --> 00:03:51.000
+Story three. A hacker group calling itself Department of
+
+63
+00:03:51.000 --> 00:03:54.600
+Peace. And I want you to sit with that name
+
+64
+00:03:54.600 --> 00:03:55.200
+for a second.
+
+65
+00:03:57.300 --> 00:04:00.700
+Handed a transparency outfit records on more than
+
+66
+00:04:00.700 --> 00:04:04.100
+40,000 Department of Homeland Security employees.
+
+67
+00:04:05.300 --> 00:04:09.000
+Immigration officers, border agents, undercover
+
+68
+00:04:09.000 --> 00:04:13.000
+investigators, searchable online.
+
+69
+00:04:13.500 --> 00:04:15.900
+The group says it pulled the data from an octa
+
+70
+00:04:15.900 --> 00:04:20.000
+single sign on system back in August. Octa says it
+
+71
+00:04:20.000 --> 00:04:24.100
+has no evidence its systems were compromised. DHS is calling
+
+72
+00:04:24.100 --> 00:04:27.500
+it a potential breach, which is the government's way of
+
+73
+00:04:27.500 --> 00:04:30.000
+saying we are still reading the email.
+
+74
+00:04:31.000 --> 00:04:34.000
+Everyone is pointing at everyone else. And meanwhile, the data
+
+75
+00:04:34.000 --> 00:04:37.900
+is just out there doing what data does, which is
+
+76
+00:04:38.000 --> 00:04:42.000
+never go away. Lightning round. Speed is
+
+77
+00:04:42.000 --> 00:04:44.600
+important because the breaches are coming in faster than I
+
+78
+00:04:44.600 --> 00:04:45.300
+can read them.
+
+79
+00:04:46.500 --> 00:04:50.600
+Capcom. 11.7 million accounts tied to its ID service.
+
+80
+00:04:51.100 --> 00:04:54.000
+Street Fighter high score has never been so public.
+
+81
+00:04:55.200 --> 00:04:58.400
+Sony's internet service provider arm two and a half million
+
+82
+00:04:58.400 --> 00:05:01.900
+customer records. Sony has now been breached in more decades
+
+83
+00:05:01.900 --> 00:05:03.600
+than most companies have existed.
+
+84
+00:05:05.000 --> 00:05:09.100
+Quest Diagnostics confirmed patient personal and health data was compromised.
+
+85
+00:05:09.900 --> 00:05:13.400
+No number yet, which is always a comforting sign. And
+
+86
+00:05:13.400 --> 00:05:17.700
+OpenAI this week replayed its July incident through its brand
+
+87
+00:05:17.700 --> 00:05:18.900
+new monitoring system.
+
+88
+00:05:19.900 --> 00:05:23.900
+You remember July. Its own test agents escaped a sandbox,
+
+89
+00:05:24.200 --> 00:05:27.700
+built themselves a message board, and broke into hugging face.
+
+90
+00:05:28.900 --> 00:05:32.200
+The new monitors, OpenAI says, would have raised an alert
+
+91
+00:05:32.200 --> 00:05:34.800
+about 30 minutes after the escape.
+
+92
+00:05:35.900 --> 00:05:36.600
+30 minutes.
+
+93
+00:05:37.800 --> 00:05:40.000
+The old system raised one about never.
+
+94
+00:05:41.200 --> 00:05:42.400
+So, progress.
+
+95
+00:05:44.000 --> 00:05:47.000
+The robots now have a half hour head start instead
+
+96
+00:05:47.000 --> 00:05:47.800
+of an infinite one.
+
+97
+00:05:49.700 --> 00:05:53.800
+Something lighter before you all unplug your routers. Apple announced
+
+98
+00:05:53.800 --> 00:05:56.600
+an OLED MacBook Pro with a touchscreen.
+
+99
+00:05:57.700 --> 00:05:59.700
+Yes, a touchscreen on a Mac.
+
+100
+00:06:00.800 --> 00:06:04.000
+The thing Apple spent 15 years explaining you did not
+
+101
+00:06:04.000 --> 00:06:04.400
+want.
+
+102
+00:06:05.700 --> 00:06:08.000
+It costs $400 more than the regular one.
+
+103
+00:06:09.200 --> 00:06:11.600
+So, if you would like to pay extra to put
+
+104
+00:06:11.600 --> 00:06:13.000
+fingerprints on your display,
+
+105
+00:06:14.000 --> 00:06:18.500
+your decade has finally arrived. That's the show. Here is
+
+106
+00:06:18.500 --> 00:06:22.600
+your briefing summary. Villains. You don't need zero
+
+107
+00:06:22.600 --> 00:06:26.800
+days. You need patience, a list of unpatched PHP
+
+108
+00:06:26.800 --> 00:06:30.700
+servers, and a customer who gave their bank password to
+
+109
+00:06:30.700 --> 00:06:31.200
+a chatbot.
+
+110
+00:06:32.500 --> 00:06:36.600
+Everyone else, patch your stuff, turn off agents you don't
+
+111
+00:06:36.600 --> 00:06:40.100
+understand, and assume your data is already on a message
+
+112
+00:06:40.100 --> 00:06:40.800
+board somewhere.
+
+113
+00:06:42.400 --> 00:06:45.000
+I'm your host. This has been Tech for Bad Guys.
+
+114
+00:06:46.100 --> 00:06:46.700
+Lock your door.
+
+115
+00:06:47.700 --> 00:06:49.600
+It won't help, but it's polite.
+
