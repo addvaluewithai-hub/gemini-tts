@@ -1,25 +1,27 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readdir, readFile } from "node:fs/promises";
+import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { normalizeRequest } from "../src/schema.mjs";
 import { isStudioVoice } from "../src/voices.mjs";
 
-const ROOT = path.resolve("episodes");
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "episodes");
 
 async function episodeRequests(dir) {
   const found = [];
-  for (const entry of await readdir(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) found.push(...await episodeRequests(full));
-    else if (entry.name === "request.json") found.push(full);
+  for (const name of await readdir(dir)) {
+    const full = path.join(dir, name);
+    const info = await stat(full);
+    if (info.isDirectory()) found.push(...await episodeRequests(full));
+    else if (name === "request.json") found.push(full);
   }
-  return found;
+  return found.sort();
 }
 
 test("every episode request.json is a valid factory request", async () => {
   const files = await episodeRequests(ROOT);
-  assert.ok(files.length > 0, "expected at least one episode request");
+  assert.ok(files.length > 0, `expected at least one episode request under ${ROOT}`);
   for (const file of files) {
     const raw = JSON.parse(await readFile(file, "utf8"));
     const request = normalizeRequest(raw);
@@ -33,7 +35,9 @@ test("every episode request.json is a valid factory request", async () => {
 });
 
 test("every episode dispatch.json wraps its sibling request.json", async () => {
-  for (const file of await episodeRequests(ROOT)) {
+  const files = await episodeRequests(ROOT);
+  assert.ok(files.length > 0, "expected at least one episode request");
+  for (const file of files) {
     const dispatchPath = path.join(path.dirname(file), "dispatch.json");
     const dispatch = JSON.parse(await readFile(dispatchPath, "utf8"));
     assert.equal(dispatch.event_type, "tts.generate");
