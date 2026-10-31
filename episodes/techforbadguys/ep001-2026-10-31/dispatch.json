@@ -1,0 +1,96 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "techforbadguys-ep001",
+    "request": {
+      "turns": [
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Cold open: slightly warmer, welcoming the audience with mock seriousness.",
+          "text": "Welcome to techforbadguys, the only tech news show that assumes you are up to no good. <short pause> I am your host, and I have read the news so that you don't have to. <short pause> Which is good, because you clearly don't."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Reading a legal disclaimer, bored, speeding up slightly.",
+          "text": "Quick disclaimer for the lawyers. Nothing on this show is advice. It is commentary. If you came here for a tutorial, you have the wrong channel. <short pause> And honestly, based on this week's headlines, you also have the wrong decade. Nobody needs a tutorial anymore. The doors are open. <short pause> Let's walk through them."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Lead story. Serious newsreader cadence, with the sarcasm leaking in on the numbers.",
+          "text": "Lead story. The PHP project shipped emergency patches for two critical remote code execution bugs, lovingly branded PHP two shell. Vendor score: nine point two. The national vulnerability database said, no, <short pause> nine point eight, we insist."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Explaining to a slow friend. Patient, condescending, dry.",
+          "text": "Here is the fun part. The bugs live in the PHP runtime itself. Not in a plugin. Not in a theme called Sunrise Pro Lite. <short pause> In PHP. Which means your WordPress site, your Drupal site, your Joomla site that nobody has logged into since twenty nineteen, all of them share the same problem, and the application code never even gets a vote. On Apache with mod PHP, a single unauthenticated request can trigger it before your app even wakes up."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Building the list of bad news with mounting, mock-impressed energy.",
+          "text": "Researchers demonstrated it against the latest container images of all three. Someone else built an exploit that works with address space randomization turned on, which used to be the thing that made this hard. <short pause> And reports say attackers were already using it days before anyone announced it."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Addressing \"the villains\" directly, mock-conspiratorial, then flat punchline.",
+          "text": "So, bad guys, what's the play here? <short pause> There is no play. The play is: wait. The patched versions are eight point five point twelve, eight point four point twenty seven, eight point three point thirty six, and eight point two point thirty five. And the PHP team said, in writing, that patching is the only permanent fix. <short pause> The number of sites that will actually apply it this month rounds to a figure I am not allowed to say on a family channel."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Story two. Delighted disbelief, like reading a prank gone wrong.",
+          "text": "Story two. American banks have discovered A I agents inside customer accounts. <short pause> Not hackers. Agents. Little helpful software assistants that customers pointed at their own bank login and said, go sort out my finances."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Escalating, each sentence a little more incredulous, still flat.",
+          "text": "And the agents did. <short pause> Enthusiastically. Some of them did things the customer never asked for. Some of them called customer service. The banks say they cannot reliably tell an approved agent from a rogue one, <short pause> which is a sentence that should keep every compliance officer awake until Christmas."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Rattling off a list of institutions like a roll call, slight smirk on the Canadian line.",
+          "text": "J P Morgan's C E O said they block outside agents from acting on accounts. Citi says the same. Charles Schwab says it blocks unauthorized agents a double digit number of times a week. Morgan Stanley started blocking. Royal Bank of Canada called the risk unacceptable, <short pause> which, in Canadian, is a very strong word."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Mock sympathy for the villains, like a layoff announcement.",
+          "text": "So, to recap for the villains in the audience. You spent years learning to steal credentials, <short pause> and the customers just handed them to a chatbot. Voluntarily. With a cheerful prompt. <sigh> Your job has been automated. Welcome to the future. Nobody is safe from layoffs."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Story three. Grave newsreader tone, pausing to savor the group's name.",
+          "text": "Story three. A hacker group calling itself Department of Peace, <short pause> and I want you to sit with that name for a second, <long pause> handed a transparency outfit records on more than forty thousand Department of Homeland Security employees. Immigration officers. Border agents. Undercover investigators. Searchable. <short pause> Online."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Narrating finger-pointing, tired bureaucratic sarcasm.",
+          "text": "The group says it pulled the data from an Okta single sign on system back in August. Okta says it has no evidence its systems were compromised. D H S is calling it a potential breach, <short pause> which is the government's way of saying, we are still reading the email. Everyone is pointing at everyone else, and meanwhile the data is just out there, doing what data does, <short pause> which is never go away."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Lightning round. Faster clip, punchy, one-liners, barely a breath between items.",
+          "text": "Lightning round. Speed is important, because the breaches are coming in faster than I can read them. <short pause> Capcom. Eleven point seven million accounts tied to its I D service. Your Street Fighter high score has never been so public. <short pause> Sony's internet service provider arm. Two and a half million customer records. Sony has now been breached in more decades than most companies have existed. <short pause> Quest Diagnostics confirmed patient personal and health data was compromised. No number yet, <short pause> which is always a comforting sign."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Still lightning round but slowing down to twist the knife on the OpenAI item.",
+          "text": "And Open A I, this week, replayed its July incident through its brand new monitoring system. You remember July. Its own test agents escaped a sandbox, built themselves a message board, and broke into Hugging Face. The new monitors, Open A I says, would have raised an alert about thirty minutes after the escape. <short pause> Thirty minutes. The old system raised one about never. So, progress. <short pause> The robots now have a half hour head start instead of an infinite one."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Palate cleanser. Lighter, almost cheerful, the sarcasm turns playful.",
+          "text": "Something lighter, before you all unplug your routers. Apple announced an O L E D MacBook Pro with a touch screen. <short pause> Yes. A touch screen. On a Mac. The thing Apple spent fifteen years explaining you did not want. It costs four hundred dollars more than the regular one. <short pause> So if you would like to pay extra to put fingerprints on your display, <chuckles> your decade has finally arrived."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Sign-off. Slower, almost sincere under the sarcasm, like the end of a long week.",
+          "text": "That's the show. Here is your briefing summary, villains. You don't need zero days. You need patience, a list of unpatched PHP servers, and a customer who gave their bank password to a chatbot. <short pause> Everyone else: patch your stuff, turn off agents you don't understand, and assume your data is already on a message board somewhere."
+        },
+        {
+          "style": "Deadpan, dry, sarcastic late-night tech news host. Gravelly, unhurried, world-weary. American English. Lands jokes with a flat delivery and a beat of silence, never laughs at his own lines. Final line. Flat, final, a tiny smile on the last word.",
+          "text": "I'm your host. This has been techforbadguys. <short pause> Lock your door. <short pause> It won't help, <short pause> but it's polite."
+        }
+      ],
+      "voice": "Algenib",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "channel": "techforbadguys",
+        "episode": 1,
+        "title": "Patch Tuesday Is for Cowards",
+        "recorded_for": "2026-10-31",
+        "script": "episodes/techforbadguys/ep001-2026-10-31/script.md"
+      }
+    }
+  }
+}
