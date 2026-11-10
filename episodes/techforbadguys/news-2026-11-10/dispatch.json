@@ -1,0 +1,59 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "techforbadguys-news-2026-11-10",
+    "request": {
+      "turns": [
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Cold open. Instant, no warm-up.",
+          "text": "November tenth, twenty twenty six. Four things broke on Earth this week. <short pause> Let's go."
+        },
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. First story. Quick setup, then the quote read flat, then the jab.",
+          "text": "Number one. Vanderbilt University got hit with ransomware yesterday, and the entire network went dark. The official advice to staff: shut down your devices, disconnect from the Wi-Fi, and remain extremely vigilant. <short pause> So the security plan is, unplug it, and look around nervously."
+        },
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Faster, amused.",
+          "text": "One employee watched her laptop announce a system update. Then announce it was deleting old files. Then announce the ransom. <short pause> Honestly, great communication. Better than most I T departments."
+        },
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Second story. Brisk, mock sympathy.",
+          "text": "Number two. Fireworks A I, a company that hosts A I models for developers, just disclosed its second breach in about a month. The attackers came in through somebody else's cloud, and got to models that weren't even finished. <short pause> That's like stealing homework that isn't done yet."
+        },
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Third story. Building disbelief, then a flat verdict.",
+          "text": "Number three, and this one is a classic. S S H is the front door of basically every server on Earth. Researchers found that if an account has its password turned off, you can still log in, <short pause> by typing a really long password. Two hundred and fifty seven characters or more. That's it. That's the whole hack."
+        },
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Rapid follow-up, each fact drier than the last.",
+          "text": "The bug has been sitting there since twenty sixteen. It was added by a fix for a different bug. It's called S S Hole. And attackers were using it within hours."
+        },
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Fourth story. Sets up the irony carefully, then drops it.",
+          "text": "Number four. DigiCert. A company whose entire job is proving that people are who they say they are. During a server migration, they left an internal archive open to the internet. Inside: customer passports and driver's licenses. <short pause> The identity verification company leaked the identities."
+        },
+        {
+          "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Outro. Quick list, quick sign-off, done.",
+          "text": "That's the report. Patch your servers, check what your last migration left open, and maybe don't use unplugging the Wi-Fi as a strategy. <short pause> This has been tech for bad guys. See you next time."
+        }
+      ],
+      "voice": "Puck",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "channel": "techforbadguys",
+        "title": "Four things broke on Earth this week",
+        "recorded_for": "2026-11-10",
+        "script": "episodes/techforbadguys/news-2026-11-10/script.md"
+      }
+    }
+  }
+}
