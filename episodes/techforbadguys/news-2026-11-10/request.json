@@ -1,36 +1,36 @@
 {
   "turns": [
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Cold open. Instant, no warm-up.",
-      "text": "November tenth, twenty twenty six. Four things broke on Earth this week. <short pause> Let's go."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Cold open. Instant, no warm-up.",
+      "text": "November tenth, twenty twenty six. Here is everything that happened in tech today. <short pause> Fast."
     },
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. First story. Quick setup, then the quote read flat, then the jab.",
-      "text": "Number one. Vanderbilt University got hit with ransomware yesterday, and the entire network went dark. The official advice to staff: shut down your devices, disconnect from the Wi-Fi, and remain extremely vigilant. <short pause> So the security plan is, unplug it, and look around nervously."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Lead story. Serious newsreader for two sentences, then the dry jab.",
+      "text": "Nvidia's board just opened an independent investigation involving its own C E O. The official statement says Jensen Huang was the target of a foreign intelligence effort. The board also says it has full confidence in him. <short pause> Which is exactly what you say, right before you hire outside lawyers."
     },
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Faster, amused.",
-      "text": "One employee watched her laptop announce a system update. Then announce it was deleting old files. Then announce the ransom. <short pause> Honestly, great communication. Better than most I T departments."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Second story. Brisk, numbers rattled off, then a flat punchline.",
+      "text": "Meanwhile, Anthropic kicked off its I P O roadshow. Eight hundred and twenty five million shares, at seventy to seventy eight dollars each, under the ticker ant. That values the company at up to one point four trillion dollars. <short pause> For a chatbot that tells you you're absolutely right. Even when you're not."
     },
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Second story. Brisk, mock sympathy.",
-      "text": "Number two. Fireworks A I, a company that hosts A I models for developers, just disclosed its second breach in about a month. The attackers came in through somebody else's cloud, and got to models that weren't even finished. <short pause> That's like stealing homework that isn't done yet."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Quick add-on, sly.",
+      "text": "It also launched office tools, including a spreadsheet called Claude Sheets, aimed straight at Microsoft. <short pause> Excel has survived everything for forty years. We'll see."
     },
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Third story. Building disbelief, then a flat verdict.",
-      "text": "Number three, and this one is a classic. S S H is the front door of basically every server on Earth. Researchers found that if an account has its password turned off, you can still log in, <short pause> by typing a really long password. Two hundred and fifty seven characters or more. That's it. That's the whole hack."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Third story. Mock importance, then deadpan math.",
+      "text": "In actually important news: G T A six comes out next week. Rockstar confirmed it runs at thirty frames per second on every console. <short pause> Thirteen years of waiting. Thirty frames."
     },
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Rapid follow-up, each fact drier than the last.",
-      "text": "The bug has been sitting there since twenty sixteen. It was added by a fix for a different bug. It's called S S Hole. And attackers were using it within hours."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Fourth story. Delighted by how bad the idea is.",
+      "text": "Amazon's Ring announced a two hundred and forty nine dollar security drone that flies around inside your house. It can stay in the air for about eight minutes. <short pause> So, burglars: just wait nine."
     },
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Fourth story. Sets up the irony carefully, then drops it.",
-      "text": "Number four. DigiCert. A company whose entire job is proving that people are who they say they are. During a server migration, they left an internal archive open to the internet. Inside: customer passports and driver's licenses. <short pause> The identity verification company leaked the identities."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Fifth story. Fast, incredulous.",
+      "text": "And SoftBank lost seven billion dollars last quarter. It also wrote off three point seven billion in deposits on data center equipment. Non refundable. <short pause> That is the most expensive cancellation fee in history."
     },
     {
-      "style": "Rapid-fire tech news recap for developers. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Outro. Quick list, quick sign-off, done.",
-      "text": "That's the report. Patch your servers, check what your last migration left open, and maybe don't use unplugging the Wi-Fi as a strategy. <short pause> This has been tech for bad guys. See you next time."
+      "style": "Rapid-fire tech news recap for a general audience. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan sarcasm. American English. Punchlines land flat and quick, then straight on to the next line. Rapid-fire closer and sign-off.",
+      "text": "Also today: Google released Gemini four Carbon to everyone, and Reddit will now turn your arguments into product reviews. <short pause> That's the day. This has been tech for bad guys. See you next time."
     }
   ],
   "voice": "Puck",
@@ -46,7 +46,7 @@
   },
   "metadata": {
     "channel": "techforbadguys",
-    "title": "Four things broke on Earth this week",
+    "title": "Everything in tech today, 10 November 2026",
     "recorded_for": "2026-11-10",
     "script": "episodes/techforbadguys/news-2026-11-10/script.md"
   }

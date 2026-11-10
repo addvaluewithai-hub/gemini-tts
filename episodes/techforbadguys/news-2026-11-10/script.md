@@ -1,35 +1,55 @@
-# techforbadguys — 10 November 2026 — "Four things broke on Earth this week"
+# techforbadguys — 10 November 2026 — "Everything in tech today"
 
-Format: fast news recap, no intro and no backstory. The host's own story is
-told in a separate clip. Voice: Puck, fast delivery.
+Format: fast recap for a general tech audience, no intro and no backstory.
+Voice: Puck, fast delivery.
+
+## How the stories were picked
+
+1. Rank: the Techmeme river for 10 November 2026 and the Hacker News front
+   page, read the same day. A story qualifies when at least two major outlets
+   carry it or a large company announced it itself.
+2. Window: events of the 48 hours before recording.
+3. Verify: every claim in the script is in a primary source or a major outlet
+   listed below. Anything that could not be confirmed was left out.
 
 ## Script
 
-November tenth, twenty twenty six. Four things broke on Earth this week. Let's go.
+November tenth, twenty twenty six. Here is everything that happened in tech today. Fast.
 
-Number one. Vanderbilt University got hit with ransomware yesterday, and the entire network went dark. The official advice to staff: shut down your devices, disconnect from the Wi-Fi, and remain extremely vigilant. So the security plan is, unplug it, and look around nervously.
+Nvidia's board just opened an independent investigation involving its own C E O. The official statement says Jensen Huang was the target of a foreign intelligence effort. The board also says it has full confidence in him. Which is exactly what you say, right before you hire outside lawyers.
 
-One employee watched her laptop announce a system update. Then announce it was deleting old files. Then announce the ransom. Honestly, great communication. Better than most I T departments.
+Meanwhile, Anthropic kicked off its I P O roadshow. Eight hundred and twenty five million shares, at seventy to seventy eight dollars each, under the ticker ant. That values the company at up to one point four trillion dollars. For a chatbot that tells you you're absolutely right. Even when you're not.
 
-Number two. Fireworks A I, a company that hosts A I models for developers, just disclosed its second breach in about a month. The attackers came in through somebody else's cloud, and got to models that weren't even finished. That's like stealing homework that isn't done yet.
+It also launched office tools, including a spreadsheet called Claude Sheets, aimed straight at Microsoft. Excel has survived everything for forty years. We'll see.
 
-Number three, and this one is a classic. S S H is the front door of basically every server on Earth. Researchers found that if an account has its password turned off, you can still log in, by typing a really long password. Two hundred and fifty seven characters or more. That's it. That's the whole hack.
+In actually important news: G T A six comes out next week. Rockstar confirmed it runs at thirty frames per second on every console. Thirteen years of waiting. Thirty frames.
 
-The bug has been sitting there since twenty sixteen. It was added by a fix for a different bug. It's called S S Hole. And attackers were using it within hours.
+Amazon's Ring announced a two hundred and forty nine dollar security drone that flies around inside your house. It can stay in the air for about eight minutes. So, burglars: just wait nine.
 
-Number four. DigiCert. A company whose entire job is proving that people are who they say they are. During a server migration, they left an internal archive open to the internet. Inside: customer passports and driver's licenses. The identity verification company leaked the identities.
+And SoftBank lost seven billion dollars last quarter. It also wrote off three point seven billion in deposits on data center equipment. Non refundable. That is the most expensive cancellation fee in history.
 
-That's the report. Patch your servers, check what your last migration left open, and maybe don't use unplugging the Wi-Fi as a strategy. This has been tech for bad guys. See you next time.
+Also today: Google released Gemini four Carbon to everyone, and Reddit will now turn your arguments into product reviews. That's the day. This has been tech for bad guys. See you next time.
 
-## Sources
+## Sources (all dated 10 November 2026 unless noted)
 
-- Vanderbilt University ransomware, 9 November: Nashville Banner, https://nashvillebanner.com/2026/11/09/vanderbilt-university-cyberattack-byod/
-- Fireworks AI second breach, disclosed 10 November: BleepingComputer, https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/
-- OpenSSH "SSHole" (CVE-2026-123158), exploited within hours: The Hacker News, https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html
-- DigiCert archive exposure, reported 5 to 6 November: BleepingComputer, https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/ ; The Register, https://www.theregister.com/a/5308097
+- Nvidia board investigation: Nvidia newsroom, https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors ; The New York Times, https://www.nytimes.com/2026/11/10/business/nvidia-wachtell-lipton-jensen-huang.html
+- Anthropic IPO roadshow: Anthropic, https://www.anthropic.com/news/roadshow-launch ; valuation of up to $1.405 trillion, CNBC, https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html
+- Anthropic office tools: Bloomberg, https://www.bloomberg.com/news/articles/2026-11-10/anthropic-unveils-office-tools-ahead-of-ipo-taking-on-microsoft ; https://claude.com/resources/articles/sheets-whiteboards-data
+- GTA VI at 30 fps, out next week: The Verge, https://www.theverge.com/news/1030714/gta-vi-xbox-cloud-gaming-support
+- Ring Drone Cam, $249, about 8 minutes of flight: ZDNET, https://www.zdnet.com/home-and-office/ring-drone-cam-rover-cam-security-robots/
+- SoftBank $7B quarterly loss: CNBC, https://www.cnbc.com/2026/11/10/softbank-2q-earnings-tech-selloff.html ; $3.7B write-off, The Information, https://www.theinformation.com/briefings/softbank-writes-3-7-billion-advance-payments-data-center-projects
+- Gemini 4 Carbon availability: Google, https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/
+- Reddit Reviews: The Verge, https://www.theverge.com/tech/1030211/reddit-reviews-product-recommendations-electronics-beauty-shopping
 
-Accuracy notes: the SSHole bypass needs an account with its password disabled
-on a system using musl libc without PAM (Alpine Linux by default). DigiCert
-says only a small minority of archived files held identity documents. The
-Gemini 4 Carbon item from Field Report 001 was dropped: no primary source
-confirms it became generally available on 10 November.
+## Editorial notes
+
+- The Nvidia item sticks to the board's own statement. The reporting behind it
+  involves the chief executive's private life, which the script does not touch.
+- This script was written by Claude, which is made by Anthropic. The Anthropic
+  items are in because they led the day's coverage, and they get a joke at
+  the product's expense like everything else.
+- The SoftBank figures and the $1.405 trillion valuation come from Techmeme's
+  summaries of CNBC and The Information; those two sites block automated
+  reading, so the articles themselves were not opened.
+- "Thirteen years" counts from GTA V in 2013. "Forty years" counts from Excel
+  in 1985.

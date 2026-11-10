@@ -1,6 +1,10 @@
 {
-  "vanderbilt": { "url": "https://nashvillebanner.com/2026/11/09/vanderbilt-university-cyberattack-byod/", "source": "Nashville Banner", "date": "9 November 2026" },
-  "fireworks": { "url": "https://www.theregister.com/cyber-crime/2026/11/10/fireworks-ai-gets-burned-twice-as-customer-data-exposure-widens/5308722", "source": "The Register", "date": "10 November 2026" },
-  "sshole": { "url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html", "source": "The Hacker News", "date": "6 November 2026" },
-  "digicert": { "url": "https://www.theregister.com/security/2026/11/06/digicert-admits-16-month-security-lapse-exposed-customer-information/5308097", "source": "The Register", "date": "6 November 2026" }
+  "nvidia": { "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors", "source": "NVIDIA Newsroom", "date": "10 November 2026" },
+  "anthropic": { "url": "https://www.anthropic.com/news/roadshow-launch", "source": "Anthropic", "date": "10 November 2026" },
+  "sheets": { "url": "https://claude.com/resources/articles/sheets-whiteboards-data", "source": "Claude", "date": "10 November 2026" },
+  "gta": { "url": "https://www.theverge.com/news/1030714/gta-vi-xbox-cloud-gaming-support", "source": "The Verge", "date": "10 November 2026" },
+  "ring": { "url": "https://www.zdnet.com/home-and-office/ring-drone-cam-rover-cam-security-robots/", "source": "ZDNET", "date": "10 November 2026" },
+  "softbank": { "url": "https://www.cnbc.com/2026/11/10/softbank-2q-earnings-tech-selloff.html", "source": "CNBC", "date": "10 November 2026" },
+  "gemini": { "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/", "source": "Google", "date": "10 November 2026" },
+  "reddit": { "url": "https://www.theverge.com/tech/1030211/reddit-reviews-product-recommendations-electronics-beauty-shopping", "source": "The Verge", "date": "10 November 2026" }
 }
