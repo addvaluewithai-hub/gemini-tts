@@ -13,8 +13,9 @@ if (!cuesPath || !wavPath || !outPath) { console.error("usage: node clip.cjs <cu
 const FPS = 30, ROOT = __dirname;
 const cues = JSON.parse(fs.readFileSync(cuesPath, "utf8"));
 const epDir = path.resolve(path.dirname(cuesPath), cues.episode);
-const words = JSON.parse(fs.readFileSync(path.join(epDir, cues.transcript), "utf8")).words
-  .map((w) => ({ s: w.start_ms / 1000, e: Math.max(w.end_ms, w.start_ms + 60) / 1000, t: w.text }));
+const transcript = JSON.parse(fs.readFileSync(path.join(epDir, cues.transcript), "utf8"));
+const words = transcript.words.map((w) => ({ s: w.start_ms / 1000, e: Math.max(w.end_ms, w.start_ms + 60) / 1000, t: w.text }));
+if (cues.to == null) cues.to = Math.round((transcript.duration_ms / 1000 + 0.9) * 10) / 10;   // whole episode, with a beat to react at the end
 
 // ---- audio level per frame, from the WAV itself --------------------------------------------------
 function readWav(file) {
@@ -38,7 +39,27 @@ const { direct } = require("./director.cjs");
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const dur = cues.to - cues.from + cues.lead, N = Math.round(dur * FPS);
 const tAudio = (i) => cues.from - cues.lead + i / FPS;
-let acting = [];
+let acting = [], chapters = [];
+
+// Cue entries may say `match` (a pattern found in a sentence) instead of a time. Resolve them once.
+function resolveCues() {
+  const { sentences } = require("./director.cjs");
+  const sents = sentences(words.filter((w) => w.e > cues.from && w.s < cues.to));
+  const find = (m) => sents.find((q) => new RegExp(m, "i").test(q.text));
+  const paper = [];
+  for (const c of cues.paper || []) {
+    if (c.match === undefined) { paper.push(c); continue; }
+    const q = find(c.match); if (!q) { console.warn("cue not found:", c.match); continue; }
+    const end = c.until ? (find(c.until) || q).e : q.e;
+    paper.push({ t: q.s - 0.3, pose: c.pose }, { t: end + 0.15, pose: "pockets" });
+  }
+  cues.paper = paper.sort((a, b) => a.t - b.t);
+  cues.acting = (cues.acting || []).map((c) => { if (c.match === undefined) return c; const q = find(c.match); if (!q) { console.warn("cue not found:", c.match); return null; } return { ...c, from: q.s, to: q.e }; }).filter(Boolean);
+  chapters = (cues.chapters || []).map((c) => { if (c.match === undefined) return c; const q = find(c.match); if (!q) { console.warn("chapter not found:", c.match); return null; } return { t: q.s - 0.2, label: c.label }; }).filter(Boolean).sort((a, b) => a.t - b.t);
+  // spelling fixes for the captions only: [["heard", "shown"], ...], matched per word without punctuation
+  const fix = new Map((cues.fix || []).map(([a, b]) => [a.toLowerCase(), b]));
+  for (const w of words) { const core = w.t.replace(/^[^A-Za-z0-9]+|[^A-Za-z0-9]+$/g, ""), hit = fix.get(core.toLowerCase()); w.show = hit ? w.t.replace(core, hit) : w.t; }
+}
 
 function frame(i) {
   const tv = i / FPS, t = tAudio(i), a0 = acting[i];
@@ -50,10 +71,10 @@ function frame(i) {
   const chunk = 7, start = a + Math.floor(Math.max(0, wi - a) / chunk) * chunk;
   const shown = words.slice(start, Math.min(b + 1, start + chunk)).map((w, k) => {
     const idx = start + k, age = t - w.s;
-    return { t: w.t, state: idx > wi ? "off" : idx === wi ? "on now" : "on", scale: idx === wi ? (1 + 0.14 * Math.max(0, 1 - age / 0.16)).toFixed(3) : 1 };
+    return { t: w.show ?? w.t, state: idx > wi ? "off" : idx === wi ? "on now" : "on", scale: idx === wi ? (1 + 0.14 * Math.max(0, 1 - age / 0.16)).toFixed(3) : 1 };
   });
   const ts = Math.max(0, t), mm = String(Math.floor(ts / 60)).padStart(2, "0"), ss = String(Math.floor(ts % 60)).padStart(2, "0"), ff = String(Math.floor((ts % 1) * FPS)).padStart(2, "0");
-  return { ...a0, face: cues.face, label: cues.label, chapter: cues.chapter, words: shown, recOn: Math.floor(tv * 1.2) % 2 === 0, tc: `${mm}:${ss}:${ff}`, progress: clamp(i / (N - 1)) };
+  return { ...a0, face: cues.face, label: cues.label, status: cues.status ?? "REC", chapter: ([...chapters].reverse().find((c) => c.t <= t) || {}).label ?? cues.chapter ?? "", words: shown, recOn: Math.floor(tv * 1.2) % 2 === 0, tc: `${mm}:${ss}:${ff}`, progress: clamp(i / (N - 1)) };
 }
 
 // ---- render ---------------------------------------------------------------------------------------
@@ -65,6 +86,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(0, "127.0.0.1", async () => {
+  resolveCues();
   const lip = await lipsync.build(words.filter((w) => w.e > cues.from - 1 && w.s < cues.to + 1), level);
   const show = await direct({ words: words.filter((w) => w.e > cues.from && w.s < cues.to), lip, level, cues, N, FPS, tAudio });
   acting = show.frames;

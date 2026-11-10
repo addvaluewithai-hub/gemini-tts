@@ -1,0 +1,45 @@
+{
+  "note": "Field Report 001, whole episode. Feelings and gestures are chosen per sentence by the director; `acting` pins the punchlines. `match` is a pattern found in a sentence of the transcript.",
+  "episode": "../../episodes/techforbadguys/fr001-2026-11-10",
+  "transcript": "fr001.transcript.json",
+  "face": "pear",
+  "from": 0,
+  "to": null,
+  "lead": 1.2,
+  "label": "FIELD REPORT 001",
+  "status": "TRANSMITTING",
+  "chapter": "TO: THE DIRECTORATE",
+  "chapters": [
+    { "match": "^Observation one", "label": "OBSERVATION 1 // THE DOOR" },
+    { "match": "^Observation two", "label": "OBSERVATION 2 // THE UNIVERSITY" },
+    { "match": "^Observation three", "label": "OBSERVATION 3 // THE MACHINES" },
+    { "match": "question you care about", "label": "THREAT ASSESSMENT" },
+    { "match": "^My assessment", "label": "RECOMMENDATION" },
+    { "match": "^Requests", "label": "REQUESTS" }
+  ],
+  "paper": [
+    { "t": -1.2, "pose": "holes" },
+    { "t": -0.25, "pose": "pockets" },
+    { "match": "I quote", "pose": "over", "until": "extremely vigilant" }
+  ],
+  "acting": [
+    { "match": "wear a hat", "emote": "proud", "gesture": "point" },
+    { "match": "humans a threat", "emote": "skeptical", "gesture": "shrug" },
+    { "match": "^For free", "emote": "smug", "react": "smug" },
+    { "match": "checked this three times", "emote": "deadpan", "gesture": "count", "react": "deadpan" },
+    { "match": "this is funny here", "emote": "bored", "react": "eyeroll" },
+    { "match": "Unplug it", "emote": "deadpan", "gesture": "shrug", "react": "deadpan" },
+    { "match": "Very polite", "emote": "grin" },
+    { "match": "without comment", "emote": "sly", "react": "wink" },
+    { "match": "robbed of minds", "emote": "worried", "gesture": "facepalm", "react": "deadpan" },
+    { "match": "call that a trap", "emote": "sly", "gesture": "point" },
+    { "match": "call it a launch", "emote": "smug", "react": "smug" },
+    { "match": "Can they reach us", "emote": "serious", "gesture": "chin" },
+    { "match": "forgot how", "emote": "deadpan", "react": "eyeroll" },
+    { "match": "cancel the invasion", "emote": "smug", "gesture": "present" },
+    { "match": "excellent job", "emote": "grin", "react": "smug" },
+    { "match": "budget for hats", "emote": "proud", "gesture": "count" },
+    { "match": "End of transmission", "emote": "smug", "gesture": "wave", "react": "wink" }
+  ],
+  "fix": []
+}

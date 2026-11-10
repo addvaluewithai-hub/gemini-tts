@@ -22,7 +22,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#0C57A0}
 #tc{position:absolute;left:1150px;bottom:104px;font-weight:800;font-size:22px;letter-spacing:.14em;color:#BFE9FF}
 </style></head><body>
 <div id="stage"><div id="floor"></div><div id="char"></div>
-  <div id="hud"><div id="label"></div><div id="rec"><div id="dot"></div>REC</div></div>
+  <div id="hud"><div id="label"></div><div id="rec"><div id="dot"></div><span id="status">REC</span></div></div>
   <div id="chapter"></div><div id="cap"></div><div id="tc"></div><div id="bar"><div id="fill"></div></div></div>
 <script type="module">
 import { peek3d } from "/characters/peek3d.js";
@@ -33,7 +33,7 @@ window.draw = (st) => {
   $("char").innerHTML = peek3d(st.e, { face: st.face, paper: st.paper, paperShift: st.shift, bob: st.bob, tilt: st.tilt, bg: false, grain: false, size: 1100,
     armL: st.armL, armR: st.armR, shrug: st.shrug, sway: st.sway, bounce: st.bounce, squash: st.squash, roll: false });
   $("char").style.transform = `scale(${st.cam})`;
-  $("label").textContent = st.label; $("chapter").textContent = st.chapter;
+  $("label").textContent = st.label; $("chapter").textContent = st.chapter; $("status").textContent = st.status;
   $("dot").style.opacity = st.recOn ? 1 : 0.25;
   $("cap").innerHTML = st.words.map((w) => `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`).join("");
   $("tc").textContent = st.tc; $("fill").style.width = (st.progress * 100).toFixed(2) + "%";
