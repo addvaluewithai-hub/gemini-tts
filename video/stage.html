@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0C57A0}
+#stage{width:1920px;height:1080px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace;color:#fff;
+  background:radial-gradient(ellipse 1300px 1000px at 590px 470px,#6FD6FF 0%,#1F96E8 55%,#0C57A0 100%)}
+#floor{position:absolute;left:-200px;top:820px;width:1600px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(143,224,255,.32),rgba(143,224,255,0))}
+#char{position:absolute;left:30px;top:-6px;width:1100px;height:1100px}
+#char svg{display:block}
+#hud{position:absolute;left:1150px;top:70px;right:70px;display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:24px;letter-spacing:.14em}
+#rec{display:flex;align-items:center;gap:12px}
+#dot{width:16px;height:16px;border-radius:50%;background:#FF3B47}
+#chapter{position:absolute;left:1150px;top:372px;font-weight:800;font-size:24px;letter-spacing:.16em;color:#BFE9FF}
+#cap{position:absolute;left:1150px;top:418px;width:700px;font-family:"Anton";font-size:86px;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+#cap span{display:inline-block;margin-right:.24em;transform-origin:left bottom}
+#cap .off{opacity:.22}
+#cap .on{opacity:1}
+#cap .now{color:#FFE66D}
+#bar{position:absolute;left:1150px;right:70px;bottom:78px;height:8px;border-radius:4px;background:rgba(255,255,255,.22)}
+#fill{height:100%;border-radius:4px;background:#FFE66D;width:0}
+#tc{position:absolute;left:1150px;bottom:104px;font-weight:800;font-size:22px;letter-spacing:.14em;color:#BFE9FF}
+</style></head><body>
+<div id="stage"><div id="floor"></div><div id="char"></div>
+  <div id="hud"><div id="label"></div><div id="rec"><div id="dot"></div>REC</div></div>
+  <div id="chapter"></div><div id="cap"></div><div id="tc"></div><div id="bar"><div id="fill"></div></div></div>
+<script type="module">
+import { peek3d } from "/characters/peek3d.js";
+const $ = (id) => document.getElementById(id);
+const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+// One frame. `st` is plain data computed by the renderer; nothing here depends on wall-clock time.
+window.draw = (st) => {
+  $("char").innerHTML = peek3d(st.e, { face: st.face, paper: st.paper, paperShift: st.shift, bob: st.bob, tilt: st.tilt, bg: false, grain: false, size: 1100 });
+  $("label").textContent = st.label; $("chapter").textContent = st.chapter;
+  $("dot").style.opacity = st.recOn ? 1 : 0.25;
+  $("cap").innerHTML = st.words.map((w) => `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`).join("");
+  $("tc").textContent = st.tc; $("fill").style.width = (st.progress * 100).toFixed(2) + "%";
+};
+await document.fonts.load('86px "Anton"'); await document.fonts.load('800 24px "JetBrains Mono"'); await document.fonts.ready; window.__ready = true;
+</script></body></html>

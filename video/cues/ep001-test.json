@@ -1,0 +1,18 @@
+{
+  "note": "Direction for the first animated test clip. Times are seconds of episode audio.",
+  "episode": "../../episodes/techforbadguys/ep001-2026-10-31",
+  "transcript": "ep001.transcript.json",
+  "face": "pear",
+  "from": 0,
+  "to": 30.9,
+  "lead": 1.2,
+  "label": "EARTH REPORT 001",
+  "chapter": "COLD OPEN",
+  "paper": [
+    { "t": -1.2, "pose": "holes" },
+    { "t": -0.25, "pose": "pockets" },
+    { "t": 16.2, "pose": "over" },
+    { "t": 21.25, "pose": "pockets" }
+  ],
+  "deadpan": [[14.95, 16.15], [24.95, 25.6], [29.95, 30.9]]
+}

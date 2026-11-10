@@ -123,12 +123,13 @@ function mouth(e, c) {
   const y = c.my, w = c.mw, s = w / 58, hi = c.skin[0];
   const tooth = (x, ty, tw, th) => `<rect x="${x}" y="${ty}" width="${tw}" height="${th}" rx="${tw * 0.34}" fill="url(#${G}tooth)"/><rect x="${x}" y="${ty}" width="${tw}" height="${th}" rx="${tw * 0.34}" fill="none" stroke="#B9B2A2" stroke-width="2" opacity=".55"/>`;
   if (e.mouth === "talk") {
-    const d = `M${600 - w} ${y} Q600 ${y - 16 * s} ${600 + w} ${y} Q${600 + w - 8 * s} ${y + 72 * s} 600 ${y + 76 * s} Q${600 - w + 8 * s} ${y + 72 * s} ${600 - w} ${y} Z`;
+    const o = Math.max(0.1, Math.min(1, e.open ?? 1)), v = w * (0.6 + 0.4 * o);   // v: mouth narrows as it closes
+    const d = `M${600 - v} ${y} Q600 ${y - 16 * s} ${600 + v} ${y} Q${600 + v - 8 * s} ${y + 72 * s * o} 600 ${y + 76 * s * o} Q${600 - v + 8 * s} ${y + 72 * s * o} ${600 - v} ${y} Z`;
     const row = c.teeth
       ? [[-45, 20, 20], [-23, 22, 30], [1, 22, 30], [25, 20, 20]].map(([dx, tw, th]) => tooth(600 + dx * s, y - 12 * s, tw * s, th * s)).join("")
       : `<rect x="${600 - 38 * s}" y="${y - 12 * s}" width="${76 * s}" height="${26 * s}" rx="${9 * s}" fill="#FFFDF6"/>`;
     return `<path d="${d}" fill="url(#${G}mouth)"/><clipPath id="${G}mc"><path d="${d}"/></clipPath>
-      <g clip-path="url(#${G}mc)"><ellipse cx="602" cy="${y + 62 * s}" rx="${36 * s}" ry="${20 * s}" fill="#FF7DB8"/><ellipse cx="${594}" cy="${y + 55 * s}" rx="${14 * s}" ry="${6 * s}" fill="#FFB1D8" opacity=".7"/>${row}</g>
+      <g clip-path="url(#${G}mc)"><ellipse cx="602" cy="${y + 20 * s + 42 * s * o}" rx="${36 * s}" ry="${20 * s}" fill="#FF7DB8"/>${row}</g>
       <path d="${d}" fill="none" stroke="${c.dark}" stroke-width="6"/>`;
   }
   if (e.mouth === "flat") return `
@@ -194,7 +195,9 @@ function newspaper(top, holes, c) {
   </g>${rims}</g>`;
 }
 
-export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox = "0 0 1200 1200" } = {}) {
+// Animation hooks: e.open (0..1 mouth opening while talking), paperShift (px the open newspaper is lowered),
+// bob / tilt (head and hat offset in px and degrees), bg and grain (turn off for compositing and speed).
+export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox = "0 0 1200 1200", paperShift = 0, bob = 0, tilt = 0, bg = true, grain = true } = {}) {
   const c = FACES[face];
   const [hi, mid, lo] = c.skin;
   const arm = "M436 636 C388 690 370 772 380 832 C402 846 438 846 458 832 C460 772 472 702 490 650 Z";
@@ -264,14 +267,14 @@ export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox 
   const low = Math.max(...c.eyes.map((q) => q.cy + q.ry));
   const sheet = (top, holes, y) => gripBack(292, y, 1) + gripBack(908, y - 8, -1) + newspaper(top, holes, c) + grip(292, y, 1, lo) + grip(908, y - 8, -1, lo);
   const paperLayer = paper === "over" ? sheet(low + 4, false, low + 110) : paper === "holes" ? sheet(292, true, 560) : "";
+  const pose = `translate(0 ${bob}) rotate(${tilt} 600 620)`;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" width="${size}" height="${size}">${defs(c)}
-  <rect width="1200" height="1200" fill="url(#${G}bg)"/>
-  <ellipse cx="600" cy="1080" rx="900" ry="200" fill="#8FE0FF" opacity=".22" filter="url(#${G}b28)"/>
+  ${bg ? `<rect width="1200" height="1200" fill="url(#${G}bg)"/><ellipse cx="600" cy="1080" rx="900" ry="200" fill="#8FE0FF" opacity=".22" filter="url(#${G}b28)"/>` : ""}
   ${body}
   ${paper === "roll" ? sleeve(false) + mitt(419, 872, 1, lo) + cuff(false) + sleeve(true) + cuff(true) + roll : ""}
-  ${paper === "pockets" ? tucked + sleeve(false) + sleeve(true) + flap(false) + flap(true) : ""}
-  ${collar}${head}${paperLayer}${hat}
-  <rect width="1200" height="1200" filter="url(#${G}grain)" opacity=".1" style="mix-blend-mode:overlay"/>
+  ${paper !== "roll" ? tucked + sleeve(false) + sleeve(true) + flap(false) + flap(true) : ""}
+  ${collar}<g transform="${pose}">${head}</g><g transform="translate(0 ${paperShift})">${paperLayer}</g><g transform="${pose}">${hat}</g>
+  ${grain ? `<rect width="1200" height="1200" filter="url(#${G}grain)" opacity=".1" style="mix-blend-mode:overlay"/>` : ""}
   </svg>`;
   return svg.replaceAll(G, `p3${face}${paper}-`);
 }

@@ -160,3 +160,28 @@ the lip and a full upper row when talking.
 ```bash
 node characters/render-sheet.cjs characters/pear pear.html
 ```
+
+## Animated clips
+
+`clip.cjs` renders the host talking over episode audio. Each frame is a pure
+function of time, so a clip can be re-rendered or cut anywhere:
+
+1. the audio level per frame is read from the WAV and gated by the word
+   timestamps, which drives how far the mouth opens;
+2. a small director adds blinks, glances, a head bob and tilt, the deadpan
+   holds and the newspaper coming up or dropping away, as listed in a cue file;
+3. `stage.html` draws the character plus word-synced captions, Chromium
+   screenshots it, and ffmpeg encodes the frames with the audio.
+
+```bash
+cd video && npm install --no-package-lock
+# audio: the WAV named in the episode's result.json (audio_url)
+node clip.cjs cues/ep001-test.json /path/to/ep001.wav out.mp4
+node clip.cjs cues/ep001-test.json /path/to/ep001.wav out.mp4 --still 2.0,15.5   # single frames
+```
+
+A cue file (`cues/*.json`) gives the episode folder, the audio range, a
+silent lead-in, the face, when the newspaper pose changes
+(`holes`, `pockets`, `over`) and the time ranges to hold a deadpan look.
+Times are seconds of episode audio. Rendering runs at roughly real time on
+four browser pages.
