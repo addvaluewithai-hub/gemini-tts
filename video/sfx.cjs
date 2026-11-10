@@ -25,6 +25,7 @@ const MAKE = {
     const a = click(0, 2300), b = click(0.075, 1700); return voice(0.2, (t) => a(t) + b(t)); },
   impact: () => { const R = rng(11); let lp = 0; return voice(0.6, (t) => { lp += 0.2 * ((R() * 2 - 1) - lp); return Math.tanh(1.8 * (Math.sin(TAU * (38 * t + (110 / 18) * (1 - Math.exp(-18 * t)))) * Math.exp(-t * 6.5) + lp * 2.2 * Math.exp(-t * 34))) * 0.8; }); },
   thud: () => { const R = rng(13); let lp = 0; return voice(0.5, (t) => { lp += 0.35 * ((R() * 2 - 1) - lp); const rattle = t > 0.09 && t < 0.3 ? (R() * 2 - 1) * 0.25 * Math.exp(-(t - 0.09) * 22) : 0; return Math.tanh(2 * Math.sin(TAU * (55 * t + (70 / 22) * (1 - Math.exp(-22 * t)))) * Math.exp(-t * 11) + lp * 2 * Math.exp(-t * 50)) * 0.7 + rattle; }); },
+  print: () => { const R = rng(23); return voice(0.75, (t) => { const k = (t * 22) % 1; return (R() * 2 - 1) * Math.exp(-k * 14) * 0.16 * Math.min(1, (0.75 - t) / 0.05) + Math.sin(TAU * 96 * t) * 0.03; }); },
   tick: () => tone(0.14, (t) => 50 + 60 * Math.exp(-t * 30), (t) => 0.5 * Math.exp(-t * 24)),
   pop: () => tone(0.09, (t) => 420 + 700 * (t / 0.09), (t) => 0.32 * Math.sin(Math.PI * Math.min(1, t / 0.09)) ** 0.7),
   ding: () => mixin(tone(0.8, () => 1174.7, (t) => 0.13 * Math.exp(-t * 6)), tone(0.8, () => 1760, (t) => 0.07 * Math.exp(-t * 8))),

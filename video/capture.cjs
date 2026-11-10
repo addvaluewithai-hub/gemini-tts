@@ -2,7 +2,8 @@
 // Screenshots the top of news articles for use as slides.
 //   node capture.cjs <slides.json> <outDir>
 // slides.json: { "name": { "url": "...", "source": "site name" }, ... }
-// Each capture is the article header (headline plus what follows it) as a JPEG at 2x. A cookie notice is
+// Each capture starts at the article header and runs `tall` screens down the page (default 2.4, per
+// slide or 1 for just the header), as a JPEG at 2x, so the stage can scroll through it. A cookie notice is
 // answered with its own "reject" button (or "accept" when that is all it offers). A page that answers
 // with a bot check or an error is skipped and reported; the stage then draws a plain text card for that
 // story instead. Pages go through the session proxy when HTTPS_PROXY is set.
@@ -26,11 +27,12 @@ const { chromium } = require("playwright");
       const h1 = await page.evaluate(() => { const h = [...document.querySelectorAll("h1")].find((x) => x.innerText.trim().length > 20); if (!h) return null; const b = h.getBoundingClientRect(); return { text: h.innerText.trim(), x: b.x, y: b.y + scrollY, w: b.width, h: b.height }; });
       if (status >= 400 || !h1 || /confirm you are human|checking your browser|access denied/i.test(title + " " + (h1 ? h1.text : ""))) { report[name] = { ok: false, status, title }; await ctx.close(); continue; }
       // Frame the headline: a 16:9 window that starts a little above it.
-      const x = Math.max(0, Math.min(h1.x - 60, 1600 - 1280)), y = Math.max(0, h1.y - 70), w = Math.min(1600 - x, Math.max(1280, h1.w + 120)), h = Math.round(w * 9 / 16);
-      await page.setViewportSize({ width: 1600, height: Math.max(1400, Math.ceil(y + h + 40)) });
+      const x = Math.max(0, Math.min(h1.x - 60, 1600 - 1280)), y = Math.max(0, h1.y - 70), w = Math.min(1600 - x, Math.max(1280, h1.w + 120)), screen = Math.round(w * 9 / 16);
+      const pageH = await page.evaluate(() => document.documentElement.scrollHeight), h = Math.max(screen, Math.min(Math.round(screen * (item.tall ?? 2.4)), pageH - y - 4));
+      await page.setViewportSize({ width: 1600, height: Math.max(1400, Math.ceil(y + h + 40)) }); await page.waitForTimeout(1200);
       await page.evaluate((yy) => scrollTo(0, 0), y);
       await page.screenshot({ path: path.join(outDir, name + ".jpg"), type: "jpeg", quality: 86, clip: { x, y, width: w, height: h } });
-      report[name] = { ok: true, file: name + ".jpg", headline: h1.text, focus: [(h1.x - x) / w, (h1.y - y) / h, h1.w / w, h1.h / h].map((v) => Math.round(v * 1000) / 1000) };
+      report[name] = { ok: true, file: name + ".jpg", screens: Math.round(h / screen * 1000) / 1000, headline: h1.text, focus: [(h1.x - x) / w, (h1.y - y) / screen, h1.w / w, h1.h / screen].map((v) => Math.round(v * 1000) / 1000) };
     } catch (e) { report[name] = { ok: false, error: String(e.message).slice(0, 140) }; }
     await ctx.close();
   }

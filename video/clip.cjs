@@ -117,7 +117,7 @@ server.listen(0, "127.0.0.1", async () => {
   if (studio) {
     const list = JSON.parse(fs.readFileSync(path.join(epDir, cues.slides || "slides.json"), "utf8")), capFile = path.join(epDir, "slides", "captured.json");
     const got = fs.existsSync(capFile) ? JSON.parse(fs.readFileSync(capFile, "utf8")) : {};
-    for (const [k, v] of Object.entries(list)) slides[k] = { ...v, ...(got[k] && got[k].ok ? { file: got[k].file, focus: got[k].focus, headline: got[k].headline } : {}) };
+    for (const [k, v] of Object.entries(list)) slides[k] = { ...v, ...(got[k] && got[k].ok ? { file: got[k].file, focus: got[k].focus, headline: got[k].headline, screens: got[k].screens || 1 } : {}) };
     plan = require("./editor.cjs").resolve(cues, words, slides);
     cues.acting.push(...plan.acting); cues.paper = [...plan.paper, ...cues.paper.filter((c) => c.t > -99)].sort((a, b) => a.t - b.t);
   }

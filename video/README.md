@@ -258,7 +258,7 @@ node clip.cjs cues/news-2026-11-10.json <voice.wav> out.mp4 --workers 6
 
 | File | Job |
 | --- | --- |
-| `capture.cjs` | Screenshots each article header to `slides/<name>.jpg` and records the headline's position in `slides/captured.json`. It answers a cookie notice with the notice's own button. A page that returns a bot check or an error is skipped; give that slide a `text` line in `slides.json` and it is shown as a plain text card with the source and date. |
+| `capture.cjs` | Screenshots each article from its header down (2.4 screens by default, `tall` per slide) to `slides/<name>.jpg` and records the headline's position in `slides/captured.json`, so an insert can scroll through the page. It answers a cookie notice with the notice's own button. A page that returns a bot check or an error is skipped; give that slide a `text` line in `slides.json` and it is shown as a plain text card with the source and date. |
 | `studio.html` | The set (wall, screen, desk, props), the full-frame screenshot window, the big-number cards, the story chip and the captions. `window.draw(state)` paints one frame. |
 | `editor.cjs` | Reads the `edit` list and produces the state for every frame: camera, transitions, what the screen shows, where the host is. Also emits the sound cues. |
 | `sfx.cjs` | Synthesises every effect (whoosh, shutter, impact, pop, ding, riser, drone) and the music bed. No audio files are used besides the voice. |
@@ -282,9 +282,11 @@ changes something inside the running shot.
 | `shot` | `wide`, `host`, `close`, `two` (host and screen), `side` (host left, room for a card), `low` (desk level), `insert` (the screenshot, full frame) |
 | `slide` | Name in `slides.json`. Shown on the wall screen, and in the window for `insert`. `null` puts the channel ident back. |
 | `story` | `{ n, tag }` for the chip in the corner; the chip also shows the slide's source and date. |
-| `mark` | `"headline"` or `[x, y, w, h]` (fractions of the screenshot): a marker runs over that region. |
-| `zoom`, `center` | How far the insert pushes in, and the point it settles on (defaults to the marked region). |
-| `fact` | `{ big, small, tone, riser }`: a card slammed in beside the host. `tone` is `bubble` or `stamp`. Use it on `side` shots. |
+| `mark` | `"headline"` or `[x, y, w, h]`: a marker runs over that region. x and w are fractions of the width; y and h count 16:9 screens from the top, so y can pass 1 on a tall capture. |
+| `zoom`, `center` | How far the insert pushes in, and the point it settles on (defaults to the marked region). Every insert opens at the top of the page and scrolls there. |
+| `scroll` | Screens per second the insert keeps scrolling down. |
+| `fact` | `{ big, small, tone, riser, chart }`: a card slammed in beside the host. `tone` is `bubble` or `stamp`; `chart: "down"` draws a falling line behind it. Use it on `side` shots. |
+| `meme` | A drawing of our own beside the host, on `side` shots: `{ kind: "chat", user, bot }`, `{ kind: "versus", no, yes }` (two panels starring the host), `{ kind: "list", title, items }`, `{ kind: "receipt", title, items, total, foot }`. |
 | `duck` | The host sinks behind the desk until only the hat and eyes show. |
 | `lurk` | He leaves the chair and reappears above the wall screen. |
 | `peek` | His head rises over the corner of an insert. |
@@ -302,3 +304,13 @@ changing pitch; times in the cue file are then in sped-up time), `lead` and
 
 `--plan` prints the resolved cut list with times before rendering, and
 `--still 12.5,40` writes single frames for checking.
+
+### What goes on screen, and what does not
+
+Screenshots are taken from the story's own page and always carry the source
+and date. Memes are drawn here with the host, not taken from existing meme
+images. Video from third parties is not downloaded: the trailers and product
+films linked from these stories sit on YouTube, and pulling them would break
+its terms and invite copyright claims on the channel. The motion in an
+episode comes from scrolling the real article, the camera, the props and the
+host.

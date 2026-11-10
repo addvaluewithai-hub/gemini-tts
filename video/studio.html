@@ -5,6 +5,7 @@
 @font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
 @font-face{font-family:"Elite";src:url("/node_modules/@fontsource/special-elite/files/special-elite-latin-400-normal.woff2") format("woff2")}
 @font-face{font-family:"Serif";src:url("/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"VT";src:url("/node_modules/@fontsource/vt323/files/vt323-latin-400-normal.woff2") format("woff2")}
 *{box-sizing:border-box;margin:0}
 html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #frame{position:relative;width:1920px;height:1080px;overflow:hidden;background:#05060d;font-family:"Anton";color:#fff}
@@ -13,7 +14,8 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #wall{left:-700px;top:-500px;width:3320px;height:2080px}
 #lurk{left:1280px;width:340px;height:340px}
 #tv{left:1060px;top:170px;width:780px;height:439px;overflow:hidden;background:#0d1022;border-radius:6px;box-shadow:0 0 0 14px #08080e,0 0 0 16px #2c3052,0 30px 60px rgba(0,0,0,.55)}
-#tv img,#view img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:top;display:none}
+#tv img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:top;display:none}
+#view img{position:absolute;left:0;top:0;width:100%;height:auto;display:none}
 #tvident{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,#2a3170,#0d1022);letter-spacing:.06em}
 #tvident b{font-size:74px;font-weight:400}#tvident b i{font-style:normal;color:#ff4fa3}
 #tvident span{font-family:"Elite";font-size:26px;color:#bfe9ff;margin-top:14px;letter-spacing:.12em}
@@ -37,7 +39,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #url{margin-left:18px;flex:1;height:34px;border-radius:17px;background:#fff;padding:7px 18px 0;font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #srcchip{font-family:"Anton";font-size:22px;letter-spacing:.08em;background:#17171b;color:#FFE66D;padding:6px 14px 3px;border-radius:6px;white-space:nowrap}
 #view{position:relative;height:810px;overflow:hidden;background:#fff}
-#pan{position:absolute;inset:0;transform-origin:0 0}
+#pan{position:absolute;left:0;top:0;width:1440px;height:810px;transform-origin:0 0}
 #mark{position:absolute;background:#FFE66D;mix-blend-mode:multiply;border-radius:5px;transform-origin:0 50%}
 #peek{left:1320px;width:640px;height:640px}
 #fact{right:70px;top:250px;width:900px;text-align:center;transform-origin:50% 45%}
@@ -45,6 +47,27 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #factsmall{font-family:"Elite";font-size:40px;margin-top:22px;color:#fff;text-shadow:0 3px 0 #05060d}
 #fact.bubble #factbig{display:inline-block;font-size:86px;color:#17171b;background:#fff;text-shadow:none;padding:40px 54px 30px;border-radius:44px 44px 44px 8px;box-shadow:0 14px 0 rgba(5,6,13,.6);white-space:normal;line-height:1.08}
 #fact.stamp #factbig{display:inline-block;font-size:100px;color:#ff4654;text-shadow:none;border:12px solid #ff4654;border-radius:18px;padding:26px 40px 10px;letter-spacing:.04em;background:rgba(5,6,13,.35)}
+#factchart{position:absolute;left:40px;top:-40px;width:820px;height:420px;z-index:-1;overflow:visible}
+#meme{right:60px;top:150px;width:900px;height:770px;display:flex;align-items:center;justify-content:center;transform-origin:50% 50%}
+.chat{width:800px;background:#11152e;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 2px rgba(255,255,255,.14);font-family:"Elite"}
+.chat .bar{background:#1c2250;padding:18px 26px 12px;font-family:"Anton";letter-spacing:.1em;font-size:26px;color:#bfe9ff;display:flex;gap:12px;align-items:center}
+.chat .bar i{width:14px;height:14px;border-radius:50%;background:#28c840;margin-bottom:6px}
+.chat .body{padding:34px 30px 40px;display:flex;flex-direction:column;gap:26px;height:360px}
+.chat .u{align-self:flex-end;background:#3557ff;font-size:46px;padding:22px 28px 12px;border-radius:26px 26px 6px 26px;transform-origin:100% 100%}
+.chat .b{align-self:flex-start;background:#fff;color:#17171b;font-family:"Anton";font-size:62px;padding:22px 30px 12px;border-radius:26px 26px 26px 6px;transform-origin:0 100%}
+.chat .dots{align-self:flex-start;background:#fff;color:#17171b;font-family:"Anton";font-size:54px;padding:0 26px 12px;border-radius:26px 26px 26px 6px;letter-spacing:.14em}
+.vs{width:820px;display:grid;grid-template-columns:330px 1fr;grid-auto-rows:330px;gap:8px;background:#05060d;border:8px solid #05060d;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.vs .p{background:radial-gradient(circle at 40% 40%,#6FD6FF,#1F96E8 70%,#0C57A0);overflow:hidden}
+.vs .t{background:#fff;color:#17171b;font-size:52px;line-height:1.06;display:flex;align-items:center;padding:8px 30px 0;text-transform:uppercase}
+.list{width:780px;background:#f3efe4;color:#17171b;border-radius:10px;padding:36px 44px 30px;transform:rotate(-2deg);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.list h3{font-weight:400;font-size:58px;letter-spacing:.03em;border-bottom:6px solid #17171b;margin-bottom:16px}
+.list div{font-family:"Elite";font-size:44px;line-height:1.55;display:flex;gap:18px;align-items:baseline}
+.list div b{color:#1f9d55;font-family:"Anton";font-weight:400;font-size:46px}
+.rc{position:relative;width:600px;background:#fbfaf4;color:#17171b;font-family:"VT";font-size:42px;line-height:1.12;padding:36px 36px 46px;transform:rotate(3deg);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.rc h3{font-family:"Anton";font-weight:400;font-size:54px;letter-spacing:.12em;text-align:center}
+.rc p{display:flex;justify-content:space-between;gap:20px}.rc .c{justify-content:center;text-align:center}
+.rc hr{border:0;border-top:4px dashed #17171b;margin:14px 0}
+.rc .tot{font-size:58px}
 #chip{left:56px;top:48px;display:flex;flex-direction:column;gap:10px;transform-origin:0 0}
 #chip div{display:flex;align-items:stretch;font-size:44px;line-height:1;letter-spacing:.04em}
 #chipn{background:#FFE66D;color:#05060d;padding:12px 16px 6px;border-radius:8px 0 0 8px}
@@ -129,6 +152,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
    <circle cx="95" cy="58" r="15" fill="#11132a"/><circle cx="95" cy="58" r="8" fill="#35c8ff"/><circle cx="91" cy="54" r="3" fill="#fff"/>
    <circle id="led" cx="124" cy="36" r="5" fill="#ff3b47"/>
    <path d="M68 66l-8 16M122 66l8 16" stroke="#11132a" stroke-width="5" stroke-linecap="round"/>
+   <g id="batt"><rect x="70" y="0" width="46" height="18" rx="4" fill="#05060d" stroke="#eef0ff" stroke-width="2.5"/><rect x="116" y="5" width="4" height="8" fill="#eef0ff"/><rect id="battfill" x="74" y="4" width="38" height="10" rx="2" fill="#58d68d"/></g>
   </svg>
  </div>
  <div id="scrim"></div>
@@ -137,7 +161,8 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
    <div id="view"><div id="pan"><div class="textcard" id="viewcard"><div class="who"></div><div class="what"></div><div class="when"></div></div><div id="mark"></div></div></div></div>
  </div>
  <div id="peek"></div>
- <div id="fact"><div id="factbig"></div><div id="factsmall"></div></div>
+ <div id="fact"><svg id="factchart" viewBox="0 0 820 420"><path id="fcline" fill="none" stroke="#ff4654" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity=".85"/><path id="fchead" fill="#ff4654" opacity=".85"/></svg><div id="factbig"></div><div id="factsmall"></div></div>
+ <div id="meme"></div>
  <div id="lbT"></div><div id="lbB"></div>
  <div id="chip"><div><span id="chipn"></span><span id="chipt"></span></div><span id="chips"></span></div>
  <div id="brand">TECH<i>FOR</i>BADGUYS<span id="branddate"></span></div>
@@ -146,6 +171,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 </div>
 <script type="module">
 import { peek3d } from "/characters/peek3d.js";
+import { EMOTES, GESTURES } from "/characters/acting.js";
 const $ = (id) => document.getElementById(id);
 const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
 let cfg = { slides: {}, face: "pear" }; const tvImg = {}, viewImg = {};
@@ -161,7 +187,7 @@ window.setup = async (config) => {
     }
   }
   await Promise.all(jobs);
-  await Promise.all(['64px "Anton"', '24px "Elite"', '60px "Serif"'].map((f) => document.fonts.load(f))); await document.fonts.ready;
+  await Promise.all(['64px "Anton"', '24px "Elite"', '60px "Serif"', '40px "VT"'].map((f) => document.fonts.load(f))); await document.fonts.ready;
 };
 
 // One of the three places the host can appear. Each copy gets its own gradient ids.
@@ -179,6 +205,28 @@ function slide(store, cardEl, name) {
   show(cardEl, text, "flex"); if (text) card(cardEl, s);
 }
 
+// Memes are our own drawings: a chat window, a two-panel verdict starring the host, a checklist, a receipt.
+// Each is a pure function of its age in seconds, so a frame can be drawn on its own.
+const pop = (a) => a < 0 ? 0 : 1 + 0.35 * Math.exp(-a * 16) * Math.cos(a * 22);
+const poseCache = {};
+function pose(emote, gesture, tag) {
+  const key = emote + gesture + tag; if (poseCache[key]) return poseCache[key];
+  const em = EMOTES[emote], g = GESTURES[gesture], side = (a) => a ? { ...a, front: false } : null;
+  const svg = peek3d({ lid: 0.14, look: 0, lookY: 0, browL: 0, browR: 0, browTilt: 0, eyeScale: 1, pupil: 1, squint: 0, antL: em.ant || 0, antR: em.ant || 0, ...em, m: em.mouth, symbol: null }, { face: cfg.face, bg: false, grain: false, size: 330, viewBox: "170 30 860 860", armL: side(g.armL), armR: side(g.armR), shrug: g.shrug || 0, tilt: em.tilt || 0, roll: false });
+  return (poseCache[key] = svg.replaceAll("p3" + cfg.face, tag + cfg.face));
+}
+const MEMES = {
+  chat: (d, a) => `<div class="chat"><div class="bar"><i></i>${esc(d.title || "AI ASSISTANT")}</div><div class="body">
+    <div class="u" style="transform:scale(${pop(a)})">${esc(d.user)}</div>
+    ${a >= d.delay ? `<div class="b" style="transform:scale(${pop(a - d.delay)})">${esc(d.bot)}</div>` : a > 0.22 ? `<div class="dots">${"•".repeat(1 + Math.floor((a - 0.22) / 0.12) % 3)}</div>` : ""}</div></div>`,
+  versus: (d, a) => `<div class="vs"><div class="p">${pose("angry", "stop", "v1")}</div><div class="t">${esc(d.no)}</div>
+    ${a >= d.delay ? `<div class="p">${pose("grin", "cheer", "v2")}</div><div class="t">${esc(d.yes)}</div>` : `<div class="p" style="background:#11152e"></div><div class="t" style="background:#11152e"></div>`}</div>`,
+  list: (d, a) => `<div class="list"><h3>${esc(d.title)}</h3>${d.items.map((x, i) => a >= 0.2 + i * d.step ? `<div><b>✓</b>${esc(x)}</div>` : `<div style="visibility:hidden"><b>✓</b>${esc(x)}</div>`).join("")}</div>`,
+  receipt: (d, a) => `<div style="clip-path:inset(0 -80px ${Math.max(0, 1 - a / 0.7) * 100}% -80px);transform:translateY(${Math.max(0, 1 - a / 0.7) * -120}px)"><div class="rc"><h3>${esc(d.title)}</h3><p class="c">${esc(d.sub || "")}</p><hr>
+    ${d.items.map(([k, v]) => `<p><span>${esc(k)}</span><span>${esc(v)}</span></p>`).join("")}<hr><p class="tot"><span>TOTAL</span><span>${esc(d.total)}</span></p><hr><p class="c">${esc(d.foot || "")}</p></div></div>`,
+};
+let lastMeme = "";
+
 window.draw = (st) => {
   const studio = !st.insert || st.insert.enter < 1;
   show($("world"), studio); show($("scrim"), st.scrim > 0.01); $("scrim").style.opacity = st.scrim;
@@ -191,7 +239,8 @@ window.draw = (st) => {
     slide(tvImg, $("tvcard"), st.tv); show($("tvident"), !st.tv, "flex");
     $("onair").style.opacity = st.onair;
     show($("drone"), !!st.drone);
-    if (st.drone) { $("drone").style.transform = `translate(${st.drone.x}px,${st.drone.y}px) rotate(${st.drone.r}deg)`; $("led").style.opacity = st.drone.led; $("rotA").setAttribute("rx", st.drone.spin); $("rotB").setAttribute("rx", st.drone.spin); }
+    if (st.drone) { $("drone").style.transform = `translate(${st.drone.x}px,${st.drone.y}px) rotate(${st.drone.r}deg)`; $("led").style.opacity = st.drone.led; $("rotA").setAttribute("rx", st.drone.spin); $("rotB").setAttribute("rx", st.drone.spin);
+      const b = st.drone.batt; $("battfill").setAttribute("width", Math.max(0, 38 * b)); $("battfill").setAttribute("fill", b > 0.5 ? "#58d68d" : b > 0.2 ? "#FFE66D" : "#ff4654"); $("batt").style.opacity = b < 0.2 && Math.floor(st.drone.blink) % 2 ? 0.3 : 1; }
   }
   const ins = st.insert; show($("insert"), !!ins);
   if (ins) {
@@ -202,16 +251,23 @@ window.draw = (st) => {
     $("insert").style.filter = st.blur > 0.5 ? `blur(${st.blur.toFixed(1)}px)` : "";
     $("win").style.transform = `translate(${ins.dx}px,${ins.dy}px) rotate(${ins.rot}deg) scale(${ins.scale})`;
     $("grid").style.transform = `translate(${-ins.drift * 40}px,${-ins.drift * 24}px)`;
-    const W = 1440, H = 810, tx = Math.min(0, Math.max(-(ins.k - 1) * W, 0.5 * W - ins.k * ins.cx * W)), ty = Math.min(0, Math.max(-(ins.k - 1) * H, 0.44 * H - ins.k * ins.cy * H));
+    const W = 1440, H = 810, tall = s.screens || 1;              // the picture may be several screens tall; cy counts screens
+    const tx = Math.min(0, Math.max(-(ins.k - 1) * W, 0.5 * W - ins.k * ins.cx * W)), ty = Math.min(0, Math.max(H - ins.k * tall * H, 0.44 * H - ins.k * ins.cy * H));
     $("pan").style.transform = `translate(${tx}px,${ty}px) scale(${ins.k})`;
     const m = ins.mark; show($("mark"), !!m && m.p > 0);
-    if (m) Object.assign($("mark").style, { left: m.x * 100 + "%", top: m.y * 100 + "%", width: m.w * 100 + "%", height: m.h * 100 + "%", transform: `scaleX(${m.p})` });
+    if (m) Object.assign($("mark").style, { left: m.x * W + "px", top: m.y * H + "px", width: m.w * W + "px", height: m.h * H + "px", transform: `scaleX(${m.p})` });
   }
   person($("peek"), st.peek, 640, "r3");
   if (st.peek) { $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
   const f = st.fact; show($("fact"), !!f);
   if (f) { $("fact").className = f.tone || ""; $("factbig").textContent = f.big; $("factsmall").textContent = f.small || ""; $("factsmall").style.opacity = f.sub;
+    show($("factchart"), f.chart === "down");
+    if (f.chart === "down") { const pts = [[0, 60], [110, 40], [200, 90], [300, 70], [400, 150], [500, 130], [600, 260], [700, 250], [800, 400]], n = Math.max(2, Math.ceil(Math.min(1, f.age / 0.5) * pts.length)), seen = pts.slice(0, n), [ex, ey] = seen[n - 1];
+      $("fcline").setAttribute("d", "M" + seen.map((q) => q.join(" ")).join("L")); $("fchead").setAttribute("d", n === pts.length ? `M${ex + 22} ${ey + 30}l-52 -14l34 -34z` : ""); }
     $("fact").style.transform = `translate(${f.dx}px,${f.dy}px) rotate(${f.rot}deg) scale(${f.s})`; $("fact").style.opacity = f.a; }
+  const me = st.meme; show($("meme"), !!me, "flex");
+  if (me) { const html = MEMES[me.kind](me, me.age); if (html !== lastMeme) { $("meme").innerHTML = html; lastMeme = html; } $("meme").style.transform = `rotate(${me.rot}deg) scale(${me.s})`; $("meme").style.opacity = me.a; }
+  else if (lastMeme) { $("meme").innerHTML = ""; lastMeme = ""; }
   $("lbT").style.height = $("lbB").style.height = st.lb + "px";
   const ch = st.chip; show($("chip"), !!ch, "flex");
   if (ch) { $("chipn").textContent = String(ch.n).padStart(2, "0"); $("chipt").textContent = ch.tag; $("chips").textContent = ch.src || ""; show($("chips"), !!ch.src); $("chip").style.opacity = ch.a; $("chip").style.transform = `translate(${(1 - ch.a) * -40}px,${st.lb}px) scale(${ch.pop})`; }

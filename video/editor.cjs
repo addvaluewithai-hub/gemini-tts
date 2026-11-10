@@ -8,6 +8,8 @@
 //   mark    "headline" or [x, y, w, h] of the slide to highlight    zoom / center   how far the insert pushes in, and on what
 //   duck    true: the host sinks behind the desk                    lurk    true: he reappears above the screen
 //   peek    true: his head rises over an insert                     paper   pockets | holes | over
+//   meme    { kind: chat | versus | list | receipt, ... } - our own drawings, side shots only; see MEMES in studio.html
+//   scroll  screens per second the insert keeps scrolling down      (a slide can be several screens tall)
 //   drone   { drop: "phrase" } starts the drone prop, false removes it
 //   emote / gesture   pin the acting for this entry                 stutter n: hold each pose for n frames
 //   trans   punch | whip | cut  (default: chosen from the two shots)
@@ -59,6 +61,11 @@ function resolve(cues, words, slides) {
     }
     if (seg.fact) { if (seg.fact.riser) sfx.push({ t: seg.t - 0.55, type: "riser", len: 0.55 }); sfx.push({ t: seg.t, type: seg.fact.tone === "bubble" ? "pop" : "impact" }); if (seg.fact.tone !== "bubble") impacts.push(seg.t); }
     if (seg.mark) sfx.push({ t: seg.t + 0.14, type: "swipe" });
+    if (seg.meme) { const m = seg.meme;
+      if (m.kind === "chat") { m.delay = m.delay ?? 0.7; sfx.push({ t: seg.t, type: "pop" }, { t: seg.t + m.delay, type: "ding" }); }
+      if (m.kind === "versus") { m.delay = m.delay ?? 0.6; sfx.push({ t: seg.t, type: "tick" }, { t: seg.t + m.delay, type: "impact", gain: 0.6 }); impacts.push(seg.t + m.delay); }
+      if (m.kind === "list") { m.step = m.step ?? 0.3; m.items.forEach((_, i) => sfx.push({ t: seg.t + 0.2 + i * m.step, type: "pop", gain: 0.6 })); }
+      if (m.kind === "receipt") sfx.push({ t: seg.t, type: "print" }); }
     if (seg.story && seg.story !== prev.story) sfx.push({ t: seg.t + 0.05, type: "ding" });
     if (!!seg.duck !== !!prev.duck) sfx.push({ t: seg.t, type: seg.duck ? "down" : "up" });
     if (seg.lurk && !prev.lurk) sfx.push({ t: seg.t + 0.42, type: "pop" });
@@ -109,9 +116,9 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     let ins = null;
     if (insert) {
       const sl = slides[seg.slide] || {}, m = seg.mark, f = m || sl.focus || [0.3, 0.2, 0.4, 0.2];
-      const org = seg.center || [f[0] + f[2] / 2, f[1] + f[3] / 2];
-      if (seg.cut && seg.t !== lastInsertCut) { lastInsertCut = seg.t; kb = 1; cx = org[0]; cy = org[1]; }
-      kb += ((seg.zoom ?? 1.1) - kb) * 0.085; cx += (org[0] - cx) * 0.1; cy += (org[1] - cy) * 0.1;
+      const org = [...(seg.center || [f[0] + f[2] / 2, f[1] + f[3] / 2])]; org[1] += (seg.scroll || 0) * (t - seg.t);
+      if (seg.cut && seg.t !== lastInsertCut) { lastInsertCut = seg.t; kb = 1; cx = 0.5; cy = 0.44; }      // every page opens at the top, then scrolls to what is being read
+      kb += ((seg.zoom ?? 1.1) - kb) * 0.085; cx += (org[0] - cx) * 0.12; cy += (org[1] - cy) * 0.12;
       const ease = 1 - Math.exp(-age * 15) * Math.cos(age * 17);
       ins = { slide: seg.slide, enter: clamp(age / 0.07), dx: 0, dy: (1 - ease) * 70, scale: 0.93 + 0.07 * ease, rot: (1 - ease) * -1.6 + 0.25 * Math.sin(tv * 0.7), drift: tv % 2.4 / 2.4,
         k: kb * (1 + 0.012 * age), cx, cy, mark: m ? { x: m[0], y: m[1], w: m[2], h: m[3], p: smooth(clamp((t - seg.t - 0.14) / 0.3)) } : null };
@@ -124,7 +131,10 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     if (seg.fact) { const fa = t - seg.t, stamp = seg.fact.tone === "stamp";
       fact = { big: seg.fact.big, small: seg.fact.small, tone: seg.fact.tone, a: clamp(fa / 0.05), sub: clamp((fa - 0.16) / 0.14),
         s: 1 + 1.5 * Math.exp(-fa * 22) - 0.07 * Math.exp(-fa * 8) * Math.sin(fa * 32), rot: (stamp ? -8 : -2) + 1.5 * Math.exp(-fa * 10), dx: 0, dy: stamp ? 60 : seg.fact.tone === "bubble" ? 40 : 0 }; }
-    scrim += ((seg.fact && !insert ? 1 : 0) - scrim) * 0.3;
+    if (fact) { fact.chart = seg.fact.chart; fact.age = t - seg.t; }
+    let meme = null;
+    if (seg.meme) { const ma = t - seg.t; meme = { ...seg.meme, age: ma, a: clamp(ma / 0.06), s: 1 + 0.25 * Math.exp(-ma * 16) * Math.cos(ma * 20), rot: 1.5 * Math.exp(-ma * 9) }; }
+    scrim += (((seg.fact || seg.meme) && !insert ? 1 : 0) - scrim) * 0.3;
     const tight = !insert && (seg.shot === "close" || seg.shot === "low");
     lb += ((tight ? 62 : 0) - lb) * 0.22;
     if (seg.story !== lastStory) { lastStory = seg.story; storyT = t; }
@@ -135,15 +145,15 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     let drone = null;
     if (seg.drone) { const d = seg.drone, u = t - d.from, enter = smooth(clamp(u / 0.9)), p = droneAt(u);
       if (d.drop !== null && t >= d.drop) { const p0 = droneAt(d.drop - d.from), dt = t - d.drop, fy = p0.y + 0.5 * G * dt * dt, down = fy >= DRONE_FLOOR;
-        drone = { x: p0.x - 135, y: Math.min(fy, DRONE_FLOOR) - 68, r: down ? 14 : Math.min(60, 160 * dt), led: 0, spin: down ? 30 : 34 };
-      } else drone = { x: lerp(2250, p.x, enter) - 135, y: lerp(120, p.y, enter) - 68, r: 5 * Math.sin(1.7 * u) - 9 * (1 - enter), led: Math.floor(tv * 6) % 2 ? 1 : 0.25, spin: 30 + 6 * (i % 2) };
+        drone = { x: p0.x - 135, y: Math.min(fy, DRONE_FLOOR) - 68, r: down ? 14 : Math.min(60, 160 * dt), led: 0, spin: down ? 30 : 34, batt: 0, blink: 0 };
+      } else drone = { x: lerp(2250, p.x, enter) - 135, y: lerp(120, p.y, enter) - 68, r: 5 * Math.sin(1.7 * u) - 9 * (1 - enter), led: Math.floor(tv * 6) % 2 ? 1 : 0.25, spin: 30 + 6 * (i % 2), batt: d.drop !== null ? clamp(1 - u / (d.drop - d.from)) : 1, blink: tv * 8 };
     }
 
     frames.push({ cam: { s, x, y, r }, blur, flash, scrim: scrim < 0.01 ? 0 : scrim, lb, brand: 1,
       host: !insert || ins.enter < 1 ? (hostY < 590 ? { ...body, y: hostY } : null) : null,
       lurk: lurk > 0.02 && (!insert || ins.enter < 1) ? { ...spy(0.75 * Math.sin(2 * Math.PI * 0.7 * tv)), amt: lurk } : null,
       peek: peek > 0.02 ? { ...spy(-0.75), amt: peek, rise: 262, rot: -7 } : null,
-      tv: seg.slide, onair: Math.floor(tv * 0.8) % 2 ? 1 : 0.55, drone, insert: ins, fact, chip, ...caption(i) });
+      tv: seg.slide, onair: Math.floor(tv * 0.8) % 2 ? 1 : 0.55, drone, insert: ins, fact, meme, chip, ...caption(i) });
   }
   return frames;
 }
