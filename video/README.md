@@ -5,7 +5,7 @@ Nothing here is used by the TTS worker itself.
 
 ## characters/
 
-Twenty-nine candidate hosts for the techforbadguys channel, drawn as parametric SVG
+Thirty-six candidate hosts for the techforbadguys channel, drawn as parametric SVG
 in `characters/characters.js`. Each `draw(expression)` takes
 
 ```js
@@ -14,7 +14,8 @@ in `characters/characters.js`. Each `draw(expression)` takes
 
 The channel premise: the host is an alien living undercover on Earth, and each
 episode is the sarcastic field report it files to its home planet. The last
-seven candidates (`grey` to `normal`) are drawn for that premise.
+fourteen candidates are drawn for that premise: `grey` to `normal` play it
+for laughs, `nullx` to `observer` keep it cold and minimal.
 
 The expression object exists so the chosen character can later be animated from an episode's audio and
 word timestamps (blink, glance, mouth driven by the voice level).
@@ -50,8 +51,15 @@ word timestamps (blink, glance, mouth driven by the voice level).
 | `peek` | PEEK | A spy behind a newspaper with three eye holes cut in it |
 | `pilot` | PILOT | A tiny alien driving a human suit from a glass dome |
 | `normal` | MR. NORMAL | A green alien in novelty glasses, fake nose, mustache and a HUMAN name tag |
+| `nullx` | NULL-X | Null's hoodie with large glowing alien eyes in the void |
+| `agentx` | AGENT X | Mr. Redacted as a grey alien whose eyes are too big for the redaction bar |
+| `xray` | X-RAY | Skully as an alien skull: long cranium, slanted sockets, headset, bow tie |
+| `visitor` | THE VISITOR | A bone-white grey in a black suit and tie, nothing else |
+| `commander` | COMMANDER | A black helmet with a gold visor reflecting Earth |
+| `hover` | HOVER | A suit with no head and a small flying saucer parked above the collar |
+| `observer` | OBSERVER | A black hood with five glowing eyes |
 
-Rendered cards live in `characters/cards/` (`overview-all.png` shows the first fifteen, `overview-shortlist.png` the masked shortlist of ten, `overview-aliens.png` the undercover aliens). Regenerate them with:
+Rendered cards live in `characters/cards/` (`overview-all.png` shows the first fifteen, `overview-shortlist.png` the masked shortlist of ten, `overview-aliens.png` and `overview-aliens-2.png` the undercover aliens). Regenerate them with:
 
 ```bash
 cd video && npm install --no-package-lock

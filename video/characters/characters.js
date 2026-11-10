@@ -815,6 +815,169 @@ function normal(e) {
   ${mouth}`;
 }
 
+// ---- fifth batch: aliens again, but cold and minimal like Null / Redacted / Skully ----
+
+function nullx(e) {
+  const K = "#14161B", G = "#39FF88", W = "#EFFFF5";
+  const ry = Math.max(3, 21 * (1 - e.lid * 0.8));
+  const eye = (cx, rot) => `<ellipse cx="${cx + e.look * 8}" cy="190" rx="37" ry="${ry}" transform="rotate(${rot} ${cx} 190)" fill="${W}"/>`;
+  const mouth = e.mouth === "talk"
+    ? [[186, 8], [195, 18], [204, 11], [213, 20], [222, 8]].map(([x, h]) => `<rect x="${x - 3}" y="${254 - h / 2}" width="6" height="${h}" rx="2.5" fill="${W}"/>`).join("")
+    : e.mouth === "flat" ? `<rect x="190" y="251" width="24" height="6" rx="3" fill="${W}"/>` : line("M186 250 Q204 260 222 246", 6, W);
+  return `
+  <defs><filter id="nx-glow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="${G}" flood-opacity="1"/></filter></defs>
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  <path d="M200 30 C96 30 60 112 74 206 C82 262 118 300 150 312 L250 312 C282 300 318 262 326 206 C340 112 304 30 200 30 Z" fill="${K}" ${O}/>
+  <path d="M200 90 C130 90 106 146 116 200 C124 246 166 286 200 292 C234 286 276 246 284 200 C294 146 270 90 200 90 Z" fill="#000" stroke="#2C313D" stroke-width="5"/>
+  <g filter="url(#nx-glow)">${eye(160, 22)}${eye(240, -22)}${mouth}</g>
+  ${line("M174 312 L170 362 M226 312 L230 354", 6, "#2C313D")}
+  <rect x="164" y="360" width="12" height="18" rx="4" fill="${G}"/><rect x="224" y="352" width="12" height="18" rx="4" fill="${G}"/>`;
+}
+
+function agentx(e) {
+  const S = "#D9DDE3", E = "#1E2440";
+  const eh = Math.max(2.5, 12 * (1 - e.lid));
+  const dx = e.look * 9;
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="202" cy="246" rx="10" ry="8" fill="#111"/>`
+    : e.mouth === "flat" ? line("M186 246 H218", 6) : line("M182 242 Q202 254 224 236", 6);
+  const eye = (cx, rot) => `<g transform="rotate(${rot} ${cx} 182)"><ellipse cx="${cx}" cy="182" rx="42" ry="22" fill="${E}" stroke="#111" stroke-width="5"/><ellipse cx="${cx + (rot > 0 ? -22 : 22)}" cy="176" rx="6" ry="4" fill="#fff" opacity=".8"/></g>`;
+  return `
+  <path d="M56 400 C62 332 98 298 160 284 L200 322 L240 284 C302 298 338 332 344 400 Z" fill="#1B1B1F" ${O}/>
+  <path d="M166 286 L200 344 L234 286 Z" fill="#F7F3E8" ${O}/>
+  <path d="M191 300 h18 l5 16 l-14 62 l-14 -62 z" fill="#D7263D" ${O}/>
+  ${both(`<path d="M160 284 L146 334 L194 356 L200 322 Z" fill="#2C2C33" ${O}/>`)}
+  <rect x="187" y="252" width="26" height="40" fill="${S}" ${O}/>
+  <path d="M200 96 C138 96 114 142 122 192 C128 238 168 270 200 274 C232 270 272 238 278 192 C286 142 262 96 200 96 Z" fill="${S}" ${O}/>
+  ${eye(160, 20)}${eye(240, -20)}
+  ${line("M194 222 v5 M206 222 v5", 3.5)}
+  <g transform="rotate(-4 200 182)">
+    <rect x="146" y="156" width="108" height="52" fill="#111"/>
+    <rect x="${164 + dx}" y="${182 - eh / 2}" width="24" height="${eh}" fill="#F7F3E8"/>
+    <rect x="${212 + dx}" y="${182 - eh / 2}" width="24" height="${eh}" fill="#F7F3E8"/>
+  </g>
+  ${mouth}
+  <path d="M132 118 C126 68 150 42 200 50 C250 42 274 68 268 118 Z" fill="#1B1B1F" ${O}/>
+  <path d="M131 98 Q200 112 269 98 L268 118 Q200 132 132 118 Z" fill="#D7263D"/>
+  <ellipse cx="200" cy="120" rx="130" ry="20" fill="#1B1B1F" ${O}/>`;
+}
+
+function xray(e) {
+  const B = "#F2EFE8", K = "#17171B", Y = "#FFD23F";
+  const j = e.mouth === "talk" ? 14 : 0;
+  const socket = (cx, rot, id) => {
+    const h = 6 + e.lid * 46, px = cx + e.look * 13;
+    return `<g transform="rotate(${rot} ${cx} 178)"><clipPath id="${id}"><ellipse cx="${cx}" cy="178" rx="41" ry="27"/></clipPath>
+      <ellipse cx="${cx}" cy="178" rx="41" ry="27" fill="${K}"/>
+      <g clip-path="url(#${id})"><circle cx="${px}" cy="182" r="9.5" fill="${Y}"/><circle cx="${px + 3}" cy="179" r="3" fill="#fff"/>
+      <rect x="${cx - 48}" y="146" width="96" height="${h}" fill="${B}"/>${line(`M${cx - 48} ${146 + h} H${cx + 48}`, 6)}</g></g>`;
+  };
+  const teeth = [176, 192, 208, 224].map((x) => `M${x} 258 V280`).join(" ");
+  const lower = [184, 200, 216].map((x) => `M${x} ${268 + j} V${284 + j}`).join(" ");
+  const smirk = e.mouth === "smirk" ? line("M248 268 Q266 262 270 244", 6) : "";
+  return `
+  <path d="M52 400 C60 340 108 312 170 304 L230 304 C292 312 340 340 348 400 Z" fill="${K}" ${O}/>
+  <path d="M170 304 L200 352 L230 304 Z" fill="${B}" ${O}/>
+  <rect x="188" y="288" width="24" height="26" fill="${B}" ${O}/>
+  <rect x="162" y="${258 + j}" width="76" height="40" rx="15" fill="${B}" ${O}/>
+  ${line(lower, 5)}
+  <path d="M200 50 C118 50 84 110 92 172 C98 214 124 236 146 248 L146 266 Q146 280 160 280 L240 280 Q254 280 254 266 L254 248 C276 236 302 214 308 172 C316 110 282 50 200 50 Z" fill="${B}" ${O}/>
+  ${line(teeth, 5)}
+  ${line("M244 58 l-10 22 l16 8 l-8 20", 4.5)}
+  ${socket(152, 18, "xr-l")}${socket(248, -18, "xr-r")}
+  ${line("M194 224 v10 M206 224 v10", 5)}
+  ${smirk}
+  ${line("M80 176 C80 16 320 16 320 176", 20)}${line("M80 176 C80 16 320 16 320 176", 10, K)}
+  <rect x="60" y="150" width="34" height="68" rx="14" fill="${K}" ${O}/><rect x="306" y="150" width="34" height="68" rx="14" fill="${K}" ${O}/>
+  ${line("M76 218 C76 296 112 306 144 300", 9)}
+  <rect x="134" y="290" width="30" height="18" rx="9" fill="${Y}" ${O}/>
+  <path d="M200 328 l-32 -18 v36 z M200 328 l32 -18 v36 z" fill="${Y}" ${O}/><circle cx="200" cy="328" r="9" fill="${Y}" ${O}/>`;
+}
+
+function visitor(e) {
+  const S = "#F2EFE8", K = "#17171B";
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="201" cy="268" rx="7" ry="5.5" fill="#111"/>`
+    : e.mouth === "flat" ? line("M190 268 H212", 4.5) : line("M188 264 Q203 272 218 260", 4.5);
+  return `
+  ${SUIT(K, "#111")}
+  <circle cx="140" cy="344" r="6" fill="#FFD23F" stroke="#111" stroke-width="3"/>
+  <ellipse cx="140" cy="344" rx="12" ry="3.5" transform="rotate(-20 140 344)" fill="none" stroke="#FFD23F" stroke-width="2.5"/>
+  <rect x="188" y="270" width="24" height="40" fill="${S}" ${O}/>
+  <path d="M200 60 C114 60 84 128 96 192 C104 248 160 290 200 296 C240 290 296 248 304 192 C316 128 286 60 200 60 Z" fill="${S}" ${O}/>
+  ${almond("vs-l", 150, 202, 45, 28, 20, e, { lid: S })}${almond("vs-r", 250, 202, 45, 28, -20, e, { lid: S })}
+  ${mouth}`;
+}
+
+function commander(e) {
+  const K = "#17171B", V = "M112 152 C112 110 160 96 200 96 C240 96 288 110 288 152 L288 196 C288 236 240 250 200 250 C160 250 112 236 112 196 Z";
+  const ry = Math.max(2.5, 15 * (1 - e.lid * 0.8));
+  const eye = (cx, rot) => `<ellipse cx="${cx + e.look * 9}" cy="178" rx="30" ry="${ry}" transform="rotate(${rot} ${cx} 178)" fill="#6B3A00" opacity=".6"/>`;
+  const hs = e.mouth === "talk" ? [8, 16, 10, 18, 9] : e.mouth === "flat" ? [6, 6, 6, 6, 6] : [5, 7, 9, 12, 15];
+  const bars = hs.map((h, i) => `<rect x="${179 + i * 10}" y="${276 - h / 2}" width="5" height="${h}" rx="2" fill="${e.mouth === "talk" ? "#FFD23F" : "#9BA0AA"}"/>`).join("");
+  return `
+  <defs><linearGradient id="cm-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE27A"/><stop offset="1" stop-color="#FF9F1C"/></linearGradient><clipPath id="cm-c"><path d="${V}"/></clipPath></defs>
+  <path d="${SHOULDERS}" fill="#23232A" ${O}/>
+  <rect x="238" y="338" width="64" height="30" rx="5" fill="#F2EFE8" stroke="#111" stroke-width="4"/>
+  <text x="270" y="359" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="800" font-size="15" fill="#111">E-001</text>
+  ${line("M312 132 L340 86", 8)}<circle cx="342" cy="82" r="9" fill="#E5333F" ${O}/>
+  <ellipse cx="200" cy="296" rx="88" ry="20" fill="#8E929C" ${O}/>
+  <circle cx="200" cy="172" r="120" fill="${K}" ${O}/>
+  ${both(`<rect x="70" y="148" width="24" height="58" rx="10" fill="#2C313D" ${O}/>`)}
+  <path d="${V}" fill="url(#cm-v)" ${O}/>
+  <g clip-path="url(#cm-c)">
+    ${eye(162, 18)}${eye(238, -18)}
+    <circle cx="146" cy="132" r="17" fill="#2B6BFF" stroke="#111" stroke-width="2.5"/>
+    <path d="M136 126 q8 -6 14 0 q-2 8 -10 8 z M148 138 q8 -2 10 4 q-6 6 -12 2 z" fill="#3DDC84"/>
+    ${line("M240 112 Q270 124 274 160", 7, "#fff")}
+  </g>
+  <path d="${V}" fill="none" ${O}/>
+  <rect x="168" y="262" width="64" height="28" rx="9" fill="#2C313D" stroke="#111" stroke-width="5"/>
+  ${bars}`;
+}
+
+function hover(e) {
+  const K = "#17171B", Y = "#FFE66D";
+  const talk = e.mouth === "talk";
+  const ry = Math.max(2.5, 12 * (1 - e.lid * 0.8));
+  const eye = (cx, rot) => `<ellipse cx="${cx + e.look * 7}" cy="126" rx="22" ry="${ry}" transform="rotate(${rot} ${cx} 126)" fill="${Y}"/>`;
+  const cols = talk ? [Y, Y, Y, Y, Y] : e.mouth === "flat" ? ["#B3202C", "#B3202C", "#B3202C", "#B3202C", "#B3202C"] : ["#E5333F", "#E5333F", Y, Y, Y];
+  const lights = [[100, 172], [148, 184], [200, 188], [252, 184], [300, 172]].map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="6.5" fill="${cols[i]}" stroke="#111" stroke-width="3"/>`).join("");
+  return `
+  <defs><filter id="hv-glow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="${Y}" flood-opacity="1"/></filter></defs>
+  ${SUIT(K, "#E5333F")}
+  <ellipse cx="200" cy="298" rx="32" ry="9" fill="#000"/>
+  <path d="M170 196 H230 L252 298 H148 Z" fill="${Y}" opacity="${talk ? 0.8 : 0.45}"/>
+  ${talk ? `<ellipse cx="200" cy="232" rx="34" ry="6" fill="none" stroke="#fff" stroke-width="3.5"/><ellipse cx="200" cy="264" rx="42" ry="7" fill="none" stroke="#fff" stroke-width="3.5"/>` : ""}
+  <ellipse cx="200" cy="190" rx="46" ry="12" fill="#5A5F6B" ${O}/>
+  <ellipse cx="200" cy="168" rx="130" ry="30" fill="#C9CED6" ${O}/>
+  <ellipse cx="200" cy="160" rx="94" ry="14" fill="#8E929C" opacity=".65"/>
+  <path d="M130 160 C130 66 270 66 270 160 Z" fill="${K}" ${O}/>
+  ${line("M152 120 Q160 96 184 88", 5, "#3A4050")}
+  <g filter="url(#hv-glow)">${eye(172, 16)}${eye(228, -16)}</g>
+  ${lights}`;
+}
+
+function observer(e) {
+  const K = "#14161B", W = "#FFFFFF";
+  const s = 1 - e.lid * 0.8, dx = e.look * 7;
+  const eye = (cx, cy, rx, ry, rot) => `<ellipse cx="${cx + dx}" cy="${cy}" rx="${rx}" ry="${Math.max(2, ry * s)}" transform="rotate(${rot} ${cx} ${cy})" fill="${W}"/>`;
+  const mouth = e.mouth === "talk"
+    ? `<circle cx="200" cy="258" r="11" fill="none" stroke="${W}" stroke-width="4.5"/><circle cx="200" cy="258" r="3.5" fill="${W}"/>`
+    : e.mouth === "flat" ? `<circle cx="200" cy="258" r="4" fill="${W}"/>` : line("M186 254 Q202 264 218 250", 5, W);
+  return `
+  <defs><filter id="ob-glow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#FF3D8B" flood-opacity="1"/></filter></defs>
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  <path d="${HOOD}" fill="${K}" ${O}/>
+  <ellipse cx="200" cy="192" rx="84" ry="102" fill="#000" stroke="#2C313D" stroke-width="5"/>
+  <g filter="url(#ob-glow)">
+    ${eye(162, 204, 34, 18, 20)}${eye(238, 204, 34, 18, -20)}
+    ${eye(200, 150, 12, 9, 0)}${eye(154, 160, 11, 7, 22)}${eye(246, 160, 11, 7, -22)}
+    ${mouth}
+  </g>
+  <path d="M200 304 l12 14 l-12 14 l-12 -14 z" fill="#FFD23F" stroke="#111" stroke-width="4" stroke-linejoin="round"/>`;
+}
+
 export const characters = [
   { id: "glitch", name: "GLITCH", role: "The possessed monitor", line: "A beige CRT that grew horns. Deadpan sysadmin from hell.",
     bg: "#17120A", fg: "#FFB000", sub: "#B9A27A", palette: ["#17120A", "#E8DFCB", "#FFB000", "#FF3B47"], draw: glitch },
@@ -874,6 +1037,20 @@ export const characters = [
     bg: "#F2EFE8", fg: "#17171B", sub: "#6B6457", palette: ["#F2EFE8", "#17171B", "#9FF4F0", "#6BE04F"], draw: pilot },
   { id: "normal", name: "MR. NORMAL", role: "The perfect disguise", line: "Glasses, nose, mustache, name tag. Definitely a human.",
     bg: "#FF3D8B", fg: "#17171B", sub: "#6E0F36", palette: ["#FF3D8B", "#6BE04F", "#F2EFE8", "#1F2A44"], draw: normal },
+  { id: "nullx", name: "NULL-X", role: "The hooded visitor", line: "Same hoodie, bigger eyes. Not from around here.",
+    bg: "#39FF88", fg: "#14161B", sub: "#0E5A32", palette: ["#39FF88", "#14161B", "#000000", "#EFFFF5"], draw: nullx },
+  { id: "agentx", name: "AGENT X", role: "The censored visitor", line: "The redaction bar was made for human eyes. It does not fit.",
+    bg: "#E9E2D0", fg: "#1B1B1F", sub: "#6B6457", palette: ["#E9E2D0", "#1B1B1F", "#D9DDE3", "#D7263D"], draw: agentx },
+  { id: "xray", name: "X-RAY", role: "The off-world anchor", line: "A skull that was never human. Reads Earth's news back home.",
+    bg: "#E5333F", fg: "#F2EFE8", sub: "#FFD0D3", palette: ["#E5333F", "#F2EFE8", "#17171B", "#FFD23F"], draw: xray },
+  { id: "visitor", name: "THE VISITOR", role: "The man in black", line: "Black suit, black tie, black eyes. Says little, files everything.",
+    bg: "#2B4BFF", fg: "#F2EFE8", sub: "#BFCBFF", palette: ["#2B4BFF", "#17171B", "#F2EFE8", "#FFD23F"], draw: visitor },
+  { id: "commander", name: "COMMANDER", role: "The gold visor", line: "Never takes the helmet off. Earth's air is mostly bad decisions.",
+    bg: "#FF6A1A", fg: "#17171B", sub: "#6B2C08", palette: ["#FF6A1A", "#17171B", "#FFD23F", "#2B6BFF"], draw: commander },
+  { id: "hover", name: "HOVER", role: "The saucer in a suit", line: "No head. Just a small ship parked above the collar.",
+    bg: "#6A3BFF", fg: "#FFE66D", sub: "#CFC2FF", palette: ["#6A3BFF", "#17171B", "#C9CED6", "#FFE66D"], draw: hover },
+  { id: "observer", name: "OBSERVER", role: "The five-eyed witness", line: "Sees everything you do online. Blinks one eye at a time.",
+    bg: "#FF3D8B", fg: "#14161B", sub: "#6E0F36", palette: ["#FF3D8B", "#14161B", "#FFFFFF", "#FFD23F"], draw: observer },
 ];
 
 export const svg = (c, expr = "idle", size = 400) =>
