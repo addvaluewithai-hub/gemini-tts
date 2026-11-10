@@ -3,24 +3,31 @@
 @font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
 *{box-sizing:border-box;margin:0}
 body{background:#000}
-.card{width:1200px;height:1200px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace;background:#0C57A0}
+.card{width:1200px;height:1200px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace;background:#0C57A0;color:#fff}
 .card svg{display:block}
 .grid{display:grid;grid-template-columns:600px 600px}
 .cell{position:relative;width:600px;height:600px;overflow:hidden}
-.tag{position:absolute;left:22px;top:18px;font-size:20px;letter-spacing:.14em;font-weight:800;color:#fff;background:rgba(6,34,63,.6);padding:8px 14px;border-radius:10px}
-.title{position:absolute;left:44px;bottom:36px;font-family:"Anton";font-size:120px;line-height:1;color:#fff;text-shadow:0 6px 24px rgba(6,34,63,.55)}
-.sub{position:absolute;right:44px;bottom:48px;font-size:22px;letter-spacing:.14em;font-weight:800;color:#fff;text-align:right;text-shadow:0 2px 10px rgba(6,34,63,.6)}
+.tag{position:absolute;left:22px;top:18px;font-size:20px;letter-spacing:.14em;font-weight:800;background:rgba(6,34,63,.6);padding:8px 14px;border-radius:10px}
+.num{position:absolute;left:40px;top:34px;font-size:24px;letter-spacing:.14em;font-weight:800;background:rgba(6,34,63,.6);padding:10px 16px;border-radius:12px}
+.title{position:absolute;left:44px;bottom:112px;font-family:"Anton";font-size:118px;line-height:1;text-shadow:0 6px 24px rgba(6,34,63,.6)}
+.note{position:absolute;left:48px;bottom:40px;width:800px;font-size:21px;line-height:1.35;font-weight:600;text-shadow:0 2px 10px rgba(6,34,63,.7)}
+.shade{position:absolute;left:0;right:0;bottom:0;height:330px;background:linear-gradient(rgba(4,30,60,0),rgba(4,30,60,.86))}
+.inset{position:absolute;right:36px;bottom:36px;width:270px;height:270px;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(3,26,51,.5);border:4px solid rgba(255,255,255,.75)}
 </style></head><body><div id="root"></div>
 <script type="module">
-import { peek3d } from "/characters/peek3d.js";
+import { peek3d, FACES } from "/characters/peek3d.js";
 const E = { idle: { lid: 0.16, look: 0, mouth: "smirk" }, talk: { lid: 0.06, look: 0, mouth: "talk" }, deadpan: { lid: 0.6, look: 0.85, mouth: "flat" } };
 const root = document.getElementById("root");
-const hero = document.createElement("div"); hero.className = "card"; hero.id = "card-peek3d-hero";
-hero.innerHTML = `${peek3d(E.idle)}<div class="title">PEEK</div><div class="sub">FIELD AGENT, EARTH<br>SOFT 3D LOOK</div>`;
-root.appendChild(hero);
-const states = document.createElement("div"); states.className = "card grid"; states.id = "card-peek3d-states";
-states.innerHTML = [[E.talk, "roll", "TALKING"], [E.deadpan, "roll", "DEADPAN"], [E.idle, "over", "PEEKING OVER"], [E.idle, "holes", "BEHIND THE PAPER"]]
-  .map(([e, p, l]) => `<div class="cell">${peek3d(e, { paper: p, size: 600 })}<div class="tag">${l}</div></div>`).join("");
-root.appendChild(states);
-await document.fonts.load('120px "Anton"'); await document.fonts.ready; window.__ready = true;
+const keys = ["egg", "pear", "goggle", "tall", "block"];
+keys.forEach((k, i) => {
+  const c = FACES[k], d = document.createElement("div"); d.className = "card"; d.id = "card-face-" + k;
+  d.innerHTML = `${peek3d(E.idle, { face: k, viewBox: "150 10 900 900" })}
+    <div class="shade"></div><div class="num">FACE ${i + 1} / ${keys.length}</div><div class="title">${c.name}</div><div class="note">${c.note}</div>
+    <div class="inset">${peek3d(E.deadpan, { face: k, size: 270, viewBox: "270 30 660 660" })}</div>`;
+  root.appendChild(d);
+});
+const ref = document.createElement("div"); ref.className = "card"; ref.id = "card-face-current";
+ref.innerHTML = `${peek3d(E.idle, { face: "A", viewBox: "150 10 900 900" })}<div class="shade"></div><div class="num">CURRENT</div><div class="title">ROUND</div><div class="note">${FACES.A.note}</div>`;
+root.appendChild(ref);
+await document.fonts.load('118px "Anton"'); await document.fonts.ready; window.__ready = true;
 </script></body></html>

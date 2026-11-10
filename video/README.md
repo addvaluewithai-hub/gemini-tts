@@ -118,7 +118,21 @@ shadows, a hat-brim shadow across the face, drop shadows and a light film
 grain. Still pure SVG, still driven by the same expression object, so it can
 be animated the same way.
 
-`peek3d(expression, { paper })` returns a full 1200x1200 scene. `paper` is
+`peek3d(expression, { face, paper, viewBox })` returns a full 1200x1200 scene.
+`face` picks an entry of `FACES`, which holds everything that makes a face:
+head outline, eye positions and sizes, iris and skin colours, mouth placement
+and optional extras (ears, muzzle, brow, nose bump).
+
+| face | idea |
+|---|---|
+| `A` | Wide round pink head, big amber eyes |
+| `egg` | Tall narrow mint head, close-set heavy-lidded eyes, fin ears |
+| `pear` | Small skull and huge cheeks, small blue eyes, nose bump, one tooth |
+| `goggle` | Round lilac head, two huge teal eyes pressed together |
+| `tall` | Small peach head, tall oval green eyes, pale muzzle |
+| `block` | Square steel-blue head, heavy brow, small ember eyes |
+
+`paper` is
 `"roll"` (rolled newspaper in hand, face visible), `"over"` (peeking over the
 paper) or `"holes"` (hidden behind it, two eye holes). The full-body design
 adds a tan trench coat, a PRESS card in the hat band and short legs.
