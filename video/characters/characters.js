@@ -615,6 +615,206 @@ function zip(e) {
   ${mouth}`;
 }
 
+// ---- fourth batch: aliens undercover on Earth, filing the report home ----------
+
+// Big almond alien eye; the lid closes from the top. `o.lid` is the lid fill.
+function almond(id, cx, cy, rx, ry, rot, e, o = {}) {
+  const lidH = 4 + e.lid * ry * 1.7;
+  const hx = cx - rx * 0.3 + e.look * rx * 0.35;
+  return `<g transform="rotate(${rot} ${cx} ${cy})"><clipPath id="${id}"><ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}"/></clipPath>
+    <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="#111" stroke="#111" stroke-width="5"/>
+    <g clip-path="url(#${id})"><ellipse cx="${hx}" cy="${cy - ry * 0.3}" rx="${rx * 0.24}" ry="${ry * 0.27}" fill="#fff" opacity=".92"/>
+      <rect x="${cx - rx - 6}" y="${cy - ry - 6}" width="${2 * rx + 12}" height="${6 + lidH}" fill="${o.lid}"/>
+      <path d="M${cx - rx - 6} ${cy - ry + lidH} H${cx + rx + 6}" stroke="#111" stroke-width="5"/></g></g>`;
+}
+const SUIT = (fill, tie, lapel = "#2C2C33") => `<path d="${SHOULDERS}" fill="${fill}" ${O}/>
+  <path d="M168 292 L200 350 L232 292 Z" fill="#F2EFE8" ${O}/>
+  <path d="M191 310 h18 l5 16 l-14 60 l-14 -60 z" fill="${tie}" ${O}/>
+  ${both(`<path d="M160 292 L146 340 L194 362 L200 328 Z" fill="${lapel}" ${O}/>`)}`;
+
+function grey(e) {
+  const S = "#B9BEC8", K = "#1B1B1F";
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="202" cy="262" rx="9" ry="7" fill="#111"/>`
+    : e.mouth === "flat" ? line("M188 262 H216", 5) : line("M186 258 Q204 268 222 252", 5);
+  const lights = [[96, 97, "#E5333F"], [146, 106, "#FFD23F"], [200, 109, "#E5333F"], [254, 106, "#FFD23F"], [304, 97, "#E5333F"]]
+    .map(([x, y, c]) => `<circle cx="${x}" cy="${y}" r="6" fill="${c}" stroke="#111" stroke-width="3"/>`).join("");
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  ${both(`<path d="M158 288 L118 262 L136 332 L196 358 L200 324 Z" fill="#2C2C33" ${O}/>`)}
+  <rect x="187" y="270" width="26" height="40" fill="${S}" ${O}/>
+  <path d="M200 66 C118 66 88 130 98 192 C106 246 160 288 200 294 C240 288 294 246 302 192 C312 130 282 66 200 66 Z" fill="${S}" ${O}/>
+  ${almond("gy-l", 152, 200, 40, 25, 20, e, { lid: S })}${almond("gy-r", 248, 200, 40, 25, -20, e, { lid: S })}
+  ${line("M193 238 v6 M207 238 v6", 3.5)}
+  ${mouth}
+  <path d="M148 86 C148 32 252 32 252 86 Z" fill="#9FF4F0" ${O}/>${line("M170 62 Q178 46 196 42", 5, "#fff")}
+  <ellipse cx="200" cy="92" rx="138" ry="24" fill="#C9CED6" ${O}/>
+  <ellipse cx="200" cy="86" rx="98" ry="10" fill="#8E929C" opacity=".65"/>
+  ${lights}`;
+}
+
+function hugh(e) {
+  const G = "#6BE04F", H = "#F2C9A0", N = "#1F2A44";
+  const HP = "M200 84 C140 84 110 124 112 180 C114 240 150 284 200 290 C250 284 286 240 288 180 C290 124 260 84 200 84 Z";
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="204" cy="252" rx="20" ry="12" fill="#3A1218" stroke="#111" stroke-width="5"/>`
+    : e.mouth === "flat" ? line("M168 252 H240", 6) : line("M162 246 Q186 260 206 252 Q228 248 242 234", 6);
+  return `
+  ${line("M240 92 C246 60 256 46 270 38", 9)}${line("M240 92 C246 60 256 46 270 38", 4, G)}
+  <circle cx="272" cy="36" r="10" fill="${G}" ${O}/>
+  ${SUIT(N, "#E5333F", "#2A3A5E")}
+  <rect x="180" y="268" width="40" height="36" fill="${H}" ${O}/><rect x="204" y="271.5" width="12.5" height="29" fill="${G}"/>
+  <ellipse cx="112" cy="188" rx="12" ry="18" fill="${H}" ${O}/>
+  <path d="M284 146 C332 156 344 232 320 288 C300 266 290 232 286 200 Z" fill="#D9A877" ${O}/>
+  <ellipse cx="312" cy="212" rx="9" ry="14" transform="rotate(-10 312 212)" fill="#111"/>
+  <path d="${HP}" fill="${G}" ${O}/>
+  <clipPath id="hm-h"><path d="${HP}"/></clipPath>
+  <g clip-path="url(#hm-h)"><rect x="90" y="60" width="116" height="250" fill="${H}"/><path d="M100 160 C104 96 150 70 206 76 L206 116 C172 110 142 124 132 162 Z" fill="#2A1A12"/></g>
+  <path d="${HP}" fill="none" ${O}/>
+  ${eyeball("hm-e", 160, 182, 18, 16, e, { lid: H })}${line("M138 154 L184 158", 6)}
+  ${almond("hm-a", 248, 184, 32, 21, -18, e, { lid: G })}
+  ${line("M198 208 Q188 224 200 228", 4)}
+  ${line("M206 80 V292", 15)}<path d="M206 80 V292" fill="none" stroke="#D9DEE6" stroke-width="8" stroke-dasharray="3.5 4.5"/>
+  <rect x="199" y="290" width="14" height="18" rx="4" fill="#FFD23F" stroke="#111" stroke-width="4"/>
+  ${mouth}`;
+}
+
+function xeno(e) {
+  const K = "#14161B", G = "#7CFFB2";
+  const ry = Math.max(3, 18 * (1 - e.lid * 0.8));
+  const eye = (cx, rot) => `<ellipse cx="${cx + e.look * 8}" cy="184" rx="33" ry="${ry}" transform="rotate(${rot} ${cx} 184)" fill="${G}"/>`;
+  const mouth = e.mouth === "talk"
+    ? [[184, 10], [194, 22], [204, 14], [214, 24], [224, 10]].map(([x, h]) => `<rect x="${x - 3.5}" y="${246 - h / 2}" width="7" height="${h}" rx="3" fill="${G}"/>`).join("")
+    : e.mouth === "flat" ? `<rect x="186" y="243" width="34" height="7" rx="3" fill="${G}"/>` : line("M182 242 Q206 254 228 236", 7, G);
+  const stalk = "M170 50 C164 30 152 18 134 14";
+  return `
+  <defs><filter id="x-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  <path d="${HOOD}" fill="${K}" ${O}/>
+  ${both(`${line(stalk, 10)}${line(stalk, 4, "#3A4050")}<circle cx="132" cy="14" r="10" fill="${G}" ${O}/><ellipse cx="170" cy="50" rx="9" ry="5" fill="#2C313D"/>`)}
+  <ellipse cx="200" cy="192" rx="80" ry="98" fill="#000" stroke="#2C313D" stroke-width="5"/>
+  <g filter="url(#x-glow)">${eye(162, 20)}${eye(238, -20)}${mouth}</g>
+  ${line("M172 312 L200 352 L228 312", 5, "#E5333F")}
+  <rect x="166" y="346" width="68" height="46" rx="6" fill="#fff"/>
+  <path d="M166 352 a6 6 0 0 1 6 -6 h56 a6 6 0 0 1 6 6 v10 h-68 z" fill="#E5333F"/>
+  <rect x="166" y="346" width="68" height="46" rx="6" fill="none" stroke="#111" stroke-width="4"/>
+  <text x="200" y="358.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="800" font-size="9.5" letter-spacing="1.5" fill="#fff">VISITOR</text>
+  <text x="200" y="382" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="800" font-size="15" fill="#111">EARTH</text>`;
+}
+
+function zorp(e) {
+  const S = "#5CE1C6", K = "#17171B", Y = "#FFD23F", T = "#6B3F1D";
+  const mouth = e.mouth === "talk"
+    ? `<path d="M172 240 H236 Q232 274 204 274 Q176 274 172 240 Z" fill="#12423A" stroke="#111" stroke-width="5" stroke-linejoin="round"/>`
+    : e.mouth === "flat" ? line("M170 248 H238", 7) : line("M160 244 Q204 270 246 234", 7);
+  const stalk = "M108 178 C84 170 70 152 66 130";
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  <path d="M170 304 L200 352 L230 304 Z" fill="#F2EFE8" ${O}/>
+  <rect x="186" y="276" width="28" height="36" fill="${S}" ${O}/>
+  ${line(stalk, 10)}${line(stalk, 4, S)}<circle cx="66" cy="126" r="10" fill="${S}" ${O}/>
+  <path d="M200 88 C130 88 100 132 104 188 C108 246 152 288 200 292 C248 288 292 246 296 188 C300 132 270 88 200 88 Z" fill="${S}" ${O}/>
+  <circle cx="130" cy="232" r="7" fill="#3FC4A9"/><circle cx="268" cy="238" r="5" fill="#3FC4A9"/><circle cx="254" cy="258" r="4" fill="#3FC4A9"/>
+  ${eyeball("zo-a", 146, 192, 22, 22, e, { lid: S })}${eyeball("zo-b", 200, 178, 22, 22, e, { lid: S, slant: 0 })}${eyeball("zo-c", 254, 192, 22, 22, e, { lid: S })}
+  ${mouth}
+  <g transform="rotate(-7 200 100)"><path d="M112 130 C100 66 180 44 244 58 C296 68 304 104 292 136 C262 108 204 100 162 112 C140 118 126 128 112 130 Z" fill="${T}" ${O}/>${line("M150 86 Q200 68 256 84", 4, "#8A5A30")}</g>
+  <rect x="290" y="160" width="32" height="64" rx="13" fill="${K}" ${O}/>
+  ${line("M306 224 C306 288 278 298 254 292", 9)}
+  <rect x="232" y="282" width="30" height="18" rx="9" fill="${Y}" ${O}/>
+  <path d="M200 326 l-32 -18 v36 z M200 326 l32 -18 v36 z" fill="${Y}" ${O}/><circle cx="200" cy="326" r="9" fill="${Y}" ${O}/>`;
+}
+
+function peek(e) {
+  const M = "#FF4FA3", P = "#F4EEDC", K = "#17171B";
+  const slit = (x, y) => `<ellipse cx="${x}" cy="${y + 1}" rx="5" ry="13" fill="#111"/>`;
+  const finger = (x, y) => `<ellipse cx="${x}" cy="${y}" rx="19" ry="11" fill="${M}" ${O}/>`;
+  const rows = (x, w, ys) => ys.map((y) => `<rect x="${x}" y="${y}" width="${w}" height="5" fill="#B9B3A4"/>`).join("");
+  const stalk = "M112 108 C86 100 72 84 68 62";
+  const talk = e.mouth === "talk" ? line("M356 150 q14 20 0 40 M370 138 q22 32 0 64", 5) : "";
+  const eo = (s) => ({ white: "#FFE66D", lid: "#111", pupil: slit, slant: s });
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  ${both(`${line(stalk, 10)}${line(stalk, 4, M)}<circle cx="68" cy="58" r="10" fill="${M}" ${O}/>`)}
+  <path d="M118 152 C118 108 160 98 200 98 C240 98 282 108 282 152 Z" fill="${M}" ${O}/>
+  <path d="M132 104 C128 50 150 30 200 36 C250 30 272 50 268 104 Z" fill="${K}" ${O}/>
+  <path d="M131 84 Q200 96 269 84 L268 104 H132 Z" fill="${M}"/>
+  <ellipse cx="200" cy="106" rx="128" ry="18" fill="${K}" ${O}/>
+  <g transform="rotate(-3 200 244)">
+    <rect x="56" y="130" width="288" height="232" rx="4" fill="${P}" ${O}/>
+    <text x="200" y="170" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="34" letter-spacing="2" fill="#111">EARTH DAILY</text>
+    ${line("M70 180 H330", 3)}
+    ${eyeball("pk-a", 150, 226, 21, 21, e, eo(6))}${eyeball("pk-b", 200, 218, 21, 21, e, eo(0))}${eyeball("pk-c", 250, 226, 21, 21, e, eo(6))}
+    <text x="200" y="280" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="19" letter-spacing=".5" fill="#111">HUMANS: STILL NOT PATCHING</text>
+    ${line("M70 292 H330", 2)}
+    ${rows(72, 80, [304, 315, 326, 337, 348])}${rows(160, 80, [304, 315, 326, 337])}
+    <rect x="250" y="302" width="78" height="48" fill="#D9D2C0" stroke="#111" stroke-width="3"/>
+    <ellipse cx="289" cy="330" rx="22" ry="6" fill="#111"/><path d="M277 328 a12 10 0 0 1 24 0 z" fill="#111"/>
+  </g>
+  ${finger(58, 214)}${finger(56, 244)}${finger(58, 274)}${finger(342, 204)}${finger(344, 234)}${finger(342, 264)}
+  ${talk}`;
+}
+
+function pilot(e) {
+  const G = "#6BE04F", K = "#17171B", GL = "#9FF4F0";
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="200" cy="202" rx="6" ry="5" fill="#111"/>`
+    : e.mouth === "flat" ? line("M192 201 H208", 3.5) : line("M191 199 Q201 206 211 196", 3.5);
+  const arm = "M170 210 Q156 204 151 214";
+  const ant = "M188 150 C184 132 178 124 170 120";
+  return `
+  ${SUIT(K, "#E5333F")}
+  <circle cx="200" cy="176" r="110" fill="${GL}" fill-opacity=".42" ${O}/>
+  ${both(`${line(ant, 7)}${line(ant, 3, G)}<circle cx="168" cy="118" r="6" fill="${G}" stroke="#111" stroke-width="3.5"/>`)}
+  <ellipse cx="200" cy="184" rx="46" ry="38" fill="${G}" stroke="#111" stroke-width="6"/>
+  ${almond("pl-l", 183, 180, 15, 10, 18, e, { lid: G })}${almond("pl-r", 217, 180, 15, 10, -18, e, { lid: G })}
+  ${mouth}
+  ${both(`${line(arm, 13)}${line(arm, 6, G)}`)}
+  <rect x="128" y="236" width="144" height="48" rx="12" fill="#5A5F6B" ${O}/>
+  ${both(`${line("M150 242 V216", 6)}<circle cx="150" cy="212" r="8" fill="#E5333F" stroke="#111" stroke-width="4"/>`)}
+  <circle cx="184" cy="256" r="6" fill="#FFD23F" stroke="#111" stroke-width="3"/><circle cx="200" cy="256" r="6" fill="${GL}" stroke="#111" stroke-width="3"/><circle cx="216" cy="256" r="6" fill="#E5333F" stroke="#111" stroke-width="3"/>
+  <rect x="176" y="268" width="48" height="8" rx="3" fill="#111"/>
+  <path d="M118 150 A96 96 0 0 1 170 86" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+  <circle cx="200" cy="176" r="110" fill="none" ${O}/>
+  <ellipse cx="200" cy="290" rx="80" ry="18" fill="#C9CED6" ${O}/>`;
+}
+
+function normal(e) {
+  const G = "#6BE04F", W = "#F2EFE8", N = "#1F2A44";
+  const HP = "M200 80 C138 80 108 126 110 184 C112 244 152 288 200 292 C248 288 288 244 290 184 C292 126 262 80 200 80 Z";
+  const eye = (cx, id) => {
+    const h = 6 + e.lid * 44;
+    return `<clipPath id="${id}"><circle cx="${cx}" cy="178" r="27"/></clipPath><circle cx="${cx}" cy="178" r="27" fill="#fff"/>
+      <g clip-path="url(#${id})"><ellipse cx="${cx + e.look * 7}" cy="180" rx="19" ry="23" fill="#111"/><ellipse cx="${cx - 6 + e.look * 9}" cy="170" rx="5" ry="6" fill="#fff"/>
+      <rect x="${cx - 30}" y="148" width="60" height="${h}" fill="${G}"/>${line(`M${cx - 30} ${148 + h} H${cx + 30}`, 4)}</g>
+      <circle cx="${cx}" cy="178" r="29" fill="none" stroke="#111" stroke-width="8"/>`;
+  };
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="202" cy="270" rx="15" ry="9" fill="#1E5A14" stroke="#111" stroke-width="5"/>`
+    : e.mouth === "flat" ? line("M186 270 H218", 6) : line("M184 266 Q204 278 224 262", 6);
+  const stalk = "M168 92 C160 60 152 44 142 34";
+  return `
+  ${both(`${line(stalk, 10)}${line(stalk, 4, G)}<circle cx="140" cy="30" r="10" fill="${G}" ${O}/>`)}
+  <path d="${SHOULDERS}" fill="${W}" ${O}/>
+  <path d="M191 312 h18 l5 16 l-14 64 l-14 -64 z" fill="${N}" ${O}/>
+  ${both(`<path d="M162 294 L148 334 L196 350 L200 318 Z" fill="${W}" ${O}/>`)}
+  ${line("M88 360 h46", 4)}<rect x="96" y="340" width="8" height="22" rx="2" fill="#E5333F" stroke="#111" stroke-width="3"/><rect x="110" y="344" width="8" height="18" rx="2" fill="${N}" stroke="#111" stroke-width="3"/>
+  <g transform="rotate(5 288 356)">
+    <rect x="244" y="326" width="90" height="62" rx="8" fill="#fff"/>
+    <path d="M244 334 a8 8 0 0 1 8 -8 h74 a8 8 0 0 1 8 8 v12 h-90 z" fill="#E5333F"/>
+    <rect x="244" y="326" width="90" height="62" rx="8" fill="none" stroke="#111" stroke-width="4"/>
+    <text x="289" y="341" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="800" font-size="11" letter-spacing="1.5" fill="#fff">HELLO I AM</text>
+    <text x="289" y="376" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="800" font-size="21" fill="#111">HUMAN</text>
+  </g>
+  <rect x="182" y="272" width="36" height="34" fill="${G}" ${O}/>
+  <path d="${HP}" fill="${G}" ${O}/>
+  ${both(`<path d="M132 140 Q164 122 196 142 L196 153 Q164 135 132 152 Z" fill="#111"/>`)}
+  ${line("M135 172 L112 164 M265 172 L288 164", 6)}${line("M190 176 H210", 8)}
+  ${eye(164, "nm-l")}${eye(236, "nm-r")}
+  <path d="M188 184 Q200 174 212 184 L222 226 Q200 244 178 226 Z" fill="#F2B28C" ${O}/>
+  <path d="M200 236 C180 224 150 234 140 258 C166 264 186 260 200 250 C214 260 234 264 260 258 C250 234 220 224 200 236 Z" fill="#111"/>
+  ${mouth}`;
+}
+
 export const characters = [
   { id: "glitch", name: "GLITCH", role: "The possessed monitor", line: "A beige CRT that grew horns. Deadpan sysadmin from hell.",
     bg: "#17120A", fg: "#FFB000", sub: "#B9A27A", palette: ["#17120A", "#E8DFCB", "#FFB000", "#FF3B47"], draw: glitch },
@@ -660,6 +860,20 @@ export const characters = [
     bg: "#FF6A1A", fg: "#17171B", sub: "#6B2C08", palette: ["#FF6A1A", "#F2EFE8", "#17171B", "#E5333F"], draw: watcher },
   { id: "zip", name: "ZIP", role: "The zipped lip", line: "A balaclava with a zipper for a mouth. Says nothing, unzips everything.",
     bg: "#FF3D8B", fg: "#17171B", sub: "#6E0F36", palette: ["#FF3D8B", "#17171B", "#F7F3E8", "#FFD23F"], draw: zip },
+  { id: "grey", name: "AGENT GREY", role: "The trench-coat classic", line: "His hat is his ship. Nobody on Earth has noticed yet.",
+    bg: "#FFD23F", fg: "#1B1B1F", sub: "#6B5510", palette: ["#FFD23F", "#1B1B1F", "#B9BEC8", "#9FF4F0"], draw: grey },
+  { id: "hugh", name: "HUGH MANN", role: "The human suit", line: "The mask is slipping and the zipper shows. Files the report anyway.",
+    bg: "#FF5A36", fg: "#17171B", sub: "#6B1E0C", palette: ["#FF5A36", "#1F2A44", "#F2C9A0", "#6BE04F"], draw: hugh },
+  { id: "xeno", name: "XENO", role: "The hooded visitor", line: "Antennae through a hoodie and a visitor badge. Blends right in.",
+    bg: "#C8F031", fg: "#14161B", sub: "#4E6110", palette: ["#C8F031", "#14161B", "#7CFFB2", "#E5333F"], draw: xeno },
+  { id: "zorp", name: "ZORP", role: "The field correspondent", line: "Three eyes, one toupee. Reports nightly to the home planet.",
+    bg: "#6A3BFF", fg: "#5CE1C6", sub: "#CFC2FF", palette: ["#6A3BFF", "#5CE1C6", "#17171B", "#FFD23F"], draw: zorp },
+  { id: "peek", name: "PEEK", role: "The newspaper spy", line: "Cut three eye holes in the paper. Humans cut two. Rookie mistake.",
+    bg: "#19B5FE", fg: "#17171B", sub: "#0B4A6B", palette: ["#19B5FE", "#F4EEDC", "#FF4FA3", "#FFE66D"], draw: peek },
+  { id: "pilot", name: "PILOT", role: "The one inside", line: "A tiny alien driving a human suit from behind the glass.",
+    bg: "#F2EFE8", fg: "#17171B", sub: "#6B6457", palette: ["#F2EFE8", "#17171B", "#9FF4F0", "#6BE04F"], draw: pilot },
+  { id: "normal", name: "MR. NORMAL", role: "The perfect disguise", line: "Glasses, nose, mustache, name tag. Definitely a human.",
+    bg: "#FF3D8B", fg: "#17171B", sub: "#6E0F36", palette: ["#FF3D8B", "#6BE04F", "#F2EFE8", "#1F2A44"], draw: normal },
 ];
 
 export const svg = (c, expr = "idle", size = 400) =>

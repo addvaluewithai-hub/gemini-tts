@@ -5,14 +5,18 @@ Nothing here is used by the TTS worker itself.
 
 ## characters/
 
-Twenty-two candidate hosts for the techforbadguys channel, drawn as parametric SVG
+Twenty-nine candidate hosts for the techforbadguys channel, drawn as parametric SVG
 in `characters/characters.js`. Each `draw(expression)` takes
 
 ```js
 { lid: 0..1, look: -1..1, mouth: "smirk" | "talk" | "flat" }
 ```
 
-so the chosen character can later be animated from an episode's audio and
+The channel premise: the host is an alien living undercover on Earth, and each
+episode is the sarcastic field report it files to its home planet. The last
+seven candidates (`grey` to `normal`) are drawn for that premise.
+
+The expression object exists so the chosen character can later be animated from an episode's audio and
 word timestamps (blink, glance, mouth driven by the voice level).
 
 | id | name | idea |
@@ -39,8 +43,15 @@ word timestamps (blink, glance, mouth driven by the voice level).
 | `source` | THE SOURCE | A suit and tie with a paper bag over its head |
 | `watcher` | WATCHER | A CCTV camera for a head on a corporate body |
 | `zip` | ZIP | A balaclava with a zipper for a mouth |
+| `grey` | AGENT GREY | A grey alien in a trench coat whose hat is his flying saucer |
+| `hugh` | HUGH MANN | An alien in a half-unzipped human mask |
+| `xeno` | XENO | A hooded visitor with antennae through the hood and an EARTH visitor badge |
+| `zorp` | ZORP | A three-eyed field correspondent with a toupee and a headset |
+| `peek` | PEEK | A spy behind a newspaper with three eye holes cut in it |
+| `pilot` | PILOT | A tiny alien driving a human suit from a glass dome |
+| `normal` | MR. NORMAL | A green alien in novelty glasses, fake nose, mustache and a HUMAN name tag |
 
-Rendered cards live in `characters/cards/` (`overview-all.png` shows the first fifteen, `overview-shortlist.png` the masked shortlist of ten). Regenerate them with:
+Rendered cards live in `characters/cards/` (`overview-all.png` shows the first fifteen, `overview-shortlist.png` the masked shortlist of ten, `overview-aliens.png` the undercover aliens). Regenerate them with:
 
 ```bash
 cd video && npm install --no-package-lock
