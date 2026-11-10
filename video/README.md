@@ -90,3 +90,22 @@ is. Rendered cards are in `characters/concepts/`.
 ```bash
 node characters/render-sheet.cjs characters/concepts concepts.html
 ```
+
+## characters/peek.html
+
+The direction picked so far: PEEK, the alien spy in a fedora with a
+newspaper, reworked with two eyes and a visible face. The newspaper is a
+recurring prop (folded under the arm, peeked over, or hidden behind with two
+eye holes) rather than a permanent cover. `peekSpy(expression, variant, paper)`
+and `peekPixel(mode)` in `characters.js` draw it; cards are in `characters/peek/`.
+
+| variant | face |
+|---|---|
+| A / ROUND | Round head, round pupils, blush |
+| B / SLY | Narrow head, slit pupils, smirk |
+| C / SQUID | Round head with a tentacle beard |
+| D / PIXEL | The same spy as a 24x24 sprite |
+
+```bash
+node characters/render-sheet.cjs characters/peek peek.html
+```

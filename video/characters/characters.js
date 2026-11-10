@@ -978,6 +978,116 @@ function observer(e) {
   <path d="M200 304 l12 14 l-12 14 l-12 -14 z" fill="#FFD23F" stroke="#111" stroke-width="4" stroke-linejoin="round"/>`;
 }
 
+// ---- PEEK, second pass: two eyes, face visible, newspaper as a recurring prop ----
+// v: "A" round and friendly, "B" narrow and sly, "C" round with a tentacle beard.
+// paper: "none" (folded under the arm), "over" (peeking over the top), "holes" (hidden, two eye holes).
+export function peekSpy(e, v = "A", paper = "none") {
+  const M = "#FF4FA3", MD = "#D9357F", P = "#F4EEDC", K = "#17171B", Y = "#FFE66D";
+  const id = `pk2-${v}-${paper}`;
+  const head = v === "B"
+    ? "M200 108 C140 108 110 150 116 200 C122 252 164 292 200 296 C236 292 278 252 284 200 C290 150 260 108 200 108 Z"
+    : "M200 112 C138 112 110 150 110 198 C110 252 150 288 200 290 C250 288 290 252 290 198 C290 150 262 112 200 112 Z";
+  const slit = (x, y) => `<ellipse cx="${x}" cy="${y + 1}" rx="5.5" ry="14" fill="#111"/>`;
+  const eyes = (lid) => v === "B"
+    ? eyeball(`${id}-l`, 162, 198, 27, 20, e, { white: Y, lid, pupil: slit, slant: 9 }) + eyeball(`${id}-r`, 238, 198, 27, 20, e, { white: Y, lid, pupil: slit, slant: 9 })
+    : eyeball(`${id}-l`, 164, 198, 25, 25, e, { white: Y, lid, slant: 3, pr: 11 }) + eyeball(`${id}-r`, 236, 198, 25, 25, e, { white: Y, lid, slant: 3, pr: 11 });
+  const my = v === "C" ? 244 : 250;
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="202" cy="${my + 3}" rx="12" ry="9" fill="#7A1846" stroke="#111" stroke-width="5"/>`
+    : e.mouth === "flat" ? line(`M184 ${my + 2} H218`, 6) : line(`M180 ${my - 2} Q202 ${my + 13} 224 ${my - 6}`, 6);
+  const blush = v === "B" ? "" : `<ellipse cx="138" cy="230" rx="13" ry="8" fill="${MD}" opacity=".55"/><ellipse cx="262" cy="230" rx="13" ry="8" fill="${MD}" opacity=".55"/>`;
+  const curl = (d) => `${line(d, 20)}${line(d, 10, M)}`;
+  const beard = v === "C" ? curl("M172 272 C166 312 146 320 140 300") + curl("M228 272 C234 312 254 320 260 300") + curl("M200 282 C198 328 216 338 224 318") : "";
+  const stalk = "M112 108 C86 100 72 84 68 62";
+  const finger = (x, y) => `<ellipse cx="${x}" cy="${y}" rx="19" ry="11" fill="${M}" ${O}/>`;
+  const rows = (x, w, ys) => ys.map((y) => `<rect x="${x}" y="${y}" width="${w}" height="5" fill="#B9B3A4"/>`).join("");
+  const mast = (y, s) => `<text x="200" y="${y}" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="${s}" letter-spacing="2" fill="#111">EARTH DAILY</text>`;
+  const headline = (y) => `<text x="200" y="${y}" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="19" letter-spacing=".5" fill="#111">HUMANS: STILL NOT PATCHING</text>`;
+  let prop = "";
+  if (paper === "none") {
+    prop = `<g transform="rotate(-12 300 352)"><rect x="238" y="322" width="136" height="70" rx="4" fill="${P}" ${O}/>
+      <text x="306" y="348" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="19" letter-spacing="1" fill="#111">EARTH DAILY</text>
+      ${line("M248 356 H364", 2)}${rows(248, 116, [364, 374])}</g>${finger(246, 356)}${finger(250, 380)}`;
+  } else if (paper === "over") {
+    prop = `<g transform="rotate(-3 200 320)"><rect x="50" y="228" width="300" height="190" rx="4" fill="${P}" ${O}/>
+      ${mast(272, 38)}${line("M66 284 H334", 3)}${headline(318)}${line("M66 330 H334", 2)}
+      ${rows(68, 82, [342, 353, 364, 375, 386])}${rows(160, 82, [342, 353, 364, 375, 386])}${rows(252, 82, [342, 353, 364, 375, 386])}</g>
+      ${finger(54, 268)}${finger(52, 298)}${finger(346, 258)}${finger(348, 288)}`;
+  } else {
+    prop = `<g transform="rotate(-3 200 244)"><rect x="56" y="134" width="288" height="232" rx="4" fill="${P}" ${O}/>
+      ${mast(174, 34)}${line("M70 184 H330", 3)}
+      ${eyes("#111")}
+      ${headline(284)}${line("M70 296 H330", 2)}
+      ${rows(72, 80, [308, 319, 330, 341, 352])}${rows(160, 80, [308, 319, 330, 341])}
+      <rect x="250" y="306" width="78" height="48" fill="#D9D2C0" stroke="#111" stroke-width="3"/>
+      <ellipse cx="289" cy="334" rx="22" ry="6" fill="#111"/><path d="M277 332 a12 10 0 0 1 24 0 z" fill="#111"/></g>
+      ${finger(58, 218)}${finger(56, 248)}${finger(58, 278)}${finger(342, 208)}${finger(344, 238)}${finger(342, 268)}`;
+  }
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  ${both(`<path d="M158 288 L118 262 L136 332 L196 358 L200 324 Z" fill="#2C2C33" ${O}/>`)}
+  <rect x="184" y="270" width="32" height="38" fill="${M}" ${O}/>
+  ${both(`${line(stalk, 10)}${line(stalk, 4, M)}<circle cx="68" cy="58" r="10" fill="${M}" ${O}/>`)}
+  ${beard}
+  <path d="${head}" fill="${M}" ${O}/>
+  ${blush}${paper === "holes" ? "" : eyes(M)}${mouth}
+  <path d="M132 104 C128 50 150 30 200 36 C250 30 272 50 268 104 Z" fill="${K}" ${O}/>
+  <path d="M131 84 Q200 96 269 84 L268 104 H132 Z" fill="${M}"/>
+  <ellipse cx="200" cy="106" rx="128" ry="18" fill="${K}" ${O}/>
+  ${prop}`;
+}
+
+// 24x24 sprite of the same spy. mode: "idle" | "blink" | "over" | "holes".
+export function peekPixel(mode = "idle", size = 400) {
+  const base = [
+    "........KKKKKKKK........",
+    ".......KKKKKKKKKK.......",
+    ".......KKKKKKKKKK.......",
+    ".......LLLLLLLLLL.......",
+    "...KKKKKKKKKKKKKKKKKK...",
+    ".N...KPPPPPPPPPPPPK...N.",
+    "..N.KPPPPPPPPPPPPPPK.N..",
+    "...NKPPPPPPPPPPPPPPKN...",
+    "....KPYYYYPPPPYYYYPK....",
+    "....KPYEEYPPPPYEEYPK....",
+    "....KPYEEYPPPPYEEYPK....",
+    "....KPYYYYPPPPYYYYPK....",
+    "....KPPPPPPPPPPPPPPK....",
+    "....KPDPPPPPPPPPPDPK....",
+    ".....KPPPPDDDDPPPPK.....",
+    "......KPPPPPPPPPPK......",
+    ".......KKPPPPPPKK.......",
+    ".....KKCCKPPPPKCCKK.....",
+    "...KKCCCCCKKKKCCCCCKK...",
+    "..KCCCCCCCCRRCCCCCCCCK..",
+    "..KCCCCCCCCRRCCCCCCCCK..",
+    "..KCCCCCCCCCRCCCCCCCCK..",
+    "..KCCCCCCCCCCCCCCCCCCK..",
+    "..KCCCCCCCCCCCCCCCCCCK..",
+  ].map((r, y) => { if (r.length !== 24) throw new Error("sprite row " + y + " is " + r.length); return [...r]; });
+  const g = base.map((r) => [...r]);
+  if (mode === "blink") for (const x of [6, 7, 8, 9, 14, 15, 16, 17]) { g[8][x] = "P"; g[9][x] = "P"; g[10][x] = "K"; g[11][x] = "P"; }
+  const paperRows = (from) => {
+    for (let y = from; y < 24; y++) for (let x = 1; x < 23; x++) {
+      const edge = y === from || x === 1 || x === 22;
+      g[y][x] = edge ? "K" : (y - from) % 2 === 0 && y > from + 1 && x > 2 && x < 21 && (x + y) % 5 !== 0 ? "T" : "W";
+    }
+    for (const y of [from + 2, from + 3]) { g[y][0] = "P"; g[y][1] = "P"; g[y][22] = "P"; g[y][23] = "P"; }
+  };
+  if (mode === "over") paperRows(12);
+  if (mode === "holes") {
+    paperRows(5);
+    for (let x = 4; x < 20; x++) g[6][x] = "K";
+    for (const y of [8, 9, 10, 11]) for (const x of [6, 7, 8, 9, 14, 15, 16, 17]) g[y][x] = base[y][x];
+    for (const y of [8, 9, 10, 11]) for (const x of [5, 10, 13, 18]) g[y][x] = "W";
+    for (const x of [5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18]) { g[7][x] = "W"; g[12][x] = "W"; }
+  }
+  const pal = { K: "#05050C", P: "#FF4FA3", D: "#C92F78", Y: "#FFE66D", E: "#05050C", L: "#FF4FA3", N: "#FF4FA3", C: "#2B2B4A", R: "#E5333F", W: "#F4EEDC", T: "#9C968A" };
+  let s = "";
+  g.forEach((row, y) => row.forEach((c, x) => { if (c !== ".") s += `<rect x="${x * 10}" y="${y * 10}" width="10.2" height="10.2" fill="${pal[c]}"/>`; }));
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="${size}" height="${size}" shape-rendering="crispEdges">${s}</svg>`;
+}
+
 export const characters = [
   { id: "glitch", name: "GLITCH", role: "The possessed monitor", line: "A beige CRT that grew horns. Deadpan sysadmin from hell.",
     bg: "#17120A", fg: "#FFB000", sub: "#B9A27A", palette: ["#17120A", "#E8DFCB", "#FFB000", "#FF3B47"], draw: glitch },

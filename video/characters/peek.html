@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}
+body{background:#000}
+.card{width:1200px;height:1200px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace}
+.num{position:absolute;left:56px;top:48px;font-size:26px;letter-spacing:.14em;font-weight:700}
+.brand{position:absolute;right:56px;top:48px;font-size:22px;letter-spacing:.14em;font-weight:700;opacity:.8}
+.hero{position:absolute;left:60px;top:100px;width:730px;height:730px;display:flex;align-items:center;justify-content:center}
+.side{position:absolute;right:56px;top:140px;width:250px;display:flex;flex-direction:column;gap:22px}
+.thumb{width:250px;height:214px;border-radius:18px;display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden}
+.thumb span{position:absolute;left:14px;top:10px;font-size:15px;letter-spacing:.14em;font-weight:700;z-index:2}
+.name{position:absolute;left:56px;bottom:172px;font-family:"Anton";font-size:170px;line-height:1;white-space:nowrap}
+.name small{font-size:64px;margin-left:26px;opacity:.75}
+.role{position:absolute;left:60px;bottom:126px;font-size:27px;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+.line{position:absolute;left:60px;bottom:52px;font-size:22px;line-height:1.35;font-weight:500;max-width:1040px;height:60px}
+</style></head><body><div id="root"></div>
+<script type="module">
+import { peekSpy, peekPixel, EXPRESSIONS } from "/characters/characters.js";
+const sv = (inner, size) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="${size}" height="${size}">${inner}</svg>`;
+const variants = [
+  { v: "A", tag: "ROUND", role: "Soft and friendly", line: "Round eyes and round pupils. The easiest one to look at for a whole episode.", bg: "#19B5FE", fg: "#17171B", sub: "#0B4A6B" },
+  { v: "B", tag: "SLY", role: "Narrow and knowing", line: "Slit pupils and a smirk. Looks like he already has your password.", bg: "#19B5FE", fg: "#17171B", sub: "#0B4A6B" },
+  { v: "C", tag: "SQUID", role: "The disguise is slipping", line: "The round face with a tentacle beard he forgot to tuck in. Keeps the Hugh Mann joke.", bg: "#19B5FE", fg: "#17171B", sub: "#0B4A6B" },
+  { v: "D", tag: "PIXEL", role: "The same spy as a sprite", line: "For an all-pixel show: blinks in two frames, lifts the paper in one.", bg: "#12205A", fg: "#FFE66D", sub: "#A9B8F5" },
+];
+const root = document.getElementById("root");
+variants.forEach((c, i) => {
+  const d = document.createElement("div");
+  d.className = "card"; d.id = "card-peek-" + c.tag.toLowerCase(); d.style.background = c.bg; d.style.color = c.fg;
+  const tint = c.v === "D" ? "rgba(255,255,255,.08)" : "rgba(23,23,27,.1)";
+  let hero, thumbs;
+  if (c.v === "D") {
+    hero = peekPixel("idle", 660);
+    thumbs = [["over", "PEEKING OVER"], ["holes", "BEHIND THE PAPER"], ["blink", "BLINK"]].map(([m, l]) => `<div class="thumb" style="background:${tint};color:${c.sub}"><span>${l}</span>${peekPixel(m, 186)}</div>`).join("");
+  } else {
+    hero = sv(peekSpy(EXPRESSIONS.idle, c.v, "none"), 730);
+    thumbs = [[EXPRESSIONS.idle, "over", "PEEKING OVER"], [EXPRESSIONS.idle, "holes", "BEHIND THE PAPER"], [EXPRESSIONS.deadpan, "none", "DEADPAN"]]
+      .map(([e, p, l]) => `<div class="thumb" style="background:${tint};color:${c.sub}"><span>${l}</span>${sv(peekSpy(e, c.v, p), 200)}</div>`).join("");
+  }
+  d.innerHTML = `<div class="num">PEEK ${c.v} / D</div><div class="brand">TECHFORBADGUYS // THE SPY, TAKE TWO</div>
+    <div class="hero">${hero}</div><div class="side">${thumbs}</div>
+    <div class="name">PEEK<small>${c.tag}</small></div><div class="role">${c.role}</div><div class="line" style="color:${c.sub}">${c.line}</div>`;
+  root.appendChild(d);
+});
+await document.fonts.load('170px "Anton"'); await document.fonts.ready; window.__ready = true;
+</script></body></html>
