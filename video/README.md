@@ -144,10 +144,10 @@ node characters/render-sheet.cjs characters/peek3d peek3d.html
 ### The picked face: `pear`
 
 `characters/pear.html` renders the chosen face on its own: full body, a
-close-up, a hands close-up and four states. The hands were redrawn for it: a
-relaxed hand with a palm, three fingers and a thumb coming out of a visible
-sleeve and cuff, a fist wrapped around the rolled newspaper, and fingers over
-the edge of the open paper. Faces with `teeth: true` get two front teeth under
+close-up, a hands close-up and four states. Every hand pose is built from one spec (`HT`, `HL`, `TT`,
+`PALM_W` in `peek3d.js`: three fingers and a thumb, one thickness, one length), so
+the relaxed hand, the fist around the rolled newspaper and the fingers over
+the edge of the open paper all match. Faces with `teeth: true` get two front teeth under
 the lip and a full upper row when talking.
 
 ```bash

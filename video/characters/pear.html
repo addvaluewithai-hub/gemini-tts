@@ -18,7 +18,8 @@ const root = document.getElementById("root"), F = "pear";
 const add = (id, html, cls = "card") => { const d = document.createElement("div"); d.className = cls; d.id = "card-" + id; d.innerHTML = html; root.appendChild(d); };
 add("pear-hero", `${peek3d(E.idle, { face: F })}<div class="title">PEEK</div><div class="sub">FIELD AGENT, EARTH<br>PEAR FACE</div>`);
 add("pear-closeup", `${peek3d(E.idle, { face: F, viewBox: "200 60 800 800" })}<div class="tag">CLOSE-UP</div>`);
-add("pear-hands", `${peek3d(E.idle, { face: F, viewBox: "300 560 600 600" })}<div class="tag">HANDS</div>`);
+add("pear-hands", [["roll", "300 770 240 240", "RELAXED"], ["roll", "690 740 240 240", "HOLDING THE ROLL"], ["over", "180 470 240 240", "ON THE PAPER, LEFT"], ["over", "780 462 240 240", "ON THE PAPER, RIGHT"]]
+  .map(([p, vb, l]) => `<div class="cell">${peek3d(E.idle, { face: F, paper: p, size: 600, viewBox: vb })}<div class="tag">${l}</div></div>`).join(""), "card grid");
 add("pear-states", [[E.talk, "roll", "TALKING"], [E.deadpan, "roll", "DEADPAN"], [E.idle, "over", "PEEKING OVER"], [E.idle, "holes", "BEHIND THE PAPER"]]
   .map(([e, p, l]) => `<div class="cell">${peek3d(e, { face: F, paper: p, size: 600 })}<div class="tag">${l}</div></div>`).join(""), "card grid");
 await document.fonts.load('120px "Anton"'); await document.fonts.ready; window.__ready = true;

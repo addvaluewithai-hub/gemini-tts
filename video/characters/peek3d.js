@@ -142,15 +142,29 @@ function mouth(e, c) {
     <path d="M${600 + w * 1.2} ${y - rise} q10 -8 16 -2" fill="none" stroke="${c.dark}" stroke-width="6" stroke-linecap="round" opacity=".7"/>`;
 }
 
-const finger = (x, y, w, h, rot) => `<rect x="${x - w / 2}" y="${y}" width="${w}" height="${h}" rx="${w / 2}" transform="rotate(${rot} ${x} ${y})" fill="url(#${G}fing)"/>`;
-// A relaxed hand seen from the back. dir = +1 puts the thumb on the right.
+// One hand for every pose: three fingers and a thumb, the same thickness and length everywhere.
+const HT = 29, HL = 32, TT = 27;            // finger thickness, visible finger length, thumb thickness
+const PALM_W = HT * 3 + 2, PALM_H = 72;     // the palm is exactly three fingers wide
+const cap = (x, y, w, h, rot, g) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${Math.min(w, h) / 2}" transform="rotate(${rot} ${x + w / 2} ${y + (rot && h > w ? 0 : h / 2)})" fill="url(#${G}${g})"/>`;
+
+// Relaxed, hanging, seen from the back. dir = +1 puts the thumb on the right.
 const hand = (cx, cy, dir, lo) => `<g filter="url(#${G}drop)">
-  ${finger(cx + dir * 25, cy - 10, 22, 34, -dir * 32)}
-  ${finger(cx - 21, cy + 6, 23, 36, 8)}${finger(cx, cy + 10, 24, 41, 0)}${finger(cx + 21, cy + 6, 23, 36, -8)}
-  <ellipse cx="${cx}" cy="${cy}" rx="35" ry="31" fill="url(#${G}ball)"/>
-  <path d="M${cx - 11} ${cy + 25} v8 M${cx + 11} ${cy + 25} v8" stroke="${lo}" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
-  <ellipse cx="${cx - 11}" cy="${cy - 12}" rx="12" ry="7" fill="#fff" opacity=".28"/></g>`;
-const grip = (x, y, side) => `<g filter="url(#${G}drop)">${[0, 33, 66].map((dy) => `<rect x="${side < 0 ? x - 40 : x - 34}" y="${y + dy}" width="74" height="27" rx="13.5" transform="rotate(${side * 4} ${x} ${y + dy})" fill="url(#${G}fingH)"/>`).join("")}</g>`;
+  ${cap(cx + dir * 33 - TT / 2, cy - 12, TT, 44, -dir * 34, "fing")}
+  ${cap(cx - HT - HT / 2, cy + 14, HT, HL + 19, 7, "fing")}${cap(cx - HT / 2, cy + 18, HT, HL + 19, 0, "fing")}${cap(cx + HT / 2, cy + 14, HT, HL + 19, -7, "fing")}
+  <rect x="${cx - PALM_W / 2}" y="${cy - PALM_H / 2}" width="${PALM_W}" height="${PALM_H}" rx="33" fill="url(#${G}ball)"/>
+  <path d="M${cx - HT / 2} ${cy + 27} v9 M${cx + HT / 2} ${cy + 27} v9" stroke="${lo}" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+  <ellipse cx="${cx - 14}" cy="${cy - 14}" rx="14" ry="8" fill="#fff" opacity=".28"/></g>`;
+
+// Closed around a vertical tube whose centre line is x = 0; the hand comes in from the right.
+const fist = (y, lo) => `<g filter="url(#${G}drop)">
+  <rect x="20" y="${y - 4}" width="48" height="${PALM_W + 8}" rx="22" fill="url(#${G}ball)"/>
+  ${cap(4, y - 30, 54, TT, -24, "fingH")}
+  ${[0, 1, 2].map((k) => cap(-44, y + 1 + k * HT, HL + 42, HT, 0, "fingH")).join("")}
+  <path d="M-30 ${y + HT + 1} h14 M-30 ${y + HT * 2 + 1} h14" stroke="${lo}" stroke-width="3" stroke-linecap="round" opacity=".4"/></g>`;
+
+// Holding the edge of a sheet at x: knuckles behind the paper, three fingertips over the front.
+const gripBack = (x, y, side) => `<rect x="${side < 0 ? x - 34 : x - 8}" y="${y - 6}" width="42" height="${PALM_W + 12}" rx="20" fill="url(#${G}ball)"/>`;
+const grip = (x, y, side) => `<g filter="url(#${G}drop)">${[0, 1, 2].map((k) => cap(side < 0 ? x - 14 : x - HL, y + 1 + k * HT, HL + 14, HT, side * 3, "fingH")).join("")}</g>`;
 
 function newspaper(top, holes, c) {
   const h = 900 - top, rows = (x, w, y0, n) => Array.from({ length: n }, (_, i) => `<rect x="${x}" y="${y0 + i * 22}" width="${w}" height="9" rx="2" fill="#A39A84"/>`).join("");
@@ -197,9 +211,7 @@ export function peek3d(e, { face = "A", paper = "roll", size = 1200, viewBox = "
   const roll = `<g transform="translate(792 752) rotate(14)">
     <g filter="url(#${G}drop)"><rect x="-34" y="-170" width="68" height="320" rx="30" fill="url(#${G}roll)"/><ellipse cx="0" cy="-166" rx="34" ry="13" fill="#EFE7D1"/><ellipse cx="0" cy="-166" rx="20" ry="7" fill="none" stroke="#A39A84" stroke-width="3"/><ellipse cx="0" cy="-166" rx="8" ry="3" fill="#A39A84"/>
     <text transform="rotate(-90)" x="48" y="12" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="34" letter-spacing="3" fill="#22201C">EARTH DAILY</text></g>
-    <g filter="url(#${G}drop)"><ellipse cx="38" cy="94" rx="24" ry="50" fill="url(#${G}ball)"/>
-    ${[[56, 80], [84, 86], [112, 80], [138, 70]].map(([y, w]) => `<rect x="${36 - w}" y="${y}" width="${w}" height="25" rx="12.5" fill="url(#${G}fingH)"/>`).join("")}
-    <ellipse cx="44" cy="76" rx="9" ry="16" fill="#fff" opacity=".22"/></g></g>`;
+    ${fist(54, lo)}</g>`;
   const collar = `
   <path d="M600 664 L452 632 C400 602 370 560 364 508 C430 540 520 592 600 664 Z" fill="url(#${G}collar)"/>
   <path d="M600 664 L748 632 C800 602 830 560 836 508 C770 540 680 592 600 664 Z" fill="url(#${G}coat2)"/>
@@ -234,13 +246,13 @@ export function peek3d(e, { face = "A", paper = "roll", size = 1200, viewBox = "
     ${antenna(false)}${antenna(true)}
   </g>`;
   const low = Math.max(...c.eyes.map((q) => q.cy + q.ry));
-  const paperLayer = paper === "over" ? newspaper(low + 4, false, c) + grip(300, low + 120, -1) + grip(900, low + 110, 1)
-    : paper === "holes" ? newspaper(292, true, c) + grip(300, 560, -1) + grip(900, 550, 1) : "";
+  const sheet = (top, holes, y) => gripBack(292, y, -1) + gripBack(908, y - 8, 1) + newspaper(top, holes, c) + grip(292, y, -1, lo) + grip(908, y - 8, 1, lo);
+  const paperLayer = paper === "over" ? sheet(low + 4, false, low + 110) : paper === "holes" ? sheet(292, true, 560) : "";
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" width="${size}" height="${size}">${defs(c)}
   <rect width="1200" height="1200" fill="url(#${G}bg)"/>
   <ellipse cx="600" cy="1080" rx="900" ry="200" fill="#8FE0FF" opacity=".22" filter="url(#${G}b28)"/>
   ${body}
-  ${showArms ? sleeve(false) + hand(419, 864, 1, lo) + cuff(false) + sleeve(true) + cuff(true) + roll : ""}
+  ${showArms ? sleeve(false) + hand(419, 872, 1, lo) + cuff(false) + sleeve(true) + cuff(true) + roll : ""}
   ${collar}${head}${paperLayer}${hat}
   <rect width="1200" height="1200" filter="url(#${G}grain)" opacity=".1" style="mix-blend-mode:overlay"/>
   </svg>`;
