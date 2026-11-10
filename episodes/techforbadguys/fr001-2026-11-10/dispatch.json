@@ -1,0 +1,72 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "techforbadguys-fr001",
+    "request": {
+      "turns": [
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Opening of an official report. Crisp and formal, a little too proud of himself.",
+          "text": "Field report zero zero one. Agent Peek, reporting from the planet Earth. <short pause> To the Directorate: greetings. And before you ask, yes, the disguise is working. I wear a hat. <short pause> Nobody has asked a single question."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Setting up the mission. Matter-of-fact, mildly amazed at how easy this is.",
+          "text": "You sent me here to answer one thing. Are the humans a threat? <short pause> I have been here two days. I read their technology news, because apparently that is where they keep all of their secrets. In public. <short pause> For free. Here is what I found."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. First finding. Careful and precise, like explaining something he still cannot believe.",
+          "text": "Observation one. The humans guard their computers with a door called S S H. This week they found a flaw in it. If an account has its password switched off, <short pause> you may enter by typing a very long password. Any long password. Two hundred and fifty seven characters or more. <short pause> I checked this three times."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Piling on, drier with each sentence.",
+          "text": "It gets better. The flaw was created in twenty sixteen, by a repair for a different flaw. And they gave it a name. They call it S S Hole. <short pause> I am told this is funny here. Attackers were trying it within hours of the announcement."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Second finding. Reads the quote slowly and flatly, then the verdict.",
+          "text": "Observation two. Yesterday a large university called Vanderbilt was attacked, and its digital networks went dark. The official instruction to staff was, and I quote: shut down university devices, disconnect from university Wi-Fi, and remain extremely vigilant. <short pause> Directorate, that is the defense plan. Unplug it, and look around nervously."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Quietly delighted by the details. Polite, deadpan.",
+          "text": "One employee says her machine announced a system update. Then it announced it was deleting old files. <short pause> Then it announced the ransom. In that order. Very polite. <short pause> The students were told an hour and a half after the teachers. I note this without comment."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Third finding. Mock concern, slightly faster.",
+          "text": "Observation three. Their artificial intelligence. A company called Fireworks, which rents out thinking machines, has disclosed a new break in. The second one in about a month. The intruders came in through another company's cloud, and reached A I models that were not finished yet. <short pause> So the humans are now being robbed of minds they have not finished building."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. A short aside, sly.",
+          "text": "Meanwhile, Google released a new model today. It is called Gemini four Carbon. The price doubles in three weeks. <short pause> On my planet we call that a trap. <short pause> Here they call it a launch."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. The threat assessment the bosses actually want. Leans in, then deflates completely.",
+          "text": "Now, the question you care about. Can they reach us? <short pause> They plan to return to their own moon in twenty twenty eight. Their own moon. The one directly above them. They have been there before. And then, as far as I can tell, <short pause> they forgot how. Neither of the two landers is finished."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Formal conclusion, completely sincere on the surface.",
+          "text": "My assessment. The humans are not a threat to us. <short pause> The humans are a threat to the humans. Recommendation: cancel the invasion. It would be rude to interrupt. <short pause> They are doing an excellent job without us."
+        },
+        {
+          "style": "A small alien field agent reading his report aloud to his bosses back home. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. Quick, dry, sarcastic, deadpan bureaucrat. American English. Lets a joke land with a short flat pause and never laughs at it. Sign-off. Petty office requests, then a flat, final close.",
+          "text": "Requests. One: more budget for hats. Two: please stop calling my communicator. It rings in the middle of the newspaper. <short pause> This has been tech for bad guys. <short pause> The bad guys being you, sirs. Agent Peek. End of transmission."
+        }
+      ],
+      "voice": "Puck",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "en-US"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "channel": "techforbadguys",
+        "episode": 1,
+        "title": "Field Report 001: Cancel the Invasion",
+        "recorded_for": "2026-11-10",
+        "script": "episodes/techforbadguys/fr001-2026-11-10/script.md"
+      }
+    }
+  }
+}
