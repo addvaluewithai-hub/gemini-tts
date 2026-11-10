@@ -5,7 +5,7 @@ Nothing here is used by the TTS worker itself.
 
 ## characters/
 
-Fifteen candidate hosts for the techforbadguys channel, drawn as parametric SVG
+Twenty-two candidate hosts for the techforbadguys channel, drawn as parametric SVG
 in `characters/characters.js`. Each `draw(expression)` takes
 
 ```js
@@ -32,8 +32,15 @@ word timestamps (blink, glance, mouth driven by the voice level).
 | `toasty` | TOASTY | A smart toaster on Wi-Fi and three botnets |
 | `spoof` | SPOOF | A ghost wearing a "HELLO I AM YOU" name tag |
 | `proxy` | PROXY | A sly fox in a suit, sitting in the middle |
+| `zero` | DR. ZERO | A plague doctor with red lenses and a bone beak |
+| `patch` | PATCH | The invisible man: bandages, round dark glasses, bowler hat |
+| `leak` | LEAK | A hazmat hood and gas mask that arrives after every data spill |
+| `oni` | ONI | A black hoodie wearing a red demon mask with gold horns |
+| `source` | THE SOURCE | A suit and tie with a paper bag over its head |
+| `watcher` | WATCHER | A CCTV camera for a head on a corporate body |
+| `zip` | ZIP | A balaclava with a zipper for a mouth |
 
-Rendered cards live in `characters/cards/` (`overview-all.png` shows all fifteen). Regenerate them with:
+Rendered cards live in `characters/cards/` (`overview-all.png` shows the first fifteen, `overview-shortlist.png` the masked shortlist of ten). Regenerate them with:
 
 ```bash
 cd video && npm install --no-package-lock

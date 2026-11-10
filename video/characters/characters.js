@@ -1,4 +1,4 @@
-// Fifteen candidate mascots for techforbadguys, drawn as parametric SVG so the
+// Candidate mascots for techforbadguys, drawn as parametric SVG so the
 // chosen one can be animated later (blink, eye direction, mouth driven by voice).
 // Each draw(e) takes an expression: { lid: 0..1 (closed), look: -1..1, mouth: 'smirk'|'talk'|'flat' }
 // and returns the inner markup of a 400x400 SVG.
@@ -442,6 +442,179 @@ function proxy(e) {
   ${mouth}`;
 }
 
+// ---- third batch: faceless / masked busts, black on one loud colour -----------
+
+const SHOULDERS = "M36 400 C46 330 98 300 160 292 L240 292 C302 300 354 330 364 400 Z";
+const HOOD = "M200 38 C108 38 76 120 82 212 C86 264 118 300 150 312 L250 312 C282 300 314 264 318 212 C324 120 292 38 200 38 Z";
+
+function zero(e) {
+  const K = "#17171B", H = "#23232A", B = "#F2EFE8", R = "#E5333F";
+  const lens = (x, y) => `<circle cx="${x}" cy="${y + 1}" r="9" fill="#fff"/><circle cx="${x}" cy="${y + 1}" r="4" fill="#111"/>`;
+  const jaw = e.mouth === "talk" ? 14 : 0;
+  const tilt = e.mouth === "smirk" ? 4 : 0;
+  const beak = "M170 198 Q200 184 230 200 Q214 272 160 340 Q150 346 150 332 Q160 262 170 198 Z";
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  ${both(`<path d="M160 292 L128 332 L196 374 L200 322 Z" fill="${H}" ${O}/>`)}
+  <path d="M200 92 C138 92 110 138 112 196 C114 252 150 294 200 298 C250 294 286 252 288 196 C290 138 262 92 200 92 Z" fill="${H}" ${O}/>
+  ${line("M132 172 H112 M268 172 H288", 7)}
+  <path d="M132 104 C128 52 150 34 200 34 C250 34 272 52 268 104 Z" fill="${K}" ${O}/>
+  <path d="M131 84 Q200 96 269 84 L268 104 Q200 116 132 104 Z" fill="${R}"/>
+  <ellipse cx="200" cy="106" rx="150" ry="19" fill="${K}" ${O}/>
+  ${eyeball("zr-l", 160, 172, 28, 28, e, { white: R, lid: H, pupil: lens })}${eyeball("zr-r", 240, 172, 28, 28, e, { white: R, lid: H, pupil: lens })}
+  <circle cx="160" cy="172" r="33" fill="none" stroke="#9BA0AA" stroke-width="5"/><circle cx="240" cy="172" r="33" fill="none" stroke="#9BA0AA" stroke-width="5"/>
+  <g transform="rotate(${tilt} 200 200)">
+    <g transform="rotate(${-jaw} 200 200)"><path d="${beak}" fill="#CFC8B6" ${O}/></g>
+    <path d="${beak}" fill="${B}" ${O}/>
+    ${line("M197 204 Q190 270 160 328", 3, "#B9B3A4")}
+    <ellipse cx="186" cy="248" rx="3" ry="7" transform="rotate(14 186 248)" fill="#111"/>
+  </g>`;
+}
+
+function patch(e) {
+  const K = "#1B1B1F", W = "#F2EFE8", L = "#BDB6A6";
+  const down = e.lid > 0.4 ? 24 : 0;
+  const HP = "M128 176 C128 126 160 104 200 104 C240 104 272 126 272 176 C272 236 240 274 200 274 C160 274 128 236 128 176 Z";
+  const mouth = e.mouth === "talk"
+    ? `<ellipse cx="202" cy="240" rx="15" ry="11" fill="#111"/>`
+    : e.mouth === "flat" ? line("M176 240 H228", 7) : line("M172 234 Q202 252 232 226", 7);
+  const brow = e.lid > 0.4 ? line("M142 150 H190 M210 150 H258", 6) : line("M142 146 L190 156 M258 146 L210 156", 6);
+  const lensAt = (cx) => `<circle cx="${cx}" cy="178" r="27" fill="#111"/><circle cx="${cx - 8 + e.look * 8}" cy="170" r="6" fill="#fff"/>`;
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  ${both(`<path d="M158 288 L118 262 L136 332 L196 358 L200 324 Z" fill="#2C2C33" ${O}/>`)}
+  <rect x="178" y="252" width="44" height="46" fill="${W}" ${O}/>${line("M180 270 L220 264 M180 286 L220 282", 3.5, L)}
+  <path d="M268 222 L314 236 L308 252 L266 240 Z" fill="${W}" ${O}/><path d="M308 238 L328 264 L315 272 L300 250 Z" fill="${W}" ${O}/>
+  <path d="${HP}" fill="${W}" ${O}/>
+  <clipPath id="pt-h"><path d="${HP}"/></clipPath>
+  <g clip-path="url(#pt-h)">${line("M120 134 L280 122 M120 206 L282 216 M122 226 L280 218 M126 256 L276 264 M150 100 L176 138", 3.5, L)}</g>
+  <ellipse cx="166" cy="178" rx="17" ry="13" fill="#2A2A30"/><ellipse cx="234" cy="178" rx="17" ry="13" fill="#2A2A30"/>
+  ${brow}
+  <g transform="translate(0,${down})">${line("M140 172 L126 166 M260 172 L274 166", 6)}${line("M190 178 Q200 170 210 178", 6)}${lensAt(166)}${lensAt(234)}</g>
+  ${mouth}
+  <path d="M130 100 C126 30 274 30 270 100 Z" fill="${K}" ${O}/>
+  <path d="M130 80 Q200 92 270 80 L270 102 H130 Z" fill="#FFD23F"/>
+  <path d="M92 96 Q200 126 308 96 Q312 110 300 114 Q200 138 100 114 Q88 110 92 96 Z" fill="${K}" ${O}/>`;
+}
+
+function leak(e) {
+  const Y = "#FFD60A", YD = "#D9B300", M = "#23232A", GL = "#9FF4F0";
+  const pup = (x, y) => `<circle cx="${x}" cy="${y + 2}" r="9" fill="#111"/><circle cx="${x + 3}" cy="${y - 1}" r="3" fill="#fff"/>`;
+  const grille = e.mouth === "talk"
+    ? `<circle cx="200" cy="258" r="12" fill="#111"/>${line("M246 240 q12 18 0 36 M262 230 q18 28 0 56", 5, Y)}`
+    : e.mouth === "flat" ? line("M186 252 H214 M186 264 H214", 4.5) : line("M186 252 Q200 260 216 248 M188 264 Q202 272 216 260", 4.5);
+  return `
+  <path d="${SHOULDERS}" fill="${Y}" ${O}/>
+  ${line("M200 314 V400", 5)}
+  <rect x="234" y="338" width="68" height="28" rx="5" fill="#111"/>
+  <text x="268" y="358" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="800" font-size="17" letter-spacing="2" fill="${Y}">LEAK</text>
+  <path d="${HOOD}" fill="${Y}" ${O}/>
+  <ellipse cx="200" cy="198" rx="94" ry="106" fill="${YD}"/>
+  <path d="M200 100 C146 100 118 140 120 196 C122 250 156 292 200 296 C244 292 278 250 280 196 C282 140 254 100 200 100 Z" fill="${M}" ${O}/>
+  ${eyeball("hz-l", 160, 178, 30, 27, e, { white: GL, lid: M, pupil: pup })}${eyeball("hz-r", 240, 178, 30, 27, e, { white: GL, lid: M, pupil: pup })}
+  <g transform="rotate(-24 126 264)"><rect x="96" y="246" width="54" height="38" rx="10" fill="#8E929C" ${O}/>${line("M110 254 V276 M123 254 V276 M136 254 V276", 3.5)}</g>
+  <circle cx="200" cy="258" r="31" fill="#8E929C" ${O}/><circle cx="200" cy="258" r="21" fill="#5A5F6B"/>
+  ${grille}`;
+}
+
+function oni(e) {
+  const K = "#17171B", R = "#E5333F", G = "#FFD23F";
+  const ry = Math.max(3, 14 * (1 - e.lid * 0.8));
+  const eye = (cx, rot) => `<g transform="rotate(${rot} ${cx} 184)"><ellipse cx="${cx}" cy="184" rx="27" ry="${ry + 2}" fill="#111"/><circle cx="${cx + e.look * 10}" cy="184" r="${Math.min(7, ry)}" fill="${G}"/></g>`;
+  const fang = (d) => `<path d="${d}" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/>`;
+  let mouth;
+  if (e.mouth === "talk") {
+    mouth = `<path d="M150 246 Q200 234 250 246 Q246 294 200 298 Q154 294 150 246 Z" fill="#111" ${O}/>`
+      + fang("M162 246 L172 268 L182 244 Z") + fang("M218 244 L228 268 L238 246 Z") + fang("M178 294 L186 274 L194 296 Z") + fang("M206 296 L214 274 L222 294 Z");
+  } else if (e.mouth === "flat") {
+    mouth = fang("M156 258 L166 234 L176 258 Z") + fang("M224 258 L234 234 L244 258 Z") + line("M150 258 H250", 7);
+  } else {
+    mouth = fang("M158 257 L168 232 L178 262 Z") + fang("M224 259 L234 230 L244 248 Z") + line("M146 250 Q200 282 256 238", 7);
+  }
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  <path d="${HOOD}" fill="${K}" ${O}/>
+  ${both(`<path d="M146 118 C130 84 140 50 168 26 C172 58 180 84 190 108 Z" fill="${G}" ${O}/>`)}
+  <path d="M200 92 C142 92 112 128 114 186 C116 250 160 302 200 316 C240 302 284 250 286 186 C288 128 258 92 200 92 Z" fill="${R}" ${O}/>
+  <path d="M200 110 l10 16 l-10 16 l-10 -16 z" fill="${G}" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+  ${both(`<path d="M124 146 L190 168 L190 180 L124 162 Z" fill="#111"/>`)}
+  ${eye(160, 14)}${eye(240, -14)}
+  <path d="M186 216 Q200 206 214 216 L218 228 Q200 236 182 228 Z" fill="#B3202C" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+  ${line("M128 214 Q140 228 134 246 M272 214 Q260 228 266 246", 4, "#B3202C")}
+  ${mouth}
+  ${line("M174 316 L170 364 M226 316 L230 356", 6, "#2C313D")}`;
+}
+
+function source(e) {
+  const K = "#17171B", BG = "#D2A86A", BD = "#A87D45";
+  const mouth = e.mouth === "talk"
+    ? line("M184 238 Q204 226 224 238 Q228 258 204 262 Q180 258 184 238 Z", 5.5)
+    : e.mouth === "flat" ? line("M172 246 L236 243", 6) : line("M166 240 Q204 264 242 230", 6);
+  const brow = e.lid > 0.4 ? line("M140 140 H188 M212 140 H260", 6) : line("M140 134 L188 146 M260 134 L212 146", 6);
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  <path d="M168 292 L200 350 L232 292 Z" fill="#F2EFE8" ${O}/>
+  <path d="M191 310 h18 l5 16 l-14 60 l-14 -60 z" fill="#FFD23F" ${O}/>
+  ${both(`<path d="M160 292 L146 340 L194 362 L200 328 Z" fill="#2C2C33" ${O}/>`)}
+  <path d="M112 300 L104 92 Q104 74 122 72 L278 72 Q296 74 296 92 L288 300 L272 286 L256 302 L240 286 L224 302 L208 286 L192 302 L176 286 L160 302 L144 286 L128 302 Z" fill="${BG}" ${O}/>
+  ${line("M134 78 L140 288 M266 78 L260 288 M106 100 L134 78 M294 100 L266 78", 3, BD)}
+  ${line("M226 108 l18 -7 M150 272 l14 7 M252 262 l10 -9", 3, BD)}
+  ${brow}
+  ${eyeball("sr-l", 164, 178, 24, 24, e, { lid: "#111" })}${eyeball("sr-r", 236, 178, 24, 24, e, { lid: "#111" })}
+  ${mouth}`;
+}
+
+function watcher(e) {
+  const K = "#17171B", B = "#F2EFE8", S = "#C9CED6", R = "#E5333F";
+  const iris = (x, y) => `<circle cx="${x}" cy="${y}" r="15" fill="${R}"/><circle cx="${x}" cy="${y}" r="7" fill="#111"/><circle cx="${x + 5}" cy="${y - 5}" r="3" fill="#fff"/>`;
+  const mouth = e.mouth === "talk"
+    ? [[180, 8], [190, 18], [200, 10], [210, 20], [220, 8]].map(([x, h]) => `<rect x="${x - 3}" y="${248 - h / 2}" width="6" height="${h}" rx="2.5" fill="#111"/>`).join("")
+    : e.mouth === "flat" ? line("M180 248 H220", 5) : line("M176 244 Q202 258 228 238", 5);
+  const cable = "M288 220 C334 230 338 292 300 318";
+  return `
+  <path d="${SHOULDERS}" fill="${K}" ${O}/>
+  <path d="M168 292 L200 350 L232 292 Z" fill="${B}" ${O}/>
+  <path d="M191 310 h18 l5 16 l-14 60 l-14 -60 z" fill="${R}" ${O}/>
+  ${both(`<path d="M160 292 L146 340 L194 362 L200 328 Z" fill="#2C2C33" ${O}/>`)}
+  ${line(cable, 11)}${line(cable, 4, "#5A5F6B")}
+  <rect x="184" y="262" width="32" height="46" rx="6" fill="#8E929C" ${O}/><circle cx="200" cy="292" r="6" fill="#5A5F6B" stroke="#111" stroke-width="3"/>
+  <rect x="108" y="108" width="184" height="166" rx="26" fill="${B}" ${O}/>
+  <path d="M90 126 L104 88 Q108 80 118 80 H282 Q292 80 296 88 L310 126 Z" fill="${S}" ${O}/>
+  <circle cx="200" cy="180" r="50" fill="#23232A" ${O}/>
+  ${eyeball("wt-e", 200, 180, 35, 35, e, { white: "#10203A", lid: "#5A5F6B", pupil: iris, side: -1, slant: 0, dx: 13 })}
+  <circle cx="130" cy="146" r="4" fill="#8E929C"/><circle cx="270" cy="146" r="4" fill="#8E929C"/>
+  <circle cx="268" cy="252" r="7" fill="${R}" stroke="#111" stroke-width="3"/>
+  ${mouth}`;
+}
+
+function zip(e) {
+  const K = "#17171B", J = "#2A2A31", P = "#F7F3E8", Z = "#D9DEE6", G = "#FFD23F";
+  const HP = "M200 58 C130 58 96 108 98 180 C100 250 140 302 200 306 C260 302 300 250 302 180 C304 108 270 58 200 58 Z";
+  const yb = 152 + e.lid * 30, dx = e.look * 12;
+  const track = (d) => `${line(d, 17)}<path d="${d}" fill="none" stroke="${Z}" stroke-width="9" stroke-dasharray="3.5 4.5"/>`;
+  const pull = (x, y, rot) => `<g transform="translate(${x} ${y}) rotate(${rot})"><rect x="-7" y="-9" width="14" height="18" rx="4" fill="${G}" stroke="#111" stroke-width="4"/><rect x="-5" y="9" width="10" height="20" rx="5" fill="${G}" stroke="#111" stroke-width="4"/></g>`;
+  const mouth = e.mouth === "talk"
+    ? `<path d="M150 250 Q200 222 250 250 Q200 294 150 250 Z" fill="#7A2434"/>${track("M150 250 Q200 222 250 250")}${track("M150 250 Q200 294 250 250")}${pull(144, 250, 0)}`
+    : e.mouth === "flat" ? `${track("M150 252 H250")}${pull(256, 252, 0)}` : `${track("M150 254 Q200 270 250 240")}${pull(256, 238, -20)}`;
+  const ribs = [140, 170, 200, 230, 260].map((x) => `M${x} 58 Q${x + (x - 200) * 0.2} 180 ${x} 306`).join(" ");
+  return `
+  <path d="${SHOULDERS}" fill="${J}" ${O}/>
+  ${line("M70 356 L122 316 M330 356 L278 316", 7, P)}
+  <rect x="158" y="280" width="84" height="38" rx="12" fill="${K}" ${O}/>
+  <path d="${HP}" fill="${K}" ${O}/>
+  <clipPath id="zp-h"><path d="${HP}"/></clipPath>
+  <g clip-path="url(#zp-h)">${line(ribs, 3, "#2E2E37")}</g>
+  <clipPath id="zp-s"><rect x="116" y="152" width="168" height="58" rx="29"/></clipPath>
+  <rect x="116" y="152" width="168" height="58" rx="29" fill="${P}" stroke="#111" stroke-width="6"/>
+  <g clip-path="url(#zp-s)">
+    <circle cx="${166 + dx}" cy="186" r="10" fill="#111"/><circle cx="${234 + dx}" cy="186" r="10" fill="#111"/>
+    <circle cx="${169 + dx}" cy="183" r="3" fill="#fff"/><circle cx="${237 + dx}" cy="183" r="3" fill="#fff"/>
+    <path d="M108 140 H292 V${yb} L200 ${yb + 12} L108 ${yb} Z" fill="${K}"/>
+    ${line(`M112 ${yb} L200 ${yb + 12} L288 ${yb}`, 5)}
+  </g>
+  ${mouth}`;
+}
+
 export const characters = [
   { id: "glitch", name: "GLITCH", role: "The possessed monitor", line: "A beige CRT that grew horns. Deadpan sysadmin from hell.",
     bg: "#17120A", fg: "#FFB000", sub: "#B9A27A", palette: ["#17120A", "#E8DFCB", "#FFB000", "#FF3B47"], draw: glitch },
@@ -473,6 +646,20 @@ export const characters = [
     bg: "#B8F2E6", fg: "#17323A", sub: "#3F6B66", palette: ["#B8F2E6", "#FFFFFF", "#E5333F", "#FF6FAE"], draw: spoof },
   { id: "proxy", name: "PROXY", role: "The fox in the middle", line: "Sits between you and the server. Smiles the whole time.",
     bg: "#F6E7C8", fg: "#1F2A44", sub: "#7A6A52", palette: ["#F6E7C8", "#F2742B", "#1F2A44", "#E5333F"], draw: proxy },
+  { id: "zero", name: "DR. ZERO", role: "The plague doctor", line: "Treats viruses the old way. Sends the bill on day zero.",
+    bg: "#F7E733", fg: "#17171B", sub: "#5C560F", palette: ["#F7E733", "#17171B", "#F2EFE8", "#E5333F"], draw: zero },
+  { id: "patch", name: "PATCH", role: "The invisible man", line: "Bandaged head to toe. The only thing here that is fully patched.",
+    bg: "#19D3DA", fg: "#17171B", sub: "#0B5A5E", palette: ["#19D3DA", "#1B1B1F", "#F2EFE8", "#FFD23F"], draw: patch },
+  { id: "leak", name: "LEAK", role: "The hazmat cleaner", line: "Arrives after every data spill. Never once in time.",
+    bg: "#6A3BFF", fg: "#FFD60A", sub: "#CFC2FF", palette: ["#6A3BFF", "#FFD60A", "#23232A", "#9FF4F0"], draw: leak },
+  { id: "oni", name: "ONI", role: "The masked demon", line: "Hoodie, horns and a fanged grin. Reads your logs for fun.",
+    bg: "#F2EFE8", fg: "#E5333F", sub: "#6B6457", palette: ["#F2EFE8", "#17171B", "#E5333F", "#FFD23F"], draw: oni },
+  { id: "source", name: "THE SOURCE", role: "The anonymous tip", line: "Suit, tie, paper bag. A person familiar with the matter.",
+    bg: "#2B4BFF", fg: "#F2EFE8", sub: "#BFCBFF", palette: ["#2B4BFF", "#D2A86A", "#17171B", "#FFD23F"], draw: source },
+  { id: "watcher", name: "WATCHER", role: "The camera in a suit", line: "A CCTV head on a corporate body. Always recording.",
+    bg: "#FF6A1A", fg: "#17171B", sub: "#6B2C08", palette: ["#FF6A1A", "#F2EFE8", "#17171B", "#E5333F"], draw: watcher },
+  { id: "zip", name: "ZIP", role: "The zipped lip", line: "A balaclava with a zipper for a mouth. Says nothing, unzips everything.",
+    bg: "#FF3D8B", fg: "#17171B", sub: "#6E0F36", palette: ["#FF3D8B", "#17171B", "#F7F3E8", "#FFD23F"], draw: zip },
 ];
 
 export const svg = (c, expr = "idle", size = 400) =>
