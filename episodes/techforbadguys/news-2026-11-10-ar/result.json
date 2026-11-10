@@ -1,0 +1,11 @@
+{
+  "id": "techforbadguys-news-2026-11-10-ar",
+  "status": "completed",
+  "voice": "Puck",
+  "workflow_run": "https://github.com/addvaluewithai-hub/gemini-tts/actions/runs/42893079714",
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/gemini-tts/techforbadguys-news-2026-11-10-ar.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/gemini-tts/techforbadguys-news-2026-11-10-ar.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/gemini-tts/techforbadguys-news-2026-11-10-ar.transcript.vtt",
+  "word_count": 218,
+  "duration_ms": 80000
+}

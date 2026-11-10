@@ -17,7 +17,8 @@
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const smooth = (p) => p * p * (3 - 2 * p);
 const lerp = (a, b, p) => a + (b - a) * p;
-const norm = (t) => t.toLowerCase().replace(/[^a-z0-9]/g, "");
+// Words are compared without case, punctuation or Arabic vowel marks, and with the alef, yeh and teh marbuta variants folded together.
+const norm = (t) => t.toLowerCase().normalize("NFKD").replace(/[ً-ٰٟـ]/g, "").replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه").replace(/[^a-z0-9ء-ي]/g, "");
 
 // Camera framings in set coordinates (1920 x 1080): zoom and the point held at the centre of the frame.
 const SHOTS = { wide: { s: 1, x: 960, y: 540 }, host: { s: 1.45, x: 600, y: 425 }, close: { s: 1.82, x: 566, y: 352 }, two: { s: 1.1, x: 1030, y: 455 },
@@ -158,4 +159,4 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
   return frames;
 }
 
-module.exports = { resolve, build, SHOTS };
+module.exports = { resolve, build, SHOTS, norm };

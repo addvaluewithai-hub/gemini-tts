@@ -72,7 +72,6 @@
     { "at": "into deposits", "shot": "host", "emote": "worried", "gesture": "count" },
     { "at": "non-refundable", "shot": "side", "fact": { "big": "NON-REFUNDABLE", "tone": "stamp" }, "emote": "deadpan" },
     { "at": "That is the most", "shot": "side", "meme": { "kind": "receipt", "title": "SOFTBANK", "sub": "DATA CENTER DEPT.", "items": [["EQUIPMENT DEPOSIT", "$3.7B"], ["EQUIPMENT RECEIVED", "0"], ["REFUND", "NO"]], "total": "-$3.7B", "foot": "THANK YOU. NO REFUNDS." }, "emote": "deadpan" },
-    { "at": "cancellation fee", "emote": "smug" },
 
     { "at": "Also today", "shot": "host", "slide": "gemini", "story": { "n": 6, "tag": "QUICK HITS" }, "gesture": "count", "emote": "neutral" },
     { "at": "Gemini 4 Carbon", "shot": "insert", "mark": "headline", "zoom": 1.1 },

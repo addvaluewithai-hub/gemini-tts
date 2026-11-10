@@ -37,6 +37,7 @@ function int2words(n) {
 }
 // "9.8" -> nine point eight, "2019" -> twenty nineteen, "40,000" -> forty thousand, "$400" -> four hundred dollars
 function spoken(token) {
+  if (/[\u0621-\u064A]/.test(token)) return [token.replace(/[^\u0621-\u0652]/g, "")];      // Arabic: one token, sounded out by its letters
   let t = token.replace(/[’]/g, "'").replace(/^[^A-Za-z0-9$]+|[^A-Za-z0-9%]+$/g, "");
   if (!t) return [];
   if (/^\$?[\d,]+(\.\d+)*%?$/.test(t)) {
@@ -55,6 +56,18 @@ function guess(word) {
   return out.filter(Boolean);
 }
 
+// Arabic is written nearly as it sounds, minus the short vowels: each letter gives its sound, and a short
+// open vowel is put between neighbouring consonants so the jaw keeps moving. Egyptian values for ج ق ث ذ.
+const AR = { "ا": "AA", "أ": "AA", "إ": "IH", "آ": "AA", "ى": "AA", "ع": "AA", "ء": null, "ئ": "IY", "ؤ": "UW", "ة": "AH", "و": "UW", "ي": "IY",
+  "ب": "B", "م": "M", "ف": "F", "ل": "L", "ر": "R", "ن": "N", "ت": "T", "ط": "T", "د": "D", "ض": "D", "ك": "K", "ق": "K", "ج": "G", "غ": "G", "خ": "K",
+  "س": "S", "ص": "S", "ث": "S", "ز": "Z", "ذ": "Z", "ظ": "Z", "ش": "SH", "ه": "HH", "ح": "HH",
+  "\u064E": "AE", "\u064F": "UH", "\u0650": "IH", "\u064B": "AE", "\u0651": null, "\u0652": null };
+function guessArabic(word) {
+  const out = [];
+  for (const ch of word) { const p = AR[ch]; if (!p) continue; if (out.length && !isVowel(p) && !isVowel(out[out.length - 1])) out.push("AE"); out.push(p); }
+  return out;
+}
+
 async function build(words, level, opts = {}) {
   const { dictionary } = await import("cmu-pronouncing-dictionary");
   const HOP = 0.005, peakWin = [];
@@ -69,6 +82,7 @@ async function build(words, level, opts = {}) {
     for (let t = lo; t <= hi; t += HOP) if (level(t) > thr) { if (s === null) s = t; e = t; }
     if (s === null || e - s < 0.04) { s = word.s; e = word.e; }
     const phones = spoken(word.t).flatMap((tok) => {
+      if (/[\u0621-\u064A]/.test(tok)) return guessArabic(tok);
       const hit = dictionary[tok] || dictionary[tok.replace(/'s$/, "")];
       if (hit) return hit.split(" ");
       if (/^[a-z]{1,5}$/.test(tok) && tok === tok && word.t.replace(/[^A-Za-z]/g, "") === word.t.replace(/[^A-Z]/g, "")) return tok.split("").flatMap((ch) => (dictionary[ch] || "").split(" ")).filter(Boolean);
@@ -94,4 +108,4 @@ async function build(words, level, opts = {}) {
   return { shapeAt, segs, missing: [...new Set(missing)] };
 }
 
-module.exports = { build, VISEME, spoken, guess };
+module.exports = { build, VISEME, spoken, guess, guessArabic };

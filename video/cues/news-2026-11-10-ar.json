@@ -1,0 +1,750 @@
+{
+ "note": "10 November 2026, Egyptian Arabic voice. Same cut list as news-2026-11-10.json, placed on the Arabic transcript; slides come from the English episode. `fix` restores names and spellings the transcriber changed, for the captions only.",
+ "episode": "../../episodes/techforbadguys/news-2026-11-10",
+ "transcript": "../news-2026-11-10-ar/news-ar.transcript.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "10 NOV 2026",
+ "rtl": true,
+ "from": 0,
+ "to": null,
+ "lead": 0.4,
+ "tail": 2.1,
+ "tempo": 1.07,
+ "captionChunk": 4,
+ "bpm": 104,
+ "musicGain": 0.5,
+ "sfxGain": 0.6,
+ "voiceGain": 1.35,
+ "fix": [
+  [
+   "التيك",
+   "التِك"
+  ],
+  [
+   "بسرعه",
+   "بسرعة"
+  ],
+  [
+   "اداره",
+   "إدارة"
+  ],
+  [
+   "انفيديا",
+   "Nvidia"
+  ],
+  [
+   "مدير",
+   "المدير"
+  ],
+  [
+   "ان",
+   "إن"
+  ],
+  [
+   "جينسن هو",
+   "Jensen Huang"
+  ],
+  [
+   "لعمليات",
+   "لعملية"
+  ],
+  [
+   "اجنبية",
+   "أجنبية"
+  ],
+  [
+   "برده",
+   "برضه"
+  ],
+  [
+   "انه",
+   "إنه"
+  ],
+  [
+   "ثقه",
+   "ثقة"
+  ],
+  [
+   "كامله",
+   "كاملة"
+  ],
+  [
+   "بالضبط",
+   "بالظبط"
+  ],
+  [
+   "انثروبك",
+   "Anthropic"
+  ],
+  [
+   "بدات",
+   "بدأت"
+  ],
+  [
+   "جوله",
+   "جولة"
+  ],
+  [
+   "اي إن تي",
+   "ANT"
+  ],
+  [
+   "اي ان تي",
+   "ANT"
+  ],
+  [
+   "قيمه",
+   "قيمة"
+  ],
+  [
+   "الشركه",
+   "الشركة"
+  ],
+  [
+   "تماما",
+   "تماماً"
+  ],
+  [
+   "ادوات",
+   "أدوات"
+  ],
+  [
+   "مكتبيه",
+   "مكتبية"
+  ],
+  [
+   "كلاود شيتس",
+   "Claude Sheets"
+  ],
+  [
+   "وداخله",
+   "وداخلة"
+  ],
+  [
+   "مايكروسوفت",
+   "Microsoft"
+  ],
+  [
+   "عدل",
+   "عِدِل"
+  ],
+  [
+   "اكسل",
+   "Excel"
+  ],
+  [
+   "عدى",
+   "عدّى"
+  ],
+  [
+   "حاجه",
+   "حاجة"
+  ],
+  [
+   "بقى له",
+   "بقاله"
+  ],
+  [
+   "سنه",
+   "سنة"
+  ],
+  [
+   "جي تي اي 6",
+   "GTA 6"
+  ],
+  [
+   "نازله",
+   "نازلة"
+  ],
+  [
+   "الاسبوع",
+   "الأسبوع"
+  ],
+  [
+   "وروك ستار",
+   "و Rockstar"
+  ],
+  [
+   "اكدت",
+   "أكدت"
+  ],
+  [
+   "انها",
+   "إنها"
+  ],
+  [
+   "الثانيه",
+   "الثانية"
+  ],
+  [
+   "الاجهزه",
+   "الأجهزة"
+  ],
+  [
+   "رينج",
+   "Ring"
+  ],
+  [
+   "امازون",
+   "Amazon"
+  ],
+  [
+   "اعلنت",
+   "أعلنت"
+  ],
+  [
+   "حراسه",
+   "حراسة"
+  ],
+  [
+   "الهواء",
+   "الهوا"
+  ],
+  [
+   "ثمان دقائق",
+   "تمن دقايق"
+  ],
+  [
+   "حراميه",
+   "حرامية"
+  ],
+  [
+   "تسعه",
+   "تسعة"
+  ],
+  [
+   "وسوفت بانك",
+   "و SoftBank"
+  ],
+  [
+   "سبعه",
+   "سبعة"
+  ],
+  [
+   "وما بتتردش",
+   "ومابتتردّش"
+  ],
+  [
+   "اغلى",
+   "أغلى"
+  ],
+  [
+   "غرامه",
+   "غرامة"
+  ],
+  [
+   "الغاء",
+   "إلغاء"
+  ],
+  [
+   "جوجل",
+   "Google"
+  ],
+  [
+   "جيمناي فور كاربون",
+   "Gemini 4 Carbon"
+  ],
+  [
+   "وريديت",
+   "و Reddit"
+  ],
+  [
+   "تيك فور باد دايز",
+   "Tech for Bad Guys"
+  ],
+  [
+   "المره الجاي",
+   "المرة الجاية"
+  ]
+ ],
+ "edit": [
+  {
+   "t": -0.4,
+   "shot": "side",
+   "fact": {
+    "big": "10 نوفمبر",
+    "small": "2026 · كل أخبار التِك النهارده"
+   },
+   "emote": "smug"
+  },
+  {
+   "at": "ده كل اللي",
+   "shot": "host",
+   "gesture": "present",
+   "emote": "proud"
+  },
+  {
+   "at": "بسرعه",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "at": "مجلس اداره",
+   "shot": "two",
+   "slide": "nvidia",
+   "story": {
+    "n": 1,
+    "tag": "NVIDIA"
+   },
+   "gesture": "tv",
+   "emote": "serious"
+  },
+  {
+   "at": "تحقيق مستقل",
+   "shot": "insert",
+   "mark": [
+    0.047,
+    0.843,
+    0.64,
+    0.036
+   ],
+   "zoom": 1.6,
+   "center": [
+    0.36,
+    0.86
+   ]
+  },
+  {
+   "at": "جينسن هو",
+   "mark": [
+    0.047,
+    0.878,
+    0.325,
+    0.036
+   ],
+   "zoom": 1.6,
+   "center": [
+    0.36,
+    0.87
+   ],
+   "peek": true
+  },
+  {
+   "at": "مخابرات اجنبية",
+   "shot": "host",
+   "duck": true,
+   "emote": "worried"
+  },
+  {
+   "at": "والمجلس بيقول",
+   "shot": "low",
+   "emote": "worried"
+  },
+  {
+   "at": "واثق في",
+   "shot": "host",
+   "duck": false,
+   "emote": "proud",
+   "gesture": "present"
+  },
+  {
+   "at": "وده بالضبط",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "at": "قبل ما",
+   "shot": "insert",
+   "slide": "nvidia2",
+   "mark": [
+    0.047,
+    0.902,
+    0.645,
+    0.105
+   ],
+   "zoom": 1.6,
+   "center": [
+    0.36,
+    0.95
+   ],
+   "peek": true
+  },
+  {
+   "at": "في نفس الوقت",
+   "shot": "two",
+   "slide": "anthropic",
+   "story": {
+    "n": 2,
+    "tag": "ANTHROPIC IPO"
+   },
+   "gesture": "tv",
+   "emote": "neutral"
+  },
+  {
+   "at": "825",
+   "shot": "insert",
+   "mark": [
+    0.334,
+    0.396,
+    0.138,
+    0.042
+   ],
+   "zoom": 1.7
+  },
+  {
+   "at": "السهم من",
+   "mark": [
+    0.48,
+    0.607,
+    0.178,
+    0.042
+   ],
+   "zoom": 1.7
+  },
+  {
+   "at": "اي ان تي",
+   "shot": "side",
+   "fact": {
+    "big": "ANT",
+    "small": "رمزها في ناسداك"
+   }
+  },
+  {
+   "at": "يعني قيمه",
+   "shot": "host",
+   "emote": "skeptical"
+  },
+  {
+   "at": "1.4",
+   "shot": "side",
+   "fact": {
+    "big": "$1.4T",
+    "small": "التقييم، لحد · CNBC",
+    "riser": true
+   },
+   "emote": "surprised"
+  },
+  {
+   "at": "علشان شات",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "at": "بيقول لك",
+   "shot": "side",
+   "meme": {
+    "kind": "chat",
+    "title": "مساعد ذكي",
+    "user": "⁦2 + 2 = 5⁩",
+    "bot": "عندك حق تماماً!",
+    "delay": 0.42
+   },
+   "emote": "grin"
+  },
+  {
+   "at": "حتى وانت",
+   "shot": "close",
+   "emote": "eyeroll"
+  },
+  {
+   "at": "وكمان نزلت",
+   "shot": "two",
+   "slide": "sheets",
+   "gesture": "tv",
+   "emote": "neutral"
+  },
+  {
+   "at": "جدول بيانات",
+   "shot": "insert",
+   "mark": "headline",
+   "zoom": 1.12
+  },
+  {
+   "at": "كلاود شيتس",
+   "center": [
+    0.38,
+    1.2
+   ],
+   "zoom": 1.3
+  },
+  {
+   "at": "وداخله",
+   "shot": "host",
+   "gesture": "point",
+   "emote": "sly"
+  },
+  {
+   "at": "اكسل عدى",
+   "shot": "side",
+   "meme": {
+    "kind": "list",
+    "title": "حاجات Excel عدّى منها",
+    "items": [
+     "Lotus 1-2-3",
+     "Google Sheets",
+     "Y2K",
+     "الماكروز بتاعتك"
+    ],
+    "step": 0.2
+   },
+   "emote": "proud"
+  },
+  {
+   "at": "40 سنه",
+   "fact": {
+    "big": "40 سنة",
+    "small": "من سنة 1985"
+   }
+  },
+  {
+   "at": "هنشوف",
+   "shot": "close",
+   "emote": "skeptical",
+   "gesture": "shrug"
+  },
+  {
+   "at": "نيجي للخبر",
+   "shot": "wide",
+   "slide": "gta",
+   "story": {
+    "n": 3,
+    "tag": "GTA VI"
+   },
+   "emote": "grin",
+   "gesture": "cheer"
+  },
+  {
+   "at": "جي تي اي",
+   "shot": "insert",
+   "mark": "headline",
+   "zoom": 1.1
+  },
+  {
+   "at": "وروك ستار",
+   "mark": [
+    0.549,
+    0.262,
+    0.345,
+    0.145
+   ],
+   "zoom": 1.3,
+   "peek": true
+  },
+  {
+   "at": "30 فريم في",
+   "shot": "side",
+   "fact": {
+    "big": "30 FPS",
+    "small": "على كل الأجهزة"
+   },
+   "emote": "deadpan"
+  },
+  {
+   "at": "13 سنه",
+   "shot": "side",
+   "meme": {
+    "kind": "versus",
+    "no": "لعبة جديدة كل كام سنة",
+    "yes": "لعبة واحدة. 13 سنة. 30 فريم.",
+    "delay": 0.65
+   },
+   "emote": "bored"
+  },
+  {
+   "at": "30 فريم",
+   "shot": "host",
+   "stutter": 5,
+   "emote": "deadpan",
+   "gesture": "shrug"
+  },
+  {
+   "at": "رينج بتاعت",
+   "shot": "two",
+   "slide": "ring",
+   "story": {
+    "n": 4,
+    "tag": "RING DRONE CAM"
+   },
+   "gesture": "tv",
+   "emote": "grin"
+  },
+  {
+   "at": "درون حراسه",
+   "shot": "insert",
+   "mark": "headline",
+   "zoom": 1.12
+  },
+  {
+   "at": "249",
+   "center": [
+    0.36,
+    0.8
+   ],
+   "zoom": 1.35
+  },
+  {
+   "at": "بيطير جوه",
+   "shot": "wide",
+   "drone": {
+    "drop": "تسعه"
+   },
+   "paper": "holes"
+  },
+  {
+   "at": "وبيفضل",
+   "shot": "host",
+   "paper": "pockets",
+   "emote": "skeptical",
+   "gesture": "point"
+  },
+  {
+   "at": "ثمان دقائق",
+   "shot": "side",
+   "fact": {
+    "big": "8 دقايق",
+    "small": "طيران في الشحنة · ZDNET"
+   }
+  },
+  {
+   "at": "فيا حراميه",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "at": "استنوا",
+   "shot": "wide",
+   "emote": "smug"
+  },
+  {
+   "at": "وسوفت بانك",
+   "shot": "two",
+   "slide": "softbank",
+   "story": {
+    "n": 5,
+    "tag": "SOFTBANK"
+   },
+   "drone": false,
+   "gesture": "tv",
+   "emote": "neutral"
+  },
+  {
+   "at": "سبعه مليار",
+   "shot": "side",
+   "fact": {
+    "big": "-$7B",
+    "small": "خسارة صافية في ربع واحد · CNBC",
+    "riser": true,
+    "chart": "down"
+   },
+   "emote": "surprised"
+  },
+  {
+   "at": "في ربع",
+   "shot": "host",
+   "emote": "worried"
+  },
+  {
+   "at": "3.7",
+   "shot": "side",
+   "fact": {
+    "big": "$3.7B",
+    "small": "مقدمات اتشطبت · The Information"
+   }
+  },
+  {
+   "at": "مقدمات",
+   "shot": "host",
+   "emote": "worried",
+   "gesture": "count"
+  },
+  {
+   "at": "وما بتتردش",
+   "shot": "side",
+   "fact": {
+    "big": "مابتتردّش",
+    "tone": "stamp"
+   },
+   "emote": "deadpan"
+  },
+  {
+   "at": "دي اغلى",
+   "shot": "side",
+   "meme": {
+    "kind": "receipt",
+    "title": "SOFTBANK",
+    "sub": "قسم الداتا سنتر",
+    "items": [
+     [
+      "مقدّم معدات",
+      "$3.7B"
+     ],
+     [
+      "معدات وصلت",
+      "0"
+     ],
+     [
+      "استرجاع",
+      "لأ"
+     ]
+    ],
+    "totalLabel": "الإجمالي",
+    "total": "-$3.7B",
+    "foot": "شكراً. مفيش استرجاع."
+   },
+   "emote": "deadpan"
+  },
+  {
+   "at": "وكمان النهارده",
+   "shot": "host",
+   "slide": "gemini",
+   "story": {
+    "n": 6,
+    "tag": "عالسريع"
+   },
+   "gesture": "count",
+   "emote": "neutral"
+  },
+  {
+   "at": "جيمناي فور",
+   "shot": "insert",
+   "mark": "headline",
+   "zoom": 1.1
+  },
+  {
+   "at": "للكل",
+   "center": [
+    0.5,
+    0.98
+   ],
+   "zoom": 1.15
+  },
+  {
+   "at": "وريديت",
+   "shot": "insert",
+   "slide": "reddit",
+   "mark": "headline",
+   "zoom": 1.1,
+   "peek": true
+  },
+  {
+   "at": "لمراجعات",
+   "shot": "close",
+   "emote": "eyeroll"
+  },
+  {
+   "at": "ده كان اليوم",
+   "shot": "wide",
+   "slide": null,
+   "story": null,
+   "gesture": "wave",
+   "emote": "grin"
+  },
+  {
+   "at": "كان معاكم",
+   "shot": "host",
+   "emote": "proud"
+  },
+  {
+   "at": "نشوفكم",
+   "shot": "wide",
+   "duck": true,
+   "emote": "sly"
+  },
+  {
+   "at": "الجاي",
+   "offset": 0.5,
+   "lurk": true
+  }
+ ]
+}

@@ -69,13 +69,13 @@ function resolveCues() {
   chapters = (cues.chapters || []).map((c) => { if (c.match === undefined) return c; const q = find(c.match); if (!q) { console.warn("chapter not found:", c.match); return null; } return { t: q.s - 0.2, label: c.label }; }).filter(Boolean).sort((a, b) => a.t - b.t);
   // caption fixes: [["heard words", "shown text"], ...]. A phrase of several words collapses onto its first word;
   // the punctuation after the last word is kept. Only the captions change, never the timing.
-  const norm = (t) => t.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const norm = require("./editor.cjs").norm;
   for (const w of words) w.show = w.t;
   for (const [from, to] of cues.fix || []) {
     const want = from.split(/\s+/).map(norm);
     for (let i = 0; i + want.length <= words.length; i++) {
       if (!want.every((x, k) => norm(words[i + k].t) === x)) continue;
-      const tail = (words[i + want.length - 1].t.match(/[^A-Za-z0-9]+$/) || [""])[0];
+      const tail = (words[i + want.length - 1].t.match(/[^\p{L}\p{N}]+$/u) || [""])[0];
       words[i].show = to + tail; for (let k = 1; k < want.length; k++) words[i + k].show = "";
     }
   }
@@ -85,8 +85,8 @@ function resolveCues() {
 function caption(i) {
   const t = tAudio(i);
   let wi = -1; for (let k = 0; k < words.length; k++) if (words[k].s <= t) wi = k;
-  let a = Math.max(0, wi), b; while (a > 0 && !/[.!?]$/.test(words[a - 1].t) && wi - a < 60) a--;
-  b = a; while (b < words.length - 1 && !/[.!?]$/.test(words[b].t)) b++;
+  let a = Math.max(0, wi), b; while (a > 0 && !/[.!?؟]$/.test(words[a - 1].t) && wi - a < 60) a--;
+  b = a; while (b < words.length - 1 && !/[.!?؟]$/.test(words[b].t)) b++;
   if (wi < 0) { a = 0; b = -1; }
   const chunk = cues.captionChunk ?? 7, start = a + Math.floor(Math.max(0, wi - a) / chunk) * chunk;
   const shown = words.slice(start, Math.min(b + 1, start + chunk)).map((w, k) => {
@@ -134,7 +134,7 @@ server.listen(0, "127.0.0.1", async () => {
     const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
     page.on("pageerror", (err) => { console.error("PAGE ERROR", err.message); process.exitCode = 1; });
     await page.goto(url); await page.waitForFunction("window.__ready === true", null, { timeout: 20000 });
-    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "" });
+    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl });
     return { page, cdp: await page.context().newCDPSession(page) };
   };
   const shot = async (w, i, format = "jpeg") => {

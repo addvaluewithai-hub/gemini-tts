@@ -314,3 +314,21 @@ films linked from these stories sit on YouTube, and pulling them would break
 its terms and invite copyright claims on the channel. The motion in an
 episode comes from scrolling the real article, the camera, the props and the
 host.
+
+### Other languages
+
+`cues/news-2026-11-10-ar.json` is the same episode with an Egyptian Arabic
+voice. What a second language needs:
+
+- its own script and factory request (`episodes/<channel>/<episode>-ar/`), with
+  `transcript.language_codes` set, and its own cue file whose `at` phrases are
+  taken from that transcript. `episode` can still point at the first
+  episode's folder so both share one set of slides;
+- `"rtl": true` for right-to-left captions and mirrored meme layouts. The
+  display fonts carry Arabic glyphs under the same names (Lalezar for Anton,
+  Cairo for the small text), so labels can be written in either language;
+- `fix` entries for names and spellings the transcriber changed. Phrases are
+  compared without case, punctuation or Arabic vowel marks, and with the alef,
+  yeh and teh marbuta variants folded together, so `at` and `fix` can be typed
+  the way the transcript prints them;
+- nothing for lip sync: Arabic words are sounded out letter by letter.

@@ -9,7 +9,7 @@ const rng = (seed) => () => { seed |= 0; seed = (seed + 0x6D2B79F5) | 0; let t =
 
 // ---- reading the script ---------------------------------------------------------------------------
 const EMOTE_RULES = [
-  [/\?\s*$/, ["skeptical"]],
+  [/[?؟]\s*$/, ["skeptical"]],
   [/\b(breach|exploit|attack|hack|compromised|critical|vulnerab|stolen|leak|remote code)/i, ["serious", "worried"]],
   [/\b(fun part|welcome|lighter|progress|good news|finally arrived|that's the show)\b/i, ["grin", "proud"]],
   [/\b(insist|clearly|honestly|lovingly|voluntarily|enthusiastically|we insist|polite|comforting)\b/i, ["smug", "sly"]],
@@ -18,7 +18,7 @@ const EMOTE_RULES = [
   [/\d/, ["surprised", "proud"]],
 ];
 const GESTURE_RULES = [
-  [/\?\s*$/, ["shrug"]],
+  [/[?؟]\s*$/, ["shrug"]],
   [/^(welcome)\b/i, ["wave"]],
   [/\b(sigh|handed them|automated|honestly)\b/i, ["facepalm", "shrug"]],
   [/^(lead story|story (two|three)|lightning round|something lighter|here is|so,)/i, ["presentHigh", "present"]],
@@ -34,7 +34,7 @@ const REACTIONS = { skeptical: ["skeptical", "eyeroll"], serious: ["deadpan", "b
 
 function sentences(words) {
   const out = []; let a = 0;
-  words.forEach((w, i) => { if (/[.!?]["')]*$/.test(w.t) || i === words.length - 1) { out.push({ a, b: i, s: words[a].s, e: w.e, text: words.slice(a, i + 1).map((x) => x.t).join(" ") }); a = i + 1; } });
+  words.forEach((w, i) => { if (/[.!?؟]["')]*$/.test(w.t) || i === words.length - 1) { out.push({ a, b: i, s: words[a].s, e: w.e, text: words.slice(a, i + 1).map((x) => x.t).join(" ") }); a = i + 1; } });
   out.forEach((s, i) => { s.gap = i + 1 < out.length ? out[i + 1].s - s.e : 9; });
   return out;
 }
@@ -62,7 +62,7 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
   // 2. stressed words: the loudest ones, at most one every 0.45 s
   const peakOf = (w) => { let m = 0; for (let t = w.s; t <= w.e; t += 0.01) m = Math.max(m, level(t)); return m; };
   const peaks = words.map(peakOf), sorted = [...peaks].sort((a, b) => a - b), cut = sorted[Math.floor(sorted.length * 0.72)] || 0;
-  const beats = []; words.forEach((w, i) => { const strong = (peaks[i] >= cut && w.t.replace(/\W/g, "").length >= 4) || /\d/.test(w.t); const t = w.s + (w.e - w.s) * 0.35; if (strong && (!beats.length || t - beats[beats.length - 1] > 0.45)) beats.push(t); });
+  const beats = []; words.forEach((w, i) => { const strong = (peaks[i] >= cut && w.t.replace(/[^\p{L}\p{N}]/gu, "").length >= 4) || /\d/.test(w.t); const t = w.s + (w.e - w.s) * 0.35; if (strong && (!beats.length || t - beats[beats.length - 1] > 0.45)) beats.push(t); });
   const pulse = (t, len) => { let v = 0; for (const b of beats) { const d = (t - b) / len; if (d >= -0.25 && d < 1) v = Math.max(v, d < 0 ? smooth(1 + d * 4) : 1 - smooth(d)); } return v; };
 
   // 3. frame by frame, everything eased through its own spring
