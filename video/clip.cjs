@@ -158,7 +158,7 @@ server.listen(0, "127.0.0.1", async () => {
     sfx.writeWav(path.join(tmp, "music.wav"), sfx.music(dur, { bpm: cues.bpm, end: dur - 0.25 }));
     extra.push("-i", path.join(tmp, "sfx.wav"), "-i", path.join(tmp, "music.wav"));
     mix = `[1:a]aresample=48000,volume=${cues.voiceGain ?? 1},${delay},asplit=2[v][key];[3:a][key]sidechaincompress=threshold=0.03:ratio=4:attack=15:release=380[m];` +
-      `[v][2:a][m]amix=inputs=3:normalize=0:weights=1 1 ${cues.musicGain ?? 0.5}[x];[x]alimiter=limit=0.84[a]`;
+      `[v][2:a][m]amix=inputs=3:normalize=0:weights=1 1 ${cues.musicGain ?? 0.5}[x];[x]alimiter=limit=0.84:level=false[a]`;
   }
   const ff = spawn("ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
     "-ss", String(cues.from), "-t", String(cues.to - cues.from), "-i", voicePath, ...extra,
