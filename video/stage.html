@@ -6,7 +6,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#0C57A0}
 #stage{width:1920px;height:1080px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace;color:#fff;
   background:radial-gradient(ellipse 1300px 1000px at 590px 470px,#6FD6FF 0%,#1F96E8 55%,#0C57A0 100%)}
 #floor{position:absolute;left:-200px;top:820px;width:1600px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(143,224,255,.32),rgba(143,224,255,0))}
-#char{position:absolute;left:30px;top:-6px;width:1100px;height:1100px}
+#char{position:absolute;left:30px;top:-6px;width:1100px;height:1100px;transform-origin:50% 36%}
 #char svg{display:block}
 #hud{position:absolute;left:1150px;top:70px;right:70px;display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:24px;letter-spacing:.14em}
 #rec{display:flex;align-items:center;gap:12px}
@@ -30,7 +30,9 @@ const $ = (id) => document.getElementById(id);
 const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 // One frame. `st` is plain data computed by the renderer; nothing here depends on wall-clock time.
 window.draw = (st) => {
-  $("char").innerHTML = peek3d(st.e, { face: st.face, paper: st.paper, paperShift: st.shift, bob: st.bob, tilt: st.tilt, bg: false, grain: false, size: 1100 });
+  $("char").innerHTML = peek3d(st.e, { face: st.face, paper: st.paper, paperShift: st.shift, bob: st.bob, tilt: st.tilt, bg: false, grain: false, size: 1100,
+    armL: st.armL, armR: st.armR, shrug: st.shrug, sway: st.sway, bounce: st.bounce, squash: st.squash, roll: false });
+  $("char").style.transform = `scale(${st.cam})`;
   $("label").textContent = st.label; $("chapter").textContent = st.chapter;
   $("dot").style.opacity = st.recOn ? 1 : 0.25;
   $("cap").innerHTML = st.words.map((w) => `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`).join("");

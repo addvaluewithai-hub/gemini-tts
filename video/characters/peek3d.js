@@ -53,7 +53,9 @@ export const FACES = {
 const G = "p3-"; // id prefix; made unique per face by the final replaceAll
 const grad = (id, type, attrs, stops) => `<${type}Gradient id="${G}${id}" ${attrs}>${stops.map((c, i) => `<stop offset="${typeof c === "string" ? i / (stops.length - 1) : c[0]}" stop-color="${typeof c === "string" ? c : c[1]}"/>`).join("")}</${type}Gradient>`;
 
-function defs(c) {
+const eyeGeom = (q, e) => { const es = e.eyeScale ?? 1; return { cx: q.cx, cy: q.cy, rx: q.rx * (1 + (es - 1) * 0.5), ry: q.ry * es }; };
+
+function defs(c, e) {
   const [hi, mid, lo] = c.skin;
   return `<defs>
   ${grad("bg", "radial", 'cx=".5" cy=".42" r=".8"', ["#6FD6FF", [0.6, "#1F96E8"], "#0C57A0"])}
@@ -85,7 +87,7 @@ function defs(c) {
   <clipPath id="${G}head"><path d="${c.head}"/></clipPath>
   <linearGradient id="${G}rimg" gradientUnits="userSpaceOnUse" x1="610" y1="0" x2="850" y2="0"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient><mask id="${G}rim"><rect width="1200" height="1200" fill="url(#${G}rimg)"/></mask>
   <clipPath id="${G}coatc"><path d="${COAT}"/></clipPath>
-  ${c.eyes.map((q, i) => `<clipPath id="${G}e${i}"><ellipse cx="${q.cx}" cy="${q.cy}" rx="${q.rx}" ry="${q.ry}"/></clipPath>`).join("")}
+  ${c.eyes.map((q, i) => { const g = eyeGeom(q, e); return `<clipPath id="${G}e${i}"><ellipse cx="${g.cx}" cy="${g.cy}" rx="${g.rx}" ry="${g.ry}"/></clipPath>`; }).join("")}
   <mask id="${G}holes"><rect width="1200" height="1200" fill="#fff"/>${c.eyes.map((q) => `<ellipse cx="${q.cx}" cy="${q.cy}" rx="${q.rx - 6}" ry="${q.ry - 6}" fill="#000"/>`).join("")}</mask>
 </defs>`;
 }
@@ -93,13 +95,15 @@ function defs(c) {
 const COAT = "M600 560 C500 560 430 590 410 660 C385 750 380 850 392 925 C460 950 740 950 808 925 C820 850 815 750 790 660 C770 590 700 560 600 560 Z";
 
 function eye(q, i, e, c) {
-  const { cx, cy, rx, ry } = q, side = i === 0 ? -1 : 1, k = c.irisR / 45;
-  const lid = Math.max(0, Math.min(1, e.lid + c.lidBase));
-  const ix = cx + e.look * rx * 0.29 - side * rx * 0.065, iy = cy + ry * 0.12;
+  const { cx, cy, rx, ry } = eyeGeom(q, e), side = i === 0 ? -1 : 1, k = c.irisR / 45;
+  const lid = Math.max(0, Math.min(1, ((i === 0 ? e.lidL : e.lidR) ?? e.lid) + c.lidBase));
+  const ix = cx + e.look * rx * 0.29 - side * rx * 0.065, iy = cy + ry * 0.12 + (e.lookY ?? 0) * ry * 0.36;
   const edge = cy - ry + ry * 0.18 + lid * ry * 1.5;
   const yIn = edge + ry * 0.16, yOut = edge - ry * 0.08;
   const x0 = cx - rx - 12, x1 = cx + rx + 12;
   const yL = side < 0 ? yOut : yIn, yR = side < 0 ? yIn : yOut, ctl = edge - ry * 0.21;
+  const sq = Math.max(0, Math.min(1, e.squint ?? 0)), ly = cy + ry + 2 - sq * ry * 0.5, lc = cy + ry - 12 - sq * ry * 0.95;   // lower lid pushed up by the cheek
+  const pr = c.pupilR * (e.pupil ?? 1);
   let spokes = "";
   for (let a = 0; a < 18; a++) { const t = a * Math.PI / 9; spokes += `M${ix + Math.cos(t) * c.irisR * 0.5} ${iy + Math.sin(t) * c.irisR * 0.5} L${ix + Math.cos(t) * c.irisR * 0.9} ${iy + Math.sin(t) * c.irisR * 0.9} `; }
   return `
@@ -109,14 +113,24 @@ function eye(q, i, e, c) {
     <circle cx="${ix}" cy="${iy}" r="${c.irisR}" fill="url(#${G}iris)"/>
     <path d="${spokes}" stroke="${c.iris.rim}" stroke-width="2.2" opacity=".28"/>
     <circle cx="${ix}" cy="${iy}" r="${c.irisR}" fill="none" stroke="${c.iris.rim}" stroke-width="${5 * k}" opacity=".6"/>
-    <circle cx="${ix}" cy="${iy}" r="${c.pupilR}" fill="#120A04"/>
+    <circle cx="${ix}" cy="${iy}" r="${pr}" fill="#120A04"/>
     <ellipse cx="${ix - 17 * k}" cy="${iy - 19 * k}" rx="${15 * k}" ry="${10.5 * k}" transform="rotate(-32 ${ix - 17 * k} ${iy - 19 * k})" fill="#fff" opacity=".96"/>
     <circle cx="${ix + 16 * k}" cy="${iy + 17 * k}" r="${5.5 * k}" fill="#fff" opacity=".7"/>
     <path d="M${x0} ${cy - ry - 14} H${x1} V${yR + 20} Q${cx} ${ctl + 22} ${x0} ${yL + 20} Z" fill="#1A0612" opacity=".3" filter="url(#${G}b6)"/>
     <path d="M${x0} ${cy - ry - 14} H${x1} V${yR} Q${cx} ${ctl} ${x0} ${yL} Z" fill="url(#${G}lid)"/>
     <path d="M${x0} ${yL} Q${cx} ${ctl} ${x1} ${yR}" fill="none" stroke="${c.dark}" stroke-width="7" stroke-linecap="round"/>
-    <path d="M${x0} ${cy + ry + 14} H${x1} V${cy + ry + 2} Q${cx} ${cy + ry - 12} ${x0} ${cy + ry + 2} Z" fill="url(#${G}lid)" opacity=".85"/>
+    <path d="M${x0} ${cy + ry + 14} H${x1} V${ly} Q${cx} ${lc} ${x0} ${ly} Z" fill="url(#${G}lid)" opacity="${0.85 + 0.15 * sq}"/>
+    <path d="M${x0} ${ly} Q${cx} ${lc} ${x1} ${ly}" fill="none" stroke="${c.dark}" stroke-width="5" stroke-linecap="round" opacity="${sq}"/>
   </g>`;
+}
+
+// Brows sit just above the eyes. raise: -1 pressed down .. 1 lifted, per brow. tilt: -1 angry (inner ends down) .. 1 sad.
+function brows(e, c) {
+  return c.eyes.map((q, i) => {
+    const g = eyeGeom(q, e), side = i === 0 ? -1 : 1, raise = (i === 0 ? e.browL : e.browR) ?? 0, tilt = e.browTilt ?? 0;
+    const by = q.cy - q.ry - 13 - raise * 19 - (g.ry - q.ry) * 0.9, bl = q.rx * 0.94, arch = 8 + Math.max(0, raise) * 8;
+    return `<g transform="rotate(${tilt * 17 * side} ${g.cx} ${by})"><path d="M${g.cx - bl} ${by + 4} Q${g.cx} ${by - arch} ${g.cx + bl} ${by + 4}" fill="none" stroke="${c.dark}" stroke-width="12" stroke-linecap="round"/></g>`;
+  }).join("");
 }
 
 // One mouth for every state. The lips are two curves that share their corners: the upper lip always
@@ -132,9 +146,17 @@ export const MOUTHS = {
   smirk: { w: 1, smile: 0.365, jaw: 0, smirk: 1 },
   flat: { w: 0.85, smile: 0.03, jaw: 0, smirk: 0 },
   talk: { w: 0.82, smile: 0.16, jaw: 1, smirk: 0.3 },
+  smug: { w: 1, smile: 0.3, jaw: 0, smirk: 1.5 },
+  grin: { w: 1.06, smile: 0.4, jaw: 0.3, smirk: 0.2 },
+  frown: { w: 0.8, smile: -0.14, jaw: 0, smirk: 0 },
+  pout: { w: 0.5, smile: -0.05, jaw: 0, smirk: 0 },
+  o: { w: 0.42, smile: 0, jaw: 0.62, smirk: 0 },
+  grimace: { w: 0.96, smile: 0.02, jaw: 0.2, smirk: 0 },
+  laugh: { w: 1.06, smile: 0.42, jaw: 0.85, smirk: 0 },
+  wobble: { w: 0.6, smile: -0.1, jaw: 0.12, smirk: 0 },
 };
 function mouthParams(e, c) {
-  if (e.m) return e.m;
+  if (e.m) return typeof e.m === "string" ? MOUTHS[e.m] : e.m;
   if (e.mouth === "talk") return { ...MOUTHS.talk, jaw: Math.max(0, Math.min(1, e.open ?? 1)) };
   if (e.mouth === "flat") return MOUTHS.flat;
   return c.flatSmirk ? { ...MOUTHS.smirk, smile: 0.17 } : MOUTHS.smirk;
@@ -218,16 +240,33 @@ function newspaper(top, holes, c) {
 
 // Animation hooks: e.open (0..1 mouth opening while talking), paperShift (px the open newspaper is lowered),
 // bob / tilt (head and hat offset in px and degrees), bg and grain (turn off for compositing and speed).
-export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox = "0 0 1200 1200", paperShift = 0, bob = 0, tilt = 0, bg = true, grain = true } = {}) {
+// Acting hooks: armL / armR ({ x, y, front } hand targets, null = in the pocket), shrug (0..1 shoulders up),
+// sway (degrees about the feet), bounce (px off the ground), squash (vertical scale about the feet), roll (show the tucked paper).
+// Face extras live on the expression: browL, browR, browTilt, eyeScale, pupil, squint, lookY, lidL, lidR, antL, antR, sweat, blush, symbol.
+const HAT_DY = -22;
+export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox = "0 0 1200 1200", paperShift = 0, bob = 0, tilt = 0, bg = true, grain = true,
+  armL = null, armR = null, shrug = 0, sway = 0, bounce = 0, squash = 1, roll: showRoll = true } = {}) {
   const c = FACES[face];
   const [hi, mid, lo] = c.skin;
   const arm = "M436 636 C388 690 370 772 380 832 C402 846 438 846 458 832 C460 772 472 702 490 650 Z";
   const flip = (m, inner) => `<g ${m ? 'transform="translate(1200,0) scale(-1,1)"' : ""}>${inner}</g>`;
   const sleeve = (m) => flip(m, `<path d="${arm}" transform="translate(12 6)" fill="#4A3418" opacity=".5" filter="url(#${G}b6)"/><path d="${arm}" fill="url(#${G}coat${m ? "2" : ""})"/><path d="M432 652 C394 702 380 770 386 822" fill="none" stroke="#F6E0B8" stroke-width="6" stroke-linecap="round" opacity="${m ? 0.25 : 0.5}"/>`);
   const cuff = (m) => flip(m, `<ellipse cx="419" cy="836" rx="43" ry="15" fill="#6E5126"/><ellipse cx="419" cy="831" rx="43" ry="14" fill="url(#${G}coat2)"/><path d="M380 828 C400 838 438 838 458 828" fill="none" stroke="#F0D3A2" stroke-width="3" opacity=".5"/>`);
-  const antenna = (m) => `<g ${m ? 'transform="translate(1200,0) scale(-1,1)"' : ""}><path d="M396 240 C366 190 340 160 324 118" fill="none" stroke="${lo}" stroke-width="15" stroke-linecap="round"/><path d="M394 238 C364 190 338 160 322 118" fill="none" stroke="${mid}" stroke-width="7" stroke-linecap="round"/><circle cx="318" cy="100" r="27" fill="url(#${G}ball)"/><ellipse cx="309" cy="90" rx="8" ry="6" fill="#fff" opacity=".8"/></g>`;
+  const antenna = (m) => `<g ${m ? 'transform="translate(1200,0) scale(-1,1)"' : ""}><g transform="rotate(${(m ? e.antR : e.antL) ?? 0} 396 240)"><path d="M396 240 C366 190 340 160 324 118" fill="none" stroke="${lo}" stroke-width="15" stroke-linecap="round"/><path d="M394 238 C364 190 338 160 322 118" fill="none" stroke="${mid}" stroke-width="7" stroke-linecap="round"/><circle cx="318" cy="100" r="27" fill="url(#${G}ball)"/><ellipse cx="309" cy="90" rx="8" ry="6" fill="#fff" opacity=".8"/></g></g>`;
+  // A free arm: shoulder to hand target through a bent elbow, drawn as a thick sleeve with a cuff and the mitt.
+  const freeArm = (side, target) => {
+    const S = { x: 600 + side * 150, y: 652 - 14 * shrug }, W = { x: target.x, y: target.y }, L = 122, reach = 2 * L - 6;
+    let dx = W.x - S.x, dy = W.y - S.y, d = Math.hypot(dx, dy) || 1;
+    if (d > reach) { W.x = S.x + dx / d * reach; W.y = S.y + dy / d * reach; dx = W.x - S.x; dy = W.y - S.y; d = reach; }
+    const h = Math.sqrt(Math.max(0, L * L - d * d / 4)), mx = (S.x + W.x) / 2, my = (S.y + W.y) / 2, nx = -dy / d, ny = dx / d;
+    const A = { x: mx + nx * h, y: my + ny * h }, B = { x: mx - nx * h, y: my - ny * h }, score = (q) => side * (q.x - 600) + q.y * 0.55;
+    const E = score(A) > score(B) ? A : B, th = Math.atan2(W.y - E.y, W.x - E.x), path = `M${S.x} ${S.y} Q${E.x} ${E.y} ${W.x} ${W.y}`;
+    return `<path d="${path}" transform="translate(10 8)" fill="none" stroke="#4A3418" stroke-width="80" stroke-linecap="round" opacity=".4" filter="url(#${G}b6)"/>
+      <path d="${path}" fill="none" stroke="${side < 0 ? "#CBA66E" : "#B38C55"}" stroke-width="76" stroke-linecap="round"/>
+      <path d="${path}" transform="translate(-8 -8)" fill="none" stroke="${side < 0 ? "#F0D3A2" : "#D2B079"}" stroke-width="28" stroke-linecap="round" opacity=".35"/>
+      <g transform="rotate(${th * 180 / Math.PI - 90} ${W.x} ${W.y})">${mitt(W.x, W.y + 40, -side, lo)}<ellipse cx="${W.x}" cy="${W.y + 5}" rx="44" ry="15" fill="#6E5126"/><ellipse cx="${W.x}" cy="${W.y}" rx="44" ry="14" fill="url(#${G}coat2)"/></g>`;
+  };
   const body = `
-  <ellipse cx="600" cy="1012" rx="300" ry="36" fill="#031A33" opacity=".5" filter="url(#${G}b14)"/>
   <rect x="524" y="900" width="52" height="84" rx="16" fill="#1E1E26"/><rect x="624" y="900" width="52" height="84" rx="16" fill="#15151B"/>
   <ellipse cx="536" cy="990" rx="58" ry="25" fill="url(#${G}shoe)"/><ellipse cx="664" cy="990" rx="58" ry="25" fill="url(#${G}shoe)"/>
   <ellipse cx="516" cy="980" rx="18" ry="7" fill="#fff" opacity=".28"/><ellipse cx="644" cy="980" rx="18" ry="7" fill="#fff" opacity=".28"/>
@@ -259,6 +298,9 @@ export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox 
   <path d="M588 612 h24 l8 20 l-20 62 l-20 -62 z" fill="#E5333F"/><path d="M588 612 h24 l8 20 h-40 z" fill="#B3202C"/>
   <path d="M600 664 L506 626 L478 712 L574 762 Z" fill="url(#${G}coat2)" opacity=".95"/><path d="M600 664 L694 626 L722 712 L626 762 Z" fill="#7B5A2E" opacity=".95"/>`;
   const [bl, br, by] = c.blushAt;
+  const bm = 1 + (e.blush ?? 0) * 1.4, ex = Math.max(...c.eyes.map((q) => q.cx + q.rx)), ey = Math.min(...c.eyes.map((q) => q.cy));
+  const sw = e.sweat ?? 0, sx = ex + 44, sy = ey - 76 + 70 * sw;
+  const sweat = sw > 0.02 ? `<path d="M${sx} ${sy - 18} C${sx + 13} ${sy} ${sx + 11} ${sy + 13} ${sx} ${sy + 13} C${sx - 11} ${sy + 13} ${sx - 13} ${sy} ${sx} ${sy - 18} Z" fill="#C9F1FF" opacity="${Math.min(1, sw * 4, (1 - sw) * 4 + 0.35)}"/><ellipse cx="${sx - 4}" cy="${sy + 3}" rx="3" ry="5" fill="#fff" opacity=".8"/>` : "";
   const nose = c.ny ? `<ellipse cx="590" cy="${c.ny}" rx="5" ry="3.5" fill="${c.dark}" opacity=".7"/><ellipse cx="612" cy="${c.ny}" rx="5" ry="3.5" fill="${c.dark}" opacity=".7"/>` : "";
   const head = `
   <ellipse cx="600" cy="${c.bottom + 18}" rx="150" ry="24" fill="#2A1A0A" opacity=".45" filter="url(#${G}b14)"/>
@@ -266,14 +308,14 @@ export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox 
   <path d="${c.head}" fill="url(#${G}skin)"/>
   <g clip-path="url(#${G}head)">
     <g mask="url(#${G}rim)"><path d="${c.head}" fill="none" stroke="#B9ECFF" stroke-width="26" opacity=".5" filter="url(#${G}b6)"/></g>
-    <ellipse cx="${bl}" cy="${by}" rx="52" ry="34" fill="${c.blush}" opacity=".42" filter="url(#${G}b14)"/><ellipse cx="${br}" cy="${by}" rx="52" ry="34" fill="${c.blush}" opacity=".38" filter="url(#${G}b14)"/>
+    <ellipse cx="${bl}" cy="${by}" rx="52" ry="34" fill="${c.blush}" opacity="${Math.min(0.95, 0.42 * bm)}" filter="url(#${G}b14)"/><ellipse cx="${br}" cy="${by}" rx="52" ry="34" fill="${c.blush}" opacity="${Math.min(0.95, 0.38 * bm)}" filter="url(#${G}b14)"/>
     <ellipse cx="${bl - 16}" cy="${by - 132}" rx="12" ry="8" fill="${c.spot}" opacity=".5"/><ellipse cx="${bl + 6}" cy="${by - 154}" rx="7" ry="5" fill="${c.spot}" opacity=".5"/><ellipse cx="${br + 22}" cy="${by - 134}" rx="9" ry="6" fill="${c.spot}" opacity=".4"/>
     ${c.over ? c.over(G) : ""}
   </g>
-  ${c.eyes.map((q, i) => eye(q, i, e, c)).join("")}
-  ${nose}${mouth(e, c)}
-  <g clip-path="url(#${G}head)"><ellipse cx="600" cy="262" rx="330" ry="74" fill="#1F0614" opacity=".55" filter="url(#${G}b14)"/></g>`;
-  const hat = `<g transform="rotate(-5 600 240)">
+  ${c.eyes.map((q, i) => eye(q, i, e, c)).join("")}${brows(e, c)}
+  ${nose}${mouth(e, c)}${sweat}
+  <g clip-path="url(#${G}head)"><ellipse cx="600" cy="${262 + HAT_DY}" rx="330" ry="74" fill="#1F0614" opacity=".55" filter="url(#${G}b14)"/></g>`;
+  const hat = `<g transform="translate(0 ${HAT_DY}) rotate(-5 600 240)">
     <ellipse cx="600" cy="262" rx="336" ry="62" fill="#050508"/>
     <ellipse cx="600" cy="246" rx="336" ry="60" fill="url(#${G}brim)"/>
     <ellipse cx="520" cy="222" rx="170" ry="16" fill="#fff" opacity=".1" filter="url(#${G}b6)"/>
@@ -287,14 +329,23 @@ export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox 
   </g>`;
   const low = Math.max(...c.eyes.map((q) => q.cy + q.ry));
   const sheet = (top, holes, y) => gripBack(292, y, 1) + gripBack(908, y - 8, -1) + newspaper(top, holes, c) + grip(292, y, 1, lo) + grip(908, y - 8, -1, lo);
-  const paperLayer = paper === "over" ? sheet(low + 4, false, low + 110) : paper === "holes" ? sheet(292, true, 560) : "";
-  const pose = `translate(0 ${bob}) rotate(${tilt} 600 620)`;
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" width="${size}" height="${size}">${defs(c)}
+  const paperLayer = paper === "over" ? sheet(low + 4, false, low + 110) : paper === "holes" ? sheet(292 + HAT_DY, true, 560) : "";
+  const pose = `translate(0 ${bob + 7 * shrug}) rotate(${tilt} 600 620)`;
+  const papery = paper === "over" || paper === "holes", free = (t) => t && !papery && paper !== "roll";
+  const symbol = e.symbol ? `<g transform="translate(908 214) rotate(12) scale(${e.symbolPop ?? 1})"><text text-anchor="middle" y="52" font-family="Anton, Impact, sans-serif" font-size="150" fill="#FFE66D" stroke="#17171B" stroke-width="10" stroke-linejoin="round" paint-order="stroke">${e.symbol}</text></g>` : "";
+  const root = `translate(0 ${-bounce}) rotate(${sway} 600 1000) translate(600 1000) scale(${1 / Math.sqrt(squash)} ${squash}) translate(-600 -1000)`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" width="${size}" height="${size}">${defs(c, e)}
   ${bg ? `<rect width="1200" height="1200" fill="url(#${G}bg)"/><ellipse cx="600" cy="1080" rx="900" ry="200" fill="#8FE0FF" opacity=".22" filter="url(#${G}b28)"/>` : ""}
+  <ellipse cx="600" cy="1012" rx="${300 - bounce * 1.2}" ry="${36 - bounce * 0.14}" fill="#031A33" opacity="${Math.max(0.2, 0.5 - bounce * 0.004)}" filter="url(#${G}b14)"/>
+  <g transform="${root}">
   ${body}
   ${paper === "roll" ? sleeve(false) + mitt(419, 872, 1, lo) + cuff(false) + sleeve(true) + cuff(true) + roll : ""}
-  ${paper !== "roll" ? tucked + sleeve(false) + sleeve(true) + flap(false) + flap(true) : ""}
+  ${paper !== "roll" ? (showRoll ? tucked : "") + (free(armL) ? "" : sleeve(false)) + (free(armR) ? "" : sleeve(true)) + flap(false) + flap(true)
+    + (free(armL) && !armL.front ? freeArm(-1, armL) : "") + (free(armR) && !armR.front ? freeArm(1, armR) : "") : ""}
   ${collar}<g transform="${pose}">${head}</g><g transform="translate(0 ${paperShift})">${paperLayer}</g><g transform="${pose}">${hat}</g>
+  ${free(armL) && armL.front ? freeArm(-1, armL) : ""}${free(armR) && armR.front ? freeArm(1, armR) : ""}
+  <g transform="${pose}">${symbol}</g>
+  </g>
   ${grain ? `<rect width="1200" height="1200" filter="url(#${G}grain)" opacity=".1" style="mix-blend-mode:overlay"/>` : ""}
   </svg>`;
   return svg.replaceAll(G, `p3${face}${paper}-`);

@@ -33,63 +33,15 @@ const level = (t) => {           // RMS over a 40 ms window centred on t
   return Math.sqrt(s / ((b - a) / wav.ch)) / 32768;
 };
 
-// ---- director -------------------------------------------------------------------------------------
-const rng = (seed) => () => { seed |= 0; seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+// ---- direction and captions ------------------------------------------------------------------------
+const { direct } = require("./director.cjs");
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
-const smooth = (p) => p * p * (3 - 2 * p);
 const dur = cues.to - cues.from + cues.lead, N = Math.round(dur * FPS);
 const tAudio = (i) => cues.from - cues.lead + i / FPS;
-
-const isDead = (t) => cues.deadpan.some(([a, b]) => t >= a && t <= b);
-const REST = { idle: { w: 1, smile: 0.365, jaw: 0, smirk: 1, tongue: 0 }, dead: { w: 0.85, smile: 0.03, jaw: 0, smirk: 0, tongue: 0 } };
-const BETWEEN = { w: 0.84, smile: 0.18, jaw: 0.03, smirk: 0.35, tongue: 0 };   // lips together mid-sentence, not back to the smirk
-const LEAD = 0.035;                                                              // the mouth moves a frame ahead of the sound
-let mouths = [];
-function directMouth(lip) {
-  const cur = { ...REST.idle }; mouths = [];
-  for (let i = 0; i < N; i++) {
-    const t = tAudio(i) + LEAD, shape = t >= cues.from ? lip.shapeAt(t) : null;
-    let goal, rate;
-    if (shape) { goal = { ...shape, smirk: 0.35 }; rate = { w: 0.5, smile: 0.5, jaw: shape.viseme === "M" ? 0.85 : 0.62, smirk: 0.3, tongue: 0.6 }; }
-    else {
-      const next = lip.segs.find((g) => g.s > t), last = [...lip.segs].reverse().find((g) => g.e <= t);
-      const mid = next && last && next.s - t < 0.28 && t - last.e < 0.28;      // a short gap inside a phrase
-      goal = mid ? BETWEEN : isDead(tAudio(i)) ? REST.dead : REST.idle;
-      rate = mid ? { w: 0.5, smile: 0.5, jaw: 0.7, smirk: 0.3, tongue: 0.6 } : { w: 0.2, smile: 0.2, jaw: 0.6, smirk: 0.16, tongue: 0.6 };
-    }
-    for (const k of Object.keys(cur)) cur[k] += ((goal[k] ?? 0) - cur[k]) * rate[k];
-    mouths.push({ ...cur });
-  }
-}
-const r = rng(21), blinks = []; for (let t = 1.6; t < dur; t += 2.4 + r() * 2.2) blinks.push(t);
-const glances = []; { const g = rng(8); let t = 0, v = 0; while (t < dur) { glances.push({ t, v }); t += 1.1 + g() * 1.8; v = (g() - 0.5) * 0.7; } }
-const SLIDE = 0.32;
-
-function paperAt(t) {
-  let k = 0; while (k + 1 < cues.paper.length && cues.paper[k + 1].t <= t) k++;
-  const cur = cues.paper[k], before = cues.paper[k - 1], p = clamp((t - cur.t) / SLIDE);
-  if (before && p < 1) {
-    if (cur.pose === "pockets") return { paper: before.pose, shift: smooth(p) * 800 };          // paper drops away
-    if (before.pose === "pockets") return { paper: cur.pose, shift: (1 - smooth(p)) * 800 };    // paper comes up
-  }
-  return { paper: cur.pose, shift: 0 };
-}
+let acting = [];
 
 function frame(i) {
-  const tv = i / FPS, t = tAudio(i);
-  const { paper, shift } = paperAt(t);
-  const dead = isDead(t);
-  const hidden = paper === "holes" && shift < 400, reading = paper === "over" && shift < 400;
-  let look = 0; { let k = 0; while (k + 1 < glances.length && glances[k + 1].t <= tv) k++; const a = glances[Math.max(0, k - 1)].v, b = glances[k].v; look = a + (b - a) * smooth(clamp((tv - glances[k].t) / 0.18)); }
-  if (hidden) look = tv < 0.42 ? -0.9 * smooth(clamp(tv / 0.14)) : tv < 0.8 ? -0.9 + 1.8 * smooth(clamp((tv - 0.42) / 0.14)) : 0.9 * (1 - smooth(clamp((tv - 0.8) / 0.14)));
-  if (reading) look = 0.55 * Math.sin(2 * Math.PI * 0.75 * tv);
-  if (dead) look = 0.85;
-  let lid = dead ? 0.58 : reading ? 0.26 : 0.14;
-  for (const b of blinks) { const d = (tv - b) * FPS; if (d >= 0 && d < 6) lid = Math.max(lid, d < 2 ? (d + 1) / 2 : 1 - (d - 2) / 4); }
-  const m = mouths[i], o = m.jaw;
-  const e = { lid, look, m };
-  const bob = -7 * o + 2.2 * Math.sin(2 * Math.PI * 0.27 * tv), tilt = 1.4 * Math.sin(2 * Math.PI * 0.13 * tv + 1) + (dead ? 3.2 : 0) - 1.6 * o;
-
+  const tv = i / FPS, t = tAudio(i), a0 = acting[i];
   // captions: the phrase being spoken, words lighting up as they land
   let wi = -1; for (let k = 0; k < words.length; k++) if (words[k].s <= t) wi = k;
   let a = Math.max(0, wi), b; while (a > 0 && !/[.!?]$/.test(words[a - 1].t) && wi - a < 60) a--;
@@ -101,7 +53,7 @@ function frame(i) {
     return { t: w.t, state: idx > wi ? "off" : idx === wi ? "on now" : "on", scale: idx === wi ? (1 + 0.14 * Math.max(0, 1 - age / 0.16)).toFixed(3) : 1 };
   });
   const ts = Math.max(0, t), mm = String(Math.floor(ts / 60)).padStart(2, "0"), ss = String(Math.floor(ts % 60)).padStart(2, "0"), ff = String(Math.floor((ts % 1) * FPS)).padStart(2, "0");
-  return { e, face: cues.face, paper, shift, bob, tilt, label: cues.label, chapter: cues.chapter, words: shown, recOn: Math.floor(tv * 1.2) % 2 === 0, tc: `${mm}:${ss}:${ff}`, progress: clamp(i / (N - 1)) };
+  return { ...a0, face: cues.face, label: cues.label, chapter: cues.chapter, words: shown, recOn: Math.floor(tv * 1.2) % 2 === 0, tc: `${mm}:${ss}:${ff}`, progress: clamp(i / (N - 1)) };
 }
 
 // ---- render ---------------------------------------------------------------------------------------
@@ -114,8 +66,10 @@ const server = http.createServer((req, res) => {
 
 server.listen(0, "127.0.0.1", async () => {
   const lip = await lipsync.build(words.filter((w) => w.e > cues.from - 1 && w.s < cues.to + 1), level);
-  directMouth(lip);
+  const show = await direct({ words: words.filter((w) => w.e > cues.from && w.s < cues.to), lip, level, cues, N, FPS, tAudio });
+  acting = show.frames;
   if (lip.missing.length) console.log("not in the pronouncing dictionary, guessed from spelling:", lip.missing.join(", "));
+  if (process.argv.includes("--plan")) for (const q of show.sents) console.log(`${q.s.toFixed(1).padStart(6)}  ${q.emote.padEnd(10)} ${q.gesture.padEnd(12)} ${(q.react || "-").padEnd(9)} ${q.text.slice(0, 70)}`);
   const url = `http://127.0.0.1:${server.address().port}/stage.html`;
   const browser = await chromium.launch();
   const open1 = async () => {

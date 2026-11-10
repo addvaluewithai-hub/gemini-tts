@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}
+body{background:#000}
+.card{width:1200px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace;background:#0C57A0;color:#fff;display:grid;grid-template-columns:repeat(4,300px)}
+.cell{position:relative;width:300px;height:300px;overflow:hidden}
+.cell svg{display:block}
+.tag{position:absolute;left:10px;top:8px;font-size:17px;font-weight:800;letter-spacing:.1em;background:rgba(6,34,63,.62);padding:5px 10px;border-radius:8px}
+</style></head><body><div id="root"></div>
+<script type="module">
+import { peek3d } from "/characters/peek3d.js";
+import { EMOTES, GESTURES } from "/characters/acting.js";
+const root = document.getElementById("root");
+const face = (em) => ({ lid: 0.14, look: 0, ...em, m: em.mouth, antL: em.ant ?? 0, antR: em.ant ?? 0, symbolPop: 1 });
+const emo = document.createElement("div"); emo.className = "card"; emo.id = "card-emotes";
+emo.innerHTML = Object.entries(EMOTES).map(([k, em]) => `<div class="cell">${peek3d(face(em), { face: "pear", size: 300, viewBox: "250 40 700 700", grain: false, roll: false, tilt: em.tilt ?? 0 })}<div class="tag">${k.toUpperCase()}</div></div>`).join("");
+root.appendChild(emo);
+const pair = { pockets: "neutral", present: "neutral", presentHigh: "grin", point: "smug", count: "serious", shrug: "skeptical", hips: "proud", cheer: "laugh", chin: "thinking", facepalm: "bored", stop: "worried", wave: "grin" };
+const ges = document.createElement("div"); ges.className = "card"; ges.id = "card-gestures";
+ges.innerHTML = Object.entries(GESTURES).map(([k, g]) => { const em = EMOTES[pair[k]]; return `<div class="cell">${peek3d(face(em), { face: "pear", size: 300, viewBox: "130 60 940 940", grain: false, roll: false, tilt: em.tilt ?? 0, armL: g.armL, armR: g.armR, shrug: g.shrug ?? 0 })}<div class="tag">${k.toUpperCase()}</div></div>`; }).join("");
+root.appendChild(ges);
+await document.fonts.load('150px "Anton"'); await document.fonts.ready; window.__ready = true;
+</script></body></html>

@@ -200,3 +200,30 @@ jump. `characters/visemes.html` renders the chart of shapes:
 ```bash
 node characters/render-sheet.cjs characters/pear visemes.html
 ```
+
+### Acting
+
+`characters/acting.js` is the vocabulary: sixteen feelings (`EMOTES`: brows,
+lids, eye size, gaze, the mouth held while silent, antennae, a nudge to the
+speech shapes) and twelve gestures (`GESTURES`: hand targets; a hand with no
+target stays in its pocket). `characters/acting.html` renders both as sheets
+into `characters/acting/`.
+
+`director.cjs` uses it to perform a script without hand animation:
+
+- it splits the transcript into sentences and gives each a feeling and a
+  gesture from keyword rules, falling back to a rotation so nothing repeats
+  back to back;
+- every real pause gets a reaction (deadpan, smug, eye-roll, wink, ...) and a
+  slow push-in;
+- the loudest words get a brow flash, a nod and a hand beat;
+- the body sways, leans into each sentence and hops on happy beats; the
+  antennae trail the head on springs;
+- every channel is eased, so feelings and poses blend instead of switching.
+
+`node clip.cjs <cues> <wav> <out> --plan` prints the choice made for each
+sentence. `acting` entries in the cue file override a time range:
+
+```json
+{ "from": 12.9, "to": 14.8, "emote": "smug", "gesture": "point", "react": "deadpan" }
+```

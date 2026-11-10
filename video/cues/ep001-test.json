@@ -1,18 +1,44 @@
 {
-  "note": "Direction for the first animated test clip. Times are seconds of episode audio.",
+  "note": "Direction for the animated test clip. Times are seconds of episode audio. Feelings and gestures are chosen automatically per sentence; `acting` overrides them.",
   "episode": "../../episodes/techforbadguys/ep001-2026-10-31",
   "transcript": "ep001.transcript.json",
   "face": "pear",
   "from": 0,
-  "to": 30.9,
+  "to": 37.4,
   "lead": 1.2,
   "label": "EARTH REPORT 001",
   "chapter": "COLD OPEN",
   "paper": [
-    { "t": -1.2, "pose": "holes" },
-    { "t": -0.25, "pose": "pockets" },
-    { "t": 16.2, "pose": "over" },
-    { "t": 21.25, "pose": "pockets" }
+    {
+      "t": -1.2,
+      "pose": "holes"
+    },
+    {
+      "t": -0.25,
+      "pose": "pockets"
+    },
+    {
+      "t": 16.2,
+      "pose": "over"
+    },
+    {
+      "t": 21.25,
+      "pose": "pockets"
+    }
   ],
-  "deadpan": [[14.95, 16.15], [24.95, 25.6], [29.95, 30.9]]
+  "deadpan": [],
+  "acting": [
+    {
+      "from": 12.9,
+      "to": 14.8,
+      "emote": "smug",
+      "gesture": "point",
+      "react": "deadpan"
+    },
+    {
+      "from": 28.4,
+      "to": 29.8,
+      "react": "deadpan"
+    }
+  ]
 }
