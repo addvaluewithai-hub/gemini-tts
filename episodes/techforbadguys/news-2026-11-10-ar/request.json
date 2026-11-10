@@ -1,0 +1,54 @@
+{
+  "turns": [
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Cold open. Instant, no warm-up.",
+      "text": "عشرة نوفمبر، ألفين ستة وعشرين. ده كل اللي حصل في التِك النهارده. <short pause> بسرعة."
+    },
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Lead story. Serious newsreader for two sentences, then the dry jab.",
+      "text": "مجلس إدارة Nvidia فتح تحقيق مستقل، والموضوع يخص المدير التنفيذي نفسه. البيان الرسمي بيقول إن Jensen Huang كان هدف لعملية مخابرات أجنبية. والمجلس بيقول برضه إنه واثق فيه ثقة كاملة. <short pause> وده بالظبط الكلام اللي بيتقال، قبل ما تجيب محامين من بره."
+    },
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Second story. Brisk, numbers rattled off, then a flat punchline.",
+      "text": "في نفس الوقت، Anthropic بدأت جولة الاكتتاب بتاعتها. تمنمية خمسة وعشرين مليون سهم، السهم من سبعين لتمانية وسبعين دولار، والرمز: ANT. يعني قيمة الشركة توصل لواحد وأربعة من عشرة تريليون دولار. <short pause> علشان شات بوت بيقولك: عندك حق تماماً. حتى وانت غلطان."
+    },
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Quick add-on, sly.",
+      "text": "وكمان نزّلت أدوات مكتبية، منها جدول بيانات اسمه Claude Sheets، وداخلة على Microsoft عِدِل. <short pause> Excel عدّى من كل حاجة بقاله أربعين سنة. هنشوف."
+    },
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Third story. Mock importance, then deadpan math.",
+      "text": "نيجي للخبر المهم بجد: GTA 6 نازلة الأسبوع الجاي. و Rockstar أكدت إنها هتشتغل تلاتين فريم في الثانية على كل الأجهزة. <short pause> تلاتاشر سنة مستنيين. تلاتين فريم."
+    },
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Fourth story. Delighted by how bad the idea is.",
+      "text": "Ring بتاعة Amazon أعلنت عن درون حراسة بميتين تسعة وأربعين دولار، بيطير جوه بيتك. وبيفضل في الهوا حوالي تمن دقايق. <short pause> فيا حرامية: استنوا تسعة."
+    },
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Fifth story. Fast, incredulous.",
+      "text": "و SoftBank خسرت سبعة مليار دولار في ربع سنة واحد. وشطبت كمان تلاتة وسبعة من عشرة مليار، مقدمات لمعدات داتا سنتر. ومابتتردّش. <short pause> دي أغلى غرامة إلغاء في التاريخ."
+    },
+    {
+      "style": "Rapid-fire tech news recap in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Fast pace, high energy, clipped delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm. Company and product names are said the English way. Punchlines land flat and quick, then straight on to the next line. Rapid-fire closer and sign-off.",
+      "text": "وكمان النهارده: Google نزّلت Gemini 4 Carbon للكل، و Reddit هيحوّل خناقاتك لمراجعات منتجات. <short pause> ده كان اليوم. كان معاكم Tech for Bad Guys. نشوفكم المرة الجاية."
+    }
+  ],
+  "voice": "Puck",
+  "routing": "quality",
+  "format": "wav",
+  "sample_rate": 24000,
+  "temperature": 1,
+  "transcript": {
+    "language_codes": [
+      "ar-EG"
+    ],
+    "write_vtt": true
+  },
+  "metadata": {
+    "channel": "techforbadguys",
+    "title": "كل اللي حصل في التِك النهارده، 10 نوفمبر 2026",
+    "language": "ar-EG",
+    "recorded_for": "2026-11-10",
+    "script": "episodes/techforbadguys/news-2026-11-10-ar/script.md"
+  }
+}
