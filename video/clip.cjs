@@ -5,6 +5,7 @@
 // cue file into plain state, the page draws it, Chromium screenshots it, ffmpeg encodes it.
 const fs = require("fs"), path = require("path"), http = require("http"), { spawn } = require("child_process");
 const { chromium } = require("playwright");
+const lipsync = require("./lipsync.cjs");
 
 const [cuesPath, wavPath, outPath] = process.argv.slice(2);
 const flag = (n) => { const i = process.argv.indexOf(n); return i < 0 ? null : process.argv[i + 1]; };
@@ -39,13 +40,26 @@ const smooth = (p) => p * p * (3 - 2 * p);
 const dur = cues.to - cues.from + cues.lead, N = Math.round(dur * FPS);
 const tAudio = (i) => cues.from - cues.lead + i / FPS;
 
-const raw = Array.from({ length: N }, (_, i) => (tAudio(i) < cues.from ? 0 : level(tAudio(i))));
-const peak = [...raw].sort((a, b) => a - b)[Math.floor(N * 0.96)] || 1;
-const speaking = (t) => words.some((w) => t >= w.s - 0.03 && t <= w.e + 0.02);
-const open = []; let prev = 0;
-for (let i = 0; i < N; i++) {
-  const t = tAudio(i), target = speaking(t) ? clamp(Math.pow(raw[i] / peak, 0.7) * 1.1, 0.16, 1) : 0;
-  prev += (target - prev) * (target > prev ? 0.62 : 0.42); open.push(prev);
+const isDead = (t) => cues.deadpan.some(([a, b]) => t >= a && t <= b);
+const REST = { idle: { w: 1, smile: 0.365, jaw: 0, smirk: 1, tongue: 0 }, dead: { w: 0.85, smile: 0.03, jaw: 0, smirk: 0, tongue: 0 } };
+const BETWEEN = { w: 0.84, smile: 0.18, jaw: 0.03, smirk: 0.35, tongue: 0 };   // lips together mid-sentence, not back to the smirk
+const LEAD = 0.035;                                                              // the mouth moves a frame ahead of the sound
+let mouths = [];
+function directMouth(lip) {
+  const cur = { ...REST.idle }; mouths = [];
+  for (let i = 0; i < N; i++) {
+    const t = tAudio(i) + LEAD, shape = t >= cues.from ? lip.shapeAt(t) : null;
+    let goal, rate;
+    if (shape) { goal = { ...shape, smirk: 0.35 }; rate = { w: 0.5, smile: 0.5, jaw: shape.viseme === "M" ? 0.85 : 0.62, smirk: 0.3, tongue: 0.6 }; }
+    else {
+      const next = lip.segs.find((g) => g.s > t), last = [...lip.segs].reverse().find((g) => g.e <= t);
+      const mid = next && last && next.s - t < 0.28 && t - last.e < 0.28;      // a short gap inside a phrase
+      goal = mid ? BETWEEN : isDead(tAudio(i)) ? REST.dead : REST.idle;
+      rate = mid ? { w: 0.5, smile: 0.5, jaw: 0.7, smirk: 0.3, tongue: 0.6 } : { w: 0.2, smile: 0.2, jaw: 0.6, smirk: 0.16, tongue: 0.6 };
+    }
+    for (const k of Object.keys(cur)) cur[k] += ((goal[k] ?? 0) - cur[k]) * rate[k];
+    mouths.push({ ...cur });
+  }
 }
 const r = rng(21), blinks = []; for (let t = 1.6; t < dur; t += 2.4 + r() * 2.2) blinks.push(t);
 const glances = []; { const g = rng(8); let t = 0, v = 0; while (t < dur) { glances.push({ t, v }); t += 1.1 + g() * 1.8; v = (g() - 0.5) * 0.7; } }
@@ -64,7 +78,7 @@ function paperAt(t) {
 function frame(i) {
   const tv = i / FPS, t = tAudio(i);
   const { paper, shift } = paperAt(t);
-  const dead = cues.deadpan.some(([a, b]) => t >= a && t <= b);
+  const dead = isDead(t);
   const hidden = paper === "holes" && shift < 400, reading = paper === "over" && shift < 400;
   let look = 0; { let k = 0; while (k + 1 < glances.length && glances[k + 1].t <= tv) k++; const a = glances[Math.max(0, k - 1)].v, b = glances[k].v; look = a + (b - a) * smooth(clamp((tv - glances[k].t) / 0.18)); }
   if (hidden) look = tv < 0.42 ? -0.9 * smooth(clamp(tv / 0.14)) : tv < 0.8 ? -0.9 + 1.8 * smooth(clamp((tv - 0.42) / 0.14)) : 0.9 * (1 - smooth(clamp((tv - 0.8) / 0.14)));
@@ -72,8 +86,8 @@ function frame(i) {
   if (dead) look = 0.85;
   let lid = dead ? 0.58 : reading ? 0.26 : 0.14;
   for (const b of blinks) { const d = (tv - b) * FPS; if (d >= 0 && d < 6) lid = Math.max(lid, d < 2 ? (d + 1) / 2 : 1 - (d - 2) / 4); }
-  const o = open[i], talking = o > 0.07;
-  const e = { lid, look, mouth: talking ? "talk" : dead ? "flat" : "smirk", open: o };
+  const m = mouths[i], o = m.jaw;
+  const e = { lid, look, m };
   const bob = -7 * o + 2.2 * Math.sin(2 * Math.PI * 0.27 * tv), tilt = 1.4 * Math.sin(2 * Math.PI * 0.13 * tv + 1) + (dead ? 3.2 : 0) - 1.6 * o;
 
   // captions: the phrase being spoken, words lighting up as they land
@@ -99,6 +113,9 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(0, "127.0.0.1", async () => {
+  const lip = await lipsync.build(words.filter((w) => w.e > cues.from - 1 && w.s < cues.to + 1), level);
+  directMouth(lip);
+  if (lip.missing.length) console.log("not in the pronouncing dictionary, guessed from spelling:", lip.missing.join(", "));
   const url = `http://127.0.0.1:${server.address().port}/stage.html`;
   const browser = await chromium.launch();
   const open1 = async () => {

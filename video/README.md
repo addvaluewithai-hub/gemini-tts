@@ -166,8 +166,10 @@ node characters/render-sheet.cjs characters/pear pear.html
 `clip.cjs` renders the host talking over episode audio. Each frame is a pure
 function of time, so a clip can be re-rendered or cut anywhere:
 
-1. the audio level per frame is read from the WAV and gated by the word
-   timestamps, which drives how far the mouth opens;
+1. `lipsync.cjs` looks each word up in the CMU pronouncing dictionary (with
+   number expansion and a letter-rule fallback), spreads its phonemes over the
+   part of the word where the WAV actually has sound, and maps each phoneme to
+   one of nine mouth shapes; loudness scales how far the jaw opens;
 2. a small director adds blinks, glances, a head bob and tilt, the deadpan
    holds and the newspaper coming up or dropping away, as listed in a cue file;
 3. `stage.html` draws the character plus word-synced captions, Chromium
@@ -185,3 +187,16 @@ silent lead-in, the face, when the newspaper pose changes
 (`holes`, `pockets`, `over`) and the time ranges to hold a deadpan look.
 Times are seconds of episode audio. Rendering runs at roughly real time on
 four browser pages.
+
+### One mouth
+
+The mouth is a single parametric drawing (`mouth` in `peek3d.js`): two lip
+curves that share their corners, driven by `w`, `smile`, `jaw`, `smirk` and
+`tongue`. With `jaw` at 0 the curves coincide into the resting smirk, so idle,
+deadpan and every speech shape are the same lips and the same two front teeth
+with different numbers, and the director can blend between them without a
+jump. `characters/visemes.html` renders the chart of shapes:
+
+```bash
+node characters/render-sheet.cjs characters/pear visemes.html
+```

@@ -119,29 +119,50 @@ function eye(q, i, e, c) {
   </g>`;
 }
 
+// One mouth for every state. The lips are two curves that share their corners: the upper lip always
+// passes through a fixed centre point, the lower lip drops below it by `jaw`. Closed (jaw 0) the two
+// coincide into the smirk line, so idle, deadpan and every speech shape are the same drawing with
+// different numbers, and the two front teeth stay attached to the upper lip throughout.
+//   w      half-width, as a fraction of the face's mouth width (narrow = rounded lips)
+//   smile  how far the corners sit above the centre, as a fraction of the mouth width
+//   jaw    0..1 opening
+//   smirk  0..1 lift of the right corner
+//   tongue 0..1 raises the tongue (L, TH)
+export const MOUTHS = {
+  smirk: { w: 1, smile: 0.365, jaw: 0, smirk: 1 },
+  flat: { w: 0.85, smile: 0.03, jaw: 0, smirk: 0 },
+  talk: { w: 0.82, smile: 0.16, jaw: 1, smirk: 0.3 },
+};
+function mouthParams(e, c) {
+  if (e.m) return e.m;
+  if (e.mouth === "talk") return { ...MOUTHS.talk, jaw: Math.max(0, Math.min(1, e.open ?? 1)) };
+  if (e.mouth === "flat") return MOUTHS.flat;
+  return c.flatSmirk ? { ...MOUTHS.smirk, smile: 0.17 } : MOUTHS.smirk;
+}
 function mouth(e, c) {
-  const y = c.my, w = c.mw, s = w / 58, hi = c.skin[0];
+  const m = mouthParams(e, c), W = c.mw, s = W / 58, hi = c.skin[0];
+  const w = W * m.w, J = Math.max(0, m.jaw) * 46 * s;                 // J: opening at the centre, px
+  const cy = c.my + 0.3 * W, up = cy - J * 0.1;                        // lip centre; the upper lip lifts a little as the jaw drops
+  const xL = 600 - w, xR = 600 + w * (1 + 0.2 * m.smirk);
+  const yL = up - m.smile * W, yR = up - m.smile * W - 14 * m.smirk;
+  const cu = 2 * up - (yL + yR) / 2;                                  // upper-lip control point
+  const low = (up + J - (yL + yR) / 8) / 0.75;                         // lower lip: a cubic, so the bottom is round, not a V
+  const lower = `C${xR - w * 0.2} ${low} ${xL + w * 0.2} ${low} ${xL} ${yL}`;
+  const upper = `M${xL} ${yL} Q${600 - 2} ${cu} ${xR} ${yR}`;
+  const cavity = `${upper} ${lower} Z`;
+  const a = Math.min(1, J / 7);                                        // how "open" it reads, for fades
   const tooth = (x, ty, tw, th) => `<rect x="${x}" y="${ty}" width="${tw}" height="${th}" rx="${tw * 0.34}" fill="url(#${G}tooth)"/><rect x="${x}" y="${ty}" width="${tw}" height="${th}" rx="${tw * 0.34}" fill="none" stroke="#B9B2A2" stroke-width="2" opacity=".55"/>`;
-  if (e.mouth === "talk") {
-    const o = Math.max(0.1, Math.min(1, e.open ?? 1)), v = w * (0.6 + 0.4 * o);   // v: mouth narrows as it closes
-    const d = `M${600 - v} ${y} Q600 ${y - 16 * s} ${600 + v} ${y} Q${600 + v - 8 * s} ${y + 72 * s * o} 600 ${y + 76 * s * o} Q${600 - v + 8 * s} ${y + 72 * s * o} ${600 - v} ${y} Z`;
-    const row = c.teeth
-      ? [[-45, 20, 20], [-23, 22, 30], [1, 22, 30], [25, 20, 20]].map(([dx, tw, th]) => tooth(600 + dx * s, y - 12 * s, tw * s, th * s)).join("")
-      : `<rect x="${600 - 38 * s}" y="${y - 12 * s}" width="${76 * s}" height="${26 * s}" rx="${9 * s}" fill="#FFFDF6"/>`;
-    return `<path d="${d}" fill="url(#${G}mouth)"/><clipPath id="${G}mc"><path d="${d}"/></clipPath>
-      <g clip-path="url(#${G}mc)"><ellipse cx="602" cy="${y + 20 * s + 42 * s * o}" rx="${36 * s}" ry="${20 * s}" fill="#FF7DB8"/>${row}</g>
-      <path d="${d}" fill="none" stroke="${c.dark}" stroke-width="6"/>`;
-  }
-  if (e.mouth === "flat") return `
-    ${c.teeth ? tooth(600 - 21, y + 10, 20, 20) + tooth(600 + 1, y + 10, 19, 18) : ""}
-    <path d="M${600 - w * 0.85} ${y + 14} Q600 ${y + 8} ${600 + w * 0.9} ${y + 16}" fill="none" stroke="${c.line}" stroke-width="10" stroke-linecap="round"/>
-    ${c.teeth ? "" : `<path d="M${600 - w * 0.7} ${y + 30} Q600 ${y + 24} ${600 + w * 0.75} ${y + 31}" fill="none" stroke="${hi}" stroke-width="6" stroke-linecap="round" opacity=".45"/>`}`;
-  const dip = c.flatSmirk ? 0.34 : 0.73, rise = c.flatSmirk ? 10 : 14;
-  const mid = y + dip * w * 0.5 - rise * 0.25;   // lip height at x = 600
-  return `${c.teeth ? tooth(600 - 27, mid - 5, 26, 33) + tooth(600 + 2, mid - 7, 24, 30) : ""}
-    <path d="M${600 - w} ${y} Q${600 - 2} ${y + dip * w} ${600 + w * 1.2} ${y - rise}" fill="none" stroke="${c.line}" stroke-width="10" stroke-linecap="round"/>
-    ${c.teeth ? "" : `<path d="M${600 - w * 0.73} ${y + 24} Q600 ${y + dip * w + 12} ${600 + w * 0.93} ${y + 12}" fill="none" stroke="${hi}" stroke-width="7" stroke-linecap="round" opacity=".45"/>`}
-    <path d="M${600 + w * 1.2} ${y - rise} q10 -8 16 -2" fill="none" stroke="${c.dark}" stroke-width="6" stroke-linecap="round" opacity=".7"/>`;
+  const teeth = c.teeth ? tooth(600 - 27, up - 5, 26, 33) + tooth(600 + 2, up - 6 - 2 * m.smirk, 24, 30) : "";
+  const tongueY = up + J * (0.92 - 0.4 * (m.tongue ?? 0));
+  const inside = a > 0 ? `<clipPath id="${G}mc"><path d="${cavity}"/></clipPath><path d="${cavity}" fill="url(#${G}mouth)"/>
+    <g clip-path="url(#${G}mc)">${c.teeth ? "" : `<rect x="${600 - w * 0.62}" y="${up - 8}" width="${w * 1.24}" height="${16 * s}" rx="${6 * s}" fill="#FFFDF6"/>`}
+      <ellipse cx="602" cy="${tongueY}" rx="${w * 0.5}" ry="${Math.max(6, J * 0.42)}" fill="#FF7DB8"/><ellipse cx="594" cy="${tongueY - J * 0.14}" rx="${w * 0.2}" ry="${Math.max(2, J * 0.1)}" fill="#FFB1D8" opacity=".6"/></g>
+    <path d="M${xR} ${yR} ${lower}" fill="none" stroke="${c.dark}" stroke-width="7" stroke-linecap="round" opacity="${a}"/>` : "";
+  const shine = c.teeth ? "" : `<path d="M${600 - w * 0.73} ${cy + J + 22} Q600 ${cy + J + 32} ${600 + w * 0.8} ${cy + J + 18}" fill="none" stroke="${hi}" stroke-width="6" stroke-linecap="round" opacity="${0.45 * (1 - a)}"/>`;
+  return `${inside}${shine}
+    <path d="${upper}" fill="none" stroke="${c.line}" stroke-width="10" stroke-linecap="round"/>
+    <path d="M${xR} ${yR} q10 -8 16 -2" fill="none" stroke="${c.dark}" stroke-width="6" stroke-linecap="round" opacity="${0.7 * m.smirk}"/>
+    ${teeth}`;
 }
 
 // Hands are single silhouettes lit as one object: three finger bumps separated by soft creases
