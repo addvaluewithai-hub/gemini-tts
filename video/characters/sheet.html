@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}
+body{background:#000}
+.card{width:1200px;height:1200px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace}
+.num{position:absolute;left:56px;top:48px;font-size:26px;letter-spacing:.14em;font-weight:700}
+.brand{position:absolute;right:56px;top:48px;font-size:22px;letter-spacing:.14em;font-weight:700;opacity:.8}
+.hero{position:absolute;left:60px;top:100px;width:730px;height:730px}
+.side{position:absolute;right:56px;top:140px;width:250px;display:flex;flex-direction:column;gap:22px}
+.thumb{width:250px;height:214px;border-radius:18px;display:flex;align-items:center;justify-content:center;position:relative}
+.thumb span{position:absolute;left:14px;top:10px;font-size:15px;letter-spacing:.16em;font-weight:700}
+.name{position:absolute;left:56px;bottom:172px;font-family:"Anton";font-size:170px;line-height:1;letter-spacing:.01em;white-space:nowrap}
+.role{position:absolute;left:60px;bottom:126px;font-size:27px;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+.line{position:absolute;left:60px;bottom:52px;font-size:22px;line-height:1.35;font-weight:500;max-width:800px;height:60px}
+.pal{position:absolute;right:56px;bottom:56px;display:flex;gap:10px}
+.pal i{display:block;width:44px;height:44px;border-radius:50%;border:3px solid rgba(128,128,128,.55)}
+</style></head><body><div id="root"></div>
+<script type="module">
+import { characters, svg } from "/characters/characters.js";
+const root = document.getElementById("root");
+const tint = (hex, a) => { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
+characters.forEach((c, i) => {
+  const d = document.createElement("div");
+  d.className = "card"; d.id = "card-" + c.id; d.style.background = c.bg; d.style.color = c.fg;
+  const thumbs = [["idle", "IDLE"], ["talk", "TALKING"], ["deadpan", "DEADPAN"]]
+    .map(([k, label]) => `<div class="thumb" style="background:${tint(c.fg, 0.1)};color:${c.sub}"><span>${label}</span>${svg(c, k, 200)}</div>`).join("");
+  d.innerHTML = `<div class="num">0${i + 1} / 05</div><div class="brand">TECHFORBADGUYS // HOST CANDIDATE</div>
+    <div class="hero">${svg(c, "idle", 730)}</div><div class="side">${thumbs}</div>
+    <div class="name" style="font-size:${c.name.length > 8 ? 132 : 170}px">${c.name}</div>
+    <div class="role">${c.role}</div><div class="line" style="color:${c.sub}">${c.line}</div>
+    <div class="pal">${c.palette.map((p) => `<i style="background:${p}"></i>`).join("")}</div>`;
+  root.appendChild(d);
+});
+await document.fonts.load('170px "Anton"'); await document.fonts.ready; window.__ready = true;
+</script></body></html>
