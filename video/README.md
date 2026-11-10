@@ -5,7 +5,7 @@ Nothing here is used by the TTS worker itself.
 
 ## characters/
 
-Five candidate hosts for the techforbadguys channel, drawn as parametric SVG
+Fifteen candidate hosts for the techforbadguys channel, drawn as parametric SVG
 in `characters/characters.js`. Each `draw(expression)` takes
 
 ```js
@@ -22,8 +22,18 @@ word timestamps (blink, glance, mouth driven by the voice level).
 | `byte` | BYTE | The villain's unimpressed black cat with an open padlock on its collar |
 | `skully` | SKULLY | A skull news anchor with a headset and a bow tie |
 | `bandit` | BANDIT | A smug raccoon in a hoodie, born with the mask on |
+| `phish` | PHISH | An anglerfish whose glowing lure is an @ sign |
+| `trojan` | TROJAN | A wooden horse on wheels with eyes peeking out of the hatch |
+| `cookie` | COOKIE | A bitten third-party cookie in sunglasses |
+| `null` | NULL | An empty black hoodie with two glowing eyes and a cursor for a mouth |
+| `quack` | QUACK | A rubber debug duck with a pirate eyepatch |
+| `octo` | OCTO | A keylogger octopus with slit pupils |
+| `locksley` | SIR LOCKSLEY | An open padlock with a monocle and a mustache |
+| `toasty` | TOASTY | A smart toaster on Wi-Fi and three botnets |
+| `spoof` | SPOOF | A ghost wearing a "HELLO I AM YOU" name tag |
+| `proxy` | PROXY | A sly fox in a suit, sitting in the middle |
 
-Rendered cards live in `characters/cards/`. Regenerate them with:
+Rendered cards live in `characters/cards/` (`overview-all.png` shows all fifteen). Regenerate them with:
 
 ```bash
 cd video && npm install --no-package-lock

@@ -25,7 +25,7 @@ characters.forEach((c, i) => {
   d.className = "card"; d.id = "card-" + c.id; d.style.background = c.bg; d.style.color = c.fg;
   const thumbs = [["idle", "IDLE"], ["talk", "TALKING"], ["deadpan", "DEADPAN"]]
     .map(([k, label]) => `<div class="thumb" style="background:${tint(c.fg, 0.1)};color:${c.sub}"><span>${label}</span>${svg(c, k, 200)}</div>`).join("");
-  d.innerHTML = `<div class="num">0${i + 1} / 05</div><div class="brand">TECHFORBADGUYS // HOST CANDIDATE</div>
+  d.innerHTML = `<div class="num">${String(i + 1).padStart(2, "0")} / ${characters.length}</div><div class="brand">TECHFORBADGUYS // HOST CANDIDATE</div>
     <div class="hero">${svg(c, "idle", 730)}</div><div class="side">${thumbs}</div>
     <div class="name" style="font-size:${c.name.length > 8 ? 132 : 170}px">${c.name}</div>
     <div class="role">${c.role}</div><div class="line" style="color:${c.sub}">${c.line}</div>
