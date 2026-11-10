@@ -21,8 +21,8 @@ const norm = (t) => t.toLowerCase().replace(/[^a-z0-9]/g, "");
 const SHOTS = { wide: { s: 1, x: 960, y: 540 }, host: { s: 1.45, x: 600, y: 425 }, close: { s: 1.82, x: 566, y: 352 }, two: { s: 1.1, x: 1030, y: 455 },
   side: { s: 1.5, x: 900, y: 415 }, low: { s: 1.85, x: 566, y: 520 }, tv: { s: 2.25, x: 1450, y: 390 } };
 const PERSIST = ["shot", "slide", "story", "duck", "lurk", "paper", "drone"];
-const G = 2600, DRONE_FLOOR = 572;
-const droneAt = (u) => ({ x: 1210 + 250 * Math.sin(0.9 * u + 0.6) - 14 * u, y: 232 + 46 * Math.sin(2.1 * u) + 18 * Math.sin(5.3 * u) });
+const G = 2600, DRONE_FLOOR = 624;
+const droneAt = (u) => ({ x: 1090 + 230 * Math.sin(0.9 * u + 0.6) - 10 * u, y: 250 + 46 * Math.sin(2.1 * u) + 18 * Math.sin(5.3 * u) });
 
 function findPhrase(words, toks, phrase, from) {
   const want = phrase.split(/\s+/).map(norm).filter(Boolean);
@@ -135,8 +135,8 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     let drone = null;
     if (seg.drone) { const d = seg.drone, u = t - d.from, enter = smooth(clamp(u / 0.9)), p = droneAt(u);
       if (d.drop !== null && t >= d.drop) { const p0 = droneAt(d.drop - d.from), dt = t - d.drop, fy = p0.y + 0.5 * G * dt * dt, down = fy >= DRONE_FLOOR;
-        drone = { x: p0.x - 95, y: Math.min(fy, DRONE_FLOOR) - 48, r: down ? 14 : Math.min(60, 160 * dt), led: 0, spin: down ? 30 : 34 };
-      } else drone = { x: lerp(2250, p.x, enter) - 95, y: lerp(120, p.y, enter) - 48, r: 5 * Math.sin(1.7 * u) - 9 * (1 - enter), led: Math.floor(tv * 6) % 2 ? 1 : 0.25, spin: 30 + 6 * (i % 2) };
+        drone = { x: p0.x - 135, y: Math.min(fy, DRONE_FLOOR) - 68, r: down ? 14 : Math.min(60, 160 * dt), led: 0, spin: down ? 30 : 34 };
+      } else drone = { x: lerp(2250, p.x, enter) - 135, y: lerp(120, p.y, enter) - 68, r: 5 * Math.sin(1.7 * u) - 9 * (1 - enter), led: Math.floor(tv * 6) % 2 ? 1 : 0.25, spin: 30 + 6 * (i % 2) };
     }
 
     frames.push({ cam: { s, x, y, r }, blur, flash, scrim: scrim < 0.01 ? 0 : scrim, lb, brand: 1,
