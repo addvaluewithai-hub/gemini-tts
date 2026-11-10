@@ -1,0 +1,95 @@
+{
+  "nvidia": {
+    "ok": true,
+    "file": "nvidia.jpg",
+    "headline": "Statement From NVIDIA Board of Directors",
+    "focus": [
+      0.047,
+      0.097,
+      0.643,
+      0.056
+    ]
+  },
+  "nvidia2": {
+    "ok": true,
+    "file": "nvidia2.jpg",
+    "headline": "Statement From the Independent Members of the NVIDIA Board",
+    "focus": [
+      0.047,
+      0.097,
+      0.643,
+      0.111
+    ]
+  },
+  "anthropic": {
+    "ok": true,
+    "file": "anthropic.jpg",
+    "headline": "Anthropic launches roadshow for proposed initial public offering",
+    "focus": [
+      0.047,
+      0.097,
+      0.717,
+      0.107
+    ]
+  },
+  "sheets": {
+    "ok": true,
+    "file": "sheets.jpg",
+    "headline": "Introducing Claude Whiteboards, Claude Sheets, and Claude Data",
+    "focus": [
+      0.1,
+      0.097,
+      0.55,
+      0.26
+    ]
+  },
+  "gta": {
+    "ok": true,
+    "file": "gta.jpg",
+    "headline": "GTA VI will be available on Xbox Cloud Gaming for Xbox One consoles",
+    "focus": [
+      0.047,
+      0.097,
+      0.617,
+      0.146
+    ]
+  },
+  "ring": {
+    "ok": true,
+    "file": "ring.jpg",
+    "headline": "Ring’s new drone patrols your home to keep an eye on things – even upstairs",
+    "focus": [
+      0.047,
+      0.097,
+      0.5,
+      0.208
+    ]
+  },
+  "softbank": {
+    "ok": false,
+    "status": 403,
+    "title": "Access Denied"
+  },
+  "gemini": {
+    "ok": true,
+    "file": "gemini.jpg",
+    "headline": "Gemini 4 Carbon is now available",
+    "focus": [
+      0.047,
+      0.097,
+      0.669,
+      0.2
+    ]
+  },
+  "reddit": {
+    "ok": true,
+    "file": "reddit.jpg",
+    "headline": "Reddit wants to guide your next purchase",
+    "focus": [
+      0.047,
+      0.097,
+      0.522,
+      0.146
+    ]
+  }
+}

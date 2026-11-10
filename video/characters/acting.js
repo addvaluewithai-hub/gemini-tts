@@ -35,4 +35,5 @@ export const GESTURES = {
   facepalm: { armL: null, armR: { x: 652, y: 420, front: true } },
   stop: { armL: { x: 344, y: 566 }, armR: { x: 856, y: 566 } }, // both palms out
   wave: { armL: null, armR: { x: 884, y: 470 }, wave: true },
+  tv: { armL: null, armR: { x: 950, y: 560 } },                 // arm out toward the studio screen
 };

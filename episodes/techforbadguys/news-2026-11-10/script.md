@@ -32,7 +32,7 @@ Also today: Google released Gemini four Carbon to everyone, and Reddit will now 
 
 ## Sources (all dated 10 November 2026 unless noted)
 
-- Nvidia board investigation: Nvidia newsroom, https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors ; The New York Times, https://www.nytimes.com/2026/11/10/business/nvidia-wachtell-lipton-jensen-huang.html
+- Nvidia board investigation: announced 8 November 2026, Nvidia newsroom, https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors ; outside counsel retained 10 November 2026, Nvidia newsroom, https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board ; The New York Times, https://www.nytimes.com/2026/11/10/business/nvidia-wachtell-lipton-jensen-huang.html
 - Anthropic IPO roadshow: Anthropic, https://www.anthropic.com/news/roadshow-launch ; valuation of up to $1.405 trillion, CNBC, https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html
 - Anthropic office tools: Bloomberg, https://www.bloomberg.com/news/articles/2026-11-10/anthropic-unveils-office-tools-ahead-of-ipo-taking-on-microsoft ; https://claude.com/resources/articles/sheets-whiteboards-data
 - GTA VI at 30 fps, out next week: The Verge, https://www.theverge.com/news/1030714/gta-vi-xbox-cloud-gaming-support
@@ -43,6 +43,8 @@ Also today: Google released Gemini four Carbon to everyone, and Reddit will now 
 
 ## Editorial notes
 
+- The Nvidia investigation was announced on Sunday 8 November; the news of 10 November is that the
+  independent directors retained outside counsel. The video shows each statement with its own date.
 - The Nvidia item sticks to the board's own statement. The reporting behind it
   involves the chief executive's private life, which the script does not touch.
 - This script was written by Claude, which is made by Anthropic. The Anthropic

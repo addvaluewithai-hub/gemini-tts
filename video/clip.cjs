@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 // Renders an animated clip of the host from episode audio and word timestamps.
-//   node clip.cjs <cues.json> <audio.wav> <out.mp4> [--still t1,t2,...] [--workers n]
-// Every frame is a pure function of time: the director below turns audio level, word timings and the
-// cue file into plain state, the page draws it, Chromium screenshots it, ffmpeg encodes it.
-const fs = require("fs"), path = require("path"), http = require("http"), { spawn } = require("child_process");
+//   node clip.cjs <cues.json> <audio.wav> <out.mp4> [--still t1,t2,...] [--workers n] [--plan]
+// Every frame is a pure function of time: the director turns audio level, word timings and the cue file
+// into plain state, the page draws it, Chromium screenshots it, ffmpeg encodes it.
+// A cue file with an `edit` list is a studio episode: editor.cjs cuts it into shots on the news-desk set
+// (studio.html), with screenshots from the episode's slides folder, and sfx.cjs supplies effects and music.
+// `tempo` speeds the voice up without changing its pitch; every time in the cue file is then in sped-up time.
+const fs = require("fs"), os = require("os"), path = require("path"), http = require("http"), { spawn, spawnSync } = require("child_process");
 const { chromium } = require("playwright");
 const lipsync = require("./lipsync.cjs");
 
@@ -15,7 +18,15 @@ const cues = JSON.parse(fs.readFileSync(cuesPath, "utf8"));
 const epDir = path.resolve(path.dirname(cuesPath), cues.episode);
 const transcript = JSON.parse(fs.readFileSync(path.join(epDir, cues.transcript), "utf8"));
 const words = transcript.words.map((w) => ({ s: w.start_ms / 1000, e: Math.max(w.end_ms, w.start_ms + 60) / 1000, t: w.text }));
-if (cues.to == null) cues.to = Math.round((transcript.duration_ms / 1000 + 0.9) * 10) / 10;   // whole episode, with a beat to react at the end
+const studio = Array.isArray(cues.edit), tmp = fs.mkdtempSync(path.join(os.tmpdir(), "clip-"));
+let voicePath = wavPath;
+if (cues.tempo && cues.tempo !== 1) {
+  voicePath = path.join(tmp, "voice.wav");
+  const r = spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-i", wavPath, "-filter:a", `atempo=${cues.tempo}`, "-c:a", "pcm_s16le", voicePath], { stdio: "inherit" });
+  if (r.status !== 0) throw new Error("could not change the tempo");
+  for (const w of words) { w.s /= cues.tempo; w.e /= cues.tempo; } transcript.duration_ms /= cues.tempo;
+}
+if (cues.to == null) cues.to = Math.round((transcript.duration_ms / 1000 + (cues.tail ?? 0.9)) * 10) / 10;   // whole episode, with a beat to react at the end
 
 // ---- audio level per frame, from the WAV itself --------------------------------------------------
 function readWav(file) {
@@ -27,7 +38,7 @@ function readWav(file) {
   if (!fmt || !data || fmt.bits !== 16) throw new Error("expected 16-bit PCM WAV");
   return { ...fmt, pcm: new Int16Array(data.buffer, data.byteOffset, Math.floor(data.length / 2)) };
 }
-const wav = readWav(wavPath);
+const wav = readWav(voicePath);
 const level = (t) => {           // RMS over a 40 ms window centred on t
   const a = Math.max(0, Math.floor((t - 0.02) * wav.rate)) * wav.ch, b = Math.min(wav.pcm.length, Math.floor((t + 0.02) * wav.rate) * wav.ch);
   if (b <= a) return 0; let s = 0; for (let i = a; i < b; i += wav.ch) s += wav.pcm[i] * wav.pcm[i];
@@ -70,43 +81,60 @@ function resolveCues() {
   }
 }
 
-function frame(i) {
-  const tv = i / FPS, t = tAudio(i), a0 = acting[i];
-  // captions: the phrase being spoken, words lighting up as they land
+// captions: the phrase being spoken, words lighting up as they land
+function caption(i) {
+  const t = tAudio(i);
   let wi = -1; for (let k = 0; k < words.length; k++) if (words[k].s <= t) wi = k;
   let a = Math.max(0, wi), b; while (a > 0 && !/[.!?]$/.test(words[a - 1].t) && wi - a < 60) a--;
   b = a; while (b < words.length - 1 && !/[.!?]$/.test(words[b].t)) b++;
   if (wi < 0) { a = 0; b = -1; }
-  const chunk = 7, start = a + Math.floor(Math.max(0, wi - a) / chunk) * chunk;
+  const chunk = cues.captionChunk ?? 7, start = a + Math.floor(Math.max(0, wi - a) / chunk) * chunk;
   const shown = words.slice(start, Math.min(b + 1, start + chunk)).map((w, k) => {
     const idx = start + k, age = t - w.s;
     return { t: w.show ?? w.t, state: idx > wi ? "off" : idx === wi ? "on now" : "on", scale: idx === wi ? (1 + 0.14 * Math.max(0, 1 - age / 0.16)).toFixed(3) : 1 };
   });
+  return { words: wi >= 0 && t > words[Math.min(b, words.length - 1)].e + 0.5 ? [] : shown };
+}
+let studioFrames = null;
+function frame(i) {
+  if (studioFrames) return studioFrames[i];
+  const tv = i / FPS, t = tAudio(i), a0 = acting[i], shown = caption(i).words;
   const ts = Math.max(0, t), mm = String(Math.floor(ts / 60)).padStart(2, "0"), ss = String(Math.floor(ts % 60)).padStart(2, "0"), ff = String(Math.floor((ts % 1) * FPS)).padStart(2, "0");
   return { ...a0, face: cues.face, label: cues.label, status: cues.status ?? "REC", chapter: ([...chapters].reverse().find((c) => c.t <= t) || {}).label ?? cues.chapter ?? "", words: shown, recOn: Math.floor(tv * 1.2) % 2 === 0, tc: `${mm}:${ss}:${ff}`, progress: clamp(i / (N - 1)) };
 }
 
 // ---- render ---------------------------------------------------------------------------------------
-const MIME = { ".html": "text/html", ".js": "text/javascript", ".woff2": "font/woff2", ".json": "application/json" };
-const server = http.createServer((req, res) => {
-  const f = path.join(ROOT, decodeURIComponent(req.url.split("?")[0]));
-  if (!f.startsWith(ROOT) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); }
+const MIME = { ".html": "text/html", ".js": "text/javascript", ".woff2": "font/woff2", ".json": "application/json", ".jpg": "image/jpeg", ".png": "image/png" };
+const server = http.createServer((req, res) => {          // the video folder, plus the episode folder under /ep/
+  const u = decodeURIComponent(req.url.split("?")[0]), base = u.startsWith("/ep/") ? epDir : ROOT, f = path.join(base, u.startsWith("/ep/") ? u.slice(4) : u);
+  if (!f.startsWith(base) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); }
   res.writeHead(200, { "content-type": MIME[path.extname(f)] || "application/octet-stream" }); fs.createReadStream(f).pipe(res);
 });
 
 server.listen(0, "127.0.0.1", async () => {
   resolveCues();
+  let plan = null; const slides = {};
+  if (studio) {
+    const list = JSON.parse(fs.readFileSync(path.join(epDir, cues.slides || "slides.json"), "utf8")), capFile = path.join(epDir, "slides", "captured.json");
+    const got = fs.existsSync(capFile) ? JSON.parse(fs.readFileSync(capFile, "utf8")) : {};
+    for (const [k, v] of Object.entries(list)) slides[k] = { ...v, ...(got[k] && got[k].ok ? { file: got[k].file, focus: got[k].focus, headline: got[k].headline } : {}) };
+    plan = require("./editor.cjs").resolve(cues, words, slides);
+    cues.acting.push(...plan.acting); cues.paper = [...plan.paper, ...cues.paper.filter((c) => c.t > -99)].sort((a, b) => a.t - b.t);
+  }
   const lip = await lipsync.build(words.filter((w) => w.e > cues.from - 1 && w.s < cues.to + 1), level);
   const show = await direct({ words: words.filter((w) => w.e > cues.from && w.s < cues.to), lip, level, cues, N, FPS, tAudio });
   acting = show.frames;
+  if (studio) studioFrames = require("./editor.cjs").build({ cues, plan, acting, slides, N, FPS, tAudio, caption });
   if (lip.missing.length) console.log("not in the pronouncing dictionary, guessed from spelling:", lip.missing.join(", "));
+  if (process.argv.includes("--plan") && plan) for (const g of plan.segs) console.log(`${g.t.toFixed(2).padStart(7)}  ${(g.cut ? g.shot : "  ·").padEnd(7)} ${(g.trans || "").padEnd(7)} ${[g.slide && g.shot === "insert" ? "slide:" + g.slide : "", g.fact ? "fact:" + g.fact.big : "", g.duck ? "duck" : "", g.lurk ? "lurk" : "", g.peek ? "peek" : "", g.emote || "", g.gesture || ""].filter(Boolean).join(" ")}`);
   if (process.argv.includes("--plan")) for (const q of show.sents) console.log(`${q.s.toFixed(1).padStart(6)}  ${q.emote.padEnd(10)} ${q.gesture.padEnd(12)} ${(q.react || "-").padEnd(9)} ${q.text.slice(0, 70)}`);
-  const url = `http://127.0.0.1:${server.address().port}/stage.html`;
+  const url = `http://127.0.0.1:${server.address().port}/${studio ? "studio.html" : "stage.html"}`;
   const browser = await chromium.launch();
   const open1 = async () => {
     const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
     page.on("pageerror", (err) => { console.error("PAGE ERROR", err.message); process.exitCode = 1; });
     await page.goto(url); await page.waitForFunction("window.__ready === true", null, { timeout: 20000 });
+    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "" });
     return { page, cdp: await page.context().newCDPSession(page) };
   };
   const shot = async (w, i, format = "jpeg") => {
@@ -121,9 +149,20 @@ server.listen(0, "127.0.0.1", async () => {
     await browser.close(); server.close(); return;
   }
   const workers = await Promise.all(Array.from({ length: Number(flag("--workers") || 4) }, open1));
+  // sound: the voice alone, or voice + effects + a music bed that ducks under the voice
+  const delay = `adelay=${Math.round(cues.lead * 1000)}:all=1,apad`, extra = [];
+  let mix = `[1:a]${delay}[a]`;
+  if (studio) {
+    const sfx = require("./sfx.cjs"), toVideo = (e) => ({ ...e, t: e.t - cues.from + cues.lead });
+    sfx.writeWav(path.join(tmp, "sfx.wav"), sfx.effects(plan.sfx.map(toVideo), dur), cues.sfxGain ?? 0.6);
+    sfx.writeWav(path.join(tmp, "music.wav"), sfx.music(dur, { bpm: cues.bpm, end: dur - 0.25 }));
+    extra.push("-i", path.join(tmp, "sfx.wav"), "-i", path.join(tmp, "music.wav"));
+    mix = `[1:a]aresample=48000,volume=${cues.voiceGain ?? 1},${delay},asplit=2[v][key];[3:a][key]sidechaincompress=threshold=0.03:ratio=4:attack=15:release=380[m];` +
+      `[v][2:a][m]amix=inputs=3:normalize=0:weights=1 1 ${cues.musicGain ?? 0.5}[x];[x]alimiter=limit=0.94[a]`;
+  }
   const ff = spawn("ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
-    "-ss", String(cues.from), "-t", String(cues.to - cues.from), "-i", wavPath,
-    "-filter_complex", `[1:a]adelay=${Math.round(cues.lead * 1000)}:all=1,apad[a]`, "-map", "0:v", "-map", "[a]",
+    "-ss", String(cues.from), "-t", String(cues.to - cues.from), "-i", voicePath, ...extra,
+    "-filter_complex", mix, "-map", "0:v", "-map", "[a]",
     "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", outPath], { stdio: ["pipe", "inherit", "inherit"] });
   const done = new Promise((res, rej) => ff.on("close", (c) => (c === 0 ? res() : rej(new Error("ffmpeg exited " + c)))));
   const buf = new Map(); let next = 0, cursor = 0; const t0 = Date.now();

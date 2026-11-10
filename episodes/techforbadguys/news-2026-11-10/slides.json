@@ -1,10 +1,11 @@
 {
-  "nvidia": { "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors", "source": "NVIDIA Newsroom", "date": "10 November 2026" },
-  "anthropic": { "url": "https://www.anthropic.com/news/roadshow-launch", "source": "Anthropic", "date": "10 November 2026" },
-  "sheets": { "url": "https://claude.com/resources/articles/sheets-whiteboards-data", "source": "Claude", "date": "10 November 2026" },
-  "gta": { "url": "https://www.theverge.com/news/1030714/gta-vi-xbox-cloud-gaming-support", "source": "The Verge", "date": "10 November 2026" },
-  "ring": { "url": "https://www.zdnet.com/home-and-office/ring-drone-cam-rover-cam-security-robots/", "source": "ZDNET", "date": "10 November 2026" },
-  "softbank": { "url": "https://www.cnbc.com/2026/11/10/softbank-2q-earnings-tech-selloff.html", "source": "CNBC", "date": "10 November 2026" },
-  "gemini": { "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/", "source": "Google", "date": "10 November 2026" },
-  "reddit": { "url": "https://www.theverge.com/tech/1030211/reddit-reviews-product-recommendations-electronics-beauty-shopping", "source": "The Verge", "date": "10 November 2026" }
+  "nvidia": { "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors", "source": "NVIDIA Newsroom", "date": "8 Nov 2026" },
+  "nvidia2": { "url": "https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board", "source": "NVIDIA Newsroom", "date": "10 Nov 2026" },
+  "anthropic": { "url": "https://www.anthropic.com/news/roadshow-launch", "source": "Anthropic", "date": "10 Nov 2026" },
+  "sheets": { "url": "https://claude.com/resources/articles/sheets-whiteboards-data", "source": "Claude", "date": "10 Nov 2026" },
+  "gta": { "url": "https://www.theverge.com/news/1030714/gta-vi-xbox-cloud-gaming-support", "source": "The Verge", "date": "10 Nov 2026" },
+  "ring": { "url": "https://www.zdnet.com/home-and-office/ring-drone-cam-rover-cam-security-robots/", "source": "ZDNET", "date": "10 Nov 2026" },
+  "softbank": { "url": "https://www.cnbc.com/2026/11/10/softbank-2q-earnings-tech-selloff.html", "source": "CNBC", "date": "10 Nov 2026", "text": "SoftBank reports a quarterly net loss of 1.12 trillion yen, about $7 billion" },
+  "gemini": { "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/", "source": "Google", "date": "10 Nov 2026" },
+  "reddit": { "url": "https://www.theverge.com/tech/1030211/reddit-reviews-product-recommendations-electronics-beauty-shopping", "source": "The Verge", "date": "10 Nov 2026" }
 }

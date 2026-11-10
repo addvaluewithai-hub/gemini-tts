@@ -56,7 +56,7 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
     s.react = s.gap >= 0.75 ? pick(REACTIONS[s.emote] || REACTIONS.neutral) : null;
     lastE = s.emote; lastG = s.gesture;
   }
-  for (const o of cues.acting || []) for (const s of sents) if (s.s < o.to && s.e > o.from) { if (o.emote) s.emote = o.emote; if (o.gesture) s.gesture = o.gesture; if (o.react !== undefined) s.react = o.react; }
+  for (const o of (cues.acting || []).filter((c) => !c.exact)) for (const s of sents) if (s.s < o.to && s.e > o.from) { if (o.emote) s.emote = o.emote; if (o.gesture) s.gesture = o.gesture; if (o.react !== undefined) s.react = o.react; }
   const deadAt = (t) => (cues.deadpan || []).some(([a, b]) => t >= a && t <= b);
 
   // 2. stressed words: the loudest ones, at most one every 0.45 s
@@ -88,7 +88,9 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
     let name = cur ? cur.emote : pausing ? prev.react : "neutral";
     if (deadAt(t)) name = "deadpan";
     if (paper === "holes" && shift < 400) name = "sly"; if (paper === "over" && shift < 400) name = "serious";
-    const em = EMOTES[name] || EMOTES.neutral, gest = papery ? GESTURES.pockets : cur ? GESTURES[cur.gesture] || GESTURES.pockets : pausing && name === "skeptical" ? GESTURES.shrug : GESTURES.pockets;
+    const pin = (cues.acting || []).find((o) => o.exact && t >= o.from && t < o.to);        // an editor entry pins the acting for exactly its own span
+    if (pin && pin.emote && !(papery && paper !== "pockets")) name = pin.emote;
+    const em = EMOTES[name] || EMOTES.neutral, gest = papery ? GESTURES.pockets : pin && pin.gesture ? GESTURES[pin.gesture] || GESTURES.pockets : cur ? GESTURES[cur.gesture] || GESTURES.pockets : pausing && name === "skeptical" ? GESTURES.shrug : GESTURES.pockets;
     if (name !== lastEmote) { lastEmote = name; emoteSince = tv; if (em.symbol) { symbol = em.symbol; symbolSince = tv; } if ((name === "grin" || name === "surprised" || name === "laugh") && !hop) hop = tv; if (R() < 0.6) blinks.push(tv + 0.04); }
 
     // face channels

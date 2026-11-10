@@ -242,3 +242,63 @@ touching timing, and can collapse a misheard phrase into one word:
 ```
 
 `"to": null` renders the whole episode. `cues/fr001.json` is the full example.
+
+## Studio episodes
+
+A cue file with an `edit` list is rendered on the news-desk set instead of the
+plain stage: the host sits behind a desk next to a wall screen, and the camera
+cuts between shots every second or two.
+
+```sh
+# 1. screenshots of the stories, into the episode folder
+node capture.cjs ../episodes/<channel>/<episode>/slides.json ../episodes/<channel>/<episode>/slides
+# 2. the episode
+node clip.cjs cues/news-2026-11-10.json <voice.wav> out.mp4 --workers 6
+```
+
+| File | Job |
+| --- | --- |
+| `capture.cjs` | Screenshots each article header to `slides/<name>.jpg` and records the headline's position in `slides/captured.json`. It answers a cookie notice with the notice's own button. A page that returns a bot check or an error is skipped; give that slide a `text` line in `slides.json` and it is shown as a plain text card with the source and date. |
+| `studio.html` | The set (wall, screen, desk, props), the full-frame screenshot window, the big-number cards, the story chip and the captions. `window.draw(state)` paints one frame. |
+| `editor.cjs` | Reads the `edit` list and produces the state for every frame: camera, transitions, what the screen shows, where the host is. Also emits the sound cues. |
+| `sfx.cjs` | Synthesises every effect (whoosh, shutter, impact, pop, ding, riser, drone) and the music bed. No audio files are used besides the voice. |
+
+### The edit list
+
+Each entry starts at a spoken phrase (`at`, matched against the transcript
+words, searching forward from the previous entry) or at a time (`t`), and runs
+until the next entry. An entry with `shot` is a cut; an entry without one
+changes something inside the running shot.
+
+```json
+{ "at": "Nvidia's board", "shot": "two", "slide": "nvidia", "story": { "n": 1, "tag": "NVIDIA" }, "gesture": "tv" },
+{ "at": "independent investigation", "shot": "insert", "mark": [0.047, 0.843, 0.64, 0.036], "zoom": 1.5 },
+{ "at": "foreign intelligence", "shot": "host", "duck": true, "emote": "worried" },
+{ "at": "1.4 trillion", "shot": "side", "fact": { "big": "$1.4T", "small": "valuation, up to · CNBC", "riser": true } }
+```
+
+| Field | Meaning |
+| --- | --- |
+| `shot` | `wide`, `host`, `close`, `two` (host and screen), `side` (host left, room for a card), `low` (desk level), `insert` (the screenshot, full frame) |
+| `slide` | Name in `slides.json`. Shown on the wall screen, and in the window for `insert`. `null` puts the channel ident back. |
+| `story` | `{ n, tag }` for the chip in the corner; the chip also shows the slide's source and date. |
+| `mark` | `"headline"` or `[x, y, w, h]` (fractions of the screenshot): a marker runs over that region. |
+| `zoom`, `center` | How far the insert pushes in, and the point it settles on (defaults to the marked region). |
+| `fact` | `{ big, small, tone, riser }`: a card slammed in beside the host. `tone` is `bubble` or `stamp`. Use it on `side` shots. |
+| `duck` | The host sinks behind the desk until only the hat and eyes show. |
+| `lurk` | He leaves the chair and reappears above the wall screen. |
+| `peek` | His head rises over the corner of an insert. |
+| `paper` | `holes` or `over`: he hides behind the newspaper. `pockets` puts it away. |
+| `drone` | `{ "drop": "phrase" }` flies a drone through the set and drops it on that phrase; `false` removes it. |
+| `emote`, `gesture` | Pin the acting for this entry (see `characters/acting.js`). Otherwise the director decides. |
+| `stutter` | Hold each pose for n frames. |
+| `trans` | `punch`, `whip` or `cut`. By default it follows from the two shots. |
+
+Top-level settings for a studio episode: `tempo` (speed the voice up without
+changing pitch; times in the cue file are then in sped-up time), `lead` and
+`tail` (seconds before the first word and after the last), `captionChunk`
+(words per caption), `date` (shown in the corner), `bpm`, `musicGain`,
+`sfxGain`, `voiceGain`.
+
+`--plan` prints the resolved cut list with times before rendering, and
+`--still 12.5,40` writes single frames for checking.

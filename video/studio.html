@@ -1,0 +1,224 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- The studio: a news desk set seen through a moving camera, with a full-frame screenshot layer on top.
+     window.setup(config) loads the slides once; window.draw(state) paints one frame from plain data. -->
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Elite";src:url("/node_modules/@fontsource/special-elite/files/special-elite-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Serif";src:url("/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
+#frame{position:relative;width:1920px;height:1080px;overflow:hidden;background:#05060d;font-family:"Anton";color:#fff}
+#frame>*,#world>*{position:absolute}
+#world{left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+#wall{left:-700px;top:-500px;width:3320px;height:2080px}
+#lurk{left:1280px;width:340px;height:340px}
+#tv{left:1060px;top:170px;width:780px;height:439px;overflow:hidden;background:#0d1022;border-radius:6px;box-shadow:0 0 0 14px #08080e,0 0 0 16px #2c3052,0 30px 60px rgba(0,0,0,.55)}
+#tv img,#view img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:top;display:none}
+#tvident{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,#2a3170,#0d1022);letter-spacing:.06em}
+#tvident b{font-size:74px;font-weight:400}#tvident b i{font-style:normal;color:#ff4fa3}
+#tvident span{font-family:"Elite";font-size:26px;color:#bfe9ff;margin-top:14px;letter-spacing:.12em}
+.textcard{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:7% 8%;background:#f3efe4;color:#17171b}
+.textcard .who{font-family:"Anton";font-size:2.2em;letter-spacing:.08em;color:#c2182b}
+.textcard .what{font-family:"Serif";font-size:5.2em;line-height:1.04;margin-top:.25em}
+.textcard .when{font-family:"Elite";font-size:1.5em;margin-top:1.2em;color:#5b5648}
+#tv .textcard{font-size:10px}#view .textcard{font-size:20px}
+#tvglare{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(120,200,255,.08) 100%)}
+#live{position:absolute;right:14px;top:12px;font-size:20px;letter-spacing:.14em;background:#e5333f;padding:2px 10px 0;border-radius:4px}
+#host{left:110px;top:70px;width:900px;height:900px}
+#host svg,#lurk svg,#peek svg{display:block}
+#drone{left:0;top:0;width:190px;height:96px}
+#desk{left:-700px;top:600px;width:3320px;height:980px}
+#scrim{inset:0;background:linear-gradient(90deg,rgba(5,6,13,0) 40%,rgba(5,6,13,.93) 60%)}
+#insert{inset:0;background:radial-gradient(ellipse at 50% 35%,#1b2460,#070919 75%)}
+#grid{position:absolute;inset:-60px;background-image:linear-gradient(rgba(255,255,255,.05) 2px,transparent 2px),linear-gradient(90deg,rgba(255,255,255,.05) 2px,transparent 2px);background-size:96px 96px}
+#win{position:absolute;left:240px;top:136px;width:1440px;height:866px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 50px 120px rgba(0,0,0,.7),0 0 0 2px rgba(255,255,255,.12)}
+#winbar{height:56px;background:#e6e8f0;display:flex;align-items:center;gap:10px;padding:0 20px;font-family:"Elite";color:#2b2e3f}
+#winbar i{width:15px;height:15px;border-radius:50%;background:#ff5f57}#winbar i+i{background:#febc2e}#winbar i+i+i{background:#28c840}
+#url{margin-left:18px;flex:1;height:34px;border-radius:17px;background:#fff;padding:7px 18px 0;font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#srcchip{font-family:"Anton";font-size:22px;letter-spacing:.08em;background:#17171b;color:#FFE66D;padding:6px 14px 3px;border-radius:6px;white-space:nowrap}
+#view{position:relative;height:810px;overflow:hidden;background:#fff}
+#pan{position:absolute;inset:0;transform-origin:0 0}
+#mark{position:absolute;background:#FFE66D;mix-blend-mode:multiply;border-radius:5px;transform-origin:0 50%}
+#peek{left:1320px;width:640px;height:640px}
+#fact{right:70px;top:250px;width:900px;text-align:center;transform-origin:50% 45%}
+#factbig{font-size:236px;line-height:1;color:#FFE66D;text-shadow:0 10px 0 #05060d,0 0 60px rgba(255,230,109,.35);white-space:nowrap}
+#factsmall{font-family:"Elite";font-size:40px;margin-top:22px;color:#fff;text-shadow:0 3px 0 #05060d}
+#fact.bubble #factbig{display:inline-block;font-size:86px;color:#17171b;background:#fff;text-shadow:none;padding:40px 54px 30px;border-radius:44px 44px 44px 8px;box-shadow:0 14px 0 rgba(5,6,13,.6);white-space:normal;line-height:1.08}
+#fact.stamp #factbig{display:inline-block;font-size:100px;color:#ff4654;text-shadow:none;border:12px solid #ff4654;border-radius:18px;padding:26px 40px 10px;letter-spacing:.04em;background:rgba(5,6,13,.35)}
+#chip{left:56px;top:48px;display:flex;flex-direction:column;gap:10px;transform-origin:0 0}
+#chip div{display:flex;align-items:stretch;font-size:44px;line-height:1;letter-spacing:.04em}
+#chipn{background:#FFE66D;color:#05060d;padding:12px 16px 6px;border-radius:8px 0 0 8px}
+#chipt{background:rgba(5,6,13,.82);padding:12px 20px 6px;border-radius:0 8px 8px 0}
+#chips{font-family:"Elite";font-size:24px;color:#dfe6ff;background:rgba(5,6,13,.7);padding:7px 12px 3px;border-radius:6px;align-self:flex-start}
+#brand{right:56px;top:52px;text-align:right;font-size:30px;letter-spacing:.12em;text-shadow:0 2px 0 rgba(5,6,13,.8)}
+#brand i{font-style:normal;color:#ff4fa3}#brand span{display:block;font-family:"Elite";font-size:22px;color:#dfe6ff;margin-top:4px}
+#lbT,#lbB{left:0;right:0;background:#000}#lbT{top:0}#lbB{bottom:0}
+#cap{left:0;right:0;bottom:40px;text-align:center;font-size:62px;line-height:1.1;text-transform:uppercase;letter-spacing:.02em}
+#cap b{display:inline-block;font-weight:400;background:rgba(5,6,13,.84);padding:12px 22px 2px;border-radius:14px;box-shadow:0 0 0 2px rgba(255,255,255,.08)}
+#cap span{display:inline-block;margin:0 .13em;transform-origin:50% 80%}
+#cap .off{color:#c9d0ee;opacity:.55}#cap .now{color:#FFE66D}
+#vig{inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 52%,rgba(0,0,0,.55) 100%);pointer-events:none}
+#flash{inset:0;background:#fff}
+</style></head><body>
+<div id="frame">
+ <div id="world">
+  <svg id="wall" viewBox="-700 -500 3320 2080" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+    <linearGradient id="w0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2358"/><stop offset=".6" stop-color="#121640"/><stop offset="1" stop-color="#0a0c26"/></linearGradient>
+    <radialGradient id="w1"><stop offset="0" stop-color="#ff3d9a" stop-opacity=".5"/><stop offset="1" stop-color="#ff3d9a" stop-opacity="0"/></radialGradient>
+    <radialGradient id="w2"><stop offset="0" stop-color="#35c8ff" stop-opacity=".42"/><stop offset="1" stop-color="#35c8ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="w3"><stop offset="0" stop-color="#bfe9ff" stop-opacity=".34"/><stop offset="1" stop-color="#bfe9ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gl" cx=".35" cy=".3"><stop offset="0" stop-color="#7fd4ff"/><stop offset=".7" stop-color="#1f6fd0"/><stop offset="1" stop-color="#0d3b86"/></radialGradient>
+    <filter id="b8"><feGaussianBlur stdDeviation="8"/></filter><filter id="b30"><feGaussianBlur stdDeviation="30"/></filter>
+   </defs>
+   <rect x="-700" y="-500" width="3320" height="2080" fill="url(#w0)"/>
+   <g stroke="#fff" stroke-opacity=".05" stroke-width="3">
+    <path d="M-460 -500V1600M-220 -500V1600M20 -500V1600M260 -500V1600M500 -500V1600M740 -500V1600M980 -500V1600M1220 -500V1600M1460 -500V1600M1700 -500V1600M1940 -500V1600M2180 -500V1600M2420 -500V1600"/>
+    <path d="M-700 60H2620M-700 -180H2620"/></g>
+   <ellipse cx="120" cy="180" rx="760" ry="620" fill="url(#w1)"/><ellipse cx="1560" cy="330" rx="900" ry="640" fill="url(#w2)"/><ellipse cx="560" cy="400" rx="560" ry="480" fill="url(#w3)"/>
+   <rect x="-700" y="52" width="3320" height="7" fill="#35c8ff" opacity=".8"/><rect x="-700" y="44" width="3320" height="22" fill="#35c8ff" opacity=".35" filter="url(#b8)"/>
+   <!-- back-light behind the screen -->
+   <rect x="1020" y="130" width="860" height="520" rx="30" fill="#35c8ff" opacity=".4" filter="url(#b30)"/>
+   <!-- on-air sign -->
+   <g id="onair" transform="translate(0 96)"><rect x="62" y="120" width="250" height="92" rx="14" fill="#ff3b47" opacity=".5" filter="url(#b30)"/>
+    <rect x="72" y="128" width="230" height="78" rx="12" fill="#2a0810" stroke="#ff3b47" stroke-width="5"/>
+    <text x="187" y="188" text-anchor="middle" font-family="Anton" font-size="54" letter-spacing="5" fill="#ff6b74">ON AIR</text></g>
+   <!-- shelf: a globe he keeps an eye on, and yesterday's papers -->
+   <rect x="20" y="520" width="330" height="16" rx="5" fill="#2c3268"/><rect x="20" y="536" width="330" height="10" fill="#0a0c22" opacity=".6"/>
+   <path d="M118 520h64l-10 -22h-44z" fill="#b9892f"/><rect x="146" y="470" width="8" height="30" fill="#b9892f"/>
+   <circle cx="150" cy="404" r="70" fill="url(#gl)"/>
+   <g fill="#58d68d" opacity=".9"><path d="M108 372c20 -18 44 -14 52 2c6 14 -8 22 -18 34c-10 12 -26 10 -34 -4c-6 -10 -8 -22 0 -32z"/><path d="M168 414c14 -8 34 -2 36 12c2 14 -12 26 -24 24c-14 -2 -22 -26 -12 -36z"/><path d="M176 350c10 -4 22 2 22 10c0 8 -14 10 -22 6c-6 -4 -6 -12 0 -16z"/></g>
+   <ellipse cx="126" cy="378" rx="26" ry="16" fill="#fff" opacity=".28"/>
+   <path d="M150 326a78 78 0 0 1 60 128" fill="none" stroke="#d9a441" stroke-width="7" stroke-linecap="round"/>
+   <g transform="translate(232 484)"><rect x="0" y="16" width="104" height="20" rx="3" fill="#e9e2cf"/><rect x="6" y="-2" width="100" height="20" rx="3" fill="#d6cdb4" transform="rotate(-4)"/><rect x="16" y="2" width="56" height="5" fill="#22201c" transform="rotate(-4)"/></g>
+  </svg>
+  <div id="lurk"></div>
+  <div id="tv"><div id="tvident"><b>TECH <i>FOR</i> BAD GUYS</b><span id="tvdate"></span></div><div class="textcard" id="tvcard"><div class="who"></div><div class="what"></div><div class="when"></div></div><div id="tvglare"></div><div id="live">LIVE</div></div>
+  <div id="host"></div>
+  <svg id="desk" viewBox="-700 600 3320 980" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+    <linearGradient id="d0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a427f"/><stop offset="1" stop-color="#232859"/></linearGradient>
+    <linearGradient id="d1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171b3d"/><stop offset=".5" stop-color="#0d1028"/><stop offset="1" stop-color="#070817"/></linearGradient>
+    <linearGradient id="d2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f6f2e6"/><stop offset="1" stop-color="#cfc8b4"/></linearGradient>
+    <filter id="db8"><feGaussianBlur stdDeviation="9"/></filter>
+   </defs>
+   <path d="M-40 655H1960L2160 716H-240Z" fill="url(#d0)"/><path d="M-40 655H1960" stroke="#8f9aff" stroke-width="3" opacity=".7"/>
+   <ellipse cx="560" cy="676" rx="330" ry="20" fill="#05060d" opacity=".4" filter="url(#db8)"/>
+   <rect x="-700" y="716" width="3320" height="900" fill="url(#d1)"/>
+   <rect x="-700" y="712" width="3320" height="26" fill="#ff3d9a" opacity=".45" filter="url(#db8)"/><rect x="-700" y="716" width="3320" height="7" fill="#ff5fae"/>
+   <text x="960" y="886" text-anchor="middle" font-family="Anton" font-size="96" letter-spacing="8" fill="#eef0ff" opacity=".9">TECH <tspan fill="#ff4fa3">FOR</tspan> BAD GUYS</text>
+   <text x="960" y="926" text-anchor="middle" font-family="Elite" font-size="24" letter-spacing="8" fill="#9fb0ff">THE NEWS, MINUS THE PRESS RELEASE</text>
+   <!-- microphone -->
+   <ellipse cx="282" cy="694" rx="56" ry="13" fill="#05060d"/><ellipse cx="282" cy="690" rx="52" ry="11" fill="#2c3052"/>
+   <path d="M282 690L326 596" stroke="#05060d" stroke-width="11" stroke-linecap="round"/><path d="M280 690L324 596" stroke="#565c8e" stroke-width="4" stroke-linecap="round"/>
+   <g transform="rotate(24 334 566)"><rect x="312" y="524" width="44" height="84" rx="22" fill="#11132a"/><rect x="312" y="524" width="44" height="50" rx="22" fill="#3b4070"/><path d="M316 548h36M316 560h36M318 536h32" stroke="#11132a" stroke-width="3"/><rect x="318" y="530" width="8" height="34" rx="4" fill="#fff" opacity=".25"/></g>
+   <!-- mug -->
+   <ellipse cx="872" cy="700" rx="46" ry="9" fill="#05060d" opacity=".5"/>
+   <path d="M900 640c34 -4 40 40 2 40" fill="none" stroke="#d8d1bd" stroke-width="11"/>
+   <rect x="836" y="622" width="72" height="76" rx="10" fill="url(#d2)"/><rect x="836" y="652" width="72" height="16" fill="#ff4fa3"/><ellipse cx="872" cy="624" rx="36" ry="8" fill="#3a2414"/>
+   <!-- papers -->
+   <g transform="translate(1010 668)"><rect x="0" y="6" width="190" height="26" rx="3" fill="#cfc8b4"/><rect x="-8" y="-6" width="190" height="26" rx="3" fill="#f3efe4" transform="rotate(-3)"/><rect x="6" y="0" width="92" height="6" fill="#22201c" transform="rotate(-3)"/><rect x="6" y="11" width="150" height="3" fill="#8c8268" transform="rotate(-3)"/></g>
+   <!-- nameplate -->
+   <g transform="translate(470 664)"><path d="M-6 44h192l8 10h-208z" fill="#05060d" opacity=".5"/><rect width="180" height="44" rx="5" fill="#d9a441"/><rect x="4" y="4" width="172" height="36" rx="3" fill="#2a1d06"/><text x="90" y="33" text-anchor="middle" font-family="Anton" font-size="28" letter-spacing="6" fill="#f2c868">PEEK</text></g>
+  </svg>
+  <svg id="drone" viewBox="0 0 190 96" xmlns="http://www.w3.org/2000/svg">
+   <path d="M30 30H160" stroke="#11132a" stroke-width="9" stroke-linecap="round"/>
+   <ellipse id="rotA" cx="30" cy="24" rx="34" ry="5" fill="#dfe6ff" opacity=".55"/><ellipse id="rotB" cx="160" cy="24" rx="34" ry="5" fill="#dfe6ff" opacity=".55"/>
+   <rect x="26" y="22" width="8" height="12" fill="#11132a"/><rect x="156" y="22" width="8" height="12" fill="#11132a"/>
+   <rect x="58" y="26" width="74" height="40" rx="16" fill="#eef0ff"/><rect x="58" y="46" width="74" height="20" rx="10" fill="#c5cae6"/>
+   <circle cx="95" cy="58" r="15" fill="#11132a"/><circle cx="95" cy="58" r="8" fill="#35c8ff"/><circle cx="91" cy="54" r="3" fill="#fff"/>
+   <circle id="led" cx="124" cy="36" r="5" fill="#ff3b47"/>
+   <path d="M68 66l-8 16M122 66l8 16" stroke="#11132a" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+ </div>
+ <div id="scrim"></div>
+ <div id="insert"><div id="grid"></div>
+  <div id="win"><div id="winbar"><i></i><i></i><i></i><div id="url"></div><div id="srcchip"></div></div>
+   <div id="view"><div id="pan"><div class="textcard" id="viewcard"><div class="who"></div><div class="what"></div><div class="when"></div></div><div id="mark"></div></div></div></div>
+ </div>
+ <div id="peek"></div>
+ <div id="fact"><div id="factbig"></div><div id="factsmall"></div></div>
+ <div id="lbT"></div><div id="lbB"></div>
+ <div id="chip"><div><span id="chipn"></span><span id="chipt"></span></div><span id="chips"></span></div>
+ <div id="brand">TECH<i>FOR</i>BADGUYS<span id="branddate"></span></div>
+ <div id="cap"></div>
+ <div id="vig"></div><div id="flash"></div>
+</div>
+<script type="module">
+import { peek3d } from "/characters/peek3d.js";
+const $ = (id) => document.getElementById(id);
+const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+let cfg = { slides: {}, face: "pear" }; const tvImg = {}, viewImg = {};
+const show = (el, on, as = "block") => { el.style.display = on ? as : "none"; };
+
+window.setup = async (config) => {
+  cfg = config; $("tvdate").textContent = config.date || ""; $("branddate").textContent = config.date || "";
+  const jobs = [];
+  for (const [name, s] of Object.entries(config.slides)) {
+    if (!s.file) continue;
+    for (const [store, parent, before] of [[tvImg, $("tv"), $("tvglare")], [viewImg, $("pan"), $("mark")]]) {
+      const img = new Image(); img.src = "/ep/slides/" + s.file; parent.insertBefore(img, before); store[name] = img; jobs.push(img.decode());
+    }
+  }
+  await Promise.all(jobs);
+  await Promise.all(['64px "Anton"', '24px "Elite"', '60px "Serif"'].map((f) => document.fonts.load(f))); await document.fonts.ready;
+};
+
+// One of the three places the host can appear. Each copy gets its own gradient ids.
+function person(el, h, size, tag) {
+  if (!h) { if (el.dataset.on !== "0") { el.innerHTML = ""; el.dataset.on = "0"; } return; }
+  el.dataset.on = "1";
+  const svg = peek3d(h.e, { face: cfg.face, paper: h.paper, paperShift: h.shift, bob: h.bob, tilt: h.tilt, bg: false, grain: false, size,
+    armL: h.armL, armR: h.armR, shrug: h.shrug, sway: h.sway, bounce: h.bounce, squash: h.squash, roll: false });
+  el.innerHTML = tag ? svg.replaceAll("p3" + cfg.face, tag + cfg.face) : svg;
+}
+function card(el, s) { el.querySelector(".who").textContent = s.source.toUpperCase(); el.querySelector(".what").textContent = s.text; el.querySelector(".when").textContent = "Reported " + s.date; }
+function slide(store, cardEl, name) {
+  for (const [k, img] of Object.entries(store)) show(img, k === name);
+  const s = cfg.slides[name], text = s && !s.file;
+  show(cardEl, text, "flex"); if (text) card(cardEl, s);
+}
+
+window.draw = (st) => {
+  const studio = !st.insert || st.insert.enter < 1;
+  show($("world"), studio); show($("scrim"), st.scrim > 0.01); $("scrim").style.opacity = st.scrim;
+  if (studio) {
+    const c = st.cam;
+    $("world").style.transform = `translate(${960 - c.x * c.s}px,${540 - c.y * c.s}px) scale(${c.s}) rotate(${c.r || 0}deg)`;
+    $("world").style.filter = st.blur > 0.5 ? `blur(${st.blur.toFixed(1)}px)` : "";
+    person($("host"), st.host, 900); if (st.host) $("host").style.transform = `translateY(${st.host.y}px)`;
+    person($("lurk"), st.lurk, 340, "q3"); if (st.lurk) $("lurk").style.top = 185 - 162 * st.lurk.amt + "px";
+    slide(tvImg, $("tvcard"), st.tv); show($("tvident"), !st.tv, "flex");
+    $("onair").style.opacity = st.onair;
+    show($("drone"), !!st.drone);
+    if (st.drone) { $("drone").style.transform = `translate(${st.drone.x}px,${st.drone.y}px) rotate(${st.drone.r}deg)`; $("led").style.opacity = st.drone.led; $("rotA").setAttribute("rx", st.drone.spin); $("rotB").setAttribute("rx", st.drone.spin); }
+  }
+  const ins = st.insert; show($("insert"), !!ins);
+  if (ins) {
+    const s = cfg.slides[ins.slide];
+    slide(viewImg, $("viewcard"), ins.slide);
+    $("url").textContent = s.url.replace(/^https?:\/\/(www\.)?/, ""); $("srcchip").textContent = `${s.source} · ${s.date}`.toUpperCase();
+    $("insert").style.opacity = Math.min(1, ins.enter * 3);
+    $("insert").style.filter = st.blur > 0.5 ? `blur(${st.blur.toFixed(1)}px)` : "";
+    $("win").style.transform = `translate(${ins.dx}px,${ins.dy}px) rotate(${ins.rot}deg) scale(${ins.scale})`;
+    $("grid").style.transform = `translate(${-ins.drift * 40}px,${-ins.drift * 24}px)`;
+    const W = 1440, H = 810, tx = Math.min(0, Math.max(-(ins.k - 1) * W, 0.5 * W - ins.k * ins.cx * W)), ty = Math.min(0, Math.max(-(ins.k - 1) * H, 0.44 * H - ins.k * ins.cy * H));
+    $("pan").style.transform = `translate(${tx}px,${ty}px) scale(${ins.k})`;
+    const m = ins.mark; show($("mark"), !!m && m.p > 0);
+    if (m) Object.assign($("mark").style, { left: m.x * 100 + "%", top: m.y * 100 + "%", width: m.w * 100 + "%", height: m.h * 100 + "%", transform: `scaleX(${m.p})` });
+  }
+  person($("peek"), st.peek, 640, "r3");
+  if (st.peek) { $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
+  const f = st.fact; show($("fact"), !!f);
+  if (f) { $("fact").className = f.tone || ""; $("factbig").textContent = f.big; $("factsmall").textContent = f.small || ""; $("factsmall").style.opacity = f.sub;
+    $("fact").style.transform = `translate(${f.dx}px,${f.dy}px) rotate(${f.rot}deg) scale(${f.s})`; $("fact").style.opacity = f.a; }
+  $("lbT").style.height = $("lbB").style.height = st.lb + "px";
+  const ch = st.chip; show($("chip"), !!ch, "flex");
+  if (ch) { $("chipn").textContent = String(ch.n).padStart(2, "0"); $("chipt").textContent = ch.tag; $("chips").textContent = ch.src || ""; show($("chips"), !!ch.src); $("chip").style.opacity = ch.a; $("chip").style.transform = `translate(${(1 - ch.a) * -40}px,${st.lb}px) scale(${ch.pop})`; }
+  $("brand").style.opacity = st.brand; $("brand").style.transform = `translateY(${st.lb}px)`;
+  const said = st.words.filter((w) => w.t);
+  $("cap").innerHTML = said.length ? "<b>" + said.map((w) => `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`).join("") + "</b>" : "";
+  $("flash").style.opacity = st.flash; show($("flash"), st.flash > 0.004);
+};
+window.__ready = true;
+</script></body></html>

@@ -1,0 +1,1267 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-11-10T19:34:16.680Z",
+  "duration_ms": 82800,
+  "word_count": 243,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "November 10th, 2026. Here is everything that happened in tech today, fast. Nvidia's board just opened an independent investigation involving its own CEO. The official statement says Jensen Huang was the target of a foreign intelligence effort. The board also says it has full confidence in him, which is exactly what you say right before you hire outside lawyers. Meanwhile, Anthropic kicked off its IPO road show, 825 million shares at $70 to $78 each under the ticker ANT that values the company at up to $1.4 trillion for a chatbot that tells you you're absolutely right even when you're not. It also launched office tools including a spreadsheet called Cloud Sheets aimed straight at Microsoft. Excel has survived everything for 40 years. We'll see. In actually important news, GTA VI comes out next week. Rockstar confirmed it runs at 30 frames per second on every console. 13 years of waiting, 30 frames. Amazon's Ring announced a $249 security drone that flies around inside your house. It can stay in the air for about 8 minutes. So burglars, just wait nine. And SoftBank lost $7 billion last quarter. It also wrote off $3.7 billion into deposits on data center equipment, non-refundable. That is the most expensive cancellation fee in history. Also today, Google released Gemini 4 Carbon to everyone and Reddit will now turn your arguments into product reviews. That's the day. This has been Tech for Bad Guys. See you next time.",
+  "source_text": "November tenth, twenty twenty six. Here is everything that happened in tech today. Fast. Nvidia's board just opened an independent investigation involving its own C E O. The official statement says Jensen Huang was the target of a foreign intelligence effort. The board also says it has full confidence in him. Which is exactly what you say, right before you hire outside lawyers. Meanwhile, Anthropic kicked off its I P O roadshow. Eight hundred and twenty five million shares, at seventy to seventy eight dollars each, under the ticker ant. That values the company at up to one point four trillion dollars. For a chatbot that tells you you're absolutely right. Even when you're not. It also launched office tools, including a spreadsheet called Claude Sheets, aimed straight at Microsoft. Excel has survived everything for forty years. We'll see. In actually important news: G T A six comes out next week. Rockstar confirmed it runs at thirty frames per second on every console. Thirteen years of waiting. Thirty frames. Amazon's Ring announced a two hundred and forty nine dollar security drone that flies around inside your house. It can stay in the air for about eight minutes. So, burglars: just wait nine. And SoftBank lost seven billion dollars last quarter. It also wrote off three point seven billion in deposits on data center equipment. Non refundable. That is the most expensive cancellation fee in history. Also today: Google released Gemini four Carbon to everyone, and Reddit will now turn your arguments into product reviews. That's the day. This has been tech for bad guys. See you next time.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "November tenth, twenty twenty six. Here is everything that happened in tech today. Fast."
+    },
+    {
+      "index": 1,
+      "text": "Nvidia's board just opened an independent investigation involving its own C E O. The official statement says Jensen Huang was the target of a foreign intelligence effort. The board also says it has full confidence in him. Which is exactly what you say, right before you hire outside lawyers."
+    },
+    {
+      "index": 2,
+      "text": "Meanwhile, Anthropic kicked off its I P O roadshow. Eight hundred and twenty five million shares, at seventy to seventy eight dollars each, under the ticker ant. That values the company at up to one point four trillion dollars. For a chatbot that tells you you're absolutely right. Even when you're not."
+    },
+    {
+      "index": 3,
+      "text": "It also launched office tools, including a spreadsheet called Claude Sheets, aimed straight at Microsoft. Excel has survived everything for forty years. We'll see."
+    },
+    {
+      "index": 4,
+      "text": "In actually important news: G T A six comes out next week. Rockstar confirmed it runs at thirty frames per second on every console. Thirteen years of waiting. Thirty frames."
+    },
+    {
+      "index": 5,
+      "text": "Amazon's Ring announced a two hundred and forty nine dollar security drone that flies around inside your house. It can stay in the air for about eight minutes. So, burglars: just wait nine."
+    },
+    {
+      "index": 6,
+      "text": "And SoftBank lost seven billion dollars last quarter. It also wrote off three point seven billion in deposits on data center equipment. Non refundable. That is the most expensive cancellation fee in history."
+    },
+    {
+      "index": 7,
+      "text": "Also today: Google released Gemini four Carbon to everyone, and Reddit will now turn your arguments into product reviews. That's the day. This has been tech for bad guys. See you next time."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 200,
+      "end_ms": 600,
+      "text": "November"
+    },
+    {
+      "start_ms": 600,
+      "end_ms": 900,
+      "text": "10th,"
+    },
+    {
+      "start_ms": 900,
+      "end_ms": 1700,
+      "text": "2026."
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 2000,
+      "text": "Here"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2100,
+      "text": "is"
+    },
+    {
+      "start_ms": 2100,
+      "end_ms": 2600,
+      "text": "everything"
+    },
+    {
+      "start_ms": 2600,
+      "end_ms": 2700,
+      "text": "that"
+    },
+    {
+      "start_ms": 2700,
+      "end_ms": 2900,
+      "text": "happened"
+    },
+    {
+      "start_ms": 2900,
+      "end_ms": 3000,
+      "text": "in"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3200,
+      "text": "tech"
+    },
+    {
+      "start_ms": 3200,
+      "end_ms": 3600,
+      "text": "today,"
+    },
+    {
+      "start_ms": 3800,
+      "end_ms": 4200,
+      "text": "fast."
+    },
+    {
+      "start_ms": 4800,
+      "end_ms": 5100,
+      "text": "Nvidia's"
+    },
+    {
+      "start_ms": 5100,
+      "end_ms": 5300,
+      "text": "board"
+    },
+    {
+      "start_ms": 5300,
+      "end_ms": 5500,
+      "text": "just"
+    },
+    {
+      "start_ms": 5500,
+      "end_ms": 5800,
+      "text": "opened"
+    },
+    {
+      "start_ms": 5800,
+      "end_ms": 5900,
+      "text": "an"
+    },
+    {
+      "start_ms": 5900,
+      "end_ms": 6500,
+      "text": "independent"
+    },
+    {
+      "start_ms": 6500,
+      "end_ms": 7200,
+      "text": "investigation"
+    },
+    {
+      "start_ms": 7200,
+      "end_ms": 7500,
+      "text": "involving"
+    },
+    {
+      "start_ms": 7500,
+      "end_ms": 7700,
+      "text": "its"
+    },
+    {
+      "start_ms": 7700,
+      "end_ms": 8000,
+      "text": "own"
+    },
+    {
+      "start_ms": 8000,
+      "end_ms": 8700,
+      "text": "CEO."
+    },
+    {
+      "start_ms": 8900,
+      "end_ms": 8901,
+      "text": "The"
+    },
+    {
+      "start_ms": 8900,
+      "end_ms": 9300,
+      "text": "official"
+    },
+    {
+      "start_ms": 9300,
+      "end_ms": 9600,
+      "text": "statement"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 9800,
+      "text": "says"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 10100,
+      "text": "Jensen"
+    },
+    {
+      "start_ms": 10100,
+      "end_ms": 10400,
+      "text": "Huang"
+    },
+    {
+      "start_ms": 10400,
+      "end_ms": 10500,
+      "text": "was"
+    },
+    {
+      "start_ms": 10500,
+      "end_ms": 10600,
+      "text": "the"
+    },
+    {
+      "start_ms": 10600,
+      "end_ms": 10900,
+      "text": "target"
+    },
+    {
+      "start_ms": 10900,
+      "end_ms": 11000,
+      "text": "of"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11001,
+      "text": "a"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11400,
+      "text": "foreign"
+    },
+    {
+      "start_ms": 11400,
+      "end_ms": 12100,
+      "text": "intelligence"
+    },
+    {
+      "start_ms": 12100,
+      "end_ms": 12400,
+      "text": "effort."
+    },
+    {
+      "start_ms": 12800,
+      "end_ms": 12900,
+      "text": "The"
+    },
+    {
+      "start_ms": 12900,
+      "end_ms": 13300,
+      "text": "board"
+    },
+    {
+      "start_ms": 13300,
+      "end_ms": 13600,
+      "text": "also"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 13800,
+      "text": "says"
+    },
+    {
+      "start_ms": 13800,
+      "end_ms": 13900,
+      "text": "it"
+    },
+    {
+      "start_ms": 13900,
+      "end_ms": 14000,
+      "text": "has"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14200,
+      "text": "full"
+    },
+    {
+      "start_ms": 14200,
+      "end_ms": 14600,
+      "text": "confidence"
+    },
+    {
+      "start_ms": 14600,
+      "end_ms": 14700,
+      "text": "in"
+    },
+    {
+      "start_ms": 14700,
+      "end_ms": 14900,
+      "text": "him,"
+    },
+    {
+      "start_ms": 15300,
+      "end_ms": 15700,
+      "text": "which"
+    },
+    {
+      "start_ms": 15700,
+      "end_ms": 16000,
+      "text": "is"
+    },
+    {
+      "start_ms": 16100,
+      "end_ms": 16500,
+      "text": "exactly"
+    },
+    {
+      "start_ms": 16500,
+      "end_ms": 16600,
+      "text": "what"
+    },
+    {
+      "start_ms": 16600,
+      "end_ms": 16700,
+      "text": "you"
+    },
+    {
+      "start_ms": 16700,
+      "end_ms": 16900,
+      "text": "say"
+    },
+    {
+      "start_ms": 16900,
+      "end_ms": 17100,
+      "text": "right"
+    },
+    {
+      "start_ms": 17100,
+      "end_ms": 17300,
+      "text": "before"
+    },
+    {
+      "start_ms": 17300,
+      "end_ms": 17400,
+      "text": "you"
+    },
+    {
+      "start_ms": 17400,
+      "end_ms": 17800,
+      "text": "hire"
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 18200,
+      "text": "outside"
+    },
+    {
+      "start_ms": 18200,
+      "end_ms": 18600,
+      "text": "lawyers."
+    },
+    {
+      "start_ms": 19100,
+      "end_ms": 19500,
+      "text": "Meanwhile,"
+    },
+    {
+      "start_ms": 19600,
+      "end_ms": 20200,
+      "text": "Anthropic"
+    },
+    {
+      "start_ms": 20200,
+      "end_ms": 20400,
+      "text": "kicked"
+    },
+    {
+      "start_ms": 20400,
+      "end_ms": 20500,
+      "text": "off"
+    },
+    {
+      "start_ms": 20500,
+      "end_ms": 20700,
+      "text": "its"
+    },
+    {
+      "start_ms": 20700,
+      "end_ms": 21100,
+      "text": "IPO"
+    },
+    {
+      "start_ms": 21100,
+      "end_ms": 21300,
+      "text": "road"
+    },
+    {
+      "start_ms": 21300,
+      "end_ms": 21700,
+      "text": "show,"
+    },
+    {
+      "start_ms": 21800,
+      "end_ms": 22700,
+      "text": "825"
+    },
+    {
+      "start_ms": 22700,
+      "end_ms": 23200,
+      "text": "million"
+    },
+    {
+      "start_ms": 23200,
+      "end_ms": 23600,
+      "text": "shares"
+    },
+    {
+      "start_ms": 23600,
+      "end_ms": 23800,
+      "text": "at"
+    },
+    {
+      "start_ms": 23800,
+      "end_ms": 24200,
+      "text": "$70"
+    },
+    {
+      "start_ms": 24200,
+      "end_ms": 24300,
+      "text": "to"
+    },
+    {
+      "start_ms": 24300,
+      "end_ms": 24900,
+      "text": "$78"
+    },
+    {
+      "start_ms": 24900,
+      "end_ms": 25400,
+      "text": "each"
+    },
+    {
+      "start_ms": 25400,
+      "end_ms": 25600,
+      "text": "under"
+    },
+    {
+      "start_ms": 25600,
+      "end_ms": 25700,
+      "text": "the"
+    },
+    {
+      "start_ms": 25700,
+      "end_ms": 26200,
+      "text": "ticker"
+    },
+    {
+      "start_ms": 26200,
+      "end_ms": 26700,
+      "text": "ANT"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 27000,
+      "text": "that"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27200,
+      "text": "values"
+    },
+    {
+      "start_ms": 27200,
+      "end_ms": 27300,
+      "text": "the"
+    },
+    {
+      "start_ms": 27300,
+      "end_ms": 27600,
+      "text": "company"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 27700,
+      "text": "at"
+    },
+    {
+      "start_ms": 27700,
+      "end_ms": 27800,
+      "text": "up"
+    },
+    {
+      "start_ms": 27800,
+      "end_ms": 27900,
+      "text": "to"
+    },
+    {
+      "start_ms": 27900,
+      "end_ms": 28600,
+      "text": "$1.4"
+    },
+    {
+      "start_ms": 28600,
+      "end_ms": 29200,
+      "text": "trillion"
+    },
+    {
+      "start_ms": 30100,
+      "end_ms": 30300,
+      "text": "for"
+    },
+    {
+      "start_ms": 30300,
+      "end_ms": 30400,
+      "text": "a"
+    },
+    {
+      "start_ms": 30600,
+      "end_ms": 31000,
+      "text": "chatbot"
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 31200,
+      "text": "that"
+    },
+    {
+      "start_ms": 31200,
+      "end_ms": 31500,
+      "text": "tells"
+    },
+    {
+      "start_ms": 31500,
+      "end_ms": 31600,
+      "text": "you"
+    },
+    {
+      "start_ms": 31600,
+      "end_ms": 31800,
+      "text": "you're"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 32300,
+      "text": "absolutely"
+    },
+    {
+      "start_ms": 32300,
+      "end_ms": 32800,
+      "text": "right"
+    },
+    {
+      "start_ms": 32900,
+      "end_ms": 33100,
+      "text": "even"
+    },
+    {
+      "start_ms": 33100,
+      "end_ms": 33200,
+      "text": "when"
+    },
+    {
+      "start_ms": 33200,
+      "end_ms": 33300,
+      "text": "you're"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33500,
+      "text": "not."
+    },
+    {
+      "start_ms": 34100,
+      "end_ms": 34200,
+      "text": "It"
+    },
+    {
+      "start_ms": 34200,
+      "end_ms": 34400,
+      "text": "also"
+    },
+    {
+      "start_ms": 34400,
+      "end_ms": 34600,
+      "text": "launched"
+    },
+    {
+      "start_ms": 34600,
+      "end_ms": 34900,
+      "text": "office"
+    },
+    {
+      "start_ms": 34900,
+      "end_ms": 35200,
+      "text": "tools"
+    },
+    {
+      "start_ms": 35200,
+      "end_ms": 35500,
+      "text": "including"
+    },
+    {
+      "start_ms": 35500,
+      "end_ms": 35600,
+      "text": "a"
+    },
+    {
+      "start_ms": 35600,
+      "end_ms": 36100,
+      "text": "spreadsheet"
+    },
+    {
+      "start_ms": 36100,
+      "end_ms": 36400,
+      "text": "called"
+    },
+    {
+      "start_ms": 36400,
+      "end_ms": 36700,
+      "text": "Cloud"
+    },
+    {
+      "start_ms": 36700,
+      "end_ms": 37200,
+      "text": "Sheets"
+    },
+    {
+      "start_ms": 37300,
+      "end_ms": 37600,
+      "text": "aimed"
+    },
+    {
+      "start_ms": 37600,
+      "end_ms": 38100,
+      "text": "straight"
+    },
+    {
+      "start_ms": 38100,
+      "end_ms": 38101,
+      "text": "at"
+    },
+    {
+      "start_ms": 38100,
+      "end_ms": 38800,
+      "text": "Microsoft."
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39400,
+      "text": "Excel"
+    },
+    {
+      "start_ms": 39400,
+      "end_ms": 39500,
+      "text": "has"
+    },
+    {
+      "start_ms": 39500,
+      "end_ms": 40000,
+      "text": "survived"
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 40400,
+      "text": "everything"
+    },
+    {
+      "start_ms": 40400,
+      "end_ms": 40600,
+      "text": "for"
+    },
+    {
+      "start_ms": 40600,
+      "end_ms": 41000,
+      "text": "40"
+    },
+    {
+      "start_ms": 41000,
+      "end_ms": 41300,
+      "text": "years."
+    },
+    {
+      "start_ms": 41800,
+      "end_ms": 41900,
+      "text": "We'll"
+    },
+    {
+      "start_ms": 41900,
+      "end_ms": 42100,
+      "text": "see."
+    },
+    {
+      "start_ms": 42500,
+      "end_ms": 42700,
+      "text": "In"
+    },
+    {
+      "start_ms": 42800,
+      "end_ms": 43200,
+      "text": "actually"
+    },
+    {
+      "start_ms": 43200,
+      "end_ms": 43600,
+      "text": "important"
+    },
+    {
+      "start_ms": 43600,
+      "end_ms": 44000,
+      "text": "news,"
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 44400,
+      "text": "GTA"
+    },
+    {
+      "start_ms": 44400,
+      "end_ms": 44700,
+      "text": "VI"
+    },
+    {
+      "start_ms": 44700,
+      "end_ms": 44900,
+      "text": "comes"
+    },
+    {
+      "start_ms": 44900,
+      "end_ms": 45100,
+      "text": "out"
+    },
+    {
+      "start_ms": 45100,
+      "end_ms": 45400,
+      "text": "next"
+    },
+    {
+      "start_ms": 45400,
+      "end_ms": 45900,
+      "text": "week."
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 46300,
+      "text": "Rockstar"
+    },
+    {
+      "start_ms": 46300,
+      "end_ms": 46600,
+      "text": "confirmed"
+    },
+    {
+      "start_ms": 46600,
+      "end_ms": 46700,
+      "text": "it"
+    },
+    {
+      "start_ms": 46700,
+      "end_ms": 47000,
+      "text": "runs"
+    },
+    {
+      "start_ms": 47000,
+      "end_ms": 47100,
+      "text": "at"
+    },
+    {
+      "start_ms": 47100,
+      "end_ms": 47500,
+      "text": "30"
+    },
+    {
+      "start_ms": 47500,
+      "end_ms": 47800,
+      "text": "frames"
+    },
+    {
+      "start_ms": 47800,
+      "end_ms": 47900,
+      "text": "per"
+    },
+    {
+      "start_ms": 47900,
+      "end_ms": 48200,
+      "text": "second"
+    },
+    {
+      "start_ms": 48200,
+      "end_ms": 48400,
+      "text": "on"
+    },
+    {
+      "start_ms": 48400,
+      "end_ms": 48700,
+      "text": "every"
+    },
+    {
+      "start_ms": 48700,
+      "end_ms": 49200,
+      "text": "console."
+    },
+    {
+      "start_ms": 49600,
+      "end_ms": 49900,
+      "text": "13"
+    },
+    {
+      "start_ms": 49900,
+      "end_ms": 50100,
+      "text": "years"
+    },
+    {
+      "start_ms": 50100,
+      "end_ms": 50200,
+      "text": "of"
+    },
+    {
+      "start_ms": 50200,
+      "end_ms": 50500,
+      "text": "waiting,"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 51200,
+      "text": "30"
+    },
+    {
+      "start_ms": 51200,
+      "end_ms": 51700,
+      "text": "frames."
+    },
+    {
+      "start_ms": 52200,
+      "end_ms": 52600,
+      "text": "Amazon's"
+    },
+    {
+      "start_ms": 52600,
+      "end_ms": 52900,
+      "text": "Ring"
+    },
+    {
+      "start_ms": 52900,
+      "end_ms": 53300,
+      "text": "announced"
+    },
+    {
+      "start_ms": 53300,
+      "end_ms": 53400,
+      "text": "a"
+    },
+    {
+      "start_ms": 53400,
+      "end_ms": 54400,
+      "text": "$249"
+    },
+    {
+      "start_ms": 54400,
+      "end_ms": 54900,
+      "text": "security"
+    },
+    {
+      "start_ms": 54900,
+      "end_ms": 55100,
+      "text": "drone"
+    },
+    {
+      "start_ms": 55100,
+      "end_ms": 55300,
+      "text": "that"
+    },
+    {
+      "start_ms": 55300,
+      "end_ms": 55500,
+      "text": "flies"
+    },
+    {
+      "start_ms": 55500,
+      "end_ms": 55800,
+      "text": "around"
+    },
+    {
+      "start_ms": 55800,
+      "end_ms": 56100,
+      "text": "inside"
+    },
+    {
+      "start_ms": 56100,
+      "end_ms": 56200,
+      "text": "your"
+    },
+    {
+      "start_ms": 56200,
+      "end_ms": 56600,
+      "text": "house."
+    },
+    {
+      "start_ms": 56900,
+      "end_ms": 57000,
+      "text": "It"
+    },
+    {
+      "start_ms": 57000,
+      "end_ms": 57100,
+      "text": "can"
+    },
+    {
+      "start_ms": 57100,
+      "end_ms": 57300,
+      "text": "stay"
+    },
+    {
+      "start_ms": 57300,
+      "end_ms": 57301,
+      "text": "in"
+    },
+    {
+      "start_ms": 57300,
+      "end_ms": 57400,
+      "text": "the"
+    },
+    {
+      "start_ms": 57400,
+      "end_ms": 57600,
+      "text": "air"
+    },
+    {
+      "start_ms": 57600,
+      "end_ms": 57700,
+      "text": "for"
+    },
+    {
+      "start_ms": 57700,
+      "end_ms": 58200,
+      "text": "about"
+    },
+    {
+      "start_ms": 58500,
+      "end_ms": 58600,
+      "text": "8"
+    },
+    {
+      "start_ms": 58600,
+      "end_ms": 59100,
+      "text": "minutes."
+    },
+    {
+      "start_ms": 59400,
+      "end_ms": 59600,
+      "text": "So"
+    },
+    {
+      "start_ms": 59600,
+      "end_ms": 60300,
+      "text": "burglars,"
+    },
+    {
+      "start_ms": 60700,
+      "end_ms": 60800,
+      "text": "just"
+    },
+    {
+      "start_ms": 60800,
+      "end_ms": 61000,
+      "text": "wait"
+    },
+    {
+      "start_ms": 61000,
+      "end_ms": 61300,
+      "text": "nine."
+    },
+    {
+      "start_ms": 62100,
+      "end_ms": 62300,
+      "text": "And"
+    },
+    {
+      "start_ms": 62300,
+      "end_ms": 62800,
+      "text": "SoftBank"
+    },
+    {
+      "start_ms": 62800,
+      "end_ms": 63200,
+      "text": "lost"
+    },
+    {
+      "start_ms": 63200,
+      "end_ms": 63600,
+      "text": "$7"
+    },
+    {
+      "start_ms": 63600,
+      "end_ms": 63900,
+      "text": "billion"
+    },
+    {
+      "start_ms": 64300,
+      "end_ms": 64400,
+      "text": "last"
+    },
+    {
+      "start_ms": 64400,
+      "end_ms": 64800,
+      "text": "quarter."
+    },
+    {
+      "start_ms": 64900,
+      "end_ms": 65000,
+      "text": "It"
+    },
+    {
+      "start_ms": 65000,
+      "end_ms": 65200,
+      "text": "also"
+    },
+    {
+      "start_ms": 65200,
+      "end_ms": 65400,
+      "text": "wrote"
+    },
+    {
+      "start_ms": 65400,
+      "end_ms": 65500,
+      "text": "off"
+    },
+    {
+      "start_ms": 65500,
+      "end_ms": 66200,
+      "text": "$3.7"
+    },
+    {
+      "start_ms": 66200,
+      "end_ms": 66500,
+      "text": "billion"
+    },
+    {
+      "start_ms": 66500,
+      "end_ms": 66700,
+      "text": "into"
+    },
+    {
+      "start_ms": 66700,
+      "end_ms": 67100,
+      "text": "deposits"
+    },
+    {
+      "start_ms": 67100,
+      "end_ms": 67300,
+      "text": "on"
+    },
+    {
+      "start_ms": 67300,
+      "end_ms": 67500,
+      "text": "data"
+    },
+    {
+      "start_ms": 67500,
+      "end_ms": 67800,
+      "text": "center"
+    },
+    {
+      "start_ms": 67800,
+      "end_ms": 68300,
+      "text": "equipment,"
+    },
+    {
+      "start_ms": 68500,
+      "end_ms": 69400,
+      "text": "non-refundable."
+    },
+    {
+      "start_ms": 70100,
+      "end_ms": 70300,
+      "text": "That"
+    },
+    {
+      "start_ms": 70300,
+      "end_ms": 70400,
+      "text": "is"
+    },
+    {
+      "start_ms": 70400,
+      "end_ms": 70500,
+      "text": "the"
+    },
+    {
+      "start_ms": 70500,
+      "end_ms": 70900,
+      "text": "most"
+    },
+    {
+      "start_ms": 70900,
+      "end_ms": 71300,
+      "text": "expensive"
+    },
+    {
+      "start_ms": 71300,
+      "end_ms": 71800,
+      "text": "cancellation"
+    },
+    {
+      "start_ms": 71800,
+      "end_ms": 72100,
+      "text": "fee"
+    },
+    {
+      "start_ms": 72100,
+      "end_ms": 72200,
+      "text": "in"
+    },
+    {
+      "start_ms": 72200,
+      "end_ms": 72600,
+      "text": "history."
+    },
+    {
+      "start_ms": 73000,
+      "end_ms": 73200,
+      "text": "Also"
+    },
+    {
+      "start_ms": 73200,
+      "end_ms": 73500,
+      "text": "today,"
+    },
+    {
+      "start_ms": 73500,
+      "end_ms": 73900,
+      "text": "Google"
+    },
+    {
+      "start_ms": 73900,
+      "end_ms": 74200,
+      "text": "released"
+    },
+    {
+      "start_ms": 74200,
+      "end_ms": 74500,
+      "text": "Gemini"
+    },
+    {
+      "start_ms": 74500,
+      "end_ms": 74800,
+      "text": "4"
+    },
+    {
+      "start_ms": 74800,
+      "end_ms": 75200,
+      "text": "Carbon"
+    },
+    {
+      "start_ms": 75200,
+      "end_ms": 75400,
+      "text": "to"
+    },
+    {
+      "start_ms": 75400,
+      "end_ms": 76200,
+      "text": "everyone"
+    },
+    {
+      "start_ms": 76200,
+      "end_ms": 76600,
+      "text": "and"
+    },
+    {
+      "start_ms": 76600,
+      "end_ms": 76800,
+      "text": "Reddit"
+    },
+    {
+      "start_ms": 76800,
+      "end_ms": 77000,
+      "text": "will"
+    },
+    {
+      "start_ms": 77000,
+      "end_ms": 77100,
+      "text": "now"
+    },
+    {
+      "start_ms": 77100,
+      "end_ms": 77400,
+      "text": "turn"
+    },
+    {
+      "start_ms": 77400,
+      "end_ms": 77600,
+      "text": "your"
+    },
+    {
+      "start_ms": 77600,
+      "end_ms": 78100,
+      "text": "arguments"
+    },
+    {
+      "start_ms": 78100,
+      "end_ms": 78500,
+      "text": "into"
+    },
+    {
+      "start_ms": 78500,
+      "end_ms": 79100,
+      "text": "product"
+    },
+    {
+      "start_ms": 79100,
+      "end_ms": 79600,
+      "text": "reviews."
+    },
+    {
+      "start_ms": 80200,
+      "end_ms": 80300,
+      "text": "That's"
+    },
+    {
+      "start_ms": 80300,
+      "end_ms": 80400,
+      "text": "the"
+    },
+    {
+      "start_ms": 80400,
+      "end_ms": 80800,
+      "text": "day."
+    },
+    {
+      "start_ms": 81000,
+      "end_ms": 81100,
+      "text": "This"
+    },
+    {
+      "start_ms": 81100,
+      "end_ms": 81200,
+      "text": "has"
+    },
+    {
+      "start_ms": 81200,
+      "end_ms": 81300,
+      "text": "been"
+    },
+    {
+      "start_ms": 81300,
+      "end_ms": 81500,
+      "text": "Tech"
+    },
+    {
+      "start_ms": 81500,
+      "end_ms": 81600,
+      "text": "for"
+    },
+    {
+      "start_ms": 81600,
+      "end_ms": 81800,
+      "text": "Bad"
+    },
+    {
+      "start_ms": 81800,
+      "end_ms": 82200,
+      "text": "Guys."
+    },
+    {
+      "start_ms": 82300,
+      "end_ms": 82400,
+      "text": "See"
+    },
+    {
+      "start_ms": 82400,
+      "end_ms": 82401,
+      "text": "you"
+    },
+    {
+      "start_ms": 82400,
+      "end_ms": 82600,
+      "text": "next"
+    },
+    {
+      "start_ms": 82600,
+      "end_ms": 82800,
+      "text": "time."
+    }
+  ]
+}
