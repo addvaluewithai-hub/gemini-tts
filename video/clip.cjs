@@ -56,9 +56,18 @@ function resolveCues() {
   cues.paper = paper.sort((a, b) => a.t - b.t);
   cues.acting = (cues.acting || []).map((c) => { if (c.match === undefined) return c; const q = find(c.match); if (!q) { console.warn("cue not found:", c.match); return null; } return { ...c, from: q.s, to: q.e }; }).filter(Boolean);
   chapters = (cues.chapters || []).map((c) => { if (c.match === undefined) return c; const q = find(c.match); if (!q) { console.warn("chapter not found:", c.match); return null; } return { t: q.s - 0.2, label: c.label }; }).filter(Boolean).sort((a, b) => a.t - b.t);
-  // spelling fixes for the captions only: [["heard", "shown"], ...], matched per word without punctuation
-  const fix = new Map((cues.fix || []).map(([a, b]) => [a.toLowerCase(), b]));
-  for (const w of words) { const core = w.t.replace(/^[^A-Za-z0-9]+|[^A-Za-z0-9]+$/g, ""), hit = fix.get(core.toLowerCase()); w.show = hit ? w.t.replace(core, hit) : w.t; }
+  // caption fixes: [["heard words", "shown text"], ...]. A phrase of several words collapses onto its first word;
+  // the punctuation after the last word is kept. Only the captions change, never the timing.
+  const norm = (t) => t.toLowerCase().replace(/[^a-z0-9]/g, "");
+  for (const w of words) w.show = w.t;
+  for (const [from, to] of cues.fix || []) {
+    const want = from.split(/\s+/).map(norm);
+    for (let i = 0; i + want.length <= words.length; i++) {
+      if (!want.every((x, k) => norm(words[i + k].t) === x)) continue;
+      const tail = (words[i + want.length - 1].t.match(/[^A-Za-z0-9]+$/) || [""])[0];
+      words[i].show = to + tail; for (let k = 1; k < want.length; k++) words[i + k].show = "";
+    }
+  }
 }
 
 function frame(i) {

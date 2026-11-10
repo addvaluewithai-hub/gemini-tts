@@ -35,7 +35,7 @@ window.draw = (st) => {
   $("char").style.transform = `scale(${st.cam})`;
   $("label").textContent = st.label; $("chapter").textContent = st.chapter; $("status").textContent = st.status;
   $("dot").style.opacity = st.recOn ? 1 : 0.25;
-  $("cap").innerHTML = st.words.map((w) => `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`).join("");
+  $("cap").innerHTML = st.words.filter((w) => w.t).map((w) => `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`).join("");
   $("tc").textContent = st.tc; $("fill").style.width = (st.progress * 100).toFixed(2) + "%";
 };
 await document.fonts.load('86px "Anton"'); await document.fonts.load('800 24px "JetBrains Mono"'); await document.fonts.ready; window.__ready = true;

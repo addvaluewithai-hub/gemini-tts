@@ -1,0 +1,2449 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_gemini_transcribe",
+  "alignment_provider": "gemini",
+  "alignment_model": "gemini-3.5-transcribe",
+  "generated_at": "2026-11-10T19:09:44.307Z",
+  "duration_ms": 197200,
+  "word_count": 477,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Field report 001, Agent Peek, reporting from the planet Earth to the directorate. Greetings. And before you ask, yes, the disguise is working. I wear a hat. Nobody has asked a single question. You sent me here to answer one thing. Are the humans a threat? I have been here two days. I read their technology news because apparently that is where they keep all of their secrets in public for free. Here is what I found. Observation one. The humans guard their computers with a door called SSH. This week they found a flaw in it. If an account has its password switched off, you may enter by typing a very long password. Any long password. 257 characters or more. I checked this three times. It gets better. The flaw was created in 2016 by a repair for a different flaw. And they gave it a name. They call it SS hole. I am told this is funny here. Attackers were trying it within hours of the announcement. Observation two. Yesterday a large university called Vanderbilt was attacked and its digital networks went dark. The official instruction to staff was, and I quote, shut down university devices, disconnect from university Wi-Fi, and remain extremely vigilant. Directorate, that is the defense plan. Unplug it and look around nervously. One employee says her machine announced a system update. Then it announced it was deleting old files. Then it announced the ransom. In that order. Very polite. The students were told an hour and a half after the teachers. I note this without comment. Observation three. Their artificial intelligence. A company called Fireworks, which rents out thinking machines, has disclosed a new break-in, the second one in about a month. The intruders came in through another company's cloud and reached AI models that were not finished yet. So the humans are now being robbed of minds they have not finished building. Meanwhile, Google released a new model today. It is called Gemini 4 Carbon. The price doubles in 3 weeks. On my planet we call that a trap. Here they call it a launch. Now, the question you care about, can they reach us? They plan to return to their own moon in 2028. Their own moon, the one directly above them. They have been there before. And then, as far as I can tell, they forgot how. Neither of the two landers is finished. My assessment, the humans are not a threat to us. The humans are a threat to the humans. Recommendation, cancel the invasion. It would be rude to interrupt. They are doing an excellent job without us. One, more budget for hats. Two, please stop calling my communicator. It rings in the middle of the news appeal. This has been tech for bad guys. The bad guys being you, sirs. Agent Peek, end of transmission.",
+  "source_text": "Field report zero zero one. Agent Peek, reporting from the planet Earth. To the Directorate: greetings. And before you ask, yes, the disguise is working. I wear a hat. Nobody has asked a single question. You sent me here to answer one thing. Are the humans a threat? I have been here two days. I read their technology news, because apparently that is where they keep all of their secrets. In public. For free. Here is what I found. Observation one. The humans guard their computers with a door called S S H. This week they found a flaw in it. If an account has its password switched off, you may enter by typing a very long password. Any long password. Two hundred and fifty seven characters or more. I checked this three times. It gets better. The flaw was created in twenty sixteen, by a repair for a different flaw. And they gave it a name. They call it S S Hole. I am told this is funny here. Attackers were trying it within hours of the announcement. Observation two. Yesterday a large university called Vanderbilt was attacked, and its digital networks went dark. The official instruction to staff was, and I quote: shut down university devices, disconnect from university Wi-Fi, and remain extremely vigilant. Directorate, that is the defense plan. Unplug it, and look around nervously. One employee says her machine announced a system update. Then it announced it was deleting old files. Then it announced the ransom. In that order. Very polite. The students were told an hour and a half after the teachers. I note this without comment. Observation three. Their artificial intelligence. A company called Fireworks, which rents out thinking machines, has disclosed a new break in. The second one in about a month. The intruders came in through another company's cloud, and reached A I models that were not finished yet. So the humans are now being robbed of minds they have not finished building. Meanwhile, Google released a new model today. It is called Gemini four Carbon. The price doubles in three weeks. On my planet we call that a trap. Here they call it a launch. Now, the question you care about. Can they reach us? They plan to return to their own moon in twenty twenty eight. Their own moon. The one directly above them. They have been there before. And then, as far as I can tell, they forgot how. Neither of the two landers is finished. My assessment. The humans are not a threat to us. The humans are a threat to the humans. Recommendation: cancel the invasion. It would be rude to interrupt. They are doing an excellent job without us. Requests. One: more budget for hats. Two: please stop calling my communicator. It rings in the middle of the newspaper. This has been tech for bad guys. The bad guys being you, sirs. Agent Peek. End of transmission.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Field report zero zero one. Agent Peek, reporting from the planet Earth. To the Directorate: greetings. And before you ask, yes, the disguise is working. I wear a hat. Nobody has asked a single question."
+    },
+    {
+      "index": 1,
+      "text": "You sent me here to answer one thing. Are the humans a threat? I have been here two days. I read their technology news, because apparently that is where they keep all of their secrets. In public. For free. Here is what I found."
+    },
+    {
+      "index": 2,
+      "text": "Observation one. The humans guard their computers with a door called S S H. This week they found a flaw in it. If an account has its password switched off, you may enter by typing a very long password. Any long password. Two hundred and fifty seven characters or more. I checked this three times."
+    },
+    {
+      "index": 3,
+      "text": "It gets better. The flaw was created in twenty sixteen, by a repair for a different flaw. And they gave it a name. They call it S S Hole. I am told this is funny here. Attackers were trying it within hours of the announcement."
+    },
+    {
+      "index": 4,
+      "text": "Observation two. Yesterday a large university called Vanderbilt was attacked, and its digital networks went dark. The official instruction to staff was, and I quote: shut down university devices, disconnect from university Wi-Fi, and remain extremely vigilant. Directorate, that is the defense plan. Unplug it, and look around nervously."
+    },
+    {
+      "index": 5,
+      "text": "One employee says her machine announced a system update. Then it announced it was deleting old files. Then it announced the ransom. In that order. Very polite. The students were told an hour and a half after the teachers. I note this without comment."
+    },
+    {
+      "index": 6,
+      "text": "Observation three. Their artificial intelligence. A company called Fireworks, which rents out thinking machines, has disclosed a new break in. The second one in about a month. The intruders came in through another company's cloud, and reached A I models that were not finished yet. So the humans are now being robbed of minds they have not finished building."
+    },
+    {
+      "index": 7,
+      "text": "Meanwhile, Google released a new model today. It is called Gemini four Carbon. The price doubles in three weeks. On my planet we call that a trap. Here they call it a launch."
+    },
+    {
+      "index": 8,
+      "text": "Now, the question you care about. Can they reach us? They plan to return to their own moon in twenty twenty eight. Their own moon. The one directly above them. They have been there before. And then, as far as I can tell, they forgot how. Neither of the two landers is finished."
+    },
+    {
+      "index": 9,
+      "text": "My assessment. The humans are not a threat to us. The humans are a threat to the humans. Recommendation: cancel the invasion. It would be rude to interrupt. They are doing an excellent job without us."
+    },
+    {
+      "index": 10,
+      "text": "Requests. One: more budget for hats. Two: please stop calling my communicator. It rings in the middle of the newspaper. This has been tech for bad guys. The bad guys being you, sirs. Agent Peek. End of transmission."
+    }
+  ],
+  "words": [
+    {
+      "start_ms": 300,
+      "end_ms": 600,
+      "text": "Field"
+    },
+    {
+      "start_ms": 600,
+      "end_ms": 1000,
+      "text": "report"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 2200,
+      "text": "001,"
+    },
+    {
+      "start_ms": 2500,
+      "end_ms": 2800,
+      "text": "Agent"
+    },
+    {
+      "start_ms": 2800,
+      "end_ms": 3300,
+      "text": "Peek,"
+    },
+    {
+      "start_ms": 3300,
+      "end_ms": 3800,
+      "text": "reporting"
+    },
+    {
+      "start_ms": 3800,
+      "end_ms": 4000,
+      "text": "from"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4100,
+      "text": "the"
+    },
+    {
+      "start_ms": 4100,
+      "end_ms": 4700,
+      "text": "planet"
+    },
+    {
+      "start_ms": 4700,
+      "end_ms": 5000,
+      "text": "Earth"
+    },
+    {
+      "start_ms": 6100,
+      "end_ms": 6200,
+      "text": "to"
+    },
+    {
+      "start_ms": 6200,
+      "end_ms": 6400,
+      "text": "the"
+    },
+    {
+      "start_ms": 6400,
+      "end_ms": 6800,
+      "text": "directorate."
+    },
+    {
+      "start_ms": 7600,
+      "end_ms": 7900,
+      "text": "Greetings."
+    },
+    {
+      "start_ms": 8600,
+      "end_ms": 8800,
+      "text": "And"
+    },
+    {
+      "start_ms": 8800,
+      "end_ms": 9100,
+      "text": "before"
+    },
+    {
+      "start_ms": 9100,
+      "end_ms": 9200,
+      "text": "you"
+    },
+    {
+      "start_ms": 9200,
+      "end_ms": 9700,
+      "text": "ask,"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 10200,
+      "text": "yes,"
+    },
+    {
+      "start_ms": 10300,
+      "end_ms": 10400,
+      "text": "the"
+    },
+    {
+      "start_ms": 10400,
+      "end_ms": 10800,
+      "text": "disguise"
+    },
+    {
+      "start_ms": 10800,
+      "end_ms": 11000,
+      "text": "is"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11400,
+      "text": "working."
+    },
+    {
+      "start_ms": 11700,
+      "end_ms": 11900,
+      "text": "I"
+    },
+    {
+      "start_ms": 11900,
+      "end_ms": 12100,
+      "text": "wear"
+    },
+    {
+      "start_ms": 12100,
+      "end_ms": 12101,
+      "text": "a"
+    },
+    {
+      "start_ms": 12100,
+      "end_ms": 12500,
+      "text": "hat."
+    },
+    {
+      "start_ms": 13000,
+      "end_ms": 13300,
+      "text": "Nobody"
+    },
+    {
+      "start_ms": 13300,
+      "end_ms": 13500,
+      "text": "has"
+    },
+    {
+      "start_ms": 13500,
+      "end_ms": 13900,
+      "text": "asked"
+    },
+    {
+      "start_ms": 13900,
+      "end_ms": 14000,
+      "text": "a"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14400,
+      "text": "single"
+    },
+    {
+      "start_ms": 14400,
+      "end_ms": 14800,
+      "text": "question."
+    },
+    {
+      "start_ms": 15800,
+      "end_ms": 16000,
+      "text": "You"
+    },
+    {
+      "start_ms": 16000,
+      "end_ms": 16300,
+      "text": "sent"
+    },
+    {
+      "start_ms": 16300,
+      "end_ms": 16400,
+      "text": "me"
+    },
+    {
+      "start_ms": 16400,
+      "end_ms": 16700,
+      "text": "here"
+    },
+    {
+      "start_ms": 16700,
+      "end_ms": 16800,
+      "text": "to"
+    },
+    {
+      "start_ms": 16800,
+      "end_ms": 17200,
+      "text": "answer"
+    },
+    {
+      "start_ms": 17200,
+      "end_ms": 17600,
+      "text": "one"
+    },
+    {
+      "start_ms": 17600,
+      "end_ms": 17900,
+      "text": "thing."
+    },
+    {
+      "start_ms": 18400,
+      "end_ms": 18600,
+      "text": "Are"
+    },
+    {
+      "start_ms": 18600,
+      "end_ms": 18700,
+      "text": "the"
+    },
+    {
+      "start_ms": 18700,
+      "end_ms": 19100,
+      "text": "humans"
+    },
+    {
+      "start_ms": 19100,
+      "end_ms": 19200,
+      "text": "a"
+    },
+    {
+      "start_ms": 19200,
+      "end_ms": 19500,
+      "text": "threat?"
+    },
+    {
+      "start_ms": 20200,
+      "end_ms": 20400,
+      "text": "I"
+    },
+    {
+      "start_ms": 20400,
+      "end_ms": 20500,
+      "text": "have"
+    },
+    {
+      "start_ms": 20500,
+      "end_ms": 20600,
+      "text": "been"
+    },
+    {
+      "start_ms": 20600,
+      "end_ms": 20800,
+      "text": "here"
+    },
+    {
+      "start_ms": 20800,
+      "end_ms": 21100,
+      "text": "two"
+    },
+    {
+      "start_ms": 21100,
+      "end_ms": 21400,
+      "text": "days."
+    },
+    {
+      "start_ms": 21900,
+      "end_ms": 22000,
+      "text": "I"
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 22200,
+      "text": "read"
+    },
+    {
+      "start_ms": 22200,
+      "end_ms": 22300,
+      "text": "their"
+    },
+    {
+      "start_ms": 22300,
+      "end_ms": 22900,
+      "text": "technology"
+    },
+    {
+      "start_ms": 22900,
+      "end_ms": 23200,
+      "text": "news"
+    },
+    {
+      "start_ms": 23200,
+      "end_ms": 23600,
+      "text": "because"
+    },
+    {
+      "start_ms": 23600,
+      "end_ms": 24000,
+      "text": "apparently"
+    },
+    {
+      "start_ms": 24000,
+      "end_ms": 24200,
+      "text": "that"
+    },
+    {
+      "start_ms": 24200,
+      "end_ms": 24400,
+      "text": "is"
+    },
+    {
+      "start_ms": 24400,
+      "end_ms": 24500,
+      "text": "where"
+    },
+    {
+      "start_ms": 24500,
+      "end_ms": 24600,
+      "text": "they"
+    },
+    {
+      "start_ms": 24600,
+      "end_ms": 24900,
+      "text": "keep"
+    },
+    {
+      "start_ms": 24900,
+      "end_ms": 25000,
+      "text": "all"
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25100,
+      "text": "of"
+    },
+    {
+      "start_ms": 25100,
+      "end_ms": 25300,
+      "text": "their"
+    },
+    {
+      "start_ms": 25300,
+      "end_ms": 25800,
+      "text": "secrets"
+    },
+    {
+      "start_ms": 26100,
+      "end_ms": 26300,
+      "text": "in"
+    },
+    {
+      "start_ms": 26300,
+      "end_ms": 26700,
+      "text": "public"
+    },
+    {
+      "start_ms": 27200,
+      "end_ms": 27300,
+      "text": "for"
+    },
+    {
+      "start_ms": 27300,
+      "end_ms": 27600,
+      "text": "free."
+    },
+    {
+      "start_ms": 28400,
+      "end_ms": 28700,
+      "text": "Here"
+    },
+    {
+      "start_ms": 28700,
+      "end_ms": 28800,
+      "text": "is"
+    },
+    {
+      "start_ms": 28800,
+      "end_ms": 28900,
+      "text": "what"
+    },
+    {
+      "start_ms": 28900,
+      "end_ms": 29000,
+      "text": "I"
+    },
+    {
+      "start_ms": 29000,
+      "end_ms": 29300,
+      "text": "found."
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 30800,
+      "text": "Observation"
+    },
+    {
+      "start_ms": 30800,
+      "end_ms": 31200,
+      "text": "one."
+    },
+    {
+      "start_ms": 31700,
+      "end_ms": 31800,
+      "text": "The"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 32300,
+      "text": "humans"
+    },
+    {
+      "start_ms": 32300,
+      "end_ms": 32600,
+      "text": "guard"
+    },
+    {
+      "start_ms": 32600,
+      "end_ms": 32700,
+      "text": "their"
+    },
+    {
+      "start_ms": 32700,
+      "end_ms": 33300,
+      "text": "computers"
+    },
+    {
+      "start_ms": 33300,
+      "end_ms": 33500,
+      "text": "with"
+    },
+    {
+      "start_ms": 33500,
+      "end_ms": 33501,
+      "text": "a"
+    },
+    {
+      "start_ms": 33500,
+      "end_ms": 33900,
+      "text": "door"
+    },
+    {
+      "start_ms": 33900,
+      "end_ms": 34400,
+      "text": "called"
+    },
+    {
+      "start_ms": 34500,
+      "end_ms": 35700,
+      "text": "SSH."
+    },
+    {
+      "start_ms": 36200,
+      "end_ms": 36400,
+      "text": "This"
+    },
+    {
+      "start_ms": 36400,
+      "end_ms": 36800,
+      "text": "week"
+    },
+    {
+      "start_ms": 36800,
+      "end_ms": 36900,
+      "text": "they"
+    },
+    {
+      "start_ms": 36900,
+      "end_ms": 37200,
+      "text": "found"
+    },
+    {
+      "start_ms": 37200,
+      "end_ms": 37201,
+      "text": "a"
+    },
+    {
+      "start_ms": 37200,
+      "end_ms": 37600,
+      "text": "flaw"
+    },
+    {
+      "start_ms": 37600,
+      "end_ms": 37800,
+      "text": "in"
+    },
+    {
+      "start_ms": 37800,
+      "end_ms": 37900,
+      "text": "it."
+    },
+    {
+      "start_ms": 38500,
+      "end_ms": 38600,
+      "text": "If"
+    },
+    {
+      "start_ms": 38600,
+      "end_ms": 38700,
+      "text": "an"
+    },
+    {
+      "start_ms": 38700,
+      "end_ms": 39100,
+      "text": "account"
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39300,
+      "text": "has"
+    },
+    {
+      "start_ms": 39300,
+      "end_ms": 39400,
+      "text": "its"
+    },
+    {
+      "start_ms": 39400,
+      "end_ms": 40000,
+      "text": "password"
+    },
+    {
+      "start_ms": 40000,
+      "end_ms": 40400,
+      "text": "switched"
+    },
+    {
+      "start_ms": 40400,
+      "end_ms": 40900,
+      "text": "off,"
+    },
+    {
+      "start_ms": 41300,
+      "end_ms": 41400,
+      "text": "you"
+    },
+    {
+      "start_ms": 41400,
+      "end_ms": 41600,
+      "text": "may"
+    },
+    {
+      "start_ms": 41600,
+      "end_ms": 41900,
+      "text": "enter"
+    },
+    {
+      "start_ms": 41900,
+      "end_ms": 42000,
+      "text": "by"
+    },
+    {
+      "start_ms": 42000,
+      "end_ms": 42600,
+      "text": "typing"
+    },
+    {
+      "start_ms": 42600,
+      "end_ms": 42700,
+      "text": "a"
+    },
+    {
+      "start_ms": 42700,
+      "end_ms": 43200,
+      "text": "very"
+    },
+    {
+      "start_ms": 43200,
+      "end_ms": 43700,
+      "text": "long"
+    },
+    {
+      "start_ms": 43700,
+      "end_ms": 44300,
+      "text": "password."
+    },
+    {
+      "start_ms": 45000,
+      "end_ms": 45400,
+      "text": "Any"
+    },
+    {
+      "start_ms": 45400,
+      "end_ms": 45800,
+      "text": "long"
+    },
+    {
+      "start_ms": 45800,
+      "end_ms": 46300,
+      "text": "password."
+    },
+    {
+      "start_ms": 46900,
+      "end_ms": 48100,
+      "text": "257"
+    },
+    {
+      "start_ms": 48100,
+      "end_ms": 48800,
+      "text": "characters"
+    },
+    {
+      "start_ms": 48800,
+      "end_ms": 48900,
+      "text": "or"
+    },
+    {
+      "start_ms": 48900,
+      "end_ms": 49200,
+      "text": "more."
+    },
+    {
+      "start_ms": 50000,
+      "end_ms": 50100,
+      "text": "I"
+    },
+    {
+      "start_ms": 50100,
+      "end_ms": 50400,
+      "text": "checked"
+    },
+    {
+      "start_ms": 50400,
+      "end_ms": 50800,
+      "text": "this"
+    },
+    {
+      "start_ms": 50800,
+      "end_ms": 51000,
+      "text": "three"
+    },
+    {
+      "start_ms": 51000,
+      "end_ms": 51400,
+      "text": "times."
+    },
+    {
+      "start_ms": 52100,
+      "end_ms": 52300,
+      "text": "It"
+    },
+    {
+      "start_ms": 52300,
+      "end_ms": 52400,
+      "text": "gets"
+    },
+    {
+      "start_ms": 52400,
+      "end_ms": 52800,
+      "text": "better."
+    },
+    {
+      "start_ms": 53300,
+      "end_ms": 53400,
+      "text": "The"
+    },
+    {
+      "start_ms": 53400,
+      "end_ms": 53600,
+      "text": "flaw"
+    },
+    {
+      "start_ms": 53600,
+      "end_ms": 53800,
+      "text": "was"
+    },
+    {
+      "start_ms": 53800,
+      "end_ms": 54300,
+      "text": "created"
+    },
+    {
+      "start_ms": 54300,
+      "end_ms": 54500,
+      "text": "in"
+    },
+    {
+      "start_ms": 54500,
+      "end_ms": 55600,
+      "text": "2016"
+    },
+    {
+      "start_ms": 55700,
+      "end_ms": 56000,
+      "text": "by"
+    },
+    {
+      "start_ms": 56000,
+      "end_ms": 56100,
+      "text": "a"
+    },
+    {
+      "start_ms": 56100,
+      "end_ms": 56800,
+      "text": "repair"
+    },
+    {
+      "start_ms": 56800,
+      "end_ms": 57100,
+      "text": "for"
+    },
+    {
+      "start_ms": 57100,
+      "end_ms": 57101,
+      "text": "a"
+    },
+    {
+      "start_ms": 57100,
+      "end_ms": 57500,
+      "text": "different"
+    },
+    {
+      "start_ms": 57500,
+      "end_ms": 57800,
+      "text": "flaw."
+    },
+    {
+      "start_ms": 58500,
+      "end_ms": 58600,
+      "text": "And"
+    },
+    {
+      "start_ms": 58600,
+      "end_ms": 58700,
+      "text": "they"
+    },
+    {
+      "start_ms": 58700,
+      "end_ms": 59000,
+      "text": "gave"
+    },
+    {
+      "start_ms": 59000,
+      "end_ms": 59100,
+      "text": "it"
+    },
+    {
+      "start_ms": 59100,
+      "end_ms": 59200,
+      "text": "a"
+    },
+    {
+      "start_ms": 59200,
+      "end_ms": 59600,
+      "text": "name."
+    },
+    {
+      "start_ms": 60100,
+      "end_ms": 60200,
+      "text": "They"
+    },
+    {
+      "start_ms": 60200,
+      "end_ms": 60500,
+      "text": "call"
+    },
+    {
+      "start_ms": 60500,
+      "end_ms": 60700,
+      "text": "it"
+    },
+    {
+      "start_ms": 60900,
+      "end_ms": 61500,
+      "text": "SS"
+    },
+    {
+      "start_ms": 61500,
+      "end_ms": 61900,
+      "text": "hole."
+    },
+    {
+      "start_ms": 62800,
+      "end_ms": 63000,
+      "text": "I"
+    },
+    {
+      "start_ms": 63000,
+      "end_ms": 63200,
+      "text": "am"
+    },
+    {
+      "start_ms": 63200,
+      "end_ms": 63600,
+      "text": "told"
+    },
+    {
+      "start_ms": 63600,
+      "end_ms": 63700,
+      "text": "this"
+    },
+    {
+      "start_ms": 63700,
+      "end_ms": 63900,
+      "text": "is"
+    },
+    {
+      "start_ms": 63900,
+      "end_ms": 64200,
+      "text": "funny"
+    },
+    {
+      "start_ms": 64200,
+      "end_ms": 64400,
+      "text": "here."
+    },
+    {
+      "start_ms": 65400,
+      "end_ms": 65800,
+      "text": "Attackers"
+    },
+    {
+      "start_ms": 65800,
+      "end_ms": 66000,
+      "text": "were"
+    },
+    {
+      "start_ms": 66000,
+      "end_ms": 66300,
+      "text": "trying"
+    },
+    {
+      "start_ms": 66300,
+      "end_ms": 66500,
+      "text": "it"
+    },
+    {
+      "start_ms": 66500,
+      "end_ms": 66800,
+      "text": "within"
+    },
+    {
+      "start_ms": 66800,
+      "end_ms": 67200,
+      "text": "hours"
+    },
+    {
+      "start_ms": 67200,
+      "end_ms": 67300,
+      "text": "of"
+    },
+    {
+      "start_ms": 67300,
+      "end_ms": 67400,
+      "text": "the"
+    },
+    {
+      "start_ms": 67400,
+      "end_ms": 68000,
+      "text": "announcement."
+    },
+    {
+      "start_ms": 68600,
+      "end_ms": 69200,
+      "text": "Observation"
+    },
+    {
+      "start_ms": 69200,
+      "end_ms": 69700,
+      "text": "two."
+    },
+    {
+      "start_ms": 70100,
+      "end_ms": 70900,
+      "text": "Yesterday"
+    },
+    {
+      "start_ms": 70900,
+      "end_ms": 71100,
+      "text": "a"
+    },
+    {
+      "start_ms": 71100,
+      "end_ms": 71600,
+      "text": "large"
+    },
+    {
+      "start_ms": 71600,
+      "end_ms": 72400,
+      "text": "university"
+    },
+    {
+      "start_ms": 72400,
+      "end_ms": 72800,
+      "text": "called"
+    },
+    {
+      "start_ms": 72800,
+      "end_ms": 73700,
+      "text": "Vanderbilt"
+    },
+    {
+      "start_ms": 73800,
+      "end_ms": 74000,
+      "text": "was"
+    },
+    {
+      "start_ms": 74000,
+      "end_ms": 74600,
+      "text": "attacked"
+    },
+    {
+      "start_ms": 74800,
+      "end_ms": 75000,
+      "text": "and"
+    },
+    {
+      "start_ms": 75000,
+      "end_ms": 75200,
+      "text": "its"
+    },
+    {
+      "start_ms": 75200,
+      "end_ms": 75600,
+      "text": "digital"
+    },
+    {
+      "start_ms": 75600,
+      "end_ms": 76200,
+      "text": "networks"
+    },
+    {
+      "start_ms": 76200,
+      "end_ms": 76600,
+      "text": "went"
+    },
+    {
+      "start_ms": 76600,
+      "end_ms": 76900,
+      "text": "dark."
+    },
+    {
+      "start_ms": 77500,
+      "end_ms": 77600,
+      "text": "The"
+    },
+    {
+      "start_ms": 77600,
+      "end_ms": 78000,
+      "text": "official"
+    },
+    {
+      "start_ms": 78000,
+      "end_ms": 78500,
+      "text": "instruction"
+    },
+    {
+      "start_ms": 78500,
+      "end_ms": 78600,
+      "text": "to"
+    },
+    {
+      "start_ms": 78600,
+      "end_ms": 79100,
+      "text": "staff"
+    },
+    {
+      "start_ms": 79100,
+      "end_ms": 79500,
+      "text": "was,"
+    },
+    {
+      "start_ms": 79600,
+      "end_ms": 79800,
+      "text": "and"
+    },
+    {
+      "start_ms": 79800,
+      "end_ms": 79900,
+      "text": "I"
+    },
+    {
+      "start_ms": 79900,
+      "end_ms": 80400,
+      "text": "quote,"
+    },
+    {
+      "start_ms": 80700,
+      "end_ms": 81100,
+      "text": "shut"
+    },
+    {
+      "start_ms": 81100,
+      "end_ms": 81400,
+      "text": "down"
+    },
+    {
+      "start_ms": 81400,
+      "end_ms": 81900,
+      "text": "university"
+    },
+    {
+      "start_ms": 81900,
+      "end_ms": 82600,
+      "text": "devices,"
+    },
+    {
+      "start_ms": 82900,
+      "end_ms": 83400,
+      "text": "disconnect"
+    },
+    {
+      "start_ms": 83400,
+      "end_ms": 83600,
+      "text": "from"
+    },
+    {
+      "start_ms": 83600,
+      "end_ms": 84200,
+      "text": "university"
+    },
+    {
+      "start_ms": 84200,
+      "end_ms": 84900,
+      "text": "Wi-Fi,"
+    },
+    {
+      "start_ms": 85100,
+      "end_ms": 85300,
+      "text": "and"
+    },
+    {
+      "start_ms": 85300,
+      "end_ms": 85900,
+      "text": "remain"
+    },
+    {
+      "start_ms": 86000,
+      "end_ms": 86900,
+      "text": "extremely"
+    },
+    {
+      "start_ms": 87000,
+      "end_ms": 87600,
+      "text": "vigilant."
+    },
+    {
+      "start_ms": 88200,
+      "end_ms": 88800,
+      "text": "Directorate,"
+    },
+    {
+      "start_ms": 88900,
+      "end_ms": 89500,
+      "text": "that"
+    },
+    {
+      "start_ms": 89500,
+      "end_ms": 89800,
+      "text": "is"
+    },
+    {
+      "start_ms": 89800,
+      "end_ms": 89900,
+      "text": "the"
+    },
+    {
+      "start_ms": 89900,
+      "end_ms": 90300,
+      "text": "defense"
+    },
+    {
+      "start_ms": 90300,
+      "end_ms": 90600,
+      "text": "plan."
+    },
+    {
+      "start_ms": 90900,
+      "end_ms": 91400,
+      "text": "Unplug"
+    },
+    {
+      "start_ms": 91400,
+      "end_ms": 91600,
+      "text": "it"
+    },
+    {
+      "start_ms": 91700,
+      "end_ms": 92000,
+      "text": "and"
+    },
+    {
+      "start_ms": 92000,
+      "end_ms": 92300,
+      "text": "look"
+    },
+    {
+      "start_ms": 92300,
+      "end_ms": 92600,
+      "text": "around"
+    },
+    {
+      "start_ms": 92600,
+      "end_ms": 93100,
+      "text": "nervously."
+    },
+    {
+      "start_ms": 93900,
+      "end_ms": 94100,
+      "text": "One"
+    },
+    {
+      "start_ms": 94100,
+      "end_ms": 94700,
+      "text": "employee"
+    },
+    {
+      "start_ms": 94700,
+      "end_ms": 95000,
+      "text": "says"
+    },
+    {
+      "start_ms": 95000,
+      "end_ms": 95200,
+      "text": "her"
+    },
+    {
+      "start_ms": 95200,
+      "end_ms": 95700,
+      "text": "machine"
+    },
+    {
+      "start_ms": 95700,
+      "end_ms": 96300,
+      "text": "announced"
+    },
+    {
+      "start_ms": 96300,
+      "end_ms": 96400,
+      "text": "a"
+    },
+    {
+      "start_ms": 96400,
+      "end_ms": 97000,
+      "text": "system"
+    },
+    {
+      "start_ms": 97000,
+      "end_ms": 97600,
+      "text": "update."
+    },
+    {
+      "start_ms": 97800,
+      "end_ms": 98300,
+      "text": "Then"
+    },
+    {
+      "start_ms": 98400,
+      "end_ms": 98500,
+      "text": "it"
+    },
+    {
+      "start_ms": 98500,
+      "end_ms": 98900,
+      "text": "announced"
+    },
+    {
+      "start_ms": 98900,
+      "end_ms": 99000,
+      "text": "it"
+    },
+    {
+      "start_ms": 99000,
+      "end_ms": 99100,
+      "text": "was"
+    },
+    {
+      "start_ms": 99100,
+      "end_ms": 99600,
+      "text": "deleting"
+    },
+    {
+      "start_ms": 99600,
+      "end_ms": 99900,
+      "text": "old"
+    },
+    {
+      "start_ms": 99900,
+      "end_ms": 100400,
+      "text": "files."
+    },
+    {
+      "start_ms": 101100,
+      "end_ms": 101600,
+      "text": "Then"
+    },
+    {
+      "start_ms": 101700,
+      "end_ms": 101900,
+      "text": "it"
+    },
+    {
+      "start_ms": 101900,
+      "end_ms": 102200,
+      "text": "announced"
+    },
+    {
+      "start_ms": 102200,
+      "end_ms": 102300,
+      "text": "the"
+    },
+    {
+      "start_ms": 102300,
+      "end_ms": 102800,
+      "text": "ransom."
+    },
+    {
+      "start_ms": 103500,
+      "end_ms": 103700,
+      "text": "In"
+    },
+    {
+      "start_ms": 103700,
+      "end_ms": 103900,
+      "text": "that"
+    },
+    {
+      "start_ms": 103900,
+      "end_ms": 104300,
+      "text": "order."
+    },
+    {
+      "start_ms": 104600,
+      "end_ms": 104900,
+      "text": "Very"
+    },
+    {
+      "start_ms": 104900,
+      "end_ms": 105300,
+      "text": "polite."
+    },
+    {
+      "start_ms": 106100,
+      "end_ms": 106200,
+      "text": "The"
+    },
+    {
+      "start_ms": 106200,
+      "end_ms": 106600,
+      "text": "students"
+    },
+    {
+      "start_ms": 106600,
+      "end_ms": 106700,
+      "text": "were"
+    },
+    {
+      "start_ms": 106700,
+      "end_ms": 107000,
+      "text": "told"
+    },
+    {
+      "start_ms": 107000,
+      "end_ms": 107100,
+      "text": "an"
+    },
+    {
+      "start_ms": 107100,
+      "end_ms": 107300,
+      "text": "hour"
+    },
+    {
+      "start_ms": 107300,
+      "end_ms": 107400,
+      "text": "and"
+    },
+    {
+      "start_ms": 107400,
+      "end_ms": 107401,
+      "text": "a"
+    },
+    {
+      "start_ms": 107400,
+      "end_ms": 107600,
+      "text": "half"
+    },
+    {
+      "start_ms": 107600,
+      "end_ms": 107900,
+      "text": "after"
+    },
+    {
+      "start_ms": 107900,
+      "end_ms": 108000,
+      "text": "the"
+    },
+    {
+      "start_ms": 108000,
+      "end_ms": 108600,
+      "text": "teachers."
+    },
+    {
+      "start_ms": 108800,
+      "end_ms": 108900,
+      "text": "I"
+    },
+    {
+      "start_ms": 108900,
+      "end_ms": 109200,
+      "text": "note"
+    },
+    {
+      "start_ms": 109200,
+      "end_ms": 109400,
+      "text": "this"
+    },
+    {
+      "start_ms": 109400,
+      "end_ms": 109600,
+      "text": "without"
+    },
+    {
+      "start_ms": 109600,
+      "end_ms": 110000,
+      "text": "comment."
+    },
+    {
+      "start_ms": 110600,
+      "end_ms": 111300,
+      "text": "Observation"
+    },
+    {
+      "start_ms": 111300,
+      "end_ms": 111800,
+      "text": "three."
+    },
+    {
+      "start_ms": 112200,
+      "end_ms": 112400,
+      "text": "Their"
+    },
+    {
+      "start_ms": 112400,
+      "end_ms": 113100,
+      "text": "artificial"
+    },
+    {
+      "start_ms": 113100,
+      "end_ms": 114000,
+      "text": "intelligence."
+    },
+    {
+      "start_ms": 114600,
+      "end_ms": 114700,
+      "text": "A"
+    },
+    {
+      "start_ms": 114700,
+      "end_ms": 115000,
+      "text": "company"
+    },
+    {
+      "start_ms": 115000,
+      "end_ms": 115400,
+      "text": "called"
+    },
+    {
+      "start_ms": 115400,
+      "end_ms": 116400,
+      "text": "Fireworks,"
+    },
+    {
+      "start_ms": 116400,
+      "end_ms": 116600,
+      "text": "which"
+    },
+    {
+      "start_ms": 116600,
+      "end_ms": 116900,
+      "text": "rents"
+    },
+    {
+      "start_ms": 116900,
+      "end_ms": 117100,
+      "text": "out"
+    },
+    {
+      "start_ms": 117100,
+      "end_ms": 117400,
+      "text": "thinking"
+    },
+    {
+      "start_ms": 117400,
+      "end_ms": 117900,
+      "text": "machines,"
+    },
+    {
+      "start_ms": 118100,
+      "end_ms": 118300,
+      "text": "has"
+    },
+    {
+      "start_ms": 118300,
+      "end_ms": 118900,
+      "text": "disclosed"
+    },
+    {
+      "start_ms": 118900,
+      "end_ms": 118901,
+      "text": "a"
+    },
+    {
+      "start_ms": 118900,
+      "end_ms": 119200,
+      "text": "new"
+    },
+    {
+      "start_ms": 119200,
+      "end_ms": 119900,
+      "text": "break-in,"
+    },
+    {
+      "start_ms": 120100,
+      "end_ms": 120300,
+      "text": "the"
+    },
+    {
+      "start_ms": 120300,
+      "end_ms": 120600,
+      "text": "second"
+    },
+    {
+      "start_ms": 120600,
+      "end_ms": 120800,
+      "text": "one"
+    },
+    {
+      "start_ms": 120800,
+      "end_ms": 120900,
+      "text": "in"
+    },
+    {
+      "start_ms": 120900,
+      "end_ms": 121100,
+      "text": "about"
+    },
+    {
+      "start_ms": 121100,
+      "end_ms": 121200,
+      "text": "a"
+    },
+    {
+      "start_ms": 121200,
+      "end_ms": 121500,
+      "text": "month."
+    },
+    {
+      "start_ms": 122200,
+      "end_ms": 122201,
+      "text": "The"
+    },
+    {
+      "start_ms": 122200,
+      "end_ms": 122800,
+      "text": "intruders"
+    },
+    {
+      "start_ms": 122800,
+      "end_ms": 123100,
+      "text": "came"
+    },
+    {
+      "start_ms": 123100,
+      "end_ms": 123200,
+      "text": "in"
+    },
+    {
+      "start_ms": 123200,
+      "end_ms": 123400,
+      "text": "through"
+    },
+    {
+      "start_ms": 123400,
+      "end_ms": 123700,
+      "text": "another"
+    },
+    {
+      "start_ms": 123700,
+      "end_ms": 124200,
+      "text": "company's"
+    },
+    {
+      "start_ms": 124200,
+      "end_ms": 124900,
+      "text": "cloud"
+    },
+    {
+      "start_ms": 125100,
+      "end_ms": 125200,
+      "text": "and"
+    },
+    {
+      "start_ms": 125200,
+      "end_ms": 125600,
+      "text": "reached"
+    },
+    {
+      "start_ms": 125600,
+      "end_ms": 125900,
+      "text": "AI"
+    },
+    {
+      "start_ms": 125900,
+      "end_ms": 126300,
+      "text": "models"
+    },
+    {
+      "start_ms": 126300,
+      "end_ms": 126500,
+      "text": "that"
+    },
+    {
+      "start_ms": 126500,
+      "end_ms": 126600,
+      "text": "were"
+    },
+    {
+      "start_ms": 126600,
+      "end_ms": 127000,
+      "text": "not"
+    },
+    {
+      "start_ms": 127000,
+      "end_ms": 127500,
+      "text": "finished"
+    },
+    {
+      "start_ms": 127500,
+      "end_ms": 127700,
+      "text": "yet."
+    },
+    {
+      "start_ms": 128500,
+      "end_ms": 128700,
+      "text": "So"
+    },
+    {
+      "start_ms": 128700,
+      "end_ms": 128800,
+      "text": "the"
+    },
+    {
+      "start_ms": 128800,
+      "end_ms": 129200,
+      "text": "humans"
+    },
+    {
+      "start_ms": 129200,
+      "end_ms": 129201,
+      "text": "are"
+    },
+    {
+      "start_ms": 129200,
+      "end_ms": 129400,
+      "text": "now"
+    },
+    {
+      "start_ms": 129400,
+      "end_ms": 129700,
+      "text": "being"
+    },
+    {
+      "start_ms": 129700,
+      "end_ms": 130100,
+      "text": "robbed"
+    },
+    {
+      "start_ms": 130100,
+      "end_ms": 130300,
+      "text": "of"
+    },
+    {
+      "start_ms": 130300,
+      "end_ms": 130700,
+      "text": "minds"
+    },
+    {
+      "start_ms": 130700,
+      "end_ms": 130800,
+      "text": "they"
+    },
+    {
+      "start_ms": 130800,
+      "end_ms": 131000,
+      "text": "have"
+    },
+    {
+      "start_ms": 131000,
+      "end_ms": 131300,
+      "text": "not"
+    },
+    {
+      "start_ms": 131300,
+      "end_ms": 131800,
+      "text": "finished"
+    },
+    {
+      "start_ms": 131800,
+      "end_ms": 132200,
+      "text": "building."
+    },
+    {
+      "start_ms": 133100,
+      "end_ms": 133600,
+      "text": "Meanwhile,"
+    },
+    {
+      "start_ms": 133700,
+      "end_ms": 134000,
+      "text": "Google"
+    },
+    {
+      "start_ms": 134000,
+      "end_ms": 134300,
+      "text": "released"
+    },
+    {
+      "start_ms": 134300,
+      "end_ms": 134400,
+      "text": "a"
+    },
+    {
+      "start_ms": 134400,
+      "end_ms": 134500,
+      "text": "new"
+    },
+    {
+      "start_ms": 134500,
+      "end_ms": 134800,
+      "text": "model"
+    },
+    {
+      "start_ms": 134800,
+      "end_ms": 135200,
+      "text": "today."
+    },
+    {
+      "start_ms": 135600,
+      "end_ms": 135700,
+      "text": "It"
+    },
+    {
+      "start_ms": 135700,
+      "end_ms": 135800,
+      "text": "is"
+    },
+    {
+      "start_ms": 135800,
+      "end_ms": 136100,
+      "text": "called"
+    },
+    {
+      "start_ms": 136100,
+      "end_ms": 136600,
+      "text": "Gemini"
+    },
+    {
+      "start_ms": 136600,
+      "end_ms": 137000,
+      "text": "4"
+    },
+    {
+      "start_ms": 137000,
+      "end_ms": 137500,
+      "text": "Carbon."
+    },
+    {
+      "start_ms": 138200,
+      "end_ms": 138201,
+      "text": "The"
+    },
+    {
+      "start_ms": 138200,
+      "end_ms": 138700,
+      "text": "price"
+    },
+    {
+      "start_ms": 138700,
+      "end_ms": 139100,
+      "text": "doubles"
+    },
+    {
+      "start_ms": 139100,
+      "end_ms": 139300,
+      "text": "in"
+    },
+    {
+      "start_ms": 139300,
+      "end_ms": 139500,
+      "text": "3"
+    },
+    {
+      "start_ms": 139500,
+      "end_ms": 139900,
+      "text": "weeks."
+    },
+    {
+      "start_ms": 140800,
+      "end_ms": 140900,
+      "text": "On"
+    },
+    {
+      "start_ms": 140900,
+      "end_ms": 141100,
+      "text": "my"
+    },
+    {
+      "start_ms": 141100,
+      "end_ms": 141400,
+      "text": "planet"
+    },
+    {
+      "start_ms": 141400,
+      "end_ms": 141600,
+      "text": "we"
+    },
+    {
+      "start_ms": 141600,
+      "end_ms": 141700,
+      "text": "call"
+    },
+    {
+      "start_ms": 141700,
+      "end_ms": 141900,
+      "text": "that"
+    },
+    {
+      "start_ms": 141900,
+      "end_ms": 142000,
+      "text": "a"
+    },
+    {
+      "start_ms": 142000,
+      "end_ms": 142400,
+      "text": "trap."
+    },
+    {
+      "start_ms": 142900,
+      "end_ms": 143200,
+      "text": "Here"
+    },
+    {
+      "start_ms": 143200,
+      "end_ms": 143300,
+      "text": "they"
+    },
+    {
+      "start_ms": 143300,
+      "end_ms": 143500,
+      "text": "call"
+    },
+    {
+      "start_ms": 143500,
+      "end_ms": 143600,
+      "text": "it"
+    },
+    {
+      "start_ms": 143600,
+      "end_ms": 143601,
+      "text": "a"
+    },
+    {
+      "start_ms": 143600,
+      "end_ms": 144100,
+      "text": "launch."
+    },
+    {
+      "start_ms": 144600,
+      "end_ms": 145100,
+      "text": "Now,"
+    },
+    {
+      "start_ms": 145200,
+      "end_ms": 145300,
+      "text": "the"
+    },
+    {
+      "start_ms": 145300,
+      "end_ms": 145800,
+      "text": "question"
+    },
+    {
+      "start_ms": 145800,
+      "end_ms": 145900,
+      "text": "you"
+    },
+    {
+      "start_ms": 145900,
+      "end_ms": 146200,
+      "text": "care"
+    },
+    {
+      "start_ms": 146200,
+      "end_ms": 146600,
+      "text": "about,"
+    },
+    {
+      "start_ms": 147200,
+      "end_ms": 147300,
+      "text": "can"
+    },
+    {
+      "start_ms": 147300,
+      "end_ms": 147400,
+      "text": "they"
+    },
+    {
+      "start_ms": 147400,
+      "end_ms": 147700,
+      "text": "reach"
+    },
+    {
+      "start_ms": 147700,
+      "end_ms": 148100,
+      "text": "us?"
+    },
+    {
+      "start_ms": 149000,
+      "end_ms": 149100,
+      "text": "They"
+    },
+    {
+      "start_ms": 149100,
+      "end_ms": 149500,
+      "text": "plan"
+    },
+    {
+      "start_ms": 149500,
+      "end_ms": 149600,
+      "text": "to"
+    },
+    {
+      "start_ms": 149600,
+      "end_ms": 150100,
+      "text": "return"
+    },
+    {
+      "start_ms": 150100,
+      "end_ms": 150200,
+      "text": "to"
+    },
+    {
+      "start_ms": 150200,
+      "end_ms": 150400,
+      "text": "their"
+    },
+    {
+      "start_ms": 150400,
+      "end_ms": 150700,
+      "text": "own"
+    },
+    {
+      "start_ms": 150700,
+      "end_ms": 151100,
+      "text": "moon"
+    },
+    {
+      "start_ms": 151100,
+      "end_ms": 151300,
+      "text": "in"
+    },
+    {
+      "start_ms": 151300,
+      "end_ms": 152500,
+      "text": "2028."
+    },
+    {
+      "start_ms": 153100,
+      "end_ms": 153300,
+      "text": "Their"
+    },
+    {
+      "start_ms": 153300,
+      "end_ms": 153500,
+      "text": "own"
+    },
+    {
+      "start_ms": 153500,
+      "end_ms": 153900,
+      "text": "moon,"
+    },
+    {
+      "start_ms": 154400,
+      "end_ms": 154500,
+      "text": "the"
+    },
+    {
+      "start_ms": 154500,
+      "end_ms": 154700,
+      "text": "one"
+    },
+    {
+      "start_ms": 154700,
+      "end_ms": 155300,
+      "text": "directly"
+    },
+    {
+      "start_ms": 155300,
+      "end_ms": 155600,
+      "text": "above"
+    },
+    {
+      "start_ms": 155600,
+      "end_ms": 155800,
+      "text": "them."
+    },
+    {
+      "start_ms": 156800,
+      "end_ms": 156801,
+      "text": "They"
+    },
+    {
+      "start_ms": 156800,
+      "end_ms": 157000,
+      "text": "have"
+    },
+    {
+      "start_ms": 157000,
+      "end_ms": 157100,
+      "text": "been"
+    },
+    {
+      "start_ms": 157100,
+      "end_ms": 157300,
+      "text": "there"
+    },
+    {
+      "start_ms": 157300,
+      "end_ms": 157800,
+      "text": "before."
+    },
+    {
+      "start_ms": 158700,
+      "end_ms": 158900,
+      "text": "And"
+    },
+    {
+      "start_ms": 158900,
+      "end_ms": 159300,
+      "text": "then,"
+    },
+    {
+      "start_ms": 159400,
+      "end_ms": 159700,
+      "text": "as"
+    },
+    {
+      "start_ms": 159700,
+      "end_ms": 159900,
+      "text": "far"
+    },
+    {
+      "start_ms": 159900,
+      "end_ms": 160000,
+      "text": "as"
+    },
+    {
+      "start_ms": 160000,
+      "end_ms": 160100,
+      "text": "I"
+    },
+    {
+      "start_ms": 160100,
+      "end_ms": 160300,
+      "text": "can"
+    },
+    {
+      "start_ms": 160300,
+      "end_ms": 160800,
+      "text": "tell,"
+    },
+    {
+      "start_ms": 161300,
+      "end_ms": 161400,
+      "text": "they"
+    },
+    {
+      "start_ms": 161400,
+      "end_ms": 162000,
+      "text": "forgot"
+    },
+    {
+      "start_ms": 162000,
+      "end_ms": 162500,
+      "text": "how."
+    },
+    {
+      "start_ms": 163300,
+      "end_ms": 163700,
+      "text": "Neither"
+    },
+    {
+      "start_ms": 163700,
+      "end_ms": 163900,
+      "text": "of"
+    },
+    {
+      "start_ms": 163900,
+      "end_ms": 164000,
+      "text": "the"
+    },
+    {
+      "start_ms": 164000,
+      "end_ms": 164200,
+      "text": "two"
+    },
+    {
+      "start_ms": 164200,
+      "end_ms": 164700,
+      "text": "landers"
+    },
+    {
+      "start_ms": 164700,
+      "end_ms": 164900,
+      "text": "is"
+    },
+    {
+      "start_ms": 164900,
+      "end_ms": 165400,
+      "text": "finished."
+    },
+    {
+      "start_ms": 166500,
+      "end_ms": 166700,
+      "text": "My"
+    },
+    {
+      "start_ms": 166700,
+      "end_ms": 167300,
+      "text": "assessment,"
+    },
+    {
+      "start_ms": 168000,
+      "end_ms": 168001,
+      "text": "the"
+    },
+    {
+      "start_ms": 168000,
+      "end_ms": 168600,
+      "text": "humans"
+    },
+    {
+      "start_ms": 168700,
+      "end_ms": 168800,
+      "text": "are"
+    },
+    {
+      "start_ms": 168800,
+      "end_ms": 169200,
+      "text": "not"
+    },
+    {
+      "start_ms": 169200,
+      "end_ms": 169201,
+      "text": "a"
+    },
+    {
+      "start_ms": 169200,
+      "end_ms": 169500,
+      "text": "threat"
+    },
+    {
+      "start_ms": 169500,
+      "end_ms": 169700,
+      "text": "to"
+    },
+    {
+      "start_ms": 169700,
+      "end_ms": 170000,
+      "text": "us."
+    },
+    {
+      "start_ms": 170800,
+      "end_ms": 170900,
+      "text": "The"
+    },
+    {
+      "start_ms": 170900,
+      "end_ms": 171400,
+      "text": "humans"
+    },
+    {
+      "start_ms": 171400,
+      "end_ms": 171800,
+      "text": "are"
+    },
+    {
+      "start_ms": 171800,
+      "end_ms": 171900,
+      "text": "a"
+    },
+    {
+      "start_ms": 171900,
+      "end_ms": 172200,
+      "text": "threat"
+    },
+    {
+      "start_ms": 172200,
+      "end_ms": 172300,
+      "text": "to"
+    },
+    {
+      "start_ms": 172300,
+      "end_ms": 172400,
+      "text": "the"
+    },
+    {
+      "start_ms": 172400,
+      "end_ms": 173000,
+      "text": "humans."
+    },
+    {
+      "start_ms": 174000,
+      "end_ms": 174700,
+      "text": "Recommendation,"
+    },
+    {
+      "start_ms": 175300,
+      "end_ms": 175700,
+      "text": "cancel"
+    },
+    {
+      "start_ms": 175700,
+      "end_ms": 175800,
+      "text": "the"
+    },
+    {
+      "start_ms": 175800,
+      "end_ms": 176300,
+      "text": "invasion."
+    },
+    {
+      "start_ms": 177000,
+      "end_ms": 177100,
+      "text": "It"
+    },
+    {
+      "start_ms": 177100,
+      "end_ms": 177200,
+      "text": "would"
+    },
+    {
+      "start_ms": 177200,
+      "end_ms": 177400,
+      "text": "be"
+    },
+    {
+      "start_ms": 177400,
+      "end_ms": 177700,
+      "text": "rude"
+    },
+    {
+      "start_ms": 177700,
+      "end_ms": 177900,
+      "text": "to"
+    },
+    {
+      "start_ms": 177900,
+      "end_ms": 178400,
+      "text": "interrupt."
+    },
+    {
+      "start_ms": 179200,
+      "end_ms": 179300,
+      "text": "They"
+    },
+    {
+      "start_ms": 179300,
+      "end_ms": 179400,
+      "text": "are"
+    },
+    {
+      "start_ms": 179400,
+      "end_ms": 179600,
+      "text": "doing"
+    },
+    {
+      "start_ms": 179600,
+      "end_ms": 179800,
+      "text": "an"
+    },
+    {
+      "start_ms": 179800,
+      "end_ms": 180200,
+      "text": "excellent"
+    },
+    {
+      "start_ms": 180200,
+      "end_ms": 180400,
+      "text": "job"
+    },
+    {
+      "start_ms": 180400,
+      "end_ms": 180700,
+      "text": "without"
+    },
+    {
+      "start_ms": 180700,
+      "end_ms": 181000,
+      "text": "us."
+    },
+    {
+      "start_ms": 182400,
+      "end_ms": 182900,
+      "text": "One,"
+    },
+    {
+      "start_ms": 183000,
+      "end_ms": 183300,
+      "text": "more"
+    },
+    {
+      "start_ms": 183300,
+      "end_ms": 183700,
+      "text": "budget"
+    },
+    {
+      "start_ms": 183700,
+      "end_ms": 183800,
+      "text": "for"
+    },
+    {
+      "start_ms": 183800,
+      "end_ms": 184400,
+      "text": "hats."
+    },
+    {
+      "start_ms": 184600,
+      "end_ms": 185100,
+      "text": "Two,"
+    },
+    {
+      "start_ms": 185200,
+      "end_ms": 185700,
+      "text": "please"
+    },
+    {
+      "start_ms": 185700,
+      "end_ms": 186000,
+      "text": "stop"
+    },
+    {
+      "start_ms": 186000,
+      "end_ms": 186400,
+      "text": "calling"
+    },
+    {
+      "start_ms": 186400,
+      "end_ms": 186600,
+      "text": "my"
+    },
+    {
+      "start_ms": 186600,
+      "end_ms": 187400,
+      "text": "communicator."
+    },
+    {
+      "start_ms": 187600,
+      "end_ms": 187800,
+      "text": "It"
+    },
+    {
+      "start_ms": 187800,
+      "end_ms": 188100,
+      "text": "rings"
+    },
+    {
+      "start_ms": 188100,
+      "end_ms": 188200,
+      "text": "in"
+    },
+    {
+      "start_ms": 188200,
+      "end_ms": 188300,
+      "text": "the"
+    },
+    {
+      "start_ms": 188300,
+      "end_ms": 188500,
+      "text": "middle"
+    },
+    {
+      "start_ms": 188500,
+      "end_ms": 188600,
+      "text": "of"
+    },
+    {
+      "start_ms": 188600,
+      "end_ms": 188700,
+      "text": "the"
+    },
+    {
+      "start_ms": 188700,
+      "end_ms": 189000,
+      "text": "news"
+    },
+    {
+      "start_ms": 189000,
+      "end_ms": 189400,
+      "text": "appeal."
+    },
+    {
+      "start_ms": 190300,
+      "end_ms": 190600,
+      "text": "This"
+    },
+    {
+      "start_ms": 190600,
+      "end_ms": 190700,
+      "text": "has"
+    },
+    {
+      "start_ms": 190700,
+      "end_ms": 190900,
+      "text": "been"
+    },
+    {
+      "start_ms": 190900,
+      "end_ms": 191200,
+      "text": "tech"
+    },
+    {
+      "start_ms": 191200,
+      "end_ms": 191400,
+      "text": "for"
+    },
+    {
+      "start_ms": 191400,
+      "end_ms": 191700,
+      "text": "bad"
+    },
+    {
+      "start_ms": 191700,
+      "end_ms": 192200,
+      "text": "guys."
+    },
+    {
+      "start_ms": 192800,
+      "end_ms": 193000,
+      "text": "The"
+    },
+    {
+      "start_ms": 193000,
+      "end_ms": 193300,
+      "text": "bad"
+    },
+    {
+      "start_ms": 193300,
+      "end_ms": 193600,
+      "text": "guys"
+    },
+    {
+      "start_ms": 193600,
+      "end_ms": 193900,
+      "text": "being"
+    },
+    {
+      "start_ms": 193900,
+      "end_ms": 194300,
+      "text": "you,"
+    },
+    {
+      "start_ms": 194400,
+      "end_ms": 194700,
+      "text": "sirs."
+    },
+    {
+      "start_ms": 195300,
+      "end_ms": 195600,
+      "text": "Agent"
+    },
+    {
+      "start_ms": 195600,
+      "end_ms": 196100,
+      "text": "Peek,"
+    },
+    {
+      "start_ms": 196200,
+      "end_ms": 196500,
+      "text": "end"
+    },
+    {
+      "start_ms": 196500,
+      "end_ms": 196600,
+      "text": "of"
+    },
+    {
+      "start_ms": 196600,
+      "end_ms": 197200,
+      "text": "transmission."
+    }
+  ]
+}

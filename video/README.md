@@ -227,3 +227,18 @@ sentence. `acting` entries in the cue file override a time range:
 ```json
 { "from": 12.9, "to": 14.8, "emote": "smug", "gesture": "point", "react": "deadpan" }
 ```
+
+### Cue files by sentence
+
+A cue can be placed with `match`, a pattern found in a sentence of the
+transcript, instead of a time. That lets a cue file be written from the script
+before the audio exists. `paper` entries take `match` and an optional `until`,
+`acting` entries take `match`, and `chapters` gives the label shown above the
+captions from a matching sentence on. `fix` corrects caption spellings without
+touching timing, and can collapse a misheard phrase into one word:
+
+```json
+"fix": [["SS hole", "SSHole"], ["news appeal", "newspaper"]]
+```
+
+`"to": null` renders the whole episode. `cues/fr001.json` is the full example.

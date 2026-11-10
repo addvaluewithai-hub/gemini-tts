@@ -7,6 +7,21 @@ and the punchline is always the same. The bad guys do not need clever tricks,
 because the rest of us keep leaving the door open. Nothing in a script is
 operational guidance. It is commentary on public news, delivered deadpan.
 
+## Premise
+
+The host is Agent Peek, an alien spy living undercover on Earth as a newspaper
+reporter. Every episode is the field report he files to the Directorate on his
+home planet, so the news is told as observations about humans and ends with a
+recommendation. The "bad guys" in the channel name are his bosses.
+
+`fr001-2026-11-10/` is the first report in that format, with the brighter
+`Puck` voice. `ep001-2026-10-31/` is the earlier pilot from before the premise
+existed. The video is rendered from `video/` with a cue file:
+
+```bash
+cd video && node clip.cjs cues/fr001.json /path/to/fr001.wav field-report-001.mp4
+```
+
 ## Layout
 
 ```text
@@ -29,7 +44,7 @@ Cloudinary at the URL in `result.json`; the MP4 is re-creatable with `build.sh`.
 
 ## House style
 
-- Host voice: `Algenib` (gravelly, dry). Keep it for continuity between episodes.
+- Host voice: `Puck` (bright, higher-pitched) from Field Report 001 on. The pilot used `Algenib`.
 - One speaker. Use `turns` without `speaker` so each segment can carry its own `style`.
 - Sarcasm lives in `style` and in the wording, never in stage directions inside `text`.
   The TTS model will read "say this sarcastically" out loud if you put it in `text`.
