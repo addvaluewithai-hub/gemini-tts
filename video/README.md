@@ -133,8 +133,9 @@ and optional extras (ears, muzzle, brow, nose bump).
 | `block` | Square steel-blue head, heavy brow, small ember eyes |
 
 `paper` is
-`"roll"` (rolled newspaper in hand, face visible), `"over"` (peeking over the
-paper) or `"holes"` (hidden behind it, two eye holes). The full-body design
+`"pockets"` (hands in pockets, paper under the arm), `"roll"` (rolled newspaper
+in hand), `"over"` (peeking over the paper) or `"holes"` (hidden behind it, two
+eye holes). The full-body design
 adds a tan trench coat, a PRESS card in the hat band and short legs.
 
 ```bash
@@ -144,10 +145,16 @@ node characters/render-sheet.cjs characters/peek3d peek3d.html
 ### The picked face: `pear`
 
 `characters/pear.html` renders the chosen face on its own: full body, a
-close-up, a hands close-up and four states. Every hand pose is built from one spec (`HT`, `HL`, `TT`,
-`PALM_W` in `peek3d.js`: three fingers and a thumb, one thickness, one length), so
-the relaxed hand, the fist around the rolled newspaper and the fingers over
-the edge of the open paper all match. Faces with `teeth: true` get two front teeth under
+close-up, a hands close-up and four states. Hands are drawn as single silhouettes lit as one object, with three finger
+bumps separated by soft creases and a thumb lobe. Building them from separate
+finger shapes made them read as assembled parts no matter how the sizes were
+tuned. The same glove-like hand appears relaxed (`mitt`), closed round the
+rolled paper (`fist`) and over the edge of the open paper (`grip`).
+
+The default resting pose is `paper: "pockets"`: hands in the coat pockets
+with the rolled paper tucked under the arm, so the hands only appear when he
+actually holds the paper. `paper: "roll"` keeps the hands-out version.
+Faces with `teeth: true` get two front teeth under
 the lip and a full upper row when talking.
 
 ```bash

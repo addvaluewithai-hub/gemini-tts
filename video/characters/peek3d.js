@@ -2,7 +2,8 @@
 // a brim shadow across the face. Same expression object as characters.js.
 //   peek3d(expression, { face, paper, size, viewBox })
 // face:  a key of FACES (head shape, eyes, colours, features)
-// paper: "roll" (rolled paper in hand, face visible) | "over" (peeking over) | "holes" (hidden behind, two holes)
+// paper: "pockets" (hands in coat pockets, paper tucked in the belt) | "roll" (paper in hand) |
+//        "over" (peeking over the open paper) | "holes" (hidden behind it, two eye holes)
 
 const IRIS = {
   amber: { c: ["#FFF4B8", "#FFC533", "#D27A00"], rim: "#5E3200" },
@@ -142,29 +143,39 @@ function mouth(e, c) {
     <path d="M${600 + w * 1.2} ${y - rise} q10 -8 16 -2" fill="none" stroke="${c.dark}" stroke-width="6" stroke-linecap="round" opacity=".7"/>`;
 }
 
-// One hand for every pose: three fingers and a thumb, the same thickness and length everywhere.
-const HT = 29, HL = 32, TT = 27;            // finger thickness, visible finger length, thumb thickness
-const PALM_W = HT * 3 + 2, PALM_H = 72;     // the palm is exactly three fingers wide
-const cap = (x, y, w, h, rot, g) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${Math.min(w, h) / 2}" transform="rotate(${rot} ${x + w / 2} ${y + (rot && h > w ? 0 : h / 2)})" fill="url(#${G}${g})"/>`;
+// Hands are single silhouettes lit as one object: three finger bumps separated by soft creases
+// and a thumb lobe. No separate finger shapes, so every pose reads as the same glove-like hand.
+const crease = (d, lo) => `<path d="${d}" fill="none" stroke="${lo}" stroke-width="3.5" stroke-linecap="round" opacity=".5"/>`;
+const glint = (x, y, rx, ry, a = 0.26) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="#fff" opacity="${a}"/>`;
 
-// Relaxed, hanging, seen from the back. dir = +1 puts the thumb on the right.
-const hand = (cx, cy, dir, lo) => `<g filter="url(#${G}drop)">
-  ${cap(cx + dir * 33 - TT / 2, cy - 12, TT, 44, -dir * 34, "fing")}
-  ${cap(cx - HT - HT / 2, cy + 14, HT, HL + 19, 7, "fing")}${cap(cx - HT / 2, cy + 18, HT, HL + 19, 0, "fing")}${cap(cx + HT / 2, cy + 14, HT, HL + 19, -7, "fing")}
-  <rect x="${cx - PALM_W / 2}" y="${cy - PALM_H / 2}" width="${PALM_W}" height="${PALM_H}" rx="33" fill="url(#${G}ball)"/>
-  <path d="M${cx - HT / 2} ${cy + 27} v9 M${cx + HT / 2} ${cy + 27} v9" stroke="${lo}" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
-  <ellipse cx="${cx - 14}" cy="${cy - 14}" rx="14" ry="8" fill="#fff" opacity=".28"/></g>`;
+// Relaxed mitt hanging from a cuff, seen from the back. d = +1 puts the thumb on the right.
+function mitt(cx, cy, d, lo) {
+  const X = (x) => cx + x * d, Y = (y) => cy + y, P = (x, y) => `${X(x)} ${Y(y)}`;
+  const shape = `M${P(-30, -42)} C${P(-46, -34)} ${P(-50, 4)} ${P(-42, 26)} C${P(-40, 46)} ${P(-20, 52)} ${P(-15, 32)} C${P(-12, 58)} ${P(12, 58)} ${P(15, 32)} C${P(20, 52)} ${P(40, 46)} ${P(42, 26)} C${P(50, 40)} ${P(66, 36)} ${P(66, 18)} C${P(66, 0)} ${P(54, -16)} ${P(40, -22)} C${P(38, -32)} ${P(34, -40)} ${P(30, -42)} Z`;
+  return `<g filter="url(#${G}drop)"><path d="${shape}" fill="url(#${G}ball)"/>
+    ${crease(`M${P(-15, 32)} Q${P(-17, 20)} ${P(-14, 10)}`, lo)}${crease(`M${P(15, 32)} Q${P(17, 20)} ${P(14, 10)}`, lo)}${crease(`M${P(42, 26)} Q${P(36, 16)} ${P(38, 6)}`, lo)}
+    ${glint(X(-14), Y(-18), 17, 9, 0.3)}${glint(X(-29), Y(36), 6, 4)}${glint(X(-2), Y(44), 6, 4)}${glint(X(26), Y(36), 6, 4)}</g>`;
+}
 
-// Closed around a vertical tube whose centre line is x = 0; the hand comes in from the right.
-const fist = (y, lo) => `<g filter="url(#${G}drop)">
-  <rect x="20" y="${y - 4}" width="48" height="${PALM_W + 8}" rx="22" fill="url(#${G}ball)"/>
-  ${cap(4, y - 30, 54, TT, -24, "fingH")}
-  ${[0, 1, 2].map((k) => cap(-44, y + 1 + k * HT, HL + 42, HT, 0, "fingH")).join("")}
-  <path d="M-30 ${y + HT + 1} h14 M-30 ${y + HT * 2 + 1} h14" stroke="${lo}" stroke-width="3" stroke-linecap="round" opacity=".4"/></g>`;
+// A fist closed round a vertical tube whose centre line is x = 0; the hand arrives from the right.
+function fist(y, lo) {
+  const shape = `M38 ${y} C54 ${y + 2} 58 ${y + 24} 58 ${y + 46} C58 ${y + 74} 50 ${y + 93} 30 ${y + 93} L-30 ${y + 93} C-54 ${y + 93} -54 ${y + 62} -30 ${y + 62} C-54 ${y + 62} -54 ${y + 31} -30 ${y + 31} C-54 ${y + 31} -54 ${y} -30 ${y} C-6 ${y - 4} 16 ${y - 4} 38 ${y} Z`;
+  const thumb = `M46 ${y + 8} C32 ${y - 20} -8 ${y - 16} -24 ${y + 2} C-32 ${y + 14} -22 ${y + 28} -8 ${y + 24} C10 ${y + 18} 32 ${y + 24} 46 ${y + 8} Z`;
+  return `<g filter="url(#${G}drop)"><path d="${shape}" fill="url(#${G}ball)"/>
+    ${crease(`M-30 ${y + 62} Q4 ${y + 58} 36 ${y + 64}`, lo)}${crease(`M-30 ${y + 31} Q4 ${y + 28} 36 ${y + 34}`, lo)}
+    ${glint(-38, y + 46, 5, 8)}${glint(-38, y + 77, 5, 8)}</g>
+    <g filter="url(#${G}drop)"><path d="${thumb}" fill="url(#${G}ball)"/>${glint(-4, y - 2, 14, 6, 0.3)}</g>`;
+}
 
-// Holding the edge of a sheet at x: knuckles behind the paper, three fingertips over the front.
-const gripBack = (x, y, side) => `<rect x="${side < 0 ? x - 34 : x - 8}" y="${y - 6}" width="42" height="${PALM_W + 12}" rx="20" fill="url(#${G}ball)"/>`;
-const grip = (x, y, side) => `<g filter="url(#${G}drop)">${[0, 1, 2].map((k) => cap(side < 0 ? x - 14 : x - HL, y + 1 + k * HT, HL + 14, HT, side * 3, "fingH")).join("")}</g>`;
+// Fingertips over the edge of a sheet at x. d = +1 for the left edge (fingers point right).
+const gripBack = (x, y, d) => `<rect x="${d > 0 ? x - 40 : x - 6}" y="${y - 6}" width="46" height="105" rx="22" fill="url(#${G}ball)"/>`;
+function grip(x, y, d, lo) {
+  const X = (v) => x + v * d;
+  const shape = `M${X(-16)} ${y} L${X(22)} ${y} C${X(50)} ${y} ${X(50)} ${y + 31} ${X(22)} ${y + 31} C${X(50)} ${y + 31} ${X(50)} ${y + 62} ${X(22)} ${y + 62} C${X(50)} ${y + 62} ${X(50)} ${y + 93} ${X(22)} ${y + 93} L${X(-16)} ${y + 93} C${X(-26)} ${y + 93} ${X(-26)} ${y} ${X(-16)} ${y} Z`;
+  return `<g filter="url(#${G}drop)"><path d="${shape}" fill="url(#${G}ball)"/>
+    ${crease(`M${X(22)} ${y + 31} H${X(-8)}`, lo)}${crease(`M${X(22)} ${y + 62} H${X(-8)}`, lo)}
+    ${glint(X(26), y + 12, 7, 5)}${glint(X(26), y + 43, 7, 5)}${glint(X(26), y + 74, 7, 5)}</g>`;
+}
 
 function newspaper(top, holes, c) {
   const h = 900 - top, rows = (x, w, y0, n) => Array.from({ length: n }, (_, i) => `<rect x="${x}" y="${y0 + i * 22}" width="${w}" height="9" rx="2" fill="#A39A84"/>`).join("");
@@ -183,10 +194,9 @@ function newspaper(top, holes, c) {
   </g>${rims}</g>`;
 }
 
-export function peek3d(e, { face = "A", paper = "roll", size = 1200, viewBox = "0 0 1200 1200" } = {}) {
+export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox = "0 0 1200 1200" } = {}) {
   const c = FACES[face];
   const [hi, mid, lo] = c.skin;
-  const showArms = paper === "roll";
   const arm = "M436 636 C388 690 370 772 380 832 C402 846 438 846 458 832 C460 772 472 702 490 650 Z";
   const flip = (m, inner) => `<g ${m ? 'transform="translate(1200,0) scale(-1,1)"' : ""}>${inner}</g>`;
   const sleeve = (m) => flip(m, `<path d="${arm}" transform="translate(12 6)" fill="#4A3418" opacity=".5" filter="url(#${G}b6)"/><path d="${arm}" fill="url(#${G}coat${m ? "2" : ""})"/><path d="M432 652 C394 702 380 770 386 822" fill="none" stroke="#F6E0B8" stroke-width="6" stroke-linecap="round" opacity="${m ? 0.25 : 0.5}"/>`);
@@ -208,10 +218,16 @@ export function peek3d(e, { face = "A", paper = "roll", size = 1200, viewBox = "
   </g>
   <rect x="572" y="784" width="58" height="46" rx="9" fill="url(#${G}gold)"/><rect x="584" y="795" width="34" height="24" rx="4" fill="#7B5A2E"/>
   ${[[556, 688], [646, 688], [556, 738], [646, 738]].map(([x, y]) => `<circle cx="${x}" cy="${y + 3}" r="14" fill="#5B4220" opacity=".5"/><circle cx="${x}" cy="${y}" r="14" fill="url(#${G}btn)"/><ellipse cx="${x - 4}" cy="${y - 5}" rx="5" ry="3" fill="#fff" opacity=".35"/>`).join("")}`;
-  const roll = `<g transform="translate(792 752) rotate(14)">
-    <g filter="url(#${G}drop)"><rect x="-34" y="-170" width="68" height="320" rx="30" fill="url(#${G}roll)"/><ellipse cx="0" cy="-166" rx="34" ry="13" fill="#EFE7D1"/><ellipse cx="0" cy="-166" rx="20" ry="7" fill="none" stroke="#A39A84" stroke-width="3"/><ellipse cx="0" cy="-166" rx="8" ry="3" fill="#A39A84"/>
-    <text transform="rotate(-90)" x="48" y="12" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="34" letter-spacing="3" fill="#22201C">EARTH DAILY</text></g>
-    ${fist(54, lo)}</g>`;
+  const tube = `<rect x="-34" y="-170" width="68" height="320" rx="30" fill="url(#${G}roll)"/><ellipse cx="0" cy="-166" rx="34" ry="13" fill="#EFE7D1"/><ellipse cx="0" cy="-166" rx="20" ry="7" fill="none" stroke="#A39A84" stroke-width="3"/><ellipse cx="0" cy="-166" rx="8" ry="3" fill="#A39A84"/>
+    <text transform="rotate(-90)" x="48" y="12" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="34" letter-spacing="3" fill="#22201C">EARTH DAILY</text>`;
+  const roll = `<g transform="translate(792 752) rotate(14)"><g filter="url(#${G}drop)">${tube}</g>${fist(54, lo)}</g>`;
+  // Hands-in-pockets pose: the rolled paper is tucked under the arm, the sleeves vanish behind pocket flaps.
+  const tucked = `<g transform="translate(796 748) rotate(15)" filter="url(#${G}drop)">${tube}</g>`;
+  const flap = (m) => flip(m, `<path d="M384 846 C408 834 452 832 478 842" fill="none" stroke="#3D2A12" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+    <path d="M384 848 C408 838 452 836 478 846 L474 904 C450 914 410 914 390 906 Z" fill="url(#${G}coat${m ? "2" : ""})"/>
+    <path d="M384 848 C408 838 452 836 478 846" fill="none" stroke="#F0D3A2" stroke-width="3.5" stroke-linecap="round" opacity=".55"/>
+    <path d="M394 860 C414 852 448 850 468 857" fill="none" stroke="#7B5A2E" stroke-width="2.5" stroke-dasharray="7 7" opacity=".7"/>
+    <ellipse cx="430" cy="882" rx="26" ry="14" fill="#fff" opacity=".1" filter="url(#${G}b6)"/>`);
   const collar = `
   <path d="M600 664 L452 632 C400 602 370 560 364 508 C430 540 520 592 600 664 Z" fill="url(#${G}collar)"/>
   <path d="M600 664 L748 632 C800 602 830 560 836 508 C770 540 680 592 600 664 Z" fill="url(#${G}coat2)"/>
@@ -246,13 +262,14 @@ export function peek3d(e, { face = "A", paper = "roll", size = 1200, viewBox = "
     ${antenna(false)}${antenna(true)}
   </g>`;
   const low = Math.max(...c.eyes.map((q) => q.cy + q.ry));
-  const sheet = (top, holes, y) => gripBack(292, y, -1) + gripBack(908, y - 8, 1) + newspaper(top, holes, c) + grip(292, y, -1, lo) + grip(908, y - 8, 1, lo);
+  const sheet = (top, holes, y) => gripBack(292, y, 1) + gripBack(908, y - 8, -1) + newspaper(top, holes, c) + grip(292, y, 1, lo) + grip(908, y - 8, -1, lo);
   const paperLayer = paper === "over" ? sheet(low + 4, false, low + 110) : paper === "holes" ? sheet(292, true, 560) : "";
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" width="${size}" height="${size}">${defs(c)}
   <rect width="1200" height="1200" fill="url(#${G}bg)"/>
   <ellipse cx="600" cy="1080" rx="900" ry="200" fill="#8FE0FF" opacity=".22" filter="url(#${G}b28)"/>
   ${body}
-  ${showArms ? sleeve(false) + hand(419, 872, 1, lo) + cuff(false) + sleeve(true) + cuff(true) + roll : ""}
+  ${paper === "roll" ? sleeve(false) + mitt(419, 872, 1, lo) + cuff(false) + sleeve(true) + cuff(true) + roll : ""}
+  ${paper === "pockets" ? tucked + sleeve(false) + sleeve(true) + flap(false) + flap(true) : ""}
   ${collar}${head}${paperLayer}${hat}
   <rect width="1200" height="1200" filter="url(#${G}grain)" opacity=".1" style="mix-blend-mode:overlay"/>
   </svg>`;
