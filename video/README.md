@@ -109,3 +109,20 @@ and `peekPixel(mode)` in `characters.js` draw it; cards are in `characters/peek/
 ```bash
 node characters/render-sheet.cjs characters/peek peek.html
 ```
+
+## characters/peek3d.js
+
+PEEK redrawn as a soft, volumetric cartoon instead of flat outlined vector:
+radial gradients for form, no outlines, glossy eyes with iris detail and lid
+shadows, a hat-brim shadow across the face, drop shadows and a light film
+grain. Still pure SVG, still driven by the same expression object, so it can
+be animated the same way.
+
+`peek3d(expression, { paper })` returns a full 1200x1200 scene. `paper` is
+`"roll"` (rolled newspaper in hand, face visible), `"over"` (peeking over the
+paper) or `"holes"` (hidden behind it, two eye holes). The full-body design
+adds a tan trench coat, a PRESS card in the hat band and short legs.
+
+```bash
+node characters/render-sheet.cjs characters/peek3d peek3d.html
+```
