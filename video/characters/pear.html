@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}
+body{background:#000}
+.card{width:1200px;height:1200px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace;background:#0C57A0;color:#fff}
+.card svg{display:block}
+.grid{display:grid;grid-template-columns:600px 600px}
+.cell{position:relative;width:600px;height:600px;overflow:hidden}
+.tag{position:absolute;left:22px;top:18px;font-size:20px;letter-spacing:.14em;font-weight:800;background:rgba(6,34,63,.6);padding:8px 14px;border-radius:10px}
+.title{position:absolute;left:44px;bottom:36px;font-family:"Anton";font-size:120px;line-height:1;text-shadow:0 6px 24px rgba(6,34,63,.55)}
+.sub{position:absolute;right:44px;bottom:48px;font-size:22px;letter-spacing:.14em;font-weight:800;text-align:right;text-shadow:0 2px 10px rgba(6,34,63,.6)}
+</style></head><body><div id="root"></div>
+<script type="module">
+import { peek3d } from "/characters/peek3d.js";
+const E = { idle: { lid: 0.16, look: 0, mouth: "smirk" }, talk: { lid: 0.06, look: 0, mouth: "talk" }, deadpan: { lid: 0.6, look: 0.85, mouth: "flat" } };
+const root = document.getElementById("root"), F = "pear";
+const add = (id, html, cls = "card") => { const d = document.createElement("div"); d.className = cls; d.id = "card-" + id; d.innerHTML = html; root.appendChild(d); };
+add("pear-hero", `${peek3d(E.idle, { face: F })}<div class="title">PEEK</div><div class="sub">FIELD AGENT, EARTH<br>PEAR FACE</div>`);
+add("pear-closeup", `${peek3d(E.idle, { face: F, viewBox: "200 60 800 800" })}<div class="tag">CLOSE-UP</div>`);
+add("pear-hands", `${peek3d(E.idle, { face: F, viewBox: "300 560 600 600" })}<div class="tag">HANDS</div>`);
+add("pear-states", [[E.talk, "roll", "TALKING"], [E.deadpan, "roll", "DEADPAN"], [E.idle, "over", "PEEKING OVER"], [E.idle, "holes", "BEHIND THE PAPER"]]
+  .map(([e, p, l]) => `<div class="cell">${peek3d(e, { face: F, paper: p, size: 600 })}<div class="tag">${l}</div></div>`).join(""), "card grid");
+await document.fonts.load('120px "Anton"'); await document.fonts.ready; window.__ready = true;
+</script></body></html>

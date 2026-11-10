@@ -140,3 +140,16 @@ adds a tan trench coat, a PRESS card in the hat band and short legs.
 ```bash
 node characters/render-sheet.cjs characters/peek3d peek3d.html
 ```
+
+### The picked face: `pear`
+
+`characters/pear.html` renders the chosen face on its own: full body, a
+close-up, a hands close-up and four states. The hands were redrawn for it: a
+relaxed hand with a palm, three fingers and a thumb coming out of a visible
+sleeve and cuff, a fist wrapped around the rolled newspaper, and fingers over
+the edge of the open paper. Faces with `teeth: true` get two front teeth under
+the lip and a full upper row when talking.
+
+```bash
+node characters/render-sheet.cjs characters/pear pear.html
+```
