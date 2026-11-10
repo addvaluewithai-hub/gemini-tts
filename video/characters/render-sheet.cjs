@@ -1,8 +1,9 @@
-// Renders one PNG card per character plus an overview strip. Usage: node characters/render-sheet.cjs <outDir>
+// Renders one PNG per .card on a sheet page. Usage: node characters/render-sheet.cjs <outDir> [page.html]
 const http = require("http"), fs = require("fs"), path = require("path");
 const { chromium } = require("playwright");
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.resolve(process.argv[2] || path.join(__dirname, "out"));
+const PAGE = process.argv[3] || "sheet.html";
 const MIME = { ".html": "text/html", ".js": "text/javascript", ".woff2": "font/woff2", ".json": "application/json" };
 const server = http.createServer((req, res) => {
   const f = path.join(ROOT, decodeURIComponent(req.url.split("?")[0]));
@@ -14,7 +15,7 @@ server.listen(0, "127.0.0.1", async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1200, height: 1200 } });
   page.on("pageerror", (e) => { console.error("PAGE ERROR", e.message); process.exitCode = 1; });
-  await page.goto(`http://127.0.0.1:${server.address().port}/characters/sheet.html`);
+  await page.goto(`http://127.0.0.1:${server.address().port}/characters/${PAGE}`);
   await page.waitForFunction("window.__ready === true", null, { timeout: 15000 });
   const ids = await page.$$eval(".card", (els) => els.map((e) => e.id));
   for (const id of ids) { await (await page.$("#" + id)).screenshot({ path: path.join(OUT, id.replace("card-", "") + ".png") }); }

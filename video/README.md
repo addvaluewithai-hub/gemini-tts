@@ -68,3 +68,25 @@ node characters/render-sheet.cjs characters/cards   # needs Playwright + Chromiu
 
 Fonts come from the `@fontsource/*` packages in `package.json` (all OFL) plus
 JetBrains Mono from the system.
+
+## characters/concepts.html
+
+A third pass that leaves the bust-on-flat-colour template behind: nine ideas,
+each in a different drawing style and with a different notion of what the host
+is. Rendered cards are in `characters/concepts/`.
+
+| id | idea | style |
+|---|---|---|
+| `pixel` | An alien anchor at a news desk | 16-bit sprite on a CRT |
+| `neon` | The host is a sign in a window | Neon tubes on brick |
+| `unit7` | No body, one eye in orbit | Glossy glass orb with a ring |
+| `coo` | Undercover as a pigeon with a camera eye | Paper-cut shapes |
+| `signal` | Never on Earth, only a transmission | Scanline hologram with glitch |
+| `line` | A face drawn without lifting the pen | One continuous stroke |
+| `zine` | A photocopied poster taped to a wall | Xerox halftone |
+| `glyph` | The host is a text face | Pure type |
+| `bureau` | No host, the report comes from an office | Official seal |
+
+```bash
+node characters/render-sheet.cjs characters/concepts concepts.html
+```

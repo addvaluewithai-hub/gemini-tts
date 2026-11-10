@@ -1,0 +1,272 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"VT323";src:url("/node_modules/@fontsource/vt323/files/vt323-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}
+body{background:#000}
+.card{width:1200px;height:1200px;position:relative;overflow:hidden;font-family:"JetBrains Mono",monospace}
+.card svg{display:block}
+.cap{position:absolute;left:0;right:0;bottom:0;height:200px;padding:30px 56px;display:flex;align-items:center;gap:40px}
+.cap .name{font-family:"Anton";font-size:104px;line-height:1;white-space:nowrap}
+.cap .meta{display:flex;flex-direction:column;gap:10px}
+.cap .n{font-size:20px;letter-spacing:.16em;font-weight:800;opacity:.75}
+.cap .st{font-size:25px;letter-spacing:.14em;font-weight:800}
+.cap .ln{font-size:20px;line-height:1.35;font-weight:500;opacity:.85;max-width:620px}
+</style></head><body><div id="root"></div>
+<script type="module">
+const rng = (seed) => () => { seed |= 0; seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+const MONO = 'font-family="JetBrains Mono, monospace"';
+
+function pixel() {
+  const map = [
+    "........KKKKKKKK........",
+    "......KKGGGGGGGGKK......",
+    ".....KGGGGGGGGGGGGK.....",
+    "....KGGGGGGGGGGGGGGK....",
+    "...KGGGGGGGGGGGGGGGGK...",
+    "...KGGGGGGGGGGGGGGGGK...",
+    "..KGGGGGGGGGGGGGGGGGGK..",
+    "..KGEEEGGGGGGGGGGEEEGK..",
+    "..KGEEEEEGGGGGGEEEEEGK..",
+    "..KGGEWEEEEGGEEEEWEGGK..",
+    "..KGGGEEEEEGGEEEEEGGGK..",
+    "..KGGGGGEEEGGEEEGGGGGK..",
+    "...KGGGGGGGGGGGGGGGGK...",
+    "...KGGGGGGGDDGGGGGGGK...",
+    "....KGGGGGGGGGGGGGGK....",
+    ".....KGGGGDDDDGGGGK.....",
+    "......KKGGGGGGGGKK......",
+    "........KKGGGGKK........",
+    "......KKKKHTTHKKKK......",
+    "....KKSSSSHTTHSSSSKK....",
+    "...KSSSSSSSTTSSSSSSSK...",
+    "..KSSSSSSSSTTSSSSSSSSK..",
+    "..KSSSSSSSSSTSSSSSSSSK..",
+    "..KSSSSSSSSSSSSSSSSSSK..",
+  ];
+  const pal = { K: "#05050C", G: "#5CE1C6", D: "#2FA892", E: "#05050C", W: "#FFFFFF", S: "#2B2B4A", T: "#E5333F", H: "#F2EFE8" };
+  const P = 30, ox = 240, oy = 120;
+  let s = "";
+  map.forEach((row, y) => { if (row.length !== 24) throw new Error("pixel row " + y + " is " + row.length); [...row].forEach((c, x) => { if (c !== ".") s += `<rect x="${ox + x * P}" y="${oy + y * P}" width="${P + 0.5}" height="${P + 0.5}" fill="${pal[c]}"/>`; }); });
+  const earth = ["...BBBB...", "..BBGGBB..", ".BBGGGBBB.", "BBBGGBBBBB", "BBBBBBGGBB", "BBGBBBGGBB", "BBGGBBBBBB", ".BBGBBBBB.", "..BBBBBB..", "...BBBB..."];
+  let e = ""; earth.forEach((row, y) => [...row].forEach((c, x) => { if (c !== ".") e += `<rect x="${96 + x * 16}" y="${110 + y * 16}" width="16.5" height="16.5" fill="${c === "B" ? "#2B6BFF" : "#3DDC84"}"/>`; }));
+  const r = rng(7); let stars = "";
+  for (let i = 0; i < 70; i++) { const x = Math.floor(r() * 150) * 8, y = Math.floor(r() * 100) * 8; stars += `<rect x="${x}" y="${y}" width="6" height="6" fill="#fff" opacity="${0.25 + r() * 0.6}"/>`; }
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000" shape-rendering="crispEdges">
+    <defs><pattern id="px-scan" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="3" fill="#000" opacity=".22"/></pattern></defs>
+    <rect width="1200" height="1000" fill="#0B1026"/>${stars}${e}
+    <rect x="884" y="120" width="230" height="96" fill="#1A0508"/><rect x="884" y="120" width="230" height="96" fill="none" stroke="#E5333F" stroke-width="8"/>
+    <text x="999" y="190" text-anchor="middle" font-family="VT323, monospace" font-size="78" fill="#FF4D5A">ON AIR</text>
+    ${s}
+    <rect x="90" y="840" width="1020" height="160" fill="#3B2A5C"/><rect x="90" y="840" width="1020" height="14" fill="#5A4490"/>
+    <text x="600" y="946" text-anchor="middle" font-family="VT323, monospace" font-size="92" fill="#FFD23F" letter-spacing="6">EARTH REPORT 001</text>
+    <rect width="1200" height="1000" fill="url(#px-scan)"/></svg>`;
+}
+
+function neon() {
+  const tube = (d, c, w = 11) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${w * 3.4}" stroke-linecap="round" stroke-linejoin="round" opacity=".42" filter="url(#nb)"/><path d="${d}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" fill="none" stroke="#fff" stroke-width="${w * 0.3}" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>`;
+  const M = "#FF2D95", C = "#2DE2E6", Y = "#FFE66D", R = "#FF4D5A";
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <defs><filter id="nb" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="ng" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="brick" width="150" height="76" patternUnits="userSpaceOnUse"><path d="M0 0 H150 M0 38 H150 M0 76 H150 M75 0 V38 M0 38 V76 M150 38 V76" stroke="#1B1824" stroke-width="4" fill="none"/></pattern>
+    <radialGradient id="nv" cx=".5" cy=".5" r=".7"><stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient></defs>
+    <rect width="1200" height="1000" fill="#0D0B14"/><rect width="1200" height="1000" fill="url(#brick)"/>
+    <ellipse cx="600" cy="480" rx="460" ry="420" fill="${M}" opacity=".07"/>
+    <path d="M430 0 V160 M770 0 V160 M986 0 V112" stroke="#23202E" stroke-width="5"/>
+    ${tube("M600 150 C390 150 300 330 330 500 C350 640 500 760 600 780 C700 760 850 640 870 500 C900 330 810 150 600 150 Z", M)}
+    ${tube("M400 470 C440 400 540 420 560 500 C520 560 430 550 400 470 Z", C)}${tube("M800 470 C760 400 660 420 640 500 C680 560 770 550 800 470 Z", C)}
+    ${tube("M556 664 Q604 694 654 652", Y, 9)}
+    ${tube("M540 800 C520 872 400 892 250 932", M, 9)}${tube("M660 800 C680 872 800 892 950 932", M, 9)}
+    ${tube("M876 112 H1096 Q1112 112 1112 128 V208 Q1112 224 1096 224 H876 Q860 224 860 208 V128 Q860 112 876 112 Z", R, 7)}
+    <text x="986" y="198" text-anchor="middle" font-family="Anton, sans-serif" font-size="78" letter-spacing="4" fill="#FFD7DA" filter="url(#ng)" stroke="${R}" stroke-width="3">ON AIR</text>
+    <text x="72" y="190" font-family="Anton, sans-serif" font-size="58" letter-spacing="3" fill="#FFF8D6" filter="url(#ng)" stroke="${Y}" stroke-width="2.5">LIVE FROM</text>
+    <text x="70" y="296" font-family="Anton, sans-serif" font-size="104" letter-spacing="3" fill="#D9FDFF" filter="url(#ng)" stroke="${C}" stroke-width="3">EARTH</text>
+    <rect width="1200" height="1000" fill="url(#nv)"/></svg>`;
+}
+
+function orb() {
+  const r = rng(11); let stars = "";
+  for (let i = 0; i < 110; i++) stars += `<circle cx="${r() * 1200}" cy="${r() * 1000}" r="${0.6 + r() * 1.8}" fill="#fff" opacity="${0.15 + r() * 0.6}"/>`;
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <defs><radialGradient id="ob-bg" cx=".5" cy=".46" r=".75"><stop offset="0" stop-color="#1C2346"/><stop offset="1" stop-color="#04050A"/></radialGradient>
+    <radialGradient id="ob-s" cx=".36" cy=".28" r=".8"><stop offset="0" stop-color="#5A628A"/><stop offset=".45" stop-color="#171B30"/><stop offset="1" stop-color="#030408"/></radialGradient>
+    <radialGradient id="ob-i"><stop offset="0" stop-color="#FF9F1C" stop-opacity=".75"/><stop offset="1" stop-color="#FF9F1C" stop-opacity="0"/></radialGradient>
+    <clipPath id="ob-f"><rect x="100" y="470" width="1000" height="220"/></clipPath><filter id="ob-b"><feGaussianBlur stdDeviation="22"/></filter></defs>
+    <rect width="1200" height="1000" fill="url(#ob-bg)"/>${stars}
+    <ellipse cx="600" cy="850" rx="260" ry="30" fill="#000" opacity=".55" filter="url(#ob-b)"/>
+    <g transform="rotate(-14 600 470)"><ellipse cx="600" cy="470" rx="440" ry="112" fill="none" stroke="#8FA0FF" stroke-opacity=".35" stroke-width="5"/></g>
+    <circle cx="600" cy="470" r="250" fill="url(#ob-s)"/>
+    <circle cx="600" cy="470" r="250" fill="none" stroke="#8FA0FF" stroke-opacity=".3" stroke-width="2"/>
+    <ellipse cx="505" cy="318" rx="92" ry="44" transform="rotate(-32 505 318)" fill="#fff" opacity=".16"/>
+    <circle cx="600" cy="470" r="170" fill="url(#ob-i)"/>
+    <circle cx="600" cy="470" r="88" fill="none" stroke="#FFB347" stroke-width="16"/>
+    <circle cx="600" cy="470" r="60" fill="none" stroke="#FF6A1A" stroke-width="5"/>
+    <circle cx="600" cy="470" r="41" fill="#040407"/><circle cx="600" cy="470" r="9" fill="#FFF3D6"/><circle cx="582" cy="452" r="6" fill="#fff" opacity=".85"/>
+    <g transform="rotate(-14 600 470)"><ellipse cx="600" cy="470" rx="440" ry="112" fill="none" stroke="#E8ECFF" stroke-width="6" clip-path="url(#ob-f)"/><ellipse cx="600" cy="470" rx="404" ry="98" fill="none" stroke="#E8ECFF" stroke-opacity=".5" stroke-width="2.5" clip-path="url(#ob-f)"/></g>
+    <ellipse cx="600" cy="800" rx="120" ry="15" fill="none" stroke="#FFB347" stroke-width="4" opacity=".9"/><ellipse cx="600" cy="812" rx="196" ry="24" fill="none" stroke="#FFB347" stroke-width="3.5" opacity=".5"/><ellipse cx="600" cy="826" rx="276" ry="34" fill="none" stroke="#FFB347" stroke-width="3" opacity=".22"/>
+    <text x="64" y="84" ${MONO} font-weight="700" font-size="22" letter-spacing="4" fill="#8FA0FF">UNIT 7 · GEOSTATIONARY · LISTENING</text>
+    <text x="1136" y="84" text-anchor="end" ${MONO} font-weight="700" font-size="22" letter-spacing="4" fill="#FFB347">TARGET: SOL-3</text></svg>`;
+}
+
+function pigeon() {
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <defs><linearGradient id="pg-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFD9E8"/><stop offset="1" stop-color="#F1DFC6"/></linearGradient>
+    <linearGradient id="pg-n" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2FA57E"/><stop offset="1" stop-color="#7A4FBF"/></linearGradient>
+    <filter id="pg-s" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1B2A3A" flood-opacity=".28"/></filter>
+    <filter id="pg-g"><feGaussianBlur stdDeviation="8"/></filter></defs>
+    <rect width="1200" height="1000" fill="url(#pg-bg)"/>
+    <circle cx="960" cy="230" r="120" fill="#FFF4DA" opacity=".8"/>
+    <path d="M0 1000 V900 H120 V850 H260 V910 H380 V830 H470 V880 H640 V920 H800 V860 H930 V900 H1060 V840 H1200 V1000 Z" fill="#33556B" opacity=".55"/>
+    <path d="M-20 800 Q600 838 1220 800" fill="none" stroke="#1B1B1F" stroke-width="7"/>
+    <path d="M598 745 L590 806 M684 748 L694 806" stroke="#FF7A1A" stroke-width="13" stroke-linecap="round"/>
+    <path d="M566 812 H616 M670 812 H722" stroke="#FF7A1A" stroke-width="11" stroke-linecap="round"/>
+    <g filter="url(#pg-s)">
+      <path d="M840 610 L1050 700 L1018 742 L968 730 L936 772 L820 700 Z" fill="#4E5D6C"/>
+      <ellipse cx="660" cy="590" rx="262" ry="172" transform="rotate(14 660 590)" fill="#8496A6"/>
+      <ellipse cx="610" cy="640" rx="180" ry="96" transform="rotate(14 610 640)" fill="#B3C1CC" opacity=".7"/>
+      <path d="M430 320 C400 420 430 520 520 610 L650 480 C610 420 590 360 580 290 Z" fill="url(#pg-n)"/>
+      <circle cx="500" cy="300" r="102" fill="#5E6F7F"/>
+      <path d="M410 286 L322 316 L414 340 Z" fill="#2B2B33"/><ellipse cx="420" cy="290" rx="24" ry="15" fill="#F2EFE8"/>
+      <path d="M560 520 C640 436 846 448 906 562 C864 664 662 694 560 624 Z" fill="#5E6F7F"/>
+      <path d="M706 470 L742 662 M796 482 L824 652" stroke="#2B2B33" stroke-width="28" stroke-linecap="round" opacity=".8"/>
+    </g>
+    <path d="M520 204 L548 122" stroke="#1B1B1F" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="550" cy="116" r="26" fill="#E5333F" opacity=".5" filter="url(#pg-g)"/><circle cx="550" cy="116" r="11" fill="#E5333F"/>
+    <circle cx="500" cy="282" r="40" fill="#C9CED6"/><circle cx="500" cy="282" r="34" fill="#1B1B1F"/><circle cx="500" cy="282" r="23" fill="#E5333F"/><circle cx="500" cy="282" r="10" fill="#1B1B1F"/><circle cx="491" cy="272" r="5" fill="#fff"/>
+    <rect x="566" y="212" width="124" height="46" rx="8" fill="#1B1B1F"/><circle cx="590" cy="235" r="9" fill="#E5333F"/>
+    <text x="640" y="246" text-anchor="middle" ${MONO} font-weight="800" font-size="28" fill="#fff">REC</text>
+    <g transform="rotate(-6 250 900)"><rect x="60" y="850" width="400" height="92" rx="8" fill="#fff" stroke="#E5333F" stroke-width="7"/>
+    <text x="260" y="916" text-anchor="middle" font-family="Anton, sans-serif" font-size="58" letter-spacing="2" fill="#E5333F">100% REAL BIRD</text></g></svg>`;
+}
+
+function hologram() {
+  const HEAD = "M600 170 C440 170 380 300 400 420 C415 520 520 600 600 612 C680 600 785 520 800 420 C820 300 760 170 600 170 Z";
+  const BODY = "M560 600 L560 664 C460 684 360 724 320 864 L880 864 C840 724 740 684 640 664 L640 600 Z";
+  const layer = (pat) => `<g clip-path="url(#hg-c)"><rect x="250" y="150" width="700" height="730" fill="url(#${pat})"/></g>`;
+  const eyes = `<path d="M452 420 C480 368 552 380 566 436 C536 480 472 472 452 420 Z M748 420 C720 368 648 380 634 436 C664 480 728 472 748 420 Z" fill="#020B0E" stroke="#9FF4F0" stroke-width="3"/><path d="M572 540 Q602 556 632 536" fill="none" stroke="#D9FDFF" stroke-width="5" stroke-linecap="round"/>`;
+  const main = `${layer("hg-p")}<path d="${HEAD} ${BODY}" fill="none" stroke="#9FF4F0" stroke-width="3" opacity=".85"/>${eyes}`;
+  const bars = [14, 30, 22, 44, 18, 36, 26, 50, 20, 32, 12, 40, 24].map((h, i) => `<rect x="${910 + i * 16}" y="${800 - h}" width="8" height="${h}" fill="#2DE2E6"/>`).join("");
+  const tx = (x, y, t, a = "start", c = "#2DE2E6") => `<text x="${x}" y="${y}" text-anchor="${a}" ${MONO} font-weight="700" font-size="21" letter-spacing="3" fill="${c}">${t}</text>`;
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <defs><clipPath id="hg-c"><path d="${HEAD}"/><path d="${BODY}"/></clipPath>
+    <pattern id="hg-p" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="5" fill="#2DE2E6"/></pattern>
+    <pattern id="hg-r" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="5" fill="#FF2D55"/></pattern>
+    <pattern id="hg-b" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="5" fill="#3D5AFE"/></pattern>
+    <linearGradient id="hg-cone" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2DE2E6" stop-opacity=".3"/><stop offset="1" stop-color="#2DE2E6" stop-opacity="0"/></linearGradient>
+    <clipPath id="hg-a"><rect x="0" y="0" width="1200" height="330"/><rect x="0" y="372" width="1200" height="330"/><rect x="0" y="730" width="1200" height="270"/></clipPath>
+    <clipPath id="hg-g1"><rect x="0" y="330" width="1200" height="42"/></clipPath><clipPath id="hg-g2"><rect x="0" y="702" width="1200" height="28"/></clipPath>
+    <filter id="hg-bl"><feGaussianBlur stdDeviation="10"/></filter>
+    <pattern id="hg-scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1.5" fill="#000" opacity=".35"/></pattern></defs>
+    <rect width="1200" height="1000" fill="#020B0E"/>
+    <path d="M0 960 H1200 M0 920 H1200 M0 892 H1200 M600 880 L60 1000 M600 880 L330 1000 M600 880 L600 1000 M600 880 L870 1000 M600 880 L1140 1000" stroke="#0E3A40" stroke-width="2"/>
+    <path d="M430 900 H770 L980 130 H220 Z" fill="url(#hg-cone)"/>
+    <g style="mix-blend-mode:screen" opacity=".7" transform="translate(-7 0)">${layer("hg-r")}</g>
+    <g style="mix-blend-mode:screen" opacity=".7" transform="translate(7 0)">${layer("hg-b")}</g>
+    <g clip-path="url(#hg-a)">${main}</g>
+    <g clip-path="url(#hg-g1)"><g transform="translate(34 0)">${main}</g></g>
+    <g clip-path="url(#hg-g2)"><g transform="translate(-26 0)">${main}</g></g>
+    <ellipse cx="600" cy="908" rx="230" ry="26" fill="#2DE2E6" opacity=".5" filter="url(#hg-bl)"/>
+    <ellipse cx="600" cy="910" rx="220" ry="34" fill="#06242A" stroke="#2DE2E6" stroke-width="4"/><ellipse cx="600" cy="904" rx="150" ry="18" fill="#9FF4F0" opacity=".85"/>
+    ${tx(60, 90, "TRANSMISSION 001")}${tx(60, 124, "ORIGIN: SOL-3 / EARTH")}${tx(60, 158, "DEST: HOME")}
+    ${tx(1140, 90, "SUBJECT: HUMANS", "end")}${tx(1140, 124, "STATUS: STILL NOT PATCHING", "end", "#FF2D55")}
+    ${tx(906, 836, "SIGNAL 71%")}${bars}
+    <rect width="1200" height="1000" fill="url(#hg-scan)"/></svg>`;
+}
+
+function oneline() {
+  const d = "M140 930 C300 915 430 880 520 815 C545 790 548 750 540 712 C400 650 310 520 322 370 C334 200 480 110 610 110 C760 110 892 210 892 372 C892 500 810 620 690 690 C650 712 610 716 580 700 C560 640 575 560 575 470 C545 410 450 380 415 440 C430 520 540 525 575 470 C590 452 610 452 625 470 C655 410 750 380 785 440 C770 520 660 525 625 470 C615 520 606 556 612 588 C590 606 572 628 596 638 C626 648 660 640 678 620 C700 664 692 740 688 792 C770 850 900 905 1060 930";
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <rect width="1200" height="1000" fill="#F3EDE0"/>
+    <circle cx="930" cy="190" r="34" fill="#FF6A1A"/><ellipse cx="930" cy="190" rx="68" ry="15" transform="rotate(-18 930 190)" fill="none" stroke="#1B1B1F" stroke-width="5"/>
+    <path d="${d}" fill="none" stroke="#1B1B1F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="64" y="90" ${MONO} font-weight="700" font-size="21" letter-spacing="4" fill="#1B1B1F">FIG. 01 — FIELD AGENT, UNDERCOVER</text>
+    <text x="1136" y="962" text-anchor="end" ${MONO} font-weight="700" font-size="21" letter-spacing="4" fill="#1B1B1F">ONE LINE / NO LIFT</text></svg>`;
+}
+
+function halftone() {
+  const HEAD = "M600 100 C400 100 320 270 345 430 C365 560 500 670 600 686 C700 670 835 560 855 430 C880 270 800 100 600 100 Z";
+  const BODY = "M540 680 L540 752 C420 782 300 822 250 1000 L950 1000 C900 822 780 782 660 752 L660 680 Z";
+  let dots = "";
+  for (let i = -30; i < 60; i++) for (let j = -30; j < 60; j++) {
+    const x = 600 + (i - j) * 15, y = 380 + (i + j) * 15;
+    if (x < 300 || x > 900 || y < 80 || y > 720) continue;
+    const dd = Math.hypot(x - 440, y - 250), rr = 12.5 * (1 - dd / 430);
+    if (rr > 1) dots += `<circle cx="${x}" cy="${y}" r="${rr.toFixed(1)}"/>`;
+  }
+  const r = rng(5); let top = "", bot = "";
+  for (let x = 110; x <= 1090; x += 35) { top += `L${x} ${770 + r() * 14} `; bot = `L${x} ${900 - r() * 14} ` + bot; }
+  let bc = "", bx = 70; const br = rng(9);
+  while (bx < 300) { const w = 3 + Math.floor(br() * 3) * 3; bc += `<rect x="${bx}" y="80" width="${w}" height="70" fill="#111"/>`; bx += w + 4 + Math.floor(br() * 2) * 4; }
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <defs><clipPath id="ht-c"><path d="${HEAD}"/></clipPath></defs>
+    <rect width="1200" height="1000" fill="#F5E642"/>
+    ${bc}<text x="70" y="176" ${MONO} font-weight="800" font-size="18" letter-spacing="3" fill="#111">0 01 EARTH 2026</text>
+    <g fill="none" stroke="#111" stroke-width="4"><circle cx="1090" cy="116" r="30"/><path d="M1044 116 H1136 M1090 70 V162"/></g>
+    <path d="${HEAD} ${BODY}" fill="#111"/>
+    <g clip-path="url(#ht-c)" fill="#F5E642">${dots}</g>
+    <path d="M410 430 C450 356 556 372 578 456 C536 520 440 508 410 430 Z M790 430 C750 356 644 372 622 456 C664 520 760 508 790 430 Z" fill="#FF2D95"/>
+    <path d="M440 412 l44 -14 M760 412 l-44 -14" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    <g transform="rotate(-5 600 836)">
+      <path d="M110 776 ${top} L1090 900 ${bot} Z" fill="#fff"/>
+      <text x="600" y="876" text-anchor="middle" font-family="Anton, sans-serif" font-size="108" letter-spacing="5" fill="#111">EARTH REPORT</text>
+      <rect x="84" y="748" width="110" height="46" fill="#E9DFA8" opacity=".78" transform="rotate(-18 139 771)"/><rect x="1006" y="880" width="110" height="46" fill="#E9DFA8" opacity=".78" transform="rotate(-14 1061 903)"/>
+    </g>
+    <g transform="rotate(4 880 964)"><rect x="700" y="938" width="390" height="50" fill="#111"/><text x="895" y="973" text-anchor="middle" ${MONO} font-weight="800" font-size="24" letter-spacing="3" fill="#F5E642">FILED FROM THE FIELD</text></g>
+    <g transform="rotate(12 1010 330)"><circle cx="1010" cy="330" r="76" fill="#FF2D95"/><text x="1010" y="322" text-anchor="middle" font-family="Anton, sans-serif" font-size="40" fill="#fff">100%</text><text x="1010" y="364" text-anchor="middle" font-family="Anton, sans-serif" font-size="34" fill="#fff">TRUE*</text></g></svg>`;
+}
+
+function glyph() {
+  const box = (x, face, label) => `<rect x="${x}" y="676" width="320" height="200" rx="18" fill="#E4DFD3"/><text x="${x + 160}" y="796" text-anchor="middle" ${MONO} font-weight="800" font-size="62" fill="#17171B" xml:space="preserve">${face}</text><text x="${x + 22}" y="712" ${MONO} font-weight="800" font-size="18" letter-spacing="3" fill="#6B6457">${label}</text>`;
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <rect width="1200" height="1000" fill="#F2EFE8"/>
+    <text x="64" y="90" ${MONO} font-weight="700" font-size="21" letter-spacing="4" fill="#6B6457">FIELD AGENT // UNDERCOVER AS A TEXT MESSAGE</text>
+    <circle cx="1112" cy="82" r="13" fill="#E5333F"/>
+    <text x="570" y="460" text-anchor="middle" ${MONO} font-weight="800" font-size="236" fill="#17171B" xml:space="preserve">{ ◉_◉ }</text>
+    <rect x="1070" y="290" width="54" height="196" fill="#E5333F"/>
+    ${box(96, "{ ◉_◉ }", "IDLE")}${box(440, "{ ◉o◉ }", "TALKING")}${box(784, "{ ¬_¬ }", "DEADPAN")}</svg>`;
+}
+
+function seal() {
+  const G = "#F4B63F", B = "#F2EFE8";
+  let rays = "";
+  for (let a = -70; a <= 70; a += 14) { const t = (a - 90) * Math.PI / 180; rays += `M${600 + Math.cos(t) * 150} ${470 + Math.sin(t) * 150} L${600 + Math.cos(t) * (a % 28 === 0 ? 232 : 208)} ${470 + Math.sin(t) * (a % 28 === 0 ? 232 : 208)} `; }
+  return `<svg viewBox="0 0 1200 1000" width="1200" height="1000">
+    <defs><path id="sl-t" d="M600,490 m-338,0 a338,338 0 1,1 676,0 a338,338 0 1,1 -676,0"/><clipPath id="sl-e"><path d="M370 500 Q600 330 830 500 Q600 670 370 500 Z"/></clipPath></defs>
+    <rect width="1200" height="1000" fill="#101B3A"/>
+    <g fill="none" stroke="${G}"><circle cx="600" cy="490" r="420" stroke-width="12"/><circle cx="600" cy="490" r="396" stroke-width="3"/><circle cx="600" cy="490" r="296" stroke-width="5"/></g>
+    <text ${MONO} font-weight="800" font-size="39" letter-spacing="7" fill="${G}"><textPath href="#sl-t" startOffset="1%">GALACTIC BUREAU OF EARTH OBSERVATION ★ FIELD REPORT DIVISION ★</textPath></text>
+    <path d="${rays}" stroke="${G}" stroke-width="6" stroke-linecap="round"/>
+    <path d="M370 500 Q600 330 830 500 Q600 670 370 500 Z" fill="#0B1430" stroke="${B}" stroke-width="9" stroke-linejoin="round"/>
+    <g clip-path="url(#sl-e)"><circle cx="600" cy="500" r="96" fill="#2B4BFF" stroke="${B}" stroke-width="6"/>
+      <g fill="none" stroke="${B}" stroke-width="3.5" opacity=".9"><ellipse cx="600" cy="500" rx="46" ry="96"/><path d="M504 500 H696 M516 452 H684 M516 548 H684"/></g>
+      <circle cx="600" cy="500" r="30" fill="#0B1430" stroke="${G}" stroke-width="6"/><circle cx="590" cy="490" r="8" fill="${B}"/></g>
+    <path d="M366 660 L396 686 L366 712 H834 L804 686 L834 660 Z" fill="${G}"/>
+    <text x="600" y="694" text-anchor="middle" ${MONO} font-weight="800" font-size="21" letter-spacing="1.5" fill="#101B3A">NOT ANGRY. JUST DISAPPOINTED.</text>
+    <text x="600" y="752" text-anchor="middle" ${MONO} font-weight="800" font-size="20" letter-spacing="7" fill="${B}">EST. LAST TUESDAY</text></svg>`;
+}
+
+const concepts = [
+  { id: "pixel", name: "PIXEL", st: "16-BIT SPRITE", ln: "An anchor from a console that never existed. Blinks in two frames, talks in three.", bg: "#0B1026", fg: "#FFD23F", art: pixel },
+  { id: "neon", name: "NEON", st: "A SIGN IN A WINDOW", ln: "The host is a neon sign. The tubes flicker when it talks and buzz when it judges.", bg: "#0D0B14", fg: "#FF2D95", art: neon },
+  { id: "unit7", name: "UNIT 7", st: "GLASS ORB IN ORBIT", ln: "No body at all. One eye in orbit, watching the whole planet at once.", bg: "#04050A", fg: "#FFB347", art: orb },
+  { id: "coo", name: "COO", st: "PAPER-CUT PIGEON", ln: "Birds are not real. This one sits on your wire and files a nightly report.", bg: "#F1DFC6", fg: "#1B2A3A", art: pigeon },
+  { id: "signal", name: "SIGNAL", st: "HOLOGRAM", ln: "Never on Earth at all. Only a transmission, with terrible reception.", bg: "#020B0E", fg: "#2DE2E6", art: hologram },
+  { id: "line", name: "LINE", st: "ONE CONTINUOUS STROKE", ln: "Drawn without lifting the pen. Elegant, cold, and quietly judging you.", bg: "#F3EDE0", fg: "#1B1B1F", art: oneline },
+  { id: "zine", name: "ZINE", st: "XEROX HALFTONE", ln: "A photocopied poster taped to a wall. A punk bulletin from above.", bg: "#F5E642", fg: "#111111", art: halftone },
+  { id: "glyph", name: "{ ◉_◉ }", st: "PURE TYPE", ln: "The host is a text face. Nearly free to animate, impossible to forget.", bg: "#F2EFE8", fg: "#17171B", art: glyph },
+  { id: "bureau", name: "THE BUREAU", st: "OFFICIAL SEAL", ln: "No host. The report comes from an office: stamped, filed and disappointed.", bg: "#101B3A", fg: "#F4B63F", art: seal },
+];
+const root = document.getElementById("root");
+concepts.forEach((c, i) => {
+  const d = document.createElement("div");
+  d.className = "card"; d.id = "card-" + c.id; d.style.background = c.bg; d.style.color = c.fg;
+  const mono = c.id === "glyph";
+  d.innerHTML = `${c.art()}<div class="cap"><div class="name" style="${mono ? 'font-family:JetBrains Mono,monospace;font-weight:800;font-size:76px' : ''}">${c.name}</div>
+    <div class="meta"><div class="n">IDEA ${i + 1} / ${concepts.length}</div><div class="st">${c.st}</div><div class="ln">${c.ln}</div></div></div>`;
+  root.appendChild(d);
+});
+await document.fonts.load('104px "Anton"'); await document.fonts.load('78px "VT323"'); await document.fonts.load('800 236px "JetBrains Mono"'); await document.fonts.ready;
+// Re-render once fonts are in so SVG text metrics settle.
+window.__ready = true;
+</script></body></html>
