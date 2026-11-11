@@ -1,5 +1,5 @@
 {
- "title": "اشرحها لكائن فضائي: العملات المشفرة 1",
+ "title": "تقرير الأرض: العملات المشفرة 1",
  "recorded_for": "2026-11-11",
  "layout": "explain",
  "date": "",
@@ -8,17 +8,21 @@
  "voice": "Puck",
  "face": "pear",
  "notes": [
-  "Explain It to an Alien: Cryptocurrency, part 1 of 3. Why humans invented money without a bank: what money is, the bank as a ledger, the double-spend problem, 2008, the Bitcoin paper, the first block, the pizza, and Satoshi's exit.",
+  "Earth Report field file: Cryptocurrency, part 1 of 3. The host is a spy reporting to his commanders on something he has observed among humans; the first line says what the report is about. Why humans invented money without a bank: what money is, the bank as a ledger, the double-spend problem, 2008, the Bitcoin paper, the first block, the pizza, and Satoshi's exit.",
   "",
   "The picture carries the lesson: motion-graphics boards drawn in code (boards.js). The host appears in a few studio shots and leans in from the side now and then.",
   "",
   "Facts are historical and stated from general knowledge, not from pages captured for this episode: gold convertibility of the dollar ended in 1971; DigiCash (David Chaum) went bankrupt in 1998; Lehman Brothers, founded 1850, failed on 15 September 2008; the US rescue programme was 700 billion dollars; the Bitcoin paper is nine pages, dated 31 October 2008; the first block is dated 3 January 2009 and carries The Times headline; the first transfer was 10 BTC to Hal Finney on 12 January 2009; the first recorded rate was about 1,309 BTC to the dollar; the pizza purchase was 10,000 BTC on 22 May 2010, about 41 dollars then; Satoshi's last known email is from April 2011; the estimate of about one million untouched coins is researchers' estimate, not a certainty. No current prices are quoted. It says plainly that it is not investment advice."
  ],
- "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
  "settings": {
   "lead": 0.3,
   "tail": 13,
-  "tempo": 1.0,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.3,
+   "keep": 0.2
+  },
   "captionChunk": 4,
   "bpm": 100,
   "musicGain": 0.45,
@@ -27,16 +31,16 @@
  },
  "ending": {
   "card": {
-   "title": "الحلقة الجاية",
+   "title": "التقرير الجاي",
    "next": "البلوكتشين بيشتغل إزاي؟ · الجزء 2 من 3",
    "note": "اشترك علشان باقي التقارير توصل"
   }
  },
  "brand": {
-  "a": "اشرحها لكائن",
-  "b": "فضائي",
+  "a": "تقرير",
+  "b": "الأرض",
   "c": "",
-  "tagline": "تقرير الأرض"
+  "tagline": "ملف ميداني: العملات المشفرة"
  },
  "boards": {
   "pizza": {
@@ -49,9 +53,9 @@
   },
   "title": {
    "kind": "titlecard",
-   "kicker": "اشرحها لكائن فضائي",
+   "kicker": "تقرير الأرض · ملف ميداني",
    "title": "العملات المشفرة",
-   "sub": "الجزء 1 من 3 · ليه البشر اخترعوا فلوس من غير بنك؟"
+   "sub": "الجزء 1 من 3 · فلوس من غير بنك"
   },
   "evo": {
    "kind": "steps",
@@ -241,41 +245,52 @@
  },
  "scenes": [
   {
-   "id": "cold",
+   "id": "intro",
    "story": null,
-   "style": "Cold open. Starts mid-story with a ridiculous fact, flat and fast.",
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a ridiculous fact.",
    "beats": [
     {
-     "say": "في سنة ألفين وعشرة، واحد من البشر دفع عشرة آلاف بيتكوين..",
+     "say": "يا فندم، تقرير ميداني جديد من كوكب الأرض.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: العملات المشفرة. فلوس البشر اخترعوها من غير بنك، ومن غير ورق.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "هقول لكم هي إيه، طلعت منين، ومين اللي عملها. <short pause> وإزاي واحد منهم دفع فيها تمن اتنين بيتزا.. مئات الملايين من الدولارات.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "سنة ألفين وعشرة: عشرة آلاف بيتكوين..",
      "show": "board",
      "board": "pizza"
     },
     {
-     "say": "علشان يشتري اتنين بيتزا.",
+     "say": "قصاد اتنين بيتزا.",
      "show": "board",
      "board": "pizza"
     },
     {
-     "say": "بأسعار السنين الأخيرة، المبلغ ده يعدّي مئات الملايين من الدولارات.",
+     "say": "بأسعار السنين الأخيرة، المبلغ ده يعدّي مئات الملايين.",
      "show": "board",
      "board": "pizza",
      "host": "right"
     },
     {
-     "say": "يا فندم، دي أغلى وجبة في تاريخ الكوكب. <short pause> ومن غير مشروب.",
+     "say": "أغلى وجبة في تاريخ الكوكب. <short pause> ومن غير مشروب.",
      "shot": "close",
      "emote": "deadpan"
     },
     {
-     "say": "وعلشان تفهموا إزاي ده حصل، لازم نبدأ من سؤال أبسط خالص: الفلوس نفسها.. إيه؟",
+     "say": "بس علشان القيادة تفهم ده، لازم أبدأ من أول حاجة رصدتها هنا: الفلوس نفسها.",
      "shot": "host",
      "emote": "skeptical",
      "gesture": "present"
-    },
-    {
-     "say": "اشرحها لكائن فضائي. العملات المشفرة. الجزء الأول.",
-     "show": "board",
-     "board": "title"
     }
    ]
   },
@@ -288,7 +303,7 @@
    "style": "Patient teacher explaining to people who have never seen money, with dry asides.",
    "beats": [
     {
-     "say": "زمان، البشر كانوا بيبدّلوا حاجة بحاجة. سمكة قصاد رغيف.",
+     "say": "راجعت تاريخهم. زمان كانوا بيبدّلوا حاجة بحاجة: سمكة قصاد رغيف.",
      "show": "board",
      "board": "evo"
     },
@@ -334,7 +349,7 @@
      "emote": "deadpan"
     },
     {
-     "say": "والنهارده أغلب فلوسهم مش ورق أصلاً. أرقام على شاشة.",
+     "say": "واللي رصدته النهارده: أغلب فلوسهم مش ورق أصلاً. أرقام على شاشة.",
      "show": "board",
      "board": "evo"
     },
@@ -357,7 +372,7 @@
    "style": "Clear and slightly conspiratorial, like revealing how a magic trick works.",
    "beats": [
     {
-     "say": "والأرقام دي ساكنة فين؟ في دفتر. عند البنك.",
+     "say": "اتتبّعت الأرقام دي لحد ما عرفت ساكنة فين: في دفتر. عند كيان اسمه البنك.",
      "show": "board",
      "board": "led"
     },
@@ -398,7 +413,7 @@
    "style": "Brisk, listing problems with mounting disbelief.",
    "beats": [
     {
-     "say": "فأي جنيه بيتحرك بين اتنين من البشر، لازم يعدّي على طرف تالت.",
+     "say": "راقبت تحويل واحد من أوله لآخره. أي جنيه بيتحرك بين اتنين منهم، لازم يعدّي على طرف تالت.",
      "show": "board",
      "board": "mid"
     },
@@ -443,7 +458,7 @@
    "style": "Curious, then the catch.",
    "beats": [
     {
-     "say": "طيب، ليه مايعملوش فلوس رقمية من غير بنك؟ ملف على الكمبيوتر، أبعته لك وخلاص.",
+     "say": "فسألت السؤال اللي أي كائن عاقل يسأله: ليه مايعملوش فلوس رقمية من غير بنك؟ ملف، يتبعت وخلاص.",
      "shot": "host",
      "emote": "skeptical",
      "gesture": "present"
@@ -494,7 +509,7 @@
    "style": "Darker and drier. Controlled sarcasm about banks.",
    "beats": [
     {
-     "say": "وبعدين جت سنة ألفين وتمانية.",
+     "say": "وبعدين حصل اللي غيّر كل حاجة: سنة ألفين وتمانية.",
      "show": "board",
      "board": "crash"
     },
@@ -613,7 +628,7 @@
      "emote": "serious"
     },
     {
-     "say": "الدفتر المشترك ده اسمه: بلوكتشين. وإزاي آلاف الغُرب بيتفقوا على نسخة واحدة من غير ما يثقوا في بعض؟ ده بقى موضوع الحلقة الجاية.",
+     "say": "الدفتر المشترك ده اسمه: بلوكتشين. وإزاي آلاف الغُرب بيتفقوا على نسخة واحدة من غير ما يثقوا في بعض؟ ده بقى موضوع التقرير الجاي.",
      "shot": "host",
      "emote": "neutral",
      "gesture": "present"
@@ -764,11 +779,11 @@
    "style": "Summary, then one sincere warning, then the sign-off.",
    "beats": [
     {
-     "say": "نلخّص يا فندم. واحد: الفلوس اتفاق، ومتسجّل في دفتر. اتنين: الدفتر ده كان عند البنك. تلاتة: بيتكوين خد الدفتر.. ووزّعه على الكل.",
+     "say": "خلاصة التقرير يا فندم. واحد: الفلوس اتفاق، ومتسجّل في دفتر. اتنين: الدفتر ده كان عند البنك. تلاتة: بيتكوين خد الدفتر.. ووزّعه على الكل.",
      "show": "meme",
      "meme": {
       "kind": "list",
-      "title": "اللي فهمناه النهارده",
+      "title": "خلاصة التقرير",
       "items": [
        "الفلوس اتفاق.. ومتسجّل في دفتر",
        "الدفتر كان عند البنك",
@@ -785,13 +800,13 @@
      "calm": true
     },
     {
-     "say": "الحلقة الجاية: يعني إيه تعدين؟ مين بيحرس الدفتر؟ وليه مفيش غير واحد وعشرين مليون بيتكوين في الكون كله؟",
+     "say": "التقرير الجاي: يعني إيه تعدين؟ مين بيحرس الدفتر؟ وليه مفيش غير واحد وعشرين مليون بيتكوين في الكون كله؟",
      "shot": "host",
      "emote": "neutral",
      "gesture": "count"
     },
     {
-     "say": "اشرحها لكائن فضائي. العميل Peek. انتهى الإرسال.",
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
      "shot": "wide",
      "emote": "proud",
      "gesture": "wave"
