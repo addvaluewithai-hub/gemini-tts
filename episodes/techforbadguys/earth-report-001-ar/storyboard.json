@@ -1,4 +1,57 @@
 {
+ "youtube": {
+  "titles": [
+   "جاسوس فضائي بيرفع تقريره عن كوكب الأرض | تقرير الأرض #1",
+   "أخبار الكوكب في 8 دقايق.. بعيون كائن فضائي | تقرير الأرض #1",
+   "الكوكب لسه شغال.. ومش عارف إزاي | تقرير الأرض #1"
+  ],
+  "description": [
+   "العميل Peek نازل الأرض في مهمة واحدة: يراقب، ويبلّغ قيادته.. ومايتعاطفش.",
+   "",
+   "ده أول تقرير: 14 ملف من أخبار الكوكب في آخر يومين. مفاوضات روسيا وأوكرانيا، محاولة عزل وزير الدفاع الأمريكي، هجوم إلكتروني على تلاجات فرنسا، غزة، ضريبة المليارديرات في كاليفورنيا، وجاسوس اتمسك وهو من نفس الكوكب.",
+   "",
+   "السخرية هنا على الحكومات والمؤسسات والأغنيا. ولما المدنيين هم اللي بيدفعوا التمن، الهزار بيقف."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقييم النهائي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "المصادر (كل خبر معروض بمصدره وتاريخه في الفيديو)",
+  "footer": [
+   "اشترك علشان يوصلك التقرير الجاي.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. الأخبار حقيقية ومن المصادر المذكورة فوق."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#أخبار",
+   "#كوميديا"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "أخبار العالم",
+   "أخبار ساخرة",
+   "كوميديا سياسية",
+   "ملخص الأخبار",
+   "أخبار اليوم",
+   "روسيا وأوكرانيا",
+   "مفاوضات أبو ظبي",
+   "غزة",
+   "ترامب",
+   "ضريبة المليارديرات",
+   "نجيب رزاق",
+   "النينو",
+   "كائن فضائي",
+   "Earth Report"
+  ],
+  "settings": [
+   "Category: News & Politics",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Altered or synthetic content: the host is plainly a cartoon, so YouTube's label for realistic synthetic media is not required. The voice is machine-generated and the description says so; tick the box if you would rather be explicit.",
+   "Comments: hold for review at the start; this is news and it covers Gaza and Ukraine."
+  ],
+  "pinned": "أنهي ملف في التقرير ده أكتر حاجة استفزتك؟ اكتب رقمه. القيادة بتقرا التعليقات."
+ },
  "recorded_for": "2026-11-11",
  "notes": [
   "Earth Report 001: the first episode. A world-news report in Egyptian Arabic that the host reads to his commanders, not to the audience; humans are the subject of the report.",

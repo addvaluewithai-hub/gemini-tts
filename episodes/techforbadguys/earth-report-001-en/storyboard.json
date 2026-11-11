@@ -1,4 +1,58 @@
 {
+ "youtube": {
+  "titles": [
+   "An Alien Spy Files His First Report on Earth | Earth Report #1",
+   "The World's News in 9 Minutes, From an Alien Spy | Earth Report #1",
+   "Earth Is Still Running. I Can't Tell You How. | Earth Report #1"
+  ],
+  "description": [
+   "Agent Peek has one mission on Earth: observe, report to Command, and do not get attached.",
+   "",
+   "This is his first report: fourteen files from the planet's last two days. Russia and Ukraine at the table, a failed impeachment in Washington, a cyberattack on French supermarket fridges, Gaza, a billionaire tax in California, and a spy who got caught on his own planet.",
+   "",
+   "The jokes are aimed at governments, institutions and the very rich. When civilians are the ones paying, the jokes stop."
+  ],
+  "intro": "Intro",
+  "outro": "Final assessment",
+  "chaptersTitle": "Chapters",
+  "sourcesTitle": "Sources (every story is shown with its source and date in the video)",
+  "footer": [
+   "Subscribe for the next report.",
+   "The character, voice and animation are computer-generated. The news is real, from the sources above."
+  ],
+  "hashtags": [
+   "#EarthReport",
+   "#News",
+   "#Satire"
+  ],
+  "tags": [
+   "Earth Report",
+   "Agent Peek",
+   "world news",
+   "news satire",
+   "political comedy",
+   "news recap",
+   "alien spy",
+   "Russia Ukraine talks",
+   "Abu Dhabi talks",
+   "Hegseth impeachment",
+   "Gaza",
+   "California billionaire tax",
+   "Najib Razak",
+   "Trump BBC lawsuit",
+   "El Niño",
+   "Booker Prize",
+   "Skims advent calendar"
+  ],
+  "settings": [
+   "Category: News & Politics",
+   "Video language: English. Upload captions.srt as English.",
+   "Audience: not made for kids",
+   "Altered or synthetic content: the host is plainly a cartoon, so YouTube's label for realistic synthetic media is not required. The voice is machine-generated and the description says so; tick the box if you would rather be explicit.",
+   "Comments: hold for review at the start; this is news and it covers Gaza and Ukraine."
+  ],
+  "pinned": "Which file should Command be most worried about? Reply with its number."
+ },
  "recorded_for": "2026-11-11",
  "notes": [
   "Earth Report 001, English version. Same files, same sources and the same cut as `../earth-report-001-ar`, but written in English rather than translated: the jokes are rebuilt for how English is spoken (a committee is where things go to die, the punishment is being sent to your room, nothing is trickling down).",

@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- Channel art drawn from the same character and set as the episodes: thumbnails, the avatar and the banner.
+     window.render(spec) lays one out at its exact pixel size; youtube.cjs screenshots it. -->
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/lalezar/files/lalezar-arabic-400-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:"Elite";src:url("/node_modules/@fontsource/special-elite/files/special-elite-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Elite";src:url("/node_modules/@fontsource/cairo/files/cairo-arabic-700-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+*{box-sizing:border-box;margin:0}body{background:#05060d}
+#art{position:relative;overflow:hidden;font-family:"Anton";color:#fff;background:linear-gradient(120deg,#5a2a78 0%,#232a6e 38%,#123a7c 100%)}
+#art>*{position:absolute}
+.glow{border-radius:50%;filter:blur(60px)}
+.radar{border-radius:50%;border:5px solid rgba(127,212,255,.28)}
+.host svg{display:block}
+.desk{left:0;right:0;bottom:0;background:linear-gradient(#2b3168,#0d1028);border-top:10px solid #ff5fae;box-shadow:0 -10px 50px rgba(255,61,154,.5)}
+.tag{background:#FFE66D;color:#05060d;padding:.32em .5em .12em;border-radius:.2em;white-space:nowrap}
+.big{line-height:1.02;text-shadow:0 .06em 0 #05060d,0 0 .5em rgba(5,6,13,.6);white-space:pre-line}
+.big i{font-style:normal;color:#FFE66D}
+.small{font-family:"Elite";color:#dfe6ff;text-shadow:0 3px 0 #05060d;white-space:pre-line}
+.stamp{color:#ff4654;border:.09em solid #ff4654;border-radius:.16em;padding:.2em .36em .04em;background:rgba(5,6,13,.4);white-space:nowrap}
+</style></head><body><div id="art"></div>
+<script type="module">
+import { peek3d } from "/characters/peek3d.js";
+import { EMOTES, GESTURES } from "/characters/acting.js";
+const base = { lid: 0.14, look: 0, lookY: 0, browL: 0, browR: 0, browTilt: 0, eyeScale: 1, pupil: 1, squint: 0 };
+function host(emote, gesture, size, look = 0) {
+  const em = EMOTES[emote], g = GESTURES[gesture] || GESTURES.pockets;
+  return peek3d({ ...base, ...em, look: em.look ?? look, antL: em.ant || 0, antR: em.ant || 0, m: em.mouth }, { face: "pear", bg: false, grain: false, size, armL: g.armL, armR: g.armR, shrug: g.shrug || 0, tilt: em.tilt || 0, roll: false });
+}
+const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\[\[/g, "<i>").replace(/\]\]/g, "</i>");
+// spec: { kind, w, h, rtl, big, small, tag, stamp, emote, gesture }.  In `big`, [[words]] are drawn in yellow.
+window.render = async (s) => {
+  const el = document.getElementById("art"), W = s.w, H = s.h, u = H / 720, side = s.rtl ? "left" : "right", text = s.rtl ? "right" : "left";
+  el.style.width = W + "px"; el.style.height = H + "px"; el.dir = s.rtl ? "rtl" : "ltr";
+  const ring = (cx, cy, r) => `<div class="radar" style="left:${cx - r}px;top:${cy - r}px;width:${2 * r}px;height:${2 * r}px"></div>`;
+  let html = `<div class="glow" style="left:${-200 * u}px;top:${-200 * u}px;width:${700 * u}px;height:${600 * u}px;background:#ff3d9a;opacity:.4"></div>
+    <div class="glow" style="${side}:${-100 * u}px;top:${60 * u}px;width:${800 * u}px;height:${700 * u}px;background:#35c8ff;opacity:.4"></div>`;
+  if (s.kind === "avatar") {
+    html += ring(W / 2, H * 0.5, W * 0.46) + ring(W / 2, H * 0.5, W * 0.33) + `<div class="host" style="left:${W * -0.31}px;top:${H * -0.05}px">${host(s.emote || "smug", "pockets", W * 1.5)}</div>`.replace(`left:${W * -0.31}px;top:${H * -0.05}px`, `left:${W * -0.25}px;top:${H * 0.02}px`);
+  } else if (s.kind === "banner") {
+    // everything that matters sits in the middle 1546 x 423, the part every device shows
+    const cx = W / 2, cy = H / 2, hx = s.rtl ? cx - 760 : cx + 250;
+    html += ring(hx + 260, cy, 330) + ring(hx + 260, cy, 220) + ring(hx + 260, cy, 110)
+      + `<div class="host" style="left:${hx}px;top:${cy - 235}px">${host(s.emote || "smug", s.gesture || "present", 520)}</div>
+      <div class="desk" style="top:${cy + 150}px;bottom:auto;height:${H}px"></div>
+      <div class="big" style="${text}:${cx - 740}px;top:${cy - 190}px;font-size:150px;text-align:${text}">${esc(s.big)}</div>
+      <div class="small" style="${text}:${cx - 736}px;top:${cy + 10}px;font-size:40px;text-align:${text}">${esc(s.small || "")}</div>`;
+  } else {
+    const size = (s.peek ? 900 : 940) * u, hx = s.rtl ? -150 * u : W - size + 150 * u, hy = (s.peek ? s.peekY ?? 118 : -20) * u, cx = hx + size / 2;
+    html += ring(cx, 330 * u, 430 * u) + ring(cx, 330 * u, 300 * u) + ring(cx, 330 * u, 170 * u)
+      + `<div class="host" style="left:${hx}px;top:${hy}px">${host(s.emote || "skeptical", s.peek ? "pockets" : s.gesture || "shrug", size, s.rtl ? 0.7 : -0.7)}</div>`
+      + (s.peek ? `<div class="desk" style="height:${190 * u}px"></div>` : "")
+      + `<div class="tag" style="${text}:${44 * u}px;top:${40 * u}px;font-size:${44 * u}px">${esc(s.tag || "")}</div>
+      <div class="big" style="${text}:${44 * u}px;top:${(s.top ?? 150) * u}px;width:${(s.width ?? 700) * u}px;font-size:${(s.size ?? 132) * u}px;text-align:${text}">${esc(s.big)}</div>`
+      + (s.small ? `<div class="small" style="${text}:${48 * u}px;bottom:${(s.peek ? 62 : 54) * u}px;font-size:${44 * u}px;text-align:${text}">${esc(s.small)}</div>` : "")
+      + (s.stamp ? `<div class="stamp" style="${text}:${(s.stampX ?? 60) * u}px;top:${(s.stampY ?? 560) * u}px;font-size:${58 * u}px;transform:rotate(-7deg)">${esc(s.stamp)}</div>` : "");
+  }
+  el.innerHTML = html;
+  await Promise.all(['100px "Anton"', '40px "Elite"'].flatMap((f) => [document.fonts.load(f), document.fonts.load(f, "عربي")])); await document.fonts.ready;
+};
+window.__ready = true;
+</script></body></html>

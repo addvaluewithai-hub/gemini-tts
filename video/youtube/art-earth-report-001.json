@@ -1,0 +1,91 @@
+[
+ {
+  "file": "earth-report-001-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "تقرير الأرض · رقم 1",
+  "big": "الكوكب\n[[لسه شغال!]]",
+  "small": "مش عارف إزاي.",
+  "stamp": "سري للغاية",
+  "emote": "skeptical",
+  "gesture": "shrug",
+  "size": 150,
+  "top": 140,
+  "stampY": 482
+ },
+ {
+  "file": "earth-report-001-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "peek": true,
+  "tag": "تقرير الأرض · رقم 1",
+  "big": "جاسوس فضائي\n[[بيقيّم كوكبكم]]",
+  "emote": "sly",
+  "size": 118,
+  "top": 140,
+  "width": 760,
+  "peekY": 118
+ },
+ {
+  "file": "earth-report-001-en/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "tag": "EARTH REPORT · NO. 1",
+  "big": "EARTH IS\n[[STILL RUNNING]]",
+  "small": "I can't tell you how.",
+  "stamp": "TOP SECRET",
+  "emote": "skeptical",
+  "gesture": "shrug",
+  "size": 124,
+  "top": 150,
+  "width": 760,
+  "stampY": 470
+ },
+ {
+  "file": "earth-report-001-en/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "peek": true,
+  "tag": "EARTH REPORT · NO. 1",
+  "big": "AN ALIEN SPY\n[[IS GRADING]]\n[[YOUR PLANET]]",
+  "emote": "sly",
+  "size": 106,
+  "top": 140,
+  "width": 760,
+  "peekY": 118
+ },
+ {
+  "file": "channel/avatar.png",
+  "kind": "avatar",
+  "w": 800,
+  "h": 800,
+  "emote": "smug"
+ },
+ {
+  "file": "channel/banner-ar.jpg",
+  "kind": "banner",
+  "w": 2560,
+  "h": 1440,
+  "rtl": true,
+  "big": "تقرير [[الأرض]]",
+  "small": "أخبار الكوكب.. من واحد مش من هنا",
+  "emote": "smug",
+  "gesture": "present"
+ },
+ {
+  "file": "channel/banner-en.jpg",
+  "kind": "banner",
+  "w": 2560,
+  "h": 1440,
+  "big": "EARTH [[REPORT]]",
+  "small": "The planet's news, filed by someone who isn't from here.",
+  "emote": "smug",
+  "gesture": "present"
+ }
+]
