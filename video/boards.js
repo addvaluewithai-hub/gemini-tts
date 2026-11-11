@@ -46,39 +46,39 @@ const BOARDS = {
   steps(s, step, age) {
     const n = s.items.length, x0 = 960 - (n - 1) * 190 * (n > 4 ? 0.9 : 1.15), dx = n > 1 ? (960 - x0) * 2 / (n - 1) : 0;
     const body = s.items.map((it, i) => { const a = since(i, step, age); if (a < 0) return ""; const x = x0 + i * dx, now = i === Math.min(step, n - 1);
-      return (i ? `<path d="M${x - dx + 120} 540H${x - 120}" stroke="${C.line}" stroke-width="8" stroke-linecap="round" stroke-dasharray="${dx}" stroke-dashoffset="${dx * (1 - ease(a / 0.4))}" opacity=".7"/><path d="M${x - 118} 540l-22 -16v32z" fill="${C.line}" opacity="${0.7 * clamp(a / 0.4)}"/>` : "")
-        + labelled(x, 520, now ? 1.12 : 0.9, it.icon, it.label, a, { glow: now ? C.yellow : null, opacity: now ? 1 : 0.6, args: it.args })
-        + (it.sub && a > 0.3 ? `<g opacity="${clamp((a - 0.3) / 0.3) * (now ? 1 : 0.55)}">${T(x, 790, it.sub, 38, { font: "Elite", fill: C.dim })}</g>` : ""); }).join("");
+      return (i ? `<path d="M${x - dx + 150} 480H${x - 150}" stroke="${C.line}" stroke-width="8" stroke-linecap="round" stroke-dasharray="${dx}" stroke-dashoffset="${dx * (1 - ease(a / 0.4))}" opacity=".7"/><path d="M${x - 148} 480l-22 -16v32z" fill="${C.line}" opacity="${0.7 * clamp(a / 0.4)}"/>` : "")
+        + labelled(x, 480, now ? 1.5 : 1.2, it.icon, it.label, a, { glow: now ? C.yellow : null, opacity: now ? 1 : 0.6, args: it.args })
+        + (it.sub && a > 0.3 ? `<g opacity="${clamp((a - 0.3) / 0.3) * (now ? 1 : 0.55)}">${T(x, 850, it.sub, 42, { font: "Elite", fill: C.dim })}</g>` : ""); }).join("");
     return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age));
   },
   // A page of names and balances. Each step after the first moves an amount from one row to another.
   ledger(s, step, age) {
-    const rows = s.rows.map((r) => ({ ...r })), W = 980, x = 960 - W / 2, y0 = 300, rh = 118, ops = s.ops || [];
+    const rows = s.rows.map((r) => ({ ...r })), W = 1240, x = 960 - W / 2, y0 = 270, rh = 150, ops = s.ops || [];
     let moving = null;
     ops.forEach((op, k) => { const a = since(k + 1, step, age); if (a < 0) return; const p = ease(a / 0.9);
       rows[op.from].amount -= op.amount * p; rows[op.to].amount += op.amount * p; if (a < 1.6) moving = { op, a }; });
     const body = rows.map((r, i) => { const a = step > 0 ? 9 : age - i * 0.18, y = y0 + i * rh, hit = moving && (moving.op.from === i || moving.op.to === i), up = moving && moving.op.to === i;
       return a <= 0 ? "" : `<g opacity="${clamp(a / 0.2)}"><rect x="${x + 30}" y="${y + 10}" width="${W - 60}" height="${rh - 20}" rx="14" fill="${hit ? (up ? "#173d2c" : "#40161c") : "#161b40"}"/>
-        ${T(x + W - 70, y + 78, r.name, 60, { anchor: "end", font: "Elite" })}${T(x + 80, y + 82, Math.round(r.amount).toLocaleString("en"), 70, { anchor: "start", fill: hit ? (up ? C.green : C.red) : C.yellow })}</g>`; }).join("");
-    const arrow = moving ? (() => { const { op, a } = moving, ya = y0 + op.from * rh + 60, yb = y0 + op.to * rh + 60, p = ease(a / 0.9), cx = x - 90, y = lerp(ya, yb, p);
-      return `<path d="M${x + 20} ${ya}C${cx} ${ya} ${cx} ${yb} ${x + 20} ${yb}" fill="none" stroke="${C.line}" stroke-width="6" stroke-dasharray="12 12" opacity=".6"/>${G(x - 40 + 30 * Math.sin(Math.PI * p) * -1, y, 0.5, icon("coin"))}`; })() : "";
+        ${T(x + W - 80, y + 98, r.name, 76, { anchor: "end", font: "Elite" })}${T(x + 90, y + 104, Math.round(r.amount).toLocaleString("en"), 92, { anchor: "start", fill: hit ? (up ? C.green : C.red) : C.yellow })}</g>`; }).join("");
+    const arrow = moving ? (() => { const { op, a } = moving, ya = y0 + op.from * rh + 75, yb = y0 + op.to * rh + 75, p = ease(a / 0.9), cx = x - 110, y = lerp(ya, yb, p);
+      return `<path d="M${x + 20} ${ya}C${cx} ${ya} ${cx} ${yb} ${x + 20} ${yb}" fill="none" stroke="${C.line}" stroke-width="6" stroke-dasharray="12 12" opacity=".6"/>${G(x - 50 - 36 * Math.sin(Math.PI * p), y, 0.7, icon("coin"))}`; })() : "";
     return svg(`${heading(s.title, 1)}<rect x="${x}" y="${y0 - 30}" width="${W}" height="${rows.length * rh + 60}" rx="26" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".35" stroke-width="4"/>
       ${body}${arrow}${caption((s.captions || [])[step], age, Math.min(890, y0 + rows.length * rh + 110))}`);
   },
   // People and a go-between. Each step is a move of a coin, a set of badges on someone, or a cross through them.
   flow(s, step, age) {
-    const n = s.actors.length, xs = s.actors.map((_, i) => 960 + (i - (n - 1) / 2) * (n > 2 ? 560 : 900)), y = 500; let extra = "";
+    const n = s.actors.length, xs = s.actors.map((_, i) => 960 + (i - (n - 1) / 2) * (n > 2 ? 620 : 900)), y = 540; let extra = "";
     const crossed = new Set();
     s.sequence.forEach((q, k) => { const a = since(k + 1, step, age); if (a < 0) return;
-      if (q.move) { const [f, t] = q.move, p = ease(a / (q.slow ? 1.8 : 0.9)), x = lerp(xs[f], xs[t], p), yy = y - 250 - 90 * Math.sin(Math.PI * p);
-        extra += `<path d="M${xs[f]} ${y - 190}Q${(xs[f] + xs[t]) / 2} ${y - 430} ${xs[t]} ${y - 190}" fill="none" stroke="${C.line}" stroke-width="6" stroke-dasharray="14 14" opacity=".5"/>`;
-        if (a < (q.slow ? 2.6 : 1.5)) extra += G(x, yy, 0.62, icon(q.token || "coin")) + (q.label && a > 0.2 ? T((xs[f] + xs[t]) / 2, y - 400, q.label, 44, { font: "Elite", fill: C.yellow }) : ""); }
-      if (q.badges) q.badges.forEach((b, j) => { const ba = a - j * (q.every ?? 0.45); if (ba <= 0) return; const col = j % 2, row = Math.floor(j / 2), bx = xs[q.at] + (col ? 170 : -170), by = y + 250 + row * 86;
-        extra += G(bx, by, pop(ba), `<rect x="-150" y="-36" width="300" height="72" rx="36" fill="${C.red}"/>${T(0, 16, b, 44, { fill: "#fff" })}`); });
+      if (q.move) { const [f, t] = q.move, p = ease(a / (q.slow ? 1.8 : 0.9)), x = lerp(xs[f], xs[t], p), yy = y - 250 - 66 * Math.sin(Math.PI * p);
+        extra += `<path d="M${xs[f]} ${y - 230}Q${(xs[f] + xs[t]) / 2} ${y - 390} ${xs[t]} ${y - 230}" fill="none" stroke="${C.line}" stroke-width="6" stroke-dasharray="14 14" opacity=".5"/>`;
+        if (a < (q.slow ? 2.6 : 1.5)) extra += G(x, yy, 0.72, icon(q.token || "coin")) + (q.label && a > 0.2 ? T((xs[f] + xs[t]) / 2, y - 190, q.label, 46, { font: "Elite", fill: C.yellow }) : ""); }
+      if (q.badges) q.badges.forEach((b, j) => { const ba = a - j * (q.every ?? 0.45); if (ba <= 0) return; const bx = xs[q.at] + (j - (q.badges.length - 1) / 2) * 350, by = y + 330;
+        extra += G(bx, by, pop(ba), `<rect x="-160" y="-44" width="320" height="88" rx="44" fill="${C.red}"/>${T(0, 20, b, 54, { fill: "#fff" })}`); });
       if (q.cross !== undefined) { crossed.add(q.cross); const p = ease(a / 0.35), cx = xs[q.cross];
         extra += `<path d="M${cx - 130} ${y - 130}L${cx - 130 + 260 * p} ${y - 130 + 260 * p}" stroke="${C.red}" stroke-width="26" stroke-linecap="round"/>${a > 0.25 ? `<path d="M${cx + 130} ${y - 130}L${cx + 130 - 260 * ease((a - 0.25) / 0.35)} ${y - 130 + 260 * ease((a - 0.25) / 0.35)}" stroke="${C.red}" stroke-width="26" stroke-linecap="round"/>` : ""}`; }
     });
-    const actors = s.actors.map((ac, i) => labelled(xs[i], y, ac.big ? 1.25 : 1, ac.icon, ac.label, step > 0 ? 9 : age - i * 0.2, { args: ac.args, opacity: crossed.has(i) ? 0.35 : 1 })).join("");
+    const actors = s.actors.map((ac, i) => labelled(xs[i], y, ac.big ? 1.6 : 1.3, ac.icon, ac.label, step > 0 ? 9 : age - i * 0.2, { args: ac.args, opacity: crossed.has(i) ? 0.35 : 1 })).join("");
     return svg(heading(s.title, 1) + actors + extra + caption((s.captions || [])[step], age));
   },
   // A digital thing copies itself; then two people each hold "the only one".
@@ -90,8 +90,8 @@ const BOARDS = {
         body += G(960 + (col - (cols - 1) / 2) * 200, 430 + row * 250 - (m > 8 ? 60 : 0), 0.8 * pop(a), icon("file", s.file || "")); }
       body += G(960, 850, pop(age), `<rect x="-250" y="-46" width="230" height="92" rx="14" fill="${C.panel}" stroke="${C.line}" stroke-width="4"/>${T(-135, 20, "COPY", 54)}<rect x="20" y="-46" width="230" height="92" rx="14" fill="${C.panel}" stroke="${C.line}" stroke-width="4"/>${T(135, 20, "PASTE", 54)}`); }
     else { const p = ease(age / 0.8);
-      body = labelled(960, 430, 0.9, "person", s.me, 9) + labelled(380, 600, 1, "person", s.a, 9, { args: [C.pink] }) + labelled(1540, 600, 1, "person", s.b, 9, { args: [C.green] })
-        + G(lerp(960, 380, p), lerp(430, 380, p) - 120, 0.6, icon("file", s.file || "")) + G(lerp(960, 1540, p), lerp(430, 380, p) - 120, 0.6, icon("file", s.file || ""))
+      body = labelled(960, 400, 1, "person", s.me, 9) + labelled(380, 620, 1.1, "person", s.a, 9, { args: [C.pink] }) + labelled(1540, 620, 1.1, "person", s.b, 9, { args: [C.green] })
+        + G(lerp(960, 380, p), lerp(300, 410, p) - 40 * Math.sin(Math.PI * p), 0.7, icon("file", s.file || "")) + G(lerp(960, 1540, p), lerp(300, 410, p) - 40 * Math.sin(Math.PI * p), 0.7, icon("file", s.file || ""))
         + (age > 0.9 ? G(960, 830, pop(age - 0.9), `<g transform="rotate(-5)"><rect x="-430" y="-80" width="860" height="160" rx="20" fill="rgba(5,6,13,.5)" stroke="${C.red}" stroke-width="12"/>${T(0, 38, s.warn, 110, { fill: C.red })}</g>`) : ""); }
     return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age, 900));
   },
@@ -154,10 +154,10 @@ const BOARDS = {
   // A big number that counts, what it bought, and what that is worth now.
   counter(s, step, age, total) {
     const v = Math.round(s.to * ease(total / (s.time || 1.4))), a1 = since(1, step, age), a2 = since(2, step, age);
-    const items = Array.from({ length: s.count || 0 }, (_, i) => G(960 + (i - (s.count - 1) / 2) * 260, 640, pop(a1 - i * 0.2), icon(s.icon))).join("");
-    return svg(`${heading(s.title, 1)}${G(960, step >= 1 ? 330 : 520, pop(total) * (step >= 1 ? 0.8 : 1), T(0, 60, v.toLocaleString("en"), 240, { fill: C.yellow }) + T(0, 150, s.unit, 70, { fill: C.gold }))}
-      ${a1 > 0 ? T(960, 500, "=", 110, { fill: C.white, opacity: clamp(a1 / 0.2) }) + items : ""}
-      ${a2 > 0 ? G(960, 890, pop(a2), `<rect x="-640" y="-70" width="1280" height="140" rx="24" fill="${C.panel}" stroke="${C.yellow}" stroke-width="5"/>${T(0, 26, s.now, 68, { fill: C.yellow })}`) : caption((s.captions || [])[step], age, 900)}`);
+    const items = Array.from({ length: s.count || 0 }, (_, i) => G(960 + (i - (s.count - 1) / 2) * 280, s.title ? 700 : 650, 1.1 * pop(a1 - i * 0.2), icon(s.icon))).join("");
+    return svg(`${heading(s.title, 1)}${G(960, step >= 1 ? (s.title ? 330 : 250) : 520, pop(total) * (step >= 1 ? 0.72 : 1), T(0, 60, v.toLocaleString("en"), 240, { fill: C.yellow }) + T(0, 150, s.unit, 70, { fill: C.gold }))}
+      ${a1 > 0 ? T(960, s.title ? 545 : 480, "=", 100, { fill: C.white, opacity: clamp(a1 / 0.2) }) + items.replaceAll("translate(", "translate(").replace(/, 640\)/g, ", 640)") : ""}
+      ${a2 > 0 ? G(960, 880, pop(a2), `<rect x="-640" y="-70" width="1280" height="140" rx="24" fill="${C.panel}" stroke="${C.yellow}" stroke-width="5"/>${T(0, 26, s.now, 68, { fill: C.yellow })}`) : caption((s.captions || [])[step], age, 900)}`);
   },
   // Someone nobody can name: an outline, what they said, then gone, and what they left behind.
   person(s, step, age, total) {
