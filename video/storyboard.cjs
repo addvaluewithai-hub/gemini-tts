@@ -24,7 +24,7 @@ if (cmd === "request") {
   fs.writeFileSync(path.join(dir, "request.json"), JSON.stringify(request, null, 2) + "\n");
   fs.writeFileSync(path.join(dir, "dispatch.json"), JSON.stringify({ event_type: "tts.generate", client_payload: { job_id: a, request } }, null, 2) + "\n");
   const md = [`# ${sb.title}`, "", ...(sb.notes || []), "", "## Script", "", ...sb.scenes.flatMap((s) => [`### ${s.story ? `${s.story.n}. ${s.story.tag}` : s.id}`, "", s.beats.map((x) => plain(x.say)).join(" "), ""]),
-    "## Sources", "", ...Object.entries(fs.existsSync(path.join(dir, "slides.json")) ? JSON.parse(fs.readFileSync(path.join(dir, "slides.json"), "utf8")) : {}).map(([k, v]) => `- ${k}: ${v.source}, ${v.date}, ${v.url}`), ""];
+    "## Sources", "", ...Object.entries(((f) => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : {}))(path.join(sb.slidesFrom ? path.resolve(dir, sb.slidesFrom) : dir, "slides.json"))).map(([k, v]) => `- ${k}: ${v.source}, ${v.date}, ${v.url}`), ""];
   fs.writeFileSync(path.join(dir, "script.md"), md.join("\n"));
   console.log(`turns ${turns.length}, words ${turns.reduce((n, t) => n + plain(t.text).split(/\s+/).length, 0)}`);
 }

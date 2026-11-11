@@ -1,0 +1,932 @@
+{
+ "recorded_for": "2026-11-11",
+ "notes": [
+  "Earth Report 001, English version. Same files, same sources and the same cut as `../earth-report-001-ar`, but written in English rather than translated: the jokes are rebuilt for how English is spoken (a committee is where things go to die, the punishment is being sent to your room, nothing is trickling down).",
+  "",
+  "The host reads the report to his commanders, not to the audience. Where civilians are suffering (the power cuts in Ukraine, Gaza, the floods in Kenya) there are no jokes and he says plainly that it is wrong. Sources, selection and editorial rules are the same as the Arabic episode's; see its script.md."
+ ],
+ "title": "Earth Report 001",
+ "date": "11 NOV 2026",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "slidesFrom": "../earth-report-001-ar",
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home. He calls them sir. Quick, dry, deadpan bureaucrat with almost no pauses between sentences. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.4,
+  "tail": 2.4,
+  "tempo": 1.05,
+  "captionChunk": 4,
+  "bpm": 104,
+  "musicGain": 0.5,
+  "sfxGain": 0.6,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "duck": true,
+  "lurk": false
+ },
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "TOP SECRET · FOR COMMAND ONLY"
+ },
+ "scenes": [
+  {
+   "id": "open",
+   "style": "Opening of an official field report. Crisp, formal, a little too proud of himself.",
+   "beats": [
+    {
+     "say": "Earth Report, number one. To Command.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Date, local reckoning: November eleventh, twenty twenty-six.",
+     "show": "fact",
+     "fact": {
+      "big": "NOV 11",
+      "small": "EARTH REPORT · NO. 1"
+     }
+    },
+    {
+     "say": "I have arrived, sir. The planet is still running. <short pause> I cannot tell you how.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "The mission stands. Observe. Report. Do not get attached.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Fourteen files from the last two days. Let's begin.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "ukraine",
+   "story": {
+    "n": 1,
+    "tag": "RUSSIA & UKRAINE"
+   },
+   "slide": "ukraine",
+   "style": "First file. Serious newsreader, then dry. The last three lines are not jokes: slower, controlled anger.",
+   "beats": [
+    {
+     "say": "File one: the war. Russia and Ukraine have been fighting for four and a half years.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "Yesterday they sat down in Abu Dhabi, with the Americans mediating, for the first time in nine months.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "Before the session, the Ukrainians and the Americans met the Europeans and NATO. The Kremlin had objected to that.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "So, a meeting before the meeting. To agree on what to say in the meeting.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "The session ran four hours.",
+     "show": "fact",
+     "fact": {
+      "big": "4 HOURS",
+      "small": "length of the session · NPR"
+     }
+    },
+    {
+     "say": "That is less than one hour per year of war.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "The Americans called it very productive. The Ukrainians called it constructive. Neither the American secretary of state nor the Ukrainian president was actually in the room.",
+     "show": "slide",
+     "view": "deep"
+    },
+    {
+     "say": "And there is no agreement. <short pause> On this planet, sir, a successful meeting is one that ends by scheduling another meeting.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "And yes. There is another one today.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "Meanwhile, Russia is hitting Ukraine's power grid as winter sets in.",
+     "show": "slide",
+     "view": "body",
+     "emote": "annoyed",
+     "calm": true,
+     "music": 0.3
+    },
+    {
+     "say": "And this, sir, is not a joke. Cutting heat and light to civilians in the middle of winter is not a war plan. <short pause> It is a crime.",
+     "shot": "close",
+     "emote": "furious",
+     "calm": true,
+     "music": 0.3
+    },
+    {
+     "say": "They negotiate peace by day. And people sleep in the dark and the cold by night.",
+     "shot": "host",
+     "emote": "sad",
+     "calm": true,
+     "music": 0.3
+    }
+   ]
+  },
+  {
+   "id": "hegseth",
+   "story": {
+    "n": 2,
+    "tag": "UNITED STATES"
+   },
+   "slide": "hegseth",
+   "style": "Second file. Brisk, numbers rattled off, then flat punchlines.",
+   "beats": [
+    {
+     "say": "File two: the United States. Their most powerful country.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "The House voted on a motion to impeach the defense secretary, Pete Hegseth, over the war with Iran.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "The count: 211 to 204. The motion was sent to a committee.",
+     "show": "fact",
+     "fact": {
+      "big": "211 – 204",
+      "small": "House vote · BBC"
+     }
+    },
+    {
+     "say": "A committee, sir, is where humans send things to die quietly.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "The motion came from a member of the president's own party. And more than a dozen members did not show up to vote.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "The secretary called it a farce, and sabotage. It was his first press briefing in six months.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "point"
+    },
+    {
+     "say": "Six months of silence. First word back: farce.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "The president posted that the effort had miserably failed, and that the secretary was exonerated.",
+     "show": "slide",
+     "view": "deep"
+    },
+    {
+     "say": "Exonerated, with no trial. <short pause> Efficient. I took notes.",
+     "shot": "host",
+     "emote": "smug"
+    },
+    {
+     "say": "The Pentagon called the result a total victory.",
+     "show": "fact",
+     "fact": {
+      "big": "TOTAL VICTORY",
+      "small": "",
+      "tone": "stamp"
+     }
+    },
+    {
+     "say": "A total victory. In a vote. <short pause> Apparently those are the wars they can still win.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "The opposition takes over the House in January. So this file will be back on my desk.",
+     "shot": "host",
+     "emote": "bored",
+     "gesture": "shrug"
+    },
+    {
+     "say": "Also: the United States skipped its human rights review at the United Nations. For the second year running.",
+     "show": "slide",
+     "view": "top",
+     "slide": "unhr"
+    },
+    {
+     "say": "Not showing up is a policy here, sir. <short pause> For votes, and for reviews.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "fridge",
+   "story": {
+    "n": 3,
+    "tag": "THE FRIDGE WAR"
+   },
+   "slide": "fridge",
+   "style": "Third file. Delighted by how absurd it is, then one sober line near the end.",
+   "beats": [
+    {
+     "say": "File three. My personal favorite.",
+     "shot": "wide",
+     "emote": "grin",
+     "gesture": "cheer"
+    },
+    {
+     "say": "France is accusing Iran of a cyberattack. On supermarket fridges.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "Hundreds of stores. The fridges heated themselves up overnight. The food spoiled, and in a few places there were fires.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "That was in October. Since then, similar incidents have turned up across Europe and beyond.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "France summoned the ambassador and says it rules nothing out. Iran says: not us.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "point"
+    },
+    {
+     "say": "So, sir. Their weapons now target cheese.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "FRENCH CASUALTIES",
+      "items": [
+       "The brie",
+       "The butter",
+       "The dignity of the croissant"
+      ],
+      "step": 0.4
+     },
+     "emote": "grin"
+    },
+    {
+     "say": "It stopped being funny this month: there was a failed attempt on the cooling units at French blood banks.",
+     "show": "slide",
+     "view": "deep",
+     "emote": "serious"
+    },
+    {
+     "say": "Urgent recommendation: change the password on the ship's fridge.",
+     "shot": "close",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "gaza",
+   "story": {
+    "n": 4,
+    "tag": "GAZA"
+   },
+   "slide": "gaza",
+   "music": 0.22,
+   "calm": true,
+   "style": "Fourth file. No jokes at all. Slower, plain, controlled anger. He means every word.",
+   "beats": [
+    {
+     "say": "File four. And here, sir, I am going to stop joking.",
+     "shot": "host",
+     "emote": "blank"
+    },
+    {
+     "say": "In Gaza, the rain has flooded the tents. About 1.4 million people are living in tents, according to the United Nations.",
+     "show": "slide",
+     "view": "top",
+     "emote": "sad"
+    },
+    {
+     "say": "On Sunday, three children and a woman died when a sand embankment collapsed onto their tents.",
+     "show": "slide",
+     "view": "body",
+     "emote": "sad"
+    },
+    {
+     "say": "People there say the rain comes at them from one side, and the sewage overflows from the other.",
+     "show": "slide",
+     "view": "deep",
+     "emote": "sad"
+    },
+    {
+     "say": "A body called the Board of Peace says the aid Israel has let in is insufficient. Israel says it has let in tens of thousands of tents.",
+     "shot": "host",
+     "emote": "annoyed"
+    },
+    {
+     "say": "I have no stake in their arguments, sir. Not their politics. Not their religions. <short pause> But children dying in flooded tents is not politics. It is a crime.",
+     "shot": "close",
+     "emote": "furious"
+    },
+    {
+     "say": "These creatures are extremely good at writing statements. <short pause> A statement does not keep anyone warm.",
+     "shot": "host",
+     "emote": "annoyed"
+    },
+    {
+     "say": "And for the record: what is being done to these civilians is wrong. <short pause> Whoever is doing it. Whatever reason they give.",
+     "shot": "close",
+     "emote": "blank"
+    }
+   ]
+  },
+  {
+   "id": "israel",
+   "story": {
+    "n": 5,
+    "tag": "ISRAEL"
+   },
+   "slide": "israel",
+   "style": "Fifth file. Dry arithmetic.",
+   "beats": [
+    {
+     "say": "File five: Israel. A new parliament has been sworn in.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "A former army chief, Gadi Eisenkot, has been asked to form a government. He has 28 days.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "His bloc holds 48 seats. Netanyahu's holds 53. You need 61.",
+     "show": "fact",
+     "fact": {
+      "big": "48 · 53 · 61",
+      "small": "seats per bloc, and the majority needed · BBC"
+     }
+    },
+    {
+     "say": "Almost half the members are new. And the Arab-led parties hold more seats than they ever have.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "So neither of them has a majority. <short pause> And each is warning the country about the other.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Twenty-eight days to form a government, sir. <short pause> Back home it takes twenty-eight seconds. Then again, we do not hold elections.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "shrug"
+    }
+   ]
+  },
+  {
+   "id": "novaya",
+   "story": {
+    "n": 6,
+    "tag": "RUSSIA"
+   },
+   "slide": "novaya",
+   "style": "Sixth file. Deadpan, a little bitter.",
+   "beats": [
+    {
+     "say": "File six: inside Russia.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "The newspaper Novaya Gazeta has closed its Moscow newsroom. An investigative paper, in print since 1993.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "One of its founders was the last leader of the Soviet Union.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "The government labeled it a foreign agent. It ordered the paper out of its offices, and barred banks from taking its readers' donations.",
+     "show": "fact",
+     "fact": {
+      "big": "FOREIGN AGENT",
+      "small": "",
+      "tone": "stamp"
+     }
+    },
+    {
+     "say": "The paper investigated the powerful. <short pause> So the powerful investigated the paper. And won.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "As an actual foreign agent, sir, I feel that title is being handed out far too easily.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "point"
+    }
+   ]
+  },
+  {
+   "id": "spy",
+   "story": {
+    "n": 7,
+    "tag": "COLLEAGUES"
+   },
+   "slide": "spy",
+   "style": "Seventh file. Professional interest, smug.",
+   "beats": [
+    {
+     "say": "Speaking of agents. File seven: news of my colleagues.",
+     "shot": "host",
+     "emote": "proud"
+    },
+    {
+     "say": "Britain has arrested an American soldier, age 41, on suspicion of spying for Russia.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "He worked at a NATO headquarters.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "The director of the F.B.I. said there is no tolerance for anyone who breaks their oath.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "I never swore an oath to anyone here, sir. <short pause> So, technically, I am fine.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "If the charge is true, my professional assessment is: amateur.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "Caught. And he is from this planet! <short pause> I am from another galaxy, and the only question anyone has asked me is where I got the hat.",
+     "shot": "low",
+     "duck": true,
+     "emote": "sly"
+    },
+    {
+     "say": "And while we are here: shareholders of the chip company Nvidia are suing its chief executive, over alleged ties to spies.",
+     "show": "slide",
+     "view": "top",
+     "slide": "nvidia",
+     "duck": false
+    },
+    {
+     "say": "This planet is crawling with spies, sir. <short pause> We are going to need a bigger budget.",
+     "shot": "host",
+     "emote": "worried",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "tax",
+   "story": {
+    "n": 8,
+    "tag": "MONEY"
+   },
+   "slide": "tax",
+   "style": "Eighth file. Incredulous accountant.",
+   "beats": [
+    {
+     "say": "Halfway, sir. So far: two wars, one fridge, and one spy.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "count"
+    },
+    {
+     "say": "And the planet is still spinning.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "File eight: money.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "California held a vote on a tax. Five percent, one time only, on anyone worth more than a billion dollars.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "That is about two hundred people.",
+     "show": "fact",
+     "fact": {
+      "big": "200",
+      "small": "billionaires in the state · BBC"
+     }
+    },
+    {
+     "say": "It would have raised around a hundred billion dollars for healthcare.",
+     "show": "fact",
+     "fact": {
+      "big": "$100B",
+      "small": "would have gone to healthcare",
+      "riser": true
+     }
+    },
+    {
+     "say": "And the voters said: no.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Even the governor opposed it. He was afraid the rich would leave. Experts say it would have been the first wealth tax on billionaires anywhere in the world.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "Some billionaires spent millions to kill the tax. A few left the state altogether.",
+     "show": "meme",
+     "meme": {
+      "kind": "versus",
+      "no": "Pay a 5% tax",
+      "yes": "Pay millions to avoid a 5% tax",
+      "delay": 1.2
+     },
+     "emote": "sly"
+    },
+    {
+     "say": "Millions of humans voted so that two hundred of them would not have to pay. <short pause> They call it trickle-down, sir. I have checked. Nothing is trickling.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    }
+   ]
+  },
+  {
+   "id": "najib",
+   "story": {
+    "n": 9,
+    "tag": "MALAYSIA"
+   },
+   "slide": "najib",
+   "style": "Ninth file. Flat and unimpressed.",
+   "beats": [
+    {
+     "say": "File nine: Malaysia.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "The former prime minister, Najib Razak, is out of prison after four years, on a royal pardon. He will finish his sentence at home.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "The case: four and a half billion dollars drained from a state fund.",
+     "show": "fact",
+     "fact": {
+      "big": "$4.5B",
+      "small": "taken from the state fund · DW"
+     }
+    },
+    {
+     "say": "And the punishment is: go to your room.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "He still faces a second sentence of fifteen years. And his supporters were waiting outside the house.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "One minister resigned in protest. <short pause> So the man who took nothing is the one who left.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "gibran",
+   "story": {
+    "n": 10,
+    "tag": "INDONESIA"
+   },
+   "slide": "gibran",
+   "style": "Tenth file. Amused.",
+   "beats": [
+    {
+     "say": "File ten: Indonesia. The fourth largest population on the planet.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "The vice president has offered to resign. The reason: a court case over whether his high school diploma is real.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "He is 39, and the son of the previous president. The current president told him to keep fighting it in court.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "A vice president. Undone by high school.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "All of my qualifications are from another planet, sir, and nobody has asked to see them. <short pause> Human resources here is very relaxed.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "point"
+    }
+   ]
+  },
+  {
+   "id": "trumpbbc",
+   "story": {
+    "n": 11,
+    "tag": "TRUMP v BBC"
+   },
+   "slide": "trumpbbc",
+   "style": "Eleventh file. Starts amused, ends nervous.",
+   "beats": [
+    {
+     "say": "File eleven: the American president versus the B B C.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "A judge has allowed his defamation case to go ahead.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "He is asking for ten billion dollars.",
+     "show": "fact",
+     "fact": {
+      "big": "$10B",
+      "small": "damages sought · BBC",
+      "riser": true
+     }
+    },
+    {
+     "say": "The reason: a program edited his speech, and spliced two parts together. The B B C has already apologized for it.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "Ten billion dollars. For an edit.",
+     "shot": "close",
+     "emote": "worried"
+    },
+    {
+     "say": "The judge threw out the other half of the case. The president called it a huge victory anyway.",
+     "shot": "host",
+     "emote": "neutral",
+     "duck": false
+    },
+    {
+     "say": "Everything is a victory here, sir. Total. Huge. <short pause> Nobody on this planet has ever lost.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Sir. This entire report is edited. <short pause> Please have a lawyer standing by.",
+     "shot": "low",
+     "duck": true,
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "elnino",
+   "story": {
+    "n": 12,
+    "tag": "THE PLANET"
+   },
+   "slide": "elnino",
+   "music": 0.35,
+   "calm": true,
+   "style": "Twelfth file. No jokes. Concerned, plain.",
+   "beats": [
+    {
+     "say": "File twelve: the planet itself. No jokes in this one either.",
+     "shot": "host",
+     "emote": "blank",
+     "duck": false
+    },
+    {
+     "say": "A climate pattern called El Niño is back this year, and it may be one of the strongest ever recorded.",
+     "show": "slide",
+     "view": "top",
+     "emote": "annoyed"
+    },
+    {
+     "say": "In Kenya, people are bracing for floods. This year alone, flooding there has killed more than sixty people.",
+     "show": "slide",
+     "view": "body",
+     "emote": "sad"
+    },
+    {
+     "say": "In Nairobi there are people living two meters from the river. One of them said: this water can kill us.",
+     "shot": "host",
+     "emote": "sad"
+    },
+    {
+     "say": "And in Peru, the largest fishery in the world has been hit.",
+     "show": "slide",
+     "view": "deep",
+     "emote": "blank"
+    },
+    {
+     "say": "Events like this cost the world economy trillions of dollars.",
+     "show": "fact",
+     "fact": {
+      "big": "TRILLIONS",
+      "small": "cost to the world economy · NPR"
+     },
+     "emote": "blank"
+    },
+    {
+     "say": "And the first to pay, sir, are the poorest people on the planet. <short pause> The ones whose houses will not hold.",
+     "shot": "close",
+     "emote": "annoyed"
+    }
+   ]
+  },
+  {
+   "id": "booker",
+   "story": {
+    "n": 13,
+    "tag": "CULTURE"
+   },
+   "slide": "booker",
+   "style": "Thirteenth file. Mildly impressed.",
+   "beats": [
+    {
+     "say": "File thirteen: culture.",
+     "shot": "host",
+     "emote": "neutral",
+     "duck": false
+    },
+    {
+     "say": "The Booker Prize, one of their highest honors for a book, went to a novel about the world after it ends. It is called The End of Everything.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "The author is the oldest winner the prize has ever had. And the judges' word for the book was: baffling, but brilliant.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "Much like this planet, sir. Baffling. <short pause> Without the second part.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "Even they can see it coming. <short pause> They just give it awards.",
+     "shot": "close",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "skims",
+   "story": {
+    "n": 14,
+    "tag": "COMMERCE"
+   },
+   "slide": "skims",
+   "style": "Last file. Delighted.",
+   "beats": [
+    {
+     "say": "And the last file: commerce.",
+     "shot": "wide",
+     "emote": "grin"
+    },
+    {
+     "say": "Skims, the company owned by Kim Kardashian, sold a holiday advent calendar for a hundred and forty-eight dollars.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "Inside: hair clips. And keychains.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "INSIDE THE BOX · $148",
+      "items": [
+       "Hair clips",
+       "Keychains",
+       "Regret"
+      ],
+      "step": 0.55
+     },
+     "emote": "grin"
+    },
+    {
+     "say": "Customers said it looked like what you find behind the sofa. The company is now offering refunds.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "That company is valued at five billion dollars. One customer said the box looked like things her cat collects around the house.",
+     "shot": "host",
+     "emote": "grin",
+     "gesture": "point"
+    },
+    {
+     "say": "And its owner is one of California's two hundred billionaires. <short pause> The ones the voters just protected from a tax.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "story": null,
+   "slide": null,
+   "style": "Formal conclusion, completely sincere on the surface. One line that is genuinely sad. Then a flat sign-off.",
+   "beats": [
+    {
+     "say": "Final assessment, sir.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "They negotiate and never agree. They vote against themselves. And they give prizes to the end of the world.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "PLANET SUMMARY",
+      "items": [
+       "Negotiate, never agree",
+       "Vote against themselves",
+       "Give prizes to the end of the world"
+      ],
+      "step": 1.5
+     },
+     "emote": "deadpan"
+    },
+    {
+     "say": "And among them are civilians paying for wars they never chose. <short pause> That, sir, is the one thing on this planet that is not funny.",
+     "shot": "host",
+     "emote": "sad",
+     "calm": true,
+     "music": 0.3
+    },
+    {
+     "say": "Recommendation: do not intervene. <short pause> They are getting there on their own.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "One last note. Not one of them has noticed me. <short pause> They are busy.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "shrug"
+    },
+    {
+     "say": "This has been the Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
