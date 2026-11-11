@@ -444,3 +444,20 @@ during a board: `right` or `left` (leaning in from that edge) or `pip` (seated
 small in the corner); without it he is only heard. `ending.card` closes the
 episode on an end card, and `tail` sets how long it holds.
 `cues/explain-crypto-01-ar.json` is the first episode made this way.
+
+### Taking out the dead air
+
+The voice comes back with a pause after every turn and many small ones in
+between. `tighten.cjs` cuts every silence longer than `--max` down to
+`--keep` and moves the transcript's word times to match:
+
+```sh
+node tighten.cjs voice.wav transcript.json voice.tight.wav transcript.tight.json --max 0.32 --keep 0.22
+node storyboard.cjs cues <storyboard.json> transcript.tight.json cues/<episode>.json
+node clip.cjs cues/<episode>.json voice.tight.wav out.mp4
+```
+
+Run it before `storyboard.cjs cues`, so the beats are placed on the tightened
+audio. `tempo` in the storyboard's settings then speeds the result up without
+changing its pitch. On the first crypto file this removed 55 seconds of
+silence from eight minutes.
