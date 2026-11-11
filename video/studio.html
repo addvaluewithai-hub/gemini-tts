@@ -28,11 +28,22 @@
 #pip{left:1330px;top:626px;width:600px;height:600px;filter:drop-shadow(0 0 26px rgba(5,6,13,.75))}
 #pipdesk{left:1300px;top:1010px;width:700px;height:90px;border-radius:26px 0 0 0;background:linear-gradient(#232859,#0d1028);border-top:6px solid #ff5fae;box-shadow:0 -6px 30px rgba(255,61,154,.45),0 0 40px rgba(5,6,13,.8)}
 #pip svg{display:block}
+/* layout "short": the solo set in a vertical frame. Cards sit above the host, captions between them. */
+html.short,html.short body,#frame.short{width:1080px;height:1920px}
+#frame.short #brand,#frame.short #lbT,#frame.short #lbB,#frame.short #insert,#frame.short #pip,#frame.short #pipdesk,#frame.short #scrim{display:none!important}
+#frame.short #fact{left:30px;right:30px;top:330px;width:auto}
+#frame.short #factbig{font-size:200px;white-space:normal;line-height:1.02}
+#frame.short #fact.stamp #factbig{font-size:170px}
+#frame.short #factsmall{font-size:46px;margin-top:30px}
+#frame.short #meme{left:20px;right:20px;top:240px;width:auto;height:640px}
+#frame.short .list{width:920px;padding:44px 50px 36px}#frame.short .list h3{font-size:70px}#frame.short .list div{font-size:52px}
+#frame.short #cap{left:30px;right:30px;bottom:auto;font-size:82px}
+#frame.short #chip{left:44px}#frame.short #chip div{font-size:72px}
 html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #frame{position:relative;width:1920px;height:1080px;overflow:hidden;background:#05060d;font-family:"Anton";color:#fff}
 #frame>*,#world>*{position:absolute}
 #world{left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
-#wall{left:-700px;top:-500px;width:3320px;height:2080px}
+#wall{left:-700px;top:-1500px;width:3320px;height:3080px}
 #lurk{left:1280px;width:340px;height:340px}
 #tv{left:1060px;top:170px;width:780px;height:439px;overflow:hidden;background:#0d1022;border-radius:6px;box-shadow:0 0 0 14px #08080e,0 0 0 16px #2c3052,0 30px 60px rgba(0,0,0,.55)}
 #tv img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:top;display:none}
@@ -106,18 +117,18 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 </style></head><body>
 <div id="frame">
  <div id="world">
-  <svg id="wall" viewBox="-700 -500 3320 2080" xmlns="http://www.w3.org/2000/svg">
+  <svg id="wall" viewBox="-700 -1500 3320 3080" xmlns="http://www.w3.org/2000/svg">
    <defs>
-    <linearGradient id="w0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2358"/><stop offset=".6" stop-color="#121640"/><stop offset="1" stop-color="#0a0c26"/></linearGradient>
+    <linearGradient id="w0" gradientUnits="userSpaceOnUse" x1="0" y1="-500" x2="0" y2="1580"><stop offset="0" stop-color="#1c2358"/><stop offset=".6" stop-color="#121640"/><stop offset="1" stop-color="#0a0c26"/></linearGradient>
     <radialGradient id="w1"><stop offset="0" stop-color="#ff3d9a" stop-opacity=".5"/><stop offset="1" stop-color="#ff3d9a" stop-opacity="0"/></radialGradient>
     <radialGradient id="w2"><stop offset="0" stop-color="#35c8ff" stop-opacity=".42"/><stop offset="1" stop-color="#35c8ff" stop-opacity="0"/></radialGradient>
     <radialGradient id="w3"><stop offset="0" stop-color="#bfe9ff" stop-opacity=".34"/><stop offset="1" stop-color="#bfe9ff" stop-opacity="0"/></radialGradient>
     <radialGradient id="gl" cx=".35" cy=".3"><stop offset="0" stop-color="#7fd4ff"/><stop offset=".7" stop-color="#1f6fd0"/><stop offset="1" stop-color="#0d3b86"/></radialGradient>
     <filter id="b8"><feGaussianBlur stdDeviation="8"/></filter><filter id="b30"><feGaussianBlur stdDeviation="30"/></filter>
    </defs>
-   <rect x="-700" y="-500" width="3320" height="2080" fill="url(#w0)"/>
+   <rect x="-700" y="-1500" width="3320" height="3080" fill="url(#w0)"/>
    <g stroke="#fff" stroke-opacity=".05" stroke-width="3">
-    <path d="M-460 -500V1600M-220 -500V1600M20 -500V1600M260 -500V1600M500 -500V1600M740 -500V1600M980 -500V1600M1220 -500V1600M1460 -500V1600M1700 -500V1600M1940 -500V1600M2180 -500V1600M2420 -500V1600"/>
+    <path d="M-460 -1500V1600M-220 -1500V1600M20 -1500V1600M260 -1500V1600M500 -1500V1600M740 -1500V1600M980 -1500V1600M1220 -1500V1600M1460 -1500V1600M1700 -1500V1600M1940 -1500V1600M2180 -1500V1600M2420 -1500V1600"/>
     <path d="M-700 60H2620M-700 -180H2620"/></g>
    <ellipse cx="120" cy="180" rx="760" ry="620" fill="url(#w1)"/><ellipse cx="1560" cy="330" rx="900" ry="640" fill="url(#w2)"/><ellipse cx="560" cy="400" rx="560" ry="480" fill="url(#w3)"/>
    <rect x="-700" y="52" width="3320" height="7" fill="#35c8ff" opacity=".8"/><rect x="-700" y="44" width="3320" height="22" fill="#35c8ff" opacity=".35" filter="url(#b8)"/>
@@ -210,8 +221,9 @@ let cfg = { slides: {}, face: "pear" }; const tvImg = {}, viewImg = {};
 const show = (el, on, as = "block") => { el.style.display = on ? as : "none"; };
 
 window.setup = async (config) => {
-  cfg = config; $("frame").classList.toggle("rtl", !!config.rtl); $("frame").classList.toggle("solo", config.layout === "solo");
-  if (config.layout === "solo") for (const el of document.querySelectorAll("#desk .seat")) el.setAttribute("transform", "translate(400 0)"); for (const id of ["cap", "meme"]) $(id).dir = config.rtl ? "rtl" : "ltr";
+  cfg = config; $("frame").classList.toggle("rtl", !!config.rtl); const seated = config.layout === "solo" || config.layout === "short";
+  $("frame").classList.toggle("solo", seated); $("frame").classList.toggle("short", config.layout === "short"); document.documentElement.classList.toggle("short", config.layout === "short");
+  if (seated) for (const el of document.querySelectorAll("#desk .seat")) el.setAttribute("transform", "translate(400 0)"); for (const id of ["cap", "meme"]) $(id).dir = config.rtl ? "rtl" : "ltr";
   if (config.brand) {            // the channel name in three parts (the middle one in pink) and a line under it; works in Latin or Arabic
     const { a = "", b = "", c = "", tagline = "" } = config.brand, arabic = /[\u0621-\u064A]/.test(a + b + c), sp = arabic ? " " : "";
     $("desklogo").innerHTML = `${esc(a)} <tspan fill="#ff4fa3">${esc(b)}</tspan> ${esc(c)}`; $("desktag").textContent = tagline;
@@ -272,7 +284,10 @@ window.draw = (st) => {
   show($("world"), studio); show($("scrim"), st.scrim > 0.01); $("scrim").style.opacity = st.scrim;
   if (studio) {
     const c = st.cam;
-    $("world").style.transform = `translate(${960 - c.x * c.s}px,${540 - c.y * c.s}px) scale(${c.s}) rotate(${c.r || 0}deg)`;
+    // vertical frame: the host is larger and centred when he is alone, smaller and lower when something sits above him
+    const tall = cfg.layout === "short", room = st.room || 0, zoom = tall ? c.s * (1.25 - 0.25 * room) : c.s, ax = tall ? 540 : 960, ay = tall ? 1280 + 274 * room : 540;
+    if (tall) $("cap").style.top = 1470 - 565 * room + "px";
+    $("world").style.transform = `translate(${ax - c.x * zoom}px,${ay - c.y * zoom}px) scale(${zoom}) rotate(${c.r || 0}deg)`;
     $("world").style.filter = st.blur > 0.5 ? `blur(${st.blur.toFixed(1)}px)` : "";
     person($("host"), st.host, 900); if (st.host) $("host").style.transform = `translateY(${st.host.y}px)`;
     person($("lurk"), st.lurk, 340, "q3"); if (st.lurk) $("lurk").style.top = 185 - 162 * st.lurk.amt + "px";
@@ -313,7 +328,7 @@ window.draw = (st) => {
   $("lbT").style.height = $("lbB").style.height = st.lb + "px";
   const ch = st.chip; show($("chip"), !!ch, "flex");
   if (ch) { $("chipn").textContent = String(ch.n).padStart(2, "0"); $("chipt").textContent = ch.tag; $("chips").textContent = ch.src || ""; show($("chips"), !!ch.src); $("chip").style.opacity = ch.a; $("chip").style.transform = `translate(${(1 - ch.a) * -40}px,${st.lb}px) scale(${ch.pop})`;
-    $("chip").style.top = ch.low ? "auto" : "48px"; $("chip").style.bottom = ch.low ? "40px" : "auto"; $("chip").style.transformOrigin = ch.low ? "0 100%" : "0 0"; }
+    $("chip").style.top = ch.low ? "auto" : cfg.layout === "short" ? "150px" : "48px"; $("chip").style.bottom = ch.low ? "40px" : "auto"; $("chip").style.transformOrigin = ch.low ? "0 100%" : "0 0"; }
   $("brand").style.opacity = st.brand; $("brand").style.transform = `translateY(${st.lb}px)`;
   // In a right-to-left caption, neighbouring Latin words (a person's name) are kept together left to right.
   const said = st.words.filter((w) => w.t), latin = (w) => cfg.rtl && /[A-Za-z]/.test(w.t) && !/[\u0621-\u064A]/.test(w.t);

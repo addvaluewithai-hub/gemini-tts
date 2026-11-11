@@ -115,7 +115,7 @@ server.listen(0, "127.0.0.1", async () => {
   resolveCues();
   let plan = null; const slides = {};
   if (studio) {
-    const list = JSON.parse(fs.readFileSync(path.join(epDir, cues.slides || "slides.json"), "utf8")), capFile = path.join(epDir, "slides", "captured.json");
+    const listFile = path.join(epDir, cues.slides || "slides.json"), list = fs.existsSync(listFile) ? JSON.parse(fs.readFileSync(listFile, "utf8")) : {}, capFile = path.join(epDir, "slides", "captured.json");
     const got = fs.existsSync(capFile) ? JSON.parse(fs.readFileSync(capFile, "utf8")) : {};
     for (const [k, v] of Object.entries(list)) slides[k] = { ...v, ...(got[k] && got[k].ok ? { file: got[k].file, focus: got[k].focus, headline: got[k].headline, screens: got[k].screens || 1 } : {}) };
     plan = require("./editor.cjs").resolve(cues, words, slides);
@@ -131,7 +131,8 @@ server.listen(0, "127.0.0.1", async () => {
   const url = `http://127.0.0.1:${server.address().port}/${studio ? "studio.html" : "stage.html"}`;
   const browser = await chromium.launch();
   const open1 = async () => {
-    const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+    const [vw, vh] = cues.size || [1920, 1080];
+    const page = await browser.newPage({ viewport: { width: vw, height: vh } });
     page.on("pageerror", (err) => { console.error("PAGE ERROR", err.message); process.exitCode = 1; });
     await page.goto(url); await page.waitForFunction("window.__ready === true", null, { timeout: 20000 });
     if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl, layout: cues.layout || "", brand: cues.brand || null });

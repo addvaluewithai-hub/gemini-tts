@@ -394,3 +394,12 @@ on stressed words and keep the hands down, and `"music"` to lower the bed.
 `brand` in a storyboard or cue file sets the name on the desk and in the
 corner: `{ "a": "تقرير", "b": "الأرض", "c": "", "tagline": "..." }`, where `b`
 is the word drawn in pink. It can be Latin or Arabic.
+
+### Vertical shorts
+
+A storyboard with `"layout": "short"` and `"size": [1080, 1920]` renders the
+same set in a vertical frame. The host stays on screen the whole time: large
+and centred when he is alone, smaller and lower when a fact or a meme sits
+above him, with the captions between the two. There are no slides in this
+layout, so it suits pieces that are not news.
+`cues/humans-guide-001-ar.json` is the first one.
