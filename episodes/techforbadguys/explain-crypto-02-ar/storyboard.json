@@ -1,0 +1,766 @@
+{
+ "title": "تقرير الأرض: العملات المشفرة 2",
+ "recorded_for": "2026-11-11",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: Cryptocurrency, part 2 of 3. How the shared ledger is written and guarded: fingerprints (hashes), pages chained by them, mining as a guessing race, why forging is too expensive, the energy cost, the halving and the 21 million cap, addresses and private keys, and people who lost theirs.",
+  "",
+  "Facts are stated from general knowledge, not from pages captured for this episode: a block about every ten minutes; difficulty adjusts about every two weeks; the reward began at 50 BTC and halves about every four years (25 in 2012, 12.5 in 2016, 6.25 in 2020, 3.125 in 2024); supply is capped at 21 million with the last coin expected around 2140; about 95% is mined by late 2026; the network's yearly electricity use is in the range of a mid-sized country by Cambridge University's estimates; the number of possible private keys is about 10 to the 77; James Howells threw away a drive in 2013 holding the key to about 8,000 BTC and a court refused his bid to dig up the landfill; Stefan Thomas holds 7,002 BTC on an encrypted drive with ten password attempts and has used eight; estimates of coins lost for good run from three to four million. The fingerprints shown on screen are stand-ins, not real hashes. No current prices are quoted, and it says it is not investment advice."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "التقرير الجاي",
+   "next": "آلاف العملات.. والنصب · الجزء 3 من 3",
+   "note": "اشترك علشان باقي التقارير توصل"
+  }
+ },
+ "brand": {
+  "a": "تقرير",
+  "b": "الأرض",
+  "c": "",
+  "tagline": "ملف ميداني: العملات المشفرة"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "تقرير الأرض · ملف ميداني",
+   "title": "البلوكتشين",
+   "sub": "الجزء 2 من 3 · دفتر من غير حارس"
+  },
+  "trip": {
+   "kind": "steps",
+   "title": "رحلة تحويل واحد",
+   "items": [
+    {
+     "icon": "phone",
+     "label": "يتذاع",
+     "sub": "على الشبكة كلها"
+    },
+    {
+     "icon": "node",
+     "label": "يستنى",
+     "sub": "العمولة الأعلى أولاً"
+    },
+    {
+     "icon": "file",
+     "label": "يتكتب",
+     "sub": "في صفحة",
+     "args": [
+      "#"
+     ]
+    },
+    {
+     "icon": "coin",
+     "label": "يتثبّت",
+     "sub": "6 صفحات ≈ ساعة",
+     "args": [
+      "#58d68d",
+      "✓"
+     ]
+    }
+   ]
+  },
+  "net": {
+   "kind": "network",
+   "title": "الدفتر عند الكل",
+   "n": 34,
+   "cheat": 11
+  },
+  "hash": {
+   "kind": "hash",
+   "title": "المكنة اللي بتطلّع بصمة",
+   "inLabel": "الكلام",
+   "outLabel": "البصمة",
+   "input": "علي دفع لمنى 30",
+   "changed": "علي دفع لمنى 31"
+  },
+  "chain": {
+   "kind": "chain",
+   "title": "صفحات ماسكة في بعض",
+   "prevLabel": "بصمة اللي قبلها",
+   "hashLabel": "بصمتها",
+   "tamper": "علي ← منى 3000",
+   "rejected": "مرفوض",
+   "blocks": [
+    {
+     "name": "صفحة 1",
+     "lines": [
+      "علي ← منى 30",
+      "سامي ← علي 5",
+      "منى ← هدى 12"
+     ]
+    },
+    {
+     "name": "صفحة 2",
+     "lines": [
+      "هدى ← سامي 7",
+      "علي ← هدى 20",
+      "منى ← علي 3"
+     ]
+    },
+    {
+     "name": "صفحة 3",
+     "lines": [
+      "سامي ← منى 9",
+      "هدى ← علي 1",
+      "علي ← سامي 14"
+     ]
+    }
+   ]
+  },
+  "mine": {
+   "kind": "mine",
+   "title": "مسابقة كل عشر دقايق",
+   "target": "المطلوب: بصمة تبدأ بـ 0000",
+   "triesLabel": "عدد المحاولات:",
+   "nonce": "481,902,773",
+   "reward": "+ بيتكوين جديدة",
+   "winner": 2
+  },
+  "energy": {
+   "kind": "bars",
+   "title": "استهلاك الكهربا في السنة",
+   "bars": [
+    {
+     "label": "شبكة بيتكوين",
+     "value": 100,
+     "text": "≈",
+     "color": "#FFE66D"
+    },
+    {
+     "label": "دولة متوسطة",
+     "value": 100,
+     "text": "≈",
+     "color": "#35c8ff"
+    }
+   ],
+   "note": "تقديرات جامعة Cambridge",
+   "every": 0.6
+  },
+  "halv": {
+   "kind": "bars",
+   "title": "جايزة كل صفحة",
+   "bars": [
+    {
+     "label": "2009",
+     "value": 50,
+     "text": "50"
+    },
+    {
+     "label": "2012",
+     "value": 25,
+     "text": "25"
+    },
+    {
+     "label": "2016",
+     "value": 12.5,
+     "text": "12.5"
+    },
+    {
+     "label": "2020",
+     "value": 6.25,
+     "text": "6.25"
+    },
+    {
+     "label": "2024",
+     "value": 3.125,
+     "text": "3.125",
+     "color": "#ff4fa3"
+    }
+   ],
+   "note": "كل أربع سنين تقريباً.. النص",
+   "every": 0.5
+  },
+  "cap": {
+   "kind": "meter",
+   "title": "السقف",
+   "big": "21,000,000",
+   "unit": "بيتكوين.. ومش أكتر",
+   "value": 0.95,
+   "label": "اتعدّنوا خلاص",
+   "note": "آخر واحد: حوالي سنة 2140"
+  },
+  "keys": {
+   "kind": "keys",
+   "title": "عنوان.. ومفتاح",
+   "addressLabel": "العنوان: يتقال لأي حد",
+   "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+   "keyLabel": "المفتاح الخاص: مايتقالش",
+   "payment": "ابعت لمنى 1 BTC",
+   "count": "10⁷⁷",
+   "countLabel": "عدد المفاتيح الممكنة"
+  },
+  "howells": {
+   "kind": "story",
+   "title": "James Howells · ويلز",
+   "icon": "drive",
+   "name": "هارد ديسك",
+   "lines": [
+    "اترمى سنة 2013",
+    "عليه مفتاح ≈ 8,000 بيتكوين",
+    "المحكمة رفضت الحفر"
+   ]
+  },
+  "thomas": {
+   "kind": "story",
+   "title": "Stefan Thomas · مبرمج",
+   "icon": "usb",
+   "name": "فلاشة مشفّرة",
+   "lines": [
+    "عليها 7,002 بيتكوين",
+    "نسي الباسورد",
+    "10 محاولات.. جرّب 8"
+   ]
+  },
+  "lost": {
+   "kind": "meter",
+   "title": "ضاعوا للأبد",
+   "big": "3 – 4 مليون",
+   "unit": "بيتكوين · تقديرات",
+   "value": 0.17,
+   "label": "من كل اللي اتعدّن",
+   "note": "محدش سرقهم. أصحابهم نسيوا.",
+   "color": "#ff4654"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم اتنين في ملف العملات المشفرة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: البلوكتشين. الدفتر اللي البشر بيحرسوه.. من غير حارس.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "هقول لكم الدفتر ده بيتكتب إزاي، ومين بيحميه. <short pause> وليه واحد منهم بقاله سنين عايز يحفر مقلب زبالة، يدوّر على مئات الملايين من الدولارات.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "في التقرير اللي فات عرفنا إن بيتكوين خد الدفتر من البنك، ووزّع نسخة على آلاف الأجهزة.",
+     "show": "board",
+     "board": "net",
+     "step": 1
+    },
+    {
+     "say": "وده يطرح سؤال خطير: لو الدفتر عند الكل.. إيه اللي يمنع أي واحد يكتب لنفسه مليون؟",
+     "shot": "close",
+     "emote": "skeptical"
+    }
+   ]
+  },
+  {
+   "id": "hash",
+   "story": {
+    "n": 1,
+    "tag": "البصمة"
+   },
+   "style": "Showing a clever trick, simply, with one very Egyptian comparison.",
+   "beats": [
+    {
+     "say": "أول حيلة رصدتها اسمها الهاش. مكنة بتاخد أي كلام، وتطلّع له بصمة: شوية حروف وأرقام.",
+     "show": "board",
+     "board": "hash"
+    },
+    {
+     "say": "غيّر في الكلام حرف واحد بس.. البصمة كلها تتغير.",
+     "show": "board",
+     "board": "hash"
+    },
+    {
+     "say": "وماينفعش ترجع من البصمة للكلام الأصلي. اتجاه واحد.",
+     "show": "board",
+     "board": "hash"
+    },
+    {
+     "say": "زي المفرمة يا فندم. تدخّل لحمة، تطلع كفتة. <short pause> بس عمر الكفتة ما ترجع لحمة.",
+     "show": "board",
+     "board": "hash",
+     "step": "hold",
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "والبشر بيستخدموا الحيلة دي في كل حاجة. كلمة السر بتاعتك عندهم مش متخزنة.. بصمتها هي اللي متخزنة.",
+     "show": "board",
+     "board": "hash",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "chain",
+   "story": {
+    "n": 2,
+    "tag": "السلسلة"
+   },
+   "style": "Building something step by step, then breaking it on purpose.",
+   "beats": [
+    {
+     "say": "كل عشر دقايق تقريباً، التحويلات الجديدة بتتجمع في صفحة. بيسمّوها بلوك.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "والصفحة بتتختم ببصمتها.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "والصفحة اللي بعدها بتبدأ ببصمة اللي قبلها. فكل صفحة ماسكة في اللي قبلها.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "وكده بتتكوّن سلسلة. بلوك.. تشين. <short pause> البشر مش مبدعين في الأسامي.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "والسلسلة دي دلوقتي فيها أكتر من تسعمية ألف صفحة، من أول صفحة Satoshi كتبها لحد اللي اتكتبت من عشر دقايق.",
+     "show": "board",
+     "board": "chain",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "جرّبت أتخيل واحد رجع وغيّر رقم في صفحة قديمة. بصمتها تتغير.. فاللي بعدها تبوظ.. واللي بعدها.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "والشبكة كلها تشوف السلسلة المكسورة، وترفضها.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "يعني علشان تزوّر سطر واحد، لازم تعيد كتابة كل اللي اتكتب بعده. <short pause> وهنا ييجي أذكى جزء في الاختراع كله.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "trip",
+   "story": {
+    "n": 3,
+    "tag": "رحلة تحويل"
+   },
+   "style": "Following one payment like a courier tracking a parcel.",
+   "beats": [
+    {
+     "say": "اتتبّعت تحويل واحد من أول ما اتبعت. الأول بيتذاع على الشبكة كلها.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "وبعدين يقعد في أوضة انتظار مع آلاف التحويلات التانية. واللي دافع عمولة أعلى.. يدخل الأول.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "لحد ما يتكتب في صفحة.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "وكل صفحة بتتكتب فوقه بتثبّته أكتر. وفي المبالغ الكبيرة، بيستنوا ست صفحات. يعني ساعة.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "ساعة علشان تحويل يتأكد. <short pause> والبشر شايفين ده سريع. لأنهم جرّبوا البنوك.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "mine",
+   "story": {
+    "n": 4,
+    "tag": "التعدين"
+   },
+   "style": "Explaining a competition like a sports commentator who finds it absurd.",
+   "beats": [
+    {
+     "say": "مين اللي بيكتب الصفحة الجديدة؟ وإيه اللي يضمن إنه مايغشش؟",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "الحل اللي لقيته عندهم: مسابقة. علشان صفحتك تتقبل، لازم بصمتها تبدأ بعدد معيّن من الأصفار.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "ومفيش طريقة تعرف بيها غير إنك تجرّب. رقم ورا رقم. ملايين المرات في الثانية.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "أول جهاز يلاقي الرقم يكسب: صفحته تتضاف للسلسلة، وياخد جايزة.. بيتكوين جديدة.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "والباقي يراجعوا الحل في لحظة. الحل صعب تلاقيه، وسهل جداً تتأكد منه.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "العملية دي اسمها تعدين. مفيش فاس، ولا منجم. <short pause> مخازن مليانة أجهزة بتخمّن أرقام، ومراوح بتبرّدها.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "ولو الأجهزة زادت والمسابقة بقت أسهل؟ النظام بيصعّبها لوحده كل أسبوعين، علشان الصفحة تفضل تطلع كل عشر دقايق.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "في الأول Satoshi كان بيعدّن على كمبيوتر عادي في بيته. النهارده الشغلانة دي محتاجة أجهزة مخصوصة، وأصحابها بيتجمعوا في فرق ويقسموا الجايزة.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "point"
+    },
+    {
+     "say": "وفيه عشرات الآلاف من الأجهزة مش بتعدّن خالص. بس ماسكة نسخة من الدفتر وبتراجع كل صفحة. <short pause> دول الحكّام. ومحدش بيدفع لهم.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "shrug"
+    },
+    {
+     "say": "يعني البشر بيحرسوا فلوسهم بيانصيب، شغال كل عشر دقايق من سنة ألفين وتسعة. <short pause> وعمره ما وقف.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "secure",
+   "story": {
+    "n": 5,
+    "tag": "ليه صعب تتسرق"
+   },
+   "style": "The payoff of the explanation. Clear and a little impressed.",
+   "beats": [
+    {
+     "say": "وليه ده بيحمي الدفتر؟ لأن اللي عايز يزوّر، لازم يكسب المسابقة دي لوحده، قصاد كل أجهزة الكوكب، مرة ورا مرة.",
+     "show": "board",
+     "board": "net",
+     "step": 3
+    },
+    {
+     "say": "يعني محتاج أجهزة وكهربا أكتر من نص الشبكة كلها. <short pause> السرقة ممكنة نظرياً يا فندم. بس تمنها أغلى من المسروق.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "البشر بيسموه هجوم الواحد وخمسين في المية. وحصل فعلاً لعملات صغيرة. <short pause> لبيتكوين نفسه: ولا مرة.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "ولو اتنين كسبوا المسابقة في نفس اللحظة؟ الشبكة بتمشي ورا السلسلة الأطول. والتانية تتنسى. من غير اجتماع، ومن غير لجنة.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "والتمن ده بيتدفع كهربا. شبكة البيتكوين بتسحب في السنة قد دولة متوسطة بحالها، حسب تقديرات جامعة Cambridge.",
+     "show": "board",
+     "board": "energy"
+    },
+    {
+     "say": "دولة كاملة من الكهربا.. علشان محدش مضطر يثق في حد. <short pause> الثقة عند الكائنات دي غالية جداً.",
+     "shot": "close",
+     "emote": "annoyed"
+    },
+    {
+     "say": "وجزء من الكهربا دي من مصادر كانت هتتهدر أصلاً. وجزء لأ. والخناقة عندهم على الموضوع ده لسه شغالة.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "shrug"
+    }
+   ]
+  },
+  {
+   "id": "cap",
+   "story": {
+    "n": 6,
+    "tag": "21 مليون"
+   },
+   "style": "Numbers, quick and dry.",
+   "beats": [
+    {
+     "say": "أما الجايزة: بدأت خمسين بيتكوين للصفحة. وكل أربع سنين تقريباً بتتقسم على اتنين.",
+     "show": "board",
+     "board": "halv"
+    },
+    {
+     "say": "خمسين، خمسة وعشرين، اتناشر ونص. والنهارده: تلاتة وشوية.",
+     "show": "board",
+     "board": "halv",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "وعلشان كده العدد كله ليه سقف: واحد وعشرين مليون بيتكوين. مش أكتر. مكتوبة في الكود.",
+     "show": "board",
+     "board": "cap"
+    },
+    {
+     "say": "حوالي خمسة وتسعين في المية منهم اتعدّنوا خلاص. وآخر واحد متوقع سنة ألفين مية وأربعين.",
+     "show": "board",
+     "board": "cap"
+    },
+    {
+     "say": "ولما الجوايز تخلص، اللي بيعدّنوا هيعيشوا على العمولات بس.",
+     "show": "board",
+     "board": "cap",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "وكل بيتكوين بيتقسم لمية مليون حتة. الحتة اسمها ساتوشي. <short pause> على اسم الغايب.",
+     "show": "board",
+     "board": "cap",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "فلوس محدش يقدر يطبع منها زيادة. <short pause> على كوكب بيطبع فلوس كل ما يتزنق، دي فكرة ثورية.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "keys",
+   "story": {
+    "n": 7,
+    "tag": "المفاتيح"
+   },
+   "style": "Practical and precise, like explaining a lock.",
+   "beats": [
+    {
+     "say": "طيب. الدفتر علني والكل شايفه. إيه اللي يثبت إن السطر ده بتاعك إنت؟",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "كل واحد ليه عنوان. زي رقم الحساب. تديه لأي حد علشان يبعت لك.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "ومعاه مفتاح خاص: رقم سري طويل جداً. هو ده اللي بيفتح.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "لما تحب تبعت، المفتاح بيوقّع على التحويل. والشبكة تتأكد من التوقيع.. من غير ما تشوف المفتاح نفسه.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "وعدد المفاتيح الممكنة قريب من عدد الذرات في الكون المعروف. فمحدش هيخمّن مفتاحك.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "والمحفظة اللي بيتكلموا عنها مافيهاش فلوس أصلاً. فيها المفتاح. <short pause> الفلوس نفسها سطر في الدفتر.",
+     "show": "board",
+     "board": "keys",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "والمفتاح ده بيتكتب في شكل اتناشر كلمة عادية. والنصيحة الرسمية: اكتبهم على ورقة، وخبّيها. <short pause> أعظم تكنولوجيا مالية عندهم.. أمانها ورقة في درج.",
+     "shot": "host",
+     "emote": "deadpan",
+     "gesture": "present"
+    },
+    {
+     "say": "وعندهم مثل بيتقال: مش مفاتيحك؟ يبقى مش فلوسك.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "ومع ذلك أغلبهم بيسيب مفاتيحه عند شركة تمسكها له. <short pause> يعني رجعوا عملوا بنك. بس من غير ما يسمّوه بنك. وده موضوع التقرير الجاي.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "shrug"
+    }
+   ]
+  },
+  {
+   "id": "lost",
+   "story": {
+    "n": 8,
+    "tag": "اللي ضيّعوا المفتاح"
+   },
+   "style": "Enjoying the stories, deadpan, a little cruel.",
+   "beats": [
+    {
+     "say": "وهنا المصيبة يا فندم. مفيش بنك، يعني مفيش زرار: نسيت كلمة السر.",
+     "shot": "host",
+     "emote": "worried",
+     "gesture": "shrug"
+    },
+    {
+     "say": "واحد اسمه James Howells رمى هارد ديسك قديم سنة ألفين وتلتاشر.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "وكان عليه مفتاح حوالي تمان آلاف بيتكوين.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "وبقاله سنين بيطلب إذن يحفر مقلب الزبالة. والمحكمة قالت له: لأ.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "عرض على البلدية ربع الفلوس. قالوا له لأ برضه.",
+     "show": "board",
+     "board": "howells",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "مئات الملايين من الدولارات.. تحت أكياس زبالة في ويلز. <short pause> وأنا يا فندم كنت فاكر إن مهمتي أنا اللي صعبة.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "ومبرمج اسمه Stefan Thomas معاه أكتر من سبع آلاف بيتكوين على فلاشة مشفّرة.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "ونسي الباسورد.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "الفلاشة بتديله عشر محاولات، وبعدين تمسح نفسها. جرّب تمانية.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "فاضل له اتنين. <short pause> أنا بتابع الملف ده شخصياً.",
+     "shot": "close",
+     "emote": "grin"
+    },
+    {
+     "say": "والتقديرات إن من تلاتة لأربعة مليون بيتكوين ضاعوا للأبد بالشكل ده.",
+     "show": "board",
+     "board": "lost"
+    },
+    {
+     "say": "محدش سرقهم. أصحابهم بس.. نسيوا.",
+     "show": "board",
+     "board": "lost"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 9,
+    "tag": "الخلاصة"
+   },
+   "style": "Summary, one sincere warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: الصفحات مربوطة ببصمات، فأي تزوير بيبان. اتنين: التعدين مسابقة بتحرس الدفتر، وتمنها كهربا. تلاتة: مفتاحك هو فلوسك. يضيع.. تضيع.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "خلاصة التقرير",
+      "items": [
+       "الصفحات مربوطة ببصمات.. التزوير بيبان",
+       "التعدين مسابقة بتحرس الدفتر",
+       "مفتاحك هو فلوسك"
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "ونفس التنبيه: ده تقرير، مش نصيحة استثمار. واللي بيضيع هنا مابيرجعش.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "التقرير الجاي والأخير: بعد بيتكوين، البشر عملوا آلاف العملات. منها اللي غيّر حاجات، ومنها اللي عليه صورة كلب. ومنصات وقعت بمليارات.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
