@@ -160,6 +160,26 @@
    "b": "سامي",
    "warn": "إنفاق مزدوج"
   },
+  "tries": {
+   "kind": "steps",
+   "title": "ناس حاولت قبل كده",
+   "items": [
+    {
+     "icon": "node",
+     "label": "Cypherpunks",
+     "sub": "التسعينات: فلوس محدش يراقبها"
+    },
+    {
+     "icon": "coin",
+     "label": "DigiCash",
+     "sub": "فلّست سنة 1998",
+     "args": [
+      "#9fb0ff",
+      "D"
+     ]
+    }
+   ]
+  },
   "crash": {
    "kind": "chart",
    "title": "2008",
@@ -274,9 +294,11 @@
     },
     {
      "say": "المشكلة: لو بتاع العيش مش عايز سمك النهارده.. هتبات جعان.",
-     "shot": "host",
-     "emote": "skeptical",
-     "gesture": "shrug"
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "right",
+     "emote": "skeptical"
     },
     {
      "say": "فجرّبوا حاجات تانية الكل يقبلها: ملح، صدف، وفي جزيرة عندهم.. حجارة قد العربية. <short pause> محفظتك هناك محتاجة ونش.",
@@ -300,9 +322,11 @@
     },
     {
      "say": "وسنة واحد وسبعين، الدهب اتشال من ورا الورق خالص. وفضلت الورقة لوحدها.",
-     "shot": "host",
-     "emote": "neutral",
-     "gesture": "point"
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
     },
     {
      "say": "يعني قيمتها جاية من حاجة واحدة بس: إن الكل مصدّق إن ليها قيمة. <short pause> الفلوس اتفاق جماعي. زي الطابور. بيشتغل طول ما الكل ملتزم.",
@@ -316,9 +340,11 @@
     },
     {
      "say": "أغلب فلوس الكوكب دلوقتي مالهاش وجود تلمسه. خانات في جداول. <short pause> وهم مرتاحين كده.",
-     "shot": "host",
-     "emote": "smug",
-     "gesture": "shrug"
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
     }
    ]
   },
@@ -342,15 +368,19 @@
     },
     {
      "say": "مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما شفت الفلوس دي بعينك.",
-     "shot": "host",
-     "emote": "neutral",
-     "gesture": "count"
+     "show": "board",
+     "board": "led",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
     },
     {
      "say": "وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع دفاتر بعض، علشان محدش فيهم يثق في التاني.",
-     "shot": "host",
-     "emote": "sly",
-     "gesture": "present"
+     "show": "board",
+     "board": "led",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
     },
     {
      "say": "يعني البنك مش خزنة مليانة فلوس. البنك دفتر. <short pause> واللي ماسك الدفتر.. ماسك كل حاجة.",
@@ -390,9 +420,11 @@
     },
     {
      "say": "الرسالة عندهم بتلف الكوكب في ثانية. والتحويل بين بلدين بياخد تلات أيام. <short pause> والاتنين أرقام يا فندم. الاتنين أرقام.",
-     "shot": "host",
-     "emote": "deadpan",
-     "gesture": "shrug"
+     "show": "board",
+     "board": "mid",
+     "step": "hold",
+     "host": "left",
+     "emote": "deadpan"
     },
     {
      "say": "وفيه أكتر من مليار إنسان على الكوكب ماعندهمش حساب بنك أصلاً. <short pause> يعني مالهمش سطر في الدفتر. يعني بالنسبة للنظام.. مش موجودين.",
@@ -433,20 +465,23 @@
     },
     {
      "say": "دي اسمها مشكلة الإنفاق المزدوج. وعلشان كده كانوا محتاجين حد في النص يراجع: مين دفع إيه.",
-     "shot": "close",
+     "show": "board",
+     "board": "dbl",
+     "step": "hold",
+     "host": "right",
      "emote": "serious"
     },
     {
      "say": "وفي التسعينات، مجموعة مبرمجين سمّوا نفسهم Cypherpunks كان حلمهم فلوس رقمية خاصة: محدش يراقبها، ومحدش يوقّفها.",
-     "shot": "host",
-     "emote": "neutral",
-     "gesture": "point"
+     "show": "board",
+     "board": "tries"
     },
     {
      "say": "ناس حاولت تحلها من التمانينات. عالم اسمه David Chaum عمل شركة فلوس رقمية. <short pause> فلّست سنة تمانية وتسعين. الفلوس الرقمية خلصت منها الفلوس.",
-     "shot": "host",
-     "emote": "bored",
-     "gesture": "point"
+     "show": "board",
+     "board": "tries",
+     "host": "right",
+     "emote": "bored"
     }
    ]
   },
@@ -476,9 +511,11 @@
     },
     {
      "say": "وملايين البشر خسروا بيوتهم وشغلهم. والمديرين اللي راهنوا؟ أغلبهم خد مكافأة نهاية السنة.",
-     "shot": "host",
-     "emote": "annoyed",
-     "gesture": "shrug"
+     "show": "board",
+     "board": "crash",
+     "step": "hold",
+     "host": "right",
+     "emote": "annoyed"
     },
     {
      "say": "يعني اللي ماسك الدفتر غلط.. واللي دفع هو صاحب الحساب. <short pause> نظام عبقري يا فندم. أقترح نطبّقه عندنا.",
@@ -507,9 +544,11 @@
     },
     {
      "say": "والورقة وعدت بحاجة واحدة: تبعت فلوس لأي حد على الكوكب، مباشرة، من غير ما تستأذن حد.",
-     "shot": "host",
-     "emote": "proud",
-     "gesture": "present"
+     "show": "board",
+     "board": "paper",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
     },
     {
      "say": "والكاتب: Satoshi Nakamoto. ولحد النهارده محدش يعرف ده مين. راجل، ست، ولا مجموعة.",
@@ -554,9 +593,11 @@
     },
     {
      "say": "والدفتر ده علني. أي حد يقدر يقراه كله، من أول سطر. بس الأسماء اللي فيه مش أسماء: أرقام طويلة. <short pause> الكل شايف كل حاجة.. ومحدش عارف مين مين. زي حفلة تنكرية بفواتير.",
-     "shot": "host",
-     "emote": "smug",
-     "gesture": "point"
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
     },
     {
      "say": "مفيش مدير. مفيش فرع رئيسي. <short pause> ومفيش خدمة عملا تسيبك على الانتظار أربعين دقيقة.",
@@ -565,9 +606,11 @@
     },
     {
      "say": "وده معناه كمان: مفيش حد يقدر يجمّد حسابك، ولا يطبع بيتكوين زيادة علشان يسدّ عجز. القواعد مكتوبة في الكود، والكود قدام الكل.",
-     "shot": "host",
-     "emote": "serious",
-     "gesture": "count"
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
     },
     {
      "say": "الدفتر المشترك ده اسمه: بلوكتشين. وإزاي آلاف الغُرب بيتفقوا على نسخة واحدة من غير ما يثقوا في بعض؟ ده بقى موضوع الحلقة الجاية.",
@@ -602,15 +645,19 @@
     },
     {
      "say": "ومع البلوك ده اتخلق خمسين بيتكوين جداد. من الهوا. <short pause> بس بقواعد مكتوبة من الأول، ومحدش يقدر يغيّرها. وده فرق كبير عن الطباعة اللي متعودين عليها.",
-     "shot": "host",
-     "emote": "neutral",
-     "gesture": "count"
+     "show": "board",
+     "board": "gen",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
     },
     {
      "say": "وبعدها بتسع أيام بعت أول تحويل: عشرة بيتكوين لمبرمج اسمه Hal Finney. أول اتنين على الشبكة. واحد فيهم مجهول.",
-     "shot": "host",
-     "emote": "neutral",
-     "gesture": "count"
+     "show": "board",
+     "board": "gen",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
     }
    ]
   },
@@ -646,7 +693,10 @@
     },
     {
      "say": "و Laszlo نفسه قال بعدين إنه مش ندمان. <short pause> البيتزا كانت حلوة.",
-     "shot": "host",
+     "show": "board",
+     "board": "pizza2",
+     "step": "hold",
+     "host": "left",
      "emote": "smug"
     },
     {
@@ -687,7 +737,10 @@
     },
     {
      "say": "قبلها كان سلّم الكود لمبرمجين تانيين. مفيش وداع، مفيش مؤتمر صحفي، ولا حتى صورة.",
-     "shot": "host",
+     "show": "board",
+     "board": "sat",
+     "step": "hold",
+     "host": "left",
      "emote": "neutral"
     },
     {

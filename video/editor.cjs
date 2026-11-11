@@ -73,7 +73,7 @@ function resolve(cues, words, slides) {
     }
     if (seg.fact) { if (seg.fact.riser) sfx.push({ t: seg.t - 0.55, type: "riser", len: 0.55 }); sfx.push({ t: seg.t, type: seg.fact.tone === "bubble" ? "pop" : "impact" }); if (seg.fact.tone !== "bubble") impacts.push(seg.t); }
     if (seg.mark) sfx.push({ t: seg.t + 0.14, type: "swipe" });
-    if (seg.kind === "board" && seg.full && !seg.cut && k > 0) sfx.push({ t: seg.t, type: "pop", gain: 0.55 });       // a board moving on a step
+    if (seg.kind === "board" && seg.full && !seg.cut && k > 0 && seg.step !== prev.step) sfx.push({ t: seg.t, type: "pop", gain: 0.55 });       // a board moving on a step
     if (seg.meme) { const m = seg.meme;
       if (m.kind === "chat") { m.delay = m.delay ?? 0.7; sfx.push({ t: seg.t, type: "pop" }, { t: seg.t + m.delay, type: "ding" }); }
       if (m.kind === "versus") { m.delay = m.delay ?? 0.6; sfx.push({ t: seg.t, type: "tick" }, { t: seg.t + m.delay, type: "impact", gain: 0.6 }); impacts.push(seg.t + m.delay); }
@@ -177,7 +177,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
       host: !insert || ins.enter < 1 ? (hostY < 590 ? { ...body, y: hostY } : null) : null,
       lurk: lurk > 0.02 && (!insert || ins.enter < 1) ? { ...spy(0.75 * Math.sin(2 * Math.PI * 0.7 * tv)), amt: lurk } : null,
       peek: peek > 0.02 ? (explain ? { ...body, paper: "pockets", shift: 0, armL: null, armR: null, amt: peek, side } : { ...spy(-0.75), amt: peek, rise: 262, rot: -7 }) : null,
-      board: insert && seg.kind === "board" ? { spec: seg.board, step: seg.step || 0, age: t - seg.t, total: t - seg.cutT } : null,
+      board: insert && seg.kind === "board" ? { spec: seg.board, step: seg.step || 0, age: t - (seg.stepT ?? seg.t), total: t - seg.cutT } : null,
       tv: seg.slide, onair: Math.floor(tv * 0.8) % 2 ? 1 : 0.55, drone, insert: ins, fact, meme, chip, ...caption(i) });
   }
   return frames;

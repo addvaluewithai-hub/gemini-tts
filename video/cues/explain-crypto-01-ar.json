@@ -1,0 +1,1501 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-crypto-01-ar",
+ "transcript": "../../../video/cues/explain-crypto-01-ar.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "اشرحها لكائن",
+  "b": "فضائي",
+  "c": "",
+  "tagline": "تقرير الأرض"
+ },
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1,
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.55,
+ "voiceGain": 1.35,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "في سنة ألفين وعشرة، واحد من البشر دفع عشرة آلاف ",
+   "board": {
+    "kind": "counter",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "النهارده: مئات الملايين من الدولارات"
+   },
+   "story": null,
+   "slide": null,
+   "step": 0,
+   "stepT": -0.3,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 5.03,
+   "say": "علشان يشتري اتنين بيتزا.",
+   "board": {
+    "kind": "counter",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "النهارده: مئات الملايين من الدولارات"
+   },
+   "step": 1,
+   "stepT": 5.03
+  },
+  {
+   "t": 7.33,
+   "say": "بأسعار السنين الأخيرة، المبلغ ده يعدّي مئات المل",
+   "board": {
+    "kind": "counter",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "النهارده: مئات الملايين من الدولارات"
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 7.33
+  },
+  {
+   "t": 11.93,
+   "say": "يا فندم، دي أغلى وجبة في تاريخ الكوكب. ومن غير م",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 16.33,
+   "say": "وعلشان تفهموا إزاي ده حصل، لازم نبدأ من سؤال أبس",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present"
+  },
+  {
+   "t": 22.63,
+   "say": "اشرحها لكائن فضائي. العملات المشفرة. الجزء الأول",
+   "board": {
+    "kind": "titlecard",
+    "kicker": "اشرحها لكائن فضائي",
+    "title": "العملات المشفرة",
+    "sub": "الجزء 1 من 3 · ليه البشر اخترعوا فلوس من غير بنك؟"
+   },
+   "step": 0,
+   "stepT": 22.63,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 27.83,
+   "say": "زمان، البشر كانوا بيبدّلوا حاجة بحاجة. سمكة قصاد",
+   "board": {
+    "kind": "steps",
+    "title": "الفلوس اتغيّرت إزاي؟",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "مقايضة",
+      "sub": "سمكة قصاد رغيف"
+     },
+     {
+      "icon": "gold",
+      "label": "دهب",
+      "sub": "نادر ومابيصدّيش"
+     },
+     {
+      "icon": "cash",
+      "label": "ورق",
+      "sub": "وصل بالدهب"
+     },
+     {
+      "icon": "phone",
+      "label": "أرقام",
+      "sub": "على شاشة"
+     }
+    ]
+   },
+   "story": {
+    "n": 1,
+    "tag": "الفلوس إيه؟"
+   },
+   "step": 0,
+   "stepT": 27.83,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 32.23,
+   "say": "المشكلة: لو بتاع العيش مش عايز سمك النهارده.. هت",
+   "board": {
+    "kind": "steps",
+    "title": "الفلوس اتغيّرت إزاي؟",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "مقايضة",
+      "sub": "سمكة قصاد رغيف"
+     },
+     {
+      "icon": "gold",
+      "label": "دهب",
+      "sub": "نادر ومابيصدّيش"
+     },
+     {
+      "icon": "cash",
+      "label": "ورق",
+      "sub": "وصل بالدهب"
+     },
+     {
+      "icon": "phone",
+      "label": "أرقام",
+      "sub": "على شاشة"
+     }
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 27.83
+  },
+  {
+   "t": 36.03,
+   "say": "فجرّبوا حاجات تانية الكل يقبلها: ملح، صدف، وفي ج",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 44.43,
+   "say": "فاتفقوا على حاجة الكل يقبلها: الدهب. نادر، ومابي",
+   "board": {
+    "kind": "steps",
+    "title": "الفلوس اتغيّرت إزاي؟",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "مقايضة",
+      "sub": "سمكة قصاد رغيف"
+     },
+     {
+      "icon": "gold",
+      "label": "دهب",
+      "sub": "نادر ومابيصدّيش"
+     },
+     {
+      "icon": "cash",
+      "label": "ورق",
+      "sub": "وصل بالدهب"
+     },
+     {
+      "icon": "phone",
+      "label": "أرقام",
+      "sub": "على شاشة"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 44.43,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 50.43,
+   "say": "بس الدهب تقيل. فبقوا يسيبوه عند واحد أمين، وياخد",
+   "board": {
+    "kind": "steps",
+    "title": "الفلوس اتغيّرت إزاي؟",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "مقايضة",
+      "sub": "سمكة قصاد رغيف"
+     },
+     {
+      "icon": "gold",
+      "label": "دهب",
+      "sub": "نادر ومابيصدّيش"
+     },
+     {
+      "icon": "cash",
+      "label": "ورق",
+      "sub": "وصل بالدهب"
+     },
+     {
+      "icon": "phone",
+      "label": "أرقام",
+      "sub": "على شاشة"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 50.43
+  },
+  {
+   "t": 58.03,
+   "say": "والراجل الأمين اكتشف إنه يقدر يسلّف دهبك لحد تان",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 64.83,
+   "say": "وسنة واحد وسبعين، الدهب اتشال من ورا الورق خالص.",
+   "board": {
+    "kind": "steps",
+    "title": "الفلوس اتغيّرت إزاي؟",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "مقايضة",
+      "sub": "سمكة قصاد رغيف"
+     },
+     {
+      "icon": "gold",
+      "label": "دهب",
+      "sub": "نادر ومابيصدّيش"
+     },
+     {
+      "icon": "cash",
+      "label": "ورق",
+      "sub": "وصل بالدهب"
+     },
+     {
+      "icon": "phone",
+      "label": "أرقام",
+      "sub": "على شاشة"
+     }
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 50.43,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 70.13,
+   "say": "يعني قيمتها جاية من حاجة واحدة بس: إن الكل مصدّق",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 80.13,
+   "say": "والنهارده أغلب فلوسهم مش ورق أصلاً. أرقام على شا",
+   "board": {
+    "kind": "steps",
+    "title": "الفلوس اتغيّرت إزاي؟",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "مقايضة",
+      "sub": "سمكة قصاد رغيف"
+     },
+     {
+      "icon": "gold",
+      "label": "دهب",
+      "sub": "نادر ومابيصدّيش"
+     },
+     {
+      "icon": "cash",
+      "label": "ورق",
+      "sub": "وصل بالدهب"
+     },
+     {
+      "icon": "phone",
+      "label": "أرقام",
+      "sub": "على شاشة"
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 80.13,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 84.53,
+   "say": "أغلب فلوس الكوكب دلوقتي مالهاش وجود تلمسه. خانات",
+   "board": {
+    "kind": "steps",
+    "title": "الفلوس اتغيّرت إزاي؟",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "مقايضة",
+      "sub": "سمكة قصاد رغيف"
+     },
+     {
+      "icon": "gold",
+      "label": "دهب",
+      "sub": "نادر ومابيصدّيش"
+     },
+     {
+      "icon": "cash",
+      "label": "ورق",
+      "sub": "وصل بالدهب"
+     },
+     {
+      "icon": "phone",
+      "label": "أرقام",
+      "sub": "على شاشة"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 80.13
+  },
+  {
+   "t": 91.13,
+   "say": "والأرقام دي ساكنة فين؟ في دفتر. عند البنك.",
+   "board": {
+    "kind": "ledger",
+    "title": "دفتر البنك",
+    "rows": [
+     {
+      "name": "علي",
+      "amount": 100
+     },
+     {
+      "name": "منى",
+      "amount": 50
+     },
+     {
+      "name": "سامي",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "story": {
+    "n": 2,
+    "tag": "البنك دفتر"
+   },
+   "step": 0,
+   "stepT": 91.13,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 95.53,
+   "say": "لما علي يدفع لمنى تلاتين جنيه، مفيش حاجة بتتحرك ",
+   "board": {
+    "kind": "ledger",
+    "title": "دفتر البنك",
+    "rows": [
+     {
+      "name": "علي",
+      "amount": 100
+     },
+     {
+      "name": "منى",
+      "amount": 50
+     },
+     {
+      "name": "سامي",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 95.53
+  },
+  {
+   "t": 103.13,
+   "say": "مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما ش",
+   "board": {
+    "kind": "ledger",
+    "title": "دفتر البنك",
+    "rows": [
+     {
+      "name": "علي",
+      "amount": 100
+     },
+     {
+      "name": "منى",
+      "amount": 50
+     },
+     {
+      "name": "سامي",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 95.53
+  },
+  {
+   "t": 109.83,
+   "say": "وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع ",
+   "board": {
+    "kind": "ledger",
+    "title": "دفتر البنك",
+    "rows": [
+     {
+      "name": "علي",
+      "amount": 100
+     },
+     {
+      "name": "منى",
+      "amount": 50
+     },
+     {
+      "name": "سامي",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "sly",
+   "stepT": 95.53
+  },
+  {
+   "t": 117.03,
+   "say": "يعني البنك مش خزنة مليانة فلوس. البنك دفتر. والل",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 124.43,
+   "say": "فأي جنيه بيتحرك بين اتنين من البشر، لازم يعدّي ع",
+   "board": {
+    "kind": "flow",
+    "title": "كل تحويل بيعدّي على طرف تالت",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "علي"
+     },
+     {
+      "icon": "bank",
+      "label": "البنك",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "منى",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "ناقص العمولة"
+     },
+     {
+      "badges": [
+       "عمولة",
+       "تأخير",
+       "تجميد",
+       "إفلاس"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "story": {
+    "n": 3,
+    "tag": "الطرف التالت"
+   },
+   "step": 0,
+   "stepT": 124.43,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 129.33,
+   "say": "علي يبعت، والبنك يراجع الدفتر.",
+   "board": {
+    "kind": "flow",
+    "title": "كل تحويل بيعدّي على طرف تالت",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "علي"
+     },
+     {
+      "icon": "bank",
+      "label": "البنك",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "منى",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "ناقص العمولة"
+     },
+     {
+      "badges": [
+       "عمولة",
+       "تأخير",
+       "تجميد",
+       "إفلاس"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 129.33
+  },
+  {
+   "t": 132.03,
+   "say": "وبعدين منى تستلم. ناقص العمولة.",
+   "board": {
+    "kind": "flow",
+    "title": "كل تحويل بيعدّي على طرف تالت",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "علي"
+     },
+     {
+      "icon": "bank",
+      "label": "البنك",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "منى",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "ناقص العمولة"
+     },
+     {
+      "badges": [
+       "عمولة",
+       "تأخير",
+       "تجميد",
+       "إفلاس"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 132.03
+  },
+  {
+   "t": 134.93,
+   "say": "واللي ماسك الدفتر يقدر ياخد عمولة، يأخّر التحويل",
+   "board": {
+    "kind": "flow",
+    "title": "كل تحويل بيعدّي على طرف تالت",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "علي"
+     },
+     {
+      "icon": "bank",
+      "label": "البنك",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "منى",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "ناقص العمولة"
+     },
+     {
+      "badges": [
+       "عمولة",
+       "تأخير",
+       "تجميد",
+       "إفلاس"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "host": "right",
+   "step": 3,
+   "stepT": 134.93
+  },
+  {
+   "t": 142.23,
+   "say": "الرسالة عندهم بتلف الكوكب في ثانية. والتحويل بين",
+   "board": {
+    "kind": "flow",
+    "title": "كل تحويل بيعدّي على طرف تالت",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "علي"
+     },
+     {
+      "icon": "bank",
+      "label": "البنك",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "منى",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "ناقص العمولة"
+     },
+     {
+      "badges": [
+       "عمولة",
+       "تأخير",
+       "تجميد",
+       "إفلاس"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "deadpan",
+   "stepT": 134.93
+  },
+  {
+   "t": 151.03,
+   "say": "وفيه أكتر من مليار إنسان على الكوكب ماعندهمش حسا",
+   "shot": "close",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 159.93,
+   "say": "طيب، ليه مايعملوش فلوس رقمية من غير بنك؟ ملف على",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 4,
+    "tag": "مشكلة النسخ"
+   }
+  },
+  {
+   "t": 166.73,
+   "say": "المشكلة إن أي حاجة رقمية بتتنسخ.",
+   "board": {
+    "kind": "copy",
+    "title": "أي حاجة رقمية.. بتتنسخ",
+    "file": "100",
+    "name": "فلوس.jpg",
+    "me": "علي",
+    "a": "منى",
+    "b": "سامي",
+    "warn": "إنفاق مزدوج"
+   },
+   "step": 0,
+   "stepT": 166.73,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 169.43,
+   "say": "صورة، أغنية، فيلم. كوبي، بيست. ببلاش.",
+   "board": {
+    "kind": "copy",
+    "title": "أي حاجة رقمية.. بتتنسخ",
+    "file": "100",
+    "name": "فلوس.jpg",
+    "me": "علي",
+    "a": "منى",
+    "b": "سامي",
+    "warn": "إنفاق مزدوج"
+   },
+   "step": 1,
+   "stepT": 169.43
+  },
+  {
+   "t": 174.23,
+   "say": "فلو الفلوس ملف، علي يقدر يبعت نفس المية جنيه لمن",
+   "board": {
+    "kind": "copy",
+    "title": "أي حاجة رقمية.. بتتنسخ",
+    "file": "100",
+    "name": "فلوس.jpg",
+    "me": "علي",
+    "a": "منى",
+    "b": "سامي",
+    "warn": "إنفاق مزدوج"
+   },
+   "step": 2,
+   "stepT": 174.23
+  },
+  {
+   "t": 181.13,
+   "say": "دي اسمها مشكلة الإنفاق المزدوج. وعلشان كده كانوا",
+   "board": {
+    "kind": "copy",
+    "title": "أي حاجة رقمية.. بتتنسخ",
+    "file": "100",
+    "name": "فلوس.jpg",
+    "me": "علي",
+    "a": "منى",
+    "b": "سامي",
+    "warn": "إنفاق مزدوج"
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "serious",
+   "stepT": 174.23
+  },
+  {
+   "t": 187.73,
+   "say": "وفي التسعينات، مجموعة مبرمجين سمّوا نفسهم Cypher",
+   "board": {
+    "kind": "steps",
+    "title": "ناس حاولت قبل كده",
+    "items": [
+     {
+      "icon": "node",
+      "label": "Cypherpunks",
+      "sub": "التسعينات: فلوس محدش يراقبها"
+     },
+     {
+      "icon": "coin",
+      "label": "DigiCash",
+      "sub": "فلّست سنة 1998",
+      "args": [
+       "#9fb0ff",
+       "D"
+      ]
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 187.73,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 197.33,
+   "say": "ناس حاولت تحلها من التمانينات. عالم اسمه David C",
+   "board": {
+    "kind": "steps",
+    "title": "ناس حاولت قبل كده",
+    "items": [
+     {
+      "icon": "node",
+      "label": "Cypherpunks",
+      "sub": "التسعينات: فلوس محدش يراقبها"
+     },
+     {
+      "icon": "coin",
+      "label": "DigiCash",
+      "sub": "فلّست سنة 1998",
+      "args": [
+       "#9fb0ff",
+       "D"
+      ]
+     }
+    ]
+   },
+   "host": "right",
+   "emote": "bored",
+   "step": 1,
+   "stepT": 197.33
+  },
+  {
+   "t": 209.03,
+   "say": "وبعدين جت سنة ألفين وتمانية.",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "إنقاذ",
+    "draw": 3.2
+   },
+   "story": {
+    "n": 5,
+    "tag": "أزمة 2008"
+   },
+   "step": 0,
+   "stepT": 209.03,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 211.63,
+   "say": "بنوك كبيرة في أمريكا راهنت بفلوس الناس على قروض ",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "إنقاذ",
+    "draw": 3.2
+   },
+   "step": 0,
+   "stepT": 209.03
+  },
+  {
+   "t": 222.03,
+   "say": "والحكومة الأمريكية خصصت سبعمية مليار دولار علشان",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "إنقاذ",
+    "draw": 3.2
+   },
+   "step": 1,
+   "stepT": 222.03
+  },
+  {
+   "t": 229.83,
+   "say": "وملايين البشر خسروا بيوتهم وشغلهم. والمديرين الل",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "إنقاذ",
+    "draw": 3.2
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "annoyed",
+   "stepT": 222.03
+  },
+  {
+   "t": 237.63,
+   "say": "يعني اللي ماسك الدفتر غلط.. واللي دفع هو صاحب ال",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 245.33,
+   "say": "وفي عز الأزمة دي، ظهرت ورقة من تسع صفحات، اتبعتت",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "مين ده؟"
+   },
+   "story": {
+    "n": 6,
+    "tag": "ورقة Satoshi"
+   },
+   "step": 0,
+   "stepT": 245.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 252.43,
+   "say": "التاريخ: واحد وتلاتين أكتوبر، ألفين وتمانية. وال",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "مين ده؟"
+   },
+   "step": 1,
+   "stepT": 252.43
+  },
+  {
+   "t": 260.73,
+   "say": "والورقة وعدت بحاجة واحدة: تبعت فلوس لأي حد على ا",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "مين ده؟"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 252.43
+  },
+  {
+   "t": 268.03,
+   "say": "والكاتب: Satoshi Nakamoto. ولحد النهارده محدش يع",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "مين ده؟"
+   },
+   "step": 2,
+   "stepT": 268.03
+  },
+  {
+   "t": 276.53,
+   "say": "وقبل ما حد يسأل يا فندم: لأ، مش أنا. أنا وصلت بع",
+   "shot": "host",
+   "emote": "smug"
+  },
+  {
+   "t": 280.33,
+   "say": "الفكرة كانت بسيطة وجريئة: الدفتر مايبقاش عند الب",
+   "board": {
+    "kind": "network",
+    "title": "دفتر واحد.. عند الكل",
+    "n": 34,
+    "cheat": 11
+   },
+   "story": {
+    "n": 7,
+    "tag": "الفكرة"
+   },
+   "step": 0,
+   "stepT": 280.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 285.23,
+   "say": "كل جهاز في الشبكة ياخد نسخة كاملة من الدفتر. آلا",
+   "board": {
+    "kind": "network",
+    "title": "دفتر واحد.. عند الكل",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 1,
+   "stepT": 285.23
+  },
+  {
+   "t": 291.13,
+   "say": "لما علي يبعت لمنى، الخبر بيلف على الكل، وكل الأج",
+   "board": {
+    "kind": "network",
+    "title": "دفتر واحد.. عند الكل",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 2,
+   "stepT": 291.13
+  },
+  {
+   "t": 296.83,
+   "say": "ولو واحد حاول يغش ويعدّل نسخته، الباقي كله يقول ",
+   "board": {
+    "kind": "network",
+    "title": "دفتر واحد.. عند الكل",
+    "n": 34,
+    "cheat": 11
+   },
+   "host": "left",
+   "step": 3,
+   "stepT": 296.83
+  },
+  {
+   "t": 302.33,
+   "say": "والدفتر ده علني. أي حد يقدر يقراه كله، من أول سط",
+   "board": {
+    "kind": "network",
+    "title": "دفتر واحد.. عند الكل",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 296.83
+  },
+  {
+   "t": 316.63,
+   "say": "مفيش مدير. مفيش فرع رئيسي. ومفيش خدمة عملا تسيبك",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 321.93,
+   "say": "وده معناه كمان: مفيش حد يقدر يجمّد حسابك، ولا يط",
+   "board": {
+    "kind": "network",
+    "title": "دفتر واحد.. عند الكل",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 296.83,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 330.63,
+   "say": "الدفتر المشترك ده اسمه: بلوكتشين. وإزاي آلاف الغ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 339.23,
+   "say": "تلاتة يناير ألفين وتسعة. Satoshi شغّل الشبكة، وك",
+   "board": {
+    "kind": "block",
+    "title": "أول صفحة في الدفتر",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "story": {
+    "n": 8,
+    "tag": "أول بلوك"
+   },
+   "step": 0,
+   "stepT": 339.23,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 347.43,
+   "say": "وجوّه البلوك ساب رسالة. عنوان جريدة The Times بت",
+   "board": {
+    "kind": "block",
+    "title": "أول صفحة في الدفتر",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "step": 1,
+   "stepT": 347.43
+  },
+  {
+   "t": 356.23,
+   "say": "يعني أول سطر في فلوس من غير بنوك.. تريقة على الب",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 363.53,
+   "say": "ومع البلوك ده اتخلق خمسين بيتكوين جداد. من الهوا",
+   "board": {
+    "kind": "block",
+    "title": "أول صفحة في الدفتر",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 347.43,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 375.23,
+   "say": "وبعدها بتسع أيام بعت أول تحويل: عشرة بيتكوين لمب",
+   "board": {
+    "kind": "block",
+    "title": "أول صفحة في الدفتر",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 347.43
+  },
+  {
+   "t": 385.03,
+   "say": "في الأول محدش اهتم. البيتكوين كان بيتوزّع تقريبا",
+   "shot": "host",
+   "emote": "bored",
+   "gesture": "shrug",
+   "story": {
+    "n": 9,
+    "tag": "يوم البيتزا"
+   }
+  },
+  {
+   "t": 394.23,
+   "say": "لحد اتنين وعشرين مايو ألفين وعشرة. مبرمج اسمه La",
+   "board": {
+    "kind": "counter",
+    "title": "22 مايو 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "وقتها كانوا يساووا حوالي 41 دولار"
+   },
+   "step": 0,
+   "stepT": 394.23,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 402.73,
+   "say": "وحد جابهم له.",
+   "board": {
+    "kind": "counter",
+    "title": "22 مايو 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "وقتها كانوا يساووا حوالي 41 دولار"
+   },
+   "step": 1,
+   "stepT": 402.73
+  },
+  {
+   "t": 403.83,
+   "say": "ودي كانت أول مرة البيتكوين يشتري حاجة حقيقية.",
+   "board": {
+    "kind": "counter",
+    "title": "22 مايو 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "وقتها كانوا يساووا حوالي 41 دولار"
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 403.83
+  },
+  {
+   "t": 406.73,
+   "say": "و Laszlo نفسه قال بعدين إنه مش ندمان. البيتزا كا",
+   "board": {
+    "kind": "counter",
+    "title": "22 مايو 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "وقتها كانوا يساووا حوالي 41 دولار"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 403.83
+  },
+  {
+   "t": 410.43,
+   "say": "والبشر لسه بيحتفلوا باليوم ده كل سنة. اسمه: يوم ",
+   "shot": "host",
+   "emote": "grin",
+   "gesture": "cheer"
+  },
+  {
+   "t": 418.13,
+   "say": "وبعد أقل من سنة، البيتكوين الواحد وصل دولار. دول",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 424.43,
+   "say": "أما Satoshi نفسه، ففي ألفين وحداشر بعت آخر رسالة",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "أنا انتقلت|لحاجات تانية",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "ماتحركوش من ساعتها"
+   },
+   "story": {
+    "n": 10,
+    "tag": "الاختفاء"
+   },
+   "step": 0,
+   "stepT": 424.43,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 429.23,
+   "say": "أنا انتقلت لحاجات تانية.",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "أنا انتقلت|لحاجات تانية",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "ماتحركوش من ساعتها"
+   },
+   "step": 1,
+   "stepT": 429.23
+  },
+  {
+   "t": 431.33,
+   "say": "واختفى.",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "أنا انتقلت|لحاجات تانية",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "ماتحركوش من ساعتها"
+   },
+   "step": 2,
+   "stepT": 431.33
+  },
+  {
+   "t": 432.63,
+   "say": "قبلها كان سلّم الكود لمبرمجين تانيين. مفيش وداع،",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "أنا انتقلت|لحاجات تانية",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "ماتحركوش من ساعتها"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 431.33
+  },
+  {
+   "t": 439.53,
+   "say": "وساب وراه حوالي مليون بيتكوين، حسب تقديرات الباح",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "أنا انتقلت|لحاجات تانية",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "ماتحركوش من ساعتها"
+   },
+   "step": 3,
+   "stepT": 439.53
+  },
+  {
+   "t": 447.43,
+   "say": "اخترع فلوس جديدة، بقى من أغنى الكائنات على الكوك",
+   "shot": "close",
+   "emote": "skeptical"
+  },
+  {
+   "t": 458.33,
+   "say": "نلخّص يا فندم. واحد: الفلوس اتفاق، ومتسجّل في دف",
+   "meme": {
+    "kind": "list",
+    "title": "اللي فهمناه النهارده",
+    "items": [
+     "الفلوس اتفاق.. ومتسجّل في دفتر",
+     "الدفتر كان عند البنك",
+     "بيتكوين وزّع الدفتر على الكل"
+    ],
+    "step": 2.3
+   },
+   "host": "pip",
+   "story": {
+    "n": 11,
+    "tag": "الخلاصة"
+   },
+   "shot": "show",
+   "kind": "meme"
+  },
+  {
+   "t": 472.83,
+   "say": "وتنبيه مهم: ده شرح، مش نصيحة استثمار. العملات دي",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 482.13,
+   "say": "الحلقة الجاية: يعني إيه تعدين؟ مين بيحرس الدفتر؟",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 490.53,
+   "say": "اشرحها لكائن فضائي. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 495.4,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endcard",
+    "title": "الحلقة الجاية",
+    "next": "البلوكتشين بيشتغل إزاي؟ · الجزء 2 من 3",
+    "note": "اشترك علشان باقي التقارير توصل"
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

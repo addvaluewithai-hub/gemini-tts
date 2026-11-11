@@ -403,3 +403,44 @@ and centred when he is alone, smaller and lower when a fact or a meme sits
 above him, with the captions between the two. There are no slides in this
 layout, so it suits pieces that are not news.
 `cues/humans-guide-001-ar.json` is the first one.
+
+## Explainers: motion-graphics boards
+
+`"layout": "explain"` is for episodes that teach something. The picture
+carries the lesson and the host is a guest in it: a few studio shots, and
+otherwise he leans in from the edge of the frame while a board is on screen.
+
+`boards.js` draws the boards. Each is a pure function of its step and time,
+so any frame can be rendered alone:
+
+| Board | What it shows |
+| --- | --- |
+| `titlecard` | series name, title and a line under it |
+| `steps` | things in a row joined by arrows, one more per step |
+| `ledger` | a page of names and balances; each step moves an amount between rows |
+| `flow` | people and a go-between; each step moves a coin, adds badges or crosses someone out |
+| `copy` | a digital file copying itself, then two people holding "the only one" |
+| `chart` | a line that draws itself, then a stamp |
+| `doc` | a paper with its title, a date stamp and an unknown author |
+| `network` | one ledger becoming a turning globe of machines; a payment ripples through; a cheat is outvoted |
+| `block` | a 3D block with a message set into its face |
+| `counter` | a number that counts up, what it bought, what that is worth |
+| `person` | someone nobody can name: what they said, then gone, and what they left |
+| `endcard` | what comes next, with room for the platform's end-screen elements |
+
+In a storyboard, boards are named once under `boards` and used by beats:
+
+```json
+"boards": { "led": { "kind": "ledger", "title": "دفتر البنك", "rows": [...], "ops": [{ "from": 0, "to": 1, "amount": 30 }] } },
+...
+{ "say": "والأرقام دي ساكنة فين؟", "show": "board", "board": "led" },
+{ "say": "لما علي يدفع لمنى...", "show": "board", "board": "led" },
+{ "say": "مرتّبك بينزل: رقم.", "show": "board", "board": "led", "step": "hold", "host": "right" }
+```
+
+Each beat on a board moves it one step on, even if a studio shot came in
+between. `"step": "hold"` keeps it where it is. `host` puts the host on screen
+during a board: `right` or `left` (leaning in from that edge) or `pip` (seated
+small in the corner); without it he is only heard. `ending.card` closes the
+episode on an end card, and `tail` sets how long it holds.
+`cues/explain-crypto-01-ar.json` is the first episode made this way.
