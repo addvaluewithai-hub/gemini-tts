@@ -1,0 +1,32 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "techforbadguys-humans-guide-001-ar",
+    "request": {
+      "turns": [
+        {
+          "style": "A small alien field agent reporting a discovery about humans to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم. Fast, clipped and confident, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. One short field note, about forty seconds. Starts mid-thought with a discovery, builds, and ends on a flat punchline.",
+          "text": "يا فندم، اكتشفت أخطر شبكة اتصالات على الكوكب. اسمها: جروب العيلة. أربعين كائن بشري من نفس الفصيلة، محبوسين في أوضة واحدة.. جوّه التليفون. كل يوم الصبح، حد فيهم بيبعت صورة وردة، مكتوب عليها: صباح الخير. ومحدش بيرد. وبيبعتها تاني يوم. عادي. وفيه كائن اسمه الخالة. بتبعت تسجيل صوتي أربع دقايق.. علشان تقول: إزيكم. وأخطر حاجة يا فندم: الشبكة دي بتعالج كل الأمراض. <short pause> باللمون. حاولت أخرج من الجروب. <short pause> رجّعوني في تلات ثواني. التوصية: مانغزوش الكوكب ده. <short pause> هيضيفونا. دليل البشر. العميل Peek."
+        }
+      ],
+      "voice": "Puck",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "channel": "techforbadguys",
+        "title": "دليل البشر 1: جروب العيلة",
+        "language": "ar-EG",
+        "recorded_for": "2026-11-11",
+        "script": "episodes/techforbadguys/humans-guide-001-ar/script.md"
+      }
+    }
+  }
+}
