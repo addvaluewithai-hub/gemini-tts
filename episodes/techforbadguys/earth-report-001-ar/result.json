@@ -1,0 +1,11 @@
+{
+  "id": "techforbadguys-earth-report-001-ar",
+  "status": "completed",
+  "voice": "Puck",
+  "workflow_run": "https://github.com/addvaluewithai-hub/gemini-tts/actions/runs/43003462500",
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/gemini-tts/techforbadguys-earth-report-001-ar.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/gemini-tts/techforbadguys-earth-report-001-ar.transcript.json",
+  "vtt_url": "https://res.cloudinary.com/as9o12al/raw/upload/gemini-tts/techforbadguys-earth-report-001-ar.transcript.vtt",
+  "word_count": 1287,
+  "duration_ms": 506500
+}

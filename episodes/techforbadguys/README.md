@@ -85,3 +85,9 @@ episodes/techforbadguys/build.sh \
 ```
 
 Needs ffmpeg with libass and the Inter font (falls back to DejaVu).
+
+## The channel is now تقرير الأرض (Earth Report)
+
+The channel covers world news, not only technology, and is named after the
+report the host files: **تقرير الأرض**. `earth-report-001-ar` is the first
+published episode. The folder keeps its old name so earlier paths still work.

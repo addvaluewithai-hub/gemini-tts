@@ -378,5 +378,19 @@ Cue files made from a storyboard use `"layout": "solo"`. There is no wall
 screen: the host sits alone at the desk in his shots, and anything shown
 (an article, a number, a meme) fills the frame while he sits small at the
 bottom right, still talking. The story chip moves to the bottom left over a
-shown page so it never covers the headline. `cues/earth-report-002-ar.json`
+shown page so it never covers the headline. `cues/earth-report-001-ar.json`
 is the first episode made this way.
+
+### News that is not funny
+
+`characters/acting.js` has four faces for it: `furious`, `annoyed`, `blank`
+and `sad` (sheet: `characters/serious/serious.png`, page:
+`characters/serious.html`). None of them smirk, and their talking mouths turn
+down. Put `"calm": true` on a beat or a scene to stop the nodding and bouncing
+on stressed words and keep the hands down, and `"music"` to lower the bed.
+
+### The channel name
+
+`brand` in a storyboard or cue file sets the name on the desk and in the
+corner: `{ "a": "تقرير", "b": "الأرض", "c": "", "tagline": "..." }`, where `b`
+is the word drawn in pink. It can be Latin or Arabic.
