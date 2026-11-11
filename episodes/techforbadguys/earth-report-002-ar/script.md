@@ -1,5 +1,10 @@
 # تقرير الأرض رقم 2
 
+Earth Report 002: a world-news episode in Egyptian Arabic. The host reads it to his commanders, not to the audience; humans are the subject of the report.
+
+How the files were picked: stories of 9 and 10 November 2026 carried by at least two of BBC News, DW, NPR and Al Jazeera, or listed in Wikipedia's Current Events for those days, then read at the source. Every claim in the script is in the article shown on screen.
+
+Editorial rules: the jokes are aimed at governments, institutions and the very rich, never at victims. The Gaza file has no jokes, quieter music and still hands. The soldier arrested in Britain is a suspect, and the script says so. A story with no page that could be opened (the weight-loss drug warning) was left out.
 
 ## Script
 
@@ -69,3 +74,19 @@
 
 ## Sources
 
+- ukraine: NPR, 10 Nov 2026, https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks
+- hegseth: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/cxly4y5jzl0qo
+- unhr: NPR, 10 Nov 2026, https://www.npr.org/2026/11/10/nx-s1-6034998/un-human-rights-us-geneva
+- fridge: DW, 10 Nov 2026, https://www.dw.com/en/iran-denies-french-fridge-cyberattack-hacking/a-79910206
+- gaza: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/cw4g1g4ll5m1o
+- israel: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/crd939lpzjp9o
+- novaya: DW, 9 Nov 2026, https://www.dw.com/en/russia-independent-novaya-gazeta-shuts-its-moscow-newsroom/a-79899827
+- spy: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/c6d7q77xgw0vo
+- nvidia: DW, 10 Nov 2026, https://www.dw.com/en/nvidia-shareholders-sue-jensen-huang-over-alleged-spy-ties/a-79905809
+- tax: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/cq398em3032wo
+- najib: DW, 10 Nov 2026, https://www.dw.com/en/malaysia-najib-razak-house-arrest/a-79913437
+- gibran: NPR, 10 Nov 2026, https://www.npr.org/2026/11/10/g-s1-152788/indonesias-vp-offers-resignation-as-questions-mount-over-his-eligibility
+- trumpbbc: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/cm93rpy6lx0do
+- elnino: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/c8wy9y37z30vo
+- booker: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/cw0737kv52lko
+- skims: BBC News, 10 Nov 2026, https://www.bbc.com/news/articles/cqp8g8p53x6ko

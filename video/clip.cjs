@@ -134,7 +134,7 @@ server.listen(0, "127.0.0.1", async () => {
     const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
     page.on("pageerror", (err) => { console.error("PAGE ERROR", err.message); process.exitCode = 1; });
     await page.goto(url); await page.waitForFunction("window.__ready === true", null, { timeout: 20000 });
-    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl });
+    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl, layout: cues.layout || "" });
     return { page, cdp: await page.context().newCDPSession(page) };
   };
   const shot = async (w, i, format = "jpeg") => {
@@ -155,7 +155,7 @@ server.listen(0, "127.0.0.1", async () => {
   if (studio) {
     const sfx = require("./sfx.cjs"), toVideo = (e) => ({ ...e, t: e.t - cues.from + cues.lead });
     sfx.writeWav(path.join(tmp, "sfx.wav"), sfx.effects(plan.sfx.map(toVideo), dur), cues.sfxGain ?? 0.6);
-    sfx.writeWav(path.join(tmp, "music.wav"), sfx.music(dur, { bpm: cues.bpm, end: dur - 0.25 }));
+    sfx.writeWav(path.join(tmp, "music.wav"), sfx.music(dur, { bpm: cues.bpm, end: dur - 0.25, levels: plan.music.map(toVideo) }));
     extra.push("-i", path.join(tmp, "sfx.wav"), "-i", path.join(tmp, "music.wav"));
     mix = `[1:a]aresample=48000,volume=${cues.voiceGain ?? 1},${delay},asplit=2[v][key];[3:a][key]sidechaincompress=threshold=0.03:ratio=4:attack=15:release=380[m];` +
       `[v][2:a][m]amix=inputs=3:normalize=0:weights=1 1 ${cues.musicGain ?? 0.5}[x];[x]alimiter=limit=0.84:level=false[a]`;

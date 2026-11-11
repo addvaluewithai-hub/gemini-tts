@@ -14,6 +14,20 @@
 #factbig,#factsmall,.chat .u,.chat .b,.chat .bar,.vs .t,.list h3,.list div,.rc h3,.rc span,.rc .c{unicode-bidi:plaintext}
 #frame.rtl #cap,#frame.rtl #fact *,#frame.rtl #meme *,#frame.rtl #chipt,#frame.rtl #chips{letter-spacing:0}
 #frame.rtl .rc{font-size:36px;line-height:1.5}#frame.rtl .list div{font-size:40px}#frame.rtl .chat .u{font-family:"Anton"}
+/* layout "solo": no wall screen. The host is alone in his shots; anything shown fills the frame and he sits small at bottom right. */
+#radar{display:none}#frame.solo #radar{display:block}
+#frame.solo #tv,#frame.solo #lurk,#frame.solo #tvglow,#frame.solo #peek{display:none!important}
+#frame.solo #host{left:510px}
+#frame.solo #win{left:0;top:0;width:1920px;height:1080px;border-radius:0;box-shadow:none}
+#frame.solo #winbar{display:none}
+#frame.solo #view{height:1080px}
+#frame.solo #pan{width:1920px;height:1080px}
+#frame.solo #view .textcard{font-size:27px}
+#frame.solo #fact{left:360px;right:auto;top:250px;width:1000px}
+#frame.solo #meme{left:400px;right:auto;top:140px}
+#pip{left:1330px;top:626px;width:600px;height:600px;filter:drop-shadow(0 0 26px rgba(5,6,13,.75))}
+#pipdesk{left:1300px;top:1010px;width:700px;height:90px;border-radius:26px 0 0 0;background:linear-gradient(#232859,#0d1028);border-top:6px solid #ff5fae;box-shadow:0 -6px 30px rgba(255,61,154,.45),0 0 40px rgba(5,6,13,.8)}
+#pip svg{display:block}
 html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #frame{position:relative;width:1920px;height:1080px;overflow:hidden;background:#05060d;font-family:"Anton";color:#fff}
 #frame>*,#world>*{position:absolute}
@@ -85,7 +99,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #lbT,#lbB{left:0;right:0;background:#000}#lbT{top:0}#lbB{bottom:0}
 #cap{left:0;right:0;bottom:40px;text-align:center;font-size:62px;line-height:1.1;text-transform:uppercase;letter-spacing:.02em}
 #cap b{display:inline-block;font-weight:400;background:rgba(5,6,13,.84);padding:12px 22px 2px;border-radius:14px;box-shadow:0 0 0 2px rgba(255,255,255,.08)}
-#cap span{display:inline-block;margin:0 .13em;transform-origin:50% 80%}
+#cap span{display:inline-block;margin:0 .13em;transform-origin:50% 80%}#cap span[dir]{margin:0}
 #cap .off{color:#c9d0ee;opacity:.55}#cap .now{color:#FFE66D}
 #vig{inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 52%,rgba(0,0,0,.55) 100%);pointer-events:none}
 #flash{inset:0;background:#fff}
@@ -108,7 +122,16 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
    <ellipse cx="120" cy="180" rx="760" ry="620" fill="url(#w1)"/><ellipse cx="1560" cy="330" rx="900" ry="640" fill="url(#w2)"/><ellipse cx="560" cy="400" rx="560" ry="480" fill="url(#w3)"/>
    <rect x="-700" y="52" width="3320" height="7" fill="#35c8ff" opacity=".8"/><rect x="-700" y="44" width="3320" height="22" fill="#35c8ff" opacity=".35" filter="url(#b8)"/>
    <!-- back-light behind the screen -->
-   <rect x="1020" y="130" width="860" height="520" rx="30" fill="#35c8ff" opacity=".4" filter="url(#b30)"/>
+   <rect id="tvglow" x="1020" y="130" width="860" height="520" rx="30" fill="#35c8ff" opacity=".4" filter="url(#b30)"/>
+   <!-- solo layout: a tracking display on the wall instead of a screen -->
+   <g id="radar" transform="translate(1560 360)">
+    <circle r="300" fill="#35c8ff" opacity=".1" filter="url(#b30)"/>
+    <g fill="none" stroke="#7fd4ff" stroke-opacity=".3" stroke-width="3"><circle r="250"/><circle r="170"/><circle r="90"/><path d="M-270 0H270M0 -270V270"/></g>
+    <g id="sweep"><path d="M0 0L250 0A250 250 0 0 0 216.5 -125Z" fill="#35c8ff" opacity=".22"/><path d="M0 0L250 0" stroke="#bfe9ff" stroke-width="4" opacity=".8"/></g>
+    <circle cx="96" cy="-70" r="20" fill="url(#gl)"/><circle cx="96" cy="-70" r="30" fill="none" stroke="#FFE66D" stroke-width="3" stroke-dasharray="8 8"/>
+    <text x="134" y="-98" font-family="Anton" font-size="26" letter-spacing="3" fill="#FFE66D">EARTH</text>
+    <circle cx="-120" cy="110" r="5" fill="#bfe9ff" opacity=".7"/><circle cx="-60" cy="-150" r="4" fill="#bfe9ff" opacity=".5"/><circle cx="170" cy="130" r="4" fill="#bfe9ff" opacity=".5"/>
+   </g>
    <!-- on-air sign -->
    <g id="onair" transform="translate(0 96)"><rect x="62" y="120" width="250" height="92" rx="14" fill="#ff3b47" opacity=".5" filter="url(#b30)"/>
     <rect x="72" y="128" width="230" height="78" rx="12" fill="#2a0810" stroke="#ff3b47" stroke-width="5"/>
@@ -133,12 +156,12 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
     <filter id="db8"><feGaussianBlur stdDeviation="9"/></filter>
    </defs>
    <path d="M-40 655H1960L2160 716H-240Z" fill="url(#d0)"/><path d="M-40 655H1960" stroke="#8f9aff" stroke-width="3" opacity=".7"/>
-   <ellipse cx="560" cy="676" rx="330" ry="20" fill="#05060d" opacity=".4" filter="url(#db8)"/>
+   <ellipse class="seat" cx="560" cy="676" rx="330" ry="20" fill="#05060d" opacity=".4" filter="url(#db8)"/>
    <rect x="-700" y="716" width="3320" height="900" fill="url(#d1)"/>
    <rect x="-700" y="712" width="3320" height="26" fill="#ff3d9a" opacity=".45" filter="url(#db8)"/><rect x="-700" y="716" width="3320" height="7" fill="#ff5fae"/>
    <text x="960" y="886" text-anchor="middle" font-family="Anton" font-size="96" letter-spacing="8" fill="#eef0ff" opacity=".9">TECH <tspan fill="#ff4fa3">FOR</tspan> BAD GUYS</text>
    <text x="960" y="926" text-anchor="middle" font-family="Elite" font-size="24" letter-spacing="8" fill="#9fb0ff">THE NEWS, MINUS THE PRESS RELEASE</text>
-   <!-- microphone -->
+   <g class="seat"><!-- microphone -->
    <ellipse cx="282" cy="694" rx="56" ry="13" fill="#05060d"/><ellipse cx="282" cy="690" rx="52" ry="11" fill="#2c3052"/>
    <path d="M282 690L326 596" stroke="#05060d" stroke-width="11" stroke-linecap="round"/><path d="M280 690L324 596" stroke="#565c8e" stroke-width="4" stroke-linecap="round"/>
    <g transform="rotate(24 334 566)"><rect x="312" y="524" width="44" height="84" rx="22" fill="#11132a"/><rect x="312" y="524" width="44" height="50" rx="22" fill="#3b4070"/><path d="M316 548h36M316 560h36M318 536h32" stroke="#11132a" stroke-width="3"/><rect x="318" y="530" width="8" height="34" rx="4" fill="#fff" opacity=".25"/></g>
@@ -150,6 +173,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
    <g transform="translate(1010 668)"><rect x="0" y="6" width="190" height="26" rx="3" fill="#cfc8b4"/><rect x="-8" y="-6" width="190" height="26" rx="3" fill="#f3efe4" transform="rotate(-3)"/><rect x="6" y="0" width="92" height="6" fill="#22201c" transform="rotate(-3)"/><rect x="6" y="11" width="150" height="3" fill="#8c8268" transform="rotate(-3)"/></g>
    <!-- nameplate -->
    <g transform="translate(470 664)"><path d="M-6 44h192l8 10h-208z" fill="#05060d" opacity=".5"/><rect width="180" height="44" rx="5" fill="#d9a441"/><rect x="4" y="4" width="172" height="36" rx="3" fill="#2a1d06"/><text x="90" y="33" text-anchor="middle" font-family="Anton" font-size="28" letter-spacing="6" fill="#f2c868">PEEK</text></g>
+  </g>
   </svg>
   <svg id="drone" viewBox="0 0 190 96" xmlns="http://www.w3.org/2000/svg">
    <path d="M30 30H160" stroke="#11132a" stroke-width="9" stroke-linecap="round"/>
@@ -168,6 +192,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
    <div id="view"><div id="pan"><div class="textcard" id="viewcard"><div class="who"></div><div class="what"></div><div class="when"></div></div><div id="mark"></div></div></div></div>
  </div>
  <div id="peek"></div>
+ <div id="pip"></div><div id="pipdesk"></div>
  <div id="fact"><svg id="factchart" viewBox="0 0 820 420"><path id="fcline" fill="none" stroke="#ff4654" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity=".85"/><path id="fchead" fill="#ff4654" opacity=".85"/></svg><div id="factbig"></div><div id="factsmall"></div></div>
  <div id="meme"></div>
  <div id="lbT"></div><div id="lbB"></div>
@@ -185,7 +210,8 @@ let cfg = { slides: {}, face: "pear" }; const tvImg = {}, viewImg = {};
 const show = (el, on, as = "block") => { el.style.display = on ? as : "none"; };
 
 window.setup = async (config) => {
-  cfg = config; $("frame").classList.toggle("rtl", !!config.rtl); for (const id of ["cap", "meme"]) $(id).dir = config.rtl ? "rtl" : "ltr";
+  cfg = config; $("frame").classList.toggle("rtl", !!config.rtl); $("frame").classList.toggle("solo", config.layout === "solo");
+  if (config.layout === "solo") for (const el of document.querySelectorAll("#desk .seat")) el.setAttribute("transform", "translate(400 0)"); for (const id of ["cap", "meme"]) $(id).dir = config.rtl ? "rtl" : "ltr";
   $("tvdate").textContent = config.date || ""; $("branddate").textContent = config.date || "";
   const jobs = [];
   for (const [name, s] of Object.entries(config.slides)) {
@@ -245,26 +271,28 @@ window.draw = (st) => {
     person($("host"), st.host, 900); if (st.host) $("host").style.transform = `translateY(${st.host.y}px)`;
     person($("lurk"), st.lurk, 340, "q3"); if (st.lurk) $("lurk").style.top = 185 - 162 * st.lurk.amt + "px";
     slide(tvImg, $("tvcard"), st.tv); show($("tvident"), !st.tv, "flex");
-    $("onair").style.opacity = st.onair;
+    $("onair").style.opacity = st.onair; if (st.sweep !== undefined) $("sweep").setAttribute("transform", `rotate(${st.sweep})`);
     show($("drone"), !!st.drone);
     if (st.drone) { $("drone").style.transform = `translate(${st.drone.x}px,${st.drone.y}px) rotate(${st.drone.r}deg)`; $("led").style.opacity = st.drone.led; $("rotA").setAttribute("rx", st.drone.spin); $("rotB").setAttribute("rx", st.drone.spin);
       const b = st.drone.batt; $("battfill").setAttribute("width", Math.max(0, 38 * b)); $("battfill").setAttribute("fill", b > 0.5 ? "#58d68d" : b > 0.2 ? "#FFE66D" : "#ff4654"); $("batt").style.opacity = b < 0.2 && Math.floor(st.drone.blink) % 2 ? 0.3 : 1; }
   }
   const ins = st.insert; show($("insert"), !!ins);
   if (ins) {
-    const s = cfg.slides[ins.slide];
-    slide(viewImg, $("viewcard"), ins.slide);
-    $("url").textContent = s.url.replace(/^https?:\/\/(www\.)?/, ""); $("srcchip").textContent = `${s.source} · ${s.date}`.toUpperCase();
+    const s = cfg.slides[ins.slide] || {}, solo = cfg.layout === "solo";
+    show($("win"), !!ins.slide); slide(viewImg, $("viewcard"), ins.slide);
+    if (ins.slide) { $("url").textContent = s.url.replace(/^https?:\/\/(www\.)?/, ""); $("srcchip").textContent = `${s.source} · ${s.date}`.toUpperCase(); }
     $("insert").style.opacity = Math.min(1, ins.enter * 3);
     $("insert").style.filter = st.blur > 0.5 ? `blur(${st.blur.toFixed(1)}px)` : "";
     $("win").style.transform = `translate(${ins.dx}px,${ins.dy}px) rotate(${ins.rot}deg) scale(${ins.scale})`;
     $("grid").style.transform = `translate(${-ins.drift * 40}px,${-ins.drift * 24}px)`;
-    const W = 1440, H = 810, tall = s.screens || 1;              // the picture may be several screens tall; cy counts screens
+    const W = solo ? 1920 : 1440, H = solo ? 1080 : 810, tall = s.screens || 1;              // the picture may be several screens tall; cy counts screens
     const tx = Math.min(0, Math.max(-(ins.k - 1) * W, 0.5 * W - ins.k * ins.cx * W)), ty = Math.min(0, Math.max(H - ins.k * tall * H, 0.44 * H - ins.k * ins.cy * H));
     $("pan").style.transform = `translate(${tx}px,${ty}px) scale(${ins.k})`;
     const m = ins.mark; show($("mark"), !!m && m.p > 0);
     if (m) Object.assign($("mark").style, { left: m.x * W + "px", top: m.y * H + "px", width: m.w * W + "px", height: m.h * H + "px", transform: `scaleX(${m.p})` });
   }
+  person($("pip"), st.pip, 600, "s3"); show($("pipdesk"), !!st.pip);
+  if (st.pip) { const d = (1 - st.pip.amt) * 470; $("pip").style.transform = `translateY(${d + st.pip.y * 0.66}px)`; $("pipdesk").style.transform = `translateY(${d}px)`; }
   person($("peek"), st.peek, 640, "r3");
   if (st.peek) { $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
   const f = st.fact; show($("fact"), !!f);
@@ -278,10 +306,16 @@ window.draw = (st) => {
   else if (lastMeme) { $("meme").innerHTML = ""; lastMeme = ""; }
   $("lbT").style.height = $("lbB").style.height = st.lb + "px";
   const ch = st.chip; show($("chip"), !!ch, "flex");
-  if (ch) { $("chipn").textContent = String(ch.n).padStart(2, "0"); $("chipt").textContent = ch.tag; $("chips").textContent = ch.src || ""; show($("chips"), !!ch.src); $("chip").style.opacity = ch.a; $("chip").style.transform = `translate(${(1 - ch.a) * -40}px,${st.lb}px) scale(${ch.pop})`; }
+  if (ch) { $("chipn").textContent = String(ch.n).padStart(2, "0"); $("chipt").textContent = ch.tag; $("chips").textContent = ch.src || ""; show($("chips"), !!ch.src); $("chip").style.opacity = ch.a; $("chip").style.transform = `translate(${(1 - ch.a) * -40}px,${st.lb}px) scale(${ch.pop})`;
+    $("chip").style.top = ch.low ? "auto" : "48px"; $("chip").style.bottom = ch.low ? "40px" : "auto"; $("chip").style.transformOrigin = ch.low ? "0 100%" : "0 0"; }
   $("brand").style.opacity = st.brand; $("brand").style.transform = `translateY(${st.lb}px)`;
-  const said = st.words.filter((w) => w.t);
-  $("cap").innerHTML = said.length ? "<b>" + said.map((w) => `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`).join("") + "</b>" : "";
+  // In a right-to-left caption, neighbouring Latin words (a person's name) are kept together left to right.
+  const said = st.words.filter((w) => w.t), latin = (w) => cfg.rtl && /[A-Za-z]/.test(w.t) && !/[\u0621-\u064A]/.test(w.t);
+  let html = "";
+  for (let i = 0; i < said.length; i++) { const w = said[i], one = `<span class="${w.state}" style="transform:scale(${w.scale})">${esc(w.t)}</span>`;
+    if (latin(w) && !(i && latin(said[i - 1]))) html += '<span dir="ltr">';
+    html += one; if (latin(w) && !(i + 1 < said.length && latin(said[i + 1]))) html += "</span>"; }
+  $("cap").innerHTML = said.length ? "<b>" + html + "</b>" : "";
   $("flash").style.opacity = st.flash; show($("flash"), st.flash > 0.004);
 };
 window.__ready = true;

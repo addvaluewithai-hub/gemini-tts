@@ -332,3 +332,51 @@ voice. What a second language needs:
   yeh and teh marbuta variants folded together, so `at` and `fix` can be typed
   the way the transcript prints them;
 - nothing for lip sync: Arabic words are sounded out letter by letter.
+
+## Storyboards: long episodes from one file
+
+A hand-written cut list does not scale to an eight-minute episode, and it has
+to be rewritten for every language. A storyboard keeps the script and its
+direction together instead:
+
+```json
+{ "id": "ukraine", "story": { "n": 1, "tag": "روسيا وأوكرانيا" }, "slide": "ukraine", "style": "First file. Serious, then dry.",
+  "beats": [
+    { "say": "الملف الأول: الحرب.", "shot": "host", "emote": "serious" },
+    { "say": "امبارح قعدوا يتفاوضوا في أبو ظبي...", "show": "slide" },
+    { "say": "الجلسة قعدت أربع ساعات.", "show": "fact", "fact": { "big": "4 ساعات", "small": "مدة الجلسة · NPR" } },
+    { "say": "يعني أقل من ساعة لكل سنة حرب.", "shot": "close", "emote": "deadpan" }
+  ] }
+```
+
+```sh
+# 1. the factory request (one turn per scene), plus script.md with the sources
+node storyboard.cjs request ../episodes/<channel>/<episode>/storyboard.json <job-id>
+# 2. run the factory; for a long request pass request_path instead of pasting the JSON
+# 3. place every beat on the transcript and write the cue file
+node storyboard.cjs cues ../episodes/<channel>/<episode>/storyboard.json <transcript.json> cues/<episode>.json
+# 4. render as usual
+node clip.cjs cues/<episode>.json <voice.wav> out.mp4
+```
+
+- A beat is either the host alone (`shot`: `wide`, `host`, `close`, `low`) or
+  something shown (`show`: `slide`, `fact`, `meme`). Slide beats take `view`:
+  `top` (the headline, marked), `body` or `deep` (further down the page), or
+  their own `mark`, `center` and `zoom`. Neighbouring slide beats on the same
+  page keep scrolling instead of cutting.
+- Step 3 aligns the whole script against the whole transcript, so it does not
+  matter that the transcriber respells names or writes numbers as digits. It
+  also writes `<cues>.words.json`: the script's own words on the transcript's
+  timings. Captions and lip sync use that file, so the screen shows what was
+  written.
+- A scene can set `music` (0 to 1) and `calm` for a passage that is not a
+  joke; the next scene goes back to normal.
+
+### The solo layout
+
+Cue files made from a storyboard use `"layout": "solo"`. There is no wall
+screen: the host sits alone at the desk in his shots, and anything shown
+(an article, a number, a meme) fills the frame while he sits small at the
+bottom right, still talking. The story chip moves to the bottom left over a
+shown page so it never covers the headline. `cues/earth-report-002-ar.json`
+is the first episode made this way.

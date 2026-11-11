@@ -6,7 +6,8 @@
 // slide or 1 for just the header), as a JPEG at 2x, so the stage can scroll through it. A cookie notice is
 // answered with its own "reject" button (or "accept" when that is all it offers). A page that answers
 // with a bot check or an error is skipped and reported; the stage then draws a plain text card for that
-// story instead. Pages go through the session proxy when HTTPS_PROXY is set.
+// story instead. Advertising slots and embedded frames are hidden before the picture is taken, so the
+// capture is the article and nothing else. Pages go through the session proxy when HTTPS_PROXY is set.
 const fs = require("fs"), path = require("path");
 const { chromium } = require("playwright");
 (async () => {
@@ -24,6 +25,8 @@ const { chromium } = require("playwright");
       await page.waitForTimeout(3500);
       const title = await page.title(), status = res ? res.status() : 0;
       for (const re of [/^(reject|decline)\b.*/i, /^accept\b.*/i]) { const b = page.getByRole("button", { name: re }).first(); if (await b.isVisible().catch(() => false)) { await b.click().catch(() => {}); await page.waitForTimeout(800); break; } }
+      await page.addStyleTag({ content: `iframe,.ad,[class^="ad-"],[class*=" ad-"],[class^="ad_"],[class*=" ad_"],[class*="advert" i],[class*="sponsor" i],[class*="dfp" i],[id^="ad-"],[id^="ad_"],[id*="google_ads"],[data-ad],[data-testid*="ad-" i],[aria-label*="advertisement" i]{display:none!important}` }).catch(() => {});
+      await page.waitForTimeout(400);
       const h1 = await page.evaluate(() => { const h = [...document.querySelectorAll("h1")].find((x) => x.innerText.trim().length > 20); if (!h) return null; const b = h.getBoundingClientRect(); return { text: h.innerText.trim(), x: b.x, y: b.y + scrollY, w: b.width, h: b.height }; });
       if (status >= 400 || !h1 || /confirm you are human|checking your browser|access denied/i.test(title + " " + (h1 ? h1.text : ""))) { report[name] = { ok: false, status, title }; await ctx.close(); continue; }
       // Frame the headline: a 16:9 window that starts a little above it.

@@ -48,7 +48,7 @@ function effects(events, seconds) {
 }
 
 // The bed: a dry little spy groove. Bass riff, kick, rim, hats and a vibraphone answer every other bar.
-function music(seconds, { bpm = 104, end = seconds } = {}) {
+function music(seconds, { bpm = 104, end = seconds, levels = [] } = {}) {
   const out = new Float32Array(Math.ceil(seconds * SR)), beat = 60 / bpm, eighth = beat / 2, R = rng(31);
   const put = (t, buf, g = 1) => { const at = Math.round(t * SR); for (let i = 0; i < buf.length; i++) { const j = at + i; if (j >= 0 && j < out.length) out[j] += buf[i] * g; } };
   const hz = (semi) => 82.41 * Math.pow(2, semi / 12);                 // semitones above E2
@@ -70,7 +70,8 @@ function music(seconds, { bpm = 104, end = seconds } = {}) {
   }
   for (const [n, d] of [[0, 0], [7, 0.03], [10, 0.06], [14, 0.09]]) put(end - 0.15 + d, vibe(n), 1.5);     // a last chord to land on
   put(end - 0.15, bass(0, 1.4), 1.2);
-  for (let i = 0; i < out.length; i++) out[i] *= 0.5;                  // headroom: the bed never clips on its own
+  let g = 1, want = 1, k = 0; const pts = [...levels].sort((p, q) => p.t - q.t);                      // level changes glide over about a second
+  for (let i = 0; i < out.length; i++) { while (k < pts.length && pts[k].t * SR <= i) want = pts[k++].g; g += (want - g) * (3 / SR); out[i] *= 0.5 * g; }   // 0.5: headroom, the bed never clips on its own
   return out;
 }
 

@@ -1,0 +1,194 @@
+{
+  "ukraine": {
+    "ok": true,
+    "file": "ukraine.jpg",
+    "screens": 2.4,
+    "headline": "Russia and Ukraine hold nearly 4 hours of U.S.-mediated talks in Abu Dhabi",
+    "focus": [
+      0.047,
+      0.097,
+      0.508,
+      0.111
+    ]
+  },
+  "hegseth": {
+    "ok": true,
+    "file": "hegseth.jpg",
+    "screens": 2.4,
+    "headline": "US House blocks bid to impeach Defence Secretary Pete Hegseth, for now",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.183
+    ]
+  },
+  "unhr": {
+    "ok": true,
+    "file": "unhr.jpg",
+    "screens": 2.4,
+    "headline": "U.S. boycotts U.N. human rights review for second year running",
+    "focus": [
+      0.047,
+      0.097,
+      0.508,
+      0.111
+    ]
+  },
+  "fridge": {
+    "ok": true,
+    "file": "fridge.jpg",
+    "screens": 2.4,
+    "headline": "Iran denies role in French fridge cyberattack as Paris summons envoy",
+    "focus": [
+      0.047,
+      0.097,
+      0.695,
+      0.114
+    ]
+  },
+  "gaza": {
+    "ok": true,
+    "file": "gaza.jpg",
+    "screens": 2.4,
+    "headline": "Board of Peace says Israel's aid response after Gaza floods 'insufficent'",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.122
+    ]
+  },
+  "israel": {
+    "ok": true,
+    "file": "israel.jpg",
+    "screens": 2.4,
+    "headline": "Israel's new parliament sworn in as leaders compete to form government",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.122
+    ]
+  },
+  "novaya": {
+    "ok": true,
+    "file": "novaya.jpg",
+    "screens": 2.4,
+    "headline": "Russia: Independent Novaya Gazeta shuts its Moscow newsroom",
+    "focus": [
+      0.047,
+      0.097,
+      0.695,
+      0.114
+    ]
+  },
+  "spy": {
+    "ok": true,
+    "file": "spy.jpg",
+    "screens": 2.4,
+    "headline": "US Army soldier suspected of spying for Russia arrested in UK",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.122
+    ]
+  },
+  "nvidia": {
+    "ok": true,
+    "file": "nvidia.jpg",
+    "screens": 2.4,
+    "headline": "Nvidia shareholders sue Jensen Huang over alleged spy ties",
+    "focus": [
+      0.047,
+      0.097,
+      0.695,
+      0.114
+    ]
+  },
+  "tax": {
+    "ok": true,
+    "file": "tax.jpg",
+    "screens": 2.4,
+    "headline": "Californians reject wealth tax for billionaires",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.122
+    ]
+  },
+  "najib": {
+    "ok": true,
+    "file": "najib.jpg",
+    "screens": 2.4,
+    "headline": "Malaysia's Najib Razak moves to house arrest over 1MDB scandal",
+    "focus": [
+      0.047,
+      0.097,
+      0.695,
+      0.114
+    ]
+  },
+  "gibran": {
+    "ok": true,
+    "file": "gibran.jpg",
+    "screens": 2.4,
+    "headline": "Indonesia's VP offers resignation as questions mount over his eligibility",
+    "focus": [
+      0.047,
+      0.097,
+      0.508,
+      0.111
+    ]
+  },
+  "trumpbbc": {
+    "ok": true,
+    "file": "trumpbbc.jpg",
+    "screens": 2.4,
+    "headline": "Judge allows Trump's $10bn defamation case against BBC to proceed",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.122
+    ]
+  },
+  "elnino": {
+    "ok": true,
+    "file": "elnino.jpg",
+    "screens": 2.4,
+    "headline": "'It can kill us': Kenyans fear impact of El Niño with floods predicted",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.122
+    ]
+  },
+  "booker": {
+    "ok": true,
+    "file": "booker.jpg",
+    "screens": 2.4,
+    "headline": "'Baffling but brilliant' post-apocalyptic novel The End of Everything wins Booker Prize",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.183
+    ]
+  },
+  "skims": {
+    "ok": true,
+    "file": "skims.jpg",
+    "screens": 2.4,
+    "headline": "Kim Kardashian's Skims offers refunds for $148 advent calendar after backlash",
+    "focus": [
+      0.093,
+      0.097,
+      0.564,
+      0.122
+    ]
+  }
+}

@@ -18,7 +18,7 @@
  },
  "ending": {
   "duck": true,
-  "lurk": true
+  "lurk": false
  },
  "scenes": [
   {
@@ -291,6 +291,8 @@
     "tag": "غزة"
    },
    "slide": "gaza",
+   "music": 0.25,
+   "calm": true,
    "style": "Fourth file. No jokes. Sober, slower, plain.",
    "beats": [
     {
@@ -872,5 +874,13 @@
     }
    ]
   }
+ ],
+ "recorded_for": "2026-11-11",
+ "notes": [
+  "Earth Report 002: a world-news episode in Egyptian Arabic. The host reads it to his commanders, not to the audience; humans are the subject of the report.",
+  "",
+  "How the files were picked: stories of 9 and 10 November 2026 carried by at least two of BBC News, DW, NPR and Al Jazeera, or listed in Wikipedia's Current Events for those days, then read at the source. Every claim in the script is in the article shown on screen.",
+  "",
+  "Editorial rules: the jokes are aimed at governments, institutions and the very rich, never at victims. The Gaza file has no jokes, quieter music and still hands. The soldier arrested in Britain is a suspect, and the script says so. A story with no page that could be opened (the weight-loss drug warning) was left out."
  ]
 }
