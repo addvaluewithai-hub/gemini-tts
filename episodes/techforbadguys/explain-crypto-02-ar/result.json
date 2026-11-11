@@ -1,0 +1,11 @@
+{
+  "id": "techforbadguys-explain-crypto-02-ar",
+  "status": "completed",
+  "voice": "Puck",
+  "workflow_run": "https://github.com/addvaluewithai-hub/gemini-tts/actions/runs/43106524646",
+  "audio_url": "https://res.cloudinary.com/as9o12al/video/upload/gemini-tts/techforbadguys-explain-crypto-02-ar.wav",
+  "transcript_url": "https://res.cloudinary.com/as9o12al/raw/upload/gemini-tts/techforbadguys-explain-crypto-02-ar.transcript.json",
+  "word_count": 1059,
+  "duration_ms": 437560,
+  "note": "ex2.transcript.json in this folder is the transcript after tighten.cjs (silences over 0.32 s cut to 0.22 s); render with the tightened WAV."
+}

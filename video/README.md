@@ -427,6 +427,13 @@ so any frame can be rendered alone:
 | `counter` | a number that counts up, what it bought, what that is worth |
 | `person` | someone nobody can name: what they said, then gone, and what they left |
 | `endcard` | what comes next, with room for the platform's end-screen elements |
+| `hash` | a fingerprint machine: text in, a code out; change a letter and the code changes; no way back |
+| `chain` | pages that each carry the last one's fingerprint; tamper with one and the rest break |
+| `mine` | the guessing race: machines try numbers until one wins, is paid, and the others check it |
+| `bars` | bars that grow one after another, with a line under them |
+| `keys` | an address anyone may see and the key only its owner holds; the key signs a payment |
+| `story` | one person's story: a thing, a headline, and a line more each step |
+| `meter` | how much of a fixed supply is gone |
 
 In a storyboard, boards are named once under `boards` and used by beats:
 

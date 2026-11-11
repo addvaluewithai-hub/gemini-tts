@@ -206,10 +206,10 @@ const BOARDS = {
       body += `<g transform="translate(${x + shake} ${540 + (1 - ease(a / 0.4)) * 60})" opacity="${clamp(a / 0.25)}"><rect x="${-W / 2}" y="-250" width="${W}" height="500" rx="22" fill="${C.navy}" stroke="${broken ? C.red : C.line}" stroke-width="6"/>
         <rect x="${-W / 2}" y="-250" width="${W}" height="84" rx="22" fill="${broken ? C.red : C.cyan}" opacity=".9"/>${T(0, -192, b.name, 52, { fill: C.ink })}
         ${b.lines.map((l, k) => T(W / 2 - 40, -100 + k * 62, k === 0 && i === 0 && a4 > 0 ? s.tamper : l, 42, { anchor: "end", font: "Elite", fill: k === 0 && i === 0 && a4 > 0 ? C.red : C.white })).join("")}
-        ${i > 0 ? T(W / 2 - 40, 110, s.prevLabel, 30, { anchor: "end", font: "Elite", fill: C.dim }) + T(-W / 2 + 40, 112, hashes[i - 1].slice(0, 8), 40, { anchor: "start", font: "Elite", fill: a4 > (i - 1) * 0.8 + 0.4 && a4 > 0 ? C.red : C.pink }) : ""}
-        ${hs > 0 ? `<g opacity="${clamp(hs / 0.2)}">${T(W / 2 - 40, 196, s.hashLabel, 30, { anchor: "end", font: "Elite", fill: C.dim })}${T(-W / 2 + 40, 200, h.slice(0, 8), 44, { anchor: "start", font: "Elite", fill: broken ? C.red : C.yellow })}</g>` : ""}</g>`;
+        ${i > 0 ? T(W / 2 - 40, 84, s.prevLabel, 28, { anchor: "end", font: "Elite", fill: C.dim }) + T(W / 2 - 40, 128, hashes[i - 1].slice(0, 8), 40, { anchor: "end", font: "Elite", fill: a4 > (i - 1) * 0.8 + 0.4 && a4 > 0 ? C.red : C.pink }) : ""}
+        ${hs > 0 ? `<g opacity="${clamp(hs / 0.2)}">${T(W / 2 - 40, 172, s.hashLabel, 28, { anchor: "end", font: "Elite", fill: C.dim })}${T(W / 2 - 40, 220, h.slice(0, 8), 44, { anchor: "end", font: "Elite", fill: broken ? C.red : C.yellow })}</g>` : ""}</g>`;
       if (i > 0 && a > 0.4) { const cut = a4 > (i - 1) * 0.8 + 0.4 && a4 > 0, xa = x - W - gap + W / 2, xb = x - W / 2;
-        body += `<path d="M${xa} 740C${xa + 60} 740 ${xb - 60} 650 ${xb} 650" fill="none" stroke="${cut ? C.red : C.pink}" stroke-width="7" stroke-dasharray="${cut ? "10 12" : "0"}" opacity="${clamp((a - 0.4) / 0.3)}"/>${cut ? G((xa + xb) / 2, 695, pop(a4 - (i - 1) * 0.8 - 0.4), T(0, 26, "✗", 80, { fill: C.red })) : ""}`; } });
+        body += `<path d="M${xa} 750C${xa + 60} 750 ${xb - 60} 660 ${xb} 660" fill="none" stroke="${cut ? C.red : C.pink}" stroke-width="7" stroke-dasharray="${cut ? "10 12" : "0"}" opacity="${clamp((a - 0.4) / 0.3)}"/>${cut ? G((xa + xb) / 2, 695, pop(a4 - (i - 1) * 0.8 - 0.4), T(0, 26, "✗", 80, { fill: C.red })) : ""}`; } });
     return svg(heading(s.title, 1) + body + (a5 > 0 ? G(960, 540, pop(a5), `<g transform="rotate(-8)"><rect x="-360" y="-100" width="720" height="200" rx="24" fill="rgba(5,6,13,.8)" stroke="${C.red}" stroke-width="14"/>${T(0, 46, s.rejected, 130, { fill: C.red })}</g>`) : "") + caption((s.captions || [])[step], age, 900));
   },
   // The guessing race: machines try number after number until one finds a fingerprint that starts with enough zeros.
@@ -218,28 +218,28 @@ const BOARDS = {
     const n = 4, xs = Array.from({ length: n }, (_, i) => 960 + (i - (n - 1) / 2) * 400), a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), win = s.winner ?? 2;
     const tick = Math.floor(total * 15), tries = a1 > 0 ? Math.floor(Math.min(a1 + (step > 1 ? 9 : 0), 14) ** 3 * 1e7) : 0;
     const miners = xs.map((x, i) => { const won = a2 > 0 && i === win, ok = a3 > i * 0.12 && i !== win, guess = a1 > 0 && !(a2 > 0) ? Math.floor(rnd(i * 31 + tick) * 9e8) : won ? s.nonce : a2 > 0 ? "—" : "?", h = a1 > 0 && !(a2 > 0) ? fake(String(guess)) : won ? "0000" + fake("w").slice(0, 4) : "";
-      return labelled(x, 560, won ? 1.5 : 1.25, "node", "", total - i * 0.12, { args: [won ? C.green : ok ? C.green : C.cyan], glow: won ? C.green : null })
-        + T(x, 760, String(guess), 46, { font: "Elite", fill: won ? C.green : C.white }) + (h ? T(x, 822, h.slice(0, 8), 40, { font: "Elite", fill: won ? C.green : C.dim }) : "") + (ok ? T(x, 420, "✓", 90, { fill: C.green }) : "")
-        + (won ? G(x, 380 - 0 * a2, pop(a2), icon("coin")) + T(x, 300, s.reward, 54, { fill: C.yellow, opacity: clamp(a2 / 0.3) }) : ""); }).join("");
-    return svg(`${heading(s.title, 1)}${G(960, 270, pop(total - 0.2), `<rect x="-520" y="-56" width="1040" height="112" rx="20" fill="${C.navy}" stroke="${C.yellow}" stroke-width="5"/>${T(0, 20, s.target, 56, { fill: C.yellow })}`)}${miners}
-      ${a1 > 0 ? T(960, 920, s.triesLabel + " " + tries.toLocaleString("en"), 48, { font: "Elite", fill: C.dim }) : ""}`);
+      return labelled(x, 580, won ? 1.5 : 1.25, "node", "", total - i * 0.12, { args: [won ? C.green : ok ? C.green : C.cyan], glow: won ? C.green : null })
+        + T(x, 760, String(guess), 46, { font: "Elite", fill: won ? C.green : C.white }) + (h ? T(x, 822, h.slice(0, 8), 40, { font: "Elite", fill: won ? C.green : C.dim }) : "") + (ok ? T(x, 450, "✓", 90, { fill: C.green }) : "")
+        + (won ? G(x, 400, 0.8 * pop(a2), icon("coin")) + T(x, 890, s.reward, 50, { fill: C.yellow, opacity: clamp(a2 / 0.3) }) : ""); }).join("");
+    return svg(`${heading(s.title, 1)}${G(960, 262, pop(total - 0.2), `<rect x="-520" y="-52" width="1040" height="104" rx="20" fill="${C.navy}" stroke="${C.yellow}" stroke-width="5"/>${T(0, 20, s.target, 56, { fill: C.yellow })}`)}${miners}
+      ${a1 > 0 && !(a2 > 0) ? T(960, 920, s.triesLabel + " " + tries.toLocaleString("en"), 48, { font: "Elite", fill: C.dim }) : ""}`);
   },
   // Bars that grow one after another, then a line under them.
   bars(s, step, age, total) {
-    const n = s.bars.length, max = Math.max(...s.bars.map((b) => b.value)), bw = Math.min(260, 1400 / n - 40), x0 = 960 - (n - 1) * (bw + 40) / 2;
-    const body = s.bars.map((b, i) => { const a = total - 0.3 - i * (s.every ?? 0.45), g = ease(a / 0.6), h = 480 * b.value / max * g, x = x0 + i * (bw + 40); if (a <= 0) return "";
+    const n = s.bars.length, max = Math.max(...s.bars.map((b) => b.value)), bw = Math.min(260, 1400 / n - 40), gap = n <= 2 ? 240 : 40, x0 = 960 - (n - 1) * (bw + gap) / 2;
+    const body = s.bars.map((b, i) => { const a = total - 0.3 - i * (s.every ?? 0.45), g = ease(a / 0.6), h = 480 * b.value / max * g, x = x0 + i * (bw + gap); if (a <= 0) return "";
       return `<rect x="${x - bw / 2}" y="${780 - h}" width="${bw}" height="${h}" rx="14" fill="${b.color || C.yellow}"/>${T(x, 760 - h, b.text ?? b.value, 62, { fill: b.color || C.yellow, opacity: clamp((a - 0.4) / 0.2) })}${T(x, 850, b.label, 46, { font: "Elite" })}`; }).join("");
-    return svg(`${heading(s.title, 1)}<path d="M${x0 - bw / 2 - 40} 780H${x0 + (n - 1) * (bw + 40) + bw / 2 + 40}" stroke="${C.line}" stroke-opacity=".5" stroke-width="5"/>${body}${caption(step >= 1 ? s.note : "", since(1, step, age), 930)}`);
+    return svg(`${heading(s.title, 1)}<path d="M${x0 - bw / 2 - 40} 780H${x0 + (n - 1) * (bw + gap) + bw / 2 + 40}" stroke="${C.line}" stroke-opacity=".5" stroke-width="5"/>${body}${caption(step >= 1 ? s.note : "", since(1, step, age), 930)}`);
   },
   // An address anyone may see, and the key that only its owner holds.
   //   0 the address  1 the key  2 the key signs a payment and the network accepts it  3 how many keys there could be
   keys(s, step, age, total) {
-    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), dim = a3 > 0 ? 0.25 : 1;
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), dim = a3 > 0 ? 0.1 : 1;
     const sign = a2 > 0 ? ease(a2 / 0.7) : 0, kx = lerp(1420, 1080, sign * (a2 < 1.4 ? 1 : 1 - ease((a2 - 1.4) / 0.5))), ky = lerp(470, 560, sign * (a2 < 1.4 ? 1 : 1 - ease((a2 - 1.4) / 0.5)));
     return svg(`${heading(s.title, 1)}<g opacity="${dim}">${labelled(500, 470, 1.5, "mailbox", s.addressLabel, total)}${total > 0.4 ? T(500, 800, s.address, 40, { font: "Elite", fill: C.cyan }) : ""}
       ${a1 > 0 ? G(kx, ky, 1.5 * pop(a1), icon("key")) + T(1420, 730, s.keyLabel, 46, { font: "Elite", opacity: clamp(a1 / 0.3) }) + T(1420, 800, "•••• •••• •••• ••••", 46, { font: "Elite", fill: C.yellow, opacity: clamp(a1 / 0.3) }) : ""}
       ${a2 > 0 ? G(960, 560, pop(a2), `<rect x="-230" y="-70" width="460" height="140" rx="16" fill="${C.paper}"/>${T(0, 18, s.payment, 50, { font: "Elite", fill: C.ink })}`) + (a2 > 0.8 ? G(1110, 500, pop(a2 - 0.8), `<circle r="48" fill="${C.green}"/>${T(0, 26, "✓", 70, { fill: "#fff" })}`) : "") : ""}</g>
-      ${a3 > 0 ? G(960, 540, pop(a3), T(0, 40, s.count, 300, { fill: C.yellow }) + T(0, 150, s.countLabel, 56, { font: "Elite" })) : ""}${caption((s.captions || [])[step], age, 920)}`);
+      ${a3 > 0 ? G(960, 520, pop(a3), T(-10, 60, s.count, 320, { fill: C.yellow, anchor: "end" }) + T(10, -70, s.exp || "", 170, { fill: C.yellow, anchor: "start" }) + T(0, 190, s.countLabel, 60, { font: "Elite" })) : ""}${caption((s.captions || [])[step], age, 920)}`);
   },
   // One person's story: a thing, a headline, and a line more each step.
   story(s, step, age, total) {
