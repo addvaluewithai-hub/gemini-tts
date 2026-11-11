@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- The four faces for news that is not funny, at rest and mid-word. Render with: node characters/render-sheet.cjs <outDir> serious.html -->
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+*{box-sizing:border-box;margin:0}body{background:#0d1028;font-family:"Anton";color:#fff;width:2400px}
+.card{width:2400px;padding:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;background:#0d1028}
+.cell{background:radial-gradient(circle at 45% 35%,#3a4aa0,#141a44 75%);border-radius:28px;overflow:hidden;text-align:center;padding-bottom:22px}
+.cell svg{display:block;margin:0 auto}.cell b{font-weight:400;font-size:54px;letter-spacing:.05em}.cell span{display:block;font-size:26px;color:#bfe9ff;letter-spacing:.08em;margin-top:2px}
+</style></head><body><div class="card" id="serious"></div>
+<script type="module">
+import { peek3d } from "/characters/peek3d.js";
+import { EMOTES } from "/characters/acting.js";
+const base = { lid: 0.14, look: 0, lookY: 0, browL: 0, browR: 0, browTilt: 0, eyeScale: 1, pupil: 1, squint: 0 };
+const rows = [["furious", "VERY ANGRY"], ["annoyed", "ANGRY"], ["blank", "NO REACTION"], ["sad", "SAD"]];
+let html = "";
+for (const talking of [false, true]) for (const [name, label] of rows) {
+  const em = EMOTES[name], m = talking ? { w: 0.82, smile: 0.16 + em.talk.smile, jaw: 0.7, smirk: em.talk.smirk, tongue: 0 } : em.mouth;
+  const svg = peek3d({ ...base, ...em, antL: em.ant || 0, antR: em.ant || 0, m }, { face: "pear", bg: false, grain: false, size: 540, viewBox: "170 20 860 860", tilt: em.tilt || 0, roll: false })
+    .replaceAll("p3pear", "x" + name + (talking ? "t" : "r"));
+  html += `<div class="cell">${svg}<b>${label}</b><span>${talking ? "talking" : "at rest"} · ${name}</span></div>`;
+}
+document.getElementById("serious").innerHTML = html;
+await document.fonts.load('54px "Anton"'); window.__ready = true;
+</script></body></html>

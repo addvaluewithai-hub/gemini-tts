@@ -1,16 +1,16 @@
 {
   "event_type": "tts.generate",
   "client_payload": {
-    "job_id": "techforbadguys-earth-report-002-ar",
+    "job_id": "techforbadguys-earth-report-001-ar",
     "request": {
       "turns": [
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Opening of an official field report. Crisp, formal, a little too proud of himself.",
-          "text": "تقرير الأرض، رقم اتنين. إلى القيادة العليا. التاريخ بتوقيتهم: حداشر نوفمبر، ألفين ستة وعشرين. يا فندم، الكوكب لسه شغال. <short pause> مش عارف إزاي. المهمة زي ما هي: أراقب، وأبلّغ، وماتعاطفش. أربعتاشر ملف عن آخر يومين. نبدأ."
+          "text": "تقرير الأرض، رقم واحد. إلى القيادة العليا. التاريخ بتوقيتهم: حداشر نوفمبر، ألفين ستة وعشرين. يا فندم، وصلت. والكوكب شغال. <short pause> مش عارف إزاي. المهمة زي ما هي: أراقب، وأبلّغ، وماتعاطفش. أربعتاشر ملف عن آخر يومين. نبدأ."
         },
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. First file. Serious newsreader, then dry.",
-          "text": "الملف الأول: الحرب. روسيا وأوكرانيا بيتحاربوا بقالهم أربع سنين ونص. امبارح قعدوا يتفاوضوا في أبو ظبي، بوساطة أمريكية، لأول مرة من تسع شهور. وقبل الجلسة، الأوكران والأمريكان قعدوا مع الأوروبيين وحلف الناتو، مع إن الكرملين كان معترض. يعني اجتماع قبل الاجتماع، علشان يتفقوا هيقولوا إيه في الاجتماع. الجلسة قعدت أربع ساعات. يعني أقل من ساعة لكل سنة حرب. الأمريكان قالوا: مثمرة جداً. والأوكران قالوا: بنّاءة. ولا وزير الخارجية الأمريكي ولا الرئيس الأوكراني حضروا بنفسهم. ومفيش أي اتفاق. <short pause> على الكوكب ده يا فندم، الاجتماع الناجح هو اللي بيتفقوا في آخره على اجتماع تاني. وفعلاً، فيه جلسة تانية النهارده. وفي نفس الوقت، روسيا بتضرب شبكة الكهربا في أوكرانيا، والشتا داخل. بيتفاوضوا على السلام بالنهار، وبيقطعوا النور بالليل. <short pause> شغل ورديات."
+          "text": "الملف الأول: الحرب. روسيا وأوكرانيا بيتحاربوا بقالهم أربع سنين ونص. امبارح قعدوا يتفاوضوا في أبو ظبي، بوساطة أمريكية، لأول مرة من تسع شهور. وقبل الجلسة، الأوكران والأمريكان قعدوا مع الأوروبيين وحلف الناتو، مع إن الكرملين كان معترض. يعني اجتماع قبل الاجتماع، علشان يتفقوا هيقولوا إيه في الاجتماع. الجلسة قعدت أربع ساعات. يعني أقل من ساعة لكل سنة حرب. الأمريكان قالوا: مثمرة جداً. والأوكران قالوا: بنّاءة. ولا وزير الخارجية الأمريكي ولا الرئيس الأوكراني حضروا بنفسهم. ومفيش أي اتفاق. <short pause> على الكوكب ده يا فندم، الاجتماع الناجح هو اللي بيتفقوا في آخره على اجتماع تاني. وفعلاً، فيه جلسة تانية النهارده. وفي نفس الوقت، روسيا بتضرب شبكة الكهربا في أوكرانيا، والشتا داخل. ودي يا فندم مافيهاش هزار. قطع النور والتدفئة عن مدنيين في عز الشتا مش خطة حرب. <short pause> دي جريمة. بيتفاوضوا على السلام بالنهار. والناس بتبات في الضلمة والبرد بالليل."
         },
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Second file. Brisk, numbers rattled off, then a flat punchline.",
@@ -21,8 +21,8 @@
           "text": "الملف التالت. وده المفضّل عندي. فرنسا بتتهم إيران إنها عملت هجوم إلكتروني.. على تلاجات السوبر ماركت. مئات المحلات، التلاجات فيها سخّنت لوحدها بالليل. الأكل باظ، وفي كام مكان حصلت حرايق. الهجوم ده حصل في أكتوبر. ومن ساعتها حوادث شبهه حصلت في أوروبا وبرّاها. فرنسا استدعت السفير، وقالت إنها مش مستبعدة أي رد. وإيران بتقول: ماليش دعوة. يعني يا فندم، أسلحتهم دلوقتي بتستهدف الجبنة. بس الموضوع مابقاش هزار: الشهر ده حصلت محاولة فاشلة على تلاجات بنوك الدم. توصية عاجلة: غيّروا الباسورد بتاع تلاجة السفينة."
         },
         {
-          "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Fourth file. No jokes. Sober, slower, plain.",
-          "text": "الملف الرابع. وده مافيهوش هزار. في غزة، المطر غرّق الخيام. حوالي مليون وأربعمية ألف إنسان عايشين في خيام، حسب الأمم المتحدة. ويوم الحد، تلات أطفال وست ماتوا لما ساتر رمل وقع على خيامهم. ناس هناك قالوا إن المطر جاي عليهم من ناحية، والمجاري طافحة من الناحية التانية. هيئة اسمها مجلس السلام قالت إن المساعدات اللي إسرائيل دخّلتها: غير كافية. وإسرائيل بتقول إنها دخّلت عشرات آلاف الخيام. ملاحظتي يا فندم: الكائنات دي شاطرة جداً في كتابة البيانات. <short pause> بس البيان مابيدفّيش حد."
+          "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Fourth file. No jokes at all. Slower, plain, controlled anger. He means every word.",
+          "text": "الملف الرابع. وهنا يا فندم هوقّف السخرية. في غزة، المطر غرّق الخيام. حوالي مليون وأربعمية ألف إنسان عايشين في خيام، حسب الأمم المتحدة. ويوم الحد، تلات أطفال وست ماتوا لما ساتر رمل وقع على خيامهم. ناس هناك قالوا إن المطر جاي عليهم من ناحية، والمجاري طافحة من الناحية التانية. هيئة اسمها مجلس السلام قالت إن المساعدات اللي إسرائيل دخّلتها: غير كافية. وإسرائيل بتقول إنها دخّلت عشرات آلاف الخيام. أنا يا فندم ماليش في حساباتهم. لا سياسة، ولا دين. <short pause> بس أطفال بيموتوا في خيام غرقانة.. دي مش سياسة. دي جريمة. الكائنات دي شاطرة جداً في كتابة البيانات. <short pause> بس البيان مابيدفّيش حد. وأرجو يتسجّل في المحضر: اللي بيحصل للمدنيين دول غلط. <short pause> أياً كان اللي بيعمله، وأياً كان مبرره."
         },
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Fifth file. Dry arithmetic.",
@@ -34,7 +34,7 @@
         },
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Seventh file. Professional interest, smug.",
-          "text": "وبمناسبة العملا. الملف السابع: قسم الزملا. بريطانيا قبضت على عسكري أمريكي، عنده واحد وأربعين سنة، مشتبه إنه بيتجسس لحساب روسيا. وكان شغال في قاعدة تبع حلف الناتو. مدير الـ FBI قال: مفيش تسامح مع أي حد يخون القَسَم. أنا ماحلفتش لحد هنا يا فندم. <short pause> فأنا في السليم. لو التهمة صح، يبقى تقييمي المهني: هواة. اتمسك.. وهو من نفس الكوكب! <short pause> أنا جاي من مجرّة تانية، ومحدش سألني غير: البرنيطة دي منين؟ وبالمناسبة: شركة Nvidia اللي بلّغت عنها في التقرير اللي فات، المساهمين رفعوا قضية على مديرها. الكوكب ده مليان جواسيس يا فندم. <short pause> لازم نزوّد الميزانية."
+          "text": "وبمناسبة العملا. الملف السابع: قسم الزملا. بريطانيا قبضت على عسكري أمريكي، عنده واحد وأربعين سنة، مشتبه إنه بيتجسس لحساب روسيا. وكان شغال في قاعدة تبع حلف الناتو. مدير الـ FBI قال: مفيش تسامح مع أي حد يخون القَسَم. أنا ماحلفتش لحد هنا يا فندم. <short pause> فأنا في السليم. لو التهمة صح، يبقى تقييمي المهني: هواة. اتمسك.. وهو من نفس الكوكب! <short pause> أنا جاي من مجرّة تانية، ومحدش سألني غير: البرنيطة دي منين؟ وبالمناسبة: مساهمين شركة Nvidia رفعوا قضية على مديرها، بسبب صلات مزعومة بجواسيس. الكوكب ده مليان جواسيس يا فندم. <short pause> لازم نزوّد الميزانية."
         },
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Eighth file. Incredulous accountant.",
@@ -53,8 +53,8 @@
           "text": "الملف الحداشر: الرئيس الأمريكي ضد الـ BBC. قاضي سمح إن قضية التشهير تكمّل. والتعويض المطلوب: عشرة مليار دولار. السبب: برنامج عمل مونتاج لخطابه، ولزّق جزئين في بعض. والـ BBC اعتذرت عن ده قبل كده. عشرة مليار.. علشان مونتاج. والقاضي رفض جزء تاني من القضية. بس الرئيس سمّاها: انتصار ضخم. كل حاجة عندهم انتصار يا فندم. كامل، وضخم. <short pause> محدش بيخسر على الكوكب ده. يا فندم، التقرير ده كله مونتاج. <short pause> أرجو تجهيز محامي."
         },
         {
-          "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Twelfth file. Concerned scientist, then dry.",
-          "text": "الملف الاتناشر: الكوكب نفسه. ظاهرة مناخية اسمها El Niño راجعة السنة دي، وممكن تبقى من أقوى المرات المتسجّلة. في كينيا الناس مستنيين فيضانات. وفي بيرو، أكبر مصايد سمك في العالم اتأثرت. في نيروبي، فيه ناس ساكنة على بعد مترين من النهر. وبيقولوا إن البيوت دي مش هتستحمل. والخسائر في المرات اللي زي دي بتوصل تريليونات الدولارات. الكوكب بيبعت لهم إنذارات. <short pause> وهم مسمّيين الإنذار: الولد الصغير. والاسم طلّعه صيادين في بيرو."
+          "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Twelfth file. No jokes. Concerned, plain.",
+          "text": "الملف الاتناشر: الكوكب نفسه. وده كمان مافيهوش هزار. ظاهرة مناخية اسمها El Niño راجعة السنة دي، وممكن تبقى من أقوى المرات المتسجّلة. في كينيا الناس مستنيين فيضانات. والسنة دي بس، الفيضانات هناك موّتت أكتر من ستين إنسان. في نيروبي، فيه ناس ساكنة على بعد مترين من النهر. وواحدة منهم قالت: الميّه دي ممكن تموّتنا. وفي بيرو، أكبر مصايد سمك في العالم اتأثرت. والخسائر في المرات اللي زي دي بتوصل تريليونات الدولارات. واللي بيدفع التمن الأول يا فندم هم أفقر ناس على الكوكب. <short pause> اللي بيوتهم مش هتستحمل."
         },
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Thirteenth file. Mildly impressed.",
@@ -66,7 +66,7 @@
         },
         {
           "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way. Formal conclusion, completely sincere on the surface. Then a flat sign-off.",
-          "text": "التقييم النهائي يا فندم. بيتفاوضوا ومابيتفقوش. بيصوّتوا ضد مصلحتهم. وبيدّوا جوايز لنهاية العالم. التوصية: مانتدخّلش. <short pause> هم ماشيين في السكة لوحدهم. ملحوظة أخيرة: ولا واحد فيهم لاحظ وجودي. <short pause> مشغولين. ده كان تقرير الأرض. العميل Peek. انتهى الإرسال."
+          "text": "التقييم النهائي يا فندم. بيتفاوضوا ومابيتفقوش. بيصوّتوا ضد مصلحتهم. وبيدّوا جوايز لنهاية العالم. وفيهم مدنيين بيدفعوا تمن حروب ماختاروهاش. <short pause> ودي يا فندم الحاجة الوحيدة اللي مش مضحكة في الكوكب ده. التوصية: مانتدخّلش. <short pause> هم ماشيين في السكة لوحدهم. ملحوظة أخيرة: ولا واحد فيهم لاحظ وجودي. <short pause> مشغولين. ده كان تقرير الأرض. العميل Peek. انتهى الإرسال."
         }
       ],
       "voice": "Puck",
@@ -82,10 +82,10 @@
       },
       "metadata": {
         "channel": "techforbadguys",
-        "title": "تقرير الأرض رقم 2",
+        "title": "تقرير الأرض رقم 1",
         "language": "ar-EG",
         "recorded_for": "2026-11-11",
-        "script": "episodes/techforbadguys/earth-report-002-ar/script.md"
+        "script": "episodes/techforbadguys/earth-report-001-ar/script.md"
       }
     }
   }

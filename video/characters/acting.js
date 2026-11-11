@@ -18,6 +18,11 @@ export const EMOTES = {
   angry: { browL: -0.9, browR: -0.9, browTilt: -1, lid: 0.3, mouth: "grimace", ant: -6, talk: { smile: -0.14, smirk: 0 } },
   bored: { browL: -0.3, browR: -0.3, lid: 0.72, mouth: "flat", ant: -18, tilt: 6, talk: { smile: -0.1, smirk: 0 } },
   sly: { browL: -0.2, browR: -0.2, browTilt: -0.55, lid: 0.46, look: 0.6, mouth: "smug", ant: 4, talk: { smile: 0.04, smirk: 1 } },
+  // For news that is not funny. None of these smirk, and the antennae stay low.
+  furious: { browL: -1, browR: -1, browTilt: -1.45, lid: 0.1, squint: 0.38, eyeScale: 1.12, pupil: 0.6, mouth: { w: 1.0, smile: -0.26, jaw: 0.42, smirk: 0 }, ant: 16, talk: { smile: -0.44, smirk: 0 } },
+  annoyed: { browL: -0.7, browR: -0.7, browTilt: -0.65, lid: 0.3, squint: 0.2, mouth: { w: 0.8, smile: -0.14, jaw: 0, smirk: 0 }, ant: -6, talk: { smile: -0.34, smirk: 0 } },
+  blank: { browL: 0, browR: 0, browTilt: 0, lid: 0.2, mouth: { w: 0.78, smile: -0.02, jaw: 0, smirk: 0 }, ant: 0, talk: { smile: -0.22, smirk: 0 } },
+  sad: { browL: 0.3, browR: 0.3, browTilt: 1.15, lid: 0.44, lookY: 0.5, mouth: { w: 0.66, smile: -0.24, jaw: 0, smirk: 0 }, ant: -26, tilt: 4, talk: { smile: -0.4, smirk: 0 } },
   proud: { browL: 0.5, browR: 0.5, lid: 0.5, squint: 0.4, lookY: -0.3, mouth: "grin", ant: 10, tilt: -3, talk: { smile: 0.1, smirk: 0.3 } },
 };
 

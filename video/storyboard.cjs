@@ -63,8 +63,9 @@ if (cmd === "cues") {
     const { say, scene, show, view, ...rest } = x, e = { t: Math.round((start[k] - 0.07) / tempo * 100) / 100, say: plain(say).slice(0, 48), ...rest };
     if (k === 0) e.t = -((sb.settings || {}).lead ?? 0.4);
     if (scene.story !== story) { story = scene.story; e.story = story ?? null; }
-    if ((scene.music ?? 1) !== level) { level = scene.music ?? 1; e.music = level; }
-    if (scene.calm && e.gesture === undefined) e.gesture = "pockets";
+    const wantLevel = rest.music ?? scene.music ?? 1;                    // a beat or a scene can lower the music; it comes back by itself
+    if (wantLevel !== level) { level = wantLevel; e.music = level; } else delete e.music;
+    if (scene.calm || rest.calm) { e.calm = true; if (e.gesture === undefined) e.gesture = "pockets"; }
     const want = rest.slide !== undefined ? rest.slide : scene.slide ?? null;
     if (want !== slide) { slide = want; e.slide = slide; }
     const key = show ? (show === "slide" ? "slide:" + slide : "card:" + k) : null;
@@ -78,7 +79,7 @@ if (cmd === "cues") {
   if (sb.ending) edit.push({ t: Math.round((last + 0.25) * 100) / 100, shot: "wide", duck: !!sb.ending.duck, emote: "sly" }, ...(sb.ending.lurk ? [{ t: Math.round((last + 1.0) * 100) / 100, lurk: true }] : []));
   const epRel = path.relative(path.dirname(path.resolve(b)), sb.slidesFrom ? path.resolve(dir, sb.slidesFrom) : dir);
   const cues = { note: `Generated from ${path.basename(sbPath)} by storyboard.cjs; edit the storyboard, not this file.`, episode: epRel, transcript: path.relative(path.resolve(path.dirname(b), epRel), path.resolve(scriptWords)),
-    slides: "slides.json", face: sb.face || "pear", date: sb.date, rtl: !!sb.rtl, layout: "solo", from: 0, to: null, ...(sb.settings || {}), fix: sb.fix || [], edit };
+    slides: "slides.json", face: sb.face || "pear", date: sb.date, rtl: !!sb.rtl, layout: "solo", ...(sb.brand ? { brand: sb.brand } : {}), from: 0, to: null, ...(sb.settings || {}), fix: sb.fix || [], edit };
   fs.writeFileSync(b, JSON.stringify(cues, null, 1) + "\n");
   console.log(`beats ${beats.length}, script words ${n}, heard ${m}, matched exactly ${exact} (${Math.round(exact / n * 100)}%)`);
 }

@@ -94,7 +94,8 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
     if (name !== lastEmote) { lastEmote = name; emoteSince = tv; if (em.symbol) { symbol = em.symbol; symbolSince = tv; } if ((name === "grin" || name === "surprised" || name === "laugh") && !hop) hop = tv; if (R() < 0.6) blinks.push(tv + 0.04); }
 
     // face channels
-    const beat = pulse(t, 0.3), speaking = !!lip.shapeAt(t + 0.035);
+    const still = pin && pin.calm ? 0.2 : 1;                              // a calm passage: no bouncing on the stressed words
+    const beat = pulse(t, 0.3) * still, speaking = !!lip.shapeAt(t + 0.035);
     let glance = 0; { let k = 0; while (k + 1 < glances.length && glances[k + 1].t <= tv) k++; const a = glances[Math.max(0, k - 1)].v, b = glances[k].v; glance = a + (b - a) * smooth(clamp((tv - glances[k].t) / 0.18)); }
     let look = (em.look ?? 0) + (em.look === undefined ? glance : glance * 0.25);
     if (paper === "holes" && shift < 400) look = tv < 0.42 ? -0.9 * smooth(clamp(tv / 0.14)) : tv < 0.8 ? -0.9 + 1.8 * smooth(clamp((tv - 0.42) / 0.14)) : 0.9 * (1 - smooth(clamp((tv - 0.8) / 0.14)));
@@ -114,7 +115,7 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
     for (const k of Object.keys(mouth)) mouth[k] += ((mg[k] ?? 0) - mouth[k]) * mr[k];
 
     // arms and shoulders
-    const beatHand = 12 * pulse(t, 0.22), wob = gest.wave ? 30 * Math.sin(2 * Math.PI * 2.6 * tv) : 0;
+    const beatHand = 12 * pulse(t, 0.22) * still, wob = gest.wave ? 30 * Math.sin(2 * Math.PI * 2.6 * tv) : 0;
     const tL = gest.armL ? { x: gest.armL.x, y: gest.armL.y + beatHand } : POCKET.L, tR = gest.armR ? { x: gest.armR.x + wob, y: gest.armR.y + beatHand - Math.abs(wob) * 0.2 } : POCKET.R;
     for (const [k, tg] of [["L", tL], ["R", tR]]) { arm[k].x += (tg.x - arm[k].x) * 0.2; arm[k].y += (tg.y - arm[k].y) * 0.2; }
     shrug += ((gest.shrug ?? 0) - shrug) * 0.25;
@@ -126,7 +127,7 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
     const sway = lean + 0.9 * Math.sin(2 * Math.PI * 0.17 * tv);
     let bounce = 2.5 * mouth.jaw, squash = 1;
     if (hop !== null) { const p = (tv - hop) / 0.34; if (p >= 1.5) hop = null; else if (p < 1) { bounce += 30 * 4 * p * (1 - p); squash = 1 + 0.04 * Math.sin(Math.PI * p); } else { squash = 1 - 0.06 * Math.sin(Math.PI * (p - 1) * 2); } }
-    const nod = 9 * pulse(t, 0.26), tilt = F.tilt + 1.2 * Math.sin(2 * Math.PI * 0.13 * tv + 1) - 1.4 * mouth.jaw;
+    const nod = 9 * pulse(t, 0.26) * still, tilt = F.tilt + 1.2 * Math.sin(2 * Math.PI * 0.13 * tv + 1) - 1.4 * mouth.jaw;
     const bob = -6 * mouth.jaw + nod + 2.2 * Math.sin(2 * Math.PI * 0.27 * tv);
 
     // antennae trail the head and wobble after every nod and hop

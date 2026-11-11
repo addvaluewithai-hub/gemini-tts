@@ -13,6 +13,7 @@
 //   drone   { drop: "phrase" } starts the drone prop, false removes it
 //   emote / gesture   pin the acting for this entry                 stutter n: hold each pose for n frames
 //   trans   punch | whip | cut  (default: chosen from the two shots)
+//   calm    true: no nodding or bouncing on stressed words during this entry
 //   music   0..1: how loud the music bed is from here on (for a passage that should not bounce along)
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
@@ -78,7 +79,7 @@ function resolve(cues, words, slides) {
     if (seg.peek) sfx.push({ t: seg.t + 0.12, type: "pop", gain: 0.7 });
     if (seg.paper !== prev.paper) paper.push({ t: seg.t, pose: seg.paper });
     if ((seg.music ?? 1) !== (prev.music ?? 1)) music.push({ t: seg.t, g: seg.music ?? 1 });
-    if (seg.emote || seg.gesture) acting.push({ exact: true, from: seg.t, to: seg.end, emote: seg.emote, gesture: seg.gesture });
+    if (seg.emote || seg.gesture || seg.calm) acting.push({ exact: true, from: seg.t, to: seg.end, emote: seg.emote, gesture: seg.gesture, calm: !!seg.calm });
     if (seg.drone && seg.drone !== prev.drone) {
       const d = seg.drone; let stop = Infinity; for (let j = k + 1; j < segs.length; j++) if (!segs[j].drone) { stop = segs[j].t; break; }
       if (d.drop !== null) { const y0 = droneAt(d.drop - d.from).y; d.land = d.drop + Math.sqrt(2 * (DRONE_FLOOR - y0) / G); impacts.push(d.land); sfx.push({ t: d.land, type: "thud" }); }

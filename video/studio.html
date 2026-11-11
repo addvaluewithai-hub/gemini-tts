@@ -159,8 +159,8 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
    <ellipse class="seat" cx="560" cy="676" rx="330" ry="20" fill="#05060d" opacity=".4" filter="url(#db8)"/>
    <rect x="-700" y="716" width="3320" height="900" fill="url(#d1)"/>
    <rect x="-700" y="712" width="3320" height="26" fill="#ff3d9a" opacity=".45" filter="url(#db8)"/><rect x="-700" y="716" width="3320" height="7" fill="#ff5fae"/>
-   <text x="960" y="886" text-anchor="middle" font-family="Anton" font-size="96" letter-spacing="8" fill="#eef0ff" opacity=".9">TECH <tspan fill="#ff4fa3">FOR</tspan> BAD GUYS</text>
-   <text x="960" y="926" text-anchor="middle" font-family="Elite" font-size="24" letter-spacing="8" fill="#9fb0ff">THE NEWS, MINUS THE PRESS RELEASE</text>
+   <text id="desklogo" x="960" y="886" text-anchor="middle" font-family="Anton" font-size="96" letter-spacing="8" fill="#eef0ff" opacity=".9">TECH <tspan fill="#ff4fa3">FOR</tspan> BAD GUYS</text>
+   <text id="desktag" x="960" y="926" text-anchor="middle" font-family="Elite" font-size="24" letter-spacing="8" fill="#9fb0ff">THE NEWS, MINUS THE PRESS RELEASE</text>
    <g class="seat"><!-- microphone -->
    <ellipse cx="282" cy="694" rx="56" ry="13" fill="#05060d"/><ellipse cx="282" cy="690" rx="52" ry="11" fill="#2c3052"/>
    <path d="M282 690L326 596" stroke="#05060d" stroke-width="11" stroke-linecap="round"/><path d="M280 690L324 596" stroke="#565c8e" stroke-width="4" stroke-linecap="round"/>
@@ -197,7 +197,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
  <div id="meme"></div>
  <div id="lbT"></div><div id="lbB"></div>
  <div id="chip"><div><span id="chipn"></span><span id="chipt"></span></div><span id="chips"></span></div>
- <div id="brand">TECH<i>FOR</i>BADGUYS<span id="branddate"></span></div>
+ <div id="brand"><b id="brandname" style="font-weight:400">TECH<i>FOR</i>BADGUYS</b><span id="branddate"></span></div>
  <div id="cap"></div>
  <div id="vig"></div><div id="flash"></div>
 </div>
@@ -212,6 +212,12 @@ const show = (el, on, as = "block") => { el.style.display = on ? as : "none"; };
 window.setup = async (config) => {
   cfg = config; $("frame").classList.toggle("rtl", !!config.rtl); $("frame").classList.toggle("solo", config.layout === "solo");
   if (config.layout === "solo") for (const el of document.querySelectorAll("#desk .seat")) el.setAttribute("transform", "translate(400 0)"); for (const id of ["cap", "meme"]) $(id).dir = config.rtl ? "rtl" : "ltr";
+  if (config.brand) {            // the channel name in three parts (the middle one in pink) and a line under it; works in Latin or Arabic
+    const { a = "", b = "", c = "", tagline = "" } = config.brand, arabic = /[\u0621-\u064A]/.test(a + b + c), sp = arabic ? " " : "";
+    $("desklogo").innerHTML = `${esc(a)} <tspan fill="#ff4fa3">${esc(b)}</tspan> ${esc(c)}`; $("desktag").textContent = tagline;
+    $("brandname").innerHTML = `${esc(a)}${sp}<i>${esc(b)}</i>${sp}${esc(c)}`;
+    if (arabic) { for (const id of ["desklogo", "desktag"]) $(id).setAttribute("letter-spacing", "0"); $("desktag").setAttribute("font-size", "30"); $("brand").style.letterSpacing = "0"; $("brandname").style.fontSize = "38px"; }
+  }
   $("tvdate").textContent = config.date || ""; $("branddate").textContent = config.date || "";
   const jobs = [];
   for (const [name, s] of Object.entries(config.slides)) {

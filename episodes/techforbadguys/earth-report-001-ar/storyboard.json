@@ -1,5 +1,13 @@
 {
- "title": "تقرير الأرض رقم 2",
+ "recorded_for": "2026-11-11",
+ "notes": [
+  "Earth Report 001: the first episode. A world-news report in Egyptian Arabic that the host reads to his commanders, not to the audience; humans are the subject of the report.",
+  "",
+  "How the files were picked: stories of 9 and 10 November 2026 carried by at least two of BBC News, DW, NPR and Al Jazeera, or listed in Wikipedia's Current Events for those days, then read at the source. Every factual claim in the script is in the article shown on screen.",
+  "",
+  "Editorial rules: jokes are aimed at governments, institutions and the very rich, never at victims. Where civilians are suffering (the power cuts in Ukraine, Gaza, the floods in Kenya) there are no jokes: the host uses the serious faces, the music drops, and he says plainly that it is wrong. That position is about civilians, whoever is responsible and whatever the reason given. The soldier arrested in Britain is a suspect, and the script says so. A story with no page that could be opened (the weight-loss drug warning) was left out."
+ ],
+ "title": "تقرير الأرض رقم 1",
  "date": "11 NOV 2026",
  "language": "ar-EG",
  "rtl": true,
@@ -20,13 +28,19 @@
   "duck": true,
   "lurk": false
  },
+ "brand": {
+  "a": "تقرير",
+  "b": "الأرض",
+  "c": "",
+  "tagline": "سري للغاية · إلى القيادة العليا"
+ },
  "scenes": [
   {
    "id": "open",
    "style": "Opening of an official field report. Crisp, formal, a little too proud of himself.",
    "beats": [
     {
-     "say": "تقرير الأرض، رقم اتنين. إلى القيادة العليا.",
+     "say": "تقرير الأرض، رقم واحد. إلى القيادة العليا.",
      "shot": "close",
      "emote": "serious"
     },
@@ -35,11 +49,11 @@
      "show": "fact",
      "fact": {
       "big": "11 نوفمبر",
-      "small": "تقرير الأرض · رقم 2"
+      "small": "تقرير الأرض · رقم 1"
      }
     },
     {
-     "say": "يا فندم، الكوكب لسه شغال. <short pause> مش عارف إزاي.",
+     "say": "يا فندم، وصلت. والكوكب شغال. <short pause> مش عارف إزاي.",
      "shot": "host",
      "emote": "smug",
      "gesture": "present"
@@ -120,12 +134,23 @@
      "say": "وفي نفس الوقت، روسيا بتضرب شبكة الكهربا في أوكرانيا، والشتا داخل.",
      "show": "slide",
      "view": "body",
-     "emote": "serious"
+     "emote": "annoyed",
+     "calm": true,
+     "music": 0.3
     },
     {
-     "say": "بيتفاوضوا على السلام بالنهار، وبيقطعوا النور بالليل. <short pause> شغل ورديات.",
+     "say": "ودي يا فندم مافيهاش هزار. قطع النور والتدفئة عن مدنيين في عز الشتا مش خطة حرب. <short pause> دي جريمة.",
+     "shot": "close",
+     "emote": "furious",
+     "calm": true,
+     "music": 0.3
+    },
+    {
+     "say": "بيتفاوضوا على السلام بالنهار. والناس بتبات في الضلمة والبرد بالليل.",
      "shot": "host",
-     "emote": "deadpan"
+     "emote": "sad",
+     "calm": true,
+     "music": 0.3
     }
    ]
   },
@@ -291,41 +316,52 @@
     "tag": "غزة"
    },
    "slide": "gaza",
-   "music": 0.25,
+   "music": 0.22,
    "calm": true,
-   "style": "Fourth file. No jokes. Sober, slower, plain.",
+   "style": "Fourth file. No jokes at all. Slower, plain, controlled anger. He means every word.",
    "beats": [
     {
-     "say": "الملف الرابع. وده مافيهوش هزار.",
+     "say": "الملف الرابع. وهنا يا فندم هوقّف السخرية.",
      "shot": "host",
-     "emote": "serious"
+     "emote": "blank"
     },
     {
      "say": "في غزة، المطر غرّق الخيام. حوالي مليون وأربعمية ألف إنسان عايشين في خيام، حسب الأمم المتحدة.",
      "show": "slide",
-     "view": "top"
+     "view": "top",
+     "emote": "sad"
     },
     {
      "say": "ويوم الحد، تلات أطفال وست ماتوا لما ساتر رمل وقع على خيامهم.",
      "show": "slide",
      "view": "body",
-     "emote": "serious"
+     "emote": "sad"
     },
     {
      "say": "ناس هناك قالوا إن المطر جاي عليهم من ناحية، والمجاري طافحة من الناحية التانية.",
      "show": "slide",
      "view": "deep",
-     "emote": "serious"
+     "emote": "sad"
     },
     {
      "say": "هيئة اسمها مجلس السلام قالت إن المساعدات اللي إسرائيل دخّلتها: غير كافية. وإسرائيل بتقول إنها دخّلت عشرات آلاف الخيام.",
      "shot": "host",
-     "emote": "serious"
+     "emote": "annoyed"
     },
     {
-     "say": "ملاحظتي يا فندم: الكائنات دي شاطرة جداً في كتابة البيانات. <short pause> بس البيان مابيدفّيش حد.",
+     "say": "أنا يا فندم ماليش في حساباتهم. لا سياسة، ولا دين. <short pause> بس أطفال بيموتوا في خيام غرقانة.. دي مش سياسة. دي جريمة.",
      "shot": "close",
-     "emote": "serious"
+     "emote": "furious"
+    },
+    {
+     "say": "الكائنات دي شاطرة جداً في كتابة البيانات. <short pause> بس البيان مابيدفّيش حد.",
+     "shot": "host",
+     "emote": "annoyed"
+    },
+    {
+     "say": "وأرجو يتسجّل في المحضر: اللي بيحصل للمدنيين دول غلط. <short pause> أياً كان اللي بيعمله، وأياً كان مبرره.",
+     "shot": "close",
+     "emote": "blank"
     }
    ]
   },
@@ -466,7 +502,7 @@
      "emote": "sly"
     },
     {
-     "say": "وبالمناسبة: شركة Nvidia اللي بلّغت عنها في التقرير اللي فات، المساهمين رفعوا قضية على مديرها.",
+     "say": "وبالمناسبة: مساهمين شركة Nvidia رفعوا قضية على مديرها، بسبب صلات مزعومة بجواسيس.",
      "show": "slide",
      "view": "top",
      "slide": "nvidia",
@@ -702,28 +738,38 @@
     "tag": "الكوكب نفسه"
    },
    "slide": "elnino",
-   "style": "Twelfth file. Concerned scientist, then dry.",
+   "music": 0.35,
+   "calm": true,
+   "style": "Twelfth file. No jokes. Concerned, plain.",
    "beats": [
     {
-     "say": "الملف الاتناشر: الكوكب نفسه.",
+     "say": "الملف الاتناشر: الكوكب نفسه. وده كمان مافيهوش هزار.",
      "shot": "host",
-     "emote": "serious",
+     "emote": "blank",
      "duck": false
     },
     {
      "say": "ظاهرة مناخية اسمها El Niño راجعة السنة دي، وممكن تبقى من أقوى المرات المتسجّلة.",
      "show": "slide",
-     "view": "top"
+     "view": "top",
+     "emote": "annoyed"
     },
     {
-     "say": "في كينيا الناس مستنيين فيضانات. وفي بيرو، أكبر مصايد سمك في العالم اتأثرت.",
+     "say": "في كينيا الناس مستنيين فيضانات. والسنة دي بس، الفيضانات هناك موّتت أكتر من ستين إنسان.",
      "show": "slide",
-     "view": "body"
+     "view": "body",
+     "emote": "sad"
     },
     {
-     "say": "في نيروبي، فيه ناس ساكنة على بعد مترين من النهر. وبيقولوا إن البيوت دي مش هتستحمل.",
+     "say": "في نيروبي، فيه ناس ساكنة على بعد مترين من النهر. وواحدة منهم قالت: الميّه دي ممكن تموّتنا.",
      "shot": "host",
-     "emote": "serious"
+     "emote": "sad"
+    },
+    {
+     "say": "وفي بيرو، أكبر مصايد سمك في العالم اتأثرت.",
+     "show": "slide",
+     "view": "deep",
+     "emote": "blank"
     },
     {
      "say": "والخسائر في المرات اللي زي دي بتوصل تريليونات الدولارات.",
@@ -731,12 +777,13 @@
      "fact": {
       "big": "تريليونات",
       "small": "خسائر الاقتصاد العالمي · NPR"
-     }
+     },
+     "emote": "blank"
     },
     {
-     "say": "الكوكب بيبعت لهم إنذارات. <short pause> وهم مسمّيين الإنذار: الولد الصغير. والاسم طلّعه صيادين في بيرو.",
+     "say": "واللي بيدفع التمن الأول يا فندم هم أفقر ناس على الكوكب. <short pause> اللي بيوتهم مش هتستحمل.",
      "shot": "close",
-     "emote": "deadpan"
+     "emote": "annoyed"
     }
    ]
   },
@@ -752,7 +799,8 @@
     {
      "say": "الملف التلاتاشر: الثقافة.",
      "shot": "host",
-     "emote": "neutral"
+     "emote": "neutral",
+     "duck": false
     },
     {
      "say": "جايزة الـ Booker، من أهم الجوايز الأدبية عندهم، راحت لرواية عن العالم بعد ما يخلص. اسمها: نهاية كل حاجة.",
@@ -856,6 +904,13 @@
      "emote": "deadpan"
     },
     {
+     "say": "وفيهم مدنيين بيدفعوا تمن حروب ماختاروهاش. <short pause> ودي يا فندم الحاجة الوحيدة اللي مش مضحكة في الكوكب ده.",
+     "shot": "host",
+     "emote": "sad",
+     "calm": true,
+     "music": 0.3
+    },
+    {
      "say": "التوصية: مانتدخّلش. <short pause> هم ماشيين في السكة لوحدهم.",
      "shot": "close",
      "emote": "smug"
@@ -874,13 +929,5 @@
     }
    ]
   }
- ],
- "recorded_for": "2026-11-11",
- "notes": [
-  "Earth Report 002: a world-news episode in Egyptian Arabic. The host reads it to his commanders, not to the audience; humans are the subject of the report.",
-  "",
-  "How the files were picked: stories of 9 and 10 November 2026 carried by at least two of BBC News, DW, NPR and Al Jazeera, or listed in Wikipedia's Current Events for those days, then read at the source. Every claim in the script is in the article shown on screen.",
-  "",
-  "Editorial rules: the jokes are aimed at governments, institutions and the very rich, never at victims. The Gaza file has no jokes, quieter music and still hands. The soldier arrested in Britain is a suspect, and the script says so. A story with no page that could be opened (the weight-loss drug warning) was left out."
  ]
 }
