@@ -9,7 +9,11 @@ on:
         type: string
       request_json:
         description: "TTS request JSON. See docs/API.md"
-        required: true
+        required: false
+        type: string
+      request_path:
+        description: "Instead of request_json: path of a request file committed under episodes/, for requests too long to paste"
+        required: false
         type: string
   repository_dispatch:
     types: [tts.generate]
@@ -58,8 +62,17 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         env:
           REQUEST_JSON: ${{ inputs.request_json }}
+          REQUEST_PATH: ${{ inputs.request_path }}
         run: |
-          printf '%s' "$REQUEST_JSON" > request.json
+          if [ -n "$REQUEST_PATH" ]; then
+            case "$REQUEST_PATH" in
+              *..*) echo "request_path must not contain .."; exit 1 ;;
+              episodes/*.json) cp -- "$REQUEST_PATH" request.json ;;
+              *) echo "request_path must be a .json file under episodes/"; exit 1 ;;
+            esac
+          else
+            printf '%s' "$REQUEST_JSON" > request.json
+          fi
 
       - name: Prepare request from repository_dispatch
         if: github.event_name == 'repository_dispatch'

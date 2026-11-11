@@ -1,0 +1,876 @@
+{
+ "title": "تقرير الأرض رقم 2",
+ "date": "11 NOV 2026",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He addresses them as يا فندم. Fast, clipped, confident delivery with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. Company and people names are said the English way.",
+ "settings": {
+  "lead": 0.4,
+  "tail": 2.4,
+  "tempo": 1.03,
+  "captionChunk": 4,
+  "bpm": 104,
+  "musicGain": 0.5,
+  "sfxGain": 0.6,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "duck": true,
+  "lurk": true
+ },
+ "scenes": [
+  {
+   "id": "open",
+   "style": "Opening of an official field report. Crisp, formal, a little too proud of himself.",
+   "beats": [
+    {
+     "say": "تقرير الأرض، رقم اتنين. إلى القيادة العليا.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "التاريخ بتوقيتهم: حداشر نوفمبر، ألفين ستة وعشرين.",
+     "show": "fact",
+     "fact": {
+      "big": "11 نوفمبر",
+      "small": "تقرير الأرض · رقم 2"
+     }
+    },
+    {
+     "say": "يا فندم، الكوكب لسه شغال. <short pause> مش عارف إزاي.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "المهمة زي ما هي: أراقب، وأبلّغ، وماتعاطفش.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "أربعتاشر ملف عن آخر يومين. نبدأ.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "ukraine",
+   "story": {
+    "n": 1,
+    "tag": "روسيا وأوكرانيا"
+   },
+   "slide": "ukraine",
+   "style": "First file. Serious newsreader, then dry.",
+   "beats": [
+    {
+     "say": "الملف الأول: الحرب. روسيا وأوكرانيا بيتحاربوا بقالهم أربع سنين ونص.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "امبارح قعدوا يتفاوضوا في أبو ظبي، بوساطة أمريكية، لأول مرة من تسع شهور.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "وقبل الجلسة، الأوكران والأمريكان قعدوا مع الأوروبيين وحلف الناتو، مع إن الكرملين كان معترض.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "يعني اجتماع قبل الاجتماع، علشان يتفقوا هيقولوا إيه في الاجتماع.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "الجلسة قعدت أربع ساعات.",
+     "show": "fact",
+     "fact": {
+      "big": "4 ساعات",
+      "small": "مدة الجلسة · NPR"
+     }
+    },
+    {
+     "say": "يعني أقل من ساعة لكل سنة حرب.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "الأمريكان قالوا: مثمرة جداً. والأوكران قالوا: بنّاءة. ولا وزير الخارجية الأمريكي ولا الرئيس الأوكراني حضروا بنفسهم.",
+     "show": "slide",
+     "view": "deep"
+    },
+    {
+     "say": "ومفيش أي اتفاق. <short pause> على الكوكب ده يا فندم، الاجتماع الناجح هو اللي بيتفقوا في آخره على اجتماع تاني.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "وفعلاً، فيه جلسة تانية النهارده.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "وفي نفس الوقت، روسيا بتضرب شبكة الكهربا في أوكرانيا، والشتا داخل.",
+     "show": "slide",
+     "view": "body",
+     "emote": "serious"
+    },
+    {
+     "say": "بيتفاوضوا على السلام بالنهار، وبيقطعوا النور بالليل. <short pause> شغل ورديات.",
+     "shot": "host",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "hegseth",
+   "story": {
+    "n": 2,
+    "tag": "أمريكا"
+   },
+   "slide": "hegseth",
+   "style": "Second file. Brisk, numbers rattled off, then a flat punchline.",
+   "beats": [
+    {
+     "say": "الملف التاني: أمريكا. أقوى دولة عندهم.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "مجلس النواب صوّت على طلب عزل وزير الدفاع، Pete Hegseth، بسبب حرب إيران.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "النتيجة: ميتين وحداشر، ضد ميتين وأربعة. والطلب اتحوّل للجنة.",
+     "show": "fact",
+     "fact": {
+      "big": "211 – 204",
+      "small": "تصويت مجلس النواب · BBC"
+     }
+    },
+    {
+     "say": "واللجنة عندهم يا فندم هي المكان اللي الطلبات بتروح تموت فيه.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "واللي قدّم الطلب أصلاً نائب من حزب الرئيس نفسه. وأكتر من اتناشر نائب ماحضروش التصويت.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "الوزير وصف الطلب بإنه مهزلة وتخريب. وده كان أول مؤتمر صحفي ليه من ست شهور.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "point"
+    },
+    {
+     "say": "ست شهور ساكت. وأول ما اتكلم قال: مهزلة.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "والرئيس كتب إن الطلب فشل فشل ذريع، وإن الوزير اتبرّأ.",
+     "show": "slide",
+     "view": "deep"
+    },
+    {
+     "say": "اتبرّأ من غير محاكمة. <short pause> نظام سريع. عجبني.",
+     "shot": "host",
+     "emote": "smug"
+    },
+    {
+     "say": "البنتاجون سمّى النتيجة: انتصار كامل.",
+     "show": "fact",
+     "fact": {
+      "big": "انتصار كامل",
+      "small": "",
+      "tone": "stamp"
+     }
+    },
+    {
+     "say": "انتصار كامل.. في تصويت. <short pause> واضح إن دي الحروب اللي بيعرفوا يكسبوها.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "بس المعارضة هتستلم المجلس في يناير. يعني الملف ده راجع لي تاني.",
+     "shot": "host",
+     "emote": "bored",
+     "gesture": "shrug"
+    },
+    {
+     "say": "وبالمرة: أمريكا قاطعت مراجعة حقوق الإنسان في الأمم المتحدة، للسنة التانية على التوالي.",
+     "show": "slide",
+     "view": "top",
+     "slide": "unhr"
+    },
+    {
+     "say": "الغياب عندهم سياسة يا فندم. <short pause> في التصويت، وفي المراجعة.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "fridge",
+   "story": {
+    "n": 3,
+    "tag": "حرب التلاجات"
+   },
+   "slide": "fridge",
+   "style": "Third file. Delighted by how absurd it is.",
+   "beats": [
+    {
+     "say": "الملف التالت. وده المفضّل عندي.",
+     "shot": "wide",
+     "emote": "grin",
+     "gesture": "cheer"
+    },
+    {
+     "say": "فرنسا بتتهم إيران إنها عملت هجوم إلكتروني.. على تلاجات السوبر ماركت.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "مئات المحلات، التلاجات فيها سخّنت لوحدها بالليل. الأكل باظ، وفي كام مكان حصلت حرايق.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "الهجوم ده حصل في أكتوبر. ومن ساعتها حوادث شبهه حصلت في أوروبا وبرّاها.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "فرنسا استدعت السفير، وقالت إنها مش مستبعدة أي رد. وإيران بتقول: ماليش دعوة.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "point"
+    },
+    {
+     "say": "يعني يا فندم، أسلحتهم دلوقتي بتستهدف الجبنة.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "خسائر فرنسا",
+      "items": [
+       "الجبنة",
+       "الزبدة",
+       "كرامة الكرواسون"
+      ],
+      "step": 0.35
+     },
+     "emote": "grin"
+    },
+    {
+     "say": "بس الموضوع مابقاش هزار: الشهر ده حصلت محاولة فاشلة على تلاجات بنوك الدم.",
+     "show": "slide",
+     "view": "deep",
+     "emote": "serious"
+    },
+    {
+     "say": "توصية عاجلة: غيّروا الباسورد بتاع تلاجة السفينة.",
+     "shot": "close",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "gaza",
+   "story": {
+    "n": 4,
+    "tag": "غزة"
+   },
+   "slide": "gaza",
+   "style": "Fourth file. No jokes. Sober, slower, plain.",
+   "beats": [
+    {
+     "say": "الملف الرابع. وده مافيهوش هزار.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "في غزة، المطر غرّق الخيام. حوالي مليون وأربعمية ألف إنسان عايشين في خيام، حسب الأمم المتحدة.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "ويوم الحد، تلات أطفال وست ماتوا لما ساتر رمل وقع على خيامهم.",
+     "show": "slide",
+     "view": "body",
+     "emote": "serious"
+    },
+    {
+     "say": "ناس هناك قالوا إن المطر جاي عليهم من ناحية، والمجاري طافحة من الناحية التانية.",
+     "show": "slide",
+     "view": "deep",
+     "emote": "serious"
+    },
+    {
+     "say": "هيئة اسمها مجلس السلام قالت إن المساعدات اللي إسرائيل دخّلتها: غير كافية. وإسرائيل بتقول إنها دخّلت عشرات آلاف الخيام.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "ملاحظتي يا فندم: الكائنات دي شاطرة جداً في كتابة البيانات. <short pause> بس البيان مابيدفّيش حد.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "israel",
+   "story": {
+    "n": 5,
+    "tag": "إسرائيل"
+   },
+   "slide": "israel",
+   "style": "Fifth file. Dry arithmetic.",
+   "beats": [
+    {
+     "say": "الملف الخامس: إسرائيل. برلمان جديد حلف اليمين.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "رئيس أركان سابق، Gadi Eisenkot، اتكلّف يشكّل الحكومة. ومعاه تمانية وعشرين يوم.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "كتلته تمانية وأربعين مقعد. وكتلة Netanyahu تلاتة وخمسين. والمطلوب واحد وستين.",
+     "show": "fact",
+     "fact": {
+      "big": "48 · 53 · 61",
+      "small": "مقاعد الكتلتين، والأغلبية المطلوبة · BBC"
+     }
+    },
+    {
+     "say": "وتقريباً نص النواب جداد. والأحزاب العربية معاها أكبر عدد مقاعد في تاريخها.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "يعني ولا واحد فيهم معاه أغلبية. <short pause> وكل واحد فيهم بيحذّر الناس من التاني.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "تمانية وعشرين يوم يا فندم علشان حكومة. <short pause> عندنا بتتشكل في تمانية وعشرين ثانية. بس إحنا ماعندناش انتخابات.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "shrug"
+    }
+   ]
+  },
+  {
+   "id": "novaya",
+   "story": {
+    "n": 6,
+    "tag": "روسيا"
+   },
+   "slide": "novaya",
+   "style": "Sixth file. Deadpan, a little bitter.",
+   "beats": [
+    {
+     "say": "الملف السادس: روسيا من جوّه.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "جريدة Novaya Gazeta قفلت مكتبها في موسكو. جريدة تحقيقات، شغالة من سنة تلاتة وتسعين.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "وواحد من اللي أسسوها كان آخر رئيس للاتحاد السوفيتي.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "الحكومة سمّتها: عميل أجنبي. وأمرتها تخلي المكتب، ومنعت البنوك تقبل تبرعات القرّاء.",
+     "show": "fact",
+     "fact": {
+      "big": "عميل أجنبي",
+      "small": "",
+      "tone": "stamp"
+     }
+    },
+    {
+     "say": "الجريدة كانت بتحقق في السلطة. <short pause> فالسلطة حققت فيها. وكسبت.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "وأنا يا فندم، كعميل أجنبي بجد، حاسس إن اللقب ده بيتوزّع بسهولة.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "point"
+    }
+   ]
+  },
+  {
+   "id": "spy",
+   "story": {
+    "n": 7,
+    "tag": "قسم الزملا"
+   },
+   "slide": "spy",
+   "style": "Seventh file. Professional interest, smug.",
+   "beats": [
+    {
+     "say": "وبمناسبة العملا. الملف السابع: قسم الزملا.",
+     "shot": "host",
+     "emote": "proud"
+    },
+    {
+     "say": "بريطانيا قبضت على عسكري أمريكي، عنده واحد وأربعين سنة، مشتبه إنه بيتجسس لحساب روسيا.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "وكان شغال في قاعدة تبع حلف الناتو.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "مدير الـ FBI قال: مفيش تسامح مع أي حد يخون القَسَم.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "أنا ماحلفتش لحد هنا يا فندم. <short pause> فأنا في السليم.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "لو التهمة صح، يبقى تقييمي المهني: هواة.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "اتمسك.. وهو من نفس الكوكب! <short pause> أنا جاي من مجرّة تانية، ومحدش سألني غير: البرنيطة دي منين؟",
+     "shot": "low",
+     "duck": true,
+     "emote": "sly"
+    },
+    {
+     "say": "وبالمناسبة: شركة Nvidia اللي بلّغت عنها في التقرير اللي فات، المساهمين رفعوا قضية على مديرها.",
+     "show": "slide",
+     "view": "top",
+     "slide": "nvidia",
+     "duck": false
+    },
+    {
+     "say": "الكوكب ده مليان جواسيس يا فندم. <short pause> لازم نزوّد الميزانية.",
+     "shot": "host",
+     "emote": "worried",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "tax",
+   "story": {
+    "n": 8,
+    "tag": "الفلوس"
+   },
+   "slide": "tax",
+   "style": "Eighth file. Incredulous accountant.",
+   "beats": [
+    {
+     "say": "نص التقرير يا فندم. لحد دلوقتي: حربين، تلاجة، وجاسوس.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "count"
+    },
+    {
+     "say": "والكوكب لسه بيلف.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "الملف التامن: الفلوس.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "ولاية كاليفورنيا عملت استفتاء على ضريبة: خمسة في المية، مرة واحدة، على أي حد ثروته فوق المليار دولار.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "ودول حوالي ميتين شخص بس.",
+     "show": "fact",
+     "fact": {
+      "big": "200",
+      "small": "عدد المليارديرات في الولاية · BBC"
+     }
+    },
+    {
+     "say": "وكانت هتجيب حوالي مية مليار دولار للعلاج.",
+     "show": "fact",
+     "fact": {
+      "big": "$100B",
+      "small": "كانت هتتصرف على العلاج",
+      "riser": true
+     }
+    },
+    {
+     "say": "والناس صوّتت: لأ.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "حتى حاكم الولاية كان ضدها، خايف الأغنيا يسيبوا الولاية. وخبرا قالوا إنها كانت هتبقى أول ضريبة ثروة على المليارديرات في العالم.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "وشوية مليارديرات صرفوا ملايين علشان الضريبة تقع. وكام واحد ساب الولاية كلها.",
+     "show": "meme",
+     "meme": {
+      "kind": "versus",
+      "no": "أدفع 5% ضريبة",
+      "yes": "أدفع ملايين علشان ماادفعش",
+      "delay": 1.2
+     },
+     "emote": "sly"
+    },
+    {
+     "say": "ملايين البشر صوّتوا علشان ميتين واحد مايدفعوش. <short pause> الكائنات دي يا فندم بتحمي اللي فوقها.. بالمجّان.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    }
+   ]
+  },
+  {
+   "id": "najib",
+   "story": {
+    "n": 9,
+    "tag": "ماليزيا"
+   },
+   "slide": "najib",
+   "style": "Ninth file. Flat and unimpressed.",
+   "beats": [
+    {
+     "say": "الملف التاسع: ماليزيا.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "رئيس الوزرا السابق، نجيب رزاق، خرج من السجن بعد أربع سنين، بعفو ملكي. وهيكمّل العقوبة.. في بيته.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "القضية: أربعة ونص مليار دولار اتسحبوا من صندوق الدولة.",
+     "show": "fact",
+     "fact": {
+      "big": "$4.5B",
+      "small": "اتسحبت من صندوق الدولة · DW"
+     }
+    },
+    {
+     "say": "والعقوبة: اقعد في البيت.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "ولسه عليه حكم تاني: خمستاشر سنة. ومؤيدينه كانوا مستنيينه قدام البيت.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "وزير استقال اعتراضاً على القرار. <short pause> يعني اللي ماخدش حاجة هو اللي مشي.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "gibran",
+   "story": {
+    "n": 10,
+    "tag": "إندونيسيا"
+   },
+   "slide": "gibran",
+   "style": "Tenth file. Amused.",
+   "beats": [
+    {
+     "say": "الملف العاشر: إندونيسيا. رابع أكبر شعب على الكوكب.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "نائب الرئيس عرض استقالته. السبب: قضية في المحكمة على شهادة الثانوية بتاعته: حقيقية ولا لأ.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "وهو ابن الرئيس اللي قبله، وعنده تسعة وتلاتين سنة. والرئيس الحالي نصحه يكمّل في المحكمة ويثبت إن ورقه سليم.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "نائب رئيس.. والمشكلة في ثانوي.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "أنا يا فندم شهاداتي كلها من كوكب تاني، وماحدش طلب يشوفها. <short pause> بتوع شؤون العاملين هنا مابيدققوش.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "point"
+    }
+   ]
+  },
+  {
+   "id": "trumpbbc",
+   "story": {
+    "n": 11,
+    "tag": "ترامب ضد BBC"
+   },
+   "slide": "trumpbbc",
+   "style": "Eleventh file. Starts amused, ends nervous.",
+   "beats": [
+    {
+     "say": "الملف الحداشر: الرئيس الأمريكي ضد الـ BBC.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "قاضي سمح إن قضية التشهير تكمّل.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "والتعويض المطلوب: عشرة مليار دولار.",
+     "show": "fact",
+     "fact": {
+      "big": "$10B",
+      "small": "التعويض المطلوب · BBC",
+      "riser": true
+     }
+    },
+    {
+     "say": "السبب: برنامج عمل مونتاج لخطابه، ولزّق جزئين في بعض. والـ BBC اعتذرت عن ده قبل كده.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "عشرة مليار.. علشان مونتاج.",
+     "shot": "close",
+     "emote": "worried"
+    },
+    {
+     "say": "والقاضي رفض جزء تاني من القضية. بس الرئيس سمّاها: انتصار ضخم.",
+     "shot": "host",
+     "emote": "neutral",
+     "duck": false
+    },
+    {
+     "say": "كل حاجة عندهم انتصار يا فندم. كامل، وضخم. <short pause> محدش بيخسر على الكوكب ده.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "يا فندم، التقرير ده كله مونتاج. <short pause> أرجو تجهيز محامي.",
+     "shot": "low",
+     "duck": true,
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "elnino",
+   "story": {
+    "n": 12,
+    "tag": "الكوكب نفسه"
+   },
+   "slide": "elnino",
+   "style": "Twelfth file. Concerned scientist, then dry.",
+   "beats": [
+    {
+     "say": "الملف الاتناشر: الكوكب نفسه.",
+     "shot": "host",
+     "emote": "serious",
+     "duck": false
+    },
+    {
+     "say": "ظاهرة مناخية اسمها El Niño راجعة السنة دي، وممكن تبقى من أقوى المرات المتسجّلة.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "في كينيا الناس مستنيين فيضانات. وفي بيرو، أكبر مصايد سمك في العالم اتأثرت.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "في نيروبي، فيه ناس ساكنة على بعد مترين من النهر. وبيقولوا إن البيوت دي مش هتستحمل.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "والخسائر في المرات اللي زي دي بتوصل تريليونات الدولارات.",
+     "show": "fact",
+     "fact": {
+      "big": "تريليونات",
+      "small": "خسائر الاقتصاد العالمي · NPR"
+     }
+    },
+    {
+     "say": "الكوكب بيبعت لهم إنذارات. <short pause> وهم مسمّيين الإنذار: الولد الصغير. والاسم طلّعه صيادين في بيرو.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "booker",
+   "story": {
+    "n": 13,
+    "tag": "الثقافة"
+   },
+   "slide": "booker",
+   "style": "Thirteenth file. Mildly impressed.",
+   "beats": [
+    {
+     "say": "الملف التلاتاشر: الثقافة.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "جايزة الـ Booker، من أهم الجوايز الأدبية عندهم، راحت لرواية عن العالم بعد ما يخلص. اسمها: نهاية كل حاجة.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "والكاتب بقى أكبر واحد ياخد الجايزة في تاريخها. ووصفوا الرواية بإنها: محيّرة، بس عبقرية.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "زي الكوكب ده بالظبط يا فندم: محيّر. <short pause> من غير الجزء التاني.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "حتى هم يا فندم شايفينها جاية. <short pause> بس بيدّوها جوايز.",
+     "shot": "close",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "skims",
+   "story": {
+    "n": 14,
+    "tag": "التجارة"
+   },
+   "slide": "skims",
+   "style": "Last file. Delighted.",
+   "beats": [
+    {
+     "say": "والملف الأخير: التجارة.",
+     "shot": "wide",
+     "emote": "grin"
+    },
+    {
+     "say": "شركة Skims بتاعة Kim Kardashian باعت صندوق مفاجآت للأعياد، بمية تمانية وأربعين دولار.",
+     "show": "slide",
+     "view": "top"
+    },
+    {
+     "say": "جوّاه: توك شعر، وميداليات مفاتيح.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "جوّه الصندوق · 148 دولار",
+      "items": [
+       "توك شعر",
+       "ميداليات مفاتيح",
+       "خيبة أمل"
+      ],
+      "step": 0.5
+     },
+     "emote": "grin"
+    },
+    {
+     "say": "الناس قالت إنه شبه الحاجات اللي بتلاقيها ورا الكنبة. والشركة عرضت ترجّع الفلوس.",
+     "show": "slide",
+     "view": "body"
+    },
+    {
+     "say": "والشركة دي قيمتها خمسة مليار دولار. وواحد قال إن الصندوق شبه الحاجات اللي قطته بتلمّها من البيت.",
+     "shot": "host",
+     "emote": "grin",
+     "gesture": "point"
+    },
+    {
+     "say": "وصاحبة الشركة دي واحدة من الميتين ملياردير بتوع كاليفورنيا. <short pause> اللي الناس لسه حامياهم من الضريبة.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "story": null,
+   "slide": null,
+   "style": "Formal conclusion, completely sincere on the surface. Then a flat sign-off.",
+   "beats": [
+    {
+     "say": "التقييم النهائي يا فندم.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "بيتفاوضوا ومابيتفقوش. بيصوّتوا ضد مصلحتهم. وبيدّوا جوايز لنهاية العالم.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "ملخص الكوكب",
+      "items": [
+       "بيتفاوضوا ومابيتفقوش",
+       "بيصوّتوا ضد مصلحتهم",
+       "بيدّوا جوايز لنهاية العالم"
+      ],
+      "step": 1.5
+     },
+     "emote": "deadpan"
+    },
+    {
+     "say": "التوصية: مانتدخّلش. <short pause> هم ماشيين في السكة لوحدهم.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "ملحوظة أخيرة: ولا واحد فيهم لاحظ وجودي. <short pause> مشغولين.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "shrug"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
