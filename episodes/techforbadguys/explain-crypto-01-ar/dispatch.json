@@ -1,0 +1,76 @@
+{
+  "event_type": "tts.generate",
+  "client_payload": {
+    "job_id": "techforbadguys-explain-crypto-01-ar",
+    "request": {
+      "turns": [
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Cold open. Starts mid-story with a ridiculous fact, flat and fast.",
+          "text": "في سنة ألفين وعشرة، واحد من البشر دفع عشرة آلاف بيتكوين.. علشان يشتري اتنين بيتزا. بأسعار السنين الأخيرة، المبلغ ده يعدّي مئات الملايين من الدولارات. يا فندم، دي أغلى وجبة في تاريخ الكوكب. <short pause> ومن غير مشروب. وعلشان تفهموا إزاي ده حصل، لازم نبدأ من سؤال أبسط خالص: الفلوس نفسها.. إيه؟ اشرحها لكائن فضائي. العملات المشفرة. الجزء الأول."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Patient teacher explaining to people who have never seen money, with dry asides.",
+          "text": "زمان، البشر كانوا بيبدّلوا حاجة بحاجة. سمكة قصاد رغيف. المشكلة: لو بتاع العيش مش عايز سمك النهارده.. هتبات جعان. فجرّبوا حاجات تانية الكل يقبلها: ملح، صدف، وفي جزيرة عندهم.. حجارة قد العربية. <short pause> محفظتك هناك محتاجة ونش. فاتفقوا على حاجة الكل يقبلها: الدهب. نادر، ومابيبوظش، وصعب تزوّره. بس الدهب تقيل. فبقوا يسيبوه عند واحد أمين، وياخدوا منه وصل. والوصل ده هو اللي بقى يلف في السوق: الورق. والراجل الأمين اكتشف إنه يقدر يسلّف دهبك لحد تاني وإنت مش واخد بالك. <short pause> وكده يا فندم اتولد البنك. وسنة واحد وسبعين، الدهب اتشال من ورا الورق خالص. وفضلت الورقة لوحدها. يعني قيمتها جاية من حاجة واحدة بس: إن الكل مصدّق إن ليها قيمة. <short pause> الفلوس اتفاق جماعي. زي الطابور. بيشتغل طول ما الكل ملتزم. والنهارده أغلب فلوسهم مش ورق أصلاً. أرقام على شاشة."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Clear and slightly conspiratorial, like revealing how a magic trick works.",
+          "text": "والأرقام دي ساكنة فين؟ في دفتر. عند البنك. لما علي يدفع لمنى تلاتين جنيه، مفيش حاجة بتتحرك من مكانها. البنك بيمسح رقم هنا.. ويكتب رقم هناك. مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما شفت الفلوس دي بعينك. وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع دفاتر بعض، علشان محدش فيهم يثق في التاني. يعني البنك مش خزنة مليانة فلوس. البنك دفتر. <short pause> واللي ماسك الدفتر.. ماسك كل حاجة."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Brisk, listing problems with mounting disbelief.",
+          "text": "فأي جنيه بيتحرك بين اتنين من البشر، لازم يعدّي على طرف تالت. علي يبعت، والبنك يراجع الدفتر. وبعدين منى تستلم. ناقص العمولة. واللي ماسك الدفتر يقدر ياخد عمولة، يأخّر التحويل أيام، يجمّد حسابك.. أو يفلّس بفلوسك. الرسالة عندهم بتلف الكوكب في ثانية. والتحويل بين بلدين بياخد تلات أيام. <short pause> والاتنين أرقام يا فندم. الاتنين أرقام. وفيه أكتر من مليار إنسان على الكوكب ماعندهمش حساب بنك أصلاً. <short pause> يعني مالهمش سطر في الدفتر. يعني بالنسبة للنظام.. مش موجودين."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Curious, then the catch.",
+          "text": "طيب، ليه مايعملوش فلوس رقمية من غير بنك؟ ملف على الكمبيوتر، أبعته لك وخلاص. المشكلة إن أي حاجة رقمية بتتنسخ. صورة، أغنية، فيلم. كوبي، بيست. ببلاش. فلو الفلوس ملف، علي يقدر يبعت نفس المية جنيه لمنى.. ولسامي. في نفس اللحظة. دي اسمها مشكلة الإنفاق المزدوج. وعلشان كده كانوا محتاجين حد في النص يراجع: مين دفع إيه. وفي التسعينات، مجموعة مبرمجين سمّوا نفسهم Cypherpunks كان حلمهم فلوس رقمية خاصة: محدش يراقبها، ومحدش يوقّفها. ناس حاولت تحلها من التمانينات. عالم اسمه David Chaum عمل شركة فلوس رقمية. <short pause> فلّست سنة تمانية وتسعين. الفلوس الرقمية خلصت منها الفلوس."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Darker and drier. Controlled sarcasm about banks.",
+          "text": "وبعدين جت سنة ألفين وتمانية. بنوك كبيرة في أمريكا راهنت بفلوس الناس على قروض بيوت.. وخسرت. بنك اسمه Lehman Brothers، عمره أكتر من مية وخمسين سنة، وقع في يوم واحد. والحكومة الأمريكية خصصت سبعمية مليار دولار علشان تنقذ البنوك. بفلوس مين؟ بفلوس نفس الناس. وملايين البشر خسروا بيوتهم وشغلهم. والمديرين اللي راهنوا؟ أغلبهم خد مكافأة نهاية السنة. يعني اللي ماسك الدفتر غلط.. واللي دفع هو صاحب الحساب. <short pause> نظام عبقري يا فندم. أقترح نطبّقه عندنا."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Storyteller lowering his voice for a mystery.",
+          "text": "وفي عز الأزمة دي، ظهرت ورقة من تسع صفحات، اتبعتت لقايمة بريد بتاعة ناس مهتمين بالتشفير. التاريخ: واحد وتلاتين أكتوبر، ألفين وتمانية. والعنوان: بيتكوين، نظام نقدي إلكتروني، من شخص لشخص. والورقة وعدت بحاجة واحدة: تبعت فلوس لأي حد على الكوكب، مباشرة، من غير ما تستأذن حد. والكاتب: Satoshi Nakamoto. ولحد النهارده محدش يعرف ده مين. راجل، ست، ولا مجموعة. وقبل ما حد يسأل يا فندم: لأ، مش أنا. <short pause> أنا وصلت بعدها."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. The key idea of the episode. Clear, building, genuinely impressed.",
+          "text": "الفكرة كانت بسيطة وجريئة: الدفتر مايبقاش عند البنك. كل جهاز في الشبكة ياخد نسخة كاملة من الدفتر. آلاف الأجهزة، حوالين الكوكب كله. لما علي يبعت لمنى، الخبر بيلف على الكل، وكل الأجهزة تكتب نفس السطر. ولو واحد حاول يغش ويعدّل نسخته، الباقي كله يقول له: لأ. ده مش اللي عندنا. والدفتر ده علني. أي حد يقدر يقراه كله، من أول سطر. بس الأسماء اللي فيه مش أسماء: أرقام طويلة. <short pause> الكل شايف كل حاجة.. ومحدش عارف مين مين. زي حفلة تنكرية بفواتير. مفيش مدير. مفيش فرع رئيسي. <short pause> ومفيش خدمة عملا تسيبك على الانتظار أربعين دقيقة. الدفتر المشترك ده اسمه: بلوكتشين. وإزاي آلاف الغُرب بيتفقوا على نسخة واحدة من غير ما يثقوا في بعض؟ ده بقى موضوع الحلقة الجاية."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Historian with a smirk.",
+          "text": "تلاتة يناير ألفين وتسعة. Satoshi شغّل الشبكة، وكتب أول صفحة في الدفتر: البلوك رقم صفر. وجوّه البلوك ساب رسالة. عنوان جريدة The Times بتاع نفس اليوم: وزير المالية على وشك ينقذ البنوك للمرة التانية. يعني أول سطر في فلوس من غير بنوك.. تريقة على البنوك. <short pause> الكائن ده كان عنده حس فكاهي يا فندم. ومع البلوك ده اتخلق خمسين بيتكوين جداد. من الهوا. <short pause> بس بقواعد مكتوبة من الأول، ومحدش يقدر يغيّرها. وده فرق كبير عن الطباعة اللي متعودين عليها. وبعدها بتسع أيام بعت أول تحويل: عشرة بيتكوين لمبرمج اسمه Hal Finney. أول اتنين على الشبكة. واحد فيهم مجهول."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Enjoying the absurdity. Fast.",
+          "text": "في الأول محدش اهتم. البيتكوين كان بيتوزّع تقريباً ببلاش. وأول سعر اتسجّل له: أكتر من ألف بيتكوين.. بدولار واحد. لحد اتنين وعشرين مايو ألفين وعشرة. مبرمج اسمه Laszlo كتب على منتدى: هدفع عشرة آلاف بيتكوين للي يجيب لي اتنين بيتزا. وحد جابهم له. ودي كانت أول مرة البيتكوين يشتري حاجة حقيقية. والبشر لسه بيحتفلوا باليوم ده كل سنة. اسمه: يوم البيتزا. <short pause> بيحتفلوا بأسوأ صفقة في تاريخهم. أنا بدأت أحب الكوكب ده. وبعد أقل من سنة، البيتكوين الواحد وصل دولار. دولار كامل. <short pause> والبشر افتكروا إن دي القمة."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Mystery again, then a professional suspicion.",
+          "text": "أما Satoshi نفسه، ففي ألفين وحداشر بعت آخر رسالة معروفة: أنا انتقلت لحاجات تانية. واختفى. قبلها كان سلّم الكود لمبرمجين تانيين. مفيش وداع، مفيش مؤتمر صحفي، ولا حتى صورة. وساب وراه حوالي مليون بيتكوين، حسب تقديرات الباحثين. وعلى حد علم البشر، ماتحركوش من ساعتها. اخترع فلوس جديدة، بقى من أغنى الكائنات على الكوكب، ومالمسش منها حاجة. <short pause> ده مش تصرف بشري يا فندم. أنا بطلب فتح تحقيق: يمكن يكون واحد مننا."
+        },
+        {
+          "style": "A small alien field agent explaining a human invention to his commanders back home, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He is a good teacher: clear, simple, a little amused, and quick, with almost no pauses between sentences. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way. Summary, then one sincere warning, then the sign-off.",
+          "text": "نلخّص يا فندم. واحد: الفلوس اتفاق، ومتسجّل في دفتر. اتنين: الدفتر ده كان عند البنك. تلاتة: بيتكوين خد الدفتر.. ووزّعه على الكل. وتنبيه مهم: ده شرح، مش نصيحة استثمار. العملات دي سعرها بيطلع وينزل بعنف، وناس كتير خسرت فيها فلوسها. الحلقة الجاية: يعني إيه تعدين؟ مين بيحرس الدفتر؟ وليه مفيش غير واحد وعشرين مليون بيتكوين في الكون كله؟ اشرحها لكائن فضائي. العميل Peek. انتهى الإرسال."
+        }
+      ],
+      "voice": "Puck",
+      "routing": "quality",
+      "format": "wav",
+      "sample_rate": 24000,
+      "temperature": 1,
+      "transcript": {
+        "language_codes": [
+          "ar-EG"
+        ],
+        "write_vtt": true
+      },
+      "metadata": {
+        "channel": "techforbadguys",
+        "title": "اشرحها لكائن فضائي: العملات المشفرة 1",
+        "language": "ar-EG",
+        "recorded_for": "2026-11-11",
+        "script": "episodes/techforbadguys/explain-crypto-01-ar/script.md"
+      }
+    }
+  }
+}

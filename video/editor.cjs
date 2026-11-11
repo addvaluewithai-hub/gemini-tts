@@ -13,6 +13,8 @@
 //   drone   { drop: "phrase" } starts the drone prop, false removes it
 //   emote / gesture   pin the acting for this entry                 stutter n: hold each pose for n frames
 //   trans   punch | whip | cut  (default: chosen from the two shots)
+//   board   { kind, ... } with step: a motion-graphics board (boards.js), for shot "show" with kind "board"
+//   host    in the explain layout, where the host is while something is shown: pip | right | left (default: not on screen)
 //   calm    true: no nodding or bouncing on stressed words during this entry
 //   music   0..1: how loud the music bed is from here on (for a passage that should not bounce along)
 
@@ -71,6 +73,7 @@ function resolve(cues, words, slides) {
     }
     if (seg.fact) { if (seg.fact.riser) sfx.push({ t: seg.t - 0.55, type: "riser", len: 0.55 }); sfx.push({ t: seg.t, type: seg.fact.tone === "bubble" ? "pop" : "impact" }); if (seg.fact.tone !== "bubble") impacts.push(seg.t); }
     if (seg.mark) sfx.push({ t: seg.t + 0.14, type: "swipe" });
+    if (seg.kind === "board" && seg.full && !seg.cut && k > 0) sfx.push({ t: seg.t, type: "pop", gain: 0.55 });       // a board moving on a step
     if (seg.meme) { const m = seg.meme;
       if (m.kind === "chat") { m.delay = m.delay ?? 0.7; sfx.push({ t: seg.t, type: "pop" }, { t: seg.t + m.delay, type: "ding" }); }
       if (m.kind === "versus") { m.delay = m.delay ?? 0.6; sfx.push({ t: seg.t, type: "tick" }, { t: seg.t + m.delay, type: "impact", gain: 0.6 }); impacts.push(seg.t + m.delay); }
@@ -94,8 +97,8 @@ function resolve(cues, words, slides) {
 
 // Step 2: one studio state per frame.
 function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
-  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", solo = cues.layout === "solo", shots = short ? SHORT : solo ? SOLO : SHOTS;
-  let pip = 0, room = 0;
+  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", explain = cues.layout === "explain", solo = cues.layout === "solo" || explain, shots = short ? SHORT : solo ? SOLO : SHOTS;
+  let pip = 0, room = 0, side = "right";
   let hostY = 0, vY = 0, lurk = 0, peek = 0, scrim = 0, lb = 0, chipA = 0, kb = 1, cx = 0.5, cy = 0.3, storyT = -9, lastStory = null, lastInsertCut = -9;
   for (let i = 0; i < N; i++) {
     const tv = i / FPS, t = tAudio(i);
@@ -121,7 +124,9 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     vY = (vY + (targetY - hostY) * 0.2) * 0.6; hostY += vY;
     const body = { e: a0.e, paper: a0.paper, shift: a0.shift, bob: a0.bob, tilt: a0.tilt, armL: a0.armL, armR: a0.armR, shrug: a0.shrug, sway: a0.sway, bounce: a0.bounce, squash: a0.squash };
     lurk += ((seg.lurk && t > seg.t + 0.4 ? 1 : 0) - lurk) * 0.24;
-    peek += ((seg.peek ? 1 : 0) - peek) * 0.26;
+    const sideHost = explain && insert && (seg.host === "right" || seg.host === "left") ? seg.host : null;
+    if (sideHost) side = sideHost;
+    peek += ((seg.peek || sideHost ? 1 : 0) - peek) * 0.26;
     const spy = (look) => ({ ...body, e: { ...a0.e, look, lookY: -0.1, symbol: null }, paper: "pockets", shift: 0, armL: null, armR: null, shrug: 0, sway: 0, bounce: 0, squash: 1 });
 
     // the screenshot insert: the window lands, the picture pushes in on what is being read, a marker runs over it
@@ -150,7 +155,8 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     let meme = null;
     if (seg.meme) { const ma = t - seg.t; meme = { ...seg.meme, age: ma, a: clamp(ma / 0.06), s: 1 + 0.25 * Math.exp(-ma * 16) * Math.cos(ma * 20), rot: 1.5 * Math.exp(-ma * 9) }; }
     scrim += (((seg.fact || seg.meme) && !insert && !short ? 1 : 0) - scrim) * 0.3;
-    pip += ((solo && insert ? 1 : 0) - pip) * 0.3;
+    // explain: the picture carries the lesson, so the host is on screen only where a beat asks for him (host: pip | right | left)
+    pip += (((explain ? seg.host === "pip" : solo) && insert ? 1 : 0) - pip) * 0.3;
     room += ((short && (seg.fact || seg.meme) ? 1 : 0) - room) * 0.26;
     const tight = !insert && (seg.shot === "close" || seg.shot === "low");
     lb += ((tight && !short ? 62 : 0) - lb) * 0.22;
@@ -170,7 +176,8 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
       pip: pip > 0.02 ? { ...body, y: hostY, amt: pip } : null,
       host: !insert || ins.enter < 1 ? (hostY < 590 ? { ...body, y: hostY } : null) : null,
       lurk: lurk > 0.02 && (!insert || ins.enter < 1) ? { ...spy(0.75 * Math.sin(2 * Math.PI * 0.7 * tv)), amt: lurk } : null,
-      peek: peek > 0.02 ? { ...spy(-0.75), amt: peek, rise: 262, rot: -7 } : null,
+      peek: peek > 0.02 ? (explain ? { ...body, paper: "pockets", shift: 0, armL: null, armR: null, amt: peek, side } : { ...spy(-0.75), amt: peek, rise: 262, rot: -7 }) : null,
+      board: insert && seg.kind === "board" ? { spec: seg.board, step: seg.step || 0, age: t - seg.t, total: t - seg.cutT } : null,
       tv: seg.slide, onair: Math.floor(tv * 0.8) % 2 ? 1 : 0.55, drone, insert: ins, fact, meme, chip, ...caption(i) });
   }
   return frames;

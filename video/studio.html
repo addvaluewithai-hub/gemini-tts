@@ -16,7 +16,9 @@
 #frame.rtl .rc{font-size:36px;line-height:1.5}#frame.rtl .list div{font-size:40px}#frame.rtl .chat .u{font-family:"Anton"}
 /* layout "solo": no wall screen. The host is alone in his shots; anything shown fills the frame and he sits small at bottom right. */
 #radar{display:none}#frame.solo #radar{display:block}
-#frame.solo #tv,#frame.solo #lurk,#frame.solo #tvglow,#frame.solo #peek{display:none!important}
+#frame.solo #tv,#frame.solo #lurk,#frame.solo #tvglow{display:none!important}
+#frame.solo:not(.explain) #peek{display:none!important}
+#board{inset:0}#board>svg{display:block}
 #frame.solo #host{left:510px}
 #frame.solo #win{left:0;top:0;width:1920px;height:1080px;border-radius:0;box-shadow:none}
 #frame.solo #winbar{display:none}
@@ -202,6 +204,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
   <div id="win"><div id="winbar"><i></i><i></i><i></i><div id="url"></div><div id="srcchip"></div></div>
    <div id="view"><div id="pan"><div class="textcard" id="viewcard"><div class="who"></div><div class="what"></div><div class="when"></div></div><div id="mark"></div></div></div></div>
  </div>
+ <div id="board"></div>
  <div id="peek"></div>
  <div id="pip"></div><div id="pipdesk"></div>
  <div id="fact"><svg id="factchart" viewBox="0 0 820 420"><path id="fcline" fill="none" stroke="#ff4654" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity=".85"/><path id="fchead" fill="#ff4654" opacity=".85"/></svg><div id="factbig"></div><div id="factsmall"></div></div>
@@ -214,6 +217,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 </div>
 <script type="module">
 import { peek3d } from "/characters/peek3d.js";
+import { board } from "/boards.js";
 import { EMOTES, GESTURES } from "/characters/acting.js";
 const $ = (id) => document.getElementById(id);
 const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
@@ -221,8 +225,8 @@ let cfg = { slides: {}, face: "pear" }; const tvImg = {}, viewImg = {};
 const show = (el, on, as = "block") => { el.style.display = on ? as : "none"; };
 
 window.setup = async (config) => {
-  cfg = config; $("frame").classList.toggle("rtl", !!config.rtl); const seated = config.layout === "solo" || config.layout === "short";
-  $("frame").classList.toggle("solo", seated); $("frame").classList.toggle("short", config.layout === "short"); document.documentElement.classList.toggle("short", config.layout === "short");
+  cfg = config; $("frame").classList.toggle("rtl", !!config.rtl); const seated = ["solo", "short", "explain"].includes(config.layout);
+  $("frame").classList.toggle("solo", seated); $("frame").classList.toggle("short", config.layout === "short"); $("frame").classList.toggle("explain", config.layout === "explain"); document.documentElement.classList.toggle("short", config.layout === "short");
   if (seated) for (const el of document.querySelectorAll("#desk .seat")) el.setAttribute("transform", "translate(400 0)"); for (const id of ["cap", "meme"]) $(id).dir = config.rtl ? "rtl" : "ltr";
   if (config.brand) {            // the channel name in three parts (the middle one in pink) and a line under it; works in Latin or Arabic
     const { a = "", b = "", c = "", tagline = "" } = config.brand, arabic = /[\u0621-\u064A]/.test(a + b + c), sp = arabic ? " " : "";
@@ -299,7 +303,7 @@ window.draw = (st) => {
   }
   const ins = st.insert; show($("insert"), !!ins);
   if (ins) {
-    const s = cfg.slides[ins.slide] || {}, solo = cfg.layout === "solo";
+    const s = cfg.slides[ins.slide] || {}, solo = cfg.layout === "solo" || cfg.layout === "explain";
     show($("win"), !!ins.slide); slide(viewImg, $("viewcard"), ins.slide);
     if (ins.slide) { $("url").textContent = s.url.replace(/^https?:\/\/(www\.)?/, ""); $("srcchip").textContent = `${s.source} · ${s.date}`.toUpperCase(); }
     $("insert").style.opacity = Math.min(1, ins.enter * 3);
@@ -314,8 +318,11 @@ window.draw = (st) => {
   }
   person($("pip"), st.pip, 600, "s3"); show($("pipdesk"), !!st.pip);
   if (st.pip) { const d = (1 - st.pip.amt) * 470; $("pip").style.transform = `translateY(${d + st.pip.y * 0.66}px)`; $("pipdesk").style.transform = `translateY(${d}px)`; }
+  const bd = st.board; show($("board"), !!bd); if (bd) $("board").innerHTML = board(bd.spec, bd.step, bd.age, bd.total, cfg);
   person($("peek"), st.peek, 640, "r3");
-  if (st.peek) { $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
+  if (st.peek && st.peek.side) { const right = st.peek.side === "right", a = st.peek.amt;       // leaning in from the edge of the frame
+    $("peek").style.top = "520px"; $("peek").style.left = (right ? 1920 - 430 * a : -640 + 430 * a) + "px"; $("peek").style.transform = `rotate(${right ? -15 : 15}deg)`; }
+  else if (st.peek) { $("peek").style.left = "1320px"; $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
   const f = st.fact; show($("fact"), !!f);
   if (f) { $("fact").className = f.tone || ""; $("factbig").textContent = f.big; $("factsmall").textContent = f.small || ""; $("factsmall").style.opacity = f.sub;
     show($("factchart"), f.chart === "down");
