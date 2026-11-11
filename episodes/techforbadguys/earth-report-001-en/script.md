@@ -60,7 +60,7 @@ File twelve: the planet itself. No jokes in this one either. A climate pattern c
 
 ### 13. CULTURE
 
-File thirteen: culture. The Booker Prize, one of their highest honors for a book, went to a novel about the world after it ends. It is called The End of Everything. The author is the oldest winner the prize has ever had. And the judges' word for the book was: baffling, but brilliant. Much like this planet, sir. Baffling. Without the second part. Even they can see it coming. They just give it awards.
+File thirteen: culture. The Booker Prize, one of their highest honors for a book, went to a novel about the world after it ends. It is called The End of Everything. The author is the oldest winner the prize has ever had. And the book has been described as: baffling, but brilliant. Much like this planet, sir. Baffling. Without the second part. Even they can see it coming. They just give it awards.
 
 ### 14. COMMERCE
 
