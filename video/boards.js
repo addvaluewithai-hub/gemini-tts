@@ -69,6 +69,8 @@ const ICON = {
   laptop: (c = C.white) => `<rect x="-84" y="-70" width="168" height="110" rx="10" fill="${c}"/><rect x="-70" y="-56" width="140" height="82" rx="4" fill="${C.panel}"/><path d="M-110 46H110L96 70H-96Z" fill="${c}"/>`,
   eye: (c = C.white) => `<path d="M-100 0C-60 -62 60 -62 100 0C60 62 -60 62 -100 0Z" fill="${c}"/><circle r="36" fill="${C.cyan}"/><circle r="15" fill="${C.ink}"/>`,
   palm: () => `<path d="M-8 100L-2 -20H12L8 100Z" fill="#8a5a1c"/>${[-150, -110, -70, -30, 10].map((d) => `<path d="M4 -24Q60 -70 104 -30Q60 -52 4 -24Z" fill="${C.green}" transform="rotate(${d} 4 -24)"/>`).join("")}<circle cx="4" cy="-30" r="10" fill="${C.pink}"/>`,
+  cable: () => `<circle r="96" fill="#2b2f45"/><circle r="78" fill="#8f96b8"/><circle r="58" fill="#c98a3a"/><circle r="40" fill="#e8e3d3"/>${[[0, 0], [-16, -12], [16, -12], [-16, 12], [16, 12], [0, 22], [0, -24]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="6" fill="${C.cyan}"/>`).join("")}`,
+  shark: (c = "#8f96b8") => `<path d="M-104 6C-60 -38 30 -40 104 0C40 34 -50 36 -104 6Z" fill="${c}"/><path d="M-10 -34L20 -84L34 -30Z" fill="${c}"/><path d="M-104 6L-128 -34L-118 6L-128 40Z" fill="${c}"/><circle cx="62" cy="-8" r="6" fill="${C.ink}"/><path d="M52 16L62 8L70 18L78 9L86 16" fill="none" stroke="#fff" stroke-width="5"/>`,
   ghost: (c = C.white) => `<circle cx="0" cy="-52" r="44" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><path d="M-72 90C-72 6 72 6 72 90" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><text y="-28" text-anchor="middle" font-family="Anton" font-size="64" fill="${c}">?</text>`,
 };
 const icon = (name, ...a) => (ICON[name] || ICON.person)(...a);

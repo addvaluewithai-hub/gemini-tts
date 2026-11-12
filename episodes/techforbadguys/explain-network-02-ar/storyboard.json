@@ -1,0 +1,1004 @@
+{
+ "title": "تقرير الأرض: الشبكة 2",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: The Network, part 2 of 3. Where the internet physically is: a network of networks with nobody in charge, the cables on the sea floor that carry almost everything between continents, how they break and are mended, packets and why the network survives a cut, names and numbers, two times the routing map went wrong, what the cloud is, Wi-Fi, who uses the cables now, satellites, and who is still offline.",
+  "",
+  "Facts are stated from web research on 12 November 2026 (see explain-network-01-ar/plan.md for links) and from general knowledge of how the internet works: the first ARPANET message on 29 October 1969 was LO because the receiving machine crashed during LOGIN; about 607 submarine cable systems were in service in 2026 with more than 1.5 million km of cable, carrying well over 95 percent of intercontinental traffic (TeleGeography); deep-sea cable is about as thick as a garden hose and repeaters sit roughly every 80 km; light in fibre travels at about 200,000 km a second; the 1858 transatlantic telegraph cable carried Queen Victoria's 98-word message in about 16 hours and failed after about three weeks, after excessive voltage was applied; there are 150 to 200 cable faults a year, 70 to 80 percent from fishing and anchors, and fish bites cause under 1 percent (ICPC); cable repair ships number in the low tens worldwide; Red Sea cables were cut in February 2024 and September 2025; on 24 February 2008 Pakistan Telecom's routing announcement took YouTube offline worldwide for about two hours; on 4 October 2021 a faulty configuration change withdrew Facebook's routes for about six hours and staff badges stopped working (New York Times); the name Wi-Fi was coined in 1999 by a branding firm and stands for nothing; Google, Meta, Amazon and Microsoft use about three quarters of international cable capacity (estimates citing TeleGeography) and Meta announced a 50,000 km cable in February 2025; one satellite network had more than 11,000 satellites in orbit in November 2026; 6 billion people were online and 2.2 billion offline in 2025 (ITU); the web was proposed in 1989; a modern cable costs hundreds of millions of dollars and carries hundreds of terabits a second; cable ships lay at walking pace and bury the cable near shore; intelligence agencies have tapped submarine cables (reported since 2013); IPv4 has about 4.3 billion addresses and roughly half of traffic to large sites now uses IPv6; data centres used about 1.5 percent of world electricity in 2024 (IEA); the 2.4 GHz Wi-Fi band is shared with microwave ovens."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "التقرير الجاي",
+   "next": "وشّك في ألف حتة · الجزء 3 من 3",
+   "note": "اشترك علشان باقي التقارير توصل"
+  }
+ },
+ "brand": {
+  "a": "تقرير",
+  "b": "الأرض",
+  "c": "",
+  "tagline": "ملف ميداني: الشبكة"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "تقرير الأرض · ملف الشبكة",
+   "title": "الإنترنت في قاع البحر",
+   "sub": "الجزء 2 من 3 · ساكن فين؟ ومين صاحبه؟"
+  },
+  "cloud": {
+   "kind": "story",
+   "title": "السحابة",
+   "icon": "cloud",
+   "name": "مفيش",
+   "lines": [
+    "البشر بيقولوا: السحابة",
+    "مفيش سحابة",
+    "فيه خراطيم.. ومخازن"
+   ]
+  },
+  "nets": {
+   "kind": "steps",
+   "title": "شبكة.. من شبكات",
+   "items": [
+    {
+     "icon": "router",
+     "label": "شبكة بيتك",
+     "sub": "كام جهاز"
+    },
+    {
+     "icon": "tower",
+     "label": "شركة الاتصالات",
+     "sub": "شبكة بلد"
+    },
+    {
+     "icon": "server",
+     "label": "الشبكات الكبيرة",
+     "sub": "بتربط القارات"
+    }
+   ]
+  },
+  "arpa": {
+   "kind": "story",
+   "title": "29 أكتوبر 1969",
+   "icon": "node",
+   "name": "أول رسالة",
+   "lines": [
+    "بين كمبيوترين في جامعتين",
+    "كانوا عايزين يكتبوا: LOGIN",
+    "وصل: LO.. والجهاز وقع"
+   ],
+   "size": 56
+  },
+  "globe": {
+   "kind": "globe",
+   "title": "الإنترنت الحقيقي",
+   "cutStep": 3,
+   "captions": [
+    "",
+    "",
+    "أكتر من 95% من الكلام بين القارات ماشي هنا",
+    "كابل اتقطع.. والباقي شال"
+   ]
+  },
+  "stats": {
+   "kind": "rows",
+   "title": "بالأرقام · 2026",
+   "items": [
+    {
+     "text": "كابل شغال في قاع البحر",
+     "tag": "+600"
+    },
+    {
+     "text": "كيلومتر",
+     "tag": "1.5 مليون"
+    },
+    {
+     "text": "من الكلام بين القارات",
+     "tag": "+95%"
+    }
+   ]
+  },
+  "hose": {
+   "kind": "story",
+   "title": "الكابل من جوه",
+   "icon": "cable",
+   "name": "قد خرطوم الجنينة",
+   "lines": [
+    "جواه شعيرات إزاز",
+    "أرفع من شعرة الإنسان",
+    "واللي ماشي فيها: ضوء"
+   ]
+  },
+  "speed": {
+   "kind": "story",
+   "title": "السرعة",
+   "icon": "bolt",
+   "name": "ضوء في إزاز",
+   "lines": [
+    "200 ألف كيلومتر في الثانية",
+    "من قارة لقارة: أقل من عُشر ثانية",
+    "وكل 80 كم تقريباً: مقوّي"
+   ],
+   "size": 56
+  },
+  "old": {
+   "kind": "story",
+   "title": "1858 · أول كابل تحت المحيط",
+   "icon": "ship",
+   "name": "تلغراف",
+   "lines": [
+    "رسالة الملكة للرئيس: 98 كلمة",
+    "خدت حوالي 16 ساعة",
+    "والكابل مات بعد 3 أسابيع"
+   ],
+   "size": 56
+  },
+  "breaks": {
+   "kind": "story",
+   "title": "بتتقطع",
+   "icon": "anchor",
+   "name": "هلب",
+   "lines": [
+    "150 إلى 200 عطل كل سنة",
+    "أغلبها: شِباك صيد وهلب مراكب",
+    "ومراكب التصليح: قليلة جداً"
+   ],
+   "size": 54
+  },
+  "shark": {
+   "kind": "story",
+   "title": "متهم بريء",
+   "icon": "shark",
+   "name": "القرش",
+   "lines": [
+    "بيعضّ الكابلات فعلاً",
+    "واتصوّر وهو بيعمل كده",
+    "نصيبه من الأعطال: أقل من 1%"
+   ]
+  },
+  "packets": {
+   "kind": "packets",
+   "title": "الحِزم",
+   "from": "الرسالة",
+   "to": "اتجمّعت"
+  },
+  "dns": {
+   "kind": "flow",
+   "title": "الأسماء والأرقام",
+   "actors": [
+    {
+     "icon": "laptop",
+     "label": "إنت"
+    },
+    {
+     "icon": "book",
+     "label": "دليل الأسماء",
+     "big": true
+    },
+    {
+     "icon": "server",
+     "label": "الموقع"
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "token": "file",
+     "label": "الاسم"
+    },
+    {
+     "move": [
+      1,
+      0
+     ],
+     "token": "file",
+     "label": "الرقم"
+    },
+    {
+     "move": [
+      0,
+      2
+     ],
+     "token": "file",
+     "label": "الطلب"
+    }
+   ]
+  },
+  "pak": {
+   "kind": "story",
+   "title": "الخريطة مبنية على الثقة · 2008",
+   "icon": "tower",
+   "name": "شركة اتصالات",
+   "lines": [
+    "باكستان كانت عايزة تحجب YouTube",
+    "الشركة قالت للخريطة: هو عندي",
+    "العالم كله صدّق.. ساعتين"
+   ],
+   "size": 54
+  },
+  "fb": {
+   "kind": "story",
+   "title": "4 أكتوبر 2021",
+   "icon": "server",
+   "name": "Facebook",
+   "lines": [
+    "إعداد غلط.. من جوه الشركة",
+    "مسح نفسه من الخريطة 6 ساعات",
+    "وكروت أبواب المكاتب وقفت"
+   ],
+   "size": 56
+  },
+  "dc": {
+   "kind": "story",
+   "title": "«السحابة»",
+   "icon": "server",
+   "name": "مخزن",
+   "lines": [
+    "مباني قد ملاعب الكورة",
+    "صفوف كمبيوترات.. وتكييف",
+    "يعني: كمبيوتر حد تاني"
+   ]
+  },
+  "home": {
+   "kind": "route",
+   "title": "رحلة صفحة واحدة",
+   "stops": [
+    {
+     "icon": "laptop",
+     "label": "جهازك",
+     "link": "radio",
+     "leg": "واي فاي"
+    },
+    {
+     "icon": "router",
+     "label": "الراوتر",
+     "link": "wire",
+     "leg": "كابل"
+    },
+    {
+     "icon": "tower",
+     "label": "شركة الاتصالات",
+     "link": "sea",
+     "leg": "قاع البحر"
+    },
+    {
+     "icon": "server",
+     "label": "المخزن",
+     "sub": "في قارة تانية"
+    }
+   ]
+  },
+  "wifi": {
+   "kind": "story",
+   "title": "Wi-Fi",
+   "icon": "router",
+   "name": "راديو برضه",
+   "lines": [
+    "آخر كام متر في البيت",
+    "الاسم اتألّف سنة 1999",
+    "ومالوش أي معنى"
+   ]
+  },
+  "who": {
+   "kind": "bars",
+   "title": "مين بيستخدم الخراطيم؟",
+   "bars": [
+    {
+     "label": "4 شركات تكنولوجيا",
+     "value": 75,
+     "text": "≈ 75%",
+     "color": "#ff4fa3"
+    },
+    {
+     "label": "كل الباقي",
+     "value": 25,
+     "text": "≈ 25%",
+     "color": "#9fb0ff"
+    }
+   ],
+   "note": "من السعة بين القارات · تقديرات",
+   "every": 0.6
+  },
+  "sats": {
+   "kind": "story",
+   "title": "والأقمار؟",
+   "icon": "sat",
+   "name": "11 ألف قمر",
+   "lines": [
+    "شبكة واحدة: أكتر من 11 ألف قمر",
+    "للأماكن اللي الكابل مابيوصلهاش",
+    "والحِمل لسه على قاع البحر"
+   ],
+   "size": 56
+  },
+  "off": {
+   "kind": "meter",
+   "title": "لسه برّه · 2025",
+   "big": "2.2 مليار",
+   "unit": "إنسان من غير إنترنت",
+   "value": 0.27,
+   "label": "من سكان الكوكب",
+   "note": "6 مليار جوه الشبكة",
+   "color": "#ff4654"
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "قاموس البشر",
+   "items": [
+    {
+     "word": "IP",
+     "means": "رقم الجهاز على الشبكة. عنوانه"
+    },
+    {
+     "word": "Cloud",
+     "means": "«السحابة»: كمبيوتر حد تاني.. في مخزن"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then destroys a popular myth.",
+   "beats": [
+    {
+     "say": "يا فندم، التقرير التاني في ملف الشبكة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: الإنترنت. هو فين بالظبط؟ ومين صاحبه؟",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "في التقرير اللي فات عرفنا إن الموبايل بيكلّم أقرب برج بس، والباقي كله كابلات. النهارده همشي ورا الكابلات دي لآخرها.",
+     "show": "board",
+     "board": "title",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "البشر لما تسألهم صورك وملفاتك فين، يشاوروا لفوق ويقولوا: في السحابة.",
+     "show": "board",
+     "board": "cloud"
+    },
+    {
+     "say": "مفيش سحابة يا فندم. أنا دوّرت.",
+     "show": "board",
+     "board": "cloud"
+    },
+    {
+     "say": "اللي لقيته: خراطيم في قاع المحيط.. ومخازن.",
+     "show": "board",
+     "board": "cloud"
+    },
+    {
+     "say": "هقول لكم الخراطيم دي إيه، ومين بيقطعها، وإزاي رسالة بتلاقي طريقها من قارة لقارة. <short pause> وإزاي واحدة من أكبر شركات الكوكب مسحت نفسها من الخريطة ست ساعات.. وموظفينها ماعرفوش يدخلوا المبنى.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "nets",
+   "story": {
+    "n": 1,
+    "tag": "شبكة من شبكات"
+   },
+   "style": "Clear and a little amused that nobody is in charge.",
+   "beats": [
+    {
+     "say": "أول حاجة: الإنترنت مش شبكة واحدة. في بيتك شبكة صغيرة: كام جهاز.",
+     "show": "board",
+     "board": "nets"
+    },
+    {
+     "say": "دي متوصلة بشبكة شركة الاتصالات.",
+     "show": "board",
+     "board": "nets"
+    },
+    {
+     "say": "ودي متوصلة بشبكات أكبر، بتربط البلاد والقارات.",
+     "show": "board",
+     "board": "nets"
+    },
+    {
+     "say": "عشرات الآلاف من الشبكات، كل واحدة ليها صاحب، ومتفقين على حاجة واحدة بس: طريقة الكلام. <short pause> مفيش مدير. مفيش مقر رئيسي. ومفيش زرار يقفله كله.",
+     "show": "board",
+     "board": "nets",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "وعلى فكرة: الإنترنت مش هو المواقع. المواقع حاجة اتبنت فوقه بعدها بعشرين سنة. <short pause> الإنترنت هو المواسير. والمواقع هي الميه.",
+     "show": "board",
+     "board": "nets",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "والبداية كانت في أكتوبر سنة تسعة وستين. كمبيوترين في جامعتين.",
+     "show": "board",
+     "board": "arpa"
+    },
+    {
+     "say": "كانوا عايزين يبعتوا كلمة: LOGIN.",
+     "show": "board",
+     "board": "arpa"
+    },
+    {
+     "say": "وصل منها حرفين: LO. والجهاز وقع.",
+     "show": "board",
+     "board": "arpa"
+    },
+    {
+     "say": "أول رسالة في تاريخ الإنترنت كانت عطل. <short pause> والبشر كمّلوا على نفس المنوال.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "cables",
+   "story": {
+    "n": 2,
+    "tag": "خراطيم في قاع البحر"
+   },
+   "style": "The main reveal. He is honestly impressed and slightly appalled.",
+   "beats": [
+    {
+     "say": "طيب القارات متوصلة ببعض إزاي؟ البشر فاكرين: أقمار صناعية.",
+     "show": "board",
+     "board": "globe"
+    },
+    {
+     "say": "غلط. الكلام بين القارات ماشي في كابلات. مرمية في قاع المحيط.",
+     "show": "board",
+     "board": "globe"
+    },
+    {
+     "say": "أكتر من خمسة وتسعين في المية منه. صورهم، فلوسهم، مكالماتهم، وأسرار حكوماتهم.. كله في القاع.",
+     "show": "board",
+     "board": "globe"
+    },
+    {
+     "say": "أكتر من ستمية كابل شغالين.",
+     "show": "board",
+     "board": "stats"
+    },
+    {
+     "say": "طولهم مع بعض مليون ونص كيلومتر. يعني يلفّوا الكوكب أكتر من خمسة وتلاتين مرة.",
+     "show": "board",
+     "board": "stats"
+    },
+    {
+     "say": "وشايلين تقريباً كل الكلام اللي بيعدّي من قارة لقارة.",
+     "show": "board",
+     "board": "stats"
+    },
+    {
+     "say": "والكابل نفسه، في عرض المحيط، تُخنه قد خرطوم الجنينة.",
+     "show": "board",
+     "board": "hose"
+    },
+    {
+     "say": "جواه شعيرات من الإزاز، كل واحدة أرفع من شعرة الإنسان.",
+     "show": "board",
+     "board": "hose"
+    },
+    {
+     "say": "واللي ماشي فيها مش كهربا. ضوء. نبضات ليزر بتنوّر وتطفي مليارات المرات في الثانية.",
+     "show": "board",
+     "board": "hose"
+    },
+    {
+     "say": "والكابل الواحد الحديث بيتكلف مئات الملايين من الدولارات، وبيشيل في الثانية الواحدة اللي يكفّي ملايين الأفلام شغالة مع بعض.",
+     "show": "board",
+     "board": "hose",
+     "step": "hold",
+     "host": "left",
+     "emote": "proud"
+    },
+    {
+     "say": "يعني حضارة الكائنات دي كلها ماشية على شوية خيوط إزاز في خرطوم.. مرمي في الضلمة على عمق كيلومترات. <short pause> ومحدش بيحرسه.",
+     "shot": "close",
+     "emote": "worried"
+    },
+    {
+     "say": "والضوء في الإزاز بيجري بحوالي ميتين ألف كيلومتر في الثانية.",
+     "show": "board",
+     "board": "speed"
+    },
+    {
+     "say": "يعني من قارة لقارة في أقل من عُشر ثانية.",
+     "show": "board",
+     "board": "speed"
+    },
+    {
+     "say": "وكل تمانين كيلومتر تقريباً فيه مقوّي للضوء، في قاع البحر، بياخد كهربته من الكابل نفسه.",
+     "show": "board",
+     "board": "speed"
+    },
+    {
+     "say": "ومين بيمدّها؟ مركب ماشية بسرعة واحد بيتمشى، والكابل نازل وراها للقاع. شهور. وقرب الشط بيدفنوه في الرمل.",
+     "show": "board",
+     "board": "speed",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "وبيطلع من البحر في مبنى صغير على الشط، شكله مخزن عادي. من غير يافطة. <short pause> أنا عدّيت على واحد منهم يا فندم.. ومحدش سألني رايح فين.",
+     "show": "board",
+     "board": "speed",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "old",
+   "story": {
+    "n": 3,
+    "tag": "من 1858"
+   },
+   "style": "Historian enjoying a Victorian failure.",
+   "beats": [
+    {
+     "say": "والفكرة دي قديمة جداً. أول كابل تحت المحيط اتمدّ سنة ألف تمنمية تمانية وخمسين. للتلغراف.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "ملكة بعتت عليه رسالة تهنئة لرئيس. تمانية وتسعين كلمة. خدت حوالي ستاشر ساعة.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "والكابل مات بعد تلات أسابيع. لأن واحد منهم زوّد عليه الكهربا علشان يستعجله.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "ستاشر ساعة كانت معجزة وقتها. قبلها الرسالة كانت بتاخد عشر أيام بالمركب. <short pause> والنهارده البشر بيقفلوا الصفحة لو اتأخرت تلات ثواني.",
+     "show": "board",
+     "board": "old",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    }
+   ]
+  },
+  {
+   "id": "breaks",
+   "story": {
+    "n": 4,
+    "tag": "بتتقطع"
+   },
+   "style": "A security assessment, dry and a bit alarmed.",
+   "beats": [
+    {
+     "say": "والخراطيم دي بتتقطع. من مية وخمسين لميتين عطل كل سنة.",
+     "show": "board",
+     "board": "breaks"
+    },
+    {
+     "say": "أغلبها مش تخريب. شبكة صيد بتتجرّ على القاع. أو مركب رمت الهلب في المكان الغلط.",
+     "show": "board",
+     "board": "breaks"
+    },
+    {
+     "say": "وعدد المراكب اللي بتعرف تصلّح الكابلات دي في الكوكب كله.. قليل جداً. عشرات.",
+     "show": "board",
+     "board": "breaks"
+    },
+    {
+     "say": "المركب تروح المكان، ترمي خُطّاف، تطلّع الطرفين من القاع، وتلحمهم على سطحها. شعيرة شعيرة. <short pause> ممكن تاخد أسابيع.",
+     "show": "board",
+     "board": "breaks",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "ولأن كل حاجة ماشية في الخراطيم دي، أجهزة مخابراتهم بتتصنّت عليها من سنين. <short pause> يعني أنا مش أول جاسوس على الكابلات دي يا فندم. أنا بس أول واحد من برّه.",
+     "show": "board",
+     "board": "breaks",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "وفيه متهم مشهور: سمك القرش. بيعضّ الكابلات فعلاً.",
+     "show": "board",
+     "board": "shark"
+    },
+    {
+     "say": "واتصوّر وهو بيعمل كده.",
+     "show": "board",
+     "board": "shark"
+    },
+    {
+     "say": "بس نصيبه من الأعطال أقل من واحد في المية. <short pause> المتهم الحقيقي دايماً.. إنسان بيصطاد.",
+     "show": "board",
+     "board": "shark"
+    },
+    {
+     "say": "ولما كابل يتقطع؟ في البحر الأحمر، كابلات اتقطعت سنة ألفين أربعة وعشرين، وتاني في ألفين خمسة وعشرين. الإنترنت بطّأ في آسيا والشرق الأوسط. <short pause> بس ماوقعش.",
+     "show": "board",
+     "board": "globe",
+     "step": 3
+    },
+    {
+     "say": "ليه ماوقعش؟ هنا أذكى حاجة في الاختراع كله.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "packets",
+   "story": {
+    "n": 5,
+    "tag": "الحِزم"
+   },
+   "style": "The clever core idea, built step by step.",
+   "beats": [
+    {
+     "say": "أي حاجة بتتبعت على الشبكة، صورة أو رسالة أو فيلم..",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "بتتقطّع حتت صغيرة. بيسمّوها حِزم. وكل حزمة عليها رقمها، وعنوان اللي رايحة له.",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "وكل حزمة بتمشي لوحدها. من أي طريق فاضي. واحدة من هنا، وواحدة من قارة تانية خالص.",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "وكل جهاز توجيه في الطريق بيبص على العنوان، ويزقّ الحزمة للي بعده. زي ناس واقفة في طابور بتناول بعض شنطة. ومحدش فيهم شايف الرحلة كلها.",
+     "show": "board",
+     "board": "packets",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "وعند الوصول، بيتجمّعوا بالترتيب. ولو واحدة ضاعت.. يطلبوها تاني.",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "علشان كده لما كابل يتقطع، الحزم بتلف من طريق تاني. من غير ما حد يقول لها. <short pause> الشبكة دي اتصمّمت من الأول علشان تكمّل وهي مكسورة.",
+     "show": "board",
+     "board": "packets",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "صورة القطة اللي الإنسان بيبعتها لصاحبه، نصها ممكن يعدّي من تحت محيط، والنص التاني من تحت محيط تاني. <short pause> وتوصل قطة كاملة. أنا مش فاهم أولوياتهم.. بس التنفيذ محترم.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "names",
+   "story": {
+    "n": 6,
+    "tag": "الأسماء والخريطة"
+   },
+   "style": "Explaining an address book, then two true stories of the map going wrong, with relish.",
+   "beats": [
+    {
+     "say": "وكل جهاز على الشبكة ليه رقم. ده عنوانه. بس البشر مابيحفظوش أرقام. فعملوا دليل.",
+     "show": "board",
+     "board": "dns"
+    },
+    {
+     "say": "تكتب اسم الموقع. الدليل يرد عليك بالرقم.",
+     "show": "board",
+     "board": "dns"
+    },
+    {
+     "say": "وبالرقم ده، حزمك تعرف تروح فين. كل ده قبل ما الصفحة تفتح. في جزء من الثانية.",
+     "show": "board",
+     "board": "dns"
+    },
+    {
+     "say": "والأرقام دي خلصت. الأصلية كانت حوالي أربعة مليار رقم، والأجهزة بقت أكتر من كده بكتير. فعملوا نظام جديد أرقامه مابتخلصش. <short pause> وبعد سنين طويلة.. لسه حوالي نص الشبكة بس اللي انتقل.",
+     "show": "board",
+     "board": "dns",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "طيب مين بيقول للحزم أنهي طريق؟ كل شبكة بتعلن للباقي: العناوين دي عندي. والباقي.. بيصدّقها. <short pause> أيوه يا فندم. خريطة الإنترنت كلها مبنية على الثقة.",
+     "show": "board",
+     "board": "dns",
+     "step": "hold",
+     "host": "left",
+     "emote": "skeptical"
+    },
+    {
+     "say": "سنة ألفين وتمانية، حكومة باكستان طلبت حجب YouTube جوه البلد.",
+     "show": "board",
+     "board": "pak"
+    },
+    {
+     "say": "شركة الاتصالات هناك أعلنت بالغلط للعالم كله: YouTube عندي أنا.",
+     "show": "board",
+     "board": "pak"
+    },
+    {
+     "say": "والعالم صدّق. وYouTube اختفى من الكوكب حوالي ساعتين.",
+     "show": "board",
+     "board": "pak"
+    },
+    {
+     "say": "وسنة ألفين واحد وعشرين، Facebook عمل إعداد غلط.. من جوه الشركة.",
+     "show": "board",
+     "board": "fb"
+    },
+    {
+     "say": "فمسح عناوينه من الخريطة. هو وتطبيقاته كلها. ست ساعات. تلاتة مليار إنسان مش عارفين يكلّموا بعض.",
+     "show": "board",
+     "board": "fb"
+    },
+    {
+     "say": "والمهندسين مش عارفين يصلّحوا من بعيد، لأن الشبكة واقعة. ولما راحوا المبنى.. كروت الأبواب ماكانتش بتفتح. لأنها على نفس الشبكة.",
+     "show": "board",
+     "board": "fb"
+    },
+    {
+     "say": "والمرتين ماكانوش هجوم. المرتين كانوا موظف.. داس على زرار غلط.",
+     "show": "board",
+     "board": "fb",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "شركة قفلت على نفسها الباب.. ورمت المفتاح جوه. <short pause> أنا يا فندم بعت للقيادة تقارير عن أسلحتهم. المفروض أبعت عن غلطاتهم. أخطر.",
+     "shot": "close",
+     "emote": "grin"
+    }
+   ]
+  },
+  {
+   "id": "cloud",
+   "story": {
+    "n": 7,
+    "tag": "السحابة"
+   },
+   "style": "Deflating a marketing word.",
+   "beats": [
+    {
+     "say": "نرجع للسحابة. الحزم دي كلها رايحة فين؟ لمباني قد ملاعب الكورة.",
+     "show": "board",
+     "board": "dc"
+    },
+    {
+     "say": "جواها صفوف كمبيوترات، شغالة ليل ونهار. وتكييف مابيقفش.",
+     "show": "board",
+     "board": "dc"
+    },
+    {
+     "say": "دي السحابة. يعني بالبلدي: كمبيوتر حد تاني. <short pause> البشر سمّوها سحابة علشان مايفكروش فيها.",
+     "show": "board",
+     "board": "dc"
+    },
+    {
+     "say": "والمخازن دي بتاكل حوالي واحد ونص في المية من كهربا الكوكب كله. والرقم بيزيد بسرعة.. بسبب الذكاء الاصطناعي.",
+     "show": "board",
+     "board": "dc",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "ورحلة صفحة واحدة بتبدأ من جهازك. أول كام متر: راديو. الواي فاي.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "الراوتر بياخدها ويحطها في كابل.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "شركة الاتصالات ترميها في قاع البحر.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "وتوصل المخزن، في قارة تانية. ويرجع الرد من نفس الطريق. كل ده وإنت لسه بترفع صباعك من على الشاشة.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "والواي فاي ده راديو، زي الموبايل بالظبط. بس لآخر كام متر.",
+     "show": "board",
+     "board": "wifi"
+    },
+    {
+     "say": "وأشهر تردد ليه هو نفس تردد الميكروويف اللي بيسخّنوا فيه الأكل. <short pause> علشان كده النت ساعات بيبطّأ.. وهم بيسخّنوا العشا.",
+     "show": "board",
+     "board": "wifi",
+     "step": "hold",
+     "host": "left",
+     "emote": "deadpan"
+    },
+    {
+     "say": "واسمه؟ اتألّف سنة تسعة وتسعين. شركة تسويق اقترحته.",
+     "show": "board",
+     "board": "wifi"
+    },
+    {
+     "say": "ومالوش أي معنى. <short pause> البشر بيدوّروا على باسورده في كل مكان يدخلوه. ومحدش فيهم سأل الاسم يعني إيه.",
+     "show": "board",
+     "board": "wifi",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "who",
+   "story": {
+    "n": 8,
+    "tag": "مين صاحبه؟"
+   },
+   "style": "Following the ownership, then who is left out. The last part is sincere.",
+   "beats": [
+    {
+     "say": "ومين صاحب الخراطيم؟ زمان: شركات الاتصالات. النهارده: أربع شركات تكنولوجيا بتستخدم حوالي تلات أرباع السعة بين القارات.",
+     "show": "board",
+     "board": "who"
+    },
+    {
+     "say": "وبقوا يمدّوا كابلات باسمهم. واحدة منهم أعلنت عن كابل طوله خمسين ألف كيلومتر. أطول من محيط الكوكب. <short pause> قلنا مفيش صاحب للإنترنت. بس فيه ناس ماسكة المواسير.",
+     "show": "board",
+     "board": "who",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "وحكوماتهم بقت بتتخانق: مين يمدّ الكابل، ومنين يعدّي، ومين يصلّحه. <short pause> الخرطوم بقى سياسة.",
+     "show": "board",
+     "board": "who",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "والأقمار الصناعية؟ موجودة. شبكة واحدة منها فيها أكتر من حداشر ألف قمر.",
+     "show": "board",
+     "board": "sats"
+    },
+    {
+     "say": "ومفيدة للأماكن اللي الكابل مابيوصلهاش: جبال، صحرا، مراكب.",
+     "show": "board",
+     "board": "sats"
+    },
+    {
+     "say": "بس الحِمل الحقيقي لسه على قاع البحر.",
+     "show": "board",
+     "board": "sats"
+    },
+    {
+     "say": "وآخر رقم يا فندم: ستة مليار إنسان على الشبكة. وفاضل برّه اتنين مليار وميتين مليون.",
+     "show": "board",
+     "board": "off"
+    },
+    {
+     "say": "أكتر من ربع الكوكب. وأغلبهم في البلاد الفقيرة.",
+     "show": "board",
+     "board": "off",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "قاموس البشر"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "كلمتين من قاموس البشر. IP: رقم الجهاز على الشبكة. عنوانه اللي الحزم بتروح له.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "و Cloud: السحابة. كمبيوتر حد تاني، في مخزن، في بلد تانية. <short pause> اسم شيك لحاجة مملة.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "الخلاصة"
+   },
+   "style": "Summary, then the question that leads to the next report, then the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: الإنترنت شبكة من شبكات، ومفيش مدير. اتنين: القارات متوصلة بخراطيم إزاز في قاع البحر. تلاتة: كل حاجة بتتقطّع حِزم، وكل حزمة بتلاقي طريقها.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "خلاصة التقرير",
+      "items": [
+       "شبكة من شبكات.. من غير مدير",
+       "القارات متوصلة بخراطيم في البحر",
+       "كل حاجة حِزم.. بتلاقي طريقها"
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "ويفضل أغرب استخدام: إنسان بيكلّم إنسان في قارة تانية.. وشايف وشّه. في نفس اللحظة.",
+     "shot": "close",
+     "emote": "skeptical"
+    },
+    {
+     "say": "التقرير الجاي والأخير في الملف: مكالمة الفيديو. وإزاي وشّك بيتقطّع ألف حتة ويتركّب تاني.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
