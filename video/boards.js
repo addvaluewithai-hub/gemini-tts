@@ -384,3 +384,4 @@ export function board(spec, step, age, total, cfg = {}) {
   return fn(spec, step, age, total, cfg);
 }
 export const BOARD_KINDS = Object.keys(BOARDS);
+export { icon };

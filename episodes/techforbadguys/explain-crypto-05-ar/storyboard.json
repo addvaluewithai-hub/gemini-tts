@@ -1148,5 +1148,81 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "إيثيريوم، العملات المستقرة، NFT وعملات الميم.. في حلقة واحدة | 5/5",
+   "20 مليون عملة مشفرة.. وأكتر من نصهم مات | ملف العملات المشفرة 5/5",
+   "الحكم النهائي: الكريبتو نفع ولا لأ؟ | 5/5"
+  ],
+  "description": [
+   "التقرير الخامس والأخير من العميل Peek: كل اللي جه بعد بيتكوين، والحكم النهائي على الملف كله.",
+   "",
+   "يعني إيه إيثيريوم وعقد ذكي؟ إزاي شبكة تحرس نفسها من غير تعدين (إثبات الحصة)؟ ليه الدولار الرقمي هو الاختراع اللي نجح فعلاً، وإيه حكاية زرار التجميد؟ إيه اللي حصل للـNFT؟ وإزاي عملة عليها صورة كلب وصلت 90 مليار دولار؟ وليه أكتر من نص العشرين مليون عملة مات؟",
+   "",
+   "وفي الآخر: الحكومات عملت إيه، إيه اللي اشتغل وإيه اللي مااشتغلش، والأسئلة اللي لسه مفتوحة."
+  ],
+  "intro": "المقدمة",
+  "outro": "الختام",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "CoinGecko، كام عملة ماتت: https://www.coingecko.com/research/publications/how-many-cryptocurrencies-failed",
+   "تجميد Tether بعد سرقة Binance: https://www.cryptotimes.io/2026/11/03/tether-says-it-froze-1-5b-in-usdt-linked-to-binance-hack/",
+   "وزارة العدل الأمريكية، الحكم على مؤسس Terra: https://www.justice.gov/usao-sdny/pr/crypto-enabled-fraudster-sentenced-orchestrating-40-billion-fraud",
+   "سوق العملات المستقرة في 2026: https://insights.muffinpay.com/stablecoin-market-report-2026/",
+   "CoinDesk، إعادة بيع أول تغريدة: https://www.coindesk.com/business/2022/04/13/jack-dorseys-first-tweet-nft-went-on-sale-for-48m-it-ended-with-a-top-bid-of-just-280/",
+   "عملة TRUMP عند أدنى سعر: https://247wallst.com/investing/cryptocurrency/2026/11/09/the-trump-coin-just-hit-an-all-time-low-down-98-from-its-peak-will-trump-coin-ever-go-back-up/",
+   "Google، الكمبيوتر الكمّي والعملات المشفرة: https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/"
+  ],
+  "footer": [
+   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#بيتكوين",
+   "#العملات_المشفرة"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "العملات المشفرة",
+   "العملات الرقمية",
+   "بيتكوين",
+   "Bitcoin",
+   "كريبتو",
+   "شرح بيتكوين",
+   "شرح العملات الرقمية",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "إيثيريوم",
+   "Ethereum",
+   "العقود الذكية",
+   "إثبات الحصة",
+   "العملات المستقرة",
+   "Stablecoin",
+   "USDT",
+   "Tether",
+   "DeFi",
+   "NFT",
+   "دوجكوين",
+   "Dogecoin",
+   "عملات الميم",
+   "Altcoin",
+   "العملة الرقمية للبنك المركزي",
+   "الكمبيوتر الكمي"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "الملف اتقفل. إيه الموضوع اللي عايز العميل Peek يفتح ملفه الجاي؟ اكتبه هنا. القيادة هتختار."
+ }
 }

@@ -22,12 +22,14 @@
 <script type="module">
 import { peek3d } from "/characters/peek3d.js";
 import { EMOTES, GESTURES } from "/characters/acting.js";
+import { icon } from "/boards.js";
 const base = { lid: 0.14, look: 0, lookY: 0, browL: 0, browR: 0, browTilt: 0, eyeScale: 1, pupil: 1, squint: 0 };
 function host(emote, gesture, size, look = 0) {
   const em = EMOTES[emote], g = GESTURES[gesture] || GESTURES.pockets;
   return peek3d({ ...base, ...em, look: em.look ?? look, antL: em.ant || 0, antR: em.ant || 0, m: em.mouth }, { face: "pear", bg: false, grain: false, size, armL: g.armL, armR: g.armR, shrug: g.shrug || 0, tilt: em.tilt || 0, roll: false });
 }
 const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\[\[/g, "<i>").replace(/\]\]/g, "</i>");
+// spec: { kind, w, h, rtl, big, small, tag, stamp, emote, gesture, icons: [{ name, args, x, y, s, rot }] }; icons are the boards' own, placed in 1280 x 720 units.
 // spec: { kind, w, h, rtl, big, small, tag, stamp, emote, gesture }.  In `big`, [[words]] are drawn in yellow.
 window.render = async (s) => {
   const el = document.getElementById("art"), W = s.w, H = s.h, u = H / 720, side = s.rtl ? "left" : "right", text = s.rtl ? "right" : "left";
@@ -53,6 +55,7 @@ window.render = async (s) => {
       + `<div class="tag" style="${text}:${44 * u}px;top:${40 * u}px;font-size:${44 * u}px">${esc(s.tag || "")}</div>
       <div class="big" style="${text}:${44 * u}px;top:${(s.top ?? 150) * u}px;width:${(s.width ?? 700) * u}px;font-size:${(s.size ?? 132) * u}px;text-align:${text}">${esc(s.big)}</div>`
       + (s.small ? `<div class="small" style="${text}:${48 * u}px;bottom:${(s.peek ? 62 : 54) * u}px;font-size:${44 * u}px;text-align:${text}">${esc(s.small)}</div>` : "")
+      + (s.icons || []).map((k) => `<svg style="left:${(k.x - 120 * (k.s || 1)) * u}px;top:${(k.y - 120 * (k.s || 1)) * u}px;filter:drop-shadow(0 ${8 * u}px ${10 * u}px rgba(5,6,13,.55))" width="${240 * (k.s || 1) * u}" height="${240 * (k.s || 1) * u}" viewBox="-120 -120 240 240"><g transform="rotate(${k.rot || 0})">${icon(k.name, ...(k.args || []))}</g></svg>`).join("")
       + (s.stamp ? `<div class="stamp" style="${text}:${(s.stampX ?? 60) * u}px;top:${(s.stampY ?? 560) * u}px;font-size:${58 * u}px;transform:rotate(-7deg)">${esc(s.stamp)}</div>` : "");
   }
   el.innerHTML = html;

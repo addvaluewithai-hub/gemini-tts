@@ -18,7 +18,7 @@ if (cmd === "kit") {
   for (const e of cues.edit) if ("story" in e && e.t > 5) chapters.push({ t: e.t + lead, name: e.story ? `${e.story.n}. ${e.story.tag}` : yt.outro || "Final assessment" });
   const chapterLines = chapters.map((x) => `${stamp(x.t)} ${x.name}`);
   const used = [...new Set(sb.scenes.flatMap((s) => [s.slide, ...s.beats.map((x) => x.slide)]).filter(Boolean))];
-  const sources = used.map((k) => `${slides[k].source} (${slides[k].date}): ${slides[k].url}`);
+  const sources = [...used.map((k) => `${slides[k].source} (${slides[k].date}): ${slides[k].url}`), ...(yt.sources || [])];   // an episode without captured pages lists its sources in `youtube.sources`
   const description = [...(yt.description || []), "", yt.chaptersTitle || "Chapters", ...chapterLines, "", yt.sourcesTitle || "Sources", ...sources, "", ...(yt.footer || []), "", (yt.hashtags || []).join(" ")].join("\n").trim() + "\n";
   fs.writeFileSync(path.join(c, "description.txt"), description);
   // captions from the script's own words: a new line at each sentence end, long pause or seventh word

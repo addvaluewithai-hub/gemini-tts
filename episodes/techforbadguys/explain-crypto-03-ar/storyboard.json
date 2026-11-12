@@ -1042,5 +1042,80 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "إزاي الناس بتخسر فلوسها في الكريبتو؟ مفاتيح، منصات، ونصب | 3/5",
+   "المحفظة والمفتاح الخاص.. وأشهر طرق النصب | ملف العملات المشفرة 3/5",
+   "مليارات في علبة فشار: البيتكوين مش مجهول زي ما إنت فاكر | 3/5"
+  ],
+  "description": [
+   "التقرير التالت من العميل Peek: إزاي البشر بيملكوا العملة دي.. وإزاي بيضيّعوها.",
+   "",
+   "يعني إيه مفتاح خاص ومحفظة والـ12 كلمة؟ إزاي بتشتري وتبعت، وليه مفيش رجوع؟ ليه البيتكوين مش مجهول زي ما الناس فاكرة (حكاية Silk Road وعلبة الفشار)؟ إزاي المنصات رجّعت البنك من تاني: Mt. Gox وFTX وسرقة Binance؟ واللي رمى هارد ديسك عليه مئات الملايين.",
+   "",
+   "وفي الآخر: أشهر أربع طرق نصب بالعملات المشفرة، وأربع علامات خطر لازم تعرفها."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "Chainalysis عن خسائر النصب في 2025: https://decrypt.co/354624/ai-impersonation-drove-crypto-scam-losses-record-17-billion-2025-chainalysis",
+   "سرقة Binance (أكتوبر 2026): https://stealthex.io/blog/binance-hack-everything-we-know-about-the-6-3b-theft/",
+   "TRM Labs عن ثغرة محافظ Coldcard: https://www.trmlabs.com/resources/blog/the-largest-hardware-wallet-exploit-of-2026-inside-the-usd-116-million-coldcard-hack",
+   "James Howells يوقف محاولات الحفر: https://cointelegraph.com/news/james-howells-pivots-digging-tokenizing-recover-lost-bitcoin",
+   "بيتكوين Silk Road في علبة فشار: https://fortune.com/2022/11/08/justice-department-seizes-50000-bitcoin-silk-road-popcorn-tin/",
+   "الحكم في قضية Bitfinex: https://www.securityweek.com/man-who-stole-and-laundered-roughly-1b-in-bitcoin-is-sentenced-to-5-years-in-prison/",
+   "Mt. Gox تأجّل السداد لـ2027: https://decrypt.co/381392/mt-gox-pushes-repayment-deadline-to-2027-with-2-8b-in-bitcoin-still-to-distribute",
+   "رفض استئناف مؤسس FTX: https://www.courthousenews.com/second-circuit-denies-sam-bankman-frieds-bid-to-overturn-ftx-crypto-fraud-conviction/",
+   "OCCRP عن OneCoin: https://www.occrp.org/en/daily/12109-us-indicts-co-founder-of-onecoin-ponzi-scheme"
+  ],
+  "footer": [
+   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#بيتكوين",
+   "#العملات_المشفرة"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "العملات المشفرة",
+   "العملات الرقمية",
+   "بيتكوين",
+   "Bitcoin",
+   "كريبتو",
+   "شرح بيتكوين",
+   "شرح العملات الرقمية",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "المحفظة الرقمية",
+   "المفتاح الخاص",
+   "Seed phrase",
+   "محفظة باردة",
+   "النصب في العملات الرقمية",
+   "احتيال الكريبتو",
+   "FTX",
+   "Mt. Gox",
+   "Binance",
+   "Silk Road",
+   "James Howells",
+   "OneCoin",
+   "حماية المحفظة"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "تحذير من القيادة: أي حد يرد عليك هنا ويقول لك \"أنا هرجّع لك فلوسك\" أو \"كلّمني واتساب\".. ده نصاب. إحنا عمرنا ما هنطلب منك فلوس ولا الـ12 كلمة."
+ }
 }

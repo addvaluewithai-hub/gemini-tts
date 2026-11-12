@@ -940,5 +940,71 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "البيتكوين اتعمل ليه؟ القصة من الأول | ملف العملات المشفرة 1/5",
+   "يعني إيه عملات مشفرة؟ اشرحها لكائن فضائي | 1/5",
+   "فلوس من غير بنك: حكاية البيتكوين من أولها | 1/5"
+  ],
+  "description": [
+   "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن حاجة غريبة لقاها عند البشر: فلوس من غير بنك ومن غير ورق.",
+   "",
+   "في التقرير الأول: الفلوس أصلاً إيه؟ ليه البنك مجرد دفتر؟ إيه مشكلة النسخ اللي منعت الفلوس الرقمية سنين؟ وإيه اللي حصل في 2008 وخلّى واحد مجهول اسمه Satoshi Nakamoto ينشر ورقة من تسع صفحات غيّرت كل حاجة. ومعاها حكاية أغلى اتنين بيتزا في التاريخ.",
+   "",
+   "الشرح بسيط ومناسب لأي حد، حتى لو أول مرة يسمع عن الموضوع."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "ورقة Satoshi Nakamoto الأصلية (2008): https://bitcoin.org/bitcoin.pdf",
+   "البنك الدولي، Global Findex 2025 (عدد اللي من غير حساب بنكي): https://www.worldbank.org/en/publication/globalfindex/report",
+   "CEPR، دروس أزمة بنوك قبرص 2013: https://cepr.org/article/bank-bail-ins-lessons-cypriot-crisis",
+   "مكافآت البنوك اللي اتنقذت سنة 2008 (تقرير مدعي عام نيويورك): https://law360.com/articles/114226/top-tarp-banks-paid-out-32-6b-in-bonuses-cuomo"
+  ],
+  "footer": [
+   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#بيتكوين",
+   "#العملات_المشفرة"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "العملات المشفرة",
+   "العملات الرقمية",
+   "بيتكوين",
+   "Bitcoin",
+   "كريبتو",
+   "شرح بيتكوين",
+   "شرح العملات الرقمية",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "Satoshi Nakamoto",
+   "ساتوشي ناكاموتو",
+   "تاريخ البيتكوين",
+   "يوم البيتزا",
+   "أزمة 2008",
+   "Lehman Brothers",
+   "يعني إيه بيتكوين",
+   "ما هي العملات الرقمية",
+   "بلوكتشين"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "تفتكر Satoshi مين؟ راجل، ست، مجموعة.. ولا واحد من كوكب Peek؟ اكتب نظريتك. القيادة بتقرا التعليقات."
+ }
 }

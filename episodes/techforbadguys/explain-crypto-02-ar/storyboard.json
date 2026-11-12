@@ -861,5 +861,74 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/5",
+   "يعني إيه تعدين بيتكوين؟ ومين بيحكم الشبكة؟ | 2/5",
+   "ليه البيتكوين بيسحب كهربا قد دولة كاملة؟ | 2/5"
+  ],
+  "description": [
+   "التقرير التاني من العميل Peek لقيادته: الدفتر اللي البشر بيحرسوه من غير حارس.",
+   "",
+   "يعني إيه هاش؟ إزاي الصفحات بتتربط في سلسلة؟ يعني إيه تعدين، وليه بيحرق كهربا قد دولة؟ ليه مفيش غير 21 مليون بيتكوين؟ ومين يقدر يغيّر القواعد أصلاً؟ ومعاها حكاية خناقة 2017 اللي قسمت العملة اتنين، واليوم اللي واحد خلق فيه 184 مليار بيتكوين من الهوا.",
+   "",
+   "الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "جامعة Cambridge، مؤشر استهلاك كهربا البيتكوين: https://ccaf.io/cbnsi/cbeci",
+   "Fortune، تعدين البيتكوين رقم 20 مليون (مارس 2026): https://dc.fortune.com/2026/03/10/bitcoin-has-mined-20-million-coins",
+   "توزيع التعدين على الدول (أكتوبر 2026): https://cryptoslate.com/3-countries-control-66-of-bitcoin-mining-but-1-rival-is-gaining/",
+   "Hashrate Index، أكبر فرق التعدين: https://hashrateindex.com/blog/top-10-bitcoin-mining-pools-of-2026/"
+  ],
+  "footer": [
+   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#بيتكوين",
+   "#العملات_المشفرة"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "العملات المشفرة",
+   "العملات الرقمية",
+   "بيتكوين",
+   "Bitcoin",
+   "كريبتو",
+   "شرح بيتكوين",
+   "شرح العملات الرقمية",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "بلوكتشين",
+   "Blockchain",
+   "تعدين البيتكوين",
+   "يعني إيه تعدين",
+   "الهاش",
+   "التنصيف",
+   "Halving",
+   "21 مليون بيتكوين",
+   "Bitcoin Cash",
+   "هجوم 51%",
+   "Lightning Network",
+   "إثبات العمل"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "لو كنت مكان البشر: تحرق كهربا دولة علشان ماتثقش في حد.. ولا تثق في بنك وخلاص؟ القيادة عايزة رأيك."
+ }
 }

@@ -1062,5 +1062,80 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ | ملف العملات المشفرة 4/5",
+   "5 فقاعات و5 وقعات: قصة سعر البيتكوين | 4/5",
+   "الرافعة المالية: إزاي تخسر كل حاجة والسعر نزل 10% بس | 4/5"
+  ],
+  "description": [
+   "التقرير الرابع من العميل Peek: سطر في دفتر، مفيش حكومة وراه، والواحد منه وصل 126 ألف دولار. ليه؟",
+   "",
+   "القيمة جاية منين لو مفيش دهب ولا حكومة ولا شركة؟ ليه السعر طلع ووقع خمس مرات؟ ليه بيتهز بالعنف ده؟ يعني إيه رافعة وتصفية، وإزاي أكتر من مليون ونص متداول اتمسحوا في يوم واحد؟ مين ماسك البيتكوين فعلاً؟ وليه وول ستريت بتبيع دلوقتي العملة اللي اتعملت علشان تستغنى عنها؟",
+   "",
+   "وفي الآخر كشف درجات: هل البيتكوين فلوس بالمعنى الحقيقي؟",
+   "",
+   "مفيش في الحلقة أي توقع للسعر ولا نصيحة شرا أو بيع."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "بنك التسويات الدولية، خسائر الأفراد في البيتكوين (Bulletin 69): https://www.bis.org/publ/bisbull69.htm",
+   "CoinDesk عن بيع Strategy وخسارتها في 2026: https://www.coindesk.com/markets/2026/07/06/one-month-that-shook-the-market-saylor-s-struggles-over-bitcoin-strategy-yields-big-loss",
+   "هبوط يونيو 2026: https://news.bitcoin.com/bitcoin-falls-below-58000-q2-2026/",
+   "صناديق البيتكوين الأمريكية (نوفمبر 2026): https://cryptobriefing.com/bitcoin-spot-etfs-412m-outflows-november-6/",
+   "السلفادور والبيتكوين: https://cointelegraph.com/magazine/el-salvador-bitcoin-aspirations-closer-earth-2025",
+   "الاحتياطي الاستراتيجي الأمريكي: https://en.wikipedia.org/wiki/U.S._Strategic_Bitcoin_Reserve"
+  ],
+  "footer": [
+   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#بيتكوين",
+   "#العملات_المشفرة"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "العملات المشفرة",
+   "العملات الرقمية",
+   "بيتكوين",
+   "Bitcoin",
+   "كريبتو",
+   "شرح بيتكوين",
+   "شرح العملات الرقمية",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "سعر البيتكوين",
+   "ليه البيتكوين غالي",
+   "فقاعة البيتكوين",
+   "الرافعة المالية",
+   "التصفية",
+   "Leverage",
+   "الدهب الرقمي",
+   "صناديق البيتكوين",
+   "Bitcoin ETF",
+   "Strategy",
+   "السلفادور",
+   "HODL",
+   "FOMO",
+   "هل البيتكوين فلوس"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "سؤال القيادة: البيتكوين دهب رقمي ولا أكبر رهان في التاريخ؟ اكتب رأيك.. من غير ما تنصح حد يشتري."
+ }
 }

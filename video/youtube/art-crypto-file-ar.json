@@ -1,0 +1,232 @@
+[
+ {
+  "file": "explain-crypto-01-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 1/5",
+  "big": "فلوس\n[[من غير بنك]]",
+  "small": "مين اخترعها؟ وليه؟",
+  "emote": "skeptical",
+  "gesture": "shrug",
+  "size": 150,
+  "top": 140,
+  "icons": [
+   {
+    "name": "coin",
+    "x": 640,
+    "y": 600,
+    "s": 1.1,
+    "rot": -12
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-01-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 1/5",
+  "peek": true,
+  "big": "10,000 بيتكوين\n[[= 2 بيتزا]]",
+  "emote": "smug",
+  "size": 112,
+  "top": 150,
+  "width": 780,
+  "peekY": 118,
+  "icons": [
+   {
+    "name": "pizza",
+    "x": 700,
+    "y": 470,
+    "s": 1.0
+   },
+   {
+    "name": "pizza",
+    "x": 560,
+    "y": 520,
+    "s": 0.8
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-02-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 2/5",
+  "big": "دفتر\n[[بيحرس نفسه]]",
+  "small": "التعدين.. بأبسط شرح",
+  "emote": "smug",
+  "gesture": "present",
+  "size": 146,
+  "top": 140,
+  "icons": [
+   {
+    "name": "node",
+    "x": 640,
+    "y": 590,
+    "s": 1.0
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-02-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 2/5",
+  "peek": true,
+  "big": "كهربا\n[[دولة كاملة]]",
+  "small": "علشان محدش يثق في حد",
+  "emote": "annoyed",
+  "size": 140,
+  "top": 140,
+  "width": 760,
+  "peekY": 118,
+  "icons": [
+   {
+    "name": "bolt",
+    "x": 590,
+    "y": 545,
+    "s": 1.1
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-03-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 3/5",
+  "big": "مفتاحك\n[[هو فلوسك]]",
+  "small": "يضيع.. تضيع",
+  "emote": "worried",
+  "gesture": "shrug",
+  "size": 150,
+  "top": 140,
+  "icons": [
+   {
+    "name": "key",
+    "x": 640,
+    "y": 600,
+    "s": 1.0,
+    "rot": -20
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-03-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 3/5",
+  "peek": true,
+  "big": "مليارات\n[[في علبة فشار]]",
+  "emote": "grin",
+  "size": 128,
+  "top": 140,
+  "width": 780,
+  "peekY": 118,
+  "icons": [
+   {
+    "name": "popcorn",
+    "x": 560,
+    "y": 565,
+    "s": 0.95
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-04-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 4/5",
+  "big": "ليه ليها\n[[تمن؟]]",
+  "small": "5 فقاعات.. و5 وقعات",
+  "emote": "skeptical",
+  "gesture": "shrug",
+  "size": 160,
+  "top": 140,
+  "icons": [
+   {
+    "name": "coin",
+    "x": 640,
+    "y": 590,
+    "s": 1.1,
+    "rot": 10
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-04-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 4/5",
+  "peek": true,
+  "big": "السعر نزل 10%\n[[خسرت 100%]]",
+  "small": "الرافعة",
+  "emote": "deadpan",
+  "size": 112,
+  "top": 150,
+  "width": 780,
+  "peekY": 118
+ },
+ {
+  "file": "explain-crypto-05-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 5/5",
+  "big": "20 مليون\n[[عملة]]",
+  "small": "وأكتر من نصهم مات",
+  "emote": "deadpan",
+  "gesture": "shrug",
+  "size": 160,
+  "top": 140,
+  "icons": [
+   {
+    "name": "dog",
+    "x": 640,
+    "y": 590,
+    "s": 1.0
+   }
+  ]
+ },
+ {
+  "file": "explain-crypto-05-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف العملات المشفرة · 5/5",
+  "peek": true,
+  "big": "الكريبتو\n[[نفع ولا لأ؟]]",
+  "small": "الحكم النهائي",
+  "emote": "sly",
+  "size": 132,
+  "top": 140,
+  "width": 760,
+  "peekY": 118,
+  "icons": [
+   {
+    "name": "coin",
+    "x": 580,
+    "y": 560,
+    "s": 0.9,
+    "rot": -10
+   }
+  ]
+ }
+]

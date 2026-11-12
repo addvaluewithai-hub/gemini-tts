@@ -1,0 +1,35 @@
+التقرير الخامس والأخير من العميل Peek: كل اللي جه بعد بيتكوين، والحكم النهائي على الملف كله.
+
+يعني إيه إيثيريوم وعقد ذكي؟ إزاي شبكة تحرس نفسها من غير تعدين (إثبات الحصة)؟ ليه الدولار الرقمي هو الاختراع اللي نجح فعلاً، وإيه حكاية زرار التجميد؟ إيه اللي حصل للـNFT؟ وإزاي عملة عليها صورة كلب وصلت 90 مليار دولار؟ وليه أكتر من نص العشرين مليون عملة مات؟
+
+وفي الآخر: الحكومات عملت إيه، إيه اللي اشتغل وإيه اللي مااشتغلش، والأسئلة اللي لسه مفتوحة.
+
+الفصول
+0:00 المقدمة
+0:21 1. دفتر بيشغّل برامج
+1:16 2. حراسة من غير كهربا
+1:52 3. عملة في دقايق
+2:08 4. الدولار الرقمي
+3:09 5. بنك من غير بنك
+3:25 6. صورة بملايين
+4:06 7. عملات النكتة
+5:00 8. الحكومات
+5:24 9. الحكم
+6:38 10. قاموس البشر
+6:48 11. قفل الملف
+7:13 الختام
+
+مصادر
+CoinGecko، كام عملة ماتت: https://www.coingecko.com/research/publications/how-many-cryptocurrencies-failed
+تجميد Tether بعد سرقة Binance: https://www.cryptotimes.io/2026/11/03/tether-says-it-froze-1-5b-in-usdt-linked-to-binance-hack/
+وزارة العدل الأمريكية، الحكم على مؤسس Terra: https://www.justice.gov/usao-sdny/pr/crypto-enabled-fraudster-sentenced-orchestrating-40-billion-fraud
+سوق العملات المستقرة في 2026: https://insights.muffinpay.com/stablecoin-market-report-2026/
+CoinDesk، إعادة بيع أول تغريدة: https://www.coindesk.com/business/2022/04/13/jack-dorseys-first-tweet-nft-went-on-sale-for-48m-it-ended-with-a-top-bid-of-just-280/
+عملة TRUMP عند أدنى سعر: https://247wallst.com/investing/cryptocurrency/2026/11/09/the-trump-coin-just-hit-an-all-time-low-down-98-from-its-peak-will-trump-coin-ever-go-back-up/
+Google، الكمبيوتر الكمّي والعملات المشفرة: https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/
+
+دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.
+ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.
+الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة.
+
+#تقرير_الأرض #بيتكوين #العملات_المشفرة

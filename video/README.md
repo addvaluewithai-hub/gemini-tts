@@ -477,3 +477,23 @@ Run it before `storyboard.cjs cues`, so the beats are placed on the tightened
 audio. `tempo` in the storyboard's settings then speeds the result up without
 changing its pitch. On the first crypto file this removed 55 seconds of
 silence from eight minutes.
+
+## Upload kit
+
+`youtube.cjs` makes everything an upload needs besides the video.
+
+```
+node youtube.cjs kit <storyboard.json> cues/<episode>.json <episode>/youtube   # description.txt, captions.srt, upload.md
+node youtube.cjs art youtube/<specs>.json ../episodes/<channel>                # thumbnails, avatar, banners
+```
+
+The storyboard's `youtube` block holds what a person writes: three `titles`,
+the opening `description` lines, `tags`, `settings`, the `pinned` comment and
+the names of the first and last chapters. Chapters come from the cue file's
+story changes, captions from the script's own timed words. Sources come from
+`slides.json` when the episode shows captured pages; an episode without them
+lists its sources by hand in `youtube.sources`.
+
+A thumbnail spec is a tag, a two-line headline (`[[words]]` in yellow), an
+optional line under it, the host's `emote` and `gesture`, and `icons`: any of
+the boards' icons, placed in 1280 x 720 units.
