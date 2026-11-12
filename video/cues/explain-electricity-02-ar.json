@@ -982,7 +982,7 @@
     "color": "#ff4654"
    },
    "step": 1,
-   "host": "left",
+   "host": "right",
    "emote": "serious",
    "calm": true,
    "gesture": "pockets",
@@ -1072,7 +1072,7 @@
     "size": 54
    },
    "step": 2,
-   "host": "left",
+   "host": "right",
    "emote": "neutral",
    "stepT": 232.31,
    "shot": "show",
@@ -1495,7 +1495,7 @@
     "size": 56
    },
    "step": 2,
-   "host": "left",
+   "host": "right",
    "emote": "neutral",
    "stepT": 334.93
   },
@@ -1582,8 +1582,7 @@
       "Osaka · 1896",
       "مولّدات أمريكاني"
      ]
-    },
-    "note": "ولحد النهارده: نصين.. بينهم وصلة صغيرة"
+    }
    },
    "step": 0,
    "stepT": 372.38,
@@ -1611,8 +1610,7 @@
       "Osaka · 1896",
       "مولّدات أمريكاني"
      ]
-    },
-    "note": "ولحد النهارده: نصين.. بينهم وصلة صغيرة"
+    }
    },
    "step": 1,
    "stepT": 377.22
@@ -1638,11 +1636,12 @@
       "Osaka · 1896",
       "مولّدات أمريكاني"
      ]
-    },
-    "note": "ولحد النهارده: نصين.. بينهم وصلة صغيرة"
+    }
    },
-   "step": 2,
-   "stepT": 380.09
+   "step": 1,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 377.22
   },
   {
    "t": 384.27,
@@ -1665,15 +1664,14 @@
       "Osaka · 1896",
       "مولّدات أمريكاني"
      ]
-    },
-    "note": "ولحد النهارده: نصين.. بينهم وصلة صغيرة"
+    }
    },
-   "step": 2,
+   "step": 1,
    "host": "left",
    "emote": "serious",
    "calm": true,
    "gesture": "pockets",
-   "stepT": 380.09
+   "stepT": 377.22
   },
   {
    "t": 395.68,

@@ -1,0 +1,33 @@
+التقرير الأول من العميل Peek لقيادته في ملف الكهربا: الحاجة اللي ماشية في السلك.. إيه هي بالظبط؟
+
+يعني إيه شحنة؟ ليه الإلكترون بيمشي أبطأ من الحلزون واللمبة بتنوّر في لحظة؟ يعني إيه فولت وأمبير وأوم ووات، بتشبيه خزان المية فوق السطوح؟ إيه الفرق بين التيار المستمر والمتردد؟ ومعاها حكاية حرب التيارات بين Edison و Tesla و Westinghouse، وليه النتيجة في الآخر طلعت تعادل.
+
+الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة.
+
+الفصول
+0:00 المقدمة
+0:27 1. الشحنة
+1:11 2. الشرارة والبرق
+2:00 3. التيار
+3:09 4. فولت وأمبير
+4:26 5. الكهربا جوّاهم
+4:54 6. مستمر ومتردد
+5:23 7. حرب التيارات
+6:48 8. مين كسب؟
+7:34 9. قاموس البشر
+7:47 10. الخلاصة
+8:15 التقرير الجاي
+
+مصادر
+سرعة الإلكترونات في السلك (OpenStax): https://openstax.org/books/university-physics-volume-2/pages/9-2-model-of-conduction-in-metals
+أرقام البرق (هيئة الأرصاد الأمريكية): https://www.weather.gov/mlb/lightning_facts
+محطة Pearl Street سنة 1882 (ETHW): https://ethw.org/Milestones:Pearl_Street_Station,_1882
+حرب التيارات (Smithsonian): https://www.smithsonianmag.com/history/edison-vs-westinghouse-a-shocking-rivalry-102146036/
+شلالات Niagara وأول شبكة متردد (IEEE Spectrum): https://spectrum.ieee.org/the-birthplace-of-the-ac-grid
+خط الصين 1100 كيلوفولت (Enerdata): https://www.enerdata.net/publications/daily-energy-news/state-grid-commissions-new-1100-kv-power-transmission-line-china.html
+
+دي حلقة من ملف من تلات تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.
+ده شرح عام، مش إرشادات أمان ولا شغل كهربا. الكهربا خطر: أي شغل فيها لمتخصص.
+الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة.
+
+#تقرير_الأرض #الكهربا #شرح

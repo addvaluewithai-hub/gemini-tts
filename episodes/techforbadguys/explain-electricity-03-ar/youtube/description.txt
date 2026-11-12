@@ -1,0 +1,39 @@
+التقرير التالت والأخير من العميل Peek في ملف الكهربا: ليه النور بيقطع، والكهربا نفسها رايحة على فين.
+
+إزاي عطل في خط واحد بيضلّم بلد كاملة زي الدومينو؟ إيه اللي حصل في أمريكا 2003، الهند 2012، Texas 2021، وأسبانيا والبرتغال 2025؟ مين أعداء الشبكة: الشمس، الهاكرز.. والسنجاب؟ الشبكة بتقوم من الصفر إزاي؟ وليه البطاريات والطاقة الشمسية بيغيّروا القواعد، ويعني إيه منحنى البطة؟
+
+وفي الآخر: 730 مليون إنسان لسه من غير كهربا، في نفس الوقت اللي مخازن الكمبيوتر بتسحب فيه قد دول.
+
+الفصول
+0:00 المقدمة
+0:33 1. الدومينو
+1:07 2. شجرة وبرنامج
+1:39 3. أكبر انقطاع
+2:01 4. أربع دقايق
+2:32 5. في ثواني
+2:58 6. أعداء الشبكة
+3:44 7. القومة من الصفر
+4:09 8. التخزين
+5:08 9. الشمس
+6:09 10. اللي لسه في الضلمة
+6:54 11. قاموس البشر
+7:10 12. قفل الملف
+7:38 الختام
+
+مصادر
+انقطاع 2003، عرض لجنة التحقيق (FERC): https://www.ferc.gov/sites/default/files/2020-08/blackout-presentation.pdf
+انقطاع الهند 2012: https://en.wikipedia.org/wiki/2012_India_blackouts
+Texas 2021، الحصيلة النهائية (Texas Tribune): https://www.texastribune.org/2022/01/02/texas-winter-storm-final-death-toll-246/
+Texas 2021، أربع دقايق و37 ثانية (KERA): https://www.keranews.org/news/2021-02-25/texas-power-grid-was-4-minutes-and-37-seconds-away-from-collapsing-heres-how-it-happened
+أسبانيا والبرتغال 2025، التقرير النهائي (POWER): https://www.powermag.com/anatomy-of-a-blackout-findings-from-the-spain-portugal-grid-collapse-final-report/
+هجوم أوكرانيا 2015 (CISA): https://www.cisa.gov/news-events/ics-alerts/ir-alert-h-16-056-01
+أسعار البطاريات 2025 (BloombergNEF): https://about.bnef.com/insights/clean-transport/new-record-lows-for-battery-prices/
+البطاريات عدّت تخزين المية (pv magazine): https://www.pv-magazine.com/2026/02/05/global-bess-capacity-tops-250-gw-overtaking-pumped-hydro-for-first-time/
+وكالة الطاقة الدولية، 730 مليون من غير كهربا: https://www.iea.org/commentaries/access-to-electricity-stagnates-leaving-globally-730-million-in-the-dark
+وكالة الطاقة الدولية، Energy and AI: https://www.iea.org/reports/energy-and-ai/executive-summary
+
+دي حلقة من ملف من تلات تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.
+ده شرح عام، مش إرشادات أمان ولا شغل كهربا. الكهربا خطر: أي شغل فيها لمتخصص.
+الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة.
+
+#تقرير_الأرض #الكهربا #شرح
