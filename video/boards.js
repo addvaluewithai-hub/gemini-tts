@@ -52,6 +52,23 @@ const ICON = {
   dog: () => `<path d="M-70 -60L-92 -104L-40 -84ZM70 -60L92 -104L40 -84Z" fill="#c98a3a"/><ellipse cx="0" cy="-10" rx="88" ry="80" fill="#e2a95a"/><ellipse cx="0" cy="26" rx="46" ry="38" fill="#fbe7c4"/><circle cx="-32" cy="-28" r="11" fill="${C.ink}"/><circle cx="32" cy="-28" r="11" fill="${C.ink}"/><ellipse cx="0" cy="8" rx="14" ry="10" fill="${C.ink}"/><path d="M-18 34Q0 50 18 34" fill="none" stroke="${C.ink}" stroke-width="6" stroke-linecap="round"/>`,
   atom: (c = C.cyan) => `${[0, 60, 120].map((d) => `<ellipse rx="96" ry="34" fill="none" stroke="${c}" stroke-width="9" transform="rotate(${d})"/>`).join("")}<circle r="20" fill="${C.yellow}"/>`,
   lock: (c = C.yellow) => `<path d="M-44 -10V-44A44 44 0 0 1 44 -44V-10" fill="none" stroke="${c}" stroke-width="20"/><rect x="-72" y="-14" width="144" height="110" rx="16" fill="${c}"/><circle cy="30" r="15" fill="${C.navy}"/><rect x="-6" y="34" width="12" height="32" fill="${C.navy}"/>`,
+  tower: (c = C.white) => `<path d="M-46 100L0 -56L46 100M-32 52H32M-18 6H18" fill="none" stroke="${c}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cy="-66" r="14" fill="${C.pink}"/><path d="M-34 -100A48 48 0 0 0 -34 -32M34 -100A48 48 0 0 1 34 -32M-58 -116A82 82 0 0 0 -58 -16M58 -116A82 82 0 0 1 58 -16" fill="none" stroke="${C.cyan}" stroke-width="9" stroke-linecap="round"/>`,
+  mobile: (c = C.white, screen = C.panel) => `<rect x="-56" y="-100" width="112" height="200" rx="20" fill="${c}"/><rect x="-44" y="-82" width="88" height="152" rx="8" fill="${screen}"/><circle cy="84" r="7" fill="${C.panel}"/><rect x="-14" y="-94" width="28" height="6" rx="3" fill="${C.panel}"/>`,
+  sat: (c = C.white) => `<g transform="rotate(-30)"><rect x="-26" y="-34" width="52" height="68" rx="8" fill="${c}"/><rect x="-104" y="-22" width="70" height="44" rx="4" fill="${C.cyan}"/><rect x="34" y="-22" width="70" height="44" rx="4" fill="${C.cyan}"/><path d="M-70 -22V22M70 -22V22" stroke="${C.navy}" stroke-width="5"/><path d="M0 34V58" stroke="${c}" stroke-width="8"/><path d="M-24 62A24 24 0 0 0 24 62Z" fill="${c}"/></g>`,
+  ship: (c = C.white) => `<path d="M-104 20H104L78 74H-78Z" fill="${c}"/><rect x="-40" y="-26" width="76" height="46" fill="#c9cee6"/><rect x="-6" y="-70" width="20" height="44" fill="${C.red}"/><path d="M-110 92q18 -16 36 0t36 0t36 0t36 0t36 0t36 0" fill="none" stroke="${C.cyan}" stroke-width="9" stroke-linecap="round"/>`,
+  router: (c = C.white) => `<rect x="-96" y="6" width="192" height="64" rx="14" fill="${c}"/><circle cx="-60" cy="38" r="8" fill="${C.green}"/><circle cx="-32" cy="38" r="8" fill="${C.green}"/><circle cx="-4" cy="38" r="8" fill="${C.yellow}"/><path d="M-66 6L-84 -70M66 6L84 -70" stroke="${c}" stroke-width="10" stroke-linecap="round"/><path d="M-22 -40A30 30 0 0 1 22 -40M-42 -64A58 58 0 0 1 42 -64" fill="none" stroke="${C.cyan}" stroke-width="9" stroke-linecap="round"/><circle cy="-18" r="9" fill="${C.cyan}"/>`,
+  mic: (c = C.white) => `<rect x="-30" y="-100" width="60" height="118" rx="30" fill="${c}"/><path d="M-56 -8A56 56 0 0 0 56 -8M0 48V84M-36 90H36" fill="none" stroke="${c}" stroke-width="12" stroke-linecap="round"/>`,
+  speaker: (c = C.white) => `<path d="M-90 -30H-48L4 -78V78L-48 30H-90Z" fill="${c}"/><path d="M34 -36A50 50 0 0 1 34 36M58 -66A90 90 0 0 1 58 66" fill="none" stroke="${C.cyan}" stroke-width="12" stroke-linecap="round"/>`,
+  camera: (c = C.white) => `<rect x="-96" y="-56" width="150" height="112" rx="16" fill="${c}"/><path d="M54 -18L104 -52V52L54 18Z" fill="${c}"/><circle cx="-22" r="34" fill="${C.navy}"/><circle cx="-22" r="16" fill="${C.cyan}"/>`,
+  sim: (c = C.gold) => `<path d="M-64 -92H30L64 -58V92H-64Z" fill="${c}"/><rect x="-36" y="-22" width="72" height="78" rx="10" fill="#7a5200" opacity=".55"/><path d="M-36 6H36M-36 30H36M0 -22V56" stroke="${c}" stroke-width="6"/>`,
+  server: (c = "#c9cee6") => `${[-78, -22, 34].map((y) => `<rect x="-88" y="${y}" width="176" height="46" rx="8" fill="${c}"/><circle cx="-62" cy="${y + 23}" r="7" fill="${C.green}"/><circle cx="-40" cy="${y + 23}" r="7" fill="${C.green}"/><path d="M0 ${y + 23}H66" stroke="#4d5478" stroke-width="7" stroke-linecap="round"/>`).join("")}`,
+  cloud: (c = C.white) => `<path d="M-74 50A44 44 0 0 1 -70 -36A60 60 0 0 1 42 -52A50 50 0 0 1 78 50Z" fill="${c}"/>`,
+  anchor: (c = C.white) => `<circle cy="-76" r="18" fill="none" stroke="${c}" stroke-width="12"/><path d="M0 -58V84M-40 -30H40M-78 26A78 78 0 0 0 78 26" fill="none" stroke="${c}" stroke-width="14" stroke-linecap="round"/><path d="M-96 34L-76 4L-56 38ZM96 34L76 4L56 38Z" fill="${c}"/>`,
+  book: (c = C.cyan) => `<path d="M-92 -70C-60 -84 -24 -80 0 -62C24 -80 60 -84 92 -70V70C60 56 24 60 0 78C-24 60 -60 56 -92 70Z" fill="${c}"/><path d="M0 -62V78" stroke="${C.navy}" stroke-width="8"/><path d="M-70 -36H-22M-70 -8H-22M-70 20H-22M22 -36H70M22 -8H70M22 20H70" stroke="${C.navy}" stroke-width="7" stroke-linecap="round" opacity=".6"/>`,
+  car: (c = C.yellow) => `<path d="M-100 20L-84 -20H-40L-18 -62H50L78 -20H100V40H-100Z" fill="${c}"/><path d="M-30 -22L-12 -50H40L60 -22Z" fill="${C.navy}"/><circle cx="-56" cy="44" r="24" fill="${C.ink}"/><circle cx="56" cy="44" r="24" fill="${C.ink}"/><circle cx="-56" cy="44" r="9" fill="#c9cee6"/><circle cx="56" cy="44" r="9" fill="#c9cee6"/>`,
+  laptop: (c = C.white) => `<rect x="-84" y="-70" width="168" height="110" rx="10" fill="${c}"/><rect x="-70" y="-56" width="140" height="82" rx="4" fill="${C.panel}"/><path d="M-110 46H110L96 70H-96Z" fill="${c}"/>`,
+  eye: (c = C.white) => `<path d="M-100 0C-60 -62 60 -62 100 0C60 62 -60 62 -100 0Z" fill="${c}"/><circle r="36" fill="${C.cyan}"/><circle r="15" fill="${C.ink}"/>`,
+  palm: () => `<path d="M-8 100L-2 -20H12L8 100Z" fill="#8a5a1c"/>${[-150, -110, -70, -30, 10].map((d) => `<path d="M4 -24Q60 -70 104 -30Q60 -52 4 -24Z" fill="${C.green}" transform="rotate(${d} 4 -24)"/>`).join("")}<circle cx="4" cy="-30" r="10" fill="${C.pink}"/>`,
   ghost: (c = C.white) => `<circle cx="0" cy="-52" r="44" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><path d="M-72 90C-72 6 72 6 72 90" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><text y="-28" text-anchor="middle" font-family="Anton" font-size="64" fill="${c}">?</text>`,
 };
 const icon = (name, ...a) => (ICON[name] || ICON.person)(...a);
@@ -376,6 +393,116 @@ const BOARDS = {
       if (a <= 0) continue;
       body += da > 0 ? G(x, y, 0.4, `<circle r="74" fill="#3a4170"/>${T(0, 30, "✗", 90, { fill: "#8f96b8" })}`, `opacity="${lerp(1, 0.75, clamp(da / 0.3))}"`) : G(x, y, 0.4 * pop(a), icon("coin", C.gold, s.letter || "$")); }
     return svg(`${heading(s.title, 1)}${G(960, 290, pop(total), T(0, 0, s.total, 70, { fill: C.yellow }))}${body}${a1 > 0 ? G(960, 930, pop(a1 - 1), T(0, 0, s.dead, 78, { fill: C.red })) : ""}`);
+  },
+  // A sound becomes numbers: the wave, the points measured on it, then only the numbers.
+  //   0 the wave  1 it is measured many times a second  2 the wave goes and the numbers stay  3 the numbers leave as a stream
+  wave(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), x0 = 260, W = 1400, base = 500, N = s.n || 18, drift = step === 0 ? total * 1.4 : 0;
+    const f = (u) => 150 * (0.6 * Math.sin(u * 9.2 + drift) + 0.3 * Math.sin(u * 21 + 1.3 + drift * 1.7) + 0.16 * Math.sin(u * 37 + 0.4)) * Math.sin(Math.PI * u) ** 0.5;
+    let d = ""; for (let i = 0; i <= 200; i++) { const u = i / 200; d += `${i ? "L" : "M"}${x0 + u * W} ${base - f(u) * Math.min(1, total / 0.5)}`; }
+    const waveOp = a2 > 0 ? 1 - 0.85 * ease(a2 / 0.6) : 1; let pts = "", nums = "";
+    for (let k = 0; k < N; k++) { const u = (k + 0.5) / N, x = x0 + u * W, v = f(u), a = a1 - k * 0.035; if (a1 < 0 || a <= 0) continue;
+      pts += `<path d="M${x} ${base}V${base - v * ease(a / 0.2)}" stroke="${C.cyan}" stroke-width="6" opacity=".8"/><circle cx="${x}" cy="${base - v * ease(a / 0.2)}" r="10" fill="${C.yellow}"/>`;
+      if (a2 > k * 0.03) nums += `<g opacity="${clamp((a2 - k * 0.03) / 0.2)}" transform="translate(${a3 > 0 ? ease(a3 / 1.6) * 300 : 0} 0)">${T(x, 790, String(Math.round(v / 1.5 + 100)), 38, { font: "Elite", fill: C.yellow })}</g>`; }
+    return svg(`${heading(s.title, 1)}<path d="M${x0} ${base}H${x0 + W}" stroke="${C.line}" stroke-opacity=".35" stroke-width="4"/><path d="${d}" fill="none" stroke="${C.pink}" stroke-width="9" stroke-linecap="round" opacity="${waveOp}"/>
+      <g opacity="${a2 > 0 ? lerp(1, 0.5, ease(a2 / 0.6)) : 1}">${pts}</g>${a2 > 0 ? `<rect x="${x0 - 30}" y="740" width="${W + 60}" height="76" rx="16" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".4" stroke-width="4" opacity="${clamp(a2 / 0.3)}"/>` : ""}${nums}
+      ${G(150, base, 0.8 * pop(total), icon(s.icon || "mic"))}${caption((s.captions || [])[step], age, 930)}`);
+  },
+  // Why it is called cellular: land cut into cells, each with a tower; the same few channels used again in cells that do not touch;
+  // a phone that whispers "I am here"; and a call handed from tower to tower as it moves.
+  //   0 the cells  1 channels reused  2 the phone checks in  3 the call is handed over
+  cells(s, step, age, total) {
+    const R = 150, hx = R * 1.5, hy = R * Math.sqrt(3), cols = [-2, -1, 0, 1, 2], a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), CO = [C.cyan, C.pink, C.green];
+    const cellsL = []; for (const c of cols) for (const r of [-1, 0, 1]) { const x = 960 + c * hx, y = 560 + r * hy + (c & 1 ? hy / 2 : 0); if (y < 250 || y > 900) continue; cellsL.push({ x, y, g: (((c - (r - (c - (c & 1)) / 2)) % 3) + 3) % 3 }); }
+    const hex = (x, y) => Array.from({ length: 6 }, (_, k) => `${x + R * Math.cos(k * Math.PI / 3)} ${y + R * Math.sin(k * Math.PI / 3)}`).join("L");
+    let ph = null; if (a3 > 0) { const p = ease((a3 % 6) / 5); ph = { x: lerp(960 - 2.2 * hx, 960 + 2.2 * hx, p), y: 560 + 40 * Math.sin(p * 5) }; } else if (a2 > 0) ph = { x: 960 + 40, y: 560 + 60 };
+    let near = null; if (ph) near = cellsL.reduce((m, c) => (Math.hypot(c.x - ph.x, c.y - ph.y) < Math.hypot(m.x - ph.x, m.y - ph.y) ? c : m));
+    const body = cellsL.map((c, i) => { const a = total - i * 0.06; if (a <= 0) return ""; const col = a1 > 0 ? CO[c.g] : C.line, on = near === c;
+      return `<g opacity="${clamp(a / 0.2)}"><path d="M${hex(c.x, c.y)}Z" fill="${on ? col : a1 > 0 ? col : C.navy}" fill-opacity="${on ? 0.42 : a1 > 0 ? 0.16 : 0.5}" stroke="${col}" stroke-width="5" stroke-opacity=".8"/>${G(c.x, c.y - 6, 0.36, icon("tower", on ? C.yellow : C.white))}${a1 > 0 ? T(c.x, c.y + 96, (s.channels || ["A", "B", "C"])[c.g], 40, { fill: col }) : ""}</g>`; }).join("");
+    const phone = ph ? (a2 > 0 && !(a3 > 0) ? [0, 1, 2].map((k) => { const p = ((a2 * 0.8 + k / 3) % 1); return `<circle cx="${ph.x}" cy="${ph.y}" r="${20 + p * 120}" fill="none" stroke="${C.yellow}" stroke-width="5" opacity="${0.7 * (1 - p)}"/>`; }).join("") : "")
+      + `<path d="M${ph.x} ${ph.y}L${near.x} ${near.y - 30}" stroke="${C.yellow}" stroke-width="6" stroke-dasharray="10 10"/>` + G(ph.x, ph.y, 0.34, icon(a3 > 0 ? "car" : "mobile")) : "";
+    return svg(heading(s.title, 1) + body + phone + caption((s.captions || [])[step], age, 990));
+  },
+  // A journey along a row of stops. Each step lights the next leg; a leg is radio (waves), wire or sea.
+  route(s, step, age, total) {
+    const n = s.stops.length, x0 = 960 - (n - 1) * (n > 5 ? 130 : n > 4 ? 170 : 210) * 1.0, dx = n > 1 ? (960 - x0) * 2 / (n - 1) : 0, y = 520, sc = n > 5 ? 0.8 : n > 4 ? 0.95 : 1.1; let legs = "";
+    for (let i = 0; i < n - 1; i++) { const a = since(i + 1, step, age); if (a < 0) continue; const xa = x0 + i * dx + 110 * sc, xb = x0 + (i + 1) * dx - 110 * sc, kind = s.stops[i].link || "wire", p = ease(a / 0.6), col = kind === "radio" ? C.yellow : kind === "sea" ? C.cyan : C.green;
+      if (kind === "radio") { let d = ""; const m = Math.floor((xb - xa) * p / 6); for (let k = 0; k <= m; k++) { const x = xa + k * 6; d += `${k ? "L" : "M"}${x} ${y + 22 * Math.sin((x - xa) / 16 - total * 6)}`; } legs += `<path d="${d}" fill="none" stroke="${col}" stroke-width="7" stroke-linecap="round"/>`; }
+      else legs += `<path d="M${xa} ${y}H${lerp(xa, xb, p)}" stroke="${col}" stroke-width="${kind === "sea" ? 14 : 9}" stroke-linecap="round" ${kind === "sea" ? 'stroke-dasharray="2 20"' : ""}/>`;
+      if (a > 0.6) { const q = ((a - 0.6) * 0.9) % 1; legs += `<circle cx="${lerp(xa, xb, q)}" cy="${y + (kind === "radio" ? 22 * Math.sin((lerp(xa, xb, q) - xa) / 16 - total * 6) : 0)}" r="13" fill="#fff"/>`; }
+      if (s.stops[i].leg && a > 0.3) legs += `<g opacity="${clamp((a - 0.3) / 0.3)}">${T((xa + xb) / 2, y - 60, s.stops[i].leg, 36, { font: "Elite", fill: col })}</g>`; }
+    const stops = s.stops.map((st, i) => { const a = step > 0 ? 9 : age - i * 0.15, reached = i <= step;
+      return labelled(x0 + i * dx, y, sc, st.icon, st.label, a, { args: st.args, opacity: reached ? 1 : 0.55, glow: i === Math.min(step, n - 1) && step > 0 ? C.yellow : null }) + (st.sub && a > 0.3 ? `<g opacity="${clamp((a - 0.3) / 0.3) * (reached ? 1 : 0.5)}">${T(x0 + i * dx, y + 150 * sc + 86, st.sub, 34, { font: "Elite", fill: C.dim })}</g>` : ""); }).join("");
+    return svg(heading(s.title, 1) + legs + stops + caption((s.captions || [])[step], age, 930));
+  },
+  // The planet's cables: a flat map, lines of light between the continents, and what happens when one is cut.
+  //   0 the map  1 the cables light up  2 (hold)  3 one is cut and the rest carry on
+  globe(s, step, age, total) {
+    const X = (lon) => 960 + lon * 4.5, Y = (lat) => 590 - lat * 4.6, a1 = since(1, step, age), a3 = since(s.cutStep ?? 2, step, age);
+    const LAND = [[[-168,66],[-150,71],[-110,72],[-85,70],[-62,58],[-55,48],[-70,42],[-76,35],[-81,25],[-90,29],[-97,26],[-97,18],[-88,15],[-83,9],[-79,8],[-92,15],[-105,20],[-112,30],[-123,38],[-125,48],[-135,58],[-155,58],[-165,62]],
+      [[-79,8],[-62,10],[-50,0],[-35,-7],[-39,-18],[-48,-27],[-57,-37],[-65,-45],[-70,-54],[-75,-48],[-72,-30],[-70,-18],[-80,-5]],
+      [[-9,37],[-9,43],[-1,44],[-4,48],[3,51],[8,54],[10,58],[5,61],[14,69],[28,71],[45,68],[70,72],[100,77],[140,73],[170,69],[178,65],[160,60],[155,52],[142,54],[135,44],[128,38],[122,31],[120,23],[109,20],[106,10],[100,13],[98,8],[103,2],[98,16],[92,21],[88,22],[80,13],[77,8],[72,20],[66,25],[57,26],[52,16],[45,13],[43,17],[35,28],[35,36],[27,36],[23,40],[18,40],[15,38],[12,44],[3,43],[-1,37]],
+      [[-17,15],[-16,24],[-6,35],[10,37],[20,32],[32,31],[35,28],[43,12],[51,11],[40,-4],[39,-15],[33,-26],[20,-35],[17,-29],[12,-17],[9,-1],[9,4],[-8,4],[-13,9]],
+      [[114,-22],[122,-18],[131,-12],[137,-16],[142,-11],[146,-19],[153,-27],[150,-37],[140,-38],[131,-32],[116,-35]],
+      [[-55,60],[-43,60],[-22,70],[-20,80],[-45,83],[-68,78]], [[-5,50],[1,51],[-2,58],[-6,57]], [[130,32],[140,36],[142,44],[136,36]]];
+    const land = LAND.map((p) => `<path d="M${p.map(([lo, la]) => `${X(lo)} ${Y(la)}`).join("L")}Z" fill="#27306e" stroke="${C.line}" stroke-opacity=".45" stroke-width="3"/>`).join("");
+    const CAB = s.cables || [[[-74,40],[-5,50]], [[-70,42],[-9,39]], [[-38,-4],[-9,38]], [[-80,26],[-38,-4]], [[5,43],[32,31]], [[32,30],[43,12]], [[43,12],[73,19]], [[73,19],[104,1]], [[104,1],[114,22]], [[114,22],[140,36]], [[-9,38],[-17,15],[3,5],[18,-34]], [[18,-34],[40,-4],[73,19]], [[104,1],[151,-34]], [[-118,34],[-176,30]], [[140,36],[176,30]], [[-123,46],[-176,48]], [[142,42],[176,48]]];
+    const cut = s.cut ?? 5; let cab = "";
+    CAB.forEach((c, i) => { const a = a1 - i * 0.18; if (a1 < 0 || a <= 0) return; const dead = a3 > 0 && i === cut, pts = c.map(([lo, la]) => [X(lo), Y(la)]);
+      let d = `M${pts[0][0]} ${pts[0][1]}`; for (let k = 1; k < pts.length; k++) { const [x1, y1] = pts[k - 1], [x2, y2] = pts[k], bow = c.length === 2 ? Math.min(90, Math.abs(x2 - x1) * 0.18) : 0; d += `Q${(x1 + x2) / 2} ${(y1 + y2) / 2 + bow} ${x2} ${y2}`; }
+      const len = 1400, p = ease(a / 0.8);
+      cab += `<path d="${d}" fill="none" stroke="${dead ? C.red : C.yellow}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${dead ? "8 12" : `${len}`}" stroke-dashoffset="${dead ? 0 : len * (1 - p)}" opacity="${dead ? 0.9 : 0.85}"/>`;
+      if (p >= 1 && !dead) { const q = ((total * 0.35 + i * 0.37) % 1), k = Math.min(pts.length - 2, Math.floor(q * (pts.length - 1))), f = q * (pts.length - 1) - k, bow = c.length === 2 ? Math.min(90, Math.abs(pts[1][0] - pts[0][0]) * 0.18) : 0;
+        const bx = (1 - f) * (1 - f) * pts[k][0] + 2 * f * (1 - f) * (pts[k][0] + pts[k + 1][0]) / 2 + f * f * pts[k + 1][0], by = (1 - f) * (1 - f) * pts[k][1] + 2 * f * (1 - f) * ((pts[k][1] + pts[k + 1][1]) / 2 + bow) + f * f * pts[k + 1][1];
+        cab += `<circle cx="${bx}" cy="${by}" r="${a3 > 0 ? 9 : 7}" fill="#fff"/>`; }
+      if (dead) { const mx = (pts[0][0] + pts[pts.length - 1][0]) / 2, my = (pts[0][1] + pts[pts.length - 1][1]) / 2; cab += G(mx, my, pop(a3), `<circle r="34" fill="${C.red}"/><path d="M-14 -14L14 14M14 -14L-14 14" stroke="#fff" stroke-width="10" stroke-linecap="round"/>`); } });
+    return svg(`${heading(s.title, 1, 130)}<g opacity="${clamp(total / 0.4)}">${land}</g>${cab}${caption((s.captions || [])[step], age, 1000)}`);
+  },
+  // Anything sent is cut into numbered packets; each finds its own way and they are put back in order at the far end.
+  //   0 the whole message  1 cut up  2 on the road, each by its own path  3 back in order  4 (optional) one is lost and nobody waits for it
+  packets(s, step, age, total) {
+    const N = s.n || 6, a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), a4 = since(4, step, age), lose = s.lose ?? 3;
+    const R = [[700, 330], [700, 700], [960, 520], [1220, 330], [1220, 700]], PATHS = [[0, 3], [1, 4], [0, 2, 4], [1, 2, 3], [0, 2, 3], [1, 2, 4]];
+    const routers = (a2 > 0 || step >= 2) ? R.map(([x, y], i) => G(x, y, 0.5 * pop((step > 2 ? 9 : a2) - i * 0.08), icon("node", C.cyan))).join("") + PATHS.map((p) => { const pts = [[430, 520], ...p.map((k) => R[k]), [1490, 520]]; return `<path d="M${pts.map((q) => q.join(" ")).join("L")}" fill="none" stroke="${C.line}" stroke-width="3" opacity=".22"/>`; }).join("") : "";
+    const box = (x, y, k, col, sc = 1, op = 1) => G(x, y, sc, `<rect x="-38" y="-38" width="76" height="76" rx="12" fill="${col}"/>${T(0, 18, String(k + 1), 50, { fill: C.ink })}`, `opacity="${op}"`);
+    let body = "";
+    for (let k = 0; k < N; k++) { const hx = 250 + (k % 2) * 84 - 42 + 80, hy = 520 + (Math.floor(k / 2) - 1) * 84, home = [hx - 80, hy], col = k === lose && a4 > 0 ? C.red : C.yellow;
+      if (step <= 1) { const sp = a1 > 0 ? ease(a1 / 0.5) : 0; body += box(lerp(250, home[0], sp), lerp(520, home[1], sp), k, col, 1, step === 0 ? 0 : 1); continue; }
+      const dest = [1630 + (k % 2) * 84 - 42, 520 + (Math.floor(k / 2) - 1) * 84];
+      if (step === 2) { const pts = [home, [430, 520], ...PATHS[k % PATHS.length].map((i) => R[i]), [1490, 520]], q = clamp(((a2 - 0.3 - k * 0.35) * 0.45)), segs = pts.length - 1, i = Math.min(segs - 1, Math.floor(q * segs)), f = q * segs - i;
+        body += box(lerp(pts[i][0], pts[i + 1][0], f), lerp(pts[i][1], pts[i + 1][1], f), k, col, 0.8, q >= 1 ? 0.35 : 1); continue; }
+      const order = [2, 0, 5, 1, 4, 3], j = order.indexOf(k), from = [1630 + (j % 2) * 84 - 42, 520 + (Math.floor(j / 2) - 1) * 84], p = step > 3 ? 1 : ease((a3 - 0.5) / 0.7);
+      const lost = k === lose && a4 > 0; body += box(lerp(from[0], dest[0], p), lerp(from[1], dest[1], p), k, lost ? C.red : p >= 1 ? C.green : C.yellow, 1, lost ? lerp(1, 0.25, ease(a4 / 0.5)) : 1) + (lost ? G(dest[0], dest[1], pop(a4), T(0, 30, "✗", 90, { fill: C.red })) : ""); }
+    const whole = step === 0 ? G(250, 520, 1.3 * pop(total), icon(s.icon || "file", "")) : "";
+    return svg(`${heading(s.title, 1)}${routers}${whole}${body}${T(250, 760, s.from || "", 44, { font: "Elite", fill: C.dim })}${step >= 2 ? T(1630, 760, s.to || "", 44, { font: "Elite", fill: C.dim }) : ""}${caption((s.captions || [])[step], age, 930)}`);
+  },
+  // A picture is a grid of coloured squares, each square three numbers; and most of it does not change from one picture to the next.
+  //   0 the picture  1 closer: squares and their numbers  2 back out  3 only what changed is sent
+  pixels(s, step, age, total) {
+    const CW = 32, CH = 18, S = 40, gx = 960 - CW * S / 2, gy = 230, a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age);
+    const z = step === 1 ? ease(a1 / 0.9) : step === 2 ? 1 - ease(a2 / 0.7) : 0, sc = 1 + 3.2 * z, fx = gx + 13.5 * S, fy = gy + 9.5 * S;
+    const colour = (i, j) => { const dx = (i - 15.5) / 6.6, dy = (j - 10.6) / 5.2;
+      if (j >= 2 && j <= 4 && i >= 10 && i <= 21) return j === 4 ? "#ff5fae" : "#16182b"; if (j === 5 && i >= 7 && i <= 24) return "#16182b";
+      if ((i === 13 || i === 18) && j === 9) return "#2a6fdb"; if ((i >= 12 && i <= 14 || i >= 17 && i <= 19) && j >= 8 && j <= 10) return "#f4f6ff";
+      if (j === 13 && i >= 14 && i <= 17) return "#7a1040"; if (dx * dx + dy * dy < 1) return j > 12 ? "#f0429a" : "#ff5fae"; if (j >= 15 && i >= 9 && i <= 22) return "#c9a36a";
+      return (i + j) % 7 === 0 ? "#1d2a63" : "#172152"; };
+    const changed = (i, j) => (j === 13 || j === 12) && i >= 13 && i <= 18 || (j === 9 && (i === 13 || i === 18));
+    let cellsS = ""; for (let j = 0; j < CH; j++) for (let i = 0; i < CW; i++) { const ch = changed(i, j), dim = a3 > 0 && !ch ? lerp(1, 0.16, ease(a3 / 0.6)) : 1;
+      cellsS += `<rect x="${gx + i * S}" y="${gy + j * S}" width="${S + (z > 0.05 || a3 > 0 ? -2 : 0.6)}" height="${S + (z > 0.05 || a3 > 0 ? -2 : 0.6)}" fill="${colour(i, j)}" opacity="${dim}" ${a3 > 0.4 && ch ? `stroke="${C.yellow}" stroke-width="3"` : ""}/>`; }
+    const nums = z > 0.7 ? `<g opacity="${clamp((z - 0.7) / 0.3)}">${[[13, 9, "42,111,219"], [12, 9, "244,246,255"], [14, 10, "244,246,255"], [13, 11, "255,95,174"]].map(([i, j, t]) => `<text x="${gx + i * S + S / 2}" y="${gy + j * S + S / 2 + 3}" text-anchor="middle" font-family="Elite" font-size="6" fill="${t.startsWith("42") ? "#fff" : "#05060d"}">${t}</text>`).join("")}</g>` : "";
+    return svg(`${heading(s.title, 1, 140)}<g transform="translate(${fx} ${fy}) scale(${sc}) translate(${-fx} ${-fy})">${cellsS}${nums}</g><rect x="${gx - 6}" y="${gy - 6}" width="${CW * S + 12}" height="${CH * S + 12}" rx="10" fill="none" stroke="${C.line}" stroke-opacity="${z > 0.05 ? 0 : 0.5}" stroke-width="5"/>
+      ${a3 > 0.8 && s.sent ? G(1500, 880, pop(a3 - 0.8), `<rect x="-250" y="-56" width="500" height="112" rx="20" fill="${C.ink}" stroke="${C.yellow}" stroke-width="5"/>${T(0, 22, s.sent, 58, { fill: C.yellow })}`) : ""}${caption((s.captions || [])[step], age, 1010)}`);
+  },
+  // Where the time goes: a bar of milliseconds that grows a part at a time, against the line where a conversation still feels natural.
+  budget(s, step, age) {
+    const max = s.max || 400, x0 = 260, W = 1400, y = 470, h = 120, X = (ms) => x0 + ms / max * W; let acc = 0, body = "";
+    s.parts.forEach((p, i) => { const a = since(i, step, age), from = acc; acc += p.ms; if (a < 0) return; const g = ease(a / 0.6), w = (X(from + p.ms) - X(from)) * g, up = i % 2 === 0;
+      body += `<rect x="${X(from)}" y="${y}" width="${Math.max(0, w - 4)}" height="${h}" rx="12" fill="${p.color || [C.cyan, C.pink, C.yellow, C.green, C.dim][i % 5]}"/>
+        <g opacity="${clamp((a - 0.3) / 0.3)}"><path d="M${X(from + p.ms / 2)} ${up ? y - 8 : y + h + 8}V${up ? y - 46 : y + h + 46}" stroke="${C.line}" stroke-width="4"/>${T(X(from + p.ms / 2), up ? y - 96 : y + h + 92, p.label, 40, { font: "Elite" })}${T(X(from + p.ms / 2), up ? y - 56 : y + h + 136, p.text ?? p.ms + " ms", 36, { font: "Elite", fill: C.yellow })}</g>`; });
+    const shown = s.parts.slice(0, Math.min(step, s.parts.length - 1) + 1).reduce((t, p) => t + p.ms, 0);
+    const mark = (ms, label, col) => `<path d="M${X(ms)} ${y - 150}V${y + h + 190}" stroke="${col}" stroke-width="5" stroke-dasharray="14 12"/>${T(X(ms), y + h + 250, label, 40, { font: "Elite", fill: col })}`;
+    return svg(`${heading(s.title, 1)}<rect x="${x0}" y="${y}" width="${W}" height="${h}" rx="12" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".4" stroke-width="4"/>${body}${mark(s.good || 150, s.goodLabel || "", C.green)}${s.bad ? mark(s.bad, s.badLabel || "", C.red) : ""}
+      ${G(960, 270, 1, T(0, 0, (s.totalLabel || "") + " " + shown + " ms", 60, { fill: shown > (s.good || 150) ? C.red : C.yellow }))}`);
   },
 };
 
