@@ -443,6 +443,13 @@ so any frame can be rendered alone:
 | `vending` | a contract that runs itself, as a vending machine: coin in, rule checked, thing out |
 | `stake` | guarding the ledger with a deposit: lock coins, get drawn by lot, lose the deposit for cheating |
 | `graveyard` | a field of coins and how many of them are dead |
+| `wave` | a sound becomes numbers: the wave, the points measured on it, then only the numbers |
+| `cells` | land cut into cells with a tower each, channels reused, a phone checking in, a call handed over |
+| `route` | a journey along a row of stops; each step lights the next leg (`link`: `radio`, `wire` or `sea`) |
+| `globe` | a flat map of the planet with cables of light between the continents; one can be cut (`cutStep`) |
+| `packets` | a message cut into numbered packets, each by its own path, put back in order; one can be lost (`lose`) |
+| `pixels` | a picture as a grid of coloured squares, a close look at their numbers, then only what changed |
+| `budget` | where the milliseconds go: a bar that grows a part at a time against a "natural" and a "limit" line |
 
 In a storyboard, boards are named once under `boards` and used by beats:
 

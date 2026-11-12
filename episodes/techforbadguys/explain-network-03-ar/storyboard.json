@@ -995,5 +995,70 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "مكالمة الفيديو بتشتغل إزاي؟ وشّك بيتقطّع ألف حتة | ملف الشبكة 3/3",
+   "ليه الصورة بتعلّق في مكالمة الفيديو؟ | ملف الشبكة 3/3",
+   "الخدعة اللي ورا كل فيديو على الإنترنت | 3/3"
+  ],
+  "description": [
+   "التقرير التالت والأخير من العميل Peek: إنسان بيكلّم إنسان في قارة تانية، وشايف وشّه في نفس اللحظة.. وبيشتكي إن الصورة علّقت نص ثانية.",
+   "",
+   "الصورة عند الجهاز إيه؟ ليه الصورة الخام أكبر ألف مرة من اللي الخط يقدر يشيله؟ إيه التلات خدع اللي بتخلّي الفيديو يعدّي؟ ليه الصوت أهم من الصورة؟ ليه الحزمة اللي تتأخر بتترمى؟ وليه مهما الشبكة اتحسّنت فيه تأخير محدش يقدر يلغيه؟",
+   "",
+   "ومعاها: حكاية تليفون الصورة اللي فشل سنة 1970، وليه محدش بيبص في عين التاني في مكالمات الفيديو."
+  ],
+  "intro": "المقدمة",
+  "outro": "الختام",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "الاتحاد الدولي للاتصالات، التوصية G.114 (حدود التأخير): https://www.itu.int/itudoc/itu-t/aap/sg12aap/history/g.114/g114s_ww9.doc",
+   "IEEE Spectrum، تليفون الصورة Picturephone: https://spectrum.ieee.org/long-before-facetime-or-skype-there-was-the-picturephone",
+   "Bloomberg، أرقام Zoom في أبريل 2020: https://www.bloomberg.com/news/articles/2020-04-30/zoom-clarifies-it-has-300-million-participants-not-users"
+  ],
+  "footer": [
+   "دي حلقة من ملف من تلات تقارير عن الشبكة: الموبايل، الإنترنت، ومكالمة الفيديو. شوفهم بالترتيب من قايمة التشغيل.",
+   "الأرقام اللي في الحلقة بتاريخها.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الإنترنت",
+   "#تكنولوجيا"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "اشرحها لكائن فضائي",
+   "الشبكة",
+   "الإنترنت",
+   "تكنولوجيا",
+   "شرح مبسط",
+   "ازاي بيشتغل",
+   "Earth Report",
+   "مكالمة الفيديو",
+   "ضغط الفيديو",
+   "Codec",
+   "البكسل",
+   "Zoom",
+   "FaceTime",
+   "ليه الصورة بتعلق",
+   "التأخير",
+   "Lag",
+   "سرعة النت",
+   "التشفير",
+   "Picturephone"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الشبكة (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so."
+  ],
+  "pinned": "الملف اتقفل. أنهي حاجة تانية بتستخدمها كل يوم ومش عارف بتشتغل إزاي؟ اكتبها. القيادة هتختار الملف الجاي."
+ }
 }

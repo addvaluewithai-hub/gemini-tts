@@ -985,5 +985,71 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "الموبايل بيشتغل إزاي؟ صوتك بيروح فين بالظبط | ملف الشبكة 1/3",
+   "الموبايل مش تليفون.. الموبايل راديو | ملف الشبكة 1/3",
+   "ليه الشبكة بتقع في الأسانسير؟ وليه اسمه خلوي؟ | 1/3"
+  ],
+  "description": [
+   "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن أغرب عادة عند البشر: كلهم شايلين جهاز بيكلّم الكوكب كله، ومحدش فيهم عارف صوته بيروح فين.",
+   "",
+   "في التقرير الأول: الصوت بيتحوّل لأرقام إزاي؟ ليه الموبايل في الحقيقة راديو بيكلّم أقرب برج بس؟ ليه اسمه \"خلوي\"؟ الشبكة بتعرف مكانك إزاي؟ يعني إيه شريحة وتجوال؟ وليه الشبكة بتقع في الأسانسير؟ ومعاها حكاية أول مكالمة موبايل في التاريخ.. اللي كانت إغاظة.",
+   "",
+   "شرح بالرسوم المتحركة، مناسب لأي حد."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "GSMA، The Mobile Economy 2026 (عدد الخطوط والمشتركين): https://www.gsma.com/mobileeconomy/",
+   "الاتحاد الدولي للاتصالات، Facts and Figures 2025 (تغطية الجيل الخامس): https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/",
+   "أول مكالمة موبايل، 3 أبريل 1973: https://ctvnews.ca/sci-tech/50-years-ago-he-made-the-first-cellphone-call-1.6340522",
+   "Ericsson، مين كان الأول (1979 و1991): https://www.ericsson.com/en/about-us/history/changing-the-world/world-leadership/who-was-first",
+   "أول رسالة نصية، 3 ديسمبر 1992: https://www.history.com/this-day-in-history/first-sms-text-message-sent"
+  ],
+  "footer": [
+   "دي حلقة من ملف من تلات تقارير عن الشبكة: الموبايل، الإنترنت، ومكالمة الفيديو. شوفهم بالترتيب من قايمة التشغيل.",
+   "الأرقام اللي في الحلقة بتاريخها.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الإنترنت",
+   "#تكنولوجيا"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "اشرحها لكائن فضائي",
+   "الشبكة",
+   "الإنترنت",
+   "تكنولوجيا",
+   "شرح مبسط",
+   "ازاي بيشتغل",
+   "Earth Report",
+   "الموبايل بيشتغل ازاي",
+   "شبكات المحمول",
+   "أبراج المحمول",
+   "الجيل الخامس",
+   "5G",
+   "الشريحة",
+   "SIM",
+   "التجوال",
+   "Martin Cooper",
+   "أول موبايل",
+   "ليه الشبكة بتقع"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الشبكة (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so."
+  ],
+  "pinned": "سؤال القيادة: لو عرفت إن تليفونك بيهمس للبرج \"أنا هنا\" طول اليوم.. هتسيبه مفتوح؟ اكتب ردّك."
+ }
 }

@@ -1000,5 +1000,75 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "الإنترنت فين بالظبط؟ في قاع البحر | ملف الشبكة 2/3",
+   "مفيش سحابة: الإنترنت خراطيم في قاع المحيط | ملف الشبكة 2/3",
+   "إزاي Facebook مسح نفسه من الإنترنت 6 ساعات؟ | 2/3"
+  ],
+  "description": [
+   "التقرير التاني من العميل Peek: البشر بيقولوا صورهم \"في السحابة\". هو دوّر على السحابة.. ولقى خراطيم في قاع المحيط.",
+   "",
+   "الإنترنت ساكن فين؟ إيه هي الكابلات البحرية اللي شايلة أكتر من 95% من الكلام بين القارات، ومين بيقطعها؟ يعني إيه حِزم، وليه الشبكة بتكمّل حتى لو كابل اتقطع؟ إزاي شركة اتصالات وقّعت YouTube في العالم كله بالغلط؟ وإزاي Facebook مسح نفسه من الخريطة ست ساعات وموظفينه ماعرفوش يدخلوا المبنى؟",
+   "",
+   "ومعاها: السحابة يعني إيه، الواي فاي اسمه جه منين، ومين صاحب الخراطيم دلوقتي."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "TeleGeography، أسئلة وأجوبة عن الكابلات البحرية: https://www2.telegeography.com/submarine-cable-faqs-frequently-asked-questions",
+   "اللجنة الدولية لحماية الكابلات (الأعطال وأسبابها): https://www.iscpc.org/news/media-enquiries/",
+   "IEEE Spectrum، كابل 1858: https://spectrum.ieee.org/tech-history/heroic-failures/the-first-transatlantic-telegraph-cable-was-a-bold-beautiful-failure",
+   "قطع كابلات البحر الأحمر: https://gulfnews.com/technology/red-sea-cable-chaos-why-the-internet-didnt-go-dark-1.500263896",
+   "Google Research، اختطاف YouTube سنة 2008: https://research.google/pubs/youtube-hijacking-february-24th-2008-analysis-of-bgp-routing-dynamics/",
+   "ThousandEyes، تحليل عطل Facebook 2021: https://www.thousandeyes.com/blog/facebook-outage-analysis",
+   "اسم Wi-Fi جه منين: https://boingboing.net/2005/11/08/wifi-isnt-short-for.html",
+   "الاتحاد الدولي للاتصالات، Facts and Figures 2025: https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/"
+  ],
+  "footer": [
+   "دي حلقة من ملف من تلات تقارير عن الشبكة: الموبايل، الإنترنت، ومكالمة الفيديو. شوفهم بالترتيب من قايمة التشغيل.",
+   "الأرقام اللي في الحلقة بتاريخها.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الإنترنت",
+   "#تكنولوجيا"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "اشرحها لكائن فضائي",
+   "الشبكة",
+   "الإنترنت",
+   "تكنولوجيا",
+   "شرح مبسط",
+   "ازاي بيشتغل",
+   "Earth Report",
+   "الإنترنت بيشتغل ازاي",
+   "الكابلات البحرية",
+   "كابلات الإنترنت تحت البحر",
+   "السحابة",
+   "Cloud",
+   "واي فاي",
+   "Wi-Fi",
+   "DNS",
+   "IP",
+   "عطل فيسبوك",
+   "مراكز البيانات",
+   "الألياف الضوئية"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الشبكة (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so."
+  ],
+  "pinned": "كنت فاكر الإنترنت ماشي بالأقمار الصناعية ولا بالكابلات؟ اعترف. القيادة مش هتحاسب حد."
+ }
 }
