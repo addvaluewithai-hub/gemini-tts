@@ -1,0 +1,35 @@
+التقرير التاني من العميل Peek: البشر بيقولوا صورهم "في السحابة". هو دوّر على السحابة.. ولقى خراطيم في قاع المحيط.
+
+الإنترنت ساكن فين؟ إيه هي الكابلات البحرية اللي شايلة أكتر من 95% من الكلام بين القارات، ومين بيقطعها؟ يعني إيه حِزم، وليه الشبكة بتكمّل حتى لو كابل اتقطع؟ إزاي شركة اتصالات وقّعت YouTube في العالم كله بالغلط؟ وإزاي Facebook مسح نفسه من الخريطة ست ساعات وموظفينه ماعرفوش يدخلوا المبنى؟
+
+ومعاها: السحابة يعني إيه، الواي فاي اسمه جه منين، ومين صاحب الخراطيم دلوقتي.
+
+الفصول
+0:00 المقدمة
+0:30 1. شبكة من شبكات
+1:10 2. خراطيم في قاع البحر
+2:25 3. من 1858
+2:48 4. بتتقطع
+3:33 5. الحِزم
+4:14 6. الأسماء والخريطة
+5:19 7. السحابة
+6:10 8. مين صاحبه؟
+6:54 9. قاموس البشر
+7:05 10. الخلاصة
+7:30 التقرير الجاي
+
+مصادر
+TeleGeography، أسئلة وأجوبة عن الكابلات البحرية: https://www2.telegeography.com/submarine-cable-faqs-frequently-asked-questions
+اللجنة الدولية لحماية الكابلات (الأعطال وأسبابها): https://www.iscpc.org/news/media-enquiries/
+IEEE Spectrum، كابل 1858: https://spectrum.ieee.org/tech-history/heroic-failures/the-first-transatlantic-telegraph-cable-was-a-bold-beautiful-failure
+قطع كابلات البحر الأحمر: https://gulfnews.com/technology/red-sea-cable-chaos-why-the-internet-didnt-go-dark-1.500263896
+Google Research، اختطاف YouTube سنة 2008: https://research.google/pubs/youtube-hijacking-february-24th-2008-analysis-of-bgp-routing-dynamics/
+ThousandEyes، تحليل عطل Facebook 2021: https://www.thousandeyes.com/blog/facebook-outage-analysis
+اسم Wi-Fi جه منين: https://boingboing.net/2005/11/08/wifi-isnt-short-for.html
+الاتحاد الدولي للاتصالات، Facts and Figures 2025: https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/
+
+دي حلقة من ملف من تلات تقارير عن الشبكة: الموبايل، الإنترنت، ومكالمة الفيديو. شوفهم بالترتيب من قايمة التشغيل.
+الأرقام اللي في الحلقة بتاريخها.
+الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة.
+
+#تقرير_الأرض #الإنترنت #تكنولوجيا

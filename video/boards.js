@@ -458,7 +458,7 @@ const BOARDS = {
         const bx = (1 - f) * (1 - f) * pts[k][0] + 2 * f * (1 - f) * (pts[k][0] + pts[k + 1][0]) / 2 + f * f * pts[k + 1][0], by = (1 - f) * (1 - f) * pts[k][1] + 2 * f * (1 - f) * ((pts[k][1] + pts[k + 1][1]) / 2 + bow) + f * f * pts[k + 1][1];
         cab += `<circle cx="${bx}" cy="${by}" r="${a3 > 0 ? 9 : 7}" fill="#fff"/>`; }
       if (dead) { const mx = (pts[0][0] + pts[pts.length - 1][0]) / 2, my = (pts[0][1] + pts[pts.length - 1][1]) / 2; cab += G(mx, my, pop(a3), `<circle r="34" fill="${C.red}"/><path d="M-14 -14L14 14M14 -14L-14 14" stroke="#fff" stroke-width="10" stroke-linecap="round"/>`); } });
-    return svg(`${heading(s.title, 1, 130)}<g opacity="${clamp(total / 0.4)}">${land}</g>${cab}${caption((s.captions || [])[step], age, 1000)}`);
+    return svg(`${heading(s.title, 1, 130)}<g opacity="${clamp(total / 0.4)}">${land}</g>${cab}${caption((s.captions || [])[step], age, 925)}`);
   },
   // Anything sent is cut into numbered packets; each finds its own way and they are put back in order at the far end.
   //   0 the whole message  1 cut up  2 on the road, each by its own path  3 back in order  4 (optional) one is lost and nobody waits for it
