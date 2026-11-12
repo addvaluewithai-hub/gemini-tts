@@ -53,6 +53,28 @@ const ICON = {
   atom: (c = C.cyan) => `${[0, 60, 120].map((d) => `<ellipse rx="96" ry="34" fill="none" stroke="${c}" stroke-width="9" transform="rotate(${d})"/>`).join("")}<circle r="20" fill="${C.yellow}"/>`,
   lock: (c = C.yellow) => `<path d="M-44 -10V-44A44 44 0 0 1 44 -44V-10" fill="none" stroke="${c}" stroke-width="20"/><rect x="-72" y="-14" width="144" height="110" rx="16" fill="${c}"/><circle cy="30" r="15" fill="${C.navy}"/><rect x="-6" y="34" width="12" height="32" fill="${C.navy}"/>`,
   ghost: (c = C.white) => `<circle cx="0" cy="-52" r="44" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><path d="M-72 90C-72 6 72 6 72 90" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><text y="-28" text-anchor="middle" font-family="Anton" font-size="64" fill="${c}">?</text>`,
+  // ---- electricity file ----
+  bulb: (c = C.yellow) => `<circle cy="-30" r="62" fill="${c}"/><path d="M-18 -8L-8 -42H8L18 -8" fill="none" stroke="${C.navy}" stroke-width="7" stroke-linejoin="round" opacity=".45"/><path d="M-32 22H32L24 62H-24Z" fill="#c9cee6"/><rect x="-20" y="62" width="40" height="24" rx="8" fill="#8f96b8"/>`,
+  tower: (c = C.white) => `<path d="M-16 -100L-58 100M16 -100L58 100M-16 -100H16M-92 -62H92M-72 -14H72M-24 -62L30 -14M24 -62L-30 -14M-34 -14L48 54M34 -14L-48 54M-48 54H48" fill="none" stroke="${c}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>${[[-92, -62], [92, -62], [-72, -14], [72, -14]].map(([x, y]) => `<rect x="${x - 5}" y="${y}" width="10" height="22" rx="4" fill="${C.cyan}"/>`).join("")}`,
+  plant: (c = C.white) => `<path d="M-100 96C-84 30 -84 -16 -94 -64H-26C-36 -16 -36 30 -20 96Z" fill="${c}"/><rect x="-6" y="14" width="106" height="82" fill="${c}"/><rect x="58" y="-58" width="26" height="76" fill="${c}"/>${[[10, 34], [40, 34], [10, 62], [40, 62]].map(([x, y]) => `<rect x="${x}" y="${y}" width="18" height="16" fill="${C.navy}"/>`).join("")}<circle cx="-60" cy="-84" r="22" fill="${c}" opacity=".5"/><circle cx="-34" cy="-100" r="16" fill="${c}" opacity=".35"/>`,
+  house: (c = C.white) => `<path d="M-104 -6L0 -96L104 -6Z" fill="${c}"/><rect x="-78" y="-8" width="156" height="104" fill="${c}"/><rect x="-60" y="14" width="42" height="38" fill="${C.yellow}"/><rect x="14" y="30" width="44" height="66" fill="${C.navy}"/>`,
+  plug: (c = C.white) => `<rect x="-34" y="-100" width="18" height="56" rx="6" fill="#c9cee6"/><rect x="16" y="-100" width="18" height="56" rx="6" fill="#c9cee6"/><path d="M-60 -48H60V4Q60 48 0 48Q-60 48 -60 4Z" fill="${c}"/><path d="M0 48V100" stroke="${c}" stroke-width="20" stroke-linecap="round"/>`,
+  sun: (c = C.yellow) => `<circle r="50" fill="${c}"/>${[0, 45, 90, 135, 180, 225, 270, 315].map((d) => `<rect x="-8" y="-98" width="16" height="32" rx="8" fill="${c}" transform="rotate(${d})"/>`).join("")}`,
+  wind: (c = C.white, rot = 20) => `<path d="M-8 100L-4 -30H4L8 100Z" fill="${c}"/><g transform="translate(0 -34) rotate(${rot})">${[0, 120, 240].map((d) => `<path d="M0 0C14 -30 10 -70 0 -92C-8 -70 -8 -30 0 0Z" fill="${c}" transform="rotate(${d})"/>`).join("")}</g><circle cy="-34" r="10" fill="${C.navy}" stroke="${c}" stroke-width="5"/>`,
+  battery: (c = C.green, bars = 3) => `<rect x="-22" y="-100" width="44" height="18" rx="5" fill="#c9cee6"/><rect x="-62" y="-84" width="124" height="184" rx="16" fill="#c9cee6"/><rect x="-48" y="-70" width="96" height="156" rx="8" fill="${C.navy}"/>${[0, 1, 2, 3].map((i) => (i < bars ? `<rect x="-38" y="${46 - i * 36}" width="76" height="28" rx="5" fill="${c}"/>` : "")).join("")}`,
+  drop: (c = C.cyan) => `<path d="M0 -96C50 -30 70 6 70 36A70 70 0 0 1 -70 36C-70 6 -50 -30 0 -96Z" fill="${c}"/><path d="M-36 40A38 38 0 0 0 -8 72" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".6"/>`,
+  kettle: (c = "#c9cee6") => `<path d="M-64 90L-52 -30Q0 -56 52 -30L64 90Z" fill="${c}"/><path d="M-56 -8L-104 -34L-98 -50L-50 -30Z" fill="${c}"/><path d="M50 -22C110 -30 112 60 60 62" fill="none" stroke="${c}" stroke-width="15" stroke-linecap="round"/><rect x="-16" y="-64" width="32" height="20" rx="8" fill="#8f96b8"/><path d="M-100 -62q-10 -14 0 -26M-116 -56q-10 -14 0 -26" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".7"/>`,
+  tree: () => `<rect x="-14" y="20" width="28" height="80" fill="#8a5a1c"/><circle cx="0" cy="-40" r="60" fill="${C.green}"/><circle cx="-44" cy="-4" r="40" fill="${C.green}"/><circle cx="44" cy="-4" r="40" fill="${C.green}"/>`,
+  snow: (c = C.white) => `${[0, 60, 120].map((d) => `<g transform="rotate(${d})"><path d="M0 -96V96M-22 -74L0 -52L22 -74M-22 74L0 52L22 74" fill="none" stroke="${c}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></g>`).join("")}`,
+  bird: (c = C.cyan) => `<ellipse cx="-6" cy="10" rx="62" ry="44" fill="${c}"/><circle cx="48" cy="-36" r="32" fill="${c}"/><path d="M76 -40L108 -30L76 -22Z" fill="${C.gold}"/><circle cx="56" cy="-42" r="7" fill="${C.ink}"/><path d="M-60 0L-110 -24L-100 24Z" fill="${c}"/><path d="M-16 52V86M12 52V86" stroke="${C.gold}" stroke-width="8" stroke-linecap="round"/>`,
+  clock: (c = C.white) => `<circle r="90" fill="${c}"/><circle r="74" fill="${C.navy}"/><path d="M0 0V-52M0 0L34 20" stroke="${c}" stroke-width="12" stroke-linecap="round"/><circle r="8" fill="${C.yellow}"/>`,
+  transformer: (c = "#8f96b8") => `<rect x="-70" y="-30" width="140" height="126" rx="10" fill="${c}"/>${[-48, -24, 0, 24, 48].map((x) => `<rect x="${x - 6}" y="-12" width="12" height="92" rx="5" fill="#4d5478"/>`).join("")}${[-40, 0, 40].map((x) => `<rect x="${x - 8}" y="-84" width="16" height="56" rx="6" fill="#c9cee6"/><circle cx="${x}" cy="-88" r="11" fill="${C.yellow}"/>`).join("")}`,
+  cloud: (c = "#8f96b8") => `<circle cx="-46" cy="-30" r="44" fill="${c}"/><circle cx="6" cy="-52" r="54" fill="${c}"/><circle cx="58" cy="-26" r="40" fill="${c}"/><rect x="-90" y="-30" width="188" height="44" rx="22" fill="${c}"/><path d="M10 14L-26 62H0L-14 104L36 48H8L24 14Z" fill="${C.yellow}"/>`,
+  squirrel: (c = "#c98a3a") => `<path d="M-30 96C-110 80 -116 -30 -60 -66C-22 -90 6 -50 -18 -30C-44 -8 -40 40 -4 60Z" fill="#a86a22"/><ellipse cx="14" cy="40" rx="46" ry="58" fill="${c}"/><circle cx="40" cy="-34" r="34" fill="${c}"/><path d="M22 -60L28 -92L48 -64Z" fill="${c}"/><circle cx="52" cy="-40" r="7" fill="${C.ink}"/><circle cx="74" cy="-26" r="6" fill="${C.ink}"/><ellipse cx="44" cy="22" rx="16" ry="12" fill="#fbe7c4"/>`,
+  dam: () => `<rect x="-104" y="-36" width="110" height="132" fill="${C.cyan}"/><path d="M-4 -80H30L78 96H-4Z" fill="#c9cee6"/><path d="M40 20Q84 40 100 96H62Z" fill="${C.cyan}" opacity=".8"/><path d="M-96 -20h30M-52 -4h30M-96 20h30" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".6"/>`,
+  panel: () => `<path d="M-96 50L-56 -60H96L56 50Z" fill="#27306e" stroke="${C.cyan}" stroke-width="8" stroke-linejoin="round"/><path d="M-76 -5H76M-22 -60L-52 50M36 -60L6 50" stroke="${C.cyan}" stroke-width="5"/><path d="M-10 50V96M-50 96H30" stroke="#c9cee6" stroke-width="10" stroke-linecap="round"/>`,
+  amber: () => `<path d="M-70 40L-84 -20L-30 -80L50 -70L90 -10L60 60L-20 80Z" fill="${C.gold}"/><path d="M-30 -80L-10 -20L-84 -20M-10 -20L60 60M-10 -20L50 -70" stroke="#ffe08a" stroke-width="5" fill="none" opacity=".7"/><ellipse cx="14" cy="6" rx="12" ry="7" fill="#5d3d00"/>`,
+  server: (c = C.cyan) => `${[-70, -10, 50].map((y) => `<rect x="-84" y="${y}" width="168" height="48" rx="8" fill="${C.navy}" stroke="${c}" stroke-width="7"/><circle cx="-56" cy="${y + 24}" r="8" fill="${C.green}"/><path d="M-20 ${y + 24}H60" stroke="${c}" stroke-width="7" stroke-linecap="round"/>`).join("")}`,
 };
 const icon = (name, ...a) => (ICON[name] || ICON.person)(...a);
 const labelled = (x, y, s, name, label, a, o = {}) => G(x, y, s * pop(a), `${o.glow ? `<circle r="130" fill="${o.glow}" opacity=".25" filter="url(#bglow)"/>` : ""}${icon(name, ...(o.args || []))}`, `opacity="${o.opacity ?? 1}"`)
@@ -376,6 +398,101 @@ const BOARDS = {
       if (a <= 0) continue;
       body += da > 0 ? G(x, y, 0.4, `<circle r="74" fill="#3a4170"/>${T(0, 30, "✗", 90, { fill: "#8f96b8" })}`, `opacity="${lerp(1, 0.75, clamp(da / 0.3))}"`) : G(x, y, 0.4 * pop(a), icon("coin", C.gold, s.letter || "$")); }
     return svg(`${heading(s.title, 1)}${G(960, 290, pop(total), T(0, 0, s.total, 70, { fill: C.yellow }))}${body}${a1 > 0 ? G(960, 930, pop(a1 - 1), T(0, 0, s.dead, 78, { fill: C.red })) : ""}`);
+  },
+  // ---- electricity file ----
+  // A closed loop: a battery, a switch and a lamp, with the wire's own electrons drawn as dots.
+  //   0 switch open, nothing moves  1 switch closes: every dot starts to crawl at once and the lamp lights
+  //   2 the two speeds: the push goes round the loop in a flash, the dots crawl  3 switch opens, all of it stops
+  circuit(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), on = a1 > 0 && a3 < 0, x0 = 480, x1 = 1440, y0 = 330, y1 = 770, W = x1 - x0, H = y1 - y0, P = 2 * (W + H);
+    const at = (u) => { let d = ((u % 1) + 1) % 1 * P; if (d < W) return [x0 + d, y0]; d -= W; if (d < H) return [x1, y0 + d]; d -= H; if (d < W) return [x1 - d, y1]; return [x0, y1 - (d - W)]; };
+    const moved = on ? total * 0.012 : 0, sw = on ? 1 - ease(a1 / 0.25) : a3 > 0 ? ease(a3 / 0.25) : 1;
+    let dots = ""; for (let i = 0; i < 44; i++) { const [x, y] = at(i / 44 + (a3 > 0 ? 0 : moved)); if (Math.abs(x - 960) < 70 && y === y0) continue; dots += `<circle cx="${x}" cy="${y}" r="11" fill="${C.cyan}"/>`; }
+    const pulse = a2 > 0 && on ? (() => { const [x, y] = at((a2 * 1.6) % 1); return `<circle cx="${x}" cy="${y}" r="34" fill="${C.yellow}" opacity=".85" filter="url(#bglow)"/><circle cx="${x}" cy="${y}" r="13" fill="#fff"/>`; })() : "";
+    return svg(`${heading(s.title, 1)}<rect x="${x0}" y="${y0}" width="${W}" height="${H}" rx="30" fill="none" stroke="#4d5478" stroke-width="30"/>
+      <rect x="890" y="${y0 - 40}" width="140" height="80" fill="${C.navy}"/><circle cx="890" cy="${y0}" r="14" fill="${C.white}"/><circle cx="1030" cy="${y0}" r="14" fill="${C.white}"/>
+      <path d="M890 ${y0}L${890 + 140 * Math.cos(sw * 0.6)} ${y0 - 140 * Math.sin(sw * 0.6)}" stroke="${C.white}" stroke-width="14" stroke-linecap="round"/>${dots}${pulse}
+      <rect x="${x0 - 70}" y="460" width="140" height="180" fill="${C.navy}"/>${G(x0, 550, 0.95, icon("battery", C.green, 4))}${T(x0 - 190, 566, s.battery, 46, { font: "Elite" })}
+      <rect x="${x1 - 70}" y="470" width="140" height="170" fill="${C.navy}"/>${on ? `<circle cx="${x1}" cy="520" r="150" fill="${C.yellow}" opacity="${0.35 * clamp(a1 / 0.3)}" filter="url(#bglow)"/>` : ""}${G(x1, 550, 1, icon("bulb", on ? C.yellow : "#4d5478"))}${T(x1 + 190, 566, s.lamp, 46, { font: "Elite" })}
+      ${a2 > 0 ? `<g opacity="${clamp(a2 / 0.3)}">${T(960, 520, s.fast, 58, { fill: C.yellow })}${T(960, 620, s.slow, 58, { fill: C.cyan })}</g>` : ""}${caption((s.captions || [])[step], age, 930)}`);
+  },
+  // Water for electricity: a tank up high, a pipe, and what comes out of the end.
+  //   0 the tank's height is the pressure (volts)  1 what flows past each second is the current (amperes)
+  //   2 a narrow stretch of pipe is resistance (ohms): less comes out  3 lift the tank: more pressure, more flow, and the line under it
+  pipes(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), lift = a3 > 0 ? ease(a3 / 0.8) : 0, ty = 400 - 150 * lift, nar = a2 > 0 ? ease(a2 / 0.6) : 0;
+    const flow = (1 + 0.9 * lift) * (1 - 0.6 * nar), th = 70 - 44 * nar, n = Math.round(4 + 9 * flow); let drops = "";
+    for (let i = 0; i < n; i++) { const u = (i / n + total * 0.22 * flow) % 1, x = 620 + u * 860; drops += `<circle cx="${x}" cy="760" r="${x > 900 && x < 1180 ? 8 + 6 * (1 - nar) : 14}" fill="#dff6ff" opacity=".9"/>`; }
+    const pour = 14 + 26 * flow, tag = (x, y, t, a, c) => (a > 0 ? G(x, y, pop(a), `<rect x="-230" y="-48" width="460" height="96" rx="20" fill="${C.navy}" stroke="${c}" stroke-width="5"/>${T(0, 18, t, 50, { font: "Elite", fill: c })}`) : "");
+    return svg(`${heading(s.title, 1)}<rect x="330" y="${ty - 190}" width="300" height="230" rx="18" fill="${C.navy}" stroke="${C.line}" stroke-width="8"/><rect x="342" y="${ty - 150}" width="276" height="178" rx="10" fill="${C.cyan}"/>
+      <path d="M480 ${ty + 40}V760H1500" fill="none" stroke="#4d5478" stroke-width="86" stroke-linejoin="round"/><path d="M480 ${ty + 40}V760H1500" fill="none" stroke="${C.cyan}" stroke-width="62" stroke-linejoin="round"/>
+      ${nar > 0 ? `<path d="M900 716H1180V${716 + (62 - th * 62 / 70) / 2 + 13}H900ZM900 804H1180V${804 - (62 - th * 62 / 70) / 2 - 13}H900Z" fill="#4d5478"/>` : ""}${drops}
+      <path d="M1500 760Q1560 760 1566 1000" fill="none" stroke="${C.cyan}" stroke-width="${pour}" stroke-linecap="round"/><path d="M1450 930H1680L1650 1040H1480Z" fill="${C.navy}" stroke="${C.line}" stroke-width="8"/>
+      <path d="M250 760V${ty - 150}M232 ${ty - 126}L250 ${ty - 152}L268 ${ty - 126}M232 736L250 762L268 736" fill="none" stroke="${C.yellow}" stroke-width="7" stroke-linecap="round"/>
+      ${tag(960, 300 , s.volt, total - 0.4, C.yellow)}${tag(960, 600, s.amp, a1, "#dff6ff")}${tag(1040, 900, s.ohm, a2, C.pink)}${a3 > 0.8 ? `<g opacity="${clamp((a3 - 0.8) / 0.3)}">${T(960, 430, s.note, 60, { fill: C.green })}</g>` : ""}`);
+  },
+  // The two kinds of current as two traces with the charges that make them.
+  //   0 direct: a level line, the dots all go one way  1 alternating: a wave, the dots only rock back and forth  2 how many times a second
+  wave(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), x0 = 620, x1 = 1640, row = (y, title, sub, col, a, alt) => { if (a <= 0) return ""; const p = ease(a / 1.2); let d = "", dots = "";
+      for (let x = x0; x <= lerp(x0, x1, p); x += 6) d += `${d ? "L" : "M"}${x} ${y - (alt ? 78 * Math.sin((x - x0) / 80 - total * 5) : 60)}`;
+      for (let i = 0; i < 9; i++) { const x = alt ? x0 + 60 + i * 112 + 40 * Math.sin(total * 5) : x0 + ((i * 113 + total * 90) % (x1 - x0)); dots += `<circle cx="${x}" cy="${y + 120}" r="13" fill="${C.cyan}"/>`; }
+      return `<g opacity="${clamp(a / 0.25)}">${T(540, y - 10, title, 84, { anchor: "end", fill: col })}${T(540, y + 60, sub, 44, { anchor: "end", font: "Elite", fill: C.dim })}<path d="M${x0} ${y}H${x1}" stroke="${C.line}" stroke-opacity=".3" stroke-width="4" stroke-dasharray="10 12"/>
+        <path d="${d}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><rect x="${x0 - 16}" y="${y + 96}" width="${x1 - x0 + 32}" height="48" rx="24" fill="${C.navy}" stroke="#4d5478" stroke-width="5"/>${dots}</g>`; };
+    return svg(heading(s.title, 1) + row(370, s.dc, s.dcSub, C.green, total, false) + row(700, s.ac, s.acSub, C.pink, a1, true) + caption(a2 > 0 ? s.note : "", a2, 960));
+  },
+  // A generator: a magnet turning inside a coil of wire, and what turns it.
+  //   0 magnet and coil, still: nothing  1 the magnet turns: current in the wire, the lamp lights, the trace is a wave
+  //   2 the thing that turns it (a turbine on the same shaft)  3 the line under it
+  generator(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), spin = a1 > 0 ? total * 4.2 : 0, cx = 900, cy = 540, v = Math.sin(spin); let tr = "";
+    if (a1 > 0) for (let i = 0; i <= 60; i++) tr += `${i ? "L" : "M"}${1330 + i * 5} ${330 - 50 * Math.sin(spin - (60 - i) * 0.16)}`;
+    const coil = (y) => [0, 1, 2, 3, 4, 5].map((i) => `<ellipse cx="${cx - 150 + i * 60}" cy="${y}" rx="26" ry="62" fill="none" stroke="${a1 > 0 ? C.gold : "#a8742a"}" stroke-width="13"/>`).join("");
+    return svg(`${heading(s.title, 1)}${a2 > 0 ? `<g opacity="${clamp(a2 / 0.3)}"><path d="M330 ${cy}H${cx - 200}" stroke="#8f96b8" stroke-width="26"/>${G(330, cy, 1.5, `<g transform="rotate(${spin * 57.3})">${[0, 45, 90, 135, 180, 225, 270, 315].map((d) => `<path d="M0 0C26 -30 30 -70 8 -96L-8 -96C-6 -60 -10 -30 0 0Z" fill="${C.cyan}" transform="rotate(${d})"/>`).join("")}<circle r="24" fill="#c9cee6"/></g>`)}${T(330, 790, s.turn, 52, { font: "Elite", fill: C.cyan })}</g>` : ""}
+      ${coil(cy - 190)}${coil(cy + 190)}<path d="M${cx + 176} ${cy - 190}H1480V${cy - 60}M${cx + 176} ${cy + 190}H1480V${cy + 90}" fill="none" stroke="${a1 > 0 ? C.gold : "#a8742a"}" stroke-width="12" stroke-linejoin="round"/>
+      <g transform="translate(${cx} ${cy}) rotate(${spin * 57.3})"><rect x="-150" y="-52" width="150" height="104" rx="12" fill="${C.red}"/><rect x="0" y="-52" width="150" height="104" rx="12" fill="#3b6cff"/>${T(-76, 26, "N", 70, { fill: "#fff" })}${T(76, 26, "S", 70, { fill: "#fff" })}</g>
+      ${a1 > 0 ? `<circle cx="1480" cy="${cy - 20}" r="${120 + 40 * Math.abs(v)}" fill="${C.yellow}" opacity="${0.18 + 0.25 * Math.abs(v)}" filter="url(#bglow)"/><rect x="1310" y="250" width="340" height="160" rx="16" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".5" stroke-width="4"/><path d="${tr}" fill="none" stroke="${C.pink}" stroke-width="8" stroke-linecap="round"/>` : ""}
+      ${G(1480, cy + 10, 1.1, icon("bulb", a1 > 0 ? C.yellow : "#4d5478"))}${T(cx, cy + 340, s.magnet, 50, { font: "Elite", fill: C.dim })}${caption(a3 > 0 ? s.note : "", a3, 960)}`);
+  },
+  // The grid's balance: what the stations make on one pan, what people draw on the other, and the frequency as the needle.
+  // `states` holds one entry per step: { supply, demand, hz, stamp? }; the beam tips toward the heavier pan and the number follows.
+  balance(s, step, age, total) {
+    const st = s.states, k = Math.min(step, st.length - 1), cur = st[k], prev = st[Math.max(0, k - 1)], p = k === 0 ? 1 : ease(age / 1.1), mix = (f) => lerp(prev[f], cur[f], p);
+    const sup = mix("supply"), dem = mix("demand"), hz = mix("hz"), tilt = clamp((dem - sup) * 5, -14, 14), off = Math.abs(hz - (s.base || 50)) > 0.045, col = off ? (Math.abs(hz - (s.base || 50)) > 0.5 ? C.red : C.gold) : C.green;
+    const pan = (x, n, c, name, ic) => { let b = ""; const m = Math.round(n); for (let i = 0; i < m; i++) b += `<rect x="${-140 + (i % 4) * 72}" y="${-70 - Math.floor(i / 4) * 56}" width="64" height="48" rx="8" fill="${c}"/>`;
+      return `<g transform="translate(${x} 0)"><g transform="rotate(${-tilt})"><path d="M0 0V60M-170 60H170" stroke="#c9cee6" stroke-width="12" stroke-linecap="round" fill="none"/><g transform="translate(0 60)">${b}</g>${G(0, 190, 0.6, icon(ic, c))}${T(0, 310, name, 48, { font: "Elite" })}</g></g>`; };
+    return svg(`${heading(s.title, 1)}${G(960, 290, 1, `<rect x="-250" y="-76" width="500" height="150" rx="24" fill="${C.navy}" stroke="${col}" stroke-width="7"/>${T(-30, 44, hz.toFixed(2), 120, { fill: col })}${T(190, 40, "Hz", 50, { fill: col, font: "Elite" })}`)}
+      <path d="M960 500V900M860 900H1060" stroke="#8f96b8" stroke-width="22" stroke-linecap="round"/><g transform="translate(960 520) rotate(${tilt})"><path d="M-480 0H480" stroke="#c9cee6" stroke-width="18" stroke-linecap="round"/>${pan(-480, sup, C.yellow, s.supply, "plant")}${pan(480, dem, C.cyan, s.demand, "house")}</g><circle cx="960" cy="520" r="24" fill="${C.yellow}"/>
+      ${cur.stamp && p > 0.9 ? G(960, 810, pop(age - 1.1), `<g transform="rotate(-6)"><rect x="-300" y="-70" width="600" height="140" rx="20" fill="rgba(5,6,13,.9)" stroke="${cur.color || C.red}" stroke-width="10"/>${T(0, 32, cur.stamp, 84, { fill: cur.color || C.red })}</g>`) : ""}${caption(cur.note, age, 1000)}`);
+  },
+  // How a failure spreads through a grid of stations and cities joined by lines.
+  //   0 everything lit, power moving  1 one line trips  2 its load lands on the neighbours: they trip too, and the dark spreads out from there
+  //   3 all of it dark, and a stamp  4 the restart: one station that can start alone lights up, and the rest follow it slowly
+  cascade(s, step, age, total) {
+    const cols = 6, rows = 3, a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), a4 = since(4, step, age), f = s.fault ?? 8, b = s.start ?? 12, N = cols * rows;
+    const X = (i) => 360 + (i % cols) * 240, Y = (i) => 380 + Math.floor(i / cols) * 200, dist = (i, j) => Math.abs((i % cols) - (j % cols)) + Math.abs(Math.floor(i / cols) - Math.floor(j / cols));
+    const dark = (i) => (a2 > 0 ? a2 * 2.4 - dist(i, f) * 0.9 - 0.3 : -1), back = (i) => (a4 > 0 ? a4 * 1.1 - dist(i, b) * 0.9 : -1); let lines = "", nodes = "";
+    for (let i = 0; i < N; i++) for (const j of [i + 1, i + cols]) { if (j >= N || (j === i + 1 && j % cols === 0)) continue; const first = i === f && j === f + 1, dk = Math.min(dark(i), dark(j)), bk = Math.min(back(i), back(j));
+      const col = bk > 0 ? C.green : first && a1 > 0 ? C.red : dk > 0 ? "#2a2f55" : Math.max(dark(i), dark(j)) > 0 ? C.red : C.line, u = (total * 0.6 + i * 0.37) % 1;
+      lines += `<path d="M${X(i)} ${Y(i)}L${X(j)} ${Y(j)}" stroke="${col}" stroke-width="${col === C.red ? 12 : 8}" opacity="${col === C.line ? 0.55 : 1}"/>` + (col === C.line || col === C.green ? `<circle cx="${lerp(X(i), X(j), u)}" cy="${lerp(Y(i), Y(j), u)}" r="9" fill="${C.yellow}"/>` : "")
+        + (first && a1 > 0 && bk <= 0 ? G((X(i) + X(j)) / 2, Y(i), pop(a1), `<circle r="44" fill="${C.red}"/><path d="M-18 -18L18 18M18 -18L-18 18" stroke="#fff" stroke-width="12" stroke-linecap="round"/>`) : ""); }
+    for (let i = 0; i < N; i++) { const st = (s.stations || [0, 5, 12, 17]).includes(i), lit = back(i) > 0 ? true : dark(i) > 0 ? false : true, c = !lit ? "#3a4170" : back(i) > 0 ? C.green : st ? C.yellow : C.white;
+      nodes += (lit ? `<circle cx="${X(i)}" cy="${Y(i)}" r="60" fill="${c}" opacity=".22" filter="url(#bglow)"/>` : "") + G(X(i), Y(i), (st ? 0.5 : 0.42) * (i === b && a4 > 0 ? 1 + 0.25 * pop(a4) : 1), icon(st ? "plant" : "house", c)); }
+    return svg(`${heading(s.title, 1)}${lines}${nodes}${a3 > 0 && a4 < 0 ? G(960, 580, pop(a3), `<g transform="rotate(-6)"><rect x="-380" y="-90" width="760" height="180" rx="24" fill="rgba(5,6,13,.88)" stroke="${C.red}" stroke-width="12"/>${T(0, 40, s.stamp, 110, { fill: C.red })}</g>`) : ""}${caption((s.captions || [])[step], age, 990)}`);
+  },
+  // One day on a grid with a lot of sun: what people use, what the panels make, what is left for everything else, and what a battery does about it.
+  //   0 demand through the day  1 the sun's hump at midday  2 what is left: low at noon, a steep climb at sunset
+  //   3 a battery fills at noon and empties in the evening
+  duck(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), X = (h) => 300 + h * 55, Y = (v) => 820 - v * 480;
+    const dem = (h) => 0.52 + 0.12 * Math.exp(-((h - 9) ** 2) / 8) + 0.36 * Math.exp(-((h - 19.5) ** 2) / 7) + 0.1 * Math.exp(-((h - 14) ** 2) / 30), sol = (h) => 0.5 * Math.exp(-((h - 12.5) ** 2) / 9);
+    const bat = (h) => 0.2 * Math.exp(-((h - 12.5) ** 2) / 6) - 0.22 * Math.exp(-((h - 19.5) ** 2) / 4), path = (fn, upto = 24) => { let d = ""; for (let h = 0; h <= upto + 0.001; h += 0.25) d += `${d ? "L" : "M"}${X(h)} ${Y(fn(h))}`; return d; };
+    const p3 = a3 > 0 ? ease(a3 / 1.2) : 0, net = (h) => dem(h) - sol(h) + bat(h) * p3;
+    return svg(`${heading(s.title, 1)}<path d="M300 300V820H1620" fill="none" stroke="${C.line}" stroke-opacity=".5" stroke-width="5"/>${[[0, s.hours[0]], [6, s.hours[1]], [12, s.hours[2]], [18, s.hours[3]]].map(([h, t]) => T(X(h + 1.2), 880, t, 42, { font: "Elite", fill: C.dim })).join("")}
+      ${a1 > 0 ? `<path d="${path(sol)}L${X(24)} ${Y(0)}L${X(0)} ${Y(0)}Z" fill="${C.yellow}" opacity="${0.3 * clamp(a1 / 0.5)}"/><path d="${path(sol, 24 * ease(a1 / 1.2))}" fill="none" stroke="${C.yellow}" stroke-width="9"/>${G(X(12.5), Y(1.02), 0.5 * pop(a1), icon("sun"))}${T(X(12.5), Y(0.2), s.solar, 46, { font: "Elite", fill: C.yellow, opacity: a2 > 0 ? 0 : clamp(a1 - 0.5) })}` : ""}
+      <path d="${path(dem, 24 * ease(total / 1.6))}" fill="none" stroke="${C.white}" stroke-width="${a2 > 0 ? 6 : 11}" opacity="${a2 > 0 ? 0.45 : 1}" stroke-linecap="round"/>${total > 1.2 ? T(X(21.5), Y(0.98), s.demand, 46, { font: "Elite", opacity: a2 > 0 ? 0.5 : 1 }) : ""}
+      ${a2 > 0 ? `<path d="${path(net, 24 * ease(a2 / 1.4))}" fill="none" stroke="${C.pink}" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>${T(X(4.6), Y(0.36), s.net, 50, { font: "Elite", fill: C.pink, opacity: clamp(a2 - 0.8) })}` : ""}
+      ${a3 > 0 ? `${G(X(15.6), Y(0.5), 0.55 * pop(a3), icon("battery", C.green, 4))}<path d="M${X(13.4)} ${Y(0.3)}Q${X(16.5)} ${Y(1.05)} ${X(19)} ${Y(0.74)}" fill="none" stroke="${C.green}" stroke-width="8" stroke-dasharray="16 12" opacity="${clamp(a3 / 0.5)}"/><path d="M${X(19)} ${Y(0.74)}l-26 -6l14 24z" fill="${C.green}" opacity="${clamp(a3 / 0.5)}"/>${T(X(16.4), Y(1.02), s.battery, 46, { font: "Elite", fill: C.green, opacity: clamp(a3 - 0.6) })}` : ""}`);
   },
 };
 
