@@ -147,7 +147,7 @@
     "size": 56
    },
    "step": 2,
-   "host": "left",
+   "host": "right",
    "emote": "bored",
    "stepT": 36.92
   },
@@ -172,8 +172,7 @@
       "قلب الذرّة",
       "تقيل.. وثابت"
      ]
-    },
-    "note": "العكس يشدّوا بعض · واللي زي بعض يزقّوا بعض"
+    }
    },
    "step": 0,
    "stepT": 46.15,
@@ -201,8 +200,7 @@
       "قلب الذرّة",
       "تقيل.. وثابت"
      ]
-    },
-    "note": "العكس يشدّوا بعض · واللي زي بعض يزقّوا بعض"
+    }
    },
    "step": 1,
    "stepT": 55.25
@@ -228,11 +226,12 @@
       "قلب الذرّة",
       "تقيل.. وثابت"
      ]
-    },
-    "note": "العكس يشدّوا بعض · واللي زي بعض يزقّوا بعض"
+    }
    },
-   "step": 2,
-   "stepT": 57.62
+   "step": 1,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 55.25
   },
   {
    "t": 61.35,
@@ -261,13 +260,12 @@
       "قلب الذرّة",
       "تقيل.. وثابت"
      ]
-    },
-    "note": "العكس يشدّوا بعض · واللي زي بعض يزقّوا بعض"
+    }
    },
-   "step": 2,
+   "step": 1,
    "host": "right",
    "emote": "neutral",
-   "stepT": 57.62,
+   "stepT": 55.25,
    "shot": "show",
    "kind": "board"
   },
@@ -423,7 +421,7 @@
     "size": 58
    },
    "step": 2,
-   "host": "left",
+   "host": "right",
    "emote": "serious",
    "calm": true,
    "gesture": "pockets",
@@ -936,7 +934,7 @@
     ]
    },
    "step": 3,
-   "host": "left",
+   "host": "right",
    "emote": "serious",
    "calm": true,
    "gesture": "pockets",
@@ -1040,7 +1038,7 @@
     "size": 56
    },
    "step": 2,
-   "host": "left",
+   "host": "right",
    "emote": "grin",
    "stepT": 281.79
   },

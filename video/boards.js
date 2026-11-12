@@ -439,7 +439,7 @@ const BOARDS = {
       for (let i = 0; i < 9; i++) { const x = alt ? x0 + 60 + i * 112 + 40 * Math.sin(total * 5) : x0 + ((i * 113 + total * 90) % (x1 - x0)); dots += `<circle cx="${x}" cy="${y + 120}" r="13" fill="${C.cyan}"/>`; }
       return `<g opacity="${clamp(a / 0.25)}">${T(540, y - 10, title, 84, { anchor: "end", fill: col })}${T(540, y + 60, sub, 44, { anchor: "end", font: "Elite", fill: C.dim })}<path d="M${x0} ${y}H${x1}" stroke="${C.line}" stroke-opacity=".3" stroke-width="4" stroke-dasharray="10 12"/>
         <path d="${d}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><rect x="${x0 - 16}" y="${y + 96}" width="${x1 - x0 + 32}" height="48" rx="24" fill="${C.navy}" stroke="#4d5478" stroke-width="5"/>${dots}</g>`; };
-    return svg(heading(s.title, 1) + row(370, s.dc, s.dcSub, C.green, total, false) + row(700, s.ac, s.acSub, C.pink, a1, true) + caption(a2 > 0 ? s.note : "", a2, 960));
+    return svg(heading(s.title, 1) + row(370, s.dc, s.dcSub, C.green, total, false) + row(700, s.ac, s.acSub, C.pink, a1, true) + caption(a2 > 0 ? s.note : "", a2, 940));
   },
   // A generator: a magnet turning inside a coil of wire, and what turns it.
   //   0 magnet and coil, still: nothing  1 the magnet turns: current in the wire, the lamp lights, the trace is a wave
@@ -452,7 +452,7 @@ const BOARDS = {
       ${coil(cy - 190)}${coil(cy + 190)}<path d="M${cx + 176} ${cy - 190}H1480V${cy - 60}M${cx + 176} ${cy + 190}H1480V${cy + 90}" fill="none" stroke="${a1 > 0 ? C.gold : "#a8742a"}" stroke-width="12" stroke-linejoin="round"/>
       <g transform="translate(${cx} ${cy}) rotate(${spin * 57.3})"><rect x="-150" y="-52" width="150" height="104" rx="12" fill="${C.red}"/><rect x="0" y="-52" width="150" height="104" rx="12" fill="#3b6cff"/>${T(-76, 26, "N", 70, { fill: "#fff" })}${T(76, 26, "S", 70, { fill: "#fff" })}</g>
       ${a1 > 0 ? `<circle cx="1480" cy="${cy - 20}" r="${120 + 40 * Math.abs(v)}" fill="${C.yellow}" opacity="${0.18 + 0.25 * Math.abs(v)}" filter="url(#bglow)"/><rect x="1310" y="250" width="340" height="160" rx="16" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".5" stroke-width="4"/><path d="${tr}" fill="none" stroke="${C.pink}" stroke-width="8" stroke-linecap="round"/>` : ""}
-      ${G(1480, cy + 10, 1.1, icon("bulb", a1 > 0 ? C.yellow : "#4d5478"))}${T(cx, cy + 340, s.magnet, 50, { font: "Elite", fill: C.dim })}${caption(a3 > 0 ? s.note : "", a3, 960)}`);
+      ${G(1480, cy + 10, 1.1, icon("bulb", a1 > 0 ? C.yellow : "#4d5478"))}${T(cx, cy + 340, s.magnet, 50, { font: "Elite", fill: C.dim })}${caption(a3 > 0 ? s.note : "", a3, 950)}`);
   },
   // The grid's balance: what the stations make on one pan, what people draw on the other, and the frequency as the needle.
   // `states` holds one entry per step: { supply, demand, hz, stamp? }; the beam tips toward the heavier pan and the number follows.
@@ -463,7 +463,7 @@ const BOARDS = {
       return `<g transform="translate(${x} 0)"><g transform="rotate(${-tilt})"><path d="M0 0V60M-170 60H170" stroke="#c9cee6" stroke-width="12" stroke-linecap="round" fill="none"/><g transform="translate(0 60)">${b}</g>${G(0, 190, 0.6, icon(ic, c))}${T(0, 310, name, 48, { font: "Elite" })}</g></g>`; };
     return svg(`${heading(s.title, 1)}${G(960, 290, 1, `<rect x="-250" y="-76" width="500" height="150" rx="24" fill="${C.navy}" stroke="${col}" stroke-width="7"/>${T(-30, 44, hz.toFixed(2), 120, { fill: col })}${T(190, 40, "Hz", 50, { fill: col, font: "Elite" })}`)}
       <path d="M960 500V900M860 900H1060" stroke="#8f96b8" stroke-width="22" stroke-linecap="round"/><g transform="translate(960 520) rotate(${tilt})"><path d="M-480 0H480" stroke="#c9cee6" stroke-width="18" stroke-linecap="round"/>${pan(-480, sup, C.yellow, s.supply, "plant")}${pan(480, dem, C.cyan, s.demand, "house")}</g><circle cx="960" cy="520" r="24" fill="${C.yellow}"/>
-      ${cur.stamp && p > 0.9 ? G(960, 810, pop(age - 1.1), `<g transform="rotate(-6)"><rect x="-300" y="-70" width="600" height="140" rx="20" fill="rgba(5,6,13,.9)" stroke="${cur.color || C.red}" stroke-width="10"/>${T(0, 32, cur.stamp, 84, { fill: cur.color || C.red })}</g>`) : ""}${caption(cur.note, age, 1000)}`);
+      ${cur.stamp && p > 0.9 ? G(960, 810, pop(age - 1.1), `<g transform="rotate(-6)"><rect x="-300" y="-70" width="600" height="140" rx="20" fill="rgba(5,6,13,.9)" stroke="${cur.color || C.red}" stroke-width="10"/>${T(0, 32, cur.stamp, 84, { fill: cur.color || C.red })}</g>`) : ""}${caption(cur.note, age, 955)}`);
   },
   // How a failure spreads through a grid of stations and cities joined by lines.
   //   0 everything lit, power moving  1 one line trips  2 its load lands on the neighbours: they trip too, and the dark spreads out from there
@@ -478,7 +478,7 @@ const BOARDS = {
         + (first && a1 > 0 && bk <= 0 ? G((X(i) + X(j)) / 2, Y(i), pop(a1), `<circle r="44" fill="${C.red}"/><path d="M-18 -18L18 18M18 -18L-18 18" stroke="#fff" stroke-width="12" stroke-linecap="round"/>`) : ""); }
     for (let i = 0; i < N; i++) { const st = (s.stations || [0, 5, 12, 17]).includes(i), lit = back(i) > 0 ? true : dark(i) > 0 ? false : true, c = !lit ? "#3a4170" : back(i) > 0 ? C.green : st ? C.yellow : C.white;
       nodes += (lit ? `<circle cx="${X(i)}" cy="${Y(i)}" r="60" fill="${c}" opacity=".22" filter="url(#bglow)"/>` : "") + G(X(i), Y(i), (st ? 0.5 : 0.42) * (i === b && a4 > 0 ? 1 + 0.25 * pop(a4) : 1), icon(st ? "plant" : "house", c)); }
-    return svg(`${heading(s.title, 1)}${lines}${nodes}${a3 > 0 && a4 < 0 ? G(960, 580, pop(a3), `<g transform="rotate(-6)"><rect x="-380" y="-90" width="760" height="180" rx="24" fill="rgba(5,6,13,.88)" stroke="${C.red}" stroke-width="12"/>${T(0, 40, s.stamp, 110, { fill: C.red })}</g>`) : ""}${caption((s.captions || [])[step], age, 990)}`);
+    return svg(`${heading(s.title, 1)}${lines}${nodes}${a3 > 0 && a4 < 0 ? G(960, 580, pop(a3), `<g transform="rotate(-6)"><rect x="-380" y="-90" width="760" height="180" rx="24" fill="rgba(5,6,13,.88)" stroke="${C.red}" stroke-width="12"/>${T(0, 40, s.stamp, 110, { fill: C.red })}</g>`) : ""}${caption((s.captions || [])[step], age, 950)}`);
   },
   // One day on a grid with a lot of sun: what people use, what the panels make, what is left for everything else, and what a battery does about it.
   //   0 demand through the day  1 the sun's hump at midday  2 what is left: low at noon, a steep climb at sunset

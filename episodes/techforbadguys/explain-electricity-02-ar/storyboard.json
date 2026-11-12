@@ -300,8 +300,7 @@
      "Osaka · 1896",
      "مولّدات أمريكاني"
     ]
-   },
-   "note": "ولحد النهارده: نصين.. بينهم وصلة صغيرة"
+   }
   },
   "day": {
    "kind": "duck",
@@ -586,7 +585,7 @@
      "show": "board",
      "board": "loss",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "serious",
      "calm": true
     }
@@ -626,7 +625,7 @@
      "show": "board",
      "board": "bird",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "neutral"
     }
    ]
@@ -747,7 +746,7 @@
      "show": "board",
      "board": "europe",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "neutral"
     },
     {
@@ -783,7 +782,10 @@
     {
      "say": "ولحد النهارده البلد نصين. مابيتوصّلوش غير بمحطات تحويل خاصة.",
      "show": "board",
-     "board": "japan"
+     "board": "japan",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
     },
     {
      "say": "وسنة ألفين وحداشر، بعد الزلزال الكبير، الشرق كان محتاج كهربا والغرب عنده زيادة. واللي قدر يعدّي من الوصلة كان حتة صغيرة. والنور فضل يقطع بالدور عن Tokyo. <short pause> قرار شرا عمره أكتر من مية سنة.",

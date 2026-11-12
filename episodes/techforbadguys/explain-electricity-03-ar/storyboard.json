@@ -375,7 +375,7 @@
      "show": "board",
      "board": "us",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "neutral"
     },
     {
@@ -413,7 +413,7 @@
      "show": "board",
      "board": "india",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "serious"
     }
    ]
@@ -501,7 +501,7 @@
      "show": "board",
      "board": "enemies",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "worried"
     },
     {
@@ -606,7 +606,7 @@
      "show": "board",
      "board": "horns",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "proud"
     },
     {

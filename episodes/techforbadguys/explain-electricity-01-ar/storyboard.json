@@ -79,8 +79,7 @@
      "قلب الذرّة",
      "تقيل.. وثابت"
     ]
-   },
-   "note": "العكس يشدّوا بعض · واللي زي بعض يزقّوا بعض"
+   }
   },
   "spark": {
    "kind": "story",
@@ -350,7 +349,7 @@
      "show": "board",
      "board": "amber",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "bored"
     },
     {
@@ -366,7 +365,10 @@
     {
      "say": "والقاعدة بسيطة: العكس يشدّوا بعض. واللي زي بعض.. يزقّوا بعض.",
      "show": "board",
-     "board": "charge"
+     "board": "charge",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
     },
     {
      "say": "زي البشر بالظبط يا فندم. <short pause> بس الإلكترونات ماعندهاش محامين.",
@@ -434,7 +436,7 @@
      "show": "board",
      "board": "bolt",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "serious",
      "calm": true
     },
@@ -613,7 +615,7 @@
      "show": "board",
      "board": "scale",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "serious",
      "calm": true
     }
@@ -656,7 +658,7 @@
      "show": "board",
      "board": "body",
      "step": "hold",
-     "host": "left",
+     "host": "right",
      "emote": "grin"
     }
    ]
