@@ -443,6 +443,13 @@ so any frame can be rendered alone:
 | `vending` | a contract that runs itself, as a vending machine: coin in, rule checked, thing out |
 | `stake` | guarding the ledger with a deposit: lock coins, get drawn by lot, lose the deposit for cheating |
 | `graveyard` | a field of coins and how many of them are dead |
+| `circuit` | a closed loop of battery, switch and lamp: the switch closes, every electron crawls at once, the push races round, the switch opens |
+| `pipes` | water for electricity: the tank's height is voltage, the flow is current, a narrow stretch is resistance; then the tank is lifted |
+| `wave` | direct current as a level line and alternating current as a wave, with the charges that make each |
+| `generator` | a magnet turning inside a coil lights a lamp and draws a wave; then the turbine that turns it |
+| `balance` | the grid as a scale: supply on one pan, demand on the other, frequency as the number; one entry of `states` per step, with an optional stamp |
+| `cascade` | a grid of stations and cities: one line trips, the neighbours follow, all of it goes dark; then one station restarts it |
+| `duck` | one day on a sunny grid: demand, the solar hump, what is left for the other stations, and a battery moving noon to evening |
 
 In a storyboard, boards are named once under `boards` and used by beats:
 
