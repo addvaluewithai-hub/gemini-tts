@@ -48,6 +48,10 @@ const ICON = {
   headset: (c = C.white) => `<path d="M-72 20V-10A72 72 0 0 1 72 -10V20" fill="none" stroke="${c}" stroke-width="18"/><rect x="-96" y="6" width="44" height="74" rx="16" fill="${c}"/><rect x="52" y="6" width="44" height="74" rx="16" fill="${c}"/><path d="M74 80V92Q74 108 52 108H14" fill="none" stroke="${c}" stroke-width="10"/><rect x="-12" y="96" width="34" height="22" rx="10" fill="${c}"/>`,
   mask: (c = C.cyan) => `<rect x="-100" y="-74" width="200" height="148" rx="16" fill="${C.navy}" stroke="${c}" stroke-width="8"/><circle cx="0" cy="-16" r="30" fill="${c}"/><path d="M-52 62C-52 14 52 14 52 62Z" fill="${c}"/><rect x="-100" y="-30" width="200" height="10" fill="${C.pink}" opacity=".8"/><rect x="-60" y="18" width="150" height="8" fill="${C.pink}" opacity=".8"/><text x="62" y="-40" font-family="Anton" font-size="34" fill="${C.pink}">AI</text>`,
   flag: (c = C.red) => `<rect x="-58" y="-96" width="14" height="192" rx="7" fill="${C.white}"/><path d="M-44 -90H70L40 -46L70 -2H-44Z" fill="${c}"/>`,
+  frame: () => `<rect x="-96" y="-84" width="192" height="168" rx="8" fill="#b98a3e"/><rect x="-78" y="-66" width="156" height="132" fill="#27306e"/><circle cx="34" cy="-26" r="18" fill="${C.yellow}"/><path d="M-78 66L-24 -6L14 36L40 12L78 66Z" fill="${C.green}"/>`,
+  dog: () => `<path d="M-70 -60L-92 -104L-40 -84ZM70 -60L92 -104L40 -84Z" fill="#c98a3a"/><ellipse cx="0" cy="-10" rx="88" ry="80" fill="#e2a95a"/><ellipse cx="0" cy="26" rx="46" ry="38" fill="#fbe7c4"/><circle cx="-32" cy="-28" r="11" fill="${C.ink}"/><circle cx="32" cy="-28" r="11" fill="${C.ink}"/><ellipse cx="0" cy="8" rx="14" ry="10" fill="${C.ink}"/><path d="M-18 34Q0 50 18 34" fill="none" stroke="${C.ink}" stroke-width="6" stroke-linecap="round"/>`,
+  atom: (c = C.cyan) => `${[0, 60, 120].map((d) => `<ellipse rx="96" ry="34" fill="none" stroke="${c}" stroke-width="9" transform="rotate(${d})"/>`).join("")}<circle r="20" fill="${C.yellow}"/>`,
+  lock: (c = C.yellow) => `<path d="M-44 -10V-44A44 44 0 0 1 44 -44V-10" fill="none" stroke="${c}" stroke-width="20"/><rect x="-72" y="-14" width="144" height="110" rx="16" fill="${c}"/><circle cy="30" r="15" fill="${C.navy}"/><rect x="-6" y="34" width="12" height="32" fill="${C.navy}"/>`,
   ghost: (c = C.white) => `<circle cx="0" cy="-52" r="44" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><path d="M-72 90C-72 6 72 6 72 90" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><text y="-28" text-anchor="middle" font-family="Anton" font-size="64" fill="${c}">?</text>`,
 };
 const icon = (name, ...a) => (ICON[name] || ICON.person)(...a);
@@ -334,6 +338,44 @@ const BOARDS = {
     const ltr = s.dir === "ltr", card = (x, d, a, now) => (a <= 0 ? "" : `<g transform="translate(${x} 580) scale(${0.94 + 0.06 * pop(a)})" opacity="${clamp(a / 0.2) * (now ? 1 : 0.7)}"><rect x="-410" y="-300" width="820" height="600" rx="30" fill="${C.navy}" stroke="${d.color || C.line}" stroke-width="6"/>
       ${d.icon ? G(0, -196, 0.55, icon(d.icon, ...(d.args || []))) : ""}${T(0, d.icon ? -70 : -170, d.title, 72, { fill: d.color || C.yellow })}${(d.lines || []).map((l, i) => T(0, (d.icon ? 30 : -50) + i * 84, l, 46, { font: "Elite" })).join("")}</g>`);
     return svg(heading(s.title, 1) + card(ltr ? 500 : 1420, s.a, since(0, step, age), step === 0) + card(ltr ? 1420 : 500, s.b, since(1, step, age), step >= 1) + caption(s.note && step >= 2 ? s.note : "", since(2, step, age), 990));
+  },
+  // A contract that runs itself, as a vending machine: money in, the condition is met, the thing comes out. Nobody behind the counter.
+  //   0 the machine  1 a coin goes in  2 the rule is checked  3 it pays out
+  vending(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), mx = 960, my = 570;
+    const items = [0, 1, 2, 3, 4, 5].map((i) => { const gone = i === 4 && a3 > 0; return gone ? "" : G(mx - 150 + (i % 3) * 110, my - 190 + Math.floor(i / 3) * 150, 0.42, icon("file", "")); }).join("");
+    const cp = a1 > 0 ? ease(a1 / 0.8) : 0, drop = a3 > 0 ? ease(a3 / 0.6) : 0;
+    return svg(`${heading(s.title, 1)}<g transform="translate(0 ${(1 - pop(total)) * 40})"><rect x="${mx - 300}" y="${my - 330}" width="600" height="700" rx="30" fill="#232a63" stroke="${C.line}" stroke-width="6"/>
+      <rect x="${mx - 250}" y="${my - 280}" width="330" height="340" rx="14" fill="${C.ink}" stroke="${C.line}" stroke-opacity=".5" stroke-width="4"/>${items}
+      <rect x="${mx + 130}" y="${my - 260}" width="120" height="60" rx="10" fill="${C.ink}"/><rect x="${mx + 160}" y="${my - 236}" width="60" height="12" rx="6" fill="${C.yellow}"/>
+      <circle cx="${mx + 190}" cy="${my - 90}" r="46" fill="${a2 > 0 ? C.green : "#3a4170"}"/>${a2 > 0 ? T(mx + 190, my - 68, "✓", 60, { fill: "#fff" }) : ""}
+      <rect x="${mx - 250}" y="${my + 150}" width="500" height="150" rx="14" fill="${C.ink}"/>
+      ${a3 > 0 ? G(mx - 40, lerp(my + 30, my + 225, drop), 0.6, icon("file", "✓")) : ""}</g>
+      ${a1 > 0 && cp < 1 ? G(lerp(1560, mx + 190, cp), lerp(300, my - 232, cp), 0.6, icon("coin")) : ""}
+      ${a1 > 0 ? `<g opacity="${clamp(a1 / 0.3)}">${T(1560, 420, s.in, 50, { font: "Elite", fill: step === 1 ? C.yellow : C.dim })}</g>` : ""}
+      ${a2 > 0 ? `<g opacity="${clamp(a2 / 0.3)}">${T(1560, 500, s.rule, 50, { font: "Elite", fill: step === 2 ? C.yellow : C.dim })}</g>` : ""}
+      ${a3 > 0 ? `<g opacity="${clamp(a3 / 0.3)}">${T(1560, 580, s.out, 50, { font: "Elite", fill: C.yellow })}</g>` : ""}
+      ${T(360, 500, s.label || "", 54, { font: "Elite", fill: C.dim })}${caption((s.captions || [])[step], age, 990)}`);
+  },
+  // Guarding the ledger with a deposit instead of electricity: lock coins up, get picked by lot, lose the deposit for cheating.
+  //   0 everyone locks a stake  1 one is drawn and writes the page  2 a cheat's stake burns
+  stake(s, step, age, total) {
+    const st = s.stakes || [2, 5, 3, 1], n = st.length, xs = st.map((_, i) => 960 + (i - (n - 1) / 2) * 360), a1 = since(1, step, age), a2 = since(2, step, age), pick = s.pick ?? 1, cheat = s.cheat ?? 3;
+    const spot = a1 > 0 ? (a1 < 1.2 ? Math.floor(a1 * 7) % n : pick) : -1;
+    const body = xs.map((x, i) => { const burn = a2 > 0 && i === cheat ? ease(a2 / 1.2) : 0, won = a1 > 1.2 && i === pick;
+      const coins = Array.from({ length: st[i] }, (_, k) => G(x, 560 - k * 46, 0.42 * pop(total - 0.2 - i * 0.1 - k * 0.07), icon("coin", burn > 0 ? C.red : C.gold), `opacity="${1 - burn}"`)).join("");
+      return (i === spot ? `<ellipse cx="${x}" cy="560" rx="150" ry="230" fill="${C.yellow}" opacity=".16" filter="url(#bglow)"/>` : "") + G(x, 730, 0.9, icon("node", won ? C.green : burn > 0 ? C.red : C.cyan)) + coins
+        + (total > 0.8 && !(burn > 0) ? G(x + 70, 600, 0.26, icon("lock")) : "") + (won ? G(x, 560 - st[i] * 46 - 10, 0.5 * pop(a1 - 1.2), icon("coin", C.green, "+")) + T(x, 860, s.win, 46, { font: "Elite", fill: C.green }) : "")
+        + (burn > 0 ? T(x, 860, s.burn, 46, { font: "Elite", fill: C.red }) + G(x, 520, pop(a2), T(0, 30, "✗", 110, { fill: C.red })) : ""); }).join("");
+    return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age, 960));
+  },
+  // A field of coins, and how many of them are already dead.
+  graveyard(s, step, age, total) {
+    const cols = 12, rows = 4, a1 = since(1, step, age); let body = "";
+    for (let i = 0; i < cols * rows; i++) { const x = 300 + (i % cols) * 120, y = 420 + Math.floor(i / cols) * 110, a = total - 0.2 - rnd(i * 3) * 0.9, dead = rnd(i * 7 + 1) < (s.share ?? 0.57), da = dead && a1 > 0 ? a1 - rnd(i * 11) * 1.6 : -1;
+      if (a <= 0) continue;
+      body += da > 0 ? G(x, y, 0.4, `<circle r="74" fill="#3a4170"/>${T(0, 30, "✗", 90, { fill: "#8f96b8" })}`, `opacity="${lerp(1, 0.75, clamp(da / 0.3))}"`) : G(x, y, 0.4 * pop(a), icon("coin", C.gold, s.letter || "$")); }
+    return svg(`${heading(s.title, 1)}${G(960, 290, pop(total), T(0, 0, s.total, 70, { fill: C.yellow }))}${body}${a1 > 0 ? G(960, 930, pop(a1 - 1), T(0, 0, s.dead, 78, { fill: C.red })) : ""}`);
   },
 };
 

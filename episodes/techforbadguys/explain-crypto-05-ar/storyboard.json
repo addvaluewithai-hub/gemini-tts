@@ -1,0 +1,1152 @@
+{
+ "title": "تقرير الأرض: العملات المشفرة 5",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: Cryptocurrency, part 5 of 5. Everything that came after Bitcoin: Ethereum and smart contracts, proof of stake, tokens, stablecoins, DeFi, NFTs, memecoins and dead coins; how governments reacted; and the host's final assessment of the whole file.",
+  "",
+  "Facts are stated from general knowledge and from web research on 12 November 2026 (see explain-crypto-03-ar/plan.md for links), not from pages captured for this episode: Ethereum was proposed by Vitalik Buterin in late 2013 at 19 and launched in July 2015; in June 2016 about 60 million dollars was drained from The DAO through a flaw in its contract and the chain was forked to undo it; Ethereum moved to proof of stake on 15 September 2022 and its electricity use fell by more than 99 percent; the 2017 token sales raised billions and one of them, EOS, about 4 billion dollars; a validator stakes 32 ether; Tether is among the largest holders of US Treasury bills; more than 3 billion dollars was stolen from crypto protocols in 2022, most of it from DeFi (Chainalysis); stablecoin supply was about 300 billion dollars in October 2026; Tether said it froze about 1.5 billion dollars of USDT linked to the October 2026 Binance theft within about half an hour; Terra's stablecoin and its sister coin lost about 40 billion dollars in a week in May 2022 and its founder was sentenced to 15 years in December 2025; the US stablecoin law of July 2025 requires one-to-one reserves; a digital artwork sold for 69 million dollars in March 2021; the first tweet sold as an NFT for 2.9 million dollars in March 2021 and drew a top bid of about 280 dollars when relisted in April 2022; a 2023 study by dappGambl found 95 percent of NFT collections had no market value; Dogecoin was created in December 2013 as a joke, was worth close to 90 billion dollars in May 2021, and co-creator Billy Markus has said he sold his holdings in 2015 for about the price of a used car; the TRUMP coin launched on 17 January 2025, three days before the inauguration, peaked near 74 dollars and was at about 1.12 dollars in November 2026; CoinGecko counted about 20.2 million tokens launched by the end of 2025, 11.6 million of them dead; China banned trading and mining in 2021 and the EU's MiCA rules apply from the end of 2024; more than 100 countries are exploring central bank digital currencies (Atlantic Council tracker); a March 2026 paper from Google Quantum AI put the hardware needed to break bitcoin's signatures about twenty times below earlier estimates. It says plainly that nothing in it is advice."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "الملف اتقفل",
+   "next": "ملف ميداني جديد.. قريب",
+   "note": "اشترك علشان التقارير الجاية توصل"
+  }
+ },
+ "brand": {
+  "a": "تقرير",
+  "b": "الأرض",
+  "c": "",
+  "tagline": "ملف ميداني: العملات المشفرة"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "تقرير الأرض · ملف ميداني",
+   "title": "حديقة الحيوان",
+   "sub": "الجزء 5 من 5 · كل العملات التانية.. والحكم"
+  },
+  "grave0": {
+   "kind": "graveyard",
+   "title": "بعد بيتكوين",
+   "total": "20 مليون عملة",
+   "dead": "",
+   "share": 0
+  },
+  "vit": {
+   "kind": "story",
+   "title": "Ethereum",
+   "icon": "node",
+   "name": "دفتر بيشغّل برامج",
+   "lines": [
+    "2013: فكرة شاب عنده 19 سنة",
+    "2015: الشبكة اشتغلت",
+    "تاني أكبر عملة على الكوكب"
+   ]
+  },
+  "vend": {
+   "kind": "vending",
+   "title": "العقد الذكي",
+   "in": "تحط العملة",
+   "rule": "الشرط اتحقق",
+   "out": "التنفيذ تلقائي",
+   "label": "من غير بيّاع"
+  },
+  "dao": {
+   "kind": "story",
+   "title": "الكود هو القانون؟ · 2016",
+   "icon": "bolt",
+   "name": "ثغرة",
+   "lines": [
+    "عقد فيه غلطة",
+    "اتسحب منه 60 مليون دولار",
+    "الحل: رجّعوا الدفتر لورا"
+   ]
+  },
+  "stake": {
+   "kind": "stake",
+   "title": "إثبات الحصة",
+   "stakes": [
+    2,
+    5,
+    3,
+    1
+   ],
+   "pick": 1,
+   "cheat": 3,
+   "win": "كتب الصفحة: مكافأة",
+   "burn": "غش: الرهن اتحرق"
+  },
+  "power": {
+   "kind": "bars",
+   "title": "كهربا Ethereum",
+   "bars": [
+    {
+     "label": "قبل · تعدين",
+     "value": 100,
+     "text": "100%",
+     "color": "#ff4654"
+    },
+    {
+     "label": "بعد · رهن",
+     "value": 0.6,
+     "text": "أقل من 1%",
+     "color": "#58d68d"
+    }
+   ],
+   "note": "سبتمبر 2022 · في ليلة واحدة",
+   "every": 0.7
+  },
+  "pvs": {
+   "kind": "versus",
+   "title": "طريقتين للحراسة",
+   "a": {
+    "title": "إثبات الشغل",
+    "color": "#FFE66D",
+    "icon": "bolt",
+    "lines": [
+     "تحرق كهربا",
+     "الأقوى أجهزة يكسب"
+    ]
+   },
+   "b": {
+    "title": "إثبات الحصة",
+    "color": "#58d68d",
+    "icon": "lock",
+    "lines": [
+     "ترهن عملات",
+     "الأكبر رهن يكسب"
+    ]
+   }
+  },
+  "token": {
+   "kind": "story",
+   "title": "التوكن",
+   "icon": "file",
+   "name": "عملة في دقايق",
+   "lines": [
+    "أي حد يعمل واحدة",
+    "2017: مليارات لمشاريع على الورق",
+    "أغلبها.. لسه على الورق"
+   ],
+   "size": 56
+  },
+  "stable": {
+   "kind": "flow",
+   "title": "الدولار الرقمي",
+   "actors": [
+    {
+     "icon": "person",
+     "label": "إنت"
+    },
+    {
+     "icon": "bank",
+     "label": "الشركة",
+     "big": true
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "token": "cash",
+     "label": "دولار حقيقي"
+    },
+    {
+     "move": [
+      1,
+      0
+     ],
+     "label": "دولار رقمي"
+    },
+    {
+     "badges": [
+      "زرار تجميد"
+     ],
+     "at": 1
+    }
+   ]
+  },
+  "use": {
+   "kind": "rows",
+   "title": "بيستخدموه في إيه؟",
+   "items": [
+    {
+     "text": "تحويلات بين البلاد.. في دقايق",
+     "mark": "check"
+    },
+    {
+     "text": "تحويش بالدولار في بلد عملتها بتقع",
+     "mark": "check"
+    },
+    {
+     "text": "والتداول على المنصات",
+     "mark": "check"
+    }
+   ],
+   "note": "حوالي 300 مليار دولار · أكتوبر 2026"
+  },
+  "freeze": {
+   "kind": "story",
+   "title": "الزرار",
+   "icon": "lock",
+   "name": "تجميد",
+   "lines": [
+    "بعد سرقة Binance · 2026",
+    "اتجمّد 1.5 مليار دولار",
+    "في نص ساعة"
+   ]
+  },
+  "terra": {
+   "kind": "chart",
+   "title": "دولار من غير دولارات · 2022",
+   "points": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0.97,
+    0.7,
+    0.35,
+    0.12,
+    0.03,
+    0.01
+   ],
+   "stamp": "40 مليار",
+   "draw": 5,
+   "labels": [
+    {
+     "at": 2,
+     "text": "1$"
+    }
+   ]
+  },
+  "defi": {
+   "kind": "steps",
+   "title": "بنك.. من غير بنك",
+   "items": [
+    {
+     "icon": "node",
+     "label": "برنامج يسلّف",
+     "sub": "من غير موظف"
+    },
+    {
+     "icon": "exchange",
+     "label": "برنامج يبدّل",
+     "sub": "من غير شركة"
+    },
+    {
+     "icon": "bolt",
+     "label": "ثغرة؟",
+     "sub": "مفيش حد ترجع له"
+    }
+   ]
+  },
+  "nft": {
+   "kind": "story",
+   "title": "NFT · 2021",
+   "icon": "frame",
+   "name": "صورة رقمية",
+   "lines": [
+    "صورة بـ 69 مليون دولار",
+    "تغريدة بـ 2.9 مليون دولار",
+    "بعد سنة: أعلى عرض 280 دولار"
+   ],
+   "size": 56
+  },
+  "nft95": {
+   "kind": "meter",
+   "title": "بعد الحفلة · 2023",
+   "big": "95%",
+   "unit": "من مجموعات الـ NFT",
+   "value": 0.95,
+   "label": "بقت ماتساويش حاجة",
+   "note": "السطر في الدفتر فاضل. القيمة مشيت.",
+   "color": "#ff4654"
+  },
+  "doge": {
+   "kind": "story",
+   "title": "Dogecoin",
+   "icon": "dog",
+   "name": "نكتة",
+   "lines": [
+    "2013: اتعملت تريقة",
+    "2021: قيمتها ≈ 90 مليار دولار",
+    "ولسه بمليارات"
+   ]
+  },
+  "trump": {
+   "kind": "chart",
+   "title": "عملة باسم رئيس · 2025",
+   "points": [
+    1,
+    74,
+    45,
+    28,
+    16,
+    11,
+    9,
+    6,
+    4,
+    2,
+    1.1
+   ],
+   "stamp": "−98%",
+   "draw": 5,
+   "labels": [
+    {
+     "at": 1,
+     "text": "74$"
+    }
+   ]
+  },
+  "games": {
+   "kind": "versus",
+   "title": "لعبتين قديمتين",
+   "a": {
+    "title": "سحب السجادة",
+    "color": "#ff4654",
+    "lines": [
+     "يلمّ فلوس الناس",
+     "ويختفي"
+    ]
+   },
+   "b": {
+    "title": "النفخ والتفريغ",
+    "color": "#ff4fa3",
+    "lines": [
+     "يشتروا بدري",
+     "يعملوا دوشة",
+     "ويبيعوا لك"
+    ]
+   }
+  },
+  "grave": {
+   "kind": "graveyard",
+   "title": "حديقة الحيوان.. والمقبرة",
+   "total": "20 مليون عملة اتعملت",
+   "dead": "أكتر من نصهم.. مات",
+   "share": 0.57
+  },
+  "law": {
+   "kind": "rows",
+   "title": "الحكومات",
+   "items": [
+    {
+     "text": "الصين: ممنوع",
+     "mark": "x"
+    },
+    {
+     "text": "أوروبا: مسموح بقانون",
+     "mark": "check"
+    },
+    {
+     "text": "أمريكا: لسه بيتخانقوا",
+     "mark": "half"
+    },
+    {
+     "text": "وبلدك؟ راجع قانونها",
+     "mark": "flag"
+    }
+   ]
+  },
+  "cbdc": {
+   "kind": "versus",
+   "title": "رد الحكومات",
+   "a": {
+    "title": "بيتكوين",
+    "color": "#FFE66D",
+    "icon": "coin",
+    "lines": [
+     "الدفتر عند الكل",
+     "من غير حارس"
+    ]
+   },
+   "b": {
+    "title": "عملة البنك المركزي",
+    "color": "#35c8ff",
+    "icon": "bank",
+    "lines": [
+     "الدفتر عند واحد",
+     "والحارس شايف كل حاجة"
+    ]
+   }
+  },
+  "good": {
+   "kind": "rows",
+   "title": "اللي اشتغل",
+   "items": [
+    {
+     "text": "دفتر من غير صاحب.. 17 سنة ومااتزوّرش",
+     "mark": "check"
+    },
+    {
+     "text": "حاجة رقمية.. وماتتنسخش",
+     "mark": "check"
+    },
+    {
+     "text": "الدولار الرقمي بيتستخدم بجد",
+     "mark": "check"
+    }
+   ],
+   "size": 52
+  },
+  "bad": {
+   "kind": "rows",
+   "title": "اللي مااشتغلش",
+   "items": [
+    {
+     "text": "محدش بيشتري بيها عيش",
+     "mark": "x"
+    },
+    {
+     "text": "اللي من غير بنك.. لسه من غير بنك",
+     "mark": "x"
+    },
+    {
+     "text": "الوسيط رجع.. تلات مرات",
+     "mark": "x"
+    },
+    {
+     "text": "واتبنى حواليها أكبر كازينو",
+     "mark": "x"
+    }
+   ],
+   "size": 52
+  },
+  "open": {
+   "kind": "story",
+   "title": "أسئلة مفتوحة",
+   "icon": "atom",
+   "name": "كمبيوتر كمّي",
+   "lines": [
+    "يقدر في يوم يكسر المفاتيح؟",
+    "2026: المطلوب أصغر 20 مرة",
+    "وأقفال جديدة بتتجهّز"
+   ],
+   "size": 56
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "قاموس البشر",
+   "items": [
+    {
+     "word": "Altcoin",
+     "means": "أي عملة غير بيتكوين. يعني العشرين مليون"
+    },
+    {
+     "word": "Airdrop",
+     "means": "عملات بتتوزّع ببلاش.. علشان تجرّك"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of the last report in the file. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، التقرير الخامس والأخير في ملف العملات المشفرة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: كل اللي جه بعد بيتكوين.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "في أربع تقارير شرحنا بيتكوين: اتعمل ليه، بيشتغل إزاي، بيتمسك إزاي، وليه ليه تمن.",
+     "show": "board",
+     "board": "title",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "بس البشر ماوقفوش عند عملة واحدة. عملوا عشرين مليون.",
+     "show": "board",
+     "board": "grave0"
+    },
+    {
+     "say": "فيهم اللي بيشغّل برامج، واللي لازق في الدولار، واللي عليه صورة كلب. هقول لكم مين فيهم نفع، ومين مات. <short pause> وفي الآخر: حكمي النهائي على الملف كله.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "eth",
+   "story": {
+    "n": 1,
+    "tag": "دفتر بيشغّل برامج"
+   },
+   "style": "Explaining a clever idea simply, with a vending machine.",
+   "beats": [
+    {
+     "say": "سنة ألفين وتلتاشر، شاب عنده تسعتاشر سنة سأل: الدفتر ده ليه يسجّل فلوس بس؟ خلّوه يشغّل برامج.",
+     "show": "board",
+     "board": "vit"
+    },
+    {
+     "say": "وسنة ألفين وخمستاشر الشبكة اشتغلت. اسمها Ethereum.",
+     "show": "board",
+     "board": "vit"
+    },
+    {
+     "say": "وعملتها بقت تاني أكبر عملة على الكوكب.",
+     "show": "board",
+     "board": "vit"
+    },
+    {
+     "say": "البرنامج اللي بيتحط على الدفتر بيسمّوه عقد ذكي. وأبسط شرح ليه: مكنة المشروبات.",
+     "show": "board",
+     "board": "vend"
+    },
+    {
+     "say": "تحط العملة.",
+     "show": "board",
+     "board": "vend"
+    },
+    {
+     "say": "المكنة تتأكد إن الشرط اتحقق.",
+     "show": "board",
+     "board": "vend"
+    },
+    {
+     "say": "والحاجة تنزل لوحدها. من غير بيّاع، ومن غير ما حد يقدر يرجع في كلامه.",
+     "show": "board",
+     "board": "vend"
+    },
+    {
+     "say": "بنفس الطريقة يعملوا سلفة، أو تأمين، أو رهان. اتفاق بين اتنين مايعرفوش بعض.. والضامن برنامج. وكل عملية ليها رسم بيسمّوه الغاز.",
+     "show": "board",
+     "board": "vend",
+     "step": "hold",
+     "host": "left",
+     "emote": "proud"
+    },
+    {
+     "say": "وبعد Ethereum طلعت شبكات تانية بتنافسه: أسرع وأرخص. وكل واحدة ليها عملتها، وجمهورها، وخناقاتها.",
+     "show": "board",
+     "board": "vend",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "والبرنامج بيتنفذ زي ما اتكتب بالظبط. <short pause> حتى لو اتكتب غلط.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "سنة ألفين وستاشر، عقد كبير طلع فيه غلطة.",
+     "show": "board",
+     "board": "dao"
+    },
+    {
+     "say": "وواحد سحب منه ستين مليون دولار. من غير ما يكسر حاجة. هو بس قرا العقد أحسن منهم.",
+     "show": "board",
+     "board": "dao"
+    },
+    {
+     "say": "والبشر عملوا إيه؟ رجّعوا الدفتر لورا. فورك، زي اللي شفناه في التقرير التاني.",
+     "show": "board",
+     "board": "dao"
+    },
+    {
+     "say": "شعارهم كان: الكود هو القانون. <short pause> لحد ما الكود خد فلوسهم.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "stake",
+   "story": {
+    "n": 2,
+    "tag": "حراسة من غير كهربا"
+   },
+   "style": "Clear comparison, then a dry remark about the rich.",
+   "beats": [
+    {
+     "say": "وفاكرين مسابقة التعدين اللي بتحرق كهربا دولة؟ Ethereum استغنى عنها خالص. اللي عايز يكتب الصفحة بيحط عملاته رهن.",
+     "show": "board",
+     "board": "stake"
+    },
+    {
+     "say": "الشبكة تختار واحد بالقرعة. يكتب صح.. ياخد مكافأة.",
+     "show": "board",
+     "board": "stake"
+    },
+    {
+     "say": "يغش؟ رهنه يتحرق.",
+     "show": "board",
+     "board": "stake"
+    },
+    {
+     "say": "وعلشان تبقى حارس لازم ترهن اتنين وتلاتين عملة. يعني عشرات آلاف الدولارات. واللي مامعاهوش بيدّي عملاته لشركة ترهنها له. <short pause> أيوه يا فندم. وسيط تاني.",
+     "show": "board",
+     "board": "stake",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "بيسمّوها إثبات الحصة. وفي سبتمبر ألفين اتنين وعشرين، كهربا الشبكة نزلت أكتر من تسعة وتسعين في المية. في ليلة واحدة.",
+     "show": "board",
+     "board": "power"
+    },
+    {
+     "say": "يعني طريقتين لحراسة الدفتر. الأولى: اللي معاه أجهزة أكتر يكسب.",
+     "show": "board",
+     "board": "pvs"
+    },
+    {
+     "say": "والتانية: اللي راهن أكتر يكسب أكتر.",
+     "show": "board",
+     "board": "pvs"
+    },
+    {
+     "say": "يعني الغني بيزيد غنى. <short pause> البشر عندهم الاختراع ده من زمان. اسمه: الاقتصاد.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "token",
+   "story": {
+    "n": 3,
+    "tag": "عملة في دقايق"
+   },
+   "style": "Quick and unimpressed.",
+   "beats": [
+    {
+     "say": "وعلى الشبكات دي، أي حد يعمل عملة جديدة في دقايق. من غير شبكة، ومن غير تعدين. بيسمّوها توكن.",
+     "show": "board",
+     "board": "token"
+    },
+    {
+     "say": "سنة ألفين وسبعتاشر، شركات لمّت مليارات ببيع عملات لمشاريع لسه ماتعملتش.",
+     "show": "board",
+     "board": "token"
+    },
+    {
+     "say": "مشروع واحد منهم لمّ أربعة مليار دولار.. قبل ما يشتغل.",
+     "show": "board",
+     "board": "token",
+     "step": "hold",
+     "host": "left",
+     "emote": "skeptical"
+    },
+    {
+     "say": "وأغلبها.. ماتعملش لحد النهارده.",
+     "show": "board",
+     "board": "token",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "stable",
+   "story": {
+    "n": 4,
+    "tag": "الدولار الرقمي"
+   },
+   "style": "The one part that works, explained plainly, then its catch.",
+   "beats": [
+    {
+     "say": "وهنا الاختراع اللي نجح فعلاً يا فندم. <short pause> وهو أكتر واحد ممل فيهم.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "عملة سعرها دايماً دولار واحد. بيسمّوها عملة مستقرة. تدّي الشركة دولار حقيقي..",
+     "show": "board",
+     "board": "stable"
+    },
+    {
+     "say": "وتديك دولار رقمي. بيتحرك على الدفتر في دقايق. أي يوم، لأي بلد.",
+     "show": "board",
+     "board": "stable"
+    },
+    {
+     "say": "وبيستخدموه في تحويل الفلوس بين البلاد.",
+     "show": "board",
+     "board": "use"
+    },
+    {
+     "say": "وناس في بلاد عملتها بتقع، بيقبضوا ويحوّشوا بيه.",
+     "show": "board",
+     "board": "use"
+    },
+    {
+     "say": "وأغلبه شغال في التداول على المنصات.",
+     "show": "board",
+     "board": "use"
+    },
+    {
+     "say": "المتداول منه دلوقتي حوالي تلتمية مليار دولار. <short pause> ده الجزء اللي بيتستخدم كفلوس بجد.",
+     "show": "board",
+     "board": "use",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "وأكبر شركة فيهم بقت من أكبر اللي بيشتروا ديون الحكومة الأمريكية على الكوكب. <short pause> يعني الحاجة اللي اتعملت علشان تهرب من الدولار.. وصّلت الدولار لأماكن ماكانش بيوصلها.",
+     "show": "board",
+     "board": "use",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "بس خدوا بالكم: هنا فيه شركة. والشركة عندها زرار تجميد.",
+     "show": "board",
+     "board": "stable",
+     "step": 3
+    },
+    {
+     "say": "بعد سرقة Binance، الشركة اللي ورا أكبر عملة مستقرة جمّدت جزء من المسروق.",
+     "show": "board",
+     "board": "freeze"
+    },
+    {
+     "say": "مليار ونص دولار.",
+     "show": "board",
+     "board": "freeze"
+    },
+    {
+     "say": "في نص ساعة.",
+     "show": "board",
+     "board": "freeze"
+    },
+    {
+     "say": "حلو لو إنت اللي اتسرقت. <short pause> بس معناه إن اللي في جيبك.. في إيد حد تاني. يعني الدفتر رجع لحارسه.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "وفيه نوع حاول يثبّت السعر من غير دولارات حقيقية. بمعادلة.",
+     "show": "board",
+     "board": "terra"
+    },
+    {
+     "say": "سنة ألفين اتنين وعشرين المعادلة باظت. أربعين مليار دولار اتبخروا في أسبوع.",
+     "show": "board",
+     "board": "terra"
+    },
+    {
+     "say": "وصاحبها خد خمستاشر سنة سجن. وأمريكا بعدها عملت قانون: كل دولار رقمي لازم وراه دولار حقيقي.",
+     "show": "board",
+     "board": "terra",
+     "step": "hold",
+     "host": "right",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "defi",
+   "story": {
+    "n": 5,
+    "tag": "بنك من غير بنك"
+   },
+   "style": "Brisk, with the catch at the end.",
+   "beats": [
+    {
+     "say": "وبالعقود الذكية بنوا بنك من غير بنك. برنامج يسلّفك ويستلف منك.",
+     "show": "board",
+     "board": "defi"
+    },
+    {
+     "say": "وبرنامج يبدّل لك عملة بعملة. من غير شركة، ومن غير مواعيد.",
+     "show": "board",
+     "board": "defi"
+    },
+    {
+     "say": "بس لو البرنامج فيه ثغرة؟ مفيش حد ترجع له. <short pause> واتسرق من البرامج دي أكتر من تلاتة مليار دولار في سنة ألفين اتنين وعشرين لوحدها.",
+     "show": "board",
+     "board": "defi",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "nft",
+   "story": {
+    "n": 6,
+    "tag": "صورة بملايين"
+   },
+   "style": "Barely containing his amusement.",
+   "beats": [
+    {
+     "say": "وسنة ألفين واحد وعشرين، البشر اكتشفوا إن الدفتر ممكن يسجّل ملكية أي حاجة. <short pause> فسجّلوا عليه صور.",
+     "shot": "host",
+     "emote": "grin",
+     "gesture": "shrug"
+    },
+    {
+     "say": "صورة رقمية اتباعت بتسعة وستين مليون دولار.",
+     "show": "board",
+     "board": "nft"
+    },
+    {
+     "say": "وأول تغريدة في تاريخ موقع Twitter اتباعت بحوالي تلاتة مليون.",
+     "show": "board",
+     "board": "nft"
+    },
+    {
+     "say": "صاحبها عرضها للبيع بعد سنة. أعلى عرض جاله: ميتين وتمانين دولار.",
+     "show": "board",
+     "board": "nft"
+    },
+    {
+     "say": "ومشاهير اشتروا صور قرود بمئات الآلاف من الدولارات. ليه؟ نفس السبب القديم: حد تاني هيدفع أكتر.",
+     "show": "board",
+     "board": "nft",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "واللي اشترى ماكانش بيشتري الصورة. كان بيشتري سطر في الدفتر بيقول إنها بتاعته. <short pause> الصورة نفسها.. أي حد ينسخها. فاكرين مشكلة النسخ من التقرير الأول؟ لسه موجودة.",
+     "show": "board",
+     "board": "nft",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "وبعد سنتين، دراسة لقت إن خمسة وتسعين في المية من المجموعات دي..",
+     "show": "board",
+     "board": "nft95"
+    },
+    {
+     "say": "بقت ماتساويش حاجة.",
+     "show": "board",
+     "board": "nft95"
+    },
+    {
+     "say": "بس الفكرة رجعت لابسة بدلة: أسهم وسندات متسجّلة على الدفتر. وده اللي البورصات الكبيرة شغالة عليه دلوقتي.",
+     "show": "board",
+     "board": "nft95",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "meme",
+   "story": {
+    "n": 7,
+    "tag": "عملات النكتة"
+   },
+   "style": "Deadpan zoology: describing absurd species.",
+   "beats": [
+    {
+     "say": "ونوصل لأغرب قفص في الحديقة. سنة ألفين وتلتاشر، اتنين مبرمجين عملوا عملة تريقة على الموضوع كله. عليها صورة كلب.",
+     "show": "board",
+     "board": "doge"
+    },
+    {
+     "say": "سنة ألفين واحد وعشرين، النكتة وصلت قيمتها حوالي تسعين مليار دولار.",
+     "show": "board",
+     "board": "doge"
+    },
+    {
+     "say": "ولسه بتساوي مليارات.",
+     "show": "board",
+     "board": "doge"
+    },
+    {
+     "say": "وأغنى إنسان على الكوكب كان بيكتب عنها سطر على النت.. فالسعر يطلع. يكتب سطر تاني.. ينزل.",
+     "show": "board",
+     "board": "doge",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "واحد من اللي عملوها باع نصيبه بدري.. واشترى بيه عربية مستعملة. <short pause> ده أكتر إنسان فاهم المشروع.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وبعدها ظهرت مواقع تعمل عليها عملة في أقل من دقيقة، من غير ما تكتب سطر كود. حتى رئيس دولة عمل واحدة باسمه، قبل ما يستلم الحكم بتلات أيام.",
+     "show": "board",
+     "board": "trump"
+    },
+    {
+     "say": "وصلت أربعة وسبعين دولار. ونزلت تمانية وتسعين في المية.",
+     "show": "board",
+     "board": "trump"
+    },
+    {
+     "say": "واللعب هنا نوعين. سحب السجادة: صاحب العملة يلمّ فلوس الناس ويختفي.",
+     "show": "board",
+     "board": "games"
+    },
+    {
+     "say": "والنفخ والتفريغ: يشتروا بدري، يعملوا دوشة، وأول ما إنت تدخل.. هم يطلعوا.",
+     "show": "board",
+     "board": "games"
+    },
+    {
+     "say": "والحصيلة: عشرين مليون عملة اتعملت لحد آخر ألفين خمسة وعشرين.",
+     "show": "board",
+     "board": "grave"
+    },
+    {
+     "say": "أكتر من نصهم.. مات.",
+     "show": "board",
+     "board": "grave"
+    },
+    {
+     "say": "عمر العملة هنا أقصر من عمر علبة الزبادي. <short pause> والبشر لسه بيدوّروا على اللي جاية.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "law",
+   "story": {
+    "n": 8,
+    "tag": "الحكومات"
+   },
+   "style": "A short briefing on how rulers reacted.",
+   "beats": [
+    {
+     "say": "وحكوماتهم مش متفقة. الصين منعت.",
+     "show": "board",
+     "board": "law"
+    },
+    {
+     "say": "أوروبا سمحت بقانون منظِّم.",
+     "show": "board",
+     "board": "law"
+    },
+    {
+     "say": "وأمريكا لسه بتتخانق مع نفسها.",
+     "show": "board",
+     "board": "law"
+    },
+    {
+     "say": "يعني القانون بيختلف من بلد لبلد. وكل واحد منهم لازم يراجع قانون بلده قبل ما يقرّب.",
+     "show": "board",
+     "board": "law"
+    },
+    {
+     "say": "والحاجة الوحيدة اللي كلهم اتفقوا عليها: <short pause> الضرايب.",
+     "show": "board",
+     "board": "law",
+     "step": "hold",
+     "host": "left",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وردّ الحكومات: عملة رقمية من البنك المركزي نفسه. أكتر من مية دولة بتدرسها.",
+     "show": "board",
+     "board": "cbdc",
+     "step": 1
+    },
+    {
+     "say": "نفس التكنولوجيا تقريباً. بس عكس الفكرة بالظبط: <short pause> مش دفتر من غير حارس. حارس.. ومعاه الدفتر كله.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "verdict",
+   "story": {
+    "n": 9,
+    "tag": "الحكم"
+   },
+   "style": "The final assessment of the whole file. Measured, fair, a little grand; he has earned this.",
+   "beats": [
+    {
+     "say": "وبعد خمس تقارير، ده تقييمي النهائي للقيادة.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "اللي اشتغل. واحد: الاختراع نفسه حقيقي. دفتر من غير صاحب، شغال سبعتاشر سنة، ومحدش قدر يزوّر فيه سطر.",
+     "show": "board",
+     "board": "good"
+    },
+    {
+     "say": "اتنين: أول مرة في تاريخهم حاجة رقمية.. ماتتنسخش.",
+     "show": "board",
+     "board": "good"
+    },
+    {
+     "say": "تلاتة: الدولار الرقمي بيتستخدم بجد، خصوصاً في البلاد اللي بنوكها خذلت ناسها.",
+     "show": "board",
+     "board": "good"
+    },
+    {
+     "say": "واللي مااشتغلش. واحد: محدش بيشتري بيها عيش.",
+     "show": "board",
+     "board": "bad"
+    },
+    {
+     "say": "اتنين: المليار اللي من غير حساب بنك؟ أغلبهم لسه من غير حساب. اللي دخّل ناس كتير النظام كان التليفون.. مش البيتكوين.",
+     "show": "board",
+     "board": "bad"
+    },
+    {
+     "say": "تلاتة: الوسيط اللي هربوا منه رجع تلات مرات: منصة، وصندوق، وشركة دولار رقمي.",
+     "show": "board",
+     "board": "bad"
+    },
+    {
+     "say": "وأربعة: حوالين الاختراع اتبنى أكبر كازينو على الكوكب.",
+     "show": "board",
+     "board": "bad"
+    },
+    {
+     "say": "وللإنصاف: التكنولوجيا نفسها بتتسرّب للنظام القديم. بنوك وبورصات بتجرّب تسجّل معاملاتها على دفاتر من النوع ده.",
+     "show": "board",
+     "board": "bad",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "وفيه أسئلة لسه مفتوحة. أجهزة جديدة اسمها الكمبيوتر الكمّي، ممكن في يوم تكسر المفاتيح.",
+     "show": "board",
+     "board": "open"
+    },
+    {
+     "say": "وسنة ألفين ستة وعشرين، باحثين في Google قالوا إن ده محتاج أجهزة أصغر عشرين مرة من اللي كان متوقع.",
+     "show": "board",
+     "board": "open"
+    },
+    {
+     "say": "والمبرمجين بيجهّزوا أقفال جديدة. سباق.. ولسه ماخلصش.",
+     "show": "board",
+     "board": "open"
+    },
+    {
+     "say": "وسؤال تاني من التقرير التاني: لما جوايز التعدين تخلص.. مين هيدفع للحراس؟",
+     "show": "board",
+     "board": "open",
+     "step": "hold",
+     "host": "left",
+     "emote": "skeptical"
+    },
+    {
+     "say": "الخلاصة يا فندم: الاختراع عبقري. والبشر استخدموه زي ما بيستخدموا كل حاجة عبقرية: <short pause> ربعه علشان يحلّوا مشكلة.. وتلات أرباعه علشان يراهنوا.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وهل أنصح القيادة تشتري؟ <short pause> العميل Peek مش مخوّل يدّي نصايح استثمار. حتى لكوكبه.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "shrug"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 10,
+    "tag": "قاموس البشر"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "آخر كلمتين من قاموس البشر. Altcoin: أي عملة غير بيتكوين. يعني العشرين مليون كلهم.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "و Airdrop: عملات بتتوزّع ببلاش علشان تجرّك. <short pause> ومفيش حاجة ببلاش على الكوكب ده.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 11,
+    "tag": "قفل الملف"
+   },
+   "style": "Closing the whole file: summary, one sincere warning, and a slightly proud sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة الملف كله يا فندم. واحد: الفلوس دفتر، وبيتكوين وزّع الدفتر على الكل. اتنين: المفتاح هو الملكية، واللي يضيع مابيرجعش. تلاتة: السعر رهان، مش وعد. وأربعة: أغلب اللي جه بعد كده.. دوشة.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "خلاصة الملف",
+      "items": [
+       "الفلوس دفتر.. وبيتكوين وزّعه",
+       "المفتاح هو الملكية",
+       "السعر رهان.. مش وعد",
+       "وأغلب الباقي دوشة"
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "وآخر تنبيه: كل اللي قلته شرح، مش نصيحة. <short pause> واللي مايفهمش الحاجة.. مايحطّش فيها فلوسه.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "ملف العملات المشفرة اتقفل. خمس تقارير. والكوكب ده عنده حاجات تانية كتير محتاجة شرح.",
+     "shot": "host",
+     "emote": "proud",
+     "gesture": "present"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
