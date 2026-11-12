@@ -434,6 +434,15 @@ so any frame can be rendered alone:
 | `keys` | an address anyone may see and the key only its owner holds; the key signs a payment |
 | `story` | one person's story: a thing, a headline, and a line more each step |
 | `meter` | how much of a fixed supply is gone |
+| `dict` | two words from the humans' vocabulary, one per step: the word and what it means |
+| `fork` | who changes the rules: machines pick a rule book, and when they disagree the chain splits in two |
+| `trace` | coins hop between unnamed addresses until one meets a name; then the whole trail has one |
+| `rows` | a list that fills in a row at a time, each with a mark (`flag`, `x`, `check`, `half`), an optional `sub` line and `tag` |
+| `lever` | borrowed money: a small stake under a big bet, and the fall in price that takes all of it |
+| `versus` | two camps side by side, one per step |
+| `vending` | a contract that runs itself, as a vending machine: coin in, rule checked, thing out |
+| `stake` | guarding the ledger with a deposit: lock coins, get drawn by lot, lose the deposit for cheating |
+| `graveyard` | a field of coins and how many of them are dead |
 
 In a storyboard, boards are named once under `boards` and used by beats:
 
