@@ -36,6 +36,8 @@ const ICON = {
   bolt: (c = C.yellow) => `<path d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="${c}"/>`,
   trash: () => `<path d="M-64 -40H64L50 96H-50Z" fill="#8f96b8"/><rect x="-80" y="-66" width="160" height="26" rx="8" fill="#c9cee6"/><rect x="-24" y="-86" width="48" height="24" rx="6" fill="#c9cee6"/><path d="M-26 -14V70M0 -14V70M26 -14V70" stroke="#4d5478" stroke-width="9" stroke-linecap="round"/>`,
   gear: (c = C.line) => `<circle r="56" fill="none" stroke="${c}" stroke-width="26"/>${[0, 45, 90, 135, 180, 225, 270, 315].map((d) => `<rect x="-14" y="-92" width="28" height="34" rx="6" fill="${c}" transform="rotate(${d})"/>`).join("")}`,
+  tag: (c = C.yellow) => `<path d="M-96 -20L-20 -96H96V20L20 96Z" fill="${c}" transform="rotate(8)"/><circle cx="52" cy="-52" r="16" fill="${C.navy}"/><text x="-10" y="34" text-anchor="middle" font-family="Anton" font-size="78" fill="${C.ink}" transform="rotate(-37)">$</text>`,
+  safe: (c = "#8f96b8") => `<rect x="-92" y="-92" width="184" height="176" rx="16" fill="${c}"/><rect x="-70" y="-70" width="140" height="132" rx="8" fill="#c9cee6"/><circle r="34" fill="none" stroke="#4d5478" stroke-width="12"/><path d="M0 -34V-52M0 34V52M-34 0H-52M34 0H52" stroke="#4d5478" stroke-width="10" stroke-linecap="round"/><rect x="-76" y="84" width="34" height="16" fill="${c}"/><rect x="42" y="84" width="34" height="16" fill="${c}"/>`,
   ghost: (c = C.white) => `<circle cx="0" cy="-52" r="44" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><path d="M-72 90C-72 6 72 6 72 90" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><text y="-28" text-anchor="middle" font-family="Anton" font-size="64" fill="${c}">?</text>`,
 };
 const icon = (name, ...a) => (ICON[name] || ICON.person)(...a);
@@ -243,7 +245,7 @@ const BOARDS = {
   },
   // One person's story: a thing, a headline, and a line more each step.
   story(s, step, age, total) {
-    const lines = s.lines.map((l, i) => { const a = since(i, step, age); return a < 0 ? "" : `<g opacity="${clamp(a / 0.25)}" transform="translate(${(1 - ease(a / 0.35)) * 40} 0)">${T(1560, 430 + i * 120, l, 62, { anchor: "end", font: "Elite", fill: i === Math.min(step, s.lines.length - 1) ? C.yellow : C.white })}</g>`; }).join("");
+    const lines = s.lines.map((l, i) => { const a = since(i, step, age); return a < 0 ? "" : `<g opacity="${clamp(a / 0.25)}" transform="translate(${(1 - ease(a / 0.35)) * 40} 0)">${T(1560, 430 + i * 120, l, s.size || 62, { anchor: "end", font: "Elite", fill: i === Math.min(step, s.lines.length - 1) ? C.yellow : C.white })}</g>`; }).join("");
     return svg(`${heading(s.title, 1)}${labelled(430, 520, 2 * (1 + 0.02 * Math.sin(total * 3)), s.icon, s.name, total, { labelFill: C.dim, glow: C.cyan })}${lines}`);
   },
   // How much of a fixed supply is gone: a number, a bar filling, and a line or two.
@@ -252,6 +254,13 @@ const BOARDS = {
     return svg(`${heading(s.title, 1)}${G(960, 400, pop(total), T(0, 40, s.big, 210, { fill: C.yellow }) + T(0, 130, s.unit, 56, { font: "Elite" }))}
       <rect x="360" y="640" width="1200" height="70" rx="35" fill="${C.navy}" stroke="${C.line}" stroke-width="5"/><rect x="368" y="648" width="${1184 * p}" height="54" rx="27" fill="${s.color || C.green}"/>
       ${T(960, 780, Math.round(p * 100) + "% " + s.label, 54, { font: "Elite" })}${a1 > 0 ? `<g opacity="${clamp(a1 / 0.3)}">${T(960, 880, s.note, 54, { font: "Elite", fill: C.yellow })}</g>` : ""}`);
+  },
+  // Two words from the humans' vocabulary, one per step: the word, and what it means.
+  dict(s, step, age, total) {
+    const n = s.items.length, body = s.items.map((it, i) => { const a = since(i, step, age); if (a < 0) return ""; const y = 540 + (i - (n - 1) / 2) * 290 + 30, now = i === Math.min(step, n - 1);
+      return `<g transform="translate(960 ${y}) scale(${0.96 + 0.04 * pop(a)})" opacity="${clamp(a / 0.2) * (now ? 1 : 0.6)}"><rect x="-760" y="-120" width="1520" height="240" rx="26" fill="${C.navy}" stroke="${now ? C.yellow : C.line}" stroke-opacity="${now ? 1 : 0.4}" stroke-width="5"/>
+        ${T(0, -18, it.word, 92, { fill: C.yellow })}${T(0, 66, it.means, 48, { font: "Elite" })}</g>`; }).join("");
+    return svg(heading(s.title, 1, 140) + body);
   },
 };
 
