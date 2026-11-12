@@ -38,6 +38,16 @@ const ICON = {
   gear: (c = C.line) => `<circle r="56" fill="none" stroke="${c}" stroke-width="26"/>${[0, 45, 90, 135, 180, 225, 270, 315].map((d) => `<rect x="-14" y="-92" width="28" height="34" rx="6" fill="${c}" transform="rotate(${d})"/>`).join("")}`,
   tag: (c = C.yellow) => `<path d="M-96 -20L-20 -96H96V20L20 96Z" fill="${c}" transform="rotate(8)"/><circle cx="52" cy="-52" r="16" fill="${C.navy}"/><text x="-10" y="34" text-anchor="middle" font-family="Anton" font-size="78" fill="${C.ink}" transform="rotate(-37)">$</text>`,
   safe: (c = "#8f96b8") => `<rect x="-92" y="-92" width="184" height="176" rx="16" fill="${c}"/><rect x="-70" y="-70" width="140" height="132" rx="8" fill="#c9cee6"/><circle r="34" fill="none" stroke="#4d5478" stroke-width="12"/><path d="M0 -34V-52M0 34V52M-34 0H-52M34 0H52" stroke="#4d5478" stroke-width="10" stroke-linecap="round"/><rect x="-76" y="84" width="34" height="16" fill="${c}"/><rect x="42" y="84" width="34" height="16" fill="${c}"/>`,
+  exchange: (c = C.white) => `<rect x="-100" y="-84" width="200" height="140" rx="14" fill="${c}"/><rect x="-86" y="-70" width="172" height="112" rx="6" fill="${C.navy}"/><path d="M-52 -40V20M-12 -54V6M28 -30V28M64 -50V-4" stroke="${C.dim}" stroke-width="4"/><rect x="-62" y="-26" width="20" height="34" fill="${C.green}"/><rect x="-22" y="-42" width="20" height="30" fill="${C.red}"/><rect x="18" y="-14" width="20" height="30" fill="${C.green}"/><rect x="54" y="-40" width="20" height="24" fill="${C.green}"/><rect x="-14" y="56" width="28" height="24" fill="${c}"/><rect x="-56" y="78" width="112" height="14" rx="7" fill="${c}"/>`,
+  noundo: (c = C.white) => `<path d="M-58 20A62 62 0 1 0 -30 -54" fill="none" stroke="${c}" stroke-width="20" stroke-linecap="round"/><path d="M-66 -86L-22 -50L-72 -28Z" fill="${c}"/><path d="M-84 84L84 -84" stroke="${C.red}" stroke-width="24" stroke-linecap="round"/>`,
+  popcorn: () => `${[[-48, -58], [-10, -78], [34, -70], [58, -44], [-66, -30], [10, -44], [-26, -42]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="27" fill="#fff3c4"/>`).join("")}<path d="M-78 -26H78L58 100H-58Z" fill="#f4f4f4"/><path d="M-52 -26L-40 100H-58L-78 -26ZM-12 -26L-8 100H-26L-34 -26ZM30 -26L24 100H8L10 -26ZM78 -26L58 100H42L54 -26Z" fill="${C.red}"/>`,
+  cards: () => `<g transform="rotate(-14)"><rect x="-78" y="-88" width="120" height="170" rx="14" fill="${C.paper}"/><text x="-18" y="26" text-anchor="middle" font-family="Anton" font-size="90" fill="${C.red}">♦</text></g><g transform="rotate(12) translate(34 6)"><rect x="-60" y="-88" width="120" height="170" rx="14" fill="#fff"/><rect x="-60" y="-88" width="120" height="170" rx="14" fill="none" stroke="#cfc8b4" stroke-width="5"/><text y="26" text-anchor="middle" font-family="Anton" font-size="90" fill="${C.ink}">♠</text></g>`,
+  crown: (c = C.gold) => `<path d="M-90 60L-104 -50L-46 -2L0 -78L46 -2L104 -50L90 60Z" fill="${c}"/><rect x="-90" y="60" width="180" height="26" rx="8" fill="#ffe08a"/><circle cx="-104" cy="-56" r="13" fill="#ffe08a"/><circle cx="0" cy="-84" r="13" fill="#ffe08a"/><circle cx="104" cy="-56" r="13" fill="#ffe08a"/>`,
+  pyramid: (c = C.yellow) => `<path d="M0 -96L104 88H-104Z" fill="${c}"/><path d="M-36 -32H36M-70 28H70" stroke="${C.navy}" stroke-width="9"/>${[[0, -56], [-22, 2], [22, 2], [-48, 62], [0, 62], [48, 62]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="11" fill="${C.navy}"/>`).join("")}`,
+  heart: (c = C.pink) => `<path d="M0 84C-120 0 -110 -84 -52 -84C-22 -84 0 -62 0 -40C0 -62 22 -84 52 -84C110 -84 120 0 0 84Z" fill="${c}"/>`,
+  headset: (c = C.white) => `<path d="M-72 20V-10A72 72 0 0 1 72 -10V20" fill="none" stroke="${c}" stroke-width="18"/><rect x="-96" y="6" width="44" height="74" rx="16" fill="${c}"/><rect x="52" y="6" width="44" height="74" rx="16" fill="${c}"/><path d="M74 80V92Q74 108 52 108H14" fill="none" stroke="${c}" stroke-width="10"/><rect x="-12" y="96" width="34" height="22" rx="10" fill="${c}"/>`,
+  mask: (c = C.cyan) => `<rect x="-100" y="-74" width="200" height="148" rx="16" fill="${C.navy}" stroke="${c}" stroke-width="8"/><circle cx="0" cy="-16" r="30" fill="${c}"/><path d="M-52 62C-52 14 52 14 52 62Z" fill="${c}"/><rect x="-100" y="-30" width="200" height="10" fill="${C.pink}" opacity=".8"/><rect x="-60" y="18" width="150" height="8" fill="${C.pink}" opacity=".8"/><text x="62" y="-40" font-family="Anton" font-size="34" fill="${C.pink}">AI</text>`,
+  flag: (c = C.red) => `<rect x="-58" y="-96" width="14" height="192" rx="7" fill="${C.white}"/><path d="M-44 -90H70L40 -46L70 -2H-44Z" fill="${c}"/>`,
   ghost: (c = C.white) => `<circle cx="0" cy="-52" r="44" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><path d="M-72 90C-72 6 72 6 72 90" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><text y="-28" text-anchor="middle" font-family="Anton" font-size="64" fill="${c}">?</text>`,
 };
 const icon = (name, ...a) => (ICON[name] || ICON.person)(...a);
@@ -278,6 +288,32 @@ const BOARDS = {
         if (a3 > 0) split += `<g opacity="${clamp(a3 / 0.3)}">${T(1400, y + 22, sign < 0 ? s.a : s.b, 60, { anchor: "start", fill: c })}</g>`; }
       if (a3 > 0 && s.year) split += G(580, 900, pop(a3), T(0, 0, s.year, 80, { fill: C.dim })); }
     return svg(`${heading(s.title, 1)}<g opacity="${dimN}">${nodes}</g>${common}${split}${caption((s.captions || [])[step], age, 960)}`);
+  },
+  // The ledger never forgets: coins hop between unnamed addresses until one of them meets a name; then the whole trail has one.
+  //   0 the hops  1 an address is tied to a person  2 the trail lights up backwards
+  trace(s, step, age, total) {
+    const n = 5, P = Array.from({ length: n }, (_, i) => [330 + i * 290, 500 + (i % 2 ? 100 : -80)]), a1 = since(1, step, age), a2 = since(2, step, age);
+    const hot = (i) => (a2 > 0 ? a2 > (n - 1 - i) * 0.4 : a1 > 0 && i === n - 1);
+    let body = "";
+    for (let i = 0; i < n - 1; i++) { const a = total - 0.3 - i * 0.3, red = a2 > (n - 2 - i) * 0.4 + 0.2 && a2 > 0; if (a <= 0) continue; const [x1, y1] = P[i], [x2, y2] = P[i + 1], p = ease(a / 0.3);
+      body += `<path d="M${x1} ${y1}L${lerp(x1, x2, p)} ${lerp(y1, y2, p)}" stroke="${red ? C.red : C.line}" stroke-width="8" stroke-dasharray="16 12" opacity=".8"/>`; }
+    if (step === 0 && total > 1.6) { const t = ((total - 1.6) * 0.9) % (n - 1), k = Math.floor(t), f = ease(t - k); body += G(lerp(P[k][0], P[k + 1][0], f), lerp(P[k][1], P[k + 1][1], f), 0.5, icon("coin")); }
+    P.forEach(([x, y], i) => { const a = total - i * 0.3; if (a <= 0) return; const h = hot(i), named = (i === n - 1 && a1 > 0.3) || (i === 0 && a2 > (n - 1) * 0.4 + 0.3);
+      body += G(x, y, pop(a), `<circle r="78" fill="${C.navy}" stroke="${h ? C.red : C.cyan}" stroke-width="8"/>${named ? G(0, 4, 0.5, icon("person", C.red)) : T(0, 30, "?", 86, { fill: h ? C.red : C.cyan })}`)
+        + T(x, y + 132, named ? (i === 0 ? s.owner : s.name) : (s.codes || [])[i] || fake("a" + i).slice(0, 6) + "…", named ? 48 : 36, { font: "Elite", fill: named ? C.yellow : C.dim }); });
+    if (a1 > 0) body += G(P[n - 1][0], P[n - 1][1] - 190, pop(a1), `<rect x="-150" y="-52" width="300" height="104" rx="16" fill="${C.paper}"/><circle cx="-92" cy="-6" r="24" fill="#8f96b8"/><path d="M-126 40C-126 6 -58 6 -58 40Z" fill="#8f96b8"/>${T(40, 16, s.id || "ID", 50, { fill: C.ink })}`);
+    return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age, 900));
+  },
+  // A list that fills in a row at a time, each row with a mark: a red flag, a cross, a tick or a "sort of".
+  rows(s, step, age) {
+    const n = s.items.length, rh = Math.min(160, 660 / n), y0 = 590 - (n * rh) / 2, ltr = s.dir === "ltr", W = 1380, x = 960 - W / 2;
+    const mark = (m) => (m === "flag" ? G(0, 0, 0.42, icon("flag")) : m === "check" ? `<circle r="40" fill="${C.green}"/>${T(0, 22, "✓", 58, { fill: "#fff" })}` : m === "half" ? `<circle r="40" fill="${C.gold}"/>${T(0, 20, "~", 70, { fill: C.ink })}` : m === "x" ? `<circle r="40" fill="${C.red}"/><path d="M-17 -17L17 17M17 -17L-17 17" stroke="#fff" stroke-width="11" stroke-linecap="round"/>` : `<circle r="16" fill="${C.cyan}"/>`);
+    const body = s.items.map((it, i) => { const a = since(i, step, age); if (a < 0) return ""; const y = y0 + i * rh + rh / 2, now = i === Math.min(step, n - 1), mx = ltr ? x + 80 : x + W - 80, ma = a - (it.late ? 0.6 : 0);
+      return `<g opacity="${clamp(a / 0.2) * (now ? 1 : 0.62)}" transform="translate(${(1 - ease(a / 0.3)) * (ltr ? -40 : 40)} 0)"><rect x="${x}" y="${y - rh / 2 + 10}" width="${W}" height="${rh - 20}" rx="20" fill="${C.navy}" stroke="${now ? C.yellow : C.line}" stroke-opacity="${now ? 0.9 : 0.3}" stroke-width="4"/>
+        ${ma > 0 ? G(mx, y, pop(ma), mark(it.mark)) : ""}${T(ltr ? x + 160 : x + W - 160, y + (it.sub ? -6 : 18), it.text, s.size || 56, { anchor: ltr ? "start" : "end", font: "Elite", fill: now ? C.white : C.dim })}
+        ${it.sub ? T(ltr ? x + 160 : x + W - 160, y + 42, it.sub, 36, { anchor: ltr ? "start" : "end", font: "Elite", fill: C.dim }) : ""}
+        ${it.tag ? T(ltr ? x + W - 50 : x + 50, y + 18, it.tag, 50, { anchor: ltr ? "end" : "start", fill: it.tagFill || C.yellow }) : ""}</g>`; }).join("");
+    return svg(heading(s.title, 1) + body + caption(s.note && step >= n ? s.note : "", since(n, step, age), 990));
   },
 };
 

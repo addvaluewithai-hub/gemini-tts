@@ -10,7 +10,7 @@
  "notes": [
   "Earth Report field file: Cryptocurrency, part 2 of 5. How the shared ledger is written and guarded: fingerprints (hashes), pages chained by them, mining as a guessing race, why forging is too expensive, the energy cost, the halving and the 21 million cap, who can change the rules (forks, the 2017 block size dispute and Bitcoin Cash), and where mining is concentrated.",
   "",
-  "Facts are stated from general knowledge, not from pages captured for this episode: a block about every ten minutes; difficulty adjusts about every two weeks; the reward began at 50 BTC and halves about every four years (25 in 2012, 12.5 in 2016, 6.25 in 2020, 3.125 in 2024); supply is capped at 21 million with the last coin expected around 2140; about 95% is mined by late 2026; the network's yearly electricity use is in the range of a mid-sized country by Cambridge University's estimates; the 20 millionth coin was mined on 9 March 2026; the whole network makes about 10 to the 21 guesses a second (about one zettahash); by Hashrate Index estimates for October 2026 the United States has about 36 percent of mining, Russia 18 and China about 12 despite its 2021 ban; the two largest pools (Foundry USA and AntPool) find about half of all blocks; Bitcoin Cash split off on 1 August 2017 and in August 2010 a bug let someone create about 184 billion coins and the network replaced that block within about five hours; Cambridge put the network at about 0.5 percent of world electricity in 2025; the SegWit2x block size increase backed by most miners and many companies was abandoned that November. The fingerprints shown on screen are stand-ins, not real hashes. No current prices are quoted, and it says it is not investment advice."
+  "Facts are stated from general knowledge, not from pages captured for this episode: a block about every ten minutes; difficulty adjusts about every two weeks; the reward began at 50 BTC and halves about every four years (25 in 2012, 12.5 in 2016, 6.25 in 2020, 3.125 in 2024); supply is capped at 21 million with the last coin expected around 2140; about 95% is mined by late 2026; the network's yearly electricity use is in the range of a mid-sized country by Cambridge University's estimates; the 20 millionth coin was mined on 9 March 2026; the whole network makes about 10 to the 21 guesses a second (about one zettahash); by Hashrate Index estimates for October 2026 the United States has about 36 percent of mining, Russia 18 and China about 12 despite its 2021 ban; the two largest pools (Foundry USA and AntPool) find about half of all blocks; Bitcoin Cash split off on 1 August 2017 and fees per transfer have averaged tens of dollars on congested days (about 55 dollars in December 2017, over 100 on the April 2024 halving day); in August 2010 a bug let someone create about 184 billion coins and the network replaced that block within about five hours; Cambridge put the network at about 0.5 percent of world electricity in 2025; the SegWit2x block size increase backed by most miners and many companies was abandoned that November. The fingerprints shown on screen are stand-ins, not real hashes. No current prices are quoted, and it says it is not investment advice."
  ],
  "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
  "settings": {
@@ -464,11 +464,19 @@
      "emote": "skeptical"
     },
     {
-     "say": "وعلشان السرعة بنوا فوقها شبكة تانية للمبالغ الصغيرة، اسمها Lightning. تدفع فوراً، والحساب يتقفل على الدفتر الكبير بعدين. <short pause> زي الحساب المفتوح عند البقال.",
+     "say": "ولما الشبكة تتزحم، العمولة بتولّع. في أيام الزحمة وصلت لعشرات الدولارات على التحويل الواحد. <short pause> علشان كده محدش بيشتري بيها قهوة.",
      "show": "board",
      "board": "trip",
      "step": "hold",
      "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "وعلشان السرعة بنوا فوقها شبكة تانية للمبالغ الصغيرة، اسمها Lightning. تدفع فوراً، والحساب يتقفل على الدفتر الكبير بعدين. <short pause> زي الحساب المفتوح عند البقال.",
+     "show": "board",
+     "board": "trip",
+     "step": "hold",
+     "host": "right",
      "emote": "smug"
     }
    ]
@@ -538,6 +546,14 @@
      "step": "hold",
      "host": "left",
      "emote": "neutral"
+    },
+    {
+     "say": "والحسبة بسيطة: الجهاز اللي كهربته أغلى من جايزته.. بيتقفل. فالمناجم بتجري ورا أرخص كهربا على الكوكب: سدود، غاز كان بيتحرق في الهوا، وحتى براكين.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
     },
     {
      "say": "وأغلب التعدين كان في الصين، لحد ما منعته سنة ألفين واحد وعشرين. فالأجهزة اتشحنت على أمريكا وروسيا. <short pause> المناجم دي بتتنقل في كراتين.",
@@ -635,6 +651,14 @@
      "step": "hold",
      "host": "left",
      "emote": "neutral"
+    },
+    {
+     "say": "والأجهزة نفسها بتتغيّر كل كام سنة، لأن الأحدث بيكسب. <short pause> فالحراسة دي بتطلّع كمان جبل خردة.",
+     "show": "board",
+     "board": "energy",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
     }
    ]
   },

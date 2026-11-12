@@ -1,0 +1,1046 @@
+{
+ "title": "تقرير الأرض: العملات المشفرة 3",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: Cryptocurrency, part 3 of 5. How humans own and use the coins, and how they lose them: addresses and private keys, wallets, buying and sending, why the ledger is not anonymous, exchanges as the bank returning, lost keys, and the common frauds with their warning signs.",
+  "",
+  "Facts are stated from general knowledge and from web research on 12 November 2026 (see explain-crypto-03-ar/plan.md for links), not from pages captured for this episode: about 10 to the 77 possible private keys; in September 2023 Paxos paid about 500,000 dollars in fees on a transfer of about 2,000 dollars and the pool F2Pool returned it; Silk Road ran from 2011 until its founder Ross Ulbricht was arrested in a San Francisco public library in October 2013, he was sentenced to life in 2015 and pardoned in January 2025; James Zhong took about 50,000 BTC from Silk Road in 2012 and they were found in November 2021, some on a device in a popcorn tin; about 120,000 BTC were stolen from Bitfinex in 2016 and a married couple was arrested in 2022; Mt. Gox began as a trading-card site, handled about 70 percent of bitcoin trading, lost about 850,000 BTC in 2014, and its repayment deadline is now October 2027; FTX was valued at 32 billion dollars, collapsed in November 2022 about 8 billion short, and its founder was sentenced to 25 years; Bybit lost about 1.5 billion dollars in February 2025; Binance lost about 6.3 billion dollars in about twenty minutes on 29 October 2026, reported as attributed by the FBI to North Korea, and said customers would be made whole; James Howells threw away a drive in 2013 with the key to about 8,000 BTC, offered the council a quarter, lost in court and stopped trying to dig in August 2025; Stefan Thomas has 7,002 BTC on a drive with two password attempts left; three to four million BTC are estimated lost; the Canadian exchange QuadrigaCX failed after its founder died in December 2018 as the only holder of its keys, and the regulator later found he had run it fraudulently; a 2026 flaw in Coldcard hardware wallets' key generation led to thefts of more than 100 million dollars; crypto fraud took about 17 billion dollars in 2025 by Chainalysis' estimate; OneCoin took about 4 billion dollars, had no real blockchain, and its founder vanished in 2017. It says it is not investment advice."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "التقرير الجاي",
+   "next": "ليه ليها تمن؟ · الجزء 4 من 5",
+   "note": "اشترك علشان باقي التقارير توصل"
+  }
+ },
+ "brand": {
+  "a": "تقرير",
+  "b": "الأرض",
+  "c": "",
+  "tagline": "ملف ميداني: العملات المشفرة"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "تقرير الأرض · ملف ميداني",
+   "title": "مفتاحك هو فلوسك",
+   "sub": "الجزء 3 من 5 · إزاي بيملكوها.. ويضيّعوها"
+  },
+  "net": {
+   "kind": "network",
+   "title": "الدفتر عند الكل",
+   "n": 34,
+   "cheat": 11
+  },
+  "keys": {
+   "kind": "keys",
+   "title": "عنوان.. ومفتاح",
+   "addressLabel": "العنوان: يتقال لأي حد",
+   "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+   "keyLabel": "المفتاح الخاص: مايتقالش",
+   "payment": "ابعت لمنى 1 BTC",
+   "count": "10",
+   "exp": "77",
+   "countLabel": "عدد المفاتيح الممكنة"
+  },
+  "wal": {
+   "kind": "steps",
+   "title": "المفتاح بيتشال فين؟",
+   "items": [
+    {
+     "icon": "file",
+     "label": "12 كلمة",
+     "sub": "على ورقة.. في درج",
+     "args": [
+      "12"
+     ]
+    },
+    {
+     "icon": "phone",
+     "label": "محفظة سخنة",
+     "sub": "على التليفون"
+    },
+    {
+     "icon": "usb",
+     "label": "محفظة باردة",
+     "sub": "عمرها ما بتتوصل بالنت"
+    }
+   ]
+  },
+  "get": {
+   "kind": "steps",
+   "title": "بيجيبوها منين؟",
+   "items": [
+    {
+     "icon": "exchange",
+     "label": "منصة",
+     "sub": "شركة تبيع لك"
+    },
+    {
+     "icon": "person",
+     "label": "من شخص لشخص",
+     "sub": "مباشرة"
+    }
+   ]
+  },
+  "send": {
+   "kind": "steps",
+   "title": "تبعت إزاي؟",
+   "items": [
+    {
+     "icon": "mailbox",
+     "label": "تنسخ العنوان",
+     "sub": "حروف وأرقام"
+    },
+    {
+     "icon": "coin",
+     "label": "تدفع عمولة",
+     "sub": "للي بيكتبوا الصفحة"
+    },
+    {
+     "icon": "node",
+     "label": "تستنى",
+     "sub": "الصفحة تتكتب"
+    },
+    {
+     "icon": "noundo",
+     "label": "مفيش رجوع",
+     "sub": "ولا شكاوى"
+    }
+   ]
+  },
+  "fee": {
+   "kind": "story",
+   "title": "غلطة واحدة · 2023",
+   "icon": "coin",
+   "name": "تحويل واحد",
+   "lines": [
+    "المبلغ: 2,000 دولار",
+    "العمولة: 500,000 دولار",
+    "اترجّعت.. بالذوق"
+   ]
+  },
+  "trace": {
+   "kind": "trace",
+   "title": "الدفتر مابينساش",
+   "name": "اسمك",
+   "owner": "إنت",
+   "id": "البطاقة"
+  },
+  "silk": {
+   "kind": "story",
+   "title": "Silk Road",
+   "icon": "ghost",
+   "name": "سوق سري",
+   "lines": [
+    "2011: ممنوعات.. والدفع بيتكوين",
+    "2013: صاحبه اتقبض عليه في مكتبة",
+    "مؤبد.. وبعدين عفو سنة 2025"
+   ],
+   "size": 56
+  },
+  "pop": {
+   "kind": "story",
+   "title": "الحرامي والفشار",
+   "icon": "popcorn",
+   "name": "علبة فشار",
+   "lines": [
+    "سرق 50 ألف بيتكوين من السوق",
+    "الشرطة وصلت له بعد 9 سنين",
+    "الفلوس كانت.. في العلبة"
+   ],
+   "size": 56
+  },
+  "iou": {
+   "kind": "flow",
+   "title": "البنك رجع",
+   "actors": [
+    {
+     "icon": "person",
+     "label": "علي"
+    },
+    {
+     "icon": "exchange",
+     "label": "المنصة",
+     "big": true
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "label": "البيتكوين"
+    },
+    {
+     "move": [
+      1,
+      0
+     ],
+     "token": "file",
+     "label": "وصل"
+    },
+    {
+     "badges": [
+      "اختراق",
+      "إفلاس",
+      "تجميد"
+     ],
+     "at": 1
+    }
+   ]
+  },
+  "gox": {
+   "kind": "story",
+   "title": "Mt. Gox · طوكيو",
+   "icon": "cards",
+   "name": "بدأت بكروت لعب",
+   "lines": [
+    "70% من تداول البيتكوين",
+    "2014: اختفى 850 ألف بيتكوين",
+    "السداد لسه شغال.. لحد 2027"
+   ],
+   "size": 56
+  },
+  "ftx": {
+   "kind": "story",
+   "title": "FTX · 2022",
+   "icon": "exchange",
+   "name": "32 مليار دولار",
+   "lines": [
+    "اسمها على استاد",
+    "فلوس العملاء ناقصة 8 مليار",
+    "المؤسس: 25 سنة سجن"
+   ]
+  },
+  "heists": {
+   "kind": "bars",
+   "title": "أكبر السرقات · بالمليار دولار",
+   "bars": [
+    {
+     "label": "Mt. Gox",
+     "value": 0.45,
+     "text": "0.45",
+     "color": "#9fb0ff"
+    },
+    {
+     "label": "Bybit",
+     "value": 1.5,
+     "text": "1.5",
+     "color": "#35c8ff"
+    },
+    {
+     "label": "Binance",
+     "value": 6.3,
+     "text": "6.3",
+     "color": "#ff4654"
+    }
+   ],
+   "note": "أكتوبر 2026: 6 مليار.. في 20 دقيقة",
+   "every": 0.5
+  },
+  "quad": {
+   "kind": "story",
+   "title": "منصة في كندا · 2018",
+   "icon": "key",
+   "name": "مفتاح واحد",
+   "lines": [
+    "صاحبها مات فجأة",
+    "هو الوحيد اللي معاه المفاتيح",
+    "وطلع إنه كان مضيّع الفلوس أصلاً"
+   ],
+   "size": 54
+  },
+  "howells": {
+   "kind": "story",
+   "title": "James Howells · ويلز",
+   "icon": "drive",
+   "name": "هارد ديسك",
+   "lines": [
+    "اترمى سنة 2013",
+    "عليه مفتاح ≈ 8,000 بيتكوين",
+    "12 سنة يحاول يحفر المقلب",
+    "2025: استسلم"
+   ],
+   "size": 56
+  },
+  "thomas": {
+   "kind": "story",
+   "title": "Stefan Thomas · مبرمج",
+   "icon": "usb",
+   "name": "فلاشة مشفّرة",
+   "lines": [
+    "عليها 7,002 بيتكوين",
+    "نسي الباسورد",
+    "10 محاولات.. جرّب 8"
+   ]
+  },
+  "lost": {
+   "kind": "meter",
+   "title": "ضاعوا للأبد",
+   "big": "3 إلى 4 مليون",
+   "unit": "بيتكوين · تقديرات",
+   "value": 0.17,
+   "label": "من كل اللي اتعدّن",
+   "note": "محدش سرقهم. أصحابهم نسيوا.",
+   "color": "#ff4654"
+  },
+  "cold": {
+   "kind": "story",
+   "title": "حتى الباردة · 2026",
+   "icon": "usb",
+   "name": "محفظة باردة",
+   "lines": [
+    "عيب في توليد المفاتيح",
+    "المفاتيح بقت تتخمّن",
+    "اتسرق أكتر من 100 مليون دولار"
+   ],
+   "size": 56
+  },
+  "scams": {
+   "kind": "steps",
+   "title": "النصب.. أربع طرق",
+   "items": [
+    {
+     "icon": "pyramid",
+     "label": "الهرم",
+     "sub": "ربح مضمون"
+    },
+    {
+     "icon": "heart",
+     "label": "الحب الوهمي",
+     "sub": "ثقة.. وبعدين منصة"
+    },
+    {
+     "icon": "headset",
+     "label": "دعم مزيّف",
+     "sub": "عايز الـ12 كلمة"
+    },
+    {
+     "icon": "mask",
+     "label": "مشهور مزيّف",
+     "sub": "ابعت 1 تاخد 2"
+    }
+   ]
+  },
+  "flags": {
+   "kind": "rows",
+   "title": "علامات الخطر",
+   "items": [
+    {
+     "text": "ربح مضمون",
+     "mark": "flag"
+    },
+    {
+     "text": "استعجال: ادفع دلوقتي",
+     "mark": "flag"
+    },
+    {
+     "text": "حد يطلب المفتاح أو الـ12 كلمة",
+     "mark": "flag"
+    },
+    {
+     "text": "ادفع رسوم علشان تسحب فلوسك",
+     "mark": "flag"
+    }
+   ]
+  },
+  "where": {
+   "kind": "rows",
+   "title": "تسيبها فين؟",
+   "items": [
+    {
+     "text": "عند منصة: سهل",
+     "sub": "بس لو وقعت.. وقعت معاها",
+     "mark": "half"
+    },
+    {
+     "text": "معاك إنت: محدش يجمّدها",
+     "sub": "بس لو نسيت.. مفيش حد يفكّرك",
+     "mark": "half"
+    }
+   ]
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "قاموس البشر",
+   "items": [
+    {
+     "word": "Seed phrase",
+     "means": "الـ12 كلمة. اللي يعرفهم.. يملك فلوسك"
+    },
+    {
+     "word": "Custody",
+     "means": "مين ماسك المفتاح: إنت.. ولا شركة؟"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم تلاتة في ملف العملات المشفرة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: إزاي البشر بيملكوا العملة دي.. وإزاي بيضيّعوها.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "هقول لكم المفتاح إيه، والمحفظة إيه، وليه العملة دي مش مجهولة زي ما هم فاكرين. <short pause> وإزاي واحد منهم قعد اتناشر سنة عايز يحفر مقلب زبالة، يدوّر على مئات الملايين من الدولارات.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "في التقرير اللي فات عرفنا إن الدفتر علني، ومتوزّع على الكل، ومحدش يقدر يزوّر فيه.",
+     "show": "board",
+     "board": "net",
+     "step": 2
+    },
+    {
+     "say": "بس الدفتر مافيهوش أسماء. <short pause> يبقى إيه اللي يثبت إن السطر ده بتاعك إنت؟",
+     "shot": "close",
+     "emote": "skeptical"
+    }
+   ]
+  },
+  {
+   "id": "keys",
+   "story": {
+    "n": 1,
+    "tag": "المفتاح"
+   },
+   "style": "Practical and precise, like explaining a lock.",
+   "beats": [
+    {
+     "say": "كل واحد ليه عنوان. زي رقم الحساب. تديه لأي حد علشان يبعت لك.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "ومعاه مفتاح خاص: رقم سري طويل جداً. هو ده اللي بيفتح.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "لما تحب تبعت، المفتاح بيوقّع على التحويل. والشبكة تتأكد من التوقيع.. من غير ما تشوف المفتاح نفسه.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "زي ختم بيختم كل ورقة بشكل مختلف. الكل يقدر يتأكد إنه ختمك.. ومحدش يقدر يقلّده.",
+     "show": "board",
+     "board": "keys",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "وعدد المفاتيح الممكنة: رقم من سبعة وسبعين خانة. أكتر من كل حبات الرمل على الكوكب.. بمراحل. فمحدش هيخمّن مفتاحك.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "ولأن الدفتر علني، أي حد يقدر يشوف رصيد أي عنوان. حتى عنوان Satoshi نفسه. <short pause> والبشر لسه بيبعتوا له فكة.. تحية.",
+     "show": "board",
+     "board": "keys",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "يعني مفيش اسم، مفيش بطاقة، مفيش توقيع بالقلم. <short pause> اللي معاه المفتاح.. هو صاحب الفلوس. نقطة.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "wallet",
+   "story": {
+    "n": 2,
+    "tag": "المحفظة"
+   },
+   "style": "Amused by how low-tech the safety advice is.",
+   "beats": [
+    {
+     "say": "والمحفظة اللي بيتكلموا عنها مافيهاش فلوس أصلاً. فيها المفتاح. <short pause> الفلوس نفسها سطر في الدفتر.",
+     "show": "board",
+     "board": "keys",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "والمفتاح ده بيتكتب في شكل اتناشر كلمة عادية. والنصيحة الرسمية: اكتبهم على ورقة، وخبّيها. <short pause> أعظم تكنولوجيا مالية عندهم.. أمانها ورقة في درج.",
+     "show": "board",
+     "board": "wal"
+    },
+    {
+     "say": "وفيه محفظة على التليفون. سهلة، بس متوصلة بالنت.",
+     "show": "board",
+     "board": "wal"
+    },
+    {
+     "say": "ومحفظة جهاز صغير عمره ما بيتوصل بالنت. بيسمّوها المحفظة الباردة.",
+     "show": "board",
+     "board": "wal"
+    }
+   ]
+  },
+  {
+   "id": "use",
+   "story": {
+    "n": 3,
+    "tag": "الشرا والتحويل"
+   },
+   "style": "A quick how-to, then the catch, with disbelief.",
+   "beats": [
+    {
+     "say": "طيب البشر بيجيبوا العملة دي منين؟ التعدين مابقاش للأفراد.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "أغلبهم بيشتري من منصة: شركة تاخد منك فلوس عادية، وتديك عملة. وأغلب المنصات هتطلب بطاقتك وصورة وشّك. <short pause> افتكروا التفصيلة دي.",
+     "show": "board",
+     "board": "get"
+    },
+    {
+     "say": "أو من شخص لشخص، مباشرة.",
+     "show": "board",
+     "board": "get"
+    },
+    {
+     "say": "ولما تبعت: بتنسخ عنوان اللي قدامك. سطر طويل من حروف وأرقام.",
+     "show": "board",
+     "board": "send"
+    },
+    {
+     "say": "تدفع عمولة للي بيكتبوا الصفحة.",
+     "show": "board",
+     "board": "send"
+    },
+    {
+     "say": "وتستنى الصفحة تتكتب.",
+     "show": "board",
+     "board": "send"
+    },
+    {
+     "say": "ومفيش رجوع. <short pause> حرف غلط في العنوان؟ الفلوس راحت. ومفيش حد تشتكي له.",
+     "show": "board",
+     "board": "send",
+     "host": "right"
+    },
+    {
+     "say": "وفيه برامج خبيثة شغلتها حاجة واحدة: تبدّل العنوان اللي نسخته بعنوان الحرامي. فالبشر الحريصين بيراجعوا أول وآخر كام حرف.. كل مرة.",
+     "show": "board",
+     "board": "send",
+     "step": "hold",
+     "host": "left",
+     "emote": "worried"
+    },
+    {
+     "say": "سنة ألفين تلاتة وعشرين، شركة كبيرة بعتت تحويل بألفين دولار.",
+     "show": "board",
+     "board": "fee"
+    },
+    {
+     "say": "ودفعت عليه عمولة نص مليون دولار. بالغلط.",
+     "show": "board",
+     "board": "fee"
+    },
+    {
+     "say": "الفريق اللي كسب الصفحة رجّعهم. <short pause> بالذوق. مش علشان فيه قانون.",
+     "show": "board",
+     "board": "fee",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "anon",
+   "story": {
+    "n": 4,
+    "tag": "خرافة المجهول"
+   },
+   "style": "Debunking a myth with relish, then enjoying two absurd true stories.",
+   "beats": [
+    {
+     "say": "والبشر مقتنعين إن العملة دي مجهولة، ومحدش يعرف مين بيبعت لمين. <short pause> غلط يا فندم. وناس منهم دفعوا تمن الغلط ده سجن.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "الدفتر علني. كل تحويل متسجّل للأبد، من عنوان لعنوان.",
+     "show": "board",
+     "board": "trace"
+    },
+    {
+     "say": "وأول ما عنوان واحد يتربط باسمك.. مثلاً منصة طلبت بطاقتك..",
+     "show": "board",
+     "board": "trace"
+    },
+    {
+     "say": "كل اللي عملته قبل كده بيبان. بأثر رجعي.",
+     "show": "board",
+     "board": "trace"
+    },
+    {
+     "say": "سنة ألفين وحداشر اتفتح سوق سري على النت اسمه Silk Road. ممنوعات.. والدفع بيتكوين.",
+     "show": "board",
+     "board": "silk"
+    },
+    {
+     "say": "صاحبه كان فاكر إنه مستخبي. اتقبض عليه سنة ألفين وتلتاشر. في مكتبة عامة.",
+     "show": "board",
+     "board": "silk"
+    },
+    {
+     "say": "اتحكم عليه بالمؤبد. وطلع بعفو رئاسي سنة ألفين خمسة وعشرين.",
+     "show": "board",
+     "board": "silk"
+    },
+    {
+     "say": "وواحد تاني سرق من السوق ده خمسين ألف بيتكوين.",
+     "show": "board",
+     "board": "pop"
+    },
+    {
+     "say": "الدفتر فضل فاكر. وبعد تسع سنين، الشرطة خبّطت على بابه.",
+     "show": "board",
+     "board": "pop"
+    },
+    {
+     "say": "ولقوا الفلوس.. في علبة فشار.",
+     "show": "board",
+     "board": "pop"
+    },
+    {
+     "say": "مليارات الدولارات. في علبة فشار. في دولاب الحمّام. <short pause> أنا بحب الكوكب ده يا فندم.",
+     "shot": "close",
+     "emote": "grin"
+    },
+    {
+     "say": "ونفس القصة في سرقة منصة اسمها Bitfinex: مية وعشرين ألف بيتكوين. اتقبض على زوجين بعد ست سنين. <short pause> واحدة منهم كانت بتغنّي راب على النت. وده كان جريمة لوحده.",
+     "show": "board",
+     "board": "pop",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "يعني الكاش بيتنسي. الدفتر ده لأ. <short pause> أسوأ مكان تخبّي فيه جريمة.. دفتر علني محفوظ للأبد.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "bank",
+   "story": {
+    "n": 5,
+    "tag": "البنك رجع"
+   },
+   "style": "Dry and pointed: the humans rebuilt the thing they ran away from.",
+   "beats": [
+    {
+     "say": "نرجع للمنصات. أغلب البشر بيشتروا العملة.. ويسيبوها هناك.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "يعني البيتكوين بقى عند الشركة.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "وهم معاهم وصل. سطر في دفتر الشركة.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "فاكرين الراجل الأمين بتاع الدهب في التقرير الأول؟ <short pause> رجع يا فندم. بنفس الوصل.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "ورجعت معاه نفس المشاكل: اختراق، إفلاس، تجميد.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "أول منصة كبيرة كان اسمها Mt. Gox. بدأت موقع لتبديل كروت لعب. وبقت بتعدّي سبعين في المية من تداول البيتكوين.",
+     "show": "board",
+     "board": "gox"
+    },
+    {
+     "say": "سنة ألفين وأربعتاشر: اختفى منها تمنمية وخمسين ألف بيتكوين.",
+     "show": "board",
+     "board": "gox"
+    },
+    {
+     "say": "والعملاء لسه بيستلموا فلوسهم لحد النهارده. آخر ميعاد اتأجل لألفين سبعة وعشرين.",
+     "show": "board",
+     "board": "gox"
+    },
+    {
+     "say": "تلتاشر سنة يا فندم. <short pause> حتى البنوك عندهم أسرع من كده.",
+     "show": "board",
+     "board": "gox",
+     "step": "hold",
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وسنة ألفين اتنين وعشرين: FTX. منصة قيمتها اتنين وتلاتين مليار دولار، واسمها على استاد.",
+     "show": "board",
+     "board": "ftx"
+    },
+    {
+     "say": "صاحبها كان بيصرف من فلوس العملاء. والناقص: تمانية مليار.",
+     "show": "board",
+     "board": "ftx"
+    },
+    {
+     "say": "خد خمسة وعشرين سنة سجن.",
+     "show": "board",
+     "board": "ftx"
+    },
+    {
+     "say": "والعملاء؟ رجعت لهم فلوسهم بعد سنين. بسعر يوم الوقعة. <short pause> والعملة كانت طلعت أضعاف من غيرهم.",
+     "show": "board",
+     "board": "ftx",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "ومنصة في كندا، صاحبها مات فجأة سنة ألفين وتمنتاشر.",
+     "show": "board",
+     "board": "quad"
+    },
+    {
+     "say": "وكان هو الوحيد اللي معاه المفاتيح.",
+     "show": "board",
+     "board": "quad"
+    },
+    {
+     "say": "وبعد التحقيق طلع إنه كان مضيّع فلوس العملاء من قبلها أصلاً. <short pause> الراجل نصب عليهم.. ومات قبل ما حد يعرف.",
+     "show": "board",
+     "board": "quad",
+     "host": "right"
+    },
+    {
+     "say": "والسرقات بتكبر. منصة Bybit خسرت مليار ونص سنة ألفين خمسة وعشرين. وفي أكتوبر ألفين ستة وعشرين: أكبر سرقة في تاريخهم. منصة Binance. أكتر من ست مليار دولار.. في عشرين دقيقة.",
+     "show": "board",
+     "board": "heists"
+    },
+    {
+     "say": "والحرامي ماقامش من على الكرسي. المحققين الأمريكان بيشاوروا على قراصنة كوريا الشمالية. والشركة قالت هتعوّض العملاء من جيبها.",
+     "show": "board",
+     "board": "heists",
+     "step": "hold",
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "وعلشان كده عندهم مثل بيتقال: مش مفاتيحك؟ <short pause> يبقى مش فلوسك.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "lost",
+   "story": {
+    "n": 6,
+    "tag": "اللي ضيّعوا المفتاح"
+   },
+   "style": "Enjoying the stories, deadpan, a little cruel.",
+   "beats": [
+    {
+     "say": "طيب تمسك مفتاحك بنفسك؟ ممتاز. <short pause> بس مفيش بنك، يعني مفيش زرار: نسيت كلمة السر.",
+     "shot": "host",
+     "emote": "worried",
+     "gesture": "shrug"
+    },
+    {
+     "say": "واحد اسمه James Howells رمى هارد ديسك قديم سنة ألفين وتلتاشر.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "وكان عليه مفتاح حوالي تمان آلاف بيتكوين.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "قعد اتناشر سنة يحاول يحفر مقلب الزبالة. عرض على البلدية ربع الفلوس. والمحكمة قالت له: لأ.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "وسنة ألفين خمسة وعشرين.. استسلم.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "مئات الملايين من الدولارات. تحت أكياس زبالة في ويلز. <short pause> وأنا يا فندم كنت فاكر إن مهمتي أنا اللي صعبة.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "ومبرمج اسمه Stefan Thomas معاه أكتر من سبع آلاف بيتكوين على فلاشة مشفّرة.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "ونسي الباسورد.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "الفلاشة بتديله عشر محاولات، وبعدين تمسح نفسها. جرّب تمانية.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "فاضل له اتنين. <short pause> أنا بتابع الملف ده شخصياً.",
+     "shot": "close",
+     "emote": "grin"
+    },
+    {
+     "say": "والتقديرات إن من تلاتة لأربعة مليون بيتكوين ضاعوا للأبد بالشكل ده.",
+     "show": "board",
+     "board": "lost"
+    },
+    {
+     "say": "محدش سرقهم. أصحابهم بس.. نسيوا.",
+     "show": "board",
+     "board": "lost"
+    },
+    {
+     "say": "ولو صاحب المفتاح مات من غير ما يقول لحد الكلمات؟ <short pause> الفلوس تموت معاه. مفيش ورثة عند الدفتر.",
+     "show": "board",
+     "board": "lost",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "وفيه اللي اتخطف علشان مفتاحه. علشان كده أول قاعدة عندهم: ماتقولش لحد معاك كام.",
+     "show": "board",
+     "board": "lost",
+     "step": "hold",
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "وحتى المحفظة الباردة مش ضمان. سنة ألفين ستة وعشرين، نوع مشهور منها طلع فيه عيب.",
+     "show": "board",
+     "board": "cold"
+    },
+    {
+     "say": "المفاتيح اللي بيطلّعها كانت تتخمّن.",
+     "show": "board",
+     "board": "cold"
+    },
+    {
+     "say": "واتسرق من أصحابها أكتر من مية مليون دولار. وهي مش متوصلة بالنت أصلاً.",
+     "show": "board",
+     "board": "cold"
+    },
+    {
+     "say": "يعني قدامك اختيارين. تسيبها عند منصة: سهل. بس لو وقعت، وقعت معاها.",
+     "show": "board",
+     "board": "where"
+    },
+    {
+     "say": "أو تمسكها بنفسك: محدش يقدر يجمّدها. بس لو نسيت.. مفيش حد يفكّرك.",
+     "show": "board",
+     "board": "where"
+    },
+    {
+     "say": "عند شركة: تتسرق. عندك: تضيع. <short pause> البشر اخترعوا فلوس محتاجة كل واحد فيهم يبقى بنك، وخزنة، وحارس أمن. وأغلبهم بينسى باسورد الإيميل.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "scams",
+   "story": {
+    "n": 7,
+    "tag": "النصب"
+   },
+   "style": "Serious and plain. This part is a warning, not a joke; he slows down slightly.",
+   "calm": true,
+   "music": 0.5,
+   "beats": [
+    {
+     "say": "وفيه طريقة تالتة تخسر بيها فلوسك هنا: تديها للحرامي بإيدك. <short pause> النصب بالعملات دي لمّ في سنة ألفين خمسة وعشرين لوحدها حوالي سبعتاشر مليار دولار.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "أشهر طريقة: الهرم. استثمر معانا، وليك ربح مضمون كل شهر. والربح بيتدفع من فلوس اللي دخلوا بعدك.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "عملة اسمها OneCoin لمّت بالطريقة دي حوالي أربعة مليار دولار. وماكانش ليها بلوكتشين أصلاً. <short pause> صاحبتها اختفت سنة ألفين وسبعتاشر. ولسه مطلوبة.",
+     "show": "board",
+     "board": "scams",
+     "step": "hold",
+     "host": "left",
+     "emote": "annoyed"
+    },
+    {
+     "say": "التانية: الحب الوهمي. حد لطيف يتعرف عليك، ويكسب ثقتك شهور.. وبعدين يدلّك على منصة استثمار. والمنصة بتاعته.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "التالتة: الدعم الفني المزيّف. حد يكلّمك علشان يحل لك مشكلة.. ويطلب الاتناشر كلمة.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "والرابعة: فيديو لواحد مشهور بيقول ابعت عملة وهرجّعها لك اتنين. الفيديو معمول بالذكاء الاصطناعي. والمشهور مايعرفش عنه حاجة.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "ولو اتنصب عليك فعلاً؟ هييجي لك نصاب تاني يقول لك: أنا هرجّع لك فلوسك. برسوم بسيطة. <short pause> البشر بيتنصب عليهم مرتين في نفس الفلوس. ده مجهود يُحترم.",
+     "show": "board",
+     "board": "scams",
+     "step": "hold",
+     "host": "right",
+     "emote": "annoyed"
+    },
+    {
+     "say": "علامات الخطر أربعة. واحد: ربح مضمون. مفيش حاجة هنا مضمونة.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "اتنين: استعجال. لازم تدفع دلوقتي حالاً.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "تلاتة: أي حد يطلب المفتاح أو الاتناشر كلمة. أي حد.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "أربعة: ماتقدرش تسحب فلوسك غير لما تدفع رسوم الأول.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "وافتكروا القاعدة: هنا مفيش رجوع. <short pause> اللي راح.. راح.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 8,
+    "tag": "قاموس البشر"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "كلمتين من قاموس البشر. Seed phrase: الاتناشر كلمة. اللي يعرفهم.. يملك فلوسك.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "و Custody: مين اللي ماسك المفتاح. إنت.. ولا شركة. <short pause> وده أهم سؤال في الموضوع كله.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 9,
+    "tag": "الخلاصة"
+   },
+   "style": "Summary, one sincere warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: المفتاح هو الملكية. اتنين: الدفتر مش مجهول، ومابينساش. تلاتة: عند شركة تتسرق.. وعندك تضيع.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "خلاصة التقرير",
+      "items": [
+       "المفتاح هو الملكية",
+       "الدفتر مش مجهول.. ومابينساش",
+       "عند شركة تتسرق.. وعندك تضيع"
+      ],
+      "step": 2.6
+     },
+     "host": "pip"
+    },
+    {
+     "say": "ونفس التنبيه: ده تقرير، مش نصيحة استثمار.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "التقرير الجاي: الحاجة دي ليه ليها تمن أصلاً؟ مين بيحدد السعر؟ وليه بيتهز بالشكل ده؟",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
