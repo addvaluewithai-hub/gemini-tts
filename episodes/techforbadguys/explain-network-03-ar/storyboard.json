@@ -1,0 +1,999 @@
+{
+ "title": "تقرير الأرض: الشبكة 3",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: The Network, part 3 of 3. How a video call works: a picture is a grid of numbers, the raw stream is about a thousand times too big, three tricks of compression, sound and echo, packets that nobody waits for, the time budget and the speed of light, what happens when the network weakens, how two devices find each other and encryption, the videophone that failed in 1970, and field notes on how humans behave on calls.",
+  "",
+  "Facts are stated from web research on 12 November 2026 (see explain-network-01-ar/plan.md for links) and from general knowledge of video and audio coding: a 1080p picture has about 2 million pixels of three colour values each, so 30 pictures a second is about 1.5 billion bits a second uncompressed, while a high-definition call uses on the order of 1 to 3 million; video coding sends a full picture and then differences, predicts motion, and carries colour at a quarter of the detail of brightness; call audio is sampled 48,000 times a second and sent in 20 millisecond frames; calls use transport that does not resend late packets and favour audio over video; ITU-T G.114 puts natural conversation at up to 150 milliseconds one way and 400 as the planning limit; light in fibre covers 20,000 km in about a tenth of a second; a geostationary satellite sits about 36,000 km up, about half a second for the round trip; the Picturephone was shown at the 1964 World's Fair and sold from 1970 at 160 dollars a month before being withdrawn; internet calling arrived in 2003 and phone video calling in 2010; Zoom reported 300 million daily meeting participants in April 2020 (participants, not users); a 2021 Stanford paper described why video calls tire people; video is more than half of all internet traffic; call audio needs a few tens of kilobits a second against one to two megabits for video; group calls relay each stream through a server that forwards small and large versions. The time-budget figures on screen are illustrative round numbers, not measurements."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "الملف اتقفل",
+   "next": "ملف ميداني جديد.. قريب",
+   "note": "اشترك علشان التقارير الجاية توصل"
+  }
+ },
+ "brand": {
+  "a": "تقرير",
+  "b": "الأرض",
+  "c": "",
+  "tagline": "ملف ميداني: الشبكة"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "تقرير الأرض · ملف الشبكة",
+   "title": "وشّك في ألف حتة",
+   "sub": "الجزء 3 من 3 · مكالمة الفيديو"
+  },
+  "call": {
+   "kind": "story",
+   "title": "المشهد",
+   "icon": "camera",
+   "name": "مكالمة فيديو",
+   "lines": [
+    "واحد في قارة.. وواحدة في قارة",
+    "شايفين بعض وسامعين بعض",
+    "وبيشتكوا إن الصورة علّقت"
+   ]
+  },
+  "px": {
+   "kind": "pixels",
+   "title": "الصورة مربعات",
+   "sent": "اتبعت: حوالي 3%"
+  },
+  "math": {
+   "kind": "rows",
+   "title": "الحسبة",
+   "items": [
+    {
+     "text": "نقطة في الصورة الواحدة",
+     "tag": "2 مليون"
+    },
+    {
+     "text": "أرقام لكل نقطة",
+     "tag": "3"
+    },
+    {
+     "text": "صورة كل ثانية",
+     "tag": "30"
+    },
+    {
+     "text": "رقم في الثانية",
+     "tag": "+180 مليون",
+     "tagFill": "#ff4654"
+    }
+   ]
+  },
+  "gap": {
+   "kind": "bars",
+   "title": "المطلوب.. والمتاح",
+   "bars": [
+    {
+     "label": "الصورة الخام",
+     "value": 1500,
+     "text": "1,500",
+     "color": "#ff4654"
+    },
+    {
+     "label": "اللي الخط بيشيله",
+     "value": 2,
+     "text": "≈ 2",
+     "color": "#58d68d"
+    }
+   ],
+   "note": "مليون بت في الثانية",
+   "every": 0.7
+  },
+  "tricks": {
+   "kind": "rows",
+   "title": "تلات خدع",
+   "items": [
+    {
+     "text": "ابعت اللي اتغيّر بس",
+     "mark": "check"
+    },
+    {
+     "text": "ارمي اللي العين مش هتشوفه",
+     "mark": "check"
+    },
+    {
+     "text": "خمّن الحركة",
+     "mark": "check"
+    }
+   ]
+  },
+  "wave": {
+   "kind": "wave",
+   "title": "والصوت؟",
+   "n": 18
+  },
+  "echo": {
+   "kind": "story",
+   "title": "تنضيف الصوت",
+   "icon": "speaker",
+   "name": "سماعة",
+   "lines": [
+    "صوتك راجع من سماعته: صدى",
+    "البرنامج بيطرحه",
+    "والدوشة اللي وراك بتتشال"
+   ]
+  },
+  "pk": {
+   "kind": "packets",
+   "title": "الطريق",
+   "from": "الصورة",
+   "to": "الشاشة",
+   "lose": 3,
+   "icon": "camera"
+  },
+  "late": {
+   "kind": "versus",
+   "title": "قاعدتين مختلفتين",
+   "a": {
+    "title": "الرسالة",
+    "color": "#35c8ff",
+    "icon": "file",
+    "args": [
+     ""
+    ],
+    "lines": [
+     "لازم توصل كاملة",
+     "تستنى عادي"
+    ]
+   },
+   "b": {
+    "title": "المكالمة",
+    "color": "#ff4fa3",
+    "icon": "camera",
+    "lines": [
+     "لازم توصل دلوقتي",
+     "اللي يتأخر.. يترمى"
+    ]
+   }
+  },
+  "bud": {
+   "kind": "budget",
+   "title": "ميزانية الوقت",
+   "totalLabel": "المجموع:",
+   "good": 150,
+   "goodLabel": "طبيعي: لحد 150",
+   "bad": 400,
+   "badLabel": "الحد: 400",
+   "parts": [
+    {
+     "label": "الكاميرا والضغط",
+     "ms": 30
+    },
+    {
+     "label": "الطريق",
+     "ms": 70
+    },
+    {
+     "label": "مخزن الانتظار",
+     "ms": 30
+    },
+    {
+     "label": "الفك والعرض",
+     "ms": 20
+    }
+   ]
+  },
+  "light": {
+   "kind": "story",
+   "title": "حد الفيزيا",
+   "icon": "bolt",
+   "name": "الضوء نفسه",
+   "lines": [
+    "نص لفّة حوالين الكوكب: 20 ألف كم",
+    "الضوء بياخدهم في عُشر ثانية",
+    "مش عيب في الشبكة.. ده الكون"
+   ],
+   "size": 56
+  },
+  "sat": {
+   "kind": "story",
+   "title": "ليه المراسل بيرد متأخر",
+   "icon": "sat",
+   "name": "قمر ثابت",
+   "lines": [
+    "على ارتفاع 36 ألف كم",
+    "الرحلة رايح جاي: حوالي نص ثانية",
+    "فالمذيع يسأل.. والمراسل يبصّ"
+   ],
+   "size": 56
+  },
+  "weak": {
+   "kind": "rows",
+   "title": "لما الشبكة تضعف",
+   "items": [
+    {
+     "text": "الصورة تتبوّظ وتبقى مربعات",
+     "tag": "1"
+    },
+    {
+     "text": "بعدين تقف على وش غريب",
+     "tag": "2"
+    },
+    {
+     "text": "والصوت آخر حاجة تقع",
+     "tag": "3"
+    }
+   ]
+  },
+  "find": {
+   "kind": "flow",
+   "title": "الجهازين بيلاقوا بعض إزاي؟",
+   "actors": [
+    {
+     "icon": "mobile",
+     "label": "إنت"
+    },
+    {
+     "icon": "server",
+     "label": "الوسيط",
+     "big": true
+    },
+    {
+     "icon": "mobile",
+     "label": "هي",
+     "args": [
+      "#ff4fa3"
+     ]
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "token": "file",
+     "label": "ده عنواني"
+    },
+    {
+     "move": [
+      2,
+      1
+     ],
+     "token": "file",
+     "label": "وده عنواني"
+    },
+    {
+     "move": [
+      0,
+      2
+     ],
+     "token": "camera",
+     "label": "مباشر"
+    }
+   ]
+  },
+  "lock": {
+   "kind": "story",
+   "title": "التشفير",
+   "icon": "lock",
+   "name": "قفل",
+   "lines": [
+    "المفتاح عند الجهازين بس",
+    "اللي في النص شايف حِزم",
+    "ومش فاهم منها حاجة"
+   ]
+  },
+  "old": {
+   "kind": "story",
+   "title": "الحلم القديم",
+   "icon": "camera",
+   "name": "تليفون بصورة",
+   "lines": [
+    "1964: اتعرض في معرض دولي",
+    "1970: نزل للناس",
+    "160 دولار في الشهر.. وفشل"
+   ]
+  },
+  "now": {
+   "kind": "rows",
+   "title": "وبعدين",
+   "size": 50,
+   "items": [
+    {
+     "text": "مكالمات على الإنترنت ببلاش",
+     "tag": "2003"
+    },
+    {
+     "text": "مكالمة الفيديو دخلت التليفون",
+     "tag": "2010"
+    },
+    {
+     "text": "300 مليون مشاركة في اليوم.. لتطبيق واحد",
+     "tag": "2020"
+    }
+   ]
+  },
+  "eyes": {
+   "kind": "story",
+   "title": "ملاحظة ميدانية",
+   "icon": "eye",
+   "name": "العين",
+   "lines": [
+    "الكاميرا فوق الشاشة",
+    "وعينه على وشّ التاني",
+    "فمحدش بيبص في عين حد"
+   ]
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "قاموس البشر",
+   "items": [
+    {
+     "word": "Codec",
+     "means": "اللي بيضغط الصورة والصوت.. ويفكّهم"
+    },
+    {
+     "word": "Lag",
+     "means": "التأخير. الفرق بين ما اتقال وما اتسمع"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of the last report in the file. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، التقرير التالت والأخير في ملف الشبكة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: مكالمة الفيديو.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "في التقريرين اللي فاتوا عرفنا الراديو، والخراطيم، والحِزم. النهارده هنشوف أصعب حاجة البشر بيعملوها بيهم.",
+     "show": "board",
+     "board": "title",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "واحد في قارة، وواحدة في قارة تانية.",
+     "show": "board",
+     "board": "call"
+    },
+    {
+     "say": "شايفين بعض، وسامعين بعض، في نفس اللحظة.",
+     "show": "board",
+     "board": "call"
+    },
+    {
+     "say": "وبيشتكوا إن الصورة علّقت نص ثانية.",
+     "show": "board",
+     "board": "call"
+    },
+    {
+     "say": "هقول لكم وشّ الإنسان بيتقطّع إزاي، ويعدّي تحت محيط، ويتركّب تاني في أقل من رمشة عين. <short pause> والسر كله في خدعة واحدة: اللي بيتبعت.. أقل من واحد على ألف من الصورة.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "pixels",
+   "story": {
+    "n": 1,
+    "tag": "الصورة مربعات"
+   },
+   "style": "Showing a magic trick by first showing how hard it is.",
+   "beats": [
+    {
+     "say": "نبدأ بالكاميرا. الصورة اللي البشر شايفينها دي مش صورة.",
+     "show": "board",
+     "board": "px"
+    },
+    {
+     "say": "قرّب منها: مربعات صغيرة. كل مربع لون واحد. وكل لون تلات أرقام: أحمر، أخضر، أزرق.",
+     "show": "board",
+     "board": "px"
+    },
+    {
+     "say": "يعني وشّ الإنسان عند الجهاز جدول أرقام. مش أكتر.",
+     "show": "board",
+     "board": "px"
+    },
+    {
+     "say": "وشاشة التليفون نفسها نفس الفكرة: مربعات بتنوّر. الإنسان عمره ما شاف صورة على شاشة. شاف نُقط.. ومخّه كمّل الباقي.",
+     "show": "board",
+     "board": "px",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "الصورة الواحدة فيها حوالي اتنين مليون مربع.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "كل مربع تلات أرقام.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "والكاميرا بتاخد تلاتين صورة في الثانية، علشان الحركة تبان ناعمة.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "يعني أكتر من مية وتمانين مليون رقم.. كل ثانية. علشان وشّ واحد.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "دي الصورة الخام: ألف وخمسمية مليون بت في الثانية.",
+     "show": "board",
+     "board": "gap"
+    },
+    {
+     "say": "والخط اللي في البيت بيدّي المكالمة حوالي اتنين مليون. <short pause> يعني المطلوب يعدّي فيل.. من خرم إبرة. تلاتين مرة في الثانية.",
+     "show": "board",
+     "board": "gap",
+     "step": "hold",
+     "host": "right",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "tricks",
+   "story": {
+    "n": 2,
+    "tag": "تلات خدع"
+   },
+   "style": "The core of the episode: three tricks, each revealed with satisfaction.",
+   "beats": [
+    {
+     "say": "والحل يا فندم مش إنهم يبعتوا أسرع. الحل إنهم مايبعتوش.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "الخدعة الأولى: ابعت اللي اتغيّر بس.",
+     "show": "board",
+     "board": "tricks"
+    },
+    {
+     "say": "الحيطة اللي ورا الإنسان ماتحركتش من الصورة اللي فاتت. فمش هتتبعت تاني. اللي اتغيّر: بُقّه، وعينيه.",
+     "show": "board",
+     "board": "px",
+     "step": 3
+    },
+    {
+     "say": "أول صورة بتتبعت كاملة. وبعدها الجهاز بيقول بس: المربعات دي اتحركت كده. والباقي زي ما هو. <short pause> علشان كده اللي قاعد ثابت قدام حيطة سادة.. صورته أحلى.",
+     "show": "board",
+     "board": "px",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "الخدعة التانية: ارمي اللي العين مش هتاخد بالها منه.",
+     "show": "board",
+     "board": "tricks",
+     "step": 1
+    },
+    {
+     "say": "عين الإنسان شاطرة في النور والضلمة، وضعيفة في الألوان. فبيبعتوا الألوان بربع التفاصيل. <short pause> ومحدش فيهم لاحظ. من سنين.",
+     "show": "board",
+     "board": "tricks",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "والتالتة: خمّن الحركة. لو الراس ماشية يمين، الجهاز يتوقع إنها هتكمّل يمين. ويبعت بس الفرق بين توقعه واللي حصل.",
+     "show": "board",
+     "board": "tricks"
+    },
+    {
+     "say": "يعني اللي واصل على الشاشة التانية مش وشّه. ده وصف مختصر لوشّه، والجهاز التاني بيرسمه من أول وجديد. تلاتين مرة في الثانية. <short pause> البشر بيكلّموا رسمة.. ومبسوطين.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "والنتيجة: من ألف وخمسمية مليون.. لاتنين مليون. والإنسان مش حاسس إن فيه حاجة ناقصة. ونفس الخدع دي هي اللي شايلة كل الأفلام والفيديوهات على الشبكة. <short pause> أكتر من نص حركة الإنترنت كلها.. فيديو مضغوط.",
+     "show": "board",
+     "board": "tricks",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "وكل كام ثانية بتتبعت صورة كاملة من جديد. احتياطي. علشان لو حاجة باظت في النص، الرسمة تتصلّح.",
+     "show": "board",
+     "board": "tricks",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "sound",
+   "story": {
+    "n": 3,
+    "tag": "الصوت"
+   },
+   "style": "Quick and practical; the sound matters more than the picture.",
+   "beats": [
+    {
+     "say": "والصوت نفس الفكرة اللي شفناها في تقرير الموبايل. موجة..",
+     "show": "board",
+     "board": "wave"
+    },
+    {
+     "say": "بتتقاس. بس هنا تمانية وأربعين ألف مرة في الثانية، مش تمان آلاف. علشان كده الصوت في مكالمة الفيديو أنضف من التليفون.",
+     "show": "board",
+     "board": "wave"
+    },
+    {
+     "say": "وبتتقطّع حتت صغيرة: كل حتة عشرين جزء من ألف من الثانية.",
+     "show": "board",
+     "board": "wave"
+    },
+    {
+     "say": "وقبل ما يتبعت بيتنضّف. صوتك بيطلع من سماعة التاني، ويدخل الميكروفون بتاعه، ويرجع لك. ده الصدى.",
+     "show": "board",
+     "board": "echo"
+    },
+    {
+     "say": "البرنامج عارف هو بعت إيه.. فبيطرحه من اللي راجع.",
+     "show": "board",
+     "board": "echo"
+    },
+    {
+     "say": "والدوشة اللي وراك: المروحة، الشارع، العيال. بتتشال. والنهارده اللي بيشيلها برنامج ذكاء اصطناعي اتعلّم الفرق بين الكلام والدوشة.",
+     "show": "board",
+     "board": "echo"
+    },
+    {
+     "say": "وفي المكالمات الجماعية، البرنامج بيعرف مين اللي بيتكلم دلوقتي من صوته.. ويكبّر صورته لوحده.",
+     "show": "board",
+     "board": "echo",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "والصوت أهم من الصورة. البشر يستحملوا صورة وحشة. <short pause> بس صوت بيقطّع؟ بيقفلوا في ثانية.",
+     "shot": "close",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "road",
+   "story": {
+    "n": 4,
+    "tag": "الطريق"
+   },
+   "style": "Reusing the packets idea from the last report, with one important difference.",
+   "beats": [
+    {
+     "say": "وبعدين الصورة والصوت بيتحطّوا في حِزم. زي ما شفنا في التقرير اللي فات.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "كل حزمة برقمها.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "وتطلع: واي فاي، راوتر، كابل، قاع البحر.. وكل واحدة من طريق.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "وتتجمّع عند الطرف التاني.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "المكالمة الواحدة بتطلّع مئات الحزم كل ثانية. ورايحة جاية في الاتجاهين.",
+     "show": "board",
+     "board": "pk",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "بس هنا فيه فرق خطير. لو حزمة ضاعت أو اتأخرت.. محدش بيستناها.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "الرسالة المكتوبة لازم توصل كاملة. تتأخر ثانية، عادي.",
+     "show": "board",
+     "board": "late"
+    },
+    {
+     "say": "المكالمة العكس: لازم توصل دلوقتي. اللي يتأخر.. يترمى.",
+     "show": "board",
+     "board": "late"
+    },
+    {
+     "say": "لأن حتة صوت وصلت بعد ميعادها مالهاش لازمة. الكلام عدّى. فالجهاز يخمّن اللي ناقص ويكمّل. <short pause> زي أي إنسان مش مركّز في اجتماع.",
+     "show": "board",
+     "board": "late",
+     "step": "hold",
+     "host": "right",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "story": {
+    "n": 5,
+    "tag": "ميزانية الوقت"
+   },
+   "style": "A budget review, strict about milliseconds.",
+   "beats": [
+    {
+     "say": "وهنا القيد الحقيقي. الوقت. علماءهم قاسوها: لو الكلام وصل في أقل من مية وخمسين جزء من ألف من الثانية، المكالمة تبان طبيعية.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "الكاميرا والضغط ياخدوا حتة.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "الطريق، تحت البحر، ياخد أكبر حتة.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "وعند الوصول فيه مخزن انتظار صغير، بيرتّب الحزم اللي جت متلخبطة.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "وبعدين الفك والعرض. المجموع: على الحدّ بالظبط.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "ولو عدّى أربعمية؟ الاتنين يتكلموا في نفس اللحظة، ويسكتوا في نفس اللحظة، ويقولوا: اتفضل إنت. لأ اتفضل إنت. <short pause> دي مش قلة ذوق يا فندم. دي فيزيا.",
+     "show": "board",
+     "board": "bud",
+     "step": "hold",
+     "host": "right",
+     "emote": "grin"
+    },
+    {
+     "say": "والبشر حسّاسين جداً لحاجة تانية: لو البُق اتحرك قبل الصوت بحاجة بسيطة.. يتضايقوا ومايعرفوش ليه. فالجهاز بيمسك الصورة ثواني صغيرة لحد ما صوتها يوصل. ويعرضهم مع بعض.",
+     "show": "board",
+     "board": "bud",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "وجزء من التأخير محدش يقدر يلغيه. نص لفّة حوالين الكوكب: عشرين ألف كيلومتر.",
+     "show": "board",
+     "board": "light"
+    },
+    {
+     "say": "الضوء نفسه، في الإزاز، بياخدهم في عُشر ثانية.",
+     "show": "board",
+     "board": "light"
+    },
+    {
+     "say": "ده مش عيب في الشبكة. ده حدّ السرعة في الكون كله. <short pause> واحنا عارفين الموضوع ده كويس يا فندم. تقاريري بتوصلكم بعد سنين.",
+     "show": "board",
+     "board": "light",
+     "host": "left"
+    },
+    {
+     "say": "والأقمار الصناعية القديمة أسوأ: واقفة على ارتفاع ستة وتلاتين ألف كيلومتر.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "الإشارة تطلع وتنزل في حوالي نص ثانية.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "علشان كده المذيع في نشراتهم يسأل المراسل.. والمراسل يفضل باصص في الكاميرا ساكت. <short pause> هو مش غبي. هو لسه السؤال ماوصلوش.",
+     "show": "board",
+     "board": "sat"
+    }
+   ]
+  },
+  {
+   "id": "weak",
+   "story": {
+    "n": 6,
+    "tag": "لما الشبكة تضعف"
+   },
+   "style": "Explaining a familiar annoyance as a deliberate choice.",
+   "beats": [
+    {
+     "say": "ولما الشبكة تضعف، البرنامج بيختار يضحّي بمين. أول حاجة: الصورة. تتبوّظ وتبقى مربعات.",
+     "show": "board",
+     "board": "weak"
+    },
+    {
+     "say": "بعدين تقف خالص. ودايماً بتقف على أوحش لقطة للوش. دي مش صدفة: اللقطة اللي فيها حركة كتير هي اللي بتقع.",
+     "show": "board",
+     "board": "weak"
+    },
+    {
+     "say": "والصوت آخر حاجة تقع. البرنامج بيحميه لآخر نفس.",
+     "show": "board",
+     "board": "weak"
+    },
+    {
+     "say": "علشان كده النصيحة عندهم لما الخط يبوظ: اقفل الكاميرا. الصوت محتاج حوالي واحد على خمسين من اللي الصورة محتاجاه.",
+     "show": "board",
+     "board": "weak",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "والبرنامج طول المكالمة بيقيس الخط: كام حزمة ضاعت، وكام اتأخرت. ويعلّي الجودة أو يوطّيها كل ثانية. <short pause> يعني الجودة اللي شايفينها مش ثابتة. دي مفاوضات مستمرة.",
+     "show": "board",
+     "board": "weak",
+     "step": "hold",
+     "host": "left",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "find",
+   "story": {
+    "n": 7,
+    "tag": "اللقاء والقفل"
+   },
+   "style": "Practical, then one line a spy would care about.",
+   "beats": [
+    {
+     "say": "طيب الجهازين بيلاقوا بعض إزاي أصلاً؟ كل واحد مستخبي ورا الراوتر بتاع بيته. فبيروح لوسيط ويقول: ده عنواني.",
+     "show": "board",
+     "board": "find"
+    },
+    {
+     "say": "والتاني يعمل زيه.",
+     "show": "board",
+     "board": "find"
+    },
+    {
+     "say": "وبعدها، لو ينفع، الصورة تمشي بينهم مباشر. ولو ماينفعش، أو المكالمة فيها ناس كتير، تعدّي على مخزن في النص.",
+     "show": "board",
+     "board": "find"
+    },
+    {
+     "say": "ولما يبقوا عشرين في مكالمة واحدة، كل جهاز بيبعت صورته مرة واحدة للمخزن. والمخزن يوزّع: صور صغيرة للكل.. وصورة كبيرة للي بيتكلم بس.",
+     "show": "board",
+     "board": "find",
+     "step": "hold",
+     "host": "left",
+     "emote": "proud"
+    },
+    {
+     "say": "وفي أغلب التطبيقات المكالمة مشفّرة من الطرف للطرف. المفتاح عند الجهازين بس.",
+     "show": "board",
+     "board": "lock"
+    },
+    {
+     "say": "اللي في النص، الشركة أو شبكة الاتصالات أو أنا، شايف حِزم ماشية.",
+     "show": "board",
+     "board": "lock"
+    },
+    {
+     "say": "ومش فاهم منها حاجة. <short pause> ودي يا فندم أكتر حاجة مضايقاني في الملف كله.",
+     "show": "board",
+     "board": "lock",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "story": {
+    "n": 8,
+    "tag": "الحلم القديم"
+   },
+   "style": "Historian's irony: they wanted it for fifty years, and now they turn the camera off.",
+   "beats": [
+    {
+     "say": "والبشر بيحلموا بالحكاية دي من زمان. سنة أربعة وستين، شركة تليفونات عرضت تليفون بصورة في معرض دولي.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "وسنة سبعين نزّلته للناس.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "الاشتراك: مية وستين دولار في الشهر. بفلوس وقتها. ومحدش اشترك. والمشروع اتقفل.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "وبعدها بتلاتين سنة، المكالمات بقت تمشي على الإنترنت ببلاش.",
+     "show": "board",
+     "board": "now"
+    },
+    {
+     "say": "وسنة ألفين وعشرة، مكالمة الفيديو دخلت التليفون اللي في الجيب.",
+     "show": "board",
+     "board": "now"
+    },
+    {
+     "say": "وسنة ألفين وعشرين، لما اتحبسوا في بيوتهم بسبب وباء، تطبيق واحد بس وصل تلتمية مليون مشاركة في اليوم.",
+     "show": "board",
+     "board": "now"
+    },
+    {
+     "say": "ودلوقتي البرنامج بقى يكتب الكلام تحت الصورة وهو بيتقال، ويترجمه كمان. اتنين مش بيتكلموا نفس اللغة.. وبيتفاهموا. <short pause> دي يا فندم حاجة احنا نفسنا لسه ماعملناهاش.",
+     "show": "board",
+     "board": "now",
+     "step": "hold",
+     "host": "right",
+     "emote": "worried"
+    },
+    {
+     "say": "خمسين سنة بيحلموا يشوفوا بعض في التليفون. ولما بقى ببلاش.. <short pause> أول حاجة بيعملوها: يقفلوا الكاميرا.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "field",
+   "story": {
+    "n": 9,
+    "tag": "ملاحظات ميدانية"
+   },
+   "style": "A field anthropologist's notes, dry and fond.",
+   "beats": [
+    {
+     "say": "وعندي كام ملاحظة ميدانية. الأولى: الكاميرا فوق الشاشة.",
+     "show": "board",
+     "board": "eyes"
+    },
+    {
+     "say": "وعين الإنسان على وشّ التاني.. اللي في الشاشة.",
+     "show": "board",
+     "board": "eyes"
+    },
+    {
+     "say": "فمحدش فيهم بيبص في عين التاني. أبداً. الاتنين باصين لتحت شوية. <short pause> مليارات المكالمات.. ومفيهاش نظرة واحدة في العين.",
+     "show": "board",
+     "board": "eyes"
+    },
+    {
+     "say": "التانية: كل واحد فيهم بيقضّي المكالمة باصص على صورته هو، في المربع الصغير. <short pause> والتالتة: أشهر جملة في العصر ده: إنت قافل المايك.",
+     "show": "board",
+     "board": "eyes",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "والرابعة: بقوا يغيّروا الخلفية بضغطة. البرنامج بيقصّ الإنسان من الصورة ويحطّه على شط بحر. <short pause> واللي وراه في الحقيقة.. أوضة مش مترتبة.",
+     "show": "board",
+     "board": "eyes",
+     "step": "hold",
+     "host": "right",
+     "emote": "grin"
+    },
+    {
+     "say": "وعلماءهم لقوا إن المكالمات دي بتتعبهم أكتر من القعدة العادية. المخ بيبذل مجهود علشان يعوّض التأخير، والنظرة اللي مش مظبوطة. <short pause> اخترعوا معجزة.. وطلعت مرهقة.",
+     "shot": "close",
+     "emote": "bored"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 10,
+    "tag": "قاموس البشر"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "آخر كلمتين من قاموس البشر في الملف ده. Codec: اللي بيضغط الصورة والصوت عند الإرسال، ويفكّهم عند الوصول. صاحب الخدع التلاتة.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "و Lag: التأخير. الفرق بين ما الكلمة اتقالت.. وما اتسمعت. <short pause> والبشر بيلوموا عليه أي حاجة مش عايزين يردّوا عليها.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 11,
+    "tag": "قفل الملف"
+   },
+   "style": "Closing the whole file: summary and a slightly proud sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة الملف كله يا فندم. واحد: الموبايل راديو لأقرب برج. اتنين: الإنترنت خراطيم إزاز في قاع البحر. تلاتة: كل حاجة بتتقطّع حِزم. وأربعة: مكالمة الفيديو مابتبعتش وشّك.. بتبعت اللي اتغيّر فيه.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "خلاصة الملف",
+      "items": [
+       "الموبايل راديو لأقرب برج",
+       "الإنترنت خراطيم في قاع البحر",
+       "كل حاجة بتتقطّع حِزم",
+       "الفيديو: ابعت اللي اتغيّر بس"
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "والتقييم: الشبكة دي أعقد حاجة الكائنات دي بنتها. ومحدش فيهم فاهمها كلها. كل واحد فاهم حتة.. والحتت راكبة على بعض. <short pause> وشغالة.",
+     "shot": "close",
+     "emote": "proud"
+    },
+    {
+     "say": "ملف الشبكة اتقفل. تلات تقارير. والكوكب ده لسه عنده حاجات كتير محتاجة شرح.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
