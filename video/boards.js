@@ -262,6 +262,23 @@ const BOARDS = {
         ${T(0, -18, it.word, 92, { fill: C.yellow })}${T(0, 66, it.means, 48, { font: "Elite" })}</g>`; }).join("");
     return svg(heading(s.title, 1, 140) + body);
   },
+  // Who changes the rules: every machine runs the rule book it chooses; when they disagree the chain splits in two.
+  //   0 everyone on the same rules  1 some switch to new rules  2 the chain forks  3 the two branches are named
+  fork(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), ch = new Set(s.changed || [1, 4]), dimN = a2 > 0 ? lerp(1, 0.4, ease(a2 / 0.4)) : 1;
+    const blk = (x, y, c, a) => (a <= 0 ? "" : `<g transform="translate(${x} ${y}) scale(${pop(a)})"><rect x="-52" y="-52" width="104" height="104" rx="18" fill="${C.navy}" stroke="${c}" stroke-width="7"/><path d="M-26 -14h52M-26 10h34" stroke="${c}" stroke-width="7" stroke-linecap="round" opacity=".7"/></g>`);
+    const nodes = Array.from({ length: 6 }, (_, i) => { const x = 460 + i * 200, sw = ch.has(i) && a1 > 0, c = sw ? C.pink : C.cyan;
+      return G(x, 330, 0.8 * pop(total - i * 0.08), icon("node", c)) + T(x, 440, sw ? s.v2 : s.v1, 38, { font: "Elite", fill: c }); }).join("");
+    const y0 = 720, common = [0, 1, 2, 3].map((k) => blk(330 + k * 150, y0, C.line, total - 0.3 - k * 0.12) + (k ? `<path d="M${330 + k * 150 - 98} ${y0}h46" stroke="${C.line}" stroke-width="7" opacity="${clamp((total - 0.3 - k * 0.12) / 0.2)}"/>` : "")).join("");
+    let split = "";
+    if (a2 > 0) { const d = 130 * ease(a2 / 0.6);
+      for (const [sign, c] of [[-1, C.yellow], [1, C.pink]]) { const y = y0 + sign * d;
+        split += `<path d="M832 ${y0}C880 ${y0} 880 ${y} 928 ${y}" fill="none" stroke="${c}" stroke-width="7"/>`;
+        for (let j = 0; j < 3; j++) split += blk(980 + j * 150, y, c, a2 - 0.3 - j * 0.18) + (j ? `<path d="M${980 + j * 150 - 98} ${y}h46" stroke="${c}" stroke-width="7" opacity="${clamp((a2 - 0.3 - j * 0.18) / 0.2)}"/>` : "");
+        if (a3 > 0) split += `<g opacity="${clamp(a3 / 0.3)}">${T(1400, y + 22, sign < 0 ? s.a : s.b, 60, { anchor: "start", fill: c })}</g>`; }
+      if (a3 > 0 && s.year) split += G(580, 900, pop(a3), T(0, 0, s.year, 80, { fill: C.dim })); }
+    return svg(`${heading(s.title, 1)}<g opacity="${dimN}">${nodes}</g>${common}${split}${caption((s.captions || [])[step], age, 960)}`);
+  },
 };
 
 export function board(spec, step, age, total, cfg = {}) {
