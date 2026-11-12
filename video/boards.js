@@ -67,7 +67,7 @@ const BOARDS = {
   },
   // Things in a row, one per step, joined by arrows: barter, gold, paper, numbers.
   steps(s, step, age) {
-    const n = s.items.length, x0 = 960 - (n - 1) * 190 * (n > 4 ? 0.9 : 1.15), dx = n > 1 ? (960 - x0) * 2 / (n - 1) : 0;
+    const n = s.items.length, x0 = 960 - (n - 1) * 190 * (n > 4 ? 0.9 : n <= 2 ? 1.9 : 1.15), dx = n > 1 ? (960 - x0) * 2 / (n - 1) : 0;
     const body = s.items.map((it, i) => { const a = since(i, step, age); if (a < 0) return ""; const x = x0 + i * dx, now = i === Math.min(step, n - 1);
       return (i ? `<path d="M${x - dx + 150} 480H${x - 150}" stroke="${C.line}" stroke-width="8" stroke-linecap="round" stroke-dasharray="${dx}" stroke-dashoffset="${dx * (1 - ease(a / 0.4))}" opacity=".7"/><path d="M${x - 148} 480l-22 -16v32z" fill="${C.line}" opacity="${0.7 * clamp(a / 0.4)}"/>` : "")
         + labelled(x, 480, now ? 1.5 : 1.2, it.icon, it.label, a, { glow: now ? C.yellow : null, opacity: now ? 1 : 0.6, args: it.args })
@@ -127,7 +127,7 @@ const BOARDS = {
     return svg(`${heading(s.title, 1)}<path d="M300 300V800H1620" fill="none" stroke="${C.line}" stroke-opacity=".5" stroke-width="5"/>
       ${[0, 1, 2, 3].map((i) => `<path d="M300 ${420 + i * 120}H1620" stroke="${C.line}" stroke-opacity=".12" stroke-width="3"/>`).join("")}
       <path d="M${seen.join("L")}" fill="none" stroke="${s.color || C.red}" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${ex}" cy="${ey}" r="16" fill="${s.color || C.red}"/>
-      ${(s.labels || []).map((l) => (last >= l.at ? `<g opacity="${clamp((last - l.at) / 0.6)}">${T(X(l.at), Y(pts[l.at]) - 40, l.text, 44, { font: "Elite" })}</g>` : "")).join("")}
+      ${(s.labels || []).map((l) => (last >= l.at ? `<g opacity="${clamp((last - l.at) / 0.6)}">${T(X(l.at), Y(pts[l.at]) - 40, l.text, 44, { font: "Elite" })}${l.below ? T(X(l.at), 856, l.below, 40, { font: "Elite", fill: C.dim }) : ""}</g>` : "")).join("")}
       ${step >= 1 && s.stamp ? G(1180, 440, pop(since(1, step, age)), `<g transform="rotate(-8)"><rect x="-330" y="-84" width="660" height="168" rx="20" fill="rgba(5,6,13,.55)" stroke="${C.red}" stroke-width="12"/>${T(0, 38, s.stamp, 104, { fill: C.red })}</g>`) : ""}
       ${caption((s.captions || [])[step], age)}`);
   },
@@ -314,6 +314,26 @@ const BOARDS = {
         ${it.sub ? T(ltr ? x + 160 : x + W - 160, y + 42, it.sub, 36, { anchor: ltr ? "start" : "end", font: "Elite", fill: C.dim }) : ""}
         ${it.tag ? T(ltr ? x + W - 50 : x + 50, y + 18, it.tag, 50, { anchor: ltr ? "end" : "start", fill: it.tagFill || C.yellow }) : ""}</g>`; }).join("");
     return svg(heading(s.title, 1) + body + caption(s.note && step >= n ? s.note : "", since(n, step, age), 990));
+  },
+  // Borrowed money: a small stake of your own under a big bet. A small fall in price takes all of the stake.
+  //   0 your money  1 the loan on top  2 the price falls and your part is what burns  3 the position is closed
+  lever(s, step, age, total) {
+    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), x0 = 410, W = 1100, own = W * (s.share ?? 0.1), y = 470, h = 150;
+    const burn = a2 > 0 ? ease(a2 / 1.2) : 0, loanW = a1 > 0 ? (W - own) * ease(a1 / 0.7) : 0, ownW = own * (1 - burn);
+    return svg(`${heading(s.title, 1)}
+      ${a1 > 0 ? `<rect x="${x0 + (W - own) - loanW}" y="${y}" width="${loanW}" height="${h}" rx="16" fill="#3a4170"/>${T(x0 + (W - own) / 2, y + 96, s.loan, 54, { font: "Elite", fill: C.dim, opacity: clamp((a1 - 0.5) / 0.3) })}` : ""}
+      ${G(x0 + W - own / 2, y + h / 2, pop(total), `<rect x="${-own / 2}" y="${-h / 2}" width="${ownW}" height="${h}" rx="16" fill="${a2 > 0 ? C.red : C.green}" transform="translate(${own - ownW} 0)"/>`)}
+      ${T(x0 + W - own / 2, y - 40, a2 > 1.2 ? s.zero : s.mine, 50, { font: "Elite", fill: a2 > 1.2 ? C.red : C.green })}
+      ${a1 > 0.7 ? `<g opacity="${clamp((a1 - 0.7) / 0.3)}"><path d="M${x0} ${y + h + 40}H${x0 + W}" stroke="${C.line}" stroke-width="5"/><path d="M${x0} ${y + h + 26}v28M${x0 + W} ${y + h + 26}v28" stroke="${C.line}" stroke-width="5"/>${T(x0 + W / 2, y + h + 110, s.total, 58, { fill: C.yellow })}</g>` : ""}
+      ${a2 > 0 ? G(960, 300, pop(a2), `<rect x="-300" y="-56" width="600" height="112" rx="20" fill="${C.navy}" stroke="${C.red}" stroke-width="6"/>${T(0, 22, s.drop, 60, { fill: C.red })}`) : ""}
+      ${a3 > 0 ? G(960, 560, pop(a3), `<g transform="rotate(-8)"><rect x="-330" y="-96" width="660" height="192" rx="24" fill="rgba(5,6,13,.85)" stroke="${C.red}" stroke-width="14"/>${T(0, 44, s.stamp, 124, { fill: C.red })}</g>`) : ""}
+      ${caption((s.captions || [])[step], age, 900)}`);
+  },
+  // Two camps side by side, one per step: what each says, in two or three short lines.
+  versus(s, step, age) {
+    const ltr = s.dir === "ltr", card = (x, d, a, now) => (a <= 0 ? "" : `<g transform="translate(${x} 580) scale(${0.94 + 0.06 * pop(a)})" opacity="${clamp(a / 0.2) * (now ? 1 : 0.7)}"><rect x="-410" y="-300" width="820" height="600" rx="30" fill="${C.navy}" stroke="${d.color || C.line}" stroke-width="6"/>
+      ${d.icon ? G(0, -196, 0.55, icon(d.icon, ...(d.args || []))) : ""}${T(0, d.icon ? -70 : -170, d.title, 72, { fill: d.color || C.yellow })}${(d.lines || []).map((l, i) => T(0, (d.icon ? 30 : -50) + i * 84, l, 46, { font: "Elite" })).join("")}</g>`);
+    return svg(heading(s.title, 1) + card(ltr ? 500 : 1420, s.a, since(0, step, age), step === 0) + card(ltr ? 1420 : 500, s.b, since(1, step, age), step >= 1) + caption(s.note && step >= 2 ? s.note : "", since(2, step, age), 990));
   },
 };
 
