@@ -26,6 +26,8 @@ if (cues.tempo && cues.tempo !== 1) {
   if (r.status !== 0) throw new Error("could not change the tempo");
   for (const w of words) { w.s /= cues.tempo; w.e /= cues.tempo; } transcript.duration_ms /= cues.tempo;
 }
+// `hold`: seconds the picture runs on in silence after `to` (a clip cut out of an episode); the words after `to` are dropped
+if (cues.hold) { const keep = words.filter((w) => w.s < cues.to); words.length = 0; words.push(...keep); }
 if (cues.to == null) cues.to = Math.round((transcript.duration_ms / 1000 + (cues.tail ?? 0.9)) * 10) / 10;   // whole episode, with a beat to react at the end
 
 // ---- audio level per frame, from the WAV itself --------------------------------------------------
@@ -48,7 +50,7 @@ const level = (t) => {           // RMS over a 40 ms window centred on t
 // ---- direction and captions ------------------------------------------------------------------------
 const { direct } = require("./director.cjs");
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
-const dur = cues.to - cues.from + cues.lead, N = Math.round(dur * FPS);
+const dur = cues.to - cues.from + cues.lead + (cues.hold || 0), N = Math.round(dur * FPS);
 const tAudio = (i) => cues.from - cues.lead + i / FPS;
 let acting = [], chapters = [];
 
@@ -135,7 +137,7 @@ server.listen(0, "127.0.0.1", async () => {
     const page = await browser.newPage({ viewport: { width: vw, height: vh } });
     page.on("pageerror", (err) => { console.error("PAGE ERROR", err.message); process.exitCode = 1; });
     await page.goto(url); await page.waitForFunction("window.__ready === true", null, { timeout: 20000 });
-    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl, layout: cues.layout || "", brand: cues.brand || null });
+    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl, layout: cues.layout || "", vertical: !!cues.vertical, boardZoom: cues.boardZoom || null, brand: cues.brand || null });
     return { page, cdp: await page.context().newCDPSession(page) };
   };
   const shot = async (w, i, format = "jpeg") => {

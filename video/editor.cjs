@@ -32,6 +32,8 @@ const SOLO = { wide: { s: 1, x: 960, y: 540 }, host: { s: 1.42, x: 960, y: 430 }
 // The "short" layout is the solo set in a 1080 x 1920 frame: the host stays on screen the whole time, and a fact or a meme
 // appears above him instead of replacing him. The stage moves him down and makes room when something is shown.
 const SHORT = { wide: { s: 1.3, x: 960, y: 470 }, host: { s: 1.5, x: 960, y: 450 }, close: { s: 1.72, x: 966, y: 420 }, low: { s: 1.7, x: 966, y: 560 } };
+// `vertical: true` on an explain cue file (size 1080 x 1920) is the same episode cut for Shorts: the host stays on screen
+// the whole time, and a board sits above him as a card instead of filling the frame.
 const PERSIST = ["shot", "kind", "slide", "story", "duck", "lurk", "paper", "drone", "music"];
 const G = 2600, DRONE_FLOOR = 624;
 const droneAt = (u) => ({ x: 1090 + 230 * Math.sin(0.9 * u + 0.6) - 10 * u, y: 250 + 46 * Math.sin(2.1 * u) + 18 * Math.sin(5.3 * u) });
@@ -97,7 +99,7 @@ function resolve(cues, words, slides) {
 
 // Step 2: one studio state per frame.
 function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
-  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", explain = cues.layout === "explain", solo = cues.layout === "solo" || explain, shots = short ? SHORT : solo ? SOLO : SHOTS;
+  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", explain = cues.layout === "explain", solo = cues.layout === "solo" || explain, vert = explain && !!cues.vertical, shots = short || vert ? SHORT : solo ? SOLO : SHOTS;
   let pip = 0, room = 0, side = "right";
   let hostY = 0, vY = 0, lurk = 0, peek = 0, scrim = 0, lb = 0, chipA = 0, kb = 1, cx = 0.5, cy = 0.3, storyT = -9, lastStory = null, lastInsertCut = -9;
   for (let i = 0; i < N; i++) {
@@ -106,16 +108,16 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     const seg = segs[k], cutSeg = seg.cutSeg, age = Math.max(0, t - seg.cutT), next = seg.nextCut, left = next ? next.t - t : 9, insert = !!seg.full && !short, slideOn = insert && seg.kind === "slide";
 
     // camera: the framing, a slow push, a little handheld life, then whatever the cut adds
-    const base = shots[seg.studio] || shots.wide; let s = base.s * (1 + Math.min(0.05, 0.014 * age)), x = base.x, y = base.y, blur = 0, flash = 0;
+    const base = shots[vert && seg.full ? "host" : seg.studio] || shots.wide; let s = base.s * (1 + Math.min(0.05, 0.014 * age)), x = base.x, y = base.y, blur = 0, flash = 0;
     x += (5 * Math.sin(2 * Math.PI * 0.13 * tv) + 3 * Math.sin(2 * Math.PI * 0.31 * tv + 1)) / s; y += 4 * Math.sin(2 * Math.PI * 0.17 * tv + 2) / s;
     const r = 0.22 * Math.sin(2 * Math.PI * 0.09 * tv);
-    if (!insert && k > 0) {
+    if ((!insert || vert) && k > 0 && !(vert && seg.full)) {
       if (cutSeg.trans === "punch") s *= 1 + 0.085 * Math.exp(-age * 11);
       else if (cutSeg.trans === "whip") { const w = Math.exp(-age * 17); x += cutSeg.dir * 640 * w / s; blur = 22 * w; }
       else s *= 1 + 0.03 * Math.exp(-age * 12);
     }
     if (!insert && next && next.full && !solo) { const p = clamp(1 - left / 0.2) ** 3; s = lerp(s, SHOTS.tv.s, p); x = lerp(x, SHOTS.tv.x, p); y = lerp(y, SHOTS.tv.y, p); blur = Math.max(blur, 9 * p); }
-    else if (!insert && next && (next.trans === "whip" || (solo && next.full))) { const p = clamp(1 - left / 0.1) ** 2; x -= next.dir * 420 * p / s; blur = Math.max(blur, 18 * p); }
+    else if (!insert && next && (next.trans === "whip" || (solo && !vert && next.full))) { const p = clamp(1 - left / 0.1) ** 2; x -= next.dir * 420 * p / s; blur = Math.max(blur, 18 * p); }
     for (const ti of impacts) if (t >= ti && t < ti + 0.6) { const a = Math.exp(-(t - ti) * 8); x += a * 15 * Math.sin(tv * 97) / s; y += a * 11 * Math.sin(tv * 83 + 1) / s; flash = Math.max(flash, 0.22 * Math.exp(-(t - ti) * 18)); }
 
     // the host: seated, ducked behind the desk, or gone from his chair altogether
@@ -124,7 +126,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     vY = (vY + (targetY - hostY) * 0.2) * 0.6; hostY += vY;
     const body = { e: a0.e, paper: a0.paper, shift: a0.shift, bob: a0.bob, tilt: a0.tilt, armL: a0.armL, armR: a0.armR, shrug: a0.shrug, sway: a0.sway, bounce: a0.bounce, squash: a0.squash };
     lurk += ((seg.lurk && t > seg.t + 0.4 ? 1 : 0) - lurk) * 0.24;
-    const sideHost = explain && insert && (seg.host === "right" || seg.host === "left") ? seg.host : null;
+    const sideHost = explain && !vert && insert && (seg.host === "right" || seg.host === "left") ? seg.host : null;
     if (sideHost) side = sideHost;
     peek += ((seg.peek || sideHost ? 1 : 0) - peek) * 0.26;
     const spy = (look) => ({ ...body, e: { ...a0.e, look, lookY: -0.1, symbol: null }, paper: "pockets", shift: 0, armL: null, armR: null, shrug: 0, sway: 0, bounce: 0, squash: 1 });
@@ -156,14 +158,14 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     if (seg.meme) { const ma = t - seg.t; meme = { ...seg.meme, age: ma, a: clamp(ma / 0.06), s: 1 + 0.25 * Math.exp(-ma * 16) * Math.cos(ma * 20), rot: 1.5 * Math.exp(-ma * 9) }; }
     scrim += (((seg.fact || seg.meme) && !insert && !short ? 1 : 0) - scrim) * 0.3;
     // explain: the picture carries the lesson, so the host is on screen only where a beat asks for him (host: pip | right | left)
-    pip += (((explain ? seg.host === "pip" : solo) && insert ? 1 : 0) - pip) * 0.3;
-    room += ((short && (seg.fact || seg.meme) ? 1 : 0) - room) * 0.26;
+    pip += (((explain ? seg.host === "pip" : solo) && insert && !vert ? 1 : 0) - pip) * 0.3;
+    room += (((short || vert) && (seg.fact || seg.meme || (vert && insert)) ? 1 : 0) - room) * 0.26;
     const tight = !insert && (seg.shot === "close" || seg.shot === "low");
-    lb += ((tight && !short ? 62 : 0) - lb) * 0.22;
+    lb += ((tight && !short && !vert ? 62 : 0) - lb) * 0.22;
     if (seg.story !== lastStory) { lastStory = seg.story; storyT = t; }
-    chipA += ((seg.story && (!tight || short) ? 1 : 0) - chipA) * 0.25;
+    chipA += ((seg.story && (!tight || short || vert) ? 1 : 0) - chipA) * 0.25;
     const sl = slides[seg.slide];
-    const chip = seg.story && chipA > 0.02 ? { n: seg.story.n, tag: seg.story.tag, src: sl && (!insert || (solo && slideOn)) ? `${sl.source} · ${sl.date}` : "", a: chipA, pop: 1 + 0.22 * Math.exp(-(t - storyT) * 9), low: solo && insert } : null;
+    const chip = seg.story && chipA > 0.02 ? { n: seg.story.n, tag: seg.story.tag, src: sl && (!insert || (solo && slideOn)) ? `${sl.source} · ${sl.date}` : "", a: chipA, pop: 1 + 0.22 * Math.exp(-(t - storyT) * 9), low: solo && insert && !vert } : null;
 
     let drone = null;
     if (seg.drone) { const d = seg.drone, u = t - d.from, enter = smooth(clamp(u / 0.9)), p = droneAt(u);
@@ -174,7 +176,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
 
     frames.push({ cam: { s, x, y, r }, blur, flash, scrim: scrim < 0.01 ? 0 : scrim, lb, brand: solo && insert ? 0 : 1, sweep: (tv * 40) % 360, room,
       pip: pip > 0.02 ? { ...body, y: hostY, amt: pip } : null,
-      host: !insert || ins.enter < 1 ? (hostY < 590 ? { ...body, y: hostY } : null) : null,
+      host: vert || !insert || ins.enter < 1 ? (hostY < 590 ? { ...body, y: hostY } : null) : null,
       lurk: lurk > 0.02 && (!insert || ins.enter < 1) ? { ...spy(0.75 * Math.sin(2 * Math.PI * 0.7 * tv)), amt: lurk } : null,
       peek: peek > 0.02 ? (explain ? { ...body, paper: "pockets", shift: 0, armL: null, armR: null, amt: peek, side } : { ...spy(-0.75), amt: peek, rise: 262, rot: -7 }) : null,
       board: insert && seg.kind === "board" ? { spec: seg.board, step: seg.step || 0, age: t - (seg.stepT ?? seg.t), total: t - seg.cutT } : null,

@@ -17,6 +17,11 @@ Authorization header and the token request's body from mode-600 temporary files.
 
 One-time setup, with a code from Google's consent page (read from stdin, never from the command line):
   video/youtube_upload.py auth-code --redirect-uri https://developers.google.com/oauthplayground < code.txt
+A Short cut from an episode (title, description and tags from <episode>/youtube/shorts.json; private unless
+--publish-at; the result is written back into shorts.json under that Short's `video`):
+  video/youtube_upload.py short <episode dir> <key> <short.mp4> [--publish-at <time>] [--dry-run]
+Schedule (or reschedule) a Short that is already uploaded and still private:
+  video/youtube_upload.py short-schedule <episode dir> <key> <publishAt, e.g. 2026-11-20T16:00:00Z>
 A playlist (prints its id):
   video/youtube_upload.py playlist "<title>" "<description>" [--privacy private]
 
@@ -126,10 +131,64 @@ def make_playlist(argv):
     print(json.dumps({"id": p["id"], "url": f"https://www.youtube.com/playlist?list={p['id']}", "title": p["snippet"]["title"], "privacy": p["status"]["privacyStatus"]}, ensure_ascii=False))
 
 
+def _shorts(ep):
+    f = os.path.join(ep.rstrip("/"), "youtube", "shorts.json")
+    return f, json.load(open(f, encoding="utf-8"))
+
+
+def _save_shorts(f, data):
+    with open(f, "w", encoding="utf-8") as h:
+        json.dump(data, h, ensure_ascii=False, indent=1); h.write("\n")
+
+
+def upload_short(argv):
+    """A vertical Short: the video alone (its captions are burned in), private or scheduled."""
+    ap = argparse.ArgumentParser(prog="youtube_upload.py short")
+    ap.add_argument("episode"); ap.add_argument("key"); ap.add_argument("video"); ap.add_argument("--publish-at"); ap.add_argument("--dry-run", action="store_true")
+    a = ap.parse_args(argv)
+    f, data = _shorts(a.episode); sh = next(x for x in data["shorts"] if x["key"] == a.key)
+    if (sh.get("video") or {}).get("id"):
+        sys.exit(f"{a.key} is already uploaded: {sh['video']['url']}")
+    assert len(sh["title"]) <= 100, f"title is {len(sh['title'])} characters; the limit is 100"
+    status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "embeddable": True, "license": "youtube"}
+    if a.publish_at: status["publishAt"] = a.publish_at
+    meta = {"snippet": {"title": sh["title"], "description": sh["description"], "tags": sh.get("tags", []), "categoryId": "27", "defaultLanguage": "ar", "defaultAudioLanguage": "ar"}, "status": status}
+    size = os.path.getsize(a.video)
+    print(f"{a.key}: \"{sh['title']}\" · {size / 1e6:.1f} MB · private" + (f" until {a.publish_at}" if a.publish_at else ""))
+    if a.dry_run:
+        print(json.dumps(meta, ensure_ascii=False, indent=1)); return
+    with tempfile.NamedTemporaryFile("w", suffix=".json", encoding="utf-8") as t:
+        json.dump(meta, t, ensure_ascii=False); t.flush()
+        _, h = curl(["-X", "POST", f"{API}/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", "-H", "Content-Type: application/json; charset=UTF-8",
+                     "-H", "X-Upload-Content-Type: video/mp4", "-H", f"X-Upload-Content-Length: {size}", "--data-binary", "@" + t.name], want_headers=True)
+    video = json.loads(curl(["-X", "PUT", h["location"], "-H", "Content-Type: video/mp4", "-T", a.video]))
+    sh["video"] = {"id": video["id"], "url": f"https://youtube.com/shorts/{video['id']}", "privacy": video["status"]["privacyStatus"], "publishAt": video["status"].get("publishAt")}
+    _save_shorts(f, data); print("  video", sh["video"]["url"], sh["video"]["privacy"])
+
+
+def schedule_short(argv):
+    """Set publishAt on a Short that is uploaded and private. videos.update replaces the whole status part, so it is read first."""
+    ap = argparse.ArgumentParser(prog="youtube_upload.py short-schedule"); ap.add_argument("episode"); ap.add_argument("key"); ap.add_argument("publish_at")
+    a = ap.parse_args(argv)
+    f, data = _shorts(a.episode); sh = next(x for x in data["shorts"] if x["key"] == a.key); vid = sh["video"]["id"]
+    cur = json.loads(curl([f"{API}/youtube/v3/videos?part=status&id={vid}"]))["items"][0]["status"]
+    if cur["privacyStatus"] != "private":
+        sys.exit(f"{a.key} is {cur['privacyStatus']}, not private; not changing it")
+    st = {k: cur[k] for k in ("embeddable", "license", "publicStatsViewable", "selfDeclaredMadeForKids") if k in cur}
+    st.update(privacyStatus="private", publishAt=a.publish_at)
+    v = json.loads(curl(["-X", "PUT", f"{API}/youtube/v3/videos?part=status", "-H", "Content-Type: application/json", "-d", json.dumps({"id": vid, "status": st})]))
+    sh["video"].update(privacy=v["status"]["privacyStatus"], publishAt=v["status"].get("publishAt"))
+    _save_shorts(f, data); print(f"  {a.key} {sh['video']['url']} scheduled for {sh['video']['publishAt']}")
+
+
 def main():
     if sys.argv[1:2] == ["auth-code"]:
         ap = argparse.ArgumentParser(prog="youtube_upload.py auth-code"); ap.add_argument("--redirect-uri", default="https://developers.google.com/oauthplayground")
         return auth_code(ap.parse_args(sys.argv[2:]).redirect_uri)
+    if sys.argv[1:2] == ["short"]:
+        return upload_short(sys.argv[2:])
+    if sys.argv[1:2] == ["short-schedule"]:
+        return schedule_short(sys.argv[2:])
     if sys.argv[1:2] == ["playlist"]:
         return make_playlist(sys.argv[2:])
     ap = argparse.ArgumentParser()
