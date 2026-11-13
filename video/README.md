@@ -404,6 +404,24 @@ above him, with the captions between the two. There are no slides in this
 layout, so it suits pieces that are not news.
 `cues/humans-guide-001-ar.json` is the first one.
 
+### Shorts cut from an explain episode
+
+`short.cjs` renders a vertical Short (1080 x 1920) out of a finished explain episode with the same renderer:
+`vertical: true` on the episode's cue file puts the board in a card at the top, keeps the host on screen below it
+and the captions between the two, clear of the bottom fifth and of the buttons on the right. The Shorts are listed
+in `<episode>/youtube/shorts.json`: title, description, tags and `parts`, each `[from, to]` in seconds of the
+finished episode. Several parts are joined in order.
+
+```sh
+node short.cjs ../episodes/<channel>/<episode> <key> <work>/<episode>.tight.wav out.mp4   # the tightened voice from produce.sh
+node short.cjs ../episodes/<channel>/<episode> <key> <voice> still.png --still 20,31      # single frames
+video/youtube_upload.py short episodes/<channel>/<episode> <key> out.mp4                  # private; the id goes back into shorts.json
+video/youtube_upload.py short-schedule episodes/<channel>/<episode> <key> 2026-11-20T10:00:00Z
+```
+
+YouTube makes any vertical video of three minutes or less a Short. The related-video link and the Short's
+thumbnail are set in YouTube Studio; the API has neither.
+
 ## Explainers: motion-graphics boards
 
 `"layout": "explain"` is for episodes that teach something. The picture
