@@ -157,5 +157,4 @@ Bob, Carol; dollars). Each storyboard's first note lists the jokes that were rep
   and takes an optional `size` for long titles (110 to 160). Arabic frames are unchanged.
 - Latin text is wider than the Arabic: on a four-item `steps` board keep each `sub` under about 16 characters; `story`
   lines start at x 760, so keep them under about 30 characters (or `"size": 54`); `route` labels one or two words.
-- Thumbnails: `video/youtube/art-*-file-en.json`. Text sits on the left, so icons go by the host's hand
-  (x about 1150, y 610) on the `a` thumbnails and near x 1000 on the `peek` ones.
+- Thumbnails for the English versions are made later from the redesigned thumbnail template (branch `thumbnails-v2`).
