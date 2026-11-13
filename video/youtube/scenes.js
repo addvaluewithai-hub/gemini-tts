@@ -402,6 +402,9 @@ export const SCENES = {
       + lin("flame", ["#ff2e2e", [0.4, "#ff7a1a"], [0.75, "#ffe066"], "#fff"], 1, 0) + lin("hull", ["#ffffff", [0.6, "#d9dfee"], "#8f96b8"], 0, 1) + lin("chrome", ["#ffffff", [0.4, "#c9cee6"], [0.6, "#7c839e"], "#e6e9f5"], 1, 0)
       + lin("scr6", ["#ffb347", "#ff6a3d"]) + lin("frond", ["#3fae6a", "#1d6b3a"], 1, 1) + lin("pole", ["#c9cee6", "#7c839e", "#c9cee6"], 1, 0) + lin("marble", ["#f4f1ea", "#c9c4b4"], 1, 1);
     const ITEMS = {
+      // lightning all around (to put over the host when he gets a shock)
+      bolts: () => [[-260, -200, -20, 0.7], [250, -220, 25, 0.6], [-300, 60, 10, 0.5], [300, 40, -15, 0.55], [-120, -300, 5, 0.45], [140, -310, -10, 0.5]].map(([x, y, r, k]) => `<path transform="translate(${x} ${y}) rotate(${r}) scale(${k})" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#fff36b" stroke="#fff" stroke-width="7" filter="url(#glow)"/>`).join("")
+        + [[-200, -120], [210, -110], [-220, 160], [230, 170]].map(([x, y]) => `<path d="M${x} ${y}l${x > 0 ? 50 : -50} ${y > 0 ? 30 : -30}" stroke="#fff36b" stroke-width="10" stroke-linecap="round"/>`).join(""),
       // a power plug whose head is a bitcoin, rammed into a socket that is throwing sparks
       plug: () => `<path d="M-520 300C-300 300 -260 120 -150 60" fill="none" stroke="#05060d" stroke-width="40" stroke-linecap="round"/>
         <g filter="url(#sh)"><rect x="40" y="-200" width="300" height="300" rx="40" fill="#e6e9f5"/><rect x="70" y="-170" width="240" height="240" rx="30" fill="#c9cee6"/><rect x="130" y="-110" width="26" height="70" rx="8" fill="#2a2f45"/><rect x="224" y="-110" width="26" height="70" rx="8" fill="#2a2f45"/></g>
@@ -491,9 +494,9 @@ export const SCENES = {
         <g transform="translate(-20 170)">${[[-90, -80], [100, -90], [-60, 80], [80, 90], [-130, 10], [140, 0]].map(([x, y]) => `<path d="M0 0L${x} ${y}" stroke="#7ff6ff" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>`).join("")}</g>`,
     };
     const back = `<rect width="1280" height="720" fill="url(#soloBg)"/>${o.rays ? rays(A.x, A.y, 18, "#fff", o.rays) : ""}${o.bubbles ? bubbles(9, 24, 0, 1280, 0, 720, 16, 0.4) : ""}
-      <g transform="translate(${A.x} ${A.y}) scale(${sc}) rotate(${o.rot || 0})">${ITEMS[o.item]()}</g>`;
-    const O = o.over;   // over: { item, at, s } drawn over the host
-    const front = O ? `<g transform="translate(${O.at.x} ${O.at.y}) scale(${O.s || 1})">${ITEMS[O.item]()}</g>` : "";
+      ${o.item ? `<g transform="translate(${A.x} ${A.y}) scale(${sc}) rotate(${o.rot || 0})">${ITEMS[o.item]()}</g>` : ""}`;
+    // over: { item, at, s, rot } or a list of them, drawn over the host (the tin he pops out of, sparks around him)
+    const front = [].concat(o.over || []).map((O) => `<g transform="translate(${O.at.x} ${O.at.y}) scale(${O.s || 1}) rotate(${O.rot || 0})">${ITEMS[O.item]()}</g>`).join("");
     return { defs, back, front };
   },
 };
