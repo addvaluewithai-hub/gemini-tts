@@ -1,0 +1,865 @@
+{
+ "title": "Earth Report: Cryptocurrency 2",
+ "recorded_for": "2026-11-13",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: Cryptocurrency, part 2 of 5, English version. Adapted from `../explain-crypto-02-ar`, not translated: same facts, order and boards; lines and jokes rewritten for English speakers. The Egyptian meat grinder and kofta becomes a smoothie that never turns back into strawberries; the tab at the corner grocer becomes a bar tab settled at closing time; new lines: the hash as the planet's password habit, the cardboard-box mines, and the countdown party for the halving. How the shared ledger is written and guarded: fingerprints (hashes), pages chained by them, mining as a guessing race, why forging is too expensive, the energy cost, the halving and the 21 million cap, who can change the rules (forks, the 2017 block size dispute and Bitcoin Cash), and where mining is concentrated.",
+  "",
+  "Facts are the Arabic episode's, stated from general knowledge: a block about every ten minutes; difficulty adjusts about every two weeks; the reward began at 50 BTC and halves about every four years (25 in 2012, 12.5 in 2016, 6.25 in 2020, 3.125 in 2024), next expected in 2028; supply is capped at 21 million with the last coin expected around 2140; about 95% is mined by late 2026; the 20 millionth coin was mined in March 2026; the chain has more than 900,000 blocks; the network handles about seven transfers a second; the whole network makes about 10 to the 21 guesses a second; by Hashrate Index estimates for October 2026 the United States has about 36 percent of mining, Russia 18 and China about 12 despite its 2021 ban; the two largest pools find about half of all blocks; fees reached tens of dollars per transfer on congested days; Bitcoin Cash split off on 1 August 2017; in August 2010 a bug let someone create about 184 billion coins and the network replaced that block within about five hours; Cambridge puts the network at about 0.5 percent of world electricity, in the range of a mid-sized country. The fingerprints shown on screen are stand-ins, not real hashes. No current prices are quoted, and it says it is not investment advice."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan bureaucrat. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "NEXT REPORT",
+   "next": "Your key is your money · Part 3 of 5",
+   "note": "Subscribe so the rest of the file reaches you"
+  }
+ },
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "EARTH REPORT · FIELD FILE",
+   "title": "THE BLOCKCHAIN",
+   "sub": "PART 2 OF 5 · THE LEDGER THAT GUARDS ITSELF"
+  },
+  "trip": {
+   "kind": "steps",
+   "title": "THE TRIP OF ONE TRANSFER",
+   "items": [
+    {
+     "icon": "phone",
+     "label": "Announced",
+     "sub": "to everyone"
+    },
+    {
+     "icon": "node",
+     "label": "Waits",
+     "sub": "highest fee first"
+    },
+    {
+     "icon": "file",
+     "label": "Written",
+     "sub": "onto a page",
+     "args": [
+      "#"
+     ]
+    },
+    {
+     "icon": "coin",
+     "label": "Settled",
+     "sub": "6 pages ≈ 1 hour",
+     "args": [
+      "#58d68d",
+      "✓"
+     ]
+    }
+   ]
+  },
+  "where": {
+   "kind": "bars",
+   "title": "WHERE ARE THE MINES?",
+   "bars": [
+    {
+     "label": "USA",
+     "value": 36,
+     "text": "36%"
+    },
+    {
+     "label": "Russia",
+     "value": 18,
+     "text": "18%",
+     "color": "#35c8ff"
+    },
+    {
+     "label": "China",
+     "value": 12,
+     "text": "12%",
+     "color": "#ff4654"
+    },
+    {
+     "label": "Everyone else",
+     "value": 34,
+     "text": "34%",
+     "color": "#9fb0ff"
+    }
+   ],
+   "note": "China banned it in 2021 · estimates, Oct 2026",
+   "every": 0.4
+  },
+  "pools": {
+   "kind": "bars",
+   "title": "WHO WINS THE RACE?",
+   "bars": [
+    {
+     "label": "Team one",
+     "value": 30,
+     "text": "30%",
+     "color": "#ff4fa3"
+    },
+    {
+     "label": "Team two",
+     "value": 19,
+     "text": "19%",
+     "color": "#ff4fa3"
+    },
+    {
+     "label": "Everyone else",
+     "value": 51,
+     "text": "51%",
+     "color": "#9fb0ff"
+    }
+   ],
+   "note": "Two teams: about half the wins",
+   "every": 0.4
+  },
+  "fork": {
+   "kind": "fork",
+   "title": "WHO CHANGES THE RULES?",
+   "v1": "rules 1",
+   "v2": "rules 2",
+   "changed": [
+    1,
+    4
+   ],
+   "a": "Bitcoin",
+   "b": "Bitcoin Cash",
+   "year": "2017"
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "THE HUMAN DICTIONARY",
+   "items": [
+    {
+     "word": "Node",
+     "means": "A computer that keeps a copy of the ledger and checks it"
+    },
+    {
+     "word": "Halving",
+     "means": "The day the reward is cut in two. Every four years"
+    }
+   ]
+  },
+  "net": {
+   "kind": "network",
+   "title": "EVERYONE HOLDS THE LEDGER",
+   "n": 34,
+   "cheat": 11
+  },
+  "hash": {
+   "kind": "hash",
+   "title": "THE FINGERPRINT MACHINE",
+   "inLabel": "the text",
+   "outLabel": "the fingerprint",
+   "input": "Alice pays Bob 30",
+   "changed": "Alice pays Bob 31"
+  },
+  "chain": {
+   "kind": "chain",
+   "title": "PAGES HOLDING ON TO EACH OTHER",
+   "prevLabel": "last page's print",
+   "hashLabel": "its own print",
+   "tamper": "Alice → Bob 3000",
+   "rejected": "REJECTED",
+   "blocks": [
+    {
+     "name": "PAGE 1",
+     "lines": [
+      "Alice → Bob 30",
+      "Carol → Alice 5",
+      "Bob → Dave 12"
+     ]
+    },
+    {
+     "name": "PAGE 2",
+     "lines": [
+      "Dave → Carol 7",
+      "Alice → Dave 20",
+      "Bob → Alice 3"
+     ]
+    },
+    {
+     "name": "PAGE 3",
+     "lines": [
+      "Carol → Bob 9",
+      "Dave → Alice 1",
+      "Alice → Carol 14"
+     ]
+    }
+   ]
+  },
+  "mine": {
+   "kind": "mine",
+   "title": "A RACE EVERY TEN MINUTES",
+   "target": "WANTED: A PRINT STARTING 0000",
+   "triesLabel": "guesses so far:",
+   "nonce": "481,902,773",
+   "reward": "+ NEW BITCOIN",
+   "winner": 2
+  },
+  "energy": {
+   "kind": "bars",
+   "title": "ELECTRICITY PER YEAR",
+   "bars": [
+    {
+     "label": "Bitcoin network",
+     "value": 100,
+     "text": "",
+     "color": "#FFE66D"
+    },
+    {
+     "label": "A mid-sized country",
+     "value": 96,
+     "text": "",
+     "color": "#35c8ff"
+    }
+   ],
+   "note": "Cambridge University estimates",
+   "every": 0.6
+  },
+  "halv": {
+   "kind": "bars",
+   "title": "THE REWARD PER PAGE",
+   "bars": [
+    {
+     "label": "2009",
+     "value": 50,
+     "text": "50"
+    },
+    {
+     "label": "2012",
+     "value": 25,
+     "text": "25"
+    },
+    {
+     "label": "2016",
+     "value": 12.5,
+     "text": "12.5"
+    },
+    {
+     "label": "2020",
+     "value": 6.25,
+     "text": "6.25"
+    },
+    {
+     "label": "2024",
+     "value": 3.125,
+     "text": "3.125",
+     "color": "#ff4fa3"
+    }
+   ],
+   "note": "Cut in half about every four years",
+   "every": 0.5
+  },
+  "cap": {
+   "kind": "meter",
+   "title": "THE CEILING",
+   "big": "21,000,000",
+   "unit": "bitcoin. Never more.",
+   "value": 0.95,
+   "label": "already mined",
+   "note": "The last one: around 2140"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir. Field report number two in the cryptocurrency file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: the blockchain. A ledger with no guard... that guards itself.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "I will report how this ledger gets written, who protects it, <short pause> and who gets to change its rules. And why guarding it uses as much electricity as an entire country.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "In the last report we learned that bitcoin took the ledger away from the bank, and handed a copy to thousands of computers.",
+     "show": "board",
+     "board": "net",
+     "step": 1
+    },
+    {
+     "say": "Which raises a dangerous question: if everybody has the ledger... what stops anybody from writing themselves a million?",
+     "shot": "close",
+     "emote": "skeptical"
+    }
+   ]
+  },
+  {
+   "id": "hash",
+   "story": {
+    "n": 1,
+    "tag": "THE FINGERPRINT"
+   },
+   "style": "Showing a clever trick, simply, with one homely comparison.",
+   "beats": [
+    {
+     "say": "The first trick I found is called a hash. A machine that takes any text at all, and gives back a fingerprint: a short jumble of letters and numbers.",
+     "show": "board",
+     "board": "hash"
+    },
+    {
+     "say": "Change a single letter in the text... and the whole fingerprint changes.",
+     "show": "board",
+     "board": "hash"
+    },
+    {
+     "say": "And there is no way back from the fingerprint to the text. One direction only.",
+     "show": "board",
+     "board": "hash"
+    },
+    {
+     "say": "Like a smoothie, sir. Strawberries go in, a smoothie comes out. <short pause> Nobody in history has turned a smoothie back into strawberries.",
+     "show": "board",
+     "board": "hash",
+     "step": "hold",
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "The humans use this trick everywhere. When you set a password, a well-run website does not keep your password. It keeps the fingerprint. <short pause> Which is lucky, because the password is usually the name of their dog.",
+     "show": "board",
+     "board": "hash",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "chain",
+   "story": {
+    "n": 2,
+    "tag": "THE CHAIN"
+   },
+   "style": "Building something step by step, then breaking it on purpose.",
+   "beats": [
+    {
+     "say": "Roughly every ten minutes, the new transfers are gathered onto one page. They call it a block. A single page holds a few thousand transfers.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "Then the page is stamped with its own fingerprint.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "And the next page begins with the fingerprint of the page before it. So every page is holding on to the one behind it.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "Which makes a chain. Block... chain. <short pause> Naming things is not their strength.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "This chain now has more than nine hundred thousand pages, from the first one Satoshi wrote, to the one written ten minutes ago.",
+     "show": "board",
+     "board": "chain",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "I tried imagining someone going back and changing one number on an old page. Its fingerprint changes... so the next page breaks... and the one after that.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "And the whole network sees a broken chain, and rejects it.",
+     "show": "board",
+     "board": "chain"
+    },
+    {
+     "say": "It also means that what is written stays written. There is no undo button, and no clerk to call. <short pause> Remember that one for the next report.",
+     "show": "board",
+     "board": "chain",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "So to forge one line, you would have to rewrite every page that came after it. <short pause> And this is where the cleverest part of the whole invention comes in.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "trip",
+   "story": {
+    "n": 3,
+    "tag": "THE TRIP OF A TRANSFER"
+   },
+   "style": "Following one payment like someone tracking a parcel.",
+   "beats": [
+    {
+     "say": "I tracked one transfer from the moment it was sent. First, it is announced to the entire network.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "Then it sits in a waiting room with thousands of other transfers. And whoever pays the higher fee... goes in first.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "Until it gets written onto a page.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "Every page written on top of it settles it more firmly. For large amounts, they wait for six pages. That is about an hour.",
+     "show": "board",
+     "board": "trip"
+    },
+    {
+     "say": "An hour to confirm one transfer. <short pause> And the humans consider that fast. Because they have used banks.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "The whole network handles about seven transfers a second. Their card networks handle thousands. <short pause> Here, safety beats speed. A strange choice, for humans.",
+     "show": "board",
+     "board": "trip",
+     "step": "hold",
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "And when the network gets crowded, the fees catch fire. On busy days they have reached tens of dollars for a single transfer. <short pause> Which is why nobody buys coffee with it.",
+     "show": "board",
+     "board": "trip",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "So for speed, they built a second network on top for small amounts, called Lightning. You pay instantly, and the account is settled on the big ledger later. <short pause> Like a bar tab. Order all night. Pay once at closing time.",
+     "show": "board",
+     "board": "trip",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "mine",
+   "story": {
+    "n": 4,
+    "tag": "MINING"
+   },
+   "style": "Explaining a competition like a sports commentator who finds it absurd.",
+   "beats": [
+    {
+     "say": "So who writes the new page? And what stops that one from cheating?",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "The solution I found: a contest. For your page to be accepted, its fingerprint has to start with a certain number of zeros.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "And there is no way to know in advance, except trying. Number after number. The whole network together tries about a thousand billion billion numbers... every single second.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "The first computer to find a number that works wins: its page joins the chain, and it collects a prize. Brand new bitcoin.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "Everyone else checks the answer instantly. The answer is hard to find, and very easy to check.",
+     "show": "board",
+     "board": "mine"
+    },
+    {
+     "say": "This is called mining. No pickaxe. No mine. <short pause> Warehouses full of machines guessing numbers, and fans keeping them cool.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "The official name is proof of work. The fingerprint you found proves you really burned the electricity. <short pause> The only certificate on this planet that cannot be forged.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "And if more machines join and the contest gets easier? The system makes it harder on its own, every two weeks, so a page still comes out every ten minutes.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "At the start, Satoshi mined on an ordinary home computer. Today it takes specialized machines, in warehouses the size of football fields.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "The math is simple: a machine whose electricity costs more than its prize gets switched off. So the mines chase the cheapest electricity on the planet. Dams. Gas that used to be burned off into the air. Even volcanoes.",
+     "show": "board",
+     "board": "mine",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "Most mining used to be in China, until China banned it in 2021. So the machines were shipped to America and Russia. <short pause> These mines move in cardboard boxes.",
+     "show": "board",
+     "board": "where"
+    },
+    {
+     "say": "And China itself? Still mining. Quietly. <short pause> There, sir, a ban is more of a suggestion.",
+     "show": "board",
+     "board": "where",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "Machine owners also team up and split the prize. Right now, just two teams win about half of all the contests.",
+     "show": "board",
+     "board": "pools"
+    },
+    {
+     "say": "A network with no boss. <short pause> But with some very big players. The humans themselves are worried about that.",
+     "show": "board",
+     "board": "pools",
+     "step": "hold",
+     "host": "left",
+     "emote": "skeptical"
+    },
+    {
+     "say": "And tens of thousands of computers do not mine at all. They just hold a copy of the ledger and check every page. <short pause> Those are the referees. And nobody pays them.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "So the humans guard their money with a lottery that has run every ten minutes since 2009. <short pause> And it has never stopped.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "secure",
+   "story": {
+    "n": 5,
+    "tag": "WHY IT IS HARD TO STEAL"
+   },
+   "style": "The payoff of the explanation. Clear and a little impressed.",
+   "beats": [
+    {
+     "say": "And why does this protect the ledger? Because a forger has to win this contest alone, against every machine on the planet, again and again.",
+     "show": "board",
+     "board": "net",
+     "step": 3
+    },
+    {
+     "say": "Which means more machines and more electricity than half of the entire network. Billions of dollars of hardware. <short pause> Theft is possible in theory, sir. It just costs more than the loot.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "They call it a fifty-one percent attack. It has actually happened to small coins. <short pause> To bitcoin itself: never.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "And if two machines win at the same moment? The network follows the longer chain, and the other one is forgotten. No meeting. No committee.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "The price is paid in electricity. By Cambridge University's estimates, the bitcoin network uses about as much in a year as a mid-sized country. Roughly half a percent of all the electricity on the planet.",
+     "show": "board",
+     "board": "energy"
+    },
+    {
+     "say": "A whole country's worth of electricity... so that nobody has to trust anybody. <short pause> Trust is very expensive among these creatures.",
+     "shot": "close",
+     "emote": "annoyed"
+    },
+    {
+     "say": "Part of that electricity comes from sources that would have been wasted anyway. Part does not. The humans are still arguing about it.",
+     "show": "board",
+     "board": "energy",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "And the machines themselves are replaced every few years, because the newest ones win. <short pause> So the guarding also produces a mountain of junk.",
+     "show": "board",
+     "board": "energy",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    }
+   ]
+  },
+  {
+   "id": "cap",
+   "story": {
+    "n": 6,
+    "tag": "21 MILLION"
+   },
+   "style": "Numbers, quick and dry.",
+   "beats": [
+    {
+     "say": "As for the prize: it started at fifty bitcoin per page. And about every four years, it is cut in half.",
+     "show": "board",
+     "board": "halv"
+    },
+    {
+     "say": "Fifty. Twenty-five. Twelve and a half. And today: three and a bit.",
+     "show": "board",
+     "board": "halv",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "The next halving is expected in 2028. The prize will be about one and a half. <short pause> And anyone with expensive electricity will pack up and leave.",
+     "show": "board",
+     "board": "halv",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Because of all this, the total has a ceiling: twenty-one million bitcoin. Never more. It is written in the code.",
+     "show": "board",
+     "board": "cap"
+    },
+    {
+     "say": "About ninety-five percent of them have already been mined. The last one is expected around the year 2140.",
+     "show": "board",
+     "board": "cap"
+    },
+    {
+     "say": "Bitcoin number twenty million was mined in March 2026. One million left... and it will take more than a hundred years.",
+     "show": "board",
+     "board": "cap",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "And when the prizes run out, the miners will live on fees alone. Will that be enough to guard the ledger? <short pause> Nobody here knows. It is an open question.",
+     "show": "board",
+     "board": "cap",
+     "step": "hold",
+     "host": "left",
+     "emote": "skeptical"
+    },
+    {
+     "say": "Each bitcoin can be split into a hundred million pieces. One piece is called a satoshi. <short pause> Named after the one who left.",
+     "show": "board",
+     "board": "cap",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "Money that nobody can print more of. <short pause> On a planet that prints money every time it gets into trouble, that is a revolutionary idea.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "rules",
+   "story": {
+    "n": 7,
+    "tag": "WHO IS IN CHARGE?"
+   },
+   "style": "An intelligence officer asking who is really in charge, and enjoying the answer.",
+   "beats": [
+    {
+     "say": "And then I asked the question that matters to any intelligence service: who runs this network? Who can change the rules?",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "The rules are a program. And every computer holding a copy of the ledger runs that program by choice.",
+     "show": "board",
+     "board": "fork"
+    },
+    {
+     "say": "Whoever wants to change a rule writes a new version of the program. Whoever is convinced runs it.",
+     "show": "board",
+     "board": "fork"
+    },
+    {
+     "say": "And if they disagree? The chain splits in two. They call it a fork. <short pause> They named it after cutlery. This planet is always hungry.",
+     "show": "board",
+     "board": "fork"
+    },
+    {
+     "say": "It has happened. In 2017, after years of fighting over the size of the page. Big companies and most of the miners wanted bigger pages.",
+     "show": "board",
+     "board": "fork"
+    },
+    {
+     "say": "The people running the ledger copies refused. The rule did not change. And a group of the losers took a copy of the ledger and left: a new coin, called Bitcoin Cash.",
+     "show": "board",
+     "board": "fork",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "Only once did everyone agree quickly. In 2010, a bug let someone create a hundred and eighty-four billion bitcoin for themselves. Out of thin air. <short pause> Within about five hours, the network was running a fixed version, and that page was erased from history.",
+     "show": "board",
+     "board": "fork",
+     "step": "hold",
+     "host": "left",
+     "emote": "grin"
+    },
+    {
+     "say": "So the ones with the machines and the money could not force their way. <short pause> This network is not run by majority, sir. It is run by stubbornness.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "And the twenty-one million ceiling, can that change? In theory, yes. In practice: you would have to convince people who bought something because it is scarce... to make it less scarce. <short pause> Good luck.",
+     "show": "board",
+     "board": "fork",
+     "step": "hold",
+     "host": "left",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 8,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "Two words from the Human Dictionary. Node: a computer that keeps a copy of the ledger and checks it. The unpaid referees.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "And halving: the day the prize is cut in two. Every four years. <short pause> The humans hold countdown parties for it. For a pay cut.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 9,
+    "tag": "SUMMARY"
+   },
+   "style": "Summary, one sincere warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "Summary of the report, sir. One: the pages are tied together by fingerprints, so any forgery shows. Two: mining is a contest that guards the ledger, and it is paid for in electricity. Three: the rules only change if everyone goes along.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "REPORT SUMMARY",
+      "items": [
+       "Pages tied by fingerprints: forgery shows",
+       "Mining is a contest that guards the ledger",
+       "Rules change only if everyone agrees"
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "And the same warning: this is a report, not investment advice.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "Next report: the ledger is public, and everyone can see it. So what proves that a line in it belongs to you? Keys, wallets... and how humans lose their money, or get it stolen.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}

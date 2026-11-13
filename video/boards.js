@@ -87,7 +87,7 @@ const fake = (text) => { let h = 2166136261; for (const ch of String(text)) { h 
 const BOARDS = {
   // A name and a line under it, for openings.
   titlecard(s, step, age, total, cfg = {}) {      // Latin capitals stand taller than the Arabic face, so the kicker sits higher over them
-    return svg(`<g transform="translate(960 470) scale(${pop(total)})">${T(0, cfg.ltr ? -196 : -150, s.kicker, 56, { font: "Elite", fill: C.dim })}${T(0, 0, s.title, 190, { fill: C.yellow })}</g>
+    return svg(`<g transform="translate(960 470) scale(${pop(total)})">${T(0, cfg.ltr ? -196 : -150, s.kicker, 56, { font: "Elite", fill: C.dim })}${T(0, 0, s.title, s.size || 190, { fill: C.yellow })}</g>
       <rect x="${960 - 300 * ease((total - 0.3) / 0.5)}" y="540" width="${600 * ease((total - 0.3) / 0.5)}" height="10" rx="5" fill="${C.pink}"/>
       <g opacity="${clamp((total - 0.5) / 0.3)}">${T(960, 650, s.sub, 70, { fill: C.white })}</g>`);
   },

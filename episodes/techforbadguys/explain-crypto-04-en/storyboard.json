@@ -1,0 +1,1067 @@
+{
+ "title": "Earth Report: Cryptocurrency 4",
+ "recorded_for": "2026-11-13",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: Cryptocurrency, part 4 of 5, English version. Adapted from `../explain-crypto-04-ar`, not translated: same facts, order and boards; lines and jokes rewritten for English speakers (the taxi driver's tip becomes your dentist and your nephew's podcast; bread that cools before the price settles becomes toast that pops; the amusement park becomes a roller coaster; 'long-term investor' translated as 'I cannot get out'). Why the coin has a price: nothing stands behind it but scarcity and belief; the repeated booms and crashes; why it swings; leverage and liquidation; who holds it; Wall Street and governments arriving; critics and believers; and a scorecard against the three jobs of money from part 1.",
+  "",
+  "Facts are stated from general knowledge and from web research on 12 November 2026 (see explain-crypto-03-ar/plan.md for links), not from pages captured for this episode: the all-time high was about 126,000 dollars on 6 October 2025; earlier peaks and lows were about 30 then 2 dollars (2011), 1,100 then 200 (2013 to 2015), 20,000 then 3,200 (2017 to 2018), 69,000 then 15,500 (2021 to 2022), and the 2026 low was about 58,000 in June; the chart on screen is on a logarithmic scale; the 99Bitcoins obituary list passed 400 entries; each peak came 12 to 18 months after a halving; on 10 October 2025 more than 19 billion dollars of leveraged positions and about 1.6 million traders were liquidated in a day while bitcoin itself fell less than 15 percent; three to four million coins are estimated lost and about 1.1 million attributed to Satoshi; US spot bitcoin funds held about 93 billion dollars on 10 November 2026, about 1.2 million coins; the US government holds a few hundred thousand seized coins and has bought none; Larry Fink of BlackRock called bitcoin an index of money laundering in October 2017 and BlackRock launched its bitcoin fund in January 2024; El Salvador made bitcoin legal tender in 2021 and removed that status in 2025 under an IMF programme; Strategy sold bitcoin in 2026 for the first time since 2022 and reported an 8.32 billion dollar loss for the second quarter; Warren Buffett called bitcoin rat poison squared in 2018; bitcoin fell about 64 percent during 2022; HODL comes from a December 2013 forum post; a buyer at the December 2017 peak waited until December 2020 to break even and a buyer at the November 2021 peak until March 2024; BIS Bulletin 69 (2023) found that a majority of crypto app users in nearly all economies lost money on bitcoin between 2015 and 2022 and that about three quarters downloaded the app when the price was above 20,000 dollars; the first crash was about 93 percent (2011) and the latest about 54 percent (2025 to 2026); all bitcoin was worth about 2.5 trillion dollars at the peak, less than a tenth of all gold; most trading volume is in leveraged derivatives rather than spot. No price forecast is made and it says plainly that nothing in it is advice."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan bureaucrat. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "NEXT REPORT",
+   "next": "Twenty million coins, and the verdict · Part 5 of 5",
+   "note": "Subscribe so the rest of the file reaches you"
+  }
+ },
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "EARTH REPORT · FIELD FILE",
+   "title": "WHY IS IT WORTH ANYTHING?",
+   "size": 140,
+   "sub": "PART 4 OF 5 · PRICE, BUBBLES AND THE BET"
+  },
+  "peak": {
+   "kind": "counter",
+   "title": "ONE BITCOIN · OCTOBER 2025",
+   "to": 126000,
+   "unit": "DOLLARS",
+   "count": 0,
+   "time": 1.8
+  },
+  "behind": {
+   "kind": "rows",
+   "title": "WHAT IS BEHIND IT?",
+   "items": [
+    {
+     "text": "Gold in a vault?",
+     "mark": "x",
+     "late": true
+    },
+    {
+     "text": "A government guarantee?",
+     "mark": "x",
+     "late": true
+    },
+    {
+     "text": "A company's profits?",
+     "mark": "x",
+     "late": true
+    },
+    {
+     "text": "Scarcity, and belief",
+     "mark": "check",
+     "late": true
+    }
+   ]
+  },
+  "gold": {
+   "kind": "steps",
+   "title": "DIGITAL GOLD",
+   "items": [
+    {
+     "icon": "gold",
+     "label": "Gold",
+     "sub": "rare, and everyone agrees"
+    },
+    {
+     "icon": "coin",
+     "label": "Bitcoin",
+     "sub": "21 million, never more"
+    }
+   ]
+  },
+  "buyers": {
+   "kind": "steps",
+   "title": "WHO IS BUYING?",
+   "items": [
+    {
+     "icon": "exchange",
+     "label": "Speculator",
+     "sub": "to sell higher"
+    },
+    {
+     "icon": "cash",
+     "label": "Escaper",
+     "sub": "a weak currency"
+    },
+    {
+     "icon": "mailbox",
+     "label": "Sender",
+     "sub": "around banks"
+    },
+    {
+     "icon": "bank",
+     "label": "Institutions",
+     "sub": "funds, firms"
+    }
+   ]
+  },
+  "tales": {
+   "kind": "rows",
+   "title": "EVERY BUBBLE HAS A STORY",
+   "items": [
+    {
+     "text": "Running from Cyprus's banks",
+     "tag": "2013"
+    },
+    {
+     "text": "New coins raising millions",
+     "tag": "2017"
+    },
+    {
+     "text": "Printed money, everyone at home",
+     "tag": "2021"
+    },
+    {
+     "text": "Wall Street walks in",
+     "tag": "2025"
+    }
+   ]
+  },
+  "wait": {
+   "kind": "story",
+   "title": "BOUGHT AT THE TOP",
+   "icon": "node",
+   "name": "waiting",
+   "size": 54,
+   "lines": [
+    "2017 peak: 3 years to break even",
+    "2021 peak: 2½ years",
+    "Study: most app users lost"
+   ]
+  },
+  "etf": {
+   "kind": "flow",
+   "title": "THE FUND",
+   "actors": [
+    {
+     "icon": "person",
+     "label": "You"
+    },
+    {
+     "icon": "bank",
+     "label": "The fund",
+     "big": true
+    },
+    {
+     "icon": "coin",
+     "label": "The bitcoin"
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "token": "cash",
+     "label": "your money"
+    },
+    {
+     "move": [
+      1,
+      2
+     ],
+     "token": "cash",
+     "label": "it buys"
+    },
+    {
+     "badges": [
+      "NO KEY",
+      "NO 12 WORDS",
+      "PLUS A FEE"
+     ],
+     "at": 1
+    }
+   ]
+  },
+  "hist": {
+   "kind": "chart",
+   "title": "FIVE TIMES UP. FIVE TIMES DOWN.",
+   "points": [
+    0,
+    1.5,
+    0.3,
+    3.05,
+    2.3,
+    4.3,
+    3.5,
+    4.84,
+    4.19,
+    5.1,
+    4.76,
+    4.87
+   ],
+   "color": "#FFE66D",
+   "draw": 16,
+   "labels": [
+    {
+     "at": 1,
+     "text": "$30",
+     "below": "2011"
+    },
+    {
+     "at": 3,
+     "text": "$1,100",
+     "below": "2013"
+    },
+    {
+     "at": 5,
+     "text": "$20,000",
+     "below": "2017"
+    },
+    {
+     "at": 7,
+     "text": "$69,000",
+     "below": "2021"
+    },
+    {
+     "at": 9,
+     "text": "$126,000",
+     "below": "2025"
+    }
+   ]
+  },
+  "dead": {
+   "kind": "story",
+   "title": "OBITUARIES ON REPEAT",
+   "icon": "ghost",
+   "name": "bitcoin",
+   "lines": [
+    "The press declared it dead",
+    "More than 400 times",
+    "Still breathing"
+   ]
+  },
+  "shake": {
+   "kind": "rows",
+   "title": "WHY DOES IT SHAKE SO MUCH?",
+   "items": [
+    {
+     "text": "A small market next to the world's money"
+    },
+    {
+     "text": "No anchor: no profits, no rent"
+    },
+    {
+     "text": "Open 24 hours. Nobody closes it."
+    },
+    {
+     "text": "One tweet sends it up, one law down"
+    }
+   ]
+  },
+  "lever": {
+   "kind": "lever",
+   "title": "LEVERAGE",
+   "mine": "Your money: 100",
+   "loan": "Loan from the exchange: 900",
+   "total": "Total bet: 1,000",
+   "drop": "PRICE FALLS 10%",
+   "zero": "Your money: zero",
+   "stamp": "LIQUIDATED",
+   "share": 0.1
+  },
+  "oct": {
+   "kind": "story",
+   "title": "OCTOBER 10, 2025",
+   "icon": "bolt",
+   "name": "one day",
+   "lines": [
+    "A sudden drop",
+    "1.6 million traders wiped",
+    "$19 billion erased"
+   ]
+  },
+  "who": {
+   "kind": "bars",
+   "title": "WHERE ARE THE 20 MILLION? · MILLIONS",
+   "bars": [
+    {
+     "label": "Lost",
+     "value": 3.5,
+     "text": "3 – 4",
+     "color": "#ff4654"
+    },
+    {
+     "label": "Satoshi",
+     "value": 1.1,
+     "text": "≈ 1",
+     "color": "#9fb0ff"
+    },
+    {
+     "label": "US funds",
+     "value": 1.25,
+     "text": "≈ 1.2",
+     "color": "#35c8ff"
+    },
+    {
+     "label": "Everyone else",
+     "value": 14,
+     "text": "≈ 14"
+    }
+   ],
+   "note": "Estimates · November 2026",
+   "every": 0.4
+  },
+  "suits": {
+   "kind": "story",
+   "title": "THE BIGGEST MONEY MANAGER",
+   "icon": "bank",
+   "name": "same company",
+   "size": 54,
+   "lines": [
+    "2017: 'an index of money laundering'",
+    "2024: the biggest bitcoin fund"
+   ]
+  },
+  "states": {
+   "kind": "rows",
+   "title": "COUNTRIES AND COMPANIES TRIED",
+   "size": 50,
+   "items": [
+    {
+     "text": "El Salvador 2021: legal tender",
+     "mark": "check"
+    },
+    {
+     "text": "El Salvador 2025: dropped it for a loan",
+     "mark": "x"
+    },
+    {
+     "text": "USA 2025: a reserve of seized coins",
+     "mark": "half"
+    },
+    {
+     "text": "Strategy 2026: $8B lost in 3 months",
+     "mark": "x"
+    }
+   ]
+  },
+  "debate": {
+   "kind": "versus",
+   "title": "THE HUMANS ARE SPLIT",
+   "a": {
+    "title": "CRITICS",
+    "color": "#ff4654",
+    "lines": [
+     "It produces nothing",
+     "Worth: a buyer pays more",
+     "'Rat poison'"
+    ]
+   },
+   "b": {
+    "title": "BELIEVERS",
+    "color": "#58d68d",
+    "lines": [
+     "Nobody can print it",
+     "Nobody can seize it",
+     "Insurance against states"
+    ]
+   }
+  },
+  "score": {
+   "kind": "rows",
+   "title": "REPORT CARD · IS IT MONEY?",
+   "items": [
+    {
+     "text": "Pay with it",
+     "sub": "rarely: slow, and people hoard it",
+     "mark": "x",
+     "late": true
+    },
+    {
+     "text": "Price with it",
+     "sub": "nobody prices bread in bitcoin",
+     "mark": "x",
+     "late": true
+    },
+    {
+     "text": "Save it",
+     "sub": "rose a lot, can halve in a year",
+     "mark": "half",
+     "late": true
+    }
+   ]
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "THE HUMAN DICTIONARY",
+   "items": [
+    {
+     "word": "HODL",
+     "means": "A typo that became a creed: never sell"
+    },
+    {
+     "word": "FOMO",
+     "means": "Fear of missing out. So you buy at the top"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir. Field report number four in the cryptocurrency file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: the price. Why is this thing worth anything at all?",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "A line in a ledger. Nothing you can touch, no government behind it. And a single one of them reached a hundred and twenty-six thousand dollars.",
+     "show": "board",
+     "board": "peak"
+    },
+    {
+     "say": "The earlier reports covered how it works and how it is held. That leaves the question the humans themselves fight about.",
+     "shot": "close",
+     "emote": "neutral"
+    },
+    {
+     "say": "I will report where that price comes from, and why it shakes the way it does. <short pause> And how, in a single day, more than one and a half million humans lost everything they had put in... while the price itself only dipped.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "value",
+   "story": {
+    "n": 1,
+    "tag": "WHERE DOES THE VALUE COME FROM?"
+   },
+   "style": "Patient and clear, with one dry aside. He is honestly puzzled by humans here.",
+   "beats": [
+    {
+     "say": "The first thing I looked for: what is behind this coin? Gold in a vault? No.",
+     "show": "board",
+     "board": "behind"
+    },
+    {
+     "say": "A government guarantee? No.",
+     "show": "board",
+     "board": "behind"
+    },
+    {
+     "say": "A company that earns money and pays dividends? Also no.",
+     "show": "board",
+     "board": "behind"
+    },
+    {
+     "say": "Behind it are exactly two things: it is scarce... and some people believe it has value.",
+     "show": "board",
+     "board": "behind"
+    },
+    {
+     "say": "And before Command laughs: that is also what has been behind the paper in their pockets since 1971. <short pause> The difference is that the paper has a government behind it that collects taxes in it. This one has... faith.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "They compare it to gold. Most of gold's value is not about what you can make with it. It is rare, and everyone agrees it is precious.",
+     "show": "board",
+     "board": "gold"
+    },
+    {
+     "say": "So they call bitcoin digital gold. Twenty-one million, and no new mine will ever be discovered.",
+     "show": "board",
+     "board": "gold"
+    },
+    {
+     "say": "Some of them say its price is the cost of the electricity burned to make it. Wrong. <short pause> If you spend a million dollars digging a hole, the hole is not worth a million dollars.",
+     "show": "board",
+     "board": "gold",
+     "step": "hold",
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "For scale: all the bitcoin on the planet, at its peak, was worth about two and a half trillion dollars. All the gold is worth more than ten times that.",
+     "show": "board",
+     "board": "gold",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "So who is buying? First: the speculator. Buying to sell it for more later. That is most of them.",
+     "show": "board",
+     "board": "buyers"
+    },
+    {
+     "say": "Second: the escaper. Living in a country whose currency is collapsing, and wanting anything else.",
+     "show": "board",
+     "board": "buyers"
+    },
+    {
+     "say": "Third: someone who wants to move money outside the banks.",
+     "show": "board",
+     "board": "buyers"
+    },
+    {
+     "say": "And fourth: institutions. Funds and companies. They arrived late.",
+     "show": "board",
+     "board": "buyers"
+    },
+    {
+     "say": "And the more people accept it, the more it is worth. Like the telephone. The first human to buy a telephone... had nobody to call.",
+     "show": "board",
+     "board": "buyers",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "So nobody sets the price. The price is simply the last number two humans agreed on: one who wanted to sell, and one who wanted to buy. <short pause> Nothing more than that.",
+     "show": "board",
+     "board": "buyers",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "story": {
+    "n": 2,
+    "tag": "THE BUBBLES"
+   },
+   "style": "A historian reading a chart of repeated madness, enjoying it.",
+   "beats": [
+    {
+     "say": "Then I looked at the history of the price. 2011: from one dollar to thirty dollars... and back down to two.",
+     "show": "board",
+     "board": "hist"
+    },
+    {
+     "say": "2013: eleven hundred. Down to two hundred. 2017: twenty thousand. Down to three thousand.",
+     "show": "board",
+     "board": "hist",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "2021: sixty-nine thousand. Down to fifteen. And 2025: a hundred and twenty-six thousand... down to under sixty.",
+     "show": "board",
+     "board": "hist",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Five times up to the sky. Five times down by more than half. <short pause> And every single time, the humans are surprised.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "To be fair: each crash has been gentler than the last. The first one was ninety-three percent. The latest, fifty-four. <short pause> Maybe it is growing up. Maybe not.",
+     "show": "board",
+     "board": "hist",
+     "step": "hold",
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "And every bubble had its story. 2013: people running from the banks of Cyprus.",
+     "show": "board",
+     "board": "tales"
+    },
+    {
+     "say": "2017: anyone at all launching a new coin and raising millions.",
+     "show": "board",
+     "board": "tales"
+    },
+    {
+     "say": "2021: governments printing money during the pandemic, and everyone stuck at home.",
+     "show": "board",
+     "board": "tales"
+    },
+    {
+     "say": "And 2025: Wall Street walked in.",
+     "show": "board",
+     "board": "tales"
+    },
+    {
+     "say": "The human cycle is always the same. The price goes up, the newspapers write about it, your dentist tells you to buy, your nephew starts a podcast, everybody gets in... and down it goes. <short pause> Four years later, it repeats. These creatures have short memories.",
+     "show": "board",
+     "board": "tales",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "Someone who bought at the top in 2017 waited three years just to get their money back.",
+     "show": "board",
+     "board": "wait"
+    },
+    {
+     "say": "Someone who bought at the top in 2021: two and a half years.",
+     "show": "board",
+     "board": "wait"
+    },
+    {
+     "say": "The bank of the central banks studied seven years of data: most people who came in through the apps... lost money. Because three quarters of them downloaded the app when the price was already high.",
+     "show": "board",
+     "board": "wait",
+     "host": "left"
+    },
+    {
+     "say": "And every time it falls, their press announces its death.",
+     "show": "board",
+     "board": "dead"
+    },
+    {
+     "say": "They have announced it more than four hundred times.",
+     "show": "board",
+     "board": "dead"
+    },
+    {
+     "say": "It is still breathing.",
+     "show": "board",
+     "board": "dead",
+     "host": "right"
+    },
+    {
+     "say": "The humans have noticed a pattern: every peak came a year to a year and a half after a halving. A smaller reward, so fewer new coins... and the price takes off.",
+     "show": "board",
+     "board": "hist",
+     "step": "hold",
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "Is that a law? No. It has happened four times. <short pause> Humans have built religions on less.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "shake",
+   "story": {
+    "n": 3,
+    "tag": "WHY DOES IT SHAKE?"
+   },
+   "style": "Brisk list of causes, matter-of-fact.",
+   "beats": [
+    {
+     "say": "So why does it swing so violently? Reason one: the market is small next to all the money on the planet. One big seller... and the whole price moves.",
+     "show": "board",
+     "board": "shake"
+    },
+    {
+     "say": "Reason two: there is no anchor. A share in a company has profits behind it. A house has rent. This has expectations.",
+     "show": "board",
+     "board": "shake"
+    },
+    {
+     "say": "Reason three: the market is open twenty-four hours a day, every day. And nobody shuts it when it loses its mind.",
+     "show": "board",
+     "board": "shake"
+    },
+    {
+     "say": "And reason four: the news. One post from a rich man sends it up. One government decision sends it down.",
+     "show": "board",
+     "board": "shake"
+    },
+    {
+     "say": "It is supposed to be a safe harbor, far from their markets. But when their stock market falls... it falls with it. Faster.",
+     "show": "board",
+     "board": "shake",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "The result: it can move more in one day than an ordinary currency moves in a year.",
+     "show": "board",
+     "board": "shake",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "The ones holding huge amounts are called whales. <short pause> When the whale moves, it is the small fish that drown.",
+     "show": "board",
+     "board": "shake",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "lever",
+   "story": {
+    "n": 4,
+    "tag": "LEVERAGE"
+   },
+   "style": "The most dangerous thing he found. Clear, a little grim, no jokes until the last line.",
+   "beats": [
+    {
+     "say": "And here is the most dangerous thing I found in this entire file. It is called leverage.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "You have a hundred dollars.",
+     "show": "board",
+     "board": "lever"
+    },
+    {
+     "say": "The exchange lends you nine hundred more. So now you are betting a thousand.",
+     "show": "board",
+     "board": "lever"
+    },
+    {
+     "say": "The price goes up ten percent? You made a hundred. Your money doubled. <short pause> That is the bait.",
+     "show": "board",
+     "board": "lever",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "The price goes down ten percent? You lost a hundred. That is all of your money.",
+     "show": "board",
+     "board": "lever"
+    },
+    {
+     "say": "And the exchange sells you out automatically to get its loan back. They call it: liquidation.",
+     "show": "board",
+     "board": "lever"
+    },
+    {
+     "say": "Some exchanges offer a hundred times. So the price moves one percent against you... and you are done.",
+     "show": "board",
+     "board": "lever",
+     "step": "hold",
+     "host": "left",
+     "emote": "annoyed"
+    },
+    {
+     "say": "On October 10th, 2025, the price dropped suddenly.",
+     "show": "board",
+     "board": "oct"
+    },
+    {
+     "say": "And in a single day, more than one and a half million traders were liquidated.",
+     "show": "board",
+     "board": "oct"
+    },
+    {
+     "say": "Nineteen billion dollars, erased. And bitcoin itself had fallen less than fifteen percent.",
+     "show": "board",
+     "board": "oct"
+    },
+    {
+     "say": "And most of the trading in this coin is not real buying and selling at all. It is leveraged bets on the price.",
+     "show": "board",
+     "board": "oct",
+     "step": "hold",
+     "host": "right",
+     "emote": "annoyed"
+    },
+    {
+     "say": "And the one who wins either way: the exchange. A fee when the price goes up, and a fee when it goes down. <short pause> Like a casino, sir. The house always wins.",
+     "show": "board",
+     "board": "oct",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "The humans found something that shakes all on its own... <short pause> and bolted a motor onto it.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "calm": true
+  },
+  {
+   "id": "who",
+   "story": {
+    "n": 5,
+    "tag": "WHO HOLDS IT?"
+   },
+   "style": "Counting who holds what, dry.",
+   "beats": [
+    {
+     "say": "So where are the twenty million that have been mined? Three to four million are lost. A million sit with the one who vanished. And more than a million are in Wall Street funds.",
+     "show": "board",
+     "board": "who"
+    },
+    {
+     "say": "And most humans who own some do not own a whole bitcoin. They own fractions. Pieces of a hundred-millionth.",
+     "show": "board",
+     "board": "who",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "And the American government holds hundreds of thousands, seized from criminals. <short pause> So one of the biggest whales of the coin made to escape governments... is a government.",
+     "show": "board",
+     "board": "who",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "suits",
+   "story": {
+    "n": 6,
+    "tag": "THE SUITS"
+   },
+   "style": "Enjoying the irony of bankers selling the anti-bank coin.",
+   "beats": [
+    {
+     "say": "And the development nobody saw coming: the banks themselves moved in.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "In 2017, the head of the biggest money manager on the planet called bitcoin an index of money laundering.",
+     "show": "board",
+     "board": "suits"
+    },
+    {
+     "say": "In 2024, the same company launched the biggest bitcoin fund in the world.",
+     "show": "board",
+     "board": "suits"
+    },
+    {
+     "say": "And what does that fund mean? You give your money to a company.",
+     "show": "board",
+     "board": "etf"
+    },
+    {
+     "say": "It buys the bitcoin and holds it.",
+     "show": "board",
+     "board": "etf"
+    },
+    {
+     "say": "And you only get the price. No key, no twelve words. And you pay a fee every year.",
+     "show": "board",
+     "board": "etf"
+    },
+    {
+     "say": "So the humans who ran away from the middleman... paid a new middleman to save them the trouble of running.",
+     "show": "board",
+     "board": "etf",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "A coin built to make banks unnecessary. <short pause> And now the banks sell it to you. For a fee.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Countries tried too. El Salvador made it legal tender in 2021.",
+     "show": "board",
+     "board": "states"
+    },
+    {
+     "say": "And backed off in 2025, to get a loan from the International Monetary Fund.",
+     "show": "board",
+     "board": "states"
+    },
+    {
+     "say": "America announced a strategic bitcoin reserve. Made of seized coins. It has not bought a single one.",
+     "show": "board",
+     "board": "states"
+    },
+    {
+     "say": "And a company called Strategy more or less left its own business to borrow money and buy bitcoin. In 2026, it lost more than eight billion dollars... in three months.",
+     "show": "board",
+     "board": "states"
+    }
+   ]
+  },
+  {
+   "id": "debate",
+   "story": {
+    "n": 7,
+    "tag": "THE ARGUMENT"
+   },
+   "style": "Even-handed. He reports both camps and refuses to pick, with one sharp observation.",
+   "beats": [
+    {
+     "say": "The humans are split on it. The critics say: it produces nothing. Its only value is that someone else will buy it from you for more. One of their most famous investors called it rat poison.",
+     "show": "board",
+     "board": "debate"
+    },
+    {
+     "say": "The believers say: money nobody can print, and nobody can seize. Insurance against their own governments.",
+     "show": "board",
+     "board": "debate"
+    },
+    {
+     "say": "A small test: in 2022, their prices caught fire. That was the moment the insurance was supposed to pay out. <short pause> That year, bitcoin fell more than sixty percent.",
+     "show": "board",
+     "board": "debate",
+     "step": "hold",
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "The believers have rituals. The confident ones put laser eyes on their profile pictures. And the ones whose price has fallen say: I am a long-term investor. <short pause> Which on this planet means: I cannot get out.",
+     "show": "board",
+     "board": "debate",
+     "step": "hold",
+     "host": "left",
+     "emote": "grin"
+    },
+    {
+     "say": "I have recorded both views, sir, and I will not rule. One observation: both sides are extremely sure. <short pause> And on this planet... that has never been a good sign.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "score",
+   "story": {
+    "n": 8,
+    "tag": "THE REPORT CARD"
+   },
+   "style": "Marking an exam paper, fair but unsentimental.",
+   "beats": [
+    {
+     "say": "Back to the three jobs of money, the ones I asked you to keep in the file from the first report.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "Pay with it? Rarely. It is slow, the fees change, and whoever holds it is afraid to spend it... in case it is worth more tomorrow.",
+     "show": "board",
+     "board": "score"
+    },
+    {
+     "say": "Price things with it? No. Nobody prices bread in bitcoin. The price would change before the toast popped.",
+     "show": "board",
+     "board": "score"
+    },
+    {
+     "say": "Save it? Half a mark. Over the long run it has risen a lot. And it can lose half in a year.",
+     "show": "board",
+     "board": "score"
+    },
+    {
+     "say": "That is not a savings account, sir. That is a roller coaster. <short pause> So by their own definition, it is not money yet. It is something new: a scarce asset... that people bet on.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "Two words from the Human Dictionary. HODL: a typo by someone trying to type hold, on a forum, in 2013. It became a creed: never sell, no matter what.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "And FOMO: fear of missing out. <short pause> The number one reason humans buy at the top.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "SUMMARY"
+   },
+   "style": "Summary, one sincere and firm warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "Summary of the report, sir. One: the value comes from scarcity... and belief. Two: the price is expectations, and leverage wipes people out. Three: by their own measure, it is not money yet. It is a bet.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "REPORT SUMMARY",
+      "items": [
+       "Value = scarcity + belief",
+       "Price is expectation. Leverage wipes out",
+       "Not money yet. A bet"
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "And this is the report that needs the warning most: nothing I said is advice to buy or to sell. <short pause> Whoever puts money they need into this... usually loses it.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "The next report, and the last: after bitcoin, the humans made twenty million more coins. Some changed things. Some have a picture of a dog on them. <short pause> And my final verdict on the whole file.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}

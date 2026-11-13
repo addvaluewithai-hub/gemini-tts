@@ -1,0 +1,1048 @@
+{
+ "title": "Earth Report: Cryptocurrency 3",
+ "recorded_for": "2026-11-13",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: Cryptocurrency, part 3 of 5, English version. Adapted from `../explain-crypto-03-ar`, not translated: same facts, order and boards; lines and jokes rewritten for English speakers ('not your keys, not your coins' is the English original of the slogan; the Bitfinex rapper line is rebuilt around Razzlekhan; small change sent to Satoshi becomes coins in a fountain). How humans own and use the coins, and how they lose them: addresses and private keys, wallets, buying and sending, why the ledger is not anonymous, exchanges as the bank returning, lost keys, and the common frauds with their warning signs.",
+  "",
+  "Facts are stated from general knowledge and from web research on 12 November 2026 (see explain-crypto-03-ar/plan.md for links), not from pages captured for this episode: about 10 to the 77 possible private keys; in September 2023 Paxos paid about 500,000 dollars in fees on a transfer of about 2,000 dollars and the pool F2Pool returned it; Silk Road ran from 2011 until its founder Ross Ulbricht was arrested in a San Francisco public library in October 2013, he was sentenced to life in 2015 and pardoned in January 2025; James Zhong took about 50,000 BTC from Silk Road in 2012 and they were found in November 2021, some on a device in a popcorn tin; about 120,000 BTC were stolen from Bitfinex in 2016 and a married couple was arrested in 2022; Mt. Gox began as a trading-card site, handled about 70 percent of bitcoin trading, lost about 850,000 BTC in 2014, and its repayment deadline is now October 2027; FTX was valued at 32 billion dollars, collapsed in November 2022 about 8 billion short, and its founder was sentenced to 25 years; Bybit lost about 1.5 billion dollars in February 2025; Binance lost about 6.3 billion dollars in about twenty minutes on 29 October 2026, reported as attributed by the FBI to North Korea, and said customers would be made whole; James Howells threw away a drive in 2013 with the key to about 8,000 BTC, offered the council a quarter, lost in court and stopped trying to dig in August 2025; Stefan Thomas has 7,002 BTC on a drive with two password attempts left; three to four million BTC are estimated lost; the Canadian exchange QuadrigaCX failed after its founder died in December 2018 as the only holder of its keys, and the regulator later found he had run it fraudulently; a 2026 flaw in Coldcard hardware wallets' key generation led to thefts of more than 100 million dollars; crypto fraud took about 17 billion dollars in 2025 by Chainalysis' estimate; OneCoin took about 4 billion dollars, had no real blockchain, and its founder vanished in 2017. It says it is not investment advice."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan bureaucrat. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "NEXT REPORT",
+   "next": "Why is it worth anything? · Part 4 of 5",
+   "note": "Subscribe so the rest of the file reaches you"
+  }
+ },
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "EARTH REPORT · FIELD FILE",
+   "title": "YOUR KEY IS YOUR MONEY",
+   "sub": "PART 3 OF 5 · HOW THEY OWN IT, AND LOSE IT"
+  },
+  "net": {
+   "kind": "network",
+   "title": "EVERYONE HOLDS THE LEDGER",
+   "n": 34,
+   "cheat": 11
+  },
+  "keys": {
+   "kind": "keys",
+   "title": "AN ADDRESS, AND A KEY",
+   "addressLabel": "Address: tell anyone",
+   "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+   "keyLabel": "Private key: tell no one",
+   "payment": "Send Bob 1 BTC",
+   "count": "10",
+   "exp": "77",
+   "countLabel": "possible keys"
+  },
+  "wal": {
+   "kind": "steps",
+   "title": "WHERE DO YOU KEEP THE KEY?",
+   "items": [
+    {
+     "icon": "file",
+     "label": "12 words",
+     "sub": "on paper, in a drawer",
+     "args": [
+      "12"
+     ]
+    },
+    {
+     "icon": "phone",
+     "label": "Hot wallet",
+     "sub": "on your phone"
+    },
+    {
+     "icon": "usb",
+     "label": "Cold wallet",
+     "sub": "never goes online"
+    }
+   ]
+  },
+  "get": {
+   "kind": "steps",
+   "title": "WHERE DO THEY GET IT?",
+   "items": [
+    {
+     "icon": "exchange",
+     "label": "An exchange",
+     "sub": "a company sells it"
+    },
+    {
+     "icon": "person",
+     "label": "Person to person",
+     "sub": "directly"
+    }
+   ]
+  },
+  "send": {
+   "kind": "steps",
+   "title": "HOW DO YOU SEND IT?",
+   "items": [
+    {
+     "icon": "mailbox",
+     "label": "Copy the address",
+     "sub": "a long code"
+    },
+    {
+     "icon": "coin",
+     "label": "Pay a fee",
+     "sub": "to the miners"
+    },
+    {
+     "icon": "node",
+     "label": "Wait",
+     "sub": "for the page"
+    },
+    {
+     "icon": "noundo",
+     "label": "No undo",
+     "sub": "no complaints"
+    }
+   ]
+  },
+  "fee": {
+   "kind": "story",
+   "title": "ONE MISTAKE · 2023",
+   "icon": "coin",
+   "name": "one transfer",
+   "lines": [
+    "Amount: $2,000",
+    "Fee: $500,000",
+    "Returned. Out of courtesy."
+   ]
+  },
+  "trace": {
+   "kind": "trace",
+   "title": "THE LEDGER NEVER FORGETS",
+   "name": "your name",
+   "owner": "you",
+   "id": "ID"
+  },
+  "silk": {
+   "kind": "story",
+   "title": "SILK ROAD",
+   "icon": "ghost",
+   "name": "a secret market",
+   "size": 56,
+   "lines": [
+    "2011: illegal goods, paid in bitcoin",
+    "2013: founder caught in a library",
+    "Life sentence. Pardoned in 2025"
+   ]
+  },
+  "pop": {
+   "kind": "story",
+   "title": "THE THIEF AND THE POPCORN",
+   "icon": "popcorn",
+   "name": "a popcorn tin",
+   "size": 56,
+   "lines": [
+    "Stole 50,000 bitcoin",
+    "Police came 9 years later",
+    "The coins were in the tin"
+   ]
+  },
+  "iou": {
+   "kind": "flow",
+   "title": "THE BANK IS BACK",
+   "actors": [
+    {
+     "icon": "person",
+     "label": "Alice"
+    },
+    {
+     "icon": "exchange",
+     "label": "The exchange",
+     "big": true
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "label": "the bitcoin"
+    },
+    {
+     "move": [
+      1,
+      0
+     ],
+     "token": "file",
+     "label": "a receipt"
+    },
+    {
+     "badges": [
+      "HACKS",
+      "BANKRUPTCY",
+      "FREEZES"
+     ],
+     "at": 1
+    }
+   ]
+  },
+  "gox": {
+   "kind": "story",
+   "title": "MT. GOX · TOKYO",
+   "icon": "cards",
+   "name": "started with game cards",
+   "size": 56,
+   "lines": [
+    "70% of all bitcoin trading",
+    "2014: 850,000 bitcoin gone",
+    "Repayment deadline: 2027"
+   ]
+  },
+  "ftx": {
+   "kind": "story",
+   "title": "FTX · 2022",
+   "icon": "exchange",
+   "name": "$32 billion",
+   "size": 56,
+   "lines": [
+    "Its name on a stadium",
+    "Customers $8 billion short",
+    "Founder: 25 years in prison"
+   ]
+  },
+  "heists": {
+   "kind": "bars",
+   "title": "BIGGEST HEISTS · BILLIONS OF $",
+   "bars": [
+    {
+     "label": "Mt. Gox",
+     "value": 0.45,
+     "text": "0.45",
+     "color": "#9fb0ff"
+    },
+    {
+     "label": "Bybit",
+     "value": 1.5,
+     "text": "1.5",
+     "color": "#35c8ff"
+    },
+    {
+     "label": "Binance",
+     "value": 6.3,
+     "text": "6.3",
+     "color": "#ff4654"
+    }
+   ],
+   "note": "October 2026: $6 billion in 20 minutes",
+   "every": 0.5
+  },
+  "quad": {
+   "kind": "story",
+   "title": "AN EXCHANGE IN CANADA · 2018",
+   "icon": "key",
+   "name": "one key holder",
+   "size": 54,
+   "lines": [
+    "The founder died suddenly",
+    "Only he had the keys",
+    "The money was already gone"
+   ]
+  },
+  "howells": {
+   "kind": "story",
+   "title": "JAMES HOWELLS · WALES",
+   "icon": "drive",
+   "name": "a hard drive",
+   "size": 56,
+   "lines": [
+    "Thrown out in 2013",
+    "Key to ≈ 8,000 bitcoin",
+    "12 years trying to dig",
+    "2025: gave up"
+   ]
+  },
+  "thomas": {
+   "kind": "story",
+   "title": "STEFAN THOMAS · PROGRAMMER",
+   "icon": "usb",
+   "name": "an encrypted drive",
+   "size": 56,
+   "lines": [
+    "Holds 7,002 bitcoin",
+    "Forgot the password",
+    "10 tries. Used 8."
+   ]
+  },
+  "lost": {
+   "kind": "meter",
+   "title": "GONE FOREVER",
+   "big": "3 TO 4 MILLION",
+   "unit": "bitcoin · estimates",
+   "value": 0.17,
+   "label": "of everything mined",
+   "note": "Nobody stole them. Owners forgot.",
+   "color": "#ff4654"
+  },
+  "cold": {
+   "kind": "story",
+   "title": "EVEN COLD WALLETS · 2026",
+   "icon": "usb",
+   "name": "a cold wallet",
+   "size": 56,
+   "lines": [
+    "A flaw in making keys",
+    "The keys could be guessed",
+    "Over $100 million stolen"
+   ]
+  },
+  "scams": {
+   "kind": "steps",
+   "title": "FOUR WAYS TO BE SCAMMED",
+   "items": [
+    {
+     "icon": "pyramid",
+     "label": "Pyramid",
+     "sub": "sure profit"
+    },
+    {
+     "icon": "heart",
+     "label": "Fake romance",
+     "sub": "trust, then a site"
+    },
+    {
+     "icon": "headset",
+     "label": "Fake support",
+     "sub": "asks for 12 words"
+    },
+    {
+     "icon": "mask",
+     "label": "Fake celebrity",
+     "sub": "send 1, get 2"
+    }
+   ]
+  },
+  "flags": {
+   "kind": "rows",
+   "title": "RED FLAGS",
+   "items": [
+    {
+     "text": "Guaranteed profit",
+     "mark": "flag"
+    },
+    {
+     "text": "Hurry: pay right now",
+     "mark": "flag"
+    },
+    {
+     "text": "Anyone asking for your key or 12 words",
+     "mark": "flag"
+    },
+    {
+     "text": "Pay a fee to withdraw your money",
+     "mark": "flag"
+    }
+   ]
+  },
+  "where": {
+   "kind": "rows",
+   "title": "WHERE DO YOU KEEP IT?",
+   "items": [
+    {
+     "text": "On an exchange: easy",
+     "sub": "but if it falls, you fall with it",
+     "mark": "half"
+    },
+    {
+     "text": "With you: nobody can freeze it",
+     "sub": "but if you forget, nobody reminds you",
+     "mark": "half"
+    }
+   ]
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "THE HUMAN DICTIONARY",
+   "items": [
+    {
+     "word": "Seed phrase",
+     "means": "The 12 words. Whoever knows them owns your money"
+    },
+    {
+     "word": "Custody",
+     "means": "Who holds the key: you, or a company?"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir. Field report number three in the cryptocurrency file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: how the humans own this money... and how they lose it.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "I will report what a key is, what a wallet is, and why this money is not as anonymous as they think. <short pause> And how one of them spent twelve years trying to dig up a garbage dump, looking for hundreds of millions of dollars.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "In the last report we learned the ledger is public, shared by everyone, and nobody can forge it.",
+     "show": "board",
+     "board": "net",
+     "step": 2
+    },
+    {
+     "say": "But there are no names in it. <short pause> So what proves that a line in that ledger is yours?",
+     "shot": "close",
+     "emote": "skeptical"
+    }
+   ]
+  },
+  {
+   "id": "keys",
+   "story": {
+    "n": 1,
+    "tag": "THE KEY"
+   },
+   "style": "Practical and precise, like explaining a lock.",
+   "beats": [
+    {
+     "say": "Everyone has an address. Like an account number. You give it to anyone who wants to pay you.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "And with it comes a private key: a very long secret number. That is what opens it.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "When you want to send money, the key signs the transfer. And the network checks the signature... without ever seeing the key itself.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "Like a stamp that marks every page a little differently. Everyone can tell it is your stamp... and nobody can copy it.",
+     "show": "board",
+     "board": "keys",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "And the number of possible keys has seventy-seven digits. Far, far more than all the grains of sand on this planet. So nobody is going to guess yours.",
+     "show": "board",
+     "board": "keys"
+    },
+    {
+     "say": "And because the ledger is public, anyone can look up the balance of any address. Even Satoshi's. <short pause> The humans still send it small change. Like coins thrown in a fountain.",
+     "show": "board",
+     "board": "keys",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "So: no name, no ID card, no signature in ink. <short pause> Whoever holds the key owns the money. Period.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "wallet",
+   "story": {
+    "n": 2,
+    "tag": "THE WALLET"
+   },
+   "style": "Amused by how low-tech the safety advice is.",
+   "beats": [
+    {
+     "say": "And the wallet they keep talking about has no money in it at all. It holds the key. <short pause> The money itself is a line in the ledger.",
+     "show": "board",
+     "board": "keys",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "That key is written out as twelve ordinary words. And the official advice: write them on a piece of paper, and hide it. <short pause> Their most advanced financial technology... is secured by a note in a drawer.",
+     "show": "board",
+     "board": "wal"
+    },
+    {
+     "say": "There are wallets on the phone. Easy, but connected to the internet.",
+     "show": "board",
+     "board": "wal"
+    },
+    {
+     "say": "And wallets on a small device that never goes online. They call that a cold wallet.",
+     "show": "board",
+     "board": "wal"
+    }
+   ]
+  },
+  {
+   "id": "use",
+   "story": {
+    "n": 3,
+    "tag": "BUYING AND SENDING"
+   },
+   "style": "A quick how-to, then the catch, with disbelief.",
+   "beats": [
+    {
+     "say": "So where do humans get this money? Mining is no longer for individuals.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "Most buy it on an exchange: a company that takes ordinary money and gives you coins. And most exchanges will ask for your ID and a photo of your face. <short pause> Remember that detail.",
+     "show": "board",
+     "board": "get"
+    },
+    {
+     "say": "Or person to person, directly.",
+     "show": "board",
+     "board": "get"
+    },
+    {
+     "say": "And to send it: you copy the other person's address. A long line of letters and numbers.",
+     "show": "board",
+     "board": "send"
+    },
+    {
+     "say": "You pay a fee to whoever writes the page.",
+     "show": "board",
+     "board": "send"
+    },
+    {
+     "say": "And you wait for the page to be written.",
+     "show": "board",
+     "board": "send"
+    },
+    {
+     "say": "And there is no undo. <short pause> One wrong character in the address? The money is gone. And there is nobody to complain to.",
+     "show": "board",
+     "board": "send",
+     "host": "right"
+    },
+    {
+     "say": "There is even malicious software whose only job is to swap the address you copied for the thief's. So careful humans check the first and last few characters. Every single time.",
+     "show": "board",
+     "board": "send",
+     "step": "hold",
+     "host": "left",
+     "emote": "worried"
+    },
+    {
+     "say": "In 2023, a big company sent a transfer of two thousand dollars.",
+     "show": "board",
+     "board": "fee"
+    },
+    {
+     "say": "And paid a fee of half a million dollars on it. By mistake.",
+     "show": "board",
+     "board": "fee"
+    },
+    {
+     "say": "The team that won that page gave it back. <short pause> Out of sheer good manners. No law said they had to.",
+     "show": "board",
+     "board": "fee",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "anon",
+   "story": {
+    "n": 4,
+    "tag": "THE ANONYMITY MYTH"
+   },
+   "style": "Debunking a myth with relish, then enjoying two absurd true stories.",
+   "beats": [
+    {
+     "say": "The humans are convinced this money is anonymous, and nobody knows who is paying whom. <short pause> Wrong, sir. And some of them paid for that mistake with prison time.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "The ledger is public. Every transfer is recorded forever, from address to address.",
+     "show": "board",
+     "board": "trace"
+    },
+    {
+     "say": "And the moment one address is linked to your name... say, an exchange asked for your ID...",
+     "show": "board",
+     "board": "trace"
+    },
+    {
+     "say": "everything you did before lights up. Retroactively.",
+     "show": "board",
+     "board": "trace"
+    },
+    {
+     "say": "In 2011, a secret online market opened, called Silk Road. Illegal goods... paid for in bitcoin.",
+     "show": "board",
+     "board": "silk"
+    },
+    {
+     "say": "Its founder thought he was hidden. He was arrested in 2013. In a public library.",
+     "show": "board",
+     "board": "silk"
+    },
+    {
+     "say": "He was sentenced to life in prison. And released on a presidential pardon in 2025.",
+     "show": "board",
+     "board": "silk"
+    },
+    {
+     "say": "Another man stole fifty thousand bitcoin from that same market.",
+     "show": "board",
+     "board": "pop"
+    },
+    {
+     "say": "The ledger remembered. Nine years later, the police knocked on his door.",
+     "show": "board",
+     "board": "pop"
+    },
+    {
+     "say": "And they found the money... in a popcorn tin.",
+     "show": "board",
+     "board": "pop"
+    },
+    {
+     "say": "Billions of dollars. In a popcorn tin. In a bathroom closet. <short pause> I love this planet, sir.",
+     "shot": "close",
+     "emote": "grin"
+    },
+    {
+     "say": "Same story with an exchange called Bitfinex: a hundred and twenty thousand bitcoin stolen. A married couple was arrested six years later. <short pause> One of them had a side career as a rapper called Razzlekhan. The music, sir, was investigated separately.",
+     "show": "board",
+     "board": "pop",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "Cash gets forgotten. This ledger does not. <short pause> The worst possible place to hide a crime... is a public ledger that is kept forever.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "bank",
+   "story": {
+    "n": 5,
+    "tag": "THE BANK IS BACK"
+   },
+   "style": "Dry and pointed: the humans rebuilt the thing they ran away from.",
+   "beats": [
+    {
+     "say": "Back to the exchanges. Most humans buy their coins... and leave them there.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "So the bitcoin now sits with the company.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "And the human holds a receipt. A line in the company's ledger.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "Remember the trusted man with the gold, from the first report? <short pause> He is back, sir. With the same receipt.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "And the same problems came back with him: hacks, bankruptcy, frozen accounts.",
+     "show": "board",
+     "board": "iou"
+    },
+    {
+     "say": "The first big exchange was called Mt. Gox. It started as a website for trading fantasy game cards. And it grew to handle seventy percent of all bitcoin trading.",
+     "show": "board",
+     "board": "gox"
+    },
+    {
+     "say": "In 2014, eight hundred and fifty thousand bitcoin disappeared from it.",
+     "show": "board",
+     "board": "gox"
+    },
+    {
+     "say": "Its customers are still being repaid to this day. The latest deadline has been pushed back to 2027.",
+     "show": "board",
+     "board": "gox"
+    },
+    {
+     "say": "Thirteen years, sir. <short pause> Even their banks are faster than that.",
+     "show": "board",
+     "board": "gox",
+     "step": "hold",
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "And in 2022: FTX. An exchange valued at thirty-two billion dollars, with its name on a stadium.",
+     "show": "board",
+     "board": "ftx"
+    },
+    {
+     "say": "Its founder had been spending customers' money. The hole: eight billion dollars.",
+     "show": "board",
+     "board": "ftx"
+    },
+    {
+     "say": "He got twenty-five years in prison.",
+     "show": "board",
+     "board": "ftx"
+    },
+    {
+     "say": "And the customers? They got their money back, years later. At the price on the day it collapsed. <short pause> Meanwhile the coins had multiplied in value. Without them.",
+     "show": "board",
+     "board": "ftx",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "And an exchange in Canada, whose founder died suddenly in 2018.",
+     "show": "board",
+     "board": "quad"
+    },
+    {
+     "say": "He was the only one who had the keys.",
+     "show": "board",
+     "board": "quad"
+    },
+    {
+     "say": "And after the investigation, it turned out he had already lost the customers' money long before. <short pause> He had been cheating them... and died before anyone found out.",
+     "show": "board",
+     "board": "quad",
+     "host": "right"
+    },
+    {
+     "say": "And the heists keep getting bigger. The exchange Bybit lost a billion and a half dollars in 2025. And in October 2026, the biggest heist in their history: Binance. More than six billion dollars... in twenty minutes.",
+     "show": "board",
+     "board": "heists"
+    },
+    {
+     "say": "The thief never got up from his chair. American investigators point to North Korean hackers. And the company says it will repay its customers out of its own pocket.",
+     "show": "board",
+     "board": "heists",
+     "step": "hold",
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "Which is why the humans have a saying: not your keys? <short pause> Not your coins.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "lost",
+   "story": {
+    "n": 6,
+    "tag": "THE ONES WHO LOST THE KEY"
+   },
+   "style": "Enjoying the stories, deadpan, a little cruel.",
+   "beats": [
+    {
+     "say": "So you hold your own key? Excellent. <short pause> But there is no bank. So there is no button that says: forgot password.",
+     "shot": "host",
+     "emote": "worried",
+     "gesture": "shrug"
+    },
+    {
+     "say": "A man named James Howells threw out an old hard drive in 2013.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "On it was the key to about eight thousand bitcoin.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "He spent twelve years trying to dig through the town dump. He offered the council a quarter of the money. A court told him no.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "And in 2025... he gave up.",
+     "show": "board",
+     "board": "howells"
+    },
+    {
+     "say": "Hundreds of millions of dollars. Under garbage bags in Wales. <short pause> And I thought my mission was difficult, sir.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "A programmer named Stefan Thomas has more than seven thousand bitcoin on an encrypted drive.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "And he forgot the password.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "The drive gives him ten attempts, then wipes itself. He has used eight.",
+     "show": "board",
+     "board": "thomas"
+    },
+    {
+     "say": "Two left. <short pause> I am following this file personally.",
+     "shot": "close",
+     "emote": "grin"
+    },
+    {
+     "say": "Estimates say three to four million bitcoin have been lost forever this way.",
+     "show": "board",
+     "board": "lost"
+    },
+    {
+     "say": "Nobody stole them. The owners just... forgot.",
+     "show": "board",
+     "board": "lost"
+    },
+    {
+     "say": "And if the key holder dies without telling anyone the words? <short pause> The money dies with them. The ledger has no next of kin.",
+     "show": "board",
+     "board": "lost",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Some humans have been kidnapped for their keys. So their first rule is: never tell anyone how much you hold.",
+     "show": "board",
+     "board": "lost",
+     "step": "hold",
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "And even a cold wallet is no guarantee. In 2026, a popular model turned out to have a flaw.",
+     "show": "board",
+     "board": "cold"
+    },
+    {
+     "say": "The keys it made could be guessed.",
+     "show": "board",
+     "board": "cold"
+    },
+    {
+     "say": "More than a hundred million dollars was stolen from its owners. From a device that is never even online.",
+     "show": "board",
+     "board": "cold"
+    },
+    {
+     "say": "So there are two choices. Leave it on an exchange: easy. But if the exchange falls, you fall with it.",
+     "show": "board",
+     "board": "where"
+    },
+    {
+     "say": "Or hold it yourself: nobody can freeze it. But if you forget... nobody reminds you.",
+     "show": "board",
+     "board": "where"
+    },
+    {
+     "say": "With a company, it gets stolen. With you, it gets lost. <short pause> The humans invented money that requires each of them to be a bank, a vault, and a security guard. Most of them cannot remember their email password.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "scams",
+   "story": {
+    "n": 7,
+    "tag": "SCAMS"
+   },
+   "style": "Serious and plain. This part is a warning, not a joke; he slows down slightly.",
+   "beats": [
+    {
+     "say": "And there is a third way to lose your money here: hand it to the thief yourself. <short pause> Crypto fraud took about seventeen billion dollars in 2025 alone.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "The best known: the pyramid. Invest with us, and get a guaranteed return every month. And the returns are paid out of the money from the people who joined after you.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "A coin called OneCoin raised about four billion dollars this way. It never even had a blockchain. <short pause> Its founder vanished in 2017. She is still wanted.",
+     "show": "board",
+     "board": "scams",
+     "step": "hold",
+     "host": "left",
+     "emote": "annoyed"
+    },
+    {
+     "say": "The second: fake romance. Someone charming gets to know you, earns your trust for months... and then points you to an investment platform. Their platform.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "The third: fake tech support. Someone contacts you to fix a problem... and asks for your twelve words.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "And the fourth: a video of a celebrity saying, send me coins and I will send back double. The video is made with artificial intelligence. The celebrity knows nothing about it.",
+     "show": "board",
+     "board": "scams"
+    },
+    {
+     "say": "And if you have already been scammed? A second scammer turns up and says: I can get your money back. For a small fee. <short pause> Humans getting robbed twice for the same money. Frankly, that takes effort.",
+     "show": "board",
+     "board": "scams",
+     "step": "hold",
+     "host": "right",
+     "emote": "annoyed"
+    },
+    {
+     "say": "Four red flags. One: guaranteed profit. Nothing here is guaranteed.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "Two: urgency. You have to pay right now.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "Three: anyone asking for your key or your twelve words. Anyone at all.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "Four: you cannot withdraw your money until you pay a fee first.",
+     "show": "board",
+     "board": "flags"
+    },
+    {
+     "say": "And remember the rule: here, there is no undo. <short pause> What is gone... is gone.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ],
+   "calm": true,
+   "music": 0.5
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 8,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "Two words from the Human Dictionary. Seed phrase: the twelve words. Whoever knows them owns your money.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "And custody: who holds the key. You... or a company. <short pause> The most important question in this whole file.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 9,
+    "tag": "SUMMARY"
+   },
+   "style": "Summary, one sincere warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "Summary of the report, sir. One: the key is the ownership. Two: the ledger is not anonymous, and it never forgets. Three: with a company it gets stolen... with you, it gets lost.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "REPORT SUMMARY",
+      "items": [
+       "The key is the ownership",
+       "The ledger is not anonymous. It never forgets",
+       "With a company: stolen. With you: lost"
+      ],
+      "step": 2.6
+     },
+     "host": "pip"
+    },
+    {
+     "say": "And the same warning: this is a report, not investment advice.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "Next report: why is this thing worth anything at all? Who sets the price? And why does it shake like that?",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
