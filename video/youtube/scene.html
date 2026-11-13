@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- Illustrated thumbnails: a drawn scene (scenes.js), the host acting inside it, and the words from the spec.
+     window.render(spec) lays one out at 1280 x 720; youtube.cjs screenshots it (specs with "page": "scene.html").
+     Every word comes from the spec, never from the drawing code, so another language only changes the spec. -->
+<style>
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Anton";src:url("/node_modules/@fontsource/lalezar/files/lalezar-arabic-400-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:"Elite";src:url("/node_modules/@fontsource/special-elite/files/special-elite-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Elite";src:url("/node_modules/@fontsource/cairo/files/cairo-arabic-700-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+*{box-sizing:border-box;margin:0}body{background:#05060d}
+#art{position:relative;overflow:hidden;font-family:"Anton";color:#fff;width:1280px;height:720px}
+#art>*{position:absolute;left:0;top:0}
+#art>svg{width:1280px;height:720px}
+.host svg{display:block}
+.words{line-height:1.08;white-space:pre-line;paint-order:stroke fill;-webkit-text-stroke-linejoin:round}
+.words i{font-style:normal}
+.tag{font-family:"Elite";font-size:25px;line-height:1;padding:9px 16px 10px;border-radius:8px;background:#05060d;color:#FFE66D;border:3px solid #FFE66D;white-space:nowrap;box-shadow:0 6px 0 rgba(5,6,13,.35)}
+</style></head><body><div id="art"></div>
+<script type="module">
+import { peek3d } from "/characters/peek3d.js";
+import { EMOTES, GESTURES } from "/characters/acting.js";
+import { SCENES } from "/youtube/scenes.js";
+const base = { lid: 0.14, look: 0, lookY: 0, browL: 0, browR: 0, browTilt: 0, eyeScale: 1, pupil: 1, squint: 0 };
+const esc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+// the host, drawn in his own 1200 x 1200 box. h: { emote, gesture, x, y (box centre x, box top), size, flip, rot, look, lookY, mask, clip, layer: "mid"|"top", face: {...overrides}, arms: {armL, armR} }
+function host(h) {
+  const em = { ...EMOTES[h.emote || "neutral"], ...(h.face || {}) }, g = { ...(GESTURES[h.gesture] || GESTURES.pockets), ...(h.arms || {}) }, size = h.size || 600;
+  const svg = peek3d({ ...base, ...em, look: h.look ?? em.look ?? 0, lookY: h.lookY ?? em.lookY ?? 0, antL: em.ant || 0, antR: em.ant || 0, m: em.mouth },
+    { face: "pear", bg: false, grain: false, size, armL: g.armL, armR: g.armR, shrug: g.shrug || 0, tilt: em.tilt || 0, roll: false });
+  const t = `rotate(${h.rot || 0}deg) scaleX(${h.flip ? -1 : 1})`, mask = (h.mask ? `-webkit-mask-image:${h.mask};mask-image:${h.mask};` : "") + (h.clip ? `clip-path:${h.clip};` : "");
+  return `<div class="host" style="left:${h.x - size / 2}px;top:${h.y}px;transform:${t};transform-origin:50% 50%;${mask}${h.shadow === false ? "" : "filter:drop-shadow(0 18px 24px rgba(5,6,13,.45))"}">${svg}</div>`;
+}
+// one block of words. w: { t, x, y, w, size, font: "big"|"small", color, hi (colour for [[...]]), stroke, sw, rot, align, lh, bg, pad }
+function words(w, rtl) {
+  const body = esc(w.t).replace(/\[\[/g, `<i style="color:${w.hi || "#FFE66D"}">`).replace(/\]\]/g, "</i>");
+  const font = w.font === "small" ? "Elite" : "Anton", align = w.align || "start", sw = w.sw ?? Math.round((w.size || 120) * 0.16);
+  const shadow = w.shadow === false ? "" : `text-shadow:0 ${Math.round((w.size || 120) * 0.07)}px 0 ${w.stroke || "#05060d"};`;
+  return `<div class="words" dir="${rtl ? "rtl" : "ltr"}" style="left:${w.x}px;top:${w.y}px;width:${w.w || 700}px;font-family:${font};font-size:${w.size || 120}px;line-height:${w.lh || 1.08};color:${w.color || "#fff"};text-align:${align};-webkit-text-stroke:${sw}px ${w.stroke || "#05060d"};${shadow}transform:rotate(${w.rot || 0}deg);transform-origin:50% 50%;${w.bg ? `background:${w.bg};padding:${w.pad || "0.1em 0.3em"};border-radius:.15em;` : ""}">${body}</div>`;
+}
+window.render = async (s) => {
+  const el = document.getElementById("art"), scene = SCENES[s.scene](s.opts || {}, s.labels || {});
+  const hosts = (s.hosts || (s.host ? [s.host] : [])).map((h) => ({ layer: "mid", ...h }));
+  const layer = (name) => hosts.filter((h) => h.layer === name).map(host).join("");
+  const svg = (inner, defs = "") => `<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"><defs>${defs}</defs>${inner}</svg>`;
+  el.innerHTML = svg(scene.back, scene.defs) + layer("mid") + (scene.front ? svg(scene.front) : "") + layer("top")
+    + (s.words || []).map((w) => words(w, s.rtl)).join("")
+    + (s.tag ? `<div class="tag" dir="${s.rtl ? "rtl" : "ltr"}" style="left:auto;right:${s.rtl ? 26 : "auto"}px;${s.rtl ? "" : "left:26px;"}top:24px">${esc(s.tag)}</div>` : "");
+  await Promise.all(['100px "Anton"', '40px "Elite"'].flatMap((f) => [document.fonts.load(f), document.fonts.load(f, "عربي")])); await document.fonts.ready;
+};
+window.__ready = true;
+</script></body></html>

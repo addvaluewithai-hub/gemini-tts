@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Everything an upload needs besides the video.
 //   node youtube.cjs kit <storyboard.json> <cues.json> <outDir>   -> description.txt, chapters, captions.srt, upload.md
-//   node youtube.cjs art <specs.json> <outDir>                    -> one image per spec (thumbnails, avatar, banner)
+//   node youtube.cjs art <specs.json> <outDir> [only]             -> one image per spec (thumbnails, avatar, banner); `only` keeps specs whose file contains it
 // The storyboard's `youtube` block holds what a person writes (titles, the opening lines, tags); chapters come
 // from the cue file's story changes, sources from slides.json, captions from the script's own timed words.
 const fs = require("fs"), path = require("path"), http = require("http");
@@ -40,7 +40,7 @@ if (cmd === "kit") {
 }
 
 if (cmd === "art") {
-  const { chromium } = require("playwright"), ROOT = __dirname, specs = JSON.parse(fs.readFileSync(a, "utf8"));
+  const { chromium } = require("playwright"), ROOT = __dirname, specs = JSON.parse(fs.readFileSync(a, "utf8")).filter((s) => !c || s.file.includes(c));
   const MIME = { ".html": "text/html", ".js": "text/javascript", ".woff2": "font/woff2" };
   const server = http.createServer((req, res) => { const f = path.join(ROOT, decodeURIComponent(req.url.split("?")[0]));
     if (!f.startsWith(ROOT) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); }
@@ -48,8 +48,9 @@ if (cmd === "art") {
   server.listen(0, "127.0.0.1", async () => {
     const browser = await chromium.launch(), page = await browser.newPage({ viewport: { width: 2600, height: 1500 } });
     page.on("pageerror", (e) => { console.error("PAGE ERROR", e.message); process.exitCode = 1; });
-    await page.goto(`http://127.0.0.1:${server.address().port}/youtube/art.html`); await page.waitForFunction("window.__ready === true");
+    let at = null;   // a spec may name its page ("page": "scene.html" for the illustrated thumbnails); art.html otherwise
     for (const s of specs) { const out = path.join(b, s.file); fs.mkdirSync(path.dirname(out), { recursive: true });
+      if (at !== (s.page || "art.html")) { at = s.page || "art.html"; await page.goto(`http://127.0.0.1:${server.address().port}/youtube/${at}`); await page.waitForFunction("window.__ready === true"); }
       await page.evaluate((x) => window.render(x), s);
       await page.screenshot({ path: out, clip: { x: 0, y: 0, width: s.w, height: s.h }, ...(out.endsWith(".png") ? {} : { type: "jpeg", quality: 92 }) }); console.log("wrote", out); }
     await browser.close(); server.close();
