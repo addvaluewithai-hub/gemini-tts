@@ -17,7 +17,7 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "short-")), env = { ...process
 const run = (cmd, args) => { const r = spawnSync(cmd, args, { stdio: "inherit", env, cwd: __dirname }); if (r.status !== 0) throw new Error(cmd + " failed"); };
 const cue = (from, to, hold) => {
   const f = path.join(tmp, `cues-${from}.json`);
-  fs.writeFileSync(f, JSON.stringify({ ...base, edit: base.edit.filter((e) => e.t < to - 0.05), episode: ep, size: [1080, 1920], vertical: true, boardZoom: spec.boardZoom || 0.68, from, to, lead: 0, hold, tail: 0 }));
+  fs.writeFileSync(f, JSON.stringify({ ...base, edit: base.edit.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)), episode: ep, size: [1080, 1920], vertical: true, boardZoom: spec.boardZoom || 0.68, from, to, lead: 0, hold, tail: 0 }));
   return f;
 };
 const stills = flag("--still");

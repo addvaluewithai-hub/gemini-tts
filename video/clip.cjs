@@ -26,8 +26,8 @@ if (cues.tempo && cues.tempo !== 1) {
   if (r.status !== 0) throw new Error("could not change the tempo");
   for (const w of words) { w.s /= cues.tempo; w.e /= cues.tempo; } transcript.duration_ms /= cues.tempo;
 }
-// `hold`: seconds the picture runs on in silence after `to` (a clip cut out of an episode); the words after `to` are dropped
-if (cues.hold) { const keep = words.filter((w) => w.s < cues.to); words.length = 0; words.push(...keep); }
+// `hold`: seconds the picture runs on in silence after `to` (a clip cut out of an episode); only the words between `from` and `to` are kept
+if (cues.hold) { const keep = words.filter((w) => w.s < cues.to && w.s >= cues.from - 0.05); words.length = 0; words.push(...keep); }
 if (cues.to == null) cues.to = Math.round((transcript.duration_ms / 1000 + (cues.tail ?? 0.9)) * 10) / 10;   // whole episode, with a beat to react at the end
 
 // ---- audio level per frame, from the WAV itself --------------------------------------------------
