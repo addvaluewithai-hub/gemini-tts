@@ -504,3 +504,15 @@ lists its sources by hand in `youtube.sources`.
 A thumbnail spec is a tag, a two-line headline (`[[words]]` in yellow), an
 optional line under it, the host's `emote` and `gesture`, and `icons`: any of
 the boards' icons, placed in 1280 x 720 units.
+
+An illustrated thumbnail names `"page": "scene.html"` and a `scene` from
+`youtube/scenes.js` (a drawing of the episode's strongest image, tuned by
+`opts`). The host is placed with `host` (or `hosts`, several): `emote`,
+`gesture`, `x` (centre of his 1200 box) and `y` (its top), `size`, `rot`,
+`look`, an optional CSS `mask` or `clip`, and `layer: "top"` to draw him over
+the scene's front (a cart he sits in, a grave he hides behind). `words` are
+blocks of text at `x`, `y`, `w`, `size`, with `[[words]]` in the `hi` colour.
+Scenes hold no words, so another language changes only the spec. Keep text
+and faces out of the bottom-right corner, where YouTube shows the duration,
+and check every thumbnail at 320 x 180. `node youtube.cjs art <specs> <out>
+thumbnail-b` renders only the specs whose file contains `thumbnail-b`.

@@ -36,12 +36,11 @@
   "scene": "palmTower",
   "host": {
    "emote": "sly",
-   "gesture": "present",
+   "gesture": "count",
    "x": 1110,
    "y": 260,
    "size": 500,
-   "flip": true,
-   "look": 0.6
+   "look": -0.6
   },
   "words": [
    {

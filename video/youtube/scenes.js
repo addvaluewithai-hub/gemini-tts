@@ -84,10 +84,10 @@ export const SCENES = {
       return `<path d="${d}" fill="none" stroke="#ffcc33" stroke-width="22" opacity=".25" filter="url(#b4)"/><path d="${d}" fill="none" stroke="#05050a" stroke-width="14"/><path d="${d}" fill="none" stroke="#fff6a0" stroke-width="9" stroke-linecap="round" stroke-dasharray="1 34" filter="url(#glow)"/>`; };
     const bolt = (x, y, s, r) => `<path transform="translate(${x} ${y}) rotate(${r}) scale(${s})" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#fff36b" stroke="#fff" stroke-width="4" filter="url(#glow)"/>`;
     const back = `<rect width="1280" height="720" fill="url(#night)"/>${Array.from({ length: 60 }, () => `<circle cx="${f(R() * 1280)}" cy="${f(R() * 420)}" r="${f(R() * 1.8 + 0.5)}" fill="#fff" opacity="${f(R() * 0.6 + 0.2)}"/>`).join("")}
-      ${wire(170, 250, 90, 560, 180)}${wire(370, 350, 330, 520, 120)}${wire(570, 270, 640, 560, 200)}${wire(600, 260, 900, 500, 220)}${wire(560, 280, 1120, 540, 260)}
+      ${wire(170, 250, 90, 740, 260)}${wire(370, 350, 330, 740, 200)}${wire(570, 270, 640, 740, 260)}${wire(600, 260, 860, 740, 300)}${wire(560, 280, 1150, 740, 360)}
       ${city}${wins}
-      ${link(270, 205, 28)}${link(470, 215, -22)}
       ${blocks.map(([x, y]) => cube(x, y, 92)).join("")}
+      ${link(258, 232, 28)}${link(285, 246, 28)}${link(462, 246, -22)}${link(488, 236, -22)}
       ${bolt(80, 90, 0.6, -12)}${bolt(700, 90, 0.45, 18)}${bolt(470, 400, 0.4, 8)}`;
     return { defs, back };
   },
@@ -116,7 +116,7 @@ export const SCENES = {
     const back = `<rect width="1280" height="720" fill="url(#dusk)"/><circle cx="380" cy="430" r="90" fill="#fff0b0" opacity=".6" filter="url(#b30)"/>
       ${gull(300, 120, 1.2)}${gull(380, 90, 0.8)}${gull(700, 150, 1)}${gull(240, 200, 0.7)}
       <path d="${hill}" fill="url(#hill)"/>${trash}
-      <circle cx="${D.x}" cy="${D.y}" r="260" fill="url(#treas)"/>${rays(D.x, D.y, 14, "#fff2a8", 0.18, 420, 0.1)}
+      <clipPath id="up3"><rect width="1280" height="${D.y + 20}"/></clipPath><g clip-path="url(#up3)">${rays(D.x, D.y, 14, "#fff2a8", 0.22, 520, 0.1)}</g><circle cx="${D.x}" cy="${D.y}" r="230" fill="url(#treas)"/>
       <g transform="translate(${D.x} ${D.y}) rotate(-18)" filter="url(#sh)"><rect x="-96" y="-62" width="192" height="124" rx="12" fill="url(#drv)"/><circle cx="-14" cy="-4" r="44" fill="#d9dfee" stroke="#8f96b8" stroke-width="4"/><circle cx="-14" cy="-4" r="9" fill="#8f96b8"/><path d="M52 44L14 12" stroke="#4d5478" stroke-width="9" stroke-linecap="round"/><rect x="48" y="30" width="30" height="16" rx="4" fill="#58d68d"/></g>
       ${coin(560, 380, 34, -20)}${coin(735, 400, 30, 22)}${coin(690, 330, 24, 8)}`;
     return { defs, back };
