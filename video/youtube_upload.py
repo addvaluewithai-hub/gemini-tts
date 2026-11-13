@@ -102,7 +102,7 @@ def curl(args, want_headers=False, _retry=True):
             if auth: os.unlink(auth)
         if r.returncode != 0:
             sys.exit("curl failed: " + r.stderr.strip())
-        head = open(hdr.name).read()
+        head = open(hdr.name, newline="").read()            # keep the \r\n that separates responses
     status = int(head.split()[1]) if head.startswith("HTTP") else 0
     for block in head.split("\r\n\r\n"):                       # the last response's headers win
         if block.strip().startswith("HTTP"):
