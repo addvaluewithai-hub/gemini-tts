@@ -40,7 +40,7 @@ function sentences(words) {
 }
 
 async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
-  const CALM = !!process.env.HEAD_CALM;
+  const CALM = !!process.env.HEAD_CALM, MCALM = !!process.env.MOUTH_CALM;
   const { EMOTES, GESTURES } = await import("./characters/acting.js");
   const { MOUTHS } = await import("./characters/peek3d.js");
   const R = rng(cues.seed ?? 17), pick = (list, avoid) => { const c = list.filter((x) => x !== avoid); const l = c.length ? c : list; return l[Math.floor(R() * l.length)]; };
@@ -109,7 +109,14 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
 
     // mouth: speech shapes nudged by the feeling, the feeling's own mouth when silent
     const sp = lip.shapeAt(t + 0.035); let mg, mr;
-    if (sp && t >= cues.from) { mg = { w: sp.w, smile: sp.smile + (em.talk?.smile ?? 0), jaw: sp.jaw, smirk: em.talk?.smirk ?? 0.35, tongue: sp.tongue }; mr = { w: 0.5, smile: 0.5, jaw: sp.viseme === "M" ? 0.85 : 0.62, smirk: 0.3, tongue: 0.6 }; }
+    // MOUTH_CALM=1: the mouth eases between shapes instead of snapping, closes fully only for M B P / F V,
+    // and keeps its width, so the jaw does the talking
+    if (sp && t >= cues.from && MCALM) {
+      const shut = sp.viseme === "M" || sp.viseme === "F";
+      mg = { w: 0.86 + (sp.w - 0.86) * 0.3, smile: sp.smile + (em.talk?.smile ?? 0), jaw: shut ? sp.jaw : Math.max(0.28, sp.jaw), smirk: em.talk?.smirk ?? 0.35, tongue: sp.tongue * 0.5 };
+      mr = { w: 0.2, smile: 0.25, jaw: shut ? 0.45 : 0.3, smirk: 0.3, tongue: 0.25 };
+    }
+    else if (sp && t >= cues.from) { mg = { w: sp.w, smile: sp.smile + (em.talk?.smile ?? 0), jaw: sp.jaw, smirk: em.talk?.smirk ?? 0.35, tongue: sp.tongue }; mr = { w: 0.5, smile: 0.5, jaw: sp.viseme === "M" ? 0.85 : 0.62, smirk: 0.3, tongue: 0.6 }; }
     else { const nx = lip.segs.find((g) => g.s > t), ls = [...lip.segs].reverse().find((g) => g.e <= t), mid = nx && ls && nx.s - t < 0.28 && t - ls.e < 0.28;
       mg = mid ? { w: 0.84, smile: 0.18 + (em.talk?.smile ?? 0), jaw: 0.03, smirk: em.talk?.smirk ?? 0.35, tongue: 0 } : shape(em.mouth ?? "smirk");
       mr = mid ? { w: 0.5, smile: 0.5, jaw: 0.7, smirk: 0.3, tongue: 0.6 } : { w: 0.22, smile: 0.22, jaw: 0.5, smirk: 0.18, tongue: 0.6 }; }
