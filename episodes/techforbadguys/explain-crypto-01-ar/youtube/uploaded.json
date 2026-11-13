@@ -4,7 +4,7 @@
  "title": "البيتكوين اتعمل ليه؟ القصة من الأول | ملف العملات المشفرة 1/5",
  "privacy": "private",
  "publishAt": null,
- "thumbnail_error": "YouTube answered 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n    \"errors\": [\n      {\n        \"message\": \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\",\n        \"domain\": \"youtube.thumbnail\",\n        \"reason\": \"forbidden\",\n        \"location\": \"Authorization\",\n        \"locationType\": \"header\"\n      }\n    ]\n  }\n}",
  "captions": "ar",
- "playlist": "PLMKRj_sCai4M"
+ "playlist": "PLMKRj_sCai4M",
+ "thumbnail": "thumbnail-a.jpg"
 }
