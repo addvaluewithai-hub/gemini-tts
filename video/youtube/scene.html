@@ -30,7 +30,7 @@ function host(h) {
   const svg = peek3d({ ...base, ...em, look: h.look ?? em.look ?? 0, lookY: h.lookY ?? em.lookY ?? 0, antL: em.ant || 0, antR: em.ant || 0, m: em.mouth },
     { face: "pear", bg: false, grain: false, size, armL: g.armL, armR: g.armR, shrug: g.shrug || 0, tilt: em.tilt || 0, roll: false });
   const t = `rotate(${h.rot || 0}deg) scaleX(${h.flip ? -1 : 1})`, mask = (h.mask ? `-webkit-mask-image:${h.mask};mask-image:${h.mask};` : "") + (h.clip ? `clip-path:${h.clip};` : "");
-  return `<div class="host" style="left:${h.x - size / 2}px;top:${h.y}px;transform:${t};transform-origin:50% 50%;${mask}${h.shadow === false ? "" : "filter:drop-shadow(0 18px 24px rgba(5,6,13,.45))"}">${svg}</div>`;
+  return `<div class="host" style="left:${h.x - size / 2}px;top:${h.y}px;transform:${t};transform-origin:50% 50%;${mask}${h.shadow === false ? "" : `filter:${h.outline ? ["4px 0", "-4px 0", "0 4px", "0 -4px"].map((o) => `drop-shadow(${o.replace(/4/g, h.outline)} 0 #fff)`).join(" ") + " " : ""}drop-shadow(0 18px 24px rgba(5,6,13,.45))`}">${svg}</div>`;
 }
 // one block of words. w: { t, x, y, w, size, font: "big"|"small", color, hi (colour for [[...]]), stroke, sw, rot, align, lh, bg, pad }
 function words(w, rtl) {
@@ -47,7 +47,11 @@ window.render = async (s) => {
   const svg = (inner, defs = "") => `<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"><defs>${defs}</defs>${wrap(inner)}</svg>`;
   // price: { t, x, y, size, rot } a price tag on a string, the number that makes the picture a story
   const price = (p) => `<div class="price" dir="ltr" style="left:${p.x}px;top:${p.y}px;font-size:${p.size || 86}px;transform:rotate(${p.rot ?? -8}deg)"><b></b>${esc(p.t)}</div>`;
-  el.innerHTML = svg(scene.back, scene.defs) + layer("mid") + (scene.front ? svg(scene.front) : "") + layer("top")
+  // marks: [{ circle: [x, y, r] } | { arrow: [x1, y1, x2, y2] }] the red circle and arrow that point at the detail
+  const marks = (s.marks || []).map((m) => m.circle ? `<ellipse cx="${m.circle[0]}" cy="${m.circle[1]}" rx="${m.circle[2]}" ry="${m.circle[3] ?? m.circle[2]}" fill="none" stroke="#fff" stroke-width="22"/><ellipse cx="${m.circle[0]}" cy="${m.circle[1]}" rx="${m.circle[2]}" ry="${m.circle[3] ?? m.circle[2]}" fill="none" stroke="#ff2a3a" stroke-width="12"/>`
+    : (([a, b, c, d]) => { const ang = Math.atan2(d - b, c - a), hx = (k) => c - 46 * Math.cos(ang + k), hy = (k) => d - 46 * Math.sin(ang + k), p = `M${a} ${b}L${c} ${d}M${hx(0.5)} ${hy(0.5)}L${c} ${d}L${hx(-0.5)} ${hy(-0.5)}`;
+      return `<path d="${p}" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="${p}" fill="none" stroke="#ff2a3a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>`; })(m.arrow)).join("");
+  el.innerHTML = svg(scene.back, scene.defs) + layer("mid") + (scene.front ? svg(scene.front) : "") + layer("top") + (marks ? `<svg viewBox="0 0 1280 720">${marks}</svg>` : "")
     + (s.prices || []).map(price).join("") + (s.words || []).map((w) => words(w, s.rtl)).join("")
     + (s.tag ? `<div class="tag" dir="${s.rtl ? "rtl" : "ltr"}" style="left:auto;right:${s.rtl ? 26 : "auto"}px;${s.rtl ? "" : "left:26px;"}top:24px">${esc(s.tag)}</div>` : "");
   await Promise.all(['100px "Anton"', '40px "Elite"'].flatMap((f) => [document.fonts.load(f), document.fonts.load(f, "عربي")])); await document.fonts.ready;
