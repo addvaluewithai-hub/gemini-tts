@@ -1,0 +1,1013 @@
+{
+ "title": "Earth Report: The Network 2",
+ "recorded_for": "2026-11-13",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: The Network, part 2 of 3, English version. Adapted from `../explain-network-02-ar`, not translated: same facts, order and boards; lines and jokes rewritten for English speakers (the people passing a bag down a line becomes a bucket brigade; new lines: the senator's 'series of tubes', the 'someone else's computer' sticker, and a company locking its keys inside). Where the internet physically is: a network of networks with nobody in charge, the cables on the sea floor that carry almost everything between continents, how they break and are mended, packets and why the network survives a cut, names and numbers, two times the routing map went wrong, what the cloud is, Wi-Fi, who uses the cables now, satellites, and who is still offline. The 'series of tubes' remark is US Senator Ted Stevens, 2006 (general knowledge).",
+  "",
+  "Facts are stated from web research on 12 November 2026 (see explain-network-01-ar/plan.md for links) and from general knowledge of how the internet works: the first ARPANET message on 29 October 1969 was LO because the receiving machine crashed during LOGIN; about 607 submarine cable systems were in service in 2026 with more than 1.5 million km of cable, carrying well over 95 percent of intercontinental traffic (TeleGeography); deep-sea cable is about as thick as a garden hose and repeaters sit roughly every 80 km; light in fibre travels at about 200,000 km a second; the 1858 transatlantic telegraph cable carried Queen Victoria's 98-word message in about 16 hours and failed after about three weeks, after excessive voltage was applied; there are 150 to 200 cable faults a year, 70 to 80 percent from fishing and anchors, and fish bites cause under 1 percent (ICPC); cable repair ships number in the low tens worldwide; Red Sea cables were cut in February 2024 and September 2025; on 24 February 2008 Pakistan Telecom's routing announcement took YouTube offline worldwide for about two hours; on 4 October 2021 a faulty configuration change withdrew Facebook's routes for about six hours and staff badges stopped working (New York Times); the name Wi-Fi was coined in 1999 by a branding firm and stands for nothing; Google, Meta, Amazon and Microsoft use about three quarters of international cable capacity (estimates citing TeleGeography) and Meta announced a 50,000 km cable in February 2025; one satellite network had more than 11,000 satellites in orbit in November 2026; 6 billion people were online and 2.2 billion offline in 2025 (ITU); the web was proposed in 1989; a modern cable costs hundreds of millions of dollars and carries hundreds of terabits a second; cable ships lay at walking pace and bury the cable near shore; intelligence agencies have tapped submarine cables (reported since 2013); IPv4 has about 4.3 billion addresses and roughly half of traffic to large sites now uses IPv6; data centres used about 1.5 percent of world electricity in 2024 (IEA); the 2.4 GHz Wi-Fi band is shared with microwave ovens."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan bureaucrat. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "NEXT REPORT",
+   "next": "The video call · Part 3 of 3",
+   "note": "Subscribe so the rest of the file reaches you"
+  }
+ },
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: THE NETWORK"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "EARTH REPORT · THE NETWORK FILE",
+   "title": "THE INTERNET IS UNDERWATER",
+   "size": 120,
+   "sub": "PART 2 OF 3 · WHERE IT LIVES, AND WHO OWNS IT"
+  },
+  "cloud": {
+   "kind": "story",
+   "title": "THE CLOUD",
+   "icon": "cloud",
+   "name": "none found",
+   "lines": [
+    "Humans say: the cloud",
+    "There is no cloud",
+    "There are hoses. And warehouses."
+   ]
+  },
+  "nets": {
+   "kind": "steps",
+   "title": "A NETWORK OF NETWORKS",
+   "items": [
+    {
+     "icon": "router",
+     "label": "Your home",
+     "sub": "a few devices"
+    },
+    {
+     "icon": "tower",
+     "label": "Your carrier",
+     "sub": "a country"
+    },
+    {
+     "icon": "server",
+     "label": "Backbones",
+     "sub": "continents"
+    }
+   ]
+  },
+  "arpa": {
+   "kind": "story",
+   "title": "OCTOBER 29, 1969",
+   "icon": "node",
+   "name": "first message",
+   "size": 56,
+   "lines": [
+    "Two computers, two universities",
+    "They meant to send: LOGIN",
+    "Arrived: LO. Then a crash."
+   ]
+  },
+  "globe": {
+   "kind": "globe",
+   "title": "THE REAL INTERNET",
+   "cutStep": 3,
+   "captions": [
+    "",
+    "",
+    "Over 95% of traffic between continents runs here",
+    "A cable is cut. The rest carry on."
+   ]
+  },
+  "stats": {
+   "kind": "rows",
+   "title": "BY THE NUMBERS · 2026",
+   "items": [
+    {
+     "text": "Cables on the sea floor",
+     "tag": "600+"
+    },
+    {
+     "text": "Kilometers of cable",
+     "tag": "1.5 MILLION"
+    },
+    {
+     "text": "Of traffic between continents",
+     "tag": "95%+"
+    }
+   ]
+  },
+  "hose": {
+   "kind": "story",
+   "title": "INSIDE THE CABLE",
+   "icon": "cable",
+   "name": "garden-hose thick",
+   "lines": [
+    "Strands of glass inside",
+    "Thinner than a human hair",
+    "Carrying: light"
+   ]
+  },
+  "speed": {
+   "kind": "story",
+   "title": "THE SPEED",
+   "icon": "bolt",
+   "name": "light in glass",
+   "size": 56,
+   "lines": [
+    "200,000 km every second",
+    "Continent to continent: <0.1 s",
+    "A booster every ~80 km"
+   ]
+  },
+  "old": {
+   "kind": "story",
+   "title": "1858 · FIRST CABLE UNDER THE OCEAN",
+   "icon": "ship",
+   "name": "telegraph",
+   "size": 56,
+   "lines": [
+    "The Queen's message: 98 words",
+    "Took about 16 hours",
+    "The cable died in 3 weeks"
+   ]
+  },
+  "breaks": {
+   "kind": "story",
+   "title": "THEY BREAK",
+   "icon": "anchor",
+   "name": "an anchor",
+   "size": 54,
+   "lines": [
+    "150 to 200 faults a year",
+    "Mostly fishing nets and anchors",
+    "Very few repair ships"
+   ]
+  },
+  "shark": {
+   "kind": "story",
+   "title": "AN INNOCENT SUSPECT",
+   "icon": "shark",
+   "name": "the shark",
+   "lines": [
+    "Does bite cables",
+    "Was filmed doing it",
+    "Share of faults: under 1%"
+   ]
+  },
+  "packets": {
+   "kind": "packets",
+   "title": "PACKETS",
+   "from": "the message",
+   "to": "reassembled"
+  },
+  "dns": {
+   "kind": "flow",
+   "title": "NAMES AND NUMBERS",
+   "actors": [
+    {
+     "icon": "laptop",
+     "label": "You"
+    },
+    {
+     "icon": "book",
+     "label": "The directory",
+     "big": true
+    },
+    {
+     "icon": "server",
+     "label": "The website"
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "token": "file",
+     "label": "the name"
+    },
+    {
+     "move": [
+      1,
+      0
+     ],
+     "token": "file",
+     "label": "the number"
+    },
+    {
+     "move": [
+      0,
+      2
+     ],
+     "token": "file",
+     "label": "the request"
+    }
+   ]
+  },
+  "pak": {
+   "kind": "story",
+   "title": "A MAP BUILT ON TRUST · 2008",
+   "icon": "tower",
+   "name": "a phone company",
+   "size": 54,
+   "lines": [
+    "Pakistan wanted YouTube blocked",
+    "Its carrier told the map: it's here",
+    "The world believed it. 2 hours."
+   ]
+  },
+  "fb": {
+   "kind": "story",
+   "title": "OCTOBER 4, 2021",
+   "icon": "server",
+   "name": "Facebook",
+   "size": 56,
+   "lines": [
+    "One bad setting, from inside",
+    "Off the map for 6 hours",
+    "Office door badges stopped"
+   ]
+  },
+  "dc": {
+   "kind": "story",
+   "title": "'THE CLOUD'",
+   "icon": "server",
+   "name": "a warehouse",
+   "lines": [
+    "Buildings the size of stadiums",
+    "Rows of computers. Air con.",
+    "Someone else's computer"
+   ]
+  },
+  "home": {
+   "kind": "route",
+   "title": "THE TRIP OF ONE PAGE",
+   "stops": [
+    {
+     "icon": "laptop",
+     "label": "Your device",
+     "link": "radio",
+     "leg": "Wi-Fi"
+    },
+    {
+     "icon": "router",
+     "label": "Router",
+     "link": "wire",
+     "leg": "cable"
+    },
+    {
+     "icon": "tower",
+     "label": "Carrier",
+     "link": "sea",
+     "leg": "sea floor"
+    },
+    {
+     "icon": "server",
+     "label": "Data center",
+     "sub": "another continent"
+    }
+   ]
+  },
+  "wifi": {
+   "kind": "story",
+   "title": "WI-FI",
+   "icon": "router",
+   "name": "also a radio",
+   "lines": [
+    "The last few meters at home",
+    "Name invented in 1999",
+    "It means nothing"
+   ]
+  },
+  "who": {
+   "kind": "bars",
+   "title": "WHO USES THE HOSES?",
+   "bars": [
+    {
+     "label": "4 tech companies",
+     "value": 75,
+     "text": "≈ 75%",
+     "color": "#ff4fa3"
+    },
+    {
+     "label": "Everyone else",
+     "value": 25,
+     "text": "≈ 25%",
+     "color": "#9fb0ff"
+    }
+   ],
+   "note": "Of capacity between continents · estimates",
+   "every": 0.6
+  },
+  "sats": {
+   "kind": "story",
+   "title": "AND SATELLITES?",
+   "icon": "sat",
+   "name": "11,000 satellites",
+   "size": 56,
+   "lines": [
+    "One network: 11,000+ satellites",
+    "For places cables can't reach",
+    "The heavy load: still the sea floor"
+   ]
+  },
+  "off": {
+   "kind": "meter",
+   "title": "STILL OFFLINE · 2025",
+   "big": "2.2 BILLION",
+   "unit": "humans with no internet",
+   "value": 0.27,
+   "label": "of the planet",
+   "note": "6 billion are online",
+   "color": "#ff4654"
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "THE HUMAN DICTIONARY",
+   "items": [
+    {
+     "word": "IP",
+     "means": "A device's number on the network. Its address"
+    },
+    {
+     "word": "Cloud",
+     "means": "Someone else's computer, in a warehouse"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then destroys a popular myth.",
+   "beats": [
+    {
+     "say": "Sir. The second report in the network file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: the internet. Where exactly is it? And who owns it?",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "In the last report we learned the phone only talks to the nearest tower, and everything after that is cable. Today I follow those cables to the end.",
+     "show": "board",
+     "board": "title",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "When you ask humans where their photos and files are, they point up and say: in the cloud.",
+     "show": "board",
+     "board": "cloud"
+    },
+    {
+     "say": "There is no cloud, sir. I looked.",
+     "show": "board",
+     "board": "cloud"
+    },
+    {
+     "say": "What I found: hoses on the ocean floor... and warehouses.",
+     "show": "board",
+     "board": "cloud"
+    },
+    {
+     "say": "I will report what those hoses are, who cuts them, and how a message finds its way from one continent to another. <short pause> And how one of the biggest companies on the planet erased itself from the map for six hours... and its own staff could not get into the building.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "nets",
+   "story": {
+    "n": 1,
+    "tag": "A NETWORK OF NETWORKS"
+   },
+   "style": "Clear and a little amused that nobody is in charge.",
+   "beats": [
+    {
+     "say": "First: the internet is not one network. In your home there is a small network: a few devices.",
+     "show": "board",
+     "board": "nets"
+    },
+    {
+     "say": "That one connects to your phone company's network.",
+     "show": "board",
+     "board": "nets"
+    },
+    {
+     "say": "And that connects to bigger networks that join countries and continents.",
+     "show": "board",
+     "board": "nets"
+    },
+    {
+     "say": "Tens of thousands of networks, each with its own owner, and they agree on exactly one thing: how to talk. <short pause> No manager. No head office. And no button that switches it all off.",
+     "show": "board",
+     "board": "nets",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "And by the way: the internet is not the websites. The websites were built on top of it twenty years later. <short pause> The internet is the plumbing. The websites are the water.",
+     "show": "board",
+     "board": "nets",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "It started in October 1969. Two computers at two universities.",
+     "show": "board",
+     "board": "arpa"
+    },
+    {
+     "say": "They wanted to send one word: LOGIN.",
+     "show": "board",
+     "board": "arpa"
+    },
+    {
+     "say": "Two letters arrived. L, O. And the machine crashed.",
+     "show": "board",
+     "board": "arpa"
+    },
+    {
+     "say": "The first message in the history of the internet was a crash. <short pause> And the humans have carried on in that spirit ever since.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "cables",
+   "story": {
+    "n": 2,
+    "tag": "HOSES ON THE SEA FLOOR"
+   },
+   "style": "The main reveal. He is honestly impressed and slightly appalled.",
+   "beats": [
+    {
+     "say": "So how are the continents connected? The humans assume: satellites.",
+     "show": "board",
+     "board": "globe"
+    },
+    {
+     "say": "Wrong. Traffic between continents runs through cables. Lying on the bottom of the ocean.",
+     "show": "board",
+     "board": "globe"
+    },
+    {
+     "say": "More than ninety-five percent of it. Their photos, their money, their calls, their governments' secrets... all on the sea floor.",
+     "show": "board",
+     "board": "globe"
+    },
+    {
+     "say": "More than six hundred cables in service.",
+     "show": "board",
+     "board": "stats"
+    },
+    {
+     "say": "Together they run about one and a half million kilometers. Enough to wrap around the planet more than thirty-five times.",
+     "show": "board",
+     "board": "stats"
+    },
+    {
+     "say": "And they carry almost everything that crosses from one continent to another.",
+     "show": "board",
+     "board": "stats"
+    },
+    {
+     "say": "And out in the deep ocean, the cable itself is about as thick as a garden hose.",
+     "show": "board",
+     "board": "hose"
+    },
+    {
+     "say": "Inside are strands of glass, each one thinner than a human hair.",
+     "show": "board",
+     "board": "hose"
+    },
+    {
+     "say": "And what travels through them is not electricity. It is light. Laser pulses, switching on and off billions of times a second.",
+     "show": "board",
+     "board": "hose"
+    },
+    {
+     "say": "A modern cable costs hundreds of millions of dollars, and every second it carries enough for millions of movies playing at once.",
+     "show": "board",
+     "board": "hose",
+     "step": "hold",
+     "host": "left",
+     "emote": "proud"
+    },
+    {
+     "say": "So the entire civilization of these creatures runs on a few threads of glass inside a hose... lying in the dark, kilometers down. <short pause> And nobody is guarding it.",
+     "shot": "close",
+     "emote": "worried"
+    },
+    {
+     "say": "One of their senators once called the internet a series of tubes. He was laughed at for years. <short pause> For the record, sir: he was not entirely wrong.",
+     "show": "board",
+     "board": "hose",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "Light in glass travels at about two hundred thousand kilometers a second.",
+     "show": "board",
+     "board": "speed"
+    },
+    {
+     "say": "So from one continent to another in less than a tenth of a second.",
+     "show": "board",
+     "board": "speed"
+    },
+    {
+     "say": "And every eighty kilometers or so there is a booster for the light, on the sea floor, powered by the cable itself.",
+     "show": "board",
+     "board": "speed"
+    },
+    {
+     "say": "Who lays them? A ship moving at walking pace, with the cable sinking behind it to the bottom. For months. And near the shore, they bury it in the sand.",
+     "show": "board",
+     "board": "speed",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "And it comes out of the sea into a small building on the beach that looks like an ordinary storage shed. No sign. <short pause> I walked past one, sir. Nobody asked me where I was going.",
+     "show": "board",
+     "board": "speed",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "old",
+   "story": {
+    "n": 3,
+    "tag": "SINCE 1858"
+   },
+   "style": "Historian enjoying a Victorian failure.",
+   "beats": [
+    {
+     "say": "And the idea is very old. The first cable under the ocean was laid in 1858. For the telegraph.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "A queen sent a message of congratulations down it to a president. Ninety-eight words. It took about sixteen hours.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "And the cable died three weeks later. Because one of them turned up the voltage to make it go faster.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "Sixteen hours was a miracle back then. Before that, a message took ten days by ship. <short pause> Today, humans close the page if it takes three seconds.",
+     "show": "board",
+     "board": "old",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    }
+   ]
+  },
+  {
+   "id": "breaks",
+   "story": {
+    "n": 4,
+    "tag": "THEY BREAK"
+   },
+   "style": "A security assessment, dry and a bit alarmed.",
+   "beats": [
+    {
+     "say": "And these hoses break. A hundred and fifty to two hundred faults every year.",
+     "show": "board",
+     "board": "breaks"
+    },
+    {
+     "say": "Most are not sabotage. A fishing net dragged along the bottom. Or a ship dropping anchor in the wrong place.",
+     "show": "board",
+     "board": "breaks"
+    },
+    {
+     "say": "And the number of ships on the entire planet that know how to repair these cables... is very small. A few dozen.",
+     "show": "board",
+     "board": "breaks"
+    },
+    {
+     "say": "The ship goes to the spot, drops a hook, pulls both ends up from the bottom, and splices them on deck. Strand by strand. <short pause> It can take weeks.",
+     "show": "board",
+     "board": "breaks",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "And because everything runs through these hoses, their intelligence agencies have been tapping them for years. <short pause> So I am not the first spy on these cables, sir. Just the first one from out of town.",
+     "show": "board",
+     "board": "breaks",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "There is a famous suspect: the shark. It really does bite cables.",
+     "show": "board",
+     "board": "shark"
+    },
+    {
+     "say": "It has been filmed doing it.",
+     "show": "board",
+     "board": "shark"
+    },
+    {
+     "say": "But its share of the faults is under one percent. <short pause> The real culprit is always... a human, fishing.",
+     "show": "board",
+     "board": "shark"
+    },
+    {
+     "say": "And when a cable is cut? In the Red Sea, cables were cut in 2024, and again in 2025. The internet slowed down across Asia and the Middle East. <short pause> But it did not go down.",
+     "show": "board",
+     "board": "globe",
+     "step": 3
+    },
+    {
+     "say": "Why not? Here is the cleverest thing in the whole invention.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "packets",
+   "story": {
+    "n": 5,
+    "tag": "PACKETS"
+   },
+   "style": "The clever core idea, built step by step.",
+   "beats": [
+    {
+     "say": "Anything sent over the network, a photo, a message, a movie...",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "is cut into small pieces. They call them packets. Each packet carries its own number, and the address it is going to.",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "And each packet travels on its own. By whatever road is free. One goes this way, another goes by a different continent entirely.",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "Every router along the way looks at the address and pushes the packet on to the next one. Like a bucket brigade. And none of them sees the whole journey.",
+     "show": "board",
+     "board": "packets",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "At the far end, they are put back in order. And if one went missing... it gets requested again.",
+     "show": "board",
+     "board": "packets"
+    },
+    {
+     "say": "That is why, when a cable is cut, the packets just go around another way. Without anyone telling them to. <short pause> This network was designed from the start to keep going while broken.",
+     "show": "board",
+     "board": "packets",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "The cat photo one human sends to another: half of it may pass under one ocean, and the other half under a different ocean. <short pause> And a whole cat arrives. I do not understand their priorities... but the engineering is respectable.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "names",
+   "story": {
+    "n": 6,
+    "tag": "NAMES AND THE MAP"
+   },
+   "style": "Explaining an address book, then two true stories of the map going wrong, with relish.",
+   "beats": [
+    {
+     "say": "Every device on the network has a number. That is its address. But humans do not memorize numbers. So they built a directory.",
+     "show": "board",
+     "board": "dns"
+    },
+    {
+     "say": "You type the website's name. The directory answers with the number.",
+     "show": "board",
+     "board": "dns"
+    },
+    {
+     "say": "And with that number, your packets know where to go. All of this before the page even opens. In a fraction of a second.",
+     "show": "board",
+     "board": "dns"
+    },
+    {
+     "say": "And those numbers ran out. The original system had about four billion of them, and the devices now far outnumber that. So they made a new system with numbers that never run out. <short pause> And after many, many years... only about half the network has moved over.",
+     "show": "board",
+     "board": "dns",
+     "step": "hold",
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "So who tells the packets which road to take? Every network announces to the others: these addresses are with me. And the others... believe it. <short pause> Yes, sir. The entire map of the internet runs on trust.",
+     "show": "board",
+     "board": "dns",
+     "step": "hold",
+     "host": "left",
+     "emote": "skeptical"
+    },
+    {
+     "say": "In 2008, the government of Pakistan ordered YouTube blocked inside the country.",
+     "show": "board",
+     "board": "pak"
+    },
+    {
+     "say": "And a phone company there accidentally announced to the entire world: YouTube is over here, with me.",
+     "show": "board",
+     "board": "pak"
+    },
+    {
+     "say": "And the world believed it. YouTube vanished from the planet for about two hours.",
+     "show": "board",
+     "board": "pak"
+    },
+    {
+     "say": "And in 2021, Facebook made a bad configuration change... from inside the company.",
+     "show": "board",
+     "board": "fb"
+    },
+    {
+     "say": "Which erased its addresses from the map. Facebook and all of its apps. Six hours. Three billion humans unable to message each other.",
+     "show": "board",
+     "board": "fb"
+    },
+    {
+     "say": "The engineers could not fix it remotely, because the network was down. And when they went to the building... their door badges would not work. Because they ran on the same network.",
+     "show": "board",
+     "board": "fb"
+    },
+    {
+     "say": "Neither time was an attack. Both times, it was an employee... pressing the wrong button.",
+     "show": "board",
+     "board": "fb",
+     "step": "hold",
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "A company that locked itself out, and left the keys inside. <short pause> Sir, I have been sending Command reports on their weapons. I should be sending reports on their mistakes. They are more dangerous.",
+     "shot": "close",
+     "emote": "grin"
+    }
+   ]
+  },
+  {
+   "id": "cloud",
+   "story": {
+    "n": 7,
+    "tag": "THE CLOUD"
+   },
+   "style": "Deflating a marketing word.",
+   "beats": [
+    {
+     "say": "Back to the cloud. Where are all these packets going? To buildings the size of football stadiums.",
+     "show": "board",
+     "board": "dc"
+    },
+    {
+     "say": "Inside are rows of computers, running day and night. And air conditioning that never stops.",
+     "show": "board",
+     "board": "dc"
+    },
+    {
+     "say": "That is the cloud. As one of their own stickers puts it: there is no cloud. It is just someone else's computer. <short pause> They named it a cloud so nobody would think about it.",
+     "show": "board",
+     "board": "dc"
+    },
+    {
+     "say": "These warehouses use about one and a half percent of all the electricity on the planet. And the number is climbing fast... because of artificial intelligence.",
+     "show": "board",
+     "board": "dc",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "The trip of a single page starts at your device. The first few meters: radio. The Wi-Fi.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "The router takes it and puts it on a cable.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "The phone company drops it to the bottom of the sea.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "And it reaches the warehouse, on another continent. And the answer comes back the same way. All while your finger is still lifting off the screen.",
+     "show": "board",
+     "board": "home"
+    },
+    {
+     "say": "And Wi-Fi is a radio, just like the mobile phone. Only for the last few meters.",
+     "show": "board",
+     "board": "wifi"
+    },
+    {
+     "say": "And its most common frequency is the same one used by the microwave ovens they heat their food in. <short pause> Which is why the internet sometimes slows down... while they reheat dinner.",
+     "show": "board",
+     "board": "wifi",
+     "step": "hold",
+     "host": "left",
+     "emote": "deadpan"
+    },
+    {
+     "say": "And the name? Invented in 1999. A branding company came up with it.",
+     "show": "board",
+     "board": "wifi"
+    },
+    {
+     "say": "And it means nothing. <short pause> Humans ask for the Wi-Fi password everywhere they go. Not one of them has asked what the name means.",
+     "show": "board",
+     "board": "wifi",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "who",
+   "story": {
+    "n": 8,
+    "tag": "WHO OWNS IT?"
+   },
+   "style": "Following the ownership, then who is left out. The last part is sincere.",
+   "beats": [
+    {
+     "say": "So who owns the hoses? It used to be the phone companies. Today, four tech companies use about three quarters of the capacity between continents.",
+     "show": "board",
+     "board": "who"
+    },
+    {
+     "say": "And they lay cables under their own names now. One of them announced a cable fifty thousand kilometers long. Longer than the planet is around. <short pause> We said nobody owns the internet. But somebody is holding the pipes.",
+     "show": "board",
+     "board": "who",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "And their governments now argue over who lays the cable, where it runs, and who repairs it. <short pause> The garden hose has become politics.",
+     "show": "board",
+     "board": "who",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "And satellites? They exist. One network alone has more than eleven thousand of them.",
+     "show": "board",
+     "board": "sats"
+    },
+    {
+     "say": "And they help in places the cables do not reach: mountains, deserts, ships.",
+     "show": "board",
+     "board": "sats"
+    },
+    {
+     "say": "But the real load is still on the sea floor.",
+     "show": "board",
+     "board": "sats"
+    },
+    {
+     "say": "And one last number, sir: six billion humans are online. And two point two billion are still outside.",
+     "show": "board",
+     "board": "off"
+    },
+    {
+     "say": "More than a quarter of the planet. Most of them in poor countries.",
+     "show": "board",
+     "board": "off",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "Two words from the Human Dictionary. IP: a device's number on the network. The address its packets go to.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "And cloud: someone else's computer, in a warehouse, in another country. <short pause> A fancy name for something boring.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "SUMMARY"
+   },
+   "style": "Summary, then the question that leads to the next report, then the sign-off.",
+   "beats": [
+    {
+     "say": "Summary of the report, sir. One: the internet is a network of networks, and nobody is in charge. Two: the continents are joined by hoses of glass on the sea floor. Three: everything is cut into packets, and every packet finds its way.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "REPORT SUMMARY",
+      "items": [
+       "A network of networks. No boss.",
+       "Continents joined by hoses in the sea",
+       "Everything is packets. They find a way."
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "Which leaves the strangest use of all: a human talking to another human on a different continent... and seeing their face. At the same moment.",
+     "shot": "close",
+     "emote": "skeptical"
+    },
+    {
+     "say": "The next report, and the last in this file: the video call. And how your face is cut into a thousand pieces and put back together.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}

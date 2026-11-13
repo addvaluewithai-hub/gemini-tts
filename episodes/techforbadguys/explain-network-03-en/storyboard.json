@@ -1,0 +1,1001 @@
+{
+ "title": "Earth Report: The Network 3",
+ "recorded_for": "2026-11-13",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Earth Report field file: The Network, part 3 of 3, English version. Adapted from `../explain-network-03-ar`, not translated: same facts, order and boards; lines and jokes rewritten for English speakers (the elephant through the needle's eye becomes the camel; 'you're on mute' is kept as the sentence of the era; lag becomes 'sorry, you're breaking up' as the excuse for every unwanted question). How a video call works: a picture is a grid of numbers, the raw stream is about a thousand times too big, three tricks of compression, sound and echo, packets that nobody waits for, the time budget and the speed of light, what happens when the network weakens, how two devices find each other and encryption, the videophone that failed in 1970, and field notes on how humans behave on calls.",
+  "",
+  "Facts are stated from web research on 12 November 2026 (see explain-network-01-ar/plan.md for links) and from general knowledge of video and audio coding: a 1080p picture has about 2 million pixels of three colour values each, so 30 pictures a second is about 1.5 billion bits a second uncompressed, while a high-definition call uses on the order of 1 to 3 million; video coding sends a full picture and then differences, predicts motion, and carries colour at a quarter of the detail of brightness; call audio is sampled 48,000 times a second and sent in 20 millisecond frames; calls use transport that does not resend late packets and favour audio over video; ITU-T G.114 puts natural conversation at up to 150 milliseconds one way and 400 as the planning limit; light in fibre covers 20,000 km in about a tenth of a second; a geostationary satellite sits about 36,000 km up, about half a second for the round trip; the Picturephone was shown at the 1964 World's Fair and sold from 1970 at 160 dollars a month before being withdrawn; internet calling arrived in 2003 and phone video calling in 2010; Zoom reported 300 million daily meeting participants in April 2020 (participants, not users); a 2021 Stanford paper described why video calls tire people; video is more than half of all internet traffic; call audio needs a few tens of kilobits a second against one to two megabits for video; group calls relay each stream through a server that forwards small and large versions. The time-budget figures on screen are illustrative round numbers, not measurements."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan bureaucrat. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "FILE CLOSED",
+   "next": "A new field file, coming soon",
+   "note": "Subscribe so the next reports reach you"
+  }
+ },
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: THE NETWORK"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "EARTH REPORT · THE NETWORK FILE",
+   "title": "YOUR FACE IN A THOUSAND PIECES",
+   "size": 110,
+   "sub": "PART 3 OF 3 · THE VIDEO CALL"
+  },
+  "call": {
+   "kind": "story",
+   "title": "THE SCENE",
+   "icon": "camera",
+   "name": "a video call",
+   "lines": [
+    "Two continents apart",
+    "Seeing and hearing each other",
+    "Complaining that it froze"
+   ],
+   "size": 54
+  },
+  "px": {
+   "kind": "pixels",
+   "title": "A PICTURE IS SQUARES",
+   "sent": "SENT: ABOUT 3%"
+  },
+  "math": {
+   "kind": "rows",
+   "title": "THE MATH",
+   "items": [
+    {
+     "text": "Dots in one picture",
+     "tag": "2 MILLION"
+    },
+    {
+     "text": "Numbers per dot",
+     "tag": "3"
+    },
+    {
+     "text": "Pictures every second",
+     "tag": "30"
+    },
+    {
+     "text": "Numbers every second",
+     "tag": "180 MILLION+",
+     "tagFill": "#ff4654"
+    }
+   ]
+  },
+  "gap": {
+   "kind": "bars",
+   "title": "WHAT IS NEEDED, WHAT FITS",
+   "bars": [
+    {
+     "label": "The raw picture",
+     "value": 1500,
+     "text": "1,500",
+     "color": "#ff4654"
+    },
+    {
+     "label": "What the line carries",
+     "value": 2,
+     "text": "≈ 2",
+     "color": "#58d68d"
+    }
+   ],
+   "note": "Million bits per second",
+   "every": 0.7
+  },
+  "tricks": {
+   "kind": "rows",
+   "title": "THREE TRICKS",
+   "items": [
+    {
+     "text": "Send only what changed",
+     "mark": "check"
+    },
+    {
+     "text": "Drop what the eye won't notice",
+     "mark": "check"
+    },
+    {
+     "text": "Guess the motion",
+     "mark": "check"
+    }
+   ]
+  },
+  "wave": {
+   "kind": "wave",
+   "title": "AND THE SOUND?",
+   "n": 18
+  },
+  "echo": {
+   "kind": "story",
+   "title": "CLEANING THE SOUND",
+   "icon": "speaker",
+   "name": "a speaker",
+   "lines": [
+    "Your voice from their speaker: echo",
+    "The program subtracts it",
+    "The noise behind you: gone"
+   ]
+  },
+  "pk": {
+   "kind": "packets",
+   "title": "THE ROAD",
+   "from": "the picture",
+   "to": "the screen",
+   "lose": 3,
+   "icon": "camera"
+  },
+  "late": {
+   "kind": "versus",
+   "title": "TWO DIFFERENT RULES",
+   "a": {
+    "title": "A MESSAGE",
+    "color": "#35c8ff",
+    "icon": "file",
+    "args": [
+     ""
+    ],
+    "lines": [
+     "Must arrive whole",
+     "Waiting is fine"
+    ]
+   },
+   "b": {
+    "title": "A CALL",
+    "color": "#ff4fa3",
+    "icon": "camera",
+    "lines": [
+     "Must arrive now",
+     "Late? Thrown away"
+    ]
+   }
+  },
+  "bud": {
+   "kind": "budget",
+   "title": "THE TIME BUDGET",
+   "totalLabel": "TOTAL:",
+   "good": 150,
+   "goodLabel": "natural: up to 150",
+   "bad": 400,
+   "badLabel": "limit: 400",
+   "parts": [
+    {
+     "label": "Camera",
+     "ms": 30
+    },
+    {
+     "label": "Road",
+     "ms": 70
+    },
+    {
+     "label": "Waiting",
+     "ms": 30
+    },
+    {
+     "label": "Display",
+     "ms": 20
+    }
+   ]
+  },
+  "light": {
+   "kind": "story",
+   "title": "THE LIMIT OF PHYSICS",
+   "icon": "bolt",
+   "name": "light itself",
+   "size": 56,
+   "lines": [
+    "Halfway round Earth: 20,000 km",
+    "Light in glass: a tenth of a second",
+    "Not the network. The universe."
+   ]
+  },
+  "sat": {
+   "kind": "story",
+   "title": "WHY THE REPORTER PAUSES",
+   "icon": "sat",
+   "name": "a fixed satellite",
+   "size": 56,
+   "lines": [
+    "36,000 km up",
+    "Up and back: about half a second",
+    "The anchor asks. The reporter stares."
+   ]
+  },
+  "weak": {
+   "kind": "rows",
+   "title": "WHEN THE NETWORK WEAKENS",
+   "items": [
+    {
+     "text": "The picture turns to blocks",
+     "tag": "1"
+    },
+    {
+     "text": "Then freezes on a strange face",
+     "tag": "2"
+    },
+    {
+     "text": "The sound goes last",
+     "tag": "3"
+    }
+   ]
+  },
+  "find": {
+   "kind": "flow",
+   "title": "HOW DO TWO DEVICES MEET?",
+   "actors": [
+    {
+     "icon": "mobile",
+     "label": "You"
+    },
+    {
+     "icon": "server",
+     "label": "The go-between",
+     "big": true
+    },
+    {
+     "icon": "mobile",
+     "label": "Her",
+     "args": [
+      "#ff4fa3"
+     ]
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ],
+     "token": "file",
+     "label": "my address"
+    },
+    {
+     "move": [
+      2,
+      1
+     ],
+     "token": "file",
+     "label": "and mine"
+    },
+    {
+     "move": [
+      0,
+      2
+     ],
+     "token": "camera",
+     "label": "direct"
+    }
+   ]
+  },
+  "lock": {
+   "kind": "story",
+   "title": "ENCRYPTION",
+   "icon": "lock",
+   "name": "a lock",
+   "lines": [
+    "Only the two devices have the key",
+    "Anyone between sees packets",
+    "And understands nothing"
+   ]
+  },
+  "old": {
+   "kind": "story",
+   "title": "THE OLD DREAM",
+   "icon": "camera",
+   "name": "a picture phone",
+   "lines": [
+    "1964: shown at a World's Fair",
+    "1970: on sale",
+    "$160 a month. It flopped."
+   ]
+  },
+  "now": {
+   "kind": "rows",
+   "title": "AND THEN",
+   "size": 50,
+   "items": [
+    {
+     "text": "Free calls over the internet",
+     "tag": "2003"
+    },
+    {
+     "text": "Video calls come to the phone",
+     "tag": "2010"
+    },
+    {
+     "text": "300 million a day, on one app",
+     "tag": "2020"
+    }
+   ]
+  },
+  "eyes": {
+   "kind": "story",
+   "title": "FIELD NOTE",
+   "icon": "eye",
+   "name": "the eye",
+   "lines": [
+    "The camera sits above the screen",
+    "The eyes watch the face below",
+    "So nobody meets anyone's eyes"
+   ]
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "THE HUMAN DICTIONARY",
+   "items": [
+    {
+     "word": "Codec",
+     "means": "What squeezes picture and sound, then unpacks them"
+    },
+    {
+     "word": "Lag",
+     "means": "The delay between said and heard"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of the last report in the file. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir. The third and final report in the network file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: the video call.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "In the last two reports we covered the radio, the hoses, and the packets. Today: the hardest thing the humans do with all of them.",
+     "show": "board",
+     "board": "title",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "One human on one continent, another on a different continent.",
+     "show": "board",
+     "board": "call"
+    },
+    {
+     "say": "Seeing each other, and hearing each other, at the same moment.",
+     "show": "board",
+     "board": "call"
+    },
+    {
+     "say": "And complaining that the picture froze for half a second.",
+     "show": "board",
+     "board": "call"
+    },
+    {
+     "say": "I will report how a human face is cut up, passed under an ocean, and put back together in less than the blink of an eye. <short pause> And the whole secret is one trick: what gets sent is less than one thousandth of the picture.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "pixels",
+   "story": {
+    "n": 1,
+    "tag": "A PICTURE IS SQUARES"
+   },
+   "style": "Showing a magic trick by first showing how hard it is.",
+   "beats": [
+    {
+     "say": "Start with the camera. The picture the humans see is not a picture.",
+     "show": "board",
+     "board": "px"
+    },
+    {
+     "say": "Zoom in: tiny squares. Each square is one color. And each color is three numbers: red, green, blue.",
+     "show": "board",
+     "board": "px"
+    },
+    {
+     "say": "So to the machine, a human face is a table of numbers. Nothing more.",
+     "show": "board",
+     "board": "px"
+    },
+    {
+     "say": "And the phone screen is the same idea: little squares lighting up. No human has ever seen a picture on a screen. They saw dots... and their brain filled in the rest.",
+     "show": "board",
+     "board": "px",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "A single picture has about two million of those squares.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "Three numbers per square.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "And the camera takes thirty pictures a second, so the movement looks smooth.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "That is more than a hundred and eighty million numbers... every second. For one face.",
+     "show": "board",
+     "board": "math"
+    },
+    {
+     "say": "That is the raw picture: one and a half billion bits a second.",
+     "show": "board",
+     "board": "gap"
+    },
+    {
+     "say": "And the line at home gives the call about two million. <short pause> So the job is to squeeze a camel through the eye of a needle. Thirty times a second.",
+     "show": "board",
+     "board": "gap",
+     "step": "hold",
+     "host": "right",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "tricks",
+   "story": {
+    "n": 2,
+    "tag": "THREE TRICKS"
+   },
+   "style": "The core of the episode: three tricks, each revealed with satisfaction.",
+   "beats": [
+    {
+     "say": "And the solution, sir, is not to send faster. The solution is to not send.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "Trick one: send only what changed.",
+     "show": "board",
+     "board": "tricks"
+    },
+    {
+     "say": "The wall behind the human has not moved since the last picture. So it is not sent again. What changed: the mouth, and the eyes.",
+     "show": "board",
+     "board": "px",
+     "step": 3
+    },
+    {
+     "say": "The first picture is sent whole. After that, the device only says: these squares moved like this. The rest is the same. <short pause> Which is why whoever sits still in front of a plain wall looks best.",
+     "show": "board",
+     "board": "px",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "Trick two: throw away whatever the eye will not notice.",
+     "show": "board",
+     "board": "tricks",
+     "step": 1
+    },
+    {
+     "say": "The human eye is good at light and dark, and weak at color. So the color is sent with a quarter of the detail. <short pause> Not one of them has noticed. For years.",
+     "show": "board",
+     "board": "tricks",
+     "step": "hold",
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "And trick three: guess the motion. If the head is moving right, the device predicts it will keep moving right. And sends only the difference between the guess and what happened.",
+     "show": "board",
+     "board": "tricks"
+    },
+    {
+     "say": "So what arrives on the other screen is not the face. It is a short description of the face, and the other device redraws it from scratch. Thirty times a second. <short pause> The humans are talking to a drawing. And they are delighted.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "The result: from one and a half billion... down to two million. And the human feels nothing is missing. The same tricks carry every movie and video on the network. <short pause> More than half of all internet traffic is compressed video.",
+     "show": "board",
+     "board": "tricks",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "And every few seconds, a whole picture is sent again. A backup. So if something breaks along the way, the drawing gets repaired.",
+     "show": "board",
+     "board": "tricks",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "sound",
+   "story": {
+    "n": 3,
+    "tag": "THE SOUND"
+   },
+   "style": "Quick and practical; the sound matters more than the picture.",
+   "beats": [
+    {
+     "say": "The sound is the same idea we saw in the mobile phone report. A wave...",
+     "show": "board",
+     "board": "wave"
+    },
+    {
+     "say": "gets measured. But here forty-eight thousand times a second, not eight thousand. That is why a video call sounds cleaner than a phone call.",
+     "show": "board",
+     "board": "wave"
+    },
+    {
+     "say": "And it is cut into small pieces: each one twenty thousandths of a second.",
+     "show": "board",
+     "board": "wave"
+    },
+    {
+     "say": "And before it is sent, it gets cleaned. Your voice comes out of the other person's speaker, goes into their microphone, and comes back to you. That is the echo.",
+     "show": "board",
+     "board": "echo"
+    },
+    {
+     "say": "The program knows what it sent... so it subtracts it from what comes back.",
+     "show": "board",
+     "board": "echo"
+    },
+    {
+     "say": "And the noise behind you: the fan, the street, the kids. It gets removed. Today that is done by an artificial intelligence program that has learned the difference between speech and noise.",
+     "show": "board",
+     "board": "echo"
+    },
+    {
+     "say": "And in a group call, the program can tell from the sound who is speaking right now... and makes their picture bigger on its own.",
+     "show": "board",
+     "board": "echo",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "And sound matters more than the picture. Humans will put up with a bad picture. <short pause> But choppy sound? They hang up in a second.",
+     "shot": "close",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "road",
+   "story": {
+    "n": 4,
+    "tag": "THE ROAD"
+   },
+   "style": "Reusing the packets idea from the last report, with one important difference.",
+   "beats": [
+    {
+     "say": "Then the picture and the sound are put into packets. Just like we saw in the last report.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "Each packet with its number.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "Out they go: Wi-Fi, router, cable, the sea floor... each one by its own road.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "And they are reassembled at the other end.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "A single call sends hundreds of packets every second. In both directions.",
+     "show": "board",
+     "board": "pk",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "But here there is one critical difference. If a packet is lost or late... nobody waits for it.",
+     "show": "board",
+     "board": "pk"
+    },
+    {
+     "say": "A written message has to arrive whole. If it is a second late, fine.",
+     "show": "board",
+     "board": "late"
+    },
+    {
+     "say": "A call is the opposite: it has to arrive now. Anything late... is thrown away.",
+     "show": "board",
+     "board": "late"
+    },
+    {
+     "say": "Because a scrap of sound that arrives after its moment is useless. The conversation has moved on. So the device guesses what was missing and fills it in. <short pause> Like any human not paying attention in a meeting.",
+     "show": "board",
+     "board": "late",
+     "step": "hold",
+     "host": "right",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "story": {
+    "n": 5,
+    "tag": "THE TIME BUDGET"
+   },
+   "style": "A budget review, strict about milliseconds.",
+   "beats": [
+    {
+     "say": "And here is the real constraint: time. Their scientists measured it: if speech arrives in under a hundred and fifty thousandths of a second, the call feels natural.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "The camera and the squeezing take a slice.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "The road, under the sea, takes the biggest slice.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "On arrival there is a small waiting room that puts the packets back in order when they come in jumbled.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "Then unpacking and display. The total: right at the limit.",
+     "show": "board",
+     "board": "bud"
+    },
+    {
+     "say": "And if it goes over four hundred? Both of them start talking at the same moment, stop at the same moment, and say: go ahead. No, you go ahead. <short pause> That is not bad manners, sir. That is physics.",
+     "show": "board",
+     "board": "bud",
+     "step": "hold",
+     "host": "right",
+     "emote": "grin"
+    },
+    {
+     "say": "And the humans are very sensitive to one more thing: if the lips move slightly before the sound, they get uneasy without knowing why. So the device holds the picture back a few thousandths of a second until its sound arrives. And plays them together.",
+     "show": "board",
+     "board": "bud",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "And part of the delay nobody can remove. Halfway around the planet: twenty thousand kilometers.",
+     "show": "board",
+     "board": "light"
+    },
+    {
+     "say": "Light itself, in glass, takes a tenth of a second to cover it.",
+     "show": "board",
+     "board": "light"
+    },
+    {
+     "say": "That is not a flaw in the network. It is the speed limit of the whole universe. <short pause> We know all about that, sir. My reports reach you years late.",
+     "show": "board",
+     "board": "light",
+     "host": "left"
+    },
+    {
+     "say": "And the old satellites are worse: parked thirty-six thousand kilometers up.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "The signal goes up and down in about half a second.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "Which is why, on their news, the anchor asks the reporter a question... and the reporter just stares into the camera. <short pause> He is not slow. The question has not reached him yet.",
+     "show": "board",
+     "board": "sat"
+    }
+   ]
+  },
+  {
+   "id": "weak",
+   "story": {
+    "n": 6,
+    "tag": "WHEN THE NETWORK WEAKENS"
+   },
+   "style": "Explaining a familiar annoyance as a deliberate choice.",
+   "beats": [
+    {
+     "say": "And when the network weakens, the program decides what to sacrifice. First: the picture. It breaks up into blocks.",
+     "show": "board",
+     "board": "weak"
+    },
+    {
+     "say": "Then it freezes completely. And it always freezes on the worst possible face. That is no accident: the frames with the most movement are the ones that get dropped.",
+     "show": "board",
+     "board": "weak"
+    },
+    {
+     "say": "And the sound goes last. The program protects it to the very end.",
+     "show": "board",
+     "board": "weak"
+    },
+    {
+     "say": "Which is why the advice when the line gets bad is: turn off the camera. Sound needs about a fiftieth of what the picture needs.",
+     "show": "board",
+     "board": "weak",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "And throughout the call, the program keeps measuring the line: how many packets were lost, how many came late. And it raises or lowers the quality every second. <short pause> So the quality they see is not fixed. It is a negotiation that never ends.",
+     "show": "board",
+     "board": "weak",
+     "step": "hold",
+     "host": "left",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "find",
+   "story": {
+    "n": 7,
+    "tag": "THE MEETING, AND THE LOCK"
+   },
+   "style": "Practical, then one line a spy would care about.",
+   "beats": [
+    {
+     "say": "So how do the two devices even find each other? Each one is hiding behind its home router. So it goes to a go-between and says: this is my address.",
+     "show": "board",
+     "board": "find"
+    },
+    {
+     "say": "The other one does the same.",
+     "show": "board",
+     "board": "find"
+    },
+    {
+     "say": "And then, if possible, the picture flows directly between them. If not, or if the call has many people, it passes through a warehouse in the middle.",
+     "show": "board",
+     "board": "find"
+    },
+    {
+     "say": "And when there are twenty people on one call, every device sends its picture once to the warehouse. And the warehouse hands out: small pictures for everyone... and a big one only for whoever is talking.",
+     "show": "board",
+     "board": "find",
+     "step": "hold",
+     "host": "left",
+     "emote": "proud"
+    },
+    {
+     "say": "And on most apps, the call is encrypted end to end. Only the two devices hold the key.",
+     "show": "board",
+     "board": "lock"
+    },
+    {
+     "say": "Anyone in the middle, the company, the phone network, or me, sees packets going by.",
+     "show": "board",
+     "board": "lock"
+    },
+    {
+     "say": "And understands nothing. <short pause> And that, sir, is the thing that annoys me most in this entire file.",
+     "show": "board",
+     "board": "lock",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "story": {
+    "n": 8,
+    "tag": "THE OLD DREAM"
+   },
+   "style": "Historian's irony: they wanted it for fifty years, and now they turn the camera off.",
+   "beats": [
+    {
+     "say": "The humans have dreamed of this for a long time. In 1964, a phone company showed a telephone with a picture at a World's Fair.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "In 1970, it went on sale.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "The subscription: a hundred and sixty dollars a month. In the money of that time. Nobody signed up. And the project was shut down.",
+     "show": "board",
+     "board": "old"
+    },
+    {
+     "say": "Thirty years later, calls began running over the internet for free.",
+     "show": "board",
+     "board": "now"
+    },
+    {
+     "say": "In 2010, the video call came to the phone in your pocket.",
+     "show": "board",
+     "board": "now"
+    },
+    {
+     "say": "And in 2020, when they were locked in their homes by a pandemic, a single app reached three hundred million meeting participants a day.",
+     "show": "board",
+     "board": "now"
+    },
+    {
+     "say": "And now the program writes out the words under the picture as they are spoken, and translates them too. Two people with no common language... understanding each other. <short pause> That, sir, is something we ourselves have not managed yet.",
+     "show": "board",
+     "board": "now",
+     "step": "hold",
+     "host": "right",
+     "emote": "worried"
+    },
+    {
+     "say": "Fifty years dreaming of seeing each other on the phone. And once it became free... <short pause> the first thing they do is turn the camera off.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "field",
+   "story": {
+    "n": 9,
+    "tag": "FIELD NOTES"
+   },
+   "style": "A field anthropologist's notes, dry and fond.",
+   "beats": [
+    {
+     "say": "And I have a few field notes. One: the camera sits above the screen.",
+     "show": "board",
+     "board": "eyes"
+    },
+    {
+     "say": "And the human's eyes are on the other face... the one on the screen.",
+     "show": "board",
+     "board": "eyes"
+    },
+    {
+     "say": "So none of them ever looks the other in the eye. Ever. Both are looking slightly down. <short pause> Billions of calls... and not a single moment of eye contact.",
+     "show": "board",
+     "board": "eyes"
+    },
+    {
+     "say": "Two: each of them spends the call looking at their own face, in the little box. <short pause> And three: the most-said sentence of this era. You're on mute.",
+     "show": "board",
+     "board": "eyes",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "And four: they change the background with one tap. The program cuts the human out of the picture and drops them onto a beach. <short pause> And what is really behind them... is a messy room.",
+     "show": "board",
+     "board": "eyes",
+     "step": "hold",
+     "host": "right",
+     "emote": "grin"
+    },
+    {
+     "say": "And their scientists found these calls tire them out more than sitting together in a room. The brain works hard to make up for the delay, and for the gaze that is slightly off. <short pause> They invented a miracle... and it turned out to be exhausting.",
+     "shot": "close",
+     "emote": "bored"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 10,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "The last two words from the Human Dictionary in this file. Codec: what squeezes the picture and sound on the way out, and unpacks them on arrival. The owner of the three tricks.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "And lag: the delay. The gap between when a word was said... and when it was heard. <short pause> Also the excuse for every question they do not want to answer: sorry, you're breaking up.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 11,
+    "tag": "CLOSING THE FILE"
+   },
+   "style": "Closing the whole file: summary and a slightly proud sign-off.",
+   "beats": [
+    {
+     "say": "Summary of the whole file, sir. One: the mobile phone is a radio, to the nearest tower. Two: the internet is glass hoses on the sea floor. Three: everything is cut into packets. And four: a video call does not send your face... it sends what changed in it.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "FILE SUMMARY",
+      "items": [
+       "The phone is a radio, to the nearest tower",
+       "The internet is hoses on the sea floor",
+       "Everything is cut into packets",
+       "Video: send only what changed"
+      ],
+      "step": 3.0
+     },
+     "host": "pip"
+    },
+    {
+     "say": "And the assessment: this network is the most complicated thing these creatures have ever built. And not one of them understands all of it. Each understands a piece... and the pieces fit together. <short pause> And it works.",
+     "shot": "close",
+     "emote": "proud"
+    },
+    {
+     "say": "The network file is closed. Three reports. And this planet still has plenty of things that need explaining.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
