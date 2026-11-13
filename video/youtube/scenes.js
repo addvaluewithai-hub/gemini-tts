@@ -402,6 +402,13 @@ export const SCENES = {
       + lin("flame", ["#ff2e2e", [0.4, "#ff7a1a"], [0.75, "#ffe066"], "#fff"], 1, 0) + lin("hull", ["#ffffff", [0.6, "#d9dfee"], "#8f96b8"], 0, 1) + lin("chrome", ["#ffffff", [0.4, "#c9cee6"], [0.6, "#7c839e"], "#e6e9f5"], 1, 0)
       + lin("scr6", ["#ffb347", "#ff6a3d"]) + lin("frond", ["#3fae6a", "#1d6b3a"], 1, 1) + lin("pole", ["#c9cee6", "#7c839e", "#c9cee6"], 1, 0) + lin("marble", ["#f4f1ea", "#c9c4b4"], 1, 1);
     const ITEMS = {
+      // one giant coin
+      bigCoin: () => `<circle r="300" fill="#ffd23f" opacity=".3" filter="url(#b30)"/>${coin(0, 0, 230, -8)}`,
+      // a pickaxe held at the end of its handle (the origin); the head is 330 up
+      pickaxe: () => `<g filter="url(#sh)"><rect x="-13" y="-340" width="26" height="360" rx="12" fill="#c98a3a"/><path d="M-200 -330Q0 -420 200 -330L188 -306Q0 -370 -188 -306Z" fill="#e6e9f5"/><rect x="-28" y="-386" width="56" height="64" rx="8" fill="#4d5478"/></g>`,
+      // a soap bubble's film with a pin coming in from the right
+      film: () => `<circle r="250" fill="url(#film)"/><circle r="250" fill="none" stroke="#e8fbff" stroke-width="6" opacity=".8"/><path d="M-180 -80A190 190 0 0 1 -60 -185" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".85"/>
+        <g transform="translate(640 -120) rotate(164)" filter="url(#sh)"><path d="M0 -6L340 -2L384 0L340 2L0 6Z" fill="#e6e9f5"/><circle cx="-18" r="38" fill="#ff2a3a"/><circle cx="-28" cy="-10" r="11" fill="#fff" opacity=".6"/></g>`,
       // lightning all around (to put over the host when he gets a shock)
       bolts: () => [[-260, -200, -20, 0.7], [250, -220, 25, 0.6], [-300, 60, 10, 0.5], [300, 40, -15, 0.55], [-120, -300, 5, 0.45], [140, -310, -10, 0.5]].map(([x, y, r, k]) => `<path transform="translate(${x} ${y}) rotate(${r}) scale(${k})" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#fff36b" stroke="#fff" stroke-width="7" filter="url(#glow)"/>`).join("")
         + [[-200, -120], [210, -110], [-220, 160], [230, 170]].map(([x, y]) => `<path d="M${x} ${y}l${x > 0 ? 50 : -50} ${y > 0 ? 30 : -30}" stroke="#fff36b" stroke-width="10" stroke-linecap="round"/>`).join(""),

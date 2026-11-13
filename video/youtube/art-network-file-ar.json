@@ -5,41 +5,50 @@
   "w": 1280,
   "h": 720,
   "rtl": true,
-  "tag": "ملف الشبكة · 1/3",
   "scene": "solo",
+  "tag": "ملف [[الشبكة]] · 1/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#ffb347",
+   "color": "#05060d",
+   "hi": "#05060d"
+  },
   "opts": {
    "item": "phone",
    "at": {
-    "x": 1080,
-    "y": 500
+    "x": 460,
+    "y": 620
    },
-   "s": 0.72,
-   "rot": 8,
+   "s": 0.95,
+   "rot": -6,
    "bg": [
     "#22c8c0",
     "#0b6b78",
     "#052a33"
    ],
    "glowAt": {
-    "x": 0.8,
-    "y": 0.4
+    "x": 0.35,
+    "y": 0.3
    }
   },
   "host": {
-   "x": 230,
-   "y": 80,
-   "size": 1000,
-   "look": 0.9,
-   "outline": 6,
-   "emote": "smug"
+   "emote": "surprised",
+   "gesture": "point",
+   "x": 352,
+   "y": 50,
+   "size": 380,
+   "rot": 14,
+   "look": 0.5,
+   "lookY": 0.6
   },
   "words": [
    {
     "t": "موبايلك\n[[راديو!]]",
-    "x": 540,
-    "y": 170,
-    "w": 440,
-    "size": 124,
+    "x": 640,
+    "y": 190,
+    "w": 620,
+    "size": 150,
     "align": "center",
     "hi": "#ffb347"
    }
@@ -51,13 +60,20 @@
   "w": 1280,
   "h": 720,
   "rtl": true,
-  "tag": "ملف الشبكة · 1/3",
   "scene": "solo",
+  "tag": "ملف [[الشبكة]] · 1/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#05060d",
+   "color": "#fff",
+   "hi": "#7dffb0"
+  },
   "opts": {
    "item": "palm",
    "at": {
-    "x": 230,
-    "y": 440
+    "x": 330,
+    "y": 430
    },
    "s": 0.95,
    "bg": [
@@ -71,20 +87,20 @@
    }
   },
   "host": {
-   "x": 1050,
-   "y": 130,
-   "size": 960,
-   "look": -0.9,
-   "outline": 6,
-   "emote": "sly"
+   "emote": "sly",
+   "gesture": "cheer",
+   "x": 330,
+   "y": 300,
+   "size": 380,
+   "look": 0.7
   },
   "words": [
    {
     "t": "النخلة دي\n[[برج!]]",
-    "x": 430,
-    "y": 110,
-    "w": 460,
-    "size": 118,
+    "x": 620,
+    "y": 140,
+    "w": 640,
+    "size": 130,
     "align": "center",
     "hi": "#7dffb0"
    }
@@ -96,15 +112,22 @@
   "w": 1280,
   "h": 720,
   "rtl": true,
-  "tag": "ملف الشبكة · 2/3",
   "scene": "solo",
+  "tag": "ملف [[الشبكة]] · 2/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#7ff6ff",
+   "color": "#05060d",
+   "hi": "#05060d"
+  },
   "opts": {
    "item": "shark",
    "at": {
-    "x": 820,
-    "y": 440
+    "x": 640,
+    "y": 470
    },
-   "s": 0.6,
+   "s": 0.72,
    "bg": [
     "#1a8fc8",
     "#08467a",
@@ -113,24 +136,20 @@
    "bubbles": true
   },
   "host": {
-   "x": 230,
-   "y": 80,
-   "size": 1000,
-   "look": 0.9,
-   "outline": 6,
-   "emote": "surprised",
-   "face": {
-    "eyeScale": 1.35,
-    "pupil": 0.55
-   }
+   "emote": "laugh",
+   "gesture": "cheer",
+   "x": 830,
+   "y": 60,
+   "size": 420,
+   "rot": -10
   },
   "words": [
    {
     "t": "قرش\n[[قطع النت؟]]",
-    "x": 560,
-    "y": 118,
-    "w": 700,
-    "size": 112,
+    "x": 20,
+    "y": 30,
+    "w": 560,
+    "size": 128,
     "align": "center",
     "hi": "#7ff6ff"
    }
@@ -142,40 +161,48 @@
   "w": 1280,
   "h": 720,
   "rtl": true,
-  "tag": "ملف الشبكة · 2/3",
   "scene": "solo",
+  "tag": "ملف [[الشبكة]] · 2/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#05060d",
+   "color": "#fff",
+   "hi": "#7cc4ff"
+  },
   "opts": {
    "item": "cloudRack",
    "at": {
-    "x": 370,
-    "y": 500
+    "x": 520,
+    "y": 480
    },
-   "s": 0.78,
+   "s": 0.9,
    "bg": [
     "#e8f6ff",
     "#7cc4ff",
     "#2a6ad8"
    ],
    "glowAt": {
-    "x": 0.33,
+    "x": 0.4,
     "y": 0.4
    }
   },
   "host": {
-   "x": 1050,
-   "y": 130,
-   "size": 960,
-   "look": -0.9,
-   "outline": 6,
-   "emote": "eyeroll"
+   "emote": "smug",
+   "gesture": "point",
+   "x": 820,
+   "y": 20,
+   "size": 330,
+   "look": -0.6,
+   "lookY": 0.6
   },
   "words": [
    {
     "t": "مفيش\n[[سحابة!]]",
-    "x": 20,
-    "y": 24,
-    "w": 700,
-    "size": 112,
+    "x": 10,
+    "y": 30,
+    "w": 470,
+    "size": 124,
     "align": "center"
    }
   ]
@@ -186,45 +213,52 @@
   "w": 1280,
   "h": 720,
   "rtl": true,
-  "tag": "ملف الشبكة · 3/3",
   "scene": "solo",
+  "tag": "ملف [[الشبكة]] · 3/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#FFE66D",
+   "color": "#05060d",
+   "hi": "#05060d"
+  },
   "opts": {
    "item": "pixels",
    "at": {
-    "x": 700,
+    "x": 560,
     "y": 430
    },
-   "s": 1,
+   "s": -1,
    "bg": [
     "#ff3d9a",
     "#8a1a8e",
     "#2a0a4e"
    ],
    "glowAt": {
-    "x": 0.4,
+    "x": 0.6,
     "y": 0.5
    }
   },
   "host": {
-   "x": 230,
-   "y": 80,
-   "size": 1000,
-   "look": 0.9,
-   "outline": 6,
    "emote": "surprised",
+   "x": 1030,
+   "y": 120,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
    "face": {
     "eyeScale": 1.35,
     "pupil": 0.55
    },
-   "mask": "linear-gradient(90deg,#000 52%,transparent 74%)"
+   "mask": "linear-gradient(270deg,#000 52%,transparent 74%)"
   },
   "words": [
    {
     "t": "وشّك\n[[في ألف حتة]]",
-    "x": 560,
-    "y": 118,
-    "w": 700,
-    "size": 112,
+    "x": 20,
+    "y": 30,
+    "w": 640,
+    "size": 124,
     "align": "center"
    }
   ]
@@ -235,15 +269,22 @@
   "w": 1280,
   "h": 720,
   "rtl": true,
-  "tag": "ملف الشبكة · 3/3",
   "scene": "solo",
+  "tag": "ملف [[الشبكة]] · 3/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#ff2a3a",
+   "color": "#fff",
+   "hi": "#FFE66D"
+  },
   "opts": {
    "item": "screen",
    "at": {
-    "x": 900,
-    "y": 500
+    "x": 640,
+    "y": 460
    },
-   "s": 0.72,
+   "s": 0.9,
    "bg": [
     "#5a6080",
     "#1b1f33",
@@ -252,42 +293,31 @@
    "over": {
     "item": "spinner",
     "at": {
-     "x": 1040,
-     "y": 560
+     "x": 820,
+     "y": 520
     },
-    "s": 0.6
+    "s": 0.7
    }
   },
-  "hosts": [
-   {
-    "emote": "surprised",
-    "x": 900,
-    "y": 340,
-    "size": 480,
-    "clip": "inset(0 0 100px 0)",
-    "shadow": false,
-    "face": {
-     "lid": 0.55,
-     "lidR": 0.9
-    }
-   },
-   {
-    "x": 230,
-    "y": 80,
-    "size": 1000,
-    "look": 0.9,
-    "outline": 6,
-    "emote": "annoyed",
-    "layer": "top"
+  "host": {
+   "emote": "surprised",
+   "x": 640,
+   "y": 250,
+   "size": 640,
+   "clip": "inset(0 0 236px 0)",
+   "shadow": false,
+   "face": {
+    "lid": 0.55,
+    "lidR": 0.9
    }
-  ],
+  },
   "words": [
    {
-    "t": "الصورة\n[[علّقت!]]",
-    "x": 560,
-    "y": 100,
-    "w": 700,
-    "size": 112,
+    "t": "الصورة [[علّقت!]]",
+    "x": 20,
+    "y": 24,
+    "w": 740,
+    "size": 116,
     "align": "center",
     "hi": "#ff2a3a"
    }
