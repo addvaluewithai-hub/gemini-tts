@@ -3,6 +3,9 @@
 // `step` is how many beats the board has been through, `age` the seconds since this step began, `total`
 // the seconds since the board appeared. Earlier steps are drawn finished; the current one animates.
 // Text can be Latin or Arabic; nothing here measures text, so labels stay short.
+// Direction: board() works out `cfg.ltr` once, from the storyboard's `rtl` (false means left to right; a board's own
+// `dir: "ltr" | "rtl"` overrides it), and every board that anchors text to a side or reads in an order follows it.
+// With no `rtl` given, boards keep the right-to-left layout they were first drawn for.
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -83,8 +86,8 @@ const fake = (text) => { let h = 2166136261; for (const ch of String(text)) { h 
 
 const BOARDS = {
   // A name and a line under it, for openings.
-  titlecard(s, step, age, total) {
-    return svg(`<g transform="translate(960 470) scale(${pop(total)})">${T(0, -150, s.kicker, 56, { font: "Elite", fill: C.dim })}${T(0, 0, s.title, 190, { fill: C.yellow })}</g>
+  titlecard(s, step, age, total, cfg = {}) {      // Latin capitals stand taller than the Arabic face, so the kicker sits higher over them
+    return svg(`<g transform="translate(960 470) scale(${pop(total)})">${T(0, cfg.ltr ? -196 : -150, s.kicker, 56, { font: "Elite", fill: C.dim })}${T(0, 0, s.title, 190, { fill: C.yellow })}</g>
       <rect x="${960 - 300 * ease((total - 0.3) / 0.5)}" y="540" width="${600 * ease((total - 0.3) / 0.5)}" height="10" rx="5" fill="${C.pink}"/>
       <g opacity="${clamp((total - 0.5) / 0.3)}">${T(960, 650, s.sub, 70, { fill: C.white })}</g>`);
   },
@@ -98,16 +101,16 @@ const BOARDS = {
     return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age));
   },
   // A page of names and balances. Each step after the first moves an amount from one row to another.
-  ledger(s, step, age) {
-    const rows = s.rows.map((r) => ({ ...r })), W = 1240, x = 960 - W / 2, y0 = 270, rh = 150, ops = s.ops || [];
+  ledger(s, step, age, total, cfg = {}) {
+    const ltr = !!cfg.ltr, rows = s.rows.map((r) => ({ ...r })), W = 1240, x = 960 - W / 2, y0 = 270, rh = 150, ops = s.ops || [];
     let moving = null;
     ops.forEach((op, k) => { const a = since(k + 1, step, age); if (a < 0) return; const p = ease(a / 0.9);
       rows[op.from].amount -= op.amount * p; rows[op.to].amount += op.amount * p; if (a < 1.6) moving = { op, a }; });
     const body = rows.map((r, i) => { const a = step > 0 ? 9 : age - i * 0.18, y = y0 + i * rh, hit = moving && (moving.op.from === i || moving.op.to === i), up = moving && moving.op.to === i;
       return a <= 0 ? "" : `<g opacity="${clamp(a / 0.2)}"><rect x="${x + 30}" y="${y + 10}" width="${W - 60}" height="${rh - 20}" rx="14" fill="${hit ? (up ? "#173d2c" : "#40161c") : "#161b40"}"/>
-        ${T(x + W - 80, y + 98, r.name, 76, { anchor: "end", font: "Elite" })}${T(x + 90, y + 104, Math.round(r.amount).toLocaleString("en"), 92, { anchor: "start", fill: hit ? (up ? C.green : C.red) : C.yellow })}</g>`; }).join("");
-    const arrow = moving ? (() => { const { op, a } = moving, ya = y0 + op.from * rh + 75, yb = y0 + op.to * rh + 75, p = ease(a / 0.9), cx = x - 110, y = lerp(ya, yb, p);
-      return `<path d="M${x + 20} ${ya}C${cx} ${ya} ${cx} ${yb} ${x + 20} ${yb}" fill="none" stroke="${C.line}" stroke-width="6" stroke-dasharray="12 12" opacity=".6"/>${G(x - 50 - 36 * Math.sin(Math.PI * p), y, 0.7, icon("coin"))}`; })() : "";
+        ${T(ltr ? x + 80 : x + W - 80, y + 98, r.name, 76, { anchor: ltr ? "start" : "end", font: "Elite" })}${T(ltr ? x + W - 90 : x + 90, y + 104, Math.round(r.amount).toLocaleString("en"), 92, { anchor: ltr ? "end" : "start", fill: hit ? (up ? C.green : C.red) : C.yellow })}</g>`; }).join("");
+    const arrow = moving ? (() => { const { op, a } = moving, ya = y0 + op.from * rh + 75, yb = y0 + op.to * rh + 75, p = ease(a / 0.9), y = lerp(ya, yb, p), side = ltr ? -1 : 1, ex = ltr ? x + W - 20 : x + 20, cx = ex - side * 130;   // the coin travels down the amounts' side
+      return `<path d="M${ex} ${ya}C${cx} ${ya} ${cx} ${yb} ${ex} ${yb}" fill="none" stroke="${C.line}" stroke-width="6" stroke-dasharray="12 12" opacity=".6"/>${G(ex - side * (70 + 36 * Math.sin(Math.PI * p)), y, 0.7, icon("coin"))}`; })() : "";
     return svg(`${heading(s.title, 1)}<rect x="${x}" y="${y0 - 30}" width="${W}" height="${rows.length * rh + 60}" rx="26" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".35" stroke-width="4"/>
       ${body}${arrow}${caption((s.captions || [])[step], age, Math.min(890, y0 + rows.length * rh + 110))}`);
   },
@@ -232,17 +235,17 @@ const BOARDS = {
   },
   // Pages that each carry the fingerprint of the page before. Change an old page and every page after it breaks.
   //   0 a page of payments  1 its fingerprint  2, 3 the next pages, each holding the last one's print  4 tampering  5 rejected
-  chain(s, step, age) {
-    const n = Math.min(3, Math.max(1, step - 0)), W = 480, gap = 90, x0 = 960 - (3 * W + 2 * gap) / 2 + W / 2, a4 = since(4, step, age), a5 = since(5, step, age);
+  chain(s, step, age, total, cfg = {}) {
+    const ltr = !!cfg.ltr, tx = ltr ? -480 / 2 + 40 : 480 / 2 - 40, ta = ltr ? "start" : "end", n = Math.min(3, Math.max(1, step - 0)), W = 480, gap = 90, x0 = 960 - (3 * W + 2 * gap) / 2 + W / 2, a4 = since(4, step, age), a5 = since(5, step, age);
     const hashes = s.blocks.map((b, i) => fake(b.lines.join("|") + i)), bad = hashes.map((h, i) => fake(h + "x" + i));
     let body = "";
     s.blocks.forEach((b, i) => { const a = i === 0 ? (step > 0 ? 9 : age) : since(i + 1, step, age); if (a < 0) return;
       const x = x0 + i * (W + gap), broken = a4 > i * 0.8 && a4 > 0, shake = broken && a4 < i * 0.8 + 0.5 ? 8 * Math.sin(a4 * 60) : 0, hs = i === 0 ? since(1, step, age) : a - 0.5, h = broken ? bad[i] : hashes[i];
       body += `<g transform="translate(${x + shake} ${540 + (1 - ease(a / 0.4)) * 60})" opacity="${clamp(a / 0.25)}"><rect x="${-W / 2}" y="-250" width="${W}" height="500" rx="22" fill="${C.navy}" stroke="${broken ? C.red : C.line}" stroke-width="6"/>
         <rect x="${-W / 2}" y="-250" width="${W}" height="84" rx="22" fill="${broken ? C.red : C.cyan}" opacity=".9"/>${T(0, -192, b.name, 52, { fill: C.ink })}
-        ${b.lines.map((l, k) => T(W / 2 - 40, -100 + k * 62, k === 0 && i === 0 && a4 > 0 ? s.tamper : l, 42, { anchor: "end", font: "Elite", fill: k === 0 && i === 0 && a4 > 0 ? C.red : C.white })).join("")}
-        ${i > 0 ? T(W / 2 - 40, 84, s.prevLabel, 28, { anchor: "end", font: "Elite", fill: C.dim }) + T(W / 2 - 40, 128, hashes[i - 1].slice(0, 8), 40, { anchor: "end", font: "Elite", fill: a4 > (i - 1) * 0.8 + 0.4 && a4 > 0 ? C.red : C.pink }) : ""}
-        ${hs > 0 ? `<g opacity="${clamp(hs / 0.2)}">${T(W / 2 - 40, 172, s.hashLabel, 28, { anchor: "end", font: "Elite", fill: C.dim })}${T(W / 2 - 40, 220, h.slice(0, 8), 44, { anchor: "end", font: "Elite", fill: broken ? C.red : C.yellow })}</g>` : ""}</g>`;
+        ${b.lines.map((l, k) => T(tx, -100 + k * 62, k === 0 && i === 0 && a4 > 0 ? s.tamper : l, 42, { anchor: ta, font: "Elite", fill: k === 0 && i === 0 && a4 > 0 ? C.red : C.white })).join("")}
+        ${i > 0 ? T(tx, 84, s.prevLabel, 28, { anchor: ta, font: "Elite", fill: C.dim }) + T(tx, 128, hashes[i - 1].slice(0, 8), 40, { anchor: ta, font: "Elite", fill: a4 > (i - 1) * 0.8 + 0.4 && a4 > 0 ? C.red : C.pink }) : ""}
+        ${hs > 0 ? `<g opacity="${clamp(hs / 0.2)}">${T(tx, 172, s.hashLabel, 28, { anchor: ta, font: "Elite", fill: C.dim })}${T(tx, 220, h.slice(0, 8), 44, { anchor: ta, font: "Elite", fill: broken ? C.red : C.yellow })}</g>` : ""}</g>`;
       if (i > 0 && a > 0.4) { const cut = a4 > (i - 1) * 0.8 + 0.4 && a4 > 0, xa = x - W - gap + W / 2, xb = x - W / 2;
         body += `<path d="M${xa} 750C${xa + 60} 750 ${xb - 60} 660 ${xb} 660" fill="none" stroke="${cut ? C.red : C.pink}" stroke-width="7" stroke-dasharray="${cut ? "10 12" : "0"}" opacity="${clamp((a - 0.4) / 0.3)}"/>${cut ? G((xa + xb) / 2, 695, pop(a4 - (i - 1) * 0.8 - 0.4), T(0, 26, "✗", 80, { fill: C.red })) : ""}`; } });
     return svg(heading(s.title, 1) + body + (a5 > 0 ? G(960, 540, pop(a5), `<g transform="rotate(-8)"><rect x="-360" y="-100" width="720" height="200" rx="24" fill="rgba(5,6,13,.8)" stroke="${C.red}" stroke-width="14"/>${T(0, 46, s.rejected, 130, { fill: C.red })}</g>`) : "") + caption((s.captions || [])[step], age, 900));
@@ -277,8 +280,9 @@ const BOARDS = {
       ${a3 > 0 ? G(960, 520, pop(a3), T(-10, 60, s.count, 320, { fill: C.yellow, anchor: "end" }) + T(10, -70, s.exp || "", 170, { fill: C.yellow, anchor: "start" }) + T(0, 190, s.countLabel, 60, { font: "Elite" })) : ""}${caption((s.captions || [])[step], age, 920)}`);
   },
   // One person's story: a thing, a headline, and a line more each step.
-  story(s, step, age, total) {
-    const lines = s.lines.map((l, i) => { const a = since(i, step, age); return a < 0 ? "" : `<g opacity="${clamp(a / 0.25)}" transform="translate(${(1 - ease(a / 0.35)) * 40} 0)">${T(1560, 430 + i * 120, l, s.size || 62, { anchor: "end", font: "Elite", fill: i === Math.min(step, s.lines.length - 1) ? C.yellow : C.white })}</g>`; }).join("");
+  story(s, step, age, total, cfg = {}) {
+    const ltr = !!cfg.ltr;          // the picture stays on the left; the lines start at the side the eye starts reading from
+    const lines = s.lines.map((l, i) => { const a = since(i, step, age); return a < 0 ? "" : `<g opacity="${clamp(a / 0.25)}" transform="translate(${(1 - ease(a / 0.35)) * (ltr ? -40 : 40)} 0)">${T(ltr ? 760 : 1560, 430 + i * 120, l, s.size || 62, { anchor: ltr ? "start" : "end", font: "Elite", fill: i === Math.min(step, s.lines.length - 1) ? C.yellow : C.white })}</g>`; }).join("");
     return svg(`${heading(s.title, 1)}${labelled(430, 520, 2 * (1 + 0.02 * Math.sin(total * 3)), s.icon, s.name, total, { labelFill: C.dim, glow: C.cyan })}${lines}`);
   },
   // How much of a fixed supply is gone: a number, a bar filling, and a line or two.
@@ -328,8 +332,8 @@ const BOARDS = {
     return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age, 900));
   },
   // A list that fills in a row at a time, each row with a mark: a red flag, a cross, a tick or a "sort of".
-  rows(s, step, age) {
-    const n = s.items.length, rh = Math.min(160, 660 / n), y0 = 590 - (n * rh) / 2, ltr = s.dir === "ltr", W = 1380, x = 960 - W / 2;
+  rows(s, step, age, total, cfg = {}) {
+    const n = s.items.length, rh = Math.min(160, 660 / n), y0 = 590 - (n * rh) / 2, ltr = !!cfg.ltr, W = 1380, x = 960 - W / 2;
     const mark = (m) => (m === "flag" ? G(0, 0, 0.42, icon("flag")) : m === "check" ? `<circle r="40" fill="${C.green}"/>${T(0, 22, "✓", 58, { fill: "#fff" })}` : m === "half" ? `<circle r="40" fill="${C.gold}"/>${T(0, 20, "~", 70, { fill: C.ink })}` : m === "x" ? `<circle r="40" fill="${C.red}"/><path d="M-17 -17L17 17M17 -17L-17 17" stroke="#fff" stroke-width="11" stroke-linecap="round"/>` : `<circle r="16" fill="${C.cyan}"/>`);
     const body = s.items.map((it, i) => { const a = since(i, step, age); if (a < 0) return ""; const y = y0 + i * rh + rh / 2, now = i === Math.min(step, n - 1), mx = ltr ? x + 80 : x + W - 80, ma = a - (it.late ? 0.6 : 0);
       return `<g opacity="${clamp(a / 0.2) * (now ? 1 : 0.62)}" transform="translate(${(1 - ease(a / 0.3)) * (ltr ? -40 : 40)} 0)"><rect x="${x}" y="${y - rh / 2 + 10}" width="${W}" height="${rh - 20}" rx="20" fill="${C.navy}" stroke="${now ? C.yellow : C.line}" stroke-opacity="${now ? 0.9 : 0.3}" stroke-width="4"/>
@@ -340,21 +344,22 @@ const BOARDS = {
   },
   // Borrowed money: a small stake of your own under a big bet. A small fall in price takes all of the stake.
   //   0 your money  1 the loan on top  2 the price falls and your part is what burns  3 the position is closed
-  lever(s, step, age, total) {
-    const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), x0 = 410, W = 1100, own = W * (s.share ?? 0.1), y = 470, h = 150;
+  lever(s, step, age, total, cfg = {}) {
+    const ltr = !!cfg.ltr, a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), x0 = 410, W = 1100, own = W * (s.share ?? 0.1), y = 470, h = 150;
     const burn = a2 > 0 ? ease(a2 / 1.2) : 0, loanW = a1 > 0 ? (W - own) * ease(a1 / 0.7) : 0, ownW = own * (1 - burn);
+    const ownX = ltr ? x0 + own / 2 : x0 + W - own / 2, loanX = ltr ? x0 + own : x0 + (W - own) - loanW, loanMid = ltr ? x0 + own + (W - own) / 2 : x0 + (W - own) / 2;   // your part first in reading order
     return svg(`${heading(s.title, 1)}
-      ${a1 > 0 ? `<rect x="${x0 + (W - own) - loanW}" y="${y}" width="${loanW}" height="${h}" rx="16" fill="#3a4170"/>${T(x0 + (W - own) / 2, y + 96, s.loan, 54, { font: "Elite", fill: C.dim, opacity: clamp((a1 - 0.5) / 0.3) })}` : ""}
-      ${G(x0 + W - own / 2, y + h / 2, pop(total), `<rect x="${-own / 2}" y="${-h / 2}" width="${ownW}" height="${h}" rx="16" fill="${a2 > 0 ? C.red : C.green}" transform="translate(${own - ownW} 0)"/>`)}
-      ${T(x0 + W - own / 2, y - 40, a2 > 1.2 ? s.zero : s.mine, 50, { font: "Elite", fill: a2 > 1.2 ? C.red : C.green })}
+      ${a1 > 0 ? `<rect x="${loanX}" y="${y}" width="${loanW}" height="${h}" rx="16" fill="#3a4170"/>${T(loanMid, y + 96, s.loan, 54, { font: "Elite", fill: C.dim, opacity: clamp((a1 - 0.5) / 0.3) })}` : ""}
+      ${G(ownX, y + h / 2, pop(total), `<rect x="${-own / 2}" y="${-h / 2}" width="${ownW}" height="${h}" rx="16" fill="${a2 > 0 ? C.red : C.green}" transform="translate(${ltr ? 0 : own - ownW} 0)"/>`)}
+      ${T(ownX, y - 40, a2 > 1.2 ? s.zero : s.mine, 50, { font: "Elite", fill: a2 > 1.2 ? C.red : C.green })}
       ${a1 > 0.7 ? `<g opacity="${clamp((a1 - 0.7) / 0.3)}"><path d="M${x0} ${y + h + 40}H${x0 + W}" stroke="${C.line}" stroke-width="5"/><path d="M${x0} ${y + h + 26}v28M${x0 + W} ${y + h + 26}v28" stroke="${C.line}" stroke-width="5"/>${T(x0 + W / 2, y + h + 110, s.total, 58, { fill: C.yellow })}</g>` : ""}
       ${a2 > 0 ? G(960, 300, pop(a2), `<rect x="-300" y="-56" width="600" height="112" rx="20" fill="${C.navy}" stroke="${C.red}" stroke-width="6"/>${T(0, 22, s.drop, 60, { fill: C.red })}`) : ""}
       ${a3 > 0 ? G(960, 560, pop(a3), `<g transform="rotate(-8)"><rect x="-330" y="-96" width="660" height="192" rx="24" fill="rgba(5,6,13,.85)" stroke="${C.red}" stroke-width="14"/>${T(0, 44, s.stamp, 124, { fill: C.red })}</g>`) : ""}
       ${caption((s.captions || [])[step], age, 900)}`);
   },
   // Two camps side by side, one per step: what each says, in two or three short lines.
-  versus(s, step, age) {
-    const ltr = s.dir === "ltr", card = (x, d, a, now) => (a <= 0 ? "" : `<g transform="translate(${x} 580) scale(${0.94 + 0.06 * pop(a)})" opacity="${clamp(a / 0.2) * (now ? 1 : 0.7)}"><rect x="-410" y="-300" width="820" height="600" rx="30" fill="${C.navy}" stroke="${d.color || C.line}" stroke-width="6"/>
+  versus(s, step, age, total, cfg = {}) {
+    const ltr = !!cfg.ltr, card = (x, d, a, now) => (a <= 0 ? "" : `<g transform="translate(${x} 580) scale(${0.94 + 0.06 * pop(a)})" opacity="${clamp(a / 0.2) * (now ? 1 : 0.7)}"><rect x="-410" y="-300" width="820" height="600" rx="30" fill="${C.navy}" stroke="${d.color || C.line}" stroke-width="6"/>
       ${d.icon ? G(0, -196, 0.55, icon(d.icon, ...(d.args || []))) : ""}${T(0, d.icon ? -70 : -170, d.title, 72, { fill: d.color || C.yellow })}${(d.lines || []).map((l, i) => T(0, (d.icon ? 30 : -50) + i * 84, l, 46, { font: "Elite" })).join("")}</g>`);
     return svg(heading(s.title, 1) + card(ltr ? 500 : 1420, s.a, since(0, step, age), step === 0) + card(ltr ? 1420 : 500, s.b, since(1, step, age), step >= 1) + caption(s.note && step >= 2 ? s.note : "", since(2, step, age), 990));
   },
@@ -510,7 +515,8 @@ const BOARDS = {
 
 export function board(spec, step, age, total, cfg = {}) {
   const fn = BOARDS[spec.kind]; if (!fn) return `<div style="color:#fff;font:40px Anton;padding:80px">unknown board: ${esc(spec.kind)}</div>`;
-  return fn(spec, step, age, total, cfg);
+  const ltr = spec.dir ? spec.dir === "ltr" : cfg.rtl === false;      // one switch: the storyboard's rtl, unless the board says otherwise
+  return fn(spec, step, age, total, { ...cfg, ltr });
 }
 export const BOARD_KINDS = Object.keys(BOARDS);
 export { icon };
