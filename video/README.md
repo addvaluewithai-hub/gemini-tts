@@ -512,7 +512,12 @@ An illustrated thumbnail names `"page": "scene.html"` and a `scene` from
 `look`, an optional CSS `mask` or `clip`, and `layer: "top"` to draw him over
 the scene's front (a cart he sits in, a grave he hides behind). `words` are
 blocks of text at `x`, `y`, `w`, `size`, with `[[words]]` in the `hi` colour.
-Scenes hold no words, so another language changes only the spec. Keep text
+Scenes hold no words, so another language changes only the spec. The `solo` scene draws one
+object close up on a clean background (`opts.item`, `at`, `s`, `bg`; `over`
+puts a second item over the host); with it the host is a big head and
+shoulders with a white `outline`. `prices` are tags on a string (`t`, `x`, `y`,
+`size`, `rot`), `marks` red circles and arrows, `zoom` brings one part of a
+scene close. Keep text
 and faces out of the bottom-right corner, where YouTube shows the duration,
 and check every thumbnail at 320 x 180. `node youtube.cjs art <specs> <out>
 thumbnail-b` renders only the specs whose file contains `thumbnail-b`.

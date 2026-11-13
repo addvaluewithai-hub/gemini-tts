@@ -42,6 +42,8 @@ const cloud = (x, y, s, c = "#fff", op = 1) => `<g transform="translate(${x} ${y
 const bubbles = (seed, n, x0, x1, y0, y1, rmax = 14, op = 0.5) => { const R = rng(seed); return Array.from({ length: n }, () => { const r = 3 + R() * rmax, x = x0 + R() * (x1 - x0), y = y0 + R() * (y1 - y0);
   return `<circle cx="${f(x)}" cy="${f(y)}" r="${f(r)}" fill="none" stroke="#bff0ff" stroke-width="2.5" opacity="${op}"/><circle cx="${f(x - r * 0.35)}" cy="${f(y - r * 0.35)}" r="${f(r * 0.22)}" fill="#fff" opacity="${op}"/>`; }).join(""); };
 
+const DOG = `<g transform="scale(.66) translate(0 6)"><path d="M-70 -60L-92 -104L-40 -84ZM70 -60L92 -104L40 -84Z" fill="#a8641c"/><ellipse cx="0" cy="-10" rx="88" ry="80" fill="#e2a95a"/><ellipse cx="0" cy="26" rx="46" ry="38" fill="#fbe7c4"/><circle cx="-32" cy="-28" r="12" fill="#05060d"/><circle cx="32" cy="-28" r="12" fill="#05060d"/><circle cx="-28" cy="-32" r="4" fill="#fff"/><circle cx="36" cy="-32" r="4" fill="#fff"/><ellipse cx="0" cy="8" rx="15" ry="10" fill="#05060d"/><path d="M-22 32Q0 56 22 32" fill="#c0392b" stroke="#05060d" stroke-width="6" stroke-linecap="round"/><path d="M-12 50Q0 72 12 50" fill="#ff6b8a"/></g>`;
+
 export const SCENES = {
   // crypto 1: a brass scale, a mountain of bitcoin on one pan and two pizzas on the other, perfectly level
   pizzaScale: () => {
@@ -395,8 +397,69 @@ export const SCENES = {
     const bg = o.bg || ["#ff7a1a", "#b3131f"], A = o.at || { x: 860, y: 400 }, sc = o.s || 1;
     const defs = FILTERS + GOLD + rad("soloBg", [bg[0], [0.55, bg[1]], bg[2] || "#1a0508"], o.glowAt?.x ?? 0.65, o.glowAt?.y ?? 0.5, 0.85)
       + rad("cheese", [["0", "#fff3a0", 0.9], ["1", "#ffb52e", 0]], 0.4, 0.35, 0.7) + lin("sharkB", ["#a9bfd6", [0.55, "#6f87a3"], "#3d526b"]) + lin("cab", ["#4a5170", "#1b1f33"])
-      + lin("canM", ["#8f96b8", [0.3, "#e6e9f5"], [0.6, "#aab2cc"], "#5a6080"], 1, 0) + lin("drv", ["#e9edf7", "#9aa3bd"], 1, 1);
+      + lin("canM", ["#8f96b8", [0.3, "#e6e9f5"], [0.6, "#aab2cc"], "#5a6080"], 1, 0) + lin("drv", ["#e9edf7", "#9aa3bd"], 1, 1)
+      + rad("film", [["0", "#ffffff", 0], [0.78, "#7ff6ff", 0.06], [0.9, "#ff8ad8", 0.28], [0.96, "#ffe66d", 0.45], ["1", "#7ff6ff", 0.7]], 0.5, 0.5, 0.5) + lin("stone", ["#a9a4c4", "#4a4566"], 1, 1)
+      + lin("flame", ["#ff2e2e", [0.4, "#ff7a1a"], [0.75, "#ffe066"], "#fff"], 1, 0) + lin("hull", ["#ffffff", [0.6, "#d9dfee"], "#8f96b8"], 0, 1) + lin("chrome", ["#ffffff", [0.4, "#c9cee6"], [0.6, "#7c839e"], "#e6e9f5"], 1, 0)
+      + lin("scr6", ["#ffb347", "#ff6a3d"]) + lin("frond", ["#3fae6a", "#1d6b3a"], 1, 1) + lin("pole", ["#c9cee6", "#7c839e", "#c9cee6"], 1, 0) + lin("marble", ["#f4f1ea", "#c9c4b4"], 1, 1);
     const ITEMS = {
+      // a power plug whose head is a bitcoin, rammed into a socket that is throwing sparks
+      plug: () => `<path d="M-520 300C-300 300 -260 120 -150 60" fill="none" stroke="#05060d" stroke-width="40" stroke-linecap="round"/>
+        <g filter="url(#sh)"><rect x="40" y="-200" width="300" height="300" rx="40" fill="#e6e9f5"/><rect x="70" y="-170" width="240" height="240" rx="30" fill="#c9cee6"/><rect x="130" y="-110" width="26" height="70" rx="8" fill="#2a2f45"/><rect x="224" y="-110" width="26" height="70" rx="8" fill="#2a2f45"/></g>
+        <g transform="translate(-60 -40) rotate(-28)" filter="url(#sh)"><rect x="40" y="-60" width="90" height="22" rx="6" fill="#c9cee6"/><rect x="40" y="38" width="90" height="22" rx="6" fill="#c9cee6"/>${coin(-40, 0, 120)}</g>
+        ${[[60, -230], [20, -150], [340, -230], [380, -40], [20, 110], [260, 140]].map(([x, y], i) => `<path transform="translate(${x} ${y}) rotate(${i * 50}) scale(.5)" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#fff36b" stroke="#fff" stroke-width="6" filter="url(#glow)"/>`).join("")}`,
+      // a pickaxe striking a giant coin, sparks flying
+      pick: () => `${coin(0, 40, 230, -8)}<path d="M-40 -60L30 -10L-20 40L60 120" fill="none" stroke="#5d3d00" stroke-width="10" stroke-linejoin="round"/>
+        <g transform="translate(-60 -120) rotate(-40)" filter="url(#sh)"><rect x="-14" y="-20" width="28" height="420" rx="12" fill="#c98a3a"/><path d="M-230 -40Q0 -130 230 -40L216 -14Q0 -80 -216 -14Z" fill="#c9cee6"/><rect x="-30" y="-76" width="60" height="66" rx="8" fill="#4d5478"/></g>
+        ${Array.from({ length: 14 }, (_, i) => { const a = -Math.PI * (0.05 + i / 15), d = 150 + (i % 3) * 50; return `<path d="M${f(-90 + Math.cos(a) * d)} ${f(-120 + Math.sin(a) * d)}l${f(Math.cos(a) * 40)} ${f(Math.sin(a) * 40)}" stroke="#fff6a0" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>`; }).join("")}`,
+      // the popcorn tin, bursting with bitcoin
+      tin: () => { const R = rng(61); let pile = ""; for (let i = 0; i < 46; i++) { const x = (R() * 2 - 1) * 230, y = -150 - R() * 90 + Math.abs(x) * 0.25; pile += R() < 0.5 ? coin(x, y, 34 + R() * 16, R() * 60 - 30, 0.3) : `<g transform="translate(${f(x)} ${f(y)}) scale(${f(1.3 + R() * 0.5)})"><circle cx="-10" r="16" fill="#fff6d6"/><circle cx="8" cy="-6" r="15" fill="#fffbe8"/><circle cx="6" cy="10" r="14" fill="#f6e2a8"/></g>`; }
+        return `<g filter="url(#sh)"><path d="M-250 -150L-220 300H220L250 -150Z" fill="#fff"/>${[-250, -150, -50, 50, 150].map((x, i) => `<path d="M${x} -150H${x + 50}L${x * 0.88 + 50} 300H${x * 0.88}Z" fill="#e8203c"/>`).join("")}<ellipse cy="-150" rx="258" ry="34" fill="none" stroke="#e8e3d3" stroke-width="16"/></g>${pile}`; },
+      // a soap bubble with a bitcoin inside, and a pin coming for it
+      bubbleCoin: () => `<circle r="290" fill="#7ff6ff" opacity=".12" filter="url(#b30)"/>${coin(0, 10, 150, -12)}<circle r="250" fill="url(#film)"/><circle r="250" fill="none" stroke="#e8fbff" stroke-width="6" opacity=".8"/>
+        <path d="M-180 -80A190 190 0 0 1 -60 -185" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".85"/>
+        <g transform="translate(560 170) rotate(-164)" filter="url(#sh)"><path d="M0 -6L300 -2L344 0L300 2L0 6Z" fill="#e6e9f5"/><circle cx="-18" r="34" fill="#ff2a3a"/><circle cx="-28" cy="-10" r="10" fill="#fff" opacity=".6"/></g>`,
+      // one big tombstone with a coin on it, little ones behind
+      tomb: () => `${[[-330, 120, 0.6], [330, 140, 0.7], [-200, 170, 0.5], [220, 190, 0.45]].map(([x, y, s]) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-90 200V-60A90 90 0 0 1 90 -60V200Z" fill="#5a557a"/><path d="M0 -40V90M-44 0H44" stroke="#2c2846" stroke-width="20" stroke-linecap="round"/></g>`).join("")}
+        <g filter="url(#sh)"><path d="M-170 300V-90A170 170 0 0 1 170 -90V300Z" fill="url(#stone)"/><path d="M-170 300V-90A170 170 0 0 1 -60 -250" fill="none" stroke="#d9d4f0" stroke-width="10" opacity=".5"/></g>
+        <g opacity=".85">${coin(0, -70, 100, -6)}</g><path d="M-80 90H80M-60 140H60M-80 190H80" stroke="#2c2846" stroke-width="14" stroke-linecap="round" opacity=".6"/>
+        <path d="M-260 300Q0 250 260 300V340H-260Z" fill="#1b1430"/>`,
+      // the dog coin on a rocket
+      rocket: () => `<g transform="rotate(-32)"><path d="M-200 -80Q-620 -30 -760 0Q-620 30 -200 80Q-260 0 -200 -80Z" fill="#ff7a1a" opacity=".6" filter="url(#b12)"/><path d="M-200 -56Q-480 -10 -580 0Q-480 10 -200 56Q-250 0 -200 -56Z" fill="url(#flame)"/>
+        <g filter="url(#sh)"><path d="M-200 -70H120Q240 -70 300 0Q240 70 120 70H-200Z" fill="url(#hull)"/><path d="M210 -54Q262 -30 300 0Q262 30 210 54Z" fill="#ff4654"/><path d="M-200 -70L-260 -150L-120 -70ZM-200 70L-260 150L-120 70Z" fill="#ff4654"/></g>
+        <g transform="translate(40 -6) rotate(32)">${coin(0, 0, 110)}${DOG}</g></g>`,
+      // a smartphone with an old telescopic radio antenna and a tuning dial on its screen
+      phone: () => `${[90, 170, 250].map((r, i) => `<path d="M${-r * 0.8 + 60} ${-470 + r * 0.25}A${r} ${r} 0 0 1 ${r * 0.8 + 60} ${-470 + r * 0.25}" fill="none" stroke="#fff" stroke-width="${16 - i * 4}" stroke-linecap="round" opacity="${0.9 - i * 0.25}"/>`).join("")}
+        <path d="M100 -280L80 -460" stroke="url(#chrome)" stroke-width="18" stroke-linecap="round"/><circle cx="78" cy="-470" r="20" fill="#ff6a3d" stroke="#fff" stroke-width="5"/>
+        <g filter="url(#sh)"><rect x="-150" y="-300" width="300" height="580" rx="44" fill="#1b1f33"/><rect x="-132" y="-270" width="264" height="520" rx="26" fill="url(#scr6)"/></g>
+        <g transform="translate(0 -130)"><rect x="-122" y="-56" width="244" height="112" rx="14" fill="#fff3d6"/>${Array.from({ length: 19 }, (_, i) => `<path d="M${-108 + i * 12} ${i % 5 ? -6 : -20}V12" stroke="#2a0f2e" stroke-width="${i % 5 ? 3 : 5}"/>`).join("")}<path d="M20 -48V48" stroke="#e8203c" stroke-width="8" stroke-linecap="round"/></g>
+        ${Array.from({ length: 5 }, (_, j) => Array.from({ length: 5 }, (_, i) => `<circle cx="${-84 + i * 42}" cy="${40 + j * 40}" r="11" fill="#2a0f2e" opacity=".75"/>`).join("")).join("")}`,
+      // a "palm tree" that is a lattice mast with antennas and plastic fronds
+      palm: () => { const fr = (a, len) => { const r = (a * Math.PI) / 180, ex = Math.cos(r) * len, ey = Math.sin(r) * len; return `<path d="M0 0Q${f(ex * 0.5)} ${f(ey * 0.5 - len * 0.3 - 40)} ${f(ex)} ${f(ey)}Q${f(ex * 0.5)} ${f(ey * 0.5 - len * 0.3 + 40)} 0 0Z" fill="url(#frond)"/>`; };
+        return `<path d="M-30 -230L-90 340H90L30 -230Z" fill="url(#pole)"/>${Array.from({ length: 12 }, (_, i) => { const y = -220 + i * 46, w0 = 30 + i * 5, w1 = 30 + (i + 1) * 5; return `<path d="M${-w0} ${y}L${w1} ${y + 46}M${w0} ${y}L${-w1} ${y + 46}" stroke="#5a6080" stroke-width="7"/>`; }).join("")}
+          ${[[-70, -220, -10], [70, -220, 10], [0, -240, 0]].map(([x, y, r]) => `<rect x="${x - 20}" y="${y - 70}" width="40" height="140" rx="8" fill="#e6e9f5" stroke="#7c839e" stroke-width="5" transform="rotate(${r} ${x} ${y})"/>`).join("")}
+          <g transform="translate(0 -260)">${[-170, -140, -105, -70, -35, -5, 185, 160].map((a, i) => fr(a, 230 + (i % 3) * 40)).join("")}</g>
+          <rect x="-6" y="-400" width="12" height="100" fill="#7c839e"/><circle cy="-410" r="18" fill="#ff2e2e" filter="url(#glow)"/>`; },
+      // a cloud cut open: racks of servers inside, hoses hanging out
+      cloudRack: () => { const R = rng(81); return `${[-220, -80, 60, 200].map((x, i) => `<path d="M${x} 150C${x} 300 ${x * 1.6} 300 ${x * 1.6} 460" fill="none" stroke="#05060d" stroke-width="26"/>`).join("")}
+        <g fill="#fff" filter="url(#sh)"><circle cx="-260" cy="40" r="120"/><circle cx="-110" cy="-80" r="160"/><circle cx="90" cy="-100" r="180"/><circle cx="270" cy="20" r="140"/><rect x="-360" y="20" width="720" height="160" rx="80"/></g>
+        <rect x="-280" y="-140" width="560" height="290" rx="10" fill="#0b0e1c"/>${Array.from({ length: 5 }, (_, i) => { const x = -265 + i * 108; return `<rect x="${x}" y="-126" width="92" height="262" rx="6" fill="#2a2f45"/>${Array.from({ length: 9 }, (_, j) => `<rect x="${x + 8}" y="${-116 + j * 28}" width="76" height="20" rx="3" fill="#1d2440"/><circle cx="${x + 20}" cy="${-106 + j * 28}" r="5" fill="${R() < 0.5 ? "#58d68d" : R() < 0.5 ? "#35c8ff" : "#ff4654"}"/>`).join("")}`; }).join("")}
+        <path d="M-290 -150l50 -30l50 26l50 -30l52 28l48 -30l52 28l48 -28l52 26l48 -30l50 28M-290 160l50 26l50 -26l50 30l52 -28l48 30l52 -28l48 28l52 -26l48 30l50 -28" fill="none" stroke="#fff" stroke-width="22" stroke-linejoin="round"/>`; },
+      // a bank cracked down the middle, chained shut, coins escaping
+      bank: () => `<g filter="url(#sh)"><path d="M-330 -170L0 -330L330 -170Z" fill="url(#marble)"/><rect x="-340" y="-180" width="680" height="30" fill="#bdb7a5"/>
+        ${[-260, -150, 150, 260].map((x) => `<rect x="${x - 26}" y="-150" width="52" height="300" fill="url(#marble)"/>`).join("")}<rect x="-100" y="-110" width="200" height="260" rx="8" fill="#4a3a20"/>
+        <rect x="-380" y="150" width="760" height="34" fill="#bdb7a5"/></g>
+        <path d="M10 -330L-16 -250L20 -170L-22 -80L16 10L-12 100L6 184" fill="none" stroke="#05060d" stroke-width="26" stroke-linejoin="round"/><path d="M10 -330L-16 -250L20 -170L-22 -80L16 10L-12 100L6 184" fill="none" stroke="#ffd23f" stroke-width="9" filter="url(#glow)"/>
+        <path d="M-130 -10L130 60M-130 60L130 -10" stroke="#9aa3bd" stroke-width="20" stroke-dasharray="26 9"/><g transform="translate(0 40)"><path d="M-34 -10V-42A34 34 0 0 1 34 -42V-10" fill="none" stroke="#c9cee6" stroke-width="15"/><rect x="-52" y="-14" width="104" height="84" rx="12" fill="#ffcf3a"/></g>
+        ${[[-60, -380, 46], [-200, -330, 40], [120, -420, 36], [-330, -260, 34], [220, -360, 30]].map(([x, y, r], i) => coin(x, y, r, i * 15 - 20, 0.15)).join("")}`,
+      // the buffering spinner and glitch bars of a frozen call
+      spinner: () => { const R = rng(91); return `${Array.from({ length: 12 }, () => `<rect x="${f(-300 + R() * 200)}" y="${f(-200 + R() * 380)}" width="${f(150 + R() * 380)}" height="${f(6 + R() * 22)}" fill="${R() < 0.5 ? "#ff2e88" : "#35c8ff"}" opacity=".4"/>`).join("")}
+        <circle r="110" fill="#05060d" opacity=".6"/>${Array.from({ length: 10 }, (_, i) => { const a = (i / 10) * Math.PI * 2; return `<circle cx="${f(Math.cos(a) * 64)}" cy="${f(Math.sin(a) * 64)}" r="${f(7 + i * 1.1)}" fill="#fff" opacity="${f(0.2 + i * 0.08)}"/>`; }).join("")}`; },
+      // squares of a face streaming away
+      pixels: () => { const R = rng(41), cols = ["#FF4FA3", "#FFA9D3", "#A81F65", "#FF7ABD", "#24242E", "#3BA7F0", "#CBA66E", "#ffffff"]; let px = "";
+        for (let i = 0; i < 170; i++) { const t = Math.pow(R(), 0.9), x = -300 + t * 640, y = (R() - 0.5) * 340 * (1 - t * 0.6) - Math.sin(t * Math.PI) * 60, s = 48 - t * 30 + R() * 10;
+          px += `<rect x="${f(x - s / 2)}" y="${f(y - s / 2)}" width="${f(s)}" height="${f(s)}" rx="4" fill="${cols[Math.floor(R() * cols.length)]}" transform="rotate(${f((R() - 0.5) * 50)} ${f(x)} ${f(y)})"/>`; } return px; },
+      // a laptop with a frozen call: the spinner over everything
+      screen: () => `<g filter="url(#sh)"><rect x="-400" y="-260" width="800" height="500" rx="26" fill="#c9cee6"/><path d="M-470 240H470L430 300H-430Z" fill="#9aa3bd"/></g><rect x="-376" y="-236" width="752" height="452" rx="8" fill="#1a2244"/>`,
       // a slice of pizza whose pepperoni is bitcoin
       pizzaSlice: () => `<g filter="url(#sh)"><path d="M-300 -170Q0 -250 300 -170L20 330Q0 350 -20 330Z" fill="#ffcf4a"/><path d="M-300 -170Q0 -250 300 -170L20 330Q0 350 -20 330Z" fill="url(#cheese)"/>
         <path d="M-120 60q-10 50 6 90M90 40q12 40 0 80M-30 200q-6 30 4 50" stroke="#ffcf4a" stroke-width="26" stroke-linecap="round"/>
@@ -429,6 +492,8 @@ export const SCENES = {
     };
     const back = `<rect width="1280" height="720" fill="url(#soloBg)"/>${o.rays ? rays(A.x, A.y, 18, "#fff", o.rays) : ""}${o.bubbles ? bubbles(9, 24, 0, 1280, 0, 720, 16, 0.4) : ""}
       <g transform="translate(${A.x} ${A.y}) scale(${sc}) rotate(${o.rot || 0})">${ITEMS[o.item]()}</g>`;
-    return { defs, back };
+    const O = o.over;   // over: { item, at, s } drawn over the host
+    const front = O ? `<g transform="translate(${O.at.x} ${O.at.y}) scale(${O.s || 1})">${ITEMS[O.item]()}</g>` : "";
+    return { defs, back, front };
   },
 };

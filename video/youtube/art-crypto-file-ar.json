@@ -6,22 +6,50 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 1/5",
-  "scene": "pizzaScale",
-  "host": {
-   "emote": "surprised",
-   "gesture": "cheer",
-   "x": 1085,
-   "y": 170,
-   "size": 560,
-   "look": -0.8
+  "scene": "solo",
+  "opts": {
+   "item": "pizzaSlice",
+   "at": {
+    "x": 930,
+    "y": 540
+   },
+   "s": 0.62,
+   "rot": -12,
+   "bg": [
+    "#ffb347",
+    "#e8421c",
+    "#5a0a10"
+   ],
+   "rays": 0.07
   },
+  "host": {
+   "x": 230,
+   "y": 80,
+   "size": 1000,
+   "look": 0.9,
+   "outline": 6,
+   "emote": "surprised",
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.55
+   }
+  },
+  "prices": [
+   {
+    "t": "10,000 BTC",
+    "x": 500,
+    "y": 600,
+    "size": 78,
+    "rot": -6
+   }
+  ],
   "words": [
    {
     "t": "أغلى بيتزا\n[[في التاريخ]]",
-    "x": 60,
-    "y": 24,
-    "w": 880,
-    "size": 132,
+    "x": 560,
+    "y": 118,
+    "w": 700,
+    "size": 112,
     "align": "center"
    }
   ]
@@ -33,22 +61,41 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 1/5",
-  "scene": "bankCrack",
+  "scene": "solo",
+  "opts": {
+   "item": "bank",
+   "at": {
+    "x": 390,
+    "y": 590
+   },
+   "s": 0.66,
+   "bg": [
+    "#1fae7a",
+    "#0a3d3a",
+    "#04140f"
+   ],
+   "glowAt": {
+    "x": 0.33,
+    "y": 0.6
+   },
+   "rays": 0.05
+  },
   "host": {
-   "emote": "smug",
-   "gesture": "pockets",
-   "x": 210,
-   "y": 250,
-   "size": 530,
-   "look": 0.8
+   "x": 1050,
+   "y": 130,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
+   "emote": "smug"
   },
   "words": [
    {
-    "t": "فلوس [[من غير بنك]]",
+    "t": "فلوس\n[[من غير بنك]]",
     "x": 20,
     "y": 24,
-    "w": 900,
-    "size": 118,
+    "w": 700,
+    "size": 112,
+    "align": "center",
     "hi": "#7dffb0"
    }
   ]
@@ -60,22 +107,43 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 2/5",
-  "scene": "blackout",
+  "scene": "solo",
+  "opts": {
+   "item": "plug",
+   "at": {
+    "x": 370,
+    "y": 510
+   },
+   "s": 0.95,
+   "bg": [
+    "#ffd84a",
+    "#5a3a00",
+    "#0a0800"
+   ],
+   "glowAt": {
+    "x": 0.38,
+    "y": 0.62
+   }
+  },
   "host": {
+   "x": 1050,
+   "y": 130,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
    "emote": "worried",
-   "gesture": "stop",
-   "x": 960,
-   "y": 320,
-   "size": 440,
-   "look": -0.6
+   "face": {
+    "sweat": 1
+   }
   },
   "words": [
    {
     "t": "بياكل كهربا\n[[دولة كاملة]]",
-    "x": 640,
-    "y": 80,
-    "w": 620,
-    "size": 132
+    "x": 20,
+    "y": 24,
+    "w": 700,
+    "size": 112,
+    "align": "center"
    }
   ]
  },
@@ -86,38 +154,40 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 2/5",
-  "scene": "mine",
+  "scene": "solo",
   "opts": {
-   "hit": {
-    "x": 720,
-    "y": 350
+   "item": "pick",
+   "at": {
+    "x": 920,
+    "y": 540
    },
-   "pick": {
-    "x": 715,
-    "y": 357,
-    "rot": 83.6
-   },
-   "lamp": {
-    "x": 330,
-    "y": 262,
-    "dx": 420
+   "s": 0.66,
+   "bg": [
+    "#9a5cff",
+    "#2a1240",
+    "#0c0516"
+   ],
+   "glowAt": {
+    "x": 0.7,
+    "y": 0.6
    }
   },
   "host": {
-   "emote": "serious",
-   "gesture": "point",
-   "x": 330,
-   "y": 170,
-   "size": 560,
-   "look": 0.8
+   "x": 230,
+   "y": 80,
+   "size": 1000,
+   "look": 0.9,
+   "outline": 6,
+   "emote": "serious"
   },
   "words": [
    {
     "t": "التعدين\n[[يعني إيه؟]]",
-    "x": 640,
-    "y": 60,
-    "w": 620,
-    "size": 120,
+    "x": 560,
+    "y": 118,
+    "w": 700,
+    "size": 112,
+    "align": "center",
     "hi": "#ffb347"
    }
   ]
@@ -129,21 +199,59 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 3/5",
-  "scene": "landfill",
-  "host": {
-   "emote": "sad",
-   "gesture": "facepalm",
-   "x": 200,
-   "y": 240,
-   "size": 480
+  "scene": "solo",
+  "opts": {
+   "item": "bin",
+   "at": {
+    "x": 960,
+    "y": 610
+   },
+   "s": 0.56,
+   "bg": [
+    "#a8b060",
+    "#2f3a24",
+    "#0d120a"
+   ],
+   "rays": 0.06
   },
+  "host": {
+   "x": 230,
+   "y": 80,
+   "size": 1000,
+   "look": 0.9,
+   "outline": 6,
+   "emote": "sad",
+   "face": {
+    "sweat": 1
+   }
+  },
+  "marks": [
+   {
+    "circle": [
+     952,
+     470,
+     100,
+     78
+    ]
+   }
+  ],
+  "prices": [
+   {
+    "t": "800,000,000 $",
+    "x": 470,
+    "y": 610,
+    "size": 74,
+    "rot": -5
+   }
+  ],
   "words": [
    {
-    "t": "8,000 بيتكوين\n[[في الزبالة]]",
-    "x": 540,
-    "y": 70,
-    "w": 720,
-    "size": 132
+    "t": "رماها\n[[في الزبالة!]]",
+    "x": 560,
+    "y": 100,
+    "w": 700,
+    "size": 112,
+    "align": "center"
    }
   ]
  },
@@ -154,29 +262,41 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 3/5",
-  "scene": "popcorn",
+  "scene": "solo",
+  "opts": {
+   "item": "tin",
+   "at": {
+    "x": 380,
+    "y": 520
+   },
+   "s": 0.9,
+   "bg": [
+    "#ff5a5a",
+    "#7a0f22",
+    "#1a0408"
+   ],
+   "glowAt": {
+    "x": 0.33,
+    "y": 0.5
+   },
+   "rays": 0.07
+  },
   "host": {
-   "emote": "sly",
-   "gesture": "cheer",
-   "x": 640,
-   "y": 50,
-   "size": 560,
-   "look": 0.4
+   "x": 1050,
+   "y": 130,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
+   "emote": "sly"
   },
   "words": [
    {
-    "t": "مليارات",
-    "x": 880,
-    "y": 130,
-    "w": 380,
-    "size": 124
-   },
-   {
-    "t": "في علبة\n[[فشار]]",
+    "t": "مليارات في\n[[علبة فشار]]",
     "x": 20,
-    "y": 120,
-    "w": 400,
-    "size": 118
+    "y": 24,
+    "w": 700,
+    "size": 112,
+    "align": "center"
    }
   ]
  },
@@ -187,25 +307,41 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 4/5",
-  "scene": "coaster",
+  "scene": "solo",
   "opts": {
-   "cartRot": 22
+   "item": "crash",
+   "at": {
+    "x": 930,
+    "y": 600
+   },
+   "s": 0.48,
+   "bg": [
+    "#ffffff",
+    "#dfe6ff",
+    "#9aa8d6"
+   ],
+   "glowAt": {
+    "x": 0.6,
+    "y": 0.4
+   }
   },
   "host": {
-   "emote": "surprised",
-   "gesture": "cheer",
-   "x": 775,
-   "y": 20,
-   "size": 400,
-   "rot": 12
+   "x": 230,
+   "y": 80,
+   "size": 1000,
+   "look": 0.9,
+   "outline": 6,
+   "emote": "furious"
   },
   "words": [
    {
-    "t": "للسما..\n[[وللأرض]]",
-    "x": 30,
-    "y": 30,
-    "w": 560,
-    "size": 150
+    "t": "اتمسح\n[[19 مليار!]]",
+    "x": 560,
+    "y": 100,
+    "w": 700,
+    "size": 112,
+    "align": "center",
+    "hi": "#ff2a3a"
    }
   ]
  },
@@ -216,35 +352,42 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 4/5",
-  "scene": "bubble",
+  "scene": "solo",
   "opts": {
-   "bubble": {
-    "x": 470,
-    "y": 430,
-    "r": 235
+   "item": "bubbleCoin",
+   "at": {
+    "x": 370,
+    "y": 460
    },
-   "pin": {
-    "x": 1153,
-    "y": 524,
-    "rot": -164,
-    "len": 440
-   }
+   "s": 1.05,
+   "bg": [
+    "#1a7a8a",
+    "#06222c",
+    "#03121a"
+   ],
+   "glowAt": {
+    "x": 0.33,
+    "y": 0.6
+   },
+   "bubbles": true
   },
   "host": {
-   "emote": "sly",
-   "gesture": "present",
-   "x": 1020,
-   "y": 250,
-   "size": 520,
-   "look": -0.8
+   "x": 1050,
+   "y": 130,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
+   "emote": "sly"
   },
   "words": [
    {
-    "t": "فقاعة [[ولا دهب؟]]",
+    "t": "فقاعة\n[[ولا دهب؟]]",
     "x": 20,
-    "y": 20,
-    "w": 840,
-    "size": 112
+    "y": 24,
+    "w": 700,
+    "size": 112,
+    "align": "center",
+    "hi": "#7ff6ff"
    }
   ]
  },
@@ -255,41 +398,43 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 5/5",
-  "scene": "graveyard",
-  "host": {
-   "emote": "worried",
-   "gesture": "pockets",
-   "x": 230,
-   "y": 146,
-   "size": 480,
-   "look": 0.8,
-   "arms": {
-    "armL": {
-     "x": 420,
-     "y": 515
-    },
-    "armR": {
-     "x": 780,
-     "y": 515
-    }
+  "scene": "solo",
+  "opts": {
+   "item": "tomb",
+   "at": {
+    "x": 370,
+    "y": 540
+   },
+   "s": 0.92,
+   "bg": [
+    "#7a4ac8",
+    "#2a1250",
+    "#0a0418"
+   ],
+   "glowAt": {
+    "x": 0.33,
+    "y": 0.45
    }
+  },
+  "host": {
+   "x": 1050,
+   "y": 130,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
+   "emote": "worried"
   },
   "words": [
    {
     "t": "20 مليون عملة\n[[ماتت!]]",
-    "x": 30,
-    "y": 40,
-    "w": 780,
-    "size": 112,
+    "x": 20,
+    "y": 24,
+    "w": 700,
+    "size": 104,
+    "align": "center",
     "hi": "#b6ff6a"
    }
-  ],
-  "opts": {
-   "moon": {
-    "x": 1000,
-    "y": 220
-   }
-  }
+  ]
  },
  {
   "file": "explain-crypto-05-ar/youtube/thumbnail-b.jpg",
@@ -298,24 +443,38 @@
   "h": 720,
   "rtl": true,
   "tag": "ملف العملات المشفرة · 5/5",
-  "scene": "dogRocket",
+  "scene": "solo",
+  "opts": {
+   "item": "rocket",
+   "at": {
+    "x": 900,
+    "y": 520
+   },
+   "s": 0.72,
+   "bg": [
+    "#fff6b0",
+    "#ffc21f",
+    "#ff7a1a"
+   ],
+   "rays": 0.15
+  },
   "host": {
-   "emote": "surprised",
-   "gesture": "stop",
-   "x": 1040,
-   "y": 290,
-   "size": 450,
-   "look": -0.7,
-   "lookY": -0.6
+   "x": 230,
+   "y": 80,
+   "size": 1000,
+   "look": 0.9,
+   "outline": 6,
+   "emote": "laugh"
   },
   "words": [
    {
     "t": "عملة عليها\n[[كلب!]]",
-    "x": 20,
-    "y": 30,
-    "w": 620,
-    "size": 120,
-    "hi": "#ff4654"
+    "x": 560,
+    "y": 118,
+    "w": 700,
+    "size": 112,
+    "align": "center",
+    "hi": "#ff2a3a"
    }
   ]
  }
