@@ -1,0 +1,1731 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-crypto-01-en",
+ "transcript": "../../../video/cues/explain-crypto-01-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.55,
+ "voiceGain": 1.35,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir. A new field report from planet Earth.",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 2.42,
+   "say": "Today's subject: cryptocurrency. Money the human",
+   "board": {
+    "kind": "titlecard",
+    "kicker": "EARTH REPORT · FIELD FILE",
+    "title": "CRYPTOCURRENCY",
+    "sub": "PART 1 OF 5 · MONEY WITHOUT A BANK"
+   },
+   "step": 0,
+   "stepT": 2.42,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 7.44,
+   "say": "I will tell you what it is, where it came from, ",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 15.4,
+   "say": "The year 2010. Ten thousand bitcoin...",
+   "board": {
+    "kind": "counter",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "RECENT YEARS: HUNDREDS OF MILLIONS"
+   },
+   "step": 0,
+   "stepT": 15.4,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 17.81,
+   "say": "for two pizzas.",
+   "board": {
+    "kind": "counter",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "RECENT YEARS: HUNDREDS OF MILLIONS"
+   },
+   "step": 1,
+   "stepT": 17.81
+  },
+  {
+   "t": 19.05,
+   "say": "At the prices of recent years, that comes to hun",
+   "board": {
+    "kind": "counter",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "RECENT YEARS: HUNDREDS OF MILLIONS"
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 19.05
+  },
+  {
+   "t": 22.28,
+   "say": "The most expensive dinner in the history of the ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 25.66,
+   "say": "But for Command to understand any of this, I hav",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present"
+  },
+  {
+   "t": 30.22,
+   "say": "I went through their history. Long ago, they swa",
+   "board": {
+    "kind": "steps",
+    "title": "HOW MONEY CHANGED",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "Barter",
+      "sub": "a fish for bread"
+     },
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, never rusts"
+     },
+     {
+      "icon": "cash",
+      "label": "Paper",
+      "sub": "a receipt for gold"
+     },
+     {
+      "icon": "phone",
+      "label": "Numbers",
+      "sub": "on a screen"
+     }
+    ]
+   },
+   "story": {
+    "n": 1,
+    "tag": "WHAT IS MONEY?"
+   },
+   "step": 0,
+   "stepT": 30.22,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 35.08,
+   "say": "The problem: if the baker does not want fish tod",
+   "board": {
+    "kind": "steps",
+    "title": "HOW MONEY CHANGED",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "Barter",
+      "sub": "a fish for bread"
+     },
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, never rusts"
+     },
+     {
+      "icon": "cash",
+      "label": "Paper",
+      "sub": "a receipt for gold"
+     },
+     {
+      "icon": "phone",
+      "label": "Numbers",
+      "sub": "on a screen"
+     }
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 30.22
+  },
+  {
+   "t": 39.64,
+   "say": "So they tried other things everybody would take.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 47.12,
+   "say": "Eventually they settled on something everyone ac",
+   "board": {
+    "kind": "steps",
+    "title": "HOW MONEY CHANGED",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "Barter",
+      "sub": "a fish for bread"
+     },
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, never rusts"
+     },
+     {
+      "icon": "cash",
+      "label": "Paper",
+      "sub": "a receipt for gold"
+     },
+     {
+      "icon": "phone",
+      "label": "Numbers",
+      "sub": "on a screen"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 47.12,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 53.02,
+   "say": "But gold is heavy. So they left it with someone ",
+   "board": {
+    "kind": "steps",
+    "title": "HOW MONEY CHANGED",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "Barter",
+      "sub": "a fish for bread"
+     },
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, never rusts"
+     },
+     {
+      "icon": "cash",
+      "label": "Paper",
+      "sub": "a receipt for gold"
+     },
+     {
+      "icon": "phone",
+      "label": "Numbers",
+      "sub": "on a screen"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 53.02
+  },
+  {
+   "t": 59.94,
+   "say": "Then the trusted man discovered he could lend yo",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 66.11,
+   "say": "In 1971, the dollar stopped being exchangeable f",
+   "board": {
+    "kind": "steps",
+    "title": "HOW MONEY CHANGED",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "Barter",
+      "sub": "a fish for bread"
+     },
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, never rusts"
+     },
+     {
+      "icon": "cash",
+      "label": "Paper",
+      "sub": "a receipt for gold"
+     },
+     {
+      "icon": "phone",
+      "label": "Numbers",
+      "sub": "on a screen"
+     }
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 53.02,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 71.02,
+   "say": "And whoever runs the printing press can print as",
+   "board": {
+    "kind": "story",
+    "title": "WHOEVER RUNS THE PRESS",
+    "icon": "cash",
+    "name": "one note",
+    "size": 56,
+    "lines": [
+     "Zimbabwe · 2009",
+     "$100,000,000,000,000",
+     "Not enough for a bus ticket"
+    ]
+   },
+   "step": 0,
+   "stepT": 71.02,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 74.71,
+   "say": "they printed a single note for one hundred trill",
+   "board": {
+    "kind": "story",
+    "title": "WHOEVER RUNS THE PRESS",
+    "icon": "cash",
+    "name": "one note",
+    "size": 56,
+    "lines": [
+     "Zimbabwe · 2009",
+     "$100,000,000,000,000",
+     "Not enough for a bus ticket"
+    ]
+   },
+   "step": 1,
+   "stepT": 74.71
+  },
+  {
+   "t": 77.94,
+   "say": "It would not buy a bus ticket.",
+   "board": {
+    "kind": "story",
+    "title": "WHOEVER RUNS THE PRESS",
+    "icon": "cash",
+    "name": "one note",
+    "size": 56,
+    "lines": [
+     "Zimbabwe · 2009",
+     "$100,000,000,000,000",
+     "Not enough for a bus ticket"
+    ]
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 77.94
+  },
+  {
+   "t": 79.28,
+   "say": "So money gets its value from one thing only: eve",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 88.17,
+   "say": "And here is what I observed today: most of their",
+   "board": {
+    "kind": "steps",
+    "title": "HOW MONEY CHANGED",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "Barter",
+      "sub": "a fish for bread"
+     },
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, never rusts"
+     },
+     {
+      "icon": "cash",
+      "label": "Paper",
+      "sub": "a receipt for gold"
+     },
+     {
+      "icon": "phone",
+      "label": "Numbers",
+      "sub": "on a screen"
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 88.17,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 92.81,
+   "say": "Most of the money on this planet has no physical",
+   "board": {
+    "kind": "steps",
+    "title": "HOW MONEY CHANGED",
+    "items": [
+     {
+      "icon": "fish",
+      "label": "Barter",
+      "sub": "a fish for bread"
+     },
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, never rusts"
+     },
+     {
+      "icon": "cash",
+      "label": "Paper",
+      "sub": "a receipt for gold"
+     },
+     {
+      "icon": "phone",
+      "label": "Numbers",
+      "sub": "on a screen"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 88.17
+  },
+  {
+   "t": 98.3,
+   "say": "I also recorded that their money has three jobs.",
+   "board": {
+    "kind": "steps",
+    "title": "MONEY HAS THREE JOBS",
+    "items": [
+     {
+      "icon": "cash",
+      "label": "Pay with it",
+      "sub": "medium of exchange"
+     },
+     {
+      "icon": "tag",
+      "label": "Price with it",
+      "sub": "unit of account"
+     },
+     {
+      "icon": "safe",
+      "label": "Save it",
+      "sub": "store of value"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 98.3,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 101.04,
+   "say": "You put a price on things with it.",
+   "board": {
+    "kind": "steps",
+    "title": "MONEY HAS THREE JOBS",
+    "items": [
+     {
+      "icon": "cash",
+      "label": "Pay with it",
+      "sub": "medium of exchange"
+     },
+     {
+      "icon": "tag",
+      "label": "Price with it",
+      "sub": "unit of account"
+     },
+     {
+      "icon": "safe",
+      "label": "Save it",
+      "sub": "store of value"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 101.04
+  },
+  {
+   "t": 102.45,
+   "say": "And you save it for tomorrow. Keep those three i",
+   "board": {
+    "kind": "steps",
+    "title": "MONEY HAS THREE JOBS",
+    "items": [
+     {
+      "icon": "cash",
+      "label": "Pay with it",
+      "sub": "medium of exchange"
+     },
+     {
+      "icon": "tag",
+      "label": "Price with it",
+      "sub": "unit of account"
+     },
+     {
+      "icon": "safe",
+      "label": "Save it",
+      "sub": "store of value"
+     }
+    ]
+   },
+   "host": "left",
+   "step": 2,
+   "stepT": 102.45
+  },
+  {
+   "t": 105.88,
+   "say": "I traced those numbers to where they actually li",
+   "board": {
+    "kind": "ledger",
+    "title": "THE BANK'S LEDGER",
+    "rows": [
+     {
+      "name": "Alice",
+      "amount": 100
+     },
+     {
+      "name": "Bob",
+      "amount": 50
+     },
+     {
+      "name": "Carol",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "story": {
+    "n": 2,
+    "tag": "THE BANK IS A LEDGER"
+   },
+   "step": 0,
+   "stepT": 105.88,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 111.75,
+   "say": "When Alice pays Bob thirty dollars, nothing phys",
+   "board": {
+    "kind": "ledger",
+    "title": "THE BANK'S LEDGER",
+    "rows": [
+     {
+      "name": "Alice",
+      "amount": 100
+     },
+     {
+      "name": "Bob",
+      "amount": 50
+     },
+     {
+      "name": "Carol",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 111.75
+  },
+  {
+   "t": 118.47,
+   "say": "Your salary arrives: a number. You pay the rent:",
+   "board": {
+    "kind": "ledger",
+    "title": "THE BANK'S LEDGER",
+    "rows": [
+     {
+      "name": "Alice",
+      "amount": 100
+     },
+     {
+      "name": "Bob",
+      "amount": 50
+     },
+     {
+      "name": "Carol",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 111.75
+  },
+  {
+   "t": 124.31,
+   "say": "And every bank keeps its own ledger. So every ni",
+   "board": {
+    "kind": "ledger",
+    "title": "THE BANK'S LEDGER",
+    "rows": [
+     {
+      "name": "Alice",
+      "amount": 100
+     },
+     {
+      "name": "Bob",
+      "amount": 50
+     },
+     {
+      "name": "Carol",
+      "amount": 20
+     }
+    ],
+    "ops": [
+     {
+      "from": 0,
+      "to": 1,
+      "amount": 30
+     }
+    ]
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "sly",
+   "stepT": 111.75
+  },
+  {
+   "t": 130.6,
+   "say": "So a bank is not a vault full of money. A bank i",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 137.25,
+   "say": "I followed one transfer from start to finish. Ev",
+   "board": {
+    "kind": "flow",
+    "title": "EVERY TRANSFER HAS A MIDDLEMAN",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "bank",
+      "label": "The bank",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "Bob",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "minus the fee"
+     },
+     {
+      "badges": [
+       "FEES",
+       "DELAYS",
+       "FREEZES",
+       "COLLAPSE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "story": {
+    "n": 3,
+    "tag": "THE MIDDLEMAN"
+   },
+   "step": 0,
+   "stepT": 137.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 143.26,
+   "say": "Alice sends. The bank checks its ledger.",
+   "board": {
+    "kind": "flow",
+    "title": "EVERY TRANSFER HAS A MIDDLEMAN",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "bank",
+      "label": "The bank",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "Bob",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "minus the fee"
+     },
+     {
+      "badges": [
+       "FEES",
+       "DELAYS",
+       "FREEZES",
+       "COLLAPSE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 143.26
+  },
+  {
+   "t": 145.58,
+   "say": "Then Bob receives it. Minus the fee.",
+   "board": {
+    "kind": "flow",
+    "title": "EVERY TRANSFER HAS A MIDDLEMAN",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "bank",
+      "label": "The bank",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "Bob",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "minus the fee"
+     },
+     {
+      "badges": [
+       "FEES",
+       "DELAYS",
+       "FREEZES",
+       "COLLAPSE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 145.58
+  },
+  {
+   "t": 147.51,
+   "say": "And whoever holds the ledger can charge a fee, h",
+   "board": {
+    "kind": "flow",
+    "title": "EVERY TRANSFER HAS A MIDDLEMAN",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "bank",
+      "label": "The bank",
+      "big": true
+     },
+     {
+      "icon": "person",
+      "label": "Bob",
+      "args": [
+       "#ff4fa3"
+      ]
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ]
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "label": "minus the fee"
+     },
+     {
+      "badges": [
+       "FEES",
+       "DELAYS",
+       "FREEZES",
+       "COLLAPSE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "host": "right",
+   "step": 3,
+   "stepT": 147.51
+  },
+  {
+   "t": 154.32,
+   "say": "This is not a theory. On the island of Cyprus, i",
+   "board": {
+    "kind": "story",
+    "title": "WHOEVER HOLDS THE LEDGER",
+    "icon": "bank",
+    "name": "closed",
+    "size": 56,
+    "lines": [
+     "Cyprus 2013: banks shut",
+     "Over €100,000: half gone",
+     "Lebanon 2019: dollars stuck"
+    ]
+   },
+   "step": 0,
+   "stepT": 154.32,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 159.54,
+   "say": "And anyone with more than a hundred thousand eur",
+   "board": {
+    "kind": "story",
+    "title": "WHOEVER HOLDS THE LEDGER",
+    "icon": "bank",
+    "name": "closed",
+    "size": 56,
+    "lines": [
+     "Cyprus 2013: banks shut",
+     "Over €100,000: half gone",
+     "Lebanon 2019: dollars stuck"
+    ]
+   },
+   "step": 1,
+   "stepT": 159.54
+  },
+  {
+   "t": 166.49,
+   "say": "And in Lebanon, since 2019, the banks have kept ",
+   "board": {
+    "kind": "story",
+    "title": "WHOEVER HOLDS THE LEDGER",
+    "icon": "bank",
+    "name": "closed",
+    "size": 56,
+    "lines": [
+     "Cyprus 2013: banks shut",
+     "Over €100,000: half gone",
+     "Lebanon 2019: dollars stuck"
+    ]
+   },
+   "host": "right",
+   "calm": true,
+   "gesture": "pockets",
+   "step": 2,
+   "stepT": 166.49
+  },
+  {
+   "t": 172.95,
+   "say": "Their messages cross the planet in one second. A",
+   "board": {
+    "kind": "story",
+    "title": "WHOEVER HOLDS THE LEDGER",
+    "icon": "bank",
+    "name": "closed",
+    "size": 56,
+    "lines": [
+     "Cyprus 2013: banks shut",
+     "Over €100,000: half gone",
+     "Lebanon 2019: dollars stuck"
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "deadpan",
+   "stepT": 166.49
+  },
+  {
+   "t": 180.87,
+   "say": "And more than a billion adults on this planet ha",
+   "shot": "close",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 188.61,
+   "say": "So I asked the question any sensible being would",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 4,
+    "tag": "THE COPY PROBLEM"
+   }
+  },
+  {
+   "t": 195.79,
+   "say": "The problem is that anything digital can be copi",
+   "board": {
+    "kind": "copy",
+    "title": "ANYTHING DIGITAL CAN BE COPIED",
+    "file": "100",
+    "name": "money.jpg",
+    "me": "Alice",
+    "a": "Bob",
+    "b": "Carol",
+    "warn": "DOUBLE SPENDING"
+   },
+   "step": 0,
+   "stepT": 195.79,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 198.21,
+   "say": "A photo, a song, a movie. Copy, paste. Free.",
+   "board": {
+    "kind": "copy",
+    "title": "ANYTHING DIGITAL CAN BE COPIED",
+    "file": "100",
+    "name": "money.jpg",
+    "me": "Alice",
+    "a": "Bob",
+    "b": "Carol",
+    "warn": "DOUBLE SPENDING"
+   },
+   "step": 1,
+   "stepT": 198.21
+  },
+  {
+   "t": 201.16,
+   "say": "So if money were a file, Alice could send the sa",
+   "board": {
+    "kind": "copy",
+    "title": "ANYTHING DIGITAL CAN BE COPIED",
+    "file": "100",
+    "name": "money.jpg",
+    "me": "Alice",
+    "a": "Bob",
+    "b": "Carol",
+    "warn": "DOUBLE SPENDING"
+   },
+   "step": 2,
+   "stepT": 201.16
+  },
+  {
+   "t": 207.05,
+   "say": "That is called the double-spending problem. And ",
+   "board": {
+    "kind": "copy",
+    "title": "ANYTHING DIGITAL CAN BE COPIED",
+    "file": "100",
+    "name": "money.jpg",
+    "me": "Alice",
+    "a": "Bob",
+    "b": "Carol",
+    "warn": "DOUBLE SPENDING"
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "serious",
+   "stepT": 201.16
+  },
+  {
+   "t": 212.79,
+   "say": "In the nineties, a group of programmers who call",
+   "board": {
+    "kind": "steps",
+    "title": "PEOPLE TRIED BEFORE",
+    "items": [
+     {
+      "icon": "node",
+      "label": "Cypherpunks",
+      "sub": "1990s: money nobody watches"
+     },
+     {
+      "icon": "coin",
+      "label": "DigiCash",
+      "sub": "bankrupt in 1998",
+      "args": [
+       "#9fb0ff",
+       "D"
+      ]
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 212.79,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 219.75,
+   "say": "Humans had been trying since the eighties. A sci",
+   "board": {
+    "kind": "steps",
+    "title": "PEOPLE TRIED BEFORE",
+    "items": [
+     {
+      "icon": "node",
+      "label": "Cypherpunks",
+      "sub": "1990s: money nobody watches"
+     },
+     {
+      "icon": "coin",
+      "label": "DigiCash",
+      "sub": "bankrupt in 1998",
+      "args": [
+       "#9fb0ff",
+       "D"
+      ]
+     }
+    ]
+   },
+   "host": "right",
+   "emote": "bored",
+   "step": 1,
+   "stepT": 219.75
+  },
+  {
+   "t": 228.25,
+   "say": "And then came the thing that changed everything:",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "BAILOUT",
+    "draw": 3.2
+   },
+   "story": {
+    "n": 5,
+    "tag": "2008"
+   },
+   "step": 0,
+   "stepT": 228.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 231.28,
+   "say": "Big American banks had bet people's money on hom",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "BAILOUT",
+    "draw": 3.2
+   },
+   "step": 0,
+   "stepT": 228.25
+  },
+  {
+   "t": 239.96,
+   "say": "The American government set aside seven hundred ",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "BAILOUT",
+    "draw": 3.2
+   },
+   "step": 1,
+   "stepT": 239.96
+  },
+  {
+   "t": 245.82,
+   "say": "Millions of humans lost their homes and their jo",
+   "board": {
+    "kind": "chart",
+    "title": "2008",
+    "points": [
+     92,
+     96,
+     90,
+     94,
+     82,
+     86,
+     70,
+     74,
+     52,
+     56,
+     34,
+     38,
+     20
+    ],
+    "stamp": "BAILOUT",
+    "draw": 3.2
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "annoyed",
+   "stepT": 239.96
+  },
+  {
+   "t": 254.14,
+   "say": "So the ledger keeper made the mistake... and the",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 262.33,
+   "say": "Right in the middle of that crisis, a nine-page ",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "Who is this?"
+   },
+   "story": {
+    "n": 6,
+    "tag": "SATOSHI'S PAPER"
+   },
+   "step": 0,
+   "stepT": 262.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 268.85,
+   "say": "The date: October 31st, 2008. Halloween. A stran",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "Who is this?"
+   },
+   "step": 1,
+   "stepT": 268.85
+  },
+  {
+   "t": 277.2,
+   "say": "The title: Bitcoin, a peer-to-peer electronic ca",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "Who is this?"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 268.85
+  },
+  {
+   "t": 285.84,
+   "say": "The author: Satoshi Nakamoto. To this day, nobod",
+   "board": {
+    "kind": "doc",
+    "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+    "author": "Satoshi Nakamoto",
+    "date": "31 OCT 2008",
+    "who": "Who is this?"
+   },
+   "step": 2,
+   "stepT": 285.84
+  },
+  {
+   "t": 291.76,
+   "say": "And before anyone asks, sir: no, it was not me. ",
+   "shot": "host",
+   "emote": "smug"
+  },
+  {
+   "t": 295.13,
+   "say": "The idea was simple, and bold: the ledger does n",
+   "board": {
+    "kind": "network",
+    "title": "ONE LEDGER. EVERYONE HAS IT.",
+    "n": 34,
+    "cheat": 11
+   },
+   "story": {
+    "n": 7,
+    "tag": "THE IDEA"
+   },
+   "step": 0,
+   "stepT": 295.13,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 299.67,
+   "say": "Every computer on the network gets a full copy o",
+   "board": {
+    "kind": "network",
+    "title": "ONE LEDGER. EVERYONE HAS IT.",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 1,
+   "stepT": 299.67
+  },
+  {
+   "t": 305.66,
+   "say": "When Alice pays Bob, the news spreads to all of ",
+   "board": {
+    "kind": "network",
+    "title": "ONE LEDGER. EVERYONE HAS IT.",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 2,
+   "stepT": 305.66
+  },
+  {
+   "t": 311.03,
+   "say": "And if someone tries to cheat by editing their o",
+   "board": {
+    "kind": "network",
+    "title": "ONE LEDGER. EVERYONE HAS IT.",
+    "n": 34,
+    "cheat": 11
+   },
+   "host": "left",
+   "step": 3,
+   "stepT": 311.03
+  },
+  {
+   "t": 316.35,
+   "say": "This ledger is also public. Anyone can read the ",
+   "board": {
+    "kind": "network",
+    "title": "ONE LEDGER. EVERYONE HAS IT.",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 311.03
+  },
+  {
+   "t": 329.69,
+   "say": "No manager. No head office. And no customer serv",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 335.03,
+   "say": "Which also means nobody can freeze your account,",
+   "board": {
+    "kind": "network",
+    "title": "ONE LEDGER. EVERYONE HAS IT.",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 311.03,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 342.32,
+   "say": "This shared ledger is called the blockchain. And",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 349.62,
+   "say": "January 3rd, 2009. Satoshi switched the network ",
+   "board": {
+    "kind": "block",
+    "title": "THE FIRST PAGE OF THE LEDGER",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "story": {
+    "n": 8,
+    "tag": "BLOCK ZERO"
+   },
+   "step": 0,
+   "stepT": 349.62,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 356.48,
+   "say": "And inside that block, Satoshi left a message. T",
+   "board": {
+    "kind": "block",
+    "title": "THE FIRST PAGE OF THE LEDGER",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "step": 1,
+   "stepT": 356.48
+  },
+  {
+   "t": 364.41,
+   "say": "So the very first line of money without banks...",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 369.65,
+   "say": "That block also created fifty brand new bitcoin.",
+   "board": {
+    "kind": "block",
+    "title": "THE FIRST PAGE OF THE LEDGER",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 356.48,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 379.55,
+   "say": "Nine days later came the first transfer: ten bit",
+   "board": {
+    "kind": "block",
+    "title": "THE FIRST PAGE OF THE LEDGER",
+    "label": "BLOCK 0",
+    "date": "03 JAN 2009",
+    "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 356.48
+  },
+  {
+   "t": 386.76,
+   "say": "At first, nobody cared. Bitcoin was practically ",
+   "shot": "host",
+   "emote": "bored",
+   "gesture": "shrug",
+   "story": {
+    "n": 9,
+    "tag": "PIZZA DAY"
+   }
+  },
+  {
+   "t": 394.1,
+   "say": "Until May 2010. A programmer named Laszlo posted",
+   "board": {
+    "kind": "counter",
+    "title": "MAY 22, 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "BACK THEN: ABOUT $41"
+   },
+   "step": 0,
+   "stepT": 394.1,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 401.16,
+   "say": "And on May 22nd... somebody did.",
+   "board": {
+    "kind": "counter",
+    "title": "MAY 22, 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "BACK THEN: ABOUT $41"
+   },
+   "step": 1,
+   "stepT": 401.16
+  },
+  {
+   "t": 403.29,
+   "say": "It was the first time bitcoin bought something r",
+   "board": {
+    "kind": "counter",
+    "title": "MAY 22, 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "BACK THEN: ABOUT $41"
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 403.29
+  },
+  {
+   "t": 405.87,
+   "say": "Laszlo later said he has no regrets. The pizza w",
+   "board": {
+    "kind": "counter",
+    "title": "MAY 22, 2010",
+    "to": 10000,
+    "unit": "BTC",
+    "icon": "pizza",
+    "count": 2,
+    "now": "BACK THEN: ABOUT $41"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 403.29
+  },
+  {
+   "t": 409,
+   "say": "And the humans still celebrate that day every ye",
+   "shot": "host",
+   "emote": "grin",
+   "gesture": "cheer"
+  },
+  {
+   "t": 416.49,
+   "say": "Less than a year later, one bitcoin reached one ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 421.83,
+   "say": "As for Satoshi: in April 2011 came the last know",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "I've moved on|to other things.",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "never moved since"
+   },
+   "story": {
+    "n": 10,
+    "tag": "THE VANISHING"
+   },
+   "step": 0,
+   "stepT": 421.83,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 426.08,
+   "say": "I've moved on to other things.",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "I've moved on|to other things.",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "never moved since"
+   },
+   "step": 1,
+   "stepT": 426.08
+  },
+  {
+   "t": 427.68,
+   "say": "And then, gone.",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "I've moved on|to other things.",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "never moved since"
+   },
+   "step": 2,
+   "stepT": 427.68
+  },
+  {
+   "t": 428.77,
+   "say": "Before that, Satoshi had handed the code over to",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "I've moved on|to other things.",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "never moved since"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 427.68
+  },
+  {
+   "t": 435.01,
+   "say": "And left behind about a million bitcoin, by rese",
+   "board": {
+    "kind": "person",
+    "title": "",
+    "name": "Satoshi Nakamoto",
+    "quote": "I've moved on|to other things.",
+    "stat": "≈ 1,000,000 BTC",
+    "statSub": "never moved since"
+   },
+   "step": 3,
+   "stepT": 435.01
+  },
+  {
+   "t": 440.96,
+   "say": "Invented a new kind of money, became one of the ",
+   "shot": "close",
+   "emote": "skeptical"
+  },
+  {
+   "t": 451.08,
+   "say": "Before the summary, two words from the Human Dic",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "Crypto",
+      "means": "From the Greek for hidden. They mean the science of codes"
+     },
+     {
+      "word": "Peer-to-peer",
+      "means": "From one person to another. Nobody in the middle"
+     }
+    ]
+   },
+   "story": {
+    "n": 11,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "step": 0,
+   "stepT": 451.08,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 459.67,
+   "say": "And peer-to-peer: from one person to another. Wi",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "Crypto",
+      "means": "From the Greek for hidden. They mean the science of codes"
+     },
+     {
+      "word": "Peer-to-peer",
+      "means": "From one person to another. Nobody in the middle"
+     }
+    ]
+   },
+   "host": "right",
+   "step": 1,
+   "stepT": 459.67
+  },
+  {
+   "t": 464.6,
+   "say": "Summary of the report, sir. One: money is an agr",
+   "meme": {
+    "kind": "list",
+    "title": "REPORT SUMMARY",
+    "items": [
+     "Money is an agreement in a ledger",
+     "The bank kept the ledger",
+     "Bitcoin gave the ledger to everyone"
+    ],
+    "step": 2.3
+   },
+   "host": "pip",
+   "story": {
+    "n": 12,
+    "tag": "SUMMARY"
+   },
+   "shot": "show",
+   "kind": "meme"
+  },
+  {
+   "t": 474.92,
+   "say": "And an important warning: this is an explanation",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 482.9,
+   "say": "Next report: who guards this ledger? What is min",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 487.55,
+   "say": "This has been Earth Report. Agent Peek. End of t",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 490.92,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endcard",
+    "title": "NEXT REPORT",
+    "next": "The ledger that guards itself · Part 2 of 5",
+    "note": "Subscribe so the rest of the file reaches you"
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

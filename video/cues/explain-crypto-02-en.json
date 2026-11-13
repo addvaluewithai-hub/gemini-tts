@@ -1,0 +1,1752 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-crypto-02-en",
+ "transcript": "../../../video/cues/explain-crypto-02-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.55,
+ "voiceGain": 1.35,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir. Field report number two in the cryptocurren",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.31,
+   "say": "Today's subject: the blockchain. A ledger with n",
+   "board": {
+    "kind": "titlecard",
+    "kicker": "EARTH REPORT · FIELD FILE",
+    "title": "THE BLOCKCHAIN",
+    "sub": "PART 2 OF 5 · THE LEDGER THAT GUARDS ITSELF"
+   },
+   "step": 0,
+   "stepT": 3.31,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 7.25,
+   "say": "I will report how this ledger gets written, who ",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 15.66,
+   "say": "In the last report we learned that bitcoin took ",
+   "board": {
+    "kind": "network",
+    "title": "EVERYONE HOLDS THE LEDGER",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 1,
+   "stepT": 15.66,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 21.6,
+   "say": "Which raises a dangerous question: if everybody ",
+   "shot": "close",
+   "emote": "skeptical"
+  },
+  {
+   "t": 27.21,
+   "say": "The first trick I found is called a hash. A mach",
+   "board": {
+    "kind": "hash",
+    "title": "THE FINGERPRINT MACHINE",
+    "inLabel": "the text",
+    "outLabel": "the fingerprint",
+    "input": "Alice pays Bob 30",
+    "changed": "Alice pays Bob 31"
+   },
+   "story": {
+    "n": 1,
+    "tag": "THE FINGERPRINT"
+   },
+   "step": 0,
+   "stepT": 27.21,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 34.63,
+   "say": "Change a single letter in the text... and the wh",
+   "board": {
+    "kind": "hash",
+    "title": "THE FINGERPRINT MACHINE",
+    "inLabel": "the text",
+    "outLabel": "the fingerprint",
+    "input": "Alice pays Bob 30",
+    "changed": "Alice pays Bob 31"
+   },
+   "step": 1,
+   "stepT": 34.63
+  },
+  {
+   "t": 38.1,
+   "say": "And there is no way back from the fingerprint to",
+   "board": {
+    "kind": "hash",
+    "title": "THE FINGERPRINT MACHINE",
+    "inLabel": "the text",
+    "outLabel": "the fingerprint",
+    "input": "Alice pays Bob 30",
+    "changed": "Alice pays Bob 31"
+   },
+   "step": 2,
+   "stepT": 38.1
+  },
+  {
+   "t": 41.92,
+   "say": "Like a smoothie, sir. Strawberries go in, a smoo",
+   "board": {
+    "kind": "hash",
+    "title": "THE FINGERPRINT MACHINE",
+    "inLabel": "the text",
+    "outLabel": "the fingerprint",
+    "input": "Alice pays Bob 30",
+    "changed": "Alice pays Bob 31"
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "deadpan",
+   "stepT": 38.1
+  },
+  {
+   "t": 47.8,
+   "say": "The humans use this trick everywhere. When you s",
+   "board": {
+    "kind": "hash",
+    "title": "THE FINGERPRINT MACHINE",
+    "inLabel": "the text",
+    "outLabel": "the fingerprint",
+    "input": "Alice pays Bob 30",
+    "changed": "Alice pays Bob 31"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 38.1
+  },
+  {
+   "t": 56.54,
+   "say": "Roughly every ten minutes, the new transfers are",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "story": {
+    "n": 2,
+    "tag": "THE CHAIN"
+   },
+   "step": 0,
+   "stepT": 56.54,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 64.52,
+   "say": "Then the page is stamped with its own fingerprin",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 64.52
+  },
+  {
+   "t": 66.69,
+   "say": "And the next page begins with the fingerprint of",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 66.69
+  },
+  {
+   "t": 72.04,
+   "say": "Which makes a chain. Block... chain. Naming thin",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 72.04
+  },
+  {
+   "t": 75.75,
+   "say": "This chain now has more than nine hundred thousa",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 72.04
+  },
+  {
+   "t": 81.79,
+   "say": "I tried imagining someone going back and changin",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "step": 4,
+   "stepT": 81.79
+  },
+  {
+   "t": 89.05,
+   "say": "And the whole network sees a broken chain, and r",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "step": 5,
+   "stepT": 89.05
+  },
+  {
+   "t": 91.88,
+   "say": "It also means that what is written stays written",
+   "board": {
+    "kind": "chain",
+    "title": "PAGES HOLDING ON TO EACH OTHER",
+    "prevLabel": "last page's print",
+    "hashLabel": "its own print",
+    "tamper": "Alice → Bob 3000",
+    "rejected": "REJECTED",
+    "blocks": [
+     {
+      "name": "PAGE 1",
+      "lines": [
+       "Alice → Bob 30",
+       "Carol → Alice 5",
+       "Bob → Dave 12"
+      ]
+     },
+     {
+      "name": "PAGE 2",
+      "lines": [
+       "Dave → Carol 7",
+       "Alice → Dave 20",
+       "Bob → Alice 3"
+      ]
+     },
+     {
+      "name": "PAGE 3",
+      "lines": [
+       "Carol → Bob 9",
+       "Dave → Alice 1",
+       "Alice → Carol 14"
+      ]
+     }
+    ]
+   },
+   "step": 5,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 89.05
+  },
+  {
+   "t": 98.22,
+   "say": "So to forge one line, you would have to rewrite ",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 105.37,
+   "say": "I tracked one transfer from the moment it was se",
+   "board": {
+    "kind": "steps",
+    "title": "THE TRIP OF ONE TRANSFER",
+    "items": [
+     {
+      "icon": "phone",
+      "label": "Announced",
+      "sub": "to everyone"
+     },
+     {
+      "icon": "node",
+      "label": "Waits",
+      "sub": "highest fee first"
+     },
+     {
+      "icon": "file",
+      "label": "Written",
+      "sub": "onto a page",
+      "args": [
+       "#"
+      ]
+     },
+     {
+      "icon": "coin",
+      "label": "Settled",
+      "sub": "6 pages ≈ 1 hour",
+      "args": [
+       "#58d68d",
+       "✓"
+      ]
+     }
+    ]
+   },
+   "story": {
+    "n": 3,
+    "tag": "THE TRIP OF A TRANSFER"
+   },
+   "step": 0,
+   "stepT": 105.37,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 110.25,
+   "say": "Then it sits in a waiting room with thousands of",
+   "board": {
+    "kind": "steps",
+    "title": "THE TRIP OF ONE TRANSFER",
+    "items": [
+     {
+      "icon": "phone",
+      "label": "Announced",
+      "sub": "to everyone"
+     },
+     {
+      "icon": "node",
+      "label": "Waits",
+      "sub": "highest fee first"
+     },
+     {
+      "icon": "file",
+      "label": "Written",
+      "sub": "onto a page",
+      "args": [
+       "#"
+      ]
+     },
+     {
+      "icon": "coin",
+      "label": "Settled",
+      "sub": "6 pages ≈ 1 hour",
+      "args": [
+       "#58d68d",
+       "✓"
+      ]
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 110.25
+  },
+  {
+   "t": 115.46,
+   "say": "Until it gets written onto a page.",
+   "board": {
+    "kind": "steps",
+    "title": "THE TRIP OF ONE TRANSFER",
+    "items": [
+     {
+      "icon": "phone",
+      "label": "Announced",
+      "sub": "to everyone"
+     },
+     {
+      "icon": "node",
+      "label": "Waits",
+      "sub": "highest fee first"
+     },
+     {
+      "icon": "file",
+      "label": "Written",
+      "sub": "onto a page",
+      "args": [
+       "#"
+      ]
+     },
+     {
+      "icon": "coin",
+      "label": "Settled",
+      "sub": "6 pages ≈ 1 hour",
+      "args": [
+       "#58d68d",
+       "✓"
+      ]
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 115.46
+  },
+  {
+   "t": 117.15,
+   "say": "Every page written on top of it settles it more ",
+   "board": {
+    "kind": "steps",
+    "title": "THE TRIP OF ONE TRANSFER",
+    "items": [
+     {
+      "icon": "phone",
+      "label": "Announced",
+      "sub": "to everyone"
+     },
+     {
+      "icon": "node",
+      "label": "Waits",
+      "sub": "highest fee first"
+     },
+     {
+      "icon": "file",
+      "label": "Written",
+      "sub": "onto a page",
+      "args": [
+       "#"
+      ]
+     },
+     {
+      "icon": "coin",
+      "label": "Settled",
+      "sub": "6 pages ≈ 1 hour",
+      "args": [
+       "#58d68d",
+       "✓"
+      ]
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 117.15
+  },
+  {
+   "t": 123.17,
+   "say": "An hour to confirm one transfer. And the humans ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 127.93,
+   "say": "The whole network handles about seven transfers ",
+   "board": {
+    "kind": "steps",
+    "title": "THE TRIP OF ONE TRANSFER",
+    "items": [
+     {
+      "icon": "phone",
+      "label": "Announced",
+      "sub": "to everyone"
+     },
+     {
+      "icon": "node",
+      "label": "Waits",
+      "sub": "highest fee first"
+     },
+     {
+      "icon": "file",
+      "label": "Written",
+      "sub": "onto a page",
+      "args": [
+       "#"
+      ]
+     },
+     {
+      "icon": "coin",
+      "label": "Settled",
+      "sub": "6 pages ≈ 1 hour",
+      "args": [
+       "#58d68d",
+       "✓"
+      ]
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 117.15,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 135.22,
+   "say": "And when the network gets crowded, the fees catc",
+   "board": {
+    "kind": "steps",
+    "title": "THE TRIP OF ONE TRANSFER",
+    "items": [
+     {
+      "icon": "phone",
+      "label": "Announced",
+      "sub": "to everyone"
+     },
+     {
+      "icon": "node",
+      "label": "Waits",
+      "sub": "highest fee first"
+     },
+     {
+      "icon": "file",
+      "label": "Written",
+      "sub": "onto a page",
+      "args": [
+       "#"
+      ]
+     },
+     {
+      "icon": "coin",
+      "label": "Settled",
+      "sub": "6 pages ≈ 1 hour",
+      "args": [
+       "#58d68d",
+       "✓"
+      ]
+     }
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "bored",
+   "stepT": 117.15
+  },
+  {
+   "t": 142.63,
+   "say": "So for speed, they built a second network on top",
+   "board": {
+    "kind": "steps",
+    "title": "THE TRIP OF ONE TRANSFER",
+    "items": [
+     {
+      "icon": "phone",
+      "label": "Announced",
+      "sub": "to everyone"
+     },
+     {
+      "icon": "node",
+      "label": "Waits",
+      "sub": "highest fee first"
+     },
+     {
+      "icon": "file",
+      "label": "Written",
+      "sub": "onto a page",
+      "args": [
+       "#"
+      ]
+     },
+     {
+      "icon": "coin",
+      "label": "Settled",
+      "sub": "6 pages ≈ 1 hour",
+      "args": [
+       "#58d68d",
+       "✓"
+      ]
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 117.15
+  },
+  {
+   "t": 152.57,
+   "say": "So who writes the new page? And what stops that ",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 4,
+    "tag": "MINING"
+   }
+  },
+  {
+   "t": 155.87,
+   "say": "The solution I found: a contest. For your page t",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 0,
+   "stepT": 155.87,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 162.09,
+   "say": "And there is no way to know in advance, except t",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 1,
+   "stepT": 162.09
+  },
+  {
+   "t": 170.36,
+   "say": "The first computer to find a number that works w",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 2,
+   "stepT": 170.36
+  },
+  {
+   "t": 176.15,
+   "say": "Everyone else checks the answer instantly. The a",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 3,
+   "stepT": 176.15
+  },
+  {
+   "t": 180.42,
+   "say": "This is called mining. No pickaxe. No mine. Ware",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 176.15
+  },
+  {
+   "t": 186.5,
+   "say": "The official name is proof of work. The fingerpr",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 176.15
+  },
+  {
+   "t": 193.99,
+   "say": "And if more machines join and the contest gets e",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 176.15
+  },
+  {
+   "t": 201.34,
+   "say": "At the start, Satoshi mined on an ordinary home ",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 176.15
+  },
+  {
+   "t": 208.17,
+   "say": "The math is simple: a machine whose electricity ",
+   "board": {
+    "kind": "mine",
+    "title": "A RACE EVERY TEN MINUTES",
+    "target": "WANTED: A PRINT STARTING 0000",
+    "triesLabel": "guesses so far:",
+    "nonce": "481,902,773",
+    "reward": "+ NEW BITCOIN",
+    "winner": 2
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 176.15
+  },
+  {
+   "t": 218.52,
+   "say": "Most mining used to be in China, until China ban",
+   "board": {
+    "kind": "bars",
+    "title": "WHERE ARE THE MINES?",
+    "bars": [
+     {
+      "label": "USA",
+      "value": 36,
+      "text": "36%"
+     },
+     {
+      "label": "Russia",
+      "value": 18,
+      "text": "18%",
+      "color": "#35c8ff"
+     },
+     {
+      "label": "China",
+      "value": 12,
+      "text": "12%",
+      "color": "#ff4654"
+     },
+     {
+      "label": "Everyone else",
+      "value": 34,
+      "text": "34%",
+      "color": "#9fb0ff"
+     }
+    ],
+    "note": "China banned it in 2021 · estimates, Oct 2026",
+    "every": 0.4
+   },
+   "step": 0,
+   "stepT": 218.52,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 226.12,
+   "say": "And China itself? Still mining. Quietly. There, ",
+   "board": {
+    "kind": "bars",
+    "title": "WHERE ARE THE MINES?",
+    "bars": [
+     {
+      "label": "USA",
+      "value": 36,
+      "text": "36%"
+     },
+     {
+      "label": "Russia",
+      "value": 18,
+      "text": "18%",
+      "color": "#35c8ff"
+     },
+     {
+      "label": "China",
+      "value": 12,
+      "text": "12%",
+      "color": "#ff4654"
+     },
+     {
+      "label": "Everyone else",
+      "value": 34,
+      "text": "34%",
+      "color": "#9fb0ff"
+     }
+    ],
+    "note": "China banned it in 2021 · estimates, Oct 2026",
+    "every": 0.4
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "sly",
+   "stepT": 218.52
+  },
+  {
+   "t": 230.61,
+   "say": "Machine owners also team up and split the prize.",
+   "board": {
+    "kind": "bars",
+    "title": "WHO WINS THE RACE?",
+    "bars": [
+     {
+      "label": "Team one",
+      "value": 30,
+      "text": "30%",
+      "color": "#ff4fa3"
+     },
+     {
+      "label": "Team two",
+      "value": 19,
+      "text": "19%",
+      "color": "#ff4fa3"
+     },
+     {
+      "label": "Everyone else",
+      "value": 51,
+      "text": "51%",
+      "color": "#9fb0ff"
+     }
+    ],
+    "note": "Two teams: about half the wins",
+    "every": 0.4
+   },
+   "step": 0,
+   "stepT": 230.61,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 235.93,
+   "say": "A network with no boss. But with some very big p",
+   "board": {
+    "kind": "bars",
+    "title": "WHO WINS THE RACE?",
+    "bars": [
+     {
+      "label": "Team one",
+      "value": 30,
+      "text": "30%",
+      "color": "#ff4fa3"
+     },
+     {
+      "label": "Team two",
+      "value": 19,
+      "text": "19%",
+      "color": "#ff4fa3"
+     },
+     {
+      "label": "Everyone else",
+      "value": 51,
+      "text": "51%",
+      "color": "#9fb0ff"
+     }
+    ],
+    "note": "Two teams: about half the wins",
+    "every": 0.4
+   },
+   "step": 0,
+   "host": "left",
+   "emote": "skeptical",
+   "stepT": 230.61
+  },
+  {
+   "t": 240.42,
+   "say": "And tens of thousands of computers do not mine a",
+   "board": {
+    "kind": "network",
+    "title": "EVERYONE HOLDS THE LEDGER",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "sly",
+   "stepT": 15.66,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 247.84,
+   "say": "So the humans guard their money with a lottery t",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 254.03,
+   "say": "And why does this protect the ledger? Because a ",
+   "board": {
+    "kind": "network",
+    "title": "EVERYONE HOLDS THE LEDGER",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "story": {
+    "n": 5,
+    "tag": "WHY IT IS HARD TO STEAL"
+   },
+   "stepT": 254.03,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 261.97,
+   "say": "Which means more machines and more electricity t",
+   "board": {
+    "kind": "network",
+    "title": "EVERYONE HOLDS THE LEDGER",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 254.03
+  },
+  {
+   "t": 270.81,
+   "say": "They call it a fifty-one percent attack. It has ",
+   "board": {
+    "kind": "network",
+    "title": "EVERYONE HOLDS THE LEDGER",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 254.03
+  },
+  {
+   "t": 276.13,
+   "say": "And if two machines win at the same moment? The ",
+   "board": {
+    "kind": "network",
+    "title": "EVERYONE HOLDS THE LEDGER",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 254.03
+  },
+  {
+   "t": 282.44,
+   "say": "The price is paid in electricity. By Cambridge U",
+   "board": {
+    "kind": "bars",
+    "title": "ELECTRICITY PER YEAR",
+    "bars": [
+     {
+      "label": "Bitcoin network",
+      "value": 100,
+      "text": "",
+      "color": "#FFE66D"
+     },
+     {
+      "label": "A mid-sized country",
+      "value": 96,
+      "text": "",
+      "color": "#35c8ff"
+     }
+    ],
+    "note": "Cambridge University estimates",
+    "every": 0.6
+   },
+   "step": 0,
+   "stepT": 282.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 292.05,
+   "say": "A whole country's worth of electricity... so tha",
+   "shot": "close",
+   "emote": "annoyed"
+  },
+  {
+   "t": 298,
+   "say": "Part of that electricity comes from sources that",
+   "board": {
+    "kind": "bars",
+    "title": "ELECTRICITY PER YEAR",
+    "bars": [
+     {
+      "label": "Bitcoin network",
+      "value": 100,
+      "text": "",
+      "color": "#FFE66D"
+     },
+     {
+      "label": "A mid-sized country",
+      "value": 96,
+      "text": "",
+      "color": "#35c8ff"
+     }
+    ],
+    "note": "Cambridge University estimates",
+    "every": 0.6
+   },
+   "step": 0,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 282.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 303.45,
+   "say": "And the machines themselves are replaced every f",
+   "board": {
+    "kind": "bars",
+    "title": "ELECTRICITY PER YEAR",
+    "bars": [
+     {
+      "label": "Bitcoin network",
+      "value": 100,
+      "text": "",
+      "color": "#FFE66D"
+     },
+     {
+      "label": "A mid-sized country",
+      "value": 96,
+      "text": "",
+      "color": "#35c8ff"
+     }
+    ],
+    "note": "Cambridge University estimates",
+    "every": 0.6
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 282.44
+  },
+  {
+   "t": 309.72,
+   "say": "As for the prize: it started at fifty bitcoin pe",
+   "board": {
+    "kind": "bars",
+    "title": "THE REWARD PER PAGE",
+    "bars": [
+     {
+      "label": "2009",
+      "value": 50,
+      "text": "50"
+     },
+     {
+      "label": "2012",
+      "value": 25,
+      "text": "25"
+     },
+     {
+      "label": "2016",
+      "value": 12.5,
+      "text": "12.5"
+     },
+     {
+      "label": "2020",
+      "value": 6.25,
+      "text": "6.25"
+     },
+     {
+      "label": "2024",
+      "value": 3.125,
+      "text": "3.125",
+      "color": "#ff4fa3"
+     }
+    ],
+    "note": "Cut in half about every four years",
+    "every": 0.5
+   },
+   "story": {
+    "n": 6,
+    "tag": "21 MILLION"
+   },
+   "step": 0,
+   "stepT": 309.72,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 315.43,
+   "say": "Fifty. Twenty-five. Twelve and a half. And today",
+   "board": {
+    "kind": "bars",
+    "title": "THE REWARD PER PAGE",
+    "bars": [
+     {
+      "label": "2009",
+      "value": 50,
+      "text": "50"
+     },
+     {
+      "label": "2012",
+      "value": 25,
+      "text": "25"
+     },
+     {
+      "label": "2016",
+      "value": 12.5,
+      "text": "12.5"
+     },
+     {
+      "label": "2020",
+      "value": 6.25,
+      "text": "6.25"
+     },
+     {
+      "label": "2024",
+      "value": 3.125,
+      "text": "3.125",
+      "color": "#ff4fa3"
+     }
+    ],
+    "note": "Cut in half about every four years",
+    "every": 0.5
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 309.72
+  },
+  {
+   "t": 318.81,
+   "say": "The next halving is expected in 2028. The prize ",
+   "board": {
+    "kind": "bars",
+    "title": "THE REWARD PER PAGE",
+    "bars": [
+     {
+      "label": "2009",
+      "value": 50,
+      "text": "50"
+     },
+     {
+      "label": "2012",
+      "value": 25,
+      "text": "25"
+     },
+     {
+      "label": "2016",
+      "value": 12.5,
+      "text": "12.5"
+     },
+     {
+      "label": "2020",
+      "value": 6.25,
+      "text": "6.25"
+     },
+     {
+      "label": "2024",
+      "value": 3.125,
+      "text": "3.125",
+      "color": "#ff4fa3"
+     }
+    ],
+    "note": "Cut in half about every four years",
+    "every": 0.5
+   },
+   "step": 0,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 309.72
+  },
+  {
+   "t": 325.59,
+   "say": "Because of all this, the total has a ceiling: tw",
+   "board": {
+    "kind": "meter",
+    "title": "THE CEILING",
+    "big": "21,000,000",
+    "unit": "bitcoin. Never more.",
+    "value": 0.95,
+    "label": "already mined",
+    "note": "The last one: around 2140"
+   },
+   "step": 0,
+   "stepT": 325.59,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 330.9,
+   "say": "About ninety-five percent of them have already b",
+   "board": {
+    "kind": "meter",
+    "title": "THE CEILING",
+    "big": "21,000,000",
+    "unit": "bitcoin. Never more.",
+    "value": 0.95,
+    "label": "already mined",
+    "note": "The last one: around 2140"
+   },
+   "step": 1,
+   "stepT": 330.9
+  },
+  {
+   "t": 336.18,
+   "say": "Bitcoin number twenty million was mined in March",
+   "board": {
+    "kind": "meter",
+    "title": "THE CEILING",
+    "big": "21,000,000",
+    "unit": "bitcoin. Never more.",
+    "value": 0.95,
+    "label": "already mined",
+    "note": "The last one: around 2140"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 330.9
+  },
+  {
+   "t": 342.09,
+   "say": "And when the prizes run out, the miners will liv",
+   "board": {
+    "kind": "meter",
+    "title": "THE CEILING",
+    "big": "21,000,000",
+    "unit": "bitcoin. Never more.",
+    "value": 0.95,
+    "label": "already mined",
+    "note": "The last one: around 2140"
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "skeptical",
+   "stepT": 330.9
+  },
+  {
+   "t": 349.06,
+   "say": "Each bitcoin can be split into a hundred million",
+   "board": {
+    "kind": "meter",
+    "title": "THE CEILING",
+    "big": "21,000,000",
+    "unit": "bitcoin. Never more.",
+    "value": 0.95,
+    "label": "already mined",
+    "note": "The last one: around 2140"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 330.9
+  },
+  {
+   "t": 354.56,
+   "say": "Money that nobody can print more of. On a planet",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 360.86,
+   "say": "And then I asked the question that matters to an",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 7,
+    "tag": "WHO IS IN CHARGE?"
+   }
+  },
+  {
+   "t": 366.5,
+   "say": "The rules are a program. And every computer hold",
+   "board": {
+    "kind": "fork",
+    "title": "WHO CHANGES THE RULES?",
+    "v1": "rules 1",
+    "v2": "rules 2",
+    "changed": [
+     1,
+     4
+    ],
+    "a": "Bitcoin",
+    "b": "Bitcoin Cash",
+    "year": "2017"
+   },
+   "step": 0,
+   "stepT": 366.5,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 371.07,
+   "say": "Whoever wants to change a rule writes a new vers",
+   "board": {
+    "kind": "fork",
+    "title": "WHO CHANGES THE RULES?",
+    "v1": "rules 1",
+    "v2": "rules 2",
+    "changed": [
+     1,
+     4
+    ],
+    "a": "Bitcoin",
+    "b": "Bitcoin Cash",
+    "year": "2017"
+   },
+   "step": 1,
+   "stepT": 371.07
+  },
+  {
+   "t": 375.2,
+   "say": "And if they disagree? The chain splits in two. T",
+   "board": {
+    "kind": "fork",
+    "title": "WHO CHANGES THE RULES?",
+    "v1": "rules 1",
+    "v2": "rules 2",
+    "changed": [
+     1,
+     4
+    ],
+    "a": "Bitcoin",
+    "b": "Bitcoin Cash",
+    "year": "2017"
+   },
+   "step": 2,
+   "stepT": 375.2
+  },
+  {
+   "t": 380.77,
+   "say": "It has happened. In 2017, after years of fightin",
+   "board": {
+    "kind": "fork",
+    "title": "WHO CHANGES THE RULES?",
+    "v1": "rules 1",
+    "v2": "rules 2",
+    "changed": [
+     1,
+     4
+    ],
+    "a": "Bitcoin",
+    "b": "Bitcoin Cash",
+    "year": "2017"
+   },
+   "step": 3,
+   "stepT": 380.77
+  },
+  {
+   "t": 387.47,
+   "say": "The people running the ledger copies refused. Th",
+   "board": {
+    "kind": "fork",
+    "title": "WHO CHANGES THE RULES?",
+    "v1": "rules 1",
+    "v2": "rules 2",
+    "changed": [
+     1,
+     4
+    ],
+    "a": "Bitcoin",
+    "b": "Bitcoin Cash",
+    "year": "2017"
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 380.77
+  },
+  {
+   "t": 395.39,
+   "say": "Only once did everyone agree quickly. In 2010, a",
+   "board": {
+    "kind": "fork",
+    "title": "WHO CHANGES THE RULES?",
+    "v1": "rules 1",
+    "v2": "rules 2",
+    "changed": [
+     1,
+     4
+    ],
+    "a": "Bitcoin",
+    "b": "Bitcoin Cash",
+    "year": "2017"
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "grin",
+   "stepT": 380.77
+  },
+  {
+   "t": 406.93,
+   "say": "So the ones with the machines and the money coul",
+   "shot": "close",
+   "emote": "smug"
+  },
+  {
+   "t": 412.7,
+   "say": "And the twenty-one million ceiling, can that cha",
+   "board": {
+    "kind": "fork",
+    "title": "WHO CHANGES THE RULES?",
+    "v1": "rules 1",
+    "v2": "rules 2",
+    "changed": [
+     1,
+     4
+    ],
+    "a": "Bitcoin",
+    "b": "Bitcoin Cash",
+    "year": "2017"
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "deadpan",
+   "stepT": 380.77,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 421.04,
+   "say": "Two words from the Human Dictionary. Node: a com",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "Node",
+      "means": "A computer that keeps a copy of the ledger and checks it"
+     },
+     {
+      "word": "Halving",
+      "means": "The day the reward is cut in two. Every four years"
+     }
+    ]
+   },
+   "story": {
+    "n": 8,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "step": 0,
+   "stepT": 421.04,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 427.55,
+   "say": "And halving: the day the prize is cut in two. Ev",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "Node",
+      "means": "A computer that keeps a copy of the ledger and checks it"
+     },
+     {
+      "word": "Halving",
+      "means": "The day the reward is cut in two. Every four years"
+     }
+    ]
+   },
+   "host": "right",
+   "step": 1,
+   "stepT": 427.55
+  },
+  {
+   "t": 434.25,
+   "say": "Summary of the report, sir. One: the pages are t",
+   "meme": {
+    "kind": "list",
+    "title": "REPORT SUMMARY",
+    "items": [
+     "Pages tied by fingerprints: forgery shows",
+     "Mining is a contest that guards the ledger",
+     "Rules change only if everyone agrees"
+    ],
+    "step": 3
+   },
+   "host": "pip",
+   "story": {
+    "n": 9,
+    "tag": "SUMMARY"
+   },
+   "shot": "show",
+   "kind": "meme"
+  },
+  {
+   "t": 447.24,
+   "say": "And the same warning: this is a report, not inve",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 450.44,
+   "say": "Next report: the ledger is public, and everyone ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 459.51,
+   "say": "This has been Earth Report. Agent Peek. End of t",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 463.01,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endcard",
+    "title": "NEXT REPORT",
+    "next": "Your key is your money · Part 3 of 5",
+    "note": "Subscribe so the rest of the file reaches you"
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

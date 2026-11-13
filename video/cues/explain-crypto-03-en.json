@@ -1,0 +1,2067 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-crypto-03-en",
+ "transcript": "../../../video/cues/explain-crypto-03-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.55,
+ "voiceGain": 1.35,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir. Field report number three in the cryptocurr",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.24,
+   "say": "Today's subject: how the humans own this money..",
+   "board": {
+    "kind": "titlecard",
+    "kicker": "EARTH REPORT · FIELD FILE",
+    "title": "YOUR KEY IS YOUR MONEY",
+    "sub": "PART 3 OF 5 · HOW THEY OWN IT, AND LOSE IT"
+   },
+   "step": 0,
+   "stepT": 3.24,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 7.25,
+   "say": "I will report what a key is, what a wallet is, a",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 18,
+   "say": "In the last report we learned the ledger is publ",
+   "board": {
+    "kind": "network",
+    "title": "EVERYONE HOLDS THE LEDGER",
+    "n": 34,
+    "cheat": 11
+   },
+   "step": 2,
+   "stepT": 18,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 22.34,
+   "say": "But there are no names in it. So what proves tha",
+   "shot": "close",
+   "emote": "skeptical"
+  },
+  {
+   "t": 26.14,
+   "say": "Everyone has an address. Like an account number.",
+   "board": {
+    "kind": "keys",
+    "title": "AN ADDRESS, AND A KEY",
+    "addressLabel": "Address: tell anyone",
+    "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "keyLabel": "Private key: tell no one",
+    "payment": "Send Bob 1 BTC",
+    "count": "10",
+    "exp": "77",
+    "countLabel": "possible keys"
+   },
+   "story": {
+    "n": 1,
+    "tag": "THE KEY"
+   },
+   "step": 0,
+   "stepT": 26.14,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 30.42,
+   "say": "And with it comes a private key: a very long sec",
+   "board": {
+    "kind": "keys",
+    "title": "AN ADDRESS, AND A KEY",
+    "addressLabel": "Address: tell anyone",
+    "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "keyLabel": "Private key: tell no one",
+    "payment": "Send Bob 1 BTC",
+    "count": "10",
+    "exp": "77",
+    "countLabel": "possible keys"
+   },
+   "step": 1,
+   "stepT": 30.42
+  },
+  {
+   "t": 35.13,
+   "say": "When you want to send money, the key signs the t",
+   "board": {
+    "kind": "keys",
+    "title": "AN ADDRESS, AND A KEY",
+    "addressLabel": "Address: tell anyone",
+    "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "keyLabel": "Private key: tell no one",
+    "payment": "Send Bob 1 BTC",
+    "count": "10",
+    "exp": "77",
+    "countLabel": "possible keys"
+   },
+   "step": 2,
+   "stepT": 35.13
+  },
+  {
+   "t": 40.9,
+   "say": "Like a stamp that marks every page a little diff",
+   "board": {
+    "kind": "keys",
+    "title": "AN ADDRESS, AND A KEY",
+    "addressLabel": "Address: tell anyone",
+    "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "keyLabel": "Private key: tell no one",
+    "payment": "Send Bob 1 BTC",
+    "count": "10",
+    "exp": "77",
+    "countLabel": "possible keys"
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 35.13
+  },
+  {
+   "t": 46.27,
+   "say": "And the number of possible keys has seventy-seve",
+   "board": {
+    "kind": "keys",
+    "title": "AN ADDRESS, AND A KEY",
+    "addressLabel": "Address: tell anyone",
+    "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "keyLabel": "Private key: tell no one",
+    "payment": "Send Bob 1 BTC",
+    "count": "10",
+    "exp": "77",
+    "countLabel": "possible keys"
+   },
+   "step": 3,
+   "stepT": 46.27
+  },
+  {
+   "t": 54.31,
+   "say": "And because the ledger is public, anyone can loo",
+   "board": {
+    "kind": "keys",
+    "title": "AN ADDRESS, AND A KEY",
+    "addressLabel": "Address: tell anyone",
+    "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "keyLabel": "Private key: tell no one",
+    "payment": "Send Bob 1 BTC",
+    "count": "10",
+    "exp": "77",
+    "countLabel": "possible keys"
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "sly",
+   "stepT": 46.27
+  },
+  {
+   "t": 62.85,
+   "say": "So: no name, no ID card, no signature in ink. Wh",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 68.48,
+   "say": "And the wallet they keep talking about has no mo",
+   "board": {
+    "kind": "keys",
+    "title": "AN ADDRESS, AND A KEY",
+    "addressLabel": "Address: tell anyone",
+    "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+    "keyLabel": "Private key: tell no one",
+    "payment": "Send Bob 1 BTC",
+    "count": "10",
+    "exp": "77",
+    "countLabel": "possible keys"
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "story": {
+    "n": 2,
+    "tag": "THE WALLET"
+   },
+   "stepT": 46.27,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 75.55,
+   "say": "That key is written out as twelve ordinary words",
+   "board": {
+    "kind": "steps",
+    "title": "WHERE DO YOU KEEP THE KEY?",
+    "items": [
+     {
+      "icon": "file",
+      "label": "12 words",
+      "sub": "on paper, in a drawer",
+      "args": [
+       "12"
+      ]
+     },
+     {
+      "icon": "phone",
+      "label": "Hot wallet",
+      "sub": "on your phone"
+     },
+     {
+      "icon": "usb",
+      "label": "Cold wallet",
+      "sub": "never goes online"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 75.55,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 86.23,
+   "say": "There are wallets on the phone. Easy, but connec",
+   "board": {
+    "kind": "steps",
+    "title": "WHERE DO YOU KEEP THE KEY?",
+    "items": [
+     {
+      "icon": "file",
+      "label": "12 words",
+      "sub": "on paper, in a drawer",
+      "args": [
+       "12"
+      ]
+     },
+     {
+      "icon": "phone",
+      "label": "Hot wallet",
+      "sub": "on your phone"
+     },
+     {
+      "icon": "usb",
+      "label": "Cold wallet",
+      "sub": "never goes online"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 86.23
+  },
+  {
+   "t": 88.96,
+   "say": "And wallets on a small device that never goes on",
+   "board": {
+    "kind": "steps",
+    "title": "WHERE DO YOU KEEP THE KEY?",
+    "items": [
+     {
+      "icon": "file",
+      "label": "12 words",
+      "sub": "on paper, in a drawer",
+      "args": [
+       "12"
+      ]
+     },
+     {
+      "icon": "phone",
+      "label": "Hot wallet",
+      "sub": "on your phone"
+     },
+     {
+      "icon": "usb",
+      "label": "Cold wallet",
+      "sub": "never goes online"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 88.96
+  },
+  {
+   "t": 93.28,
+   "say": "So where do humans get this money? Mining is no ",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 3,
+    "tag": "BUYING AND SENDING"
+   }
+  },
+  {
+   "t": 97.14,
+   "say": "Most buy it on an exchange: a company that takes",
+   "board": {
+    "kind": "steps",
+    "title": "WHERE DO THEY GET IT?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "An exchange",
+      "sub": "a company sells it"
+     },
+     {
+      "icon": "person",
+      "label": "Person to person",
+      "sub": "directly"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 97.14,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 106.15,
+   "say": "Or person to person, directly.",
+   "board": {
+    "kind": "steps",
+    "title": "WHERE DO THEY GET IT?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "An exchange",
+      "sub": "a company sells it"
+     },
+     {
+      "icon": "person",
+      "label": "Person to person",
+      "sub": "directly"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 106.15
+  },
+  {
+   "t": 107.85,
+   "say": "And to send it: you copy the other person's addr",
+   "board": {
+    "kind": "steps",
+    "title": "HOW DO YOU SEND IT?",
+    "items": [
+     {
+      "icon": "mailbox",
+      "label": "Copy the address",
+      "sub": "a long code"
+     },
+     {
+      "icon": "coin",
+      "label": "Pay a fee",
+      "sub": "to the miners"
+     },
+     {
+      "icon": "node",
+      "label": "Wait",
+      "sub": "for the page"
+     },
+     {
+      "icon": "noundo",
+      "label": "No undo",
+      "sub": "no complaints"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 107.85,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 112.68,
+   "say": "You pay a fee to whoever writes the page.",
+   "board": {
+    "kind": "steps",
+    "title": "HOW DO YOU SEND IT?",
+    "items": [
+     {
+      "icon": "mailbox",
+      "label": "Copy the address",
+      "sub": "a long code"
+     },
+     {
+      "icon": "coin",
+      "label": "Pay a fee",
+      "sub": "to the miners"
+     },
+     {
+      "icon": "node",
+      "label": "Wait",
+      "sub": "for the page"
+     },
+     {
+      "icon": "noundo",
+      "label": "No undo",
+      "sub": "no complaints"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 112.68
+  },
+  {
+   "t": 114.66,
+   "say": "And you wait for the page to be written.",
+   "board": {
+    "kind": "steps",
+    "title": "HOW DO YOU SEND IT?",
+    "items": [
+     {
+      "icon": "mailbox",
+      "label": "Copy the address",
+      "sub": "a long code"
+     },
+     {
+      "icon": "coin",
+      "label": "Pay a fee",
+      "sub": "to the miners"
+     },
+     {
+      "icon": "node",
+      "label": "Wait",
+      "sub": "for the page"
+     },
+     {
+      "icon": "noundo",
+      "label": "No undo",
+      "sub": "no complaints"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 114.66
+  },
+  {
+   "t": 116.34,
+   "say": "And there is no undo. One wrong character in the",
+   "board": {
+    "kind": "steps",
+    "title": "HOW DO YOU SEND IT?",
+    "items": [
+     {
+      "icon": "mailbox",
+      "label": "Copy the address",
+      "sub": "a long code"
+     },
+     {
+      "icon": "coin",
+      "label": "Pay a fee",
+      "sub": "to the miners"
+     },
+     {
+      "icon": "node",
+      "label": "Wait",
+      "sub": "for the page"
+     },
+     {
+      "icon": "noundo",
+      "label": "No undo",
+      "sub": "no complaints"
+     }
+    ]
+   },
+   "host": "right",
+   "step": 3,
+   "stepT": 116.34
+  },
+  {
+   "t": 122.57,
+   "say": "There is even malicious software whose only job ",
+   "board": {
+    "kind": "steps",
+    "title": "HOW DO YOU SEND IT?",
+    "items": [
+     {
+      "icon": "mailbox",
+      "label": "Copy the address",
+      "sub": "a long code"
+     },
+     {
+      "icon": "coin",
+      "label": "Pay a fee",
+      "sub": "to the miners"
+     },
+     {
+      "icon": "node",
+      "label": "Wait",
+      "sub": "for the page"
+     },
+     {
+      "icon": "noundo",
+      "label": "No undo",
+      "sub": "no complaints"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "worried",
+   "stepT": 116.34
+  },
+  {
+   "t": 131.25,
+   "say": "In 2023, a big company sent a transfer of two th",
+   "board": {
+    "kind": "story",
+    "title": "ONE MISTAKE · 2023",
+    "icon": "coin",
+    "name": "one transfer",
+    "lines": [
+     "Amount: $2,000",
+     "Fee: $500,000",
+     "Returned. Out of courtesy."
+    ]
+   },
+   "step": 0,
+   "stepT": 131.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 135.04,
+   "say": "And paid a fee of half a million dollars on it. ",
+   "board": {
+    "kind": "story",
+    "title": "ONE MISTAKE · 2023",
+    "icon": "coin",
+    "name": "one transfer",
+    "lines": [
+     "Amount: $2,000",
+     "Fee: $500,000",
+     "Returned. Out of courtesy."
+    ]
+   },
+   "step": 1,
+   "stepT": 135.04
+  },
+  {
+   "t": 138.57,
+   "say": "The team that won that page gave it back. Out of",
+   "board": {
+    "kind": "story",
+    "title": "ONE MISTAKE · 2023",
+    "icon": "coin",
+    "name": "one transfer",
+    "lines": [
+     "Amount: $2,000",
+     "Fee: $500,000",
+     "Returned. Out of courtesy."
+    ]
+   },
+   "host": "left",
+   "step": 2,
+   "stepT": 138.57
+  },
+  {
+   "t": 143.09,
+   "say": "The humans are convinced this money is anonymous",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug",
+   "story": {
+    "n": 4,
+    "tag": "THE ANONYMITY MYTH"
+   }
+  },
+  {
+   "t": 151.7,
+   "say": "The ledger is public. Every transfer is recorded",
+   "board": {
+    "kind": "trace",
+    "title": "THE LEDGER NEVER FORGETS",
+    "name": "your name",
+    "owner": "you",
+    "id": "ID"
+   },
+   "step": 0,
+   "stepT": 151.7,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 156.38,
+   "say": "And the moment one address is linked to your nam",
+   "board": {
+    "kind": "trace",
+    "title": "THE LEDGER NEVER FORGETS",
+    "name": "your name",
+    "owner": "you",
+    "id": "ID"
+   },
+   "step": 1,
+   "stepT": 156.38
+  },
+  {
+   "t": 160.74,
+   "say": "everything you did before lights up. Retroactive",
+   "board": {
+    "kind": "trace",
+    "title": "THE LEDGER NEVER FORGETS",
+    "name": "your name",
+    "owner": "you",
+    "id": "ID"
+   },
+   "step": 2,
+   "stepT": 160.74
+  },
+  {
+   "t": 164.02,
+   "say": "In 2011, a secret online market opened, called S",
+   "board": {
+    "kind": "story",
+    "title": "SILK ROAD",
+    "icon": "ghost",
+    "name": "a secret market",
+    "size": 56,
+    "lines": [
+     "2011: illegal goods, paid in bitcoin",
+     "2013: founder caught in a library",
+     "Life sentence. Pardoned in 2025"
+    ]
+   },
+   "step": 0,
+   "stepT": 164.02,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 169.54,
+   "say": "Its founder thought he was hidden. He was arrest",
+   "board": {
+    "kind": "story",
+    "title": "SILK ROAD",
+    "icon": "ghost",
+    "name": "a secret market",
+    "size": 56,
+    "lines": [
+     "2011: illegal goods, paid in bitcoin",
+     "2013: founder caught in a library",
+     "Life sentence. Pardoned in 2025"
+    ]
+   },
+   "step": 1,
+   "stepT": 169.54
+  },
+  {
+   "t": 174.23,
+   "say": "He was sentenced to life in prison. And released",
+   "board": {
+    "kind": "story",
+    "title": "SILK ROAD",
+    "icon": "ghost",
+    "name": "a secret market",
+    "size": 56,
+    "lines": [
+     "2011: illegal goods, paid in bitcoin",
+     "2013: founder caught in a library",
+     "Life sentence. Pardoned in 2025"
+    ]
+   },
+   "step": 2,
+   "stepT": 174.23
+  },
+  {
+   "t": 178.59,
+   "say": "Another man stole fifty thousand bitcoin from th",
+   "board": {
+    "kind": "story",
+    "title": "THE THIEF AND THE POPCORN",
+    "icon": "popcorn",
+    "name": "a popcorn tin",
+    "size": 56,
+    "lines": [
+     "Stole 50,000 bitcoin",
+     "Police came 9 years later",
+     "The coins were in the tin"
+    ]
+   },
+   "step": 0,
+   "stepT": 178.59,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 181.9,
+   "say": "The ledger remembered. Nine years later, the pol",
+   "board": {
+    "kind": "story",
+    "title": "THE THIEF AND THE POPCORN",
+    "icon": "popcorn",
+    "name": "a popcorn tin",
+    "size": 56,
+    "lines": [
+     "Stole 50,000 bitcoin",
+     "Police came 9 years later",
+     "The coins were in the tin"
+    ]
+   },
+   "step": 1,
+   "stepT": 181.9
+  },
+  {
+   "t": 185.3,
+   "say": "And they found the money... in a popcorn tin.",
+   "board": {
+    "kind": "story",
+    "title": "THE THIEF AND THE POPCORN",
+    "icon": "popcorn",
+    "name": "a popcorn tin",
+    "size": 56,
+    "lines": [
+     "Stole 50,000 bitcoin",
+     "Police came 9 years later",
+     "The coins were in the tin"
+    ]
+   },
+   "step": 2,
+   "stepT": 185.3
+  },
+  {
+   "t": 187.99,
+   "say": "Billions of dollars. In a popcorn tin. In a bath",
+   "shot": "close",
+   "emote": "grin"
+  },
+  {
+   "t": 193.74,
+   "say": "Same story with an exchange called Bitfinex: a h",
+   "board": {
+    "kind": "story",
+    "title": "THE THIEF AND THE POPCORN",
+    "icon": "popcorn",
+    "name": "a popcorn tin",
+    "size": 56,
+    "lines": [
+     "Stole 50,000 bitcoin",
+     "Police came 9 years later",
+     "The coins were in the tin"
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "bored",
+   "stepT": 185.3,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 205.65,
+   "say": "Cash gets forgotten. This ledger does not. The w",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 212.63,
+   "say": "Back to the exchanges. Most humans buy their coi",
+   "board": {
+    "kind": "flow",
+    "title": "THE BANK IS BACK",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "exchange",
+      "label": "The exchange",
+      "big": true
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "label": "the bitcoin"
+     },
+     {
+      "move": [
+       1,
+       0
+      ],
+      "token": "file",
+      "label": "a receipt"
+     },
+     {
+      "badges": [
+       "HACKS",
+       "BANKRUPTCY",
+       "FREEZES"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "story": {
+    "n": 5,
+    "tag": "THE BANK IS BACK"
+   },
+   "step": 0,
+   "stepT": 212.63,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 216.6,
+   "say": "So the bitcoin now sits with the company.",
+   "board": {
+    "kind": "flow",
+    "title": "THE BANK IS BACK",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "exchange",
+      "label": "The exchange",
+      "big": true
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "label": "the bitcoin"
+     },
+     {
+      "move": [
+       1,
+       0
+      ],
+      "token": "file",
+      "label": "a receipt"
+     },
+     {
+      "badges": [
+       "HACKS",
+       "BANKRUPTCY",
+       "FREEZES"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 216.6
+  },
+  {
+   "t": 218.38,
+   "say": "And the human holds a receipt. A line in the com",
+   "board": {
+    "kind": "flow",
+    "title": "THE BANK IS BACK",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "exchange",
+      "label": "The exchange",
+      "big": true
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "label": "the bitcoin"
+     },
+     {
+      "move": [
+       1,
+       0
+      ],
+      "token": "file",
+      "label": "a receipt"
+     },
+     {
+      "badges": [
+       "HACKS",
+       "BANKRUPTCY",
+       "FREEZES"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 218.38
+  },
+  {
+   "t": 221.24,
+   "say": "Remember the trusted man with the gold, from the",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 225.78,
+   "say": "And the same problems came back with him: hacks,",
+   "board": {
+    "kind": "flow",
+    "title": "THE BANK IS BACK",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "Alice"
+     },
+     {
+      "icon": "exchange",
+      "label": "The exchange",
+      "big": true
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "label": "the bitcoin"
+     },
+     {
+      "move": [
+       1,
+       0
+      ],
+      "token": "file",
+      "label": "a receipt"
+     },
+     {
+      "badges": [
+       "HACKS",
+       "BANKRUPTCY",
+       "FREEZES"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 225.78,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 229.55,
+   "say": "The first big exchange was called Mt. Gox. It st",
+   "board": {
+    "kind": "story",
+    "title": "MT. GOX · TOKYO",
+    "icon": "cards",
+    "name": "started with game cards",
+    "size": 56,
+    "lines": [
+     "70% of all bitcoin trading",
+     "2014: 850,000 bitcoin gone",
+     "Repayment deadline: 2027"
+    ]
+   },
+   "step": 0,
+   "stepT": 229.55,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 237.28,
+   "say": "In 2014, eight hundred and fifty thousand bitcoi",
+   "board": {
+    "kind": "story",
+    "title": "MT. GOX · TOKYO",
+    "icon": "cards",
+    "name": "started with game cards",
+    "size": 56,
+    "lines": [
+     "70% of all bitcoin trading",
+     "2014: 850,000 bitcoin gone",
+     "Repayment deadline: 2027"
+    ]
+   },
+   "step": 1,
+   "stepT": 237.28
+  },
+  {
+   "t": 240.87,
+   "say": "Its customers are still being repaid to this day",
+   "board": {
+    "kind": "story",
+    "title": "MT. GOX · TOKYO",
+    "icon": "cards",
+    "name": "started with game cards",
+    "size": 56,
+    "lines": [
+     "70% of all bitcoin trading",
+     "2014: 850,000 bitcoin gone",
+     "Repayment deadline: 2027"
+    ]
+   },
+   "step": 2,
+   "stepT": 240.87
+  },
+  {
+   "t": 245.58,
+   "say": "Thirteen years, sir. Even their banks are faster",
+   "board": {
+    "kind": "story",
+    "title": "MT. GOX · TOKYO",
+    "icon": "cards",
+    "name": "started with game cards",
+    "size": 56,
+    "lines": [
+     "70% of all bitcoin trading",
+     "2014: 850,000 bitcoin gone",
+     "Repayment deadline: 2027"
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "deadpan",
+   "stepT": 240.87
+  },
+  {
+   "t": 248.74,
+   "say": "And in 2022: FTX. An exchange valued at thirty-t",
+   "board": {
+    "kind": "story",
+    "title": "FTX · 2022",
+    "icon": "exchange",
+    "name": "$32 billion",
+    "size": 56,
+    "lines": [
+     "Its name on a stadium",
+     "Customers $8 billion short",
+     "Founder: 25 years in prison"
+    ]
+   },
+   "step": 0,
+   "stepT": 248.74,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 254.59,
+   "say": "Its founder had been spending customers' money. ",
+   "board": {
+    "kind": "story",
+    "title": "FTX · 2022",
+    "icon": "exchange",
+    "name": "$32 billion",
+    "size": 56,
+    "lines": [
+     "Its name on a stadium",
+     "Customers $8 billion short",
+     "Founder: 25 years in prison"
+    ]
+   },
+   "step": 1,
+   "stepT": 254.59
+  },
+  {
+   "t": 258.34,
+   "say": "He got twenty-five years in prison.",
+   "board": {
+    "kind": "story",
+    "title": "FTX · 2022",
+    "icon": "exchange",
+    "name": "$32 billion",
+    "size": 56,
+    "lines": [
+     "Its name on a stadium",
+     "Customers $8 billion short",
+     "Founder: 25 years in prison"
+    ]
+   },
+   "step": 2,
+   "stepT": 258.34
+  },
+  {
+   "t": 259.75,
+   "say": "And the customers? They got their money back, ye",
+   "board": {
+    "kind": "story",
+    "title": "FTX · 2022",
+    "icon": "exchange",
+    "name": "$32 billion",
+    "size": 56,
+    "lines": [
+     "Its name on a stadium",
+     "Customers $8 billion short",
+     "Founder: 25 years in prison"
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "bored",
+   "stepT": 258.34
+  },
+  {
+   "t": 266.48,
+   "say": "And an exchange in Canada, whose founder died su",
+   "board": {
+    "kind": "story",
+    "title": "AN EXCHANGE IN CANADA · 2018",
+    "icon": "key",
+    "name": "one key holder",
+    "size": 54,
+    "lines": [
+     "The founder died suddenly",
+     "Only he had the keys",
+     "The money was already gone"
+    ]
+   },
+   "step": 0,
+   "stepT": 266.48,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 269.94,
+   "say": "He was the only one who had the keys.",
+   "board": {
+    "kind": "story",
+    "title": "AN EXCHANGE IN CANADA · 2018",
+    "icon": "key",
+    "name": "one key holder",
+    "size": 54,
+    "lines": [
+     "The founder died suddenly",
+     "Only he had the keys",
+     "The money was already gone"
+    ]
+   },
+   "step": 1,
+   "stepT": 269.94
+  },
+  {
+   "t": 271.66,
+   "say": "And after the investigation, it turned out he ha",
+   "board": {
+    "kind": "story",
+    "title": "AN EXCHANGE IN CANADA · 2018",
+    "icon": "key",
+    "name": "one key holder",
+    "size": 54,
+    "lines": [
+     "The founder died suddenly",
+     "Only he had the keys",
+     "The money was already gone"
+    ]
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 271.66
+  },
+  {
+   "t": 278.14,
+   "say": "And the heists keep getting bigger. The exchange",
+   "board": {
+    "kind": "bars",
+    "title": "BIGGEST HEISTS · BILLIONS OF $",
+    "bars": [
+     {
+      "label": "Mt. Gox",
+      "value": 0.45,
+      "text": "0.45",
+      "color": "#9fb0ff"
+     },
+     {
+      "label": "Bybit",
+      "value": 1.5,
+      "text": "1.5",
+      "color": "#35c8ff"
+     },
+     {
+      "label": "Binance",
+      "value": 6.3,
+      "text": "6.3",
+      "color": "#ff4654"
+     }
+    ],
+    "note": "October 2026: $6 billion in 20 minutes",
+    "every": 0.5
+   },
+   "step": 0,
+   "stepT": 278.14,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 289.6,
+   "say": "The thief never got up from his chair. American ",
+   "board": {
+    "kind": "bars",
+    "title": "BIGGEST HEISTS · BILLIONS OF $",
+    "bars": [
+     {
+      "label": "Mt. Gox",
+      "value": 0.45,
+      "text": "0.45",
+      "color": "#9fb0ff"
+     },
+     {
+      "label": "Bybit",
+      "value": 1.5,
+      "text": "1.5",
+      "color": "#35c8ff"
+     },
+     {
+      "label": "Binance",
+      "value": 6.3,
+      "text": "6.3",
+      "color": "#ff4654"
+     }
+    ],
+    "note": "October 2026: $6 billion in 20 minutes",
+    "every": 0.5
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "serious",
+   "stepT": 278.14
+  },
+  {
+   "t": 296.36,
+   "say": "Which is why the humans have a saying: not your ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 299.71,
+   "say": "So you hold your own key? Excellent. But there i",
+   "shot": "host",
+   "emote": "worried",
+   "gesture": "shrug",
+   "story": {
+    "n": 6,
+    "tag": "THE ONES WHO LOST THE KEY"
+   }
+  },
+  {
+   "t": 306.01,
+   "say": "A man named James Howells threw out an old hard ",
+   "board": {
+    "kind": "story",
+    "title": "JAMES HOWELLS · WALES",
+    "icon": "drive",
+    "name": "a hard drive",
+    "size": 56,
+    "lines": [
+     "Thrown out in 2013",
+     "Key to ≈ 8,000 bitcoin",
+     "12 years trying to dig",
+     "2025: gave up"
+    ]
+   },
+   "step": 0,
+   "stepT": 306.01,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 309.75,
+   "say": "On it was the key to about eight thousand bitcoi",
+   "board": {
+    "kind": "story",
+    "title": "JAMES HOWELLS · WALES",
+    "icon": "drive",
+    "name": "a hard drive",
+    "size": 56,
+    "lines": [
+     "Thrown out in 2013",
+     "Key to ≈ 8,000 bitcoin",
+     "12 years trying to dig",
+     "2025: gave up"
+    ]
+   },
+   "step": 1,
+   "stepT": 309.75
+  },
+  {
+   "t": 312.42,
+   "say": "He spent twelve years trying to dig through the ",
+   "board": {
+    "kind": "story",
+    "title": "JAMES HOWELLS · WALES",
+    "icon": "drive",
+    "name": "a hard drive",
+    "size": 56,
+    "lines": [
+     "Thrown out in 2013",
+     "Key to ≈ 8,000 bitcoin",
+     "12 years trying to dig",
+     "2025: gave up"
+    ]
+   },
+   "step": 2,
+   "stepT": 312.42
+  },
+  {
+   "t": 318.76,
+   "say": "And in 2025... he gave up.",
+   "board": {
+    "kind": "story",
+    "title": "JAMES HOWELLS · WALES",
+    "icon": "drive",
+    "name": "a hard drive",
+    "size": 56,
+    "lines": [
+     "Thrown out in 2013",
+     "Key to ≈ 8,000 bitcoin",
+     "12 years trying to dig",
+     "2025: gave up"
+    ]
+   },
+   "step": 3,
+   "stepT": 318.76
+  },
+  {
+   "t": 320.66,
+   "say": "Hundreds of millions of dollars. Under garbage b",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 326.23,
+   "say": "A programmer named Stefan Thomas has more than s",
+   "board": {
+    "kind": "story",
+    "title": "STEFAN THOMAS · PROGRAMMER",
+    "icon": "usb",
+    "name": "an encrypted drive",
+    "size": 56,
+    "lines": [
+     "Holds 7,002 bitcoin",
+     "Forgot the password",
+     "10 tries. Used 8."
+    ]
+   },
+   "step": 0,
+   "stepT": 326.23,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 330.81,
+   "say": "And he forgot the password.",
+   "board": {
+    "kind": "story",
+    "title": "STEFAN THOMAS · PROGRAMMER",
+    "icon": "usb",
+    "name": "an encrypted drive",
+    "size": 56,
+    "lines": [
+     "Holds 7,002 bitcoin",
+     "Forgot the password",
+     "10 tries. Used 8."
+    ]
+   },
+   "step": 1,
+   "stepT": 330.81
+  },
+  {
+   "t": 331.94,
+   "say": "The drive gives him ten attempts, then wipes its",
+   "board": {
+    "kind": "story",
+    "title": "STEFAN THOMAS · PROGRAMMER",
+    "icon": "usb",
+    "name": "an encrypted drive",
+    "size": 56,
+    "lines": [
+     "Holds 7,002 bitcoin",
+     "Forgot the password",
+     "10 tries. Used 8."
+    ]
+   },
+   "step": 2,
+   "stepT": 331.94
+  },
+  {
+   "t": 335.61,
+   "say": "Two left. I am following this file personally.",
+   "shot": "close",
+   "emote": "grin"
+  },
+  {
+   "t": 338.08,
+   "say": "Estimates say three to four million bitcoin have",
+   "board": {
+    "kind": "meter",
+    "title": "GONE FOREVER",
+    "big": "3 TO 4 MILLION",
+    "unit": "bitcoin · estimates",
+    "value": 0.17,
+    "label": "of everything mined",
+    "note": "Nobody stole them. Owners forgot.",
+    "color": "#ff4654"
+   },
+   "step": 0,
+   "stepT": 338.08,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 341.48,
+   "say": "Nobody stole them. The owners just... forgot.",
+   "board": {
+    "kind": "meter",
+    "title": "GONE FOREVER",
+    "big": "3 TO 4 MILLION",
+    "unit": "bitcoin · estimates",
+    "value": 0.17,
+    "label": "of everything mined",
+    "note": "Nobody stole them. Owners forgot.",
+    "color": "#ff4654"
+   },
+   "step": 1,
+   "stepT": 341.48
+  },
+  {
+   "t": 343.94,
+   "say": "And if the key holder dies without telling anyon",
+   "board": {
+    "kind": "meter",
+    "title": "GONE FOREVER",
+    "big": "3 TO 4 MILLION",
+    "unit": "bitcoin · estimates",
+    "value": 0.17,
+    "label": "of everything mined",
+    "note": "Nobody stole them. Owners forgot.",
+    "color": "#ff4654"
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 341.48
+  },
+  {
+   "t": 349.31,
+   "say": "Some humans have been kidnapped for their keys. ",
+   "board": {
+    "kind": "meter",
+    "title": "GONE FOREVER",
+    "big": "3 TO 4 MILLION",
+    "unit": "bitcoin · estimates",
+    "value": 0.17,
+    "label": "of everything mined",
+    "note": "Nobody stole them. Owners forgot.",
+    "color": "#ff4654"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 341.48
+  },
+  {
+   "t": 354.18,
+   "say": "And even a cold wallet is no guarantee. In 2026,",
+   "board": {
+    "kind": "story",
+    "title": "EVEN COLD WALLETS · 2026",
+    "icon": "usb",
+    "name": "a cold wallet",
+    "size": 56,
+    "lines": [
+     "A flaw in making keys",
+     "The keys could be guessed",
+     "Over $100 million stolen"
+    ]
+   },
+   "step": 0,
+   "stepT": 354.18,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 359.08,
+   "say": "The keys it made could be guessed.",
+   "board": {
+    "kind": "story",
+    "title": "EVEN COLD WALLETS · 2026",
+    "icon": "usb",
+    "name": "a cold wallet",
+    "size": 56,
+    "lines": [
+     "A flaw in making keys",
+     "The keys could be guessed",
+     "Over $100 million stolen"
+    ]
+   },
+   "step": 1,
+   "stepT": 359.08
+  },
+  {
+   "t": 360.63,
+   "say": "More than a hundred million dollars was stolen f",
+   "board": {
+    "kind": "story",
+    "title": "EVEN COLD WALLETS · 2026",
+    "icon": "usb",
+    "name": "a cold wallet",
+    "size": 56,
+    "lines": [
+     "A flaw in making keys",
+     "The keys could be guessed",
+     "Over $100 million stolen"
+    ]
+   },
+   "step": 2,
+   "stepT": 360.63
+  },
+  {
+   "t": 365.32,
+   "say": "So there are two choices. Leave it on an exchang",
+   "board": {
+    "kind": "rows",
+    "title": "WHERE DO YOU KEEP IT?",
+    "items": [
+     {
+      "text": "On an exchange: easy",
+      "sub": "but if it falls, you fall with it",
+      "mark": "half"
+     },
+     {
+      "text": "With you: nobody can freeze it",
+      "sub": "but if you forget, nobody reminds you",
+      "mark": "half"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 365.32,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 370.48,
+   "say": "Or hold it yourself: nobody can freeze it. But i",
+   "board": {
+    "kind": "rows",
+    "title": "WHERE DO YOU KEEP IT?",
+    "items": [
+     {
+      "text": "On an exchange: easy",
+      "sub": "but if it falls, you fall with it",
+      "mark": "half"
+     },
+     {
+      "text": "With you: nobody can freeze it",
+      "sub": "but if you forget, nobody reminds you",
+      "mark": "half"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 370.48
+  },
+  {
+   "t": 375.02,
+   "say": "With a company, it gets stolen. With you, it get",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 385.12,
+   "say": "And there is a third way to lose your money here",
+   "shot": "host",
+   "emote": "serious",
+   "story": {
+    "n": 7,
+    "tag": "SCAMS"
+   },
+   "music": 0.5,
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 393.77,
+   "say": "The best known: the pyramid. Invest with us, and",
+   "board": {
+    "kind": "steps",
+    "title": "FOUR WAYS TO BE SCAMMED",
+    "items": [
+     {
+      "icon": "pyramid",
+      "label": "Pyramid",
+      "sub": "sure profit"
+     },
+     {
+      "icon": "heart",
+      "label": "Fake romance",
+      "sub": "trust, then a site"
+     },
+     {
+      "icon": "headset",
+      "label": "Fake support",
+      "sub": "asks for 12 words"
+     },
+     {
+      "icon": "mask",
+      "label": "Fake celebrity",
+      "sub": "send 1, get 2"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 0,
+   "stepT": 393.77,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 400.72,
+   "say": "A coin called OneCoin raised about four billion ",
+   "board": {
+    "kind": "steps",
+    "title": "FOUR WAYS TO BE SCAMMED",
+    "items": [
+     {
+      "icon": "pyramid",
+      "label": "Pyramid",
+      "sub": "sure profit"
+     },
+     {
+      "icon": "heart",
+      "label": "Fake romance",
+      "sub": "trust, then a site"
+     },
+     {
+      "icon": "headset",
+      "label": "Fake support",
+      "sub": "asks for 12 words"
+     },
+     {
+      "icon": "mask",
+      "label": "Fake celebrity",
+      "sub": "send 1, get 2"
+     }
+    ]
+   },
+   "step": 0,
+   "host": "left",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 393.77
+  },
+  {
+   "t": 409.09,
+   "say": "The second: fake romance. Someone charming gets ",
+   "board": {
+    "kind": "steps",
+    "title": "FOUR WAYS TO BE SCAMMED",
+    "items": [
+     {
+      "icon": "pyramid",
+      "label": "Pyramid",
+      "sub": "sure profit"
+     },
+     {
+      "icon": "heart",
+      "label": "Fake romance",
+      "sub": "trust, then a site"
+     },
+     {
+      "icon": "headset",
+      "label": "Fake support",
+      "sub": "asks for 12 words"
+     },
+     {
+      "icon": "mask",
+      "label": "Fake celebrity",
+      "sub": "send 1, get 2"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 1,
+   "stepT": 409.09
+  },
+  {
+   "t": 416.75,
+   "say": "The third: fake tech support. Someone contacts y",
+   "board": {
+    "kind": "steps",
+    "title": "FOUR WAYS TO BE SCAMMED",
+    "items": [
+     {
+      "icon": "pyramid",
+      "label": "Pyramid",
+      "sub": "sure profit"
+     },
+     {
+      "icon": "heart",
+      "label": "Fake romance",
+      "sub": "trust, then a site"
+     },
+     {
+      "icon": "headset",
+      "label": "Fake support",
+      "sub": "asks for 12 words"
+     },
+     {
+      "icon": "mask",
+      "label": "Fake celebrity",
+      "sub": "send 1, get 2"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 2,
+   "stepT": 416.75
+  },
+  {
+   "t": 422,
+   "say": "And the fourth: a video of a celebrity saying, s",
+   "board": {
+    "kind": "steps",
+    "title": "FOUR WAYS TO BE SCAMMED",
+    "items": [
+     {
+      "icon": "pyramid",
+      "label": "Pyramid",
+      "sub": "sure profit"
+     },
+     {
+      "icon": "heart",
+      "label": "Fake romance",
+      "sub": "trust, then a site"
+     },
+     {
+      "icon": "headset",
+      "label": "Fake support",
+      "sub": "asks for 12 words"
+     },
+     {
+      "icon": "mask",
+      "label": "Fake celebrity",
+      "sub": "send 1, get 2"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 3,
+   "stepT": 422
+  },
+  {
+   "t": 430.12,
+   "say": "And if you have already been scammed? A second s",
+   "board": {
+    "kind": "steps",
+    "title": "FOUR WAYS TO BE SCAMMED",
+    "items": [
+     {
+      "icon": "pyramid",
+      "label": "Pyramid",
+      "sub": "sure profit"
+     },
+     {
+      "icon": "heart",
+      "label": "Fake romance",
+      "sub": "trust, then a site"
+     },
+     {
+      "icon": "headset",
+      "label": "Fake support",
+      "sub": "asks for 12 words"
+     },
+     {
+      "icon": "mask",
+      "label": "Fake celebrity",
+      "sub": "send 1, get 2"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 422
+  },
+  {
+   "t": 439.55,
+   "say": "Four red flags. One: guaranteed profit. Nothing ",
+   "board": {
+    "kind": "rows",
+    "title": "RED FLAGS",
+    "items": [
+     {
+      "text": "Guaranteed profit",
+      "mark": "flag"
+     },
+     {
+      "text": "Hurry: pay right now",
+      "mark": "flag"
+     },
+     {
+      "text": "Anyone asking for your key or 12 words",
+      "mark": "flag"
+     },
+     {
+      "text": "Pay a fee to withdraw your money",
+      "mark": "flag"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 0,
+   "stepT": 439.55,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 443.85,
+   "say": "Two: urgency. You have to pay right now.",
+   "board": {
+    "kind": "rows",
+    "title": "RED FLAGS",
+    "items": [
+     {
+      "text": "Guaranteed profit",
+      "mark": "flag"
+     },
+     {
+      "text": "Hurry: pay right now",
+      "mark": "flag"
+     },
+     {
+      "text": "Anyone asking for your key or 12 words",
+      "mark": "flag"
+     },
+     {
+      "text": "Pay a fee to withdraw your money",
+      "mark": "flag"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 1,
+   "stepT": 443.85
+  },
+  {
+   "t": 446.42,
+   "say": "Three: anyone asking for your key or your twelve",
+   "board": {
+    "kind": "rows",
+    "title": "RED FLAGS",
+    "items": [
+     {
+      "text": "Guaranteed profit",
+      "mark": "flag"
+     },
+     {
+      "text": "Hurry: pay right now",
+      "mark": "flag"
+     },
+     {
+      "text": "Anyone asking for your key or 12 words",
+      "mark": "flag"
+     },
+     {
+      "text": "Pay a fee to withdraw your money",
+      "mark": "flag"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 2,
+   "stepT": 446.42
+  },
+  {
+   "t": 450.12,
+   "say": "Four: you cannot withdraw your money until you p",
+   "board": {
+    "kind": "rows",
+    "title": "RED FLAGS",
+    "items": [
+     {
+      "text": "Guaranteed profit",
+      "mark": "flag"
+     },
+     {
+      "text": "Hurry: pay right now",
+      "mark": "flag"
+     },
+     {
+      "text": "Anyone asking for your key or 12 words",
+      "mark": "flag"
+     },
+     {
+      "text": "Pay a fee to withdraw your money",
+      "mark": "flag"
+     }
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 3,
+   "stepT": 450.12
+  },
+  {
+   "t": 453.48,
+   "say": "And remember the rule: here, there is no undo. W",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 457.24,
+   "say": "Two words from the Human Dictionary. Seed phrase",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "Seed phrase",
+      "means": "The 12 words. Whoever knows them owns your money"
+     },
+     {
+      "word": "Custody",
+      "means": "Who holds the key: you, or a company?"
+     }
+    ]
+   },
+   "story": {
+    "n": 8,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "music": 1,
+   "step": 0,
+   "stepT": 457.24,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 462.92,
+   "say": "And custody: who holds the key. You... or a comp",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "Seed phrase",
+      "means": "The 12 words. Whoever knows them owns your money"
+     },
+     {
+      "word": "Custody",
+      "means": "Who holds the key: you, or a company?"
+     }
+    ]
+   },
+   "host": "right",
+   "step": 1,
+   "stepT": 462.92
+  },
+  {
+   "t": 468.13,
+   "say": "Summary of the report, sir. One: the key is the ",
+   "meme": {
+    "kind": "list",
+    "title": "REPORT SUMMARY",
+    "items": [
+     "The key is the ownership",
+     "The ledger is not anonymous. It never forgets",
+     "With a company: stolen. With you: lost"
+    ],
+    "step": 2.6
+   },
+   "host": "pip",
+   "story": {
+    "n": 9,
+    "tag": "SUMMARY"
+   },
+   "shot": "show",
+   "kind": "meme"
+  },
+  {
+   "t": 478.25,
+   "say": "And the same warning: this is a report, not inve",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 481.85,
+   "say": "Next report: why is this thing worth anything at",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 487.26,
+   "say": "This has been Earth Report. Agent Peek. End of t",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 490.67,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endcard",
+    "title": "NEXT REPORT",
+    "next": "Why is it worth anything? · Part 4 of 5",
+    "note": "Subscribe so the rest of the file reaches you"
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
