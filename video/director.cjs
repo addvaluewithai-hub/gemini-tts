@@ -40,7 +40,9 @@ function sentences(words) {
 }
 
 async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
-  const CALM = !!process.env.HEAD_CALM, JAWK = CALM ? Number(process.env.HEAD_JAW ?? 0) : 1, MCALM = !!process.env.MOUTH_CALM;
+  // calm host by default (approved 13 Nov 2026); HEAD_CALM=0 / MOUTH_CALM=0 bring back the old motion
+  const on = (v) => v !== "0" && v !== "false";
+  const CALM = on(process.env.HEAD_CALM), JAWK = CALM ? Number(process.env.HEAD_JAW ?? 0.35) : 1, MCALM = on(process.env.MOUTH_CALM);
   const { EMOTES, GESTURES } = await import("./characters/acting.js");
   const { MOUTHS } = await import("./characters/peek3d.js");
   const R = rng(cues.seed ?? 17), pick = (list, avoid) => { const c = list.filter((x) => x !== avoid); const l = c.length ? c : list; return l[Math.floor(R() * l.length)]; };
@@ -109,7 +111,7 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
 
     // mouth: speech shapes nudged by the feeling, the feeling's own mouth when silent
     const sp = lip.shapeAt(t + 0.035); let mg, mr;
-    // MOUTH_CALM=1: the mouth eases between shapes instead of snapping, closes fully only for M B P / F V,
+    // calm mouth: the mouth eases between shapes instead of snapping, closes fully only for M B P / F V,
     // and keeps its width, so the jaw does the talking
     if (sp && t >= cues.from && MCALM) {
       const shut = sp.viseme === "M" || sp.viseme === "F";
@@ -131,7 +133,7 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
     const armL = out("L") ? { x: arm.L.x, y: arm.L.y, front: !!gest.armL?.front && arm.L.y < 760 } : null, armR = out("R") ? { x: arm.R.x, y: arm.R.y, front: !!gest.armR?.front && arm.R.y < 760 } : null;
 
     // body: sway, lean into each sentence, a hop on happy beats, a nod on stressed words
-    // HEAD_CALM=1: nods and hops are halved, and the head rides the jaw only HEAD_JAW (0..1, default 0) as much
+    // calm head: nods and hops are halved, and the head rides the jaw only HEAD_JAW (0..1, default 0.35) as much
     lean += ((cur ? cur.side * 1.6 : 0) - lean) * 0.06;
     const sway = lean + 0.9 * Math.sin(2 * Math.PI * 0.17 * tv);
     let bounce = 2.5 * JAWK * mouth.jaw, squash = 1;
