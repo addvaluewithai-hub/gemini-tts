@@ -51,9 +51,11 @@ window.render = async (s) => {
   const marks = (s.marks || []).map((m) => m.circle ? `<ellipse cx="${m.circle[0]}" cy="${m.circle[1]}" rx="${m.circle[2]}" ry="${m.circle[3] ?? m.circle[2]}" fill="none" stroke="#fff" stroke-width="22"/><ellipse cx="${m.circle[0]}" cy="${m.circle[1]}" rx="${m.circle[2]}" ry="${m.circle[3] ?? m.circle[2]}" fill="none" stroke="#ff2a3a" stroke-width="12"/>`
     : (([a, b, c, d]) => { const ang = Math.atan2(d - b, c - a), hx = (k) => c - 46 * Math.cos(ang + k), hy = (k) => d - 46 * Math.sin(ang + k), p = `M${a} ${b}L${c} ${d}M${hx(0.5)} ${hy(0.5)}L${c} ${d}L${hx(-0.5)} ${hy(-0.5)}`;
       return `<path d="${p}" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="${p}" fill="none" stroke="#ff2a3a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>`; })(m.arrow)).join("");
+  // tagStyle: { bg, color, hi, size } a bigger series label in this thumbnail's own colour; [[...]] in the tag takes `hi`
+  const ts = s.tagStyle || {}, tagCss = ts.size ? `font-family:Anton;font-size:${ts.size}px;padding:.16em .45em .08em;border-width:${Math.round(ts.size / 12)}px;border-color:${ts.color || "#05060d"};background:${ts.bg || "#FFE66D"};color:${ts.color || "#05060d"};transform:rotate(${ts.rot ?? 0}deg)` : "";
   el.innerHTML = svg(scene.back, scene.defs) + layer("mid") + (scene.front ? svg(scene.front) : "") + layer("top") + (marks ? `<svg viewBox="0 0 1280 720">${marks}</svg>` : "")
     + (s.prices || []).map(price).join("") + (s.words || []).map((w) => words(w, s.rtl)).join("")
-    + (s.tag ? `<div class="tag" dir="${s.rtl ? "rtl" : "ltr"}" style="left:auto;right:${s.rtl ? 26 : "auto"}px;${s.rtl ? "" : "left:26px;"}top:24px">${esc(s.tag)}</div>` : "");
+    + (s.tag ? `<div class="tag" dir="${s.rtl ? "rtl" : "ltr"}" style="left:auto;right:${s.rtl ? 26 : "auto"}px;${s.rtl ? "" : "left:26px;"}top:24px;${tagCss}">${esc(s.tag).replace(/\[\[/g, `<i style="font-style:normal;color:${ts.hi || "#fff"}">`).replace(/\]\]/g, "</i>")}</div>` : "");
   await Promise.all(['100px "Anton"', '40px "Elite"'].flatMap((f) => [document.fonts.load(f), document.fonts.load(f, "عربي")])); await document.fonts.ready;
 };
 window.__ready = true;
