@@ -159,7 +159,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     scrim += (((seg.fact || seg.meme) && !insert && !short ? 1 : 0) - scrim) * 0.3;
     // explain: the picture carries the lesson, so the host is on screen only where a beat asks for him (host: pip | right | left)
     pip += (((explain ? seg.host === "pip" : solo) && insert && !vert ? 1 : 0) - pip) * 0.3;
-    room += (((short || vert) && (seg.fact || seg.meme || (vert && insert)) ? 1 : 0) - room) * 0.26;
+    room += (((short || vert) && (seg.fact || seg.meme || (vert && insert)) ? 1 : 0) - room) * (vert && i === 0 ? 1 : 0.26);       // a clip that opens on a board starts laid out for it
     const tight = !insert && (seg.shot === "close" || seg.shot === "low");
     lb += ((tight && !short && !vert ? 62 : 0) - lb) * 0.22;
     if (seg.story !== lastStory) { lastStory = seg.story; storyT = t; }
