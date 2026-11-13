@@ -42,6 +42,106 @@ const cloud = (x, y, s, c = "#fff", op = 1) => `<g transform="translate(${x} ${y
 const bubbles = (seed, n, x0, x1, y0, y1, rmax = 14, op = 0.5) => { const R = rng(seed); return Array.from({ length: n }, () => { const r = 3 + R() * rmax, x = x0 + R() * (x1 - x0), y = y0 + R() * (y1 - y0);
   return `<circle cx="${f(x)}" cy="${f(y)}" r="${f(r)}" fill="none" stroke="#bff0ff" stroke-width="2.5" opacity="${op}"/><circle cx="${f(x - r * 0.35)}" cy="${f(y - r * 0.35)}" r="${f(r * 0.22)}" fill="#fff" opacity="${op}"/>`; }).join(""); };
 
+// ---- backdrops: one world per file, so every episode of a file looks like the same place --------------
+// The crypto file lives in a city at night lit by gold; the network file in blue, among signals.
+const stars = (R, n, h) => Array.from({ length: n }, () => `<circle cx="${f(R() * 1280)}" cy="${f(R() * h)}" r="${f(R() * 1.9 + 0.4)}" fill="#fff" opacity="${f(R() * 0.7 + 0.25)}"/>`).join("");
+const skyline = (R, base, hmin, hmax, fill, lit, win, x0 = -20, x1 = 1300) => { let b = "", w = "";
+  for (let x = x0; x < x1;) { const bw = 50 + R() * 90, h = hmin + R() * (hmax - hmin); b += `<rect x="${f(x)}" y="${f(base - h)}" width="${f(bw)}" height="${f(h + 200)}" fill="${fill}"/>`;
+    if (R() < 0.25) b += `<rect x="${f(x + bw / 2 - 2)}" y="${f(base - h - 34)}" width="4" height="34" fill="${fill}"/><circle cx="${f(x + bw / 2)}" cy="${f(base - h - 36)}" r="4" fill="#ff4654"/>`;
+    for (let wy = base - h + 12; wy < base - 8; wy += 20) for (let wx = x + 8; wx < x + bw - 12; wx += 16) if (R() < lit) w += `<rect x="${f(wx)}" y="${f(wy)}" width="7" height="10" fill="${win}" opacity="${f(0.6 + R() * 0.4)}"/>`;
+    x += bw + 3; }
+  return b + w; };
+const lattice = (x, base, h, w, c) => { let s = `<path d="M${x - w} ${base}L${x - 8} ${base - h}H${x + 8}L${x + w} ${base}" fill="none" stroke="${c}" stroke-width="6"/>`;
+  for (let i = 0; i < 8; i++) { const y0 = base - (h * i) / 8, y1 = base - (h * (i + 1)) / 8, a = w - ((w - 8) * i) / 8, b = w - ((w - 8) * (i + 1)) / 8; s += `<path d="M${x - a} ${y0}L${x + b} ${y1}M${x + a} ${y0}L${x - b} ${y1}" stroke="${c}" stroke-width="3"/>`; }
+  return s + `<path d="M${x - w * 0.9} ${base - h * 0.78}H${x + w * 0.9}M${x - w * 0.7} ${base - h * 0.92}H${x + w * 0.7}" stroke="${c}" stroke-width="6"/>`; };
+const fish = (x, y, s, c, flip) => `<path transform="translate(${f(x)} ${f(y)}) scale(${flip ? -s : s} ${s})" d="M-20 0C-10 -12 14 -12 22 0C14 12 -10 12 -20 0ZM-20 0L-34 -10V10Z" fill="${c}"/>`;
+
+const BACKDROPS = {
+  cryptoNight: (b = {}) => {
+    const R = rng(b.seed || 3), G = b.groundY ?? 600, M = b.moon || { x: 640, y: 150 };
+    const defs = lin("cnSky", ["#05041a", [0.55, "#1c1442"], "#3e2858"]) + rad("cnMoon", ["#fffbe0", [0.7, "#ffe9a8"], "#e8c66a"], 0.4, 0.4, 0.7) + lin("cnGround", ["#1a1430", "#08060f"]);
+    let g = "";
+    const lit = b.ground === "blackout" ? 0.03 : 0.3;
+    if (b.ground === "street") { const S = b.shop || { x: 260 };
+      g = `<rect y="${G}" width="1280" height="200" fill="url(#cnGround)"/><rect y="${G}" width="1280" height="14" fill="#3a2e5a"/>${Array.from({ length: 12 }, (_, i) => `<rect x="${i * 120 + 20}" y="${G + 70}" width="60" height="8" rx="4" fill="#ffd23f" opacity=".35"/>`).join("")}
+        <g transform="translate(${S.x} ${G})"><rect x="-200" y="-360" width="400" height="360" fill="#5a2430"/>${Array.from({ length: 14 }, (_, j) => Array.from({ length: 8 }, (_, i) => `<rect x="${-196 + i * 50 + (j % 2) * 25}" y="${-356 + j * 26}" width="46" height="22" fill="#6e2c3a" opacity=".7"/>`).join("")).join("")}
+          <rect x="-160" y="-180" width="220" height="160" rx="6" fill="#ffcf6a"/><rect x="-160" y="-180" width="220" height="160" rx="6" fill="#ff9a2a" opacity=".35"/><path d="M-160 -100H60M-50 -180V-20" stroke="#5a2430" stroke-width="8"/>
+          <rect x="90" y="-170" width="80" height="170" rx="4" fill="#2a1018"/><circle cx="104" cy="-86" r="5" fill="#ffd23f"/>
+          ${Array.from({ length: 8 }, (_, i) => `<path d="M${-200 + i * 50} -240h50v40q-25 26 -50 0z" fill="${i % 2 ? "#fff" : "#e8203c"}"/>`).join("")}<rect x="-210" y="-250" width="420" height="16" rx="6" fill="#b3131f"/>
+          <g transform="translate(0 -305)"><circle r="44" fill="#ffd257" stroke="#d8913f" stroke-width="10" filter="url(#glow)"/>${[[-14, -12], [16, -6], [-4, 16]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="8" fill="#c3362a"/>`).join("")}</g>
+          <rect x="-200" y="0" width="400" height="10" fill="#ffcf6a" opacity=".25" filter="url(#b12)"/></g>
+        <g transform="translate(${b.lamp ?? 980} ${G})"><rect x="-5" y="-300" width="10" height="300" fill="#2a2440"/><path d="M0 -300q30 0 40 20" fill="none" stroke="#2a2440" stroke-width="8"/><circle cx="40" cy="-272" r="12" fill="#fff3b0"/><path d="M40 -272L-30 0H110Z" fill="#fff3b0" opacity=".08"/><circle cx="40" cy="-272" r="60" fill="#ffd23f" opacity=".25" filter="url(#b30)"/></g>`; }
+    if (b.ground === "blackout") {
+      const towers = [[180, 330], [1100, 300]];
+      g = `<rect y="${G}" width="1280" height="200" fill="url(#cnGround)"/>${towers.map(([x, h]) => lattice(x, G, h, 60, "#4a4266")).join("")}
+        ${[0.78, 0.92].map((k) => `<path d="M${towers[0][0] - 60} ${G - towers[0][1] * k}Q640 ${G - 120 * k} ${towers[1][0] - 60} ${G - towers[1][1] * k}M${towers[0][0] + 60} ${G - towers[0][1] * k}Q640 ${G - 100 * k} ${towers[1][0] + 60} ${G - towers[1][1] * k}" fill="none" stroke="#6a628a" stroke-width="3"/>`).join("")}
+        ${[[420, 0.5], [860, 0.6]].map(([x, s]) => `<path transform="translate(${x} ${G - 240}) scale(${s})" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#fff36b" filter="url(#glow)"/>`).join("")}`; }
+    if (b.ground === "trash") {
+      const hy = (x) => G - 90 + Math.pow((x - 640) / 640, 2) * 140 - 30 * Math.sin(x / 120); let t = "";
+      for (let i = 0; i < 200; i++) { const x = R() * 1300 - 10, y = hy(x) + Math.pow(R(), 1.3) * (740 - hy(x)), s = 0.7 + (y - 450) / 300, k = R(), c = ["#1d2a1d", "#2a2440", "#14181f", "#2c2a3a", "#1b2b3a"][Math.floor(R() * 5)];
+        t += `<g transform="translate(${f(x)} ${f(y)}) scale(${f(s)}) rotate(${f(R() * 50 - 25)})">${k < 0.65 ? `<path d="M-44 14C-52 -22 -24 -40 -4 -34L-10 -46L6 -40L14 -50L16 -34C44 -30 54 0 44 18C22 32 -30 32 -44 14Z" fill="${c}"/><path d="M-26 -10C-14 -22 4 -22 14 -16" fill="none" stroke="#ffd23f" stroke-width="4" opacity=".18"/>` : k < 0.8 ? `<path d="M-30 -26H30V22H-30Z" fill="#6a5434"/><path d="M-30 -26L-18 -38H40L30 -26Z" fill="#8a6a44"/>` : k < 0.9 ? `<rect x="-8" y="-30" width="16" height="44" rx="6" fill="#3a6a5a"/>` : `<ellipse rx="30" ry="12" fill="none" stroke="#05040a" stroke-width="11"/>`}</g>`; }
+      g = `<path d="M-10 740V${hy(0)}${Array.from({ length: 33 }, (_, i) => `L${i * 40} ${f(hy(i * 40))}`).join("")}L1290 740Z" fill="#14101f"/>${t}
+        ${[[300, 230, 1.2], [380, 200, 0.8], [760, 250, 1]].map(([x, y, s]) => `<path transform="translate(${x} ${y}) scale(${s})" d="M-30 0Q-15 -16 0 0Q15 -16 30 0" fill="none" stroke="#cfc6ff" stroke-width="5" stroke-linecap="round" opacity=".6"/>`).join("")}`; }
+    if (b.ground === "graves") {
+      const stone = (x, y, s, r, k) => `<g transform="translate(${f(x)} ${f(y)}) scale(${f(s)}) rotate(${f(r)})"><path d="M-46 0V-90A46 46 0 0 1 46 -90V0Z" fill="#5a557a"/><path d="M-46 0V-90A46 46 0 0 1 -20 -131" fill="none" stroke="#9a94c0" stroke-width="5" opacity=".5"/>${k ? `<path d="M0 -112V-52M-20 -92H20" stroke="#2c2846" stroke-width="9" stroke-linecap="round"/>` : `<circle cy="-82" r="24" fill="none" stroke="#2c2846" stroke-width="7"/>`}</g>`;
+      let rows = ""; [[G - 150, 0.4, 16], [G - 110, 0.52, 13], [G - 60, 0.7, 10], [G + 10, 0.9, 8]].forEach(([y, s, n]) => { for (let i = 0; i < n; i++) rows += stone((i + 0.5) * (1280 / n) + (R() - 0.5) * 50, y + (R() - 0.5) * 14, s, (R() - 0.5) * 16, R() < 0.5 ? 1 : 0); });
+      const tree = (x, s) => `<g transform="translate(${x} ${G - 120}) scale(${s})" stroke="#0c0818" stroke-linecap="round" fill="none"><path d="M0 0V-260" stroke-width="22"/><path d="M0 -150L-80 -230M-80 -230L-120 -240M-80 -230L-90 -290M0 -200L70 -280M70 -280L120 -290M70 -280L60 -330M0 -250L-30 -320" stroke-width="10"/></g>`;
+      g = `<path d="M-10 ${G - 160}Q300 ${G - 200} 640 ${G - 170}T1290 ${G - 170}V740H-10Z" fill="url(#cnGround)"/>${tree(120, 1)}${tree(1180, 0.8)}${rows}
+        ${[G - 120, G - 20, G + 80].map((y, i) => `<ellipse cx="640" cy="${y}" rx="900" ry="40" fill="#b9a8ff" opacity="${0.16 + i * 0.05}" filter="url(#b30)"/>`).join("")}`; }
+    const bokeh = Array.from({ length: 16 }, () => `<circle cx="${f(R() * 1280)}" cy="${f(R() * G)}" r="${f(8 + R() * 22)}" fill="#ffd23f" opacity="${f(0.08 + R() * 0.14)}" filter="url(#b4)"/>`).join("");
+    const back = `<rect width="1280" height="720" fill="url(#cnSky)"/>${stars(R, 110, G - 100)}
+      <circle cx="${M.x}" cy="${M.y}" r="150" fill="#ffe9a8" opacity=".18" filter="url(#b30)"/><circle cx="${M.x}" cy="${M.y}" r="64" fill="url(#cnMoon)"/><circle cx="${M.x - 18}" cy="${M.y - 10}" r="10" fill="#e8c66a" opacity=".6"/><circle cx="${M.x + 22}" cy="${M.y + 18}" r="13" fill="#e8c66a" opacity=".5"/>
+      ${bokeh}<g opacity=".75">${skyline(R, G, 140, 300, "#150f30", lit * 0.6, "#ffd23f")}</g>${skyline(R, G, 60, 190, "#0d0a20", lit, "#ffcf6a")}${g}`;
+    return { defs, back };
+  },
+
+  netCity: (b = {}) => {
+    const R = rng(b.seed || 5), G = b.groundY ?? 640;
+    const defs = lin("ncSky", ["#061a3e", [0.5, "#0d4d8f"], "#2aa0d8"]);
+    const hex = (cx, cy, r) => `<path d="${Array.from({ length: 6 }, (_, i) => `${i ? "L" : "M"}${f(cx + r * Math.cos((i * Math.PI) / 3))} ${f(cy + r * Math.sin((i * Math.PI) / 3))}`).join("")}Z" fill="none" stroke="#7ff6ff" stroke-width="2"/>`;
+    let cells = ""; for (let j = 0; j < 9; j++) for (let i = 0; i < 18; i++) cells += hex(i * 90 + (j % 2) * 45, j * 78, 52);
+    const mast = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})">${lattice(0, 0, 160, 26, "#0a2246")}<rect x="-22" y="-176" width="12" height="40" fill="#0a2246"/><rect x="10" y="-176" width="12" height="40" fill="#0a2246"/><circle cy="-170" r="6" fill="#ff4654"/>
+      ${[40, 80, 120].map((r, i) => `<path d="M${-r} ${-170 - r * 0.2}A${r} ${r} 0 0 1 ${r} ${-170 - r * 0.2}" fill="none" stroke="#7ff6ff" stroke-width="${6 - i * 1.5}" opacity="${0.75 - i * 0.2}" transform="translate(0 ${r * 0.25})"/>`).join("")}</g>`;
+    const back = `<rect width="1280" height="720" fill="url(#ncSky)"/><g opacity=".09">${cells}</g>${stars(R, 40, 200)}
+      ${cloud(160, 140, 0.9, "#bfe8ff", 0.25)}${cloud(980, 110, 1.1, "#bfe8ff", 0.2)}
+      <g opacity=".8">${skyline(R, G, 160, 330, "#0b2a55", 0.18, "#7ff6ff")}</g>${skyline(R, G, 70, 210, "#061733", 0.25, "#bff6ff")}
+      ${(b.masts || [[140, 470, 0.9], [820, 440, 0.8], [1180, 500, 1]]).map(([x, y, s]) => mast(x, y, s)).join("")}
+      <rect y="${G}" width="1280" height="200" fill="#04102a"/>`;
+    return { defs, back };
+  },
+
+  netSea: (b = {}) => {
+    const R = rng(b.seed || 9);
+    const defs = lin("nsSea", ["#0f8fc8", [0.45, "#08467a"], "#021028"]) + lin("nsSand", ["#2c5a6e", "#102a3a"]);
+    const shafts = Array.from({ length: 8 }, (_, i) => { const x = 40 + i * 170 + R() * 50; return `<path d="M${f(x)} -20H${f(x + 50)}L${f(x + 240)} 720H${f(x + 110)}Z" fill="#bff6ff" opacity="${f(0.05 + R() * 0.06)}"/>`; }).join("");
+    const school = (cx, cy, n, c, flip) => Array.from({ length: n }, () => fish(cx + (R() - 0.5) * 220, cy + (R() - 0.5) * 90, 0.7 + R() * 0.5, c, flip)).join("");
+    const weed = (x, h, c) => `<path d="M${x} 720Q${x - 30} ${720 - h * 0.5} ${x + 10} ${720 - h}" fill="none" stroke="${c}" stroke-width="12" stroke-linecap="round"/><path d="M${x + 16} 720Q${x + 40} ${720 - h * 0.4} ${x + 20} ${720 - h * 0.8}" fill="none" stroke="${c}" stroke-width="9" stroke-linecap="round"/>`;
+    const rock = (x, y, s) => `<path transform="translate(${x} ${y}) scale(${s})" d="M-80 0L-60 -50L-10 -70L50 -50L80 0Z" fill="#163448"/>`;
+    const back = `<rect width="1280" height="720" fill="url(#nsSea)"/>${shafts}
+      <path d="M-10 560Q200 520 420 560T900 550T1290 540V720H-10Z" fill="#0a2236" opacity=".8"/>
+      <path d="M-10 560Q300 545 640 570T1290 555" fill="none" stroke="#7ff6ff" stroke-width="5" stroke-dasharray="20 30" opacity=".5"/>
+      ${school(1000, 160, 9, "#ffb347", true)}${school(240, 260, 7, "#7ff6ff", false)}${school(560, 120, 6, "#ff8ad8", true)}
+      <path d="M-10 640Q260 600 520 640T1000 630T1290 620V720H-10Z" fill="url(#nsSand)"/>${rock(160, 650, 1.2)}${rock(1120, 640, 1)}${rock(700, 690, 0.8)}
+      ${weed(60, 170, "#1f8a6a")}${weed(1220, 200, "#1f8a6a")}${weed(900, 120, "#2aa07a")}${weed(330, 140, "#2aa07a")}
+      ${[[480, 690], [980, 680]].map(([x, y]) => `<g transform="translate(${x} ${y})"><circle r="16" fill="#ff7a5a"/><circle cx="20" cy="6" r="12" fill="#ff9a6a"/><circle cx="-16" cy="8" r="10" fill="#ff6a8a"/></g>`).join("")}
+      ${bubbles(b.seed || 9, 30, 0, 1280, 40, 640, 14, 0.45)}`;
+    return { defs, back };
+  },
+
+  netSpace: (b = {}) => {
+    const R = rng(b.seed || 13), E = b.earth || { x: 640, y: 1220, r: 860 };
+    const defs = rad("nsEarth", ["#2c7bd8", [0.7, "#123a7c"], "#081a40"], 0.45, 0.25, 0.8) + lin("nsSpace", ["#01020c", [0.6, "#0a1640"], "#1a2a6a"]);
+    const lights = Array.from({ length: 160 }, () => { const a = -Math.PI / 2 + (R() - 0.5) * 1.6, d = E.r * (0.6 + R() * 0.38); return `<circle cx="${f(E.x + Math.cos(a) * d)}" cy="${f(E.y + Math.sin(a) * d)}" r="${f(1.5 + R() * 2.5)}" fill="#ffd27a" opacity="${f(0.5 + R() * 0.5)}"/>`; }).join("");
+    const arcs = (b.arcs || [[140, 520, 560, 470], [560, 470, 1100, 520], [300, 600, 900, 580]]).map(([x1, y1, x2, y2]) => `<path d="M${x1} ${y1}Q${(x1 + x2) / 2} ${Math.min(y1, y2) - 260} ${x2} ${y2}" fill="none" stroke="#7ff6ff" stroke-width="5" stroke-dasharray="2 14" stroke-linecap="round" filter="url(#glow)"/><circle cx="${x1}" cy="${y1}" r="8" fill="#7ff6ff"/><circle cx="${x2}" cy="${y2}" r="8" fill="#7ff6ff"/>`).join("");
+    const sat = (x, y, r) => `<g transform="translate(${x} ${y}) rotate(${r})"><rect x="-14" y="-10" width="28" height="20" fill="#c9cee6"/><rect x="-56" y="-8" width="38" height="16" fill="#2a6ad8" stroke="#c9cee6" stroke-width="2"/><rect x="18" y="-8" width="38" height="16" fill="#2a6ad8" stroke="#c9cee6" stroke-width="2"/></g>`;
+    const back = `<rect width="1280" height="720" fill="url(#nsSpace)"/>${stars(R, 180, 520)}${sat(1100, 200, -20)}${sat(220, 160, 15)}
+      <circle cx="${E.x}" cy="${E.y}" r="${E.r + 40}" fill="#7fd4ff" opacity=".35" filter="url(#b30)"/><circle cx="${E.x}" cy="${E.y}" r="${E.r}" fill="url(#nsEarth)"/>
+      <path d="M${E.x - 520} ${E.y - 560}q80 -50 180 -20t140 -40q60 20 40 70t-150 40q-120 10 -210 -50z M${E.x + 60} ${E.y - 700}q90 -40 200 0t120 70q-70 40 -180 20t-140 -90z M${E.x + 300} ${E.y - 560}q60 -10 120 30t20 60q-80 0 -140 -90z" fill="#1d5a3a" opacity=".85"/>
+      ${lights}${arcs}`;
+    return { defs, back };
+  },
+};
+
 const DOG = `<g transform="scale(.66) translate(0 6)"><path d="M-70 -60L-92 -104L-40 -84ZM70 -60L92 -104L40 -84Z" fill="#a8641c"/><ellipse cx="0" cy="-10" rx="88" ry="80" fill="#e2a95a"/><ellipse cx="0" cy="26" rx="46" ry="38" fill="#fbe7c4"/><circle cx="-32" cy="-28" r="12" fill="#05060d"/><circle cx="32" cy="-28" r="12" fill="#05060d"/><circle cx="-28" cy="-32" r="4" fill="#fff"/><circle cx="36" cy="-32" r="4" fill="#fff"/><ellipse cx="0" cy="8" rx="15" ry="10" fill="#05060d"/><path d="M-22 32Q0 56 22 32" fill="#c0392b" stroke="#05060d" stroke-width="6" stroke-linecap="round"/><path d="M-12 50Q0 72 12 50" fill="#ff6b8a"/></g>`;
 
 export const SCENES = {
@@ -129,15 +229,16 @@ export const SCENES = {
     const v = o.points || [0.3, 2.2, 0.9, 3.3, 1.7, 4.3, 2.6, 5.0, 3.3, 5.7, -1.4];
     const xs = o.xs || [-20, 70, 150, 230, 310, 390, 470, 550, 630, 720, 1150], Y = (q) => (o.base ?? 720) - q * (o.scale ?? 68);
     const P = v.map((q, i) => [xs[i], Y(q)]), S = sampleSmooth(P, 30);
-    const defs = FILTERS + lin("sky4", ["#2a4cff", [0.38, "#8b4dff"], [0.7, "#ff4fa3"], "#ffad5a"]) + lin("rail", ["#ffffff", "#c9cee6"]);
+    const defs = FILTERS + lin("sky4", ["#2a4cff", [0.38, "#8b4dff"], [0.7, "#ff4fa3"], "#ffad5a"]) + lin("rail", ["#ffffff", "#c9cee6"]) + (o.backdrop ? BACKDROPS[o.backdrop](o.bd || {}).defs : "");
     let ties = "", posts = "";
     S.forEach((p, i) => { if (i % 3) return; const q = S[Math.min(S.length - 1, i + 1)], a = Math.atan2(q[1] - p[1], q[0] - p[0]) * 180 / Math.PI;
       ties += `<rect x="-5" y="-14" width="10" height="28" transform="translate(${f(p[0])} ${f(p[1] + 6)}) rotate(${f(a)})" fill="#7a2a5a"/>`; });
     S.forEach((p, i) => { if (i % 10 || p[1] > 700) return; posts += `<path d="M${f(p[0])} ${f(p[1] + 14)}V740" stroke="#4a1747" stroke-width="9"/>`;
       if (i % 20 === 0) posts += `<path d="M${f(p[0] - 30)} 740L${f(p[0])} ${f(p[1] + 30)}L${f(p[0] + 30)} 740" fill="none" stroke="#4a1747" stroke-width="5" opacity=".8"/>`; });
     const d = smooth(P), top = P[9];
-    const back = `<rect width="1280" height="720" fill="url(#sky4)"/><circle cx="1060" cy="520" r="150" fill="#ffe08a" opacity=".85"/><circle cx="1060" cy="520" r="230" fill="#ffd36a" opacity=".3" filter="url(#b30)"/>
-      ${cloud(180, 110, 1.1, "#fff", 0.5)}${cloud(560, 70, 0.8, "#fff", 0.35)}${cloud(1180, 300, 0.9, "#ffd9f0", 0.45)}
+    const BD = o.backdrop ? BACKDROPS[o.backdrop](o.bd || {}) : null;
+    const back = `${BD ? BD.back : `<rect width="1280" height="720" fill="url(#sky4)"/><circle cx="1060" cy="520" r="150" fill="#ffe08a" opacity=".85"/><circle cx="1060" cy="520" r="230" fill="#ffd36a" opacity=".3" filter="url(#b30)"/>
+      ${cloud(180, 110, 1.1, "#fff", 0.5)}${cloud(560, 70, 0.8, "#fff", 0.35)}${cloud(1180, 300, 0.9, "#ffd9f0", 0.45)}`}
       ${posts}<path d="${d}" fill="none" stroke="#2a0f2e" stroke-width="30" stroke-linecap="round" opacity=".35" transform="translate(0 10)"/>${ties}
       <path d="${d}" fill="none" stroke="#ff2e88" stroke-width="12" stroke-linecap="round" transform="translate(0 -6)"/><path d="${d}" fill="none" stroke="url(#rail)" stroke-width="9" stroke-linecap="round" transform="translate(0 10)"/>
       <path d="M1000 330l40 70M1040 300l30 50" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".7"/>`;
@@ -402,6 +503,8 @@ export const SCENES = {
       + lin("flame", ["#ff2e2e", [0.4, "#ff7a1a"], [0.75, "#ffe066"], "#fff"], 1, 0) + lin("hull", ["#ffffff", [0.6, "#d9dfee"], "#8f96b8"], 0, 1) + lin("chrome", ["#ffffff", [0.4, "#c9cee6"], [0.6, "#7c839e"], "#e6e9f5"], 1, 0)
       + lin("scr6", ["#ffb347", "#ff6a3d"]) + lin("frond", ["#3fae6a", "#1d6b3a"], 1, 1) + lin("pole", ["#c9cee6", "#7c839e", "#c9cee6"], 1, 0) + lin("marble", ["#f4f1ea", "#c9c4b4"], 1, 1);
     const ITEMS = {
+      // the coin with a dog on it, dancing
+      dogCoin: () => `${coin(0, 0, 110, -10)}${DOG}<path d="M-150 -60l-36 -18M-140 0l-42 -2M150 -60l36 -18M142 0l42 -2" stroke="#fff6b0" stroke-width="9" stroke-linecap="round"/>`,
       // one giant coin
       bigCoin: () => `<circle r="300" fill="#ffd23f" opacity=".3" filter="url(#b30)"/>${coin(0, 0, 230, -8)}`,
       // a pickaxe held at the end of its handle (the origin); the head is 330 up
@@ -500,10 +603,11 @@ export const SCENES = {
           <circle cx="150" cy="-62" r="17" fill="#05060d"/><circle cx="145" cy="-67" r="5" fill="#fff"/><path d="M124 -88L180 -74" stroke="#3d526b" stroke-width="8" stroke-linecap="round"/></g>
         <g transform="translate(-20 170)">${[[-90, -80], [100, -90], [-60, 80], [80, 90], [-130, 10], [140, 0]].map(([x, y]) => `<path d="M0 0L${x} ${y}" stroke="#7ff6ff" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>`).join("")}</g>`,
     };
-    const back = `<rect width="1280" height="720" fill="url(#soloBg)"/>${o.rays ? rays(A.x, A.y, 18, "#fff", o.rays) : ""}${o.bubbles ? bubbles(9, 24, 0, 1280, 0, 720, 16, 0.4) : ""}
+    const BD = o.backdrop ? BACKDROPS[o.backdrop](o.bd || {}) : null;
+    const back = `${BD ? BD.back : `<rect width="1280" height="720" fill="url(#soloBg)"/>`}${o.rays ? rays(A.x, A.y, 18, "#fff", o.rays) : ""}${o.bubbles ? bubbles(9, 24, 0, 1280, 0, 720, 16, 0.4) : ""}
       ${o.item ? `<g transform="translate(${A.x} ${A.y}) scale(${sc}) rotate(${o.rot || 0})">${ITEMS[o.item]()}</g>` : ""}`;
     // over: { item, at, s, rot } or a list of them, drawn over the host (the tin he pops out of, sparks around him)
     const front = [].concat(o.over || []).map((O) => `<g transform="translate(${O.at.x} ${O.at.y}) scale(${O.s || 1}) rotate(${O.rot || 0})">${ITEMS[O.item]()}</g>`).join("");
-    return { defs, back, front };
+    return { defs: defs + (BD ? BD.defs : ""), back, front };
   },
 };

@@ -8,29 +8,35 @@
   "scene": "solo",
   "tag": "ملف [[الشبكة]] · 1/3",
   "tagStyle": {
-   "size": 50,
+   "size": 54,
    "rot": -2,
-   "bg": "#ffb347",
+   "bg": "#7ff6ff",
    "color": "#05060d",
    "hi": "#05060d"
   },
   "opts": {
+   "backdrop": "netCity",
+   "bd": {
+    "masts": [
+     [
+      860,
+      560,
+      0.8
+     ],
+     [
+      1180,
+      600,
+      1
+     ]
+    ]
+   },
    "item": "phone",
    "at": {
     "x": 460,
     "y": 620
    },
    "s": 0.95,
-   "rot": -6,
-   "bg": [
-    "#22c8c0",
-    "#0b6b78",
-    "#052a33"
-   ],
-   "glowAt": {
-    "x": 0.35,
-    "y": 0.3
-   }
+   "rot": -6
   },
   "host": {
    "emote": "surprised",
@@ -46,63 +52,11 @@
    {
     "t": "موبايلك\n[[راديو!]]",
     "x": 640,
-    "y": 190,
+    "y": 170,
     "w": 620,
     "size": 150,
     "align": "center",
-    "hi": "#ffb347"
-   }
-  ]
- },
- {
-  "file": "explain-network-01-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[الشبكة]] · 1/3",
-  "tagStyle": {
-   "size": 50,
-   "rot": -2,
-   "bg": "#05060d",
-   "color": "#fff",
-   "hi": "#7dffb0"
-  },
-  "opts": {
-   "item": "palm",
-   "at": {
-    "x": 330,
-    "y": 430
-   },
-   "s": 0.95,
-   "bg": [
-    "#ff9a4a",
-    "#b3366a",
-    "#2a0f3a"
-   ],
-   "glowAt": {
-    "x": 0.25,
-    "y": 0.75
-   }
-  },
-  "host": {
-   "emote": "sly",
-   "gesture": "cheer",
-   "x": 330,
-   "y": 300,
-   "size": 380,
-   "look": 0.7
-  },
-  "words": [
-   {
-    "t": "النخلة دي\n[[برج!]]",
-    "x": 620,
-    "y": 140,
-    "w": 640,
-    "size": 130,
-    "align": "center",
-    "hi": "#7dffb0"
+    "hi": "#7ff6ff"
    }
   ]
  },
@@ -115,25 +69,20 @@
   "scene": "solo",
   "tag": "ملف [[الشبكة]] · 2/3",
   "tagStyle": {
-   "size": 50,
+   "size": 54,
    "rot": -2,
    "bg": "#7ff6ff",
    "color": "#05060d",
    "hi": "#05060d"
   },
   "opts": {
+   "backdrop": "netSea",
    "item": "shark",
    "at": {
     "x": 640,
     "y": 470
    },
-   "s": 0.72,
-   "bg": [
-    "#1a8fc8",
-    "#08467a",
-    "#020c1f"
-   ],
-   "bubbles": true
+   "s": 0.72
   },
   "host": {
    "emote": "laugh",
@@ -156,58 +105,6 @@
   ]
  },
  {
-  "file": "explain-network-02-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[الشبكة]] · 2/3",
-  "tagStyle": {
-   "size": 50,
-   "rot": -2,
-   "bg": "#05060d",
-   "color": "#fff",
-   "hi": "#7cc4ff"
-  },
-  "opts": {
-   "item": "cloudRack",
-   "at": {
-    "x": 520,
-    "y": 480
-   },
-   "s": 0.9,
-   "bg": [
-    "#e8f6ff",
-    "#7cc4ff",
-    "#2a6ad8"
-   ],
-   "glowAt": {
-    "x": 0.4,
-    "y": 0.4
-   }
-  },
-  "host": {
-   "emote": "smug",
-   "gesture": "point",
-   "x": 820,
-   "y": 20,
-   "size": 330,
-   "look": -0.6,
-   "lookY": 0.6
-  },
-  "words": [
-   {
-    "t": "مفيش\n[[سحابة!]]",
-    "x": 10,
-    "y": 30,
-    "w": 470,
-    "size": 124,
-    "align": "center"
-   }
-  ]
- },
- {
   "file": "explain-network-03-ar/youtube/thumbnail-a.jpg",
   "page": "scene.html",
   "w": 1280,
@@ -216,28 +113,36 @@
   "scene": "solo",
   "tag": "ملف [[الشبكة]] · 3/3",
   "tagStyle": {
-   "size": 50,
+   "size": 54,
    "rot": -2,
-   "bg": "#FFE66D",
+   "bg": "#7ff6ff",
    "color": "#05060d",
    "hi": "#05060d"
   },
   "opts": {
+   "backdrop": "netSpace",
+   "bd": {
+    "arcs": [
+     [
+      120,
+      560,
+      520,
+      480
+     ],
+     [
+      300,
+      640,
+      700,
+      600
+     ]
+    ]
+   },
    "item": "pixels",
    "at": {
     "x": 560,
     "y": 430
    },
-   "s": -1,
-   "bg": [
-    "#ff3d9a",
-    "#8a1a8e",
-    "#2a0a4e"
-   ],
-   "glowAt": {
-    "x": 0.6,
-    "y": 0.5
-   }
+   "s": -1
   },
   "host": {
    "emote": "surprised",
@@ -259,67 +164,8 @@
     "y": 30,
     "w": 640,
     "size": 124,
-    "align": "center"
-   }
-  ]
- },
- {
-  "file": "explain-network-03-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[الشبكة]] · 3/3",
-  "tagStyle": {
-   "size": 50,
-   "rot": -2,
-   "bg": "#ff2a3a",
-   "color": "#fff",
-   "hi": "#FFE66D"
-  },
-  "opts": {
-   "item": "screen",
-   "at": {
-    "x": 640,
-    "y": 460
-   },
-   "s": 0.9,
-   "bg": [
-    "#5a6080",
-    "#1b1f33",
-    "#05060d"
-   ],
-   "over": {
-    "item": "spinner",
-    "at": {
-     "x": 820,
-     "y": 520
-    },
-    "s": 0.7
-   }
-  },
-  "host": {
-   "emote": "surprised",
-   "x": 640,
-   "y": 250,
-   "size": 640,
-   "clip": "inset(0 0 236px 0)",
-   "shadow": false,
-   "face": {
-    "lid": 0.55,
-    "lidR": 0.9
-   }
-  },
-  "words": [
-   {
-    "t": "الصورة [[علّقت!]]",
-    "x": 20,
-    "y": 24,
-    "w": 740,
-    "size": 116,
     "align": "center",
-    "hi": "#ff2a3a"
+    "hi": "#7ff6ff"
    }
   ]
  }

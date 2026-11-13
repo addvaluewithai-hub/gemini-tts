@@ -12,15 +12,22 @@
    "rot": -2,
    "bg": "#05060d",
    "color": "#fff",
-   "hi": "#FFE66D"
+   "hi": "#FFD23F"
   },
   "opts": {
-   "bg": [
-    "#ffb347",
-    "#e8421c",
-    "#5a0a10"
-   ],
-   "rays": 0.07,
+   "backdrop": "cryptoNight",
+   "bd": {
+    "ground": "street",
+    "groundY": 640,
+    "shop": {
+     "x": 1040
+    },
+    "lamp": 620,
+    "moon": {
+     "x": 760,
+     "y": 110
+    }
+   },
    "over": {
     "item": "pizzaSlice",
     "at": {
@@ -44,73 +51,21 @@
   "prices": [
    {
     "t": "10,000 BTC",
-    "x": 640,
-    "y": 470,
-    "size": 84,
+    "x": 600,
+    "y": 560,
+    "size": 80,
     "rot": -6
    }
   ],
   "words": [
    {
     "t": "أغلى بيتزا\n[[في التاريخ]]",
-    "x": 600,
-    "y": 130,
-    "w": 660,
+    "x": 590,
+    "y": 120,
+    "w": 670,
     "size": 116,
-    "align": "center"
-   }
-  ]
- },
- {
-  "file": "explain-crypto-01-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[العملات المشفرة]] · 1/5",
-  "tagStyle": {
-   "size": 50,
-   "rot": -2,
-   "bg": "#7dffb0",
-   "color": "#05060d",
-   "hi": "#05060d"
-  },
-  "opts": {
-   "item": "bank",
-   "at": {
-    "x": 420,
-    "y": 580
-   },
-   "s": 0.8,
-   "bg": [
-    "#1fae7a",
-    "#0a3d3a",
-    "#04140f"
-   ],
-   "glowAt": {
-    "x": 0.33,
-    "y": 0.6
-   },
-   "rays": 0.05
-  },
-  "host": {
-   "emote": "smug",
-   "gesture": "pockets",
-   "x": 420,
-   "y": 66,
-   "size": 340,
-   "look": 0.8
-  },
-  "words": [
-   {
-    "t": "فلوس\n[[من غير بنك]]",
-    "x": 720,
-    "y": 140,
-    "w": 540,
-    "size": 118,
     "align": "center",
-    "hi": "#7dffb0"
+    "hi": "#FFD23F"
    }
   ]
  },
@@ -127,24 +82,24 @@
    "rot": -2,
    "bg": "#05060d",
    "color": "#fff",
-   "hi": "#ffd84a"
+   "hi": "#FFD23F"
   },
   "opts": {
+   "backdrop": "cryptoNight",
+   "bd": {
+    "ground": "blackout",
+    "groundY": 620,
+    "moon": {
+     "x": 620,
+     "y": 110
+    }
+   },
    "item": "plug",
    "at": {
     "x": 360,
     "y": 500
    },
-   "s": 0.9,
-   "bg": [
-    "#ffd84a",
-    "#5a3a00",
-    "#0a0800"
-   ],
-   "glowAt": {
-    "x": 0.35,
-    "y": 0.6
-   },
+   "s": 0.85,
    "over": {
     "item": "bolts",
     "at": {
@@ -175,78 +130,7 @@
     "w": 700,
     "size": 104,
     "align": "center",
-    "hi": "#ffd84a"
-   }
-  ]
- },
- {
-  "file": "explain-crypto-02-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[العملات المشفرة]] · 2/5",
-  "tagStyle": {
-   "size": 50,
-   "rot": -2,
-   "bg": "#ffb347",
-   "color": "#05060d",
-   "hi": "#05060d"
-  },
-  "opts": {
-   "item": "bigCoin",
-   "at": {
-    "x": 950,
-    "y": 530
-   },
-   "s": 0.78,
-   "bg": [
-    "#9a5cff",
-    "#2a1240",
-    "#0c0516"
-   ],
-   "glowAt": {
-    "x": 0.72,
-    "y": 0.65
-   },
-   "over": [
-    {
-     "item": "pickaxe",
-     "at": {
-      "x": 487,
-      "y": 386
-     },
-     "s": 0.8,
-     "rot": 97
-    },
-    {
-     "item": "bolts",
-     "at": {
-      "x": 770,
-      "y": 430
-     },
-     "s": 0.35
-    }
-   ]
-  },
-  "host": {
-   "emote": "serious",
-   "gesture": "point",
-   "x": 360,
-   "y": 170,
-   "size": 560,
-   "look": 0.8
-  },
-  "words": [
-   {
-    "t": "التعدين\n[[يعني إيه؟]]",
-    "x": 560,
-    "y": 120,
-    "w": 700,
-    "size": 108,
-    "align": "center",
-    "hi": "#ffb347"
+    "hi": "#FFD23F"
    }
   ]
  },
@@ -263,21 +147,24 @@
    "rot": -2,
    "bg": "#05060d",
    "color": "#fff",
-   "hi": "#c8e86a"
+   "hi": "#FFD23F"
   },
   "opts": {
+   "backdrop": "cryptoNight",
+   "bd": {
+    "ground": "trash",
+    "groundY": 620,
+    "moon": {
+     "x": 700,
+     "y": 120
+    }
+   },
    "item": "bin",
    "at": {
     "x": 930,
     "y": 560
    },
-   "s": 0.62,
-   "bg": [
-    "#a8b060",
-    "#2f3a24",
-    "#0d120a"
-   ],
-   "rays": 0.06
+   "s": 0.62
   },
   "host": {
    "emote": "sad",
@@ -316,69 +203,8 @@
     "y": 118,
     "w": 700,
     "size": 112,
-    "align": "center"
-   }
-  ]
- },
- {
-  "file": "explain-crypto-03-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[العملات المشفرة]] · 3/5",
-  "tagStyle": {
-   "size": 50,
-   "rot": 2,
-   "bg": "#fff",
-   "color": "#b3131f",
-   "hi": "#05060d"
-  },
-  "opts": {
-   "bg": [
-    "#ff5a5a",
-    "#7a0f22",
-    "#1a0408"
-   ],
-   "glowAt": {
-    "x": 0.5,
-    "y": 0.55
-   },
-   "rays": 0.08,
-   "over": {
-    "item": "tin",
-    "at": {
-     "x": 640,
-     "y": 640
-    },
-    "s": 0.85
-   }
-  },
-  "host": {
-   "emote": "sly",
-   "gesture": "cheer",
-   "x": 640,
-   "y": 150,
-   "size": 560,
-   "look": -0.6
-  },
-  "words": [
-   {
-    "t": "مليارات",
-    "x": 880,
-    "y": 250,
-    "w": 390,
-    "size": 120,
-    "align": "center"
-   },
-   {
-    "t": "في علبة\n[[فشار]]",
-    "x": 10,
-    "y": 150,
-    "w": 380,
-    "size": 118,
-    "align": "center"
+    "align": "center",
+    "hi": "#FFD23F"
    }
   ]
  },
@@ -393,11 +219,20 @@
   "tagStyle": {
    "size": 50,
    "rot": -2,
-   "bg": "#ff2e88",
+   "bg": "#05060d",
    "color": "#fff",
-   "hi": "#FFE66D"
+   "hi": "#FFD23F"
   },
   "opts": {
+   "backdrop": "cryptoNight",
+   "bd": {
+    "ground": "none",
+    "groundY": 720,
+    "moon": {
+     "x": 1080,
+     "y": 420
+    }
+   },
    "xs": [
     -215,
     -125,
@@ -430,68 +265,7 @@
     "w": 520,
     "size": 132,
     "align": "center",
-    "hi": "#FFE66D"
-   }
-  ]
- },
- {
-  "file": "explain-crypto-04-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[العملات المشفرة]] · 4/5",
-  "tagStyle": {
-   "size": 50,
-   "rot": -2,
-   "bg": "#7ff6ff",
-   "color": "#05060d",
-   "hi": "#05060d"
-  },
-  "opts": {
-   "item": "bigCoin",
-   "at": {
-    "x": 760,
-    "y": 470
-   },
-   "s": 0.5,
-   "bg": [
-    "#1a7a8a",
-    "#06222c",
-    "#03121a"
-   ],
-   "glowAt": {
-    "x": 0.6,
-    "y": 0.6
-   },
-   "bubbles": true,
-   "over": {
-    "item": "film",
-    "at": {
-     "x": 700,
-     "y": 420
-    },
-    "s": 1.12
-   }
-  },
-  "host": {
-   "emote": "worried",
-   "gesture": "cheer",
-   "x": 610,
-   "y": 240,
-   "size": 340,
-   "look": 0.6
-  },
-  "words": [
-   {
-    "t": "فقاعة\n[[ولا دهب؟]]",
-    "x": 10,
-    "y": 130,
-    "w": 420,
-    "size": 112,
-    "align": "center",
-    "hi": "#7ff6ff"
+    "hi": "#FFD23F"
    }
   ]
  },
@@ -508,18 +282,24 @@
    "rot": -2,
    "bg": "#05060d",
    "color": "#fff",
-   "hi": "#b6ff6a"
+   "hi": "#FFD23F"
   },
   "opts": {
-   "bg": [
-    "#7a4ac8",
-    "#2a1250",
-    "#0a0418"
-   ],
-   "glowAt": {
-    "x": 0.3,
-    "y": 0.35
+   "backdrop": "cryptoNight",
+   "bd": {
+    "ground": "graves",
+    "groundY": 640,
+    "moon": {
+     "x": 1000,
+     "y": 200
+    }
    },
+   "item": "dogCoin",
+   "at": {
+    "x": 1000,
+    "y": 420
+   },
+   "s": 0.75,
    "over": {
     "item": "tomb",
     "at": {
@@ -550,60 +330,11 @@
    {
     "t": "20 مليون عملة\n[[ماتت!]]",
     "x": 640,
-    "y": 140,
+    "y": 120,
     "w": 630,
     "size": 100,
     "align": "center",
-    "hi": "#b6ff6a"
-   }
-  ]
- },
- {
-  "file": "explain-crypto-05-ar/youtube/thumbnail-b.jpg",
-  "page": "scene.html",
-  "w": 1280,
-  "h": 720,
-  "rtl": true,
-  "scene": "solo",
-  "tag": "ملف [[العملات المشفرة]] · 5/5",
-  "tagStyle": {
-   "size": 50,
-   "rot": -2,
-   "bg": "#ff2a3a",
-   "color": "#fff",
-   "hi": "#FFE66D"
-  },
-  "opts": {
-   "item": "rocket",
-   "at": {
-    "x": 700,
-    "y": 470
-   },
-   "s": 0.9,
-   "bg": [
-    "#fff6b0",
-    "#ffc21f",
-    "#ff7a1a"
-   ],
-   "rays": 0.15
-  },
-  "host": {
-   "emote": "laugh",
-   "gesture": "cheer",
-   "x": 560,
-   "y": 200,
-   "size": 380,
-   "rot": -24
-  },
-  "words": [
-   {
-    "t": "عملة عليها\n[[كلب!]]",
-    "x": 20,
-    "y": 24,
-    "w": 600,
-    "size": 118,
-    "align": "center",
-    "hi": "#ff2a3a"
+    "hi": "#FFD23F"
    }
   ]
  }
