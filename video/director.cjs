@@ -40,6 +40,7 @@ function sentences(words) {
 }
 
 async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
+  const CALM = !!process.env.HEAD_CALM;
   const { EMOTES, GESTURES } = await import("./characters/acting.js");
   const { MOUTHS } = await import("./characters/peek3d.js");
   const R = rng(cues.seed ?? 17), pick = (list, avoid) => { const c = list.filter((x) => x !== avoid); const l = c.length ? c : list; return l[Math.floor(R() * l.length)]; };
@@ -123,12 +124,13 @@ async function direct({ words, lip, level, cues, N, FPS, tAudio }) {
     const armL = out("L") ? { x: arm.L.x, y: arm.L.y, front: !!gest.armL?.front && arm.L.y < 760 } : null, armR = out("R") ? { x: arm.R.x, y: arm.R.y, front: !!gest.armR?.front && arm.R.y < 760 } : null;
 
     // body: sway, lean into each sentence, a hop on happy beats, a nod on stressed words
+    // HEAD_CALM=1: the head no longer rides the jaw, and nods and hops are halved
     lean += ((cur ? cur.side * 1.6 : 0) - lean) * 0.06;
     const sway = lean + 0.9 * Math.sin(2 * Math.PI * 0.17 * tv);
-    let bounce = 2.5 * mouth.jaw, squash = 1;
-    if (hop !== null) { const p = (tv - hop) / 0.34; if (p >= 1.5) hop = null; else if (p < 1) { bounce += 30 * 4 * p * (1 - p); squash = 1 + 0.04 * Math.sin(Math.PI * p); } else { squash = 1 - 0.06 * Math.sin(Math.PI * (p - 1) * 2); } }
-    const nod = 9 * pulse(t, 0.26) * still, tilt = F.tilt + 1.2 * Math.sin(2 * Math.PI * 0.13 * tv + 1) - 1.4 * mouth.jaw;
-    const bob = -6 * mouth.jaw + nod + 2.2 * Math.sin(2 * Math.PI * 0.27 * tv);
+    let bounce = (CALM ? 0 : 2.5) * mouth.jaw, squash = 1;
+    if (hop !== null) { const p = (tv - hop) / 0.34; if (p >= 1.5) hop = null; else if (p < 1) { bounce += (CALM ? 15 : 30) * 4 * p * (1 - p); squash = 1 + 0.04 * Math.sin(Math.PI * p); } else { squash = 1 - 0.06 * Math.sin(Math.PI * (p - 1) * 2); } }
+    const nod = (CALM ? 4 : 9) * pulse(t, 0.26) * still, tilt = F.tilt + 1.2 * Math.sin(2 * Math.PI * 0.13 * tv + 1) - (CALM ? 0 : 1.4) * mouth.jaw;
+    const bob = -(CALM ? 0 : 6) * mouth.jaw + nod + 2.2 * Math.sin(2 * Math.PI * 0.27 * tv);
 
     // antennae trail the head and wobble after every nod and hop
     const push = (tilt - prevTilt) * 2.2 + (beat > 0.9 ? 1.6 : 0); prevTilt = tilt;
