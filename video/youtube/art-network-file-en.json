@@ -1,0 +1,140 @@
+[
+ {
+  "file": "explain-network-01-en/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "tag": "THE NETWORK FILE · 1/3",
+  "big": "YOUR PHONE\n[[IS A RADIO]]",
+  "small": "Where does your voice go?",
+  "emote": "skeptical",
+  "gesture": "shrug",
+  "size": 136,
+  "top": 140,
+  "icons": [
+   {
+    "name": "tower",
+    "x": 1150,
+    "y": 610,
+    "s": 0.8800000000000001,
+    "rot": 0
+   }
+  ]
+ },
+ {
+  "file": "explain-network-01-en/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "peek": true,
+  "width": 760,
+  "peekY": 118,
+  "tag": "THE NETWORK FILE · 1/3",
+  "big": "WHY DO\n[[CALLS DROP?]]",
+  "small": "Especially in the elevator",
+  "emote": "annoyed",
+  "size": 140,
+  "top": 140,
+  "icons": [
+   {
+    "name": "mobile",
+    "x": 1010,
+    "y": 520,
+    "s": 1.0,
+    "rot": -12
+   }
+  ]
+ },
+ {
+  "file": "explain-network-02-en/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "tag": "THE NETWORK FILE · 2/3",
+  "big": "THE INTERNET IS\n[[UNDERWATER]]",
+  "small": "There is no cloud",
+  "emote": "smug",
+  "gesture": "present",
+  "size": 120,
+  "top": 140,
+  "icons": [
+   {
+    "name": "shark",
+    "x": 1110,
+    "y": 625,
+    "s": 1.05,
+    "rot": 0
+   }
+  ]
+ },
+ {
+  "file": "explain-network-02-en/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "peek": true,
+  "width": 760,
+  "peekY": 118,
+  "tag": "THE NETWORK FILE · 2/3",
+  "big": "THERE IS\n[[NO CLOUD]]",
+  "small": "Just hoses on the ocean floor",
+  "emote": "deadpan",
+  "size": 150,
+  "top": 130,
+  "icons": [
+   {
+    "name": "cloud",
+    "x": 1010,
+    "y": 520,
+    "s": 1.1,
+    "rot": 0
+   }
+  ]
+ },
+ {
+  "file": "explain-network-03-en/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "tag": "THE NETWORK FILE · 3/3",
+  "big": "YOUR FACE IN\n[[1,000 PIECES]]",
+  "small": "How video calls work",
+  "emote": "worried",
+  "gesture": "shrug",
+  "size": 128,
+  "top": 140,
+  "icons": [
+   {
+    "name": "camera",
+    "x": 1150,
+    "y": 610,
+    "s": 0.8,
+    "rot": 0
+   }
+  ]
+ },
+ {
+  "file": "explain-network-03-en/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "peek": true,
+  "width": 760,
+  "peekY": 118,
+  "tag": "THE NETWORK FILE · 3/3",
+  "big": "WHY DOES\n[[YOUR CALL FREEZE?]]",
+  "small": "The trick behind every video",
+  "emote": "skeptical",
+  "size": 112,
+  "top": 140,
+  "icons": [
+   {
+    "name": "camera",
+    "x": 1010,
+    "y": 520,
+    "s": 1.0,
+    "rot": 0
+   }
+  ]
+ }
+]

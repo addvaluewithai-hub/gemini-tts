@@ -1009,5 +1009,69 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "Where Is the Internet, Physically? On the Ocean Floor | Network File 2/3",
+   "There Is No Cloud: The Internet Runs Through Cables Under the Sea | 2/3",
+   "How Facebook Erased Itself From the Internet for 6 Hours | 2/3"
+  ],
+  "description": [
+   "Report two in Agent Peek's network file: the internet.",
+   "",
+   "Where it actually lives: a network of networks with nobody in charge, the glass cables on the sea floor that carry almost everything between continents, how they break (it is rarely the sharks), how packets find their way around a cut, how names become numbers, the two days the map of the internet went wrong, what the cloud really is, and who is still offline."
+  ],
+  "intro": "Intro",
+  "outro": "Summary",
+  "chaptersTitle": "Chapters",
+  "sourcesTitle": "Sources",
+  "sources": [
+   "TeleGeography, submarine cable FAQs: https://www2.telegeography.com/submarine-cable-faqs-frequently-asked-questions",
+   "International Cable Protection Committee (faults and their causes): https://www.iscpc.org/news/media-enquiries/",
+   "IEEE Spectrum, the 1858 cable: https://spectrum.ieee.org/tech-history/heroic-failures/the-first-transatlantic-telegraph-cable-was-a-bold-beautiful-failure",
+   "Red Sea cable cuts: https://gulfnews.com/technology/red-sea-cable-chaos-why-the-internet-didnt-go-dark-1.500263896",
+   "Google Research, the 2008 YouTube hijacking: https://research.google/pubs/youtube-hijacking-february-24th-2008-analysis-of-bgp-routing-dynamics/",
+   "ThousandEyes, the 2021 Facebook outage: https://www.thousandeyes.com/blog/facebook-outage-analysis",
+   "Where the name Wi-Fi came from: https://boingboing.net/2005/11/08/wifi-isnt-short-for.html",
+   "ITU, Facts and Figures 2025: https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/"
+  ],
+  "footer": [
+   "This is one report in a three-part file on the network. Watch them in order from the playlist.",
+   "The character, voice and animation are computer-generated. The facts come from the sources above and from general references."
+  ],
+  "hashtags": [
+   "#EarthReport",
+   "#Internet",
+   "#HowItWorks"
+  ],
+  "tags": [
+   "Earth Report",
+   "Agent Peek",
+   "explained simply",
+   "alien explains",
+   "how the internet works",
+   "how phones work",
+   "networking explained",
+   "undersea cables",
+   "submarine cables",
+   "where is the internet",
+   "what is the cloud",
+   "packet switching",
+   "DNS explained",
+   "BGP",
+   "Facebook outage 2021",
+   "shark bites internet cable",
+   "Wi-Fi meaning"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: English. Upload captions.srt as English.",
+   "Audience: not made for kids",
+   "Playlist: Earth Report: The Network File (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: open."
+  ],
+  "pinned": "Confess: did you think the internet went through satellites, or through cables? Command will not judge."
+ }
 }

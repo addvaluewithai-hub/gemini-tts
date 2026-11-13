@@ -1148,5 +1148,71 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "Ethereum, Stablecoins, NFTs and Memecoins Explained in One Video | 5/5",
+   "20 Million Cryptocurrencies, and Over Half Are Dead | Crypto File 5/5",
+   "The Final Verdict: Did Crypto Work? | 5/5"
+  ],
+  "description": [
+   "The last report in Agent Peek's crypto file: everything that came after bitcoin.",
+   "",
+   "Ethereum and smart contracts, proof of stake, tokens, stablecoins and the freeze button, DeFi, NFTs, Dogecoin and the memecoins, how governments reacted, and the final verdict on the whole file: what worked, and what did not."
+  ],
+  "intro": "Intro",
+  "outro": "Summary",
+  "chaptersTitle": "Chapters",
+  "sourcesTitle": "Sources",
+  "sources": [
+   "CoinGecko, how many cryptocurrencies failed: https://www.coingecko.com/research/publications/how-many-cryptocurrencies-failed",
+   "Tether freezes funds after the Binance heist: https://www.cryptotimes.io/2026/11/03/tether-says-it-froze-1-5b-in-usdt-linked-to-binance-hack/",
+   "US Department of Justice, sentencing of Terra's founder: https://www.justice.gov/usao-sdny/pr/crypto-enabled-fraudster-sentenced-orchestrating-40-billion-fraud",
+   "The stablecoin market in 2026: https://insights.muffinpay.com/stablecoin-market-report-2026/",
+   "CoinDesk, the first tweet's NFT resale: https://www.coindesk.com/business/2022/04/13/jack-dorseys-first-tweet-nft-went-on-sale-for-48m-it-ended-with-a-top-bid-of-just-280/",
+   "The TRUMP coin hits an all-time low: https://247wallst.com/investing/cryptocurrency/2026/11/09/the-trump-coin-just-hit-an-all-time-low-down-98-from-its-peak-will-trump-coin-ever-go-back-up/",
+   "Google, quantum computing and cryptocurrency: https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/"
+  ],
+  "footer": [
+   "This is one report in a five-part file on cryptocurrency. Watch them in order from the playlist.",
+   "This is an explanation, not investment advice. Prices in the video carry their dates and are not forecasts.",
+   "The character, voice and animation are computer-generated. The facts come from the sources above and from general references."
+  ],
+  "hashtags": [
+   "#EarthReport",
+   "#Bitcoin",
+   "#Crypto"
+  ],
+  "tags": [
+   "Earth Report",
+   "Agent Peek",
+   "explained simply",
+   "alien explains",
+   "cryptocurrency explained",
+   "crypto explained",
+   "Bitcoin",
+   "bitcoin explained",
+   "blockchain explained",
+   "Ethereum explained",
+   "smart contracts",
+   "stablecoin explained",
+   "what is DeFi",
+   "NFT explained",
+   "Dogecoin",
+   "memecoin",
+   "proof of stake",
+   "CBDC",
+   "is crypto worth it"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: English. Upload captions.srt as English.",
+   "Audience: not made for kids",
+   "Playlist: Earth Report: The Crypto File (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "The file is closed. What should Agent Peek investigate next? Name it below. Command will choose."
+ }
 }

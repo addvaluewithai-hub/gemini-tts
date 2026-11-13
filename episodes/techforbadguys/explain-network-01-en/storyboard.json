@@ -986,5 +986,66 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "How Does a Cell Phone Actually Work? Where Your Voice Goes | Network File 1/3",
+   "Your Phone Is a Radio: How Mobile Networks Work | Network File 1/3",
+   "Why Do Calls Drop in Elevators? And Why Is It Called Cellular? | 1/3"
+  ],
+  "description": [
+   "A new file from Agent Peek, the alien spy reporting on Earth: the network.",
+   "",
+   "Report one: the mobile phone. How your voice becomes numbers, why your phone is really a radio that only reaches the nearest tower, why the rest is all cable, why it is called cellular, how the network always knows where you are, what the SIM does, why calls drop, and the history from the first handheld call in 1973 to phones that text satellites."
+  ],
+  "intro": "Intro",
+  "outro": "Summary",
+  "chaptersTitle": "Chapters",
+  "sourcesTitle": "Sources",
+  "sources": [
+   "GSMA, The Mobile Economy 2026 (lines and subscribers): https://www.gsma.com/mobileeconomy/",
+   "ITU, Facts and Figures 2025 (5G coverage): https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/",
+   "The first mobile phone call, April 3, 1973: https://ctvnews.ca/sci-tech/50-years-ago-he-made-the-first-cellphone-call-1.6340522",
+   "Ericsson, who was first (1979 and 1991): https://www.ericsson.com/en/about-us/history/changing-the-world/world-leadership/who-was-first",
+   "The first text message, December 3, 1992: https://www.history.com/this-day-in-history/first-sms-text-message-sent"
+  ],
+  "footer": [
+   "This is one report in a three-part file on the network. Watch them in order from the playlist.",
+   "The character, voice and animation are computer-generated. The facts come from the sources above and from general references."
+  ],
+  "hashtags": [
+   "#EarthReport",
+   "#Internet",
+   "#HowItWorks"
+  ],
+  "tags": [
+   "Earth Report",
+   "Agent Peek",
+   "explained simply",
+   "alien explains",
+   "how the internet works",
+   "how phones work",
+   "networking explained",
+   "how cell phones work",
+   "how mobile networks work",
+   "why is it called cellular",
+   "cell tower",
+   "what is a SIM card",
+   "roaming explained",
+   "why calls drop",
+   "Martin Cooper first cell phone call",
+   "5G explained",
+   "satellite texting"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: English. Upload captions.srt as English.",
+   "Audience: not made for kids",
+   "Playlist: Earth Report: The Network File (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: open."
+  ],
+  "pinned": "Command's question: now that you know your phone whispers 'I am here' to the tower all day... will you leave it on? Reply below."
+ }
 }

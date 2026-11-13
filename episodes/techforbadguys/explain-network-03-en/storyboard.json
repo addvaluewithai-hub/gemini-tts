@@ -997,5 +997,64 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "How Do Video Calls Actually Work? Your Face in a Thousand Pieces | Network File 3/3",
+   "Why Does Your Video Call Freeze? | Network File 3/3",
+   "The Trick Behind Every Video on the Internet | 3/3"
+  ],
+  "description": [
+   "The last report in Agent Peek's network file: the video call.",
+   "",
+   "How a picture becomes numbers, why the raw video is a thousand times too big, the three compression tricks behind every video on the internet, how echo and noise are removed, why late packets are thrown away, the time budget and the speed of light, why the picture freezes on your worst face, encryption, the 1970 picture phone that flopped, and a few field notes on how humans behave on calls."
+  ],
+  "intro": "Intro",
+  "outro": "Summary",
+  "chaptersTitle": "Chapters",
+  "sourcesTitle": "Sources",
+  "sources": [
+   "ITU-T Recommendation G.114 (delay limits): https://www.itu.int/itudoc/itu-t/aap/sg12aap/history/g.114/g114s_ww9.doc",
+   "IEEE Spectrum, the Picturephone: https://spectrum.ieee.org/long-before-facetime-or-skype-there-was-the-picturephone",
+   "Bloomberg, Zoom's April 2020 figures: https://www.bloomberg.com/news/articles/2020-04-30/zoom-clarifies-it-has-300-million-participants-not-users"
+  ],
+  "footer": [
+   "This is one report in a three-part file on the network. Watch them in order from the playlist.",
+   "The character, voice and animation are computer-generated. The facts come from the sources above and from general references."
+  ],
+  "hashtags": [
+   "#EarthReport",
+   "#Internet",
+   "#HowItWorks"
+  ],
+  "tags": [
+   "Earth Report",
+   "Agent Peek",
+   "explained simply",
+   "alien explains",
+   "how the internet works",
+   "how phones work",
+   "networking explained",
+   "how video calls work",
+   "video compression explained",
+   "codec explained",
+   "why video calls freeze",
+   "latency explained",
+   "lag",
+   "you're on mute",
+   "Zoom fatigue",
+   "Picturephone",
+   "end-to-end encryption"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: English. Upload captions.srt as English.",
+   "Audience: not made for kids",
+   "Playlist: Earth Report: The Network File (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: open."
+  ],
+  "pinned": "The file is closed. What else do you use every day without knowing how it works? Name it below. Command will choose the next file."
+ }
 }

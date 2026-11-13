@@ -1044,5 +1044,76 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "How People Lose Their Crypto: Keys, Wallets, Exchanges and Scams | 3/5",
+   "Crypto Wallets and Private Keys Explained, Plus the Biggest Scams | Crypto File 3/5",
+   "Billions in a Popcorn Tin: Bitcoin Is Not Anonymous | 3/5"
+  ],
+  "description": [
+   "Report three from Agent Peek: how humans own this money, and how they lose it.",
+   "",
+   "What a private key, a wallet and a seed phrase are. How buying and sending works, and why there is no undo. Why bitcoin is not anonymous (Silk Road and the popcorn tin). How exchanges brought the bank back: Mt. Gox, FTX and the Binance heist. And the man who threw away a hard drive worth hundreds of millions.",
+   "",
+   "At the end: the four most common crypto scams, and four red flags everyone should know."
+  ],
+  "intro": "Intro",
+  "outro": "Summary",
+  "chaptersTitle": "Chapters",
+  "sourcesTitle": "Sources",
+  "sources": [
+   "Chainalysis on 2025 scam losses: https://decrypt.co/354624/ai-impersonation-drove-crypto-scam-losses-record-17-billion-2025-chainalysis",
+   "The Binance heist (October 2026): https://stealthex.io/blog/binance-hack-everything-we-know-about-the-6-3b-theft/",
+   "TRM Labs on the Coldcard wallet flaw: https://www.trmlabs.com/resources/blog/the-largest-hardware-wallet-exploit-of-2026-inside-the-usd-116-million-coldcard-hack",
+   "James Howells stops digging: https://cointelegraph.com/news/james-howells-pivots-digging-tokenizing-recover-lost-bitcoin",
+   "Silk Road bitcoin found in a popcorn tin: https://fortune.com/2022/11/08/justice-department-seizes-50000-bitcoin-silk-road-popcorn-tin/",
+   "Sentencing in the Bitfinex case: https://www.securityweek.com/man-who-stole-and-laundered-roughly-1b-in-bitcoin-is-sentenced-to-5-years-in-prison/",
+   "Mt. Gox pushes repayment to 2027: https://decrypt.co/381392/mt-gox-pushes-repayment-deadline-to-2027-with-2-8b-in-bitcoin-still-to-distribute",
+   "FTX founder's appeal denied: https://www.courthousenews.com/second-circuit-denies-sam-bankman-frieds-bid-to-overturn-ftx-crypto-fraud-conviction/",
+   "OCCRP on OneCoin: https://www.occrp.org/en/daily/12109-us-indicts-co-founder-of-onecoin-ponzi-scheme"
+  ],
+  "footer": [
+   "This is one report in a five-part file on cryptocurrency. Watch them in order from the playlist.",
+   "This is an explanation, not investment advice. Prices in the video carry their dates and are not forecasts.",
+   "The character, voice and animation are computer-generated. The facts come from the sources above and from general references."
+  ],
+  "hashtags": [
+   "#EarthReport",
+   "#Bitcoin",
+   "#Crypto"
+  ],
+  "tags": [
+   "Earth Report",
+   "Agent Peek",
+   "explained simply",
+   "alien explains",
+   "cryptocurrency explained",
+   "crypto explained",
+   "Bitcoin",
+   "bitcoin explained",
+   "blockchain explained",
+   "crypto wallet explained",
+   "private key",
+   "seed phrase",
+   "not your keys not your coins",
+   "crypto scams",
+   "Mt. Gox",
+   "FTX collapse",
+   "Silk Road",
+   "James Howells",
+   "is bitcoin anonymous",
+   "pig butchering scam"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: English. Upload captions.srt as English.",
+   "Audience: not made for kids",
+   "Playlist: Earth Report: The Crypto File (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: this episode will draw scam replies. Hold every comment with a link or a phone number for review, and remove 'recovery' offers."
+  ],
+  "pinned": "Warning from Command: anyone who replies here offering to recover your money, or asking you to message them, is a scammer. We will never ask for money or your twelve words."
+ }
 }

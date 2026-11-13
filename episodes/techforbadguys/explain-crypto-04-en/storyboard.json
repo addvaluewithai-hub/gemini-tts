@@ -1063,5 +1063,72 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "Why Is Bitcoin Worth Anything? And Why Does the Price Swing So Much? | 4/5",
+   "Five Bubbles, Five Crashes: The Story of Bitcoin's Price | Crypto File 4/5",
+   "Leverage Explained: Lose Everything When the Price Drops 10% | 4/5"
+  ],
+  "description": [
+   "Report four from Agent Peek: the price.",
+   "",
+   "What stands behind bitcoin (no gold, no government, no profits), who buys it, the five booms and five crashes, why it swings so violently, how leverage wiped out more than a million and a half traders in one day, Wall Street's arrival, the critics and the believers, and a report card: is it money yet?",
+   "",
+   "Nothing here is advice to buy or sell."
+  ],
+  "intro": "Intro",
+  "outro": "Summary",
+  "chaptersTitle": "Chapters",
+  "sourcesTitle": "Sources",
+  "sources": [
+   "Bank for International Settlements, retail losses on bitcoin (Bulletin 69): https://www.bis.org/publ/bisbull69.htm",
+   "CoinDesk on Strategy's 2026 sale and loss: https://www.coindesk.com/markets/2026/07/06/one-month-that-shook-the-market-saylor-s-struggles-over-bitcoin-strategy-yields-big-loss",
+   "The June 2026 drop: https://news.bitcoin.com/bitcoin-falls-below-58000-q2-2026/",
+   "US spot bitcoin funds (November 2026): https://cryptobriefing.com/bitcoin-spot-etfs-412m-outflows-november-6/",
+   "El Salvador and bitcoin: https://cointelegraph.com/magazine/el-salvador-bitcoin-aspirations-closer-earth-2025",
+   "US Strategic Bitcoin Reserve: https://en.wikipedia.org/wiki/U.S._Strategic_Bitcoin_Reserve"
+  ],
+  "footer": [
+   "This is one report in a five-part file on cryptocurrency. Watch them in order from the playlist.",
+   "This is an explanation, not investment advice. Prices in the video carry their dates and are not forecasts.",
+   "The character, voice and animation are computer-generated. The facts come from the sources above and from general references."
+  ],
+  "hashtags": [
+   "#EarthReport",
+   "#Bitcoin",
+   "#Crypto"
+  ],
+  "tags": [
+   "Earth Report",
+   "Agent Peek",
+   "explained simply",
+   "alien explains",
+   "cryptocurrency explained",
+   "crypto explained",
+   "Bitcoin",
+   "bitcoin explained",
+   "blockchain explained",
+   "why is bitcoin valuable",
+   "bitcoin price history",
+   "bitcoin bubble",
+   "leverage explained",
+   "liquidation",
+   "bitcoin ETF",
+   "digital gold",
+   "HODL meaning",
+   "FOMO",
+   "is bitcoin money"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: English. Upload captions.srt as English.",
+   "Audience: not made for kids",
+   "Playlist: Earth Report: The Crypto File (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review; price-tip and 'signal group' spam is common on this topic."
+  ],
+  "pinned": "Command's question: is bitcoin digital gold, or the biggest bet in history? Make your case. No buying tips, please."
+ }
 }
