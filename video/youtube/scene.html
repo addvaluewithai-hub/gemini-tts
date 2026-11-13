@@ -14,6 +14,8 @@
 .host svg{display:block}
 .words{line-height:1.08;white-space:pre-line;paint-order:stroke fill;-webkit-text-stroke-linejoin:round}
 .words i{font-style:normal}
+.price{font-family:"Anton";line-height:1;white-space:nowrap;color:#05060d;background:#FFE66D;padding:.18em .4em .14em .9em;clip-path:polygon(.55em 0,100% 0,100% 100%,.55em 100%,0 50%);filter:drop-shadow(0 10px 0 rgba(5,6,13,.5));transform-origin:0 50%}
+.price b{position:absolute;left:.42em;top:50%;width:.22em;height:.22em;margin-top:-.11em;border-radius:50%;background:#05060d}
 .tag{font-family:"Elite";font-size:25px;line-height:1;padding:9px 16px 10px;border-radius:8px;background:#05060d;color:#FFE66D;border:3px solid #FFE66D;white-space:nowrap;box-shadow:0 6px 0 rgba(5,6,13,.35)}
 </style></head><body><div id="art"></div>
 <script type="module">
@@ -41,9 +43,12 @@ window.render = async (s) => {
   const el = document.getElementById("art"), scene = SCENES[s.scene](s.opts || {}, s.labels || {});
   const hosts = (s.hosts || (s.host ? [s.host] : [])).map((h) => ({ layer: "mid", ...h }));
   const layer = (name) => hosts.filter((h) => h.layer === name).map(host).join("");
-  const svg = (inner, defs = "") => `<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"><defs>${defs}</defs>${inner}</svg>`;
+  const z = s.zoom, wrap = (inner) => (z ? `<g transform="translate(640 360) scale(${z.s}) translate(${-z.x} ${-z.y})">${inner}</g>` : inner);   // zoom: { x, y, s } brings one part of the scene close
+  const svg = (inner, defs = "") => `<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg"><defs>${defs}</defs>${wrap(inner)}</svg>`;
+  // price: { t, x, y, size, rot } a price tag on a string, the number that makes the picture a story
+  const price = (p) => `<div class="price" dir="ltr" style="left:${p.x}px;top:${p.y}px;font-size:${p.size || 86}px;transform:rotate(${p.rot ?? -8}deg)"><b></b>${esc(p.t)}</div>`;
   el.innerHTML = svg(scene.back, scene.defs) + layer("mid") + (scene.front ? svg(scene.front) : "") + layer("top")
-    + (s.words || []).map((w) => words(w, s.rtl)).join("")
+    + (s.prices || []).map(price).join("") + (s.words || []).map((w) => words(w, s.rtl)).join("")
     + (s.tag ? `<div class="tag" dir="${s.rtl ? "rtl" : "ltr"}" style="left:auto;right:${s.rtl ? 26 : "auto"}px;${s.rtl ? "" : "left:26px;"}top:24px">${esc(s.tag)}</div>` : "");
   await Promise.all(['100px "Anton"', '40px "Elite"'].flatMap((f) => [document.fonts.load(f), document.fonts.load(f, "عربي")])); await document.fonts.ready;
 };
