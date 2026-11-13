@@ -138,3 +138,24 @@ node youtube.cjs art youtube/<specs>.json ../episodes/techforbadguys
 - Two-item `steps` boards and long `story` lines were the usual overflow; `rows` with a `sub` line need short text.
 - The host's side lean covers the outer 300 px of a held board; keep the important part of a board near the middle.
 - A stamp and a small line on the same thumbnail overlap; use one of them.
+
+## English versions
+
+The English files (`explain-crypto-0N-en`, `explain-network-0N-en`) are adaptations of the Arabic ones, not
+translations: same facts, order and boards; the lines and every joke rewritten for English speakers (names Alice,
+Bob, Carol; dollars). Each storyboard's first note lists the jokes that were replaced.
+
+- Fields: `"language":"en-US","rtl":false`, brand `EARTH / REPORT` with tagline `FIELD FILE: <SUBJECT>`, glossary
+  "The Human Dictionary", sign-off "This has been Earth Report. Agent Peek. End of transmission." The style prompt
+  is Earth Report 001's English one plus the brisk, no-dead-air sentence of the Arabic explainers.
+- Length, measured on crypto part 1: the voice reads about **182 words a minute raw and 216 after tightening and
+  tempo**. 1,767 words gave 8:24 with the end card. Aim for 1,650 to 1,900 words.
+- Years and amounts are written as digits ("2008", "$41"); the transcriber writes them as digits too, and the
+  aligner matched 97 to 98 percent.
+- Boards: `board()` sets `cfg.ltr` from the storyboard's `rtl:false` (a board's own `dir` still wins); `ledger`,
+  `story`, `chain`, `rows`, `versus` and `lever` follow it, and the title card lifts its kicker over Latin capitals
+  and takes an optional `size` for long titles (110 to 160). Arabic frames are unchanged.
+- Latin text is wider than the Arabic: on a four-item `steps` board keep each `sub` under about 16 characters; `story`
+  lines start at x 760, so keep them under about 30 characters (or `"size": 54`); `route` labels one or two words.
+- Thumbnails: `video/youtube/art-*-file-en.json`. Text sits on the left, so icons go by the host's hand
+  (x about 1150, y 610) on the `a` thumbnails and near x 1000 on the `peek` ones.

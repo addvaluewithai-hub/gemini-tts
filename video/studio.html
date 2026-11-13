@@ -113,6 +113,8 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #cap{left:0;right:0;bottom:40px;text-align:center;font-size:62px;line-height:1.1;text-transform:uppercase;letter-spacing:.02em}
 #cap b{display:inline-block;font-weight:400;background:rgba(5,6,13,.84);padding:12px 22px 2px;border-radius:14px;box-shadow:0 0 0 2px rgba(255,255,255,.08)}
 #cap span{display:inline-block;margin:0 .13em;transform-origin:50% 80%}#cap span[dir]{margin:0}
+/* left to right: Latin capitals are wide and the spoken word grows, so the gap between words is wider */
+#frame:not(.rtl) #cap span{margin:0 .24em}
 #cap .off{color:#c9d0ee;opacity:.55}#cap .now{color:#FFE66D}
 #vig{inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 52%,rgba(0,0,0,.55) 100%);pointer-events:none}
 #flash{inset:0;background:#fff}
