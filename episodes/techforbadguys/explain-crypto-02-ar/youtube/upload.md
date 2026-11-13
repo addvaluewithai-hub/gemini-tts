@@ -12,7 +12,7 @@ Paste `description.txt` as it is. It already holds the chapters and the sources.
 
 ## Tags
 
-تقرير الأرض, العميل Peek, العملات المشفرة, العملات الرقمية, بيتكوين, Bitcoin, كريبتو, شرح بيتكوين, شرح العملات الرقمية, اشرحها لكائن فضائي, Earth Report, بلوكتشين, Blockchain, تعدين البيتكوين, يعني إيه تعدين, الهاش, التنصيف, Halving, 21 مليون بيتكوين, Bitcoin Cash, هجوم 51%, Lightning Network, إثبات العمل
+تقرير الأرض, العميل Peek, العملات المشفرة, شرح البلوكشين, كيف يعمل تعدين البيتكوين, ما هو البلوكتشين, العملات الرقمية, بيتكوين, Bitcoin, كريبتو, شرح بيتكوين, شرح العملات الرقمية, اشرحها لكائن فضائي, Earth Report, بلوكتشين, Blockchain, تعدين البيتكوين, يعني إيه تعدين, الهاش, التنصيف, Halving, 21 مليون بيتكوين, Bitcoin Cash, هجوم 51%, Lightning Network, إثبات العمل
 
 ## Settings
 

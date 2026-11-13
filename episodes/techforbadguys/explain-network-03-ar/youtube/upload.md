@@ -12,7 +12,7 @@ Paste `description.txt` as it is. It already holds the chapters and the sources.
 
 ## Tags
 
-تقرير الأرض, العميل Peek, اشرحها لكائن فضائي, الشبكة, الإنترنت, تكنولوجيا, شرح مبسط, ازاي بيشتغل, Earth Report, مكالمة الفيديو, ضغط الفيديو, Codec, البكسل, Zoom, FaceTime, ليه الصورة بتعلق, التأخير, Lag, سرعة النت, التشفير, Picturephone
+تقرير الأرض, العميل Peek, اشرحها لكائن فضائي, كيف يعمل ضغط الفيديو, كيف تعمل مكالمات الفيديو, الشبكة, الإنترنت, تكنولوجيا, شرح مبسط, ازاي بيشتغل, Earth Report, مكالمة الفيديو, ضغط الفيديو, Codec, البكسل, Zoom, FaceTime, ليه الصورة بتعلق, التأخير, Lag, سرعة النت, التشفير, Picturephone
 
 ## Settings
 

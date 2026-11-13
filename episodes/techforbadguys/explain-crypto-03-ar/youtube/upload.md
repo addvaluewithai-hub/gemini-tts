@@ -12,7 +12,7 @@ Paste `description.txt` as it is. It already holds the chapters and the sources.
 
 ## Tags
 
-تقرير الأرض, العميل Peek, العملات المشفرة, العملات الرقمية, بيتكوين, Bitcoin, كريبتو, شرح بيتكوين, شرح العملات الرقمية, اشرحها لكائن فضائي, Earth Report, المحفظة الرقمية, المفتاح الخاص, Seed phrase, محفظة باردة, النصب في العملات الرقمية, احتيال الكريبتو, FTX, Mt. Gox, Binance, Silk Road, James Howells, OneCoin, حماية المحفظة
+تقرير الأرض, العميل Peek, العملات المشفرة, طرق الاحتيال في العملات الرقمية, ما هي المحفظة الرقمية, العملات الرقمية, بيتكوين, Bitcoin, كريبتو, شرح بيتكوين, شرح العملات الرقمية, اشرحها لكائن فضائي, Earth Report, المحفظة الرقمية, المفتاح الخاص, Seed phrase, محفظة باردة, النصب في العملات الرقمية, احتيال الكريبتو, FTX, Mt. Gox, Binance, Silk Road, James Howells, OneCoin, حماية المحفظة
 
 ## Settings
 

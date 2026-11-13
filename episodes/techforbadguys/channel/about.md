@@ -1,56 +1,93 @@
-# The channel: تقرير الأرض / Earth Report
+# قناة تقرير الأرض: كل اللي محتاجه علشان تنشر
 
-Files here: `avatar.png` (800 x 800, safe inside a circle), `banner-ar.jpg` and
-`banner-en.jpg` (2560 x 1440, everything important inside the middle
-1546 x 423). They are drawn by `video/youtube.cjs art` from
-`video/youtube/art-earth-report-001.json`.
+كل الملفات المذكورة هنا جوه `episodes/techforbadguys/`.
 
-## Name and handle
+## 1. إعداد القناة
 
-- Arabic channel: **تقرير الأرض**
-- English channel: **Earth Report**
-- Handle ideas, in order: `@TaqrirAlArd`, `@EarthReportPeek`, `@AgentPeek`,
-  `@EarthReportShow`. Availability has not been checked; YouTube shows it
-  when you type the handle.
+يوتيوب ستوديو ← التخصيص (Customization).
 
-Arabic and English audiences rarely overlap, so two channels (one per
-language) will serve each better than one channel with mixed uploads.
+| الخانة | تحط فيها إيه |
+|---|---|
+| الاسم | تقرير الأرض |
+| المعرّف (Handle) | جرّب بالترتيب: `@TaqrirAlArd` ثم `@EarthReportPeek` ثم `@AgentPeek`. يوتيوب بيقول لك المتاح وإنت بتكتب؛ أنا ما قدرتش أتأكد منهم. |
+| الصورة | `channel/avatar.png` (800 × 800، مظبوطة على القص الدائري) |
+| صورة الغلاف (Banner) | `channel/banner-ar.jpg` (2560 × 1440، كل المهم في النص) |
+| الوصف | النص اللي تحت |
+| الفيديو التعريفي لغير المشتركين | الحلقة الأولى من ملف العملات المشفرة |
 
-## Description (Arabic)
+### وصف القناة
 
-العميل Peek مش من هنا. نازل كوكب الأرض في مهمة واحدة: يراقب، ويرفع تقريره
-للقيادة.. ومايتعاطفش.
+```
+العميل Peek جاسوس فضائي على كوكب الأرض. مهمته: يفهم البشر بيعملوا إيه، ويشرحه لقيادته.. ببساطة.
 
-كل تقرير بيلمّ أهم أخبار الكوكب: سياسة، حروب، فلوس، علم وتكنولوجيا، وحاجات
-غريبة البشر بيعملوها. كل خبر بمصدره وتاريخه على الشاشة.
+كل "ملف" سلسلة قصيرة بتشرح حاجة البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي: البيتكوين والعملات المشفرة، الموبايل والإنترنت، الكهربا، وغيرهم. شرح بالرسوم المتحركة، من الأول، ومناسب لأي حد.
 
-السخرية على الحكومات والمؤسسات والأغنيا. ولما المدنيين هم اللي بيدفعوا
-التمن، الهزار بيقف.
+الملفات:
+• ملف العملات المشفرة (5 تقارير)
+• ملف الشبكة: الموبايل، الإنترنت، ومكالمة الفيديو (3 تقارير)
 
-الشخصية والصوت والرسوم متولّدين بالكمبيوتر. الأخبار حقيقية.
+اشترك علشان الملف الجاي يوصلك.
 
-## Description (English)
+الشخصية والصوت والرسوم متولّدين بالكمبيوتر. مصادر كل حلقة في وصفها. ومفيش هنا نصايح استثمار.
+```
 
-Agent Peek is not from here. He is on Earth with one mission: observe, file
-his report to Command, and do not get attached.
+### الكلمات المفتاحية للقناة
 
-Each report rounds up the planet's most important news: politics, wars,
-money, science and technology, and the strange things humans do. Every story
-is shown with its source and date.
+يوتيوب ستوديو ← الإعدادات ← القناة ← المعلومات الأساسية.
 
-The jokes are aimed at governments, institutions and the very rich. When
-civilians are the ones paying, the jokes stop.
+```
+تقرير الأرض, العميل Peek, اشرحها لكائن فضائي, شرح مبسط, كيف يعمل, ازاي بيشتغل, تبسيط العلوم, تكنولوجيا, بيتكوين, العملات المشفرة, الإنترنت, Earth Report
+```
 
-The character, voice and animation are computer-generated. The news is real.
+### إعدادات الرفع الافتراضية
 
-## Channel keywords
+يوتيوب ستوديو ← الإعدادات ← الإعدادات الافتراضية للتحميل.
 
-Arabic: تقرير الأرض, أخبار العالم, أخبار ساخرة, كوميديا سياسية, ملخص الأخبار, العميل Peek
+- الفئة: التعليم (Education)
+- لغة الفيديو: العربية
+- الجمهور: ليس مخصصاً للأطفال
+- التعليقات: اللي فيها روابط تتراجع قبل ما تظهر
 
-English: Earth Report, world news, news satire, political comedy, news recap, Agent Peek
+## 2. الفيديوهات
 
-## Upload defaults worth setting once
+لكل حلقة مجلد `youtube/` فيه:
 
-- Category: News & Politics
-- Audience: not made for kids
-- Default description footer: the last two lines of any episode's `description.txt`
+- `upload.md`: تلات عناوين (الأول هو المقترح)، التاجز، الإعدادات، والتعليق المثبّت.
+- `description.txt`: الوصف جاهز للّصق، وفيه الفصول بالتوقيت والمصادر.
+- `captions.srt`: الترجمة العربية.
+- `thumbnail-a.jpg` (المقترح) و`thumbnail-b.jpg`.
+
+### ملف العملات المشفرة (ينزل الأول)
+
+| # | العنوان | المدة | المجلد |
+|---|---|---|---|
+| 1 | البيتكوين اتعمل ليه؟ القصة من الأول \| ملف العملات المشفرة 1/5 | 7:27 | `explain-crypto-01-ar/youtube/` |
+| 2 | البلوكتشين والتعدين.. بأبسط شرح ممكن \| ملف العملات المشفرة 2/5 | 7:07 | `explain-crypto-02-ar/youtube/` |
+| 3 | إزاي الناس بتخسر فلوسها في الكريبتو؟ مفاتيح، منصات، ونصب \| 3/5 | 7:37 | `explain-crypto-03-ar/youtube/` |
+| 4 | البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ \| ملف العملات المشفرة 4/5 | 7:45 | `explain-crypto-04-ar/youtube/` |
+| 5 | إيثيريوم، العملات المستقرة، NFT وعملات الميم.. في حلقة واحدة \| 5/5 | 7:26 | `explain-crypto-05-ar/youtube/` |
+
+قايمة التشغيل وترتيب النشر: `channel/crypto-file.md`.
+
+### ملف الشبكة
+
+| # | العنوان | المدة | المجلد |
+|---|---|---|---|
+| 1 | الموبايل بيشتغل إزاي؟ صوتك بيروح فين بالظبط \| ملف الشبكة 1/3 | 7:30 | `explain-network-01-ar/youtube/` |
+| 2 | الإنترنت فين بالظبط؟ في قاع البحر \| ملف الشبكة 2/3 | 7:43 | `explain-network-02-ar/youtube/` |
+| 3 | مكالمة الفيديو بتشتغل إزاي؟ وشّك بيتقطّع ألف حتة \| ملف الشبكة 3/3 | 7:38 | `explain-network-03-ar/youtube/` |
+
+قايمة التشغيل: `channel/network-file.md`.
+
+## 3. ليه العناوين دي
+
+- كل عنوان بيبدأ بالسؤال اللي الناس بتكتبه في البحث، وبعده اسم الملف ورقم الحلقة.
+- العناوين بالعامية علشان تتقري طبيعي، والتاجز فيها نفس السؤال بالفصحى ("كيف يعمل الإنترنت"، "ما هو البيتكوين") علشان اللي بيدوّر بالفصحى يلاقيها.
+- أول سطرين في كل وصف فيهم الموضوع والكلمات الأساسية، لأنهم اللي بيظهروا في نتايج البحث.
+
+## 4. ملاحظات
+
+- ملف العملات المشفرة ينزل الأول: فيه أحداث وأرقام بتاريخها (آخرها نوفمبر 2026) فقيمته بتقل مع الوقت. ملف الشبكة مابيتقادمش.
+- حلقة الأخبار القديمة (`earth-report-001-ar`) ما تنزلش على القناة دي: نوع مختلف وهيلخبط يوتيوب في تصنيف القناة.
+- للنسخة الإنجليزية لاحقاً: قناة منفصلة باسم Earth Report، وغلافها جاهز في `channel/banner-en.jpg`.
+- صور القناة مرسومة بـ `video/youtube.cjs art` من `video/youtube/art-earth-report-001.json`.
