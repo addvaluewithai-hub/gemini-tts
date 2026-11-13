@@ -504,3 +504,16 @@ lists its sources by hand in `youtube.sources`.
 A thumbnail spec is a tag, a two-line headline (`[[words]]` in yellow), an
 optional line under it, the host's `emote` and `gesture`, and `icons`: any of
 the boards' icons, placed in 1280 x 720 units.
+
+`youtube_upload.py` then sends an episode to YouTube from the machine that rendered it: the video (resumable
+upload), its thumbnail, its captions and, optionally, a playlist entry, with the title, description, tags and
+language taken from the kit. It uploads as private unless told otherwise, and `--publish-at` schedules it.
+
+```
+video/youtube_upload.py episodes/<channel>/<episode> <video.mp4> --dry-run
+video/youtube_upload.py episodes/<channel>/<episode> <video.mp4> --publish-at 2026-11-20T15:00:00Z --playlist <id>
+```
+
+It needs an OAuth access token for the channel with the scopes `youtube.upload` and `youtube.force-ssl`, either
+added to requests for `www.googleapis.com` by the machine's proxy or given in `YT_ACCESS_TOKEN`. Since 2 November
+2026 videos uploaded by an unverified API project are no longer locked to private.
