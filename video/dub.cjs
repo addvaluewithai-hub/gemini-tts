@@ -13,7 +13,7 @@ if (!outPath) { console.error("usage: node dub.cjs <video cues.json> <dub cues.j
 const SR = 24000, vid = JSON.parse(fs.readFileSync(vidPath, "utf8")), dub = JSON.parse(fs.readFileSync(dubPath, "utf8"));
 const words = (c, p) => JSON.parse(fs.readFileSync(path.resolve(path.dirname(p), c.episode, c.transcript), "utf8"));
 const vW = words(vid, vidPath), dW = words(dub, dubPath), vT = vid.tempo || 1, dT = dub.tempo || 1;
-const beats = (c) => c.edit.filter((e) => !(e.board && e.board.kind === "endcard")).map((e) => Math.max(0, e.t));
+const beats = (c) => c.edit.filter((e) => !(e.board && ["endcard", "endnext", "shortend"].includes(e.board.kind))).map((e) => Math.max(0, e.t));
 const A = beats(vid), B = beats(dub);
 if (A.length !== B.length) throw new Error(`the two cue files do not have the same beats: ${A.length} and ${B.length}`);
 const endA = vW.duration_ms / 1000 / vT, endB = dW.duration_ms / 1000 / dT;      // cue times are in sped-up time
