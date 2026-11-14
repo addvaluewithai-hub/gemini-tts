@@ -27,10 +27,21 @@
   "captionChunk": 4,
   "bpm": 100,
   "musicGain": 0.45,
-  "sfxGain": 0.55,
+  "sfxGain": 0.25,
   "voiceGain": 1.35,
   "captions": false,
-  "whooshGain": 0.2
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
  },
  "ending": {
   "card": {

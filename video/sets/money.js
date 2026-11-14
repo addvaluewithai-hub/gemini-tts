@@ -41,7 +41,7 @@ function s1(a, tot) {
 }
 // ---- 2: salt, shells, and on an island a stone as big as a car: a wallet that needs a crane ----
 function s2(a, tot) {
-  const c = camAt(a, [[0, 640, 580, 1.25], [1.5, 700, 580, 1.25], [2.25, 1300, 560, 1.15], [3.2, 2350, 560, 0.95], [3.75, 2700, 560, 1.12], [5.0, 2740, 520, 1.05], [6.4, 2760, 500, 1.0]]), G = 860, IS = 2700;
+  const c = camAt(a, [[0, 680, 560, 1.08], [1.5, 720, 560, 1.08], [2.25, 1300, 540, 1.04], [3.2, 2350, 560, 0.95], [3.75, 2700, 560, 1.12], [5.0, 2740, 520, 1.05], [6.4, 2760, 500, 1.0]]), G = 860, IS = 2700;
   const salt = at(700, G - 180, `${two("M-80 0Q-96 -150 -50 -190L-60 -210H60L50 -190Q96 -150 80 0Z", P.cream, P.creamD, 0, 10)}<path d="M-56 -206Q0 -180 56 -206" stroke="${P.wood}" stroke-width="10" fill="none"/>${[[-30, -230], [0, -244], [26, -228], [-8, -224]].map(([x, y]) => `<rect x="${x}" y="${y}" width="16" height="16" rx="3" fill="#fff" transform="rotate(20 ${x} ${y})"/>`).join("")}`, [1.6 * pop(a - 1.69), 1.6 * pop(a - 1.69)]);
   const shells = at(1300, G - 420, `<g transform="scale(1.6)"><path d="M-150 0Q0 70 150 0" stroke="${P.wood}" stroke-width="6" fill="none"/>${[-120, -60, 0, 60, 120].map((x, i) => at(x, 30 - Math.abs(x) * 0.18 + 6 * Math.sin(tot * 2 + i), `${two("M0 -28Q32 -24 30 6Q20 30 0 30Q-20 30 -30 6Q-32 -24 0 -28Z", "#ffe0ec", "#f0a8c4", 0, 6)}<path d="M0 -24V26M-16 -16L-8 24M16 -16L8 24" stroke="#f0a8c4" stroke-width="4"/>`, pop(a - 2.33 - i * 0.05))).join("")}</g>`);
   const crates = at(700, G, two(rr(-180, -180, 360, 180, 8), P.wood, P.woodD, 0, 12)) + at(1300, G, `<rect x="-250" y="-460" width="18" height="460" fill="${P.woodD}"/><rect x="232" y="-460" width="18" height="460" fill="${P.woodD}"/>`);
@@ -78,7 +78,7 @@ function s3(a, tot) {
 }
 // ---- 4: gold is heavy; it goes into a strongbox, a receipt comes out and goes round the market as paper ----
 function s4(a, tot) {
-  const c = camAt(a, [[0, 520, 640, 1.75], [0.9, 540, 640, 1.75], [1.9, 860, 600, 1.55], [2.9, 980, 620, 1.55], [3.5, 1250, 640, 1.5], [4.6, 1850, 640, 1.5], [5.9, 1950, 620, 1.6]]), G = 860, SC = [380, G], SH = [900, G];
+  const c = camAt(a, [[0, 640, 590, 1.22], [0.9, 660, 590, 1.22], [1.9, 860, 580, 1.25], [2.9, 980, 590, 1.3], [3.5, 1250, 600, 1.28], [4.6, 1800, 600, 1.28], [5.9, 1900, 590, 1.32]]), G = 860, SC = [380, G], SH = [900, G];
   const sink = kf(a, [[0.2, 0], [0.42, 1.15], [0.55, 0.95], [0.66, 1]]), slide = ease(seg(a, 0.95, 1.9)), sackX = lerp(SC[0] + 90, SH[0], slide), sackY = lerp(G - 150 + 40 * sink, G - 80, slide) - 40 * Math.sin(Math.PI * slide);
   const scale = at(SC[0], G, `<path d="M-14 0h28l-6 -220h-16Z" fill="${P.steelD}"/><path d="M-150 ${-220 + 20 * sink}L150 ${-220 - 20 * sink}" stroke="${P.steel}" stroke-width="12" stroke-linecap="round"/>
     ${[[-150, 20], [150, -20]].map(([x, d]) => `<path d="M${x} ${-220 + d * sink}l-50 70h100Z" fill="none" stroke="${P.steel}" stroke-width="5"/><path d="M${x - 70} ${-150 + d * sink}h140l-14 16h-112Z" fill="${P.steel}"/>`).join("")}${slide < 0.3 ? "" : at(150, -160 + 20 * sink - 20, `<rect x="-30" y="-16" width="60" height="16" rx="4" fill="#8a86a8"/>`)}`);
@@ -135,7 +135,7 @@ function s7(a, tot) {
 }
 // ---- 8: and it would not buy a bus ticket ----
 function s8(a, tot) {
-  const c = camAt(a, [[0, 900, 620, 1.45], [1.5, 1000, 600, 1.3]]), G = 880, M = [820, G];
+  const c = camAt(a, [[0, 920, 600, 1.2], [1.5, 1000, 590, 1.12]]), G = 880, M = [820, G];
   const push = kf(a, [[0, -900], [0.42, 560], [0.6, 440], [1.5, 300]]), busX = lerp(1250, 2900, easeIn(seg(a, 0.8, 1.5)));
   const machine = at(M[0], G, `${two(rr(-110, -420, 220, 420, 18), P.teal, P.tealD, 12, 0)}<path d="${rr(-80, -390, 160, 110, 12)}" fill="${P.ink}"/>${a > 0.47 ? text(0, -310, "✗", 80, P.red) : text(0, -310, "1 $", 50, P.green)}<path d="${rr(-70, -240, 140, 20, 8)}" fill="${P.ink}"/><path d="${rr(-50, -140, 100, 16, 6)}" fill="${P.ink}"/>`);
   const nt = at(push, G - 230, `${two(rr(-900, -60, 900, 120, 10), "#6fe3a1", "#3fbf7a", 5, 5)}${number(-450, 22, "100,000,000,000,000", 56, "#1f6a40")}`, 1, a > 0.47 ? -4 * Math.exp(-(a - 0.47) * 6) * Math.sin((a - 0.47) * 40) : 0);
@@ -145,7 +145,7 @@ function s8(a, tot) {
 }
 // ---- 9: most of their money is not paper at all: numbers on a screen ----
 function s9(a, tot) {
-  const c = camAt(a, [[0, 960, 600, 1.3], [2.6, 1000, 580, 1.32], [3.55, 1330, 480, 1.8]]), G = 900, SX = 1330, N = 10;
+  const c = camAt(a, [[0, 960, 590, 1.2], [2.6, 1000, 580, 1.22], [3.55, 1300, 520, 1.45]]), G = 900, SX = 1330, N = 10;
   let notes = "", digits = "";
   const glyph = (i) => String((i * 7 + 3) % 10);
   for (let i = N - 1; i >= 0; i--) { const y = G - 40 - i * 52, t0 = 1.13 + (N - 1 - i) * 0.16, u = a - t0, keep = i === 0;
@@ -198,9 +198,9 @@ function jobs(t, c, tot, s) {
   const g = `<rect width="1920" height="1080" fill="#3b1d74"/>` + layer(stars(37, 40, -200, 2200, 600, tot) + `<rect x="-400" y="${PG}" width="3000" height="400" fill="#2c1a66"/>`, c, 0.5) + layer(out, c);
   return g;
 }
-function s11(a, tot, s) { const c = camAt(a, [[0, 960, 600, 1.1], [1.5, 960, 590, 1.04], [2.2, 960, 590, 1.0], [2.45, 620, 600, 1.3], [3.09, 580, 610, 1.38]]); return { g: jobs(a, c, tot, s) }; }
-function s12(a, tot, s) { const T2 = (s.ends || [])[11] || 3.09, c = camAt(a, [[0, 580, 610, 1.38], [0.3, 960, 600, 1.42], [1.11, 980, 600, 1.45]]); return { g: jobs(T2 + a, c, tot, s) }; }
-function s13(a, tot, s) { const T3 = ((s.ends || [])[11] || 3.09) + ((s.ends || [])[12] || 1.11), c = camAt(a, [[0, 980, 600, 1.45], [0.3, 1330, 560, 1.35], [0.9, 1280, 560, 1.25], [1.25, 860, 560, 1.0], [3.27, 860, 560, 1.04]]); return { g: jobs(T3 + a, c, tot, s) }; }
+function s11(a, tot, s) { const c = camAt(a, [[0, 960, 590, 1.02], [1.5, 960, 580, 1.0], [2.2, 960, 580, 0.98], [2.45, 640, 590, 1.18], [3.09, 620, 600, 1.22]]); return { g: jobs(a, c, tot, s) }; }
+function s12(a, tot, s) { const T2 = (s.ends || [])[11] || 3.09, c = camAt(a, [[0, 620, 600, 1.22], [0.3, 960, 590, 1.24], [1.11, 970, 590, 1.26]]); return { g: jobs(T2 + a, c, tot, s) }; }
+function s13(a, tot, s) { const T3 = ((s.ends || [])[11] || 3.09) + ((s.ends || [])[12] || 1.11), c = camAt(a, [[0, 970, 590, 1.26], [0.3, 1300, 560, 1.22], [0.9, 1260, 560, 1.15], [1.25, 900, 560, 0.98], [3.27, 900, 560, 1.0]]); return { g: jobs(T3 + a, c, tot, s) }; }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13];
 export const moneySet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);

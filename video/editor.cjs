@@ -97,7 +97,8 @@ function resolve(cues, words, slides) {
 
 // Step 2: one studio state per frame.
 function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
-  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", explain = cues.layout === "explain", solo = cues.layout === "solo" || explain, shots = short ? SHORT : solo ? SOLO : SHOTS;
+  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", explain = cues.layout === "explain", solo = cues.layout === "solo" || explain, base = short ? SHORT : solo ? SOLO : SHOTS,
+    shots = cues.shots ? Object.fromEntries(Object.entries(base).map(([k, v]) => [k, { ...v, ...(cues.shots[k] || {}) }])) : base;   // settings.shots loosens or tightens a framing per episode
   let pip = 0, room = 0, side = "right";
   let hostY = 0, vY = 0, lurk = 0, peek = 0, scrim = 0, lb = 0, chipA = 0, kb = 1, cx = 0.5, cy = 0.3, storyT = -9, lastStory = null, lastInsertCut = -9;
   for (let i = 0; i < N; i++) {
@@ -159,7 +160,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     pip += (((explain ? seg.host === "pip" : solo) && insert ? 1 : 0) - pip) * 0.3;
     room += ((short && (seg.fact || seg.meme) ? 1 : 0) - room) * 0.26;
     const tight = !insert && (seg.shot === "close" || seg.shot === "low");
-    lb += ((tight && !short ? 62 : 0) - lb) * 0.22;
+    lb += ((tight && !short && cues.letterbox !== false ? 62 : 0) - lb) * 0.22;
     if (seg.story !== lastStory) { lastStory = seg.story; storyT = t; }
     chipA += ((seg.story && (!tight || short) ? 1 : 0) - chipA) * 0.25;
     const sl = slides[seg.slide];

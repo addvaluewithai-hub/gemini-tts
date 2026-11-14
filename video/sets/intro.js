@@ -19,7 +19,7 @@ export const HEAPN = HEAP.length;
 
 // ---- 0: money with no bank and no paper ----
 function s0(a, tot) {
-  const c = camAt(a, [[0, 960, 540, 1], [2.0, 960, 520, 1.04], [3.3, 960, 520, 1.05], [4.69, 960, 470, 1.24]]), G = 880, BX = 420, NX = 1500;
+  const c = camAt(a, [[0, 960, 540, 1], [2.0, 960, 520, 1.04], [3.3, 960, 520, 1.05], [4.69, 960, 510, 1.08]]), G = 880, BX = 480, NX = 1500;
   const sink = easeIn(seg(a, 3.62, 4.25)), bk = at(BX, G + 640 * sink, bank({ night: 1, sign: [1, 1, 1, 1], inside: P.ink, inner: at(0, -225, book(rows("100", "50")), 0.62) }), 0.92);
   const x1 = a > 3.46 ? at(0, 640 * sink, cross(BX, G - 300, 70, P.red, a - 3.46)) : "";
   // a stack of notes that blows away on "paper"
