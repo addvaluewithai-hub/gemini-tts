@@ -192,7 +192,7 @@ function w10(a, tot) {
   const dist = Math.round(lerp(0, 30, ease(seg(a, 4.4, 5.3))));
   const span1 = a > 4.3 ? at(0, 0, `<path d="M560 ${G + 120}H${X1}" stroke="${P.gold}" stroke-width="12" stroke-linecap="round" stroke-dasharray="${clamp(seg(a, 4.3, 5.2)).toFixed(3)} 1" pathLength="1"/>` + at((560 + X1) / 2, G + 240, tagV((dist >= 30 ? "30+" : dist), "km", { size: 170 }))) : "";
   const edison = a > 5.0 ? at(560, G + 380, `<path d="M0 -60H137" stroke="${P.cream}" stroke-width="14" stroke-linecap="round"/>` + at(160, 60, tagV("1.5", "km", { size: 100, fill: P.cream })), pop(a - 5.0)) : "";
-  const g = sky(c, tot, 29) + layer(hills(91, -800, 4400, G - 80, 160, E.far), c, 0.5) + layer(`<rect x="-900" y="${G}" width="5400" height="900" fill="${P.ground}"/>` + falls + PX.map((x) => at(x, G, pylon(520))).join("") + drawn(line, seg(a, 2.98, 3.7), E.el, 7) + city + at(420, G - 700, plate("NIAGARA", 80), pop(a - 2.6)) + at(X1 + 120, G - 640, plate("BUFFALO", 110), pop(a - 3.59)) + span1 + edison, c) + at(330, 230, year(a, 0.38, "1896", 0.95));
+  const g = sky(c, tot, 29) + layer(hills(91, -800, 4400, G - 80, 160, E.far), c, 0.5) + layer(`<rect x="-900" y="${G}" width="5400" height="900" fill="${P.ground}"/>` + falls + PX.map((x) => at(x, G, pylon(520))).join("") + drawn(line, seg(a, 2.98, 3.7), E.el, 7) + city + at(820, G - 700, plate("NIAGARA", 80), pop(a - 2.6)) + at(X1 + 120, G - 640, plate("BUFFALO", 110), pop(a - 3.59)) + span1 + edison, c) + at(330, 230, year(a, 0.38, "1896", 0.95));
   return { g, in: [960, 540], inC: "#fff4dc" };
 }
 

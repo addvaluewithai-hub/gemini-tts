@@ -1,0 +1,2187 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-electricity-01-dub-en",
+ "transcript": "../../../video/cues/explain-electricity-01-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir, field report number one on the electricity ",
+   "shot": "close",
+   "emote": "serious",
+   "slide": null
+  },
+  {
+   "t": 3.25,
+   "say": "Today's subject: electricity itself. The stuff i",
+   "board": {
+    "kind": "eintro",
+    "ends": [
+     4.3,
+     4.59,
+     3.47,
+     4.35,
+     1.81
+    ]
+   },
+   "step": 0,
+   "stepT": 3.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 7.57,
+   "say": "This whole planet runs on it. Lights, phones, fa",
+   "board": {
+    "kind": "eintro",
+    "ends": [
+     4.3,
+     4.59,
+     3.47,
+     4.35,
+     1.81
+    ]
+   },
+   "step": 1,
+   "stepT": 7.57
+  },
+  {
+   "t": 11.28,
+   "say": "Cut it for one hour.. and their civilization sta",
+   "board": {
+    "kind": "eintro",
+    "ends": [
+     4.3,
+     4.59,
+     3.47,
+     4.35,
+     1.81
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 11.28
+  },
+  {
+   "t": 14.2,
+   "say": "Strangest thing I found: what runs in their wire",
+   "board": {
+    "kind": "eintro",
+    "ends": [
+     4.3,
+     4.59,
+     3.47,
+     4.35,
+     1.81
+    ]
+   },
+   "step": 3,
+   "stepT": 14.2
+  },
+  {
+   "t": 18.42,
+   "say": "Yet the lamp lights instantly.",
+   "board": {
+    "kind": "eintro",
+    "ends": [
+     4.3,
+     4.59,
+     3.47,
+     4.35,
+     1.81
+    ]
+   },
+   "step": 4,
+   "stepT": 18.42
+  },
+  {
+   "t": 20.31,
+   "say": "So how? What is a volt, anyway? And why do they ",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "present"
+  },
+  {
+   "t": 26.65,
+   "say": "It began about twenty-six hundred years ago.",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "CHARGE",
+    "icon": "atom"
+   },
+   "stepT": 26.65,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 29.23,
+   "say": "A Greek rubbed a lump of amber on some fur.. and",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 1,
+   "stepT": 29.23
+  },
+  {
+   "t": 34.02,
+   "say": "The Greek word for amber: Elektron.",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 2,
+   "stepT": 34.02
+  },
+  {
+   "t": 36.03,
+   "say": "That gave them the word Electricity.",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 3,
+   "stepT": 36.03
+  },
+  {
+   "t": 37.9,
+   "say": "Their most important invention.. named after a r",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 4,
+   "stepT": 37.9
+  },
+  {
+   "t": 40.47,
+   "say": "Then for two thousand years, nobody understood i",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 5,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 40.47
+  },
+  {
+   "t": 44.21,
+   "say": "What happened: everything here is made of atoms.",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 6,
+   "stepT": 44.21
+  },
+  {
+   "t": 46.79,
+   "say": "Around every atom are very tiny things called el",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 7,
+   "stepT": 46.79
+  },
+  {
+   "t": 52.6,
+   "say": "The heart of the atom is positive.",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 8,
+   "stepT": 52.6
+  },
+  {
+   "t": 54.19,
+   "say": "The rule is simple: opposites attract. Likes.. p",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 9,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 54.19
+  },
+  {
+   "t": 57.16,
+   "say": "Just like humans, sir. Except electrons don't hi",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 60.19,
+   "say": "When the Greek rubbed the amber, electrons jumpe",
+   "board": {
+    "kind": "amber",
+    "ends": [
+     2.48,
+     4.42,
+     2.03,
+     1.93,
+     2.84,
+     3.93,
+     2.6,
+     5.89,
+     1.71,
+     6.59,
+     5.78
+    ]
+   },
+   "step": 10,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 60.19,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 66.21,
+   "say": "They call that static electricity. Charge piling",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "SPARK",
+    "icon": "bolt"
+   },
+   "stepT": 66.21,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 70.66,
+   "say": "A human walks across a carpet.. and gets charged",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 1,
+   "stepT": 70.66
+  },
+  {
+   "t": 73.37,
+   "say": "Touches a doorknob.. the charge jumps. Spark.",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 2,
+   "stepT": 73.37
+  },
+  {
+   "t": 75.81,
+   "say": "That little spark is thousands of volts.",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 3,
+   "stepT": 75.81
+  },
+  {
+   "t": 78.4,
+   "say": "But almost no charge behind it. It just stings.",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 4,
+   "stepT": 78.4
+  },
+  {
+   "t": 81.19,
+   "say": "Now scale that spark up.. lightning.",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 5,
+   "stepT": 81.19
+  },
+  {
+   "t": 83.59,
+   "say": "A charged cloud. The charge leaps down.",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 6,
+   "stepT": 83.59
+  },
+  {
+   "t": 85.9,
+   "say": "A typical bolt: about three hundred million volt",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 7,
+   "stepT": 85.9
+  },
+  {
+   "t": 88.91,
+   "say": "And about thirty thousand amps.",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 8,
+   "stepT": 88.91
+  },
+  {
+   "t": 90.56,
+   "say": "Lightning hits this planet dozens of times.. eve",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 9,
+   "stepT": 90.56
+  },
+  {
+   "t": 93.66,
+   "say": "One bolt heats the air around it to five times t",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 10,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 93.66
+  },
+  {
+   "t": 97.46,
+   "say": "And the boom they hear after.. is the air bursti",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 11,
+   "stepT": 97.46
+  },
+  {
+   "t": 100.52,
+   "say": "In seventeen fifty-two, an American named Frankl",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 12,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 100.52
+  },
+  {
+   "t": 106.28,
+   "say": "A year later, a scientist in Russia tried it.. a",
+   "board": {
+    "kind": "spark",
+    "ends": [
+     4.24,
+     2.7,
+     2.51,
+     2.25,
+     2.59,
+     1.93,
+     2.17,
+     3.07,
+     1.88,
+     3.23,
+     3.86,
+     2.46,
+     5.6,
+     2.9
+    ]
+   },
+   "step": 13,
+   "host": "right",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 106.28
+  },
+  {
+   "t": 109.35,
+   "say": "So humans learned lesson one early: electricity ",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 113.77,
+   "say": "But charge that sits still powers nothing. What ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present",
+   "story": {
+    "n": 3,
+    "tag": "CURRENT",
+    "icon": "cable"
+   }
+  },
+  {
+   "t": 119.57,
+   "say": "A copper wire is full of loose electrons.",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 0,
+   "stepT": 119.57,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 121.75,
+   "say": "To get moving they need two things: a push, like",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 1,
+   "stepT": 121.75
+  },
+  {
+   "t": 124.9,
+   "say": "And a closed path that brings them back to the s",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 2,
+   "stepT": 124.9
+  },
+  {
+   "t": 127.83,
+   "say": "Close the switch.. the circuit is complete, the ",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 3,
+   "stepT": 127.83
+  },
+  {
+   "t": 131.83,
+   "say": "Now the riddle from the start. The electron itse",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 4,
+   "stepT": 131.83
+  },
+  {
+   "t": 137.38,
+   "say": "But the push races around the circuit near the s",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 5,
+   "stepT": 137.38
+  },
+  {
+   "t": 140.38,
+   "say": "Why? The wire is already full. Like a hose full ",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 6,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 140.38
+  },
+  {
+   "t": 148.58,
+   "say": "Open the switch.. the circuit breaks, and everyt",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 7,
+   "stepT": 148.58
+  },
+  {
+   "t": 152.91,
+   "say": "So their light switch doesn't send electricity. ",
+   "shot": "close",
+   "emote": "smug"
+  },
+  {
+   "t": 157.17,
+   "say": "And if electrons find a shortcut with no lamp? T",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 8,
+   "host": "right",
+   "emote": "serious",
+   "stepT": 157.17,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 163.06,
+   "say": "So every house has a breaker that trips when the",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 9,
+   "stepT": 163.06
+  },
+  {
+   "t": 166.3,
+   "say": "Materials come in two kinds. Metals like copper ",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 10,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 166.3
+  },
+  {
+   "t": 173.56,
+   "say": "That's why every wire wears a jacket.",
+   "board": {
+    "kind": "circuit",
+    "ends": [
+     2.37,
+     3.4,
+     3.5,
+     4.2,
+     5.52,
+     3.57,
+     8.18,
+     9.8,
+     6.18,
+     3.91,
+     8,
+     2.44
+    ]
+   },
+   "step": 11,
+   "stepT": 173.56
+  },
+  {
+   "t": 175.45,
+   "say": "To understand electricity, humans compare it to ",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 4,
+    "tag": "VOLTS",
+    "icon": "gear"
+   },
+   "stepT": 175.45,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 180.65,
+   "say": "The higher the tank, the harder the water pushes",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 1,
+   "stepT": 180.65
+  },
+  {
+   "t": 185.54,
+   "say": "How much water flows through the pipe each secon",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 2,
+   "stepT": 185.54
+  },
+  {
+   "t": 189.71,
+   "say": "If the pipe has a narrow spot, less water gets t",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 3,
+   "stepT": 189.71
+  },
+  {
+   "t": 194.3,
+   "say": "Raise the tank.. more pressure, more flow. The e",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 4,
+   "stepT": 194.3
+  },
+  {
+   "t": 198.39,
+   "say": "The work that water can do, push times flow: tha",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 5,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 198.39
+  },
+  {
+   "t": 203.08,
+   "say": "A modern bulb draws about ten watts. A kettle, a",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 6,
+   "stepT": 203.08
+  },
+  {
+   "t": 207.08,
+   "say": "One cup of tea.. two hundred bulbs.",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 7,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 207.08
+  },
+  {
+   "t": 209.48,
+   "say": "The old bulb had a thin wire inside, with high r",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 8,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 209.48
+  },
+  {
+   "t": 218.47,
+   "say": "These units are all people. Volta, Italian, buil",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 9,
+   "stepT": 218.47
+  },
+  {
+   "t": 223.12,
+   "say": "Ampère, French.",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 10,
+   "stepT": 223.12
+  },
+  {
+   "t": 224.37,
+   "say": "Ohm, German.",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 11,
+   "stepT": 224.37
+  },
+  {
+   "t": 225.32,
+   "say": "And Watt, Scottish.",
+   "board": {
+    "kind": "pipes",
+    "ends": [
+     4.97,
+     4.9,
+     4.57,
+     5.12,
+     4.59,
+     5.29,
+     3.69,
+     2,
+     8.79,
+     5.22,
+     0.79,
+     1.13,
+     1.17
+    ]
+   },
+   "step": 12,
+   "stepT": 225.32
+  },
+  {
+   "t": 226.51,
+   "say": "Every one of these scientists died.. and their n",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 230.94,
+   "say": "To picture the numbers: a phone charger puts out",
+   "board": {
+    "kind": "scale",
+    "ends": [
+     3.35,
+     3.08,
+     2.21,
+     1.99,
+     7.9
+    ]
+   },
+   "step": 0,
+   "stepT": 230.94,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 234.13,
+   "say": "A wall socket: one-ten to two-forty, depending o",
+   "board": {
+    "kind": "scale",
+    "ends": [
+     3.35,
+     3.08,
+     2.21,
+     1.99,
+     7.9
+    ]
+   },
+   "step": 1,
+   "stepT": 234.13
+  },
+  {
+   "t": 237.32,
+   "say": "High power lines: hundreds of thousands.",
+   "board": {
+    "kind": "scale",
+    "ends": [
+     3.35,
+     3.08,
+     2.21,
+     1.99,
+     7.9
+    ]
+   },
+   "step": 2,
+   "stepT": 237.32
+  },
+  {
+   "t": 239.62,
+   "say": "Lightning: hundreds of millions.",
+   "board": {
+    "kind": "scale",
+    "ends": [
+     3.35,
+     3.08,
+     2.21,
+     1.99,
+     7.9
+    ]
+   },
+   "step": 3,
+   "stepT": 239.62
+  },
+  {
+   "t": 241.75,
+   "say": "A note for command: an ordinary wall socket is e",
+   "board": {
+    "kind": "scale",
+    "ends": [
+     3.35,
+     3.08,
+     2.21,
+     1.99,
+     7.9
+    ]
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 241.75
+  },
+  {
+   "t": 248.67,
+   "say": "Why is current so dangerous to them? Because the",
+   "board": {
+    "kind": "body",
+    "ends": [
+     6.98,
+     3.03,
+     4.61,
+     7.2,
+     5.71
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "BODY",
+    "icon": "heart"
+   },
+   "stepT": 248.67,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 255.45,
+   "say": "Their heart beats because an electric pulse tell",
+   "board": {
+    "kind": "body",
+    "ends": [
+     6.98,
+     3.03,
+     4.61,
+     7.2,
+     5.71
+    ]
+   },
+   "step": 1,
+   "stepT": 255.45
+  },
+  {
+   "t": 258.49,
+   "say": "A stray current scrambles the heart's own signal",
+   "board": {
+    "kind": "body",
+    "ends": [
+     6.98,
+     3.03,
+     4.61,
+     7.2,
+     5.71
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 258.49
+  },
+  {
+   "t": 262.37,
+   "say": "Some creatures use it as a weapon. A fish in Sou",
+   "board": {
+    "kind": "body",
+    "ends": [
+     6.98,
+     3.03,
+     4.61,
+     7.2,
+     5.71
+    ]
+   },
+   "step": 3,
+   "stepT": 262.37
+  },
+  {
+   "t": 268.6,
+   "say": "And when Volta built the first battery, he was c",
+   "board": {
+    "kind": "body",
+    "ends": [
+     6.98,
+     3.03,
+     4.61,
+     7.2,
+     5.71
+    ]
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "grin",
+   "stepT": 268.6
+  },
+  {
+   "t": 274.27,
+   "say": "Current comes in two kinds. One: direct. The ele",
+   "board": {
+    "kind": "wave",
+    "ends": [
+     9.49,
+     6.9,
+     3.85,
+     7.57
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 6,
+    "tag": "AC DC",
+    "icon": "bolt"
+   },
+   "stepT": 274.27,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 282.72,
+   "say": "Two: alternating. The electrons go back and fort",
+   "board": {
+    "kind": "wave",
+    "ends": [
+     9.49,
+     6.9,
+     3.85,
+     7.57
+    ]
+   },
+   "step": 1,
+   "stepT": 282.72
+  },
+  {
+   "t": 288.27,
+   "say": "It flips direction fifty or sixty times a second",
+   "board": {
+    "kind": "wave",
+    "ends": [
+     9.49,
+     6.9,
+     3.85,
+     7.57
+    ]
+   },
+   "step": 2,
+   "stepT": 288.27
+  },
+  {
+   "t": 291.45,
+   "say": "The lamp lights either way. Going out, the elect",
+   "board": {
+    "kind": "wave",
+    "ends": [
+     9.49,
+     6.9,
+     3.85,
+     7.57
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 291.45
+  },
+  {
+   "t": 297.27,
+   "say": "So why would anyone want back-and-forth electric",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 303.26,
+   "say": "In eighteen eighty-two, Thomas Edison opened the",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 7,
+    "tag": "WAR",
+    "icon": "flag"
+   },
+   "stepT": 303.26,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 307.63,
+   "say": "Direct current, one hundred ten volts. On day on",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 1,
+   "stepT": 307.63
+  },
+  {
+   "t": 311.67,
+   "say": "But it had one big flaw: its power couldn't reac",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 2,
+   "stepT": 311.67
+  },
+  {
+   "t": 320.52,
+   "say": "A coal plant on every street. A great plan.. for",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 324.08,
+   "say": "Then came an immigrant from Europe named Nikola ",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 3,
+   "stepT": 324.08,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 328.02,
+   "say": "Worked for Edison a few months.. they clashed, a",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 4,
+   "stepT": 328.02
+  },
+  {
+   "t": 330.73,
+   "say": "He had designs for motors and generators running",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 5,
+   "stepT": 330.73
+  },
+  {
+   "t": 336.21,
+   "say": "AC had one advantage, and it changed everything:",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 6,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 336.21
+  },
+  {
+   "t": 346.92,
+   "say": "Edison didn't sit still. From eighteen eighty-ei",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 7,
+   "calm": true,
+   "music": 0.5,
+   "gesture": "pockets",
+   "stepT": 346.92
+  },
+  {
+   "t": 353.81,
+   "say": "In eighteen ninety, New York State carried out t",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 8,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 353.81
+  },
+  {
+   "t": 363.2,
+   "say": "The execution itself was gruesome and slow. West",
+   "shot": "close",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 370.65,
+   "say": "But the math won. In eighteen ninety-three, West",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 9,
+   "music": 1,
+   "stepT": 370.65,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 375.58,
+   "say": "And in eighteen ninety-six, power from Niagara F",
+   "board": {
+    "kind": "war",
+    "ends": [
+     5.33,
+     4.2,
+     11.94,
+     5,
+     2.75,
+     6.46,
+     10.9,
+     8.92,
+     19.2,
+     6.38,
+     5.75
+    ]
+   },
+   "step": 10,
+   "stepT": 375.58
+  },
+  {
+   "t": 380.1,
+   "say": "Thirty kilometers. Edison topped out at one and ",
+   "shot": "close",
+   "emote": "smug"
+  },
+  {
+   "t": 383.46,
+   "say": "Since then, the grid across the whole planet is ",
+   "board": {
+    "kind": "won",
+    "ends": [
+     4.89,
+     10.01,
+     4.91,
+     3.71,
+     5.58,
+     2.18,
+     6.76
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "WINNER",
+    "icon": "crown"
+   },
+   "stepT": 383.46,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 388.54,
+   "say": "But wait, sir. Any device with a screen or a bat",
+   "board": {
+    "kind": "won",
+    "ends": [
+     4.89,
+     10.01,
+     4.91,
+     3.71,
+     5.58,
+     2.18,
+     6.76
+    ]
+   },
+   "step": 1,
+   "stepT": 388.54
+  },
+  {
+   "t": 397.46,
+   "say": "And the little cube at the end of the charger ca",
+   "board": {
+    "kind": "won",
+    "ends": [
+     4.89,
+     10.01,
+     4.91,
+     3.71,
+     5.58,
+     2.18,
+     6.76
+    ]
+   },
+   "step": 2,
+   "stepT": 397.46
+  },
+  {
+   "t": 402.27,
+   "say": "So every home holds twenty tiny peace treaties b",
+   "board": {
+    "kind": "won",
+    "ends": [
+     4.89,
+     10.01,
+     4.91,
+     3.71,
+     5.58,
+     2.18,
+     6.76
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 402.27
+  },
+  {
+   "t": 406.12,
+   "say": "And the longest power lines on the planet today.",
+   "board": {
+    "kind": "won",
+    "ends": [
+     4.89,
+     10.01,
+     4.91,
+     3.71,
+     5.58,
+     2.18,
+     6.76
+    ]
+   },
+   "step": 4,
+   "stepT": 406.12
+  },
+  {
+   "t": 411.82,
+   "say": "About three thousand three hundred kilometers lo",
+   "board": {
+    "kind": "won",
+    "ends": [
+     4.89,
+     10.01,
+     4.91,
+     3.71,
+     5.58,
+     2.18,
+     6.76
+    ]
+   },
+   "step": 5,
+   "stepT": 411.82
+  },
+  {
+   "t": 414.32,
+   "say": "At one point one million volts. Because over ver",
+   "board": {
+    "kind": "won",
+    "ends": [
+     4.89,
+     10.01,
+     4.91,
+     3.71,
+     5.58,
+     2.18,
+     6.76
+    ]
+   },
+   "step": 6,
+   "stepT": 414.32
+  },
+  {
+   "t": 420.87,
+   "say": "So after a hundred and forty years, the score is",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 424.9,
+   "say": "Two words from the human dictionary. AC and DC: ",
+   "board": {
+    "kind": "edict",
+    "ends": [
+     7.41,
+     4.92
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 424.9,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 431.55,
+   "say": "And kilowatt-hour: a thousand watts running for ",
+   "board": {
+    "kind": "edict",
+    "ends": [
+     7.41,
+     4.92
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 431.55
+  },
+  {
+   "t": 436.9,
+   "say": "Report summary, sir. One: electricity is charge.",
+   "board": {
+    "kind": "erecap",
+    "ends": [
+     14.22
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 436.9,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 452.02,
+   "say": "One last warning: electricity is no toy. If you ",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 459.42,
+   "say": "Next report: where is electricity made? And how ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 467.08,
+   "say": "This was Earth Report. Agent Peek. Transmission ",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 470.6,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "2 / 3",
+    "icons": [
+     "bolt",
+     "tower",
+     "cable"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
