@@ -84,26 +84,26 @@ function m3(a, tot) {
 }
 // ---- 4: an island at dawn; the houses wake up and find the bank shut ----
 function m4(a, tot) {
-  const c = camAt(a, [[0, 960, 640, 1.22], [3.7, 960, 640, 1.28], [4.5, 960, 640, 1.75], [5.09, 960, 645, 1.8]]), G = 820, SEA = 790;
+  const c = camAt(a, [[0, 960, 620, 1.5], [3.7, 960, 620, 1.55], [4.25, 990, 640, 1.6], [5.09, 990, 645, 1.63]]), G = 820, SEA = 790;
   const sunY = lerp(980, 560, easeOut(seg(a, 0, 3.0))), wake = (i) => (a > 3.36 + i * 0.1 ? 1 : 0), sh = ease(seg(a, 4.2, 4.5));
   const shutter = `<clipPath id="m4a"><path d="M-170 -40V-260A170 170 0 0 1 170 -260V-40Z"/></clipPath><g clip-path="url(#m4a)"><rect x="-180" y="-440" width="360" height="${(400 * sh).toFixed(1)}" fill="${P.steel}"/>${Array.from({ length: Math.floor(16 * sh) }, (_, i) => `<path d="M-180 ${-440 + 25 * (i + 1)}h360" stroke="${P.steelD}" stroke-width="5"/>`).join("")}</g>${sh >= 1 ? at(0, -110, padlock(1.3), pop(a - 4.5)) : ""}`;
   const sky = `<rect width="1920" height="1080" fill="url(#bsky)"/>`;
   const far = layer(rings(1350, sunY, 190, "#ffd27a", 0.22, 1.4) + `<circle cx="1350" cy="${sunY}" r="120" fill="#ffd98a"/>` + clouds(tot, 160, 3, "#ffb199", 0.5), c, 0.15);
   const water = `<rect x="-800" y="${SEA}" width="3600" height="900" fill="#1d6fb8"/>${Array.from({ length: 14 }, (_, i) => `<path d="M${-400 + i * 200 + 30 * Math.sin(tot * 0.8 + i)} ${SEA + 40 + (i % 3) * 60}h100" stroke="#5fb6ff" stroke-width="8" stroke-linecap="round" opacity=".6"/>`).join("")}<path d="M1300 ${SEA + 20}h100M1260 ${SEA + 50}h180" stroke="#ffd98a" stroke-width="8" stroke-linecap="round" opacity=".5"/>`;
   const island = `<path d="M260 ${SEA + 30}Q320 ${G - 40} 520 ${G - 20}H1400Q1600 ${G - 40} 1660 ${SEA + 30}Z" fill="#e8c88a"/><path d="M300 ${SEA + 30}Q600 ${SEA + 50} 1620 ${SEA + 30}" stroke="#c9a76a" stroke-width="10" fill="none"/>`;
-  const sign = at(1500, G - 10, `<rect x="-8" y="-260" width="16" height="260" fill="${P.woodD}"/>${two(rr(-150, -300, 300, 90, 12), P.cream, P.creamD, 0, 8)}${text(0, -238, "CYPRUS", 56, P.ink)}`, [1, pop(a - 1.68)]);
-  const year = a > 2.43 ? at(440, 330, calPage("2013", "", 0.85, 150), pop(a - 2.43)) : "";
-  const main = water + island + at(560, G, house(P.blue, P.blueD, { lit: [wake(0), wake(1), wake(0)] }), 0.9) + at(1360, G, house(P.pink, P.pinkD, { lit: [wake(2), wake(1), wake(2)] }), 0.9)
-    + (a > 3.36 ? [560, 1360].map((x, i) => rings(x, G - 160, 200 * spring(a - 3.36 - i * 0.1, 7, 11), P.win, 0.1 * (1 - seg(a, 3.8, 4.3)))).join("") : "")
+  const sign = at(1440, G - 10, `<rect x="-8" y="-260" width="16" height="260" fill="${P.woodD}"/>${two(rr(-130, -300, 260, 90, 12), P.cream, P.creamD, 0, 8)}${text(0, -238, "CYPRUS", 52, P.ink)}`, [1, pop(a - 1.68)]);
+  const year = a > 2.43 ? at(530, 430, calPage("2013", "", 0.7, 150), pop(a - 2.43)) : "";
+  const main = water + island + at(650, G, house(P.blue, P.blueD, { lit: [wake(0), wake(1), wake(0)] }), 0.9) + at(1270, G, house(P.pink, P.pinkD, { lit: [wake(2), wake(1), wake(2)] }), 0.9)
+    + (a > 3.36 ? [650, 1270].map((x, i) => rings(x, G - 160, 200 * spring(a - 3.36 - i * 0.1, 7, 11), P.win, 0.1 * (1 - seg(a, 3.8, 4.3)))).join("") : "")
     + at(960, G, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner: shutter }), 0.62) + sign + year;
   return { g: sky + far + layer(main, c), in: toScreen(c, 960, G - 90), inC: P.ink, inZ: 14, out: toScreen(c, 960, G - 110 * 0.62), outC: P.gold, outZ: 18 };
 }
 // ---- 5: a tower of coins with a line at €100,000; a scoop takes about half of what is above it, and the bank mends itself ----
 function m5(a, tot) {
-  const c = camAt(a, [[0, 980, 640, 1.15], [4.53, 1010, 640, 1.18]]), G = 930, TX = 560, N = 16, LINE = 10, H = 28;
+  const c = camAt(a, [[0, 1110, 690, 1.4], [4.53, 1115, 690, 1.42]]), G = 930, TX = 610, N = 16, LINE = 10, H = 28;
   const disk = (x, y) => `<path d="M${x - 130} ${y}v14a130 32 0 0 0 260 0v-14Z" fill="${P.goldD}"/><ellipse cx="${x}" cy="${y}" rx="130" ry="32" fill="${P.gold}"/><ellipse cx="${x}" cy="${y}" rx="92" ry="22" fill="none" stroke="${P.goldD}" stroke-width="5"/>`;
-  const scoopT = seg(a, 2.07, 2.45), carry = seg(a, 2.45, 2.95), took = a > 2.45 ? 3 : 0, BX = 1500, BY = G;
-  const sp = scoopT < 1 ? bez([1700, 260], [1400, 300], [TX + 120, G - (N - 1.5) * H - 40], easeOut(scoopT)) : bez([TX + 120, G - (N - 1.5) * H - 40], [1100, 120], [BX, BY - 300], ease(carry));
+  const scoopT = seg(a, 2.07, 2.45), carry = seg(a, 2.45, 2.95), took = a > 2.45 ? 3 : 0, BX = 1490, BY = G;
+  const sp = scoopT < 1 ? bez([1650, 380], [1400, 380], [TX + 120, G - (N - 1.5) * H - 40], easeOut(scoopT)) : bez([TX + 120, G - (N - 1.5) * H - 40], [1100, 300], [BX, BY - 300], ease(carry));
   let tower = "";
   for (let i = 0; i < N; i++) { const t0 = 0.05 + i * 0.04; if (a < t0) continue; if (i >= N - took) continue; const y = G - 20 - i * H - 260 * (1 - easeOut(seg(a, t0, t0 + 0.14)));
     tower += disk(TX, y); }
