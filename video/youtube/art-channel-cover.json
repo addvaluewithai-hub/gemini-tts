@@ -1,0 +1,31 @@
+[
+ {
+  "file": "channel/cover-a.jpg",
+  "kind": "cover",
+  "w": 2560,
+  "h": 1440,
+  "big": "EARTH [[REPORT]]",
+  "small": "Field reports from planet Earth"
+ },
+ {
+  "file": "channel/cover-b.jpg",
+  "kind": "cover",
+  "w": 2560,
+  "h": 1440
+ },
+ {
+  "file": "channel/cover-c.jpg",
+  "kind": "cover",
+  "w": 2560,
+  "h": 1440,
+  "big": "EARTH [[REPORT]]",
+  "files": [
+   "coin",
+   "mobile",
+   "bolt",
+   "router"
+  ],
+  "emote": "grin",
+  "gesture": "wave"
+ }
+]

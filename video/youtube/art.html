@@ -39,6 +39,36 @@ window.render = async (s) => {
     <div class="glow" style="${side}:${-100 * u}px;top:${60 * u}px;width:${800 * u}px;height:${700 * u}px;background:#35c8ff;opacity:.4"></div>`;
   if (s.kind === "avatar") {
     html += ring(W / 2, H * 0.5, W * 0.46) + ring(W / 2, H * 0.5, W * 0.33) + `<div class="host" style="left:${W * -0.31}px;top:${H * -0.05}px">${host(s.emote || "smug", "pockets", W * 1.5)}</div>`.replace(`left:${W * -0.31}px;top:${H * -0.05}px`, `left:${W * -0.25}px;top:${H * 0.02}px`);
+  } else if (s.kind === "cover") {
+    // The channel's cover, for every series: Peek at his desk in the studio at night, Earth in the porthole behind him,
+    // the files he has opened pinned on the wall. Everything that matters inside the middle 1546 x 423 (y 508..931).
+    const cx = W / 2, cy = H / 2 - 30, wx = cx + (s.windowX ?? -520), wr = 150, stars = Array.from({ length: 70 }, (_, i) => [((i * 733) % 997) / 997, ((i * 389) % 991) / 991, 1 + (i % 3)]);
+    const files = s.files || ["coin", "mobile", "bolt", "router"], fx0 = cx + (s.filesX ?? 330);
+    html = `<svg style="left:0;top:0" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><defs>
+        <radialGradient id="cwall" cx=".5" cy=".42" r=".75"><stop offset="0" stop-color="#2a2f78"/><stop offset=".6" stop-color="#171a4a"/><stop offset="1" stop-color="#0a0b24"/></radialGradient>
+        <radialGradient id="cearth" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#7fd4ff"/><stop offset=".6" stop-color="#1f6fd0"/><stop offset="1" stop-color="#0d3b86"/></radialGradient>
+        <radialGradient id="cglow"><stop offset="0" stop-color="#35c8ff" stop-opacity=".55"/><stop offset="1" stop-color="#35c8ff" stop-opacity="0"/></radialGradient>
+        <radialGradient id="cpink"><stop offset="0" stop-color="#ff3d9a" stop-opacity=".45"/><stop offset="1" stop-color="#ff3d9a" stop-opacity="0"/></radialGradient>
+        <clipPath id="cwin"><circle cx="${wx}" cy="${cy - 5}" r="${wr}"/></clipPath></defs>
+      <rect width="${W}" height="${H}" fill="url(#cwall)"/>
+      <g stroke="#fff" stroke-opacity=".045" stroke-width="3">${Array.from({ length: 22 }, (_, i) => `<path d="M${i * 128} 0V${H}"/>`).join("")}<path d="M0 ${cy - 330}H${W}"/></g>
+      <ellipse cx="${wx}" cy="${cy - 5}" rx="${wr * 2.1}" ry="${wr * 1.8}" fill="url(#cglow)"/><ellipse cx="${cx + 700}" cy="${cy - 260}" rx="700" ry="520" fill="url(#cpink)"/>
+      <g clip-path="url(#cwin)"><rect x="${wx - wr}" y="${cy - 5 - wr}" width="${2 * wr}" height="${2 * wr}" fill="#060716"/>
+        ${stars.map(([x, y, r]) => `<circle cx="${wx - wr + x * 2 * wr}" cy="${cy - 5 - wr + y * 2 * wr}" r="${r}" fill="#dfe6ff" opacity=".7"/>`).join("")}
+        <g transform="translate(${wx + 24} ${cy + 6}) scale(.6)"><circle r="180" fill="url(#cearth)"/>
+          <g fill="#58d68d"><path d="M-110 -60c40-50 110-40 120 0c10 40-30 60-60 70c-40 14-80 0-90-30c-6-20 10-30 30-40z"/><path d="M40 20c40-20 100-6 104 30c4 40-40 70-80 64c-40-6-60-70-24-94z"/><path d="M30 -130c30-10 70 4 70 30c0 26-50 30-70 16c-20-14-20-40 0-46z"/></g>
+          <ellipse cx="-60" cy="-80" rx="70" ry="40" fill="#fff" opacity=".22"/></g></g>
+      <circle cx="${wx}" cy="${cy - 5}" r="${wr}" fill="none" stroke="#3a427f" stroke-width="34"/><circle cx="${wx}" cy="${cy - 5}" r="${wr + 17}" fill="none" stroke="#7fd4ff" stroke-width="5" opacity=".55"/>
+      ${Array.from({ length: 8 }, (_, i) => { const t = i / 8 * Math.PI * 2; return `<circle cx="${wx + Math.cos(t) * wr}" cy="${cy - 5 + Math.sin(t) * wr}" r="9" fill="#8f9aff"/>`; }).join("")}
+      <g transform="translate(${fx0 + 20} ${cy - 150}) scale(.62)"><rect x="-30" y="-30" width="${files.length > 2 ? 470 : 250}" height="${files.length > 2 ? 400 : 200}" rx="18" fill="#c99a5a"/><rect x="-18" y="-18" width="${files.length > 2 ? 446 : 226}" height="${files.length > 2 ? 376 : 176}" rx="12" fill="#a9783f"/>
+        ${files.map((n, i) => { const x = (i % 2) * 210 + 95, y = Math.floor(i / 2) * 180 + 82, r = [-5, 4, 3, -4][i % 4];
+          return `<g transform="translate(${x} ${y}) rotate(${r})"><rect x="-82" y="-70" width="164" height="140" rx="10" fill="#f3efe4"/><circle cx="0" cy="-62" r="10" fill="#ff4654"/><g transform="scale(.48)">${icon(n)}</g></g>`; }).join("")}
+        ${files.length > 1 ? `<path d="M95 82L305 82L95 262L305 262" fill="none" stroke="#ff4654" stroke-width="5" opacity=".75"/>` : ""}</g>
+      </svg>
+      <div class="host" style="left:${cx + (s.hostX ?? -230)}px;top:${cy - 190}px">${host(s.emote || "smug", s.gesture || "present", 420, -0.6)}</div>
+      <div class="desk" style="top:${cy + 95}px;bottom:auto;height:${H}px"></div>`
+      + (s.big ? `<div class="big" style="left:0;right:0;text-align:center;top:${cy + 112}px;font-size:80px;letter-spacing:.05em">${esc(s.big)}</div>` : "")
+      + (s.small ? `<div class="small" style="left:0;right:0;text-align:center;top:${cy + 198}px;font-size:30px">${esc(s.small)}</div>` : "");
   } else if (s.kind === "banner") {
     // everything that matters sits in the middle 1546 x 423, the part every device shows
     const cx = W / 2, cy = H / 2, hx = s.rtl ? cx - 760 : cx + 250;
