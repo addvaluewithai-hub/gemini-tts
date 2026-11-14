@@ -325,24 +325,8 @@
    "say": "اتتبّعت الأرقام دي لحد ما عرفت ساكنة فين: في دفت",
    "board": {
     "kind": "trail",
-    "host": true,
-    "walk": [
-     170,
-     1400,
-     4.4
-    ]
+    "host": true
    },
-   "actor": {
-    "x": 170,
-    "y": 742,
-    "size": 400,
-    "to": {
-     "x": 1400
-    },
-    "over": 0.8
-   },
-   "emote": "skeptical",
-   "gesture": "present",
    "story": {
     "n": 2,
     "tag": "BANK",
@@ -358,20 +342,8 @@
    "say": "لما علي يدفع لمنى تلاتين دولار، مفيش حاجة بتتحرك",
    "board": {
     "kind": "trail",
-    "host": true,
-    "walk": [
-     170,
-     1400,
-     4.4
-    ]
+    "host": true
    },
-   "actor": {
-    "x": 215,
-    "y": 1050,
-    "size": 600
-   },
-   "emote": "sly",
-   "gesture": "present",
    "step": 1,
    "stepT": 98.18
   },
@@ -380,21 +352,10 @@
    "say": "مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما ش",
    "board": {
     "kind": "trail",
-    "host": true,
-    "walk": [
-     170,
-     1400,
-     4.4
-    ]
+    "host": true
    },
-   "actor": {
-    "x": 1640,
-    "y": 1055,
-    "size": 600,
-    "flip": true
-   },
+   "host": "right",
    "emote": "neutral",
-   "gesture": "count",
    "step": 2,
    "stepT": 103.69
   },
@@ -403,20 +364,10 @@
    "say": "وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع ",
    "board": {
     "kind": "trail",
-    "host": true,
-    "walk": [
-     170,
-     1400,
-     4.4
-    ]
+    "host": true
    },
-   "actor": {
-    "x": 170,
-    "y": 1065,
-    "size": 440
-   },
+   "host": "left",
    "emote": "sly",
-   "gesture": "shrug",
    "step": 3,
    "stepT": 108
   },
@@ -425,20 +376,10 @@
    "say": "يعني البنك مش خزنة مليانة فلوس. البنك دفتر. والل",
    "board": {
     "kind": "trail",
-    "host": true,
-    "walk": [
-     170,
-     1400,
-     4.4
-    ]
+    "host": true
    },
-   "actor": {
-    "x": 300,
-    "y": 1050,
-    "size": 600
-   },
+   "host": "right",
    "emote": "serious",
-   "gesture": "present",
    "step": 4,
    "stepT": 113.25
   },
