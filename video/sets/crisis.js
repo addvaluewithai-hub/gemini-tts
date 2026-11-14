@@ -8,13 +8,13 @@ import { V } from "./crisis.v.js";
 import { P, mix, fmt, house, bank, coin, stars, skyline, clouds, dusk } from "./bank.js";
 import { calPage, calFlip } from "./props.js";
 
-const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
+export const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
 const bump = (a, t0, amt = 0.14) => (a > t0 ? 1 + amt * Math.exp(-(a - t0) * 8) * Math.cos((a - t0) * 14) : 1);
 const storm = (o) => `<rect width="${FW}" height="${FH}" fill="url(#bstorm)" opacity="${clamp(o).toFixed(3)}"/>`;
-const cracks = (p) => drawn("M-120 -440L-90 -360L-140 -300L-100 -230L-130 -150", p, P.ink, 9, 'stroke-linejoin="round"') + drawn("M200 -440L230 -380L190 -320L220 -250", p - 0.2, P.ink, 9, 'stroke-linejoin="round"') + drawn("M-300 -200L-260 -160L-290 -110", p - 0.35, P.ink, 7);
-const fronts = [[P.blue, P.blueD], [P.pink, P.pinkD], [P.teal, P.tealD], [P.violet, P.violetD]];
+export const cracks = (p) => drawn("M-120 -440L-90 -360L-140 -300L-100 -230L-130 -150", p, P.ink, 9, 'stroke-linejoin="round"') + drawn("M200 -440L230 -380L190 -320L220 -250", p - 0.2, P.ink, 9, 'stroke-linejoin="round"') + drawn("M-300 -200L-260 -160L-290 -110", p - 0.35, P.ink, 7);
+export const fronts = [[P.blue, P.blueD], [P.pink, P.pinkD], [P.teal, P.tealD], [P.violet, P.violetD]];
 // a dollar figure that rolls up to `to` as p goes 0..1
-const roll = (to, p) => "$" + fmt(to * easeOut(p));
+export const roll = (to, p) => "$" + fmt(to * easeOut(p));
 const boards = (k) => (k <= 0 ? "" : `<g opacity="${clamp(k * 3).toFixed(2)}">${[[-63, -115], [63, -115]].map(([x, y]) => `<path d="M${x - 34} ${y - 30}L${x + 34} ${y + 2}M${x - 34} ${y + 2}L${x + 34} ${y - 30}" stroke="${P.wood}" stroke-width="13" stroke-linecap="round" transform="translate(0 ${(-60 * (1 - ease(k))).toFixed(1)})"/>`).join("")}<path d="M-32 -50L32 -30M-32 -30L32 -50" stroke="${P.wood}" stroke-width="13" stroke-linecap="round"/></g>`);
 
 // ---- 0: the years run on, and stop at 2008; a storm comes in, the street cracks ----
@@ -33,11 +33,11 @@ function c0(a, tot) {
 }
 // ---- 1: the bank bets the houses' money on house-cards; the cards fall; then the 158-year-old tower falls in one go ----
 const TX = 1450, TG = 900, TK = 0.8;
-const tower = (fall) => { const w = 560, top = -1050;
+export const tower = (fall) => { const w = 560, top = -1050;
   let wins = ""; for (let r = 0; r < 6; r++) for (let q = 0; q < 4; q++) wins += `<rect x="${-w / 2 + 60 + q * 120}" y="${top + 60 + r * 90}" width="60" height="56" rx="6" fill="${(r + q) % 3 ? P.win : "#3b2a6e"}"/>`;
   return `${two(rr(-w / 2, top, w, -top - 500, 8), "#e9c99a", "#c9a676", 18, 0)}${wins}${two(rr(-w / 2 - 30, top - 40, w + 60, 50, 8), P.stone, P.stoneD, 0, 10)}<path d="M-60 ${top - 40}L0 ${top - 130}L60 ${top - 40}Z" fill="${P.stone}"/>${disc(0, top - 70, 22, P.gold, P.goldD)}
     ${at(0, 0, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner: cracks(fall) }), TK)}`; };
-const plaque = (glow) => `${glow > 0 ? rings(0, -45, 120, P.gold, 0.3 * glow) : ""}${two(rr(-110, -90, 220, 90, 8), P.stone, P.stoneD, 0, 10)}${text(0, -22, "1850", 64, mix("#8a6a3a", "#8a5200", glow))}`;
+export const plaque = (glow) => `${glow > 0 ? rings(0, -45, 120, P.gold, 0.3 * glow) : ""}${two(rr(-110, -90, 220, 90, 8), P.stone, P.stoneD, 0, 10)}${text(0, -22, "1850", 64, mix("#8a6a3a", "#8a5200", glow))}`;
 function c1(a, tot) {
   const c = camAt(a, [[0, 880, 335, 0.85], [3.6, 880, 335, 0.87], [4.6, 890, 330, 0.86], [6.1, 890, 330, 0.86], [6.6, 900, 330, 0.88], [7.6, 900, 330, 0.88], [8.2, TX + 250, 330, 0.8], [9.4, TX + 300, 340, 0.8]]);
   const HS = [[110, P.blue, P.blueD], [340, P.pink, P.pinkD], [570, P.teal, P.tealD]], TB = [920, TG - 150];

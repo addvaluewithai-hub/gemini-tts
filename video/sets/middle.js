@@ -10,13 +10,13 @@ import { V } from "./middle.v.js";
 import { P, mix, fmt, house, bank, book, rows, coin, stars, skyline, clouds, dusk } from "./bank.js";
 import { calPage, calFlip, banknote, padlock, globe } from "./props.js";
 
-const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
-const bump = (a, t0, amt = 0.14) => (a > t0 ? 1 + amt * Math.exp(-(a - t0) * 8) * Math.cos((a - t0) * 14) : 1);
+export const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
+export const bump = (a, t0, amt = 0.14) => (a > t0 ? 1 + amt * Math.exp(-(a - t0) * 8) * Math.cos((a - t0) * 14) : 1);
 // a coin with a wedge cut out of it (`cut` wedges of 60 degrees, from the upper right)
 const cutCoin = (r, cut = 0, id = "cc") => { if (!cut) return coin(r); const a0 = -Math.PI / 2 + cut * Math.PI / 3, R = r * 1.3;
   return `<clipPath id="${id}"><path d="M0 0L${(R * Math.cos(a0)).toFixed(1)} ${(R * Math.sin(a0)).toFixed(1)}A${R} ${R} 0 ${cut <= 3 ? 1 : 0} 1 0 ${-R}Z"/></clipPath><g clip-path="url(#${id})">${coin(r)}</g>`; };
 const wedge = (r) => `<path d="M0 0L0 ${-r}A${r} ${r} 0 0 1 ${(r * Math.cos(-Math.PI / 6)).toFixed(1)} ${(r * Math.sin(-Math.PI / 6)).toFixed(1)}Z" fill="${P.gold}" stroke="${P.goldD}" stroke-width="${r * 0.08}"/>`;
-const cracks = (p) => drawn("M-120 -440L-90 -360L-140 -300L-100 -230L-130 -150", p, P.ink, 9, 'stroke-linejoin="round"') + drawn("M200 -440L230 -380L190 -320L220 -250", p - 0.2, P.ink, 9, 'stroke-linejoin="round"') + drawn("M-300 -200L-260 -160L-290 -110", p - 0.35, P.ink, 7);
+export const cracks = (p) => drawn("M-120 -440L-90 -360L-140 -300L-100 -230L-130 -150", p, P.ink, 9, 'stroke-linejoin="round"') + drawn("M200 -440L230 -380L190 -320L220 -250", p - 0.2, P.ink, 9, 'stroke-linejoin="round"') + drawn("M-300 -200L-260 -160L-290 -110", p - 0.35, P.ink, 7);
 const town = (c, tot, G) => dusk(c, tot, 960, 640) + layer(skyline(11, -400, 2400, G - 160, 100, 300, P.far), c, 0.35) + layer(skyline(47, -400, 2500, G - 70, 60, 210, P.mid, "#ffb066"), c, 0.65);
 const street = (G) => `<rect x="-900" y="${G}" width="3800" height="600" fill="${P.ground}"/><rect x="-900" y="${G + 60}" width="3800" height="120" fill="${P.road}"/>`;
 

@@ -10,14 +10,14 @@ import { V } from "./copy.v.js";
 import { P, mix, house, bank, book, rows, coin, stars, skyline } from "./bank.js";
 import { calPage, calFlip, padlock } from "./props.js";
 
-const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
-const room = (c, tot) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(53, 60, -300, 2300, 700, tot), c, 0.15);
+export const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
+export const room = (c, tot) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(53, 60, -300, 2300, 700, tot), c, 0.15);
 // a file: a page with a folded corner, 240 x 300 around (0, 0); `inner` is drawn on it
-const fileCard = (inner = "", o = {}) => `${o.glow ? rings(0, 0, 190, o.glowC || "#9fe7ff", o.glow * 0.2) : ""}${two("M-120 -150H70L120 -100V150H-120Z", o.c || P.cream, o.cD || P.creamD, 0, 10)}<path d="M70 -150V-100H120Z" fill="${o.cD || P.creamD}"/>${inner}`;
-const picture = `<path d="${rr(-84, -96, 168, 130, 10)}" fill="#7fd0ff"/><circle cx="40" cy="-60" r="18" fill="${P.gold}"/><path d="M-84 34L-30 -30L10 10L40 -14L84 34Z" fill="${P.green}"/><path d="M-80 76h160M-80 106h110" stroke="${P.creamD}" stroke-width="12" stroke-linecap="round"/>`;
-const song = `<path d="M-20 50V-70L60 -90V30" stroke="${P.violetD}" stroke-width="14" fill="none" stroke-linejoin="round"/><ellipse cx="-42" cy="52" rx="30" ry="22" fill="${P.violet}"/><ellipse cx="38" cy="32" rx="30" ry="22" fill="${P.violet}"/><path d="M-80 106h110" stroke="${P.creamD}" stroke-width="12" stroke-linecap="round"/>`;
-const film = `<circle cx="0" cy="-10" r="70" fill="${P.ink}"/>${[0, 1, 2, 3, 4].map((i) => `<circle cx="${(Math.cos(i * 1.257) * 40).toFixed(1)}" cy="${(-10 + Math.sin(i * 1.257) * 40).toFixed(1)}" r="16" fill="${P.cream}"/>`).join("")}<circle cx="0" cy="-10" r="10" fill="${P.cream}"/><path d="M-80 106h110" stroke="${P.creamD}" stroke-width="12" stroke-linecap="round"/>`;
-const money100 = (fill = "#1f7a48") => `${disc(0, -50, 52, P.gold, P.goldD)}${text(0, -30, "$", 60, "#8a5200")}${number(0, 80, "100", 84, fill)}`;
+export const fileCard = (inner = "", o = {}) => `${o.glow ? rings(0, 0, 190, o.glowC || "#9fe7ff", o.glow * 0.2) : ""}${two("M-120 -150H70L120 -100V150H-120Z", o.c || P.cream, o.cD || P.creamD, 0, 10)}<path d="M70 -150V-100H120Z" fill="${o.cD || P.creamD}"/>${inner}`;
+export const picture = `<path d="${rr(-84, -96, 168, 130, 10)}" fill="#7fd0ff"/><circle cx="40" cy="-60" r="18" fill="${P.gold}"/><path d="M-84 34L-30 -30L10 10L40 -14L84 34Z" fill="${P.green}"/><path d="M-80 76h160M-80 106h110" stroke="${P.creamD}" stroke-width="12" stroke-linecap="round"/>`;
+export const song = `<path d="M-20 50V-70L60 -90V30" stroke="${P.violetD}" stroke-width="14" fill="none" stroke-linejoin="round"/><ellipse cx="-42" cy="52" rx="30" ry="22" fill="${P.violet}"/><ellipse cx="38" cy="32" rx="30" ry="22" fill="${P.violet}"/><path d="M-80 106h110" stroke="${P.creamD}" stroke-width="12" stroke-linecap="round"/>`;
+export const film = `<circle cx="0" cy="-10" r="70" fill="${P.ink}"/>${[0, 1, 2, 3, 4].map((i) => `<circle cx="${(Math.cos(i * 1.257) * 40).toFixed(1)}" cy="${(-10 + Math.sin(i * 1.257) * 40).toFixed(1)}" r="16" fill="${P.cream}"/>`).join("")}<circle cx="0" cy="-10" r="10" fill="${P.cream}"/><path d="M-80 106h110" stroke="${P.creamD}" stroke-width="12" stroke-linecap="round"/>`;
+export const money100 = (fill = "#1f7a48") => `${disc(0, -50, 52, P.gold, P.goldD)}${text(0, -30, "$", 60, "#8a5200")}${number(0, 80, "100", 84, fill)}`;
 
 // ---- 0: anything digital is copied ----
 function s0(a, tot) {
