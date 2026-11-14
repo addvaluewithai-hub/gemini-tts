@@ -125,7 +125,7 @@ function shot(t, voice) {
   if (t < 29.5) {
     const u = t - 21.5, shake = u < 0.9 ? wob(u, 26, 7 * (1 - u / 0.9)) : 0, out = seg(u, 0.5, 1.1), walk = seg(u, 1.1, 3.2), px = lerp(300, 800, walk), stepping = walk > 0 && walk < 1;
     const reach = seg(u, 3.3, 3.9), bite = seg(u, 4.1, 4.5), biteHold = u > 4.5 && u < 5.2, turn = seg(u, 5.2, 5.7), push = seg(u, 5.0, 6.0);
-    const hand = bite > 0 ? { x: lerp(980, 700, bite), y: lerp(700, 560, bite), front: true } : reach > 0 ? { x: lerp(820, 980, reach), y: lerp(760, 700, reach), front: true } : null;
+    const hand = bite > 0 ? { x: lerp(980, 660, bite), y: lerp(700, 505, bite), front: true } : reach > 0 ? { x: lerp(820, 980, reach), y: lerp(760, 700, reach), front: true } : null;
     const sz = 560, ox = px - sz / 2, oy = 1010 - sz * 0.845, k = sz / 1200, cxy = hand ? [ox + (1200 - hand.x) * k, oy + hand.y * k] : [886, 724];     // the host faces right (flipped), so his hand is mirrored
     const chomp = biteHold ? Math.abs(wob(u - 4.5, 16, 1)) : 0;
     const h = host(px, 1010, sz, { flip: true, emote: turn > 0.5 ? "deadpan" : stepping ? "sly" : bite > 0.5 ? "skeptical" : "thinking", look: turn > 0.5 ? 0 : stepping ? wob(u, 5, 0.8) : 0.7, bounce: stepping ? Math.abs(wob(u, 11, 16)) : 0, sway: stepping ? wob(u, 11, 2.5) : 0, armR: hand, talk: turn > 0.6 ? voice : chomp * 0.7 });
