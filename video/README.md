@@ -437,6 +437,7 @@ so any frame can be rendered alone:
 | `dict` | two words from the humans' vocabulary, one per step: the word and what it means |
 | `fork` | who changes the rules: machines pick a rule book, and when they disagree the chain splits in two |
 | `trace` | coins hop between unnamed addresses until one meets a name; then the whole trail has one |
+| `trail` | "the bank is a ledger" as five full-frame illustrated shots with nothing to read, one per beat (`sets/bank.js`) |
 | `rows` | a list that fills in a row at a time, each with a mark (`flag`, `x`, `check`, `half`), an optional `sub` line and `tag` |
 | `lever` | borrowed money: a small stake under a big bet, and the fall in price that takes all of it |
 | `versus` | two camps side by side, one per step |
@@ -505,6 +506,17 @@ Run it before `storyboard.cjs cues`, so the beats are placed on the tightened
 audio. `tempo` in the storyboard's settings then speeds the result up without
 changing its pitch. On the first crypto file this removed 55 seconds of
 silence from eight minutes.
+
+
+### Illustrated sets
+
+A set is a board that carries a line with the picture alone: no caption, no labels, no people. It lives in
+`sets/` and is built with `sets/kit.js`: one camera per shot with layers at different depths (`camAt`, `layer`),
+solid shapes with one shade step and hard-ring glow (`two`, `disc`, `rings`), arrivals with weight (`spring`),
+lines that draw themselves (`drawn`), and a hand-over from one shot to the next through a shape both share
+(`through`) instead of a fade. Actions are timed to the words of the beat. The host is not in a set: give the beat
+`"host": "left"` or `"right"` and keep the lower corner on that side clear. To check a set, ask of every shot:
+would someone who cannot hear the voice still get the line?
 
 ## Upload kit
 
