@@ -35,7 +35,7 @@ export const atom = (t, o = {}) => { const n = o.n ?? 3, R = o.R ?? 170, r = o.r
 
 // ---- light ----
 // a bulb, base on y = 0, 300 tall at k = 1; `on` 0..1 is how lit it is; o.old draws the old bulb with its thin glowing wire
-export const bulb = (on = 0, o = {}) => { const glass = mix("#5a4a9a", "#fff3b0", on), glassD = mix("#463a80", "#ffd04a", on), w = o.old ? mix("#8a7ab8", "#fff", on) : mix("#7a6ab0", "#fff8d0", on);
+export const bulb = (on = 0, o = {}) => { const glass = mix("#2f6178", "#fff3b0", on), glassD = mix("#214b60", "#ffd04a", on), w = o.old ? mix("#7fa3b6", "#fff", on) : mix("#6f93a8", "#fff8d0", on);
   const fil = o.old ? `<path d="M-30 -120V-170Q-20 -196 -10 -170Q0 -144 10 -170Q20 -196 30 -170V-120" fill="none" stroke="${w}" stroke-width="${6 + 3 * on}" stroke-linejoin="round"/>`
     : `<path d="M-26 -110V-150h52V-110" fill="none" stroke="${w}" stroke-width="10" stroke-linejoin="round"/><path d="${rr(-34, -172, 68, 26, 10)}" fill="${w}"/>`;
   return `${on > 0 ? rings(0, -175, 170 * (0.6 + 0.4 * on), "#ffd98a", 0.24 * on, 1.55) : ""}<path d="M-40 -60Q-40 -96 -78 -140Q-110 -180 -100 -230A100 100 0 1 1 100 -230Q110 -180 78 -140Q40 -96 40 -60Z" fill="${glassD}"/>
@@ -61,7 +61,7 @@ export const tube = (x0, x1, y, h, t, drift = 0, o = {}) => { const n = o.n ?? M
 // ---- sources and switches ----
 // a battery standing up, base on y = 0, 220 wide and 380 tall at k = 1; o.v: a label on its side (e.g. "1.5 V"); push 0..1 glows the + end
 export const battery = (o = {}) => `${two(rr(-110, -360, 220, 360, 28), "#2b2350", "#1c1638", 12, 0)}${two(rr(-110, -360, 220, 130, 28), P.gold, P.goldD, 12, 0)}<path d="${rr(-110, -250, 220, 20, 0)}" fill="${P.goldD}"/>
-  <path d="${rr(-40, -392, 80, 36, 10)}" fill="${P.steel}"/>${at(0, -292, plus(46, P.ink))}${at(0, -70, minus(46, "#8a7ab8"))}
+  <path d="${rr(-40, -392, 80, 36, 10)}" fill="${P.steel}"/>${at(0, -292, plus(46, P.ink))}${at(0, -70, minus(46, "#7fa3b6"))}
   ${o.v ? text(0, -140, o.v, 64, P.cream) : ""}${o.push ? rings(0, -380, 70 * (0.7 + 0.3 * o.push), P.gold, 0.3 * o.push, 1.5) : ""}`;
 // a knife switch, hinge at (0, 0): the blade lies flat when closed (closed 1) and stands up when open (0)
 export const knife = (closed = 1, len = 200) => { const a = lerp(-62, 0, ease(closed));
@@ -96,7 +96,7 @@ export const spanAt = (a, b, sag, p) => { const c = [(a[0] + b[0]) / 2, (a[1] + 
 // a power station: a brick hall with a chimney, base on y = 0, 600 wide; o.smoke with time t; o.lit 0..1 for its windows
 export const station = (t = 0, o = {}) => { const lit = o.lit ?? 1, c = o.c || "#a8473a", cD = o.cD || "#84342a";
   const smoke = o.smoke === false ? "" : [0, 1, 2, 3].map((i) => { const q = ((t * 0.35 + i / 4) % 1); return `<circle cx="${190 + q * 120 + 20 * Math.sin(t + i)}" cy="${-560 - q * 300}" r="${30 + q * 60}" fill="#6a5a8a" opacity="${(0.5 * (1 - q)).toFixed(2)}"/>`; }).join("");
-  return `${smoke}${two(rr(150, -560, 90, 300, 6), c, cD, 12, 0)}<path d="${rr(140, -575, 110, 26, 6)}" fill="${cD}"/>${two(rr(-300, -300, 600, 300, 8), c, cD, 16, 0)}${two("M-320 -296L0 -420L320 -296Z", "#3a1c71", P.ink, 0, 9)}
+  return `${smoke}${two(rr(150, -560, 90, 300, 6), c, cD, 12, 0)}<path d="${rr(140, -575, 110, 26, 6)}" fill="${cD}"/>${two(rr(-300, -300, 600, 300, 8), c, cD, 16, 0)}${two("M-320 -296L0 -420L320 -296Z", "#123a57", P.ink, 0, 9)}
     ${[-210, -70, 70, 210].map((x) => `<path d="M${x - 44} -40V-190A44 44 0 0 1 ${x + 44} -190V-40Z" fill="${mix(P.ink, P.win, lit)}"/>`).join("")}`; };
 
 // ---- sky ----
@@ -129,7 +129,7 @@ export const gauge = (v = 0, o = {}) => { const a = lerp(-120, 120, clamp(v)) * 
 // a kettle, base on y = 0, 300 wide; steam with time t when on
 export const kettle = (t = 0, on = 0) => `${on > 0 ? [0, 1, 2].map((i) => { const q = ((t * 0.7 + i / 3) % 1); return `<circle cx="${150 + q * 60 + 14 * Math.sin(t * 3 + i)}" cy="${-300 - q * 200}" r="${18 + q * 30}" fill="#fff" opacity="${(0.45 * on * (1 - q)).toFixed(2)}"/>`; }).join("") : ""}
   ${two("M-110 0Q-130 -150 -90 -260H90Q130 -150 110 0Z", "#ece8ff", "#c6c0e6", 12, 0)}<path d="M100 -200Q190 -240 170 -300" fill="none" stroke="#c6c0e6" stroke-width="26" stroke-linecap="round"/><path d="M-110 -220Q-190 -200 -170 -90" fill="none" stroke="#c6c0e6" stroke-width="22" stroke-linecap="round"/>
-  <path d="${rr(-80, -290, 160, 36, 14)}" fill="#c6c0e6"/><path d="${rr(-90, -14, 180, 14, 6)}" fill="#2b2350"/><circle cx="-40" cy="-60" r="12" fill="${on > 0 ? P.red : "#5a4a9a"}"/>`;
+  <path d="${rr(-80, -290, 160, 36, 14)}" fill="#c6c0e6"/><path d="${rr(-90, -14, 180, 14, 6)}" fill="#2b2350"/><circle cx="-40" cy="-60" r="12" fill="${on > 0 ? P.red : "#2f6178"}"/>`;
 // a glass of tea, base on y = 0 (the Egyptian kind: small, clear, amber)
 export const tea = (t = 0) => `${[0, 1].map((i) => { const q = ((t * 0.5 + i / 2) % 1); return `<path d="M${-14 + i * 28} ${-150 - q * 90}q14 -20 0 -40" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="${(0.5 * (1 - q)).toFixed(2)}"/>`; }).join("")}
   <path d="M-56 -140L-44 0H44L56 -140Z" fill="#cfe9ff" opacity=".35"/><path d="M-52 -110L-43 -6H43L52 -110Z" fill="#c4581e"/><path d="M-52 -110L-43 -6H-20L-26 -110Z" fill="#e0782e"/><path d="M-60 -144H60" stroke="#cfe9ff" stroke-width="6" stroke-linecap="round" opacity=".6"/>`;
