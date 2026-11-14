@@ -804,6 +804,21 @@ const BOARDS = {
   },
   // The closing frame without a sentence: `title` (e.g. "NEXT"), `next` (e.g. "2 / 5"), and `icons` for what the next report is about,
   // with the same room as `endcard` for the platform's end-screen elements.
+  // The last card of a Short: the channel name, the full report as a video with a play button (two `icons` either side of it, `sub`
+  // under it, e.g. "CRYPTO FILE · 1/5"), and at step 1 a ringing bell with SUBSCRIBE. Nothing outside x 340..1580, so it
+  // survives the vertical crop (studio.html, boardZoom 0.85).
+  shortend(s, step, age, total) {
+    const ic = s.icons || [], n = ic.length, f = pop(total - 0.15), b = step >= 1 ? age : -1, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0;
+    const bell = `<path d="M-62 44C-62 -46 -40 -82 0 -82C40 -82 62 -46 62 44L80 62H-80Z" fill="${C.yellow}"/><path d="M-62 44C-62 -46 -40 -82 0 -82" fill="none" stroke="#fff3b0" stroke-width="10" opacity=".6"/>
+      <circle cy="-92" r="14" fill="${C.yellow}"/><circle cy="80" r="20" fill="${C.gold}"/>`;
+    const waves = b > 0 ? [1, -1].map((d) => `<path d="M${d * 104} -40Q${d * 128} 0 ${d * 104} 40M${d * 134} -62Q${d * 166} 0 ${d * 134} 62" fill="none" stroke="${C.yellow}" stroke-width="9" stroke-linecap="round" opacity="${clamp(1 - (b % 0.6) / 0.6)}"/>`).join("") : "";
+    return svg(`${G(960, 150, pop(total), `<text x="0" y="0" text-anchor="middle" font-family="Anton" font-size="118"><tspan fill="#eef0ff">EARTH </tspan><tspan fill="${C.pink}">REPORT</tspan></text>`)}
+      ${G(960, 455, f, `<rect x="-400" y="-225" width="800" height="450" rx="30" fill="${C.panel}" stroke="${C.line}" stroke-width="6"/>
+        ${ic.slice(0, 2).map((name, i) => G(i ? 255 : -255, -10, 0.72, icon(name), 'opacity=".6"')).join("")}
+        <circle r="96" fill="${C.pink}"/><path d="M-30 -52L58 0L-30 52Z" fill="#fff"/>`)}
+      ${G(960, 780, pop(total - 0.45), T(0, 0, "FULL REPORT", 86, { fill: C.yellow }) + T(0, 70, s.sub || "", 50, { fill: C.dim }))}
+      ${b >= 0 ? G(960, 965, pop(b), G(-250, 0, 0.82, `<g transform="rotate(${swing} 0 -92)">${bell}</g>${waves}`) + `<rect x="-140" y="-56" width="420" height="112" rx="56" fill="#ff2d3a"/>` + T(70, 26, "SUBSCRIBE", 70, { fill: "#ffffff" })) : ""}`);
+  },
   endnext(s, step, age, total) {
     const ic = s.icons || [], n = ic.length;
     return svg(`${G(960, 130, pop(total), T(0, 0, s.title, 96, { fill: C.yellow }) + T(0, 66, s.next || "", 50, { fill: C.dim }))}
