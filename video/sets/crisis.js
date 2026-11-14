@@ -18,17 +18,17 @@ const boards = (k) => (k <= 0 ? "" : `<g opacity="${clamp(k * 3).toFixed(2)}">${
 
 // ---- 0: the years run on, and stop at 2008; a storm comes in, the street cracks ----
 function c0(a, tot) {
-  const c = camAt(a, [[0, 960, 540, 1.0], [2.6, 960, 540, 1.03], [3.46, 960, 555, 1.06]]), G = 990;
+  const c = camAt(a, [[0, 960, 540, 1.0], [2.6, 960, 540, 1.03], [3.46, 960, 555, 1.06]]), G = 950;
   const years = ["2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008"], times = [0.6, 0.95, 1.25, 1.52, 1.76, 1.98, 2.2];
   const n = times.filter((t) => a >= t).length, st = seg(a, 2.6, 3.3);
-  const cal = at(960, 300, calPage(years[n], "", 1, 150) + (n > 0 ? calFlip(years[n - 1], "", seg(a, times[n - 1], times[n - 1] + 0.22), 150) : ""), 1.65 * pop(a, 7, 12) * bump(a, 2.55, 0.12));
+  const cal = at(960, 290, calPage(years[n], "", 1, 150) + (n > 0 ? calFlip(years[n - 1], "", seg(a, times[n - 1], times[n - 1] + 0.22), 150) : ""), 1.5 * pop(a, 7, 12) * bump(a, 2.55, 0.12));
   let row = ""; for (let i = 0; i < 4; i++) { const x = 230 + i * 487, f = fronts[i % 4], dark = a > 2.9 + i * 0.05 && rnd(i * 7) > 0.4;
     row += at(x, G, house(f[0], f[1], { lit: dark ? [0, 1, 0] : [1, 1, 1] }), [1.5, 1.5], st * (i % 2 ? 2 : -2)); }
-  const crackD = `M-40 ${G + 60}L260 ${G + 90}L420 ${G + 50}L640 ${G + 110}L900 ${G + 60}L1120 ${G + 120}L1380 ${G + 70}L1600 ${G + 110}L1960 ${G + 70}`, crack = drawn(crackD, seg(a, 2.7, 3.3), "#ff8a5c", 34, 'stroke-linejoin="round"') + drawn(crackD, seg(a, 2.7, 3.3), "#0a0726", 18, 'stroke-linejoin="round"');
+  const crackD = `M-40 ${G + 30}L260 ${G + 60}L420 ${G + 25}L640 ${G + 75}L900 ${G + 35}L1120 ${G + 80}L1380 ${G + 40}L1600 ${G + 75}L1960 ${G + 40}`, crack = drawn(crackD, seg(a, 2.7, 3.3), "#ff8a5c", 34, 'stroke-linejoin="round"') + drawn(crackD, seg(a, 2.7, 3.3), "#0a0726", 18, 'stroke-linejoin="round"');
   const bolt = a > 2.85 && a < 3.05 ? `<path d="M1500 0L1440 160L1500 170L1410 360L1530 150L1470 140L1540 0Z" fill="#fff3c2"/><rect width="1920" height="1080" fill="#fff" opacity="${(0.25 * (1 - seg(a, 2.85, 3.05))).toFixed(2)}"/>` : "";
   const main = `<rect x="-600" y="${G}" width="3200" height="500" fill="${mix(P.ground, "#1a0f3a", st)}"/><rect x="-600" y="${G + 50}" width="3200" height="130" fill="${P.road}"/>` + row + crack;
   const g = dusk(c, tot, 1500, 700) + storm(st) + layer(clouds(tot * 3, 120, 4, mix("#ffb199", "#2a1446", st), 0.4 + 0.5 * st), c, 0.2) + layer(skyline(11, -400, 2400, G - 150, 100, 300, mix(P.far, "#2a1446", st)), c, 0.35) + layer(main, c) + bolt + layer(cal, c);
-  return { g, out: toScreen(c, 960, 300), outC: P.cream, outZ: 16 };
+  return { g, out: toScreen(c, 960, 290), outC: P.cream, outZ: 16 };
 }
 // ---- 1: the bank bets the houses' money on house-cards; the cards fall; then the 158-year-old tower falls in one go ----
 const TX = 1450, TG = 900, TK = 0.8;

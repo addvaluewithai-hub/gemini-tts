@@ -87,7 +87,7 @@ function s3(a, tot) {
   const q = a - 3.03, bump = (t0) => (a > t0 ? 0.18 * Math.exp(-(a - t0) * 7) * Math.cos((a - t0) * 14) : 0), many = a > 4.85 ? spring(a - 4.85, 7, 11) : 0;
   const qm = (x, y, k) => at(x, y + 8 * Math.sin(tot * 2.4), `${rings(0, -60, 110, P.gold, 0.18)}${text(0, 20, "?", 220, P.gold)}`, k);
   const chairs = at(lerp(-300, 450, many), G, hoodChair({ colour: "#2f2468", colourD: "#221a52" }), 0.95) + at(lerp(2300, 1600, many), G, hoodChair({ colour: "#2f2468", colourD: "#221a52" }), 0.95) + at(880, G, hoodChair(), 1.3);
-  const marks = (q > 0 ? qm(660, 400, 0.85 * pop(q) * (1 + bump(3.98) + bump(4.64))) : "") + (many > 0 ? qm(450, 470, 0.5 * many) + qm(1600, 470, 0.5 * many) : "");
+  const marks = (q > 0 ? qm(640, 500, 0.8 * pop(q) * (1 + bump(3.98) + bump(4.64))) : "") + (many > 0 ? qm(450, 580, 0.45 * many) + qm(1600, 580, 0.45 * many) : "");
   const g = layer(wall + board + pg + lamp + desk + chairs + marks, c);
   return { g, in: toScreen(c, 1120, 545), inC: P.cream, inZ: 18 };
 }

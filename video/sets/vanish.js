@@ -1,7 +1,7 @@
 // "Satoshi vanished": five shots, one per beat. Satoshi is never a person: an empty chair with a hooded coat on it.
 //   0 the chair at its laptop, 2011: a last envelope leaves the screen and goes out of the window into the night
 //   1 the lid shuts and the door behind the desk opens on light (moved on)       2 the coat drops flat, the chair spins: gone
-//   3 the code goes down the table to three other laptops; an empty podium under spotlights; an empty photo frame
+//   3 (in through the empty chair's colour) the code goes down the table to three other laptops; an empty podium under spotlights; an empty photo frame
 //   4 a glass vault of coins, about a million; the years go by, cobwebs and dust grow, and the coins never move
 // Shots 0–2 are one room on one clock (the beats run straight on), so they hand over by continuing, not through a shape.
 import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, play, frame } from "./kit.js";
@@ -21,7 +21,7 @@ function room(T, c, tot, s) {
   const twinkle = ea > 1.0 ? rings(300, 300, 50 * spring(ea - 1.0, 7, 11), P.cream, 0.3 * (1 - seg(ea, 1.4, 2.0))) : "";
   // the lid shuts; the door opens; the coat drops and the chair turns round
   const lid = T < T1 + 0.15 ? 1 : kf(T, [[T1 + 0.15, 1], [T1 + 0.5, -0.04], [T1 + 0.6, 0.02], [T1 + 0.68, 0]]), dOpen = ease(seg(T, T1 + 0.55, T1 + 1.0)), arrow = seg(T, T1 + 0.85, T1 + 1.25);
-  const coat = T < T2 ? 1 : 1 - easeIn(seg(T, T2, T2 + 0.2)), puff = T > T2 + 0.15 ? T - T2 - 0.15 : -1, spin = T < T2 + 0.1 ? 0 : Math.PI * 2 * easeOut(seg(T, T2 + 0.1, T2 + 0.7));
+  const coat = T < T2 + 0.12 ? 1 : 1 - easeIn(seg(T, T2 + 0.12, T2 + 0.32)), puff = T > T2 + 0.28 ? T - T2 - 0.28 : -1, spin = T < T2 + 0.28 ? 0 : Math.PI * 2 * easeOut(seg(T, T2 + 0.28, T2 + 0.71));
   const screen = `${disc(0, -112, 40, "#ffffff", "#d6f4ff", 0.1)}<path d="M-14 -112h28M2 -126l14 14l-14 14" stroke="${P.blueD}" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
   const wall = `<rect x="-600" y="-400" width="3200" height="1200" fill="#4a2b8a"/><rect x="-600" y="800" width="3200" height="700" fill="#3f2479"/><rect x="-600" y="792" width="3200" height="12" fill="#5c39a6"/>
     <path d="${rr(130, 160, 340, 300, 14)}" fill="${P.ink}"/><path d="${rr(150, 180, 300, 260, 8)}" fill="${P.night0}"/>${stars(91, 12, 160, 440, 430, tot)}<circle cx="400" cy="230" r="26" fill="${P.cream}"/><circle cx="390" cy="222" r="24" fill="${P.night0}"/><path d="M300 170V450M140 310H460" stroke="${P.ink}" stroke-width="12"/>`;
@@ -36,34 +36,34 @@ function room(T, c, tot, s) {
   const g = layer(wall + door + cal + desk + at(CH[0], CH[1], hoodChair({ coat, spin }), 1.45) + dust + env + twinkle, c);
   return g;
 }
-function s0(a, tot, s) { const c = camAt(a, [[0, 1000, 560, 1.0], [2.5, 1010, 556, 1.03], [4.2, 1040, 545, 1.07]]); return { g: room(a, c, tot, s), out: toScreen(c, DK[0], DK[1] - 165), outC: GLOW, outZ: 22 }; }
-function s1(a, tot, s) { const c = camAt(a, [[0, 1150, 560, 1.12], [1.49, 1250, 560, 1.08]]); return { g: room((s.ends || [])[0] + a || 4.2 + a, c, tot, s), in: toScreen(c, DK[0], DK[1] - 165), inC: GLOW, inZ: 22 }; }
-function s2(a, tot, s) { const E = s.ends || [], c = camAt(a, [[0, 1250, 560, 1.08], [0.71, 980, 600, 1.22]]); return { g: room((E[0] || 4.2) + (E[1] || 1.49) + a, c, tot, s), out: toScreen(c, CH[0], CH[1] - 300), outC: "#4b3d8f", outZ: 18 }; }
+function s0(a, tot, s) { const c = camAt(a, [[0, 960, 640, 1.32], [2.5, 960, 630, 1.36], [4.2, 990, 620, 1.42]]); return { g: room(a, c, tot, s), out: toScreen(c, DK[0], DK[1] - 165), outC: GLOW, outZ: 22 }; }
+function s1(a, tot, s) { const c = camAt(a, [[0, 1200, 600, 1.4], [1.49, 1330, 600, 1.34]]); return { g: room((s.ends || [])[0] + a || 4.2 + a, c, tot, s), in: toScreen(c, DK[0], DK[1] - 165), inC: GLOW, inZ: 22 }; }
+function s2(a, tot, s) { const E = s.ends || [], c = camAt(a, [[0, 1330, 600, 1.34], [0.16, 880, 640, 1.6], [0.71, 850, 650, 1.7]]); return { g: room((E[0] || 4.2) + (E[1] || 1.49) + a, c, tot, s), out: toScreen(c, CH[0], CH[1] - 300), outC: "#4b3d8f", outZ: 18 }; }
 
 // ---- 3: the code goes to other laptops; no farewell, no press conference, not even a photo ----
 function s3(a, tot) {
-  const c = camAt(a, [[0, 820, 640, 1.45], [0.5, 860, 640, 1.45], [1.5, 1500, 620, 1.42], [2.1, 1560, 620, 1.42], [2.7, 2780, 600, 1.1], [3.8, 2800, 600, 1.12], [4.35, 3700, 520, 1.25], [4.97, 3710, 520, 1.3]]), TY = 720;
-  const wall = `<rect x="-600" y="-400" width="5200" height="1200" fill="#3b1d74"/><rect x="-600" y="800" width="5200" height="700" fill="#2c1a66"/><rect x="-600" y="792" width="5200" height="12" fill="#4a2b8a"/>`;
-  const table = `${two(rr(560, TY, 1460, 30, 10), P.wood, P.woodD, 0, 8)}<rect x="600" y="${TY + 30}" width="26" height="120" fill="${P.woodD}"/><rect x="1960" y="${TY + 30}" width="26" height="120" fill="${P.woodD}"/>`;
-  const L = [[1350, 1.6], [1620, 1.8], [1890, 2.0]];
-  const lap = L.map(([x, t0]) => { const on = a > t0 ? spring(a - t0, 8, 13) : 0; return (on > 0 ? rings(x, TY - 150, 120 * on, P.teal, 0.12) : "") + at(x, TY, laptop(mix("#2a3a6a", "#9ff0e4", clamp(on)), on > 0.5 ? `<path d="M-60 -112h120M-60 -88h80M-60 -136h90" stroke="${P.tealD}" stroke-width="10" stroke-linecap="round"/>` : ""), 0.9); }).join("");
+  const c = camAt(a, [[0, 1250, 560, 1.25], [0.5, 1290, 560, 1.25], [1.5, 1820, 560, 1.15], [2.05, 1860, 560, 1.15], [2.7, 3300, 600, 1.1], [3.8, 3320, 600, 1.12], [4.35, 4200, 520, 1.25], [4.97, 4210, 520, 1.3]]), TY = 720;
+  const wall = `<rect x="-600" y="-400" width="5600" height="1200" fill="#3b1d74"/><rect x="-600" y="800" width="5600" height="700" fill="#2c1a66"/><rect x="-600" y="792" width="5600" height="12" fill="#4a2b8a"/>`;
+  const table = `${two(rr(760, TY, 1800, 30, 10), P.wood, P.woodD, 0, 8)}<rect x="800" y="${TY + 30}" width="26" height="120" fill="${P.woodD}"/><rect x="2500" y="${TY + 30}" width="26" height="120" fill="${P.woodD}"/>`;
+  const L = [[1480, 1.6], [1880, 1.8], [2280, 2.0]];
+  const lap = L.map(([x, t0]) => { const on = a > t0 ? spring(a - t0, 8, 13) : 0; return (on > 0 ? rings(x, TY - 150, 120 * on, P.teal, 0.12) : "") + at(x, TY, laptop(mix("#2a3a6a", "#9ff0e4", clamp(on)), on > 0.5 ? `<path d="M-60 -112h120M-60 -88h80M-60 -136h90" stroke="${P.tealD}" stroke-width="10" stroke-linecap="round"/>` : ""), 1.15); }).join("");
   // the code: a glowing box with braces, from the hooded chair's laptop down the table
-  const go = ease(seg(a, 0.47, 1.5)), bx = lerp(980, 1350, go), boxK = 1 + 0.12 * Math.sin(Math.PI * go);
-  const lines = L.map(([x, t0], i) => (a > t0 - 0.2 && i > 0 ? drawn(`M1350 ${TY - 240}Q${(1350 + x) / 2} ${TY - 330} ${x} ${TY - 240}`, seg(a, t0 - 0.2, t0), P.gold, 6, 'stroke-dasharray="4 14"') : "")).join("");
-  const box = at(bx, TY - 240 - 20 * Math.sin(Math.PI * go) + 6 * Math.sin(tot * 3), `${rings(0, 0, 90, P.gold, 0.25)}${two(rr(-80, -60, 160, 120, 18), P.gold, P.goldD, 0, 9)}${text(0, 28, "{ }", 80, "#8a5200")}`, boxK * pop(a + 0.3));
+  const go = ease(seg(a, 0.47, 1.5)), bx = lerp(1040, 1480, go), boxK = 1 + 0.12 * Math.sin(Math.PI * go);
+  const lines = L.map(([x, t0], i) => (a > t0 - 0.2 && i > 0 ? drawn(`M1480 ${TY - 290}Q${(1480 + x) / 2} ${TY - 400} ${x} ${TY - 290}`, seg(a, t0 - 0.2, t0), P.gold, 6, 'stroke-dasharray="4 14"') : "")).join("");
+  const box = at(bx, TY - 290 - 20 * Math.sin(Math.PI * go) + 6 * Math.sin(tot * 3), `${rings(0, 0, 90, P.gold, 0.25)}${two(rr(-80, -60, 160, 120, 18), P.gold, P.goldD, 0, 9)}${text(0, 28, "{ }", 80, "#8a5200")}`, 1.3 * boxK * pop(a + 0.3));
   // an empty podium: the spotlights come on and there is no one
-  const lit = a > 2.97 ? spring(a - 2.97, 7, 11) : 0, PX = 2780, PY = 960;
+  const lit = a > 2.97 ? spring(a - 2.97, 7, 11) : 0, PX = 3300, PY = 960;
   const podium = `${lit > 0 ? [-1, 1].map((d) => `<path d="M${PX + d * 520} -100L${PX + d * 120 - 200} ${PY}H${PX + d * 120 + 200}Z" fill="${LIGHT}" opacity="${(0.14 * clamp(lit)).toFixed(3)}"/>`).join("") + `<ellipse cx="${PX}" cy="${PY}" rx="${(320 * clamp(lit)).toFixed(1)}" ry="40" fill="${LIGHT}" opacity=".18"/>` : ""}
     ${[-70, 0, 70].map((d, i) => `<path d="M${PX + d * 0.6} ${PY - 420}L${PX + d} ${PY - 560}" stroke="${P.ink}" stroke-width="10"/>${two(rr(PX + d - 18, PY - 610, 36, 60, 18), "#5d678f", "#44507a", 4, 0)}`).join("")}
     ${two(`M${PX - 200} ${PY}L${PX - 160} ${PY - 420}H${PX + 160}L${PX + 200} ${PY}Z`, P.wood, P.woodD, 14, 0)}<path d="${rr(PX - 190, PY - 440, 380, 34, 8)}" fill="${P.woodD}"/>${disc(PX, PY - 260, 56, P.gold, P.goldD)}
     ${[0, 1, 2].map((i) => `<rect x="${PX - 600 + i * 70}" y="${PY - 120}" width="40" height="120" rx="8" fill="#2a1d5c"/><path d="${rr(PX - 614 + i * 70, PY - 150, 68, 40, 10)}" fill="#3a2a7a"/>`).join("")}${[0, 1, 2].map((i) => `<rect x="${PX + 420 + i * 70}" y="${PY - 120}" width="40" height="120" rx="8" fill="#2a1d5c"/><path d="${rr(PX + 406 + i * 70, PY - 150, 68, 40, 10)}" fill="#3a2a7a"/>`).join("")}`;
   // not even a photo: an empty frame on the wall
-  const FX = 3700, FY = 470, q = a - 4.2;
+  const FX = 4200, FY = 470, q = a - 4.2;
   const pic = `${two(rr(FX - 210, FY - 260, 420, 520, 18), P.gold, P.goldD, 10, 10)}<path d="${rr(FX - 170, FY - 220, 340, 440, 8)}" fill="${P.ink}"/><path d="M${FX} ${FY - 330}L${FX - 120} ${FY - 260}M${FX} ${FY - 330}L${FX + 120} ${FY - 260}" stroke="${P.ink}" stroke-width="6"/><circle cx="${FX}" cy="${FY - 334}" r="10" fill="${P.gold}"/>
     ${q > 0 ? at(FX, FY + 70, text(0, 0, "?", 260, P.cream), pop(q)) : ""}`;
-  const chair = at(760, 1010, hoodChair({}), 1.3), lapA = at(980, TY, laptop(GLOW), 1.0);
-  const g = layer(wall + pic + podium + table + lapA + lap + lines + box + chair, c);
-  return { g, in: toScreen(c, 760, 1010 - 300 * 1.3), inC: "#4b3d8f", inZ: 18, out: toScreen(c, FX, FY), outC: P.ink, outZ: 18 };
+  const lapA = at(1040, TY, laptop(GLOW), 1.25);
+  const g = layer(wall + pic + podium + table + lapA + lap + lines + box, c);
+  return { g, in: toScreen(c, 1040, TY - 290), inC: "#4b3d8f", inZ: 18, out: toScreen(c, FX, FY), outC: P.ink, outZ: 18 };
 }
 
 // ---- 4: about a million coins, untouched year after year ----

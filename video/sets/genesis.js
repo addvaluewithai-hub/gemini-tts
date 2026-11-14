@@ -27,7 +27,7 @@ const desk = (screen, inner = "") => `${two(rr(-450, -300, 900, 40, 10), P.wood,
 // ---- 0: the network starts, and block 0 is written ----
 function s0(a, tot) {
   const G = 940, DK = [1050, G], LT = [900, G - 300];
-  const c = camAt(a, [[0, 1000, 640, 1.42], [2.0, 980, 620, 1.5], [3.0, 960, 560, 1.55], [4.3, 1100, 600, 1.45], [5.4, 1260, 660, 1.7], [6.44, 1270, 660, 1.74]]);
+  const c = camAt(a, [[0, 1000, 650, 1.1], [2.0, 990, 640, 1.14], [3.0, 980, 600, 1.18], [4.3, 1040, 610, 1.2], [5.4, 1060, 620, 1.3], [6.44, 1060, 620, 1.32]]);
   const spark = a > 2.42 ? Math.exp(-(a - 2.42) * 3) : 0, on = seg(a, 2.42, 2.7), scr = mix("#2a2f6e", "#fff3c2", Math.max(on * 0.5, spark));
   const code = on > 0 ? [0, 1, 2, 3].map((r) => `<path d="${rr(-100, -170 + r * 30, 160 * seg(a, 2.6 + r * 0.12, 2.9 + r * 0.12) + 20, 12, 6)}" fill="${[P.teal, P.pink, P.gold, P.blue][r]}"/>`).join("") : "";
   // the block: out of the screen, up, then down onto the book's first page
@@ -37,11 +37,11 @@ function s0(a, tot) {
   const blk = a > 3.35 ? at(bp[0], bp[1], rings(0, 0, 150 + 60 * zeroGlow, P.gold, 0.25 + 0.2 * zeroGlow) + block(100, "0"), lerp(lerp(0.3, 1, rise), 0.62, land) * bk) : "";
   const bookOpen = at(BK[0], BK[1], book(land >= 1 ? at(-75, 0, `<path d="${rr(-60, -70, 120, 140, 6)}" fill="${P.gold}" opacity="${(0.35 + 0.3 * zeroGlow).toFixed(2)}"/>`) : ""), 1.0);
   const flashes = spark > 0.05 ? [0, 1, 2, 3, 4, 5].map((i) => { const an = i * 1.05, d = 120 + 260 * (1 - spark); return `<path d="M${LT[0] + 70 + Math.cos(an) * d * 0.6} ${LT[1] - 110 + Math.sin(an) * d * 0.6}L${LT[0] + 70 + Math.cos(an) * d} ${LT[1] - 110 + Math.sin(an) * d}" stroke="${P.gold}" stroke-width="10" stroke-linecap="round" opacity="${spark.toFixed(2)}"/>`; }).join("") : "";
-  const cal = at(1520, 300, cal2("03", "JAN 2009", 0.8), pop(a - 0.2), -4);
+  const cal = at(1540, 380, cal2("03", "JAN 2009", 0.8), pop(a - 0.2), -4);
   const room = `<rect x="-600" y="-400" width="3200" height="1800" fill="#3b1d74"/><rect x="-600" y="${G}" width="3200" height="500" fill="#2c1a66"/>
     <path d="${rr(150, 120, 520, 400, 16)}" fill="${P.ink}"/><path d="${rr(170, 140, 480, 360, 8)}" fill="${P.night0}"/>${stars(5, 16, 180, 640, 480, tot)}<circle cx="560" cy="230" r="40" fill="${P.cream}"/><circle cx="545" cy="218" r="36" fill="${P.night0}"/>`;
   const glow = on > 0 ? `<path d="M${LT[0] - 80} ${LT[1] - 200}L${LT[0] - 600} ${G}H${LT[0] + 760}L${LT[0] + 220} ${LT[1] - 200}Z" fill="#fff3c2" opacity="${(0.06 * on + 0.15 * spark).toFixed(3)}"/>` : "";
-  const g = layer(room, c, 0.7) + layer(glow + at(DK[0], G, desk(scr, code)) + bookOpen + cal + at(520, G + 60, hoodChair(), 1.25) + flashes + blk, c);
+  const g = layer(room, c, 0.7) + layer(glow + at(DK[0], G, desk(scr, code)) + bookOpen + cal + at(600, G + 40, hoodChair(), 1.0) + flashes + blk, c);
   return { g, out: toScreen(c, bp[0], bp[1]), outC: P.gold, outZ: 16 };
 }
 // ---- 1: inside the block, the day's newspaper ----
@@ -65,8 +65,8 @@ function s1(a, tot) {
 }
 // ---- 2: fifty coins out of thin air, by rules locked in from the start; unlike the press next door ----
 function s2(a, tot) {
-  const G = 920, B = [1060, G - 220], PR = [330, G];
-  const c = camAt(a, [[0, 1060, 470, 1.35], [3.3, 1060, 470, 1.3], [4.0, 1050, 520, 1.2], [6.4, 1040, 520, 1.15], [7.2, 840, 540, 0.95], [8.86, 830, 540, 0.97]]);
+  const G = 920, B = [900, G - 220], PR = [250, G];
+  const c = camAt(a, [[0, 950, 470, 1.35], [3.3, 950, 470, 1.3], [4.0, 940, 520, 1.2], [6.4, 930, 520, 1.15], [7.2, 760, 540, 0.95], [8.86, 750, 540, 0.97]]);
   // the coins: a sparkle in empty air, then a coin, fifty times, settling in a heap beside the block
   let coins = "", count = 0;
   for (let i = 0; i < 50; i++) { const t0 = 0.94 + i * 0.03, u = a - t0; if (u < 0) continue; count++;
@@ -92,26 +92,26 @@ function s2(a, tot) {
 }
 // ---- 3: nine days later, the first payment: from the hooded chair to Hal Finney's desk ----
 function s3(a, tot) {
-  const GX = 960, GY = 1700, R = 1300, TH = [-0.27, 0.27], pos = (th, lift = 0) => [GX + (R + lift) * Math.sin(th), GY - (R + lift) * Math.cos(th)];
-  const c = camAt(a, [[0, 950, 410, 1.1], [7.15, 960, 395, 1.15]]);
+  const GX = 960, GY = 1700, R = 1300, TH = [-0.235, 0.235], pos = (th, lift = 0) => [GX + (R + lift) * Math.sin(th), GY - (R + lift) * Math.cos(th)];
+  const c = camAt(a, [[0, 950, 250, 1.36], [7.15, 950, 240, 1.4]]);
   const L = pos(TH[0]), Rt = pos(TH[1]);
   const linked = seg(a, 4.67, 5.2), hal = seg(a, 4.11, 4.5), q = a - 5.79;
   const scrL = mix("#9fe7ff", "#fff3c2", linked), deskL = `${two(rr(-260, -180, 520, 30, 8), P.wood, P.woodD, 0, 8)}<rect x="-230" y="-150" width="22" height="150" fill="${P.woodD}"/><rect x="208" y="-150" width="22" height="150" fill="${P.woodD}"/>${at(40, -180, laptop(scrL), 0.7)}`;
-  const left = at(L[0], L[1], deskL + at(-140, 30, hoodChair(), 0.6), 1.2, TH[0] * 57.3) + (q > 0 ? at(L[0] - 230, L[1] - 300, text(0, 60, "?", 200, P.cream), pop(q) * (1 + 0.04 * Math.sin(tot * 3))) : "");
+  const left = at(L[0], L[1], deskL + at(-60, 30, hoodChair(), 0.5), 1.15, TH[0] * 57.3) + (q > 0 ? at(L[0] + 10, L[1] - 450, text(0, 60, "?", 200, P.cream), pop(q) * (1 + 0.04 * Math.sin(tot * 3))) : "");
   const lampOn = 0.5 + 0.5 * hal;
   const deskR = `${two(rr(-260, -180, 520, 30, 8), P.wood, P.woodD, 0, 8)}<rect x="-230" y="-150" width="22" height="150" fill="${P.woodD}"/><rect x="208" y="-150" width="22" height="150" fill="${P.woodD}"/>${at(-40, -180, laptop(mix("#9fe7ff", "#fff3c2", linked)), 0.7)}
     <path d="M150 -180V-330L210 -380" stroke="${P.ink}" stroke-width="10" fill="none"/><path d="M190 -400l60 -20l30 60l-60 20Z" fill="${P.red}"/><path d="M220 -370L360 -180H100Z" fill="#ffd98a" opacity="${(0.25 * lampOn).toFixed(2)}"/>
     <path d="${rr(-230, -240, 50, 60, 8)}" fill="${P.blue}"/><path d="M-180 -226q24 0 24 18q0 18 -24 18" stroke="${P.blue}" stroke-width="8" fill="none"/>
     ${at(-60, -100, `<path d="${rr(-170, -34, 340, 68, 10)}" fill="${P.gold}"/>${text(0, 20, "Hal Finney", 50, "#5a3400")}`, 0.3 + 0.7 * pop(a - 4.0))}`;
-  const right = at(Rt[0], Rt[1], (hal > 0 ? rings(0, -200, 280, P.win, 0.14 * hal) : "") + deskR, 1.2, TH[1] * 57.3);
+  const right = at(Rt[0], Rt[1], (hal > 0 ? rings(0, -200, 280, P.win, 0.14 * hal) : "") + deskR, 1.15, TH[1] * 57.3);
   // ten coins along an arc from one laptop to the other
-  const from = pos(TH[0] + 0.03, 330), to = pos(TH[1] - 0.05, 330), mid = [GX, 60];
+  const from = pos(TH[0] + 0.03, 330), to = pos(TH[1] - 0.05, 330), mid = [GX, -80];
   let coins = "";
   for (let i = 0; i < 10; i++) { const t0 = 2.1 + i * 0.12, p = seg(a, t0, t0 + 1.2); if (p <= 0) continue; const b = bez(from, mid, to, ease(p));
     coins += p < 1 ? at(b[0], b[1], coin(40), 1, 0) : at(to[0] - 120 + (i % 5) * 30 + 40, to[1] + 120 - Math.floor(i / 5) * 18, coin(18)); }
   const link = linked > 0 ? drawn(`M${from[0]} ${from[1]}Q${mid[0]} ${mid[1]} ${to[0]} ${to[1]}`, linked, P.gold, 8) : drawn(`M${from[0]} ${from[1]}Q${mid[0]} ${mid[1]} ${to[0]} ${to[1]}`, seg(a, 1.2, 1.8), "#9fe7ff", 3, 'stroke-dasharray="6 14"');
   // the calendar: from the 3rd to the 12th
-  const day = Math.round(lerp(3, 12, ease(seg(a, 0.3, 1.0)))), cal = at(1700, 170, cal2(String(day).padStart(2, "0"), "JAN 2009", 0.75), pop(a - 0.1), 4);
+  const day = Math.round(lerp(3, 12, ease(seg(a, 0.3, 1.0)))), cal = at(360, -20, cal2(String(day).padStart(2, "0"), "JAN 2009", 0.6), pop(a - 0.1), -4);
   const g = night(c, tot, 31) + layer(at(GX, GY, globe(R, 0.15, { night: 0.3, id: "g3" })), c, 1) + layer(link + left + right + coins + cal, c);
   return { g, in: [960, 540], inC: P.gold, inZ: 14 };
 }

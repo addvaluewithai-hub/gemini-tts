@@ -43,13 +43,13 @@ function s1(a, tot) {
 }
 // ---- 2: money as a file: the blue house sends the same $100 to the pink house and to the teal house, at once ----
 function s2(a, tot) {
-  const c = camAt(a, [[0, 640, 620, 1.3], [1.8, 760, 610, 1.18], [2.7, 950, 600, 1.1], [4.64, 950, 600, 1.12]]), G = 1000, B = [340, G], K = [1150, G], T = [1580, G], HK = 1.6;
-  const top = (x) => [x, G - 292 * HK - 180], launch = 2.64, arrive = 3.55;
-  const fly = (to, j) => { const p = ease(seg(a, launch + j * 0.02, arrive)), b = bez(top(B[0]), [(B[0] + to[0]) / 2, -60], top(to[0]), p); return { b, p }; };
+  const c = camAt(a, [[0, 640, 560, 1.2], [1.8, 760, 590, 1.16], [2.7, 950, 600, 1.1], [4.64, 950, 600, 1.12]]), G = 1000, B = [340, G], K = [1150, G], T = [1580, G], HK = 1.6;
+  const top = (x) => [x, G - 292 * HK - 150], launch = 2.64, arrive = 3.55;
+  const fly = (to, j) => { const p = ease(seg(a, launch + j * 0.02, arrive)), b = bez(top(B[0]), [(B[0] + to[0]) / 2, 250], top(to[0]), p); return { b, p }; };
   let cards = "", trail = "";
   const glow = a > 2.07 ? 1 : 0, own = at(top(B[0])[0], top(B[0])[1] + 6 * Math.sin(tot * 2), fileCard(money100(), { glow }), 1.4 * pop(a + 0.3));
   if (a > 2.35) [K, T].forEach((h, j) => { const { b, p } = fly(h, j);
-    for (let q = 1; q <= 6; q++) { const pp = Math.max(0, p - q * 0.035); if (pp <= 0 || p >= 1) continue; const bb = bez(top(B[0]), [(B[0] + h[0]) / 2, -60], top(h[0]), pp); trail += `<circle cx="${bb[0].toFixed(1)}" cy="${bb[1].toFixed(1)}" r="${(10 - q).toFixed(1)}" fill="${P.gold}" opacity="${(0.7 - q * 0.1).toFixed(2)}"/>`; }
+    for (let q = 1; q <= 6; q++) { const pp = Math.max(0, p - q * 0.035); if (pp <= 0 || p >= 1) continue; const bb = bez(top(B[0]), [(B[0] + h[0]) / 2, 250], top(h[0]), pp); trail += `<circle cx="${bb[0].toFixed(1)}" cy="${bb[1].toFixed(1)}" r="${(10 - q).toFixed(1)}" fill="${P.gold}" opacity="${(0.7 - q * 0.1).toFixed(2)}"/>`; }
     const split = a < launch ? spring(a - 2.35, 8, 13) : 1;
     cards += at(b[0] + (a < launch ? (j ? 60 : 30) * split : 0), b[1] + (a < launch ? -20 * split : 0), fileCard(money100(), { glow: 1 }), 1.4 * (p < 1 ? 1 : 1 + 0.15 * Math.exp(-(a - arrive) * 8) * Math.cos((a - arrive) * 14))); });
   const lit = (t0) => (a > t0 ? [1, 1, 1] : [0, 0, 1]), hop = (t0) => (a > t0 ? 1 + 0.06 * Math.exp(-(a - t0) * 7) * Math.cos((a - t0) * 14) : 1);
