@@ -55,3 +55,17 @@ export const drawn = (d, p, stroke, width, extra = "") => (p <= 0 ? "" : `<path 
 export const at = (x, y, inner, k = 1, rot = 0, extra = "") => `<g transform="translate(${(+x).toFixed(2)} ${(+y).toFixed(2)})${rot ? ` rotate(${(+rot).toFixed(2)})` : ""}${k !== 1 ? ` scale(${Array.isArray(k) ? k.map((v) => (+v).toFixed(4)).join(" ") : (+k).toFixed(4)})` : ""}" ${extra}>${inner}</g>`;
 export const check = (x, y, r, colour, a) => (a <= 0 ? "" : at(x, y, `<circle r="${r}" fill="${colour}"/>${drawn(`M${-r * 0.45} ${r * 0.02}L${-r * 0.1} ${r * 0.36}L${r * 0.48} ${-r * 0.32}`, seg(a, 0.05, 0.25), "#fff", r * 0.24, 'stroke-linejoin="round"')}`, 0.4 + 0.6 * spring(a, 10, 18)));
 export const cross = (x, y, r, colour, a) => (a <= 0 ? "" : at(x, y, `<circle r="${r}" fill="${colour}"/>${drawn(`M${-r * 0.38} ${-r * 0.38}L${r * 0.38} ${r * 0.38}`, seg(a, 0.03, 0.15), "#fff", r * 0.24)}${drawn(`M${r * 0.38} ${-r * 0.38}L${-r * 0.38} ${r * 0.38}`, seg(a, 0.12, 0.24), "#fff", r * 0.24)}`, 0.4 + 0.6 * spring(a, 10, 18)));
+
+// ---- a set: shots in a row, one per step ----
+// Runs shot `step` at `age`. When the board was already on screen in the beat before (total > age), the shot comes in
+// through the shape the previous one left by: `s.ends[k]` is how long shot k ran (sets/beats.cjs writes it). Every shot returns { g, in, inC, inZ, out, outC, outZ }.
+const OUT = 0.2, IN = 0.45;
+export function play(SHOTS, s, step, age, total) {
+  begin(); const ends = s.ends || []; const k = Math.min(step, SHOTS.length - 1), cont = k > 0 && total - age > 0.1 && ends && ends[k - 1]; let g;
+  if (cont && age < OUT) { const prev = SHOTS[k - 1](ends[k - 1] + age, total, s); g = prev.out ? through(prev.g, prev.out[0], prev.out[1], age / OUT, prev.outC, prev.outZ || 16) : prev.g; }
+  else { const cur = SHOTS[k](age, total, s); g = cont && cur.in && age < OUT + IN ? through(cur.g, cur.in[0], cur.in[1], 1 - easeOut((age - OUT) / IN), cur.inC, cur.inZ || 16) : cur.g; }
+  return g;
+}
+// the frame every set is drawn in, with the two skies of the bank set
+export const frame = (g, P) => `<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset=".55" stop-color="${P.sky1}"/><stop offset="1" stop-color="${P.sky2}"/></linearGradient>
+  <linearGradient id="bnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><linearGradient id="bstorm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0f3a"/><stop offset=".6" stop-color="#5a1f5e"/><stop offset="1" stop-color="#a8344f"/></linearGradient><clipPath id="bclip"><rect width="1920" height="1080"/></clipPath></defs><g clip-path="url(#bclip)">${g}</g></svg>`;

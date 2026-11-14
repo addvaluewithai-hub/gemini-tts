@@ -4,6 +4,7 @@
 // the seconds since the board appeared. Earlier steps are drawn finished; the current one animates.
 // Text can be Latin or Arabic; nothing here measures text, so labels stay short.
 import { bankSet } from "./sets/bank.js";
+import { moneySet } from "./sets/money.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -802,6 +803,8 @@ const BOARDS = {
   // "The bank is a ledger": five full-frame illustrated shots with nothing to read, one per beat (sets/bank.js).
   // The host is not in them; give a beat `host: "left"` or `"right"` and he leans in from that side.
   trail: (s, step, age, total) => bankSet(s, step, age, total),
+  // Crypto part 1, scene by scene, in the world of the bank set (sets/<scene>.js): one wordless shot per beat, `ends` from sets/beats.cjs.
+  money: (s, step, age, total) => moneySet(s, step, age, total),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.

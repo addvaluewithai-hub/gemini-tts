@@ -243,3 +243,6 @@ export function bankSet(s, step, age, total) {
   return `<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset=".55" stop-color="${P.sky1}"/><stop offset="1" stop-color="${P.sky2}"/></linearGradient>
     <linearGradient id="bnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><clipPath id="bclip"><rect width="1920" height="1080"/></clipPath></defs><g clip-path="url(#bclip)">${g}</g></svg>`;
 }
+
+// the world the other sets of the episode are built in: the same palette, town, bank, book, houses and money
+export { P, mix, fmt, cub, house, eyes, bank, book, LINES, rows, coin, note, pill, stars, skyline, clouds, dusk };

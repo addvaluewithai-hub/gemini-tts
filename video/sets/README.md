@@ -53,3 +53,15 @@ renders stills at the given `step:age` moments into one sheet. Look at every sho
 video: is the subject large enough, is anything under the host's corner, does each frame pass the test in point 2.
 Then render the section (a copy of the cue file with `from`, `to` and `lead: 0`, through `clip.cjs`), make a
 contact sheet with ffmpeg and watch the hand-overs frame by frame.
+
+## The sets of crypto part 1
+
+One file per scene (`money.js`, …), each a board kind in `boards.js`, all drawn in the bank set's world: `bank.js`
+exports its palette and props (town, bank, book, houses, coins), `props.js` holds the ones the other scenes share
+(calendar page, banknote, press, padlock, laptop, the hooded chair). The shot list is
+`episodes/techforbadguys/explain-crypto-01-world/shots.md`.
+
+- Give every beat on a set an explicit `"step"`; the scene's shots are `SHOTS[step]`, run by `play()` in `kit.js`.
+- `node sets/beats.cjs <storyboard> <cues> <board> [--write]` prints each beat's words with their times from the
+  start of the beat, and `--write` stores `ends` (how long each shot ran) in the board's spec, which `play()` needs to
+  hand one shot over to the next. A shot that follows a host beat comes in on a cut from the studio, with no hand-over.
