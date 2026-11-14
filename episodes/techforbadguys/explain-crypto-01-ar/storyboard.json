@@ -163,7 +163,8 @@
      "to": 1,
      "amount": 30
     }
-   ]
+   ],
+   "rich": true
   },
   "mid": {
    "kind": "flow",

@@ -141,6 +141,48 @@ const strike = (x, y, a, r = 110) => (a <= 0 ? "" : `<path d="M${x - r} ${y - r}
 const rnd = (n) => { let t = (n + 0x6D2B79F5) | 0; t = Math.imul(t ^ (t >>> 15), 1 | t); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 const fake = (text) => { let h = 2166136261; for (const ch of String(text)) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619); } let out = ""; for (let i = 0; i < 16; i++) out += "0123456789abcdef"[Math.floor(rnd(h + i * 97) * 16)]; return out; };
 
+// ---- richer motion (opt-in per board with `"rich": true`) ---------------------------------------------------------
+// A living backdrop behind a board: two soft lights drifting, dust rising, a slow sweep of light.
+const ambient = (total) => { let dots = "";
+  for (let i = 0; i < 34; i++) { const sp = 14 + rnd(i * 5) * 26, y = 1080 - ((total * sp + rnd(i * 5 + 1) * 1080) % 1140), x = rnd(i * 5 + 2) * 1920 + 30 * Math.sin(total * 0.5 + i), r = 2 + rnd(i * 5 + 3) * 3.5;
+    dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="${i % 3 ? C.line : C.yellow}" opacity="${(0.12 + 0.2 * Math.abs(Math.sin(total * 1.3 + i))).toFixed(2)}"/>`; }
+  return `<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><filter id="ambl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="90"/></filter></defs>
+    <circle cx="${400 + 160 * Math.sin(total * 0.21)}" cy="${330 + 90 * Math.cos(total * 0.17)}" r="300" fill="${C.cyan}" opacity=".13" filter="url(#ambl)"/><circle cx="${1500 + 140 * Math.cos(total * 0.19)}" cy="${760 + 100 * Math.sin(total * 0.23)}" r="320" fill="${C.pink}" opacity=".12" filter="url(#ambl)"/>${dots}</svg>`; };
+// The bank's ledger with weight and light: a panel that settles in, rows that slide, a coin that arcs with a trail and
+// lands with a burst, and amounts that roll.  Same spec as `ledger`.
+function richLedger(s, step, age, total) {
+  const rows = s.rows.map((r) => ({ ...r })), W = 1180, x = 960 - W / 2, y0 = 300, rh = 156, ops = s.ops || [], n = rows.length, H = n * rh + 40, bob = 5 * Math.sin(total * 1.1);
+  let mv = null; const vel = rows.map(() => 0);
+  ops.forEach((op, k) => { const a = since(k + 1, step, age); if (a < 0) return; const p = ease((a - 1.4) / 0.5), q = ease((a - 0.15) / 0.5);
+    rows[op.from].amount -= op.amount * q; rows[op.to].amount += op.amount * p; vel[op.from] = q > 0 && q < 1 ? 1 : 0; vel[op.to] = p > 0 && p < 1 ? 1 : 0; if (a < 3) mv = { op, a }; });
+  const enter = step > 0 ? 1 : back01(total / 0.55), rowY = (i) => y0 + 20 + i * rh;
+  const digits = (cx, cy, v, fill, moving) => { const t = Math.round(v).toLocaleString("en");
+    return (moving ? `<g opacity=".28">${T(cx, cy - 46, Math.round(v + 3).toLocaleString("en"), 96, { anchor: "start", fill })}${T(cx, cy + 46, Math.round(v - 3).toLocaleString("en"), 96, { anchor: "start", fill })}</g>` : "") + T(cx, cy + (moving ? 5 * Math.sin(total * 40) : 0), t, 96, { anchor: "start", fill }); };
+  const body = rows.map((r, i) => { const a = step > 0 ? 9 : total - 0.25 - i * 0.14; if (a <= 0) return ""; const y = rowY(i), slide = (1 - back01(a / 0.45)) * 220, from = mv && mv.op.from === i, to = mv && mv.op.to === i;
+    const flash = from ? Math.exp(-Math.max(0, mv.a - 0.15) * 2.2) : to ? Math.exp(-Math.max(0, mv.a - 1.45) * 2.2) * (mv.a > 1.4 ? 1 : 0) : 0, tint = from ? C.red : C.green;
+    return `<g transform="translate(${slide} 0)" opacity="${clamp(a / 0.2)}"><rect x="${x + 26}" y="${y}" width="${W - 52}" height="${rh - 22}" rx="22" fill="${C.row}"/><rect x="${x + 26}" y="${y}" width="${W - 52}" height="${rh - 22}" rx="22" fill="${tint}" opacity="${(0.32 * flash).toFixed(3)}"/>
+      <rect x="${x + 26}" y="${y}" width="${W - 52}" height="${(rh - 22) / 2}" rx="22" fill="#fff" opacity=".035"/>
+      <circle cx="${x + W - 110}" cy="${y + 67}" r="44" fill="${r.color || [C.cyan, C.pink, C.green][i % 3]}"/><circle cx="${x + W - 110}" cy="${y + 54}" r="15" fill="${C.ink}" opacity=".55"/><path d="M${x + W - 136} ${y + 96}c0 -30 52 -30 52 0z" fill="${C.ink}" opacity=".55"/>
+      ${r.color ? "" : T(x + W - 180, y + 92, r.name, 70, { anchor: "end", font: "Elite" })}${digits(x + 80, y + 100, r.amount, flash > 0.25 ? tint : C.yellow, vel[i] > 0)}</g>`; }).join("");
+  let fx = "";
+  if (mv) { const { op, a } = mv, ya = rowY(op.from) + 67, yb = rowY(op.to) + 67, sx = x + 40, bx = x - 210;
+    const at = (p) => { const u = 1 - p; return [u * u * u * sx + 3 * u * u * p * bx + 3 * u * p * p * bx + p * p * p * sx, u * u * u * ya + 3 * u * u * p * ya + 3 * u * p * p * yb + p * p * p * yb]; };
+    const p = ease((a - 0.2) / 1.2);
+    fx += `<path d="M${sx} ${ya}C${bx} ${ya} ${bx} ${yb} ${sx} ${yb}" fill="none" stroke="${C.line}" stroke-width="5" stroke-dasharray="4 16" stroke-linecap="round" opacity="${(0.55 * (1 - clamp((a - 1.6) / 0.6))).toFixed(2)}" stroke-dashoffset="${-total * 60}"/>`;
+    if (a > 0.2 && p < 1) { for (let k = 9; k >= 1; k--) { const [tx2, ty2] = at(Math.max(0, p - k * 0.035)); fx += `<circle cx="${tx2}" cy="${ty2}" r="${26 - k * 2.2}" fill="${C.gold}" opacity="${(0.34 - k * 0.032).toFixed(3)}"/>`; }
+      const [cx, cy] = at(p); fx += `<circle cx="${cx}" cy="${cy}" r="60" fill="${C.gold}" opacity=".3" filter="url(#bglow)"/>${G(cx, cy, 0.62 + 0.12 * Math.sin(Math.PI * p), `<g transform="rotate(${p * 540})">${icon("coin")}</g>`)}`; }
+    const b = a - 1.4; if (b > 0 && b < 0.6) { const [cx, cy] = at(1); for (let k = 0; k < 12; k++) { const ang = k * Math.PI / 6, r1 = 30 + b * 200, r2 = r1 + 34 * (1 - b / 0.6); fx += `<path d="M${cx + Math.cos(ang) * r1} ${cy + Math.sin(ang) * r1}L${cx + Math.cos(ang) * r2} ${cy + Math.sin(ang) * r2}" stroke="${C.yellow}" stroke-width="7" stroke-linecap="round" opacity="${(1 - b / 0.6).toFixed(2)}"/>`; } }
+    const badge = (t0, yy, text, col) => { const u = a - t0; return u > 0 && u < 1.5 ? `<g transform="translate(${x + 470} ${yy - 10 - 70 * ease(u / 1.5)}) scale(${back01(u / 0.3)})" opacity="${(1 - clamp((u - 0.9) / 0.6)).toFixed(2)}"><rect x="-96" y="-44" width="192" height="88" rx="44" fill="${col}"/>${T(0, 24, text, 62, { fill: "#fff" })}</g>` : ""; };
+    fx += badge(0.2, ya, "−" + op.amount, C.red) + badge(1.45, yb, "+" + op.amount, C.green); }
+  const sweepX = ((total * 260) % 2600) - 500;
+  return `<div style="position:absolute;inset:0">${ambient(total)}${svg(`${heading(s.title, 1, 170)}<g transform="translate(960 ${540 + bob}) scale(${(0.7 + 0.3 * enter) * (1 + 0.02 * ease(total / 10))}) translate(-960 -540)" opacity="${clamp(total / 0.2)}">
+      <rect x="${x + 14}" y="${y0 + 26}" width="${W}" height="${H}" rx="34" fill="#000" opacity=".35" filter="url(#bglow)"/>
+      <rect x="${x}" y="${y0}" width="${W}" height="${H}" rx="34" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".55" stroke-width="4"/>
+      <clipPath id="rlc"><rect x="${x}" y="${y0}" width="${W}" height="${H}" rx="34"/></clipPath><g clip-path="url(#rlc)"><path d="M${sweepX} ${y0}l160 0l-220 ${H}l-160 0z" fill="#fff" opacity=".05"/></g>
+      ${body}${fx}</g>${caption((s.captions || [])[step], age, 940)}`).replace("<svg ", '<svg style="position:absolute;left:0;top:0" ')}</div>`;
+}
+const back01 = (p) => { p = clamp(p); const c = 1.70158; return 1 + (c + 1) * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); };
+
 const BOARDS = {
   // A name and a line under it, for openings.
   titlecard(s, step, age, total) {
@@ -159,7 +201,8 @@ const BOARDS = {
   },
   // A page of names and balances. Each step after the first moves an amount from one row to another.
   // A row with `color` shows a person in that colour instead of its name.
-  ledger(s, step, age) {
+  ledger(s, step, age, total) {
+    if (s.rich) return richLedger(s, step, age, total);
     const rows = s.rows.map((r) => ({ ...r })), W = 1240, x = 960 - W / 2, y0 = 270, rh = 150, ops = s.ops || [];
     let moving = null;
     ops.forEach((op, k) => { const a = since(k + 1, step, age); if (a < 0) return; const p = ease(a / 0.9);
