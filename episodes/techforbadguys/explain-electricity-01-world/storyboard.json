@@ -1,0 +1,1075 @@
+{
+ "title": "تقرير الأرض: الكهربا 1 (world picture)",
+ "recorded_for": "2026-11-14",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture (one video for every audio track): same Arabic script and voice as explain-electricity-01-ar, re-recorded on Vertex AI (job techforbadguys-explain-electricity-01-ar-v, section 4 from -v-t3), no burned-in captions, every board redrawn as a wordless illustrated set in the bank set's world (video/sets/, props in sets/elec.js). Shot list: shots.md.",
+  "Earth Report field file: Electricity, part 1 of 3. What electricity is: charge and the amber the word comes from, static and lightning, current in a closed loop and why the lamp lights at once though electrons crawl, volts/amperes/ohms/watts as a rooftop water tank and a pipe, electricity in the human body, direct and alternating current, the war of the currents (Edison, Tesla, Westinghouse), and why both kinds are still in use.",
+  "",
+  "Sourced (links in explain-electricity-01-ar/plan.md): electron drift is a fraction of a millimetre per second while the signal travels near light speed; a typical lightning flash is about 300 million volts and 30,000 amperes (US National Weather Service gives ranges of 100 million to 1 billion volts) and there are tens of flashes a second worldwide; Pearl Street Station opened 4 September 1882 at 110 volts direct current with about 400 lamps; Edison's campaign against alternating current from 1888; William Kemmler, 6 August 1890, first execution by electric chair, run on Westinghouse generators obtained second-hand without Westinghouse's consent, and Westinghouse's remark about an axe; Westinghouse lit the 1893 Chicago World's Fair; Niagara power reached Buffalo in November 1896 over 20 to 26 miles; China's Changji-Guquan line (2019) is direct current at 1,100 kV over about 3,300 km.",
+  "From general knowledge, not re-checked: lightning heats the air to about five times the temperature of the sun's surface; an LED lamp draws about 10 watts and a kettle about 2,000; a short circuit and the breaker that stops it; Thales and amber about 600 BC; like charges repel; Franklin 1752 and Georg Richmann's death in 1753; a static shock is thousands of volts with little charge; Volta's battery 1800, modelled on the electric fish; the unit names; household sockets 100 to 240 volts; 50 or 60 cycles a second; an electric eel species measured at 860 volts in 2019; nerves and the heartbeat are electrical; Tesla arrived in 1884, worked for Edison for some months, and Westinghouse licensed his patents in 1888; 110-volt direct current served only about a mile round a station; devices with screens or batteries run on direct current internally.",
+  "Safety: the script says plainly that household voltage can kill and describes nothing to try."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "2 / 3",
+   "icons": [
+    "bolt",
+    "tower",
+    "cable"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "eintro": {
+   "kind": "eintro",
+   "ends": [
+    4.3,
+    4.59,
+    3.47,
+    4.35,
+    1.81
+   ]
+  },
+  "amber": {
+   "kind": "amber",
+   "ends": [
+    2.48,
+    4.42,
+    2.03,
+    1.93,
+    2.84,
+    3.93,
+    2.6,
+    5.89,
+    1.71,
+    6.59,
+    5.78
+   ]
+  },
+  "spark": {
+   "kind": "spark",
+   "ends": [
+    4.24,
+    2.7,
+    2.51,
+    2.25,
+    2.59,
+    1.93,
+    2.17,
+    3.07,
+    1.88,
+    3.23,
+    3.86,
+    2.46,
+    5.6,
+    2.9
+   ]
+  },
+  "circuit": {
+   "kind": "circuit",
+   "ends": [
+    2.37,
+    3.4,
+    3.5,
+    4.2,
+    5.52,
+    3.57,
+    8.18,
+    9.8,
+    6.18,
+    3.91,
+    8,
+    2.44
+   ]
+  },
+  "pipes": {
+   "kind": "pipes",
+   "ends": [
+    4.97,
+    4.9,
+    4.57,
+    5.12,
+    4.59,
+    5.29,
+    3.69,
+    2,
+    8.79,
+    5.22,
+    0.79,
+    1.13,
+    1.17
+   ]
+  },
+  "scale": {
+   "kind": "scale",
+   "ends": [
+    3.35,
+    3.08,
+    2.21,
+    1.99,
+    7.9
+   ]
+  },
+  "body": {
+   "kind": "body",
+   "ends": [
+    6.98,
+    3.03,
+    4.61,
+    7.2,
+    5.71
+   ]
+  },
+  "wave": {
+   "kind": "wave",
+   "ends": [
+    9.49,
+    6.9,
+    3.85,
+    7.57
+   ]
+  },
+  "war": {
+   "kind": "war",
+   "ends": [
+    5.33,
+    4.2,
+    11.94,
+    5,
+    2.75,
+    6.46,
+    10.9,
+    8.92,
+    19.2,
+    6.38,
+    5.75
+   ]
+  },
+  "won": {
+   "kind": "won",
+   "ends": [
+    4.89,
+    10.01,
+    4.91,
+    3.71,
+    5.58,
+    2.18,
+    6.76
+   ]
+  },
+  "edict": {
+   "kind": "edict",
+   "ends": [
+    7.41,
+    4.92
+   ]
+  },
+  "erecap": {
+   "kind": "erecap",
+   "ends": [
+    14.22
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم واحد في ملف الكهربا.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: الكهربا نفسها. الحاجة اللي ماشية في السلك.. إيه هي بالظبط؟",
+     "show": "board",
+     "board": "eintro",
+     "step": 0
+    },
+    {
+     "say": "الكوكب ده كله شغال عليها. النور، التليفونات، المصانع، المستشفيات.",
+     "show": "board",
+     "board": "eintro",
+     "step": 1
+    },
+    {
+     "say": "اقطعها عنهم ساعة واحدة.. وحضارتهم كلها تقف في الطابور.",
+     "show": "board",
+     "board": "eintro",
+     "step": 2,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "وأغرب حاجة رصدتها: اللي بيجري في أسلاكهم ماشي أبطأ من الحلزون.",
+     "show": "board",
+     "board": "eintro",
+     "step": 3
+    },
+    {
+     "say": "<short pause> ومع كده اللمبة بتنوّر في لحظة.",
+     "show": "board",
+     "board": "eintro",
+     "step": 4
+    },
+    {
+     "say": "فإزاي؟ ويعني إيه فولت أصلاً؟ وليه عندهم نوعين من الكهربا.. اتخانقوا عليهم خناقة وصلت لكرسي الإعدام؟",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "charge",
+   "style": "Telling an old story simply, amused that it took humans so long.",
+   "story": {
+    "n": 1,
+    "tag": "CHARGE",
+    "icon": "atom"
+   },
+   "beats": [
+    {
+     "say": "الحكاية بدأت من حوالي ألفين وستمية سنة.",
+     "show": "board",
+     "board": "amber",
+     "step": 0
+    },
+    {
+     "say": "واحد يوناني دعك حجر كهرمان في حتة فروة.. فالحجر بقى يشدّ الريش والقش.",
+     "show": "board",
+     "board": "amber",
+     "step": 1
+    },
+    {
+     "say": "والكهرمان باليوناني اسمه Elektron.",
+     "show": "board",
+     "board": "amber",
+     "step": 2
+    },
+    {
+     "say": "ومن الاسم ده طلعت كلمة Electricity.",
+     "show": "board",
+     "board": "amber",
+     "step": 3
+    },
+    {
+     "say": "<short pause> يعني أهم حاجة في حضارتهم.. متسمّية على حجر.",
+     "show": "board",
+     "board": "amber",
+     "step": 4
+    },
+    {
+     "say": "وقعدوا بعدها أكتر من ألفين سنة مش فاهمين اللي حصل. بيدعكوا.. ويتفرجوا.",
+     "show": "board",
+     "board": "amber",
+     "step": 5,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "واللي حصل ده: كل حاجة على الكوكب معمولة من ذرّات.",
+     "show": "board",
+     "board": "amber",
+     "step": 6
+    },
+    {
+     "say": "وحوالين كل ذرّة حاجات صغيرة جداً اسمها إلكترونات. شايلة حاجة بيسمّوها شحنة. وشحنتها سالبة.",
+     "show": "board",
+     "board": "amber",
+     "step": 7
+    },
+    {
+     "say": "وقلب الذرّة نفسه شحنته موجبة.",
+     "show": "board",
+     "board": "amber",
+     "step": 8
+    },
+    {
+     "say": "والقاعدة بسيطة: العكس يشدّوا بعض. واللي زي بعض.. يزقّوا بعض.",
+     "show": "board",
+     "board": "amber",
+     "step": 9,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "زي البشر بالظبط يا فندم. <short pause> بس الإلكترونات ماعندهاش محامين.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "ولما اليوناني دعك الحجر، إلكترونات اتنقلت من الفروة للحجر. بقى عنده زيادة.. فبقى يشدّ أي حاجة خفيفة حواليه.",
+     "show": "board",
+     "board": "amber",
+     "step": 10,
+     "host": "right",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "static",
+   "style": "From a tiny spark to lightning; ends on a plain, serious note about danger.",
+   "story": {
+    "n": 2,
+    "tag": "SPARK",
+    "icon": "bolt"
+   },
+   "beats": [
+    {
+     "say": "دي اللي بيسمّوها كهربا ساكنة. شحنة بتتحوّش في مكان ومش لاقية طريق تمشي فيه.",
+     "show": "board",
+     "board": "spark",
+     "step": 0
+    },
+    {
+     "say": "الإنسان منهم يمشي على سجادة.. فجسمه يتشحن.",
+     "show": "board",
+     "board": "spark",
+     "step": 1
+    },
+    {
+     "say": "يلمس أوكرة الباب.. الشحنة تنط. شرارة.",
+     "show": "board",
+     "board": "spark",
+     "step": 2
+    },
+    {
+     "say": "والشرارة الصغيرة دي فيها آلاف الفولتات.",
+     "show": "board",
+     "board": "spark",
+     "step": 3
+    },
+    {
+     "say": "بس الشحنة اللي وراها قليلة جداً، فبتلسع وخلاص.",
+     "show": "board",
+     "board": "spark",
+     "step": 4
+    },
+    {
+     "say": "كبّر الشرارة دي بقى.. تبقى برق.",
+     "show": "board",
+     "board": "spark",
+     "step": 5
+    },
+    {
+     "say": "سحابة اتشحنت، والشحنة نطّت منها للأرض.",
+     "show": "board",
+     "board": "spark",
+     "step": 6
+    },
+    {
+     "say": "البرقة العادية فيها حوالي تلتمية مليون فولت.",
+     "show": "board",
+     "board": "spark",
+     "step": 7
+    },
+    {
+     "say": "وحوالي تلاتين ألف أمبير.",
+     "show": "board",
+     "board": "spark",
+     "step": 8
+    },
+    {
+     "say": "والكوكب ده بيضرب فيه البرق عشرات المرات.. في كل ثانية.",
+     "show": "board",
+     "board": "spark",
+     "step": 9
+    },
+    {
+     "say": "والبرقة الواحدة بتسخّن الهوا حواليها لدرجة أعلى من سطح الشمس خمس مرات.",
+     "show": "board",
+     "board": "spark",
+     "step": 10,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "والصوت اللي بيسمعوه بعدها.. ده الهوا وهو بيفرقع.",
+     "show": "board",
+     "board": "spark",
+     "step": 11
+    },
+    {
+     "say": "وسنة ألف سبعمية اتنين وخمسين، واحد أمريكي اسمه Franklin قال إن البرق ده كهربا، واقترح تجربة تثبتها.",
+     "show": "board",
+     "board": "spark",
+     "step": 12,
+     "calm": true
+    },
+    {
+     "say": "والسنة اللي بعدها، عالِم في روسيا جرّب حاجة شبهها.. ومات في مكانه.",
+     "show": "board",
+     "board": "spark",
+     "step": 13,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "فالبشر اتعلموا الدرس الأول بدري: الكهربا دي بتموّت. <short pause> ومابتديش إنذار.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "current",
+   "style": "Solving the riddle from the opening with one everyday comparison. Clear and pleased with himself.",
+   "story": {
+    "n": 3,
+    "tag": "CURRENT",
+    "icon": "cable"
+   },
+   "beats": [
+    {
+     "say": "بس الشحنة وهي واقفة مابتشغّلش حاجة. اللي بيشغّل: شحنة ماشية. وده اسمه التيار.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "السلك النحاس مليان إلكترونات سايبة.",
+     "show": "board",
+     "board": "circuit",
+     "step": 0
+    },
+    {
+     "say": "وعلشان تمشي محتاجة حاجتين: حد يزقّها، زي البطارية.",
+     "show": "board",
+     "board": "circuit",
+     "step": 1
+    },
+    {
+     "say": "وطريق مقفول على بعضه يرجّعها لمكان ما بدأت. بيسمّوه دايرة.",
+     "show": "board",
+     "board": "circuit",
+     "step": 2
+    },
+    {
+     "say": "تقفل المفتاح.. الدايرة تكمل، الإلكترونات تتحرك، واللمبة تنوّر.",
+     "show": "board",
+     "board": "circuit",
+     "step": 3
+    },
+    {
+     "say": "وهنا اللغز اللي قلته في الأول. الإلكترون نفسه بيزحف: أقل من ملّي في الثانية. الحلزون يسبقه.",
+     "show": "board",
+     "board": "circuit",
+     "step": 4
+    },
+    {
+     "say": "بس الزقّة نفسها بتلفّ الدايرة بسرعة قريبة من سرعة الضوء.",
+     "show": "board",
+     "board": "circuit",
+     "step": 5
+    },
+    {
+     "say": "ليه؟ لأن السلك مليان أصلاً. زي خرطوم مليان مية: تفتح الحنفية من هنا.. تطلع مية من الناحية التانية فوراً. مش نفس المية اللي دخلت. دي اللي كانت واقفة في الآخر.",
+     "show": "board",
+     "board": "circuit",
+     "step": 6,
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "وتفتح المفتاح.. الدايرة تتقطع، وكل حاجة تقف. في السلك كله، مرة واحدة.",
+     "show": "board",
+     "board": "circuit",
+     "step": 7
+    },
+    {
+     "say": "يعني زرار النور عندهم مابيبعتش كهربا. <short pause> هو كوبري متحرك. يا مقفول، يا مفتوح.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "ولو الإلكترونات لقت طريق مختصر من غير لمبة؟ تجري فيه كلها مرة واحدة، والسلك يسخن ويولّع. بيسمّوها قفلة.",
+     "show": "board",
+     "board": "circuit",
+     "step": 8,
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "وعلشان كده كل بيت عندهم فيه قاطع بيفصل لوحده لما التيار يزيد عن حدّه.",
+     "show": "board",
+     "board": "circuit",
+     "step": 9
+    },
+    {
+     "say": "والمواد عندهم صنفين. معادن زي النحاس، إلكتروناتها سايبة فبتوصّل. وحاجات زي البلاستيك والكاوتش، إلكتروناتها ماسكة في مكانها فبتعزل.",
+     "show": "board",
+     "board": "circuit",
+     "step": 10,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "<short pause> علشان كده كل سلك عندهم لابس جاكتة.",
+     "show": "board",
+     "board": "circuit",
+     "step": 11
+    }
+   ]
+  },
+  {
+   "id": "volt",
+   "style": "The core analogy, built step by step like a patient teacher, with dry asides.",
+   "story": {
+    "n": 4,
+    "tag": "VOLTS",
+    "icon": "gear"
+   },
+   "beats": [
+    {
+     "say": "وعلشان البشر يفهموا الكهربا بيشبّهوها بالمية. خزان فوق السطوح ونازلة منه ماسورة.",
+     "show": "board",
+     "board": "pipes",
+     "step": 0
+    },
+    {
+     "say": "كل ما الخزان أعلى، المية تنزل بضغط أكبر. الضغط ده في الكهربا اسمه: فولت.",
+     "show": "board",
+     "board": "pipes",
+     "step": 1
+    },
+    {
+     "say": "وكمية المية اللي بتعدّي في الماسورة كل ثانية.. دي التيار. وبيتقاس بالأمبير.",
+     "show": "board",
+     "board": "pipes",
+     "step": 2
+    },
+    {
+     "say": "ولو الماسورة فيها حتة ضيقة، المية اللي بتعدّي تقل. دي اسمها مقاومة. وبتتقاس بالأوم.",
+     "show": "board",
+     "board": "pipes",
+     "step": 3
+    },
+    {
+     "say": "ترفع الخزان.. الضغط يزيد، فالمية تعدّي أكتر. نفس القانون بالظبط في السلك.",
+     "show": "board",
+     "board": "pipes",
+     "step": 4
+    },
+    {
+     "say": "والشغل اللي المية دي تقدر تعمله، ضغط في كمية: ده الوات. وهو اللي بيدفعوا تمنه في الفاتورة.",
+     "show": "board",
+     "board": "pipes",
+     "step": 5,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "اللمبة الحديثة بتسحب حوالي عشرة وات. والغلاية حوالي ألفين.",
+     "show": "board",
+     "board": "pipes",
+     "step": 6
+    },
+    {
+     "say": "<short pause> يعني كوباية شاي واحدة.. بميتين لمبة.",
+     "show": "board",
+     "board": "pipes",
+     "step": 7,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "واللمبة القديمة كان جوّاها سلك رفيع، مقاومته عالية بالقصد. الإلكترونات تتزنق فيه، فيسخن لحد ما ينوّر. <short pause> يعني النور عندهم كان.. زحمة مرور.",
+     "show": "board",
+     "board": "pipes",
+     "step": 8,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "والوحدات دي كلها أسامي ناس. Volta، إيطالي، عمل أول بطارية سنة ألف وتمنمية.",
+     "show": "board",
+     "board": "pipes",
+     "step": 9
+    },
+    {
+     "say": "Ampère، فرنساوي.",
+     "show": "board",
+     "board": "pipes",
+     "step": 10
+    },
+    {
+     "say": "Ohm، ألماني.",
+     "show": "board",
+     "board": "pipes",
+     "step": 11
+    },
+    {
+     "say": "و Watt، اسكتلندي.",
+     "show": "board",
+     "board": "pipes",
+     "step": 12
+    },
+    {
+     "say": "كل عالِم فيهم مات.. واسمه بقى مكتوب على فاتورة. <short pause> ده أعلى تكريم عند البشر.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وعلشان تتخيلوا الأرقام: شاحن التليفون بيطلّع حوالي خمسة فولت.",
+     "show": "board",
+     "board": "scale",
+     "step": 0
+    },
+    {
+     "say": "فيشة البيت: من مية وعشرة لميتين وأربعين، حسب البلد.",
+     "show": "board",
+     "board": "scale",
+     "step": 1
+    },
+    {
+     "say": "أسلاك الأبراج العالية: مئات الآلاف.",
+     "show": "board",
+     "board": "scale",
+     "step": 2
+    },
+    {
+     "say": "والبرق: مئات الملايين.",
+     "show": "board",
+     "board": "scale",
+     "step": 3
+    },
+    {
+     "say": "وتنبيه للقيادة: فيشة البيت العادية كفاية تموّت إنسان. اللي بيأذي هو التيار اللي يعدّي في الجسم. والجسم عندهم بيوصّل.",
+     "show": "board",
+     "board": "scale",
+     "step": 4,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "body",
+   "style": "A short surprising aside, then a serious line.",
+   "story": {
+    "n": 5,
+    "tag": "BODY",
+    "icon": "heart"
+   },
+   "beats": [
+    {
+     "say": "وليه التيار خطر عليهم بالشكل ده؟ لأنهم هم نفسهم شغالين بالكهربا. الأعصاب عندهم بتنقل الأوامر بنبضات كهربا صغيرة.",
+     "show": "board",
+     "board": "body",
+     "step": 0
+    },
+    {
+     "say": "والقلب بيدق لأن نبضة كهربا بتأمره. في كل دقّة.",
+     "show": "board",
+     "board": "body",
+     "step": 1
+    },
+    {
+     "say": "فلما تيار غريب يعدّي في الجسم، بيشوّش على إشارة القلب نفسها. <short pause> زي ما حد يزعّق في وسط مكالمة.",
+     "show": "board",
+     "board": "body",
+     "step": 2,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "وفيه كائنات عندهم بتستخدمها سلاح. سمكة في أنهار أمريكا الجنوبية، قاسوا ضربتها سنة ألفين وتسعتاشر: تمنمية وستين فولت.",
+     "show": "board",
+     "board": "body",
+     "step": 3
+    },
+    {
+     "say": "و Volta لما عمل أول بطارية، كان بيقلّد السمكة دي. <short pause> يعني أول بطارية على الكوكب.. كانت سمكة مزوّرة.",
+     "show": "board",
+     "board": "body",
+     "step": 4,
+     "host": "right",
+     "emote": "grin"
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "style": "Two things compared plainly, then a teasing question.",
+   "story": {
+    "n": 6,
+    "tag": "AC DC",
+    "icon": "bolt"
+   },
+   "beats": [
+    {
+     "say": "والتيار نوعين. الأول: مستمر. الإلكترونات ماشية في اتجاه واحد على طول، زي النهر. ده اللي بيطلع من أي بطارية. واختصاره DC.",
+     "show": "board",
+     "board": "wave",
+     "step": 0
+    },
+    {
+     "say": "والتاني: متردد. الإلكترونات بتروح وتيجي في مكانها. رايح جاي، زي المنشار. واختصاره AC.",
+     "show": "board",
+     "board": "wave",
+     "step": 1
+    },
+    {
+     "say": "وبيغيّر اتجاهه خمسين أو ستين مرة في الثانية. حسب البلد.",
+     "show": "board",
+     "board": "wave",
+     "step": 2
+    },
+    {
+     "say": "واللمبة بتنوّر في الحالتين. لأن الإلكترونات وهي رايحة بتسخّن السلك.. وهي راجعة برضه بتسخّنه. <short pause> المنشار بيقطع في الاتجاهين.",
+     "show": "board",
+     "board": "wave",
+     "step": 3,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "طيب ليه حد يعوز كهربا رايحة جاية؟ <short pause> الإجابة يا فندم في خناقة. من أشهر خناقات الكوكب.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "war",
+   "style": "A true story of a business war, told briskly; the middle passage about the execution is grave and unhurried.",
+   "story": {
+    "n": 7,
+    "tag": "WAR",
+    "icon": "flag"
+   },
+   "beats": [
+    {
+     "say": "سنة ألف تمنمية اتنين وتمانين، Thomas Edison شغّل أول محطة كهربا في New York.",
+     "show": "board",
+     "board": "war",
+     "step": 0
+    },
+    {
+     "say": "تيار مستمر، مية وعشرة فولت. وأول يوم نوّرت حوالي ربعمية لمبة.",
+     "show": "board",
+     "board": "war",
+     "step": 1
+    },
+    {
+     "say": "بس فيها عيب كبير: الكهربا بتاعتها ماتوصلش أبعد من كيلو ونص تقريباً. بعد كده الضغط يقع والسلك يسخن. يعني كل حي محتاج محطة.",
+     "show": "board",
+     "board": "war",
+     "step": 2
+    },
+    {
+     "say": "محطة فحم في كل شارع. <short pause> خطة عظيمة.. لبيّاع الفحم.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وهنا دخل مهاجر من أوروبا اسمه Nikola Tesla. وصل أمريكا سنة ألف تمنمية أربعة وتمانين.",
+     "show": "board",
+     "board": "war",
+     "step": 3
+    },
+    {
+     "say": "اشتغل عند Edison كام شهر.. واختلفوا، ومشي.",
+     "show": "board",
+     "board": "war",
+     "step": 4
+    },
+    {
+     "say": "وكان معاه تصميمات لمواتير ومولّدات بالتيار المتردد. ورجل أعمال اسمه Westinghouse اشترى منه الاختراعات.",
+     "show": "board",
+     "board": "war",
+     "step": 5
+    },
+    {
+     "say": "وميزة المتردد حاجة واحدة، بس غيّرت كل حاجة: تقدر ترفع ضغطه لآلاف الفولتات بجهاز بسيط اسمه المحوّل، فيسافر مئات الكيلوهات.. وتنزّله تاني قبل ما يدخل البيت. التفاصيل في التقرير الجاي.",
+     "show": "board",
+     "board": "war",
+     "step": 6,
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "Edison ماسكتش. من سنة ألف تمنمية تمانية وتمانين بدأ حملة تخويف: المتردد ده قاتل. ورجّالته كانوا بيكهربوا حيوانات قدام الصحفيين علشان يثبتوا.",
+     "show": "board",
+     "board": "war",
+     "step": 7,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "وسنة ألف تمنمية وتسعين، ولاية New York نفّذت أول إعدام بالكرسي الكهربائي. واللي جهّز الكرسي شغّله بمولّدات Westinghouse بالذات، اشتراها من ورا ضهره. علشان اسم المتردد يلزق في الموت.",
+     "show": "board",
+     "board": "war",
+     "step": 8,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "والإعدام نفسه كان بشع وطوّل. و Westinghouse قال بعدها: كانوا عملوها أحسن بفاس. <short pause> البشر لما يتنافسوا على سوق.. مابيبقاش عندهم حدود.",
+     "shot": "close",
+     "emote": "annoyed",
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "بس الحسبة هي اللي كسبت. سنة ألف تمنمية تلاتة وتسعين، Westinghouse نوّر معرض Chicago العالمي كله بالمتردد.",
+     "show": "board",
+     "board": "war",
+     "step": 9
+    },
+    {
+     "say": "وسنة ألف تمنمية ستة وتسعين، كهربا شلالات Niagara وصلت مدينة Buffalo.. على بعد أكتر من تلاتين كيلو.",
+     "show": "board",
+     "board": "war",
+     "step": 10
+    },
+    {
+     "say": "تلاتين كيلو. و Edison كان آخره كيلو ونص. <short pause> الخناقة خلصت.",
+     "shot": "close",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "won",
+   "style": "The twist at the end of the story. Enjoying the irony.",
+   "story": {
+    "n": 8,
+    "tag": "WINNER",
+    "icon": "crown"
+   },
+   "beats": [
+    {
+     "say": "ومن ساعتها، الشبكة على الكوكب كله تيار متردد. من المحطة لحد الفيشة.",
+     "show": "board",
+     "board": "won",
+     "step": 0
+    },
+    {
+     "say": "بس استنوا يا فندم. أي جهاز فيه شاشة أو بطارية.. شغال من جوّه بالتيار المستمر. التليفون، الكمبيوتر، اللمبة الحديثة، اللوح الشمسي، والعربية الكهربا.",
+     "show": "board",
+     "board": "won",
+     "step": 1
+    },
+    {
+     "say": "والمكعب اللي في آخر سلك الشاحن؟ شغلته كلها إنه يحوّل المتردد بتاع الحيطة لمستمر.",
+     "show": "board",
+     "board": "won",
+     "step": 2
+    },
+    {
+     "say": "<short pause> يعني كل بيت عندهم فيه عشرين معاهدة صلح صغيرة بين Edison و Tesla.",
+     "show": "board",
+     "board": "won",
+     "step": 3,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "وأطول خطوط كهربا على الكوكب النهارده.. تيار مستمر. في الصين خط اشتغل سنة ألفين وتسعتاشر.",
+     "show": "board",
+     "board": "won",
+     "step": 4
+    },
+    {
+     "say": "طوله حوالي تلات آلاف وتلتمية كيلو.",
+     "show": "board",
+     "board": "won",
+     "step": 5
+    },
+    {
+     "say": "وضغطه مليون ومية ألف فولت. لأن على المسافات الطويلة قوي، وبالإلكترونيات الحديثة، المستمر بيضيّع أقل.",
+     "show": "board",
+     "board": "won",
+     "step": 6
+    },
+    {
+     "say": "يعني بعد مية وأربعين سنة، النتيجة تعادل. <short pause> بس محدش بلّغ Edison.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "beats": [
+    {
+     "say": "كلمتين من قاموس البشر. AC و DC: المتردد والمستمر. <short pause> وسمّوا عليهم فرقة مزيكا صوتها عالي جداً.",
+     "show": "board",
+     "board": "edict",
+     "step": 0
+    },
+    {
+     "say": "و Kilowatt-hour: ألف وات شغالين ساعة كاملة. دي الوحدة اللي بيتحاسبوا بيها آخر كل شهر.",
+     "show": "board",
+     "board": "edict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "style": "Summary, one sincere warning, then the sign-off.",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: الكهربا شحنات. واقفة تبقى ساكنة، وماشية تبقى تيار. اتنين: الفولت ضغط، والأمبير كمية، والأوم خنقة. تلاتة: المتردد بيسافر بعيد، والمستمر بيشغّل الأجهزة. والاتنين عايشين مع بعض.",
+     "show": "board",
+     "board": "erecap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "وتنبيه أخير: الكهربا عندهم مش لعبة. اللي مش دارسها مايفتحش جهاز، ومايقرّبش من سلك مكشوف. دي شغلة ناس اتعلّموها.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "التقرير الجاي: الكهربا دي بتتعمل فين؟ وإزاي بتوصل من محطة على بعد مئات الكيلوهات.. لفيشة في الحيطة، في نفس اللحظة؟",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "الكهربا يعني إيه؟ الشرح اللي كان لازم ناخده في المدرسة | ملف الكهربا 1/3",
+   "فولت وأمبير ووات.. بتشبيه خزان المية | ملف الكهربا 1/3",
+   "Edison ضد Tesla: الخناقة اللي وصلت للكرسي الكهربائي | 1/3"
+  ],
+  "description": [
+   "التقرير الأول من العميل Peek لقيادته في ملف الكهربا: الحاجة اللي ماشية في السلك.. إيه هي بالظبط؟",
+   "",
+   "يعني إيه شحنة؟ ليه الإلكترون بيمشي أبطأ من الحلزون واللمبة بتنوّر في لحظة؟ يعني إيه فولت وأمبير وأوم ووات، بتشبيه خزان المية فوق السطوح؟ إيه الفرق بين التيار المستمر والمتردد؟ ومعاها حكاية حرب التيارات بين Edison و Tesla و Westinghouse، وليه النتيجة في الآخر طلعت تعادل.",
+   "",
+   "الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "سرعة الإلكترونات في السلك (OpenStax): https://openstax.org/books/university-physics-volume-2/pages/9-2-model-of-conduction-in-metals",
+   "أرقام البرق (هيئة الأرصاد الأمريكية): https://www.weather.gov/mlb/lightning_facts",
+   "محطة Pearl Street سنة 1882 (ETHW): https://ethw.org/Milestones:Pearl_Street_Station,_1882",
+   "حرب التيارات (Smithsonian): https://www.smithsonianmag.com/history/edison-vs-westinghouse-a-shocking-rivalry-102146036/",
+   "شلالات Niagara وأول شبكة متردد (IEEE Spectrum): https://spectrum.ieee.org/the-birthplace-of-the-ac-grid",
+   "خط الصين 1100 كيلوفولت (Enerdata): https://www.enerdata.net/publications/daily-energy-news/state-grid-commissions-new-1100-kv-power-transmission-line-china.html"
+  ],
+  "footer": [
+   "دي حلقة من ملف من تلات تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش إرشادات أمان ولا شغل كهربا. الكهربا خطر: أي شغل فيها لمتخصص.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الكهربا",
+   "#شرح"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "الكهربا",
+   "الكهرباء",
+   "شرح الكهرباء",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "علوم مبسطة",
+   "فولت",
+   "أمبير",
+   "وات",
+   "التيار المتردد",
+   "التيار المستمر",
+   "AC DC",
+   "Tesla",
+   "Edison",
+   "Westinghouse",
+   "حرب التيارات",
+   "البرق",
+   "الكهربا الساكنة",
+   "يعني إيه فولت",
+   "يعني إيه كهربا"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الكهربا (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "لو كنت مكان البشر سنة 1890: فريق Edison ولا فريق Tesla؟ اكتب ليه. القيادة بتقرا التعليقات."
+ },
+ "theme": "day"
+}

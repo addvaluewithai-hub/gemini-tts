@@ -17,6 +17,18 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { shortEndV } from "./sets/shortend.v.js";
+import { eintroSet } from "./sets/eintro.js";
+import { amberSet } from "./sets/amber.js";
+import { sparkSet } from "./sets/spark.js";
+import { circuitSet } from "./sets/circuit.js";
+import { pipesSet } from "./sets/pipes.js";
+import { scaleSet } from "./sets/scale.js";
+import { bodySet } from "./sets/body.js";
+import { waveSet } from "./sets/wave.js";
+import { warSet } from "./sets/war.js";
+import { wonSet } from "./sets/won.js";
+import { edictSet } from "./sets/edict.js";
+import { erecapSet } from "./sets/erecap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -844,6 +856,19 @@ const BOARDS = {
   vanish: (s, step, age, total, cfg) => vanishSet(s, step, age, total, cfg),
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
+  // Electricity part 1, scene by scene, in the same world (sets/<scene>.js, shared props in sets/elec.js).
+  eintro: (s, step, age, total, cfg) => eintroSet(s, step, age, total, cfg),
+  amber: (s, step, age, total, cfg) => amberSet(s, step, age, total, cfg),
+  spark: (s, step, age, total, cfg) => sparkSet(s, step, age, total, cfg),
+  circuit: (s, step, age, total, cfg) => circuitSet(s, step, age, total, cfg),
+  pipes: (s, step, age, total, cfg) => pipesSet(s, step, age, total, cfg),
+  scale: (s, step, age, total, cfg) => scaleSet(s, step, age, total, cfg),
+  body: (s, step, age, total, cfg) => bodySet(s, step, age, total, cfg),
+  wave: (s, step, age, total, cfg) => waveSet(s, step, age, total, cfg),
+  war: (s, step, age, total, cfg) => warSet(s, step, age, total, cfg),
+  won: (s, step, age, total, cfg) => wonSet(s, step, age, total, cfg),
+  edict: (s, step, age, total, cfg) => edictSet(s, step, age, total, cfg),
+  erecap: (s, step, age, total, cfg) => erecapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
