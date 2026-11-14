@@ -299,6 +299,10 @@
    "quote": "أنا انتقلت|لحاجات تانية",
    "stat": "≈ 1,000,000 BTC",
    "statSub": "ماتحركوش من ساعتها"
+  },
+  "trail": {
+   "kind": "trail",
+   "host": true
   }
  },
  "scenes": [
@@ -464,32 +468,32 @@
     {
      "say": "اتتبّعت الأرقام دي لحد ما عرفت ساكنة فين: في دفتر. عند كيان اسمه البنك.",
      "show": "board",
-     "board": "led"
+     "board": "trail"
     },
     {
      "say": "لما علي يدفع لمنى تلاتين دولار، مفيش حاجة بتتحرك من مكانها. البنك بيمسح رقم هنا.. ويكتب رقم هناك.",
      "show": "board",
-     "board": "led"
+     "board": "trail"
     },
     {
      "say": "مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما شفت الفلوس دي بعينك.",
      "show": "board",
-     "board": "led",
-     "step": "hold",
+     "board": "trail",
      "host": "right",
      "emote": "neutral"
     },
     {
      "say": "وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع دفاتر بعض، علشان محدش فيهم يثق في التاني.",
      "show": "board",
-     "board": "led",
-     "step": "hold",
+     "board": "trail",
      "host": "left",
      "emote": "sly"
     },
     {
      "say": "يعني البنك مش خزنة مليانة فلوس. البنك دفتر. <short pause> واللي ماسك الدفتر.. ماسك كل حاجة.",
-     "shot": "close",
+     "show": "board",
+     "board": "trail",
+     "host": "right",
      "emote": "serious"
     }
    ]

@@ -518,30 +518,8 @@
    "t": 92.69,
    "say": "اتتبّعت الأرقام دي لحد ما عرفت ساكنة فين: في دفت",
    "board": {
-    "kind": "ledger",
-    "title": "دفتر البنك",
-    "rows": [
-     {
-      "name": "علي",
-      "amount": 100
-     },
-     {
-      "name": "منى",
-      "amount": 50
-     },
-     {
-      "name": "سامي",
-      "amount": 20
-     }
-    ],
-    "ops": [
-     {
-      "from": 0,
-      "to": 1,
-      "amount": 30
-     }
-    ],
-    "rich": true
+    "kind": "trail",
+    "host": true
    },
    "story": {
     "n": 2,
@@ -556,30 +534,8 @@
    "t": 98.18,
    "say": "لما علي يدفع لمنى تلاتين دولار، مفيش حاجة بتتحرك",
    "board": {
-    "kind": "ledger",
-    "title": "دفتر البنك",
-    "rows": [
-     {
-      "name": "علي",
-      "amount": 100
-     },
-     {
-      "name": "منى",
-      "amount": 50
-     },
-     {
-      "name": "سامي",
-      "amount": 20
-     }
-    ],
-    "ops": [
-     {
-      "from": 0,
-      "to": 1,
-      "amount": 30
-     }
-    ],
-    "rich": true
+    "kind": "trail",
+    "host": true
    },
    "step": 1,
    "stepT": 98.18
@@ -588,75 +544,37 @@
    "t": 103.69,
    "say": "مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما ش",
    "board": {
-    "kind": "ledger",
-    "title": "دفتر البنك",
-    "rows": [
-     {
-      "name": "علي",
-      "amount": 100
-     },
-     {
-      "name": "منى",
-      "amount": 50
-     },
-     {
-      "name": "سامي",
-      "amount": 20
-     }
-    ],
-    "ops": [
-     {
-      "from": 0,
-      "to": 1,
-      "amount": 30
-     }
-    ],
-    "rich": true
+    "kind": "trail",
+    "host": true
    },
-   "step": 1,
    "host": "right",
    "emote": "neutral",
-   "stepT": 98.18
+   "step": 2,
+   "stepT": 103.69
   },
   {
    "t": 108,
    "say": "وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع ",
    "board": {
-    "kind": "ledger",
-    "title": "دفتر البنك",
-    "rows": [
-     {
-      "name": "علي",
-      "amount": 100
-     },
-     {
-      "name": "منى",
-      "amount": 50
-     },
-     {
-      "name": "سامي",
-      "amount": 20
-     }
-    ],
-    "ops": [
-     {
-      "from": 0,
-      "to": 1,
-      "amount": 30
-     }
-    ],
-    "rich": true
+    "kind": "trail",
+    "host": true
    },
-   "step": 1,
    "host": "left",
    "emote": "sly",
-   "stepT": 98.18
+   "step": 3,
+   "stepT": 108
   },
   {
    "t": 113.25,
    "say": "يعني البنك مش خزنة مليانة فلوس. البنك دفتر. والل",
-   "shot": "close",
-   "emote": "serious"
+   "board": {
+    "kind": "trail",
+    "host": true
+   },
+   "host": "right",
+   "emote": "serious",
+   "step": 4,
+   "stepT": 113.25
   },
   {
    "t": 119.08,
