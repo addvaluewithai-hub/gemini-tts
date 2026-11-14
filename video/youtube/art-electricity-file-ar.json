@@ -1,0 +1,151 @@
+[
+ {
+  "file": "explain-electricity-01-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف الكهربا · 1/3",
+  "big": "الكهربا\n[[يعني إيه؟]]",
+  "emote": "skeptical",
+  "size": 150,
+  "top": 140,
+  "icons": [
+   {
+    "name": "bulb",
+    "x": 640,
+    "y": 590,
+    "s": 1.0,
+    "rot": -10
+   }
+  ],
+  "small": "من الأول خالص",
+  "gesture": "shrug"
+ },
+ {
+  "file": "explain-electricity-01-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف الكهربا · 1/3",
+  "big": "Edison\n[[ضد Tesla]]",
+  "emote": "smug",
+  "size": 132,
+  "top": 140,
+  "icons": [
+   {
+    "name": "bolt",
+    "x": 620,
+    "y": 520,
+    "s": 1.2,
+    "rot": 8
+   }
+  ],
+  "small": "خناقة وصلت للإعدام",
+  "peek": true,
+  "width": 780,
+  "peekY": 118
+ },
+ {
+  "file": "explain-electricity-02-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف الكهربا · 2/3",
+  "big": "من المحطة\n[[للفيشة]]",
+  "emote": "smug",
+  "size": 140,
+  "top": 140,
+  "icons": [
+   {
+    "name": "tower",
+    "x": 560,
+    "y": 590,
+    "s": 0.95
+   },
+   {
+    "name": "plug",
+    "x": 730,
+    "y": 610,
+    "s": 0.8,
+    "rot": 12
+   }
+  ],
+  "small": "في أقل من ثانية",
+  "gesture": "present"
+ },
+ {
+  "file": "explain-electricity-02-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف الكهربا · 2/3",
+  "big": "النووي؟\n[[غلاية مية]]",
+  "emote": "deadpan",
+  "size": 132,
+  "top": 140,
+  "icons": [
+   {
+    "name": "kettle",
+    "x": 600,
+    "y": 530,
+    "s": 1.2
+   }
+  ],
+  "peek": true,
+  "width": 780,
+  "peekY": 118
+ },
+ {
+  "file": "explain-electricity-03-ar/youtube/thumbnail-a.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف الكهربا · 3/3",
+  "big": "ليه النور\n[[بيقطع؟]]",
+  "emote": "worried",
+  "size": 146,
+  "top": 140,
+  "icons": [
+   {
+    "name": "bulb",
+    "args": [
+     "#4d5478"
+    ],
+    "x": 640,
+    "y": 590,
+    "s": 1.0,
+    "rot": 14
+   }
+  ],
+  "small": "والسبب: شجرة",
+  "gesture": "shrug"
+ },
+ {
+  "file": "explain-electricity-03-ar/youtube/thumbnail-b.jpg",
+  "kind": "thumb",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "tag": "ملف الكهربا · 3/3",
+  "big": "عدو الشبكة\n[[سنجاب]]",
+  "emote": "grin",
+  "size": 124,
+  "top": 140,
+  "icons": [
+   {
+    "name": "squirrel",
+    "x": 600,
+    "y": 530,
+    "s": 1.25
+   }
+  ],
+  "peek": true,
+  "width": 780,
+  "peekY": 118
+ }
+]
