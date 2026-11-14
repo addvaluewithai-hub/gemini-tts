@@ -25,7 +25,7 @@ Paste `description.txt` as it is. It already holds the chapters and the sources.
 
 ## Files
 
-- `thumbnail-a.jpg` (recommended) and `thumbnail-b.jpg`: 1280 x 720
+- `thumbnail-a.jpg`: 1280 x 720
 - `captions.srt`: upload under Subtitles, language as set above
 - `description.txt`
 

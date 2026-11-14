@@ -33,7 +33,7 @@ if (cmd === "kit") {
   const md = [`# YouTube upload: ${sb.title}`, "", "## Title", "", ...(yt.titles || []).map((t, i) => `${i + 1}. ${t}${i ? "" : "  ← recommended"}`), "",
     "## Description", "", "Paste `description.txt` as it is. It already holds the chapters and the sources.", "",
     "## Tags", "", (yt.tags || []).join(", "), "", "## Settings", "", ...(yt.settings || []).map((x) => `- ${x}`), "",
-    "## Files", "", "- `thumbnail-a.jpg` (recommended) and `thumbnail-b.jpg`: 1280 x 720", "- `captions.srt`: upload under Subtitles, language as set above", "- `description.txt`", "",
+    "## Files", "", (fs.existsSync(path.join(c, "thumbnail-b.jpg")) ? "- `thumbnail-a.jpg` (recommended) and `thumbnail-b.jpg`: 1280 x 720" : "- `thumbnail-a.jpg`: 1280 x 720"), "- `captions.srt`: upload under Subtitles, language as set above", "- `description.txt`", "",
     "## Pinned comment", "", yt.pinned || "", ""];
   fs.writeFileSync(path.join(c, "upload.md"), md.join("\n"));
   console.log(`chapters ${chapters.length}, sources ${sources.length}, caption lines ${lines.length}, description ${description.length} chars`);
