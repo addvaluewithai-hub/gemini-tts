@@ -1,0 +1,962 @@
+{
+ "title": "تقرير الأرض: الشبكة 1",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-picture version of network part 1 (the style of explain-crypto-01-world): same Arabic script as explain-network-01-ar, voice re-recorded on Vertex (job techforbadguys-explain-network-01-ar-v), every board beat a wordless drawn shot (video/sets/<board>.js), no captions, nothing in Arabic on screen; shot list in shots.md.",
+  "",
+  "Facts are stated from web research on 12 November 2026 (see explain-network-01-ar/plan.md for links) and from general knowledge of how mobile networks work: 8.8 billion mobile connections and 5.8 billion unique subscribers (GSMA, March 2026) against a world population of about 8.2 billion; narrowband telephone speech is sampled 8,000 times a second; Martin Cooper of Motorola made the first handheld mobile call on 3 April 1973 in New York to Joel Engel of Bell Labs; the prototype weighed about 1.1 kg, took about ten hours to charge for about thirty minutes of talk, and the commercial model sold in 1983 for about 4,000 dollars; NTT opened the first commercial cellular network in Tokyo in 1979; the first GSM call was made in Finland on 1 July 1991; the first text message was sent on 3 December 1992 and read Merry Christmas; 3G launched commercially in 2001, 4G in 2009 and 5G in 2019; 5G covered 55 percent of the world's population in 2025, 84 percent in high-income and 4 percent in low-income countries (ITU); direct-to-phone satellite texting has been sold commercially since July 2025 and voice was still in testing in 2026; emergency calls work without a SIM in many countries, not all; a text message was limited to 160 characters because it travelled in spare room in the signalling channel; before cellular, car telephone systems served a whole city from one mast with a handful of channels."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "2 / 3",
+   "icons": [
+    "globe",
+    "server",
+    "wifi"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "nintro": {
+   "kind": "nintro",
+   "ends": [
+    3.97,
+    5.94,
+    5.91
+   ]
+  },
+  "voice": {
+   "kind": "voice",
+   "ends": [
+    4.79,
+    5.39,
+    8.37,
+    4.78,
+    6.65,
+    2.1
+   ]
+  },
+  "radio": {
+   "kind": "radio",
+   "ends": [
+    1.66,
+    5.4,
+    5.49,
+    2.34,
+    1.39,
+    1.71,
+    2.65,
+    3.98
+   ]
+  },
+  "route": {
+   "kind": "route",
+   "ends": [
+    2.77,
+    2.9,
+    5.71,
+    4.16,
+    6.67,
+    10.62,
+    4.99
+   ]
+  },
+  "cells": {
+   "kind": "cells",
+   "ends": [
+    4.55,
+    8.76,
+    5.46,
+    6.54,
+    5.72,
+    1.98,
+    1.76,
+    2.54,
+    8.04,
+    11.8,
+    6.12,
+    5.65
+   ]
+  },
+  "sim": {
+   "kind": "sim",
+   "ends": [
+    3.88,
+    4.02,
+    7.26,
+    4.56,
+    3.16,
+    1.58,
+    3.82,
+    3.63,
+    2.43,
+    3.05
+   ]
+  },
+  "drop": {
+   "kind": "drop",
+   "ends": [
+    4.89,
+    3.54,
+    6.02,
+    6.44,
+    7.62,
+    7.59
+   ]
+  },
+  "history": {
+   "kind": "history",
+   "ends": [
+    4.25,
+    3.81,
+    5.26,
+    6.15,
+    3.39,
+    6.17
+   ]
+  },
+  "gens": {
+   "kind": "gens",
+   "ends": [
+    1.64,
+    1.25,
+    1.6,
+    3.7,
+    6.6,
+    8.22,
+    8.2,
+    1.86,
+    2.91,
+    5.22,
+    6.38,
+    3.02,
+    4.77
+   ]
+  },
+  "sat": {
+   "kind": "sat",
+   "ends": [
+    6.55,
+    4.04,
+    8.27,
+    4.59
+   ]
+  },
+  "ndict": {
+   "kind": "ndict",
+   "ends": [
+    6.26,
+    4.69
+   ]
+  },
+  "nrecap": {
+   "kind": "nrecap",
+   "ends": [
+    10.29
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a new field file. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، ملف ميداني جديد من كوكب الأرض. ملف الشبكة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "التقرير الأول: الموبايل. الجهاز اللي كل البشر شايلينه في جيوبهم.",
+     "show": "board",
+     "board": "nintro",
+     "step": 0
+    },
+    {
+     "say": "على الكوكب ده تمانية مليار إنسان وشوية.. وحوالي تسعة مليار خط موبايل. يعني الخطوط أكتر من البشر.",
+     "show": "board",
+     "board": "nintro",
+     "step": 1
+    },
+    {
+     "say": "وأصحاب الخطوط دي حوالي ستة مليار إنسان بس. يعني فيه منهم كتير معاه خطين وتلاتة. <short pause> وبيرد على واحد بس.",
+     "show": "board",
+     "board": "nintro",
+     "step": 2,
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "هقول لكم الجهاز ده بيوصّل الصوت إزاي من جيب لجيب. وليه اسمه خلوي. وليه الشبكة بتقع في الأسانسير. <short pause> وأغرب حاجة رصدتها: محدش منهم تقريباً يعرف صوته بيروح فين. بيتكلموا فيه كل يوم.. ومافكروش.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "voice",
+   "story": {
+    "n": 1,
+    "tag": "SOUND",
+    "icon": "wave"
+   },
+   "style": "Patient and exact, like dismantling a small machine.",
+   "beats": [
+    {
+     "say": "نبدأ من أول الرحلة. الإنسان بيتكلم، فالهوا بيتهز. والميكروفون بيحوّل الهزّة دي لموجة كهربا.",
+     "show": "board",
+     "board": "voice",
+     "step": 0
+    },
+    {
+     "say": "والتليفون بيقيس الموجة دي آلاف المرات في الثانية. في المكالمة العادية: تمان آلاف قياس كل ثانية.",
+     "show": "board",
+     "board": "voice",
+     "step": 1
+    },
+    {
+     "say": "ليه تمان آلاف؟ لأن كلام الإنسان مش محتاج أكتر من كده. المزيكا محتاجة أكتر بكتير. <short pause> علشان كده مزيكا الانتظار في المكالمات بتطلع بالشكل البشع ده.",
+     "show": "board",
+     "board": "voice",
+     "step": 2,
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "وكل قياس بيبقى رقم. الموجة نفسها خلاص مابقتش مهمة. اللي هيسافر هو الأرقام.",
+     "show": "board",
+     "board": "voice",
+     "step": 3
+    },
+    {
+     "say": "وبعدين بيضغطها: يرمي كل اللي ودن الإنسان مش هتاخد بالها منه. <short pause> يعني الصوت اللي بيوصل يا فندم مش صوتك. ده ملخص صوتك.",
+     "show": "board",
+     "board": "voice",
+     "step": 4,
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "والأرقام دي بتطلع من التليفون.. في الهوا.",
+     "show": "board",
+     "board": "voice",
+     "step": 5
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "story": {
+    "n": 2,
+    "tag": "RADIO",
+    "icon": "tower"
+   },
+   "style": "The first surprise. He enjoys telling humans what they are carrying.",
+   "beats": [
+    {
+     "say": "في الهوا إزاي؟ هنا المفاجأة الأولى. <short pause> الموبايل مش تليفون. الموبايل راديو.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "البشر بيشوفوا الضوء بعينيهم.",
+     "show": "board",
+     "board": "radio",
+     "step": 0
+    },
+    {
+     "say": "موجات الراديو نفس النوع بالظبط، وبنفس السرعة. بس أطول.. وعينيهم مابتشوفهاش.",
+     "show": "board",
+     "board": "radio",
+     "step": 1
+    },
+    {
+     "say": "يعني كل واحد منهم ماشي وفي جيبه محطة إذاعة صغيرة، بتبعت وتستقبل في نفس اللحظة.",
+     "show": "board",
+     "board": "radio",
+     "step": 2,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "ومش إذاعة واحدة. الموبايل بيكلّم البرج.",
+     "show": "board",
+     "board": "radio",
+     "step": 3
+    },
+    {
+     "say": "والواي فاي راديو تاني.",
+     "show": "board",
+     "board": "radio",
+     "step": 4
+    },
+    {
+     "say": "والسماعة اللي في ودنه راديو تالت.",
+     "show": "board",
+     "board": "radio",
+     "step": 5
+    },
+    {
+     "say": "وتحديد المكان بيسمع أقمار صناعية. ده رابع.",
+     "show": "board",
+     "board": "radio",
+     "step": 6
+    },
+    {
+     "say": "وزرار وضع الطيران بيعمل حاجة واحدة بس: يسكّت الإذاعات دي كلها.",
+     "show": "board",
+     "board": "radio",
+     "step": 7,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "الإنسان الواحد بيطلّع أربع إشارات وهو واقف مستني الأتوبيس. والكوكب كله غرقان في موجات هم مش شايفينها. <short pause> أنا شايفها يا فندم. المنظر مزعج.",
+     "shot": "close",
+     "emote": "annoyed"
+    }
+   ]
+  },
+  {
+   "id": "route",
+   "story": {
+    "n": 3,
+    "tag": "ROUTE",
+    "icon": "route"
+   },
+   "style": "Following one call like a courier tracking a parcel, then the punchline about wires.",
+   "beats": [
+    {
+     "say": "والمفاجأة التانية: الموجة دي مابتروحش بعيد.",
+     "show": "board",
+     "board": "route",
+     "step": 0
+    },
+    {
+     "say": "بتروح لأقرب برج بس. كام مية متر، أو كام كيلو.",
+     "show": "board",
+     "board": "route",
+     "step": 1
+    },
+    {
+     "say": "ومن البرج، الصوت بينزل في كابل تحت الأرض، ويروح لقلب الشبكة: مبنى مليان كمبيوترات.",
+     "show": "board",
+     "board": "route",
+     "step": 2
+    },
+    {
+     "say": "وقلب الشبكة بيدوّر على التليفون التاني، ويبعت الصوت في كابل لأقرب برج ليه.",
+     "show": "board",
+     "board": "route",
+     "step": 3
+    },
+    {
+     "say": "وقلب الشبكة ده بيعمل تلات حاجات: يعرف إنت مين، يعرف التاني فين، ويحسب عليك الفلوس. <short pause> والتالتة هي الوحيدة اللي عمرها ما بتقع.",
+     "show": "board",
+     "board": "route",
+     "step": 4,
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "وآخر كام مية متر بس.. راديو تاني.",
+     "show": "board",
+     "board": "route",
+     "step": 5
+    },
+    {
+     "say": "يعني اللاسلكي يا فندم لاسلكي في أول الرحلة وآخرها بس. اللي في النص كله.. سلوك. <short pause> البشر سمّوه لاسلكي. وهو أكتر حاجة مسلّكة على الكوكب.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وكل ده بياخد أقل من ربع ثانية. هو بيتكلم، وهي بتسمعه وهو لسه بيكمّل الجملة.",
+     "show": "board",
+     "board": "route",
+     "step": 6,
+     "host": "left",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "cells",
+   "story": {
+    "n": 4,
+    "tag": "CELLS",
+    "icon": "tower"
+   },
+   "style": "Explaining a clever trick, then what it means for a spy.",
+   "beats": [
+    {
+     "say": "طيب ليه بيسمّوه خلوي؟ لأن الأرض عندهم متقسّمة خلايا. وكل خلية فيها برج.",
+     "show": "board",
+     "board": "cells",
+     "step": 0
+    },
+    {
+     "say": "والحيلة: القنوات اللي في الهوا محدودة. فكل خلية تاخد مجموعة، والخلية اللي مش لازقة فيها تستخدم نفس المجموعة تاني. <short pause> نفس الهوا.. بيتباع ألف مرة.",
+     "show": "board",
+     "board": "cells",
+     "step": 1
+    },
+    {
+     "say": "في المدن الخلايا صغيرة، برج كل كام شارع، علشان الزحمة. وفي الصحرا الخلية الواحدة ممكن تبقى عشرات الكيلومترات.",
+     "show": "board",
+     "board": "cells",
+     "step": 2,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "وكل برج عليه كذا هوائي، كل واحد باصص في ناحية. والتليفون نفسه إشارته ضعيفة جداً، أضعف من لمبة صغيرة. <short pause> البرج هو اللي ودانه كبيرة.",
+     "show": "board",
+     "board": "cells",
+     "step": 3,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "ولما الإشارة تضعف، التليفون بيعلّي صوته علشان البرج يسمعه. علشان كده البطارية بتخلص أسرع في الأماكن اللي شبكتها وحشة.",
+     "show": "board",
+     "board": "cells",
+     "step": 4,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "ومدن كتير عندهم مش عايزة شكل الأبراج.",
+     "show": "board",
+     "board": "cells",
+     "step": 5
+    },
+    {
+     "say": "فبيخبّوها في شكل نخلة، أو شجرة.",
+     "show": "board",
+     "board": "cells",
+     "step": 6
+    },
+    {
+     "say": "تنكّر رديء يا فندم. <short pause> بس للأمانة: أحسن من تنكّري.",
+     "show": "board",
+     "board": "cells",
+     "host": "left",
+     "step": 7
+    },
+    {
+     "say": "ودي أهم معلومة لأي جاسوس: التليفون، وهو ساكت في الجيب، بيهمس لأقرب برج كل شوية: أنا هنا. <short pause> لازم. وإلا الشبكة هتوصّل له المكالمة إزاي؟",
+     "show": "board",
+     "board": "cells",
+     "step": 8
+    },
+    {
+     "say": "ومن قوة الإشارة عند كذا برج حواليه، الشبكة تقدر تحسب مكانه بالتقريب. من غير أقمار صناعية خالص.",
+     "show": "board",
+     "board": "cells",
+     "step": 9,
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "يعني الشبكة عارفة كل واحد فيهم فين. طول الوقت. <short pause> البشر بيدفعوا اشتراك شهري في جهاز تتبّع.. وبيزعلوا لما الباقة تخلص.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "ولما واحد يتحرك بالعربية، المكالمة بتتسلّم من برج للي بعده. في جزء من الثانية. وهو مش حاسس.",
+     "show": "board",
+     "board": "cells",
+     "step": 10
+    },
+    {
+     "say": "ولما التسليم يفشل؟ <short pause> ألو؟ ألو؟ سامعني؟ <short pause> دي أكتر جملة اتقالت في تاريخ الكوكب.",
+     "show": "board",
+     "board": "cells",
+     "step": 11,
+     "host": "left",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "sim",
+   "story": {
+    "n": 5,
+    "tag": "SIM",
+    "icon": "key"
+   },
+   "style": "Practical, with a dry line about money.",
+   "beats": [
+    {
+     "say": "والشبكة بتعرف إنت مين منين؟ من الشريحة. حتة بلاستيك قد الضفر.",
+     "show": "board",
+     "board": "sim",
+     "step": 0
+    },
+    {
+     "say": "هي اللي هويتك. مش الجهاز. تنقلها لتليفون تاني.. رقمك يتنقل معاها.",
+     "show": "board",
+     "board": "sim",
+     "step": 1
+    },
+    {
+     "say": "وعليها مفتاح سري، الشبكة بتتأكد بيه إنها مش متقلّدة. <short pause> والأحدث منها مابقاش بلاستيك أصلاً. بقت جزء من التليفون نفسه.",
+     "show": "board",
+     "board": "sim",
+     "step": 2
+    },
+    {
+     "say": "والجهاز نفسه ليه رقم تاني خاص بيه. علشان لو اتسرق، الشبكة تقدر تقفله في وش الحرامي.",
+     "show": "board",
+     "board": "sim",
+     "step": 3,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "والرقم نفسه عنوان. أول كام رقم بيقولوا: أنهي بلد.",
+     "show": "board",
+     "board": "sim",
+     "step": 4
+    },
+    {
+     "say": "واللي بعدهم: أنهي شركة.",
+     "show": "board",
+     "board": "sim",
+     "step": 5
+    },
+    {
+     "say": "والباقي: إنت. يعني الشبكة بتقرا الرقم زي ساعي البريد ما بيقرا الظرف.",
+     "show": "board",
+     "board": "sim",
+     "step": 6
+    },
+    {
+     "say": "ولما تسافر بلد تانية، تليفونك بيلاقي شبكة غريبة ويعرّفها بنفسه.",
+     "show": "board",
+     "board": "sim",
+     "step": 7
+    },
+    {
+     "say": "الشبكة الغريبة تسأل شبكة بلدك: ده تبعكم؟",
+     "show": "board",
+     "board": "sim",
+     "step": 8
+    },
+    {
+     "say": "وشبكتك ترد: أيوه. وهيدفع. <short pause> وهيدفع كتير.",
+     "show": "board",
+     "board": "sim",
+     "step": 9
+    },
+    {
+     "say": "شبكات الكوكب كلها بتكلّم بعض وبتتحاسب مع بعض. فيه دول عندهم مابتكلّمش بعض خالص.. وشبكاتها متفقة. <short pause> الفلوس بتوحّد يا فندم.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "drop",
+   "story": {
+    "n": 6,
+    "tag": "NO SIGNAL",
+    "icon": "x"
+   },
+   "style": "Brisk list of causes, with one absurd observation.",
+   "beats": [
+    {
+     "say": "وليه الشبكة بتقع؟ أول سبب: البُعد. كل ما تبعد عن البرج، الموجة تضعف.",
+     "show": "board",
+     "board": "drop",
+     "step": 0
+    },
+    {
+     "say": "تاني سبب: الحيطان. الخرسانة والحديد بيبلعوا الموجة.",
+     "show": "board",
+     "board": "drop",
+     "step": 1
+    },
+    {
+     "say": "تالت سبب: الأسانسير. صندوق معدن مقفول. أحسن عازل للراديو البشر اخترعوه.. وبيركبوه وهم بيتكلموا.",
+     "show": "board",
+     "board": "drop",
+     "step": 2
+    },
+    {
+     "say": "ورابع سبب: الزحمة. كل برج بيشيل عدد معيّن. في ماتش أو حفلة، الكل ماسك تليفونه.. والبرج يقول: كفاية.",
+     "show": "board",
+     "board": "drop",
+     "step": 3
+    },
+    {
+     "say": "والشُرَط اللي فوق في الشاشة؟ بتقيس قوة الإشارة، مش زحمة البرج. ممكن تبقى خمس شُرَط.. ومفيش حاجة بتفتح. <short pause> الشُرَط دي بتطمّنهم بس.",
+     "show": "board",
+     "board": "drop",
+     "step": 4,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "وللإنصاف: رقم الطوارئ عندهم بيشتغل في بلاد كتير حتى من غير شريحة، وعلى أي شبكة موجودة. <short pause> أول مرة أشوفهم متفقين على حاجة مفيدة.",
+     "show": "board",
+     "board": "drop",
+     "step": 5,
+     "host": "right",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "story": {
+    "n": 7,
+    "tag": "1973",
+    "icon": "file"
+   },
+   "style": "Historian with a smirk, enjoying the pettiness of the first call.",
+   "beats": [
+    {
+     "say": "قبل الخلايا كان فيه تليفون للعربيات. برج واحد عالي للمدينة كلها.",
+     "show": "board",
+     "board": "history",
+     "step": 0
+    },
+    {
+     "say": "وعليه كام قناة بس. يعني كام مكالمة في نفس الوقت.. لمدينة كاملة.",
+     "show": "board",
+     "board": "history",
+     "step": 1
+    },
+    {
+     "say": "واللي عايز يتكلم يستنى دوره. <short pause> علشان كده فكرة الخلايا هي اللي عملت الموبايل، مش الجهاز.",
+     "show": "board",
+     "board": "history",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "والحكاية بدأت يوم تلاتة أبريل، سنة تلاتة وسبعين. مهندس اسمه Martin Cooper وقف على رصيف في نيويورك..",
+     "show": "board",
+     "board": "history",
+     "step": 3
+    },
+    {
+     "say": "وعمل أول مكالمة في التاريخ من موبايل محمول في الإيد.",
+     "show": "board",
+     "board": "history",
+     "step": 4
+    },
+    {
+     "say": "واتصل بمين؟ بمنافسه، في الشركة التانية اللي كانت بتحاول تعمل نفس الجهاز. <short pause> علشان يقول له: أنا بكلّمك من الشارع.",
+     "show": "board",
+     "board": "history",
+     "step": 5
+    },
+    {
+     "say": "أول مكالمة موبايل في تاريخ الكوكب.. كانت إغاظة. <short pause> أنا بحترم الكائن ده.",
+     "shot": "close",
+     "emote": "grin"
+    },
+    {
+     "say": "الجهاز كان وزنه أكتر من كيلو.",
+     "show": "board",
+     "board": "gens",
+     "step": 0
+    },
+    {
+     "say": "شحنه عشر ساعات..",
+     "show": "board",
+     "board": "gens",
+     "step": 1
+    },
+    {
+     "say": "علشان يتكلم نص ساعة.",
+     "show": "board",
+     "board": "gens",
+     "step": 2
+    },
+    {
+     "say": "ولما اتباع للناس بعدها بعشر سنين، كان بحوالي أربع آلاف دولار.",
+     "show": "board",
+     "board": "gens",
+     "host": "left",
+     "step": 3
+    },
+    {
+     "say": "أول شبكة تجارية اشتغلت في طوكيو سنة تسعة وسبعين. الجيل الأول: صوت بس. وأي حد معاه راديو كان يقدر يسمع مكالمتك.",
+     "show": "board",
+     "board": "gens",
+     "step": 4
+    },
+    {
+     "say": "الجيل التاني، سنة واحد وتسعين: الصوت بقى أرقام، ومعاه الرسايل. أول رسالة نصية اتبعتت في ديسمبر اتنين وتسعين. كان مكتوب فيها: Merry Christmas.",
+     "show": "board",
+     "board": "gens",
+     "step": 5
+    },
+    {
+     "say": "والرسالة كانت مية وستين حرف بس. لأنها كانت بتتحشر في فراغ فاضي جوه إشارات الشبكة نفسها. <short pause> البشر اخترعوا لغة كاملة من الاختصارات.. علشان خانة فاضية.",
+     "show": "board",
+     "board": "gens",
+     "step": 6,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "التالت دخّل الإنترنت التليفون.",
+     "show": "board",
+     "board": "gens",
+     "step": 7
+    },
+    {
+     "say": "والرابع خلّى كل حاجة إنترنت. حتى الصوت نفسه.",
+     "show": "board",
+     "board": "gens",
+     "step": 8
+    },
+    {
+     "say": "والخامس، من ألفين وتسعتاشر: أسرع بكتير. ومش للبشر بس. للمكن اللي بيكلّم بعضه.",
+     "show": "board",
+     "board": "gens",
+     "step": 9
+    },
+    {
+     "say": "وكل جيل، البشر بيقولوا: هو ده اللي هيغيّر حياتنا. <short pause> واللي بيتغيّر فعلاً: بيتفرجوا على نفس الفيديوهات.. بجودة أعلى.",
+     "show": "board",
+     "board": "gens",
+     "step": 10,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "والنهارده الجيل الخامس مغطّي أكتر من نص سكان الكوكب.",
+     "show": "board",
+     "board": "gens",
+     "step": 11
+    },
+    {
+     "say": "بس مش بالعدل. في البلاد الغنية: أربعة وتمانين في المية. وفي الفقيرة: أربعة.",
+     "show": "board",
+     "board": "gens",
+     "step": 12
+    }
+   ]
+  },
+  {
+   "id": "sat",
+   "story": {
+    "n": 8,
+    "tag": "SPACE",
+    "icon": "globe"
+   },
+   "style": "The newest development, and a personal complaint.",
+   "beats": [
+    {
+     "say": "وآخر تطور رصدته: الأبراج طلعت الفضا. من سنة ألفين خمسة وعشرين، التليفون العادي بقى يبعت رسايل لقمر صناعي مباشرة.",
+     "show": "board",
+     "board": "sat",
+     "step": 0
+    },
+    {
+     "say": "من غير طبق، ولا جهاز خاص. في الصحرا، في البحر، في أي حتة شايفة السما.",
+     "show": "board",
+     "board": "sat",
+     "step": 1
+    },
+    {
+     "say": "والقمر ده على ارتفاع مئات الكيلومترات، وبيجري بحوالي سبعة وعشرين ألف كيلو في الساعة. والتليفون اللي في الجيب بيكلّمه. <short pause> مركبتي أنا مابتعرفش تعمل كده يا فندم.",
+     "show": "board",
+     "board": "sat",
+     "step": 2,
+     "host": "left",
+     "emote": "annoyed"
+    },
+    {
+     "say": "المكالمات لسه تحت التجربة. بس الاتجاه واضح: مش هيفضل مكان على الكوكب برّه التغطية.",
+     "show": "board",
+     "board": "sat",
+     "step": 3
+    },
+    {
+     "say": "وده يا فندم خبر مش كويس لينا. <short pause> أنا كنت بستخبى في الأماكن دي.",
+     "shot": "close",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "كلمتين من قاموس البشر. Cell: خلية. المنطقة اللي برج واحد بيغطيها. ومنها جه اسم التليفون الخلوي.",
+     "show": "board",
+     "board": "ndict",
+     "step": 0
+    },
+    {
+     "say": "و SIM: الشريحة اللي شايلة هويتك. <short pause> والبشر بيضيّعوها أكتر ما بيضيّعوا مفاتيح بيوتهم.",
+     "show": "board",
+     "board": "ndict",
+     "host": "right",
+     "step": 1
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, then the question that leads to the next report, then the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: الموبايل راديو، وبيكلّم أقرب برج بس. اتنين: الباقي كله كابلات. تلاتة: الشبكة لازم تعرف إنت فين.. علشان توصّل لك.",
+     "show": "board",
+     "board": "nrecap",
+     "step": 0
+    },
+    {
+     "say": "ويفضل سؤال: الكابلات دي بتروح فين؟ والإنترنت اللي بيتكلموا عنه ده.. ساكن فين بالظبط؟",
+     "shot": "close",
+     "emote": "skeptical"
+    },
+    {
+     "say": "التقرير الجاي: الإنترنت. والإجابة يا فندم.. في قاع البحر.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "الموبايل بيشتغل إزاي؟ صوتك بيروح فين بالظبط | ملف الشبكة 1/3",
+   "الموبايل مش تليفون.. الموبايل راديو | ملف الشبكة 1/3",
+   "ليه الشبكة بتقع في الأسانسير؟ وليه اسمه خلوي؟ | 1/3"
+  ],
+  "description": [
+   "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن أغرب عادة عند البشر: كلهم شايلين جهاز بيكلّم الكوكب كله، ومحدش فيهم عارف صوته بيروح فين.",
+   "",
+   "في التقرير الأول: الصوت بيتحوّل لأرقام إزاي؟ ليه الموبايل في الحقيقة راديو بيكلّم أقرب برج بس؟ ليه اسمه \"خلوي\"؟ الشبكة بتعرف مكانك إزاي؟ يعني إيه شريحة وتجوال؟ وليه الشبكة بتقع في الأسانسير؟ ومعاها حكاية أول مكالمة موبايل في التاريخ.. اللي كانت إغاظة.",
+   "",
+   "شرح بالرسوم المتحركة، مناسب لأي حد."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "GSMA، The Mobile Economy 2026 (عدد الخطوط والمشتركين): https://www.gsma.com/mobileeconomy/",
+   "الاتحاد الدولي للاتصالات، Facts and Figures 2025 (تغطية الجيل الخامس): https://www.itu.int/hub/publication/d-ind-ict_mdd-2025-3/",
+   "أول مكالمة موبايل، 3 أبريل 1973: https://ctvnews.ca/sci-tech/50-years-ago-he-made-the-first-cellphone-call-1.6340522",
+   "Ericsson، مين كان الأول (1979 و1991): https://www.ericsson.com/en/about-us/history/changing-the-world/world-leadership/who-was-first",
+   "أول رسالة نصية، 3 ديسمبر 1992: https://www.history.com/this-day-in-history/first-sms-text-message-sent"
+  ],
+  "footer": [
+   "دي حلقة من ملف من تلات تقارير عن الشبكة: الموبايل، الإنترنت، ومكالمة الفيديو. شوفهم بالترتيب من قايمة التشغيل.",
+   "الأرقام اللي في الحلقة بتاريخها.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الإنترنت",
+   "#تكنولوجيا"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "اشرحها لكائن فضائي",
+   "كيف تعمل شبكات المحمول",
+   "كيف يعمل الهاتف المحمول",
+   "الشبكة",
+   "الإنترنت",
+   "تكنولوجيا",
+   "شرح مبسط",
+   "ازاي بيشتغل",
+   "Earth Report",
+   "الموبايل بيشتغل ازاي",
+   "شبكات المحمول",
+   "أبراج المحمول",
+   "الجيل الخامس",
+   "5G",
+   "الشريحة",
+   "SIM",
+   "التجوال",
+   "Martin Cooper",
+   "أول موبايل",
+   "ليه الشبكة بتقع"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الشبكة (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so."
+  ],
+  "pinned": "سؤال القيادة: لو عرفت إن تليفونك بيهمس للبرج \"أنا هنا\" طول اليوم.. هتسيبه مفتوح؟ اكتب ردّك."
+ },
+ "theme": "day"
+}

@@ -17,6 +17,18 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { shortEndV } from "./sets/shortend.v.js";
+import { nintroSet } from "./sets/nintro.js";
+import { voiceSet } from "./sets/voice.js";
+import { radioSet } from "./sets/radio.js";
+import { routeSet } from "./sets/route.js";
+import { cellsSet } from "./sets/cells.js";
+import { simSet } from "./sets/sim.js";
+import { dropSet } from "./sets/drop.js";
+import { historySet } from "./sets/history.js";
+import { gensSet } from "./sets/gens.js";
+import { satSet } from "./sets/sat.js";
+import { ndictSet } from "./sets/ndict.js";
+import { nrecapSet } from "./sets/nrecap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -844,6 +856,19 @@ const BOARDS = {
   vanish: (s, step, age, total, cfg) => vanishSet(s, step, age, total, cfg),
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
+  // Network part 1, scene by scene, in the same world (sets/<scene>.js, props in sets/net.js).
+  nintro: (s, step, age, total, cfg) => nintroSet(s, step, age, total, cfg),
+  voice: (s, step, age, total, cfg) => voiceSet(s, step, age, total, cfg),
+  radio: (s, step, age, total, cfg) => radioSet(s, step, age, total, cfg),
+  route: (s, step, age, total, cfg) => routeSet(s, step, age, total, cfg),
+  cells: (s, step, age, total, cfg) => cellsSet(s, step, age, total, cfg),
+  sim: (s, step, age, total, cfg) => simSet(s, step, age, total, cfg),
+  drop: (s, step, age, total, cfg) => dropSet(s, step, age, total, cfg),
+  history: (s, step, age, total, cfg) => historySet(s, step, age, total, cfg),
+  gens: (s, step, age, total, cfg) => gensSet(s, step, age, total, cfg),
+  sat: (s, step, age, total, cfg) => satSet(s, step, age, total, cfg),
+  ndict: (s, step, age, total, cfg) => ndictSet(s, step, age, total, cfg),
+  nrecap: (s, step, age, total, cfg) => nrecapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
