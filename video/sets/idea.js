@@ -18,7 +18,7 @@ const roll = (from, to, p) => String(Math.round(lerp(from, to, ease(p))));
 // ---- 0: the book leaves the bank ----
 function s0(a, tot) {
   const G = 900, BX = 960, rise = ease(seg(a, 1.95, 2.85)), fly = seg(a, 2.6, 3.49);
-  const c = camAt(a, [[0, BX, G - 250, 2.3], [1.7, BX, G - 260, 2.1], [2.7, BX, G - 330, 1.25], [3.49, BX + 60, G - 380, 1.1]]);
+  const c = camAt(a, [[0, BX, G - 350, 0.96], [3.49, BX + 30, G - 370, 1.0]]);
   const dark = ease(seg(a, 2.75, 3.1)), sign = [0, 1, 2, 3].map((j) => (a < 2.75 + j * 0.06 ? 1 : 0));
   const glowB = 1 + 0.08 * Math.sin(tot * 3) + (a > 1.76 ? 0.3 * Math.exp(-(a - 1.76) * 4) : 0);
   const inner = `${rings(0, -225, 150 * glowB * (1 - dark), P.gold, 0.22)}${two(rr(-34, -130, 68, 90, 6), "#7a55c9", "#5b3aa6", 10, 0)}<path d="${rr(-70, -46, 140, 12, 5)}" fill="#5b3aa6"/>`;
@@ -80,24 +80,24 @@ function planet(t, c, tot, s) {
   // the cheater outvoted: a red cross from each neighbour, over the cheater's laptop
   let votes = "";
   if (u3 > 1.8 && u3 < 4.2) { const ch = onRim(RIM[3], 60); [0, 1, 2, 4].forEach((j, n) => { const t0 = 1.9 + n * 0.17, [x, y] = onRim(RIM[j], 120), gone = seg(u3, 3.7, 3.95);
-    if (u3 < t0) return; const p = ease(seg(u3, t0, t0 + 0.3)), b = bez([x, y - 40], [(x + ch[0]) / 2, Math.min(y, ch[1]) - 160], [ch[0] - 75 + n * 50, ch[1] - 130 - (n % 2) * 36], p);
+    if (u3 < t0) return; const p = ease(seg(u3, t0, t0 + 0.3)), b = bez([x, y - 40], [(x + ch[0]) / 2, Math.min(y, ch[1]) - 160], [ch[0] - 75 + n * 50, ch[1] - 70 - (n % 2) * 30], p);
     votes += drawn(`M${x} ${y - 40}Q${(x + ch[0]) / 2} ${Math.min(y, ch[1]) - 160} ${b[0].toFixed(1)} ${b[1].toFixed(1)}`, 1, P.red, 4, `stroke-dasharray="6 10" opacity="${(0.6 * (1 - gone)).toFixed(2)}"`) + at(b[0], b[1], cross(0, 0, 26, P.red, u3 - t0 - 0.25), 1 - gone); });
     if (u3 > 3.75) votes += rings(ch[0], ch[1] - 60, 200 * spring(u3 - 3.75, 7, 11), P.green, 0.18 * (1 - seg(u3, 4.1, 4.6))); }
   g += at(GX, GY, globe(R, tot * 0.01, { night: 0.35 }), 1) + net + dots + houses + tops + pulse + coinGo + copies + votes;
   return night(c, tot, 11) + layer(g, c);
 }
-function s1(a, tot, s) { const c = camAt(a, [[0, GX, GY - R - 215, 1.9], [1.2, GX, GY - R - 210, 1.9], [2.2, GX, GY - R - 60, 2.4], [2.65, GX, GY - R - 55, 2.35], [4.2, GX, GY - 30, 0.95], [5.22, GX, GY - 40, 0.92]]);
+function s1(a, tot, s) { const c = camAt(a, [[0, GX, 230, 1.15], [1.2, GX, 235, 1.15], [2.2, GX, 330, 1.45], [2.65, GX, 330, 1.45], [4.2, GX, 600, 0.92], [5.22, GX, 600, 0.9]]);
   return { g: planet(a, c, tot, s), in: [960, 540], inC: P.cream, inZ: 18 }; }
-function s2(a, tot, s) { const T2 = (s.ends || [])[1] || 5.22, c = camAt(a, [[0, GX, GY - 40, 0.92], [2.55, GX, GY - 50, 0.95], [3.2, GX + 40, GY - R - 55, 2.3], [4.57, GX + 50, GY - R - 55, 2.35]]); return { g: planet(T2 + a, c, tot, s) }; }
-function s3(a, tot, s) { const E = s.ends || [], T3 = (E[1] || 5.22) + (E[2] || 4.57), c = camAt(a, [[0, GX + 50, GY - R - 55, 2.35], [0.9, GX + 120, GY - R - 50, 2.6], [1.8, GX + 90, GY - R - 70, 2.1], [4.6, GX + 90, GY - R - 72, 2.05]]);
+function s2(a, tot, s) { const T2 = (s.ends || [])[1] || 5.22, c = camAt(a, [[0, GX, 600, 0.9], [2.55, GX, 600, 0.92], [3.2, GX, 420, 1.55], [4.57, GX, 420, 1.57]]); return { g: planet(T2 + a, c, tot, s) }; }
+function s3(a, tot, s) { const E = s.ends || [], T3 = (E[1] || 5.22) + (E[2] || 4.57), c = camAt(a, [[0, GX, 420, 1.57], [0.9, GX + 60, 400, 1.6], [1.8, GX + 60, 410, 1.5], [4.6, GX + 60, 410, 1.5]]);
   const ch = onRim(RIM[3]); return { g: planet(T3 + a, c, tot, s), out: toScreen(c, ch[0] + 20, ch[1] - 50), outC: P.cream, outZ: 20 }; }
 
 // ---- 4: the book is public: anyone reads it from row 1; names are long numbers; a masked ball with invoices ----
 const ADDR = ["1A1zP1eP5QGe", "3J98t1WpEZ73", "bc1qar0srrr7", "1BvBMSEYstWe", "3FZbgi29cpjq", "bc1qxy2kgdyg"], AMT = ["50", "10", "70", "80", "25", "4"];
-const HOUSES4 = [[260, 0.85, P.teal, P.tealD], [1120, 0.85, P.violet, P.violetD], [720, 0.85, P.gold, P.goldD], [450, 1.3, P.blue, P.blueD], [1260, 1.3, P.pink, P.pinkD]];
+const HOUSES4 = [[340, 0.85, P.teal, P.tealD], [1100, 0.85, P.violet, P.violetD], [720, 0.85, P.gold, P.goldD], [470, 1.3, P.blue, P.blueD], [1200, 1.3, P.pink, P.pinkD]];
 function s4(a, tot) {
   const G = 940, BK = [960, 520], KB = 1.7;
-  const c = camAt(a, [[0, 960, 470, 2.4], [0.9, 960, 470, 2.3], [1.4, 920, 410, 2.9], [3.0, 920, 640, 2.9], [3.4, 920, 560, 2.5], [5.9, 920, 560, 2.5], [7.0, 940, 600, 1.3], [11.06, 940, 600, 1.36]]);
+  const c = camAt(a, [[0, 1022, 520, 1.55], [3.0, 1022, 520, 1.6], [5.9, 1022, 520, 1.62], [7.0, 940, 610, 1.22], [11.06, 940, 610, 1.25]]);
   // the page: six rows, a coloured house where a name would be, then the long number takes its place
   let page = "";
   const scan = kf(a, [[1.4, -70], [2.9, 80]], (p) => p);
@@ -116,7 +116,7 @@ function s4(a, tot) {
   HOUSES4.forEach(([x, k, col, colD], i) => { const back = k < 1, y = back ? G - 60 : G + 20, look = a > 6.3 ? 1 : 0, mask = seg(a, 9.3 + i * 0.12, 9.6 + i * 0.12), bill = a - 9.9 - i * 0.1, q = a - 7.9 - i * 0.12;
     const m = mask > 0 ? `<g transform="translate(0 ${(-115 - 300 * (1 - easeOut(mask))).toFixed(1)})"><path d="M-130 -14Q-120 -50 -60 -40Q0 -30 0 -10Q0 -30 60 -40Q120 -50 130 -14Q120 34 60 30Q16 26 0 6Q-16 26 -60 30Q-120 34 -130 -14Z" fill="${P.ink}"/><path d="M-130 -14Q-120 -50 -60 -40Q0 -30 0 -10Q0 -30 60 -40Q120 -50 130 -14" fill="none" stroke="${P.gold}" stroke-width="7"/>${[-63, 63].map((ex) => `<ellipse cx="${ex}" cy="-6" rx="26" ry="18" fill="${P.win}"/>`).join("")}<path d="M130 -14l46 -30M-130 -14l-46 -30" stroke="${P.pink}" stroke-width="8" stroke-linecap="round"/></g>` : "";
     const pin = bill > 0 ? at(36, -60, `<path d="${rr(-24, -34, 48, 64, 4)}" fill="#fff"/><path d="M-14 -18h28M-14 -6h20M-14 6h28" stroke="#c9b48a" stroke-width="5"/>${text(0, 26, "$", 16, P.redD)}<circle cy="-34" r="6" fill="${P.red}"/>`, pop(bill), -6) : "";
-    const qm = q > 0 && q < 99 ? at(0, -400, text(0, 0, "?", 200, P.cream), pop(q) * (1 - 0.06 * Math.sin(tot * 3 + i))) : "";
+    const qm = q > 0 && q < 99 ? at(0, -330, text(0, 0, "?", 170, P.cream), pop(q) * (1 - 0.06 * Math.sin(tot * 3 + i))) : "";
     hs += at(x, y, house(col, colD, { lit: [1, 1, 1] }) + m + pin + qm, k * (back ? 0.9 : 1), (look ? (x < BK[0] ? 3 : -3) * ease(seg(a, 6.3, 6.8)) : 0)); });
   const ground = `<rect x="-800" y="${G}" width="3600" height="600" fill="#1b2054"/><ellipse cx="${BK[0]}" cy="${G + 20}" rx="640" ry="70" fill="#2c366f"/>`;
   const g = night(c, tot, 19) + layer(skyline(83, -600, 2600, G - 40, 140, 320, "#221a5c", "#ffb066"), c, 0.5) + layer(rays + ground + hs + stand + big + dome, c);
@@ -126,7 +126,7 @@ function s4(a, tot) {
 // ---- 5: nobody can freeze it, nobody can print more: the rules are code, in front of everyone ----
 function s5(a, tot) {
   const G = 900, CX = 900, PX = 1600, CASE = [1250, G];
-  const c = camAt(a, [[0, 920, 620, 1.85], [2.25, 930, 620, 1.95], [2.95, 1580, 600, 1.6], [4.75, 1590, 600, 1.66], [5.4, 1190, 650, 1.25], [7.94, 1180, 640, 1.3]]);
+  const c = camAt(a, [[0, 920, 620, 1.55], [2.25, 930, 620, 1.6], [2.95, 1590, 610, 1.5], [4.75, 1595, 610, 1.52], [5.4, 1190, 650, 1.2], [7.94, 1180, 645, 1.24]]);
   // the coin on its pedestal; an ice beam hits it and breaks into mist, the coin keeps turning
   const beam = seg(a, 1.0, 1.4) * (1 - seg(a, 2.0, 2.3)), fizz = seg(a, 1.5, 2.2), spinC = Math.cos(tot * 2.2);
   const ice = beam > 0 ? `<path d="M${CX - 640} 120L${CX - 30} ${G - 330}" stroke="#bfe6ff" stroke-width="${(26 * beam).toFixed(1)}" stroke-linecap="round" opacity=".85"/><path d="M${CX - 640} 120L${CX - 30} ${G - 330}" stroke="#fff" stroke-width="${(8 * beam).toFixed(1)}" stroke-linecap="round"/>` : "";

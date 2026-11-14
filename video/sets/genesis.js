@@ -27,12 +27,12 @@ const desk = (screen, inner = "") => `${two(rr(-450, -300, 900, 40, 10), P.wood,
 // ---- 0: the network starts, and block 0 is written ----
 function s0(a, tot) {
   const G = 940, DK = [1050, G], LT = [900, G - 300];
-  const c = camAt(a, [[0, 1000, 650, 1.1], [2.0, 990, 640, 1.14], [3.0, 980, 600, 1.18], [4.3, 1040, 610, 1.2], [5.4, 1060, 620, 1.3], [6.44, 1060, 620, 1.32]]);
+  const c = camAt(a, [[0, 1080, 620, 1.16], [2.0, 1080, 615, 1.18], [3.0, 1070, 600, 1.2], [4.3, 1090, 610, 1.22], [6.44, 1100, 620, 1.25]]);
   const spark = a > 2.42 ? Math.exp(-(a - 2.42) * 3) : 0, on = seg(a, 2.42, 2.7), scr = mix("#2a2f6e", "#fff3c2", Math.max(on * 0.5, spark));
   const code = on > 0 ? [0, 1, 2, 3].map((r) => `<path d="${rr(-100, -170 + r * 30, 160 * seg(a, 2.6 + r * 0.12, 2.9 + r * 0.12) + 20, 12, 6)}" fill="${[P.teal, P.pink, P.gold, P.blue][r]}"/>`).join("") : "";
   // the block: out of the screen, up, then down onto the book's first page
   const rise = ease(seg(a, 3.4, 4.1)), land = ease(seg(a, 4.35, 4.9)), BK = [1320, G - 330];
-  const bp = land > 0 ? bez([LT[0] + 70, LT[1] - 360], [1200, LT[1] - 470], [BK[0] - 75, BK[1] - 60], land) : [LT[0] + 70, lerp(LT[1] - 130, LT[1] - 360, rise)];
+  const bp = land > 0 ? bez([LT[0] + 70, LT[1] - 280], [1200, LT[1] - 380], [BK[0] - 75, BK[1] - 60], land) : [LT[0] + 70, lerp(LT[1] - 130, LT[1] - 280, rise)];
   const zeroGlow = a > 5.65 ? Math.exp(-(a - 5.65) * 3) : 0, bk = 1 + 0.12 * zeroGlow;
   const blk = a > 3.35 ? at(bp[0], bp[1], rings(0, 0, 150 + 60 * zeroGlow, P.gold, 0.25 + 0.2 * zeroGlow) + block(100, "0"), lerp(lerp(0.3, 1, rise), 0.62, land) * bk) : "";
   const bookOpen = at(BK[0], BK[1], book(land >= 1 ? at(-75, 0, `<path d="${rr(-60, -70, 120, 140, 6)}" fill="${P.gold}" opacity="${(0.35 + 0.3 * zeroGlow).toFixed(2)}"/>`) : ""), 1.0);
@@ -65,17 +65,17 @@ function s1(a, tot) {
 }
 // ---- 2: fifty coins out of thin air, by rules locked in from the start; unlike the press next door ----
 function s2(a, tot) {
-  const G = 920, B = [900, G - 220], PR = [250, G];
-  const c = camAt(a, [[0, 950, 470, 1.35], [3.3, 950, 470, 1.3], [4.0, 940, 520, 1.2], [6.4, 930, 520, 1.15], [7.2, 760, 540, 0.95], [8.86, 750, 540, 0.97]]);
+  const G = 920, B = [1000, G - 220], PR = [330, G];
+  const c = camAt(a, [[0, 980, 480, 1.12], [3.3, 980, 490, 1.14], [4.0, 1000, 600, 1.25], [6.4, 990, 600, 1.2], [7.2, 760, 560, 0.95], [8.86, 760, 560, 0.97]]);
   // the coins: a sparkle in empty air, then a coin, fifty times, settling in a heap beside the block
   let coins = "", count = 0;
   for (let i = 0; i < 50; i++) { const t0 = 0.94 + i * 0.03, u = a - t0; if (u < 0) continue; count++;
-    const ax = B[0] - 200 + rnd(i * 3) * 400, ay = 140 + rnd(i * 3 + 1) * 180, row = Math.floor(i / 10), hx = B[0] + 270 + ((i % 10) - 4.5) * 34 + (row % 2) * 16, hy = G - 30 - row * 26 - Math.abs((i % 10) - 4.5) * 2;
+    const ax = B[0] - 200 + rnd(i * 3) * 400, ay = 170 + rnd(i * 3 + 1) * 140, row = Math.floor(i / 10), w = 10 - row * 1.5, hx = B[0] + 38 + ((i % 10) - 4.5) * 30 * (w / 10) + (row % 2) * 12, hy = B[1] - 222 - row * 22;
     const fall = easeIn(seg(u, 0.25, 0.75)), x = lerp(ax, hx, fall), y = lerp(ay, hy, fall);
     if (u < 0.25) coins += at(ax, ay, `<path d="M0 -30L8 -8L30 0L8 8L0 30L-8 8L-30 0L-8 -8Z" fill="#fff3c2"/>`, (0.4 + spring(u, 10, 16)) * (1 - u / 0.25 * 0.5));
     else coins += at(x, y, coin(24), 1, 0); }
   const shown = Math.round(lerp(0, 50, ease(seg(a, 1.0, 2.5))));
-  const counter = a > 1.0 ? at(B[0] + 270, G - 330, `<path d="${rr(-110, -60, 220, 100, 50)}" fill="${P.ink}" opacity=".6"/>${disc(-60, -10, 30, P.gold, P.goldD)}${number(30, 22, String(shown), 80, P.gold)}`, pop(a - 1.0)) : "";
+  const counter = a > 1.0 ? at(1270, 400, `<path d="${rr(-110, -60, 220, 100, 50)}" fill="${P.ink}" opacity=".6"/>${disc(-60, -10, 30, P.gold, P.goldD)}${number(30, 22, String(shown), 80, P.gold)}`, pop(a - 1.0)) : "";
   // the chain and the padlock
   const wrap = seg(a, 3.75, 4.5), lockA = a - 4.45;
   const chainL = Array.from({ length: 18 }, (_, i) => { const p = i / 17; if (wrap <= 0 || p > wrap) return ""; const x = B[0] - 230 + p * 460, y = B[1] + 30 * Math.sin(p * Math.PI) - 10; return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="20" ry="12" fill="none" stroke="${P.steel}" stroke-width="8" transform="rotate(${i % 2 ? 25 : -25} ${x.toFixed(1)} ${y.toFixed(1)})"/>`; }).join("");
@@ -93,11 +93,11 @@ function s2(a, tot) {
 // ---- 3: nine days later, the first payment: from the hooded chair to Hal Finney's desk ----
 function s3(a, tot) {
   const GX = 960, GY = 1700, R = 1300, TH = [-0.235, 0.235], pos = (th, lift = 0) => [GX + (R + lift) * Math.sin(th), GY - (R + lift) * Math.cos(th)];
-  const c = camAt(a, [[0, 950, 250, 1.36], [7.15, 950, 240, 1.4]]);
+  const c = camAt(a, [[0, 960, 170, 1.22], [7.15, 960, 165, 1.25]]);
   const L = pos(TH[0]), Rt = pos(TH[1]);
   const linked = seg(a, 4.67, 5.2), hal = seg(a, 4.11, 4.5), q = a - 5.79;
   const scrL = mix("#9fe7ff", "#fff3c2", linked), deskL = `${two(rr(-260, -180, 520, 30, 8), P.wood, P.woodD, 0, 8)}<rect x="-230" y="-150" width="22" height="150" fill="${P.woodD}"/><rect x="208" y="-150" width="22" height="150" fill="${P.woodD}"/>${at(40, -180, laptop(scrL), 0.7)}`;
-  const left = at(L[0], L[1], deskL + at(-60, 30, hoodChair(), 0.5), 1.15, TH[0] * 57.3) + (q > 0 ? at(L[0] + 10, L[1] - 450, text(0, 60, "?", 200, P.cream), pop(q) * (1 + 0.04 * Math.sin(tot * 3))) : "");
+  const left = at(L[0], L[1], deskL + at(-60, 30, hoodChair(), 0.5), 1.15, TH[0] * 57.3) + (q > 0 ? at(L[0] + 60, L[1] - 440, text(0, 60, "?", 190, P.cream), pop(q) * (1 + 0.04 * Math.sin(tot * 3))) : "");
   const lampOn = 0.5 + 0.5 * hal;
   const deskR = `${two(rr(-260, -180, 520, 30, 8), P.wood, P.woodD, 0, 8)}<rect x="-230" y="-150" width="22" height="150" fill="${P.woodD}"/><rect x="208" y="-150" width="22" height="150" fill="${P.woodD}"/>${at(-40, -180, laptop(mix("#9fe7ff", "#fff3c2", linked)), 0.7)}
     <path d="M150 -180V-330L210 -380" stroke="${P.ink}" stroke-width="10" fill="none"/><path d="M190 -400l60 -20l30 60l-60 20Z" fill="${P.red}"/><path d="M220 -370L360 -180H100Z" fill="#ffd98a" opacity="${(0.25 * lampOn).toFixed(2)}"/>
@@ -111,7 +111,7 @@ function s3(a, tot) {
     coins += p < 1 ? at(b[0], b[1], coin(40), 1, 0) : at(to[0] - 120 + (i % 5) * 30 + 40, to[1] + 120 - Math.floor(i / 5) * 18, coin(18)); }
   const link = linked > 0 ? drawn(`M${from[0]} ${from[1]}Q${mid[0]} ${mid[1]} ${to[0]} ${to[1]}`, linked, P.gold, 8) : drawn(`M${from[0]} ${from[1]}Q${mid[0]} ${mid[1]} ${to[0]} ${to[1]}`, seg(a, 1.2, 1.8), "#9fe7ff", 3, 'stroke-dasharray="6 14"');
   // the calendar: from the 3rd to the 12th
-  const day = Math.round(lerp(3, 12, ease(seg(a, 0.3, 1.0)))), cal = at(360, -20, cal2(String(day).padStart(2, "0"), "JAN 2009", 0.6), pop(a - 0.1), -4);
+  const day = Math.round(lerp(3, 12, ease(seg(a, 0.3, 1.0)))), cal = at(560, -100, cal2(String(day).padStart(2, "0"), "JAN 2009", 0.6), pop(a - 0.1), -4);
   const g = night(c, tot, 31) + layer(at(GX, GY, globe(R, 0.15, { night: 0.3, id: "g3" })), c, 1) + layer(link + left + right + coins + cal, c);
   return { g, in: [960, 540], inC: P.gold, inZ: 14 };
 }

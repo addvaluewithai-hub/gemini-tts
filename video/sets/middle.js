@@ -107,7 +107,7 @@ function m5(a, tot) {
   let tower = "";
   for (let i = 0; i < N; i++) { const t0 = 0.05 + i * 0.04; if (a < t0) continue; if (i >= N - took) continue; const y = G - 20 - i * H - 260 * (1 - easeOut(seg(a, t0, t0 + 0.14)));
     tower += disk(TX, y); }
-  const ly = G - 20 - (LINE - 0.5) * H - 14, line = drawn(`M${TX - 260} ${ly}H${TX + 260}`, seg(a, 0.66, 1.13), "#fff3c2", 7, 'stroke-dasharray="0.03 0.025"') + (a > 0.75 ? text(TX + 280, ly + 20, "€100,000", 58, "#fff3c2", { anchor: "start", opacity: seg(a, 0.75, 1.0).toFixed(2) }) : "");
+  const ly = G - 20 - (LINE - 0.5) * H - 14, line = drawn(`M${TX - 180} ${ly}H${TX + 260}`, seg(a, 0.66, 1.13), "#fff3c2", 7, 'stroke-dasharray="0.03 0.025"') + (a > 0.75 ? text(TX + 280, ly + 20, "€100,000", 58, "#fff3c2", { anchor: "start", opacity: seg(a, 0.75, 1.0).toFixed(2) }) : "");
   const load = took && a < 2.97 ? [0, 1, 2].map((i) => disk(0, -i * H)).join("") : "";
   const ex = easeIn(seg(a, 2.95, 3.45)), spx = sp[0] + 500 * ex, spy = sp[1] - 900 * ex;
   const scoop = a > 2.0 && ex < 1 ? at(spx, spy, `<path d="M-40 -400L-10 -60" stroke="${P.steelD}" stroke-width="22"/>${load ? at(0, -14, load, 0.8) : ""}<path d="M-160 -40Q0 100 160 -40L130 -60Q0 40 -130 -60Z" fill="${P.steel}"/>`, 1, carry * -8) : "";

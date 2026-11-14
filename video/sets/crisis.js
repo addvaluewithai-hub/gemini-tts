@@ -32,13 +32,13 @@ function c0(a, tot) {
 }
 // ---- 1: the bank bets the houses' money on house-cards; the cards fall; then the 158-year-old tower falls in one go ----
 const TX = 1450, TG = 900, TK = 0.8;
-const tower = (fall) => { const w = 560, top = -1450;
-  let wins = ""; for (let r = 0; r < 10; r++) for (let q = 0; q < 4; q++) wins += `<rect x="${-w / 2 + 60 + q * 120}" y="${top + 60 + r * 90}" width="60" height="56" rx="6" fill="${(r + q) % 3 ? P.win : "#3b2a6e"}"/>`;
+const tower = (fall) => { const w = 560, top = -1050;
+  let wins = ""; for (let r = 0; r < 6; r++) for (let q = 0; q < 4; q++) wins += `<rect x="${-w / 2 + 60 + q * 120}" y="${top + 60 + r * 90}" width="60" height="56" rx="6" fill="${(r + q) % 3 ? P.win : "#3b2a6e"}"/>`;
   return `${two(rr(-w / 2, top, w, -top - 500, 8), "#e9c99a", "#c9a676", 18, 0)}${wins}${two(rr(-w / 2 - 30, top - 40, w + 60, 50, 8), P.stone, P.stoneD, 0, 10)}<path d="M-60 ${top - 40}L0 ${top - 130}L60 ${top - 40}Z" fill="${P.stone}"/>${disc(0, top - 70, 22, P.gold, P.goldD)}
     ${at(0, 0, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner: cracks(fall) }), TK)}`; };
 const plaque = (glow) => `${glow > 0 ? rings(0, -45, 120, P.gold, 0.3 * glow) : ""}${two(rr(-110, -90, 220, 90, 8), P.stone, P.stoneD, 0, 10)}${text(0, -22, "1850", 64, mix("#8a6a3a", "#8a5200", glow))}`;
 function c1(a, tot) {
-  const c = camAt(a, [[0, 885, 575, 0.92], [3.6, 885, 570, 0.96], [4.4, 900, 520, 0.9], [5.4, TX, 110, 0.58], [6.1, TX, 110, 0.6], [6.6, TX - 60, TG - 290, 1.22], [7.4, TX - 60, TG - 290, 1.25], [8.0, TX + 150, 110, 0.6], [9.4, TX + 200, 130, 0.6]]);
+  const c = camAt(a, [[0, 880, 335, 0.85], [3.6, 880, 335, 0.87], [4.6, 890, 330, 0.86], [6.1, 890, 330, 0.86], [6.6, 900, 330, 0.88], [7.6, 900, 330, 0.88], [8.2, TX + 250, 330, 0.8], [9.4, TX + 300, 340, 0.8]]);
   const HS = [[110, P.blue, P.blueD], [340, P.pink, P.pinkD], [570, P.teal, P.tealD]], TB = [920, TG - 150];
   // the house-cards: a pyramid of little houses on a green table
   const cards = [[-150, 0], [0, 0], [150, 0], [-75, -1], [75, -1], [0, -2]], down = seg(a, 3.55, 4.3);
