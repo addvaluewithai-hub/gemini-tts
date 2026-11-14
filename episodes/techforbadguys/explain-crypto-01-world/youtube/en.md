@@ -28,19 +28,19 @@ Simple enough for anyone, even if you have never heard of any of this before. Th
 
 Chapters
 0:00 Intro
-0:28 1. What is money?
-1:32 2. The bank is a ledger
-1:59 3. The middleman
-2:38 4. The copy problem
-3:14 5. 2008
-3:47 6. Satoshi's paper
-4:15 7. The idea
-5:03 8. Block zero
-5:38 9. Pizza Day
-6:11 10. The vanishing
-6:36 11. The human dictionary
-6:50 12. Summary
-7:14 Next report
+0:29 1. What is money?
+1:31 2. The bank is a ledger
+1:57 3. The middleman
+2:42 4. The copy problem
+3:18 5. 2008
+3:51 6. Satoshi's paper
+4:19 7. The idea
+5:09 8. Block zero
+5:40 9. Pizza Day
+6:14 10. The vanishing
+6:41 11. The human dictionary
+6:53 12. Summary
+7:16 Next report
 
 Sources
 Satoshi Nakamoto's original paper (2008): https://bitcoin.org/bitcoin.pdf
