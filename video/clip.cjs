@@ -83,6 +83,7 @@ function resolveCues() {
 
 // captions: the phrase being spoken, words lighting up as they land
 function caption(i) {
+  if (cues.captions === false) return { words: [] };          // no burned-in captions: the platform's own subtitles do the job in every language
   const t = tAudio(i);
   let wi = -1; for (let k = 0; k < words.length; k++) if (words[k].s <= t) wi = k;
   let a = Math.max(0, wi), b; while (a > 0 && !/[.!?؟]$/.test(words[a - 1].t) && wi - a < 60) a--;
@@ -149,7 +150,6 @@ server.listen(0, "127.0.0.1", async () => {
     for (const s of stills.split(",")) { const i = clamp(Math.round((Number(s) - cues.from + cues.lead) * FPS), 0, N - 1); const f = outPath.replace(/\.\w+$/, "") + `-${s}.png`; fs.writeFileSync(f, await shot(w, i, "png")); console.log("still", s, "->", f); }
     await browser.close(); server.close(); return;
   }
-  const workers = await Promise.all(Array.from({ length: Number(flag("--workers") || 4) }, open1));
   // sound: the voice alone, or voice + effects + a music bed that ducks under the voice
   const delay = `adelay=${Math.round(cues.lead * 1000)}:all=1,apad`, extra = [];
   let mix = `[1:a]${delay}[a]`;
@@ -161,6 +161,14 @@ server.listen(0, "127.0.0.1", async () => {
     mix = `[1:a]aresample=48000,volume=${cues.voiceGain ?? 1},${delay},asplit=2[v][key];[3:a][key]sidechaincompress=threshold=0.03:ratio=4:attack=15:release=380[m];` +
       `[v][2:a][m]amix=inputs=3:normalize=0:weights=1 1 ${cues.musicGain ?? 0.5}[x];[x]loudnorm=I=-16:TP=-2.5:LRA=11,aresample=48000[a]`;
   }
+  // --dub <voice.wav>: no picture. Mix another voice track (already in this video's timing and tempo, see dub.cjs)
+  // with this episode's own effects and music, for a second audio language on the same video.
+  const dub = flag("--dub");
+  if (dub) {
+    const r = spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-i", dub, ...extra, "-filter_complex", mix, "-map", "[a]", "-t", String(dur), "-c:a", "aac", "-b:a", "192k", outPath], { stdio: "inherit" });
+    await browser.close(); server.close(); if (r.status !== 0) throw new Error("could not mix the dub"); console.log(`wrote ${outPath}: ${dur.toFixed(2)} s of audio`); return;
+  }
+  const workers = await Promise.all(Array.from({ length: Number(flag("--workers") || 4) }, open1));
   const ff = spawn("ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", String(FPS), "-c:v", "mjpeg", "-i", "-",
     "-ss", String(cues.from), "-t", String(cues.to - cues.from), "-i", voicePath, ...extra,
     "-filter_complex", mix, "-map", "0:v", "-map", "[a]",

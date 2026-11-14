@@ -1,0 +1,1014 @@
+{
+ "title": "تقرير الأرض: العملات المشفرة 1 (world picture)",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Language-light picture for multi-language audio: same Arabic script and voice as explain-crypto-01-ar, no burned-in captions, and on-screen text reduced to numbers, dates, Latin names and a few short English labels.",
+  "Earth Report field file: Cryptocurrency, part 1 of 5. The host is a spy reporting to his commanders on something he has observed among humans; the first line says what the report is about. Why humans invented money without a bank: what money is, the bank as a ledger, the double-spend problem, 2008, the Bitcoin paper, the first block, the pizza, and Satoshi's exit.",
+  "",
+  "The picture carries the lesson: motion-graphics boards drawn in code (boards.js). The host appears in a few studio shots and leans in from the side now and then.",
+  "",
+  "Facts are historical and stated from general knowledge, not from pages captured for this episode: Zimbabwe issued a 100 trillion dollar note in 2009; in the 2013 Cyprus bail-in banks were shut for about twelve days and uninsured deposits over 100,000 euros at Bank of Cyprus were cut by 47.5 percent; Lebanese banks have restricted withdrawals of dollar deposits since 2019; the nine banks that took US rescue money paid 32.6 billion dollars in bonuses for 2008 (New York Attorney General report, 2009); gold convertibility of the dollar ended in 1971; DigiCash (David Chaum) went bankrupt in 1998; Lehman Brothers, founded 1850, failed on 15 September 2008; the US rescue programme was 700 billion dollars; the Bitcoin paper is nine pages, dated 31 October 2008; the first block is dated 3 January 2009 and carries The Times headline; the first transfer was 10 BTC to Hal Finney on 12 January 2009; the first recorded rate was about 1,309 BTC to the dollar; the pizza purchase was 10,000 BTC on 22 May 2010, about 41 dollars then; Satoshi's last known email is from April 2011; the estimate of about one million untouched coins is researchers' estimate, not a certainty. No current prices are quoted. It says plainly that it is not investment advice."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35,
+  "captions": false
+ },
+ "ending": {
+  "card": {
+   "title": "NEXT",
+   "next": "2 / 5",
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "تقرير",
+  "b": "الأرض",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "pizza": {
+   "kind": "counter",
+   "to": 10000,
+   "unit": "BTC",
+   "icon": "pizza",
+   "count": 2,
+   "now": "2026 ≈ $700,000,000"
+  },
+  "title": {
+   "kind": "titlecard",
+   "kicker": "",
+   "title": "BITCOIN",
+   "sub": "1 / 5"
+  },
+  "evo": {
+   "kind": "steps",
+   "title": "",
+   "items": [
+    {
+     "icon": "fish",
+     "label": "",
+     "sub": ""
+    },
+    {
+     "icon": "gold",
+     "label": "",
+     "sub": ""
+    },
+    {
+     "icon": "cash",
+     "label": "",
+     "sub": ""
+    },
+    {
+     "icon": "phone",
+     "label": "",
+     "sub": ""
+    }
+   ]
+  },
+  "jobs": {
+   "kind": "steps",
+   "title": "",
+   "items": [
+    {
+     "icon": "cash",
+     "label": "1",
+     "sub": ""
+    },
+    {
+     "icon": "tag",
+     "label": "2",
+     "sub": ""
+    },
+    {
+     "icon": "safe",
+     "label": "3",
+     "sub": ""
+    }
+   ]
+  },
+  "zim": {
+   "kind": "story",
+   "title": "ZIMBABWE · 2009",
+   "icon": "cash",
+   "name": "",
+   "lines": [
+    "1 NOTE",
+    "100,000,000,000,000 $",
+    "< 1 BUS TICKET"
+   ]
+  },
+  "frozen": {
+   "kind": "story",
+   "title": "",
+   "icon": "bank",
+   "name": "",
+   "lines": [
+    "CYPRUS · 2013",
+    "> 100,000 € : − 47.5%",
+    "LEBANON · 2019"
+   ]
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "",
+   "items": [
+    {
+     "word": "Crypto",
+     "means": ""
+    },
+    {
+     "word": "Peer-to-peer",
+     "means": ""
+    }
+   ]
+  },
+  "led": {
+   "kind": "ledger",
+   "title": "BANK",
+   "rows": [
+    {
+     "name": "ALI",
+     "amount": 100
+    },
+    {
+     "name": "MONA",
+     "amount": 50
+    },
+    {
+     "name": "SAMI",
+     "amount": 20
+    }
+   ],
+   "ops": [
+    {
+     "from": 0,
+     "to": 1,
+     "amount": 30
+    }
+   ]
+  },
+  "mid": {
+   "kind": "flow",
+   "title": "",
+   "actors": [
+    {
+     "icon": "person",
+     "label": "ALI"
+    },
+    {
+     "icon": "bank",
+     "label": "BANK",
+     "big": true
+    },
+    {
+     "icon": "person",
+     "label": "MONA",
+     "args": [
+      "#ff4fa3"
+     ]
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ]
+    },
+    {
+     "move": [
+      1,
+      2
+     ],
+     "label": "− %"
+    },
+    {
+     "badges": [
+      "FEE",
+      "DELAY",
+      "FREEZE",
+      "BANKRUPT"
+     ],
+     "at": 1
+    }
+   ]
+  },
+  "dbl": {
+   "kind": "copy",
+   "title": "",
+   "file": "100",
+   "name": "money.jpg",
+   "me": "ALI",
+   "a": "MONA",
+   "b": "SAMI",
+   "warn": "× 2"
+  },
+  "tries": {
+   "kind": "steps",
+   "title": "",
+   "items": [
+    {
+     "icon": "node",
+     "label": "Cypherpunks",
+     "sub": "1990s"
+    },
+    {
+     "icon": "coin",
+     "label": "DigiCash",
+     "sub": "1998",
+     "args": [
+      "#9fb0ff",
+      "D"
+     ]
+    }
+   ]
+  },
+  "crash": {
+   "kind": "chart",
+   "title": "2008",
+   "points": [
+    92,
+    96,
+    90,
+    94,
+    82,
+    86,
+    70,
+    74,
+    52,
+    56,
+    34,
+    38,
+    20
+   ],
+   "stamp": "BAILOUT",
+   "draw": 3.2
+  },
+  "paper": {
+   "kind": "doc",
+   "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+   "author": "Satoshi Nakamoto",
+   "date": "31 OCT 2008",
+   "who": "?"
+  },
+  "net": {
+   "kind": "network",
+   "title": "",
+   "n": 34,
+   "cheat": 11
+  },
+  "gen": {
+   "kind": "block",
+   "title": "",
+   "label": "BLOCK 0",
+   "date": "03 JAN 2009",
+   "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+  },
+  "pizza2": {
+   "kind": "counter",
+   "title": "22 MAY 2010",
+   "to": 10000,
+   "unit": "BTC",
+   "icon": "pizza",
+   "count": 2,
+   "now": "= $41"
+  },
+  "sat": {
+   "kind": "person",
+   "title": "",
+   "name": "Satoshi Nakamoto",
+   "quote": "I've moved on|to other things",
+   "stat": "≈ 1,000,000 BTC",
+   "statSub": "2011 → 0"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a ridiculous fact.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني جديد من كوكب الأرض.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: العملات المشفرة. فلوس البشر اخترعوها من غير بنك، ومن غير ورق.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "هقول لكم هي إيه، طلعت منين، ومين اللي عملها. <short pause> وإزاي واحد منهم دفع فيها تمن اتنين بيتزا.. مئات الملايين من الدولارات.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "سنة ألفين وعشرة: عشرة آلاف بيتكوين..",
+     "show": "board",
+     "board": "pizza"
+    },
+    {
+     "say": "قصاد اتنين بيتزا.",
+     "show": "board",
+     "board": "pizza"
+    },
+    {
+     "say": "بأسعار السنين الأخيرة، المبلغ ده يعدّي مئات الملايين.",
+     "show": "board",
+     "board": "pizza",
+     "host": "right"
+    },
+    {
+     "say": "أغلى وجبة في تاريخ الكوكب. <short pause> ومن غير مشروب.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "بس علشان القيادة تفهم ده، لازم أبدأ من أول حاجة رصدتها هنا: الفلوس نفسها.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "money",
+   "story": {
+    "n": 1,
+    "tag": "MONEY"
+   },
+   "style": "Patient teacher explaining to people who have never seen money, with dry asides.",
+   "beats": [
+    {
+     "say": "راجعت تاريخهم. زمان كانوا بيبدّلوا حاجة بحاجة: سمكة قصاد رغيف.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "المشكلة: لو بتاع العيش مش عايز سمك النهارده.. هتبات جعان.",
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "فجرّبوا حاجات تانية الكل يقبلها: ملح، صدف، وفي جزيرة عندهم.. حجارة قد العربية. <short pause> محفظتك هناك محتاجة ونش.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "فاتفقوا على حاجة الكل يقبلها: الدهب. نادر، ومابيبوظش، وصعب تزوّره.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "بس الدهب تقيل. فبقوا يسيبوه عند واحد أمين، وياخدوا منه وصل. والوصل ده هو اللي بقى يلف في السوق: الورق.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "والراجل الأمين اكتشف إنه يقدر يسلّف دهبك لحد تاني وإنت مش واخد بالك. <short pause> وكده يا فندم اتولد البنك.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "وسنة واحد وسبعين، الدهب اتشال من ورا الورق خالص. وفضلت الورقة لوحدها.",
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "واللي ماسك المطبعة يقدر يطبع زي ما هو عايز. في بلد اسمها زيمبابوي،",
+     "show": "board",
+     "board": "zim"
+    },
+    {
+     "say": "طبعوا ورقة واحدة بمية تريليون دولار.",
+     "show": "board",
+     "board": "zim"
+    },
+    {
+     "say": "وماكانتش تجيب تذكرة أتوبيس.",
+     "show": "board",
+     "board": "zim",
+     "host": "right"
+    },
+    {
+     "say": "يعني قيمتها جاية من حاجة واحدة بس: إن الكل مصدّق إن ليها قيمة. <short pause> الفلوس اتفاق جماعي. زي الطابور. بيشتغل طول ما الكل ملتزم.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "واللي رصدته النهارده: أغلب فلوسهم مش ورق أصلاً. أرقام على شاشة.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "أغلب فلوس الكوكب دلوقتي مالهاش وجود تلمسه. خانات في جداول. <short pause> وهم مرتاحين كده.",
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "وسجّلت إن الفلوس عندهم ليها تلات شغلانات. تدفع بيها.",
+     "show": "board",
+     "board": "jobs"
+    },
+    {
+     "say": "تسعّر بيها الحاجة.",
+     "show": "board",
+     "board": "jobs"
+    },
+    {
+     "say": "وتحوّش بيها لبكرة. <short pause> خلّوا التلاتة دول في الملف يا فندم. هنرجع لهم.",
+     "show": "board",
+     "board": "jobs",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "story": {
+    "n": 2,
+    "tag": "BANK"
+   },
+   "style": "Clear and slightly conspiratorial, like revealing how a magic trick works.",
+   "beats": [
+    {
+     "say": "اتتبّعت الأرقام دي لحد ما عرفت ساكنة فين: في دفتر. عند كيان اسمه البنك.",
+     "show": "board",
+     "board": "led"
+    },
+    {
+     "say": "لما علي يدفع لمنى تلاتين دولار، مفيش حاجة بتتحرك من مكانها. البنك بيمسح رقم هنا.. ويكتب رقم هناك.",
+     "show": "board",
+     "board": "led"
+    },
+    {
+     "say": "مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما شفت الفلوس دي بعينك.",
+     "show": "board",
+     "board": "led",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع دفاتر بعض، علشان محدش فيهم يثق في التاني.",
+     "show": "board",
+     "board": "led",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "يعني البنك مش خزنة مليانة فلوس. البنك دفتر. <short pause> واللي ماسك الدفتر.. ماسك كل حاجة.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "middle",
+   "story": {
+    "n": 3,
+    "tag": "3RD PARTY"
+   },
+   "style": "Brisk, listing problems with mounting disbelief.",
+   "beats": [
+    {
+     "say": "راقبت تحويل واحد من أوله لآخره. أي قرش بيتحرك بين اتنين منهم، لازم يعدّي على طرف تالت.",
+     "show": "board",
+     "board": "mid"
+    },
+    {
+     "say": "علي يبعت، والبنك يراجع الدفتر.",
+     "show": "board",
+     "board": "mid"
+    },
+    {
+     "say": "وبعدين منى تستلم. ناقص العمولة.",
+     "show": "board",
+     "board": "mid"
+    },
+    {
+     "say": "واللي ماسك الدفتر يقدر ياخد عمولة، يأخّر التحويل أيام، يجمّد حسابك.. أو يفلّس بفلوسك.",
+     "show": "board",
+     "board": "mid",
+     "host": "right"
+    },
+    {
+     "say": "ودي مش نظرية. في جزيرة اسمها قبرص، سنة ألفين وتلتاشر، الناس صحيوا لقوا البنوك مقفولة.",
+     "show": "board",
+     "board": "frozen"
+    },
+    {
+     "say": "واللي حسابه فوق المية ألف يورو في أكبر بنك.. اتاخد منه حوالي نصه. علشان البنك ينقذ نفسه.",
+     "show": "board",
+     "board": "frozen"
+    },
+    {
+     "say": "وفي لبنان من ألفين وتسعتاشر، البنوك حبست دولارات الناس. <short pause> وسنين بعدها لسه بيطالبوا بيها.",
+     "show": "board",
+     "board": "frozen",
+     "host": "right",
+     "calm": true
+    },
+    {
+     "say": "الرسالة عندهم بتلف الكوكب في ثانية. والتحويل بين بلدين بياخد تلات أيام. <short pause> والاتنين أرقام يا فندم. الاتنين أرقام.",
+     "show": "board",
+     "board": "frozen",
+     "step": "hold",
+     "host": "left",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وفيه أكتر من مليار إنسان على الكوكب ماعندهمش حساب بنك أصلاً. <short pause> يعني مالهمش سطر في الدفتر. يعني بالنسبة للنظام.. مش موجودين.",
+     "shot": "close",
+     "emote": "annoyed",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "copy",
+   "story": {
+    "n": 4,
+    "tag": "COPY"
+   },
+   "style": "Curious, then the catch.",
+   "beats": [
+    {
+     "say": "فسألت السؤال اللي أي كائن عاقل يسأله: ليه مايعملوش فلوس رقمية من غير بنك؟ ملف، يتبعت وخلاص.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "المشكلة إن أي حاجة رقمية بتتنسخ.",
+     "show": "board",
+     "board": "dbl"
+    },
+    {
+     "say": "صورة، أغنية، فيلم. كوبي، بيست. ببلاش.",
+     "show": "board",
+     "board": "dbl"
+    },
+    {
+     "say": "فلو الفلوس ملف، علي يقدر يبعت نفس المية دولار لمنى.. ولسامي. في نفس اللحظة.",
+     "show": "board",
+     "board": "dbl"
+    },
+    {
+     "say": "دي اسمها مشكلة الإنفاق المزدوج. وعلشان كده كانوا محتاجين حد في النص يراجع: مين دفع إيه.",
+     "show": "board",
+     "board": "dbl",
+     "step": "hold",
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "وفي التسعينات، مجموعة مبرمجين سمّوا نفسهم Cypherpunks كان حلمهم فلوس رقمية خاصة: محدش يراقبها، ومحدش يوقّفها.",
+     "show": "board",
+     "board": "tries"
+    },
+    {
+     "say": "ناس حاولت تحلها من التمانينات. عالم اسمه David Chaum عمل شركة فلوس رقمية. <short pause> فلّست سنة تمانية وتسعين. الفلوس الرقمية خلصت منها الفلوس.",
+     "show": "board",
+     "board": "tries",
+     "host": "right",
+     "emote": "bored"
+    }
+   ]
+  },
+  {
+   "id": "crisis",
+   "story": {
+    "n": 5,
+    "tag": "2008"
+   },
+   "style": "Darker and drier. Controlled sarcasm about banks.",
+   "beats": [
+    {
+     "say": "وبعدين حصل اللي غيّر كل حاجة: سنة ألفين وتمانية.",
+     "show": "board",
+     "board": "crash"
+    },
+    {
+     "say": "بنوك كبيرة في أمريكا راهنت بفلوس الناس على قروض بيوت.. وخسرت. بنك اسمه Lehman Brothers، عمره أكتر من مية وخمسين سنة، وقع في يوم واحد.",
+     "show": "board",
+     "board": "crash",
+     "step": 0
+    },
+    {
+     "say": "والحكومة الأمريكية خصصت سبعمية مليار دولار علشان تنقذ البنوك. بفلوس مين؟ بفلوس نفس الناس.",
+     "show": "board",
+     "board": "crash"
+    },
+    {
+     "say": "وملايين البشر خسروا بيوتهم وشغلهم. والبنوك اللي اتنقذت؟ وزّعت في نفس السنة مكافآت بأكتر من تلاتين مليار دولار.",
+     "show": "board",
+     "board": "crash",
+     "step": "hold",
+     "host": "right",
+     "emote": "annoyed"
+    },
+    {
+     "say": "يعني اللي ماسك الدفتر غلط.. واللي دفع هو صاحب الحساب. <short pause> نظام عبقري يا فندم. أقترح نطبّقه عندنا.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "paper",
+   "story": {
+    "n": 6,
+    "tag": "SATOSHI"
+   },
+   "style": "Storyteller lowering his voice for a mystery.",
+   "beats": [
+    {
+     "say": "وفي عز الأزمة دي، ظهرت ورقة من تسع صفحات، اتبعتت لقايمة بريد بتاعة ناس مهتمين بالتشفير.",
+     "show": "board",
+     "board": "paper"
+    },
+    {
+     "say": "التاريخ: واحد وتلاتين أكتوبر، ألفين وتمانية. والعنوان: بيتكوين، نظام نقدي إلكتروني، من شخص لشخص.",
+     "show": "board",
+     "board": "paper"
+    },
+    {
+     "say": "والورقة وعدت بحاجة واحدة: تبعت فلوس لأي حد على الكوكب، مباشرة، من غير ما تستأذن حد.",
+     "show": "board",
+     "board": "paper",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "والكاتب: Satoshi Nakamoto. ولحد النهارده محدش يعرف ده مين. راجل، ست، ولا مجموعة.",
+     "show": "board",
+     "board": "paper"
+    },
+    {
+     "say": "وقبل ما حد يسأل يا فندم: لأ، مش أنا. <short pause> أنا وصلت بعدها.",
+     "shot": "host",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "idea",
+   "story": {
+    "n": 7,
+    "tag": "IDEA"
+   },
+   "style": "The key idea of the episode. Clear, building, genuinely impressed.",
+   "beats": [
+    {
+     "say": "الفكرة كانت بسيطة وجريئة: الدفتر مايبقاش عند البنك.",
+     "show": "board",
+     "board": "net"
+    },
+    {
+     "say": "كل جهاز في الشبكة ياخد نسخة كاملة من الدفتر. آلاف الأجهزة، حوالين الكوكب كله.",
+     "show": "board",
+     "board": "net"
+    },
+    {
+     "say": "لما علي يبعت لمنى، الخبر بيلف على الكل، وكل الأجهزة تكتب نفس السطر.",
+     "show": "board",
+     "board": "net"
+    },
+    {
+     "say": "ولو واحد حاول يغش ويعدّل نسخته، الباقي كله يقول له: لأ. ده مش اللي عندنا.",
+     "show": "board",
+     "board": "net",
+     "host": "left"
+    },
+    {
+     "say": "والدفتر ده علني. أي حد يقدر يقراه كله، من أول سطر. بس الأسماء اللي فيه مش أسماء: أرقام طويلة. <short pause> الكل شايف كل حاجة.. ومحدش عارف مين مين. زي حفلة تنكرية بفواتير.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "مفيش مدير. مفيش فرع رئيسي. <short pause> ومفيش خدمة عملا تسيبك على الانتظار أربعين دقيقة.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وده معناه كمان: مفيش حد يقدر يجمّد حسابك، ولا يطبع بيتكوين زيادة علشان يسدّ عجز. القواعد مكتوبة في الكود، والكود قدام الكل.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "الدفتر المشترك ده اسمه: بلوكتشين. وإزاي آلاف الغُرب بيتفقوا على نسخة واحدة من غير ما يثقوا في بعض؟ ده بقى موضوع التقرير الجاي.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "genesis",
+   "story": {
+    "n": 8,
+    "tag": "BLOCK 0"
+   },
+   "style": "Historian with a smirk.",
+   "beats": [
+    {
+     "say": "تلاتة يناير ألفين وتسعة. Satoshi شغّل الشبكة، وكتب أول صفحة في الدفتر: البلوك رقم صفر.",
+     "show": "board",
+     "board": "gen"
+    },
+    {
+     "say": "وجوّه البلوك ساب رسالة. عنوان جريدة The Times بتاع نفس اليوم: وزير المالية على وشك ينقذ البنوك للمرة التانية.",
+     "show": "board",
+     "board": "gen"
+    },
+    {
+     "say": "يعني أول سطر في فلوس من غير بنوك.. تريقة على البنوك. <short pause> الكائن ده كان عنده حس فكاهي يا فندم.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "ومع البلوك ده اتخلق خمسين بيتكوين جداد. من الهوا. <short pause> بس بقواعد مكتوبة من الأول، ومش في إيد حد لوحده يغيّرها. وده فرق كبير عن الطباعة اللي متعودين عليها.",
+     "show": "board",
+     "board": "gen",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "وبعدها بتسع أيام بعت أول تحويل: عشرة بيتكوين لمبرمج اسمه Hal Finney. أول اتنين على الشبكة. واحد فيهم مجهول.",
+     "show": "board",
+     "board": "gen",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "pizza",
+   "story": {
+    "n": 9,
+    "tag": "PIZZA"
+   },
+   "style": "Enjoying the absurdity. Fast.",
+   "beats": [
+    {
+     "say": "في الأول محدش اهتم. البيتكوين كان بيتوزّع تقريباً ببلاش. وأول سعر اتسجّل له: أكتر من ألف بيتكوين.. بدولار واحد.",
+     "shot": "host",
+     "emote": "bored",
+     "gesture": "shrug"
+    },
+    {
+     "say": "لحد مايو ألفين وعشرة. مبرمج اسمه Laszlo كتب على منتدى: هدفع عشرة آلاف بيتكوين للي يجيب لي اتنين بيتزا.",
+     "show": "board",
+     "board": "pizza2"
+    },
+    {
+     "say": "ويوم اتنين وعشرين مايو.. حد جابهم له.",
+     "show": "board",
+     "board": "pizza2"
+    },
+    {
+     "say": "ودي كانت أول مرة البيتكوين يشتري حاجة حقيقية.",
+     "show": "board",
+     "board": "pizza2",
+     "host": "right"
+    },
+    {
+     "say": "و Laszlo نفسه قال بعدين إنه مش ندمان. <short pause> البيتزا كانت حلوة.",
+     "show": "board",
+     "board": "pizza2",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "والبشر لسه بيحتفلوا باليوم ده كل سنة. اسمه: يوم البيتزا. <short pause> بيحتفلوا بأسوأ صفقة في تاريخهم. أنا بدأت أحب الكوكب ده.",
+     "shot": "host",
+     "emote": "grin",
+     "gesture": "cheer"
+    },
+    {
+     "say": "وبعد أقل من سنة، البيتكوين الواحد وصل دولار. دولار كامل. <short pause> والبشر افتكروا إن دي القمة.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "vanish",
+   "story": {
+    "n": 10,
+    "tag": "GONE"
+   },
+   "style": "Mystery again, then a professional suspicion.",
+   "beats": [
+    {
+     "say": "أما Satoshi نفسه، ففي ألفين وحداشر بعت آخر رسالة معروفة:",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "أنا انتقلت لحاجات تانية.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "واختفى.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "قبلها كان سلّم الكود لمبرمجين تانيين. مفيش وداع، مفيش مؤتمر صحفي، ولا حتى صورة.",
+     "show": "board",
+     "board": "sat",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "وساب وراه حوالي مليون بيتكوين، حسب تقديرات الباحثين. وعلى حد علم البشر، ماتحركوش من ساعتها.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "اخترع فلوس جديدة، بقى من أغنى الكائنات على الكوكب، ومالمسش منها حاجة. <short pause> ده مش تصرف بشري يا فندم. أنا بطلب فتح تحقيق: يمكن يكون واحد مننا.",
+     "shot": "close",
+     "emote": "skeptical"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 11,
+    "tag": "WORDS"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "وقبل الخلاصة: كلمتين من قاموس البشر. Crypto: من كلمة قديمة معناها مخفي. قصدهم علم التشفير. مش إن الفلوس مستخبية.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "و Peer-to-peer: من شخص لشخص. من غير حد في النص. <short pause> ودي يا فندم كل الحكاية.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 12,
+    "tag": "RECAP"
+   },
+   "style": "Summary, then one sincere warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: الفلوس اتفاق، ومتسجّل في دفتر. اتنين: الدفتر ده كان عند البنك. تلاتة: بيتكوين خد الدفتر.. ووزّعه على الكل.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "1 · 2 · 3",
+      "items": [
+       "MONEY = LEDGER",
+       "LEDGER → BANK",
+       "BITCOIN: LEDGER → EVERYONE"
+      ],
+      "step": 2.3
+     },
+     "host": "pip"
+    },
+    {
+     "say": "وتنبيه مهم: ده شرح، مش نصيحة استثمار. العملات دي سعرها بيطلع وينزل بعنف، وناس كتير خسرت فيها فلوسها.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "التقرير الجاي: مين بيحرس الدفتر ده؟ يعني إيه تعدين؟ ومين يقدر يغيّر القواعد؟",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "البيتكوين اتعمل ليه؟ القصة من الأول | ملف العملات المشفرة 1/5",
+   "يعني إيه عملات مشفرة؟ اشرحها لكائن فضائي | 1/5",
+   "فلوس من غير بنك: حكاية البيتكوين من أولها | 1/5"
+  ],
+  "description": [
+   "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن حاجة غريبة لقاها عند البشر: فلوس من غير بنك ومن غير ورق.",
+   "",
+   "في التقرير الأول: الفلوس أصلاً إيه؟ ليه البنك مجرد دفتر؟ إيه مشكلة النسخ اللي منعت الفلوس الرقمية سنين؟ وإيه اللي حصل في 2008 وخلّى واحد مجهول اسمه Satoshi Nakamoto ينشر ورقة من تسع صفحات غيّرت كل حاجة. ومعاها حكاية أغلى اتنين بيتزا في التاريخ.",
+   "",
+   "الشرح بسيط ومناسب لأي حد، حتى لو أول مرة يسمع عن الموضوع."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "ورقة Satoshi Nakamoto الأصلية (2008): https://bitcoin.org/bitcoin.pdf",
+   "البنك الدولي، Global Findex 2025 (عدد اللي من غير حساب بنكي): https://www.worldbank.org/en/publication/globalfindex/report",
+   "CEPR، دروس أزمة بنوك قبرص 2013: https://cepr.org/article/bank-bail-ins-lessons-cypriot-crisis",
+   "مكافآت البنوك اللي اتنقذت سنة 2008 (تقرير مدعي عام نيويورك): https://law360.com/articles/114226/top-tarp-banks-paid-out-32-6b-in-bonuses-cuomo"
+  ],
+  "footer": [
+   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#بيتكوين",
+   "#العملات_المشفرة"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "العملات المشفرة",
+   "كيف بدأ البيتكوين",
+   "ما هو البيتكوين",
+   "العملات الرقمية",
+   "بيتكوين",
+   "Bitcoin",
+   "كريبتو",
+   "شرح بيتكوين",
+   "شرح العملات الرقمية",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "Satoshi Nakamoto",
+   "ساتوشي ناكاموتو",
+   "تاريخ البيتكوين",
+   "يوم البيتزا",
+   "أزمة 2008",
+   "Lehman Brothers",
+   "يعني إيه بيتكوين",
+   "ما هي العملات الرقمية",
+   "بلوكتشين"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "تفتكر Satoshi مين؟ راجل، ست، مجموعة.. ولا واحد من كوكب Peek؟ اكتب نظريتك. القيادة بتقرا التعليقات."
+ }
+}
