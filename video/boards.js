@@ -9,8 +9,29 @@ const lerp = (a, b, p) => a + (b - a) * p;
 const pop = (a) => (a <= 0 ? 0 : Math.min(1, a / 0.1) * (1 + 0.28 * Math.exp(-a * 11) * Math.cos(a * 17)));
 const esc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
 const since = (i, step, age) => (i < step ? 99 : i === step ? age : -1);       // seconds since item i came in, or -1
-const C = { ink: "#05060d", navy: "#11152e", panel: "#1c2250", line: "#7fd4ff", white: "#eef0ff", dim: "#9fb0ff", yellow: "#FFE66D", pink: "#ff4fa3", cyan: "#35c8ff", green: "#58d68d", red: "#ff4654", gold: "#f2b632", paper: "#f3efe4" };
-const T = (x, y, text, size, o = {}) => `<text x="${x}" y="${y}" text-anchor="${o.anchor || "middle"}" font-family="${o.font || "Anton"}" font-size="${size}" fill="${o.fill || C.white}" opacity="${o.opacity ?? 1}" ${o.weight ? `font-weight="${o.weight}"` : ""} style="unicode-bidi:plaintext" ${o.extra || ""}>${esc(text)}</text>`;
+// The palette. `BASE` is the original dark set; a theme (see THEMES below) replaces some of it. The surface tokens
+// (row, muted, body, land, cube, stamp) hold colours that used to be written inline, with the same values.
+const BASE = { ink: "#05060d", navy: "#11152e", panel: "#1c2250", line: "#7fd4ff", white: "#eef0ff", dim: "#9fb0ff", yellow: "#FFE66D", pink: "#ff4fa3", cyan: "#35c8ff", green: "#58d68d", red: "#ff4654", gold: "#f2b632", paper: "#f3efe4",
+  row: "#161b40", rowUp: "#173d2c", rowDown: "#40161c", muted: "#3a4170", body: "#232a63", land: "#27306e", cube: ["#141a44", "#0d1230", "#101638", "#1b2360", "#0a0d24"], cubeGlow: "rgba(53,200,255,.35)",
+  stamp: (a) => `rgba(5,6,13,${a})`, text: null };
+// Themes, chosen by the storyboard (`"theme": "day"`): the boards' palette, `text` (a bright fill that would be hard to read as
+// text on this background maps to a darker ink when it is used for text), and `studio`, CSS variables for the set in studio.html.
+// Without a theme nothing changes. Add a theme here and every board and the studio pick it up.
+const THEMES = {
+  day: { ink: "#14182e", navy: "#ffffff", panel: "#e3ebfa", line: "#4f7fd1", white: "#263259", dim: "#6c7798", yellow: "#ffc63a", pink: "#ef4b97", cyan: "#23a7e4", green: "#2fb26a", red: "#e5384a", gold: "#f2b632", paper: "#fffdf6",
+    row: "#f2f6fd", rowUp: "#dcf5e6", rowDown: "#fde1e4", muted: "#c6d2ea", body: "#dfe8f8", land: "#cfe0c9", cube: ["#ffffff", "#e4ecfa", "#eef3fc", "#f7faff", "#d6e1f5"], cubeGlow: "rgba(79,127,209,.18)",
+    stamp: (a) => `rgba(255,255,255,${Math.min(0.95, a + 0.3)})`,
+    text: { "#ffc63a": "#c2500c", "#23a7e4": "#0c74ad", "#2fb26a": "#1b8048", "#f2b632": "#9a6400", "#ef4b97": "#c81f6b" },
+    bg: "radial-gradient(ellipse at 50% 38%,#ffffff,#fbf4e4 55%,#efe3c9 100%)",
+    studio: { bg: "#f4ecd9", insert: "radial-gradient(ellipse at 50% 38%,#ffffff,#fbf4e4 55%,#efe3c9 100%)", grid: "rgba(80,90,140,.06)",
+      wall0: "#cfe3f6", wall1: "#b7d2ee", wall2: "#9fbfe3", glow: ".35", desk0: "#ffffff", desk1: "#d6deef", front0: "#e6ecf7", front1: "#c9d4ea", front2: "#b4c2df",
+      logo: "#263259", tag: "#55628a", shelf: "#9aa9cc", pipdesk: "linear-gradient(#ffffff,#d6deef)", chipBg: "rgba(255,255,255,.94)", chipInk: "#14182e", chipSub: "#3b4870",
+      brand: "#263259", brandShadow: "0 2px 0 rgba(255,255,255,.8)", brandSub: "#55628a", vig: "radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(60,40,0,.16) 100%)" } },
+};
+const themeOf = (t) => (!t ? BASE : typeof t === "object" ? { ...BASE, ...t } : THEMES[t] ? { ...BASE, ...THEMES[t] } : BASE);
+let C = BASE;
+const tx = (f) => (C.text && C.text[f]) || f;          // the colour a fill becomes when it is used for text
+const T = (x, y, text, size, o = {}) => `<text x="${x}" y="${y}" text-anchor="${o.anchor || "middle"}" font-family="${o.font || "Anton"}" font-size="${size}" fill="${tx(o.fill || C.white)}" opacity="${o.opacity ?? 1}" ${o.weight ? `font-weight="${o.weight}"` : ""} style="unicode-bidi:plaintext" ${o.extra || ""}>${esc(text)}</text>`;
 const G = (x, y, s, inner, extra = "") => `<g transform="translate(${x} ${y}) scale(${s})" ${extra}>${inner}</g>`;
 const svg = (inner, defs = "") => `<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><filter id="bglow"><feGaussianBlur stdDeviation="14"/></filter>${defs}</defs>${inner}</svg>`;
 const heading = (text, a, y = 150) => (text ? G(960, y, pop(a), T(0, 0, text, 84, { fill: C.yellow })) : "");
@@ -72,11 +93,50 @@ const ICON = {
   cable: () => `<circle r="96" fill="#2b2f45"/><circle r="78" fill="#8f96b8"/><circle r="58" fill="#c98a3a"/><circle r="40" fill="#e8e3d3"/>${[[0, 0], [-16, -12], [16, -12], [-16, 12], [16, 12], [0, 22], [0, -24]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="6" fill="${C.cyan}"/>`).join("")}`,
   shark: (c = "#8f96b8") => `<path d="M-104 6C-60 -38 30 -40 104 0C40 34 -50 36 -104 6Z" fill="${c}"/><path d="M-10 -34L20 -84L34 -30Z" fill="${c}"/><path d="M-104 6L-128 -34L-118 6L-128 40Z" fill="${c}"/><circle cx="62" cy="-8" r="6" fill="${C.ink}"/><path d="M52 16L62 8L70 18L78 9L86 16" fill="none" stroke="#fff" stroke-width="5"/>`,
   ghost: (c = C.white) => `<circle cx="0" cy="-52" r="44" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><path d="M-72 90C-72 6 72 6 72 90" fill="none" stroke="${c}" stroke-width="8" stroke-dasharray="14 12"/><text y="-28" text-anchor="middle" font-family="Anton" font-size="64" fill="${c}">?</text>`,
+  // ---- added for the language-neutral picture (explain-crypto-01-world) ----
+  // a city bus, side on
+  bus: (c = C.yellow) => `<rect x="-112" y="-70" width="224" height="120" rx="20" fill="${c}"/>${[-80, -30, 20].map((x) => `<rect x="${x}" y="-52" width="40" height="40" rx="6" fill="${C.panel}"/>`).join("")}<rect x="70" y="-52" width="30" height="88" rx="5" fill="${C.panel}"/><rect x="-112" y="8" width="180" height="10" fill="${C.white}" opacity=".35"/><circle cx="-62" cy="52" r="22" fill="${C.ink}"/><circle cx="62" cy="52" r="22" fill="${C.ink}"/><circle cx="-62" cy="52" r="8" fill="#c9cee6"/><circle cx="62" cy="52" r="8" fill="#c9cee6"/>`,
+  // a ticket stub with notches and a perforation, a little bus on it
+  ticket: (c = C.pink) => `<path d="M-100 -50H100V-14A14 14 0 0 0 100 14V50H-100V14A14 14 0 0 0 -100 -14Z" fill="${c}"/><path d="M40 -44V44" stroke="#fff" stroke-width="5" stroke-dasharray="8 8"/><g transform="translate(-28 0) scale(.42)" fill="#fff"><rect x="-90" y="-56" width="180" height="96" rx="16"/><circle cx="-50" cy="48" r="18"/><circle cx="50" cy="48" r="18"/></g>`,
+  // a wheelbarrow, empty (pile things on it from the board)
+  barrow: (c = C.red) => `<path d="M-120 -40H90L60 30H-90Z" fill="${c}"/><path d="M-120 -40H90" stroke="${C.ink}" stroke-width="6" opacity=".25"/><path d="M60 30L130 -10M-70 30L-50 70" stroke="#8a5a1c" stroke-width="11" stroke-linecap="round"/><path d="M-90 30L-120 -40" stroke="#8a5a1c" stroke-width="9"/><circle cx="-20" cy="62" r="30" fill="${C.ink}"/><circle cx="-20" cy="62" r="12" fill="#c9cee6"/>`,
+  // a printing press: a frame, two rollers and a sheet coming out
+  press: (c = "#8f96b8") => `<rect x="-100" y="-90" width="200" height="170" rx="14" fill="${c}"/><rect x="-80" y="-70" width="160" height="60" rx="8" fill="#c9cee6"/><circle cx="-36" cy="-40" r="22" fill="#4d5478"/><circle cx="36" cy="-40" r="22" fill="#4d5478"/><rect x="-80" y="10" width="160" height="16" rx="6" fill="#4d5478"/><rect x="-110" y="80" width="220" height="20" rx="6" fill="#4d5478"/><circle cx="70" cy="50" r="10" fill="${C.red}"/>`,
+  // a glass jar with a lid
+  jar: (c = C.line) => `<rect x="-62" y="-104" width="124" height="26" rx="8" fill="#b98a3e"/><path d="M-56 -78H56Q78 -60 78 -20V80Q78 100 58 100H-58Q-78 100 -78 80V-20Q-78 -60 -56 -78Z" fill="${c}" fill-opacity=".14" stroke="${c}" stroke-width="8"/><path d="M-52 -40V60" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".55"/>`,
+  // a sack of salt, tied at the top, a few grains
+  salt: () => `<path d="M-70 -50Q-96 60 -66 96H66Q96 60 70 -50Z" fill="#f4f1ea" stroke="#cfc8b4" stroke-width="6"/><path d="M-44 -50L-30 -84H30L44 -50Z" fill="#e2dccd"/><path d="M-50 -54H50" stroke="#b98a3e" stroke-width="10" stroke-linecap="round"/>${[[-20, 110], [10, 116], [36, 108], [-44, 114]].map(([x, y]) => `<rect x="${x}" y="${y}" width="10" height="10" fill="#e2dccd" transform="rotate(30 ${x} ${y})"/>`).join("")}`,
+  // a scallop shell
+  shell: (c = "#ffb38a") => `<path d="M0 70L-96 -10Q-90 -96 0 -100Q90 -96 96 -10Z" fill="${c}"/>${[-60, -30, 0, 30, 60].map((x) => `<path d="M0 70L${x * 1.3} -96" stroke="#c96b3a" stroke-width="6" opacity=".6"/>`).join("")}<path d="M-30 70H30L20 96H-20Z" fill="${c}"/>`,
+  // a stone wheel with a hole, the kind one island used as money
+  stone: () => `<circle r="96" fill="#a9a49a"/><circle r="96" fill="none" stroke="#7d786e" stroke-width="8"/><circle r="22" fill="${C.ink}" opacity=".7"/><path d="M-50 -60Q-20 -76 20 -70" stroke="#d6d1c6" stroke-width="10" stroke-linecap="round" opacity=".7"/>`,
+  // a trusted man: a person in a top hat
+  banker: (c = "#8f96b8") => `<circle cx="0" cy="-40" r="38" fill="${c}"/><path d="M-62 92C-62 18 62 18 62 92Z" fill="${c}"/><rect x="-30" y="-122" width="60" height="58" rx="4" fill="${C.ink}"/><rect x="-50" y="-70" width="100" height="12" rx="6" fill="${C.ink}"/><path d="M0 22L-12 50L0 80L12 50Z" fill="${C.red}"/>`,
+  // a letter
+  envelope: (c = C.white) => `<rect x="-90" y="-58" width="180" height="116" rx="12" fill="${c}"/><path d="M-90 -50L0 14L90 -50" fill="none" stroke="${C.navy}" stroke-width="10" stroke-linejoin="round"/>`,
+  // a snail, for something slow
+  snail: (c = "#c98a3a") => `<path d="M-110 60H90Q120 60 116 34L100 20Q96 50 70 50H-110Z" fill="#9bc46a"/><circle cx="104" cy="6" r="14" fill="#9bc46a"/><path d="M100 -6L92 -40M112 -6L120 -38" stroke="#9bc46a" stroke-width="6" stroke-linecap="round"/><circle cx="-10" cy="-6" r="62" fill="${c}"/><path d="M-10 -6m-40 0a40 40 0 1 1 40 40a26 26 0 1 1 -26 -26a12 12 0 1 1 12 12" fill="none" stroke="#7a4a14" stroke-width="8" stroke-linecap="round"/>`,
+  // a wall calendar page; `label` is what is printed on it (a year, a day)
+  calendar: (c = C.red, label = "") => `<rect x="-90" y="-80" width="180" height="170" rx="14" fill="${C.paper}" stroke="#cfc8b4" stroke-width="5"/><rect x="-90" y="-80" width="180" height="50" rx="14" fill="${c}"/><rect x="-90" y="-46" width="180" height="16" fill="${c}"/><rect x="-54" y="-100" width="14" height="40" rx="7" fill="#4d5478"/><rect x="40" y="-100" width="14" height="40" rx="7" fill="#4d5478"/><text y="58" text-anchor="middle" font-family="Anton" font-size="${String(label).length > 2 ? 64 : 90}" fill="${C.ink}">${esc(label)}</text>`,
+  // a line chart going down, for a crash
+  chartdown: (c = C.red) => `<rect x="-96" y="-86" width="192" height="172" rx="14" fill="${C.paper}"/><path d="M-70 -50L-30 -20L0 -36L34 20L70 50" fill="none" stroke="${c}" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 52L76 56L72 28" fill="none" stroke="${c}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>`,
+  // two pages, one on top of the other: a copy
+  dup: (c = C.paper) => `<g transform="translate(-26 -20)"><path d="M-60 -76H30L60 -46V86H-60Z" fill="${c}" opacity=".6"/></g><g transform="translate(26 20)"><path d="M-60 -76H30L60 -46V86H-60Z" fill="${c}"/><path d="M30 -76V-46H60Z" fill="#cfc8b4"/><path d="M-36 -10H36M-36 18H36M-36 46H14" stroke="#b9b2a2" stroke-width="9" stroke-linecap="round"/></g>`,
+  // a shield, for whoever guards something
+  shield: (c = C.cyan) => `<path d="M0 -100L84 -66V0Q84 64 0 104Q-84 64 -84 0V-66Z" fill="${c}"/><path d="M-36 4L-8 32L42 -22" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>`,
+  // a pickaxe, for mining
+  pickaxe: (c = "#8f96b8") => `<path d="M-70 96L60 -40" stroke="#b98a3e" stroke-width="20" stroke-linecap="round"/><path d="M-30 -96Q60 -100 104 -10Q60 -60 6 -64Z" fill="${c}"/><path d="M6 -64L40 -30" stroke="${c}" stroke-width="26" stroke-linecap="round"/>`,
+  // a paper with lines and a pen: a rule book being written
+  rules: (c = C.paper) => `<rect x="-76" y="-96" width="140" height="190" rx="10" fill="${c}" stroke="#cfc8b4" stroke-width="5"/><path d="M-50 -56H38M-50 -24H38M-50 8H38M-50 40H6" stroke="#b9b2a2" stroke-width="9" stroke-linecap="round"/><path d="M20 70L92 -26L110 -12L38 84L14 90Z" fill="${C.pink}"/>`,
+
 };
 const icon = (name, ...a) => (ICON[name] || ICON.person)(...a);
 const labelled = (x, y, s, name, label, a, o = {}) => G(x, y, s * pop(a), `${o.glow ? `<circle r="130" fill="${o.glow}" opacity=".25" filter="url(#bglow)"/>` : ""}${icon(name, ...(o.args || []))}`, `opacity="${o.opacity ?? 1}"`)
   + (label && a > 0.1 ? `<g opacity="${clamp((a - 0.1) / 0.2) * (o.opacity ?? 1)}">${T(x, y + 150 * s + 30, label, 46, { font: "Elite", fill: o.labelFill || C.white })}</g>` : "");
 
+// A red cross drawn over (x, y) stroke by stroke, `a` seconds after it starts.
+const strike = (x, y, a, r = 110) => (a <= 0 ? "" : `<path d="M${x - r} ${y - r}L${x - r + 2 * r * ease(a / 0.25)} ${y - r + 2 * r * ease(a / 0.25)}" stroke="${C.red}" stroke-width="${r / 5}" stroke-linecap="round"/>`
+  + (a > 0.2 ? `<path d="M${x + r} ${y - r}L${x + r - 2 * r * ease((a - 0.2) / 0.25)} ${y - r + 2 * r * ease((a - 0.2) / 0.25)}" stroke="${C.red}" stroke-width="${r / 5}" stroke-linecap="round"/>` : ""));
 // A stand-in fingerprint: not a real hash, just something that looks like one and changes completely with its input.
 const rnd = (n) => { let t = (n + 0x6D2B79F5) | 0; t = Math.imul(t ^ (t >>> 15), 1 | t); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 const fake = (text) => { let h = 2166136261; for (const ch of String(text)) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619); } let out = ""; for (let i = 0; i < 16; i++) out += "0123456789abcdef"[Math.floor(rnd(h + i * 97) * 16)]; return out; };
@@ -98,14 +158,15 @@ const BOARDS = {
     return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age));
   },
   // A page of names and balances. Each step after the first moves an amount from one row to another.
+  // A row with `color` shows a person in that colour instead of its name.
   ledger(s, step, age) {
     const rows = s.rows.map((r) => ({ ...r })), W = 1240, x = 960 - W / 2, y0 = 270, rh = 150, ops = s.ops || [];
     let moving = null;
     ops.forEach((op, k) => { const a = since(k + 1, step, age); if (a < 0) return; const p = ease(a / 0.9);
       rows[op.from].amount -= op.amount * p; rows[op.to].amount += op.amount * p; if (a < 1.6) moving = { op, a }; });
     const body = rows.map((r, i) => { const a = step > 0 ? 9 : age - i * 0.18, y = y0 + i * rh, hit = moving && (moving.op.from === i || moving.op.to === i), up = moving && moving.op.to === i;
-      return a <= 0 ? "" : `<g opacity="${clamp(a / 0.2)}"><rect x="${x + 30}" y="${y + 10}" width="${W - 60}" height="${rh - 20}" rx="14" fill="${hit ? (up ? "#173d2c" : "#40161c") : "#161b40"}"/>
-        ${T(x + W - 80, y + 98, r.name, 76, { anchor: "end", font: "Elite" })}${T(x + 90, y + 104, Math.round(r.amount).toLocaleString("en"), 92, { anchor: "start", fill: hit ? (up ? C.green : C.red) : C.yellow })}</g>`; }).join("");
+      return a <= 0 ? "" : `<g opacity="${clamp(a / 0.2)}"><rect x="${x + 30}" y="${y + 10}" width="${W - 60}" height="${rh - 20}" rx="14" fill="${hit ? (up ? C.rowUp : C.rowDown) : C.row}"/>
+        ${r.color ? G(x + W - 130, y + 82, 0.5, icon("person", r.color)) : T(x + W - 80, y + 98, r.name, 76, { anchor: "end", font: "Elite" })}${T(x + 90, y + 104, Math.round(r.amount).toLocaleString("en"), 92, { anchor: "start", fill: hit ? (up ? C.green : C.red) : C.yellow })}</g>`; }).join("");
     const arrow = moving ? (() => { const { op, a } = moving, ya = y0 + op.from * rh + 75, yb = y0 + op.to * rh + 75, p = ease(a / 0.9), cx = x - 110, y = lerp(ya, yb, p);
       return `<path d="M${x + 20} ${ya}C${cx} ${ya} ${cx} ${yb} ${x + 20} ${yb}" fill="none" stroke="${C.line}" stroke-width="6" stroke-dasharray="12 12" opacity=".6"/>${G(x - 50 - 36 * Math.sin(Math.PI * p), y, 0.7, icon("coin"))}`; })() : "";
     return svg(`${heading(s.title, 1)}<rect x="${x}" y="${y0 - 30}" width="${W}" height="${rows.length * rh + 60}" rx="26" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".35" stroke-width="4"/>
@@ -138,7 +199,7 @@ const BOARDS = {
     else { const p = ease(age / 0.8);
       body = labelled(960, 400, 1, "person", s.me, 9) + labelled(380, 620, 1.1, "person", s.a, 9, { args: [C.pink] }) + labelled(1540, 620, 1.1, "person", s.b, 9, { args: [C.green] })
         + G(lerp(960, 380, p), lerp(300, 410, p) - 40 * Math.sin(Math.PI * p), 0.7, icon("file", s.file || "")) + G(lerp(960, 1540, p), lerp(300, 410, p) - 40 * Math.sin(Math.PI * p), 0.7, icon("file", s.file || ""))
-        + (age > 0.9 ? G(960, 830, pop(age - 0.9), `<g transform="rotate(-5)"><rect x="-430" y="-80" width="860" height="160" rx="20" fill="rgba(5,6,13,.5)" stroke="${C.red}" stroke-width="12"/>${T(0, 38, s.warn, 110, { fill: C.red })}</g>`) : ""); }
+        + (age > 0.9 ? G(960, 830, pop(age - 0.9), `<g transform="rotate(-5)"><rect x="-430" y="-80" width="860" height="160" rx="20" fill="${C.stamp(0.5)}" stroke="${C.red}" stroke-width="12"/>${T(0, 38, s.warn, 110, { fill: C.red })}</g>`) : ""); }
     return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age, 900));
   },
   // A line chart that draws itself, then a stamp across it.
@@ -151,7 +212,7 @@ const BOARDS = {
       ${[0, 1, 2, 3].map((i) => `<path d="M300 ${420 + i * 120}H1620" stroke="${C.line}" stroke-opacity=".12" stroke-width="3"/>`).join("")}
       <path d="M${seen.join("L")}" fill="none" stroke="${s.color || C.red}" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${ex}" cy="${ey}" r="16" fill="${s.color || C.red}"/>
       ${(s.labels || []).map((l) => (last >= l.at ? `<g opacity="${clamp((last - l.at) / 0.6)}">${T(X(l.at), Y(pts[l.at]) - 40, l.text, 44, { font: "Elite" })}${l.below ? T(X(l.at), 856, l.below, 40, { font: "Elite", fill: C.dim }) : ""}</g>` : "")).join("")}
-      ${step >= 1 && s.stamp ? G(1180, 440, pop(since(1, step, age)), `<g transform="rotate(-8)"><rect x="-330" y="-84" width="660" height="168" rx="20" fill="rgba(5,6,13,.55)" stroke="${C.red}" stroke-width="12"/>${T(0, 38, s.stamp, 104, { fill: C.red })}</g>`) : ""}
+      ${step >= 1 && s.stamp ? G(1180, 440, pop(since(1, step, age)), `<g transform="rotate(-8)"><rect x="-330" y="-84" width="660" height="168" rx="20" fill="${C.stamp(0.55)}" stroke="${C.red}" stroke-width="12"/>${T(0, 38, s.stamp, 104, { fill: C.red })}</g>`) : ""}
       ${caption((s.captions || [])[step], age)}`);
   },
   // A paper: its title, a date stamped on it, and whoever wrote it.
@@ -188,13 +249,13 @@ const BOARDS = {
   block(s, step, age, total) {
     const rx = 12, S = 420;
     const turn = step >= 1 ? lerp(-28, -4, step > 1 ? 1 : ease(age / 0.8)) + 4 * Math.sin(total * 0.6) : -28 + 9 * Math.sin(total * 0.6);
-    const face = (tf, bg, inner = "") => `<div style="position:absolute;left:${-S / 2}px;top:${-S / 2}px;width:${S}px;height:${S}px;transform:${tf};background:${bg};border:6px solid ${C.line};border-radius:18px;box-shadow:inset 0 0 60px rgba(53,200,255,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px;text-align:center">${inner}</div>`;
+    const face = (tf, bg, inner = "") => `<div style="position:absolute;left:${-S / 2}px;top:${-S / 2}px;width:${S}px;height:${S}px;transform:${tf};background:${bg};border:6px solid ${C.line};border-radius:18px;box-shadow:inset 0 0 60px ${C.cubeGlow};display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px;text-align:center">${inner}</div>`;
     const a1 = since(1, step, age), text = s.message || "", shown = a1 > 0 ? text.slice(0, Math.floor(clamp(a1 / 2.2) * text.length)) : "";
-    const front = `<div style="font-family:Anton;font-size:44px;color:${C.yellow};letter-spacing:.06em">${esc(s.label)}</div><div style="font-family:Elite;font-size:27px;line-height:1.3;color:${C.white};margin-top:18px;min-height:150px;direction:ltr">${esc(shown)}</div><div style="font-family:Anton;font-size:34px;color:${C.pink};margin-top:10px">${esc(s.date)}</div>`;
+    const front = `<div style="font-family:Anton;font-size:44px;color:${tx(C.yellow)};letter-spacing:.06em">${esc(s.label)}</div><div style="font-family:Elite;font-size:27px;line-height:1.3;color:${C.white};margin-top:18px;min-height:150px;direction:ltr">${esc(shown)}</div><div style="font-family:Anton;font-size:34px;color:${tx(C.pink)};margin-top:10px">${esc(s.date)}</div>`;
     const scale = pop(total) * (step >= 1 ? 1.25 : 1);
     return `<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;perspective:1800px">${svg(heading(s.title, 1) + `<ellipse cx="960" cy="860" rx="${300 * scale}" ry="34" fill="${C.cyan}" opacity=".25" filter="url(#bglow)"/>` + caption((s.captions || [])[step], age, 905)).replace("<svg ", '<svg style="position:absolute;left:0;top:0" ')}
       <div style="position:absolute;left:960px;top:540px;transform-style:preserve-3d;transform:scale(${scale}) rotateX(${-rx}deg) rotateY(${turn}deg)">
-        ${face(`translateZ(${S / 2}px)`, "#141a44", front)}${face(`rotateY(180deg) translateZ(${S / 2}px)`, "#0d1230")}${face(`rotateY(90deg) translateZ(${S / 2}px)`, "#101638")}${face(`rotateY(-90deg) translateZ(${S / 2}px)`, "#101638")}${face(`rotateX(90deg) translateZ(${S / 2}px)`, "#1b2360")}${face(`rotateX(-90deg) translateZ(${S / 2}px)`, "#0a0d24")}
+        ${face(`translateZ(${S / 2}px)`, C.cube[0], front)}${face(`rotateY(180deg) translateZ(${S / 2}px)`, C.cube[1])}${face(`rotateY(90deg) translateZ(${S / 2}px)`, C.cube[2])}${face(`rotateY(-90deg) translateZ(${S / 2}px)`, C.cube[2])}${face(`rotateX(90deg) translateZ(${S / 2}px)`, C.cube[3])}${face(`rotateX(-90deg) translateZ(${S / 2}px)`, C.cube[4])}
       </div></div>`;
   },
   // A big number that counts, what it bought, and what that is worth now.
@@ -245,7 +306,7 @@ const BOARDS = {
         ${hs > 0 ? `<g opacity="${clamp(hs / 0.2)}">${T(W / 2 - 40, 172, s.hashLabel, 28, { anchor: "end", font: "Elite", fill: C.dim })}${T(W / 2 - 40, 220, h.slice(0, 8), 44, { anchor: "end", font: "Elite", fill: broken ? C.red : C.yellow })}</g>` : ""}</g>`;
       if (i > 0 && a > 0.4) { const cut = a4 > (i - 1) * 0.8 + 0.4 && a4 > 0, xa = x - W - gap + W / 2, xb = x - W / 2;
         body += `<path d="M${xa} 750C${xa + 60} 750 ${xb - 60} 660 ${xb} 660" fill="none" stroke="${cut ? C.red : C.pink}" stroke-width="7" stroke-dasharray="${cut ? "10 12" : "0"}" opacity="${clamp((a - 0.4) / 0.3)}"/>${cut ? G((xa + xb) / 2, 695, pop(a4 - (i - 1) * 0.8 - 0.4), T(0, 26, "✗", 80, { fill: C.red })) : ""}`; } });
-    return svg(heading(s.title, 1) + body + (a5 > 0 ? G(960, 540, pop(a5), `<g transform="rotate(-8)"><rect x="-360" y="-100" width="720" height="200" rx="24" fill="rgba(5,6,13,.8)" stroke="${C.red}" stroke-width="14"/>${T(0, 46, s.rejected, 130, { fill: C.red })}</g>`) : "") + caption((s.captions || [])[step], age, 900));
+    return svg(heading(s.title, 1) + body + (a5 > 0 ? G(960, 540, pop(a5), `<g transform="rotate(-8)"><rect x="-360" y="-100" width="720" height="200" rx="24" fill="${C.stamp(0.8)}" stroke="${C.red}" stroke-width="14"/>${T(0, 46, s.rejected, 130, { fill: C.red })}</g>`) : "") + caption((s.captions || [])[step], age, 900));
   },
   // The guessing race: machines try number after number until one finds a fingerprint that starts with enough zeros.
   //   0 the target  1 everyone guessing  2 one wins and is paid  3 the others check it at once
@@ -344,12 +405,12 @@ const BOARDS = {
     const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), x0 = 410, W = 1100, own = W * (s.share ?? 0.1), y = 470, h = 150;
     const burn = a2 > 0 ? ease(a2 / 1.2) : 0, loanW = a1 > 0 ? (W - own) * ease(a1 / 0.7) : 0, ownW = own * (1 - burn);
     return svg(`${heading(s.title, 1)}
-      ${a1 > 0 ? `<rect x="${x0 + (W - own) - loanW}" y="${y}" width="${loanW}" height="${h}" rx="16" fill="#3a4170"/>${T(x0 + (W - own) / 2, y + 96, s.loan, 54, { font: "Elite", fill: C.dim, opacity: clamp((a1 - 0.5) / 0.3) })}` : ""}
+      ${a1 > 0 ? `<rect x="${x0 + (W - own) - loanW}" y="${y}" width="${loanW}" height="${h}" rx="16" fill="${C.muted}"/>${T(x0 + (W - own) / 2, y + 96, s.loan, 54, { font: "Elite", fill: C.dim, opacity: clamp((a1 - 0.5) / 0.3) })}` : ""}
       ${G(x0 + W - own / 2, y + h / 2, pop(total), `<rect x="${-own / 2}" y="${-h / 2}" width="${ownW}" height="${h}" rx="16" fill="${a2 > 0 ? C.red : C.green}" transform="translate(${own - ownW} 0)"/>`)}
       ${T(x0 + W - own / 2, y - 40, a2 > 1.2 ? s.zero : s.mine, 50, { font: "Elite", fill: a2 > 1.2 ? C.red : C.green })}
       ${a1 > 0.7 ? `<g opacity="${clamp((a1 - 0.7) / 0.3)}"><path d="M${x0} ${y + h + 40}H${x0 + W}" stroke="${C.line}" stroke-width="5"/><path d="M${x0} ${y + h + 26}v28M${x0 + W} ${y + h + 26}v28" stroke="${C.line}" stroke-width="5"/>${T(x0 + W / 2, y + h + 110, s.total, 58, { fill: C.yellow })}</g>` : ""}
       ${a2 > 0 ? G(960, 300, pop(a2), `<rect x="-300" y="-56" width="600" height="112" rx="20" fill="${C.navy}" stroke="${C.red}" stroke-width="6"/>${T(0, 22, s.drop, 60, { fill: C.red })}`) : ""}
-      ${a3 > 0 ? G(960, 560, pop(a3), `<g transform="rotate(-8)"><rect x="-330" y="-96" width="660" height="192" rx="24" fill="rgba(5,6,13,.85)" stroke="${C.red}" stroke-width="14"/>${T(0, 44, s.stamp, 124, { fill: C.red })}</g>`) : ""}
+      ${a3 > 0 ? G(960, 560, pop(a3), `<g transform="rotate(-8)"><rect x="-330" y="-96" width="660" height="192" rx="24" fill="${C.stamp(0.85)}" stroke="${C.red}" stroke-width="14"/>${T(0, 44, s.stamp, 124, { fill: C.red })}</g>`) : ""}
       ${caption((s.captions || [])[step], age, 900)}`);
   },
   // Two camps side by side, one per step: what each says, in two or three short lines.
@@ -364,10 +425,10 @@ const BOARDS = {
     const a1 = since(1, step, age), a2 = since(2, step, age), a3 = since(3, step, age), mx = 960, my = 570;
     const items = [0, 1, 2, 3, 4, 5].map((i) => { const gone = i === 4 && a3 > 0; return gone ? "" : G(mx - 150 + (i % 3) * 110, my - 190 + Math.floor(i / 3) * 150, 0.42, icon("file", "")); }).join("");
     const cp = a1 > 0 ? ease(a1 / 0.8) : 0, drop = a3 > 0 ? ease(a3 / 0.6) : 0;
-    return svg(`${heading(s.title, 1)}<g transform="translate(0 ${(1 - pop(total)) * 40})"><rect x="${mx - 300}" y="${my - 330}" width="600" height="700" rx="30" fill="#232a63" stroke="${C.line}" stroke-width="6"/>
+    return svg(`${heading(s.title, 1)}<g transform="translate(0 ${(1 - pop(total)) * 40})"><rect x="${mx - 300}" y="${my - 330}" width="600" height="700" rx="30" fill="${C.body}" stroke="${C.line}" stroke-width="6"/>
       <rect x="${mx - 250}" y="${my - 280}" width="330" height="340" rx="14" fill="${C.ink}" stroke="${C.line}" stroke-opacity=".5" stroke-width="4"/>${items}
       <rect x="${mx + 130}" y="${my - 260}" width="120" height="60" rx="10" fill="${C.ink}"/><rect x="${mx + 160}" y="${my - 236}" width="60" height="12" rx="6" fill="${C.yellow}"/>
-      <circle cx="${mx + 190}" cy="${my - 90}" r="46" fill="${a2 > 0 ? C.green : "#3a4170"}"/>${a2 > 0 ? T(mx + 190, my - 68, "✓", 60, { fill: "#fff" }) : ""}
+      <circle cx="${mx + 190}" cy="${my - 90}" r="46" fill="${a2 > 0 ? C.green : C.muted}"/>${a2 > 0 ? T(mx + 190, my - 68, "✓", 60, { fill: "#fff" }) : ""}
       <rect x="${mx - 250}" y="${my + 150}" width="500" height="150" rx="14" fill="${C.ink}"/>
       ${a3 > 0 ? G(mx - 40, lerp(my + 30, my + 225, drop), 0.6, icon("file", "✓")) : ""}</g>
       ${a1 > 0 && cp < 1 ? G(lerp(1560, mx + 190, cp), lerp(300, my - 232, cp), 0.6, icon("coin")) : ""}
@@ -393,7 +454,7 @@ const BOARDS = {
     const cols = 12, rows = 4, a1 = since(1, step, age); let body = "";
     for (let i = 0; i < cols * rows; i++) { const x = 300 + (i % cols) * 120, y = 420 + Math.floor(i / cols) * 110, a = total - 0.2 - rnd(i * 3) * 0.9, dead = rnd(i * 7 + 1) < (s.share ?? 0.57), da = dead && a1 > 0 ? a1 - rnd(i * 11) * 1.6 : -1;
       if (a <= 0) continue;
-      body += da > 0 ? G(x, y, 0.4, `<circle r="74" fill="#3a4170"/>${T(0, 30, "✗", 90, { fill: "#8f96b8" })}`, `opacity="${lerp(1, 0.75, clamp(da / 0.3))}"`) : G(x, y, 0.4 * pop(a), icon("coin", C.gold, s.letter || "$")); }
+      body += da > 0 ? G(x, y, 0.4, `<circle r="74" fill="${C.muted}"/>${T(0, 30, "✗", 90, { fill: "#8f96b8" })}`, `opacity="${lerp(1, 0.75, clamp(da / 0.3))}"`) : G(x, y, 0.4 * pop(a), icon("coin", C.gold, s.letter || "$")); }
     return svg(`${heading(s.title, 1)}${G(960, 290, pop(total), T(0, 0, s.total, 70, { fill: C.yellow }))}${body}${a1 > 0 ? G(960, 930, pop(a1 - 1), T(0, 0, s.dead, 78, { fill: C.red })) : ""}`);
   },
   // A sound becomes numbers: the wave, the points measured on it, then only the numbers.
@@ -447,7 +508,7 @@ const BOARDS = {
       [[-17,15],[-16,24],[-6,35],[10,37],[20,32],[32,31],[35,28],[43,12],[51,11],[40,-4],[39,-15],[33,-26],[20,-35],[17,-29],[12,-17],[9,-1],[9,4],[-8,4],[-13,9]],
       [[114,-22],[122,-18],[131,-12],[137,-16],[142,-11],[146,-19],[153,-27],[150,-37],[140,-38],[131,-32],[116,-35]],
       [[-55,60],[-43,60],[-22,70],[-20,80],[-45,83],[-68,78]], [[-5,50],[1,51],[-2,58],[-6,57]], [[130,32],[140,36],[142,44],[136,36]]];
-    const land = LAND.map((p) => `<path d="M${p.map(([lo, la]) => `${X(lo)} ${Y(la)}`).join("L")}Z" fill="#27306e" stroke="${C.line}" stroke-opacity=".45" stroke-width="3"/>`).join("");
+    const land = LAND.map((p) => `<path d="M${p.map(([lo, la]) => `${X(lo)} ${Y(la)}`).join("L")}Z" fill="${C.land}" stroke="${C.line}" stroke-opacity=".45" stroke-width="3"/>`).join("");
     const CAB = s.cables || [[[-74,40],[-5,50]], [[-70,42],[-9,39]], [[-38,-4],[-9,38]], [[-80,26],[-38,-4]], [[5,43],[32,31]], [[32,30],[43,12]], [[43,12],[73,19]], [[73,19],[104,1]], [[104,1],[114,22]], [[114,22],[140,36]], [[-9,38],[-17,15],[3,5],[18,-34]], [[18,-34],[40,-4],[73,19]], [[104,1],[151,-34]], [[-118,34],[-176,30]], [[140,36],[176,30]], [[-123,46],[-176,48]], [[142,42],[176,48]]];
     const cut = s.cut ?? 5; let cab = "";
     CAB.forEach((c, i) => { const a = a1 - i * 0.18; if (a1 < 0 || a <= 0) return; const dead = a3 > 0 && i === cut, pts = c.map(([lo, la]) => [X(lo), Y(la)]);
@@ -506,11 +567,202 @@ const BOARDS = {
     return svg(`${heading(s.title, 1)}<rect x="${x0}" y="${y}" width="${W}" height="${h}" rx="12" fill="${C.navy}" stroke="${C.line}" stroke-opacity=".4" stroke-width="4"/>${body}${mark(s.good || 150, s.goodLabel || "", C.green)}${s.bad ? mark(s.bad, s.badLabel || "", C.red) : ""}
       ${G(960, 270, 1, T(0, 0, (s.totalLabel || "") + " " + shown + " ms", 60, { fill: shown > (s.good || 150) ? C.red : C.yellow }))}`);
   },
+  // ---- Boards for a picture that has to work in any language (explain-crypto-01-world): each tells its story with drawings,
+  // and the only text is a name, a year, a number or a word or two.
+
+  // A title card made of pictures: the coin in the middle, and on either side the two things it does without (`left`, `right`,
+  // icon names, default a bank and a bank note), each struck through in turn. `title` and `sub` (e.g. "1 / 5") under it.
+  cover(s, step, age, total) {
+    const side = (x, name, a, ca) => (a <= 0 ? "" : G(x, 430, 1.25 * pop(a), `<circle r="150" fill="${C.panel}" opacity=".7"/>${icon(name)}`) + strike(x, 430, ca, 120));
+    return svg(`<circle cx="960" cy="420" r="230" fill="${C.yellow}" opacity=".28" filter="url(#bglow)"/>
+      ${G(960, 420, 2.1 * pop(total), `<g transform="rotate(${8 * Math.sin(total * 1.3)})">${icon("coin", C.gold, s.coin || "B")}</g>`)}
+      ${side(470, s.left || "bank", total - 0.7, total - 1.2)}${side(1450, s.right || "cash", total - 0.9, total - 1.5)}
+      <g opacity="${clamp((total - 0.3) / 0.3)}">${T(960, 790, s.title, 150, { fill: C.yellow })}</g>
+      <rect x="${960 - 260 * ease((total - 0.5) / 0.5)}" y="818" width="${520 * ease((total - 0.5) / 0.5)}" height="10" rx="5" fill="${C.pink}"/>
+      <g opacity="${clamp((total - 0.7) / 0.3)}">${T(960, 910, s.sub, 64, { fill: C.dim })}</g>`);
+  },
+  // Where money came from, in pictures, one scene per step:
+  //   0 a fish swapped for a loaf   1 the baker wants no fish: no deal   2 salt, a shell, a stone wheel bigger than a car
+  //   3 gold   4 the gold goes to a trusted man's safe and his receipt changes hands   5 `year`: the note is cut loose from the gold
+  //   6 the note becomes numbers on a screen (`balance`)
+  money(s, step, age, total) {
+    const a = age, st = Math.min(step, 6), fade = (t) => clamp(t / 0.35);
+    let body = "", head = "";
+    const who = (x, y, col, sc = 1.15, extra = "") => G(x, y, sc, icon("person", col), extra);
+    if (st <= 1) {
+      const A = 600, B = 1320, y = 600, p = st === 0 ? ease((a - 0.5) / 1.1) : 0, ya = 470;
+      const fx = lerp(A + 170, B - 170, p), fy = ya - 170 * Math.sin(Math.PI * p), bx = lerp(B - 170, A + 170, p), by = ya + 90 * Math.sin(Math.PI * p);
+      const shake = st === 1 ? 14 * Math.sin(a * 42) * Math.exp(-Math.max(0, a - 0.5) * 4) * (a > 0.5 ? 1 : 0) : 0, slump = st === 1 ? ease((a - 1.0) / 0.6) : 0;
+      body += who(A, y + 18 * slump, C.cyan, 1.15 - 0.08 * slump, `opacity="${1 - 0.35 * slump}"`) + who(B + shake, y, C.pink);
+      body += G(fx, fy, 0.75, icon("fish")) + G(bx, by, 0.7, icon("bread"));
+      if (st === 0) body += `<g opacity="${clamp(total / 0.4) * (1 - clamp((p - 0.8) / 0.2) * 0.6)}"><path d="M800 410Q960 330 1120 410" fill="none" stroke="${C.line}" stroke-width="7" stroke-dasharray="14 12"/><path d="M1120 410l-30 -2l14 -24z" fill="${C.line}"/><path d="M1120 520Q960 590 800 520" fill="none" stroke="${C.line}" stroke-width="7" stroke-dasharray="14 12"/><path d="M800 520l30 4l-16 22z" fill="${C.line}"/></g>`;
+      else body += `<path d="M800 430H${lerp(800, 1100, ease(a / 0.4))}" stroke="${C.line}" stroke-width="7" stroke-dasharray="14 12"/>` + strike(960, 440, a - 0.45, 70)
+        + (a > 1.1 ? G(A, 330, pop(a - 1.1), `<path d="M-90 40Q-100 -60 0 -64Q100 -60 90 40Q60 70 0 64L-30 92L-26 62Q-80 58 -90 40Z" fill="${C.navy}" stroke="${C.line}" stroke-width="5"/>${G(0, -2, 0.42, icon("bread"))}`) + strike(A, 328, a - 1.4, 46) : "");
+    } else if (st === 2) {
+      body += G(480, 560, 1.1 * pop(a - 0.1), icon("salt")) + G(820, 590, 0.9 * pop(a - 0.45), icon("shell"))
+        + G(1250, 520, 2.1 * pop(a - 0.8), icon("stone")) + G(1440, 700, 0.62 * pop(a - 1.3), icon("car", C.yellow));
+    } else if (st === 3) {
+      const g = pop(a);
+      body += `<circle cx="960" cy="560" r="260" fill="${C.yellow}" opacity=".25" filter="url(#bglow)"/>` + G(960, 600, 1.9 * g, `${G(-70, 40, 1, icon("gold"))}${G(70, 40, 1, icon("gold"))}${G(0, -50, 1, icon("gold"))}`);
+      for (let k = 0; k < 5; k++) { const ph = (total * 0.9 + k * 0.23) % 1, x = 960 + [-180, 150, -60, 210, 40][k], y = 470 + [40, -10, -60, 120, 150][k], r = 26 * Math.sin(Math.PI * ph);
+        body += `<path d="M${x} ${y - r}L${x + r * 0.25} ${y - r * 0.25}L${x + r} ${y}L${x + r * 0.25} ${y + r * 0.25}L${x} ${y + r}L${x - r * 0.25} ${y + r * 0.25}L${x - r} ${y}L${x - r * 0.25} ${y - r * 0.25}Z" fill="#fff" opacity=".9"/>`; }
+    } else if (st === 4) {
+      const gp = ease(a / 0.8), px = [1010, 1250, 1490];
+      body += who(410, 600, "#8f96b8", 1, "") + G(410, 600, 1, icon("banker")) + G(640, 590, 1.3, icon("safe"));
+      if (gp < 1) body += G(lerp(960, 640, gp), lerp(560, 590, gp), 1.2 * (1 - 0.7 * gp), icon("gold"));
+      px.forEach((x, i) => { body += who(x, 640, [C.cyan, C.pink, C.green][i], 0.85 * pop(a - 0.5 - i * 0.12)); });
+      if (a > 0.9) { const u = (a - 0.9) * 1.1, k = Math.floor(u), f = ease(u - k), from = k === 0 ? [700, 520] : [px[(k - 1) % 3], 450], to = [px[k % 3], 450];
+        body += G(lerp(from[0], to[0], f), lerp(from[1], to[1], f) - 90 * Math.sin(Math.PI * f), 0.55, icon("cash")); }
+    } else if (st === 5) {
+      const br = a - 0.9, fall = br > 0 ? br * br * 420 : 0, bob = br > 0 ? 10 * Math.sin(total * 2.4) - Math.min(40, br * 60) : 0;
+      head = heading(s.year, a, 160);
+      body += G(960, 430 + bob, 1.6, icon("cash"));
+      for (let k = 0; k < 5; k++) { const y = 520 + k * 44, off = br > 0 ? (k < 2 ? -Math.min(40, br * 60) : br * br * 420) : 0;     // the chain: the top links stay with the note, the rest fall with the gold
+        if (k === 2 && br > 0) continue;
+        body += `<rect x="944" y="${y + off}" width="32" height="40" rx="16" fill="none" stroke="#8f96b8" stroke-width="9" opacity="${br > 0 && k > 2 ? clamp(1 - br * 0.8) : 1}"/>`; }
+      body += G(960, 790 + fall, 1.3, icon("gold"), `opacity="${br > 0 ? clamp(1 - br * 0.8) : 1}"`) + (br > 0 && br < 0.6 ? G(960, 610, pop(br), T(0, 26, "✂", 80, { fill: C.red })) : "");
+    } else {
+      const sh = ease(a / 0.7);
+      body += G(960, 540, 2.3 * pop(a - 0.2), icon("mobile", C.white, C.panel)) + G(lerp(960, 960, sh), lerp(300, 520, sh), 1.2 * (1 - sh), icon("cash"));
+      const v = (s.balance || 1204.5) * ease((a - 0.5) / 1.2), txt = "$" + v.toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      body += a > 0.5 ? T(960, 560, txt, 38, { fill: C.green }) + `<path d="M890 600H1030M890 640H1000" stroke="${C.dim}" stroke-width="10" stroke-linecap="round" opacity=".5"/>` : "";
+      body += G(560, 580, 1.1 * pop(a - 1.0), icon("laptop")) + (a > 1.2 ? T(560, 570, "0101 1101", 30, { font: "Elite", fill: C.green }) : "")
+        + G(1360, 580, 0.9 * pop(a - 1.3), icon("exchange"));
+    }
+    return svg(head + `<g opacity="${fade(st === 0 ? total : a + 0.2)}">${body}</g>`);
+  },
+  // Money that the printing press made worthless:
+  //   0 a press runs and notes pile up   1 one note with all its zeros (`note`)   2 a wheelbarrow of those notes = one bus ticket
+  inflation(s, step, age, total) {
+    let body = "";
+    const note = (x, y, sc, rot = 0) => G(x, y, sc, `<g transform="rotate(${rot})">${icon("cash")}</g>`);
+    if (step === 0) {
+      body += G(640, 560, 1.7 * pop(total), icon("press")) + `<rect x="800" y="${560 - 4 + 3 * Math.sin(total * 30)}" width="70" height="20" fill="#4d5478"/>`;
+      const n = Math.min(26, Math.floor(total * 6));
+      for (let k = 0; k < n; k++) body += note(1250 + (rnd(k) - 0.5) * 120, 800 - k * 13, 0.75, (rnd(k * 3) - 0.5) * 24);
+      for (let k = 0; k < 4; k++) { const ph = (total * 1.6 + k / 4) % 1; body += note(lerp(860, 1250, ph), 560 - 160 * Math.sin(Math.PI * ph) + ph * 120, 0.55, ph * 200); }
+    } else if (step === 1) {
+      const p = ease(age / 0.5), digits = String(s.note || "100 000 000 000 000"), shown = digits.slice(0, Math.max(1, Math.ceil(clamp((age - 0.3) / 1.2) * digits.length)));
+      body += G(lerp(-400, 960, p), 540, 1, `<rect x="-720" y="-230" width="1440" height="460" rx="30" fill="#3fae6a"/><rect x="-680" y="-190" width="1360" height="380" rx="18" fill="none" stroke="#d7ffe6" stroke-width="8" opacity=".75"/>
+        <circle cx="-520" cy="0" r="110" fill="#d7ffe6" opacity=".85"/>${T(-520, 46, s.currency || "$", 140, { fill: "#1f6b3e" })}${T(110, 50, shown, 128, { fill: "#0f3d22" })}`);
+    } else {
+      const roll = ease(age / 1.0), x = lerp(-260, 680, roll), wob = (1 - roll) * 6 * Math.sin(age * 20);
+      let pile = ""; for (let k = 0; k < 22; k++) pile += note(-100 + (k % 5) * 50 + (rnd(k) - 0.5) * 30, -70 - Math.floor(k / 5) * 34 - rnd(k + 9) * 10, 0.5, (rnd(k * 5) - 0.5) * 30);
+      body += G(x, 650 + wob, 1.5, pile + icon("barrow"));
+      body += age > 0.9 ? G(1040, 610, pop(age - 0.9), T(0, 40, "=", 150, { fill: C.dim })) : "";
+      body += G(1380, 520, 1.25 * pop(age - 0.2), icon("bus")) + (age > 1.2 ? G(1380, 760, 1.1 * pop(age - 1.2), icon("ticket")) : "") + (age > 1.2 ? G(1490, 700, 0.5 * pop(age - 1.5), T(0, 0, "×1", 110, { fill: C.pink })) : "");
+    }
+    return svg(heading(s.title, 1) + body + caption((s.captions || [])[step], age, 990));
+  },
+  // When the bank keeps the money:
+  //   0 `a` (place and year): a bank with its shutter coming down, people outside   1 a pile of savings; above `cut` a blade takes
+  //   `share` of it   2 `b`: the doors chained, the dollars behind bars, the years going by (`from` .. `to`)
+  //   3 a message crosses the planet in `fast`; a payment between two banks takes `slow`, on a snail
+  bankrun(s, step, age, total) {
+    const facade = (x, y, sc, shut, lock, inside = "") => G(x, y, sc, `<path d="M-280 -150L0 -280L280 -150Z" fill="${C.white}"/><rect x="-270" y="-150" width="540" height="34" fill="${C.white}"/>
+      <rect x="-70" y="-100" width="140" height="240" fill="${C.ink}" opacity=".85"/>${inside}
+      ${[-210, -120, 120, 210].map((cx) => `<rect x="${cx - 24}" y="-110" width="48" height="250" rx="6" fill="${C.white}"/>`).join("")}<rect x="-300" y="140" width="600" height="36" rx="6" fill="${C.white}"/>
+      ${shut > 0 ? `<rect x="-252" y="-110" width="504" height="${250 * shut}" fill="${C.muted}" stroke="${C.line}" stroke-width="4"/>${Array.from({ length: Math.floor(250 * shut / 26) }, (_, k) => `<path d="M-252 ${-110 + (k + 1) * 26}H252" stroke="${C.line}" stroke-width="3" opacity=".6"/>`).join("")}` : ""}
+      ${lock > 0 ? G(0, 120, 0.5 * pop(lock), icon("lock", C.red)) : ""}`);
+    let body = "", title = "";
+    if (step === 0) { title = s.a;
+      body += facade(960, 560, 1, ease((age - 0.4) / 1.4), age - 1.9);
+      [[560, C.cyan], [1340, C.pink], [1460, C.green]].forEach(([x, c], i) => { const a = age - 1.0 - i * 0.25; body += G(x, 800, 0.6 * pop(a), icon("person", c)) + (a > 0.4 ? G(x, 660, pop(a - 0.4), T(0, 30, "?", 90, { fill: C.red })) : ""); });
+    } else if (step === 1) { title = s.a;
+      const N = 14, keep = 5, cw = 260, ch = 36, cx = 900, y0 = 860, share = s.share ?? 0.475, cutX = cx - cw / 2 + cw * (1 - share), blade = ease((age - 0.5) / 0.6), slide = ease((age - 1.3) / 1.0);
+      body += facade(1600, 430, 0.42, 1, 1);
+      for (let k = 0; k < N; k++) { const y = y0 - k * ch, top = k >= keep, a = age - k * 0.04;
+        if (a <= 0) continue;
+        const coin = (x0, w, dx, op) => `<rect x="${x0 + dx}" y="${y - ch + 4}" width="${w}" height="${ch - 6}" rx="12" fill="${C.gold}" stroke="#b07d10" stroke-width="4" opacity="${op}"/>`;
+        if (!top || slide <= 0) body += coin(cx - cw / 2, cw, 0, 1);
+        else body += coin(cx - cw / 2, cutX - (cx - cw / 2), 0, 1) + coin(cutX + 6, cx + cw / 2 - cutX - 6, slide * 300, 1 - 0.55 * slide); }
+      const ly = y0 - keep * ch + 2;
+      body += `<path d="M${cx - 230} ${ly}H${cx + 200}" stroke="${C.green}" stroke-width="6" stroke-dasharray="16 12"/>${T(cx - 250, ly + 16, s.cut || "€100,000", 46, { anchor: "end", fill: C.green })}`;
+      if (blade > 0 && slide < 1) { const by = lerp(260, ly - 20, blade); body += `<g transform="translate(${cutX} ${by})"><path d="M-10 -150H10V0L0 30L-10 0Z" fill="#c9cee6" stroke="#4d5478" stroke-width="4"/><rect x="-20" y="-220" width="40" height="80" rx="10" fill="#8a5a1c"/></g>`; }
+      if (slide > 0) body += `<g opacity="${clamp(slide / 0.3)}">${T(cutX + 160 + slide * 300, ly - 360, "−" + Math.round(share * 1000) / 10 + "%", 84, { fill: C.red })}</g>`;
+    } else if (step === 2) { title = s.b;
+      const bars = `${[-50, -18, 14, 46].map((x) => `<rect x="${x - 5}" y="-100" width="10" height="240" fill="#8f96b8"/>`).join("")}`, money = `${G(-20, 40, 0.42, icon("cash"))}${G(20, 90, 0.42, icon("cash"))}`;
+      body += facade(960, 560, 1, 0, 0, money + bars) + `<path d="M-60 0L60 60M60 0L-60 60" transform="translate(960 560)" stroke="#8f96b8" stroke-width="12" stroke-linecap="round" opacity="${clamp(age / 0.5)}"/>` + (age > 0.4 ? G(960, 610, 0.5 * pop(age - 0.4), icon("lock", C.red)) : "");
+      const from = s.from ?? 2019, to = s.to ?? 2025, yr = Math.min(to, from + Math.floor(Math.max(0, age - 0.8) * 1.3));
+      body += G(1460, 360, 0.85 * pop(age - 0.6), icon("calendar", C.red, yr)) + G(470, 790, 0.62, icon("person", C.cyan)) + (age > 1.2 ? G(470, 650, pop(age - 1.2), T(0, 30, "?", 90, { fill: C.red })) : "");
+    } else {
+      const fly = (age % 1.6) / 1.0, f = ease(clamp(fly)), crawl = ease(age / 9);
+      body += G(500, 380, 0.75, icon("mobile")) + G(1420, 380, 0.75, icon("mobile")) + `<path d="M590 360Q960 220 1330 360" fill="none" stroke="${C.line}" stroke-width="5" stroke-dasharray="12 12" opacity=".6"/>`
+        + (fly <= 1 ? G(lerp(590, 1330, f), lerp(360, 360, f) - 140 * Math.sin(Math.PI * f), 0.42, icon("envelope", C.cyan)) : "") + T(960, 220, s.fast || "1 s", 64, { fill: C.cyan });
+      body += G(500, 760, 0.6, icon("bank")) + G(1420, 760, 0.6, icon("bank")) + `<path d="M600 840H1320" stroke="${C.line}" stroke-width="5" stroke-dasharray="4 16" opacity=".6"/>`
+        + G(lerp(640, 1240, crawl), 800, 0.6, icon("snail") + G(-10, -110, 0.5, icon("coin"))) + T(960, 950, s.slow || "3 DAYS", 64, { fill: C.red });
+    }
+    return svg(heading(title, 1) + body + caption((s.captions || [])[step], age, 990));
+  },
+  // The three jobs of money, one little action each, a panel per step: 0 pay (a note goes over, a loaf comes back)
+  //   1 put a price on things (a tag swings on a loaf)   2 save (a coin drops into a jar; the days go by; it is still there).
+  //   `labels` are optional words under the panels.
+  jobs(s, step, age, total) {
+    const xs = s.x || [470, 890, 1310], y = 540;
+    const panel = (i, inner) => { const a = since(i, step, age); if (a < 0) return ""; const now = i === Math.min(step, 2);
+      return `<g transform="translate(${xs[i]} ${y}) scale(${0.94 + 0.06 * pop(a)})" opacity="${clamp(a / 0.2)}"><rect x="-200" y="-250" width="400" height="500" rx="30" fill="${C.navy}" stroke="${now ? C.yellow : C.line}" stroke-opacity="${now ? 1 : 0.4}" stroke-width="6"/>
+        <circle cx="0" cy="-250" r="40" fill="${now ? C.yellow : C.panel}"/>${T(0, -232, String(i + 1), 54, { fill: C.ink })}${inner(a)}${(s.labels || [])[i] ? T(0, 226, s.labels[i], 44, { fill: now ? C.white : C.dim }) : ""}</g>`; };
+    const pay = (a) => { const p = ease((a - 0.3) / 0.8), q = ease((a - 1.3) / 0.8);
+      return G(-100, 80, 0.75, icon("person", C.cyan)) + G(100, 80, 0.75, icon("person", C.pink)) + G(lerp(-80, 80, p), -50 - 80 * Math.sin(Math.PI * p), 0.62, icon("cash")) + (a > 1.3 ? G(lerp(80, -80, q), -50 - 70 * Math.sin(Math.PI * q), 0.55, icon("bread")) : ""); };
+    const price = (a) => `<path d="M40 -150L60 -40" stroke="${C.dim}" stroke-width="4"/>${G(0, 70, 1.3, icon("bread"))}<g transform="translate(60 -150) rotate(${16 * Math.sin(a * 3.2) * Math.exp(-a * 0.6)}) translate(-60 150)">${G(74, -50, 0.62 * pop(a - 0.2), icon("tag"))}</g>`;
+    const save = (a) => { const drop = clamp((a - 0.2) / 0.55), cy = lerp(-200, 106, drop * drop), day = Math.max(0, Math.floor((a - 0.9) / 1.3)), ph = ((a - 0.9) / 1.3) % 1;
+      return (a > 0.9 ? G(lerp(-150, 150, ph), -150 - 50 * Math.sin(Math.PI * ph), 0.28, day % 2 ? `<circle r="70" fill="#c9cee6"/><circle cx="26" cy="-14" r="60" fill="${C.navy}"/>` : `<circle r="70" fill="${C.yellow}"/>`) : "")
+        + G(0, 66, 1.1, icon("jar")) + G(0, cy, 0.5, icon("coin"))
+        + (a > 0.9 ? G(130, -150, 0.36, icon("calendar", C.red, day + 1)) : ""); };
+    return svg(heading(s.title, 1) + panel(0, pay) + panel(1, price) + panel(2, save));
+  },
+  // Words from the humans' dictionary without the dictionary: the word in big letters, an optional `root` under it, and a little
+  // scene for what it means. One word per step; `pic` is "hidden" (a message locked into gibberish) or "p2p" (a coin straight
+  // from one person to another, the bank in the middle dropping out).
+  glossary(s, step, age, total) {
+    const it = s.items[Math.min(step, s.items.length - 1)], a = age;
+    let pic = "";
+    if (it.pic === "hidden") {
+      const paper = (x, inner, a2) => G(x, 640, pop(a2), `<rect x="-120" y="-150" width="240" height="300" rx="16" fill="${C.paper}" stroke="#cfc8b4" stroke-width="5"/>${inner}`);
+      const lines = [-80, -30, 20, 70].map((y, k) => `<rect x="-80" y="${y}" width="${k === 3 ? 100 : 160}" height="18" rx="9" fill="#8f96b8"/>`).join("");
+      const tick = Math.floor(total * 8), junk = [-80, -30, 20, 70].map((y, k) => Array.from({ length: 5 }, (_, j) => `<rect x="${-80 + j * 34}" y="${y}" width="26" height="20" rx="4" fill="${[C.pink, C.cyan, C.green, C.yellow][Math.floor(rnd(tick * 13 + k * 7 + j) * 4)]}"/>`).join("")).join("");
+      pic = paper(560, lines, a - 0.2) + (a > 0.5 ? `<path d="M720 640H820" stroke="${C.line}" stroke-width="8" stroke-linecap="round"/><path d="M836 640l-26 -18v36z" fill="${C.line}"/>` : "")
+        + G(960, 640, 1.1 * pop(a - 0.6), icon("lock")) + (a > 0.9 ? `<path d="M1100 640H1200" stroke="${C.line}" stroke-width="8" stroke-linecap="round"/><path d="M1216 640l-26 -18v36z" fill="${C.line}"/>` : "") + paper(1360, junk, a - 1.0);
+    } else {
+      const drop = ease((a - 0.6) / 0.7), q = Math.max(0, a - 1.2), ph = (q / 1.4) % 2, f = ease(ph < 1 ? ph : 2 - ph);
+      pic = G(560, 660, 1.15 * pop(a - 0.1), icon("person", C.cyan)) + G(1360, 660, 1.15 * pop(a - 0.2), icon("person", C.pink))
+        + G(960, 640 + 260 * drop, 0.9 * pop(a - 0.3), icon("bank"), `opacity="${1 - 0.75 * drop}"`) + strike(960, 640 + 260 * drop, a - 0.9, 100)
+        + (a > 1.2 ? `<path d="M700 560H1220" stroke="${C.line}" stroke-width="6" stroke-dasharray="14 12" opacity=".6"/>` + G(lerp(700, 1220, f), 560 - 60 * Math.sin(Math.PI * f), 0.5, icon("coin")) : "");
+    }
+    return svg(`${G(960, 270, pop(a), T(0, 0, it.word, 140, { fill: C.yellow }))}${it.root ? `<g opacity="${clamp((a - 0.3) / 0.3)}">${T(960, 360, it.root, 50, { font: "Elite", fill: C.dim })}</g>` : ""}${pic}
+      ${T(960, 1010, s.items.map((_, i) => (i === Math.min(step, s.items.length - 1) ? "●" : "○")).join("  "), 36, { fill: C.dim })}`);
+  },
+  // The recap as three pictures that come in on the narrator's "one, two, three" (`at`: seconds after the board appears):
+  //   1 two people and the ledger between them   2 the ledger kept by a bank   3 the ledger copied to everyone. `labels` optional.
+  recap(s, step, age, total) {
+    const xs = [420, 900, 1380], at = s.at || [0.3, 3, 6];
+    const panel = (i, inner) => { const a = total - at[i]; if (a <= 0) return ""; const now = i === 2 ? true : total < at[i + 1];
+      return `<g transform="translate(${xs[i]} 400) scale(${0.94 + 0.06 * pop(a)})" opacity="${clamp(a / 0.2) * (now ? 1 : 0.75)}"><rect x="-210" y="-210" width="420" height="420" rx="30" fill="${C.navy}" stroke="${now ? C.yellow : C.line}" stroke-opacity="${now ? 1 : 0.4}" stroke-width="6"/>
+        <circle cx="0" cy="-210" r="40" fill="${now ? C.yellow : C.panel}"/>${T(0, -192, String(i + 1), 54, { fill: C.ink })}${inner(a)}${(s.labels || [])[i] ? T(0, 290, s.labels[i], 48, { fill: now ? C.white : C.dim }) : ""}</g>`; };
+    const one = (a) => G(-105, 100, 0.72, icon("person", C.cyan)) + G(105, 100, 0.72, icon("person", C.pink)) + G(0, -50, 0.8, icon("book")) + (a > 0.5 ? `<path d="M-40 -60l22 22l46 -50" fill="none" stroke="${C.green}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="120" stroke-dashoffset="${120 * (1 - ease((a - 0.5) / 0.4))}"/>` : "");
+    const two = (a) => G(0, -20, 1.3, icon("bank")) + G(0, 120, 0.62 * pop(a - 0.3), icon("book")) + (a > 0.6 ? G(130, 120, 0.4 * pop(a - 0.6), icon("lock")) : "");
+    const three = (a) => { let o = G(0, 10, 0.6, icon("book")); for (let k = 0; k < 6; k++) { const th = k / 6 * Math.PI * 2 - Math.PI / 2, x = Math.cos(th) * 150, y = Math.sin(th) * 130 + 30, p = ease((a - 0.3 - k * 0.12) / 0.5);
+        o += G(x, y + 20, 0.4 * pop(a - k * 0.1), icon("person", [C.cyan, C.pink, C.green, C.yellow, C.red, C.line][k])) + (p > 0 ? G(lerp(0, x * 0.8, p), lerp(0, y * 0.8 - 30, p), 0.2, icon("book")) : ""); }
+      return o; };
+    return svg(panel(0, one) + panel(1, two) + panel(2, three));
+  },
+  // The closing frame without a sentence: `title` (e.g. "NEXT"), `next` (e.g. "2 / 5"), and `icons` for what the next report is about,
+  // with the same room as `endcard` for the platform's end-screen elements.
+  endnext(s, step, age, total) {
+    const ic = s.icons || [], n = ic.length;
+    return svg(`${G(960, 130, pop(total), T(0, 0, s.title, 96, { fill: C.yellow }) + T(0, 66, s.next || "", 50, { fill: C.dim }))}
+      ${ic.map((name, i) => G(960 + (i - (n - 1) / 2) * 190, 300, 0.55 * pop(total - 0.4 - i * 0.2), icon(name))).join("")}
+      <rect x="250" y="390" width="760" height="428" rx="24" fill="none" stroke="${C.line}" stroke-width="5" stroke-dasharray="20 16" opacity=".5"/><circle cx="1420" cy="604" r="170" fill="none" stroke="${C.pink}" stroke-width="5" stroke-dasharray="20 16" opacity=".6"/>
+      <g opacity="${clamp((total - 0.6) / 0.3)}">${T(960, 930, s.note || "", 46, { font: "Elite", fill: C.dim })}</g>`);
+  },
 };
 
+// Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
+export function useTheme(theme) { C = themeOf(theme); return C; }
 export function board(spec, step, age, total, cfg = {}) {
+  useTheme(cfg.theme);
   const fn = BOARDS[spec.kind]; if (!fn) return `<div style="color:#fff;font:40px Anton;padding:80px">unknown board: ${esc(spec.kind)}</div>`;
   return fn(spec, step, age, total, cfg);
 }
 export const BOARD_KINDS = Object.keys(BOARDS);
-export { icon };
+export { icon, THEMES };

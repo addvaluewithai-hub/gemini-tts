@@ -450,6 +450,14 @@ so any frame can be rendered alone:
 | `packets` | a message cut into numbered packets, each by its own path, put back in order; one can be lost (`lose`) |
 | `pixels` | a picture as a grid of coloured squares, a close look at their numbers, then only what changed |
 | `budget` | where the milliseconds go: a bar that grows a part at a time against a "natural" and a "limit" line |
+| `cover` | a title card in pictures: the coin, and the two things it does without (`left`, `right`) struck through; `title`, `sub` |
+| `money` | where money came from, a scene per step: fish for bread, no deal, salt/shell/stone, gold, the safe and its receipt, `year` the note is cut loose, numbers on a screen |
+| `inflation` | a printing press piling up notes, one note with all its zeros (`note`), a wheelbarrow of them = one bus ticket |
+| `bankrun` | `a`: shutters come down on a bank; savings above `cut` sliced by `share`; `b`: doors chained while the years go by; a message in `fast`, a payment on a snail in `slow` |
+| `jobs` | the three jobs of money as three actions: pay (note over, loaf back), price (a tag on bread), save (a coin in a jar, still there days later); optional `labels` |
+| `glossary` | a word per step in big Latin letters, an optional `root`, and a small scene for its meaning (`pic`: `hidden` or `p2p`) |
+| `recap` | three pictures that come in at `at` seconds: the ledger between two people, kept by a bank, copied to everyone |
+| `endnext` | the closing frame without a sentence: `title`, `next` and `icons` for what the next report is about, with room for end-screen elements |
 
 In a storyboard, boards are named once under `boards` and used by beats:
 
@@ -467,6 +475,19 @@ during a board: `right` or `left` (leaning in from that edge) or `pip` (seated
 small in the corner); without it he is only heard. `ending.card` closes the
 episode on an end card, and `tail` sets how long it holds.
 `cues/explain-crypto-01-ar.json` is the first episode made this way.
+
+### Themes
+
+`"theme": "day"` at the top of a storyboard draws the episode on a light set: the boards take the theme's palette
+and the studio (wall, desk, chip, brand, the backdrop behind the boards) takes its colours. Themes live in
+`THEMES` in `boards.js`: the colours the boards use, a `text` map that turns a bright fill (yellow, cyan, green)
+into a darker ink when it is used for text on a light ground, and `studio`, CSS variables that `studio.html`
+applies under `#frame.themed`. Without a theme nothing changes. A new theme is one more entry there; a storyboard
+can also pass an object of colours instead of a name.
+
+For a picture that has to work in every audio language (`explain-crypto-01-world`): a story's chip can carry an
+`icon` (`"story": { "n": 1, "tag": "MONEY", "icon": "cash" }`), a `ledger` row a `color` instead of a name, and
+`ending.card` a `kind` of its own (`endnext`).
 
 ### Taking out the dead air
 

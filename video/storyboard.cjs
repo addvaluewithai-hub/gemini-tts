@@ -88,7 +88,7 @@ if (cmd === "cues") {
   else if (sb.ending) edit.push({ t: Math.round((last + 0.25) * 100) / 100, shot: "wide", duck: !!sb.ending.duck, emote: "sly" }, ...(sb.ending.lurk ? [{ t: Math.round((last + 1.0) * 100) / 100, lurk: true }] : []));
   const epRel = path.relative(path.dirname(path.resolve(b)), sb.slidesFrom ? path.resolve(dir, sb.slidesFrom) : dir);
   const cues = { note: `Generated from ${path.basename(sbPath)} by storyboard.cjs; edit the storyboard, not this file.`, episode: epRel, transcript: path.relative(path.resolve(path.dirname(b), epRel), path.resolve(scriptWords)),
-    slides: "slides.json", face: sb.face || "pear", date: sb.date, rtl: !!sb.rtl, layout: sb.layout || "solo", ...(sb.size ? { size: sb.size } : {}), ...(sb.brand ? { brand: sb.brand } : {}), from: 0, to: null, ...(sb.settings || {}), fix: sb.fix || [], edit };
+    slides: "slides.json", face: sb.face || "pear", date: sb.date, rtl: !!sb.rtl, layout: sb.layout || "solo", ...(sb.size ? { size: sb.size } : {}), ...(sb.brand ? { brand: sb.brand } : {}), ...(sb.theme ? { theme: sb.theme } : {}), from: 0, to: null, ...(sb.settings || {}), fix: sb.fix || [], edit };
   fs.writeFileSync(b, JSON.stringify(cues, null, 1) + "\n");
   console.log(`beats ${beats.length}, script words ${n}, heard ${m}, matched exactly ${exact} (${Math.round(exact / n * 100)}%)`);
 }

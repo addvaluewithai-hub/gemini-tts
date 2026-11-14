@@ -33,8 +33,14 @@
  },
  "ending": {
   "card": {
+   "kind": "endnext",
    "title": "NEXT",
    "next": "2 / 5",
+   "icons": [
+    "shield",
+    "pickaxe",
+    "rules"
+   ],
    "note": ""
   }
  },
@@ -54,91 +60,47 @@
    "now": "2026 ≈ $700,000,000"
   },
   "title": {
-   "kind": "titlecard",
-   "kicker": "",
+   "kind": "cover",
    "title": "BITCOIN",
-   "sub": "1 / 5"
+   "sub": "1 / 5",
+   "coin": "B",
+   "left": "bank",
+   "right": "cash"
   },
   "evo": {
-   "kind": "steps",
-   "title": "",
-   "items": [
-    {
-     "icon": "fish",
-     "label": "",
-     "sub": ""
-    },
-    {
-     "icon": "gold",
-     "label": "",
-     "sub": ""
-    },
-    {
-     "icon": "cash",
-     "label": "",
-     "sub": ""
-    },
-    {
-     "icon": "phone",
-     "label": "",
-     "sub": ""
-    }
-   ]
-  },
-  "jobs": {
-   "kind": "steps",
-   "title": "",
-   "items": [
-    {
-     "icon": "cash",
-     "label": "1",
-     "sub": ""
-    },
-    {
-     "icon": "tag",
-     "label": "2",
-     "sub": ""
-    },
-    {
-     "icon": "safe",
-     "label": "3",
-     "sub": ""
-    }
-   ]
+   "kind": "money",
+   "year": "1971",
+   "balance": 1204.5
   },
   "zim": {
-   "kind": "story",
+   "kind": "inflation",
    "title": "ZIMBABWE · 2009",
-   "icon": "cash",
-   "name": "",
-   "lines": [
-    "1 NOTE",
-    "100,000,000,000,000 $",
-    "< 1 BUS TICKET"
-   ]
+   "note": "100 000 000 000 000",
+   "currency": "$"
   },
   "frozen": {
-   "kind": "story",
-   "title": "",
-   "icon": "bank",
-   "name": "",
-   "lines": [
-    "CYPRUS · 2013",
-    "> 100,000 € : − 47.5%",
-    "LEBANON · 2019"
-   ]
+   "kind": "bankrun",
+   "a": "CYPRUS · 2013",
+   "cut": "€100,000",
+   "share": 0.475,
+   "b": "LEBANON · 2019",
+   "from": 2019,
+   "to": 2025,
+   "fast": "1 s",
+   "slow": "3 DAYS"
   },
   "dict": {
-   "kind": "dict",
-   "title": "",
+   "kind": "glossary",
    "items": [
     {
-     "word": "Crypto",
-     "means": ""
+     "word": "CRYPTO",
+     "root": "kryptós = hidden",
+     "pic": "hidden"
     },
     {
-     "word": "Peer-to-peer",
-     "means": ""
+     "word": "PEER-TO-PEER",
+     "root": "person → person",
+     "pic": "p2p"
     }
    ]
   },
@@ -148,14 +110,17 @@
    "rows": [
     {
      "name": "ALI",
+     "color": "#23a7e4",
      "amount": 100
     },
     {
      "name": "MONA",
+     "color": "#ef4b97",
      "amount": 50
     },
     {
      "name": "SAMI",
+     "color": "#2fb26a",
      "amount": 20
     }
    ],
@@ -173,18 +138,21 @@
    "actors": [
     {
      "icon": "person",
-     "label": "ALI"
+     "label": "",
+     "args": [
+      "#23a7e4"
+     ]
     },
     {
      "icon": "bank",
-     "label": "BANK",
+     "label": "",
      "big": true
     },
     {
      "icon": "person",
-     "label": "MONA",
+     "label": "",
      "args": [
-      "#ff4fa3"
+      "#ef4b97"
      ]
     }
    ],
@@ -218,9 +186,9 @@
    "title": "",
    "file": "100",
    "name": "money.jpg",
-   "me": "ALI",
-   "a": "MONA",
-   "b": "SAMI",
+   "me": "",
+   "a": "",
+   "b": "",
    "warn": "× 2"
   },
   "tries": {
@@ -300,6 +268,22 @@
    "quote": "I've moved on|to other things",
    "stat": "≈ 1,000,000 BTC",
    "statSub": "2011 → 0"
+  },
+  "jobs": {
+   "kind": "jobs",
+   "labels": [
+    "PAY",
+    "PRICE",
+    "SAVE"
+   ]
+  },
+  "recap": {
+   "kind": "recap",
+   "at": [
+    1.5,
+    4.35,
+    6.45
+   ]
   }
  },
  "scenes": [
@@ -357,37 +341,42 @@
    "id": "money",
    "story": {
     "n": 1,
-    "tag": "MONEY"
+    "tag": "MONEY",
+    "icon": "cash"
    },
    "style": "Patient teacher explaining to people who have never seen money, with dry asides.",
    "beats": [
     {
      "say": "راجعت تاريخهم. زمان كانوا بيبدّلوا حاجة بحاجة: سمكة قصاد رغيف.",
      "show": "board",
-     "board": "evo"
+     "board": "evo",
+     "step": 0
     },
     {
      "say": "المشكلة: لو بتاع العيش مش عايز سمك النهارده.. هتبات جعان.",
      "show": "board",
      "board": "evo",
-     "step": "hold",
+     "step": 1,
      "host": "right",
      "emote": "skeptical"
     },
     {
      "say": "فجرّبوا حاجات تانية الكل يقبلها: ملح، صدف، وفي جزيرة عندهم.. حجارة قد العربية. <short pause> محفظتك هناك محتاجة ونش.",
-     "shot": "close",
-     "emote": "deadpan"
+     "show": "board",
+     "board": "evo",
+     "step": 2
     },
     {
      "say": "فاتفقوا على حاجة الكل يقبلها: الدهب. نادر، ومابيبوظش، وصعب تزوّره.",
      "show": "board",
-     "board": "evo"
+     "board": "evo",
+     "step": 3
     },
     {
      "say": "بس الدهب تقيل. فبقوا يسيبوه عند واحد أمين، وياخدوا منه وصل. والوصل ده هو اللي بقى يلف في السوق: الورق.",
      "show": "board",
-     "board": "evo"
+     "board": "evo",
+     "step": 4
     },
     {
      "say": "والراجل الأمين اكتشف إنه يقدر يسلّف دهبك لحد تاني وإنت مش واخد بالك. <short pause> وكده يا فندم اتولد البنك.",
@@ -398,25 +387,27 @@
      "say": "وسنة واحد وسبعين، الدهب اتشال من ورا الورق خالص. وفضلت الورقة لوحدها.",
      "show": "board",
      "board": "evo",
-     "step": "hold",
+     "step": 5,
      "host": "left",
      "emote": "neutral"
     },
     {
      "say": "واللي ماسك المطبعة يقدر يطبع زي ما هو عايز. في بلد اسمها زيمبابوي،",
      "show": "board",
-     "board": "zim"
+     "board": "zim",
+     "step": 0
     },
     {
      "say": "طبعوا ورقة واحدة بمية تريليون دولار.",
      "show": "board",
-     "board": "zim"
+     "board": "zim",
+     "step": 1
     },
     {
      "say": "وماكانتش تجيب تذكرة أتوبيس.",
      "show": "board",
      "board": "zim",
-     "host": "right"
+     "step": 2
     },
     {
      "say": "يعني قيمتها جاية من حاجة واحدة بس: إن الكل مصدّق إن ليها قيمة. <short pause> الفلوس اتفاق جماعي. زي الطابور. بيشتغل طول ما الكل ملتزم.",
@@ -426,31 +417,35 @@
     {
      "say": "واللي رصدته النهارده: أغلب فلوسهم مش ورق أصلاً. أرقام على شاشة.",
      "show": "board",
-     "board": "evo"
+     "board": "evo",
+     "step": 6
     },
     {
      "say": "أغلب فلوس الكوكب دلوقتي مالهاش وجود تلمسه. خانات في جداول. <short pause> وهم مرتاحين كده.",
      "show": "board",
      "board": "evo",
-     "step": "hold",
+     "step": 6,
      "host": "right",
      "emote": "smug"
     },
     {
      "say": "وسجّلت إن الفلوس عندهم ليها تلات شغلانات. تدفع بيها.",
      "show": "board",
-     "board": "jobs"
+     "board": "jobs",
+     "step": 0
     },
     {
      "say": "تسعّر بيها الحاجة.",
      "show": "board",
-     "board": "jobs"
+     "board": "jobs",
+     "step": 1
     },
     {
      "say": "وتحوّش بيها لبكرة. <short pause> خلّوا التلاتة دول في الملف يا فندم. هنرجع لهم.",
      "show": "board",
      "board": "jobs",
-     "host": "left"
+     "step": 2,
+     "host": "right"
     }
    ]
   },
@@ -458,7 +453,8 @@
    "id": "ledger",
    "story": {
     "n": 2,
-    "tag": "BANK"
+    "tag": "BANK",
+    "icon": "book"
    },
    "style": "Clear and slightly conspiratorial, like revealing how a magic trick works.",
    "beats": [
@@ -499,7 +495,8 @@
    "id": "middle",
    "story": {
     "n": 3,
-    "tag": "3RD PARTY"
+    "tag": "3RD PARTY",
+    "icon": "bank"
    },
    "style": "Brisk, listing problems with mounting disbelief.",
    "beats": [
@@ -527,17 +524,20 @@
     {
      "say": "ودي مش نظرية. في جزيرة اسمها قبرص، سنة ألفين وتلتاشر، الناس صحيوا لقوا البنوك مقفولة.",
      "show": "board",
-     "board": "frozen"
+     "board": "frozen",
+     "step": 0
     },
     {
      "say": "واللي حسابه فوق المية ألف يورو في أكبر بنك.. اتاخد منه حوالي نصه. علشان البنك ينقذ نفسه.",
      "show": "board",
-     "board": "frozen"
+     "board": "frozen",
+     "step": 1
     },
     {
      "say": "وفي لبنان من ألفين وتسعتاشر، البنوك حبست دولارات الناس. <short pause> وسنين بعدها لسه بيطالبوا بيها.",
      "show": "board",
      "board": "frozen",
+     "step": 2,
      "host": "right",
      "calm": true
     },
@@ -545,7 +545,7 @@
      "say": "الرسالة عندهم بتلف الكوكب في ثانية. والتحويل بين بلدين بياخد تلات أيام. <short pause> والاتنين أرقام يا فندم. الاتنين أرقام.",
      "show": "board",
      "board": "frozen",
-     "step": "hold",
+     "step": 3,
      "host": "left",
      "emote": "deadpan"
     },
@@ -561,7 +561,8 @@
    "id": "copy",
    "story": {
     "n": 4,
-    "tag": "COPY"
+    "tag": "COPY",
+    "icon": "dup"
    },
    "style": "Curious, then the catch.",
    "beats": [
@@ -612,7 +613,8 @@
    "id": "crisis",
    "story": {
     "n": 5,
-    "tag": "2008"
+    "tag": "2008",
+    "icon": "chartdown"
    },
    "style": "Darker and drier. Controlled sarcasm about banks.",
    "beats": [
@@ -651,7 +653,8 @@
    "id": "paper",
    "story": {
     "n": 6,
-    "tag": "SATOSHI"
+    "tag": "SATOSHI",
+    "icon": "mailbox"
    },
    "style": "Storyteller lowering his voice for a mystery.",
    "beats": [
@@ -689,7 +692,8 @@
    "id": "idea",
    "story": {
     "n": 7,
-    "tag": "IDEA"
+    "tag": "IDEA",
+    "icon": "node"
    },
    "style": "The key idea of the episode. Clear, building, genuinely impressed.",
    "beats": [
@@ -747,7 +751,8 @@
    "id": "genesis",
    "story": {
     "n": 8,
-    "tag": "BLOCK 0"
+    "tag": "BLOCK 0",
+    "icon": "file"
    },
    "style": "Historian with a smirk.",
    "beats": [
@@ -788,7 +793,8 @@
    "id": "pizza",
    "story": {
     "n": 9,
-    "tag": "PIZZA"
+    "tag": "PIZZA",
+    "icon": "pizza"
    },
    "style": "Enjoying the absurdity. Fast.",
    "beats": [
@@ -839,7 +845,8 @@
    "id": "vanish",
    "story": {
     "n": 10,
-    "tag": "GONE"
+    "tag": "GONE",
+    "icon": "ghost"
    },
    "style": "Mystery again, then a professional suspicion.",
    "beats": [
@@ -882,19 +889,22 @@
    "id": "dict",
    "story": {
     "n": 11,
-    "tag": "WORDS"
+    "tag": "WORDS",
+    "icon": "key"
    },
    "style": "A quick aside, like reading two entries from a field dictionary.",
    "beats": [
     {
      "say": "وقبل الخلاصة: كلمتين من قاموس البشر. Crypto: من كلمة قديمة معناها مخفي. قصدهم علم التشفير. مش إن الفلوس مستخبية.",
      "show": "board",
-     "board": "dict"
+     "board": "dict",
+     "step": 0
     },
     {
      "say": "و Peer-to-peer: من شخص لشخص. من غير حد في النص. <short pause> ودي يا فندم كل الحكاية.",
      "show": "board",
      "board": "dict",
+     "step": 1,
      "host": "right"
     }
    ]
@@ -903,23 +913,16 @@
    "id": "recap",
    "story": {
     "n": 12,
-    "tag": "RECAP"
+    "tag": "RECAP",
+    "icon": "rules"
    },
    "style": "Summary, then one sincere warning, then the sign-off.",
    "beats": [
     {
      "say": "خلاصة التقرير يا فندم. واحد: الفلوس اتفاق، ومتسجّل في دفتر. اتنين: الدفتر ده كان عند البنك. تلاتة: بيتكوين خد الدفتر.. ووزّعه على الكل.",
-     "show": "meme",
-     "meme": {
-      "kind": "list",
-      "title": "1 · 2 · 3",
-      "items": [
-       "MONEY = LEDGER",
-       "LEDGER → BANK",
-       "BITCOIN: LEDGER → EVERYONE"
-      ],
-      "step": 2.3
-     },
+     "show": "board",
+     "board": "recap",
+     "step": 0,
      "host": "pip"
     },
     {
@@ -1010,5 +1013,6 @@
    "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
   ],
   "pinned": "تفتكر Satoshi مين؟ راجل، ست، مجموعة.. ولا واحد من كوكب Peek؟ اكتب نظريتك. القيادة بتقرا التعليقات."
- }
+ },
+ "theme": "day"
 }

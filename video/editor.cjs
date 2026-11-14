@@ -4,7 +4,7 @@
 // the running shot. Like the director, it is deterministic: same cues and words, same frames.
 //
 //   shot    wide | host | close | two | side | low | insert        slide   name in slides.json (also goes on the studio screen)
-//   story   { n, tag } for the chip                                 fact    { big, small, tone, riser } - side shots only
+//   story   { n, tag, icon? } for the chip                          fact    { big, small, tone, riser } - side shots only
 //   mark    "headline" or [x, y, w, h] of the slide to highlight    zoom / center   how far the insert pushes in, and on what
 //   duck    true: the host sinks behind the desk                    lurk    true: he reappears above the screen
 //   peek    true: his head rises over an insert                     paper   pockets | holes | over
@@ -163,7 +163,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     if (seg.story !== lastStory) { lastStory = seg.story; storyT = t; }
     chipA += ((seg.story && (!tight || short) ? 1 : 0) - chipA) * 0.25;
     const sl = slides[seg.slide];
-    const chip = seg.story && chipA > 0.02 ? { n: seg.story.n, tag: seg.story.tag, src: sl && (!insert || (solo && slideOn)) ? `${sl.source} · ${sl.date}` : "", a: chipA, pop: 1 + 0.22 * Math.exp(-(t - storyT) * 9), low: solo && insert } : null;
+    const chip = seg.story && chipA > 0.02 ? { n: seg.story.n, tag: seg.story.tag, icon: seg.story.icon || null, src: sl && (!insert || (solo && slideOn)) ? `${sl.source} · ${sl.date}` : "", a: chipA, pop: 1 + 0.22 * Math.exp(-(t - storyT) * 9), low: solo && insert } : null;
 
     let drone = null;
     if (seg.drone) { const d = seg.drone, u = t - d.from, enter = smooth(clamp(u / 0.9)), p = droneAt(u);
