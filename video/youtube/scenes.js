@@ -44,7 +44,7 @@ const bubbles = (seed, n, x0, x1, y0, y1, rmax = 14, op = 0.5) => { const R = rn
 
 // ---- backdrops: one world per file, so every episode of a file looks like the same place --------------
 // The crypto file lives in a city at night lit by gold; the network file in blue, among signals.
-const stars = (R, n, h) => Array.from({ length: n }, () => `<circle cx="${f(R() * 1280)}" cy="${f(R() * h)}" r="${f(R() * 1.9 + 0.4)}" fill="#fff" opacity="${f(R() * 0.7 + 0.25)}"/>`).join("");
+const stars = (R, n, h, w = 1280) => Array.from({ length: n }, () => `<circle cx="${f(R() * w)}" cy="${f(R() * h)}" r="${f(R() * 1.9 + 0.4)}" fill="#fff" opacity="${f(R() * 0.7 + 0.25)}"/>`).join("");
 const skyline = (R, base, hmin, hmax, fill, lit, win, x0 = -20, x1 = 1300) => { let b = "", w = "";
   for (let x = x0; x < x1;) { const bw = 50 + R() * 90, h = hmin + R() * (hmax - hmin); b += `<rect x="${f(x)}" y="${f(base - h)}" width="${f(bw)}" height="${f(h + 200)}" fill="${fill}"/>`;
     if (R() < 0.25) b += `<rect x="${f(x + bw / 2 - 2)}" y="${f(base - h - 34)}" width="4" height="34" fill="${fill}"/><circle cx="${f(x + bw / 2)}" cy="${f(base - h - 36)}" r="4" fill="#ff4654"/>`;
@@ -92,7 +92,7 @@ const BACKDROPS = {
     const back = `<rect width="1280" height="720" fill="url(#cnSky)"/>${stars(R, 110, G - 100)}
       <circle cx="${M.x}" cy="${M.y}" r="150" fill="#ffe9a8" opacity=".18" filter="url(#b30)"/><circle cx="${M.x}" cy="${M.y}" r="64" fill="url(#cnMoon)"/><circle cx="${M.x - 18}" cy="${M.y - 10}" r="10" fill="#e8c66a" opacity=".6"/><circle cx="${M.x + 22}" cy="${M.y + 18}" r="13" fill="#e8c66a" opacity=".5"/>
       ${bokeh}<g opacity=".75">${skyline(R, G, 140, 300, "#150f30", lit * 0.6, "#ffd23f")}</g>${skyline(R, G, 60, 190, "#0d0a20", lit, "#ffcf6a")}${g}`;
-    return { defs, back };
+    return { defs, back, top: "#05041a" };
   },
 
   netCity: (b = {}) => {
@@ -494,7 +494,7 @@ export const SCENES = {
     return { defs, back, front };
   },
   // ---- one object, close up: a clean background and a single big drawing (opts.item at opts.at, opts.s) --
-  solo: (o) => {
+  solo: (o, labels, D = { W: 1280, H: 720 }) => {
     const bg = o.bg || ["#ff7a1a", "#b3131f"], A = o.at || { x: 860, y: 400 }, sc = o.s || 1;
     const defs = FILTERS + GOLD + rad("soloBg", [bg[0], [0.55, bg[1]], bg[2] || "#1a0508"], o.glowAt?.x ?? 0.65, o.glowAt?.y ?? 0.5, 0.85)
       + rad("cheese", [["0", "#fff3a0", 0.9], ["1", "#ffb52e", 0]], 0.4, 0.35, 0.7) + lin("sharkB", ["#a9bfd6", [0.55, "#6f87a3"], "#3d526b"]) + lin("cab", ["#4a5170", "#1b1f33"])
@@ -503,6 +503,24 @@ export const SCENES = {
       + lin("flame", ["#ff2e2e", [0.4, "#ff7a1a"], [0.75, "#ffe066"], "#fff"], 1, 0) + lin("hull", ["#ffffff", [0.6, "#d9dfee"], "#8f96b8"], 0, 1) + lin("chrome", ["#ffffff", [0.4, "#c9cee6"], [0.6, "#7c839e"], "#e6e9f5"], 1, 0)
       + lin("scr6", ["#ffb347", "#ff6a3d"]) + lin("frond", ["#3fae6a", "#1d6b3a"], 1, 1) + lin("pole", ["#c9cee6", "#7c839e", "#c9cee6"], 1, 0) + lin("marble", ["#f4f1ea", "#c9c4b4"], 1, 1);
     const ITEMS = {
+      // a fanned stack of banknotes
+      banknotes: () => [-24, -10, 6, 20].map((r, i) => `<g transform="rotate(${r}) translate(${i * 14 - 20} ${-i * 8})" filter="url(#sh)"><rect x="-230" y="-110" width="460" height="220" rx="16" fill="${["#2f8a5a", "#3fae6a", "#58c47e", "#7ad69a"][i]}"/><rect x="-206" y="-88" width="412" height="176" rx="10" fill="none" stroke="#d7ffe6" stroke-width="7" opacity=".7"/><circle r="62" fill="#d7ffe6" opacity=".85"/><circle r="40" fill="none" stroke="#2f8a5a" stroke-width="8"/><circle cx="-160" cy="-50" r="18" fill="#d7ffe6" opacity=".6"/><circle cx="160" cy="50" r="18" fill="#d7ffe6" opacity=".6"/></g>`).join(""),
+      // an open ledger: rows of lines and amounts, one row being struck out
+      ledger: () => `<g filter="url(#sh)"><path d="M-330 -220Q-170 -260 0 -220Q170 -260 330 -220V240Q170 200 0 240Q-170 200 -330 240Z" fill="#7a4a10"/><path d="M-310 -230Q-160 -262 -6 -226V226Q-160 190 -310 222Z" fill="#fff8e6"/><path d="M6 -226Q160 -262 310 -230V222Q160 190 6 226Z" fill="#f3ead2"/></g>
+        ${Array.from({ length: 8 }, (_, i) => `<path d="M-280 ${-170 + i * 50}H-40M40 ${-170 + i * 50}H280" stroke="#c9bea0" stroke-width="4"/><rect x="-280" y="${-196 + i * 50}" width="${80 + (i * 37) % 90}" height="14" rx="7" fill="#5a6080" opacity=".55"/><rect x="${-110 + (i % 3) * 10}" y="${-196 + i * 50}" width="60" height="14" rx="7" fill="#2f8a5a" opacity=".7"/><rect x="40" y="${-196 + i * 50}" width="${70 + (i * 53) % 110}" height="14" rx="7" fill="#5a6080" opacity=".55"/><rect x="${200 - (i % 2) * 10}" y="${-196 + i * 50}" width="70" height="14" rx="7" fill="#c0392b" opacity=".7"/>`).join("")}
+        <path d="M30 -8L300 -24" stroke="#ff2a3a" stroke-width="12" stroke-linecap="round"/><g transform="translate(-170 250) rotate(-30)"><rect x="-8" y="-150" width="16" height="170" rx="6" fill="#ffd23f"/><path d="M-8 20L0 50L8 20Z" fill="#05060d"/></g>`,
+      // a photocopier spitting out copies of a coin
+      copier: () => `<g filter="url(#sh)"><rect x="-260" y="-60" width="520" height="300" rx="24" fill="#c9cee6"/><rect x="-260" y="-110" width="520" height="70" rx="16" fill="#e6e9f5"/><rect x="-200" y="-100" width="400" height="40" rx="8" fill="#7fd4ff" opacity=".7" filter="url(#glow)"/>
+        <rect x="-220" y="20" width="440" height="40" rx="8" fill="#8f96b8"/><rect x="-220" y="90" width="440" height="40" rx="8" fill="#8f96b8"/><circle cx="200" cy="190" r="16" fill="#58d68d"/><circle cx="150" cy="190" r="16" fill="#ff4654"/><rect x="-200" y="170" width="200" height="40" rx="8" fill="#2a2f45"/></g>
+        ${coin(-60, -240, 100, -8)}${[0, 1, 2, 3].map((i) => `<g opacity="${0.9 - i * 0.18}">${coin(150 + i * 70, -60 - i * 120, 80 - i * 6, 10 + i * 12, 0.1)}</g>`).join("")}`,
+      // a hooded figure with no face, just a question mark, holding a paper
+      hooded: () => `<g filter="url(#sh)"><path d="M-220 420Q-240 60 -120 -60Q-150 -260 0 -300Q150 -260 120 -60Q240 60 220 420Z" fill="#14101f"/><path d="M-110 -70Q-120 -230 0 -250Q120 -230 110 -70Q60 -20 0 -20Q-60 -20 -110 -70Z" fill="#05040a"/></g>
+        <text x="0" y="-80" text-anchor="middle" font-family="Anton" font-size="170" fill="#FFD23F" filter="url(#glow)">?</text>
+        <g transform="translate(150 160) rotate(12)" filter="url(#sh)"><rect x="-90" y="-120" width="180" height="240" rx="6" fill="#fff8e6"/>${Array.from({ length: 9 }, (_, i) => `<rect x="-66" y="${-96 + i * 24}" width="${100 + (i * 29) % 40}" height="9" rx="4" fill="#8f96b8"/>`).join("")}</g>
+        ${[[-260, 300], [260, 260], [-300, 100]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="70" fill="#b9a8ff" opacity=".18" filter="url(#b30)"/>`).join("")}`,
+      // two pizza boxes beside a heap of bitcoin
+      pizzaHeap: () => `${heap(-150, 160, 420, 330, 30, 12)}${coin(-150, -150, 70, -10)}${coin(-260, 40, 54, 15)}${coin(-40, 30, 50, -20)}
+        <g transform="translate(250 100)" filter="url(#sh)">${[60, -10].map((y) => `<rect x="-150" y="${y - 40}" width="300" height="70" rx="6" fill="#f4ede0"/><rect x="-150" y="${y - 40}" width="300" height="14" rx="6" fill="#e2d6c0"/><circle cx="0" cy="${y}" r="16" fill="#e8203c"/>`).join("")}</g>`,
       // the coin with a dog on it, dancing
       dogCoin: () => `${coin(0, 0, 110, -10)}${DOG}<path d="M-150 -60l-36 -18M-140 0l-42 -2M150 -60l36 -18M142 0l42 -2" stroke="#fff6b0" stroke-width="9" stroke-linecap="round"/>`,
       // one giant coin
@@ -603,8 +621,10 @@ export const SCENES = {
           <circle cx="150" cy="-62" r="17" fill="#05060d"/><circle cx="145" cy="-67" r="5" fill="#fff"/><path d="M124 -88L180 -74" stroke="#3d526b" stroke-width="8" stroke-linecap="round"/></g>
         <g transform="translate(-20 170)">${[[-90, -80], [100, -90], [-60, 80], [80, 90], [-130, 10], [140, 0]].map(([x, y]) => `<path d="M0 0L${x} ${y}" stroke="#7ff6ff" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>`).join("")}</g>`,
     };
-    const BD = o.backdrop ? BACKDROPS[o.backdrop](o.bd || {}) : null;
-    const back = `${BD ? BD.back : `<rect width="1280" height="720" fill="url(#soloBg)"/>`}${o.rays ? rays(A.x, A.y, 18, "#fff", o.rays) : ""}${o.bubbles ? bubbles(9, 24, 0, 1280, 0, 720, 16, 0.4) : ""}
+    const BD = o.backdrop ? BACKDROPS[o.backdrop](o.bd || {}) : null, tall = D.H > 720;
+    // a backdrop is drawn for 1280 x 720; in a taller frame (a Short) it sits at the bottom and its sky goes on up
+    const bdBack = BD && (tall ? `<rect width="${D.W}" height="${D.H}" fill="${BD.top || "#05041a"}"/>${stars(rng(77), 160, D.H - 700, D.W)}<g transform="translate(${(D.W - 1280) / 2} ${D.H - 720})">${BD.back}</g>` : BD.back);
+    const back = `${BD ? bdBack : `<rect width="${D.W}" height="${D.H}" fill="url(#soloBg)"/>`}${o.rays ? rays(A.x, A.y, 18, "#fff", o.rays) : ""}${o.bubbles ? bubbles(9, 24, 0, 1280, 0, 720, 16, 0.4) : ""}
       ${o.item ? `<g transform="translate(${A.x} ${A.y}) scale(${sc}) rotate(${o.rot || 0})">${ITEMS[o.item]()}</g>` : ""}`;
     // over: { item, at, s, rot } or a list of them, drawn over the host (the tin he pops out of, sparks around him)
     const front = [].concat(o.over || []).map((O) => `<g transform="translate(${O.at.x} ${O.at.y}) scale(${O.s || 1}) rotate(${O.rot || 0})">${ITEMS[O.item]()}</g>`).join("");

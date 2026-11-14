@@ -46,7 +46,7 @@ if (cmd === "art") {
     if (!f.startsWith(ROOT) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); }
     res.writeHead(200, { "content-type": MIME[path.extname(f)] || "application/octet-stream" }); fs.createReadStream(f).pipe(res); });
   server.listen(0, "127.0.0.1", async () => {
-    const browser = await chromium.launch(), page = await browser.newPage({ viewport: { width: 2600, height: 1500 } });
+    const browser = await chromium.launch(), page = await browser.newPage({ viewport: { width: 2600, height: 2000 } });
     page.on("pageerror", (e) => { console.error("PAGE ERROR", e.message); process.exitCode = 1; });
     let at = null;   // a spec may name its page ("page": "scene.html" for the illustrated thumbnails); art.html otherwise
     for (const s of specs) { const out = path.join(b, s.file); fs.mkdirSync(path.dirname(out), { recursive: true });
