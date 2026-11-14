@@ -36,20 +36,20 @@ function room(T, c, tot, s) {
   const g = layer(wall + door + cal + desk + at(CH[0], CH[1], hoodChair({ coat, spin }), 1.45) + dust + env + twinkle, c);
   return g;
 }
-function s0(a, tot, s) { const c = camAt(a, [[0, 960, 640, 1.32], [2.5, 960, 630, 1.36], [4.2, 990, 620, 1.42]]); return { g: room(a, c, tot, s), out: toScreen(c, DK[0], DK[1] - 165), outC: GLOW, outZ: 22 }; }
-function s1(a, tot, s) { const c = camAt(a, [[0, 1200, 600, 1.4], [1.49, 1330, 600, 1.34]]); return { g: room((s.ends || [])[0] + a || 4.2 + a, c, tot, s), in: toScreen(c, DK[0], DK[1] - 165), inC: GLOW, inZ: 22 }; }
-function s2(a, tot, s) { const E = s.ends || [], c = camAt(a, [[0, 1330, 600, 1.34], [0.16, 880, 640, 1.6], [0.71, 850, 650, 1.7]]); return { g: room((E[0] || 4.2) + (E[1] || 1.49) + a, c, tot, s), out: toScreen(c, CH[0], CH[1] - 300), outC: "#4b3d8f", outZ: 18 }; }
+function s0(a, tot, s) { const c = camAt(a, [[0, 1000, 630, 0.9], [2.5, 1005, 628, 0.92], [4.2, 1010, 625, 0.94]]); return { g: room(a, c, tot, s), out: toScreen(c, DK[0], DK[1] - 165), outC: GLOW, outZ: 22 }; }
+function s1(a, tot, s) { const c = camAt(a, [[0, 1010, 625, 0.94], [1.49, 1090, 620, 0.98]]); return { g: room((s.ends || [])[0] + a || 4.2 + a, c, tot, s), in: toScreen(c, DK[0], DK[1] - 165), inC: GLOW, inZ: 22 }; }
+function s2(a, tot, s) { const E = s.ends || [], c = camAt(a, [[0, 1090, 620, 0.98], [0.2, 1000, 640, 0.97], [0.71, 990, 640, 1.0]]); return { g: room((E[0] || 4.2) + (E[1] || 1.49) + a, c, tot, s), out: toScreen(c, CH[0], CH[1] - 300), outC: "#4b3d8f", outZ: 18 }; }
 
 // ---- 3: the code goes to other laptops; no farewell, no press conference, not even a photo ----
 function s3(a, tot) {
-  const c = camAt(a, [[0, 1250, 560, 1.25], [0.5, 1290, 560, 1.25], [1.5, 1820, 560, 1.15], [2.05, 1860, 560, 1.15], [2.7, 3300, 600, 1.1], [3.8, 3320, 600, 1.12], [4.35, 4200, 520, 1.25], [4.97, 4210, 520, 1.3]]), TY = 720;
+  const c = camAt(a, [[0, 1440, 598, 0.91], [2.05, 1450, 598, 0.92], [2.7, 3300, 600, 1.1], [3.8, 3320, 600, 1.12], [4.35, 4200, 520, 1.25], [4.97, 4210, 520, 1.3]]), TY = 720;
   const wall = `<rect x="-600" y="-400" width="5600" height="1200" fill="#3b1d74"/><rect x="-600" y="800" width="5600" height="700" fill="#2c1a66"/><rect x="-600" y="792" width="5600" height="12" fill="#4a2b8a"/>`;
   const table = `${two(rr(760, TY, 1800, 30, 10), P.wood, P.woodD, 0, 8)}<rect x="800" y="${TY + 30}" width="26" height="120" fill="${P.woodD}"/><rect x="2500" y="${TY + 30}" width="26" height="120" fill="${P.woodD}"/>`;
-  const L = [[1480, 1.6], [1880, 1.8], [2280, 2.0]];
-  const lap = L.map(([x, t0]) => { const on = a > t0 ? spring(a - t0, 8, 13) : 0; return (on > 0 ? rings(x, TY - 150, 120 * on, P.teal, 0.12) : "") + at(x, TY, laptop(mix("#2a3a6a", "#9ff0e4", clamp(on)), on > 0.5 ? `<path d="M-60 -112h120M-60 -88h80M-60 -136h90" stroke="${P.tealD}" stroke-width="10" stroke-linecap="round"/>` : ""), 1.15); }).join("");
+  const L = [[1440, 1.6], [1810, 1.8], [2180, 2.0]];
+  const lap = L.map(([x, t0]) => { const on = a > t0 ? spring(a - t0, 8, 13) : 0; return (on > 0 ? rings(x, TY - 150, 120 * on, P.teal, 0.12) : "") + at(x, TY, laptop(mix("#2a3a6a", "#9ff0e4", clamp(on)), on > 0.5 ? `<path d="M-60 -112h120M-60 -88h80M-60 -136h90" stroke="${P.tealD}" stroke-width="10" stroke-linecap="round"/>` : ""), 1.05); }).join("");
   // the code: a glowing box with braces, from the hooded chair's laptop down the table
-  const go = ease(seg(a, 0.47, 1.5)), bx = lerp(1040, 1480, go), boxK = 1 + 0.12 * Math.sin(Math.PI * go);
-  const lines = L.map(([x, t0], i) => (a > t0 - 0.2 && i > 0 ? drawn(`M1480 ${TY - 290}Q${(1480 + x) / 2} ${TY - 400} ${x} ${TY - 290}`, seg(a, t0 - 0.2, t0), P.gold, 6, 'stroke-dasharray="4 14"') : "")).join("");
+  const go = ease(seg(a, 0.47, 1.5)), bx = lerp(1040, 1440, go), boxK = 1 + 0.12 * Math.sin(Math.PI * go);
+  const lines = L.map(([x, t0], i) => (a > t0 - 0.2 && i > 0 ? drawn(`M1440 ${TY - 290}Q${(1440 + x) / 2} ${TY - 400} ${x} ${TY - 290}`, seg(a, t0 - 0.2, t0), P.gold, 6, 'stroke-dasharray="4 14"') : "")).join("");
   const box = at(bx, TY - 290 - 20 * Math.sin(Math.PI * go) + 6 * Math.sin(tot * 3), `${rings(0, 0, 90, P.gold, 0.25)}${two(rr(-80, -60, 160, 120, 18), P.gold, P.goldD, 0, 9)}${text(0, 28, "{ }", 80, "#8a5200")}`, 1.3 * boxK * pop(a + 0.3));
   // an empty podium: the spotlights come on and there is no one
   const lit = a > 2.97 ? spring(a - 2.97, 7, 11) : 0, PX = 3300, PY = 960;

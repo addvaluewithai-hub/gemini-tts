@@ -19,9 +19,9 @@ export const HEAPN = HEAP.length;
 
 // ---- 0: money with no bank and no paper ----
 function s0(a, tot) {
-  const c = camAt(a, [[0, 960, 540, 1], [2.0, 960, 520, 1.04], [3.3, 960, 520, 1.05], [4.69, 960, 510, 1.08]]), G = 880, BX = 480, NX = 1500;
-  const sink = easeIn(seg(a, 3.62, 4.25)), bk = at(BX, G + 640 * sink, bank({ night: 1, sign: [1, 1, 1, 1], inside: P.ink, inner: at(0, -225, book(rows("100", "50")), 0.62) }), 0.92);
-  const x1 = a > 3.46 ? at(0, 640 * sink, cross(BX, G - 300, 70, P.red, a - 3.46)) : "";
+  const c = camAt(a, [[0, 960, 540, 1], [2.0, 960, 520, 1.04], [3.3, 960, 520, 1.05], [4.69, 960, 510, 1.08]]), G = 880, BX = 520, NX = 1500;
+  const sink = easeIn(seg(a, 3.62, 4.25)), bk = at(BX, G + 1000 * sink, bank({ night: 1, sign: [1, 1, 1, 1], inside: P.ink, inner: at(0, -225, book(rows("100", "50")), 0.62) }), 0.92);
+  const x1 = a > 3.46 ? at(0, 1000 * sink, cross(BX, G - 300, 70, P.red, a - 3.46)) : "";
   // a stack of notes that blows away on "paper"
   let notes = "";
   for (let i = 0; i < 9; i++) { const t0 = 4.0 + (8 - i) * 0.05, u = Math.max(0, a - t0), fly = u * u, x = NX + (i % 2 ? 6 : -6) + 900 * fly + 120 * u, y = G - 28 - i * 30 - 1500 * fly + 8 * Math.sin(tot * 3 + i) * (a < 3.9 ? 0.15 : 1);
@@ -49,13 +49,13 @@ function counter(t, c, tot, s) {
   const fill = kf(t, [[0.45, 0], [1.9, HEAPN]], (p) => 1 - Math.pow(1 - p, 1.6)), n = Math.floor(fill);
   const stream = t > 0.4 && t < 1.95 ? Array.from({ length: 7 }, (_, i) => { const q = ((t * 2.6 + i / 7) % 1); return at(HX0 + 30 * Math.sin(i * 2.3) + 10 * Math.sin(t * 5 + i), lerp(-80, G - 60, q * q), coin(26), [Math.max(0.1, Math.abs(Math.cos(t * 8 + i))), 1]); }).join("") : "";
   // the heap grows into a mountain
-  const grow = ease(seg(u3, 1.0, 2.45)), k = lerp(1.7, 2.45, grow);
+  const grow = ease(seg(u3, 1.0, 2.45)), k = lerp(1.25, 1.9, grow);
   const settle = (t0) => (t > t0 ? 1 - 0.06 * Math.exp(-(t - t0) * 9) * Math.cos((t - t0) * 16) : 1);
   const mount = at(hx, G - hop, (grow > 0 ? rings(0, -260 * k * 0.5, 240 * k, P.gold, 0.14 * grow, 1.3) : "") + heap(n, tot * 3), [k, k * settle(T2 + 0.85)]);
   const boxes = at(bx, G - bhop, at(0, 0, pizzaBox(0)) + at(6, -48, pizzaBox(0)) + [0, 1, 2].map((i) => { const q = ((tot * 0.6 + i / 3) % 1); return `<circle cx="${-40 + i * 40 + 10 * Math.sin(tot * 2 + i)}" cy="${-110 - q * 120}" r="${10 + q * 16}" fill="${P.cream}" opacity="${(0.4 * (1 - q)).toFixed(2)}"/>`; }).join(""), 2.1);
   // the number over the heap: first how many coins, then what they are worth today
   const flip = seg(u3, 0.85, 1.15), cnt = Math.round(lerp(0, 10000, clamp(fill / HEAPN))), worth = lerp(41, 700000000, ease(seg(u3, 1.14, 2.4)));
-  const lx = lerp(hx, 1330, ease(seg(u3, 0.85, 1.4))), ly = lerp(G - 520 - hop, 200, ease(seg(u3, 0.85, 1.4)));
+  const lx = lerp(hx, 1330, ease(seg(u3, 0.85, 1.4))), ly = lerp(G - 470 - hop, 230, ease(seg(u3, 0.85, 1.4)));
   const label = t > 1.0 ? at(lx, ly, flip < 0.5 ? `${rings(-180, -40, 46, P.gold, 0.25)}${at(-180, -40, coin(34))}${number(60, 0, fmt(cnt), 110, P.gold)}`
     : `${rings(0, -40, 120, P.gold, 0.16)}${number(0, 0, "$" + fmt(worth), 120, P.gold)}`, [Math.max(0.04, Math.abs(Math.cos(Math.PI * flip))) * pop(t - 1.0), pop(t - 1.0)]) : "";
   const cal = at(640, 220, calPage("2010", "", 0.95, 150), pop(t - 0.19) * (1 - ease(seg(u2, -0.05, 0.25))));
@@ -64,9 +64,9 @@ function counter(t, c, tot, s) {
   const desk = `<rect x="-600" y="${G}" width="3200" height="60" fill="${P.wood}"/><rect x="-600" y="${G + 60}" width="3200" height="500" fill="${P.woodD}"/>${Array.from({ length: 12 }, (_, i) => `<rect x="${-400 + i * 260}" y="${G + 90}" width="200" height="300" rx="12" fill="#6e4322"/>`).join("")}`;
   return `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(19, 50, -400, 2400, 400, tot), c, 0.15) + layer(shop, c, 0.7) + layer(desk + stream + mount + boxes + label + cal, c);
 }
-function s1(a, tot, s) { const c = camAt(a, [[0, 1100, 560, 1.3], [1.0, 1120, 540, 1.32], [2.26, 1100, 540, 1.36]]); return { g: counter(a, c, tot, s) }; }
-function s2(a, tot, s) { const T2 = (s.ends || [])[1] || 2.26, c = camAt(a, [[0, 1100, 540, 1.36], [1.51, 980, 540, 1.3]]); return { g: counter(T2 + a, c, tot, s) }; }
-function s3(a, tot, s) { const T3 = ((s.ends || [])[1] || 2.26) + ((s.ends || [])[2] || 1.51), c = camAt(a, [[0, 980, 540, 1.3], [1.0, 940, 520, 1.15], [2.5, 900, 470, 0.92], [2.93, 900, 470, 0.9]]); return { g: counter(T3 + a, c, tot, s) }; }
+function s1(a, tot, s) { const c = camAt(a, [[0, 985, 480, 1.1], [2.26, 975, 470, 1.12]]); return { g: counter(a, c, tot, s) }; }
+function s2(a, tot, s) { const T2 = (s.ends || [])[1] || 2.26, c = camAt(a, [[0, 975, 470, 1.12], [1.51, 965, 470, 1.1]]); return { g: counter(T2 + a, c, tot, s) }; }
+function s3(a, tot, s) { const T3 = ((s.ends || [])[1] || 2.26) + ((s.ends || [])[2] || 1.51), c = camAt(a, [[0, 965, 470, 1.1], [1.0, 960, 470, 1.08], [2.5, 960, 470, 1.03], [2.93, 960, 470, 1.02]]); return { g: counter(T3 + a, c, tot, s) }; }
 
 const SHOTS = [s0, s1, s2, s3];
 export const introSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);

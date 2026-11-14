@@ -43,13 +43,13 @@ function s1(a, tot) {
 }
 // ---- 2: money as a file: the blue house sends the same $100 to the pink house and to the teal house, at once ----
 function s2(a, tot) {
-  const c = camAt(a, [[0, 640, 560, 1.2], [1.8, 760, 590, 1.16], [2.7, 950, 600, 1.1], [4.64, 950, 600, 1.12]]), G = 1000, B = [340, G], K = [1150, G], T = [1580, G], HK = 1.6;
+  const c = camAt(a, [[0, 960, 600, 1.05], [4.64, 960, 590, 1.0]]), G = 1000, B = [340, G], K = [1150, G], T = [1580, G], HK = 1.6;
   const top = (x) => [x, G - 292 * HK - 150], launch = 2.64, arrive = 3.55;
-  const fly = (to, j) => { const p = ease(seg(a, launch + j * 0.02, arrive)), b = bez(top(B[0]), [(B[0] + to[0]) / 2, 250], top(to[0]), p); return { b, p }; };
+  const fly = (to, j) => { const p = ease(seg(a, launch + j * 0.02, arrive)), b = bez(top(B[0]), [(B[0] + to[0]) / 2, 380], top(to[0]), p); return { b, p }; };
   let cards = "", trail = "";
   const glow = a > 2.07 ? 1 : 0, own = at(top(B[0])[0], top(B[0])[1] + 6 * Math.sin(tot * 2), fileCard(money100(), { glow }), 1.4 * pop(a + 0.3));
   if (a > 2.35) [K, T].forEach((h, j) => { const { b, p } = fly(h, j);
-    for (let q = 1; q <= 6; q++) { const pp = Math.max(0, p - q * 0.035); if (pp <= 0 || p >= 1) continue; const bb = bez(top(B[0]), [(B[0] + h[0]) / 2, 250], top(h[0]), pp); trail += `<circle cx="${bb[0].toFixed(1)}" cy="${bb[1].toFixed(1)}" r="${(10 - q).toFixed(1)}" fill="${P.gold}" opacity="${(0.7 - q * 0.1).toFixed(2)}"/>`; }
+    for (let q = 1; q <= 6; q++) { const pp = Math.max(0, p - q * 0.035); if (pp <= 0 || p >= 1) continue; const bb = bez(top(B[0]), [(B[0] + h[0]) / 2, 380], top(h[0]), pp); trail += `<circle cx="${bb[0].toFixed(1)}" cy="${bb[1].toFixed(1)}" r="${(10 - q).toFixed(1)}" fill="${P.gold}" opacity="${(0.7 - q * 0.1).toFixed(2)}"/>`; }
     const split = a < launch ? spring(a - 2.35, 8, 13) : 1;
     cards += at(b[0] + (a < launch ? (j ? 60 : 30) * split : 0), b[1] + (a < launch ? -20 * split : 0), fileCard(money100(), { glow: 1 }), 1.4 * (p < 1 ? 1 : 1 + 0.15 * Math.exp(-(a - arrive) * 8) * Math.cos((a - arrive) * 14))); });
   const lit = (t0) => (a > t0 ? [1, 1, 1] : [0, 0, 1]), hop = (t0) => (a > t0 ? 1 + 0.06 * Math.exp(-(a - t0) * 7) * Math.cos((a - t0) * 14) : 1);
@@ -78,15 +78,15 @@ function s3(a, tot) {
 }
 // ---- 4: the 1990s: a room of old monitors with locks on their screens; a digital coin no one watches and no one stops ----
 function s4(a, tot) {
-  const c = camAt(a, [[0, 960, 640, 1.55], [0.8, 960, 620, 1.4], [2.9, 960, 580, 1.28], [4.4, 1120, 440, 1.38], [5.3, 1130, 440, 1.4], [5.8, 960, 580, 1.28], [6.77, 960, 580, 1.3]]), G = 980, CO = [960, 480];
+  const c = camAt(a, [[0, 960, 580, 1.06], [0.8, 960, 560, 1.02], [2.9, 960, 560, 1.0], [4.4, 1000, 520, 1.06], [5.3, 1000, 520, 1.08], [5.8, 960, 560, 1.0], [6.77, 960, 560, 1.02]]), G = 980, CO = [960, 480];
   const crt = (x, y, k, i) => { const on = a > 0.3 + i * 0.12, lk = a - 0.6 - i * 0.12, scr = on ? "#0f3b2a" : P.ink;
     let code = ""; if (on) for (let r = 0; r < 5; r++) { const w = 40 + rnd(i * 31 + r + Math.floor(tot * 3 + i)) * 120; code += `<rect x="-130" y="${-210 + r * 26}" width="${w.toFixed(0)}" height="12" rx="6" fill="#3ddc97" opacity=".55"/>`; }
     return at(x, y, `${two(rr(-190, -300, 380, 300, 30), "#c9c2a8", "#a8a088", 0, 12)}<path d="${rr(-160, -270, 320, 220, 26)}" fill="${scr}"/>${code}${on ? rings(0, -160, 150, "#3ddc97", 0.08) : ""}
       ${lk > 0 ? at(70, -110, padlock(0.55, 0, P.green, P.greenD), pop(lk)) : ""}${two(rr(-140, 0, 280, 40, 8), "#c9c2a8", "#a8a088", 0, 8)}<path d="${rr(-120, 6, 240, 10, 4)}" fill="#8a8470"/>`, k); };
   const desk = `<rect x="-500" y="${G - 120}" width="3000" height="40" fill="${P.wood}"/><rect x="-500" y="${G - 80}" width="3000" height="400" fill="${P.woodD}"/>`;
-  const mons = crt(260, G - 160, 1.0, 0) + crt(660, G - 140, 0.85, 1) + crt(1260, G - 140, 0.85, 2) + crt(1660, G - 160, 1.0, 3);
+  const mons = crt(300, G - 160, 0.95, 0) + crt(690, G - 140, 0.85, 1) + crt(1230, G - 140, 0.85, 2) + crt(1620, G - 160, 0.95, 3);
   // the coin is made of what the screens send it
-  const made = a > 3.0 ? spring(a - 3.0, 7, 11) : 0, feeds = a > 2.6 && a < 3.6 ? [[260, G - 360], [660, G - 330], [1260, G - 330], [1660, G - 360]].map((p, i) => { const u = seg(a, 2.6 + i * 0.05, 3.1 + i * 0.05); return [0, 1, 2].map((q) => { const v = clamp(u - q * 0.15), b = bez(p, [(p[0] + CO[0]) / 2, 200], CO, v); return v > 0 && v < 1 ? `<circle cx="${b[0].toFixed(1)}" cy="${b[1].toFixed(1)}" r="10" fill="#3ddc97"/>` : ""; }).join(""); }).join("") : "";
+  const made = a > 3.0 ? spring(a - 3.0, 7, 11) : 0, feeds = a > 2.6 && a < 3.6 ? [[300, G - 360], [690, G - 330], [1230, G - 330], [1620, G - 360]].map((p, i) => { const u = seg(a, 2.6 + i * 0.05, 3.1 + i * 0.05); return [0, 1, 2].map((q) => { const v = clamp(u - q * 0.15), b = bez(p, [(p[0] + CO[0]) / 2, 200], CO, v); return v > 0 && v < 1 ? `<circle cx="${b[0].toFixed(1)}" cy="${b[1].toFixed(1)}" r="10" fill="#3ddc97"/>` : ""; }).join(""); }).join("") : "";
   const roll = ease(seg(a, 6.2, 6.77)) * 160, theCoin = made > 0 ? at(CO[0] + roll, CO[1] + 8 * Math.sin(tot * 2), `${rings(0, 0, 210, P.gold, 0.2)}${coin(150)}<path d="M-50 -30h30v-30M50 30h-30v30M-50 30h20M50 -30h-20" stroke="${P.goldD}" stroke-width="10" fill="none" stroke-linecap="round"/><circle cx="-20" cy="-60" r="9" fill="${P.goldD}"/><circle cx="20" cy="60" r="9" fill="${P.goldD}"/>`, made, roll * 0.9) : "";
   // a watching camera on the wall turns to it; its eye shuts
   const turn = kf(a, [[3.6, -30], [4.3, 22], [4.9, 22]]), shut = ease(seg(a, 4.9, 5.25)), cam = at(1420, 250, `<path d="M0 -40V-160" stroke="${P.steelD}" stroke-width="16"/><g transform="rotate(${turn})">${two(rr(-150, -50, 220, 100, 18), P.steel, P.steelD, 0, 10)}<circle cx="-150" cy="0" r="44" fill="${P.ink}"/><circle cx="-150" cy="0" r="${(26 * (1 - shut)).toFixed(1)}" fill="${P.red}"/>${shut > 0 ? `<path d="M-194 0a44 44 0 0 1 88 0Z" fill="${P.steelD}" transform="translate(-150 0) scale(1 ${shut.toFixed(3)}) translate(150 0)"/><path d="M-194 0a44 44 0 0 0 88 0Z" fill="${P.steelD}" transform="translate(-150 0) scale(1 ${shut.toFixed(3)}) translate(150 0)"/>` : ""}</g>`, 1.5);
@@ -94,11 +94,11 @@ function s4(a, tot) {
   const up = a < 5.83 ? 0 : spring(a - 5.83, 7, 11), bar = at(620, 760, `<rect x="-20" y="0" width="40" height="${G - 880 + 120}" fill="${P.ink}"/><g transform="rotate(${(-78 * up).toFixed(1)})"><path d="${rr(0, -18, 700, 36, 18)}" fill="#fff"/>${[0, 1, 2, 3].map((i) => `<path d="${rr(60 + i * 160, -18, 80, 36, 0)}" fill="${P.red}"/>`).join("")}</g><circle r="34" fill="${P.steel}"/>`);
   const cal = a > 0.19 ? at(470, 300, calPage("1990s", "", 0.8, 150), pop(a - 0.19)) : "";
   const g = `<rect width="1920" height="1080" fill="#170c3b"/>` + layer(`<rect x="-500" y="-300" width="3000" height="1500" fill="#22135a"/>${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M${-400 + i * 480} -300V1000" stroke="#1b0f4a" stroke-width="30"/>`).join("")}`, c, 0.5) + layer(cal + cam + desk + mons + feeds + theCoin + bar, c);
-  return { g, in: toScreen(c, 660, G - 300), inC: P.ink, inZ: 18, out: toScreen(c, CO[0] + roll, CO[1]), outC: P.gold, outZ: 18 };
+  return { g, in: toScreen(c, 690, G - 300), inC: P.ink, inZ: 18, out: toScreen(c, CO[0] + roll, CO[1]), outC: P.gold, outZ: 18 };
 }
 // ---- 5: a little digital-money company lights up; in 1998 it shuts, and its wallet is empty ----
 function s5(a, tot) {
-  const c = camAt(a, [[0, 820, 170, 2.6], [0.8, 860, 500, 1.0], [5.0, 860, 520, 1.04], [5.7, 1110, 870, 2.3], [7.28, 1120, 880, 2.45]]), G = 980, TX = 820, TK = 1.15;
+  const c = camAt(a, [[0, 860, 526, 1.0], [5.0, 860, 530, 1.0], [5.7, 1110, 870, 2.3], [7.28, 1120, 880, 2.45]]), G = 980, TX = 820, TK = 1.15;
   const on = (i) => (a > 2.24 + i * 0.06 && a < 3.74 + i * 0.03 ? 1 : 0), dim = seg(a, 3.74, 4.0), fall = easeIn(seg(a, 4.31, 4.85)), signA = 1 - dim;
   let win = ""; for (let r = 0; r < 5; r++) for (let q = 0; q < 3; q++) { const i = r * 3 + q; win += `<rect x="${-120 + q * 90}" y="${-560 + r * 90}" width="60" height="60" rx="8" fill="${on(i) ? P.win : P.ink}"/>`; }
   const sign = at(fall > 0 ? -210 * fall : 0, -700 + 640 * fall * fall, `${rings(0, 0, 130, P.gold, 0.25 * signA * (a > 2.24 ? 1 : 0.3))}${disc(0, 0, 90, mix(P.gold, "#8a86a8", dim), mix(P.goldD, "#6b6790", dim))}${text(0, 34, "D", 100, mix("#8a5200", "#4a4670", dim))}`, 1, -90 * fall);
