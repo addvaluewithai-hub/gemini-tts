@@ -1,0 +1,994 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-science-01-world",
+ "transcript": "../../../video/cues/explain-science-01-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني رقم واحد في ملف جديد: ملف ",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 4.61,
+   "say": "البشر عندهم حاجة اسمها العلم، بيصدّقوها أكتر من ",
+   "board": {
+    "kind": "sintro"
+   },
+   "step": 0,
+   "stepT": 4.61,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 8.3,
+   "say": "بيركبوا طيارات علشانها، وبياخدوا دوا علشانها، وب",
+   "board": {
+    "kind": "sintro"
+   },
+   "step": 1,
+   "stepT": 8.3
+  },
+  {
+   "t": 13.19,
+   "say": "وفي نفس الوقت، نص الكوكب بيسأل نفس السؤال: هو إح",
+   "board": {
+    "kind": "sintro"
+   },
+   "step": 2,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 13.19
+  },
+  {
+   "t": 18.62,
+   "say": "النهارده هشرح لكم العلم ده إيه أصلاً، وليه البشر",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 21.99,
+   "say": "وهبدأ بأغرب حكاية لقيتها: سنة ألفين وحداشر، مجمو",
+   "board": {
+    "kind": "sintro"
+   },
+   "step": 3,
+   "stepT": 21.99,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 30.15,
+   "say": "وبعدها بكام شهر، طلع المتهم.. كابل مش داخل كويس.",
+   "board": {
+    "kind": "sintro"
+   },
+   "step": 4,
+   "emote": "deadpan",
+   "host": "left",
+   "stepT": 30.15
+  },
+  {
+   "t": 33.14,
+   "say": "الحكاية يا فندم بدأت في أوروبا. فيه معمل كبير في",
+   "board": {
+    "kind": "announce"
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "FASTER THAN LIGHT?",
+    "icon": "atom",
+    "size": 54
+   },
+   "stepT": 33.14,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 41.5,
+   "say": "المسافة حوالي سبعمية وتلاتين كيلو. وفريق اسمه OP",
+   "board": {
+    "kind": "announce"
+   },
+   "step": 1,
+   "stepT": 41.5
+  },
+  {
+   "t": 46.75,
+   "say": "سنة ألفين وحداشر، الأرقام طلعت غريبة: الجزيئات و",
+   "board": {
+    "kind": "announce"
+   },
+   "step": 2,
+   "stepT": 46.75
+  },
+  {
+   "t": 53.84,
+   "say": "يعني أسرع من الضوء. وده المفروض مستحيل.",
+   "board": {
+    "kind": "announce"
+   },
+   "step": 3,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 53.84
+  },
+  {
+   "t": 55.76,
+   "say": "أينشتاين قال إن مفيش حاجة تسبق الضوء، وكل الفيزي",
+   "board": {
+    "kind": "announce"
+   },
+   "step": 4,
+   "stepT": 55.76
+  },
+  {
+   "t": 61.19,
+   "say": "هنا البشر عندهم اختيارين يا فندم.",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 62.81,
+   "say": "يا يخبّوا النتيجة في الدرج. يا يعلنوها ويقولوا: ",
+   "board": {
+    "kind": "announce"
+   },
+   "step": 5,
+   "stepT": 62.81,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 66.33,
+   "say": "وهم عملوا التانية. عملوا مؤتمر صحفي، وقالوا للعا",
+   "board": {
+    "kind": "announce"
+   },
+   "step": 6,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 66.33
+  },
+  {
+   "t": 71.41,
+   "say": "وأنا لما قريت ده يا فندم، قعدت ساكت شوية. عندنا ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 76.54,
+   "say": "أول حاجة لازم تفهموها: البشر فاكرين إن العلم كتا",
+   "board": {
+    "kind": "workshop"
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "METHOD",
+    "icon": "gear"
+   },
+   "stepT": 76.54,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 80.66,
+   "say": "الأرض بتلف حوالين الشمس، المية بتغلي على مية درج",
+   "board": {
+    "kind": "workshop"
+   },
+   "step": 1,
+   "stepT": 80.66
+  },
+  {
+   "t": 83.97,
+   "say": "بس ده مش العلم يا فندم. ده اللي فاضل بعد العلم.",
+   "board": {
+    "kind": "workshop"
+   },
+   "step": 2,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 83.97
+  },
+  {
+   "t": 86.95,
+   "say": "العلم نفسه طريقة. طريقة علشان البني آدم مايضحكش ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 89.92,
+   "say": "وهي بسيطة جداً: قول حاجة ممكن تتجرب. جرّبها. وبع",
+   "board": {
+    "kind": "workshop"
+   },
+   "step": 3,
+   "stepT": 89.92,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 95.07,
+   "say": "لو صمدت، نصدّقها شوية. لو صمدت قدام ناس كتير مش ",
+   "board": {
+    "kind": "workshop"
+   },
+   "step": 4,
+   "stepT": 95.07
+  },
+  {
+   "t": 99.24,
+   "say": "يعني العلم مش مكتبة يا فندم. العلم ورشة. وكل حاج",
+   "board": {
+    "kind": "workshop"
+   },
+   "step": 5,
+   "emote": "proud",
+   "host": "left",
+   "stepT": 99.24
+  },
+  {
+   "t": 105.71,
+   "say": "وعلشان تعرفوا الطريقة دي قديمة قد إيه، روحت لحكا",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "STICK & SHADOW",
+    "icon": "sun",
+    "size": 54
+   },
+   "stepT": 105.71,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 110.63,
+   "say": "راجل اسمه Eratosthenes، كان مسؤول عن مكتبة إسكند",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 1,
+   "stepT": 110.63
+  },
+  {
+   "t": 113.76,
+   "say": "سمع إن في مدينة في الجنوب اسمها أسوان، في يوم مع",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 2,
+   "stepT": 113.76
+  },
+  {
+   "t": 121.59,
+   "say": "فعمل حاجة بسيطة: في نفس اليوم، في نفس الساعة، غر",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 3,
+   "stepT": 121.59
+  },
+  {
+   "t": 127.13,
+   "say": "ضل صغير، زاويته حوالي سبع درجات. يعني جزء من خمس",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 4,
+   "stepT": 127.13
+  },
+  {
+   "t": 131.09,
+   "say": "فقال: لو الأرض مسطحة، الضلين المفروض يبقوا زي بع",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 5,
+   "stepT": 131.09
+  },
+  {
+   "t": 134.08,
+   "say": "بما إنهم مختلفين.. يبقى الأرض مدوّرة.",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 6,
+   "stepT": 134.08
+  },
+  {
+   "t": 136.44,
+   "say": "وبما إن الفرق جزء من خمسين، يبقى المسافة بين الم",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 7,
+   "stepT": 136.44
+  },
+  {
+   "t": 141.35,
+   "say": "المسافة اتقاست بالخطوات، حوالي خمس آلاف استاديون",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 8,
+   "stepT": 141.35
+  },
+  {
+   "t": 146.41,
+   "say": "البشر لحد النهارده مختلفين الاستاديون ده طوله قد",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 9,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 146.41
+  },
+  {
+   "t": 153.75,
+   "say": "من غير طيارة، ولا قمر صناعي، ولا إنترنت. عصاية، ",
+   "board": {
+    "kind": "shadow"
+   },
+   "step": 10,
+   "stepT": 153.75
+  },
+  {
+   "t": 158.2,
+   "say": "وأهم حاجة في الحكاية مش الرقم يا فندم. أهم حاجة ",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "present"
+  },
+  {
+   "t": 164.99,
+   "say": "ومحتاجش يصدّق Eratosthenes. يجرّب.",
+   "shot": "close",
+   "emote": "proud"
+  },
+  {
+   "t": 167.16,
+   "say": "طب إيه اللي يخلّي كلام يبقى علمي، وكلام تاني لأ؟",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug",
+   "story": {
+    "n": 4,
+    "tag": "DRAGON",
+    "icon": "ghost"
+   }
+  },
+  {
+   "t": 170.36,
+   "say": "تخيّل يا فندم واحد جه قال لك: عندي تنين في الجرا",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 0,
+   "stepT": 170.36,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 173.23,
+   "say": "تقول له: وريني. يقول لك: ده تنين مش بيتشاف.",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 1,
+   "stepT": 173.23
+  },
+  {
+   "t": 175.38,
+   "say": "طب نرش دقيق على الأرض نشوف رجليه. يقول لك: ده بي",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 2,
+   "stepT": 175.38
+  },
+  {
+   "t": 178.1,
+   "say": "طب نقيس حرارة النار اللي بيطلّعها. يقول لك: ناره",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 3,
+   "stepT": 178.1
+  },
+  {
+   "t": 180.82,
+   "say": "كل ما تجيب طريقة تختبر بيها، يجيب لك سبب.",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 4,
+   "emote": "bored",
+   "host": "right",
+   "stepT": 180.82
+  },
+  {
+   "t": 183.25,
+   "say": "الكلام ده ممكن يكون صح، وممكن يكون غلط، بس عمره ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 186.78,
+   "say": "ليه؟ لأن مفيش أي تجربة في الدنيا ممكن تثبت إنه غ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 189.66,
+   "say": "وده أهم شرط عند البشر في العلم: لازم الكلام يكون",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 5,
+   "stepT": 189.66,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 195.95,
+   "say": "أينشتاين نفسه عمل كده. نظريته قالت إن ضوء النجوم",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 6,
+   "stepT": 195.95
+  },
+  {
+   "t": 203.12,
+   "say": "وسنة ألف تسعمية تسعتاشر، البشر استنوا كسوف الشمس",
+   "board": {
+    "kind": "dragon"
+   },
+   "step": 7,
+   "emote": "proud",
+   "host": "right",
+   "stepT": 203.12
+  },
+  {
+   "t": 207.57,
+   "say": "نرجع للجزيئات اللي أسرع من الضوء. بعد الإعلان، ع",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "THE CABLE",
+    "icon": "cable"
+   },
+   "stepT": 207.57,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 212.43,
+   "say": "مش علشان يصدّقوا. علشان يكسروا النتيجة. وده بالظ",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 1,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 212.43
+  },
+  {
+   "t": 216.36,
+   "say": "وبعد حوالي خمس شهور، الفريق نفسه لقى الغلطة.",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 2,
+   "stepT": 216.36
+  },
+  {
+   "t": 219.57,
+   "say": "كابل ألياف ضوئية بيوصّل إشارة الوقت من جهاز الـ ",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 3,
+   "stepT": 219.57
+  },
+  {
+   "t": 224.22,
+   "say": "وكمان فيه ساعة في الجهاز كانت ماشية غلط.",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 4,
+   "stepT": 224.22
+  },
+  {
+   "t": 226.15,
+   "say": "مشاكل صغيرة جداً، بس كفاية تغيّر النتيجة الستين ",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 5,
+   "emote": "deadpan",
+   "host": "left",
+   "stepT": 226.15
+  },
+  {
+   "t": 231.39,
+   "say": "وفي نفس الوقت، تجربة تانية في نفس المعمل الإيطال",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 6,
+   "stepT": 231.39
+  },
+  {
+   "t": 240.38,
+   "say": "وبعد ما الفريق صلّح الكابل وعاد الحسابات، طلعت ا",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 7,
+   "stepT": 240.38
+  },
+  {
+   "t": 245.3,
+   "say": "ورئيس الفريق كان استقال قبلها.",
+   "shot": "close",
+   "emote": "neutral"
+  },
+  {
+   "t": 246.71,
+   "say": "ولاحظ يا فندم، مين اللي كشف الغلطة؟ مش صحفي، ولا",
+   "board": {
+    "kind": "cable"
+   },
+   "step": 8,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 246.71,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 251.89,
+   "say": "فيه كلمة البشر بيستخدموها غلط طول الوقت: نظرية.",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "present",
+   "story": {
+    "n": 6,
+    "tag": "THEORY",
+    "icon": "rules"
+   }
+  },
+  {
+   "t": 255.33,
+   "say": "في الشارع، لما حد يقول عندي نظرية، يقصد عنده تخم",
+   "board": {
+    "kind": "theory"
+   },
+   "step": 0,
+   "stepT": 255.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 261.12,
+   "say": "بس عند العلما، الكلمة دي معناها حاجة تانية خالص.",
+   "shot": "host",
+   "emote": "neutral"
+  },
+  {
+   "t": 264.51,
+   "say": "البداية بتبقى فرضية: تخمين ممكن يتجرب.",
+   "board": {
+    "kind": "theory"
+   },
+   "step": 1,
+   "stepT": 264.51,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 267.61,
+   "say": "لو اتجرّبت كتير، وصمدت، ونجحت تتنبأ بحاجات ماحدش",
+   "board": {
+    "kind": "theory"
+   },
+   "step": 2,
+   "stepT": 267.61
+  },
+  {
+   "t": 273.51,
+   "say": "يعني النظرية عندهم مش أول السلم يا فندم. دي آخره",
+   "board": {
+    "kind": "theory"
+   },
+   "step": 3,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 273.51
+  },
+  {
+   "t": 276.7,
+   "say": "نظرية الجاذبية مثلاً. محدش بيقول عليها: أي كلام.",
+   "board": {
+    "kind": "theory"
+   },
+   "step": 4,
+   "stepT": 276.7
+  },
+  {
+   "t": 279.94,
+   "say": "بدليل إن محدش بينط من الشباك علشان يجرّبها.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 282.41,
+   "say": "ونظرية إن الأمراض بتيجي من كائنات صغيرة مابتتشاف",
+   "board": {
+    "kind": "theory"
+   },
+   "step": 5,
+   "stepT": 282.41,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 289.48,
+   "say": "وده موضوع، صدّقني، ليه حكاية في تقرير جاي.",
+   "shot": "host",
+   "emote": "sly"
+  },
+  {
+   "t": 292.19,
+   "say": "وفيه اختبار أصعب من إنك تشرح حاجة حصلت: إنك تقول",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "count",
+   "story": {
+    "n": 7,
+    "tag": "HALLEY",
+    "icon": "comet"
+   }
+  },
+  {
+   "t": 297.16,
+   "say": "سنة ألف سبعمية وخمسة، راجل إنجليزي اسمه Edmond H",
+   "board": {
+    "kind": "halley"
+   },
+   "step": 0,
+   "stepT": 297.16,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 302.84,
+   "say": "لاحظ إن فيه مذنّب بيظهر كل حوالي ستة وسبعين سنة.",
+   "board": {
+    "kind": "halley"
+   },
+   "step": 1,
+   "stepT": 302.84
+  },
+  {
+   "t": 305.9,
+   "say": "فقال: ده مش تلات مذنبات. ده مذنب واحد بيرجع.",
+   "board": {
+    "kind": "halley"
+   },
+   "step": 2,
+   "stepT": 305.9
+  },
+  {
+   "t": 309.31,
+   "say": "وحسب بقوانين الجاذبية، وقال: هيرجع تاني حوالي سن",
+   "board": {
+    "kind": "halley"
+   },
+   "step": 3,
+   "stepT": 309.31
+  },
+  {
+   "t": 314.02,
+   "say": "Halley مات قبلها بستاشر سنة.",
+   "board": {
+    "kind": "halley"
+   },
+   "step": 4,
+   "stepT": 314.02
+  },
+  {
+   "t": 315.47,
+   "say": "وفي ليلة الكريسماس سنة تمانية وخمسين.. المذنّب ظ",
+   "board": {
+    "kind": "halley"
+   },
+   "step": 5,
+   "stepT": 315.47
+  },
+  {
+   "t": 319.05,
+   "say": "البشر سمّوه باسمه.",
+   "board": {
+    "kind": "halley"
+   },
+   "step": 6,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 319.05
+  },
+  {
+   "t": 320.18,
+   "say": "تخيّل يا فندم تحط اسمك على تنبؤ هتموت قبل ما تشو",
+   "shot": "host",
+   "emote": "serious"
+  },
+  {
+   "t": 323.4,
+   "say": "ده يا مجنون، يا واثق في الطريقة اللي حسب بيها. و",
+   "shot": "close",
+   "emote": "proud"
+  },
+  {
+   "t": 326.77,
+   "say": "طيب. نرجع للسؤال الأصلي: ليه البشر يصدّقوا العلم",
+   "shot": "host",
+   "emote": "neutral",
+   "story": {
+    "n": 8,
+    "tag": "WHY TRUST IT",
+    "icon": "shield",
+    "size": 54
+   }
+  },
+  {
+   "t": 330.3,
+   "say": "مش علشان العلما أذكى من باقي الناس. ولا علشان ما",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug"
+  },
+  {
+   "t": 335.26,
+   "say": "البشر بيصدّقوه علشان سببين.",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 337.49,
+   "say": "الأول: هو الطريقة الوحيدة عندهم اللي مبنية علشان",
+   "board": {
+    "kind": "trust"
+   },
+   "step": 0,
+   "stepT": 337.49,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 342.07,
+   "say": "أي واحد يقدر يعيد التجربة. وأي عالم يثبت إن الكب",
+   "board": {
+    "kind": "trust"
+   },
+   "step": 1,
+   "stepT": 342.07
+  },
+  {
+   "t": 346.69,
+   "say": "ومش بنصدّق عالم واحد يا فندم. ده غلط برضه.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 349.05,
+   "say": "اللي بنصدّقه هو لما فرق كتير، في بلاد مختلفة، مش",
+   "board": {
+    "kind": "trust"
+   },
+   "step": 2,
+   "stepT": 349.05,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 357.51,
+   "say": "ساعتها الكلام ده بيبقى صعب جداً يكون مؤامرة. لأن",
+   "board": {
+    "kind": "trust"
+   },
+   "step": 3,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 357.51
+  },
+  {
+   "t": 361.78,
+   "say": "والعلما يا فندم ماتفقوش على حاجة في حياتهم.. غير",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 365.69,
+   "say": "والسبب التاني أبسط: إنها بتشتغل. الموبايل اللي ف",
+   "board": {
+    "kind": "trust"
+   },
+   "step": 4,
+   "stepT": 365.69,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 371.75,
+   "say": "كل دول تنبؤات علمية، والبشر بيراهنوا بحياتهم علي",
+   "board": {
+    "kind": "trust"
+   },
+   "step": 5,
+   "emote": "proud",
+   "host": "left",
+   "stepT": 371.75
+  },
+  {
+   "t": 377.08,
+   "say": "قاموس البشر. كلمتين النهارده. فرضية: تخمين ممكن ",
+   "board": {
+    "kind": "sdict"
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 377.08,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 382.55,
+   "say": "ونظرية: فرضية اتجرّبت ألف مرة وصمدت، مش تخمين زي",
+   "board": {
+    "kind": "sdict"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 382.55
+  },
+  {
+   "t": 387.36,
+   "say": "الخلاصة يا فندم. أولاً: العلم مش كتاب إجابات. ال",
+   "board": {
+    "kind": "srecap"
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 387.36,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 392.77,
+   "say": "ثانياً: الكلام العلمي لازم يكون ممكن يغلط، وإلا ",
+   "board": {
+    "kind": "srecap"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 392.77
+  },
+  {
+   "t": 397.28,
+   "say": "ثالثاً: العلما بيغلطوا، بس الطريقة نفسها هي اللي",
+   "board": {
+    "kind": "srecap"
+   },
+   "step": 2,
+   "host": "right",
+   "stepT": 397.28
+  },
+  {
+   "t": 403.1,
+   "say": "ودي حاجة لازم أعترف بيها: البشر اخترعوا نادي، ال",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 409.03,
+   "say": "في التقرير الجاي: البحث العلمي بيتعمل إزاي؟ ومين",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 416.42,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 419.75,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "2 / 4",
+    "icons": [
+     "file",
+     "eye",
+     "rules"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
