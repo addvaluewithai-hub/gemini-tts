@@ -38,7 +38,7 @@
    "slide": null
   },
   {
-   "t": 2.43,
+   "t": 2.75,
    "say": "Today's subject: cryptocurrency. Money the human",
    "board": {
     "kind": "titlecard",
@@ -47,19 +47,19 @@
     "sub": "PART 1 OF 5 · MONEY WITHOUT A BANK"
    },
    "step": 0,
-   "stepT": 2.43,
+   "stepT": 2.75,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 7.01,
+   "t": 8.07,
    "say": "I will tell you what it is, where it came from, ",
    "shot": "host",
    "emote": "smug",
    "gesture": "count"
   },
   {
-   "t": 14.23,
+   "t": 16.58,
    "say": "The year 2010. Ten thousand bitcoin...",
    "board": {
     "kind": "counter",
@@ -70,12 +70,12 @@
     "now": "RECENT YEARS: HUNDREDS OF MILLIONS"
    },
    "step": 0,
-   "stepT": 14.23,
+   "stepT": 16.58,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 16.5,
+   "t": 19.07,
    "say": "for two pizzas.",
    "board": {
     "kind": "counter",
@@ -86,10 +86,10 @@
     "now": "RECENT YEARS: HUNDREDS OF MILLIONS"
    },
    "step": 1,
-   "stepT": 16.5
+   "stepT": 19.07
   },
   {
-   "t": 17.36,
+   "t": 20.44,
    "say": "At the prices of recent years, that comes to hun",
    "board": {
     "kind": "counter",
@@ -101,23 +101,23 @@
    },
    "host": "right",
    "step": 2,
-   "stepT": 17.36
+   "stepT": 20.44
   },
   {
-   "t": 20.43,
+   "t": 24.05,
    "say": "The most expensive dinner on the planet. And not",
    "shot": "close",
    "emote": "deadpan"
   },
   {
-   "t": 23.23,
+   "t": 27.04,
    "say": "But for Command to understand any of this, I hav",
    "shot": "host",
    "emote": "skeptical",
    "gesture": "present"
   },
   {
-   "t": 27.63,
+   "t": 32,
    "say": "I checked their history. Long ago they swapped t",
    "board": {
     "kind": "steps",
@@ -150,12 +150,12 @@
     "tag": "WHAT IS MONEY?"
    },
    "step": 0,
-   "stepT": 27.63,
+   "stepT": 32,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 31.78,
+   "t": 36.28,
    "say": "The problem: if the baker wants no fish today, y",
    "board": {
     "kind": "steps",
@@ -186,16 +186,16 @@
    "step": 0,
    "host": "right",
    "emote": "skeptical",
-   "stepT": 27.63
+   "stepT": 32
   },
   {
-   "t": 35.88,
+   "t": 40.31,
    "say": "So they tried other things everybody would take.",
    "shot": "close",
    "emote": "deadpan"
   },
   {
-   "t": 43.25,
+   "t": 47.83,
    "say": "They settled on gold: rare, never rots, hard to ",
    "board": {
     "kind": "steps",
@@ -224,12 +224,12 @@
     ]
    },
    "step": 1,
-   "stepT": 43.25,
+   "stepT": 47.83,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 46.35,
+   "t": 51.17,
    "say": "But gold is heavy. So they left it with someone ",
    "board": {
     "kind": "steps",
@@ -258,16 +258,16 @@
     ]
    },
    "step": 2,
-   "stepT": 46.35
+   "stepT": 51.17
   },
   {
-   "t": 51.84,
+   "t": 57.27,
    "say": "Then the trusted man discovered he could lend yo",
    "shot": "close",
    "emote": "sly"
   },
   {
-   "t": 57.64,
+   "t": 63.18,
    "say": "In 1971 the dollar was cut loose from gold. The ",
    "board": {
     "kind": "steps",
@@ -298,12 +298,12 @@
    "step": 2,
    "host": "left",
    "emote": "neutral",
-   "stepT": 46.35,
+   "stepT": 51.17,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 61.23,
+   "t": 67.21,
    "say": "And whoever runs the printing press can print as",
    "board": {
     "kind": "story",
@@ -318,12 +318,12 @@
     ]
    },
    "step": 0,
-   "stepT": 61.23,
+   "stepT": 67.21,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 64.29,
+   "t": 70.72,
    "say": "they printed a single note for one hundred trill",
    "board": {
     "kind": "story",
@@ -338,10 +338,10 @@
     ]
    },
    "step": 1,
-   "stepT": 64.29
+   "stepT": 70.72
   },
   {
-   "t": 67.19,
+   "t": 73.73,
    "say": "It would not buy a bus ticket.",
    "board": {
     "kind": "story",
@@ -357,16 +357,16 @@
    },
    "host": "right",
    "step": 2,
-   "stepT": 67.19
+   "stepT": 73.73
   },
   {
-   "t": 68.35,
+   "t": 74.85,
    "say": "So money's value comes from one thing: everyone ",
    "shot": "close",
    "emote": "deadpan"
   },
   {
-   "t": 74.91,
+   "t": 81.95,
    "say": "And today most of their money is not even paper.",
    "board": {
     "kind": "steps",
@@ -395,12 +395,12 @@
     ]
    },
    "step": 3,
-   "stepT": 74.91,
+   "stepT": 81.95,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 78.13,
+   "t": 85.23,
    "say": "Most money on this planet has no physical form. ",
    "board": {
     "kind": "steps",
@@ -431,10 +431,10 @@
    "step": 3,
    "host": "right",
    "emote": "smug",
-   "stepT": 74.91
+   "stepT": 81.95
   },
   {
-   "t": 83.03,
+   "t": 90.34,
    "say": "I also recorded that their money has three jobs.",
    "board": {
     "kind": "steps",
@@ -458,12 +458,12 @@
     ]
    },
    "step": 0,
-   "stepT": 83.03,
+   "stepT": 90.34,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 85.79,
+   "t": 93.25,
    "say": "You price things with it.",
    "board": {
     "kind": "steps",
@@ -487,10 +487,10 @@
     ]
    },
    "step": 1,
-   "stepT": 85.79
+   "stepT": 93.25
   },
   {
-   "t": 86.75,
+   "t": 94.28,
    "say": "And you save it for tomorrow. Keep those three i",
    "board": {
     "kind": "steps",
@@ -515,10 +515,10 @@
    },
    "host": "left",
    "step": 2,
-   "stepT": 86.75
+   "stepT": 94.28
   },
   {
-   "t": 90.46,
+   "t": 97.63,
    "say": "I traced those numbers to where they actually li",
    "board": {
     "kind": "ledger",
@@ -550,12 +550,12 @@
     "tag": "THE BANK IS A LEDGER"
    },
    "step": 0,
-   "stepT": 90.46,
+   "stepT": 97.63,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 96.68,
+   "t": 103.14,
    "say": "When Alice pays Bob thirty dollars, nothing move",
    "board": {
     "kind": "ledger",
@@ -583,10 +583,10 @@
     ]
    },
    "step": 1,
-   "stepT": 96.68
+   "stepT": 103.14
   },
   {
-   "t": 101.75,
+   "t": 108.98,
    "say": "Your salary: a number. Your rent: a number. You ",
    "board": {
     "kind": "ledger",
@@ -616,10 +616,10 @@
    "step": 1,
    "host": "right",
    "emote": "neutral",
-   "stepT": 96.68
+   "stepT": 103.14
   },
   {
-   "t": 106.3,
+   "t": 113.59,
    "say": "Every bank keeps its own ledger. So every night ",
    "board": {
     "kind": "ledger",
@@ -649,16 +649,16 @@
    "step": 1,
    "host": "left",
    "emote": "sly",
-   "stepT": 96.68
+   "stepT": 103.14
   },
   {
-   "t": 111.01,
+   "t": 118.92,
    "say": "So a bank is not a vault full of money. A bank i",
    "shot": "close",
    "emote": "serious"
   },
   {
-   "t": 116.33,
+   "t": 124.48,
    "say": "I followed one transfer from start to finish. Ev",
    "board": {
     "kind": "flow",
@@ -711,12 +711,12 @@
     "tag": "THE MIDDLEMAN"
    },
    "step": 0,
-   "stepT": 116.33,
+   "stepT": 124.48,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 122.36,
+   "t": 130.43,
    "say": "Alice sends. The bank checks.",
    "board": {
     "kind": "flow",
@@ -765,10 +765,10 @@
     ]
    },
    "step": 1,
-   "stepT": 122.36
+   "stepT": 130.43
   },
   {
-   "t": 124.09,
+   "t": 132.09,
    "say": "Then Bob receives it. Minus the fee.",
    "board": {
     "kind": "flow",
@@ -817,10 +817,10 @@
     ]
    },
    "step": 2,
-   "stepT": 124.09
+   "stepT": 132.09
   },
   {
-   "t": 125.93,
+   "t": 134.03,
    "say": "The ledger holder can charge a fee, delay you, f",
    "board": {
     "kind": "flow",
@@ -870,10 +870,10 @@
    },
    "host": "right",
    "step": 3,
-   "stepT": 125.93
+   "stepT": 134.03
   },
   {
-   "t": 130.95,
+   "t": 139.09,
    "say": "This is not a theory. On the island of Cyprus, i",
    "board": {
     "kind": "story",
@@ -888,12 +888,12 @@
     ]
    },
    "step": 0,
-   "stepT": 130.95,
+   "stepT": 139.09,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 136.54,
+   "t": 144.42,
    "say": "Anyone with over a hundred thousand euros in the",
    "board": {
     "kind": "story",
@@ -908,10 +908,10 @@
     ]
    },
    "step": 1,
-   "stepT": 136.54
+   "stepT": 144.42
   },
   {
-   "t": 141.39,
+   "t": 149.77,
    "say": "In Lebanon, since 2019, banks have locked up peo",
    "board": {
     "kind": "story",
@@ -929,10 +929,10 @@
    "calm": true,
    "gesture": "pockets",
    "step": 2,
-   "stepT": 141.39
+   "stepT": 149.77
   },
   {
-   "t": 146.48,
+   "t": 155.57,
    "say": "Their messages cross the planet in a second. A b",
    "board": {
     "kind": "story",
@@ -949,10 +949,10 @@
    "step": 2,
    "host": "left",
    "emote": "deadpan",
-   "stepT": 141.39
+   "stepT": 149.77
   },
   {
-   "t": 152.11,
+   "t": 161.52,
    "say": "And over a billion adults here have no bank acco",
    "shot": "close",
    "emote": "annoyed",
@@ -960,7 +960,7 @@
    "gesture": "pockets"
   },
   {
-   "t": 158.07,
+   "t": 168.2,
    "say": "So I asked the obvious question: why not digital",
    "shot": "host",
    "emote": "skeptical",
@@ -971,7 +971,7 @@
    }
   },
   {
-   "t": 163.67,
+   "t": 173.73,
    "say": "The problem is that anything digital can be copi",
    "board": {
     "kind": "copy",
@@ -984,12 +984,12 @@
     "warn": "DOUBLE SPENDING"
    },
    "step": 0,
-   "stepT": 163.67,
+   "stepT": 173.73,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 166.12,
+   "t": 176.56,
    "say": "A photo, a song, a movie. Copy, paste. Free.",
    "board": {
     "kind": "copy",
@@ -1002,10 +1002,10 @@
     "warn": "DOUBLE SPENDING"
    },
    "step": 1,
-   "stepT": 166.12
+   "stepT": 176.56
   },
   {
-   "t": 168.75,
+   "t": 179.88,
    "say": "If money were a file, Alice could send the same ",
    "board": {
     "kind": "copy",
@@ -1018,10 +1018,10 @@
     "warn": "DOUBLE SPENDING"
    },
    "step": 2,
-   "stepT": 168.75
+   "stepT": 179.88
   },
   {
-   "t": 173.25,
+   "t": 185.08,
    "say": "That is called the double-spending problem. And ",
    "board": {
     "kind": "copy",
@@ -1036,10 +1036,10 @@
    "step": 2,
    "host": "right",
    "emote": "serious",
-   "stepT": 168.75
+   "stepT": 179.88
   },
   {
-   "t": 178.27,
+   "t": 190.95,
    "say": "In the nineties, a group of programmers who call",
    "board": {
     "kind": "steps",
@@ -1062,12 +1062,12 @@
     ]
    },
    "step": 0,
-   "stepT": 178.27,
+   "stepT": 190.95,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 185.39,
+   "t": 198.86,
    "say": "Humans had been trying since the eighties. A sci",
    "board": {
     "kind": "steps",
@@ -1092,10 +1092,10 @@
    "host": "right",
    "emote": "bored",
    "step": 1,
-   "stepT": 185.39
+   "stepT": 198.86
   },
   {
-   "t": 193.68,
+   "t": 208.42,
    "say": "And then came the thing that changed everything:",
    "board": {
     "kind": "chart",
@@ -1123,12 +1123,12 @@
     "tag": "2008"
    },
    "step": 0,
-   "stepT": 193.68,
+   "stepT": 208.42,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 197.16,
+   "t": 212.16,
    "say": "Big American banks had bet people's money on hom",
    "board": {
     "kind": "chart",
@@ -1152,10 +1152,10 @@
     "draw": 3.2
    },
    "step": 0,
-   "stepT": 193.68
+   "stepT": 208.42
   },
   {
-   "t": 205.87,
+   "t": 221.17,
    "say": "The American government set aside seven hundred ",
    "board": {
     "kind": "chart",
@@ -1179,10 +1179,10 @@
     "draw": 3.2
    },
    "step": 1,
-   "stepT": 205.87
+   "stepT": 221.17
   },
   {
-   "t": 211.93,
+   "t": 227.47,
    "say": "Millions lost their homes and jobs. And the resc",
    "board": {
     "kind": "chart",
@@ -1208,16 +1208,16 @@
    "step": 1,
    "host": "right",
    "emote": "annoyed",
-   "stepT": 205.87
+   "stepT": 221.17
   },
   {
-   "t": 218.97,
+   "t": 234.53,
    "say": "So the ledger keeper gambled, and the customer p",
    "shot": "close",
    "emote": "sly"
   },
   {
-   "t": 225.89,
+   "t": 241.53,
    "say": "Right in the middle of that crisis, a nine-page ",
    "board": {
     "kind": "doc",
@@ -1231,12 +1231,12 @@
     "tag": "SATOSHI'S PAPER"
    },
    "step": 0,
-   "stepT": 225.89,
+   "stepT": 241.53,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 232.38,
+   "t": 248.18,
    "say": "The date: October 31st, 2008. Halloween. A maske",
    "board": {
     "kind": "doc",
@@ -1246,10 +1246,10 @@
     "who": "Who is this?"
    },
    "step": 1,
-   "stepT": 232.38
+   "stepT": 248.18
   },
   {
-   "t": 239.75,
+   "t": 255.74,
    "say": "The title: Bitcoin, a peer-to-peer electronic ca",
    "board": {
     "kind": "doc",
@@ -1261,10 +1261,10 @@
    "step": 1,
    "host": "right",
    "emote": "proud",
-   "stepT": 232.38
+   "stepT": 248.18
   },
   {
-   "t": 247.57,
+   "t": 263.53,
    "say": "The author: Satoshi Nakamoto. To this day, nobod",
    "board": {
     "kind": "doc",
@@ -1274,16 +1274,16 @@
     "who": "Who is this?"
    },
    "step": 2,
-   "stepT": 247.57
+   "stepT": 263.53
   },
   {
-   "t": 253.85,
+   "t": 269.42,
    "say": "And before anyone asks, sir: no, it was not me. ",
    "shot": "host",
    "emote": "smug"
   },
   {
-   "t": 257.7,
+   "t": 272.96,
    "say": "The idea was simple and bold: take the ledger aw",
    "board": {
     "kind": "network",
@@ -1296,12 +1296,12 @@
     "tag": "THE IDEA"
    },
    "step": 0,
-   "stepT": 257.7,
+   "stepT": 272.96,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 261.58,
+   "t": 277.3,
    "say": "Every computer on the network gets a full copy o",
    "board": {
     "kind": "network",
@@ -1310,10 +1310,10 @@
     "cheat": 11
    },
    "step": 1,
-   "stepT": 261.58
+   "stepT": 277.3
   },
   {
-   "t": 266.63,
+   "t": 283.22,
    "say": "When Alice pays Bob, the news reaches them all, ",
    "board": {
     "kind": "network",
@@ -1322,10 +1322,10 @@
     "cheat": 11
    },
    "step": 2,
-   "stepT": 266.63
+   "stepT": 283.22
   },
   {
-   "t": 270.78,
+   "t": 288.05,
    "say": "And if someone tries to cheat by editing their o",
    "board": {
     "kind": "network",
@@ -1335,10 +1335,10 @@
    },
    "host": "left",
    "step": 3,
-   "stepT": 270.78
+   "stepT": 288.05
   },
   {
-   "t": 275.8,
+   "t": 293.06,
    "say": "The ledger is also public. Anyone can read it al",
    "board": {
     "kind": "network",
@@ -1349,16 +1349,16 @@
    "step": 3,
    "host": "right",
    "emote": "smug",
-   "stepT": 270.78
+   "stepT": 288.05
   },
   {
-   "t": 286.69,
+   "t": 305.03,
    "say": "No manager. No head office. And no customer serv",
    "shot": "close",
    "emote": "deadpan"
   },
   {
-   "t": 292.13,
+   "t": 310.82,
    "say": "Which also means nobody can freeze your account,",
    "board": {
     "kind": "network",
@@ -1369,19 +1369,19 @@
    "step": 3,
    "host": "left",
    "emote": "serious",
-   "stepT": 270.78,
+   "stepT": 288.05,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 298.83,
+   "t": 318.17,
    "say": "This shared ledger is called the blockchain. And",
    "shot": "host",
    "emote": "neutral",
    "gesture": "present"
   },
   {
-   "t": 306.43,
+   "t": 325.74,
    "say": "January 3rd, 2009. Satoshi switched the network ",
    "board": {
     "kind": "block",
@@ -1395,12 +1395,12 @@
     "tag": "BLOCK ZERO"
    },
    "step": 0,
-   "stepT": 306.43,
+   "stepT": 325.74,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 314.04,
+   "t": 332.78,
    "say": "And inside that block, Satoshi left a message. T",
    "board": {
     "kind": "block",
@@ -1410,16 +1410,16 @@
     "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
    },
    "step": 1,
-   "stepT": 314.04
+   "stepT": 332.78
   },
   {
-   "t": 322.13,
+   "t": 341.34,
    "say": "So the very first line of money without banks...",
    "shot": "close",
    "emote": "sly"
   },
   {
-   "t": 328.07,
+   "t": 347.59,
    "say": "That block also created fifty brand new bitcoin.",
    "board": {
     "kind": "block",
@@ -1431,12 +1431,12 @@
    "step": 1,
    "host": "right",
    "emote": "neutral",
-   "stepT": 314.04,
+   "stepT": 332.78,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 338.12,
+   "t": 357.36,
    "say": "Nine days later came the first transfer: ten bit",
    "board": {
     "kind": "block",
@@ -1448,10 +1448,10 @@
    "step": 1,
    "host": "left",
    "emote": "neutral",
-   "stepT": 314.04
+   "stepT": 332.78
   },
   {
-   "t": 345.64,
+   "t": 364.64,
    "say": "At first, nobody cared. Bitcoin was practically ",
    "shot": "host",
    "emote": "bored",
@@ -1462,7 +1462,7 @@
    }
   },
   {
-   "t": 352.72,
+   "t": 371.97,
    "say": "Until May 2010. A programmer named Laszlo posted",
    "board": {
     "kind": "counter",
@@ -1474,12 +1474,12 @@
     "now": "BACK THEN: ABOUT $41"
    },
    "step": 0,
-   "stepT": 352.72,
+   "stepT": 371.97,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 359.07,
+   "t": 378.16,
    "say": "And on May 22nd... somebody did.",
    "board": {
     "kind": "counter",
@@ -1491,10 +1491,10 @@
     "now": "BACK THEN: ABOUT $41"
    },
    "step": 1,
-   "stepT": 359.07
+   "stepT": 378.16
   },
   {
-   "t": 360.89,
+   "t": 380.11,
    "say": "It was the first time bitcoin bought something r",
    "board": {
     "kind": "counter",
@@ -1507,10 +1507,10 @@
    },
    "host": "right",
    "step": 2,
-   "stepT": 360.89
+   "stepT": 380.11
   },
   {
-   "t": 363.16,
+   "t": 382.24,
    "say": "Laszlo later said he has no regrets. The pizza w",
    "board": {
     "kind": "counter",
@@ -1524,23 +1524,23 @@
    "step": 2,
    "host": "left",
    "emote": "smug",
-   "stepT": 360.89
+   "stepT": 380.11
   },
   {
-   "t": 365.96,
+   "t": 385.04,
    "say": "And the humans still celebrate that day every ye",
    "shot": "host",
    "emote": "grin",
    "gesture": "cheer"
   },
   {
-   "t": 373.14,
+   "t": 392.78,
    "say": "Less than a year later, one bitcoin reached one ",
    "shot": "close",
    "emote": "deadpan"
   },
   {
-   "t": 378.44,
+   "t": 397.88,
    "say": "As for Satoshi: in April 2011 came the last know",
    "board": {
     "kind": "person",
@@ -1555,12 +1555,12 @@
     "tag": "THE VANISHING"
    },
    "step": 0,
-   "stepT": 378.44,
+   "stepT": 397.88,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 382.45,
+   "t": 401.88,
    "say": "I've moved on to other things.",
    "board": {
     "kind": "person",
@@ -1571,10 +1571,10 @@
     "statSub": "never moved since"
    },
    "step": 1,
-   "stepT": 382.45
+   "stepT": 401.88
   },
   {
-   "t": 384.1,
+   "t": 403.57,
    "say": "Then, gone.",
    "board": {
     "kind": "person",
@@ -1585,10 +1585,10 @@
     "statSub": "never moved since"
    },
    "step": 2,
-   "stepT": 384.1
+   "stepT": 403.57
   },
   {
-   "t": 384.97,
+   "t": 404.54,
    "say": "First, Satoshi handed the code to other programm",
    "board": {
     "kind": "person",
@@ -1601,10 +1601,10 @@
    "step": 2,
    "host": "left",
    "emote": "neutral",
-   "stepT": 384.1
+   "stepT": 403.57
   },
   {
-   "t": 390.24,
+   "t": 410.12,
    "say": "And left behind about a million bitcoin, by rese",
    "board": {
     "kind": "person",
@@ -1615,16 +1615,16 @@
     "statSub": "never moved since"
    },
    "step": 3,
-   "stepT": 390.24
+   "stepT": 410.12
   },
   {
-   "t": 396.55,
+   "t": 416.19,
    "say": "Invented a new money, became one of the richest ",
    "shot": "close",
    "emote": "skeptical"
   },
   {
-   "t": 405.78,
+   "t": 425.12,
    "say": "Before the summary, two words from the Human Dic",
    "board": {
     "kind": "dict",
@@ -1645,12 +1645,12 @@
     "tag": "THE HUMAN DICTIONARY"
    },
    "step": 0,
-   "stepT": 405.78,
+   "stepT": 425.12,
    "shot": "show",
    "kind": "board"
   },
   {
-   "t": 414.84,
+   "t": 434.41,
    "say": "And peer-to-peer: from one person to another. Wi",
    "board": {
     "kind": "dict",
@@ -1668,10 +1668,10 @@
    },
    "host": "right",
    "step": 1,
-   "stepT": 414.84
+   "stepT": 434.41
   },
   {
-   "t": 419.99,
+   "t": 439.75,
    "say": "Summary of the report, sir. One: money is an agr",
    "meme": {
     "kind": "list",
@@ -1692,7 +1692,7 @@
    "kind": "meme"
   },
   {
-   "t": 430,
+   "t": 450.68,
    "say": "An important warning: this explains, it does not",
    "shot": "close",
    "emote": "serious",
@@ -1700,21 +1700,21 @@
    "gesture": "pockets"
   },
   {
-   "t": 436.23,
+   "t": 457.33,
    "say": "Next report: who guards this ledger? What is min",
    "shot": "host",
    "emote": "neutral",
    "gesture": "count"
   },
   {
-   "t": 440.76,
+   "t": 461.86,
    "say": "This has been Earth Report. Agent Peek. End of t",
    "shot": "wide",
    "emote": "proud",
    "gesture": "wave"
   },
   {
-   "t": 444.28,
+   "t": 465.42,
    "shot": "show",
    "kind": "board",
    "board": {
