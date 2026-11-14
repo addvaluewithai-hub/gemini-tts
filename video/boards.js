@@ -34,8 +34,13 @@ import { nrecapSet } from "./sets/nrecap.js";
 const NET_NIGHT = { "#0d0b33": "#04132b", "#34206f": "#0c3a5a", "#141a45": "#0a2236", "#2c366f": "#1b4d6e", "#2a1f66": "#103957", "#22195a": "#0c2e4a",
   "#1a1446": "#0a2238", "#2c2766": "#123a55", "#241d5e": "#0f3350", "#3a3290": "#1d5578", "#3a3478": "#1c4a6a", "#1a1240": "#04132b", "#ffb066": "#8ff0ff",
   "#472080": "#124463", "#5a2a8c": "#165277", "#1f0f47": "#08213a", "#2a1556": "#0b2a45", "#2a1466": "#0a2a52", "#8a3391": "#1d6f8e", "#ff8a5c": "#5fd6c8", "#3a1c71": "#174266" };
-const NET_RE = new RegExp(Object.keys(NET_NIGHT).join("|"), "gi");
-const netNight = (svg) => svg.replace(NET_RE, (m) => NET_NIGHT[m.toLowerCase()]);
+const NET_HEX = /#[0-9a-f]{6}\b/gi;
+// any other dark violet (hue 235..300, lightness under 0.45) is turned to the same lightness in blue-teal
+const toTeal = (h) => { const n = parseInt(h.slice(1), 16), r = (n >> 16) / 255, g = ((n >> 8) & 255) / 255, b = (n & 255) / 255, mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn;
+  if (d < 0.04 || l > 0.45) return h; const sat = d / (1 - Math.abs(2 * l - 1)); let hue = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; hue *= 60; if (hue < 0) hue += 360;
+  if (hue < 235 || hue > 300) return h; const H = 203, c = (1 - Math.abs(2 * l - 1)) * sat, x = c * (1 - Math.abs(((H / 60) % 2) - 1)), m = l - c / 2, [R, G, B] = [0, x, c];   // hue 203: between 180 and 240
+  return "#" + [R, G, B].map((v) => Math.round((v + m) * 255).toString(16).padStart(2, "0")).join(""); };
+const netNight = (svg) => svg.replace(NET_HEX, (m) => NET_NIGHT[m.toLowerCase()] || toTeal(m.toLowerCase()));
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
