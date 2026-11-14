@@ -1,0 +1,215 @@
+[
+ {
+  "file": "explain-electricity-01-world/youtube/shorts/thumb-snail-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "snailBulb",
+   "at": {
+    "x": 600,
+    "y": 720
+   },
+   "s": 0.95
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-01-world/youtube/shorts/thumb-lightning-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "boltCloud",
+   "at": {
+    "x": 540,
+    "y": 660
+   },
+   "s": 1.15
+  },
+  "host": {
+   "emote": "worried",
+   "x": 760,
+   "y": 1000,
+   "size": 980,
+   "look": -0.6,
+   "lookY": -0.8,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-01-world/youtube/shorts/thumb-tea-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "teaScale",
+   "at": {
+    "x": 540,
+    "y": 720
+   },
+   "s": 0.9
+  },
+  "host": {
+   "emote": "thinking",
+   "gesture": "chin",
+   "x": 300,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.6
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-01-world/youtube/shorts/thumb-fish-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "eel",
+   "at": {
+    "x": 540,
+    "y": 660
+   },
+   "s": 0.95
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 760,
+   "y": 1000,
+   "size": 980,
+   "look": -0.6,
+   "lookY": -0.8,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-01-world/youtube/shorts/thumb-edison-tesla-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "acdc",
+   "at": {
+    "x": 510,
+    "y": 640
+   },
+   "s": 0.98
+  },
+  "host": {
+   "emote": "smug",
+   "x": 540,
+   "y": 1000,
+   "size": 980,
+   "look": 0,
+   "lookY": -0.6
+  },
+  "words": []
+ }
+]

@@ -57,6 +57,24 @@ const lattice = (x, base, h, w, c) => { let s = `<path d="M${x - w} ${base}L${x 
 const fish = (x, y, s, c, flip) => `<path transform="translate(${f(x)} ${f(y)}) scale(${flip ? -s : s} ${s})" d="M-20 0C-10 -12 14 -12 22 0C14 12 -10 12 -20 0ZM-20 0L-34 -10V10Z" fill="${c}"/>`;
 
 const BACKDROPS = {
+  // the electricity file's own night: teal and navy, amber windows, wooden poles with wires, cyan glow (not crypto's violet)
+  elecNight: (b = {}) => {
+    const R = rng(b.seed || 7), G = b.groundY ?? 600, M = b.moon || { x: 980, y: 120 };
+    const defs = lin("enSky", ["#020c18", [0.5, "#06283a"], "#0d4a5a"]) + lin("enGround", ["#0a2a3a", "#03111d"]) + rad("enMoon", ["#f2fbff", [0.7, "#bfeeff"], "#7fd4ef"], 0.4, 0.4, 0.7);
+    const poles = (b.poles || [140, 640, 1140]).map((x) => `<g transform="translate(${x} ${G})"><rect x="-9" y="-430" width="18" height="430" fill="#8a5a32"/><rect x="-3" y="-430" width="6" height="430" fill="#a8703f"/><rect x="-80" y="-410" width="160" height="14" rx="5" fill="#6e4524"/>${[-70, 70].map((d) => `<circle cx="${d}" cy="-412" r="7" fill="#e8f6ff"/>`).join("")}</g>`).join("");
+    const P = b.poles || [140, 640, 1140], wires = [-70, 70].map((d) => P.slice(1).map((x, i) => `<path d="M${P[i] + d} ${G - 412}Q${(P[i] + x) / 2 + d} ${G - 360} ${x + d} ${G - 412}" fill="none" stroke="#020a12" stroke-width="4"/>`).join("")).join("");
+    const glowWire = b.spark === false ? "" : `<path d="M${P[0] + 70} ${G - 412}Q${(P[0] + P[1]) / 2 + 70} ${G - 360} ${P[1] + 70} ${G - 412}" fill="none" stroke="#5fe6ff" stroke-width="5" opacity=".9" filter="url(#glow)"/>`;
+    const house = (x, w, h, c, cD) => `<g transform="translate(${x} ${G})"><rect x="${-w / 2}" y="${-h}" width="${w}" height="${h}" fill="${c}"/><rect x="${w / 2 - 14}" y="${-h}" width="14" height="${h}" fill="${cD}"/><path d="M${-w / 2 - 24} ${-h}L0 ${-h - w * 0.5}L${w / 2 + 24} ${-h}Z" fill="#0f2f48"/>
+      ${[-0.26, 0.26].map((k) => `<rect x="${k * w - 24}" y="${-h * 0.72}" width="48" height="44" rx="6" fill="#ffcf6b"/><rect x="${k * w - 24}" y="${-h * 0.72}" width="48" height="44" rx="6" fill="#ffb04a" opacity=".4"/>`).join("")}<path d="M-20 0V-60A20 20 0 0 1 20 -60V0Z" fill="#06121f"/></g>`;
+    const houses = b.houses === false ? "" : house(b.houseA ?? 360, 200, 170, "#22c7b8", "#15988f") + house(b.houseB ?? 920, 220, 180, "#ff8a3c", "#d9661f");
+    const bokeh = Array.from({ length: 14 }, () => `<circle cx="${f(R() * 1280)}" cy="${f(R() * G)}" r="${f(8 + R() * 20)}" fill="${R() < 0.5 ? "#5fe6ff" : "#ffcf6b"}" opacity="${f(0.07 + R() * 0.12)}" filter="url(#b4)"/>`).join("");
+    const back = `<rect width="1280" height="720" fill="url(#enSky)"/>${stars(R, 110, G - 120)}
+      <circle cx="${M.x}" cy="${M.y}" r="140" fill="#9feaff" opacity=".14" filter="url(#b30)"/><circle cx="${M.x}" cy="${M.y}" r="56" fill="url(#enMoon)"/>
+      ${bokeh}<g opacity=".8">${skyline(R, G, 140, 300, "#0b2f45", 0.35, "#ffcf6b")}</g>${skyline(R, G, 60, 180, "#071f30", 0.4, "#ffb04a")}
+      <rect y="${G}" width="1280" height="200" fill="url(#enGround)"/><rect y="${G}" width="1280" height="12" fill="#14526a"/>${Array.from({ length: 12 }, (_, i) => `<rect x="${i * 120 + 20}" y="${G + 64}" width="60" height="8" rx="4" fill="#5fe6ff" opacity=".25"/>`).join("")}
+      ${houses}${poles}${wires}${glowWire}`;
+    return { defs, back, top: "#020c18" };
+  },
   cryptoNight: (b = {}) => {
     const R = rng(b.seed || 3), G = b.groundY ?? 600, M = b.moon || { x: 640, y: 150 };
     const defs = lin("cnSky", ["#05041a", [0.55, "#1c1442"], "#3e2858"]) + rad("cnMoon", ["#fffbe0", [0.7, "#ffe9a8"], "#e8c66a"], 0.4, 0.4, 0.7) + lin("cnGround", ["#1a1430", "#08060f"]);
@@ -503,6 +521,47 @@ export const SCENES = {
       + lin("flame", ["#ff2e2e", [0.4, "#ff7a1a"], [0.75, "#ffe066"], "#fff"], 1, 0) + lin("hull", ["#ffffff", [0.6, "#d9dfee"], "#8f96b8"], 0, 1) + lin("chrome", ["#ffffff", [0.4, "#c9cee6"], [0.6, "#7c839e"], "#e6e9f5"], 1, 0)
       + lin("scr6", ["#ffb347", "#ff6a3d"]) + lin("frond", ["#3fae6a", "#1d6b3a"], 1, 1) + lin("pole", ["#c9cee6", "#7c839e", "#c9cee6"], 1, 0) + lin("marble", ["#f4f1ea", "#c9c4b4"], 1, 1);
     const ITEMS = {
+      // ---- electricity file ----
+      // a copper wire running into a big glowing bulb, a snail racing along the wire ahead of a tiny electron
+      snailBulb: () => `<circle cx="170" cy="-120" r="360" fill="#ffb21f" opacity=".35" filter="url(#b30)"/><circle cx="170" cy="-120" r="240" fill="#fff3b0" opacity=".35" filter="url(#b30)"/>${Array.from({ length: 12 }, (_, i) => { const a = (i / 12) * Math.PI * 2; return `<path d="M${170 + Math.cos(a) * 220} ${-120 + Math.sin(a) * 220}L${170 + Math.cos(a) * 300} ${-120 + Math.sin(a) * 300}" stroke="#ffe27a" stroke-width="14" stroke-linecap="round" opacity=".8"/>`; }).join("")}
+        <path d="M-640 250C-300 250 -120 250 110 210" fill="none" stroke="#7a3e18" stroke-width="44" stroke-linecap="round"/><path d="M-640 244C-300 244 -120 244 110 204" fill="none" stroke="#e8924f" stroke-width="26" stroke-linecap="round"/><path d="M-640 236C-300 236 -120 236 110 196" fill="none" stroke="#ffc38f" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+        <g filter="url(#sh)"><path d="M100 230V140Q100 100 60 50Q-10 -30 0 -120A170 170 0 1 1 340 -120Q350 -30 280 50Q240 100 240 140V230Z" fill="#ffb21f"/><path d="M100 230V140Q100 100 60 50Q-10 -30 0 -120A170 170 0 0 1 300 -230Q330 -60 250 40Q210 90 210 140V230Z" fill="#ffd84a"/>
+          <path d="M130 150V40Q130 0 170 0Q210 0 210 40V150" fill="none" stroke="#c46a00" stroke-width="12"/><path d="M120 -10Q145 -40 170 -10Q195 20 220 -10" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" filter="url(#glow)"/>
+          <path d="M40 -150A120 120 0 0 1 120 -260" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" opacity=".8"/>
+          <rect x="90" y="226" width="160" height="90" rx="14" fill="#aab4d4"/><path d="M90 256H250M90 286H250" stroke="#8792bb" stroke-width="10"/><path d="M120 316H220L200 346H140Z" fill="#071827"/></g>
+        <g transform="translate(-250 190) scale(1.05)" filter="url(#sh)"><path d="M-130 30Q-130 -10 -70 -10H110Q150 -10 154 -50L162 -100" fill="none" stroke="#9de07a" stroke-width="46" stroke-linecap="round"/>
+          <circle cx="-10" cy="-100" r="104" fill="#a46a3e"/><circle cx="-20" cy="-110" r="96" fill="#c98a5a"/><path d="M-20 -110m-62 0a62 62 0 1 1 62 62a38 38 0 1 1 -38 -38a15 15 0 1 1 15 15" fill="none" stroke="#7a4a2a" stroke-width="12" stroke-linecap="round"/>
+          <path d="M160 -96L190 -170M160 -96L222 -150" stroke="#9de07a" stroke-width="13" stroke-linecap="round"/><circle cx="192" cy="-176" r="12" fill="#071827"/><circle cx="226" cy="-154" r="12" fill="#071827"/>
+          ${[0, 1, 2].map((i) => `<path d="M${-190 - i * 40} ${-60 + i * 30}h${-60 + i * 10}" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity="${0.7 - i * 0.2}"/>`).join("")}</g>
+        <g transform="translate(-560 236)"><circle r="40" fill="#5fd6ff" opacity=".35" filter="url(#b12)"/><circle r="26" fill="#5fd6ff"/><rect x="-12" y="-4" width="24" height="8" rx="4" fill="#fff"/></g>`,
+      // a storm cloud firing a huge bolt down to the ground
+      boltCloud: () => `<path d="M30 -150L-90 60H10L-60 330L140 30H30L110 -150Z" fill="#9feaff" opacity=".45" filter="url(#b30)"/>
+        <path d="M30 -150L-90 60H10L-60 330L140 30H30L110 -150Z" fill="#e8fbff" stroke="#5fe6ff" stroke-width="16" stroke-linejoin="round" filter="url(#glow)"/>
+        <g filter="url(#sh)" fill="#2b5a74"><circle cx="-250" cy="-200" r="120"/><circle cx="-90" cy="-290" r="170"/><circle cx="110" cy="-300" r="180"/><circle cx="290" cy="-200" r="130"/><rect x="-370" y="-230" width="780" height="140" rx="70"/></g>
+        <g fill="#3c7a96"><circle cx="-110" cy="-330" r="110"/><circle cx="90" cy="-350" r="110"/></g>
+        ${[[-260, 40, 30], [260, 0, -25], [-200, 200, 20], [240, 220, -20]].map(([x, y, r]) => `<path transform="translate(${x} ${y}) rotate(${r}) scale(.45)" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#9feaff" filter="url(#glow)"/>`).join("")}`,
+      // a balance: one tea glass on the low pan outweighs a pile of light bulbs on the high pan
+      teaScale: () => { const bulb = (x, y, k) => `<g transform="translate(${x} ${y}) scale(${k})"><circle cy="-60" r="44" fill="#fff3b0"/><circle cy="-60" r="44" fill="#ffd04a" opacity=".3"/><rect x="-18" y="-22" width="36" height="26" rx="5" fill="#aab4d4"/></g>`;
+        let pile = ""; [[-80, 0], [-20, 0], [40, 0], [100, 0], [-50, -60], [10, -60], [70, -60], [-20, -120], [40, -120], [10, -180]].forEach(([x, y]) => { pile += bulb(x - 10, y, 0.62); });
+        return `<rect x="-14" y="-330" width="28" height="610" rx="10" fill="#c9cee6"/><path d="M-120 290H120L80 250H-80Z" fill="#8f96b8"/><circle cy="-330" r="30" fill="#ffd23f"/>
+        <g transform="rotate(16 0 -300)"><rect x="-400" y="-312" width="800" height="24" rx="12" fill="#e6e9f5"/>
+          <g transform="translate(-370 -300)"><path d="M0 0L-100 260M0 0L100 260" stroke="#c9cee6" stroke-width="6"/><path d="M-150 260H150Q140 310 0 316Q-140 310 -150 260Z" fill="#aab4d4"/></g>
+          <g transform="translate(370 -300)"><path d="M0 0L-100 260M0 0L100 260" stroke="#c9cee6" stroke-width="6"/><path d="M-150 260H150Q140 310 0 316Q-140 310 -150 260Z" fill="#aab4d4"/></g></g>
+        <g transform="translate(-366 -150)">${pile}</g>
+        <g transform="translate(356 70) scale(1.3)" filter="url(#sh)">${[0, 1, 2].map((i) => `<path d="M${-30 + i * 30} -170q20 -26 0 -52" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".7"/>`).join("")}
+          <path d="M-62 -150L-48 0H48L62 -150Z" fill="#cfe9ff" opacity=".45"/><path d="M-57 -118L-47 -6H47L57 -118Z" fill="#c4581e"/><path d="M-57 -118L-47 -6H-22L-28 -118Z" fill="#e0782e"/><ellipse cx="0" cy="-150" rx="62" ry="10" fill="none" stroke="#e8fbff" stroke-width="5"/></g>`; },
+      // an electric eel, curled, glowing with sparks
+      eel: () => `<path d="M-460 160C-340 -40 -160 260 0 60C160 -140 300 120 400 -40" fill="none" stroke="#5fe6ff" stroke-width="150" stroke-linecap="round" opacity=".22" filter="url(#b30)"/>
+        <path d="M-460 160C-340 -40 -160 260 0 60C160 -140 300 120 400 -40" fill="none" stroke="#1d6b5a" stroke-width="96" stroke-linecap="round"/><path d="M-460 160C-340 -40 -160 260 0 60C160 -140 300 120 400 -40" fill="none" stroke="#2fa585" stroke-width="64" stroke-linecap="round"/>
+        <path d="M-470 186C-340 -14 -160 286 0 86C160 -114 300 146 400 -14" fill="none" stroke="#e8c45a" stroke-width="18" stroke-linecap="round" stroke-dasharray="4 30" opacity=".8"/>
+        <g transform="translate(410 -50) rotate(-40)"><ellipse rx="96" ry="66" fill="#2fa585"/><path d="M60 10Q100 20 96 -6" fill="none" stroke="#0c3a30" stroke-width="10" stroke-linecap="round"/><circle cx="26" cy="-24" r="18" fill="#fff"/><circle cx="32" cy="-24" r="9" fill="#071827"/></g>
+        ${[[-380, -60, 20], [-200, 280, -10], [-30, -120, 30], [180, 200, -25], [300, -230, 10], [-520, 30, 0], [80, -300, -15]].map(([x, y, r]) => `<path transform="translate(${x} ${y}) rotate(${r}) scale(.55)" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#fff36b" stroke="#fff" stroke-width="5" filter="url(#glow)"/>`).join("")}`,
+      // a DC battery and an AC wave squaring up to each other across a spark
+      acdc: () => `<g transform="translate(-280 40)" filter="url(#sh)"><rect x="-120" y="-230" width="240" height="420" rx="30" fill="#1c1638"/><rect x="-120" y="-230" width="240" height="150" rx="30" fill="#ffd04a"/><rect x="-120" y="-100" width="240" height="20" fill="#f09a1a"/>
+          <rect x="-44" y="-264" width="88" height="40" rx="10" fill="#aab4d4"/><path d="M-36 -156H36M0 -192V-120" stroke="#1a0f3a" stroke-width="20" stroke-linecap="round"/><path d="M-40 130H40" stroke="#8a7ab8" stroke-width="20" stroke-linecap="round"/>
+          <path d="M-80 20H80" stroke="#5fe6ff" stroke-width="14" stroke-linecap="round" filter="url(#glow)"/></g>
+        <g transform="translate(300 40)"><circle r="230" fill="#ff8a3c" opacity=".2" filter="url(#b30)"/><path d="M-210 0C-160 -190 -110 -190 -60 0S40 190 90 0S180 -190 220 -40" fill="none" stroke="#ff8a3c" stroke-width="44" stroke-linecap="round" filter="url(#glow)"/><path d="M-210 0C-160 -190 -110 -190 -60 0S40 190 90 0S180 -190 220 -40" fill="none" stroke="#ffe0b0" stroke-width="12" stroke-linecap="round"/></g>
+        <path transform="translate(0 20) scale(1.1)" d="M20 -100L-50 14H-4L-24 100L56 -22H8Z" fill="#fff36b" stroke="#fff" stroke-width="6" filter="url(#glow)"/>`,
       // a fanned stack of banknotes
       banknotes: () => [-24, -10, 6, 20].map((r, i) => `<g transform="rotate(${r}) translate(${i * 14 - 20} ${-i * 8})" filter="url(#sh)"><rect x="-230" y="-110" width="460" height="220" rx="16" fill="${["#2f8a5a", "#3fae6a", "#58c47e", "#7ad69a"][i]}"/><rect x="-206" y="-88" width="412" height="176" rx="10" fill="none" stroke="#d7ffe6" stroke-width="7" opacity=".7"/><circle r="62" fill="#d7ffe6" opacity=".85"/><circle r="40" fill="none" stroke="#2f8a5a" stroke-width="8"/><circle cx="-160" cy="-50" r="18" fill="#d7ffe6" opacity=".6"/><circle cx="160" cy="50" r="18" fill="#d7ffe6" opacity=".6"/></g>`).join(""),
       // an open ledger: rows of lines and amounts, one row being struck out

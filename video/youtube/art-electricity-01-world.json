@@ -1,0 +1,126 @@
+[
+ {
+  "file": "explain-electricity-01-world/youtube/thumbnail-a.jpg",
+  "page": "scene.html",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "scene": "solo",
+  "tag": "ملف [[الكهربا]] · 1/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#05060d",
+   "color": "#fff",
+   "hi": "#FFD23F"
+  },
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 640,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 160,
+     "y": 140
+    }
+   },
+   "item": "snailBulb",
+   "at": {
+    "x": 850,
+    "y": 420
+   },
+   "s": 0.72
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 230,
+   "y": 90,
+   "size": 960,
+   "look": 0.9,
+   "outline": 6,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": [
+   {
+    "t": "أبطأ من [[الحلزون]]",
+    "x": 440,
+    "y": 100,
+    "w": 820,
+    "size": 104,
+    "align": "center",
+    "hi": "#FFD23F"
+   }
+  ]
+ },
+ {
+  "file": "explain-electricity-01-world/youtube/thumbnail-en.jpg",
+  "page": "scene.html",
+  "w": 1280,
+  "h": 720,
+  "rtl": false,
+  "scene": "solo",
+  "tag": "[[ELECTRICITY]] FILE · 1/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#05060d",
+   "color": "#fff",
+   "hi": "#FFD23F"
+  },
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 640,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1120,
+     "y": 140
+    }
+   },
+   "item": "snailBulb",
+   "at": {
+    "x": 430,
+    "y": 420
+   },
+   "s": 0.72
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 1050,
+   "y": 90,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": [
+   {
+    "t": "Slower Than [[a Snail]]",
+    "x": 20,
+    "y": 100,
+    "w": 820,
+    "size": 96,
+    "align": "center",
+    "hi": "#FFD23F"
+   }
+  ]
+ }
+]
