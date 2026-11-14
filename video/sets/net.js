@@ -61,7 +61,7 @@ export const sim = (o = {}) => `${two("M-75 -95H40L75 -60V95H-75Z", o.c || "#f1f
 export const hexPath = (x, y, r) => { let d = ""; for (let i = 0; i < 6; i++) { const an = Math.PI / 180 * (60 * i); d += (i ? "L" : "M") + (x + r * Math.cos(an)).toFixed(1) + " " + (y + r * Math.sin(an)).toFixed(1); } return d + "Z"; };
 // the centres of a hex grid of flat-topped cells of radius r, cols x rows, starting at (x0, y0); each with its colour
 // group 0..2 (the cell pattern that lets cells that do not touch reuse the same group)
-export const hexGrid = (x0, y0, r, cols, rows) => { const out = []; for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) { const x = x0 + i * r * 1.5, y = y0 + j * r * Math.sqrt(3) + (i % 2 ? r * Math.sqrt(3) / 2 : 0); out.push({ i, j, x, y, g: ((i % 3) + (i % 2 ? 2 * (j % 3) + 1 : 2 * (j % 3))) % 3 }); } return out; };
+export const hexGrid = (x0, y0, r, cols, rows) => { const out = []; for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) { const x = x0 + i * r * 1.5, y = y0 + j * r * Math.sqrt(3) + (i % 2 ? r * Math.sqrt(3) / 2 : 0); const q = i, ar = j - (i - (i & 1)) / 2; out.push({ i, j, x, y, g: (((q - ar) % 3) + 3) % 3 }); } return out; };   // odd columns sit half a cell lower; (q - r) mod 3 never repeats between neighbours
 export const GROUP = [["#ff5fa2", "#d6407f"], ["#3fa9ff", "#2a80d2"], ["#ffd04a", "#f09a1a"]];
 
 // ---- a satellite, about 360 wide, centred on (0, 0): body and two solar wings

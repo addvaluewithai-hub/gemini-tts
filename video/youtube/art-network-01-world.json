@@ -1,0 +1,124 @@
+[
+ {
+  "file": "explain-network-01-world/youtube/thumbnail-a.jpg",
+  "page": "scene.html",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "scene": "solo",
+  "tag": "ملف [[الشبكة]] · 1/3",
+  "tagStyle": {
+   "size": 54,
+   "rot": -2,
+   "bg": "#7ff6ff",
+   "color": "#05060d",
+   "hi": "#05060d"
+  },
+  "opts": {
+   "backdrop": "netCity",
+   "bd": {
+    "masts": [
+     [
+      860,
+      560,
+      0.8
+     ],
+     [
+      1180,
+      600,
+      1
+     ]
+    ]
+   },
+   "item": "phone",
+   "at": {
+    "x": 460,
+    "y": 620
+   },
+   "s": 0.95,
+   "rot": -6
+  },
+  "host": {
+   "emote": "surprised",
+   "gesture": "point",
+   "x": 352,
+   "y": 50,
+   "size": 380,
+   "rot": 14,
+   "look": 0.5,
+   "lookY": 0.6
+  },
+  "words": [
+   {
+    "t": "موبايلك\n[[راديو!]]",
+    "x": 640,
+    "y": 170,
+    "w": 620,
+    "size": 150,
+    "align": "center",
+    "hi": "#7ff6ff"
+   }
+  ]
+ },
+ {
+  "file": "explain-network-01-world/youtube/thumbnail-en.jpg",
+  "page": "scene.html",
+  "w": 1280,
+  "h": 720,
+  "rtl": false,
+  "scene": "solo",
+  "tag": "[[NETWORK]] FILE · 1/3",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#7ff6ff",
+   "color": "#05060d",
+   "hi": "#05060d"
+  },
+  "opts": {
+   "backdrop": "netCity",
+   "bd": {
+    "masts": [
+     [
+      860,
+      560,
+      0.8
+     ],
+     [
+      1180,
+      600,
+      1
+     ]
+    ]
+   },
+   "item": "phone",
+   "at": {
+    "x": 460,
+    "y": 620
+   },
+   "s": 0.95,
+   "rot": -6
+  },
+  "host": {
+   "emote": "surprised",
+   "gesture": "point",
+   "x": 352,
+   "y": 50,
+   "size": 380,
+   "rot": 14,
+   "look": 0.5,
+   "lookY": 0.6
+  },
+  "words": [
+   {
+    "t": "Your Phone\n[[Is a Radio!]]",
+    "x": 640,
+    "y": 170,
+    "w": 620,
+    "size": 106,
+    "align": "center",
+    "hi": "#7ff6ff"
+   }
+  ]
+ }
+]

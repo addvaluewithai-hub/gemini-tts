@@ -1,0 +1,893 @@
+{
+ "title": "Earth Report: The Network 1 (English dub track for the world video)",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "English voice written to fit the timing of explain-network-01-world beat by beat (video/dub.cjs). Adapted, not translated, from explain-network-01-ar: same facts and order, lines shortened to fit each slot. Only the audio is used; the picture is the world video's.",
+  "Facts: as in explain-network-01-ar (sources in its plan.md)."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. A warm, smooth, rounded voice in a comfortable middle register, relaxed and close to the microphone: never shrill, never nasal, soft on the s sounds. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "2 / 3",
+   "icons": [
+    "globe",
+    "server",
+    "wifi"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "nintro": {
+   "kind": "nintro",
+   "ends": [
+    3.97,
+    5.94,
+    5.91
+   ]
+  },
+  "voice": {
+   "kind": "voice",
+   "ends": [
+    4.79,
+    5.39,
+    8.37,
+    4.78,
+    6.65,
+    2.1
+   ]
+  },
+  "radio": {
+   "kind": "radio",
+   "ends": [
+    1.66,
+    5.4,
+    5.49,
+    2.34,
+    1.39,
+    1.71,
+    2.65,
+    3.98
+   ]
+  },
+  "route": {
+   "kind": "route",
+   "ends": [
+    2.77,
+    2.9,
+    5.71,
+    4.16,
+    6.67,
+    10.62,
+    4.99
+   ]
+  },
+  "cells": {
+   "kind": "cells",
+   "ends": [
+    4.55,
+    8.76,
+    5.46,
+    6.54,
+    5.72,
+    1.98,
+    1.76,
+    2.54,
+    8.04,
+    11.8,
+    6.12,
+    5.65
+   ]
+  },
+  "sim": {
+   "kind": "sim",
+   "ends": [
+    3.88,
+    4.02,
+    7.26,
+    4.56,
+    3.16,
+    1.58,
+    3.82,
+    3.63,
+    2.43,
+    3.05
+   ]
+  },
+  "drop": {
+   "kind": "drop",
+   "ends": [
+    4.89,
+    3.54,
+    6.02,
+    6.44,
+    7.62,
+    7.59
+   ]
+  },
+  "history": {
+   "kind": "history",
+   "ends": [
+    4.25,
+    3.81,
+    5.26,
+    6.15,
+    3.39,
+    6.17
+   ]
+  },
+  "gens": {
+   "kind": "gens",
+   "ends": [
+    1.64,
+    1.25,
+    1.6,
+    3.7,
+    6.6,
+    8.22,
+    8.2,
+    1.86,
+    2.91,
+    5.22,
+    6.38,
+    3.02,
+    4.77
+   ]
+  },
+  "sat": {
+   "kind": "sat",
+   "ends": [
+    6.55,
+    4.04,
+    8.27,
+    4.59
+   ]
+  },
+  "ndict": {
+   "kind": "ndict",
+   "ends": [
+    6.26,
+    4.69
+   ]
+  },
+  "nrecap": {
+   "kind": "nrecap",
+   "ends": [
+    10.29
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a new field file. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir. A new field file from planet Earth. The Network file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Report one: the mobile phone. The thing in every human pocket.",
+     "show": "board",
+     "board": "nintro",
+     "step": 0
+    },
+    {
+     "say": "Just over eight billion humans... and almost nine billion phone lines. More lines than humans.",
+     "show": "board",
+     "board": "nintro",
+     "step": 1
+    },
+    {
+     "say": "The owners? Only about six billion. So many carry two or three lines. <short pause> And answer one.",
+     "show": "board",
+     "board": "nintro",
+     "step": 2,
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Today: how a voice gets from pocket to pocket, why it's called cellular, and why it dies in elevators. <short pause> Strangest part: almost none of them know where their voice goes. Every day. Never wondered.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "voice",
+   "story": {
+    "n": 1,
+    "tag": "SOUND",
+    "icon": "wave"
+   },
+   "style": "Patient and exact, like dismantling a small machine.",
+   "beats": [
+    {
+     "say": "A human talks, the air shakes. The microphone turns the shaking into an electric wave.",
+     "show": "board",
+     "board": "voice",
+     "step": 0
+    },
+    {
+     "say": "The phone measures that wave thousands of times a second. On a normal call: eight thousand.",
+     "show": "board",
+     "board": "voice",
+     "step": 1
+    },
+    {
+     "say": "Why eight thousand? Human speech doesn't need more. Music needs a lot more. <short pause> Which is why hold music sounds that terrible.",
+     "show": "board",
+     "board": "voice",
+     "step": 2,
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "Each measurement becomes a number. The wave is done. Only the numbers travel.",
+     "show": "board",
+     "board": "voice",
+     "step": 3
+    },
+    {
+     "say": "Then it squeezes them, dropping what human ears won't miss. <short pause> So what arrives isn't your voice, sir. It's a summary.",
+     "show": "board",
+     "board": "voice",
+     "step": 4,
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "Then out they go... into the air.",
+     "show": "board",
+     "board": "voice",
+     "step": 5
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "story": {
+    "n": 2,
+    "tag": "RADIO",
+    "icon": "tower"
+   },
+   "style": "The first surprise. He enjoys telling humans what they are carrying.",
+   "beats": [
+    {
+     "say": "Into the air how? First surprise. <short pause> A mobile isn't a phone. A mobile is a radio.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "Humans can see light.",
+     "show": "board",
+     "board": "radio",
+     "step": 0
+    },
+    {
+     "say": "Radio is the same kind of wave, same speed. Just longer... and invisible to them.",
+     "show": "board",
+     "board": "radio",
+     "step": 1
+    },
+    {
+     "say": "So each one carries a tiny radio station, sending and receiving at the same time.",
+     "show": "board",
+     "board": "radio",
+     "step": 2,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Not just one. Station one: the tower.",
+     "show": "board",
+     "board": "radio",
+     "step": 3
+    },
+    {
+     "say": "Wi-Fi: radio two.",
+     "show": "board",
+     "board": "radio",
+     "step": 4
+    },
+    {
+     "say": "The earbuds: radio three.",
+     "show": "board",
+     "board": "radio",
+     "step": 5
+    },
+    {
+     "say": "Location listens to satellites. That's four.",
+     "show": "board",
+     "board": "radio",
+     "step": 6
+    },
+    {
+     "say": "Airplane mode does exactly one thing: it silences them all.",
+     "show": "board",
+     "board": "radio",
+     "step": 7,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "One human, waiting for a bus, beams four signals. The planet is drowning in waves they can't see. <short pause> I can, sir. It's a mess.",
+     "shot": "close",
+     "emote": "annoyed"
+    }
+   ]
+  },
+  {
+   "id": "route",
+   "story": {
+    "n": 3,
+    "tag": "ROUTE",
+    "icon": "route"
+   },
+   "style": "Following one call like a courier tracking a parcel, then the punchline about wires.",
+   "beats": [
+    {
+     "say": "Second surprise: that wave doesn't go far.",
+     "show": "board",
+     "board": "route",
+     "step": 0
+    },
+    {
+     "say": "Just to the nearest tower. A few hundred meters.",
+     "show": "board",
+     "board": "route",
+     "step": 1
+    },
+    {
+     "say": "From the tower it drops into an underground cable, to the core: a building full of computers.",
+     "show": "board",
+     "board": "route",
+     "step": 2
+    },
+    {
+     "say": "The core finds the other phone and cables it to her nearest tower.",
+     "show": "board",
+     "board": "route",
+     "step": 3
+    },
+    {
+     "say": "The core does three things: knows who you are, knows where the other one is, and bills you. <short pause> Only the third never goes down.",
+     "show": "board",
+     "board": "route",
+     "step": 4,
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "And the last few hundred meters... radio again.",
+     "show": "board",
+     "board": "route",
+     "step": 5
+    },
+    {
+     "say": "So wireless is wireless only at both ends, sir. The middle is all wires. <short pause> The most wired thing on the planet... and they call it wireless.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "All in under a quarter second. She hears him before he finishes the sentence.",
+     "show": "board",
+     "board": "route",
+     "step": 6,
+     "host": "left",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "cells",
+   "story": {
+    "n": 4,
+    "tag": "CELLS",
+    "icon": "tower"
+   },
+   "style": "Explaining a clever trick, then what it means for a spy.",
+   "beats": [
+    {
+     "say": "So why \"cellular\"? Because their land is cut into cells. Each cell has a tower.",
+     "show": "board",
+     "board": "cells",
+     "step": 0
+    },
+    {
+     "say": "The trick: channels in the air are limited. Each cell gets a set, and cells that don't touch reuse it. <short pause> The same air, sold a thousand times.",
+     "show": "board",
+     "board": "cells",
+     "step": 1
+    },
+    {
+     "say": "City cells are tiny, a tower every few streets. Desert cells can span tens of kilometers.",
+     "show": "board",
+     "board": "cells",
+     "step": 2,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "Each tower has antennas facing every way. A phone's signal is weaker than a tiny bulb. <short pause> The tower has big ears.",
+     "show": "board",
+     "board": "cells",
+     "step": 3,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "Weak signal? The phone shouts to be heard. That's why batteries die fast where coverage is bad.",
+     "show": "board",
+     "board": "cells",
+     "step": 4,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Cities hate how towers look.",
+     "show": "board",
+     "board": "cells",
+     "step": 5
+    },
+    {
+     "say": "So they disguise them as palms.",
+     "show": "board",
+     "board": "cells",
+     "step": 6
+    },
+    {
+     "say": "A poor disguise, sir. <short pause> Honestly, better than mine.",
+     "show": "board",
+     "board": "cells",
+     "host": "left",
+     "step": 7
+    },
+    {
+     "say": "The key fact for any spy: a silent phone keeps whispering to the nearest tower: I'm here. <short pause> It has to. How else would a call find it?",
+     "show": "board",
+     "board": "cells",
+     "step": 8
+    },
+    {
+     "say": "From the signal at nearby towers, the network works out roughly where it is. No satellites needed.",
+     "show": "board",
+     "board": "cells",
+     "step": 9,
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "So the network always knows where they are. <short pause> They pay monthly for a tracking device... and complain when the data runs out.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "In a moving car, the call is handed from tower to tower in a split second. He never notices.",
+     "show": "board",
+     "board": "cells",
+     "step": 10
+    },
+    {
+     "say": "And when the handover fails? <short pause> Hello? Hello? Can you hear me? <short pause> The most spoken sentence in this planet's history.",
+     "show": "board",
+     "board": "cells",
+     "step": 11,
+     "host": "left",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "sim",
+   "story": {
+    "n": 5,
+    "tag": "SIM",
+    "icon": "key"
+   },
+   "style": "Practical, with a dry line about money.",
+   "beats": [
+    {
+     "say": "How does it know who you are? The SIM: plastic the size of a fingernail.",
+     "show": "board",
+     "board": "sim",
+     "step": 0
+    },
+    {
+     "say": "The SIM is you, not the phone. Move it, and your number moves too.",
+     "show": "board",
+     "board": "sim",
+     "step": 1
+    },
+    {
+     "say": "It holds a secret key the network uses to check it's not a copy. <short pause> The newest ones aren't plastic at all. They're built into the phone.",
+     "show": "board",
+     "board": "sim",
+     "step": 2
+    },
+    {
+     "say": "The phone has its own serial number, so a stolen one can be locked.",
+     "show": "board",
+     "board": "sim",
+     "step": 3,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "The phone number is an address. First digits: the country.",
+     "show": "board",
+     "board": "sim",
+     "step": 4
+    },
+    {
+     "say": "Next: the company.",
+     "show": "board",
+     "board": "sim",
+     "step": 5
+    },
+    {
+     "say": "The rest: you. The network reads it like a mail carrier reads an envelope.",
+     "show": "board",
+     "board": "sim",
+     "step": 6
+    },
+    {
+     "say": "Travel abroad, and your phone finds a foreign network and introduces itself.",
+     "show": "board",
+     "board": "sim",
+     "step": 7
+    },
+    {
+     "say": "The foreign network asks home: one of yours?",
+     "show": "board",
+     "board": "sim",
+     "step": 8
+    },
+    {
+     "say": "Yours says: yes. And he'll pay. <short pause> He'll pay a lot.",
+     "show": "board",
+     "board": "sim",
+     "step": 9
+    },
+    {
+     "say": "All their networks talk and bill each other. Some countries won't speak at all... yet their networks get along. <short pause> Money unites, sir.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "drop",
+   "story": {
+    "n": 6,
+    "tag": "NO SIGNAL",
+    "icon": "x"
+   },
+   "style": "Brisk list of causes, with one absurd observation.",
+   "beats": [
+    {
+     "say": "Why do calls drop? Reason one: distance. The farther from the tower, the weaker the wave.",
+     "show": "board",
+     "board": "drop",
+     "step": 0
+    },
+    {
+     "say": "Reason two: walls. Concrete and steel swallow the wave.",
+     "show": "board",
+     "board": "drop",
+     "step": 1
+    },
+    {
+     "say": "Three: the elevator. A sealed metal box, the best radio shield they ever built... and they ride it mid-call.",
+     "show": "board",
+     "board": "drop",
+     "step": 2
+    },
+    {
+     "say": "Four: crowds. A tower serves only so many. At a match, everyone's on their phone... and the tower says: enough.",
+     "show": "board",
+     "board": "drop",
+     "step": 3
+    },
+    {
+     "say": "Those bars on the screen measure signal, not how busy the tower is. Five bars... nothing loads. <short pause> The bars are just to calm them.",
+     "show": "board",
+     "board": "drop",
+     "step": 4,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "To be fair: in many countries, the emergency number works without a SIM, on any network. <short pause> First time I've seen them agree on something useful.",
+     "show": "board",
+     "board": "drop",
+     "step": 5,
+     "host": "right",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "story": {
+    "n": 7,
+    "tag": "1973",
+    "icon": "file"
+   },
+   "style": "Historian with a smirk, enjoying the pettiness of the first call.",
+   "beats": [
+    {
+     "say": "Before cells, there were car phones. One tall tower for the whole city.",
+     "show": "board",
+     "board": "history",
+     "step": 0
+    },
+    {
+     "say": "With a few channels. A few calls at once... for an entire city.",
+     "show": "board",
+     "board": "history",
+     "step": 1
+    },
+    {
+     "say": "Everyone else waited their turn. <short pause> So the idea of cells made the mobile, not the device.",
+     "show": "board",
+     "board": "history",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "It began on April third, nineteen seventy-three. An engineer named Martin Cooper stood on a New York sidewalk...",
+     "show": "board",
+     "board": "history",
+     "step": 3
+    },
+    {
+     "say": "and made the first call from a handheld phone.",
+     "show": "board",
+     "board": "history",
+     "step": 4
+    },
+    {
+     "say": "Who did he call? His rival, at the company racing him. <short pause> To say: I'm calling from the street.",
+     "show": "board",
+     "board": "history",
+     "step": 5
+    },
+    {
+     "say": "The planet's first mobile call... was a taunt. <short pause> I respect this being.",
+     "shot": "close",
+     "emote": "grin"
+    },
+    {
+     "say": "It weighed over a kilo.",
+     "show": "board",
+     "board": "gens",
+     "step": 0
+    },
+    {
+     "say": "Ten hours to charge...",
+     "show": "board",
+     "board": "gens",
+     "step": 1
+    },
+    {
+     "say": "for half an hour of talk.",
+     "show": "board",
+     "board": "gens",
+     "step": 2
+    },
+    {
+     "say": "Sold ten years later, it cost about four thousand dollars.",
+     "show": "board",
+     "board": "gens",
+     "host": "left",
+     "step": 3
+    },
+    {
+     "say": "The first commercial network opened in Tokyo in seventy-nine. First generation: voice only. Anyone with a radio could listen in.",
+     "show": "board",
+     "board": "gens",
+     "step": 4
+    },
+    {
+     "say": "Second generation, ninety-one: the voice became numbers, and texting came along. The first text was sent in December ninety-two. It said: Merry Christmas.",
+     "show": "board",
+     "board": "gens",
+     "step": 5
+    },
+    {
+     "say": "Texts had a hundred and sixty characters, squeezed into a spare gap in the network's signals. <short pause> Humans invented a whole slang... for a spare slot.",
+     "show": "board",
+     "board": "gens",
+     "step": 6,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "Three put the internet in the phone.",
+     "show": "board",
+     "board": "gens",
+     "step": 7
+    },
+    {
+     "say": "Four made everything internet. Even the voice.",
+     "show": "board",
+     "board": "gens",
+     "step": 8
+    },
+    {
+     "say": "And five, from twenty nineteen: much faster. And not just for humans. For machines talking to machines.",
+     "show": "board",
+     "board": "gens",
+     "step": 9
+    },
+    {
+     "say": "Each generation, humans say: this will change our lives. <short pause> What actually changes: they watch the same videos... in higher quality.",
+     "show": "board",
+     "board": "gens",
+     "step": 10,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "Today five G covers more than half the planet's people.",
+     "show": "board",
+     "board": "gens",
+     "step": 11
+    },
+    {
+     "say": "But not fairly. Rich countries: eighty-four percent. Poor countries: four.",
+     "show": "board",
+     "board": "gens",
+     "step": 12
+    }
+   ]
+  },
+  {
+   "id": "sat",
+   "story": {
+    "n": 8,
+    "tag": "SPACE",
+    "icon": "globe"
+   },
+   "style": "The newest development, and a personal complaint.",
+   "beats": [
+    {
+     "say": "Latest development: the towers went to space. Since twenty twenty-five, an ordinary phone can text a satellite directly.",
+     "show": "board",
+     "board": "sat",
+     "step": 0
+    },
+    {
+     "say": "No dish, no special gear. Desert, sea, anywhere that can see the sky.",
+     "show": "board",
+     "board": "sat",
+     "step": 1
+    },
+    {
+     "say": "It flies hundreds of kilometers up at twenty-seven thousand kilometers an hour, and a pocket phone talks to it. <short pause> My ship can't do that, sir.",
+     "show": "board",
+     "board": "sat",
+     "step": 2,
+     "host": "left",
+     "emote": "annoyed"
+    },
+    {
+     "say": "Calls are still being tested. But soon, nowhere on this planet will be out of range.",
+     "show": "board",
+     "board": "sat",
+     "step": 3
+    },
+    {
+     "say": "Bad news for us, sir. <short pause> I used to hide there.",
+     "shot": "close",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "Two words from the Human Dictionary. Cell: the area one tower covers. That's where cellphone comes from.",
+     "show": "board",
+     "board": "ndict",
+     "step": 0
+    },
+    {
+     "say": "And SIM: the card that holds your identity. <short pause> They lose it more often than their house keys.",
+     "show": "board",
+     "board": "ndict",
+     "host": "right",
+     "step": 1
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, then the question that leads to the next report, then the sign-off.",
+   "beats": [
+    {
+     "say": "Summary, sir. One: the mobile is a radio that reaches only the nearest tower. Two: everything else is cables. Three: the network must know where you are... to reach you.",
+     "show": "board",
+     "board": "nrecap",
+     "step": 0
+    },
+    {
+     "say": "One question remains: where do those cables go? And where does this internet actually live?",
+     "shot": "close",
+     "emote": "skeptical"
+    },
+    {
+     "say": "Next report: the internet. The answer, sir... is on the seabed.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "theme": "day"
+}
