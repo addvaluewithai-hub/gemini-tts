@@ -32,8 +32,8 @@ const endCue = () => {
   const words = JSON.parse(fs.readFileSync(path.join(kit, spec.end.words), "utf8")); fs.writeFileSync(path.join(dir, "transcript.json"), JSON.stringify(words));
   const w = words.words, first = w[0].start_ms / 1000 / tempo, last = w[w.length - 1].end_ms / 1000 / tempo;
   const sub = w.find((x) => /اشترك/.test(x.text)), board = { kind: "shortend", ...spec.end.card };
-  const edit = [{ t: -1, shot: "show", kind: "board", board, step: 0, stepT: first - 0.1, story: null, music: 1 }];
-  if (sub) edit.push({ t: sub.start_ms / 1000 / tempo - 0.05, kind: "board", board, step: 1 });
+  const edit = [{ t: -1, shot: "show", kind: "board", board, step: 0, stepT: first - 0.1, story: null, music: 1, host: "right" }];   // he leans in once more to say goodbye
+  if (sub) edit.push({ t: sub.start_ms / 1000 / tempo - 0.05, kind: "board", board, step: 1, host: "right" });
   const f = path.join(tmp, "cues-end.json");
   fs.writeFileSync(f, JSON.stringify({ ...base, episode: dir, transcript: "transcript.json", slides: "none.json", edit, ...vertical, from: Math.max(0, first - 0.08), to: last + 0.3, hold: 1.0 }));
   return f;
@@ -62,6 +62,8 @@ if (dubPath) {
   ff(["-f", "concat", "-safe", "0", "-i", list, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000", "-c:a", "aac", "-b:a", "192k", path.resolve(out)]);
   fs.rmSync(tmp, { recursive: true, force: true }); console.log("wrote", out); process.exit(0);
 }
+const endStills = flag("--end-still");   // stills of the closing card, times in seconds of its own line; --end-audio stands in for a WAV that is not here
+if (endStills) { run("node", ["clip.cjs", endCue(), path.resolve(flag("--end-audio") || path.join(kit, spec.end.audio)), path.resolve(out), "--still", endStills, "--workers", "1"]); process.exit(0); }
 const stills = flag("--still");
 if (stills) {   // times in episode seconds, from any part; one still file per time (out-<t>.png beside out) when they span several parts
   const ts = stills.split(",").map(Number), byPart = spec.parts.map(([a, b]) => ts.filter((t) => t >= a && t < b));
