@@ -6,7 +6,7 @@
 //   4 the vault opens on a book, not gold; the book rises over the town and every house hangs from it
 // Each shot ends on a shape the next one starts from (a page, a window, the dark of an empty wallet, a doorway).
 // The host is not in these sets: he leans in from the side of the frame, so the lower corner on his side is kept clear.
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, through, begin, rr, circ, two, disc, rings, text, digitX, number, drawn, at, check, cross } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, through, begin, rr, circ, two, disc, rings, text, digitX, number, drawn, at, check, cross, FW, FH } from "./kit.js";
 
 const P = { sky0: "#2a1466", sky1: "#8a3391", sky2: "#ff8a5c", night0: "#0d0b33", night1: "#34206f", far: "#5a2a8c", mid: "#472080", ground: "#2a1556", road: "#1f0f47", soil: "#170c3b",
   violet: "#8a5be0", violetD: "#6a40bd", blue: "#3fa9ff", blueD: "#2a80d2", pink: "#ff5fa2", pinkD: "#d6407f", teal: "#22c7b8", tealD: "#15988f", gold: "#ffd04a", goldD: "#f09a1a",
@@ -47,7 +47,7 @@ const skyline = (seed, x0, x1, base, hmin, hmax, fill, lit) => { let out = "", x
   if (lit) for (let r = 0; r < 3; r++) for (let q = 0; q < 2; q++) if (rnd(seed + i * 31 + r * 7 + q) > 0.55 && 26 + r * 44 < h - 30) out += `<rect x="${(x + 22 + q * 40).toFixed(0)}" y="${(base - h + 26 + r * 44).toFixed(0)}" width="18" height="22" rx="3" fill="${lit}"/>`;
   x += w + 14 + rnd(seed + i * 5 + 2) * 60; i++; } return out; };
 const clouds = (tot, y, n, fill, o) => Array.from({ length: n }, (_, i) => `<g transform="translate(${(((tot * (9 + i * 4) + i * 760) % 3400) - 500).toFixed(1)} ${y + i * 64})" opacity="${o}"><path d="${rr(-150, -26, 300, 52, 26)}" fill="${fill}"/><path d="${rr(-60, -58, 190, 52, 26)}" fill="${fill}"/></g>`).join("");
-const dusk = (c, tot, sunX, sunY) => `<rect width="1920" height="1080" fill="url(#bsky)"/>${layer(rings(sunX, sunY, 250 * (1 + 0.02 * Math.sin(tot * 1.3)), "#ffd27a", 0.2, 1.45) + `<circle cx="${sunX}" cy="${sunY}" r="170" fill="#ffd98a"/>` + clouds(tot, 170, 4, "#ffb199", 0.55), c, 0.14)}`;
+const dusk = (c, tot, sunX, sunY) => `<rect width="${FW}" height="${FH}" fill="url(#bsky)"/>${layer(rings(sunX, sunY, 250 * (1 + 0.02 * Math.sin(tot * 1.3)), "#ffd27a", 0.2, 1.45) + `<circle cx="${sunX}" cy="${sunY}" r="170" fill="#ffd98a"/>` + clouds(tot, 170, 4, "#ffb199", 0.55), c, 0.14)}`;
 
 // ---- shot 0: money becomes numbers, the numbers live in a book, the book is in a bank ----
 function shot0(a, tot) {

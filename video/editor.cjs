@@ -127,7 +127,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     vY = (vY + (targetY - hostY) * 0.2) * 0.6; hostY += vY;
     const body = { e: a0.e, paper: a0.paper, shift: a0.shift, bob: a0.bob, tilt: a0.tilt, armL: a0.armL, armR: a0.armR, shrug: a0.shrug, sway: a0.sway, bounce: a0.bounce, squash: a0.squash };
     lurk += ((seg.lurk && t > seg.t + 0.4 ? 1 : 0) - lurk) * 0.24;
-    const sideHost = explain && !vert && insert && (seg.host === "right" || seg.host === "left") ? seg.host : null;
+    const sideHost = explain && (!vert || cues.portraitSets) && insert && (seg.host === "right" || seg.host === "left") ? seg.host : null;   // portraitSets: a Short whose sets fill the frame; he leans in from the side as in the episode
     if (sideHost) side = sideHost;
     peek += ((seg.peek || sideHost ? 1 : 0) - peek) * 0.26;
     const spy = (look) => ({ ...body, e: { ...a0.e, look, lookY: -0.1, symbol: null }, paper: "pockets", shift: 0, armL: null, armR: null, shrug: 0, sway: 0, bounce: 0, squash: 1 });

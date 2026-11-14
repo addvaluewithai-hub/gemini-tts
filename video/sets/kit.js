@@ -23,17 +23,22 @@ export const kf = (t, keys, f = ease) => { if (t <= keys[0][0]) return keys[0][1
 // a point on a quadratic curve from a over c to b
 export const bez = (a, c, b, p) => [(1 - p) * (1 - p) * a[0] + 2 * (1 - p) * p * c[0] + p * p * b[0], (1 - p) * (1 - p) * a[1] + 2 * (1 - p) * p * c[1] + p * p * b[1]];
 
+// ---- the frame: 1920 x 1080 for the episode, 1080 x 1920 for a Short (portrait shots, see README) ----
+export let FW = 1920, FH = 1080;
+export const setFrame = (w, h) => { FW = w; FH = h; };
+export const portrait = () => FH > FW;
+
 // ---- camera ----
 // keys are [t, x, y, zoom]: the world point at the centre of the frame, and the scale
 export const camAt = (t, keys) => ({ x: kf(t, keys.map((k) => [k[0], k[1]])), y: kf(t, keys.map((k) => [k[0], k[2]])), z: Math.exp(kf(t, keys.map((k) => [k[0], Math.log(k[3])]))) });
 // a layer seen through the camera; depth 1 is the subject, smaller is further away (moves and scales less), larger is nearer
-export const layer = (inner, c, d = 1) => `<g transform="translate(960 540) scale(${Math.pow(c.z, d).toFixed(4)}) translate(${(-(960 + (c.x - 960) * d)).toFixed(2)} ${(-(540 + (c.y - 540) * d)).toFixed(2)})">${inner}</g>`;
+export const layer = (inner, c, d = 1) => { const cx = FW / 2, cy = FH / 2; return `<g transform="translate(${cx} ${cy}) scale(${Math.pow(c.z, d).toFixed(4)}) translate(${(-(cx + (c.x - cx) * d)).toFixed(2)} ${(-(cy + (c.y - cy) * d)).toFixed(2)})">${inner}</g>`; };
 // where a world point lands on screen at depth 1
-export const toScreen = (c, x, y) => [960 + (x - c.x) * c.z, 540 + (y - c.y) * c.z];
+export const toScreen = (c, x, y) => [FW / 2 + (x - c.x) * c.z, FH / 2 + (y - c.y) * c.z];
 // One shot handing over to the next through a shape: the frame grows out of (or shrinks back into) the point (fx, fy)
 // while a flat colour, the colour of that shape, covers the last part. p = 0 is the plain frame, p = 1 is all colour.
 export const through = (inner, fx, fy, p, colour, zmax = 16) => { if (p <= 0) return inner; const z = Math.exp(Math.log(zmax) * p), m = ease(p);
-  return `<g transform="translate(${lerp(fx, 960, m).toFixed(2)} ${lerp(fy, 540, m).toFixed(2)}) scale(${z.toFixed(4)}) translate(${-fx} ${-fy})">${inner}</g><rect width="1920" height="1080" fill="${colour}" opacity="${seg(p, 0.55, 0.95).toFixed(3)}"/>`; };
+  return `<g transform="translate(${lerp(fx, FW / 2, m).toFixed(2)} ${lerp(fy, FH / 2, m).toFixed(2)}) scale(${z.toFixed(4)}) translate(${-fx} ${-fy})">${inner}</g><rect width="${FW}" height="${FH}" fill="${colour}" opacity="${seg(p, 0.55, 0.95).toFixed(3)}"/>`; };
 
 // ---- shapes ----
 let uid = 0;
@@ -67,5 +72,5 @@ export function play(SHOTS, s, step, age, total) {
   return g;
 }
 // the frame every set is drawn in, with the two skies of the bank set
-export const frame = (g, P) => `<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset=".55" stop-color="${P.sky1}"/><stop offset="1" stop-color="${P.sky2}"/></linearGradient>
-  <linearGradient id="bnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><linearGradient id="bstorm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0f3a"/><stop offset=".6" stop-color="#5a1f5e"/><stop offset="1" stop-color="#a8344f"/></linearGradient><clipPath id="bclip"><rect width="1920" height="1080"/></clipPath></defs><g clip-path="url(#bclip)">${g}</g></svg>`;
+export const frame = (g, P) => `<svg viewBox="0 0 ${FW} ${FH}" width="${FW}" height="${FH}" data-frame="${FW}x${FH}" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset=".55" stop-color="${P.sky1}"/><stop offset="1" stop-color="${P.sky2}"/></linearGradient>
+  <linearGradient id="bnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><linearGradient id="bstorm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0f3a"/><stop offset=".6" stop-color="#5a1f5e"/><stop offset="1" stop-color="#a8344f"/></linearGradient><clipPath id="bclip"><rect width="${FW}" height="${FH}"/></clipPath></defs><g clip-path="url(#bclip)">${g}</g></svg>`;

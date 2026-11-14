@@ -5,7 +5,8 @@
 //   5 1971: the gold slides out from behind the note   6 the press prints at will   7 one note, a hundred trillion
 //   8 it does not buy a bus ticket   9 most notes turn into digits on a screen   10 the town at night: every window a cell
 //   11–13 the three jobs: pay, price, save; then all three go into a file
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame, setFrame } from "./kit.js";
+import { VSHOTS } from "./money.v.js";
 import { P, mix, fmt, house, coin, note, stars, skyline, clouds, dusk } from "./bank.js";
 import { calPage, calFlip, banknote, padlock, press, jar, folder, tag, stall, fish, loaf, goldBar, monitor, car, bus, hills, pedestal } from "./props.js";
 
@@ -203,4 +204,8 @@ function s12(a, tot, s) { const T2 = (s.ends || [])[11] || 3.09, c = camAt(a, [[
 function s13(a, tot, s) { const T3 = ((s.ends || [])[11] || 3.09) + ((s.ends || [])[12] || 1.11), c = camAt(a, [[0, 970, 590, 1.26], [0.3, 1300, 560, 1.22], [0.9, 1260, 560, 1.15], [1.25, 900, 560, 0.98], [3.27, 900, 560, 1.0]]); return { g: jobs(T3 + a, c, tot, s) }; }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13];
-export const moneySet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// cfg.vertical (a Short): the portrait shots of money.v.js, drawn 1080 x 1920; steps without one fall back to the landscape shot
+export const moneySet = (s, step, age, total, cfg = {}) => {
+  if (!cfg.vertical || step >= VSHOTS.length) return frame(play(SHOTS, s, step, age, total), P);
+  setFrame(1080, 1920); try { return frame(play(VSHOTS, { ...s, ends: s.vends || s.ends }, step, age, total), P); } finally { setFrame(1920, 1080); }
+};

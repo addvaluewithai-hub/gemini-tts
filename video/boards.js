@@ -828,20 +828,20 @@ const BOARDS = {
   },
   // "The bank is a ledger": five full-frame illustrated shots with nothing to read, one per beat (sets/bank.js).
   // The host is not in them; give a beat `host: "left"` or `"right"` and he leans in from that side.
-  trail: (s, step, age, total) => bankSet(s, step, age, total),
+  trail: (s, step, age, total, cfg) => bankSet(s, step, age, total, cfg),
   // Crypto part 1, scene by scene, in the world of the bank set (sets/<scene>.js): one wordless shot per beat, `ends` from sets/beats.cjs.
-  money: (s, step, age, total) => moneySet(s, step, age, total),
-  intro: (s, step, age, total) => introSet(s, step, age, total),
-  middle: (s, step, age, total) => middleSet(s, step, age, total),
-  copy: (s, step, age, total) => copySet(s, step, age, total),
-  crisis: (s, step, age, total) => crisisSet(s, step, age, total),
-  paper: (s, step, age, total) => paperSet(s, step, age, total),
-  idea: (s, step, age, total) => ideaSet(s, step, age, total),
-  genesis: (s, step, age, total) => genesisSet(s, step, age, total),
-  pizza: (s, step, age, total) => pizzaSet(s, step, age, total),
-  vanish: (s, step, age, total) => vanishSet(s, step, age, total),
-  dict: (s, step, age, total) => dictSet(s, step, age, total),
-  recap: (s, step, age, total) => recapSet(s, step, age, total),
+  money: (s, step, age, total, cfg) => moneySet(s, step, age, total, cfg),
+  intro: (s, step, age, total, cfg) => introSet(s, step, age, total, cfg),
+  middle: (s, step, age, total, cfg) => middleSet(s, step, age, total, cfg),
+  copy: (s, step, age, total, cfg) => copySet(s, step, age, total, cfg),
+  crisis: (s, step, age, total, cfg) => crisisSet(s, step, age, total, cfg),
+  paper: (s, step, age, total, cfg) => paperSet(s, step, age, total, cfg),
+  idea: (s, step, age, total, cfg) => ideaSet(s, step, age, total, cfg),
+  genesis: (s, step, age, total, cfg) => genesisSet(s, step, age, total, cfg),
+  pizza: (s, step, age, total, cfg) => pizzaSet(s, step, age, total, cfg),
+  vanish: (s, step, age, total, cfg) => vanishSet(s, step, age, total, cfg),
+  dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
+  recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.

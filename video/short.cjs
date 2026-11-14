@@ -19,7 +19,7 @@ const base = JSON.parse(fs.readFileSync(path.join(__dirname, "cues", name + ".js
 const zoom = spec.boardZoom || all.boardZoom || 0.68;
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "short-")), env = { ...process.env, NODE_PATH: process.env.NODE_PATH || "/opt/node-tools/node_modules" };
 const run = (cmd, args) => { const r = spawnSync(cmd, args, { stdio: "inherit", env, cwd: __dirname }); if (r.status !== 0) throw new Error(cmd + " failed"); };
-const vertical = { size: [1080, 1920], vertical: true, boardZoom: zoom, lead: 0, tail: 0 };
+const vertical = { size: [1080, 1920], vertical: true, portraitSets: true, boardZoom: zoom, lead: 0, tail: 0 };
 const cue = (from, to, hold) => {
   const f = path.join(tmp, `cues-${from}.json`);
   fs.writeFileSync(f, JSON.stringify({ ...base, edit: base.edit.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),
@@ -63,7 +63,11 @@ if (dubPath) {
   fs.rmSync(tmp, { recursive: true, force: true }); console.log("wrote", out); process.exit(0);
 }
 const stills = flag("--still");
-if (stills) { const [a, b] = spec.parts[0]; run("node", ["clip.cjs", cue(a, b, 0), path.resolve(wav), path.resolve(out), "--still", stills, "--workers", "1"]); process.exit(0); }
+if (stills) {   // times in episode seconds, from any part; one still file per time (out-<t>.png beside out) when they span several parts
+  const ts = stills.split(",").map(Number), byPart = spec.parts.map(([a, b]) => ts.filter((t) => t >= a && t < b));
+  if (byPart.filter((x) => x.length).length <= 1) { const i = Math.max(0, byPart.findIndex((x) => x.length)), [a, b] = spec.parts[i]; run("node", ["clip.cjs", cue(a, b, 0), path.resolve(wav), path.resolve(out), "--still", stills, "--workers", "1"]); process.exit(0); }
+  byPart.forEach((t, i) => { if (!t.length) return; const [a, b] = spec.parts[i], o = path.resolve(out).replace(/(\.\w+)$/, `-part${i}$1`); run("node", ["clip.cjs", cue(a, b, 0), path.resolve(wav), o, "--still", t.join(","), "--workers", "1"]); });
+  process.exit(0); }
 const workers = process.env.WORKERS || "5", clips = [];
 if (!process.argv.includes("--end-only")) spec.parts.forEach(([a, b], i) => {
   const f = path.join(tmp, `part${i}.mp4`), last = i === spec.parts.length - 1 && !spec.end;
