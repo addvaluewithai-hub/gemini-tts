@@ -10,3 +10,4 @@ out/
 # Rendered episode media lives on Cloudinary (see each episode result.json); keep git light.
 episodes/**/*.mp4
 episodes/**/*.wav
+__pycache__/
