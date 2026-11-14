@@ -7,12 +7,13 @@
 //   3 one copy writes 700; its neighbours cross it out and it rolls back to 70
 //   4 a huge public book under a glass dome: read from row 1, the names turn into long numbers, the houses put on masks
 //   5 a coin no ice can freeze, a press in chains, and the rules as code in a glass case lit from every side
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./idea.v.js";
 import { P, mix, house, bank, book, rows, LINES, coin, stars, skyline, clouds, dusk } from "./bank.js";
 import { laptop, globe, padlock, press, banknote } from "./props.js";
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
-const night = (c, tot, seed = 7) => `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(seed, 80, -600, 2600, 1080, tot), c, 0.15);
+const night = (c, tot, seed = 7) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(seed, 80, -600, 2600, 1080, tot), c, 0.15);
 const roll = (from, to, p) => String(Math.round(lerp(from, to, ease(p))));
 
 // ---- 0: the book leaves the bank ----
@@ -150,4 +151,5 @@ function s5(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5];
-export const ideaSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of idea.v.js (see makeSet in kit.js)
+export const ideaSet = makeSet(SHOTS, V, P);

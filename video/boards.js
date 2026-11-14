@@ -16,6 +16,7 @@ import { pizzaSet } from "./sets/pizza.js";
 import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
+import { shortEndV } from "./sets/shortend.v.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -807,7 +808,8 @@ const BOARDS = {
   // The last card of a Short: the channel name, the full report as a video with a play button (two `icons` either side of it, `sub`
   // under it, e.g. "CRYPTO FILE · 1/5"), and at step 1 a ringing bell with SUBSCRIBE. Nothing outside x 340..1580, so it
   // survives the vertical crop (studio.html, boardZoom 0.85).
-  shortend(s, step, age, total) {
+  shortend(s, step, age, total, cfg = {}) {
+    if (cfg.vertical) return shortEndV(s, step, age, total);   // a Short: the portrait card in the sets' world (sets/shortend.v.js)
     const ic = s.icons || [], n = ic.length, f = pop(total - 0.15), b = step >= 1 ? age : -1, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0;
     const bell = `<path d="M-62 44C-62 -46 -40 -82 0 -82C40 -82 62 -46 62 44L80 62H-80Z" fill="${C.yellow}"/><path d="M-62 44C-62 -46 -40 -82 0 -82" fill="none" stroke="#fff3b0" stroke-width="10" opacity=".6"/>
       <circle cy="-92" r="14" fill="${C.yellow}"/><circle cy="80" r="20" fill="${C.gold}"/>`;

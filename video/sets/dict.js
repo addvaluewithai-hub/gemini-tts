@@ -4,7 +4,8 @@
 //     (cryptography); and a cloth whips off a glass case of coins in plain view (the money is not what is hidden)
 //   1 PEER-TO-PEER: a coin sets off from the blue house towards the bank, the bank sinks out of the way, the coin goes
 //     straight to the pink house; the book above them shuts with a gold clip (that is the whole story)
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./dict.v.js";
 import { P, mix, house, bank, book, rows, coin, stars } from "./bank.js";
 import { padlock } from "./props.js";
 
@@ -39,7 +40,7 @@ function s0(a, tot) {
     <path d="${rr(DX - 380, G - 520, 760, 520, 20)}" fill="${P.ink}"/>${pile}<path d="${rr(DX - 380, G - 520, 760, 520, 20)}" fill="#cfe9ff" opacity=".1" stroke="#cfe9ff" stroke-width="10"/>${two(rr(DX - 420, G, 840, 50, 10), "#5d678f", "#44507a", 0, 10)}
     ${off < 1 ? at(DX + 900 * off, G + 2 - 300 * off * off, cloth(1, a * 3, P.red, P.redD, 820, 560), 1, 40 * off) : ""}`;
   const floor = `<rect x="-900" y="${G + 50}" width="7600" height="500" fill="#141a45"/><rect x="-900" y="${G + 50}" width="7600" height="10" fill="#2c366f"/>`;
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(53, 160, -600, 6200, 800, tot), c, 0.3) + layer(floor + dictBook + cryptoW + tab + lockBox + letterIn + outP + key + caseD, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(53, 160, -600, 6200, 800, tot), c, 0.3) + layer(floor + dictBook + cryptoW + tab + lockBox + letterIn + outP + key + caseD, c);
   return { g, out: toScreen(c, DX, G - 80 - 4 * 58), outC: P.gold, outZ: 18 };
 }
 
@@ -58,9 +59,10 @@ function s1(a, tot) {
   // the book of the whole story, shut with a gold clip
   const bA = a - 2.95, shut = ease(seg(a, 3.5, 3.8)), clip = a - 3.8;
   const theBook = bA > 0 ? at(BX, 320, (shut < 1 ? `<g transform="scale(${(1 - shut * 0.5).toFixed(3)} 1)">${book(rows("70", "80"))}</g>` : two(rr(-84, -104, 168, 210, 14), P.wood, P.woodD, 0, 10) + `<path d="${rr(-70, -90, 140, 182, 10)}" fill="none" stroke="${P.goldD}" stroke-width="6"/>`) + (clip > 0 ? at(0, -100, `<path d="${rr(-24, -20, 48, 60, 8)}" fill="none" stroke="${P.gold}" stroke-width="12"/>`, pop(clip)) + rings(0, 0, 220 * spring(clip, 7, 11), P.gold, 0.14 * (1 - seg(clip, 0.4, 0.65))) : ""), 1.5 * pop(bA)) : "";
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(61, 60, -200, 2200, 700, tot), c, 0.2) + layer(`<rect x="-500" y="${G}" width="3000" height="400" fill="#141a45"/><rect x="-500" y="${G}" width="3000" height="10" fill="#2c366f"/>` + bk + road + houses + coinG + theBook + title, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(61, 60, -200, 2200, 700, tot), c, 0.2) + layer(`<rect x="-500" y="${G}" width="3000" height="400" fill="#141a45"/><rect x="-500" y="${G}" width="3000" height="10" fill="#2c366f"/>` + bk + road + houses + coinG + theBook + title, c);
   return { g, in: toScreen(c, A[0], A[1] - 30), inC: P.gold, inZ: 18 };
 }
 
 const SHOTS = [s0, s1];
-export const dictSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of dict.v.js (see makeSet in kit.js)
+export const dictSet = makeSet(SHOTS, V, P);

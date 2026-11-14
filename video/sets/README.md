@@ -65,3 +65,21 @@ exports its palette and props (town, bank, book, houses, coins), `props.js` hold
 - `node sets/beats.cjs <storyboard> <cues> <board> [--write]` prints each beat's words with their times from the
   start of the beat, and `--write` stores `ends` (how long each shot ran) in the board's spec, which `play()` needs to
   hand one shot over to the next. A shot that follows a host beat comes in on a cut from the studio, with no hand-over.
+
+## Portrait, for the Shorts
+
+`short.cjs` renders a Short with `vertical: true` and `portraitSets: true`. A set board then draws itself at 1080 x 1920
+(`cfg.vertical`), studio.html shows it full frame instead of as a card, and the host leans in from the side low in the
+frame, as in the episode. Every set is made with `makeSet(SHOTS, V, P)` (kit.js); `<set>.v.js` holds `V`, one entry per
+shot:
+
+- a function: a shot drawn for the tall frame (`money.v.js` has nine: the stalls one above the other, the camera going
+  down to the island, the hundred-trillion note as rows of zeros);
+- `{ z, dx, dy, bg }`: the landscape shot through a moved camera, for a subject in the middle; `bg` fills above and
+  below a world that ends (a room, a table);
+- `{ stack: true, cx: [top, bottom] }`: the landscape shot cut in two, its left part above its right part, for things
+  side by side.
+
+`node sets/preview.cjs <storyboard> <board> sheet.jpg 0:1,3 --portrait` looks at them; `node short.cjs <episode> <key>
+<voice.wav> out.png --still t1,t2` takes stills of the Short itself (any part). The closing card `shortend` has its
+portrait version in `shortend.v.js`.

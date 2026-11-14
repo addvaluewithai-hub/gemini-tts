@@ -5,7 +5,8 @@
 //   3 what the keeper can do: snip a slice, keep you waiting, freeze it, sink with it   4 an island at dawn: the town wakes, the bank is shut
 //   5 a tower of coins over a line; a scoop takes about half of what is above it, and the bank mends itself   6 calm: money behind bars while the years go by
 //   7 an envelope goes round the planet in a second, a coin on a snail takes three days; both turn out to be numbers
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./middle.v.js";
 import { P, mix, fmt, house, bank, book, rows, coin, stars, skyline, clouds, dusk } from "./bank.js";
 import { calPage, calFlip, banknote, padlock, globe } from "./props.js";
 
@@ -87,7 +88,7 @@ function m4(a, tot) {
   const c = camAt(a, [[0, 1008, 600, 1.3], [3.7, 1008, 600, 1.33], [5.09, 1008, 605, 1.37]]), G = 820, SEA = 790;
   const sunY = lerp(980, 560, easeOut(seg(a, 0, 3.0))), wake = (i) => (a > 3.36 + i * 0.1 ? 1 : 0), sh = ease(seg(a, 4.2, 4.5));
   const shutter = `<clipPath id="m4a"><path d="M-170 -40V-260A170 170 0 0 1 170 -260V-40Z"/></clipPath><g clip-path="url(#m4a)"><rect x="-180" y="-440" width="360" height="${(400 * sh).toFixed(1)}" fill="${P.steel}"/>${Array.from({ length: Math.floor(16 * sh) }, (_, i) => `<path d="M-180 ${-440 + 25 * (i + 1)}h360" stroke="${P.steelD}" stroke-width="5"/>`).join("")}</g>${sh >= 1 ? at(0, -110, padlock(1.3), pop(a - 4.5)) : ""}`;
-  const sky = `<rect width="1920" height="1080" fill="url(#bsky)"/>`;
+  const sky = `<rect width="${FW}" height="${FH}" fill="url(#bsky)"/>`;
   const far = layer(rings(1350, sunY, 190, "#ffd27a", 0.22, 1.4) + `<circle cx="1350" cy="${sunY}" r="120" fill="#ffd98a"/>` + clouds(tot, 160, 3, "#ffb199", 0.5), c, 0.15);
   const water = `<rect x="-800" y="${SEA}" width="3600" height="900" fill="#1d6fb8"/>${Array.from({ length: 14 }, (_, i) => `<path d="M${-400 + i * 200 + 30 * Math.sin(tot * 0.8 + i)} ${SEA + 40 + (i % 3) * 60}h100" stroke="#5fb6ff" stroke-width="8" stroke-linecap="round" opacity=".6"/>`).join("")}<path d="M1300 ${SEA + 20}h100M1260 ${SEA + 50}h180" stroke="#ffd98a" stroke-width="8" stroke-linecap="round" opacity=".5"/>`;
   const island = `<path d="M260 ${SEA + 30}Q320 ${G - 40} 520 ${G - 20}H1400Q1600 ${G - 40} 1660 ${SEA + 30}Z" fill="#e8c88a"/><path d="M300 ${SEA + 30}Q600 ${SEA + 50} 1620 ${SEA + 30}" stroke="#c9a76a" stroke-width="10" fill="none"/>`;
@@ -114,7 +115,7 @@ function m5(a, tot) {
   const fed = a > 2.95 ? spring(a - 2.95, 7, 11) : 0, mend = 1.4 * (1 - seg(a, 3.35, 4.1));
   const bk = at(BX, BY, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner: (fed > 0 ? rings(0, -150, 120 * fed, P.gold, 0.3) : "") + cracks(mend) }), [0.72 * bump(a, 3.92, 0.06), 0.72 * bump(a, 3.92, 0.06)]);
   const main = `<rect x="-600" y="${G}" width="3200" height="400" fill="#2c1a66"/>` + bk + tower + line + scoop + (a > 3.92 ? rings(BX, BY - 300, 340 * spring(a - 3.92, 6, 10), P.gold, 0.12 * (1 - seg(a, 4.2, 4.53))) : "");
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(53, 60, -300, 2200, 900, tot), c, 0.2) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(53, 60, -300, 2200, 900, tot), c, 0.2) + layer(main, c);
   return { g, in: toScreen(c, TX, G - 20 - (N - 1) * H), inC: P.gold, inZ: 18, out: toScreen(c, BX, BY - 110), outC: P.ink, outZ: 18 };
 }
 // ---- 6 (calm): dollars behind bars, a chain and a lock, and the years go by ----
@@ -130,7 +131,7 @@ function m6(a, tot) {
   const inner = cash + bars + web(-1) + web(1) + chain;
   const motes = Array.from({ length: 10 }, (_, i) => `<circle cx="${(BX - 220 + rnd(i * 3) * 440 + 20 * Math.sin(tot * 0.4 + i)).toFixed(1)}" cy="${(G - 500 + ((rnd(i * 3 + 1) * 400 + tot * 12) % 400)).toFixed(1)}" r="3" fill="${P.cream}" opacity=".4"/>`).join("");
   const main = `<rect x="-600" y="${G}" width="3200" height="400" fill="#2c1a66"/>` + at(BX, G, bank({ inside: P.ink, sign: [1, 1, 1, 1], inner }), K) + motes + cal;
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(59, 50, -300, 2200, 900, tot), c, 0.2) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(59, 50, -300, 2200, 900, tot), c, 0.2) + layer(main, c);
   return { g, in: toScreen(c, BX, G - 160 * K), inC: P.ink, inZ: 16, out: toScreen(c, BX, G - 150 * K), outC: P.ink, outZ: 16 };
 }
 // ---- 7: an envelope goes round the planet in a second; a coin on a snail takes three days; both are only numbers ----
@@ -154,9 +155,10 @@ function m7(a, tot) {
   const eq = a > 4.75 ? at(1090, 880, text(0, 50, "=", 150, P.gold), pop(a - 4.75)) : "";
   const path = `<ellipse cx="${GX}" cy="${GY + 70}" rx="${RX}" ry="${RY}" fill="none" stroke="#b9a8ff" stroke-width="4" stroke-dasharray="10 16" opacity="${(0.5 * (1 - gather)).toFixed(2)}"/>`;
   const main = path + (behind(envTh) ? envItem : "") + (behind(snTh) ? snItem : "") + at(GX, GY, globe(R, tot * 0.03)) + trail + (!behind(envTh) ? envItem : "") + (!behind(snTh) ? snItem : "") + eq;
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(67, 80, -300, 2300, 1080, tot), c, 0.15) + layer(main, c) + watch + cal;
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(67, 80, -300, 2300, 1080, tot), c, 0.15) + layer(main, c) + watch + cal;
   return { g, in: [1500, 200], inC: P.ink, inZ: 12 };
 }
 
 const SHOTS = [m0, m1, m2, m3, m4, m5, m6, m7];
-export const middleSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of middle.v.js (see makeSet in kit.js)
+export const middleSet = makeSet(SHOTS, V, P);

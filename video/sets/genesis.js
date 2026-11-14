@@ -6,12 +6,13 @@
 //     the old printing press beside it keeps spewing notes
 //   3 nine days later: two desks on the planet, the hooded chair and Hal Finney's lit desk; ten coins cross between
 //     them, a line joins the first two, and a "?" stays over the hooded chair
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, cross, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, cross, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./genesis.v.js";
 import { P, mix, book, LINES, coin, stars, skyline } from "./bank.js";
 import { calPage, calFlip, laptop, hoodChair, globe, padlock, press, banknote } from "./props.js";
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
-const night = (c, tot, seed = 7) => `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(seed, 80, -600, 2600, 1080, tot), c, 0.15);
+const night = (c, tot, seed = 7) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(seed, 80, -600, 2600, 1080, tot), c, 0.15);
 // a gold block seen a little from above, face 2s x 2s around (0, 0); `lid` 0..1 opens its top
 const block = (s = 120, label = "0", lid = 0, inner = "") => { const d = s * 0.45;
   return `${two(`M${-s} ${-s}L${-s + d} ${-s - d}H${s + d}V${s - d}L${s} ${s}Z`, P.goldD, "#c06f10", 0, 0)}${inner}
@@ -117,4 +118,5 @@ function s3(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3];
-export const genesisSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of genesis.v.js (see makeSet in kit.js)
+export const genesisSet = makeSet(SHOTS, V, P);

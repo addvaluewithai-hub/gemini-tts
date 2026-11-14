@@ -6,7 +6,7 @@
 //   4 the vault opens on a book, not gold; the book rises over the town and every house hangs from it
 // Each shot ends on a shape the next one starts from (a page, a window, the dark of an empty wallet, a doorway).
 // The host is not in these sets: he leans in from the side of the frame, so the lower corner on his side is kept clear.
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, through, begin, rr, circ, two, disc, rings, text, digitX, number, drawn, at, check, cross, FW, FH } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, through, begin, rr, circ, two, disc, rings, text, digitX, number, drawn, at, check, cross, FW, FH, makeSet } from "./kit.js";
 
 const P = { sky0: "#2a1466", sky1: "#8a3391", sky2: "#ff8a5c", night0: "#0d0b33", night1: "#34206f", far: "#5a2a8c", mid: "#472080", ground: "#2a1556", road: "#1f0f47", soil: "#170c3b",
   violet: "#8a5be0", violetD: "#6a40bd", blue: "#3fa9ff", blueD: "#2a80d2", pink: "#ff5fa2", pinkD: "#d6407f", teal: "#22c7b8", tealD: "#15988f", gold: "#ffd04a", goldD: "#f09a1a",
@@ -176,7 +176,7 @@ function shot3(a, tot) {
   const G = 880, xs = [560, 990, 1420], cols = [[P.teal, P.tealD], [P.gold, P.goldD], [P.pink, P.pinkD]], cmpX = xs, cmpY = 218, rowY = [-44, 6, 56], KB = 0.5, KC = 1.3, MOON = 1790, bad = a >= 3.75;
   const cyc = (a - 2.0) / 0.6, f = cyc - Math.floor(cyc), lapse = a >= 2.0 && a < 3.8, dayL = lapse ? Math.exp(-Math.pow((f - 0.17) / 0.09, 2)) : 0;
   const moonX = !lapse ? MOON : f < 0.12 ? lerp(MOON, 2100, easeIn(f / 0.12)) : f < 0.3 ? -300 : lerp(-180, MOON, easeOut((f - 0.3) / 0.7)), sunX = lapse && f > 0.04 && f < 0.32 ? lerp(-180, 2100, (f - 0.04) / 0.28) : -500, arc = (x) => 140 + 110 * Math.pow((x - 960) / 960, 2);
-  const sky = `<rect width="1920" height="1080" fill="url(#bnight)"/><g opacity="${(1 - dayL).toFixed(2)}">${stars(5, 60, 0, 1920, 520, tot, (x, y) => Math.hypot(x - 300, y - 200) < 80)}</g><rect width="1920" height="1080" fill="#ff9d6c" opacity="${(dayL * 0.8).toFixed(2)}"/>
+  const sky = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/><g opacity="${(1 - dayL).toFixed(2)}">${stars(5, 60, 0, 1920, 520, tot, (x, y) => Math.hypot(x - 300, y - 200) < 80)}</g><rect width="${FW}" height="${FH}" fill="#ff9d6c" opacity="${(dayL * 0.8).toFixed(2)}"/>
     ${at(sunX, arc(sunX), rings(0, 0, 90, "#ffe08a", 0.3) + `<circle r="62" fill="#ffe08a"/>`)}${at(moonX, arc(moonX), rings(0, 0, 84, P.cream, 0.12) + `<circle r="56" fill="${P.cream}"/><circle cx="-20" cy="-14" r="50" fill="${mix(P.night0, P.night1, 0.25)}"/>`)}`;
   const scanX = (m) => lerp(340, 1640, ease(seg(a, 2.22 + m * 0.6, 2.55 + m * 0.6)));
   let banks = "";
@@ -229,19 +229,22 @@ function shot4(a, tot) {
   H.forEach((h, i) => { if (!h[4]) one(h, i); });
   const soil = `<rect x="-600" y="${G - 50}" width="3200" height="52" fill="#1b2054"/><rect x="-600" y="${G}" width="3200" height="14" fill="#2c366f"/><rect x="-600" y="${G + 12}" width="3200" height="700" fill="${P.soil}"/>${Array.from({ length: 14 }, (_, i) => `<ellipse cx="${(rnd(i * 9 + 3) * 1920).toFixed(0)}" cy="${(G + 50 + rnd(i * 9 + 4) * 160).toFixed(0)}" rx="${(14 + rnd(i * 9 + 5) * 20).toFixed(0)}" ry="9" fill="#21144d"/>`).join("")}<rect x="${VX - 14}" y="${G}" width="28" height="30" fill="#5d678f"/>`;
   const theBook = bq <= 0 ? "" : at(bpos[0], bpos[1], (bq > 0.5 ? rings(0, 0, 200, P.gold, 0.16 * seg(bq, 0.5, 1), 1.3) : "") + book(rows("70", "80")), bk * pulse, tilt(a));
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(9, 70, -200, 2200, 620, tot) + at(1500, 190, rings(0, 0, 84, P.cream, 0.12) + `<circle r="56" fill="${P.cream}"/><circle cx="-20" cy="-14" r="50" fill="${mix(P.night0, P.night1, 0.2)}"/>`), c, 0.12)
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(9, 70, -200, 2200, 620, tot) + at(1500, 190, rings(0, 0, 84, P.cream, 0.12) + `<circle r="56" fill="${P.cream}"/><circle cx="-20" cy="-14" r="50" fill="${mix(P.night0, P.night1, 0.2)}"/>`), c, 0.12)
     + layer(skyline(83, -300, 2300, G - 10, 120, 300, "#221a5c", "#ffb066"), c, 0.6) + layer(soil + town + at(VX, VY, vault, K) + strings + theBook, c);
   return { g, in: [960, 540], inC: P.ink, inZ: 20 };
 }
 
 const SHOTS = [shot0, shot1, shot2, shot3, shot4], RAN = [5.49, 5.51, 4.31, 5.25], OUT = 0.2, IN = 0.45;
 // spec.ends: how long each shot ran before the next one took over, when the voice timing differs from the defaults
-export function bankSet(s, step, age, total) {
+import { V as BV } from "./bank.v.js";
+const bankV = makeSet(SHOTS, BV, P);
+export function bankSet(s, step, age, total, cfg = {}) {
+  if (cfg.vertical) return bankV({ ...s, ends: s.ends || RAN }, step, age, total, cfg);   // a Short: the portrait shots of bank.v.js
   begin(); const k = Math.min(step, SHOTS.length - 1), ran = s.ends || RAN; let g;
   if (k > 0 && age < OUT) { const prev = SHOTS[k - 1](ran[k - 1] + age, total); g = through(prev.g, prev.out[0], prev.out[1], age / OUT, prev.outC, prev.outZ || 16); }
   else { const cur = SHOTS[k](age, total); g = k > 0 && age < OUT + IN ? through(cur.g, cur.in[0], cur.in[1], 1 - easeOut((age - OUT) / IN), cur.inC, cur.inZ || 16) : cur.g; }
-  return `<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset=".55" stop-color="${P.sky1}"/><stop offset="1" stop-color="${P.sky2}"/></linearGradient>
-    <linearGradient id="bnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><clipPath id="bclip"><rect width="1920" height="1080"/></clipPath></defs><g clip-path="url(#bclip)">${g}</g></svg>`;
+  return `<svg viewBox="0 0 1920 1080" width="${FW}" height="${FH}" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset=".55" stop-color="${P.sky1}"/><stop offset="1" stop-color="${P.sky2}"/></linearGradient>
+    <linearGradient id="bnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><clipPath id="bclip"><rect width="${FW}" height="${FH}"/></clipPath></defs><g clip-path="url(#bclip)">${g}</g></svg>`;
 }
 
 // the world the other sets of the episode are built in: the same palette, town, bank, book, houses and money

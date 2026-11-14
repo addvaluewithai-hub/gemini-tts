@@ -30,7 +30,8 @@ export const portrait = () => FH > FW;
 
 // ---- camera ----
 // keys are [t, x, y, zoom]: the world point at the centre of the frame, and the scale
-export const camAt = (t, keys) => ({ x: kf(t, keys.map((k) => [k[0], k[1]])), y: kf(t, keys.map((k) => [k[0], k[2]])), z: Math.exp(kf(t, keys.map((k) => [k[0], Math.log(k[3])]))) });
+let VMOD = null;   // while a landscape shot is reframed for portrait: how its camera is moved (see makeSet)
+export const camAt = (t, keys) => { const c = { x: kf(t, keys.map((k) => [k[0], k[1]])), y: kf(t, keys.map((k) => [k[0], k[2]])), z: Math.exp(kf(t, keys.map((k) => [k[0], Math.log(k[3])]))) }; return VMOD ? VMOD(c, t) : c; };
 // a layer seen through the camera; depth 1 is the subject, smaller is further away (moves and scales less), larger is nearer
 export const layer = (inner, c, d = 1) => { const cx = FW / 2, cy = FH / 2; return `<g transform="translate(${cx} ${cy}) scale(${Math.pow(c.z, d).toFixed(4)}) translate(${(-(cx + (c.x - cx) * d)).toFixed(2)} ${(-(cy + (c.y - cy) * d)).toFixed(2)})">${inner}</g>`; };
 // where a world point lands on screen at depth 1
@@ -74,3 +75,29 @@ export function play(SHOTS, s, step, age, total) {
 // the frame every set is drawn in, with the two skies of the bank set
 export const frame = (g, P) => `<svg viewBox="0 0 ${FW} ${FH}" width="${FW}" height="${FH}" data-frame="${FW}x${FH}" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset=".55" stop-color="${P.sky1}"/><stop offset="1" stop-color="${P.sky2}"/></linearGradient>
   <linearGradient id="bnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><linearGradient id="bstorm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a0f3a"/><stop offset=".6" stop-color="#5a1f5e"/><stop offset="1" stop-color="#a8344f"/></linearGradient><clipPath id="bclip"><rect width="${FW}" height="${FH}"/></clipPath></defs><g clip-path="url(#bclip)">${g}</g></svg>`;
+
+// ---- a set, in both frames ----
+// makeSet(SHOTS, V, P): the board function of a set. In an episode it plays SHOTS at 1920 x 1080. In a Short (cfg.vertical)
+// it draws 1080 x 1920: V[k] is either a portrait shot of its own (a function like the others, drawn for the tall frame) or
+// { z, dx, dy, keys } to show landscape shot k through a moved camera (zoom times z, shifted by dx, dy; or `keys`, a function
+// (camera, t) -> camera). A shot whose subject sits in the middle reframes well; one with things side by side needs its own.
+// bg: [top, bottom], two flat colours behind a shot whose world ends above or below the tall frame (a room, a table)
+const reframe = (fn, m = {}) => (a, tot, s) => { VMOD = m.keys || ((c) => ({ x: c.x + (m.dx || 0), y: c.y + (m.dy || 0), z: c.z * (m.z || 1) }));
+  try { const r = fn(a, tot, s), bg = m.bg || ["#1a1240", "#1a1240"]; return { ...r, g: `<rect width="1080" height="960" fill="${bg[0]}"/><rect y="960" width="1080" height="960" fill="${bg[1]}"/>` + r.g }; } finally { VMOD = null; } };   // never let the studio show through
+// { stack: true }: the landscape shot cut in two and stacked, its left part above its right part, each a 1080 x 960 panel
+// at the episode's own scale (z multiplies it; dy moves the panels' cameras, one value or [top, bottom]; split moves the cut,
+// 0.5 = the middle; or cx: [top, bottom], the x of the episode's frame each panel is centred on)
+const stacked = (fn, m = {}) => (a, tot, s) => {
+  const k = m.z || 1, H = 960, panels = [-1, 1].map((side) => { setFrame(1080, H);
+    VMOD = (c) => { const z = c.z * k, half = (1920 / c.z - 1080 / z) / 2, sh = (m.split ?? 0.5) - 0.5; return { x: m.cx ? c.x + (m.cx[(side + 1) / 2] - 960) / c.z : c.x + side * half + sh * 1920 / c.z, y: c.y + (Array.isArray(m.dy) ? m.dy[(side + 1) / 2] : m.dy || 0), z }; };
+    try { return fn(a, tot, s); } finally { VMOD = null; setFrame(1080, 1920); } });
+  const seam = m.seam ?? "#0d0b33";
+  const g = `<clipPath id="vtop"><rect width="1080" height="${H}"/></clipPath><clipPath id="vbot"><rect width="1080" height="${H}"/></clipPath><g clip-path="url(#vtop)">${panels[0].g}</g><g transform="translate(0 ${H})"><g clip-path="url(#vbot)">${panels[1].g}</g></g><rect y="${H - 6}" width="1080" height="12" fill="${seam}"/>`;
+  const pick = (p, key) => (p[key] ? [p[key][0], p[key][1] + (p === panels[1] ? H : 0)] : null);
+  return { g, in: pick(panels[0], "in") || pick(panels[1], "in"), inC: panels[0].inC || panels[1].inC, inZ: panels[0].inZ, out: pick(panels[1], "out") || pick(panels[0], "out"), outC: panels[1].outC || panels[0].outC, outZ: panels[1].outZ };
+};
+export const makeSet = (SHOTS, V, P) => (s, step, age, total, cfg = {}) => {
+  if (!cfg.vertical) return frame(play(SHOTS, s, step, age, total), P);
+  setFrame(1080, 1920);
+  try { return frame(play(SHOTS.map((fn, i) => (typeof V[i] === "function" ? V[i] : V[i] && V[i].stack ? stacked(fn, V[i]) : reframe(fn, V[i]))), s, step, age, total), P); } finally { setFrame(1920, 1080); }
+};

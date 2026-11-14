@@ -5,12 +5,13 @@
 //   one ✓, one ✗   4 a dark room of old monitors with locks on their screens; a digital coin; the watching camera shuts its
 //   eye, the barrier lifts   5 a little company with a "D" coin sign lights up, 1989; 1998, the lights go out, the sign
 //   falls, the door is locked, and the wallet on its step opens on a moth
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./copy.v.js";
 import { P, mix, house, bank, book, rows, coin, stars, skyline } from "./bank.js";
 import { calPage, calFlip, padlock } from "./props.js";
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
-const room = (c, tot) => `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(53, 60, -300, 2300, 700, tot), c, 0.15);
+const room = (c, tot) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(53, 60, -300, 2300, 700, tot), c, 0.15);
 // a file: a page with a folded corner, 240 x 300 around (0, 0); `inner` is drawn on it
 const fileCard = (inner = "", o = {}) => `${o.glow ? rings(0, 0, 190, o.glowC || "#9fe7ff", o.glow * 0.2) : ""}${two("M-120 -150H70L120 -100V150H-120Z", o.c || P.cream, o.cD || P.creamD, 0, 10)}<path d="M70 -150V-100H120Z" fill="${o.cD || P.creamD}"/>${inner}`;
 const picture = `<path d="${rr(-84, -96, 168, 130, 10)}" fill="#7fd0ff"/><circle cx="40" cy="-60" r="18" fill="${P.gold}"/><path d="M-84 34L-30 -30L10 10L40 -14L84 34Z" fill="${P.green}"/><path d="M-80 76h160M-80 106h110" stroke="${P.creamD}" stroke-width="12" stroke-linecap="round"/>`;
@@ -93,7 +94,7 @@ function s4(a, tot) {
   // and the barrier in front of it lifts by itself
   const up = a < 5.83 ? 0 : spring(a - 5.83, 7, 11), bar = at(620, 760, `<rect x="-20" y="0" width="40" height="${G - 880 + 120}" fill="${P.ink}"/><g transform="rotate(${(-78 * up).toFixed(1)})"><path d="${rr(0, -18, 700, 36, 18)}" fill="#fff"/>${[0, 1, 2, 3].map((i) => `<path d="${rr(60 + i * 160, -18, 80, 36, 0)}" fill="${P.red}"/>`).join("")}</g><circle r="34" fill="${P.steel}"/>`);
   const cal = a > 0.19 ? at(470, 300, calPage("1990s", "", 0.8, 150), pop(a - 0.19)) : "";
-  const g = `<rect width="1920" height="1080" fill="#170c3b"/>` + layer(`<rect x="-500" y="-300" width="3000" height="1500" fill="#22135a"/>${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M${-400 + i * 480} -300V1000" stroke="#1b0f4a" stroke-width="30"/>`).join("")}`, c, 0.5) + layer(cal + cam + desk + mons + feeds + theCoin + bar, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="#170c3b"/>` + layer(`<rect x="-500" y="-300" width="3000" height="1500" fill="#22135a"/>${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M${-400 + i * 480} -300V1000" stroke="#1b0f4a" stroke-width="30"/>`).join("")}`, c, 0.5) + layer(cal + cam + desk + mons + feeds + theCoin + bar, c);
   return { g, in: toScreen(c, 690, G - 300), inC: P.ink, inZ: 18, out: toScreen(c, CO[0] + roll, CO[1]), outC: P.gold, outZ: 18 };
 }
 // ---- 5: a little digital-money company lights up; in 1998 it shuts, and its wallet is empty ----
@@ -111,10 +112,11 @@ function s5(a, tot) {
   const moth = mu > 0 ? at(20 + 50 * Math.sin(mu * 3.1), -70 - 80 * mu + 10 * Math.sin(mu * 9), `<ellipse rx="5" ry="10" fill="#8a7a66"/><path d="M0 -3L-20 ${-14 + 10 * Math.sin(a * 40)}L-16 9ZM0 -3L20 ${-14 + 10 * Math.sin(a * 40)}L16 9Z" fill="#e3d2b2"/>`, clamp(mu / 0.2)) : "";
   const web = `<g opacity=".85">${[[70, 14], [60, 50], [30, 66]].map((e, i) => drawn(`M14 -40L${14 + e[0]} ${-40 + e[1]}`, (a - 5.7 - i * 0.08) * 3, "#cfc6ff", 2.5)).join("")}</g>`;
   const wallet = at(1120, G - 6, `<ellipse cx="0" cy="62" rx="${(120 + 60 * o2).toFixed(1)}" ry="8" fill="#1d0f45" opacity=".6"/><g transform="translate(0 0) scale(-1 1)">${half("")}</g>${o2 > 0 ? `<g transform="scale(${Math.max(0.02, o2).toFixed(4)} 1)">${half(`<path d="${rr(12, -40, 86, 80, 8)}" fill="${P.night0}"/>${web}`)}</g>` : `<g transform="scale(-1 1)">${two(rr(0, -60, 110, 120, 14), "#b87644", P.wood, 0, 6)}${disc(94, 0, 9, P.gold, P.goldD)}</g>`}${moth}`, 1, 0);
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(59, 70, -300, 2300, 800, tot), c, 0.15) + layer(skyline(83, -500, 2500, G - 20, 100, 300, "#221a5c", "#ffb066"), c, 0.5)
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(59, 70, -300, 2300, 800, tot), c, 0.15) + layer(skyline(83, -500, 2500, G - 20, 100, 300, "#221a5c", "#ffb066"), c, 0.5)
     + layer(`<rect x="-500" y="${G}" width="3000" height="400" fill="#141a45"/><rect x="-500" y="${G}" width="3000" height="10" fill="#2c366f"/>` + tower + cal + wallet, c);
   return { g, in: toScreen(c, TX, G - 700 * TK), inC: P.gold, inZ: 18 };
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5];
-export const copySet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of copy.v.js (see makeSet in kit.js)
+export const copySet = makeSet(SHOTS, V, P);

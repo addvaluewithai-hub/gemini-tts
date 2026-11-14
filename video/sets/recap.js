@@ -3,7 +3,8 @@
 //   2 the book in the bank's arch, the sign lit (the book was the bank's)
 //   3 the book rises out of the bank, flies to the globe and copies go out to every side of it (bitcoin gave it to everyone)
 // The host leans in from the right, so every stop sits left of the lower right corner.
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, digitX, number, drawn, at, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, digitX, number, drawn, at, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./recap.v.js";
 import { P, mix, house, bank, book, rows, LINES, coin, stars } from "./bank.js";
 import { globe } from "./props.js";
 
@@ -36,9 +37,10 @@ function s0(a, tot) {
   const stop3 = at(GL[0], GL[1], globe(GR, tot * 0.03, { id: "rc" })) + at(GL[0] - 480, 200, marker(3, 6.47, a)) + copies;
   const theBook = at(bp[0], bp[1], (leave > 0.6 ? rings(0, 0, 200, P.gold, 0.18) : "") + book(rows("100", "50")), bScale);
   const ground = `<rect x="-2000" y="${G}" width="9000" height="1200" fill="#141a45"/><rect x="-2000" y="${G}" width="9000" height="12" fill="#2c366f"/>`;
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(71, 240, -3000, 8000, 1200, tot), c, 0.2) + layer(ground + stop1 + stop2 + stop3 + theBook, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(71, 240, -3000, 8000, 1200, tot), c, 0.2) + layer(ground + stop1 + stop2 + stop3 + theBook, c);
   return { g };
 }
 
 const SHOTS = [s0];
-export const recapSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of recap.v.js (see makeSet in kit.js)
+export const recapSet = makeSet(SHOTS, V, P);

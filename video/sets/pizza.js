@@ -5,13 +5,14 @@
 //   2 the boxes go in, the heap of coins comes out onto the scooter, which rides off; a gold "1" ribbon over the door
 //   3 the open box from above: the slices go one by one, and a heart
 // Shots 1 and 2 are one street seen by one camera; the others hand over through a shape (the pizza box, the ribbon).
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, kf, bez, camAt, layer, toScreen, rr, two, disc, rings, text, number, drawn, at, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, kf, bez, camAt, layer, toScreen, rr, two, disc, rings, text, number, drawn, at, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./pizza.v.js";
 import { P, mix, coin, stars, skyline } from "./bank.js";
 import { calPage, pizzaBox } from "./props.js";
 import { heap } from "./intro.js";
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
-const night = (c, tot, G) => `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(53, 70, -400, 2400, 700, tot) + `<circle cx="1560" cy="170" r="56" fill="${P.cream}"/><circle cx="1540" cy="156" r="50" fill="${P.night0}"/>`, c, 0.15)
+const night = (c, tot, G) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(53, 70, -400, 2400, 700, tot) + `<circle cx="1560" cy="170" r="56" fill="${P.cream}"/><circle cx="1540" cy="156" r="50" fill="${P.night0}"/>`, c, 0.15)
   + layer(skyline(71, -500, 2500, G - 60, 110, 320, "#2a1f66", "#ffb066"), c, 0.5);
 const street = (G) => `<rect x="-800" y="${G}" width="3600" height="600" fill="${P.ground}"/><rect x="-800" y="${G + 60}" width="3600" height="130" fill="${P.road}"/><path d="M-800 ${G + 125}H2800" stroke="#ff8a5c" stroke-width="8" stroke-dasharray="70 60" opacity=".5"/>`;
 // Laszlo's house: green, an antenna on the roof, one big lit window (−130..20, −200..−90) and a door on the right
@@ -92,4 +93,5 @@ function s3(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3];
-export const pizzaSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of pizza.v.js (see makeSet in kit.js)
+export const pizzaSet = makeSet(SHOTS, V, P);

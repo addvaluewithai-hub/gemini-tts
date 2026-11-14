@@ -4,7 +4,8 @@
 //   2 the heap slides over the counter and the two boxes slide back: ten thousand for two pizzas
 //   3 the heap swells into a mountain of gold and the price rolls up to $700,000,000; the boxes stay small at its foot
 // Shots 1–3 are one counter seen by one camera (no hand-over shape between them: the camera simply carries on).
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, two, disc, rings, text, number, drawn, at, cross, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, two, disc, rings, text, number, drawn, at, cross, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./intro.v.js";
 import { P, mix, fmt, bank, book, rows, coin, stars, skyline } from "./bank.js";
 import { calPage, banknote, pizzaBox } from "./props.js";
 
@@ -34,7 +35,7 @@ function s0(a, tot) {
   const trail = a > 0.85 && a < 1.3 ? [1, 2, 3].map((q) => `<circle cx="960" cy="${(cy - q * 60).toFixed(1)}" r="${(30 - q * 7) * 1.8}" fill="${P.gold}" opacity="${(0.45 - q * 0.12) * (1 - seg(a, 1.22, 1.3))}"/>`).join("") : "";
   const theCoin = a > 0.85 ? at(960, cy, btc(190, spin), [1 + 0.12 * (1 - land) * (a > 1.22 ? 1 : 0), 1 - 0.12 * (1 - land) * (a > 1.22 ? 1 : 0)]) : "";
   const street = `<rect x="-600" y="${G}" width="3200" height="500" fill="${P.ground}"/><rect x="-600" y="${G + 60}" width="3200" height="130" fill="${P.road}"/><path d="M-600 ${G + 125}H2600" stroke="#ff8a5c" stroke-width="8" stroke-dasharray="70 60" opacity=".5"/>`;
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(5, 70, -300, 2300, 700, tot) + `<circle cx="1640" cy="170" r="56" fill="${P.cream}"/><circle cx="1620" cy="156" r="50" fill="${P.night0}"/>`, c, 0.15)
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(5, 70, -300, 2300, 700, tot) + `<circle cx="1640" cy="170" r="56" fill="${P.cream}"/><circle cx="1620" cy="156" r="50" fill="${P.night0}"/>`, c, 0.15)
     + layer(skyline(11, -400, 2400, 760, 120, 330, "#2a1f66", "#ffb066"), c, 0.5) + layer(street + bk + notes + glow + wave + trail + theCoin + x1 + x2, c);
   return { g, out: toScreen(c, 960, 450), outC: P.gold, outZ: 14 };
 }
@@ -62,11 +63,12 @@ function counter(t, c, tot, s) {
   const shop = `<path d="${rr(120, 40, 1680, 800, 0)}" fill="#4a2b8a"/><path d="${rr(1380, 150, 300, 360, 20)}" fill="${P.ink}"/><path d="${rr(1400, 170, 260, 320, 14)}" fill="#ff8a3c"/><circle cx="1530" cy="420" r="70" fill="#ffd27a" opacity="${(0.6 + 0.2 * Math.sin(tot * 5)).toFixed(2)}"/>
     ${Array.from({ length: 12 }, (_, i) => `<path d="M${120 + i * 140} 40h140v70a70 30 0 0 1 -140 0Z" fill="${i % 2 ? P.cream : P.red}"/>`).join("")}<path d="${rr(200, 160, 300, 300, 150)}" fill="${P.ink}"/>${disc(350, 310, 120, "#e8a23c", "#c47f22")}${[0, 1, 2, 3, 4, 5].map((i) => `<circle cx="${350 + Math.cos(i) * 70}" cy="${310 + Math.sin(i) * 70}" r="16" fill="${P.red}"/>`).join("")}`;
   const desk = `<rect x="-600" y="${G}" width="3200" height="60" fill="${P.wood}"/><rect x="-600" y="${G + 60}" width="3200" height="500" fill="${P.woodD}"/>${Array.from({ length: 12 }, (_, i) => `<rect x="${-400 + i * 260}" y="${G + 90}" width="200" height="300" rx="12" fill="#6e4322"/>`).join("")}`;
-  return `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(19, 50, -400, 2400, 400, tot), c, 0.15) + layer(shop, c, 0.7) + layer(desk + stream + mount + boxes + label + cal, c);
+  return `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(19, 50, -400, 2400, 400, tot), c, 0.15) + layer(shop, c, 0.7) + layer(desk + stream + mount + boxes + label + cal, c);
 }
 function s1(a, tot, s) { const c = camAt(a, [[0, 985, 480, 1.1], [2.26, 975, 470, 1.12]]); return { g: counter(a, c, tot, s) }; }
 function s2(a, tot, s) { const T2 = (s.ends || [])[1] || 2.26, c = camAt(a, [[0, 975, 470, 1.12], [1.51, 965, 470, 1.1]]); return { g: counter(T2 + a, c, tot, s) }; }
 function s3(a, tot, s) { const T3 = ((s.ends || [])[1] || 2.26) + ((s.ends || [])[2] || 1.51), c = camAt(a, [[0, 965, 470, 1.1], [1.0, 960, 470, 1.08], [2.5, 960, 470, 1.03], [2.93, 960, 470, 1.02]]); return { g: counter(T3 + a, c, tot, s) }; }
 
 const SHOTS = [s0, s1, s2, s3];
-export const introSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of intro.v.js (see makeSet in kit.js)
+export const introSet = makeSet(SHOTS, V, P);

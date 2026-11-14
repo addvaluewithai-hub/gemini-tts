@@ -3,13 +3,14 @@
 //   1 an old bank tower (its cornerstone says 1850) piles the houses' coins on a tower of house-cards; the cards fall; then the tower falls, in one go
 //   2 a domed government building pours a river of gold into a cracked bank ($700,000,000,000); pull back: it is drawn up from the houses' roofs
 //   3 the houses are boarded up and go dark; next door the rescued bank rains gold and bonus envelopes ($30,000,000,000)
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./crisis.v.js";
 import { P, mix, fmt, house, bank, coin, stars, skyline, clouds, dusk } from "./bank.js";
 import { calPage, calFlip } from "./props.js";
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
 const bump = (a, t0, amt = 0.14) => (a > t0 ? 1 + amt * Math.exp(-(a - t0) * 8) * Math.cos((a - t0) * 14) : 1);
-const storm = (o) => `<rect width="1920" height="1080" fill="url(#bstorm)" opacity="${clamp(o).toFixed(3)}"/>`;
+const storm = (o) => `<rect width="${FW}" height="${FH}" fill="url(#bstorm)" opacity="${clamp(o).toFixed(3)}"/>`;
 const cracks = (p) => drawn("M-120 -440L-90 -360L-140 -300L-100 -230L-130 -150", p, P.ink, 9, 'stroke-linejoin="round"') + drawn("M200 -440L230 -380L190 -320L220 -250", p - 0.2, P.ink, 9, 'stroke-linejoin="round"') + drawn("M-300 -200L-260 -160L-290 -110", p - 0.35, P.ink, 7);
 const fronts = [[P.blue, P.blueD], [P.pink, P.pinkD], [P.teal, P.tealD], [P.violet, P.violetD]];
 // a dollar figure that rolls up to `to` as p goes 0..1
@@ -25,7 +26,7 @@ function c0(a, tot) {
   let row = ""; for (let i = 0; i < 4; i++) { const x = 330 + i * 420, f = fronts[i % 4], dark = a > 2.9 + i * 0.05 && rnd(i * 7) > 0.4;
     row += at(x, G, house(f[0], f[1], { lit: dark ? [0, 1, 0] : [1, 1, 1] }), [1.3, 1.3], st * (i % 2 ? 1.5 : -1.5)); }
   const crackD = `M-40 ${G + 30}L260 ${G + 60}L420 ${G + 25}L640 ${G + 75}L900 ${G + 35}L1120 ${G + 80}L1380 ${G + 40}L1600 ${G + 75}L1960 ${G + 40}`, crack = drawn(crackD, seg(a, 2.7, 3.3), "#ff8a5c", 34, 'stroke-linejoin="round"') + drawn(crackD, seg(a, 2.7, 3.3), "#0a0726", 18, 'stroke-linejoin="round"');
-  const bolt = a > 2.85 && a < 3.05 ? `<path d="M1500 0L1440 160L1500 170L1410 360L1530 150L1470 140L1540 0Z" fill="#fff3c2"/><rect width="1920" height="1080" fill="#fff" opacity="${(0.25 * (1 - seg(a, 2.85, 3.05))).toFixed(2)}"/>` : "";
+  const bolt = a > 2.85 && a < 3.05 ? `<path d="M1500 0L1440 160L1500 170L1410 360L1530 150L1470 140L1540 0Z" fill="#fff3c2"/><rect width="${FW}" height="${FH}" fill="#fff" opacity="${(0.25 * (1 - seg(a, 2.85, 3.05))).toFixed(2)}"/>` : "";
   const main = `<rect x="-600" y="${G}" width="3200" height="500" fill="${mix(P.ground, "#1a0f3a", st)}"/><rect x="-600" y="${G + 50}" width="3200" height="130" fill="${P.road}"/>` + row + crack;
   const g = dusk(c, tot, 1500, 700) + storm(st) + layer(clouds(tot * 3, 120, 4, mix("#ffb199", "#2a1446", st), 0.4 + 0.5 * st), c, 0.2) + layer(skyline(11, -400, 2400, G - 150, 100, 300, mix(P.far, "#2a1446", st)), c, 0.35) + layer(main, c) + bolt + layer(cal, c);
   return { g, out: toScreen(c, 960, 290), outC: P.cream, outZ: 16 };
@@ -56,7 +57,7 @@ function c1(a, tot) {
   const dust = a > 8.6 ? Array.from({ length: 9 }, (_, i) => { const u = a - 8.6 - i * 0.03; return u > 0 ? `<circle cx="${TX - 200 + i * 220}" cy="${TG - 40 - 80 * (i % 2)}" r="${(160 + 80 * rnd(i)) * spring(u, 5, 8)}" fill="${P.stone}" opacity=".92"/>` : ""; }).join("") : "";
   const hs = HS.map(([x, col, colD], i) => at(x, TG, house(col, colD, { lit: [1, a > 1.42 + i * 0.14 + 0.5 ? 0 : 1, 1] }), 0.8)).join("");
   const main = `<rect x="-1200" y="${TG}" width="4800" height="900" fill="${P.ground}"/>` + hs + theTower + at(TX - 380 * TK + 40, TG, plaque(seg(a, 6.14, 6.5) * (1 - seg(a, 7.6, 8.0))), 1) + table + cardsG + coins + dust;
-  const g = `<rect width="1920" height="1080" fill="url(#bstorm)"/>` + layer(clouds(tot * 3, 100, 4, "#2a1446", 0.8) + skyline(13, -1200, 3600, TG - 120, 100, 380, "#3a1850"), c, 0.3) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bstorm)"/>` + layer(clouds(tot * 3, 100, 4, "#2a1446", 0.8) + skyline(13, -1200, 3600, TG - 120, 100, 380, "#3a1850"), c, 0.3) + layer(main, c);
   return { g, in: toScreen(c, TX - 380 * TK + 40, TG - 45), inC: P.cream, inZ: 16, out: toScreen(c, TX + 400, TG - 200), outC: P.stone, outZ: 14 };
 }
 // ---- 2: the government pours gold into the cracked bank; it is drawn up out of the houses ----
@@ -77,7 +78,7 @@ function c2(a, tot) {
     const q = [u * u * u * A[0] + 3 * u * u * p * B[0] + 3 * u * p * p * C2[0] + p * p * p * D[0], u * u * u * A[1] + 3 * u * u * p * B[1] + 3 * u * p * p * C2[1] + p * p * p * D[1]]; up += at(q[0], q[1], coin(24)); } });
   const hill = `<path d="M-1200 ${G}H2600V${HG}H-1200Z" fill="#2a1556"/><path d="M-1200 ${G}H2600V${G + 20}H-1200Z" fill="#3a2a7a"/><rect x="-1200" y="${HG}" width="4800" height="800" fill="${P.ground}"/>`;
   const main = hill + pipes + up + town + dome + at(BX, G, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner: cracks(mend) }), 0.75) + saved + drawn(pipe, pipeP, P.steel, 40) + flow + fall + fig;
-  const g = `<rect width="1920" height="1080" fill="url(#bstorm)"/>` + layer(clouds(tot * 2, 90, 3, "#2a1446", 0.7), c, 0.25) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bstorm)"/>` + layer(clouds(tot * 2, 90, 3, "#2a1446", 0.7), c, 0.25) + layer(main, c);
   return { g, in: toScreen(c, DX, G - 470), inC: P.stone, inZ: 14, out: toScreen(c, 980 - 63 * 1.2, HG - 115 * 1.2), outC: P.win, outZ: 26 };
 }
 // ---- 3: the houses get boarded up and go dark; the rescued bank rains gold and bonus envelopes ----
@@ -90,9 +91,10 @@ function c3(a, tot) {
   const fig = a > 4.1 ? at(BX, 170, `${two(rr(-400, -70, 800, 120, 60), P.ink, "#0a0726", 0, 6)}${text(0, 30, roll(30000000000, seg(a, 4.29, 6.27)), 84, P.gold)}`, pop(a - 4.1)) : "";
   const glowB = a > 3.0 ? rings(BX, G - 330, 420, P.gold, 0.16 * seg(a, 3.0, 3.4), 1.3) : "";
   const main = `<rect x="-600" y="${G}" width="4400" height="500" fill="${P.ground}"/><rect x="-600" y="${G + 50}" width="4400" height="130" fill="${P.road}"/>` + hs + glowB + at(BX, G, bank({ inside: "#3b1d74", sign: [1.6, 1.6, 1.6, 1.6], inner: rings(0, -150, 120, P.gold, 0.4) }), 0.95) + rain + fig;
-  const g = `<rect width="1920" height="1080" fill="url(#bstorm)"/>` + layer(clouds(tot * 2, 100, 4, "#2a1446", 0.7) + skyline(17, -600, 3800, G - 140, 100, 300, "#3a1850", "#7a3a40"), c, 0.35) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bstorm)"/>` + layer(clouds(tot * 2, 100, 4, "#2a1446", 0.7) + skyline(17, -600, 3800, G - 140, 100, 300, "#3a1850", "#7a3a40"), c, 0.35) + layer(main, c);
   return { g, in: toScreen(c, 720 - 63 * 1.35, G - 115 * 1.35), inC: P.win, inZ: 26 };
 }
 
 const SHOTS = [c0, c1, c2, c3];
-export const crisisSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of crisis.v.js (see makeSet in kit.js)
+export const crisisSet = makeSet(SHOTS, V, P);

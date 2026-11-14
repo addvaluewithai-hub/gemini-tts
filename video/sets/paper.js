@@ -6,7 +6,8 @@
 //     from the blue house straight over to the pink house; the bank on top of the world can only watch it go by
 //   3 the byline "Satoshi Nakamoto", then the desk it came from: a hooded coat on an empty chair, a "?" — and then
 //     there are three chairs
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./paper.v.js";
 import { P, mix, house, bank, coin, stars, skyline } from "./bank.js";
 import { calPage, padlock, laptop, hoodChair, globe } from "./props.js";
 
@@ -37,7 +38,7 @@ function s0(a, tot) {
     if (a > t0 && !inBox) { const b = bez(C, [(C[0] + x) / 2, 40], [x, G - 400], ease(u)); env += at(b[0], b[1], envelope(1), 0.8 * (1 - 0.35 * u)); }
     boxes += at(x, G, mailbox(inBox ? spring(a - t1, 8, 13) : 0, inBox ? Math.exp(-(a - t1) * 3) : 0), 1.4); });
   const bolt = flash > 0 ? `<path d="M1500 -100L1440 200L1500 200L1420 460" stroke="#fff3c2" stroke-width="12" fill="none" opacity=".8"/>` : "";
-  const g = `<rect width="1920" height="1080" fill="url(#bstorm)"/><rect width="1920" height="1080" fill="#fff" opacity="${flash.toFixed(2)}"/>` + layer(bolt + stars(61, 30, -300, 2600, 400, tot), c, 0.15)
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bstorm)"/><rect width="${FW}" height="${FH}" fill="#fff" opacity="${flash.toFixed(2)}"/>` + layer(bolt + stars(61, 30, -300, 2600, 400, tot), c, 0.15)
     + layer(skyline(91, -600, 3000, G - 30, 120, 360, "#2a1250", "#5a2a6a"), c, 0.5) + layer(`<rect x="-600" y="${G}" width="3600" height="400" fill="#140a33"/>` + hs + boxes + pages + env, c);
   return { g, out: toScreen(c, 2260, G - 400), outC: P.cream, outZ: 18 };
 }
@@ -53,7 +54,7 @@ function s1(a, tot) {
   const dr = seg(a, 5.6, 6.3), cp = ease(seg(a, 5.95, 6.6)), A = [640, 1000], Z = [1280, 1000], arc = (p) => bez([A[0] + 90, A[1] - 200], [960, 700], [Z[0] - 90, Z[1] - 200], p);
   const drawing = a > 5.3 ? at(A[0], A[1] + 120, house(P.blue, P.blueD, { lit: [1, 1, 1] }), 1.1 * pop(a - 5.3)) + at(Z[0], Z[1] + 120, house(P.pink, P.pinkD, { lit: cp >= 1 ? [1, 1, 1] : [0, 0, 1] }), 1.1 * pop(a - 5.4))
     + drawn(`M${A[0] + 90} ${A[1] - 200}Q960 700 ${Z[0] - 90} ${Z[1] - 200}`, dr, P.gold, 10, 'stroke-dasharray=".02 .03"') + (cp > 0 && cp < 1 ? at(...arc(cp), coin(34)) : "") : "";
-  const g = `<rect width="1920" height="1080" fill="#2c1a66"/>` + layer(`<rect x="-500" y="-500" width="3000" height="2500" fill="${P.wood}"/>${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M-500 ${-300 + i * 300}H2500" stroke="${P.woodD}" stroke-width="10"/>`).join("")}`, c, 0.8) + layer(PG + title + clip + drawing, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="#2c1a66"/>` + layer(`<rect x="-500" y="-500" width="3000" height="2500" fill="${P.wood}"/>${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M-500 ${-300 + i * 300}H2500" stroke="${P.woodD}" stroke-width="10"/>`).join("")}`, c, 0.8) + layer(PG + title + clip + drawing, c);
   return { g, in: toScreen(c, 960, 460), inC: P.cream, inZ: 18, out: toScreen(c, Z[0], Z[1] + 60), outC: P.pink, outZ: 20 };
 }
 // ---- 2: the promise: money to anyone on the planet, straight there; the bank on top of the world only watches ----
@@ -70,7 +71,7 @@ function s2(a, tot) {
   const glowP = arrived > 0 ? rings(PH[0], PH[1] - 110, 200 * spring(arrived, 7, 11), P.win, 0.16, 1.3) : "";
   const houses = at(BH[0], BH[1], house(P.blue, P.blueD, { lit: [1, 1, 1] }), 0.95, 52) + glowP + at(PH[0], PH[1], house(P.pink, P.pinkD, { lit: arrived > 0 ? [1, 1, 1] : [0, 0, 1] }), [0.95, 0.95 * hop], -52);
   const door = arrived > 0.5 ? at(PH[0], PH[1], `<path d="M-24 0V-66A24 24 0 0 1 24 -66V0Z" fill="${P.cream}"/>`, 0.95, -52) : "";
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(67, 90, -300, 2200, 1080, tot), c, 0.15) + layer(at(O[0], O[1], globe(R, tot * 0.01, { id: "pp" })) + bk + houses + door + trail + flying, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(67, 90, -300, 2200, 1080, tot), c, 0.15) + layer(at(O[0], O[1], globe(R, tot * 0.01, { id: "pp" })) + bk + houses + door + trail + flying, c);
   const dp = [PH[0] - Math.sin(-52 * Math.PI / 180) * 50, PH[1] - Math.cos(52 * Math.PI / 180) * 50];
   return { g, in: toScreen(c, PH[0], PH[1] - 100), inC: P.pink, inZ: 20, out: toScreen(c, dp[0], dp[1]), outC: P.cream, outZ: 24 };
 }
@@ -93,4 +94,5 @@ function s3(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3];
-export const paperSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of paper.v.js (see makeSet in kit.js)
+export const paperSet = makeSet(SHOTS, V, P);

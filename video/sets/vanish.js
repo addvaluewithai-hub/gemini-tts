@@ -4,7 +4,8 @@
 //   3 (in through the empty chair's colour) the code goes down the table to three other laptops; an empty podium under spotlights; an empty photo frame
 //   4 a glass vault of coins, about a million; the years go by, cobwebs and dust grow, and the coins never move
 // Shots 0–2 are one room on one clock (the beats run straight on), so they hand over by continuing, not through a shape.
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, play, frame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, play, frame, FW, FH, makeSet } from "./kit.js";
+import { V } from "./vanish.v.js";
 import { P, mix, coin, stars } from "./bank.js";
 import { calPage, calFlip, laptop, hoodChair } from "./props.js";
 
@@ -81,9 +82,10 @@ function s4(a, tot) {
     ${two(rr(VX - W / 2 - 40, VY, W + 80, 60, 10), "#5d678f", "#44507a", 0, 10)}`;
   const plaque = at(VX, VY + 135, `${two(rr(-330, -70, 660, 140, 24), P.gold, P.goldD, 0, 10)}${text(0, 36, "≈ 1,000,000", 92, "#8a5200")}`, pop(a - 0.76));
   const cal = at(1600, 290, calPage(String(years), "", 1, 150) + (a > 3.23 && a < 5.4 ? calFlip(String(years - 1), "", flipP, 150) : ""), pop(a - 0.2));
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(`<rect x="-400" y="${VY + 60}" width="3000" height="600" fill="#141a45"/>`, c, 0.8) + layer(vault + plaque + cal, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(`<rect x="-400" y="${VY + 60}" width="3000" height="600" fill="#141a45"/>`, c, 0.8) + layer(vault + plaque + cal, c);
   return { g, in: toScreen(c, VX, VY - 300), inC: P.ink, inZ: 18 };
 }
 
 const SHOTS = [s0, s1, s2, s3, s4];
-export const vanishSet = (s, step, age, total) => frame(play(SHOTS, s, step, age, total), P);
+// in a Short (cfg.vertical) the portrait versions of vanish.v.js (see makeSet in kit.js)
+export const vanishSet = makeSet(SHOTS, V, P);

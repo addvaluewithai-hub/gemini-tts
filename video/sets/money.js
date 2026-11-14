@@ -5,7 +5,7 @@
 //   5 1971: the gold slides out from behind the note   6 the press prints at will   7 one note, a hundred trillion
 //   8 it does not buy a bus ticket   9 most notes turn into digits on a screen   10 the town at night: every window a cell
 //   11–13 the three jobs: pay, price, save; then all three go into a file
-import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame, setFrame } from "./kit.js";
+import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, check, cross, play, frame, makeSet, FW, FH } from "./kit.js";
 import { VSHOTS } from "./money.v.js";
 import { P, mix, fmt, house, coin, note, stars, skyline, clouds, dusk } from "./bank.js";
 import { calPage, calFlip, banknote, padlock, press, jar, folder, tag, stall, fish, loaf, goldBar, monitor, car, bus, hills, pedestal } from "./props.js";
@@ -74,7 +74,7 @@ function s3(a, tot) {
   // hard to fake: a grey coin comes in, takes a bite and cracks in two
   const fa = a - 3.54, crack = seg(a, 3.95, 4.2), fake = fa > 0 ? at(1460, 820, `<g transform="translate(${-40 * crack} ${30 * crack * crack}) rotate(${-20 * crack})"><clipPath id="fkL"><path d="M-80 -80H4L-10 -20L10 20L-4 80H-80Z"/></clipPath><g clip-path="url(#fkL)">${disc(0, 0, 70, "#b8b4c8", "#8a86a8")}</g></g>
     <g transform="translate(${40 * crack} ${30 * crack * crack}) rotate(${20 * crack})"><clipPath id="fkR"><path d="M80 -80H4L-10 -20L10 20L-4 80H80Z"/></clipPath><g clip-path="url(#fkR)">${disc(0, 0, 70, "#b8b4c8", "#8a86a8")}</g></g>${a > 3.8 ? `<circle cx="54" cy="-50" r="26" fill="${P.night1}"/>` : ""}${crack > 0 ? cross(0, -130, 34, P.red, a - 4.0) : ""}`, 1.6 * pop(fa)) : "";
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(3, 50, -200, 2100, 1080, tot), c, 0.2) + layer(rings(960, 470, 420, P.violet, 0.12 * land, 1.5), c, 0.5) + layer(ring + rare + keep + fake + big, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(3, 50, -200, 2100, 1080, tot), c, 0.2) + layer(rings(960, 470, 420, P.violet, 0.12 * land, 1.5), c, 0.5) + layer(ring + rare + keep + fake + big, c);
   return { g, in: [960, 540], inC: P.ink, inZ: 12, out: toScreen(c, 960, 470), outC: P.gold, outZ: 18 };
 }
 // ---- 4: gold is heavy; it goes into a strongbox, a receipt comes out and goes round the market as paper ----
@@ -108,7 +108,7 @@ function s5(a, tot) {
   const noteK = 3.2, nt = at(1060, 470 + bob * seg(a, 2.6, 3.2), banknote(noteK), 1, wob);
   const pit = `<ellipse cx="1060" cy="1040" rx="420" ry="60" fill="#0a0726"/>`;
   const cal = at(1600, 230, calPage("1971", "", 0.95, 150), pop(a - 0.29));
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(13, 60, -200, 2100, 1080, tot), c, 0.2) + layer(pit + bar + nt + cal, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(13, 60, -200, 2100, 1080, tot), c, 0.2) + layer(pit + bar + nt + cal, c);
   return { g, in: toScreen(c, 1060, 470), inC: "#6fe3a1", inZ: 20 };
 }
 // ---- 6: whoever holds the press prints as much as he likes ----
@@ -120,7 +120,7 @@ function s6(a, tot) {
   const flying = [0, 1].map((j) => { const u = cyc - 0.3 - j * 0; if (u < 0) return ""; const side = n % 2, x0 = 960, x1 = side ? 1480 : 440, p = clamp(u / 0.6), b = hopTo([x0, G - 160], [x1, G - 30 - stackH(side)], p, 260); return at(b[0], b[1], banknote(1.5), 1, (side ? 1 : -1) * 360 * p * 0); }).join("");
   const main = `<rect x="-300" y="${G}" width="2500" height="400" fill="#2c1a66"/>` + stack(440, stackH(0)) + stack(1480, stackH(1)) + at(960, G, press(stamp, { lamp: Math.min(3, a * 1.2) }), 1.45) + flying
     + (a > 2.74 ? at(330, 300, calPage("2009", "", 0.85, 150), pop(a - 2.74)) : "");
-  const g = `<rect width="1920" height="1080" fill="#3b1d74"/>` + layer(`<path d="M600 -200L960 300L1320 -200Z" fill="#ffd98a" opacity=".08"/>` + skyline(61, -300, 2300, 700, 80, 300, "#4a2690"), c, 0.4) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="#3b1d74"/>` + layer(`<path d="M600 -200L960 300L1320 -200Z" fill="#ffd98a" opacity=".08"/>` + skyline(61, -300, 2300, 700, 80, 300, "#4a2690"), c, 0.4) + layer(main, c);
   return { g, out: toScreen(c, 960, G - 160), outC: "#6fe3a1", outZ: 16 };
 }
 // ---- 7: one note, a hundred trillion ----
@@ -131,7 +131,7 @@ function s7(a, tot) {
   const slideIn = easeOut(seg(a, 0, 0.6)), nx = lerp(-len, x0, slideIn);
   const nt = at(nx, 540, `${two(rr(0, -150, len, 300, 18), "#6fe3a1", "#3fbf7a", 8, 7)}<path d="${rr(20, -128, len - 40, 256, 12)}" fill="none" stroke="#2b9a5e" stroke-width="6"/>${disc(130, 0, 80, "#5fd391", "#2b9a5e")}${text(130, 28, "$", 80, "#1f7a48")}
     ${number(260 + grp.length * 25, 40, grp, 110, "#1f6a40")}`);
-  const g = `<rect width="1920" height="1080" fill="#3b1d74"/>` + layer(stars(17, 50, -400, 3000, 1080, tot), c, 0.2) + layer(nt, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="#3b1d74"/>` + layer(stars(17, 50, -400, 3000, 1080, tot), c, 0.2) + layer(nt, c);
   return { g, in: toScreen(c, nx + 130, 540), inC: "#6fe3a1", inZ: 16, out: toScreen(c, nx + 130, 540), outC: "#6fe3a1", outZ: 16 };
 }
 // ---- 8: and it would not buy a bus ticket ----
@@ -141,7 +141,7 @@ function s8(a, tot) {
   const machine = at(M[0], G, `${two(rr(-110, -420, 220, 420, 18), P.teal, P.tealD, 12, 0)}<path d="${rr(-80, -390, 160, 110, 12)}" fill="${P.ink}"/>${a > 0.47 ? text(0, -310, "✗", 80, P.red) : text(0, -310, "1 $", 50, P.green)}<path d="${rr(-70, -240, 140, 20, 8)}" fill="${P.ink}"/><path d="${rr(-50, -140, 100, 16, 6)}" fill="${P.ink}"/>`);
   const nt = at(push, G - 230, `${two(rr(-900, -60, 900, 120, 10), "#6fe3a1", "#3fbf7a", 5, 5)}${number(-450, 22, "100,000,000,000,000", 56, "#1f6a40")}`, 1, a > 0.47 ? -4 * Math.exp(-(a - 0.47) * 6) * Math.sin((a - 0.47) * 40) : 0);
   const main = `<rect x="-400" y="${G}" width="3000" height="400" fill="${P.road}"/><rect x="-400" y="${G}" width="3000" height="14" fill="#3a2a7a"/>` + at(1560, G, `<rect x="-8" y="-420" width="16" height="420" fill="${P.ink}"/>${disc(0, -440, 44, P.gold, P.goldD)}`) + at(busX, G, bus()) + machine + nt + (a > 0.47 ? cross(M[0], G - 520, 56, P.red, a - 0.47) : "");
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(23, 60, -200, 2200, 700, tot) + skyline(31, -300, 2400, G - 20, 100, 330, "#221a5c", "#ffb066"), c, 0.4) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(23, 60, -200, 2200, 700, tot) + skyline(31, -300, 2400, G - 20, 100, 330, "#221a5c", "#ffb066"), c, 0.4) + layer(main, c);
   return { g, in: toScreen(c, 300, G - 230), inC: "#6fe3a1", inZ: 16 };
 }
 // ---- 9: most of their money is not paper at all: numbers on a screen ----
@@ -157,7 +157,7 @@ function s9(a, tot) {
   const glow = seg(a, 2.55, 2.9);
   const scr = at(SX, G, monitor(mix("#10284f", "#123a5c", glow), "") + (glow > 0 ? rings(0, -260, 200, P.teal, 0.12 * glow) : ""), 1.5);
   const main = `<rect x="-400" y="${G}" width="3000" height="400" fill="${P.wood}"/><rect x="-400" y="${G + 20}" width="3000" height="400" fill="${P.woodD}"/>` + scr + notes + digits;
-  const g = `<rect width="1920" height="1080" fill="#4a2b8a"/>` + layer(`<rect x="-400" y="-300" width="3000" height="1200" fill="#4a2b8a"/>` + `<path d="${rr(120, 120, 360, 300, 14)}" fill="${P.ink}"/><path d="${rr(140, 140, 320, 260, 8)}" fill="${P.night1}"/>` + stars(41, 10, 150, 450, 380, tot), c, 0.6) + layer(main, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="#4a2b8a"/>` + layer(`<rect x="-400" y="-300" width="3000" height="1200" fill="#4a2b8a"/>` + `<path d="${rr(120, 120, 360, 300, 14)}" fill="${P.ink}"/><path d="${rr(140, 140, 320, 260, 8)}" fill="${P.night1}"/>` + stars(41, 10, 150, 450, 380, tot), c, 0.6) + layer(main, c);
   return { g, out: toScreen(c, SX, G - 390), outC: "#123a5c", outZ: 16 };
 }
 // ---- 10: the town at night: every window is a cell with a number in it, and everyone sleeps soundly ----
@@ -172,7 +172,7 @@ function s10(a, tot) {
   // the windows join up into one table across the sky
   const grid = seg(a, 2.39, 3.0), lines = grid > 0 ? Array.from({ length: 9 }, (_, i) => drawn(`M-100 ${200 + i * 82}H2000`, grid - i * 0.04, "#ffd98a", 3, 'opacity=".45"')).join("") + Array.from({ length: 22 }, (_, i) => drawn(`M${-30 + i * 92} 120V${G}`, grid - i * 0.02, "#ffd98a", 3, 'opacity=".35"')).join("") : "";
   const zz = a > 3.46 ? [200, 650, 1100, 1380].map((x, i) => [0, 1, 2].map((j) => { const u = ((a - 3.46 - i * 0.12) * 0.9 + j / 3) % 1; return a - 3.46 - i * 0.12 > j * 0.25 ? text(x + 40 * u + 10 * Math.sin(tot * 2 + j), 520 - 160 * u, "z", 30 + 14 * j, P.cream, { opacity: (0.9 * (1 - u)).toFixed(2) }) : ""; }).join("")).join("") : "";
-  const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(29, 70, -400, 2400, 700, tot) + `<circle cx="1500" cy="160" r="56" fill="${P.cream}"/><circle cx="1480" cy="146" r="50" fill="${P.night0}"/>`, c, 0.15) + layer(lines, c, 0.5)
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(29, 70, -400, 2400, 700, tot) + `<circle cx="1500" cy="160" r="56" fill="${P.cream}"/><circle cx="1480" cy="146" r="50" fill="${P.night0}"/>`, c, 0.15) + layer(lines, c, 0.5)
     + layer(`<rect x="-500" y="${G}" width="3000" height="500" fill="#141a45"/>` + town + cells + zz, c);
   return { g, in: [960, 540], inC: "#123a5c", inZ: 12 };
 }
@@ -196,7 +196,7 @@ function jobs(t, c, tot, s) {
   // the file: it opens, takes all three, shuts and gets a clip
   if (filing > 0 || t > T3 + 0.9) { const op = 1 - ease(seg(t, T3 + 1.55, T3 + 1.85)), clip = t - T3 - 1.9;
     out = out.replace("", "") + at(960, 560, folder(op, "") + (clip > 0 ? at(0, -150, `<path d="M-30 -30h60v70h-60Z" fill="none" stroke="${P.gold}" stroke-width="12"/>`, pop(clip)) + rings(0, 0, 300 * spring(clip, 7, 11), P.gold, 0.12 * (1 - seg(clip, 0.4, 1))) : ""), 1.7 * pop(t - T3 - 0.9)); }
-  const g = `<rect width="1920" height="1080" fill="#3b1d74"/>` + layer(stars(37, 40, -200, 2200, 600, tot) + `<rect x="-400" y="${PG}" width="3000" height="400" fill="#2c1a66"/>`, c, 0.5) + layer(out, c);
+  const g = `<rect width="${FW}" height="${FH}" fill="#3b1d74"/>` + layer(stars(37, 40, -200, 2200, 600, tot) + `<rect x="-400" y="${PG}" width="3000" height="400" fill="#2c1a66"/>`, c, 0.5) + layer(out, c);
   return g;
 }
 function s11(a, tot, s) { const c = camAt(a, [[0, 960, 590, 1.02], [1.5, 960, 580, 1.0], [2.2, 960, 580, 0.98], [2.45, 640, 590, 1.18], [3.09, 620, 600, 1.22]]); return { g: jobs(a, c, tot, s) }; }
@@ -204,8 +204,5 @@ function s12(a, tot, s) { const T2 = (s.ends || [])[11] || 3.09, c = camAt(a, [[
 function s13(a, tot, s) { const T3 = ((s.ends || [])[11] || 3.09) + ((s.ends || [])[12] || 1.11), c = camAt(a, [[0, 970, 590, 1.26], [0.3, 1300, 560, 1.22], [0.9, 1260, 560, 1.15], [1.25, 900, 560, 0.98], [3.27, 900, 560, 1.0]]); return { g: jobs(T3 + a, c, tot, s) }; }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13];
-// cfg.vertical (a Short): the portrait shots of money.v.js, drawn 1080 x 1920; steps without one fall back to the landscape shot
-export const moneySet = (s, step, age, total, cfg = {}) => {
-  if (!cfg.vertical || step >= VSHOTS.length) return frame(play(SHOTS, s, step, age, total), P);
-  setFrame(1080, 1920); try { return frame(play(VSHOTS, { ...s, ends: s.vends || s.ends }, step, age, total), P); } finally { setFrame(1920, 1080); }
-};
+// in a Short (cfg.vertical) shots 0–8 are the portrait ones of money.v.js
+export const moneySet = makeSet(SHOTS, VSHOTS, P);
