@@ -1,5 +1,5 @@
 {
- "note": "Shorts for the drawn version of crypto part 1. `parts` are [from, to] in seconds of the finished episode (cues/explain-crypto-01-world.json); `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, word timings estimated by video/roughwords.cjs). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs, upload with video/youtube_upload.py short.",
+ "note": "Shorts for the drawn version of crypto part 1. `parts` are [from, to] in seconds of the finished episode (cues/explain-crypto-01-world.json); `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, recorded on Vertex AI by addvaluewithai-hub/vertex_ai (job techforbadguys-crypto01-short-cta-<key>), word timings from its Speech-to-Text listen-back). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs, upload with video/youtube_upload.py short.",
  "full": null,
  "boardZoom": 0.85,
  "shorts": [
