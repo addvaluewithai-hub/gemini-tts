@@ -16,7 +16,8 @@ trials as a principle; many early results come from mice; "predatory" journals t
 (cider, elixir of vitriol, vinegar, sea water, oranges and lemons, a purgative); the citrus pair recovered, one fit
 for duty after six days; the Royal Navy adopted citrus in 1795 (said as "حوالي خمسين سنة").
 https://www.bbvaopenmind.com/en/james-lind-and-scurvy-the-first-clinical-trial-in-history/ ; publication bias (the
-file drawer) and pre-registration as general knowledge. No food or
+file drawer), pre-registration, and relative versus absolute risk (the 1-in-10,000 example is illustrative) as
+general knowledge. No food or
 drug is recommended or warned against; the cooking-pot pictures stand in for any trial.
 
 Pictures (for the scenes): a 1747 sailing ship with twelve sailors in six pairs, one pair with oranges and lemons; twenty lab drawers, nineteen closed; a giant newspaper headline about chocolate; a paper with its parts (question, method,
@@ -61,7 +62,7 @@ same pot; a mouse in a lab coat.
 
 ### 8. إزاي تقرا العنوان
 
-فجمعت لكم شوية أسئلة، تسألوها لأي خبر بيبدأ بـ"دراسة بتقول". أولاً: الدراسة على كام واحد؟ عشرة ولا عشرة آلاف؟ ثانياً: كان فيه مجموعة يقارنوا بيها، ولا لأ؟ ثالثاً: الدراسة على بشر، ولا على فيران؟ أصل نص الأخبار العظيمة يا فندم بتبقى على فيران. والفار ده يتشكر، بس هو مش أنا ولا انت. رابعاً: حد تاني عمل نفس الدراسة ووصل لنفس النتيجة؟ وخامساً: مين اللي دفع فلوسها؟ مش علشان أي حد دفع يبقى كذاب، بس علشان تبقى عارف. ولو الخبر عدّى من الخمس أسئلة دول.. صدّقه. بس صدّقه شوية.
+فجمعت لكم شوية أسئلة، تسألوها لأي خبر بيبدأ بـ"دراسة بتقول". أولاً: الدراسة على كام واحد؟ عشرة ولا عشرة آلاف؟ ثانياً: كان فيه مجموعة يقارنوا بيها، ولا لأ؟ ثالثاً: الدراسة على بشر، ولا على فيران؟ أصل نص الأخبار العظيمة يا فندم بتبقى على فيران. والفار ده يتشكر، بس هو مش أنا ولا انت. رابعاً: حد تاني عمل نفس الدراسة ووصل لنفس النتيجة؟ وخامساً: مين اللي دفع فلوسها؟ مش علشان أي حد دفع يبقى كذاب، بس علشان تبقى عارف. وسادساً، ودي أحلى واحدة: الخطر زاد الضعف؟ ضعف كام؟ أصل لو حاجة كانت بتحصل لواحد من كل عشر آلاف، وبقت بتحصل لاتنين من كل عشر آلاف.. ده «الضعف» بالظبط. العنوان هيكتب: الخطر اتضاعف! والحقيقة إن تسعة آلاف تسعمية تمانية وتسعين واحد ماحصلّهمش حاجة، زي الأول. الرقم صح، والإحساس اللي العنوان عايزك تحسه.. غلط. ولو الخبر عدّى من الست أسئلة دول.. صدّقه. بس صدّقه شوية.
 
 ### قاموس البشر
 
