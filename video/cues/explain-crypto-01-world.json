@@ -13,6 +13,7 @@
   "c": "",
   "tagline": ""
  },
+ "theme": "day",
  "from": 0,
  "to": null,
  "lead": 0.3,
@@ -42,10 +43,12 @@
    "t": 2.48,
    "say": "موضوع النهارده: العملات المشفرة. فلوس البشر اختر",
    "board": {
-    "kind": "titlecard",
-    "kicker": "",
+    "kind": "cover",
     "title": "BITCOIN",
-    "sub": "1 / 5"
+    "sub": "1 / 5",
+    "coin": "B",
+    "left": "bank",
+    "right": "cash"
    },
    "step": 0,
    "stepT": 2.48,
@@ -121,36 +124,16 @@
    "t": 27.95,
    "say": "راجعت تاريخهم. زمان كانوا بيبدّلوا حاجة بحاجة: س",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "fish",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "gold",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "cash",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "phone",
-      "label": "",
-      "sub": ""
-     }
-    ]
-   },
-   "story": {
-    "n": 1,
-    "tag": "MONEY"
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
    },
    "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "MONEY",
+    "icon": "cash"
+   },
    "stepT": 27.95,
    "shot": "show",
    "kind": "board"
@@ -159,106 +142,46 @@
    "t": 31.86,
    "say": "المشكلة: لو بتاع العيش مش عايز سمك النهارده.. هت",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "fish",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "gold",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "cash",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "phone",
-      "label": "",
-      "sub": ""
-     }
-    ]
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
    },
-   "step": 0,
+   "step": 1,
    "host": "right",
    "emote": "skeptical",
-   "stepT": 27.95
+   "stepT": 31.86
   },
   {
    "t": 35.19,
    "say": "فجرّبوا حاجات تانية الكل يقبلها: ملح، صدف، وفي ج",
-   "shot": "close",
-   "emote": "deadpan"
+   "board": {
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
+   },
+   "step": 2,
+   "stepT": 35.19
   },
   {
    "t": 41.6,
    "say": "فاتفقوا على حاجة الكل يقبلها: الدهب. نادر، ومابي",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "fish",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "gold",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "cash",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "phone",
-      "label": "",
-      "sub": ""
-     }
-    ]
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
    },
-   "step": 1,
-   "stepT": 41.6,
-   "shot": "show",
-   "kind": "board"
+   "step": 3,
+   "stepT": 41.6
   },
   {
    "t": 45.92,
    "say": "بس الدهب تقيل. فبقوا يسيبوه عند واحد أمين، وياخد",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "fish",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "gold",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "cash",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "phone",
-      "label": "",
-      "sub": ""
-     }
-    ]
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
    },
-   "step": 2,
+   "step": 4,
    "stepT": 45.92
   },
   {
@@ -271,35 +194,14 @@
    "t": 57.58,
    "say": "وسنة واحد وسبعين، الدهب اتشال من ورا الورق خالص.",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "fish",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "gold",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "cash",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "phone",
-      "label": "",
-      "sub": ""
-     }
-    ]
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
    },
-   "step": 2,
+   "step": 5,
    "host": "left",
    "emote": "neutral",
-   "stepT": 45.92,
+   "stepT": 57.58,
    "shot": "show",
    "kind": "board"
   },
@@ -307,15 +209,10 @@
    "t": 61.66,
    "say": "واللي ماسك المطبعة يقدر يطبع زي ما هو عايز. في ب",
    "board": {
-    "kind": "story",
+    "kind": "inflation",
     "title": "ZIMBABWE · 2009",
-    "icon": "cash",
-    "name": "",
-    "lines": [
-     "1 NOTE",
-     "100,000,000,000,000 $",
-     "< 1 BUS TICKET"
-    ]
+    "note": "100 000 000 000 000",
+    "currency": "$"
    },
    "step": 0,
    "stepT": 61.66,
@@ -326,15 +223,10 @@
    "t": 65.53,
    "say": "طبعوا ورقة واحدة بمية تريليون دولار.",
    "board": {
-    "kind": "story",
+    "kind": "inflation",
     "title": "ZIMBABWE · 2009",
-    "icon": "cash",
-    "name": "",
-    "lines": [
-     "1 NOTE",
-     "100,000,000,000,000 $",
-     "< 1 BUS TICKET"
-    ]
+    "note": "100 000 000 000 000",
+    "currency": "$"
    },
    "step": 1,
    "stepT": 65.53
@@ -343,17 +235,11 @@
    "t": 68.39,
    "say": "وماكانتش تجيب تذكرة أتوبيس.",
    "board": {
-    "kind": "story",
+    "kind": "inflation",
     "title": "ZIMBABWE · 2009",
-    "icon": "cash",
-    "name": "",
-    "lines": [
-     "1 NOTE",
-     "100,000,000,000,000 $",
-     "< 1 BUS TICKET"
-    ]
+    "note": "100 000 000 000 000",
+    "currency": "$"
    },
-   "host": "right",
    "step": 2,
    "stepT": 68.39
   },
@@ -367,32 +253,11 @@
    "t": 77.3,
    "say": "واللي رصدته النهارده: أغلب فلوسهم مش ورق أصلاً. ",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "fish",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "gold",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "cash",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "phone",
-      "label": "",
-      "sub": ""
-     }
-    ]
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
    },
-   "step": 3,
+   "step": 6,
    "stepT": 77.3,
    "shot": "show",
    "kind": "board"
@@ -401,32 +266,11 @@
    "t": 80.85,
    "say": "أغلب فلوس الكوكب دلوقتي مالهاش وجود تلمسه. خانات",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "fish",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "gold",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "cash",
-      "label": "",
-      "sub": ""
-     },
-     {
-      "icon": "phone",
-      "label": "",
-      "sub": ""
-     }
-    ]
+    "kind": "money",
+    "year": "1971",
+    "balance": 1204.5
    },
-   "step": 3,
+   "step": 6,
    "host": "right",
    "emote": "smug",
    "stepT": 77.3
@@ -435,24 +279,11 @@
    "t": 85.22,
    "say": "وسجّلت إن الفلوس عندهم ليها تلات شغلانات. تدفع ب",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "cash",
-      "label": "1",
-      "sub": ""
-     },
-     {
-      "icon": "tag",
-      "label": "2",
-      "sub": ""
-     },
-     {
-      "icon": "safe",
-      "label": "3",
-      "sub": ""
-     }
+    "kind": "jobs",
+    "labels": [
+     "PAY",
+     "PRICE",
+     "SAVE"
     ]
    },
    "step": 0,
@@ -464,24 +295,11 @@
    "t": 88.31,
    "say": "تسعّر بيها الحاجة.",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "cash",
-      "label": "1",
-      "sub": ""
-     },
-     {
-      "icon": "tag",
-      "label": "2",
-      "sub": ""
-     },
-     {
-      "icon": "safe",
-      "label": "3",
-      "sub": ""
-     }
+    "kind": "jobs",
+    "labels": [
+     "PAY",
+     "PRICE",
+     "SAVE"
     ]
    },
    "step": 1,
@@ -491,28 +309,15 @@
    "t": 89.42,
    "say": "وتحوّش بيها لبكرة. خلّوا التلاتة دول في الملف يا",
    "board": {
-    "kind": "steps",
-    "title": "",
-    "items": [
-     {
-      "icon": "cash",
-      "label": "1",
-      "sub": ""
-     },
-     {
-      "icon": "tag",
-      "label": "2",
-      "sub": ""
-     },
-     {
-      "icon": "safe",
-      "label": "3",
-      "sub": ""
-     }
+    "kind": "jobs",
+    "labels": [
+     "PAY",
+     "PRICE",
+     "SAVE"
     ]
    },
-   "host": "left",
    "step": 2,
+   "host": "right",
    "stepT": 89.42
   },
   {
@@ -524,14 +329,17 @@
     "rows": [
      {
       "name": "ALI",
+      "color": "#23a7e4",
       "amount": 100
      },
      {
       "name": "MONA",
+      "color": "#ef4b97",
       "amount": 50
      },
      {
       "name": "SAMI",
+      "color": "#2fb26a",
       "amount": 20
      }
     ],
@@ -545,7 +353,8 @@
    },
    "story": {
     "n": 2,
-    "tag": "BANK"
+    "tag": "BANK",
+    "icon": "book"
    },
    "step": 0,
    "stepT": 92.69,
@@ -561,14 +370,17 @@
     "rows": [
      {
       "name": "ALI",
+      "color": "#23a7e4",
       "amount": 100
      },
      {
       "name": "MONA",
+      "color": "#ef4b97",
       "amount": 50
      },
      {
       "name": "SAMI",
+      "color": "#2fb26a",
       "amount": 20
      }
     ],
@@ -592,14 +404,17 @@
     "rows": [
      {
       "name": "ALI",
+      "color": "#23a7e4",
       "amount": 100
      },
      {
       "name": "MONA",
+      "color": "#ef4b97",
       "amount": 50
      },
      {
       "name": "SAMI",
+      "color": "#2fb26a",
       "amount": 20
      }
     ],
@@ -625,14 +440,17 @@
     "rows": [
      {
       "name": "ALI",
+      "color": "#23a7e4",
       "amount": 100
      },
      {
       "name": "MONA",
+      "color": "#ef4b97",
       "amount": 50
      },
      {
       "name": "SAMI",
+      "color": "#2fb26a",
       "amount": 20
      }
     ],
@@ -664,18 +482,21 @@
     "actors": [
      {
       "icon": "person",
-      "label": "ALI"
+      "label": "",
+      "args": [
+       "#23a7e4"
+      ]
      },
      {
       "icon": "bank",
-      "label": "BANK",
+      "label": "",
       "big": true
      },
      {
       "icon": "person",
-      "label": "MONA",
+      "label": "",
       "args": [
-       "#ff4fa3"
+       "#ef4b97"
       ]
      }
     ],
@@ -706,7 +527,8 @@
    },
    "story": {
     "n": 3,
-    "tag": "3RD PARTY"
+    "tag": "3RD PARTY",
+    "icon": "bank"
    },
    "step": 0,
    "stepT": 119.08,
@@ -722,18 +544,21 @@
     "actors": [
      {
       "icon": "person",
-      "label": "ALI"
+      "label": "",
+      "args": [
+       "#23a7e4"
+      ]
      },
      {
       "icon": "bank",
-      "label": "BANK",
+      "label": "",
       "big": true
      },
      {
       "icon": "person",
-      "label": "MONA",
+      "label": "",
       "args": [
-       "#ff4fa3"
+       "#ef4b97"
       ]
      }
     ],
@@ -774,18 +599,21 @@
     "actors": [
      {
       "icon": "person",
-      "label": "ALI"
+      "label": "",
+      "args": [
+       "#23a7e4"
+      ]
      },
      {
       "icon": "bank",
-      "label": "BANK",
+      "label": "",
       "big": true
      },
      {
       "icon": "person",
-      "label": "MONA",
+      "label": "",
       "args": [
-       "#ff4fa3"
+       "#ef4b97"
       ]
      }
     ],
@@ -826,18 +654,21 @@
     "actors": [
      {
       "icon": "person",
-      "label": "ALI"
+      "label": "",
+      "args": [
+       "#23a7e4"
+      ]
      },
      {
       "icon": "bank",
-      "label": "BANK",
+      "label": "",
       "big": true
      },
      {
       "icon": "person",
-      "label": "MONA",
+      "label": "",
       "args": [
-       "#ff4fa3"
+       "#ef4b97"
       ]
      }
     ],
@@ -874,15 +705,15 @@
    "t": 132.82,
    "say": "ودي مش نظرية. في جزيرة اسمها قبرص، سنة ألفين وتل",
    "board": {
-    "kind": "story",
-    "title": "",
-    "icon": "bank",
-    "name": "",
-    "lines": [
-     "CYPRUS · 2013",
-     "> 100,000 € : − 47.5%",
-     "LEBANON · 2019"
-    ]
+    "kind": "bankrun",
+    "a": "CYPRUS · 2013",
+    "cut": "€100,000",
+    "share": 0.475,
+    "b": "LEBANON · 2019",
+    "from": 2019,
+    "to": 2025,
+    "fast": "1 s",
+    "slow": "3 DAYS"
    },
    "step": 0,
    "stepT": 132.82,
@@ -893,15 +724,15 @@
    "t": 137.91,
    "say": "واللي حسابه فوق المية ألف يورو في أكبر بنك.. اتا",
    "board": {
-    "kind": "story",
-    "title": "",
-    "icon": "bank",
-    "name": "",
-    "lines": [
-     "CYPRUS · 2013",
-     "> 100,000 € : − 47.5%",
-     "LEBANON · 2019"
-    ]
+    "kind": "bankrun",
+    "a": "CYPRUS · 2013",
+    "cut": "€100,000",
+    "share": 0.475,
+    "b": "LEBANON · 2019",
+    "from": 2019,
+    "to": 2025,
+    "fast": "1 s",
+    "slow": "3 DAYS"
    },
    "step": 1,
    "stepT": 137.91
@@ -910,40 +741,40 @@
    "t": 142.44,
    "say": "وفي لبنان من ألفين وتسعتاشر، البنوك حبست دولارات",
    "board": {
-    "kind": "story",
-    "title": "",
-    "icon": "bank",
-    "name": "",
-    "lines": [
-     "CYPRUS · 2013",
-     "> 100,000 € : − 47.5%",
-     "LEBANON · 2019"
-    ]
+    "kind": "bankrun",
+    "a": "CYPRUS · 2013",
+    "cut": "€100,000",
+    "share": 0.475,
+    "b": "LEBANON · 2019",
+    "from": 2019,
+    "to": 2025,
+    "fast": "1 s",
+    "slow": "3 DAYS"
    },
+   "step": 2,
    "host": "right",
    "calm": true,
    "gesture": "pockets",
-   "step": 2,
    "stepT": 142.44
   },
   {
    "t": 147.25,
    "say": "الرسالة عندهم بتلف الكوكب في ثانية. والتحويل بين",
    "board": {
-    "kind": "story",
-    "title": "",
-    "icon": "bank",
-    "name": "",
-    "lines": [
-     "CYPRUS · 2013",
-     "> 100,000 € : − 47.5%",
-     "LEBANON · 2019"
-    ]
+    "kind": "bankrun",
+    "a": "CYPRUS · 2013",
+    "cut": "€100,000",
+    "share": 0.475,
+    "b": "LEBANON · 2019",
+    "from": 2019,
+    "to": 2025,
+    "fast": "1 s",
+    "slow": "3 DAYS"
    },
-   "step": 2,
+   "step": 3,
    "host": "left",
    "emote": "deadpan",
-   "stepT": 142.44
+   "stepT": 147.25
   },
   {
    "t": 152.74,
@@ -961,7 +792,8 @@
    "gesture": "present",
    "story": {
     "n": 4,
-    "tag": "COPY"
+    "tag": "COPY",
+    "icon": "dup"
    }
   },
   {
@@ -972,9 +804,9 @@
     "title": "",
     "file": "100",
     "name": "money.jpg",
-    "me": "ALI",
-    "a": "MONA",
-    "b": "SAMI",
+    "me": "",
+    "a": "",
+    "b": "",
     "warn": "× 2"
    },
    "step": 0,
@@ -990,9 +822,9 @@
     "title": "",
     "file": "100",
     "name": "money.jpg",
-    "me": "ALI",
-    "a": "MONA",
-    "b": "SAMI",
+    "me": "",
+    "a": "",
+    "b": "",
     "warn": "× 2"
    },
    "step": 1,
@@ -1006,9 +838,9 @@
     "title": "",
     "file": "100",
     "name": "money.jpg",
-    "me": "ALI",
-    "a": "MONA",
-    "b": "SAMI",
+    "me": "",
+    "a": "",
+    "b": "",
     "warn": "× 2"
    },
    "step": 2,
@@ -1022,9 +854,9 @@
     "title": "",
     "file": "100",
     "name": "money.jpg",
-    "me": "ALI",
-    "a": "MONA",
-    "b": "SAMI",
+    "me": "",
+    "a": "",
+    "b": "",
     "warn": "× 2"
    },
    "step": 2,
@@ -1114,7 +946,8 @@
    },
    "story": {
     "n": 5,
-    "tag": "2008"
+    "tag": "2008",
+    "icon": "chartdown"
    },
    "step": 0,
    "stepT": 194.64,
@@ -1222,7 +1055,8 @@
    },
    "story": {
     "n": 6,
-    "tag": "SATOSHI"
+    "tag": "SATOSHI",
+    "icon": "mailbox"
    },
    "step": 0,
    "stepT": 226.92,
@@ -1287,7 +1121,8 @@
    },
    "story": {
     "n": 7,
-    "tag": "IDEA"
+    "tag": "IDEA",
+    "icon": "node"
    },
    "step": 0,
    "stepT": 255.3,
@@ -1386,7 +1221,8 @@
    },
    "story": {
     "n": 8,
-    "tag": "BLOCK 0"
+    "tag": "BLOCK 0",
+    "icon": "file"
    },
    "step": 0,
    "stepT": 303.53,
@@ -1452,7 +1288,8 @@
    "gesture": "shrug",
    "story": {
     "n": 9,
-    "tag": "PIZZA"
+    "tag": "PIZZA",
+    "icon": "pizza"
    }
   },
   {
@@ -1546,7 +1383,8 @@
    },
    "story": {
     "n": 10,
-    "tag": "GONE"
+    "tag": "GONE",
+    "icon": "ghost"
    },
    "step": 0,
    "stepT": 371.23,
@@ -1621,24 +1459,26 @@
    "t": 396.3,
    "say": "وقبل الخلاصة: كلمتين من قاموس البشر. Crypto: من ",
    "board": {
-    "kind": "dict",
-    "title": "",
+    "kind": "glossary",
     "items": [
      {
-      "word": "Crypto",
-      "means": ""
+      "word": "CRYPTO",
+      "root": "kryptós = hidden",
+      "pic": "hidden"
      },
      {
-      "word": "Peer-to-peer",
-      "means": ""
+      "word": "PEER-TO-PEER",
+      "root": "person → person",
+      "pic": "p2p"
      }
     ]
    },
+   "step": 0,
    "story": {
     "n": 11,
-    "tag": "WORDS"
+    "tag": "WORDS",
+    "icon": "key"
    },
-   "step": 0,
    "stepT": 396.3,
    "shot": "show",
    "kind": "board"
@@ -1647,43 +1487,45 @@
    "t": 405.39,
    "say": "و Peer-to-peer: من شخص لشخص. من غير حد في النص. ",
    "board": {
-    "kind": "dict",
-    "title": "",
+    "kind": "glossary",
     "items": [
      {
-      "word": "Crypto",
-      "means": ""
+      "word": "CRYPTO",
+      "root": "kryptós = hidden",
+      "pic": "hidden"
      },
      {
-      "word": "Peer-to-peer",
-      "means": ""
+      "word": "PEER-TO-PEER",
+      "root": "person → person",
+      "pic": "p2p"
      }
     ]
    },
-   "host": "right",
    "step": 1,
+   "host": "right",
    "stepT": 405.39
   },
   {
    "t": 409.84,
    "say": "خلاصة التقرير يا فندم. واحد: الفلوس اتفاق، ومتسج",
-   "meme": {
-    "kind": "list",
-    "title": "1 · 2 · 3",
-    "items": [
-     "MONEY = LEDGER",
-     "LEDGER → BANK",
-     "BITCOIN: LEDGER → EVERYONE"
-    ],
-    "step": 2.3
+   "board": {
+    "kind": "recap",
+    "at": [
+     1.5,
+     4.35,
+     6.45
+    ]
    },
+   "step": 0,
    "host": "pip",
    "story": {
     "n": 12,
-    "tag": "RECAP"
+    "tag": "RECAP",
+    "icon": "rules"
    },
+   "stepT": 409.84,
    "shot": "show",
-   "kind": "meme"
+   "kind": "board"
   },
   {
    "t": 419.13,
@@ -1712,9 +1554,14 @@
    "shot": "show",
    "kind": "board",
    "board": {
-    "kind": "endcard",
+    "kind": "endnext",
     "title": "NEXT",
     "next": "2 / 5",
+    "icons": [
+     "shield",
+     "pickaxe",
+     "rules"
+    ],
     "note": ""
    },
    "step": 0,
