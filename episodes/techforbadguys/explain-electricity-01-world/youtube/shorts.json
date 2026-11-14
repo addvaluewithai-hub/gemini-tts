@@ -1,0 +1,268 @@
+{
+ "note": "Shorts for electricity part 1 (world picture). `parts` are [from, to] in seconds of the finished episode (cues/explain-electricity-01-world.json); `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex job techforbadguys-elec01-short-cta-<key>, English -cta-en-w-<key>). {full} in a description is replaced by the full episode's link at upload. Proposals until the owner picks: nothing is uploaded.",
+ "full": "",
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "snail",
+   "title": "الكهربا أبطأ من الحلزون.. واللمبة بتنوّر في لحظة؟ 🐌 #Shorts",
+   "description": "الإلكترونات في سلك النحاس بتزحف أقل من ملّي في الثانية. الحلزون يسبقها. ومع كده تدوس الزرار واللمبة تنوّر فوراً. السر: السلك مليان أصلاً، زي خرطوم مليان مية.\n\nالتقرير كامل: الكهربا يعني إيه؟ الشرح اللي كان لازم ناخده في المدرسة | ملف الكهربا 1/3\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "الكهربا",
+    "الإلكترون",
+    "سرعة الكهربا",
+    "زرار النور",
+    "شرح الكهربا"
+   ],
+   "parts": [
+    [
+     15.51,
+     21.77
+    ],
+    [
+     132.73,
+     159.9
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-snail.wav",
+    "words": "shorts/cta-snail.words.json",
+    "card": {
+     "icons": [
+      "snail",
+      "bolt"
+     ],
+     "sub": "ELECTRICITY FILE · 1/3"
+    }
+   },
+   "voice_s": 33.4,
+   "en": {
+    "title": "Electricity Is Slower Than a Snail? 🐌 #Shorts",
+    "description": "Electrons in a copper wire crawl less than a millimeter per second. A snail beats them. Yet the lamp lights the instant you flip the switch. The secret: the wire is already full, like a hose full of water.\n\nThe full report: What Is Electricity, Really? | Electricity File 1/3\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "electricity",
+     "electrons",
+     "how a light switch works"
+    ]
+   }
+  },
+  {
+   "key": "lightning",
+   "title": "برقة واحدة: 300 مليون فولت ⚡ #Shorts",
+   "description": "البرقة العادية فيها حوالي 300 مليون فولت و30 ألف أمبير، والكوكب بيضرب فيه البرق عشرات المرات كل ثانية. وسنة 1753 عالِم جرّب يثبت إن البرق كهربا.. ومات في مكانه.\n\nالتقرير كامل: الكهربا يعني إيه؟ الشرح اللي كان لازم ناخده في المدرسة | ملف الكهربا 1/3\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "البرق",
+    "الكهربا الساكنة",
+    "Franklin",
+    "البرق كهربا",
+    "شرح البرق"
+   ],
+   "parts": [
+    [
+     83.03,
+     113.87
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-lightning.wav",
+    "words": "shorts/cta-lightning.words.json",
+    "card": {
+     "icons": [
+      "cloud",
+      "bolt"
+     ],
+     "sub": "ELECTRICITY FILE · 1/3"
+    }
+   },
+   "voice_s": 30.8,
+   "en": {
+    "title": "One Lightning Bolt: 300 Million Volts ⚡ #Shorts",
+    "description": "A typical lightning bolt carries about 300 million volts and 30,000 amps, and lightning strikes the planet dozens of times every second. In 1753 a scientist tried to prove lightning is electricity.. and died on the spot.\n\nThe full report: What Is Electricity, Really? | Electricity File 1/3\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "lightning",
+     "static electricity",
+     "Franklin"
+    ]
+   }
+  },
+  {
+   "key": "tea",
+   "title": "كوباية شاي واحدة = 200 لمبة ☕ #Shorts",
+   "description": "اللمبة الحديثة بتسحب حوالي 10 وات، والغلاية حوالي 2000. يعني كوباية الشاي بميتين لمبة. واللمبة القديمة كانت بتنوّر بزحمة مرور جوّه سلك رفيع. ووحدات الكهربا كلها أسامي علما.. انتهوا على الفاتورة.\n\nالتقرير كامل: الكهربا يعني إيه؟ الشرح اللي كان لازم ناخده في المدرسة | ملف الكهربا 1/3\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "وات",
+    "الغلاية",
+    "استهلاك الكهربا",
+    "فولت",
+    "أمبير"
+   ],
+   "parts": [
+    [
+     209.77,
+     236.96
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-tea.wav",
+    "words": "shorts/cta-tea.words.json",
+    "card": {
+     "icons": [
+      "bolt",
+      "bread"
+     ],
+     "sub": "ELECTRICITY FILE · 1/3"
+    }
+   },
+   "voice_s": 27.2,
+   "en": {
+    "title": "One Cup of Tea = 200 Light Bulbs ☕ #Shorts",
+    "description": "A modern bulb draws about 10 watts; a kettle about 2,000. So one cup of tea costs as much as 200 bulbs. The old bulb glowed from a traffic jam inside a thin wire. And every unit is named after a scientist.. who ended up on your bill.\n\nThe full report: What Is Electricity, Really? | Electricity File 1/3\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "watts",
+     "kettle",
+     "volt ampere ohm watt"
+    ]
+   }
+  },
+  {
+   "key": "fish",
+   "title": "أول بطارية في التاريخ.. كانت سمكة مزوّرة 🐟 #Shorts",
+   "description": "في أنهار أمريكا الجنوبية سمكة قاسوا ضربتها سنة 2019: 860 فولت. و Volta لما عمل أول بطارية سنة 1800 كان بيقلّد السمكة دي. والبشر نفسهم شغالين بالكهربا: القلب بيدق بنبضة كهربا في كل دقّة.\n\nالتقرير كامل: الكهربا يعني إيه؟ الشرح اللي كان لازم ناخده في المدرسة | ملف الكهربا 1/3\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "ثعبان السمك الكهربائي",
+    "Volta",
+    "أول بطارية",
+    "القلب والكهربا",
+    "حقائق غريبة"
+   ],
+   "parts": [
+    [
+     270.01,
+     283.02
+    ],
+    [
+     255.39,
+     270.11
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-fish.wav",
+    "words": "shorts/cta-fish.words.json",
+    "card": {
+     "icons": [
+      "fish",
+      "heart"
+     ],
+     "sub": "ELECTRICITY FILE · 1/3"
+    }
+   },
+   "voice_s": 27.7,
+   "en": {
+    "title": "The First Battery Was a Fake Fish 🐟 #Shorts",
+    "description": "A fish in South American rivers was measured in 2019 at 860 volts. When Volta built the first battery in 1800, he was copying that fish. And humans run on electricity too: every heartbeat is an electric pulse.\n\nThe full report: What Is Electricity, Really? | Electricity File 1/3\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "electric eel",
+     "Volta",
+     "first battery"
+    ]
+   }
+  },
+  {
+   "key": "edison-tesla",
+   "title": "Edison ضد Tesla: مين كسب؟ ⚡ #Shorts",
+   "description": "سنة 1882 Edison شغّل أول محطة كهربا في New York، بس كهربتها ماتوصلش أبعد من كيلو ونص. وجه Tesla بالتيار المتردد.. وسنة 1896 كهربا شلالات Niagara وصلت مدينة Buffalo على بعد أكتر من 30 كيلو.\n\nالتقرير كامل: الكهربا يعني إيه؟ الشرح اللي كان لازم ناخده في المدرسة | ملف الكهربا 1/3\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "Edison",
+    "Tesla",
+    "Westinghouse",
+    "حرب التيارات",
+    "التيار المتردد"
+   ],
+   "parts": [
+    [
+     316.69,
+     334.78
+    ],
+    [
+     338.16,
+     346.01
+    ],
+    [
+     391.39,
+     406.92
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-edison-tesla.wav",
+    "words": "shorts/cta-edison-tesla.words.json",
+    "card": {
+     "icons": [
+      "bolt",
+      "crown"
+     ],
+     "sub": "ELECTRICITY FILE · 1/3"
+    }
+   },
+   "voice_s": 41.5,
+   "en": {
+    "title": "Edison vs Tesla: Who Won? ⚡ #Shorts",
+    "description": "In 1882 Edison opened the first power station in New York, but its power couldn't reach past a kilometer and a half. Then came Tesla with alternating current.. and in 1896 power from Niagara Falls reached Buffalo, more than 30 km away.\n\nThe full report: What Is Electricity, Really? | Electricity File 1/3\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "Edison vs Tesla",
+     "war of the currents",
+     "AC vs DC"
+    ]
+   }
+  }
+ ]
+}

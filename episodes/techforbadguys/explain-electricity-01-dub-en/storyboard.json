@@ -1,0 +1,1070 @@
+{
+ "title": "Earth Report: Electricity 1 (English dub track for the world-picture video)",
+ "recorded_for": "2026-11-14",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "English voice written to fit the timing of explain-electricity-01-world beat by beat (video/dub.cjs): same 105 beats in the same order; only the audio is used, the picture is the world-picture video's. Adapted, not translated: same facts and order, jokes rewritten for English speakers where needed. Facts: see ../explain-electricity-01-ar/plan.md."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. A warm, smooth, rounded voice in a comfortable middle register, relaxed and close to the microphone: never shrill, never nasal, soft on the s sounds. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "2 / 3",
+   "icons": [
+    "bolt",
+    "tower",
+    "cable"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "eintro": {
+   "kind": "eintro",
+   "ends": [
+    4.3,
+    4.59,
+    3.47,
+    4.35,
+    1.81
+   ]
+  },
+  "amber": {
+   "kind": "amber",
+   "ends": [
+    2.48,
+    4.42,
+    2.03,
+    1.93,
+    2.84,
+    3.93,
+    2.6,
+    5.89,
+    1.71,
+    6.59,
+    5.78
+   ]
+  },
+  "spark": {
+   "kind": "spark",
+   "ends": [
+    4.24,
+    2.7,
+    2.51,
+    2.25,
+    2.59,
+    1.93,
+    2.17,
+    3.07,
+    1.88,
+    3.23,
+    3.86,
+    2.46,
+    5.6,
+    2.9
+   ]
+  },
+  "circuit": {
+   "kind": "circuit",
+   "ends": [
+    2.37,
+    3.4,
+    3.5,
+    4.2,
+    5.52,
+    3.57,
+    8.18,
+    9.8,
+    6.18,
+    3.91,
+    8,
+    2.44
+   ]
+  },
+  "pipes": {
+   "kind": "pipes",
+   "ends": [
+    4.97,
+    4.9,
+    4.57,
+    5.12,
+    4.59,
+    5.29,
+    3.69,
+    2,
+    8.79,
+    5.22,
+    0.79,
+    1.13,
+    1.17
+   ]
+  },
+  "scale": {
+   "kind": "scale",
+   "ends": [
+    3.35,
+    3.08,
+    2.21,
+    1.99,
+    7.9
+   ]
+  },
+  "body": {
+   "kind": "body",
+   "ends": [
+    6.98,
+    3.03,
+    4.61,
+    7.2,
+    5.71
+   ]
+  },
+  "wave": {
+   "kind": "wave",
+   "ends": [
+    9.49,
+    6.9,
+    3.85,
+    7.57
+   ]
+  },
+  "war": {
+   "kind": "war",
+   "ends": [
+    5.33,
+    4.2,
+    11.94,
+    5,
+    2.75,
+    6.46,
+    10.9,
+    8.92,
+    19.2,
+    6.38,
+    5.75
+   ]
+  },
+  "won": {
+   "kind": "won",
+   "ends": [
+    4.89,
+    10.01,
+    4.91,
+    3.71,
+    5.58,
+    2.18,
+    6.76
+   ]
+  },
+  "edict": {
+   "kind": "edict",
+   "ends": [
+    7.41,
+    4.92
+   ]
+  },
+  "erecap": {
+   "kind": "erecap",
+   "ends": [
+    14.22
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir, field report number one on the electricity file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: electricity itself. The stuff in the wire. What is it, exactly?",
+     "show": "board",
+     "board": "eintro",
+     "step": 0
+    },
+    {
+     "say": "This whole planet runs on it. Lights, phones, factories, hospitals.",
+     "show": "board",
+     "board": "eintro",
+     "step": 1
+    },
+    {
+     "say": "Cut it for one hour.. and their civilization stands in line.",
+     "show": "board",
+     "board": "eintro",
+     "step": 2,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "Strangest thing I found: what runs in their wires moves slower than a snail.",
+     "show": "board",
+     "board": "eintro",
+     "step": 3
+    },
+    {
+     "say": "<short pause> Yet the lamp lights instantly.",
+     "show": "board",
+     "board": "eintro",
+     "step": 4
+    },
+    {
+     "say": "So how? What is a volt, anyway? And why do they have two kinds of electricity.. that they fought over, all the way to the electric chair?",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "charge",
+   "style": "Telling an old story simply, amused that it took humans so long.",
+   "story": {
+    "n": 1,
+    "tag": "CHARGE",
+    "icon": "atom"
+   },
+   "beats": [
+    {
+     "say": "It began about twenty-six hundred years ago.",
+     "show": "board",
+     "board": "amber",
+     "step": 0
+    },
+    {
+     "say": "A Greek rubbed a lump of amber on some fur.. and it started pulling feathers and straw.",
+     "show": "board",
+     "board": "amber",
+     "step": 1
+    },
+    {
+     "say": "The Greek word for amber: Elektron.",
+     "show": "board",
+     "board": "amber",
+     "step": 2
+    },
+    {
+     "say": "That gave them the word Electricity.",
+     "show": "board",
+     "board": "amber",
+     "step": 3
+    },
+    {
+     "say": "<short pause> Their most important invention.. named after a rock.",
+     "show": "board",
+     "board": "amber",
+     "step": 4
+    },
+    {
+     "say": "Then for two thousand years, nobody understood it. They rubbed.. and watched.",
+     "show": "board",
+     "board": "amber",
+     "step": 5,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "What happened: everything here is made of atoms.",
+     "show": "board",
+     "board": "amber",
+     "step": 6
+    },
+    {
+     "say": "Around every atom are very tiny things called electrons. They carry something called charge. Negative charge.",
+     "show": "board",
+     "board": "amber",
+     "step": 7
+    },
+    {
+     "say": "The heart of the atom is positive.",
+     "show": "board",
+     "board": "amber",
+     "step": 8
+    },
+    {
+     "say": "The rule is simple: opposites attract. Likes.. push apart.",
+     "show": "board",
+     "board": "amber",
+     "step": 9,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Just like humans, sir. <short pause> Except electrons don't hire lawyers.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "When the Greek rubbed the amber, electrons jumped from the fur to the stone. It had extra.. so it pulled anything light nearby.",
+     "show": "board",
+     "board": "amber",
+     "step": 10,
+     "host": "right",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "static",
+   "style": "From a tiny spark to lightning; ends on a plain, serious note about danger.",
+   "story": {
+    "n": 2,
+    "tag": "SPARK",
+    "icon": "bolt"
+   },
+   "beats": [
+    {
+     "say": "They call that static electricity. Charge piling up somewhere, with no way out.",
+     "show": "board",
+     "board": "spark",
+     "step": 0
+    },
+    {
+     "say": "A human walks across a carpet.. and gets charged.",
+     "show": "board",
+     "board": "spark",
+     "step": 1
+    },
+    {
+     "say": "Touches a doorknob.. the charge jumps. Spark.",
+     "show": "board",
+     "board": "spark",
+     "step": 2
+    },
+    {
+     "say": "That little spark is thousands of volts.",
+     "show": "board",
+     "board": "spark",
+     "step": 3
+    },
+    {
+     "say": "But almost no charge behind it. It just stings.",
+     "show": "board",
+     "board": "spark",
+     "step": 4
+    },
+    {
+     "say": "Now scale that spark up.. lightning.",
+     "show": "board",
+     "board": "spark",
+     "step": 5
+    },
+    {
+     "say": "A charged cloud. The charge leaps down.",
+     "show": "board",
+     "board": "spark",
+     "step": 6
+    },
+    {
+     "say": "A typical bolt: about three hundred million volts.",
+     "show": "board",
+     "board": "spark",
+     "step": 7
+    },
+    {
+     "say": "And about thirty thousand amps.",
+     "show": "board",
+     "board": "spark",
+     "step": 8
+    },
+    {
+     "say": "Lightning hits this planet dozens of times.. every second.",
+     "show": "board",
+     "board": "spark",
+     "step": 9
+    },
+    {
+     "say": "One bolt heats the air around it to five times the surface of the sun.",
+     "show": "board",
+     "board": "spark",
+     "step": 10,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "And the boom they hear after.. is the air bursting.",
+     "show": "board",
+     "board": "spark",
+     "step": 11
+    },
+    {
+     "say": "In seventeen fifty-two, an American named Franklin said lightning is electricity, and proposed an experiment to prove it.",
+     "show": "board",
+     "board": "spark",
+     "step": 12,
+     "calm": true
+    },
+    {
+     "say": "A year later, a scientist in Russia tried it.. and died.",
+     "show": "board",
+     "board": "spark",
+     "step": 13,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "So humans learned lesson one early: electricity kills. <short pause> No warning.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "current",
+   "style": "Solving the riddle from the opening with one everyday comparison. Clear and pleased with himself.",
+   "story": {
+    "n": 3,
+    "tag": "CURRENT",
+    "icon": "cable"
+   },
+   "beats": [
+    {
+     "say": "But charge that sits still powers nothing. What does the work is moving charge. That's called current.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "A copper wire is full of loose electrons.",
+     "show": "board",
+     "board": "circuit",
+     "step": 0
+    },
+    {
+     "say": "To get moving they need two things: a push, like a battery.",
+     "show": "board",
+     "board": "circuit",
+     "step": 1
+    },
+    {
+     "say": "And a closed path that brings them back to the start. A circuit.",
+     "show": "board",
+     "board": "circuit",
+     "step": 2
+    },
+    {
+     "say": "Close the switch.. the circuit is complete, the electrons move, and the lamp lights.",
+     "show": "board",
+     "board": "circuit",
+     "step": 3
+    },
+    {
+     "say": "Now the riddle from the start. The electron itself crawls: under a millimeter per second. The snail wins.",
+     "show": "board",
+     "board": "circuit",
+     "step": 4
+    },
+    {
+     "say": "But the push races around the circuit near the speed of light.",
+     "show": "board",
+     "board": "circuit",
+     "step": 5
+    },
+    {
+     "say": "Why? The wire is already full. Like a hose full of water: open the tap.. water comes out the far end at once. Not the water you put in. The water already waiting there.",
+     "show": "board",
+     "board": "circuit",
+     "step": 6,
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "Open the switch.. the circuit breaks, and everything stops. The whole wire, all at once.",
+     "show": "board",
+     "board": "circuit",
+     "step": 7
+    },
+    {
+     "say": "So their light switch doesn't send electricity. <short pause> It's a drawbridge. Up, or down.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "And if electrons find a shortcut with no lamp? They all rush through, the wire heats up and burns. A short circuit.",
+     "show": "board",
+     "board": "circuit",
+     "step": 8,
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "So every house has a breaker that trips when the current gets too high.",
+     "show": "board",
+     "board": "circuit",
+     "step": 9
+    },
+    {
+     "say": "Materials come in two kinds. Metals like copper have loose electrons, so they conduct. Plastic and rubber hold theirs tight, so they insulate.",
+     "show": "board",
+     "board": "circuit",
+     "step": 10,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "<short pause> That's why every wire wears a jacket.",
+     "show": "board",
+     "board": "circuit",
+     "step": 11
+    }
+   ]
+  },
+  {
+   "id": "volt",
+   "style": "The core analogy, built step by step like a patient teacher, with dry asides.",
+   "story": {
+    "n": 4,
+    "tag": "VOLTS",
+    "icon": "gear"
+   },
+   "beats": [
+    {
+     "say": "To understand electricity, humans compare it to water. A tank on the roof, a pipe coming down.",
+     "show": "board",
+     "board": "pipes",
+     "step": 0
+    },
+    {
+     "say": "The higher the tank, the harder the water pushes. In electricity, that push is called the volt.",
+     "show": "board",
+     "board": "pipes",
+     "step": 1
+    },
+    {
+     "say": "How much water flows through the pipe each second.. that's the current. Measured in amps.",
+     "show": "board",
+     "board": "pipes",
+     "step": 2
+    },
+    {
+     "say": "If the pipe has a narrow spot, less water gets through. That's resistance. Measured in ohms.",
+     "show": "board",
+     "board": "pipes",
+     "step": 3
+    },
+    {
+     "say": "Raise the tank.. more pressure, more flow. The exact same law in a wire.",
+     "show": "board",
+     "board": "pipes",
+     "step": 4
+    },
+    {
+     "say": "The work that water can do, push times flow: that's the watt. The thing they pay for on the bill.",
+     "show": "board",
+     "board": "pipes",
+     "step": 5,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "A modern bulb draws about ten watts. A kettle, about two thousand.",
+     "show": "board",
+     "board": "pipes",
+     "step": 6
+    },
+    {
+     "say": "<short pause> One cup of tea.. two hundred bulbs.",
+     "show": "board",
+     "board": "pipes",
+     "step": 7,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "The old bulb had a thin wire inside, with high resistance on purpose. The electrons jam up in it, and it heats until it glows. <short pause> So their light used to be.. a traffic jam.",
+     "show": "board",
+     "board": "pipes",
+     "step": 8,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "These units are all people. Volta, Italian, built the first battery in eighteen hundred.",
+     "show": "board",
+     "board": "pipes",
+     "step": 9
+    },
+    {
+     "say": "Ampère, French.",
+     "show": "board",
+     "board": "pipes",
+     "step": 10
+    },
+    {
+     "say": "Ohm, German.",
+     "show": "board",
+     "board": "pipes",
+     "step": 11
+    },
+    {
+     "say": "And Watt, Scottish.",
+     "show": "board",
+     "board": "pipes",
+     "step": 12
+    },
+    {
+     "say": "Every one of these scientists died.. and their name ended up on a bill. <short pause> Their highest honor.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "To picture the numbers: a phone charger puts out about five volts.",
+     "show": "board",
+     "board": "scale",
+     "step": 0
+    },
+    {
+     "say": "A wall socket: one-ten to two-forty, depending on the country.",
+     "show": "board",
+     "board": "scale",
+     "step": 1
+    },
+    {
+     "say": "High power lines: hundreds of thousands.",
+     "show": "board",
+     "board": "scale",
+     "step": 2
+    },
+    {
+     "say": "Lightning: hundreds of millions.",
+     "show": "board",
+     "board": "scale",
+     "step": 3
+    },
+    {
+     "say": "A note for command: an ordinary wall socket is enough to kill a human. What hurts is the current that passes through the body. And their bodies conduct.",
+     "show": "board",
+     "board": "scale",
+     "step": 4,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "body",
+   "style": "A short surprising aside, then a serious line.",
+   "story": {
+    "n": 5,
+    "tag": "BODY",
+    "icon": "heart"
+   },
+   "beats": [
+    {
+     "say": "Why is current so dangerous to them? Because they run on electricity themselves. Their nerves carry orders as tiny electric pulses.",
+     "show": "board",
+     "board": "body",
+     "step": 0
+    },
+    {
+     "say": "Their heart beats because an electric pulse tells it to. Every beat.",
+     "show": "board",
+     "board": "body",
+     "step": 1
+    },
+    {
+     "say": "A stray current scrambles the heart's own signal. <short pause> Like someone yelling into a phone call.",
+     "show": "board",
+     "board": "body",
+     "step": 2,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "Some creatures use it as a weapon. A fish in South American rivers: in twenty nineteen they measured its shock at eight hundred sixty volts.",
+     "show": "board",
+     "board": "body",
+     "step": 3
+    },
+    {
+     "say": "And when Volta built the first battery, he was copying that fish. <short pause> So the planet's first battery.. was a counterfeit fish.",
+     "show": "board",
+     "board": "body",
+     "step": 4,
+     "host": "right",
+     "emote": "grin"
+    }
+   ]
+  },
+  {
+   "id": "kinds",
+   "style": "Two things compared plainly, then a teasing question.",
+   "story": {
+    "n": 6,
+    "tag": "AC DC",
+    "icon": "bolt"
+   },
+   "beats": [
+    {
+     "say": "Current comes in two kinds. One: direct. The electrons flow one way, all the time, like a river. That's what comes out of any battery. Short name: DC.",
+     "show": "board",
+     "board": "wave",
+     "step": 0
+    },
+    {
+     "say": "Two: alternating. The electrons go back and forth in place. Back and forth, like a saw. Short name: AC.",
+     "show": "board",
+     "board": "wave",
+     "step": 1
+    },
+    {
+     "say": "It flips direction fifty or sixty times a second. Depends on the country.",
+     "show": "board",
+     "board": "wave",
+     "step": 2
+    },
+    {
+     "say": "The lamp lights either way. Going out, the electrons heat the wire.. coming back, they heat it too. <short pause> A saw cuts both ways.",
+     "show": "board",
+     "board": "wave",
+     "step": 3,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "So why would anyone want back-and-forth electricity? <short pause> The answer, sir, is a fight. One of this planet's most famous.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "war",
+   "style": "A true story of a business war, told briskly; the middle passage about the execution is grave and unhurried.",
+   "story": {
+    "n": 7,
+    "tag": "WAR",
+    "icon": "flag"
+   },
+   "beats": [
+    {
+     "say": "In eighteen eighty-two, Thomas Edison opened the first power station in New York.",
+     "show": "board",
+     "board": "war",
+     "step": 0
+    },
+    {
+     "say": "Direct current, one hundred ten volts. On day one it lit about four hundred lamps.",
+     "show": "board",
+     "board": "war",
+     "step": 1
+    },
+    {
+     "say": "But it had one big flaw: its power couldn't reach farther than about a kilometer and a half. After that the pressure drops and the wire heats up. So every neighborhood needed its own station.",
+     "show": "board",
+     "board": "war",
+     "step": 2
+    },
+    {
+     "say": "A coal plant on every street. <short pause> A great plan.. for coal sellers.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Then came an immigrant from Europe named Nikola Tesla. He reached America in eighteen eighty-four.",
+     "show": "board",
+     "board": "war",
+     "step": 3
+    },
+    {
+     "say": "Worked for Edison a few months.. they clashed, and he left.",
+     "show": "board",
+     "board": "war",
+     "step": 4
+    },
+    {
+     "say": "He had designs for motors and generators running on alternating current. A businessman named Westinghouse bought the inventions.",
+     "show": "board",
+     "board": "war",
+     "step": 5
+    },
+    {
+     "say": "AC had one advantage, and it changed everything: you can raise its pressure to thousands of volts with a simple device called a transformer, send it hundreds of kilometers.. and step it back down before it enters the house. Details in the next report.",
+     "show": "board",
+     "board": "war",
+     "step": 6,
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "Edison didn't sit still. From eighteen eighty-eight he ran a fear campaign: AC is a killer. His men electrocuted animals in front of reporters to prove it.",
+     "show": "board",
+     "board": "war",
+     "step": 7,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "In eighteen ninety, New York State carried out the first execution in the electric chair. The man who built the chair ran it on Westinghouse generators, of all things, bought behind his back. So the name AC would stick to death.",
+     "show": "board",
+     "board": "war",
+     "step": 8,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "The execution itself was gruesome and slow. Westinghouse said afterward: they would have done better with an axe. <short pause> When humans compete for a market.. there are no limits.",
+     "shot": "close",
+     "emote": "annoyed",
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "But the math won. In eighteen ninety-three, Westinghouse lit the entire Chicago World's Fair with AC.",
+     "show": "board",
+     "board": "war",
+     "step": 9
+    },
+    {
+     "say": "And in eighteen ninety-six, power from Niagara Falls reached the city of Buffalo.. more than thirty kilometers away.",
+     "show": "board",
+     "board": "war",
+     "step": 10
+    },
+    {
+     "say": "Thirty kilometers. Edison topped out at one and a half. <short pause> Fight over.",
+     "shot": "close",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "won",
+   "style": "The twist at the end of the story. Enjoying the irony.",
+   "story": {
+    "n": 8,
+    "tag": "WINNER",
+    "icon": "crown"
+   },
+   "beats": [
+    {
+     "say": "Since then, the grid across the whole planet is alternating current. From the station to the socket.",
+     "show": "board",
+     "board": "won",
+     "step": 0
+    },
+    {
+     "say": "But wait, sir. Any device with a screen or a battery.. runs on direct current inside. The phone, the computer, the modern bulb, the solar panel, the electric car.",
+     "show": "board",
+     "board": "won",
+     "step": 1
+    },
+    {
+     "say": "And the little cube at the end of the charger cable? Its whole job is turning wall AC into DC.",
+     "show": "board",
+     "board": "won",
+     "step": 2
+    },
+    {
+     "say": "<short pause> So every home holds twenty tiny peace treaties between Edison and Tesla.",
+     "show": "board",
+     "board": "won",
+     "step": 3,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "And the longest power lines on the planet today.. are direct current. In China, a line went live in twenty nineteen.",
+     "show": "board",
+     "board": "won",
+     "step": 4
+    },
+    {
+     "say": "About three thousand three hundred kilometers long.",
+     "show": "board",
+     "board": "won",
+     "step": 5
+    },
+    {
+     "say": "At one point one million volts. Because over very long distances, with modern electronics, DC loses less.",
+     "show": "board",
+     "board": "won",
+     "step": 6
+    },
+    {
+     "say": "So after a hundred and forty years, the score is a tie. <short pause> Nobody told Edison.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "beats": [
+    {
+     "say": "Two words from the human dictionary. AC and DC: alternating and direct. <short pause> They also named a very loud band after them.",
+     "show": "board",
+     "board": "edict",
+     "step": 0
+    },
+    {
+     "say": "And kilowatt-hour: a thousand watts running for one full hour. The unit they get billed in every month.",
+     "show": "board",
+     "board": "edict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "style": "Summary, one sincere warning, then the sign-off.",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "beats": [
+    {
+     "say": "Report summary, sir. One: electricity is charge. Sitting still, it's static; moving, it's current. Two: the volt is pressure, the amp is flow, the ohm is the squeeze. Three: AC travels far, DC runs the devices. And the two live together.",
+     "show": "board",
+     "board": "erecap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "One last warning: electricity is no toy. If you haven't studied it, don't open a device, and keep away from bare wire. Leave it to trained people.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "Next report: where is electricity made? And how does it travel from a station hundreds of kilometers away.. to a socket in the wall, in the same instant?",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "This was Earth Report. Agent Peek. Transmission ends.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "الكهربا يعني إيه؟ الشرح اللي كان لازم ناخده في المدرسة | ملف الكهربا 1/3",
+   "فولت وأمبير ووات.. بتشبيه خزان المية | ملف الكهربا 1/3",
+   "Edison ضد Tesla: الخناقة اللي وصلت للكرسي الكهربائي | 1/3"
+  ],
+  "description": [
+   "التقرير الأول من العميل Peek لقيادته في ملف الكهربا: الحاجة اللي ماشية في السلك.. إيه هي بالظبط؟",
+   "",
+   "يعني إيه شحنة؟ ليه الإلكترون بيمشي أبطأ من الحلزون واللمبة بتنوّر في لحظة؟ يعني إيه فولت وأمبير وأوم ووات، بتشبيه خزان المية فوق السطوح؟ إيه الفرق بين التيار المستمر والمتردد؟ ومعاها حكاية حرب التيارات بين Edison و Tesla و Westinghouse، وليه النتيجة في الآخر طلعت تعادل.",
+   "",
+   "الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "سرعة الإلكترونات في السلك (OpenStax): https://openstax.org/books/university-physics-volume-2/pages/9-2-model-of-conduction-in-metals",
+   "أرقام البرق (هيئة الأرصاد الأمريكية): https://www.weather.gov/mlb/lightning_facts",
+   "محطة Pearl Street سنة 1882 (ETHW): https://ethw.org/Milestones:Pearl_Street_Station,_1882",
+   "حرب التيارات (Smithsonian): https://www.smithsonianmag.com/history/edison-vs-westinghouse-a-shocking-rivalry-102146036/",
+   "شلالات Niagara وأول شبكة متردد (IEEE Spectrum): https://spectrum.ieee.org/the-birthplace-of-the-ac-grid",
+   "خط الصين 1100 كيلوفولت (Enerdata): https://www.enerdata.net/publications/daily-energy-news/state-grid-commissions-new-1100-kv-power-transmission-line-china.html"
+  ],
+  "footer": [
+   "دي حلقة من ملف من تلات تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش إرشادات أمان ولا شغل كهربا. الكهربا خطر: أي شغل فيها لمتخصص.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الكهربا",
+   "#شرح"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "الكهربا",
+   "الكهرباء",
+   "شرح الكهرباء",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "علوم مبسطة",
+   "فولت",
+   "أمبير",
+   "وات",
+   "التيار المتردد",
+   "التيار المستمر",
+   "AC DC",
+   "Tesla",
+   "Edison",
+   "Westinghouse",
+   "حرب التيارات",
+   "البرق",
+   "الكهربا الساكنة",
+   "يعني إيه فولت",
+   "يعني إيه كهربا"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الكهربا (three parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "لو كنت مكان البشر سنة 1890: فريق Edison ولا فريق Tesla؟ اكتب ليه. القيادة بتقرا التعليقات."
+ },
+ "theme": "day"
+}
