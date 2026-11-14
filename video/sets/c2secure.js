@@ -73,7 +73,7 @@ function s1(a, tot) {
 // ---- 2: 51%: small coins break, the big one never has ----
 function s2(a, tot) {
   const c = camAt(a, [[0, 960, 540, 1.0], [3.3, 960, 540, 1.0], [3.9, 1230, 540, 1.08], [5.16, 1240, 540, 1.1]]);
-  const big51 = text(0, 70, "51%", 220, P.red), t51 = at(960, 250, rings(0, 0, 210, P.red, 0.12) + big51, pop(a - 0.9) * (1 - 0.35 * seg(a, 2.0, 2.4)));
+  const big51 = text(0, 70, "51%", 220, P.red), t51 = at(470, 240, rings(0, 0, 210, P.red, 0.12) + big51, pop(a - 0.9) * (1 - 0.35 * seg(a, 2.0, 2.4)));
   // three small coins, a red chain swings down and cracks them
   const hit = 2.45; let small = "";
   [[650, P.teal, P.tealD], [880, "#b9c2e6", P.steelD], [1110, P.violet, P.violetD]].forEach(([x, col, colD], i) => { const t = a - hit - i * 0.12, y = 720;
@@ -91,7 +91,7 @@ function s2(a, tot) {
   const bigC = at(BC[0], BC[1], flash + rings(0, 0, 200, P.gold, 0.14) + coin(150, "B") + shield, pop(a - 3.4));
   const yr = 2009 + Math.round(17 * ease(seg(a, 3.75, 4.75))), cal = a > 3.6 ? at(BC[0] + 330, BC[1] - 300, calPage(String(yr), "", 1, 150), 0.62 * pop(a - 3.6), 6) : "";
   const ok = a > 4.6 ? check(BC[0] + 170, BC[1] + 200, 46, P.green, a - 4.6) : "";
-  const g = night(c, tot, 23) + layer(ground(900, "#221650") + t51 + small + chain + bigC + cal + ok, c);
+  const g = night(c, tot, 23) + layer(ground(900, "#221650") + small + chain + t51 + bigC + cal + ok, c);
   return { g, in: [960, 540], inC: "#e6c38a", inZ: 18, out: toScreen(c, BC[0], BC[1]), outC: P.gold, outZ: 18 };
 }
 
