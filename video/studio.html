@@ -45,6 +45,8 @@ html.short,html.short body,#frame.short{width:1080px;height:1920px}
 /* explain + vertical: the board is a card above the host; captions sit between them, clear of the bottom fifth and the right-hand buttons */
 #frame.vert #board{left:0;top:0;width:1920px;height:1080px;inset:auto;transform-origin:0 0;border-radius:40px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#1b2460,#070919 75%);box-shadow:0 0 0 6px rgba(127,212,255,.35),0 30px 80px rgba(0,0,0,.6)}
 #frame.vert:not(.fullv) #peek{display:none!important}
+/* a Short whose sets are portrait: in studio shots he stands in the town of the sets, whole, instead of behind the desk */
+#vback{display:none;left:0;top:0;width:1080px;height:1920px}#frame.hostv #vback{display:block}#frame.hostv #wall,#frame.hostv #desk,#frame.hostv #tv,#frame.hostv #lurk,#frame.hostv #drone{display:none!important}
 #frame.vert.fullv #board{left:0;top:0;width:1080px;height:1920px;border-radius:0;box-shadow:none;background:none}
 #frame.vert #cap{left:60px;right:150px;font-size:76px}
 html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
@@ -140,6 +142,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #chipi{display:none;background:rgba(5,6,13,.82);padding:0 2px 0 12px;align-items:center}#chipi svg{display:block}
 </style></head><body>
 <div id="frame">
+ <div id="vback"></div>
  <div id="world">
   <svg id="wall" viewBox="-700 -1500 3320 3080" xmlns="http://www.w3.org/2000/svg">
    <defs>
@@ -240,7 +243,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 </div>
 <script type="module">
 import { peek3d } from "/characters/peek3d.js";
-import { board, icon, useTheme } from "/boards.js";
+import { board, icon, useTheme, hostBackV } from "/boards.js";
 import { EMOTES, GESTURES } from "/characters/acting.js";
 const $ = (id) => document.getElementById(id);
 const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
@@ -350,6 +353,8 @@ window.draw = (st) => {
   // a set drawn in portrait (its svg says data-frame="1080x1920") fills the Short's frame; anything else is a card at the top
   const fullV = !!(bd && cfg.vertical && $("board").firstElementChild && $("board").firstElementChild.dataset && $("board").firstElementChild.dataset.frame === "1080x1920");
   $("frame").classList.toggle("fullv", fullV);
+  const hostV = !!(cfg.portraitSets && cfg.vertical && !bd); $("frame").classList.toggle("hostv", hostV);
+  if (hostV) { $("vback").innerHTML = hostBackV(st.t || 0); const z = 1.3, hx = $("host").offsetLeft + 450; $("world").style.transform = `translate(${540 - hx * z}px,${1650 - 815 * z}px) scale(${z})`; }   // feet on the ground of the town
   if (fullV) { const e = Math.min(1, (st.insert ? st.insert.enter : 1) * 3); $("board").style.transform = ""; $("board").style.opacity = e; }
   else if (bd && cfg.vertical) { const k = cfg.boardZoom || 0.68, e = Math.min(1, (st.insert ? st.insert.enter : 1) * 3), p = 1 + 0.06 * (1 - e);   // the board as a card at the top
     $("board").style.transform = `translate(${540 - 960 * k * p}px,${250 + (1 - e) * 30}px) scale(${k * p})`; $("board").style.opacity = e; }
@@ -357,7 +362,7 @@ window.draw = (st) => {
     if (ac) { el.style.left = ac.x - ac.size / 2 + "px"; el.style.top = ac.y - ac.size * 0.845 - ac.hop * ac.size * 0.035 + "px"; el.style.transform = `${ac.flip ? "scaleX(-1) " : ""}rotate(${ac.lean}deg)`; } }
   person($("peek"), st.peek, 640, "r3");
   if (st.peek && st.peek.side) { const right = st.peek.side === "right", a = st.peek.amt;       // leaning in from the edge of the frame
-    const W = cfg.vertical ? 1080 : 1920; $("peek").style.top = (cfg.vertical ? 1250 : 520) + "px"; $("peek").style.left = (right ? W - 430 * a : -640 + 430 * a) + "px"; $("peek").style.transform = `rotate(${right ? -15 : 15}deg)`; }
+    const W = cfg.vertical ? 1080 : 1920; $("peek").style.top = (cfg.vertical ? 1300 : 520) + "px"; $("peek").style.left = (right ? W - 430 * a : -640 + 430 * a) + "px"; $("peek").style.transform = `rotate(${right ? -15 : 15}deg)`; }
   else if (st.peek) { $("peek").style.left = "1320px"; $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
   const f = st.fact; show($("fact"), !!f);
   if (f) { $("fact").className = f.tone || ""; $("factbig").textContent = f.big; $("factsmall").textContent = f.small || ""; $("factsmall").style.opacity = f.sub;

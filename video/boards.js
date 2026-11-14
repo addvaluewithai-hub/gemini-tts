@@ -17,6 +17,7 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { shortEndV } from "./sets/shortend.v.js";
+import { hostBackV } from "./sets/hostback.v.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -854,4 +855,4 @@ export function board(spec, step, age, total, cfg = {}) {
   return fn(spec, step, age, total, cfg);
 }
 export const BOARD_KINDS = Object.keys(BOARDS);
-export { icon, THEMES };
+export { icon, THEMES, hostBackV };
