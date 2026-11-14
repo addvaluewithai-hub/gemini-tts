@@ -5,6 +5,17 @@
 // Text can be Latin or Arabic; nothing here measures text, so labels stay short.
 import { bankSet } from "./sets/bank.js";
 import { moneySet } from "./sets/money.js";
+import { introSet } from "./sets/intro.js";
+import { middleSet } from "./sets/middle.js";
+import { copySet } from "./sets/copy.js";
+import { crisisSet } from "./sets/crisis.js";
+import { paperSet } from "./sets/paper.js";
+import { ideaSet } from "./sets/idea.js";
+import { genesisSet } from "./sets/genesis.js";
+import { pizzaSet } from "./sets/pizza.js";
+import { vanishSet } from "./sets/vanish.js";
+import { dictSet } from "./sets/dict.js";
+import { recapSet } from "./sets/recap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -805,6 +816,17 @@ const BOARDS = {
   trail: (s, step, age, total) => bankSet(s, step, age, total),
   // Crypto part 1, scene by scene, in the world of the bank set (sets/<scene>.js): one wordless shot per beat, `ends` from sets/beats.cjs.
   money: (s, step, age, total) => moneySet(s, step, age, total),
+  intro: (s, step, age, total) => introSet(s, step, age, total),
+  middle: (s, step, age, total) => middleSet(s, step, age, total),
+  copy: (s, step, age, total) => copySet(s, step, age, total),
+  crisis: (s, step, age, total) => crisisSet(s, step, age, total),
+  paper: (s, step, age, total) => paperSet(s, step, age, total),
+  idea: (s, step, age, total) => ideaSet(s, step, age, total),
+  genesis: (s, step, age, total) => genesisSet(s, step, age, total),
+  pizza: (s, step, age, total) => pizzaSet(s, step, age, total),
+  vanish: (s, step, age, total) => vanishSet(s, step, age, total),
+  dict: (s, step, age, total) => dictSet(s, step, age, total),
+  recap: (s, step, age, total) => recapSet(s, step, age, total),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
