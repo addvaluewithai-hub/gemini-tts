@@ -53,7 +53,7 @@ million coins**, **the code case** (the rules, from part 1).
 | 21 | 1.2 | Our slip goes through the door and becomes a row in the page (0.4–0.8). | written in a page |
 | 22 | 9.7 | Pages stack on top of ours one by one, a ✓ counter 1…6 (0.3–4.1 "six pages"); a clock sweeps sixty minutes (4.8–5.0 "an hour"). | six pages, an hour |
 | 24 | 7.3 | Two roads: a narrow lane with a gate where slips pass one by one, `7 / s` (1.0–2.3); beside it a highway full of cards, `1000s / s` (2.7–4.1). A big padlock lights over the lane (4.6–5.8 "security over speed"). Host right. | slow, but safe |
-| 25 | 8.0 | The waiting room overflows (0.6 "crowded"); the fee tag catches fire and rolls `$1` → `$60`, calendar 2021 (1.3–4.6 "tens of dollars"); a coffee cup `$3` beside it slides away (6.0–7.6). Host left. | fees, and why no one buys coffee |
+| 25 | 8.0 | The waiting room overflows (0.6 "crowded"); the fee tag catches fire and rolls `$1` → `$55`, calendar DEC 2017 (1.3–4.6 "tens of dollars"); a coffee cup `$3` beside it slides away (6.0–7.6). Host left. | fees, and why no one buys coffee |
 | 26 | 7.7 | A bright bolt-shaped line above the chain (2.9 "Lightning"); little coins zip back and forth on it between the blue and pink houses (3.5–4.3 "instantly"); a tab notebook sums them, and one row drops down into the big page (4.4–5.7 "later"); a grocer's counter with the same tab notebook (6.2–7.1). Host right. | Lightning, like a tab at the grocer |
 
 ## mine (`c2mine`)

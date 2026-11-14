@@ -213,7 +213,8 @@
    "id": "hash",
    "story": {
     "n": 1,
-    "tag": "البصمة"
+    "tag": "HASH",
+    "icon": "lock"
    },
    "style": "Showing a clever trick, simply, with one very Egyptian comparison.",
    "beats": [
@@ -257,7 +258,8 @@
    "id": "chain",
    "story": {
     "n": 2,
-    "tag": "السلسلة"
+    "tag": "CHAIN",
+    "icon": "file"
    },
    "style": "Building something step by step, then breaking it on purpose.",
    "beats": [
@@ -324,7 +326,8 @@
    "id": "trip",
    "story": {
     "n": 3,
-    "tag": "رحلة تحويل"
+    "tag": "TRANSFER",
+    "icon": "phone"
    },
    "style": "Following one payment like a courier tracking a parcel.",
    "beats": [
@@ -387,7 +390,8 @@
    "id": "mine",
    "story": {
     "n": 4,
-    "tag": "التعدين"
+    "tag": "MINING",
+    "icon": "pickaxe"
    },
    "style": "Explaining a competition like a sports commentator who finds it absurd.",
    "beats": [
@@ -508,7 +512,8 @@
    "id": "secure",
    "story": {
     "n": 5,
-    "tag": "ليه صعب تتسرق"
+    "tag": "SECURITY",
+    "icon": "shield"
    },
    "style": "The payoff of the explanation. Clear and a little impressed.",
    "beats": [
@@ -575,7 +580,8 @@
    "id": "cap",
    "story": {
     "n": 6,
-    "tag": "21 مليون"
+    "tag": "21 MILLION",
+    "icon": "coin"
    },
    "style": "Numbers, quick and dry.",
    "beats": [
@@ -648,7 +654,8 @@
    "id": "rules",
    "story": {
     "n": 7,
-    "tag": "مين بيحكم؟"
+    "tag": "RULES",
+    "icon": "rules"
    },
    "style": "An intelligence officer asking who is really in charge, and enjoying the answer.",
    "beats": [
@@ -717,7 +724,8 @@
    "id": "dict",
    "story": {
     "n": 8,
-    "tag": "قاموس البشر"
+    "tag": "WORDS",
+    "icon": "key"
    },
    "style": "A quick aside, like reading two entries from a field dictionary.",
    "beats": [
@@ -740,7 +748,8 @@
    "id": "recap",
    "story": {
     "n": 9,
-    "tag": "الخلاصة"
+    "tag": "RECAP",
+    "icon": "book"
    },
    "style": "Summary, one sincere warning, then the sign-off.",
    "beats": [
