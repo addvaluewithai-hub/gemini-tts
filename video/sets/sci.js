@@ -6,11 +6,17 @@
 // or at seconds measured from the words (see sets/README.md). `dur(s, k, est)` gives D.
 import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, rr, circ, two, disc, rings, text, number, drawn, at, FW, FH, layer } from "./kit.js";
 import { P as P0, mix, stars as stars0 } from "./bank.js";
-// The science file's own look, so it does not read as the crypto file: a teal night instead of the violet one, an
-// observatory blue-green dusk, mint and coral accents, chalk white for lines; amber (`gold`) stays "look here".
-export const P = { ...P0, sky0: "#0a2f4f", sky1: "#1d6f86", sky2: "#ffc98a", night0: "#061726", night1: "#0e3f56", far: "#164a63", mid: "#12405a", ground: "#0b2c3d", road: "#08202d", soil: "#061a26",
-  violet: "#2fb7a6", violetD: "#1f8c80", ink: "#071522", gold: "#ffbe47", goldD: "#f08a1a", mint: "#5ef0c8", mintD: "#2fc4a0", coral: "#ff7a6b", coralD: "#e0554a", chalk: "#eaf6f2", win: "#ffd27a" };
-export const stars = (seed, n, x0, x1, y1, tot) => stars0(seed, n, x0, x1, y1, tot).replace(/#b9a8ff/g, "#9fd8e6");
+// The science file's own look, far from the crypto file's violet nights: a scientist's notebook in daylight. Sand-coloured
+// graph paper for the background, terracotta as the main colour, sage green and sky blue beside it, mustard (`gold`) for
+// "look here", dark ink for lines. Only shots that are really at night (the comet, the eclipse, space) use the navy night.
+export const P = { ...P0, sky0: "#f7ead3", sky1: "#f3dcb8", sky2: "#efc996", night0: "#141a33", night1: "#2e3560", far: "#e6c9a0", mid: "#dcb98c", ground: "#d6b186", road: "#c49c70", soil: "#b88d62",
+  wall: "#f4e4c9", floor: "#dcc09a", grid: "#e2c9a3",
+  violet: "#e0603a", violetD: "#b94a2a", blue: "#4a90c8", blueD: "#336f9f", pink: "#e86f8a", pinkD: "#c4506b", teal: "#5fa98a", tealD: "#3f8a6c",
+  ink: "#2a2440", gold: "#f2b134", goldD: "#d48a12", mint: "#5fa98a", mintD: "#3f8a6c", coral: "#e0603a", coralD: "#b94a2a", chalk: "#fff8ec", win: "#ffd98a",
+  steel: "#9aa3b8", steelD: "#7a8299", cream: "#fffaf0", creamD: "#ecdcbf", green: "#7cc49b", greenD: "#4f9a72", red: "#d9443a", redD: "#b0322a" };
+export const stars = (seed, n, x0, x1, y1, tot) => stars0(seed, n, x0, x1, y1, tot).replace(/#b9a8ff/g, "#c9cde8");
+// the globe in the notebook's colours
+export const G0 = { sea: "#4a90c8", land: "#7cc49b", rim: "#2a2440", glow: "#f2b134", night: 0.08 };
 export { mix };
 
 export const dur = (s, k, est) => ((s && s.ends && s.ends[k]) || est);
@@ -18,19 +24,21 @@ export const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, 
 
 // ---- skies ----
 export const nightSky = (c, tot, seed = 11, moon = true) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(seed, 90, -600, 2600, 760, tot) + (moon ? `<circle cx="1560" cy="170" r="56" fill="${P.cream}"/><circle cx="1540" cy="156" r="50" fill="${P.night0}"/>` : ""), c, 0.15);
+// the notebook: sand paper with a faint grid that moves with the camera (depth 0.3)
+export const paperBg = (c, tot = 0) => `<rect width="${FW}" height="${FH}" fill="${P.sky0}"/>` + layer(`<path d="${Array.from({ length: 60 }, (_, i) => `M${-1500 + i * 80} -1200V2400M-1500 ${-1200 + i * 80}H3500`).join("")}" stroke="${P.grid}" stroke-width="3"/><path d="${Array.from({ length: 13 }, (_, i) => `M${-1500 + i * 400} -1200V2400M-1500 ${-1200 + i * 400}H3500`).join("")}" stroke="${P.grid}" stroke-width="6"/>`, c, 0.3);
 export const duskSky = (c, tot) => `<rect width="${FW}" height="${FH}" fill="url(#bsky)"/>`;
 // a bright noon sky (the desert of the stick and the shadow)
 export const noonSky = (id = "noon") => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d5fd0"/><stop offset=".6" stop-color="#5fa6ff"/><stop offset="1" stop-color="#ffd9a0"/></linearGradient></defs><rect width="${FW}" height="${FH}" fill="url(#${id})"/>`;
 // a lab or a room: a deep violet wall and a floor line at y = G (world units, through the camera)
-export const room = (G, wall = "#2b1a63", floor = "#1c0f45") => `<rect x="-1500" y="-1500" width="5000" height="${G + 1500}" fill="${wall}"/><rect x="-1500" y="${G}" width="5000" height="1500" fill="${floor}"/><path d="M-1500 ${G}H3500" stroke="#1f6f7a" stroke-width="10"/>`;
+export const room = (G, wall = P.wall, floor = P.floor) => `<rect x="-1500" y="-1500" width="5000" height="${G + 1500}" fill="${wall}"/><rect x="-1500" y="${G}" width="5000" height="1500" fill="${floor}"/><path d="M-1500 ${G}H3500" stroke="${P.ink}" stroke-width="6" opacity=".25"/>`;
 
 // ---- light and particles ----
 // the sun, radius r; `beams` 0..1 draws its rays
 export const sun = (r = 120, tot = 0, beams = 1) => `${rings(0, 0, r * 1.5 * (1 + 0.03 * Math.sin(tot * 1.7)), "#ffe27a", 0.22, 1.5)}${beams > 0 ? Array.from({ length: 12 }, (_, i) => { const a = i * Math.PI / 6 + tot * 0.15; return `<path d="M${(Math.cos(a) * r * 1.15).toFixed(1)} ${(Math.sin(a) * r * 1.15).toFixed(1)}L${(Math.cos(a) * r * (1.15 + 0.45 * beams)).toFixed(1)} ${(Math.sin(a) * r * (1.15 + 0.45 * beams)).toFixed(1)}" stroke="#ffe27a" stroke-width="${r * 0.12}" stroke-linecap="round"/>`; }).join("") : ""}${disc(0, 0, r, "#ffe27a", "#ffb53a")}`;
 // a neutrino: a small bright dot with a short trail to the left (direction: +x)
-export const neutrino = (r = 18, trail = 140, c = "#7fffd4") => `<path d="M${-trail} 0L0 ${-r * 0.6}L0 ${r * 0.6}Z" fill="${c}" opacity=".35"/>${rings(0, 0, r * 1.6, c, 0.3)}<circle r="${r}" fill="#eafffa"/>`;
+export const neutrino = (r = 18, trail = 140, c = P.violet) => `<path d="M${-trail} 0L0 ${-r * 0.6}L0 ${r * 0.6}Z" fill="${c}" opacity=".45"/>${rings(0, 0, r * 1.6, c, 0.3)}<circle r="${r}" fill="${c}"/><circle r="${r * 0.45}" fill="${P.cream}"/>`;
 // a pulse of light: a short gold dash with a glow (direction: +x)
-export const photon = (len = 160, c = "#ffe27a") => `<path d="M${-len} 0H0" stroke="${c}" stroke-width="10" stroke-linecap="round" opacity=".45"/><path d="M${-len * 0.4} 0H0" stroke="#fff6c8" stroke-width="16" stroke-linecap="round"/>${rings(0, 0, 26, c, 0.3)}`;
+export const photon = (len = 160, c = P.goldD) => `<path d="M${-len} 0H0" stroke="${c}" stroke-width="10" stroke-linecap="round" opacity=".5"/><path d="M${-len * 0.4} 0H0" stroke="${P.gold}" stroke-width="16" stroke-linecap="round"/>${rings(0, 0, 26, c, 0.3)}`;
 
 // ---- instruments ----
 // a stopwatch, radius r, the hand at `hand` turns (0..1 = once round); `big` is a number on its face (or "")
@@ -59,11 +67,11 @@ export const card = (mark = "?", glow = 0, k = 1) => at(0, 0, `${glow > 0 ? ring
 export const bench = (o = {}) => `${two(rr(-260, -180, 520, 40, 8), P.wood, P.woodD, 0, 8)}<rect x="-230" y="-140" width="26" height="140" fill="${P.woodD}"/><rect x="204" y="-140" width="26" height="140" fill="${P.woodD}"/>${o.flask === false ? "" : at(-120, -180, flask(o.liquid || P.green))}`;
 export const flask = (liquid = P.green, bub = 0) => `<path d="M-22 -150V-90L-80 -10Q-86 0 -74 0H74Q86 0 80 -10L22 -90V-150Z" fill="#cfe9ff" opacity=".35" stroke="#cfe9ff" stroke-width="6"/><path d="M-56 -36L-80 -8Q-84 0 -74 0H74Q84 0 80 -8L56 -36Z" fill="${liquid}"/><path d="${rr(-30, -166, 60, 18, 6)}" fill="${P.steel}"/>${bub > 0 ? [0, 1, 2].map((i) => `<circle cx="${-20 + i * 20}" cy="${-30 - ((bub * 60 + i * 30) % 90)}" r="${6 + i * 2}" fill="#fff" opacity=".6"/>`).join("") : ""}`;
 // a laboratory building with a dome, 600 wide, base on y = 0; `lit` 0..1 its windows; `tag` a short Latin name on the band
-export const lab = (o = {}) => { const lit = o.lit ?? 1, c = o.c || "#5a69b3", cD = o.cD || "#44529a";
+export const lab = (o = {}) => { const lit = o.lit ?? 1, c = o.c || P.blue, cD = o.cD || P.blueD;
   return `${two(rr(-300, -300, 600, 300, 8), c, cD, 14, 0)}${two("M-170 -300A170 170 0 0 1 170 -300Z", o.dome || P.steel, P.steelD, 0, 10)}<path d="M-12 -470V-560" stroke="${P.steelD}" stroke-width="10"/><circle cx="-12" cy="-566" r="12" fill="${P.red}"/>
     ${[-220, -110, 110, 220].map((x) => `<path d="${rr(x - 36, -240, 72, 90, 8)}" fill="${lit > 0.5 ? P.win : P.ink}"/>`).join("")}<path d="M-50 0V-120A50 50 0 0 1 50 -120V0Z" fill="${P.ink}"/>${o.tag ? `<path d="${rr(-150, -296, 300, 60, 10)}" fill="${P.ink}"/>${text(0, -250, o.tag, 46, P.gold)}` : ""}`; };
 // a mountain with a tunnel mouth at its foot (the lab under the rock); base on y = 0
-export const mountain = (w = 900, h = 520, o = {}) => `${two(`M${-w / 2} 0L${-w * 0.12} ${-h}L${w * 0.05} ${-h * 0.82}L${w * 0.2} ${-h * 0.95}L${w / 2} 0Z`, o.c || "#6a4bb0", o.cD || "#4d3390", 0, 0)}<path d="M${-w * 0.12} ${-h}L${-w * 0.2} ${-h * 0.8}L${-w * 0.1} ${-h * 0.84}L${-w * 0.02} ${-h * 0.76}L${w * 0.05} ${-h * 0.82}Z" fill="${P.cream}"/>`;
+export const mountain = (w = 900, h = 520, o = {}) => `${two(`M${-w / 2} 0L${-w * 0.12} ${-h}L${w * 0.05} ${-h * 0.82}L${w * 0.2} ${-h * 0.95}L${w / 2} 0Z`, o.c || P.mint, o.cD || "#25606a", 0, 0)}<path d="M${-w * 0.12} ${-h}L${-w * 0.2} ${-h * 0.8}L${-w * 0.1} ${-h * 0.84}L${-w * 0.02} ${-h * 0.76}L${w * 0.05} ${-h * 0.82}Z" fill="${P.cream}"/>`;
 // a podium with a microphone stand, for a press conference; 260 wide, base on y = 0
 export const podium = (o = {}) => `${two("M-130 0L-110 -280H110L130 0Z", o.c || P.blue, o.cD || P.blueD, 0, 10)}<path d="M-150 -280H150V-300H-150Z" fill="${P.ink}"/>${[-50, 0, 50].map((x, i) => `<path d="M${x * 0.4} -300L${x} -400" stroke="${P.ink}" stroke-width="8"/>${two(rr(x - 16, -440, 32, 56, 16), ["#ff5fa2", "#3ddc97", "#ffd04a"][i], P.ink, 0, 6)}`).join("")}${o.mark ? disc(0, -150, 56, P.gold, P.goldD) + o.mark : ""}`;
 // a camera flash: a white star at (0, 0), p 0..1 through its life
@@ -128,7 +136,7 @@ export const footprints = (n = 8, step = 70, shown = n, c = "#7a68b0") => Array.
 // a fibre-optic cable plugging into a socket on the right: `gap` 0..1 how far the plug is out (1 = 60 units)
 export const cablePlug = (gap = 0, tot = 0, glow = 1) => { const g = 60 * gap;
   return `<path d="M-700 40Q-400 40 -300 0H${-120 - g}" stroke="#ff9f43" stroke-width="28" fill="none" stroke-linecap="round"/><path d="M-700 40Q-400 40 -300 0H${-120 - g}" stroke="#ffd29a" stroke-width="8" fill="none" stroke-dasharray="20 30" stroke-dashoffset="${(-tot * 120).toFixed(1)}" opacity="${glow}"/>
-    ${two(rr(-150 - g, -34, 90, 68, 10), P.steel, P.steelD, 0, 6)}<path d="${rr(-60 - g, -14, 60, 28, 4)}" fill="${P.gold}"/>${two(rr(0, -90, 220, 180, 14), "#2b5566", "#1c3c4a", 0, 10)}<circle cx="170" cy="-50" r="12" fill="${P.mint}"/><path d="${rr(0, -24, 40, 48, 4)}" fill="#061218"/>`; };
+    ${two(rr(-150 - g, -34, 90, 68, 10), P.steel, P.steelD, 0, 6)}<path d="${rr(-60 - g, -14, 60, 28, 4)}" fill="${P.gold}"/>${two(rr(0, -90, 220, 180, 14), P.blueD, P.ink, 0, 10)}<circle cx="170" cy="-50" r="12" fill="${P.mint}"/><path d="${rr(0, -24, 40, 48, 4)}" fill="#061218"/>`; };
 // a small grey box with an antenna and a dish (the GPS receiver), 220 wide, base on y = 0
 export const gpsBox = (blink = 0) => `${two(rr(-110, -150, 220, 150, 14), P.steel, P.steelD, 0, 8)}<path d="${rr(-80, -120, 110, 60, 8)}" fill="#120a30"/><circle cx="60" cy="-90" r="14" fill="${blink > 0.5 ? P.green : "#1f5a4a"}"/><path d="M-60 -150V-230" stroke="${P.steelD}" stroke-width="10"/><path d="M-120 -250Q-60 -190 0 -250" fill="${P.steel}" stroke="${P.steelD}" stroke-width="6"/><circle cx="-60" cy="-232" r="10" fill="${P.red}"/>`;
 // an apple
