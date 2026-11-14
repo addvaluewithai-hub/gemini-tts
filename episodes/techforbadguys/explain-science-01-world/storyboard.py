@@ -166,7 +166,7 @@ sb = {
  "settings": {"lead": 0.3, "tail": 13, "tempo": 1.06, "tighten": {"max": 0.32, "keep": 0.22}, "captionChunk": 4, "bpm": 100, "musicGain": 0.45, "sfxGain": 0.25, "voiceGain": 1.35, "captions": False, "whooshGain": 0, "shots": {"host": {"s": 1.18, "y": 470}, "close": {"s": 1.42, "y": 410}}, "letterbox": False},
  "ending": {"card": {"kind": "endnext", "title": "NEXT", "next": "2 / 4", "icons": ["file", "eye", "rules"], "note": ""}},
  "brand": {"a": "Earth ", "b": "Report", "c": "", "tagline": ""},
- "theme": "day",
+ "theme": "lab",
  "boards": boards,
  "scenes": scenes,
 }

@@ -16,6 +16,7 @@ import { pizzaSet } from "./sets/pizza.js";
 import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
+import { sintroSet } from "./sets/sintro.js";
 import { shortEndV } from "./sets/shortend.v.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
@@ -41,6 +42,16 @@ const THEMES = {
       wall0: "#cfe3f6", wall1: "#b7d2ee", wall2: "#9fbfe3", glow: ".35", desk0: "#ffffff", desk1: "#d6deef", front0: "#e6ecf7", front1: "#c9d4ea", front2: "#b4c2df",
       logo: "#263259", tag: "#55628a", shelf: "#9aa9cc", pipdesk: "linear-gradient(#ffffff,#d6deef)", chipBg: "rgba(255,255,255,.94)", chipInk: "#14182e", chipSub: "#3b4870",
       brand: "#263259", brandShadow: "0 2px 0 rgba(255,255,255,.8)", brandSub: "#55628a", vig: "radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(60,40,0,.16) 100%)" } },
+  // the science file: the same light studio idea as "day", but cool (mint paper, teal walls, a slate desk) so the two files look apart
+  lab: { ink: "#0d1f24", navy: "#ffffff", panel: "#dff3ef", line: "#1f8c80", white: "#1d3a40", dim: "#5f7f84", yellow: "#ffb547", pink: "#ff7a6b", cyan: "#1fa6b8", green: "#2fb26a", red: "#e5484a", gold: "#f2a632", paper: "#f7fffc",
+    row: "#eefaf7", rowUp: "#dcf5e6", rowDown: "#fde3e1", muted: "#c3dcd8", body: "#d9efeb", land: "#cfe6d4", cube: ["#ffffff", "#e2f3f0", "#ecf8f5", "#f6fdfb", "#d3ebe6"], cubeGlow: "rgba(31,140,128,.18)",
+    stamp: (a) => `rgba(255,255,255,${Math.min(0.95, a + 0.3)})`,
+    text: { "#ffb547": "#b85a00", "#1fa6b8": "#0b6f7d", "#2fb26a": "#1b8048", "#f2a632": "#9a6000", "#ff7a6b": "#c0392b" },
+    bg: "radial-gradient(ellipse at 50% 38%,#ffffff,#e9f7f3 55%,#cfe8e2 100%)",
+    studio: { bg: "#dcefea", insert: "radial-gradient(ellipse at 50% 38%,#ffffff,#e9f7f3 55%,#cfe8e2 100%)", grid: "rgba(20,90,90,.07)",
+      wall0: "#1f5f6e", wall1: "#174c5a", wall2: "#103a47", glow: ".45", desk0: "#f4f7f6", desk1: "#c9d6d4", front0: "#3b5560", front1: "#2c434d", front2: "#22363e",
+      logo: "#eaf6f2", tag: "#9fd8cf", shelf: "#2a7080", pipdesk: "linear-gradient(#f4f7f6,#c9d6d4)", chipBg: "rgba(255,255,255,.94)", chipInk: "#0d1f24", chipSub: "#2c5a60",
+      brand: "#0d3a40", brandShadow: "0 2px 0 rgba(255,255,255,.8)", brandSub: "#2c6a70", vig: "radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(0,40,40,.18) 100%)" } },
 };
 const themeOf = (t) => (!t ? BASE : typeof t === "object" ? { ...BASE, ...t } : THEMES[t] ? { ...BASE, ...THEMES[t] } : BASE);
 let C = BASE;
@@ -844,6 +855,7 @@ const BOARDS = {
   vanish: (s, step, age, total, cfg) => vanishSet(s, step, age, total, cfg),
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
+  sintro: (s, step, age, total, cfg) => sintroSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
