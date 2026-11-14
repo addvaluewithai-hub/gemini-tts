@@ -22,7 +22,7 @@ const street = (G) => `<rect x="-900" y="${G}" width="3800" height="600" fill="$
 // ---- 0: from one house to the other, straight; then a bank rises across the road, and the coin must go in ----
 const G0 = 860, HB = 430, HP = 1490, HK = 1.45, BK = 0.7, DOOR = G0 - 70, STOP = 640;
 function m0(a, tot) {
-  const c = camAt(a, [[0, 960, G0 - 250, 1.32], [3.0, 960, G0 - 255, 1.35], [5.22, 960, G0 - 250, 1.42]]);
+  const c = camAt(a, [[0, 960, 640, 1.08], [3.0, 960, 640, 1.1], [5.22, 960, 640, 1.13]]);
   const rise = a < 2.95 ? 0 : spring(a - 2.95, 7, 11), by = G0 + (1 - rise) * 560;
   const road = drawn(`M${HB + 90} ${DOOR + 40}H${HP - 90}`, seg(a, 0.3, 1.2), P.gold, 8, 'stroke-dasharray="0.012 0.02" opacity=".8"');
   // the coin: out of the door, straight on; it stops short of the bank that came up in its way, then goes in at its door
@@ -40,18 +40,18 @@ function m0(a, tot) {
 }
 // ---- 1: inside the arch: the book is open, the blue row is checked, ✓ ----
 function m1(a, tot) {
-  const c = camAt(a, [[0, 960, G0 - 230, 2.3], [1.89, 960, G0 - 240, 2.45]]);
+  const c = camAt(a, [[0, 960, 545, 1.0], [1.89, 960, 545, 1.04]]);
   const scan = seg(a, 0.8, 1.3), coinIn = easeOut(seg(a, 0, 0.45));
   const lit = scan > 0 ? `<path d="${rr(-150, -76, 150 * scan, 66, 10)}" fill="${P.gold}" opacity=".35"/>` : "";
   const lamp = scan > 0 && scan < 1 ? at(-150 + 150 * scan, -110, `<path d="M0 0L-26 -60h52Z" fill="#fff3c2" opacity=".5"/><circle r="10" fill="#fff3c2"/>`) : "";
-  const inner = `${rings(0, -225, 150 * (1 + 0.03 * Math.sin(tot * 2)), P.gold, 0.2, 1.3)}${two(rr(-34, -130, 68, 90, 6), "#7a55c9", "#5b3aa6", 10, 0)}<path d="${rr(-70, -46, 140, 12, 5)}" fill="#5b3aa6"/>${at(0, -225, book(lit + rows("70", "80") + lamp))}
+  const inner = `${rings(0, -225, 150 * (1 + 0.03 * Math.sin(tot * 2)), P.gold, 0.2, 1.3)}${two(rr(-34, -130, 68, 90, 6), "#7a55c9", "#5b3aa6", 10, 0)}<path d="${rr(-70, -46, 140, 12, 5)}" fill="#5b3aa6"/>${at(0, -225, book(lit + rows("70", "80") + lamp), 1.08)}
     ${at(lerp(-260, -110, coinIn), -78, coin(34), 1, coinIn * 360)}${check(-62, -330, 34, P.green, a - 1.37)}`;
   const main = street(G0) + at(960, G0, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner }));
   return { g: town(c, tot, G0) + layer(main, c), in: toScreen(c, 960, G0 - 150), inC: P.ink, inZ: 20, out: toScreen(c, 960 - 110, G0 - 78), outC: P.gold, outZ: 22 };
 }
 // ---- 2: on to the pink house; there a slice comes off and flies back to the bank: the fee ----
 function m2(a, tot) {
-  const c = camAt(a, [[0, 1080, G0 - 250, 1.35], [1.79, 1130, G0 - 250, 1.4]]);
+  const c = camAt(a, [[0, 960, 640, 1.13], [1.79, 960, 640, 1.14]]);
   const p = ease(seg(a, 0.0, 0.62)), cx = lerp(1010, HP - 80, p), cy = DOOR - 30 * Math.sin(Math.PI * p), cut = a > 0.96 ? 1 : 0;
   const fly = seg(a, 0.96, 1.45), w = bez([HP - 60, DOOR - 70], [1250, DOOR - 380], [960, G0 - 110], ease(fly));
   const main = street(G0) + at(HB, G0, house(P.blue, P.blueD), HK) + at(HP, G0, house(P.pink, P.pinkD, { lit: [1, 1, a > 0.5 ? 1 : 0] }), [HK, HK * bump(a, 0.55, 0.06)])
@@ -62,20 +62,20 @@ function m2(a, tot) {
 }
 // ---- 3: the keeper of the book can take a fee, keep it waiting, freeze it, or go under with it ----
 function m3(a, tot) {
-  const G = 900, BX = 760, c = camAt(a, [[0, BX + 60, G - 260, 1.85], [3.9, BX + 60, G - 250, 1.95], [4.84, BX + 60, G - 230, 1.75]]);
+  const G = 900, BX = 760, c = camAt(a, [[0, BX + 40, 560, 1.0], [3.9, BX + 40, 560, 1.04], [4.84, BX + 40, 570, 1.0]]);
   const sink = easeIn(seg(a, 4.15, 4.84)) * 760, tilt = 4 * seg(a, 4.15, 4.84), shake = a > 3.95 && a < 4.2 ? 6 * Math.sin(a * 70) : 0;
-  const cX = BX, cY = G - 74;
+  const cX = BX, cY = G - 104;
   // fee: scissors close on the coin and a slice drops into the bank
-  const sc = seg(a, 0.6, 1.13), sOpen = a < 1.13 ? 22 * (1 - seg(a, 0.95, 1.13)) : 22 * seg(a, 1.13, 1.3), sPos = bez([1340, 420], [1150, 450], [cX + 40, cY - 90], easeOut(sc)), sGone = seg(a, 1.35, 1.6);
+  const sc = seg(a, 0.6, 1.13), sOpen = a < 1.13 ? 22 * (1 - seg(a, 0.95, 1.13)) : 22 * seg(a, 1.13, 1.3), sPos = bez([1340, 420], [1150, 450], [cX + 60, cY - 130], easeOut(sc)), sGone = seg(a, 1.35, 1.6);
   const blade = (s) => `<g transform="rotate(${s})"><path d="M0 0L170 -14L170 10Z" fill="${P.steel}"/><circle cx="-46" cy="${s > 0 ? 18 : -18}" r="26" fill="none" stroke="${P.red}" stroke-width="12"/></g>`;
   const scissors = a > 0.6 && sGone < 1 ? at(sPos[0] + 400 * easeIn(sGone), sPos[1] - 300 * easeIn(sGone), blade(sOpen) + blade(-sOpen) + `<circle r="9" fill="${P.ink}"/>`, 1.1, 200) : "";
-  const fall = seg(a, 1.15, 1.6), slice = a > 1.13 && fall < 1 ? at(lerp(cX + 20, BX, fall), lerp(cY - 30, G - 260, ease(fall)) + 80 * Math.sin(Math.PI * fall) * 0, wedge(70), 1 - 0.5 * fall, 160 * fall) : "";
+  const fall = seg(a, 1.15, 1.6), slice = a > 1.13 && fall < 1 ? at(lerp(cX + 20, BX, fall), lerp(cY - 30, G - 260, ease(fall)) + 80 * Math.sin(Math.PI * fall) * 0, wedge(100), 1 - 0.5 * fall, 160 * fall) : "";
   // delay: the calendar goes on and on while the coin waits
   const cal = a > 1.6 ? at(BX + 80, G - 320, calPage(String(Math.min(3, 1 + Math.floor(seg(a, 1.9, 2.5) * 2.99))), "", 0.9, 150) + [0, 1].map((i) => calFlip(String(i + 1), "", seg(a, 1.9 + i * 0.3, 2.2 + i * 0.3), 150)).join(""), 0.5 * pop(a - 1.6) * (1 - seg(a, 4.2, 4.5))) : "";
   const tap = a > 1.72 && a < 2.7 ? -10 * Math.abs(Math.sin((a - 1.72) * 9)) : 0;
   // freeze: a block of ice grows up round it
   const ice = seg(a, 2.78, 3.1), iceG = ice > 0 ? `<path d="${rr(-104, 104 - 208 * ease(ice), 208, Math.max(1, 208 * ease(ice)), 22)}" fill="#bfeaff" opacity=".55" stroke="#e8f8ff" stroke-width="6"/>${ice >= 1 ? `<path d="M-70 -70l40 0M-70 -50l20 0" stroke="#fff" stroke-width="8" stroke-linecap="round"/>${[0, 1, 2].map((i) => at(-80 + i * 80, -120 - 10 * Math.sin(tot * 3 + i), `<path d="M0 -14V14M-14 0H14M-10 -10L10 10M10 -10L-10 10" stroke="#e8f8ff" stroke-width="4"/>`, 0.8 + 0.2 * Math.sin(tot * 4 + i))).join("")}` : ""}` : "";
-  const theCoin = at(cX, cY + tap, cutCoin(70, a > 1.13 ? 1 : 0, "m3c") + iceG, 1, 0);
+  const theCoin = at(cX, cY + tap, cutCoin(70, a > 1.13 ? 1 : 0, "m3c") + iceG, 1.45, 0);
   const rot = (inner) => `<g transform="translate(${BX + 400} ${G}) rotate(${tilt}) translate(${-BX - 400} ${-G})">${inner}</g>`;
   const front = `<rect x="-900" y="${G}" width="3800" height="600" fill="${P.ground}"/><rect x="-900" y="${G}" width="3800" height="10" fill="#3a2a7a"/>`;
   const dust = a > 4.3 ? [0, 1, 2, 3, 4].map((i) => at(BX - 360 + i * 180, G - 10, `<circle r="${(60 + 30 * rnd(i)) * spring(a - 4.3 - i * 0.04, 6, 9)}" fill="${P.stone}" opacity="${(0.7 * (1 - seg(a, 4.5, 4.84))).toFixed(2)}"/>`)).join("") : "";
@@ -84,7 +84,7 @@ function m3(a, tot) {
 }
 // ---- 4: an island at dawn; the houses wake up and find the bank shut ----
 function m4(a, tot) {
-  const c = camAt(a, [[0, 960, 620, 1.5], [3.7, 960, 620, 1.55], [4.25, 990, 640, 1.6], [5.09, 990, 645, 1.63]]), G = 820, SEA = 790;
+  const c = camAt(a, [[0, 1008, 600, 1.3], [3.7, 1008, 600, 1.33], [5.09, 1008, 605, 1.37]]), G = 820, SEA = 790;
   const sunY = lerp(980, 560, easeOut(seg(a, 0, 3.0))), wake = (i) => (a > 3.36 + i * 0.1 ? 1 : 0), sh = ease(seg(a, 4.2, 4.5));
   const shutter = `<clipPath id="m4a"><path d="M-170 -40V-260A170 170 0 0 1 170 -260V-40Z"/></clipPath><g clip-path="url(#m4a)"><rect x="-180" y="-440" width="360" height="${(400 * sh).toFixed(1)}" fill="${P.steel}"/>${Array.from({ length: Math.floor(16 * sh) }, (_, i) => `<path d="M-180 ${-440 + 25 * (i + 1)}h360" stroke="${P.steelD}" stroke-width="5"/>`).join("")}</g>${sh >= 1 ? at(0, -110, padlock(1.3), pop(a - 4.5)) : ""}`;
   const sky = `<rect width="1920" height="1080" fill="url(#bsky)"/>`;
@@ -100,7 +100,7 @@ function m4(a, tot) {
 }
 // ---- 5: a tower of coins with a line at €100,000; a scoop takes about half of what is above it, and the bank mends itself ----
 function m5(a, tot) {
-  const c = camAt(a, [[0, 1110, 690, 1.4], [4.53, 1115, 690, 1.42]]), G = 930, TX = 610, N = 16, LINE = 10, H = 28;
+  const c = camAt(a, [[0, 1145, 640, 1.19], [4.53, 1145, 640, 1.22]]), G = 930, TX = 610, N = 16, LINE = 10, H = 28;
   const disk = (x, y) => `<path d="M${x - 130} ${y}v14a130 32 0 0 0 260 0v-14Z" fill="${P.goldD}"/><ellipse cx="${x}" cy="${y}" rx="130" ry="32" fill="${P.gold}"/><ellipse cx="${x}" cy="${y}" rx="92" ry="22" fill="none" stroke="${P.goldD}" stroke-width="5"/>`;
   const scoopT = seg(a, 2.07, 2.45), carry = seg(a, 2.45, 2.95), took = a > 2.45 ? 3 : 0, BX = 1490, BY = G;
   const sp = scoopT < 1 ? bez([1650, 380], [1400, 380], [TX + 120, G - (N - 1.5) * H - 40], easeOut(scoopT)) : bez([TX + 120, G - (N - 1.5) * H - 40], [1100, 300], [BX, BY - 300], ease(carry));
@@ -119,7 +119,7 @@ function m5(a, tot) {
 }
 // ---- 6 (calm): dollars behind bars, a chain and a lock, and the years go by ----
 function m6(a, tot) {
-  const c = camAt(a, [[0, 860, 560, 1.0], [4.81, 860, 550, 1.06]]), G = 1010, K = 1.25, BX = 840;
+  const c = camAt(a, [[0, 860, 585, 1.0], [4.81, 860, 585, 1.04]]), G = 1000, K = 1.2, BX = 840;
   const years = ["2019", "2020", "2021", "2022", "2023", "2024", "2025"], times = [1.45, 2.0, 2.5, 3.0, 3.5, 4.05];
   const n = times.filter((t) => a >= t).length;
   const cal = a > 0.55 ? at(1440, 290, calPage(years[n], "", 0.95, 150) + (n > 0 ? calFlip(years[n - 1], "", seg(a, times[n - 1], times[n - 1] + 0.35), 150) : ""), pop(a - 0.55, 6, 10)) : "";
@@ -141,9 +141,9 @@ function m7(a, tot) {
   const snailT = seg(a, 1.63, 3.6), snTh = th0 - 1.1 + 0.5 * snailT, sn = orbit(snTh);
   const morph = (t0) => { const u = a - t0; return u < 0 ? 1 : u < 0.2 ? Math.cos(Math.PI / 2 * u / 0.2) : -1; };
   const envGlyph = `${two(rr(-70, -46, 140, 92, 10), P.cream, P.creamD, 0, 6)}<path d="M-70 -46L0 10L70 -46" fill="none" stroke="${P.creamD}" stroke-width="7"/>`;
-  const digits = `${rings(0, 0, 110, P.gold, 0.25)}${number(0, 42, "0110", 120, "#fff3c2")}`;
+  const digits = `${rings(0, 0, 90, P.gold, 0.25, 1.3)}${number(0, 42, "0110", 120, "#fff3c2")}`;
   const mE = morph(3.6), mC = morph(3.85), gather = ease(seg(a, 4.3, 4.85));
-  const envPos = [lerp(env[0], 700, gather), lerp(env[1], 900, gather)], snPos = [lerp(sn[0], 1460, gather), lerp(sn[1] - 60, 900, gather)];
+  const envPos = [lerp(env[0], 720, gather), lerp(env[1], 880, gather)], snPos = [lerp(sn[0], 1460, gather), lerp(sn[1] - 60, 880, gather)];
   const trail = envT > 0 && envT < 1 ? Array.from({ length: 12 }, (_, i) => { const p = orbit(envTh - i * 0.12); return `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="${12 - i * 0.8}" fill="${P.gold}" opacity="${(0.5 - i * 0.04).toFixed(2)}"/>`; }).join("") : "";
   const snail = (k) => `<path d="M-90 0Q-100 -30 -60 -30H40Q70 -30 80 -60L90 -60Q90 -10 60 0Z" fill="#cfa6ff"/><path d="M76 -60l10 -40M86 -60l20 -34" stroke="#cfa6ff" stroke-width="6" stroke-linecap="round"/><circle cx="86" cy="-100" r="7" fill="${P.ink}"/><circle cx="106" cy="-94" r="7" fill="${P.ink}"/>${at(-10, -80, coin(56), 1, 8 * Math.sin(tot * 2))}`;
   const item = (pos, glyph, m, back) => (back ? "" : "") + at(pos[0], pos[1], m > 0 ? glyph : digits, [Math.max(0.04, Math.abs(m)) * (m > 0 ? 2.1 : 1), m > 0 ? 2.1 : 1]);
@@ -151,7 +151,7 @@ function m7(a, tot) {
   const behind = (th) => Math.sin(th) < 0 && gather <= 0;
   const watch = a > 0.3 && a < 2.2 ? at(1640, 230, `${disc(0, 0, 90, P.cream, P.creamD)}<rect x="-14" y="-118" width="28" height="22" rx="6" fill="${P.red}"/><path d="M0 0L${(64 * Math.sin(2 * Math.PI * ease(envT))).toFixed(1)} ${(-64 * Math.cos(2 * Math.PI * ease(envT))).toFixed(1)}" stroke="${P.ink}" stroke-width="10" stroke-linecap="round"/><circle r="10" fill="${P.ink}"/>${a > 1.23 ? at(0, 160, text(0, 0, "1 s", 80, "#fff3c2"), pop(a - 1.23)) : ""}`, 1.4 * pop(a - 0.3) * (1 - seg(a, 1.9, 2.2))) : "";
   const dayFlip = (i) => calFlip(String(i + 1), "", seg(a, 2.67 + i * 0.24, 2.9 + i * 0.24), 150), cal = a > 2.2 ? at(1660, 260, calPage(String(Math.min(3, 1 + Math.floor(seg(a, 2.67, 3.14) * 2.99))), "", 0.9, 150) + [0, 1].map(dayFlip).join(""), pop(a - 2.2) * (1 - seg(a, 4.3, 4.6))) : "";
-  const eq = a > 4.75 ? at(1080, 900, text(0, 50, "=", 150, P.gold), pop(a - 4.75)) : "";
+  const eq = a > 4.75 ? at(1090, 880, text(0, 50, "=", 150, P.gold), pop(a - 4.75)) : "";
   const path = `<ellipse cx="${GX}" cy="${GY + 70}" rx="${RX}" ry="${RY}" fill="none" stroke="#b9a8ff" stroke-width="4" stroke-dasharray="10 16" opacity="${(0.5 * (1 - gather)).toFixed(2)}"/>`;
   const main = path + (behind(envTh) ? envItem : "") + (behind(snTh) ? snItem : "") + at(GX, GY, globe(R, tot * 0.03)) + trail + (!behind(envTh) ? envItem : "") + (!behind(snTh) ? snItem : "") + eq;
   const g = `<rect width="1920" height="1080" fill="url(#bnight)"/>` + layer(stars(67, 80, -300, 2300, 1080, tot), c, 0.15) + layer(main, c) + watch + cal;
