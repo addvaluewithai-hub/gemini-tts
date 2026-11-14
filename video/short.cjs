@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // A vertical Short (1080 x 1920) cut out of an explain episode, drawn by the same renderer:
 //   node short.cjs <episode dir> <key> <voice.tight.wav> <out.mp4> [--still t1,t2]   (times in episode seconds)
+//   node short.cjs <episode dir> <key> <voice.tight.wav> <out.m4a> --dub <episode dub.wav> --end-dub <line.wav>   (another language's soundtrack)
 // Reads the Short from <episode>/youtube/shorts.json: `parts` are [from, to] in seconds of the finished episode
 // (the time of cues/<episode>.json). Each part is rendered from the episode's own cue file with `vertical: true`
 // (editor.cjs / studio.html: the board as a card above the host, captions between them), then the parts are joined.
@@ -37,6 +38,30 @@ const endCue = () => {
   fs.writeFileSync(f, JSON.stringify({ ...base, episode: dir, transcript: "transcript.json", slides: "none.json", edit, ...vertical, from: Math.max(0, first - 0.08), to: last + 0.3, hold: 1.0 }));
   return f;
 };
+// --dub <episode dub.wav> --end-dub <closing line.wav>: no picture. The Short's soundtrack in another language: the
+// episode's dub track (dub.cjs output, already in the video's timing and tempo) cut to the same parts, and the Short's
+// own closing line in that language fitted to the end card's length, each mixed with the same effects and music.
+const dubPath = flag("--dub");
+if (dubPath) {
+  const tempo = base.tempo || 1, pieces = [], ff = (args) => run("ffmpeg", ["-y", "-loglevel", "error", ...args]);
+  const piece = (cueFile, wavIn, i) => { const f = path.join(tmp, `dub${i}.m4a`); run("node", ["clip.cjs", cueFile, path.resolve(wav), f, "--dub", wavIn]); pieces.push(f); };
+  spec.parts.forEach(([a, b], i) => {
+    const last = i === spec.parts.length - 1 && !spec.end, hold = last ? 0.8 : 0.15, seg = path.join(tmp, `seg${i}.wav`);
+    ff(["-ss", String(a), "-t", String(b - a + hold), "-i", path.resolve(dubPath), "-ac", "1", "-ar", "24000", seg]);
+    piece(cue(a, b, hold), seg, i);
+  });
+  if (spec.end) {
+    const endFile = endCue(), c = JSON.parse(fs.readFileSync(endFile, "utf8")), room = c.to - c.from + c.hold - 0.3, seg = path.join(tmp, "endseg.wav");
+    const len = Number(spawnSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", flag("--end-dub")], { encoding: "utf8" }).stdout) / tempo;
+    const f = Math.max(1, len / room);                                        // only ever faster, and only if it would not fit
+    ff(["-i", flag("--end-dub"), "-af", `silenceremove=start_periods=1:start_threshold=-45dB,atempo=${(tempo * f).toFixed(4)}`, "-ac", "1", "-ar", "24000", seg]);
+    if (f > 1.001) console.log(`closing line sped up ${f.toFixed(2)}x to fit the card`);
+    piece(endFile, seg, "end");
+  }
+  const list = path.join(tmp, "list.txt"); fs.writeFileSync(list, pieces.map((p) => `file '${p}'`).join("\n"));
+  ff(["-f", "concat", "-safe", "0", "-i", list, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000", "-c:a", "aac", "-b:a", "192k", path.resolve(out)]);
+  fs.rmSync(tmp, { recursive: true, force: true }); console.log("wrote", out); process.exit(0);
+}
 const stills = flag("--still");
 if (stills) { const [a, b] = spec.parts[0]; run("node", ["clip.cjs", cue(a, b, 0), path.resolve(wav), path.resolve(out), "--still", stills, "--workers", "1"]); process.exit(0); }
 const workers = process.env.WORKERS || "5", clips = [];
