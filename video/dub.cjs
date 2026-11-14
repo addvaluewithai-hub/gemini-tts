@@ -2,14 +2,15 @@
 // A second voice for a finished video. Takes another language's recording of the same storyboard (same beats, in
 // the same order) and fits it beat by beat into the timing of the video that already exists, so it can be added
 // as an extra audio track without touching the picture.
-//   node dub.cjs <video cues.json> <dub cues.json> <dub voice.wav> <out.wav> [--srt out.srt]
+//   node dub.cjs <video cues.json> <dub cues.json> <dub voice.wav> <out.wav> [--srt out.srt] [--words out.json]
 // Both cue files come from storyboard.cjs; the dub voice is the tightened recording the dub cues were made from.
 // Each beat is sped up or slowed down a little to fill its slot (0.9x to 1.22x, up to 1.3x when running behind).
 // Nothing is cut: a line too long for its slot spills into the next one, and the lateness is reported. The result is at the video's own tempo: mix it with `clip.cjs ... --dub <out.wav>`.
 const fs = require("fs"), path = require("path"), { spawnSync } = require("child_process");
 const [vidPath, dubPath, wavPath, outPath] = process.argv.slice(2);
 const srtOut = ((i) => (i < 0 ? null : process.argv[i + 1]))(process.argv.indexOf("--srt"));
-if (!outPath) { console.error("usage: node dub.cjs <video cues.json> <dub cues.json> <dub voice.wav> <out.wav> [--srt out.srt]"); process.exit(2); }
+const wordsOut = ((i) => (i < 0 ? null : process.argv[i + 1]))(process.argv.indexOf("--words"));   // the dub's words in the video's cue time (no lead), for cutting captions
+if (!outPath) { console.error("usage: node dub.cjs <video cues.json> <dub cues.json> <dub voice.wav> <out.wav> [--srt out.srt] [--words out.json]"); process.exit(2); }
 const SR = 24000, vid = JSON.parse(fs.readFileSync(vidPath, "utf8")), dub = JSON.parse(fs.readFileSync(dubPath, "utf8"));
 const words = (c, p) => JSON.parse(fs.readFileSync(path.resolve(path.dirname(p), c.episode, c.transcript), "utf8"));
 const vW = words(vid, vidPath), dW = words(dub, dubPath), vT = vid.tempo || 1, dT = dub.tempo || 1;
@@ -41,11 +42,12 @@ const fs_ = map.map((m) => m.f).sort((x, y) => x - y);
 console.log(`${map.length} beats fitted; speed change median ${fs_[fs_.length >> 1].toFixed(2)}x, range ${fs_[0].toFixed(2)}x to ${fs_[fs_.length - 1].toFixed(2)}x; latest start ${worst.toFixed(2)} s behind its picture; ${report.length} beats more than half a second late; ends ${(cursor - endA).toFixed(2)} s ${cursor > endA ? "after" : "before"} the original voice`);
 report.forEach((l) => console.log("  " + l));
 
-if (srtOut) {          // the dub's own words, moved to the video's timing
+if (srtOut || wordsOut) {          // the dub's own words, moved to the video's timing
   const lead = vid.lead ?? 0, at = (t) => { const m = map.find((x) => t >= x.b0 - 0.001 && t < x.b1) || map[map.length - 1]; return m.a0 + (t - m.b0) / m.f + lead; };
   const stamp = (t) => { const ms = Math.max(0, Math.round(t * 1000)); return `${String(Math.floor(ms / 3600000)).padStart(2, "0")}:${String(Math.floor(ms / 60000) % 60).padStart(2, "0")}:${String(Math.floor(ms / 1000) % 60).padStart(2, "0")},${String(ms % 1000).padStart(3, "0")}`; };
   const ws = dW.words.map((w) => ({ s: at(w.start_ms / 1000 / dT), e: at(w.end_ms / 1000 / dT), t: w.text })), lines = []; let cur = [];
   ws.forEach((w, i) => { cur.push(w); const nx = ws[i + 1]; if (!nx || /[.!?:]$/.test(w.t) || cur.length >= 8 || nx.s - w.e > 0.6) { lines.push(cur); cur = []; } });
-  fs.writeFileSync(srtOut, lines.map((l, i) => { const s = l[0].s, nx = lines[i + 1] ? lines[i + 1][0].s : Infinity, e = Math.min(Math.max(l[l.length - 1].e + 0.25, s + 0.9), nx - 0.04); return `${i + 1}\n${stamp(s)} --> ${stamp(e)}\n${l.map((w) => w.t).join(" ")}\n`; }).join("\n"));
-  console.log(`wrote ${srtOut}: ${lines.length} lines`);
+  if (wordsOut) fs.writeFileSync(wordsOut, JSON.stringify({ note: "dub words in video cue time (seconds, lead not added)", words: ws.map((w) => ({ s: +(w.s - lead).toFixed(3), e: +(w.e - lead).toFixed(3), t: w.t })) }));
+  if (srtOut) fs.writeFileSync(srtOut, lines.map((l, i) => { const s = l[0].s, nx = lines[i + 1] ? lines[i + 1][0].s : Infinity, e = Math.min(Math.max(l[l.length - 1].e + 0.25, s + 0.9), nx - 0.04); return `${i + 1}\n${stamp(s)} --> ${stamp(e)}\n${l.map((w) => w.t).join(" ")}\n`; }).join("\n"));
+  if (srtOut) console.log(`wrote ${srtOut}: ${lines.length} lines`);
 }

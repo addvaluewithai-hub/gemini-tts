@@ -1,0 +1,115 @@
+1
+00:00:00,122 --> 00:00:02,563
+I traced those numbers to where they actually live:
+
+2
+00:00:02,603 --> 00:00:03,185
+in a ledger.
+
+3
+00:00:03,225 --> 00:00:05,071
+Kept by an entity called the bank.
+
+4
+00:00:05,111 --> 00:00:08,493
+When Alice pays Bob thirty dollars, nothing moves.
+
+5
+00:00:08,533 --> 00:00:10,278
+The bank erases a number here,
+
+6
+00:00:10,318 --> 00:00:13,264
+writes one there. Your salary: a number. Your rent:
+
+7
+00:00:13,304 --> 00:00:13,880
+a number.
+
+8
+00:00:13,920 --> 00:00:15,986
+You have never actually seen this money.
+
+9
+00:00:16,026 --> 00:00:17,731
+Every bank keeps its own ledger.
+
+10
+00:00:17,771 --> 00:00:19,414
+So every night they check each other's.
+
+11
+00:00:19,454 --> 00:00:21,009
+Because none of them trusts the others.
+
+12
+00:00:21,049 --> 00:00:23,043
+So a bank is not a vault full of money.
+
+13
+00:00:23,083 --> 00:00:24,291
+A bank is a ledger.
+
+14
+00:00:24,331 --> 00:00:26,491
+And whoever holds the ledger holds everything.
+
+15
+00:00:26,531 --> 00:00:28,378
+The ledger holder can charge a fee,
+
+16
+00:00:28,418 --> 00:00:30,181
+delay you, freeze your account,
+
+17
+00:00:30,221 --> 00:00:32,307
+or go bankrupt with your money.
+
+18
+00:00:32,347 --> 00:00:33,580
+This is not a theory.
+
+19
+00:00:33,620 --> 00:00:34,519
+On the island of Cyprus,
+
+20
+00:00:34,559 --> 00:00:37,398
+in 2013, people woke up to find the banks closed.
+
+21
+00:00:37,438 --> 00:00:39,197
+Anyone with over a hundred thousand euros in the
+
+22
+00:00:39,237 --> 00:00:41,463
+biggest bank lost almost half the excess.
+
+23
+00:00:41,503 --> 00:00:42,627
+To rescue the bank.
+
+24
+00:00:42,667 --> 00:00:44,966
+But what if that ledger didn't belong to anyone
+
+25
+00:00:45,006 --> 00:00:45,852
+at all?
+
+26
+00:00:45,892 --> 00:00:47,807
+That's the idea that changed everything.
+
+27
+00:00:48,054 --> 00:00:50,246
+The full report is on the Earth Report channel.
+
+28
+00:00:50,286 --> 00:00:52,054
+Subscribe to the channel and turn on the bell
+
+29
+00:00:52,094 --> 00:00:54,683
+so my secret reports on your planet reach you first.

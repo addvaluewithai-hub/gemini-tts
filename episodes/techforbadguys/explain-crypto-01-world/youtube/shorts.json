@@ -68,7 +68,17 @@
     "url": "https://youtube.com/shorts/mFR2OBYkQx0",
     "privacy": "public",
     "publishAt": null,
-    "thumbnail": "shorts/thumb-money.jpg (thumbnails-v2)"
+    "thumbnail": "shorts/thumb-money.jpg (thumbnails-v2)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaaTUMrqiSNeRiTfttwU0jZwsTpzwvg5Yty1c-Lv",
+      "file": "shorts/captions/money-ar.srt"
+     },
+     "en": {
+      "id": "AUieDab2va1lx_AwyRthB7iJnmd0OlNhzFk8FLCg2DQF",
+      "file": "shorts/captions/money-en.srt"
+     }
+    }
    }
   },
   {
@@ -136,7 +146,17 @@
     "url": "https://youtube.com/shorts/B2F0Gtgb5t8",
     "privacy": "public",
     "publishAt": null,
-    "thumbnail": "shorts/thumb-bank.jpg (thumbnails-v2)"
+    "thumbnail": "shorts/thumb-bank.jpg (thumbnails-v2)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaaDv5H2rjDaQixcnc6QmsCOOGozhf71uvWSOHXS",
+      "file": "shorts/captions/bank-ar.srt"
+     },
+     "en": {
+      "id": "AUieDaZ-S-05_adgRuuOUCmt1UZpjj2TgArt-MlLfl9T",
+      "file": "shorts/captions/bank-en.srt"
+     }
+    }
    }
   },
   {
@@ -204,7 +224,17 @@
     "url": "https://youtube.com/shorts/DSZOXG1wXwc",
     "privacy": "public",
     "publishAt": null,
-    "thumbnail": "shorts/thumb-copy.jpg (thumbnails-v2)"
+    "thumbnail": "shorts/thumb-copy.jpg (thumbnails-v2)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaZNFHjvGrJsF3lIlpYJkZqDkn65oHqr5rmAWMGg",
+      "file": "shorts/captions/copy-ar.srt"
+     },
+     "en": {
+      "id": "AUieDaa0r0HLbt3aZ0a3UTia0fwG7cg490lkn3VL9iJr",
+      "file": "shorts/captions/copy-en.srt"
+     }
+    }
    }
   },
   {
@@ -268,7 +298,17 @@
     "url": "https://youtube.com/shorts/lUhMfyRo-T4",
     "privacy": "public",
     "publishAt": null,
-    "thumbnail": "shorts/thumb-crisis-2008.jpg (thumbnails-v2)"
+    "thumbnail": "shorts/thumb-crisis-2008.jpg (thumbnails-v2)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaYBFWBJp9U4Ii9fO4bJXsRzKVQUzaoScYjLGXb0",
+      "file": "shorts/captions/crisis-2008-ar.srt"
+     },
+     "en": {
+      "id": "AUieDaaHkIvgpiWO6sVRV0XcRM_RKkqmkYRGQBEkDKqV",
+      "file": "shorts/captions/crisis-2008-en.srt"
+     }
+    }
    }
   },
   {
@@ -336,7 +376,17 @@
     "url": "https://youtube.com/shorts/boblTu8Pnjo",
     "privacy": "public",
     "publishAt": null,
-    "thumbnail": "shorts/thumb-pizza.jpg (thumbnails-v2)"
+    "thumbnail": "shorts/thumb-pizza.jpg (thumbnails-v2)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaawKKbh5F0OkIAB0w7tPmjH3hgSteEJiD36YWjO",
+      "file": "shorts/captions/pizza-ar.srt"
+     },
+     "en": {
+      "id": "AUieDaaUz54XTucIJRV9QSPzSSK4-MniB09wrrj4MYpB",
+      "file": "shorts/captions/pizza-en.srt"
+     }
+    }
    }
   },
   {
@@ -412,7 +462,17 @@
     "url": "https://youtube.com/shorts/FfeZq762Jt8",
     "privacy": "public",
     "publishAt": null,
-    "thumbnail": "shorts/thumb-satoshi.jpg (thumbnails-v2)"
+    "thumbnail": "shorts/thumb-satoshi.jpg (thumbnails-v2)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaaGh1GLc3kAxtGT9HatPyUxySWc3GNyyr7ZnUXF",
+      "file": "shorts/captions/satoshi-ar.srt"
+     },
+     "en": {
+      "id": "AUieDaYwGVi9qtkK839Uh8gPQr0myAZ8n1V0dEawbdzN",
+      "file": "shorts/captions/satoshi-en.srt"
+     }
+    }
    }
   }
  ]

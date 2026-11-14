@@ -568,3 +568,10 @@ video/youtube_upload.py episodes/<channel>/<episode> <video.mp4> --publish-at 20
 It needs an OAuth access token for the channel with the scopes `youtube.upload` and `youtube.force-ssl`, either
 added to requests for `www.googleapis.com` by the machine's proxy or given in `YT_ACCESS_TOKEN`. Since 2 November
 2026 videos uploaded by an unverified API project are no longer locked to private.
+
+### Subtitles for the Shorts
+
+`python3 short_captions.py <episode dir> <video cues.json> <dub words.json> <closing lines dir> <out dir> --cta-prefix <prefix>`
+writes `<key>-ar.srt` and `<key>-en.srt` for every Short in `youtube/shorts.json`, cut the way `short.cjs` cuts the
+picture. Arabic lines are spelled from the script (the transcript's `source_text`), not from speech recognition; the
+English words come from `dub.cjs ... --words dub-words.json`. Upload them as manual captions (captions.insert).

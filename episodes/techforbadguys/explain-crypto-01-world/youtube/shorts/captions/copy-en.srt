@@ -1,0 +1,79 @@
+1
+00:00:00,017 --> 00:00:02,164
+So I asked the obvious question:
+
+2
+00:00:02,204 --> 00:00:04,685
+why not digital money without a bank? A file.
+
+3
+00:00:04,725 --> 00:00:05,711
+You send it, done.
+
+4
+00:00:05,751 --> 00:00:08,041
+The problem is that anything digital can be copied.
+
+5
+00:00:08,081 --> 00:00:11,310
+A photo, a song, a movie. Copy, paste. Free.
+
+6
+00:00:11,350 --> 00:00:12,310
+If money were a file,
+
+7
+00:00:12,350 --> 00:00:14,773
+Alice could send the same hundred dollars to Bob,
+
+8
+00:00:14,813 --> 00:00:16,230
+and to Carol. At once.
+
+9
+00:00:16,270 --> 00:00:17,886
+That is called the double-spending problem.
+
+10
+00:00:17,926 --> 00:00:19,172
+And that is why they needed someone in the
+
+11
+00:00:19,212 --> 00:00:21,463
+middle, keeping track of who paid what.
+
+12
+00:00:21,503 --> 00:00:23,017
+Humans had been trying since the eighties.
+
+13
+00:00:23,057 --> 00:00:25,793
+A scientist named David Chaum started a digital cash company.
+
+14
+00:00:25,833 --> 00:00:27,494
+It went bankrupt in 1998.
+
+15
+00:00:27,534 --> 00:00:29,375
+The digital money ran out of money.
+
+16
+00:00:29,415 --> 00:00:32,986
+This problem went unsolved for years until an anonymous
+
+17
+00:00:33,026 --> 00:00:34,380
+stranger solved it.
+
+18
+00:00:34,420 --> 00:00:36,636
+The whole story is on the Earth Report channel.
+
+19
+00:00:36,708 --> 00:00:38,348
+Subscribe to the channel and turn on the bell
+
+20
+00:00:38,388 --> 00:00:41,177
+so my secret reports on your planet reach you first.
