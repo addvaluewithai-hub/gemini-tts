@@ -1,0 +1,830 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-crypto-02-world",
+ "transcript": "../../../video/cues/explain-crypto-02-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني رقم اتنين في ملف العملات ا",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.25,
+   "say": "موضوع النهارده: البلوكتشين. دفتر من غير حارس.. ب",
+   "board": {
+    "kind": "c2intro"
+   },
+   "step": 0,
+   "stepT": 3.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 7.33,
+   "say": "هقول لكم الدفتر ده بيتكتب إزاي، مين بيحميه، ومين",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 13.8,
+   "say": "في التقرير اللي فات عرفنا إن بيتكوين خد الدفتر م",
+   "board": {
+    "kind": "c2intro"
+   },
+   "step": 1,
+   "stepT": 13.8,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 18.25,
+   "say": "وده يطرح سؤال خطير: لو الدفتر عند الكل.. إيه الل",
+   "shot": "close",
+   "emote": "skeptical"
+  },
+  {
+   "t": 22.98,
+   "say": "أول حيلة رصدتها اسمها الهاش. مكنة بتاخد أي كلام،",
+   "board": {
+    "kind": "c2hash"
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "البصمة"
+   },
+   "stepT": 22.98,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 28.76,
+   "say": "غيّر في الكلام حرف واحد بس.. البصمة كلها تتغير.",
+   "board": {
+    "kind": "c2hash"
+   },
+   "step": 1,
+   "stepT": 28.76
+  },
+  {
+   "t": 32.34,
+   "say": "وماينفعش ترجع من البصمة للكلام الأصلي. اتجاه واح",
+   "board": {
+    "kind": "c2hash"
+   },
+   "step": 2,
+   "stepT": 32.34
+  },
+  {
+   "t": 35.32,
+   "say": "زي المفرمة يا فندم. تدخّل لحمة، تطلع كفتة. بس عم",
+   "board": {
+    "kind": "c2hash"
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "deadpan",
+   "stepT": 35.32
+  },
+  {
+   "t": 39.69,
+   "say": "والبشر بيستخدموا الحيلة دي في كل حاجة. كلمة السر",
+   "board": {
+    "kind": "c2hash"
+   },
+   "step": 4,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 39.69
+  },
+  {
+   "t": 45.25,
+   "say": "كل عشر دقايق تقريباً، التحويلات الجديدة بتتجمع ف",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "السلسلة"
+   },
+   "stepT": 45.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 51.93,
+   "say": "والصفحة بتتختم ببصمتها.",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 1,
+   "stepT": 51.93
+  },
+  {
+   "t": 53.63,
+   "say": "والصفحة اللي بعدها بتبدأ ببصمة اللي قبلها. فكل ص",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 2,
+   "stepT": 53.63
+  },
+  {
+   "t": 57.87,
+   "say": "وكده بتتكوّن سلسلة. بلوك.. تشين. البشر مش مبدعين",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 3,
+   "stepT": 57.87
+  },
+  {
+   "t": 61.89,
+   "say": "والسلسلة دي دلوقتي فيها أكتر من تسعمية ألف صفحة،",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 61.89
+  },
+  {
+   "t": 67.91,
+   "say": "جرّبت أتخيل واحد رجع وغيّر رقم في صفحة قديمة. بص",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 5,
+   "stepT": 67.91
+  },
+  {
+   "t": 73.68,
+   "say": "والشبكة كلها تشوف السلسلة المكسورة، وترفضها.",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 6,
+   "stepT": 73.68
+  },
+  {
+   "t": 76.39,
+   "say": "وده معناه كمان: اللي اتكتب مابيتمسحش. مفيش زرار ",
+   "board": {
+    "kind": "c2chain"
+   },
+   "step": 7,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 76.39
+  },
+  {
+   "t": 82.35,
+   "say": "يعني علشان تزوّر سطر واحد، لازم تعيد كتابة كل ال",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 87.42,
+   "say": "اتتبّعت تحويل واحد من أول ما اتبعت. الأول بيتذاع",
+   "board": {
+    "kind": "c2trip"
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "رحلة تحويل"
+   },
+   "stepT": 87.42,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 91.76,
+   "say": "وبعدين يقعد في أوضة انتظار مع آلاف التحويلات الت",
+   "board": {
+    "kind": "c2trip"
+   },
+   "step": 1,
+   "stepT": 91.76
+  },
+  {
+   "t": 97.21,
+   "say": "لحد ما يتكتب في صفحة.",
+   "board": {
+    "kind": "c2trip"
+   },
+   "step": 2,
+   "stepT": 97.21
+  },
+  {
+   "t": 98.43,
+   "say": "وكل صفحة بتتكتب فوقه بتثبّته أكتر. وفي المبالغ ا",
+   "board": {
+    "kind": "c2trip"
+   },
+   "step": 3,
+   "stepT": 98.43
+  },
+  {
+   "t": 103.95,
+   "say": "ساعة علشان تحويل يتأكد. والبشر شايفين ده سريع. ل",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 108.13,
+   "say": "والشبكة كلها بتعدّي حوالي سبع تحويلات في الثانية",
+   "board": {
+    "kind": "c2trip"
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 108.13,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 115.45,
+   "say": "ولما الشبكة تتزحم، العمولة بتولّع. في أيام الزحم",
+   "board": {
+    "kind": "c2trip"
+   },
+   "step": 5,
+   "host": "left",
+   "emote": "bored",
+   "stepT": 115.45
+  },
+  {
+   "t": 123.45,
+   "say": "وعلشان السرعة بنوا فوقها شبكة تانية للمبالغ الصغ",
+   "board": {
+    "kind": "c2trip"
+   },
+   "step": 6,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 123.45
+  },
+  {
+   "t": 131.1,
+   "say": "مين اللي بيكتب الصفحة الجديدة؟ وإيه اللي يضمن إن",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 4,
+    "tag": "التعدين"
+   }
+  },
+  {
+   "t": 134.37,
+   "say": "الحل اللي لقيته عندهم: مسابقة. علشان صفحتك تتقبل",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 0,
+   "stepT": 134.37,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 140.51,
+   "say": "ومفيش طريقة تعرف بيها غير إنك تجرّب. رقم ورا رقم",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 1,
+   "stepT": 140.51
+  },
+  {
+   "t": 148.74,
+   "say": "أول جهاز يلاقي الرقم يكسب: صفحته تتضاف للسلسلة، ",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 2,
+   "stepT": 148.74
+  },
+  {
+   "t": 153.65,
+   "say": "والباقي يراجعوا الحل في لحظة. الحل صعب تلاقيه، و",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 3,
+   "stepT": 153.65
+  },
+  {
+   "t": 157.88,
+   "say": "العملية دي اسمها تعدين. مفيش فاس، ولا منجم. مخاز",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 157.88
+  },
+  {
+   "t": 163.59,
+   "say": "واسمها الرسمي: إثبات الشغل. يعني البصمة اللي لقي",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 5,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 163.59
+  },
+  {
+   "t": 170.34,
+   "say": "ولو الأجهزة زادت والمسابقة بقت أسهل؟ النظام بيصع",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 6,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 170.34
+  },
+  {
+   "t": 176.4,
+   "say": "في الأول Satoshi كان بيعدّن على كمبيوتر عادي في ",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 7,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 176.4
+  },
+  {
+   "t": 183.11,
+   "say": "والحسبة بسيطة: الجهاز اللي كهربته أغلى من جايزته",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 8,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 183.11
+  },
+  {
+   "t": 191.7,
+   "say": "وأغلب التعدين كان في الصين، لحد ما منعته سنة ألف",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 9,
+   "stepT": 191.7
+  },
+  {
+   "t": 199.13,
+   "say": "والصين نفسها؟ لسه فيها تعدين. بس في السر. المنع ",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 10,
+   "host": "right",
+   "emote": "sly",
+   "stepT": 199.13
+  },
+  {
+   "t": 203.42,
+   "say": "وأصحاب الأجهزة بيتجمعوا في فرق ويقسموا الجايزة. ",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 11,
+   "stepT": 203.42
+  },
+  {
+   "t": 208.75,
+   "say": "شبكة من غير مدير. بس فيها كبار. والبشر نفسهم قلق",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 12,
+   "host": "left",
+   "emote": "skeptical",
+   "stepT": 208.75
+  },
+  {
+   "t": 212.66,
+   "say": "وفيه عشرات الآلاف من الأجهزة مش بتعدّن خالص. بس ",
+   "board": {
+    "kind": "c2mine"
+   },
+   "step": 13,
+   "host": "left",
+   "emote": "sly",
+   "stepT": 212.66
+  },
+  {
+   "t": 219.8,
+   "say": "يعني البشر بيحرسوا فلوسهم بيانصيب، شغال كل عشر د",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 225,
+   "say": "وليه ده بيحمي الدفتر؟ لأن اللي عايز يزوّر، لازم ",
+   "board": {
+    "kind": "c2secure"
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "ليه صعب تتسرق"
+   },
+   "stepT": 225,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 232.09,
+   "say": "يعني محتاج أجهزة وكهربا أكتر من نص الشبكة كلها. ",
+   "board": {
+    "kind": "c2secure"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 232.09
+  },
+  {
+   "t": 240.01,
+   "say": "البشر بيسموه هجوم الواحد وخمسين في المية. وحصل ف",
+   "board": {
+    "kind": "c2secure"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 240.01
+  },
+  {
+   "t": 245.17,
+   "say": "ولو اتنين كسبوا المسابقة في نفس اللحظة؟ الشبكة ب",
+   "board": {
+    "kind": "c2secure"
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 245.17
+  },
+  {
+   "t": 251.26,
+   "say": "والتمن ده بيتدفع كهربا. شبكة البيتكوين بتسحب في ",
+   "board": {
+    "kind": "c2secure"
+   },
+   "step": 4,
+   "stepT": 251.26
+  },
+  {
+   "t": 259.86,
+   "say": "دولة كاملة من الكهربا.. علشان محدش مضطر يثق في ح",
+   "shot": "close",
+   "emote": "annoyed"
+  },
+  {
+   "t": 264.72,
+   "say": "وجزء من الكهربا دي من مصادر كانت هتتهدر أصلاً. و",
+   "board": {
+    "kind": "c2secure"
+   },
+   "step": 5,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 264.72,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 270.08,
+   "say": "والأجهزة نفسها بتتغيّر كل كام سنة، لأن الأحدث بي",
+   "board": {
+    "kind": "c2secure"
+   },
+   "step": 6,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 270.08
+  },
+  {
+   "t": 275.37,
+   "say": "أما الجايزة: بدأت خمسين بيتكوين للصفحة. وكل أربع",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 0,
+   "story": {
+    "n": 6,
+    "tag": "21 مليون"
+   },
+   "stepT": 275.37,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 279.57,
+   "say": "خمسين، خمسة وعشرين، اتناشر ونص. والنهارده: تلاتة",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 279.57
+  },
+  {
+   "t": 283.71,
+   "say": "والتنصيف الجاي متوقع سنة ألفين تمانية وعشرين. ال",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 283.71
+  },
+  {
+   "t": 290.03,
+   "say": "وعلشان كده العدد كله ليه سقف: واحد وعشرين مليون ",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 3,
+   "stepT": 290.03
+  },
+  {
+   "t": 294.97,
+   "say": "حوالي خمسة وتسعين في المية منهم اتعدّنوا خلاص. و",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 4,
+   "stepT": 294.97
+  },
+  {
+   "t": 299.92,
+   "say": "البيتكوين رقم عشرين مليون اتعدّن في مارس ألفين س",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 5,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 299.92
+  },
+  {
+   "t": 305.82,
+   "say": "ولما الجوايز تخلص، اللي بيعدّنوا هيعيشوا على الع",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 6,
+   "host": "left",
+   "emote": "skeptical",
+   "stepT": 305.82
+  },
+  {
+   "t": 312.09,
+   "say": "وكل بيتكوين بيتقسم لمية مليون حتة. الحتة اسمها س",
+   "board": {
+    "kind": "c2cap"
+   },
+   "step": 7,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 312.09
+  },
+  {
+   "t": 316.66,
+   "say": "فلوس محدش يقدر يطبع منها زيادة. على كوكب بيطبع ف",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 321.33,
+   "say": "وهنا سألت السؤال اللي يهم أي جهاز مخابرات: مين ب",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 7,
+    "tag": "مين بيحكم؟"
+   }
+  },
+  {
+   "t": 326.62,
+   "say": "القواعد برنامج. وكل جهاز ماسك نسخة من الدفتر.. ب",
+   "board": {
+    "kind": "c2rules"
+   },
+   "step": 0,
+   "stepT": 326.62,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 330.74,
+   "say": "اللي عايز يغيّر قاعدة، بيكتب نسخة جديدة من البرن",
+   "board": {
+    "kind": "c2rules"
+   },
+   "step": 1,
+   "stepT": 330.74
+  },
+  {
+   "t": 334.82,
+   "say": "ولو اختلفوا؟ السلسلة بتتقسم اتنين. بيسمّوها فورك",
+   "board": {
+    "kind": "c2rules"
+   },
+   "step": 2,
+   "stepT": 334.82
+  },
+  {
+   "t": 340.58,
+   "say": "وده حصل. سنة ألفين وسبعتاشر، بعد خناقة سنين على ",
+   "board": {
+    "kind": "c2rules"
+   },
+   "step": 3,
+   "stepT": 340.58
+  },
+  {
+   "t": 346.64,
+   "say": "اللي بيشغّلوا النسخ رفضوا. والقاعدة مااتغيرتش. و",
+   "board": {
+    "kind": "c2rules"
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 346.64
+  },
+  {
+   "t": 352.8,
+   "say": "ومرة واحدة الكل اتفق بسرعة. سنة ألفين وعشرة، ثغر",
+   "board": {
+    "kind": "c2rules"
+   },
+   "step": 5,
+   "host": "left",
+   "emote": "grin",
+   "stepT": 352.8
+  },
+  {
+   "t": 363.47,
+   "say": "يعني اللي معاهم الأجهزة والفلوس ماقدروش يفرضوا ر",
+   "shot": "close",
+   "emote": "smug"
+  },
+  {
+   "t": 368.52,
+   "say": "طيب، وسقف الواحد وعشرين مليون ممكن يتغير؟ نظرياً",
+   "board": {
+    "kind": "c2rules"
+   },
+   "step": 6,
+   "host": "left",
+   "emote": "deadpan",
+   "stepT": 368.52,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 375.71,
+   "say": "كلمتين من قاموس البشر. Node: جهاز ماسك نسخة من ا",
+   "board": {
+    "kind": "c2dict"
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "قاموس البشر"
+   },
+   "stepT": 375.71,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 381.63,
+   "say": "و Halving: يوم الجايزة ما بتتقسم على اتنين. كل أ",
+   "board": {
+    "kind": "c2dict"
+   },
+   "host": "right",
+   "step": 1,
+   "stepT": 381.63
+  },
+  {
+   "t": 388.1,
+   "say": "خلاصة التقرير يا فندم. واحد: الصفحات مربوطة ببصم",
+   "host": "right",
+   "board": {
+    "kind": "c2recap"
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "الخلاصة"
+   },
+   "stepT": 388.1,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 399.32,
+   "say": "ونفس التنبيه: ده تقرير، مش نصيحة استثمار.",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 402.5,
+   "say": "التقرير الجاي: الدفتر علني والكل شايفه. طيب إيه ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 411.27,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 414.62,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "3 / 5",
+    "icons": [
+     "key",
+     "safe",
+     "mask"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

@@ -17,6 +17,16 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { shortEndV } from "./sets/shortend.v.js";
+import { c2introSet } from "./sets/c2intro.js";
+import { c2hashSet } from "./sets/c2hash.js";
+import { c2chainSet } from "./sets/c2chain.js";
+import { c2tripSet } from "./sets/c2trip.js";
+import { c2mineSet } from "./sets/c2mine.js";
+import { c2secureSet } from "./sets/c2secure.js";
+import { c2capSet } from "./sets/c2cap.js";
+import { c2rulesSet } from "./sets/c2rules.js";
+import { c2dictSet } from "./sets/c2dict.js";
+import { c2recapSet } from "./sets/c2recap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -844,6 +854,17 @@ const BOARDS = {
   vanish: (s, step, age, total, cfg) => vanishSet(s, step, age, total, cfg),
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
+  // Crypto part 2 (blockchain and mining), scene by scene, in the same world (sets/c2<scene>.js, props in sets/c2props.js).
+  c2intro: (s, step, age, total, cfg) => c2introSet(s, step, age, total, cfg),
+  c2hash: (s, step, age, total, cfg) => c2hashSet(s, step, age, total, cfg),
+  c2chain: (s, step, age, total, cfg) => c2chainSet(s, step, age, total, cfg),
+  c2trip: (s, step, age, total, cfg) => c2tripSet(s, step, age, total, cfg),
+  c2mine: (s, step, age, total, cfg) => c2mineSet(s, step, age, total, cfg),
+  c2secure: (s, step, age, total, cfg) => c2secureSet(s, step, age, total, cfg),
+  c2cap: (s, step, age, total, cfg) => c2capSet(s, step, age, total, cfg),
+  c2rules: (s, step, age, total, cfg) => c2rulesSet(s, step, age, total, cfg),
+  c2dict: (s, step, age, total, cfg) => c2dictSet(s, step, age, total, cfg),
+  c2recap: (s, step, age, total, cfg) => c2recapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
