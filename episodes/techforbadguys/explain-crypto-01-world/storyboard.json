@@ -8,7 +8,7 @@
  "voice": "Puck",
  "face": "pear",
  "notes": [
-  "Language-light picture for multi-language audio: same Arabic script and voice as explain-crypto-01-ar, no burned-in captions, and on-screen text reduced to numbers, dates, Latin names and a few short English labels.",
+  "World-language picture for one video with several audio tracks (Arabic original, an English dub, platform auto-dubs): same Arabic script, voice and beat timing as explain-crypto-01-ar, no burned-in captions, the light \"day\" theme, and scenes that were text (story, rows, dict, the recap list, the title and end cards) redrawn as small animated scenes (cover, money, inflation, bankrun, jobs, glossary, recap, endnext). On-screen text is limited to names, years, numbers and one- to three-word English labels; people are told apart by colour, not by name, because the names differ between the language versions.",
   "Earth Report field file: Cryptocurrency, part 1 of 5. The host is a spy reporting to his commanders on something he has observed among humans; the first line says what the report is about. Why humans invented money without a bank: what money is, the bank as a ledger, the double-spend problem, 2008, the Bitcoin paper, the first block, the pizza, and Satoshi's exit.",
   "",
   "The picture carries the lesson: motion-graphics boards drawn in code (boards.js). The host appears in a few studio shots and leans in from the side now and then.",
