@@ -4,12 +4,18 @@
 // the bulb of the blue house, the battery, the switch, the socket, the pylon, the storm cloud and the bolt, the rooftop
 // tank of water, the kettle, the charger cube. Props are drawn around (0, 0), base on y = 0 unless the comment says centre.
 import { clamp, lerp, ease, seg, spring, rnd, at, rr, circ, two, disc, rings, text, drawn } from "./kit.js";
-import { P, mix, house, stars, skyline } from "./bank.js";
+import { P as P0, mix, house, stars, skyline } from "./bank.js";
+
+// The electricity file has its own night, so it does not look like the crypto file (owner, 2026-11-14): the same world and
+// shapes, but a teal-and-navy night lit by electric cyan and warm amber, instead of crypto's violet and pink dusk.
+// Pass this P to makeSet/frame so the skies (#bnight, #bsky) follow it; use E.far / E.lit for skylines.
+export const P = { ...P0, night0: "#041624", night1: "#0b4152", sky0: "#06223d", sky1: "#17607a", sky2: "#ffb04a", far: "#0f3a55", mid: "#0c3149",
+  ground: "#082a3a", road: "#04192a", soil: "#03111d", ink: "#071827", violet: "#2f8fb0", violetD: "#1f6d8c", win: "#ffcf6b" };
 
 // the colours the file adds to the bank set's palette
 export const E = { cu: "#e8924f", cuD: "#b9642e", cuL: "#ffc38f", el: "#5fd6ff", elD: "#2a9fd6", plus: "#ff5fa2", plusD: "#d6407f", spark: "#d8f6ff",
-  water: "#4fb6ff", waterD: "#2f86d6", rubber: "#2b2350", rubberD: "#1c1638", amber: "#ffad2a", amberD: "#d97a10", warn: "#ffd04a", grid: "#9aa6d8" };
-export { P, mix, house, stars, skyline };
+  water: "#4fb6ff", waterD: "#2f86d6", rubber: "#2b2350", rubberD: "#1c1638", amber: "#ffad2a", amberD: "#d97a10", warn: "#ffd04a", grid: "#9aa6d8", houseA: "#22c7b8", houseAD: "#15988f", houseB: "#ff8a3c", houseBD: "#d9661f", roof: "#123a57", far: "#0f3a55", farLit: "#ffcf6b", hill: "#0a3346" };
+export { mix, house, stars, skyline };
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
 export { pop };
@@ -95,14 +101,14 @@ export const station = (t = 0, o = {}) => { const lit = o.lit ?? 1, c = o.c || "
 
 // ---- sky ----
 // a storm cloud (centre), 600 wide at k = 1; charge 0..1 fills it with electrons (moving with t)
-export const cloud = (t = 0, charge = 0, o = {}) => { const c = o.c || "#3b3478", cD = o.cD || "#2a2560";
+export const cloud = (t = 0, charge = 0, o = {}) => { const c = o.c || "#2b5a74", cD = o.cD || "#1c4157";
   const body = `M-300 60Q-330 -20 -250 -50Q-250 -150 -140 -150Q-90 -230 20 -200Q100 -260 180 -170Q290 -170 290 -70Q340 -30 300 60Z`;
   let dots = ""; const n = Math.round(14 * charge); for (let i = 0; i < n; i++) dots += at(-220 + (i % 7) * 72 + 18 * Math.sin(t * 3 + i), -20 - Math.floor(i / 7) * 70 + 10 * Math.cos(t * 4 + i), electron(20, { sign: true }));
   return two(body, c, cD, 0, -14) + dots; };
 // a bolt from (x0, y0) to (x1, y1), zigzag from `seed`; p 0..1 how much of it has been drawn; flash 0..1 its brightness
 export const boltPath = (x0, y0, x1, y1, seed = 1, n = 9) => { let d = `M${x0} ${y0}`; for (let i = 1; i < n; i++) { const p = i / n; d += `L${(lerp(x0, x1, p) + (rnd(seed + i) - 0.5) * 140).toFixed(1)} ${lerp(y0, y1, p).toFixed(1)}`; } return d + `L${x1} ${y1}`; };
 export const bolt = (x0, y0, x1, y1, seed = 1, p = 1, flash = 1, w = 34) => { const d = boltPath(x0, y0, x1, y1, seed);
-  return drawn(d, p, mix("#7a6ad0", "#fff3b0", flash), w * 1.9, `stroke-linejoin="round" opacity="${(0.5 * flash).toFixed(2)}"`) + drawn(d, p, mix("#bfb4ff", "#ffffff", flash), w * 0.7, 'stroke-linejoin="round"'); };
+  return drawn(d, p, mix("#2a7fa0", "#9feaff", flash), w * 1.9, `stroke-linejoin="round" opacity="${(0.5 * flash).toFixed(2)}"`) + drawn(d, p, mix("#a8e8ff", "#ffffff", flash), w * 0.7, 'stroke-linejoin="round"'); };
 // a spark between two points: a short bright zigzag with a star burst at its middle
 export const spark = (a, b, p = 1, seed = 3) => { const d = boltPath(a[0], a[1], b[0], b[1], seed, 4); const m = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
   return (p > 0 ? rings(m[0], m[1], 60 * p, E.spark, 0.3 * p, 1.6) : "") + drawn(d, clamp(p * 1.4), E.spark, 12, 'stroke-linejoin="round"'); };
@@ -151,8 +157,8 @@ export const plate = (name, size = 72, o = {}) => { const w = String(name).lengt
 // street poles with a wire between them. lit 0..1 lights every window and street lamp (the town with electricity); o.dark 0..1 turns it off.
 export const nightTown = (t, c, layerFn, o = {}) => { const lit = clamp((o.lit ?? 1) * (1 - (o.dark || 0))), G = o.G ?? 880;
   const sky = `<rect width="3000" height="3000" x="-500" y="-1000" fill="url(#bnight)"/>`;
-  const far = skyline(11, -600, 2600, G - 120, 120, 330, "#2a1f66", lit > 0.5 ? "#ffb066" : "#2a1f66");
-  const houses = at(560, G, house(P.blue, P.blueD, { lit: [lit > 0.3, lit > 0.3, lit > 0.3] })) + at(1360, G, house(P.pink, P.pinkD, { lit: [lit > 0.3, lit > 0.3, lit > 0.3] }));
+  const far = skyline(11, -600, 2600, G - 120, 120, 330, E.far, lit > 0.5 ? E.farLit : E.far);
+  const houses = at(560, G, house(E.houseA, E.houseAD, { roof: E.roof, lit: [lit > 0.3, lit > 0.3, lit > 0.3] })) + at(1360, G, house(E.houseB, E.houseBD, { roof: E.roof, lit: [lit > 0.3, lit > 0.3, lit > 0.3] }));
   const poles = [160, 960, 1760].map((x) => at(x, G, pole(560))).join("") + [[160, 960], [960, 1760]].map(([a, b]) => span([a - 80, G - 534], [b - 80, G - 534], 30) + span([a + 80, G - 534], [b + 80, G - 534], 30)).join("");
   const street = `<rect x="-600" y="${G}" width="3200" height="500" fill="${P.ground}"/><rect x="-600" y="${G + 60}" width="3200" height="130" fill="${P.road}"/>`;
   return { sky, far, near: street + houses + poles };

@@ -1,7 +1,9 @@
 # Electricity part 1, world picture: the shot list
 
+**Look (owner, 2026-11-14): different from the crypto file.** Same world rules and shapes, but its own night: teal and navy skies lit by electric cyan and warm amber (`P` from `sets/elec.js`, never the bank set's violet `P`), a teal house and an orange house instead of crypto's blue and pink, cyan bolts, teal-grey clouds.
+
 Every board beat is one wordless illustrated shot (`video/sets/<board>.js`), drawn with `sets/kit.js` and the file's
-props in `sets/elec.js`, in the world of the crypto bank set: the night town, the blue house (left) and the pink house
+props in `sets/elec.js`, in the world of the crypto bank set: the night town, the teal house (left) and the orange house
 (right), street poles with wires. Host beats (`close`, `host`, `wide`) are studio shots. `host left/right` = Peek leans in
 from that side, so that lower corner stays empty (x > 1560 or x < 360, y > 480); the chapter chip is bottom left.
 Nothing on screen in Arabic. Allowed: numbers, years, units (V, A, Ω, W, km, Hz), symbols (+ − ✓ ✗ ⚠ ?), names in Latin
@@ -9,11 +11,11 @@ letters (ELEKTRON, ELECTRICITY, VOLTA, EDISON, TESLA, WESTINGHOUSE, NEW YORK, CH
 
 Things that travel through the episode:
 - **the electron**: a small cyan ball with a minus (`electron`); **the heart of the atom**: pink with a plus (`nucleus`);
-- **the blue house's bulb** (`bulb`): it is the lamp that lights "in an instant", the lamp in the circuit, the lamp that
+- **the teal house's bulb** (`bulb`): it is the lamp that lights "in an instant", the lamp in the circuit, the lamp that
   costs 10 W, the lamp that glows both ways; gold glow = light, and "look here";
 - **the copper wire** (`wire`, `tube` for the wire cut open with its free electrons inside);
 - **the snail** (slower than the snail), **the battery** (the push), **the knife switch** (the drawbridge),
-- **the rooftop tank** on the blue house (the water picture of volt, ampere, ohm, watt), **the kettle and the tea glass**,
+- **the rooftop tank** on the teal house (the water picture of volt, ampere, ohm, watt), **the kettle and the tea glass**,
 - **the storm cloud and the bolt**, **the pylon**, **the station** (a brick hall with a chimney: Edison's),
 - **the calendar page** (`calPage` from props.js) for every year.
 
