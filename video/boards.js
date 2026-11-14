@@ -755,6 +755,92 @@ const BOARDS = {
       <rect x="250" y="390" width="760" height="428" rx="24" fill="none" stroke="${C.line}" stroke-width="5" stroke-dasharray="20 16" opacity=".5"/><circle cx="1420" cy="604" r="170" fill="none" stroke="${C.pink}" stroke-width="5" stroke-dasharray="20 16" opacity=".6"/>
       <g opacity="${clamp((total - 0.6) / 0.3)}">${T(960, 930, s.note || "", 46, { font: "Elite", fill: C.dim })}</g>`);
   },
+  // A short film in five shots, with its own sets and camera: the host follows a trail of numbers to a bank, and finds
+  // that the money is only a ledger. Full frame, no labels to read.
+  //   0 he tracks the numbers across town; the camera pushes in through the bank's door
+  //   1 inside: the clerk rubs out a number in one row and writes it in another; the coins never move
+  //   2 a human at home: pay arrives as a number, rent leaves as a number, the wallet stays empty
+  //   3 night: every bank keeps its own book, and they inspect each other's
+  //   4 the vault opens: no gold, a book
+  trail(s, step, age, total) {
+    const P = { sky0: "#bfe3fb", sky1: "#fdf3d8", hill: "#bcd9a8", road: "#d9d2c0", bld: "#c7d3ea", bld2: "#aebde0", ink: "#1b2145", stone: "#f3efe4", stone2: "#d9d2c0", night0: "#0f1430", night1: "#27346e", floor: "#e9e2d0", wall: "#f7f1e1", glass: "#cfe6ff" };
+    const cam = (inner, cx, cy, z) => `<g transform="translate(960 540) scale(${z}) translate(${-cx} ${-cy})">${inner}</g>`;
+    const frame = (inner, bg) => `<svg viewBox="0 0 1920 1080" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0"><defs><linearGradient id="tsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.sky0}"/><stop offset="1" stop-color="${P.sky1}"/></linearGradient><linearGradient id="tnight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.night0}"/><stop offset="1" stop-color="${P.night1}"/></linearGradient><filter id="tglow"><feGaussianBlur stdDeviation="18"/></filter><clipPath id="tclip"><rect width="1920" height="1080"/></clipPath></defs><g clip-path="url(#tclip)"><rect width="1920" height="1080" fill="${bg}"/>${inner}</g></svg>`;
+    // the host, small, drawn from the feet up; `ph` is the walk phase, `mag` holds the magnifier up, `dir` -1 faces left
+    const peek = (x, y, k, ph, o = {}) => { if (s.host) return "";          // the real host is placed over the set by the editor (see `actor`)
+      const sw = Math.sin(ph) * (o.still ? 0 : 22), bob = o.still ? 0 : Math.abs(Math.sin(ph)) * 5, d = o.dir || 1;
+      return `<g transform="translate(${x} ${y - bob}) scale(${k * d} ${k})"><ellipse cx="0" cy="${4 + bob}" rx="62" ry="10" fill="rgba(20,24,46,.18)"/>
+        <rect x="-20" y="-46" width="16" height="48" rx="7" fill="#2a2f55" transform="rotate(${sw} -12 -46)"/><rect x="6" y="-46" width="16" height="48" rx="7" fill="#2a2f55" transform="rotate(${-sw} 14 -46)"/>
+        <path d="M-46 -40C-52 -100 -34 -128 0 -128C34 -128 52 -100 46 -40Z" fill="#cfa66b"/><path d="M-46 -62H46" stroke="#a37b3f" stroke-width="7"/><rect x="-8" y="-68" width="16" height="12" rx="2" fill="#f2c94c"/><path d="M0 -128V-66" stroke="#b58c4f" stroke-width="4"/>
+        <path d="M-58 -166C-66 -128 -40 -116 0 -116C40 -116 66 -128 58 -166C52 -204 28 -216 0 -216C-28 -216 -52 -204 -58 -166Z" fill="#f2559f"/>
+        <circle cx="${16 + (o.look || 0) * 5}" cy="-172" r="13" fill="#fff"/><circle cx="${42 + (o.look || 0) * 5}" cy="-172" r="12" fill="#fff"/><circle cx="${20 + (o.look || 0) * 8}" cy="${-171 + (o.lookY || 0) * 5}" r="6.5" fill="#2a7fd6"/><circle cx="${46 + (o.look || 0) * 8}" cy="${-171 + (o.lookY || 0) * 5}" r="6" fill="#2a7fd6"/>
+        <rect x="22" y="-146" width="9" height="11" rx="2" fill="#fff"/><path d="M12 -148Q28 -140 44 -150" fill="none" stroke="#8c1f58" stroke-width="4" stroke-linecap="round"/>
+        <path d="M-40 -246L-64 -292M40 -246L64 -292" stroke="#f2559f" stroke-width="6" stroke-linecap="round"/><circle cx="-66" cy="-296" r="11" fill="#ff7db8"/><circle cx="66" cy="-296" r="11" fill="#ff7db8"/>
+        <ellipse cx="0" cy="-212" rx="86" ry="15" fill="#15162a"/><path d="M-50 -214C-50 -262 -34 -272 0 -272C34 -272 50 -262 50 -214Z" fill="#1e2038"/><path d="M-50 -226H50" stroke="#f2559f" stroke-width="12"/>
+        ${o.mag ? `<path d="M38 -96L92 -${118 + (o.magUp || 0) * 30}" stroke="#cfa66b" stroke-width="16" stroke-linecap="round"/><circle cx="118" cy="-${150 + (o.magUp || 0) * 30}" r="34" fill="rgba(207,230,255,.55)" stroke="#2a2f55" stroke-width="9"/><path d="M96 -${126 + (o.magUp || 0) * 30}L88 -${116 + (o.magUp || 0) * 30}" stroke="#2a2f55" stroke-width="12" stroke-linecap="round"/>` : `<path d="M40 -100L62 -60" stroke="#cfa66b" stroke-width="16" stroke-linecap="round"/>`}
+        ${o.bang ? `<text x="0" y="-320" text-anchor="middle" font-family="Anton" font-size="90" fill="#e5384a">!</text>` : ""}</g>`; };
+    const bank = (x, y, k, o = {}) => `<g transform="translate(${x} ${y}) scale(${k})"><rect x="-300" y="-20" width="600" height="26" fill="${P.stone2}"/><rect x="-270" y="-330" width="540" height="310" fill="${o.night ? "#3a4682" : P.stone}"/>
+      <path d="M-320 -330L0 -480L320 -330Z" fill="${o.night ? "#4a5796" : "#fff"}" stroke="${P.stone2}" stroke-width="6"/><circle cx="0" cy="-390" r="34" fill="${C.gold}"/><text x="0" y="-372" text-anchor="middle" font-family="Anton" font-size="50" fill="#7a5200">$</text>
+      ${[-220, -130, 130, 220].map((cx) => `<rect x="${cx - 22}" y="-320" width="44" height="300" rx="8" fill="${o.night ? "#5462a6" : "#fff"}" stroke="${P.stone2}" stroke-width="4"/>`).join("")}
+      <rect x="-70" y="-230" width="140" height="210" rx="70 70 0 0" fill="${o.door || P.ink}"/>${o.window || ""}</g>`;
+    const person = (x, y, k, c) => `<g transform="translate(${x} ${y}) scale(${k})"><circle cx="0" cy="-150" r="38" fill="${c}"/><path d="M-60 0C-60 -110 60 -110 60 0Z" fill="${c}"/></g>`;
+    const book = (x, y, k, rows, glow) => `<g transform="translate(${x} ${y}) scale(${k})">${glow ? `<ellipse cx="0" cy="0" rx="330" ry="230" fill="${C.gold}" opacity="${glow}" filter="url(#tglow)"/>` : ""}<path d="M-300 -170Q-150 -200 0 -170Q150 -200 300 -170V170Q150 140 0 170Q-150 140 -300 170Z" fill="#fffdf6" stroke="#8b6b3d" stroke-width="10"/><path d="M0 -170V170" stroke="#8b6b3d" stroke-width="6"/>${rows || [0, 1, 2, 3].map((i) => `<path d="M-250 ${-110 + i * 70}h200M50 ${-110 + i * 70}h200" stroke="#b9b2a2" stroke-width="12" stroke-linecap="round"/>`).join("")}</g>`;
+    const num = (x, y, t, size, fill, o = 1) => `<text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" fill="${fill}" opacity="${o}">${esc(t)}</text>`;
+    let inner = "", bg = "url(#tsky)";
+
+    if (step === 0) {                       // the trail across town, then through the door
+      const digits = ["7", "0", "3", "1", "5", "0", "9", "2", "0", "4", "8", "0"], walk = ease(age / 3.6); let px = lerp(-200, 2050, walk); const zin = ease((age - 3.5) / 1.5);
+      let cx = lerp(Math.min(Math.max(px + 260, 960), 2060), 2300, zin), z = lerp(1, 7.5, zin * zin), cy = lerp(540, 690, zin);
+      if (s.host) { const [x0, x1, d] = s.walk || [150, 1420, 4]; cx = 1350; cy = 520; z = 0.62; px = (lerp(x0, x1, ease(age / d)) - 960) / z + cx; }
+      let world = `<path d="M-400 760C300 640 900 700 1500 660C2100 620 2600 700 3200 660V1200H-400Z" fill="${P.hill}"/><rect x="-400" y="800" width="3600" height="400" fill="${P.road}"/><path d="M-400 880H3200" stroke="#fff" stroke-width="10" stroke-dasharray="70 60" opacity=".7"/>`;
+      [[120, 300], [330, 210], [560, 360], [820, 250], [1060, 330], [1290, 230], [1530, 300]].forEach(([bx, bh], i) => { world += `<rect x="${bx}" y="${800 - bh}" width="${170}" height="${bh}" fill="${i % 2 ? P.bld : P.bld2}"/>${[0, 1, 2, 3, 4, 5].map((r) => [0, 1, 2].map((c2) => (r * 46 + 70 < bh ? `<rect x="${bx + 22 + c2 * 46}" y="${800 - bh + 24 + r * 46}" width="26" height="26" fill="#fff" opacity=".7"/>` : "")).join("")).join("")}`; });
+      world += bank(2300, 800, 1.25, { door: P.ink });
+      digits.forEach((d, i) => { const dx = 260 + i * 150, got = px > dx - 30, a = got ? Math.max(0, 1 - (px - dx) / 160) : 1; world += `<g transform="translate(${dx} ${700 - 26 * Math.sin(total * 2.4 + i)}) scale(${got ? 1 + (1 - a) * 0.6 : 1})" opacity="${a}"><circle r="34" fill="#fff" opacity=".85"/>${num(0, 20, d, 54, "#c2500c")}</g>`; });
+      world += peek(px, 850, 0.82, age * 11, { mag: 1, look: 1, lookY: 1, still: walk >= 1 });
+      inner = cam(world, cx, cy, z) + (!s.host && zin > 0.85 ? `<rect width="1920" height="1080" fill="${P.ink}" opacity="${clamp((zin - 0.85) / 0.15)}"/>` : "");
+    } else if (step === 1) {                // inside the bank: numbers change, nothing moves
+      const push = 1 + 0.06 * ease(age / 5), rub = clamp((age - 0.9) / 1.3), wr = clamp((age - 2.4) / 1.2), fromV = Math.round(lerp(100, 70, ease(rub))), toV = Math.round(lerp(50, 80, ease(wr)));
+      const rowsDef = [[C.cyan, fromV, rub > 0 && rub < 1], [C.pink, toV, wr > 0 && wr < 1], [C.green, 20, false]];
+      const rows = rowsDef.map(([c, v, hot], i) => `${person(-210, -70 + i * 110, 0.42, c)}<rect x="-140" y="${-132 + i * 110}" width="390" height="78" rx="12" fill="${hot ? "#fff3c4" : "#f3efe4"}"/>${num(56, -72 + i * 110, String(v), 70, hot ? "#e5384a" : P.ink)}`).join("");
+      const ex = lerp(-40, 130, 0.5 + 0.5 * Math.sin(age * 16)), hand = rub > 0 && rub < 1 ? `<g transform="translate(${ex + 40} -98) rotate(-18)"><rect x="-34" y="-20" width="68" height="40" rx="8" fill="#ff9db0"/><rect x="-34" y="-20" width="24" height="40" rx="8" fill="#6c7bd0"/></g>` : wr > 0 && wr < 1 ? `<g transform="translate(${lerp(20, 110, wr)} ${12 - 8 * Math.sin(age * 22)}) rotate(28)"><rect x="-8" y="-120" width="16" height="110" rx="4" fill="#2a2f55"/><path d="M-8 -10L0 14L8 -10Z" fill="#f2c94c"/></g>` : "";
+      const coins = `<g transform="translate(1480 800)">${[0, 1, 2, 3, 4].map((i) => `<g transform="translate(${(i % 3) * 70 - 70} ${-Math.floor(i / 3) * 50})">${G(0, 0, 0.42, icon("coin"))}</g>`).join("")}<path d="M-150 30C-150 -190 150 -190 150 30Z" fill="rgba(207,230,255,.35)" stroke="#9fb6d8" stroke-width="6"/><rect x="-170" y="30" width="340" height="22" rx="8" fill="#8b6b3d"/>${age > 3.4 ? `<text x="0" y="-170" text-anchor="middle" font-family="Anton" font-size="60" fill="${P.ink}" opacity="${clamp((age - 3.4) / 0.4)}">z z z</text>` : ""}</g>`;
+      const room = `<rect width="1920" height="760" fill="${P.wall}"/><rect y="760" width="1920" height="320" fill="${P.floor}"/>${[150, 1770].map((x) => `<rect x="${x - 50}" y="60" width="100" height="700" fill="#fff" stroke="${P.stone2}" stroke-width="6"/><rect x="${x - 70}" y="40" width="140" height="40" fill="${P.stone2}"/>`).join("")}
+        ${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<path d="M${i * 280 - 100} 760L${i * 380 - 500} 1080" stroke="${P.stone2}" stroke-width="4" opacity=".6"/>`).join("")}
+        <g transform="translate(860 520)">${book(0, 0, 1.45, rows)}<g transform="scale(1.45)">${hand}</g><rect x="-60" y="246" width="120" height="240" fill="#8b6b3d"/><rect x="-200" y="470" width="400" height="40" rx="10" fill="#6f5430"/></g>${coins}
+        ${peek(250, 1010, 1.05, 0, { still: 1, mag: 1, magUp: 0.4, look: 1 })}`;
+      inner = cam(room, 960, 540, push); bg = P.wall;
+    } else if (step === 2) {                // at home: the money only ever shows up as numbers
+      const a1 = clamp((age - 0.5) / 0.5), a2 = clamp((age - 2.1) / 0.5), flap = Math.sin(age * 18) * 16, mx = 1330 + 60 * Math.sin(age * 1.3), my = 250 + 40 * Math.sin(age * 2.1);
+      inner = `<rect width="1920" height="1080" fill="#fbe8cf"/><rect y="820" width="1920" height="260" fill="#d9b98c"/>
+        <rect x="1180" y="130" width="520" height="420" rx="14" fill="${P.sky0}" stroke="#8b6b3d" stroke-width="18"/><path d="M1440 130V550M1180 340H1700" stroke="#8b6b3d" stroke-width="12"/>${peek(1500, 620, 0.7, 0, { still: 1, mag: 1, magUp: 0.2, dir: -1, look: 1 })}<rect x="1160" y="548" width="560" height="26" rx="6" fill="#8b6b3d"/>
+        <rect x="150" y="620" width="900" height="260" rx="50" fill="#7f8fd6"/><rect x="110" y="700" width="980" height="200" rx="40" fill="#6c7bd0"/>${person(520, 800, 1.5, C.cyan)}
+        <g transform="translate(900 470) rotate(8)"><rect x="-150" y="-260" width="300" height="520" rx="36" fill="${P.ink}"/><rect x="-128" y="-226" width="256" height="440" rx="14" fill="#fff"/>
+          <g opacity="${a1}" transform="translate(0 ${(1 - ease(a1)) * 40})"><rect x="-108" y="-190" width="216" height="150" rx="16" fill="#dcf5e6"/>${num(0, -86, "+ 3,000", 66, "#1b8048")}</g>
+          <g opacity="${a2}" transform="translate(0 ${(1 - ease(a2)) * 40})"><rect x="-108" y="0" width="216" height="150" rx="16" fill="#fde1e4"/>${num(0, 104, "− 1,200", 66, "#e5384a")}</g></g>
+        <g transform="translate(1330 880)"><path d="M-170 -70H170L150 60H-150Z" fill="#8b5a2b"/><path d="M-170 -70C-120 -150 120 -150 170 -70" fill="none" stroke="#8b5a2b" stroke-width="22"/><ellipse cx="0" cy="-66" rx="150" ry="26" fill="#3a2410"/></g>
+        ${age > 2.6 ? `<g transform="translate(${mx} ${my + 400})" opacity="${clamp((age - 2.6) / 0.4)}"><ellipse rx="10" ry="18" fill="#8a7a66"/><path d="M0 0L-34 ${-20 + flap}L-30 ${14 + flap / 2}Z M0 0L34 ${-20 + flap}L30 ${14 + flap / 2}Z" fill="#c9b79c"/></g>` : ""}`;
+    } else if (step === 3) {                // night: three banks, three books, three magnifying glasses
+      bg = "url(#tnight)"; const xs = [380, 960, 1540];
+      const win = `<rect x="-130" y="-300" width="260" height="170" rx="10" fill="#ffe9a8"/>`;
+      const stars = Array.from({ length: 46 }, (_, i) => `<circle cx="${rnd(i * 3) * 1920}" cy="${rnd(i * 3 + 1) * 420}" r="${1.5 + rnd(i * 3 + 2) * 2.5}" fill="#fff" opacity="${0.4 + 0.5 * Math.abs(Math.sin(total * 1.5 + i))}"/>`).join("");
+      inner = `${stars}<circle cx="1640" cy="170" r="80" fill="#fff6cf"/><circle cx="1610" cy="150" r="80" fill="${P.night0}" opacity=".9"/><rect y="860" width="1920" height="220" fill="#1a2148"/>`
+        + xs.map((x, i) => { const a = age - i * 0.35; if (a <= 0) return ""; const look = Math.sin(age * 2.2 + i * 2) > 0 ? 1 : -1;
+          return `<g opacity="${clamp(a / 0.3)}" transform="translate(0 ${(1 - ease(a / 0.5)) * 60})">${bank(x, 860, 0.86, { night: 1, door: "#1a2148", window: win })}${book(x, 670, 0.3, null)}
+            <g transform="translate(${x} 535)"><ellipse cx="-34" cy="0" rx="20" ry="13" fill="#fff"/><ellipse cx="34" cy="0" rx="20" ry="13" fill="#fff"/><circle cx="${-34 + look * 9}" cy="0" r="7" fill="${P.ink}"/><circle cx="${34 + look * 9}" cy="0" r="7" fill="${P.ink}"/><path d="M-58 -22L-12 -14M58 -22L12 -14" stroke="${P.ink}" stroke-width="6" stroke-linecap="round"/></g></g>`; }).join("")
+        + [[0, 1], [1, 2], [2, 0]].map(([f, t], i) => { const a = age - 1.6 - i * 0.5; if (a <= 0) return ""; const p = ease(a / 0.7), x1 = xs[f] + (xs[t] > xs[f] ? 150 : -150), y1 = 560 - i * 16, x2 = lerp(x1, xs[t] + (xs[t] > xs[f] ? -40 : 40), p), y2 = lerp(y1, 650, p), w = 6 * Math.sin(age * 5 + i);
+          return `<path d="M${x1} ${y1}Q${(x1 + x2) / 2} ${y1 - 150 - i * 40} ${x2} ${y2 + w}" fill="none" stroke="#cfa66b" stroke-width="12" stroke-linecap="round"/><circle cx="${x2}" cy="${y2 + w}" r="52" fill="rgba(207,230,255,.45)" stroke="#fff" stroke-width="10"/>`; }).join("");
+    } else {                                // the vault: a book where the gold should be
+      const spin = ease(age / 1.4) * 400, open = ease((age - 1.5) / 1.3), shut = 1 - open;
+      inner = `<rect width="1920" height="1080" fill="#3b4268"/><rect y="880" width="1920" height="200" fill="#2a2f55"/>
+        <circle cx="960" cy="520" r="430" fill="#11142b"/><g opacity="${open}">${book(960, 560, 0.9, null, 0.55 * open)}<rect x="900" y="700" width="120" height="180" fill="#8b6b3d"/>
+          ${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M960 560L${960 + Math.cos(i * 1.05 + total * 0.3) * 420} ${560 + Math.sin(i * 1.05 + total * 0.3) * 420}" stroke="${C.gold}" stroke-width="10" opacity=".18"/>`).join("")}</g>
+        <g transform="translate(${960 - 430} 520) scale(${Math.max(0.04, shut)} 1) translate(430 0)"><circle r="430" fill="#aab4d4" stroke="#7d88ad" stroke-width="26"/><circle r="330" fill="none" stroke="#8f9ac0" stroke-width="14"/>
+          ${[0, 45, 90, 135, 180, 225, 270, 315].map((d) => `<circle cx="${Math.cos(d * Math.PI / 180) * 380}" cy="${Math.sin(d * Math.PI / 180) * 380}" r="18" fill="#7d88ad"/>`).join("")}
+          <g transform="rotate(${spin})"><circle r="120" fill="#7d88ad"/>${[0, 60, 120].map((d) => `<rect x="-190" y="-14" width="380" height="28" rx="14" fill="#5d678f" transform="rotate(${d})"/>`).join("")}<circle r="46" fill="#5d678f"/></g></g>
+        ${peek(430, 1000, 1.15, 0, { still: 1, look: 1, lookY: -1, bang: open > 0.6 })}`;
+    }
+    return frame(inner, bg);
+  },
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.

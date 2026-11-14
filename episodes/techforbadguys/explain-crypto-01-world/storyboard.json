@@ -284,6 +284,15 @@
     4.35,
     6.45
    ]
+  },
+  "trail": {
+   "kind": "trail",
+   "host": true,
+   "walk": [
+    170,
+    1400,
+    4.4
+   ]
   }
  },
  "scenes": [
@@ -461,33 +470,67 @@
     {
      "say": "اتتبّعت الأرقام دي لحد ما عرفت ساكنة فين: في دفتر. عند كيان اسمه البنك.",
      "show": "board",
-     "board": "led"
+     "board": "trail",
+     "actor": {
+      "x": 170,
+      "y": 742,
+      "size": 400,
+      "to": {
+       "x": 1400
+      },
+      "over": 0.8
+     },
+     "emote": "skeptical",
+     "gesture": "present"
     },
     {
      "say": "لما علي يدفع لمنى تلاتين دولار، مفيش حاجة بتتحرك من مكانها. البنك بيمسح رقم هنا.. ويكتب رقم هناك.",
      "show": "board",
-     "board": "led"
+     "board": "trail",
+     "actor": {
+      "x": 215,
+      "y": 1050,
+      "size": 600
+     },
+     "emote": "sly",
+     "gesture": "present"
     },
     {
      "say": "مرتّبك بينزل: رقم. بتدفع الإيجار: رقم. عمرك ما شفت الفلوس دي بعينك.",
      "show": "board",
-     "board": "led",
-     "step": "hold",
-     "host": "right",
-     "emote": "neutral"
+     "board": "trail",
+     "actor": {
+      "x": 1640,
+      "y": 1055,
+      "size": 600,
+      "flip": true
+     },
+     "emote": "neutral",
+     "gesture": "count"
     },
     {
      "say": "وكل بنك عنده دفتره. والبنوك بتقعد كل ليلة تراجع دفاتر بعض، علشان محدش فيهم يثق في التاني.",
      "show": "board",
-     "board": "led",
-     "step": "hold",
-     "host": "left",
-     "emote": "sly"
+     "board": "trail",
+     "actor": {
+      "x": 170,
+      "y": 1065,
+      "size": 440
+     },
+     "emote": "sly",
+     "gesture": "shrug"
     },
     {
      "say": "يعني البنك مش خزنة مليانة فلوس. البنك دفتر. <short pause> واللي ماسك الدفتر.. ماسك كل حاجة.",
-     "shot": "close",
-     "emote": "serious"
+     "show": "board",
+     "board": "trail",
+     "actor": {
+      "x": 300,
+      "y": 1050,
+      "size": 600
+     },
+     "emote": "serious",
+     "gesture": "present"
     }
    ]
   },

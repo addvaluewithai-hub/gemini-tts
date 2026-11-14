@@ -177,6 +177,9 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
       host: !insert || ins.enter < 1 ? (hostY < 590 ? { ...body, y: hostY } : null) : null,
       lurk: lurk > 0.02 && (!insert || ins.enter < 1) ? { ...spy(0.75 * Math.sin(2 * Math.PI * 0.7 * tv)), amt: lurk } : null,
       peek: peek > 0.02 ? (explain ? { ...body, paper: "pockets", shift: 0, armL: null, armR: null, amt: peek, side } : { ...spy(-0.75), amt: peek, rise: 262, rot: -7 }) : null,
+      // the host acting inside a full-frame set: placed by its feet, any size, optionally walking from one spot to another over the beat
+      actor: insert && seg.actor ? (() => { const a = seg.actor, to = a.to || {}, span = Math.max(0.3, (Math.min(seg.end, seg.t + 30) - seg.t) * (a.over ?? 0.75)), p = a.to ? smooth(clamp((t - seg.t - (a.wait ?? 0)) / span)) : 0, moving = !!a.to && p > 0.01 && p < 0.99;
+        return { ...body, ...(a.arms === false ? { armL: null, armR: null } : {}), x: lerp(a.x, to.x ?? a.x, p), y: lerp(a.y, to.y ?? a.y, p), size: lerp(a.size, to.size ?? a.size, p), flip: !!a.flip, hop: moving ? Math.abs(Math.sin(t * 10)) : 0, lean: moving ? 4 : 0 }; })() : null,
       board: insert && seg.kind === "board" ? { spec: seg.board, step: seg.step || 0, age: t - (seg.stepT ?? seg.t), total: t - seg.cutT } : null,
       tv: seg.slide, onair: Math.floor(tv * 0.8) % 2 ? 1 : 0.55, drone, insert: ins, fact, meme, chip, ...caption(i) });
   }
