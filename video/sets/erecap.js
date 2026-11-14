@@ -20,19 +20,19 @@ const phoneC = (fill) => `${two(rr(-70, -130, 140, 260, 26), "#1d2c44", "#101a2c
   <path d="${rr(-18, 42 - 96 * clamp(fill), 36, 96 * clamp(fill), 4)}" fill="#5dffb0"/>`;
 
 function s0(a, tot) {
-  const c = camAt(a, [[0, 560, 420, 1.0], [1.2, 330, 430, 1.32], [4.9, 360, 430, 1.32], [5.6, 800, 430, 1.32], [8.9, 820, 430, 1.32], [9.6, 1290, 430, 1.32], [12.7, 1280, 430, 1.32], [13.4, 820, 460, 1.0], [14.22, 820, 460, 1.02]]);
+  const c = camAt(a, [[0, 800, 440, 1.0], [1.2, 330, 430, 1.32], [4.9, 360, 430, 1.32], [5.6, 800, 430, 1.32], [8.9, 820, 430, 1.32], [9.6, 1290, 430, 1.32], [12.7, 1280, 430, 1.32], [13.4, 960, 470, 1.0], [14.22, 960, 470, 1.02]]);
   const act = (k) => (k === 0 ? seg(a, 1.4, 1.8) * (1 - seg(a, 5.0, 5.4)) : k === 1 ? seg(a, 5.3, 5.7) * (1 - seg(a, 9.0, 9.4)) : seg(a, 9.3, 9.7)) + (a > 12.99 ? seg(a, 12.99, 13.4) : 0);
   // 1: standing charge, moving charge
-  const c1 = card(at(0, 0, jar(tot, a > 3.0 ? Math.exp(-(a - 3.0) * 1.5) : 0), 0) + tube(-170, 170, 160, 90, tot, a > 4.09 ? (a - 4.09) * 160 : 0, { n: 6, r: 20 })
+  const c1 = card(at(0, 60, jar(tot, a > 3.0 ? Math.exp(-(a - 3.0) * 1.5) : 0), 0.9) + tube(-170, 170, 140, 80, tot, a > 4.09 ? (a - 4.09) * 160 : 0, { n: 6, r: 20 })
     + (a > 4.09 ? `<path d="M-120 230H120M90 210L120 230L90 250" fill="none" stroke="${P.gold}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="${seg(a, 4.09, 4.4).toFixed(2)}"/>` : ""), 1, seg(a, 1.4, 1.7), act(0));
   // 2: the tank and its three gauges
   const flowOn = a > 5.9, pipe = `<path d="M-60 -10V120H120" fill="none" stroke="${P.steelD}" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/><path d="M-60 -10V120H120" fill="none" stroke="${E.waterD}" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>${flowOn ? `<path d="M-60 -10V120H120" fill="none" stroke="${E.water}" stroke-width="12" stroke-dasharray="26 30" stroke-dashoffset="${(-tot * 160).toFixed(0)}"/>` : ""}${a > 8.26 ? `<path d="M30 102h40v36h-40Z" fill="${P.steel}"/>` : ""}`;
   const g3 = [["V", -110, 5.92, 0.8], ["A", 20, 6.83, 0.6], ["Ω", 150, 8.26, 0.3]].map(([m, x, t0, v]) => (a > t0 ? at(x, 200, gauge(v * ease(seg(a, t0, t0 + 0.5)), { mark: m }), 0.55 * pop(a - t0)) : "")).join("");
-  const c2 = card(at(-60, 40, tank(0.8), 0.62) + pipe + g3, 2, seg(a, 5.31, 5.6), act(1));
+  const c2 = card(at(-60, 40, tank(0.8, { c: "#2f8fb0", cD: "#1f6d8c" }), 0.62) + pipe + g3, 2, seg(a, 5.31, 5.6), act(1));
   // 3: the line carries the wave far to the cube, the phone runs on a straight line; then the two together
-  const tip = pylonTips(300)[0], P1 = [-130, -40], P2 = [130, -40];
+  const tip = pylonTips(300)[0], P1 = [-130, 20], P2 = [130, 20];
   const line = at(P1[0], P1[1], pylon(300), 0.9) + at(P2[0], P2[1], pylon(300), 0.9) + span([P1[0] + tip[0] * 0.9, P1[1] + tip[1] * 0.9], [P2[0] + tip[0] * 0.9, P2[1] + tip[1] * 0.9], 14, "#9aa6d8", 5);
-  const wv = a > 10.41 ? drawn(`M-180 -250${Array.from({ length: 8 }, (_, i) => `q${11} ${i % 2 ? 22 : -22} 22 0`).join("")}`, seg(a, 10.41, 10.9), P.gold, 10, `transform="translate(${((a * 60) % 44).toFixed(1)} 0)"`) : "";
+  const wv = a > 10.41 ? drawn(`M-180 -215${Array.from({ length: 8 }, (_, i) => `q${11} ${i % 2 ? 22 : -22} 22 0`).join("")}`, seg(a, 10.41, 10.9), P.gold, 10, `transform="translate(${((a * 60) % 44).toFixed(1)} 0)"`) : "";
   const together = a > 12.99 ? ease(seg(a, 12.99, 13.6)) : 0;
   const cube = at(-80, 120, (together > 0 ? rings(0, 0, 90, P.gold, 0.3 * together) : "") + charger(), 0.5 * pop(a - 10.6));
   const ph = at(120, 150, phoneC(lerp(0.2, 1, together)), 0.8 * pop(a - 11.9)) + (a > 11.95 ? `<path d="M10 260H230" stroke="#5fd6ff" stroke-width="10" stroke-linecap="round" opacity="${seg(a, 11.95, 12.2).toFixed(2)}"/>` : "");
