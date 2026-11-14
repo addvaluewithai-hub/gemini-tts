@@ -35,7 +35,7 @@ function s0(a, tot) {
 const GX = 960, GY = 640, R = 380;
 const RIM = [-0.84, -0.42, 0, 0.42, 0.84, -1.85, 1.85, -2.35, 2.35, -2.85, 2.85], HOUSE = { blue: -1.33, pink: 1.33 };
 const onRim = (th, lift = 0) => [GX + (R + lift) * Math.sin(th), GY - (R + lift) * Math.cos(th)];
-const DOTS = Array.from({ length: 44 }, (_, i) => { const rr_ = Math.sqrt(rnd(i * 7 + 1)) * 0.86 * R, an = rnd(i * 7 + 2) * Math.PI * 2; return [GX + rr_ * Math.cos(an), GY + rr_ * Math.sin(an), rnd(i * 7 + 3)]; });
+const DOTS = Array.from({ length: 26 }, (_, i) => { const rr_ = Math.sqrt(rnd(i * 7 + 1)) * 0.86 * R, an = rnd(i * 7 + 2) * Math.PI * 2; return [GX + rr_ * Math.cos(an), GY + rr_ * Math.sin(an), rnd(i * 7 + 3)]; });
 const NB = DOTS.map((d, i) => DOTS.map((e, j) => [j, Math.hypot(d[0] - e[0], d[1] - e[1])]).filter(([j]) => j !== i).sort((x, y) => x[1] - y[1]).slice(0, 2).map(([j]) => j));
 // t: seconds since shot 1 began; T2, T3: when shots 2 and 3 began
 function planet(t, c, tot, s) {
@@ -53,7 +53,7 @@ function planet(t, c, tot, s) {
   net += t > 2.4 ? `<circle cx="${GX}" cy="${GY}" r="${R + 70}" fill="none" stroke="${front > 0 ? P.gold : "#9fe7ff"}" stroke-width="3" stroke-dasharray="4 14" opacity="${(0.5 * seg(t, 2.4, 3)).toFixed(2)}"/>` : "";
   let dots = "";
   DOTS.forEach((d, i) => { if (!dotsOn(d)) return; const p = pop(t - 2.6 - d[2] * 1.5), hit = front > 0 && litAt(d[0], d[1]), dist = Math.hypot(d[0] - bx[0], d[1] - bx[1]), ft = front > 0 ? (front - dist) / 900 : -1, flash = ft > 0 ? Math.exp(-ft * 6) : 0;
-    dots += at(d[0], d[1], (flash > 0.05 ? rings(0, 0, 18 + 20 * flash, P.gold, 0.4 * flash) : rings(0, 0, 14, hit ? P.gold : "#9fe7ff", 0.2)) + `<path d="${rr(-13, -9, 26, 16, 3)}" fill="${hit ? "#fff3c2" : P.cream}"/><path d="M-16 8h32" stroke="${P.steel}" stroke-width="4" stroke-linecap="round"/>`, p); });
+    dots += at(d[0], d[1], (flash > 0.05 ? rings(0, -12, 34 + 26 * flash, P.gold, 0.4 * flash) : rings(0, -12, 30, hit ? P.gold : "#9fe7ff", 0.22)) + laptop(hit ? "#fff3c2" : "#9fe7ff", `<path d="M-90 -150h120M-90 -110h160M-90 -70h90" stroke="${hit ? P.goldD : "#3fa9ff"}" stroke-width="16" stroke-linecap="round"/>`).replace(/^/, "").replace(/<path d="M-170 0h340/, '<path d="M-170 0h340'), p * 0.3); });
   // the laptops standing round the rim; the five on top carry the copies we can read
   let tops = "";
   RIM.forEach((th, i) => { const top = i < 5, at0 = top ? 1.3 + i * 0.12 : 2.7 + (i - 5) * 0.1; if (t < at0 - 0.4 && !top) return;
@@ -94,10 +94,10 @@ function s3(a, tot, s) { const E = s.ends || [], T3 = (E[1] || 5.22) + (E[2] || 
 
 // ---- 4: the book is public: anyone reads it from row 1; names are long numbers; a masked ball with invoices ----
 const ADDR = ["1A1zP1eP5QGe", "3J98t1WpEZ73", "bc1qar0srrr7", "1BvBMSEYstWe", "3FZbgi29cpjq", "bc1qxy2kgdyg"], AMT = ["50", "10", "70", "80", "25", "4"];
-const HOUSES4 = [[180, 1.0, P.teal, P.tealD], [470, 1.15, P.blue, P.blueD], [1400, 1.15, P.pink, P.pinkD], [1230, 0.8, P.violet, P.violetD], [690, 0.8, P.gold, P.goldD]];
+const HOUSES4 = [[260, 0.85, P.teal, P.tealD], [1120, 0.85, P.violet, P.violetD], [720, 0.85, P.gold, P.goldD], [450, 1.3, P.blue, P.blueD], [1260, 1.3, P.pink, P.pinkD]];
 function s4(a, tot) {
   const G = 940, BK = [960, 520], KB = 1.7;
-  const c = camAt(a, [[0, 960, 470, 2.4], [0.9, 960, 470, 2.3], [1.4, 920, 410, 2.9], [3.0, 920, 640, 2.9], [3.4, 920, 560, 2.5], [5.9, 920, 560, 2.5], [7.0, 960, 560, 1.0], [11.06, 960, 560, 1.04]]);
+  const c = camAt(a, [[0, 960, 470, 2.4], [0.9, 960, 470, 2.3], [1.4, 920, 410, 2.9], [3.0, 920, 640, 2.9], [3.4, 920, 560, 2.5], [5.9, 920, 560, 2.5], [7.0, 940, 600, 1.3], [11.06, 940, 600, 1.36]]);
   // the page: six rows, a coloured house where a name would be, then the long number takes its place
   let page = "";
   const scan = kf(a, [[1.4, -70], [2.9, 80]], (p) => p);
@@ -113,10 +113,10 @@ function s4(a, tot) {
   const stand = `${two(rr(BK[0] - 70, BK[1] + 160, 140, G - BK[1] - 200, 8), "#7a55c9", "#5b3aa6", 12, 0)}<path d="${rr(BK[0] - 200, G - 50, 400, 50, 10)}" fill="#5b3aa6"/>`;
   // the town square: houses that look at the book, then wear masks and pin up a bill
   let hs = "";
-  HOUSES4.forEach(([x, k, col, colD], i) => { const back = k < 1, y = back ? G - 70 : G, look = a > 6.3 ? 1 : 0, mask = seg(a, 9.3 + i * 0.12, 9.6 + i * 0.12), bill = a - 9.9 - i * 0.1, q = a - 7.9 - i * 0.12;
+  HOUSES4.forEach(([x, k, col, colD], i) => { const back = k < 1, y = back ? G - 60 : G + 20, look = a > 6.3 ? 1 : 0, mask = seg(a, 9.3 + i * 0.12, 9.6 + i * 0.12), bill = a - 9.9 - i * 0.1, q = a - 7.9 - i * 0.12;
     const m = mask > 0 ? `<g transform="translate(0 ${(-115 - 300 * (1 - easeOut(mask))).toFixed(1)})"><path d="M-130 -14Q-120 -50 -60 -40Q0 -30 0 -10Q0 -30 60 -40Q120 -50 130 -14Q120 34 60 30Q16 26 0 6Q-16 26 -60 30Q-120 34 -130 -14Z" fill="${P.ink}"/><path d="M-130 -14Q-120 -50 -60 -40Q0 -30 0 -10Q0 -30 60 -40Q120 -50 130 -14" fill="none" stroke="${P.gold}" stroke-width="7"/>${[-63, 63].map((ex) => `<ellipse cx="${ex}" cy="-6" rx="26" ry="18" fill="${P.win}"/>`).join("")}<path d="M130 -14l46 -30M-130 -14l-46 -30" stroke="${P.pink}" stroke-width="8" stroke-linecap="round"/></g>` : "";
     const pin = bill > 0 ? at(36, -60, `<path d="${rr(-24, -34, 48, 64, 4)}" fill="#fff"/><path d="M-14 -18h28M-14 -6h20M-14 6h28" stroke="#c9b48a" stroke-width="5"/>${text(0, 26, "$", 16, P.redD)}<circle cy="-34" r="6" fill="${P.red}"/>`, pop(bill), -6) : "";
-    const qm = q > 0 && q < 99 ? at(0, -380, text(0, 0, "?", 110, P.cream), pop(q) * (1 - 0.06 * Math.sin(tot * 3 + i))) : "";
+    const qm = q > 0 && q < 99 ? at(0, -400, text(0, 0, "?", 200, P.cream), pop(q) * (1 - 0.06 * Math.sin(tot * 3 + i))) : "";
     hs += at(x, y, house(col, colD, { lit: [1, 1, 1] }) + m + pin + qm, k * (back ? 0.9 : 1), (look ? (x < BK[0] ? 3 : -3) * ease(seg(a, 6.3, 6.8)) : 0)); });
   const ground = `<rect x="-800" y="${G}" width="3600" height="600" fill="#1b2054"/><ellipse cx="${BK[0]}" cy="${G + 20}" rx="640" ry="70" fill="#2c366f"/>`;
   const g = night(c, tot, 19) + layer(skyline(83, -600, 2600, G - 40, 140, 320, "#221a5c", "#ffb066"), c, 0.5) + layer(rays + ground + hs + stand + big + dome, c);
@@ -125,8 +125,8 @@ function s4(a, tot) {
 
 // ---- 5: nobody can freeze it, nobody can print more: the rules are code, in front of everyone ----
 function s5(a, tot) {
-  const G = 900, CX = 640, PX = 1560, CASE = [1100, G];
-  const c = camAt(a, [[0, 760, 560, 1.35], [2.2, 760, 560, 1.4], [2.9, 1420, 560, 1.35], [4.7, 1440, 560, 1.38], [5.4, 1100, 530, 1.0], [7.94, 1100, 520, 1.03]]);
+  const G = 900, CX = 900, PX = 1600, CASE = [1250, G];
+  const c = camAt(a, [[0, 920, 620, 1.85], [2.25, 930, 620, 1.95], [2.95, 1580, 600, 1.6], [4.75, 1590, 600, 1.66], [5.4, 1190, 650, 1.25], [7.94, 1180, 640, 1.3]]);
   // the coin on its pedestal; an ice beam hits it and breaks into mist, the coin keeps turning
   const beam = seg(a, 1.0, 1.4) * (1 - seg(a, 2.0, 2.3)), fizz = seg(a, 1.5, 2.2), spinC = Math.cos(tot * 2.2);
   const ice = beam > 0 ? `<path d="M${CX - 640} 120L${CX - 30} ${G - 330}" stroke="#bfe6ff" stroke-width="${(26 * beam).toFixed(1)}" stroke-linecap="round" opacity=".85"/><path d="M${CX - 640} 120L${CX - 30} ${G - 330}" stroke="#fff" stroke-width="${(8 * beam).toFixed(1)}" stroke-linecap="round"/>` : "";

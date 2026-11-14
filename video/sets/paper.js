@@ -19,7 +19,7 @@ const mailbox = (flag, has) => `<rect x="-10" y="-220" width="20" height="220" f
 
 // ---- 0: in the storm, nine pages out of one window, sealed and sent to everyone on the list ----
 function s0(a, tot) {
-  const c = camAt(a, [[0, 640, 560, 1.25], [1.2, 640, 540, 1.2], [2.6, 700, 480, 1.08], [3.5, 1000, 520, 0.92], [5.4, 1300, 560, 0.92], [6.26, 1320, 560, 0.95]]), G = 960, HX = 600, HK = 1.8, WIN = [HX, G - 214 * HK];
+  const c = camAt(a, [[0, 620, 600, 1.55], [1.2, 620, 560, 1.48], [2.6, 620, 440, 1.3], [3.5, 760, 470, 1.18], [4.5, 1500, 640, 1.2], [5.6, 2000, 680, 1.25], [6.26, 2020, 680, 1.27]]), G = 960, HX = 600, HK = 1.8, WIN = [HX, G - 214 * HK];
   const flash = Math.max(0, Math.sin(tot * 1.3) > 0.985 ? 1 : 0) * 0.25;
   const lit = a > 1.26 ? spring(a - 1.26, 7, 11) : 0;
   const hs = at(HX, G, house("#4b3d8f", "#36296e", { lit: [0, 0, 1], roof: "#2a1d5c" }), HK) + (lit > 0 ? rings(WIN[0], WIN[1], 90 * lit, P.win, 0.3) : "");
@@ -39,7 +39,7 @@ function s0(a, tot) {
   const bolt = flash > 0 ? `<path d="M1500 -100L1440 200L1500 200L1420 460" stroke="#fff3c2" stroke-width="12" fill="none" opacity=".8"/>` : "";
   const g = `<rect width="1920" height="1080" fill="url(#bstorm)"/><rect width="1920" height="1080" fill="#fff" opacity="${flash.toFixed(2)}"/>` + layer(bolt + stars(61, 30, -300, 2600, 400, tot), c, 0.15)
     + layer(skyline(91, -600, 3000, G - 30, 120, 360, "#2a1250", "#5a2a6a"), c, 0.5) + layer(`<rect x="-600" y="${G}" width="3600" height="400" fill="#140a33"/>` + hs + boxes + pages + env, c);
-  return { g, out: toScreen(c, C[0], C[1]), outC: P.cream, outZ: 18 };
+  return { g, out: toScreen(c, 2260, G - 400), outC: P.cream, outZ: 18 };
 }
 // ---- 1: the paper: 31 Oct 2008; "Bitcoin: A Peer-to-Peer Electronic Cash System"; and a picture of what it means ----
 function s1(a, tot) {
@@ -76,7 +76,7 @@ function s2(a, tot) {
 }
 // ---- 3: the author: a name, an empty chair, nobody knows who; maybe one, maybe many ----
 function s3(a, tot) {
-  const z = Math.exp(kf(a, [[0, Math.log(4.2)], [1.55, Math.log(3.8)], [2.8, Math.log(1.0)], [5.95, Math.log(1.04)]])), c = { x: kf(a, [[0, 1120], [1.55, 1120], [2.8, 900], [5.95, 900]]), y: kf(a, [[0, 545], [1.55, 545], [2.8, 560], [5.95, 560]]), z };
+  const z = Math.exp(kf(a, [[0, Math.log(4.2)], [1.2, Math.log(3.8)], [2.4, Math.log(1.35)], [5.95, Math.log(1.4)]])), c = { x: kf(a, [[0, 1120], [1.2, 1120], [2.4, 1000], [5.95, 1000]]), y: kf(a, [[0, 545], [1.2, 545], [2.4, 690], [5.95, 700]]), z };
   const G = 1010, DX = 1360, DY = 760;
   const wall = `<rect x="-600" y="-400" width="3200" height="1600" fill="#2c1a66"/><rect x="-600" y="${G}" width="3200" height="400" fill="#1d0f45"/>`;
   const board = `${two(rr(930, 210, 380, 400, 10), P.wood, P.woodD, 8, 8)}<path d="${rr(950, 230, 340, 360, 6)}" fill="#c99a62"/>`;
@@ -84,10 +84,10 @@ function s3(a, tot) {
   const lamp = `<path d="M${DX + 200} ${DY}v-200l-80 -80" stroke="${P.ink}" stroke-width="10" fill="none"/><path d="M${DX + 80} ${DY - 300}l-60 30l40 40Z" fill="${P.ink}"/><path d="M${DX + 30} ${DY - 255}L${DX - 160} ${DY}H${DX + 120}Z" fill="#ffd98a" opacity=".1"/>`;
   const desk = `${two(rr(DX - 330, DY, 660, 36, 8), P.wood, P.woodD, 0, 10)}<rect x="${DX - 300}" y="${DY + 36}" width="26" height="${G - DY - 36}" fill="${P.woodD}"/><rect x="${DX + 274}" y="${DY + 36}" width="26" height="${G - DY - 36}" fill="${P.woodD}"/>${at(DX + 60, DY, laptop("#9fe7ff", `<path d="M-90 -160h120M-90 -130h170M-90 -100h90" stroke="#3a6b8a" stroke-width="10" stroke-linecap="round"/>`), 1.05)}${rings(DX + 60, DY - 110, 140, "#9fe7ff", 0.1)}`;
   // the "?" over the chair: it bounces on "man", "woman"; on "group" there are three chairs
-  const q = a - 3.03, bump = (t0) => (a > t0 ? 0.18 * Math.exp(-(a - t0) * 7) * Math.cos((a - t0) * 14) : 0), many = a > 5.05 ? spring(a - 5.05, 7, 11) : 0;
+  const q = a - 3.03, bump = (t0) => (a > t0 ? 0.18 * Math.exp(-(a - t0) * 7) * Math.cos((a - t0) * 14) : 0), many = a > 4.85 ? spring(a - 4.85, 7, 11) : 0;
   const qm = (x, y, k) => at(x, y + 8 * Math.sin(tot * 2.4), `${rings(0, -60, 110, P.gold, 0.18)}${text(0, 20, "?", 220, P.gold)}`, k);
-  const chairs = at(lerp(-300, 330, many), G, hoodChair({ colour: "#2f2468", colourD: "#221a52" }), 1.05) + at(lerp(2300, 1820, many), G, hoodChair({ colour: "#2f2468", colourD: "#221a52" }), 1.05) + at(880, G, hoodChair(), 1.3);
-  const marks = (q > 0 ? qm(880, 200, pop(q) * (1 + bump(3.98) + bump(4.64))) : "") + (many > 0 ? qm(330, 380, 0.6 * many) + qm(1820, 380, 0.6 * many) : "");
+  const chairs = at(lerp(-300, 450, many), G, hoodChair({ colour: "#2f2468", colourD: "#221a52" }), 0.95) + at(lerp(2300, 1600, many), G, hoodChair({ colour: "#2f2468", colourD: "#221a52" }), 0.95) + at(880, G, hoodChair(), 1.3);
+  const marks = (q > 0 ? qm(660, 400, 0.85 * pop(q) * (1 + bump(3.98) + bump(4.64))) : "") + (many > 0 ? qm(450, 470, 0.5 * many) + qm(1600, 470, 0.5 * many) : "");
   const g = layer(wall + board + pg + lamp + desk + chairs + marks, c);
   return { g, in: toScreen(c, 1120, 545), inC: P.cream, inZ: 18 };
 }

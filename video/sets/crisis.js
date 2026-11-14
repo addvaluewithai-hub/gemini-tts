@@ -18,17 +18,17 @@ const boards = (k) => (k <= 0 ? "" : `<g opacity="${clamp(k * 3).toFixed(2)}">${
 
 // ---- 0: the years run on, and stop at 2008; a storm comes in, the street cracks ----
 function c0(a, tot) {
-  const c = camAt(a, [[0, 960, 540, 1.0], [2.6, 960, 540, 1.04], [3.46, 960, 560, 1.08]]), G = 880;
+  const c = camAt(a, [[0, 960, 540, 1.0], [2.6, 960, 540, 1.03], [3.46, 960, 555, 1.06]]), G = 990;
   const years = ["2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008"], times = [0.6, 0.95, 1.25, 1.52, 1.76, 1.98, 2.2];
   const n = times.filter((t) => a >= t).length, st = seg(a, 2.6, 3.3);
-  const cal = at(960, 360, calPage(years[n], "", 1, 150) + (n > 0 ? calFlip(years[n - 1], "", seg(a, times[n - 1], times[n - 1] + 0.22), 150) : ""), 1.5 * pop(a, 7, 12) * bump(a, 2.55, 0.12));
-  let row = ""; for (let i = 0; i < 7; i++) { const x = 140 + i * 275, f = fronts[i % 4], dark = a > 2.9 + i * 0.05 && rnd(i * 7) > 0.4;
-    row += at(x, G, house(f[0], f[1], { lit: dark ? [0, 1, 0] : [1, 1, 1] }), [0.92, 0.92], st * (i % 2 ? 2 : -2)); }
+  const cal = at(960, 300, calPage(years[n], "", 1, 150) + (n > 0 ? calFlip(years[n - 1], "", seg(a, times[n - 1], times[n - 1] + 0.22), 150) : ""), 1.65 * pop(a, 7, 12) * bump(a, 2.55, 0.12));
+  let row = ""; for (let i = 0; i < 4; i++) { const x = 230 + i * 487, f = fronts[i % 4], dark = a > 2.9 + i * 0.05 && rnd(i * 7) > 0.4;
+    row += at(x, G, house(f[0], f[1], { lit: dark ? [0, 1, 0] : [1, 1, 1] }), [1.5, 1.5], st * (i % 2 ? 2 : -2)); }
   const crackD = `M-40 ${G + 60}L260 ${G + 90}L420 ${G + 50}L640 ${G + 110}L900 ${G + 60}L1120 ${G + 120}L1380 ${G + 70}L1600 ${G + 110}L1960 ${G + 70}`, crack = drawn(crackD, seg(a, 2.7, 3.3), "#ff8a5c", 34, 'stroke-linejoin="round"') + drawn(crackD, seg(a, 2.7, 3.3), "#0a0726", 18, 'stroke-linejoin="round"');
   const bolt = a > 2.85 && a < 3.05 ? `<path d="M1500 0L1440 160L1500 170L1410 360L1530 150L1470 140L1540 0Z" fill="#fff3c2"/><rect width="1920" height="1080" fill="#fff" opacity="${(0.25 * (1 - seg(a, 2.85, 3.05))).toFixed(2)}"/>` : "";
   const main = `<rect x="-600" y="${G}" width="3200" height="500" fill="${mix(P.ground, "#1a0f3a", st)}"/><rect x="-600" y="${G + 50}" width="3200" height="130" fill="${P.road}"/>` + row + crack;
   const g = dusk(c, tot, 1500, 700) + storm(st) + layer(clouds(tot * 3, 120, 4, mix("#ffb199", "#2a1446", st), 0.4 + 0.5 * st), c, 0.2) + layer(skyline(11, -400, 2400, G - 150, 100, 300, mix(P.far, "#2a1446", st)), c, 0.35) + layer(main, c) + bolt + layer(cal, c);
-  return { g, out: toScreen(c, 960, 360), outC: P.cream, outZ: 16 };
+  return { g, out: toScreen(c, 960, 300), outC: P.cream, outZ: 16 };
 }
 // ---- 1: the bank bets the houses' money on house-cards; the cards fall; then the 158-year-old tower falls in one go ----
 const TX = 1450, TG = 900, TK = 0.8;
@@ -38,7 +38,7 @@ const tower = (fall) => { const w = 560, top = -1450;
     ${at(0, 0, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner: cracks(fall) }), TK)}`; };
 const plaque = (glow) => `${glow > 0 ? rings(0, -45, 120, P.gold, 0.3 * glow) : ""}${two(rr(-110, -90, 220, 90, 8), P.stone, P.stoneD, 0, 10)}${text(0, -22, "1850", 64, mix("#8a6a3a", "#8a5200", glow))}`;
 function c1(a, tot) {
-  const c = camAt(a, [[0, 820, 560, 1.18], [3.6, 860, 570, 1.22], [4.4, 860, 570, 1.22], [5.5, 1150, 240, 0.62], [6.1, 1150, 240, 0.64], [6.6, TX - 380 * TK + 40, TG - 80, 1.9], [7.4, TX - 380 * TK + 40, TG - 80, 2.0], [8.0, 1150, 280, 0.66], [9.4, 1150, 300, 0.64]]);
+  const c = camAt(a, [[0, 760, 580, 1.4], [3.6, 790, 590, 1.45], [4.4, 820, 590, 1.4], [5.2, TX, 420, 0.95], [6.0, TX, -60, 0.95], [6.6, TX - 380 * TK + 40, TG - 80, 1.9], [7.4, TX - 380 * TK + 40, TG - 80, 2.0], [8.0, TX + 150, 300, 0.78], [9.4, TX + 200, 340, 0.8]]);
   const HS = [[110, P.blue, P.blueD], [340, P.pink, P.pinkD], [570, P.teal, P.tealD]], TB = [920, TG - 150];
   // the house-cards: a pyramid of little houses on a green table
   const cards = [[-150, 0], [0, 0], [150, 0], [-75, -1], [75, -1], [0, -2]], down = seg(a, 3.55, 4.3);
@@ -61,7 +61,7 @@ function c1(a, tot) {
 }
 // ---- 2: the government pours gold into the cracked bank; it is drawn up out of the houses ----
 function c2(a, tot) {
-  const c = camAt(a, [[0, 960, 520, 1.0], [3.9, 980, 520, 1.02], [5.0, 960, 900, 0.62], [7.02, 960, 910, 0.64]]), G = 860, HG = 1520, DX = 470, BX = 1450;
+  const c = camAt(a, [[0, 960, 560, 1.08], [3.9, 980, 560, 1.1], [5.0, 960, 1180, 0.84], [7.02, 960, 1190, 0.87]]), G = 860, HG = 1560, DX = 470, BX = 1450;
   const dome = at(DX, G, `${two(rr(-330, -300, 660, 300, 8), "#f1d3a2", P.stoneD, 16, 0)}${[-260, -170, -80, 10, 100, 190, 280].map((x) => two(rr(x - 18, -290, 36, 280, 4), P.stone, P.stoneD, 10, 0)).join("")}<path d="${rr(-360, -340, 720, 50, 8)}" fill="${P.stone}"/><path d="${rr(-200, -400, 400, 64, 8)}" fill="${P.stoneD}"/>
     ${two("M-200 -400A200 200 0 0 1 200 -400Z", "#fff4dc", "#e3b987", 14, 0)}<path d="M0 -600V-680" stroke="${P.ink}" stroke-width="10"/>${disc(0, -610, 26, P.gold, P.goldD)}<path d="${rr(-380, -14, 760, 14, 4)}" fill="${P.stoneD}"/>`);
   const pipe = `M${DX + 200} ${G - 380}C${DX + 600} ${G - 760} ${BX - 300} ${G - 760} ${BX} ${G - 600}`, pipeP = seg(a, 0.85, 1.3), pt = (p) => { const u = 1 - p, A = [DX + 200, G - 380], B = [DX + 600, G - 760], C2 = [BX - 300, G - 760], D = [BX, G - 600]; return [u * u * u * A[0] + 3 * u * u * p * B[0] + 3 * u * p * p * C2[0] + p * p * p * D[0], u * u * u * A[1] + 3 * u * u * p * B[1] + 3 * u * p * p * C2[1] + p * p * p * D[1]]; };
@@ -70,19 +70,19 @@ function c2(a, tot) {
   const mend = 1.4 * (1 - seg(a, 3.4, 3.8)), saved = a > 3.7 ? rings(BX, G - 300, 300 * spring(a - 3.7, 6, 10), P.gold, 0.14 * (1 - seg(a, 4.2, 4.8))) : "";
   const fig = a > 1.4 ? at(980, 150, `${two(rr(-420, -70, 840, 120, 60), P.ink, "#0a0726", 0, 6)}${text(0, 30, roll(700000000000, seg(a, 1.5, 2.64)), 84, P.gold)}`, pop(a - 1.4)) : "";
   // under the hill: the town that pays. Pipes from every roof up to the dome; the coins go up them, the windows go dark
-  const hx = [120, 420, 720, 1020, 1320, 1620, 1920];
-  const town = hx.map((x, i) => { const f = fronts[i % 4], dark = a > 5.25 + i * 0.15; return at(x, HG, house(f[0], f[1], { lit: dark ? [0, 0, 0] : [1, 1, 1] }), 1.1); }).join("");
-  const pipes = hx.map((x, i) => `<path d="M${x} ${HG - 330}C${x} ${HG - 520} ${DX + (i - 3) * 60} ${G + 300} ${DX + (i - 3) * 40} ${G}" fill="none" stroke="${P.steelD}" stroke-width="18"/>`).join("");
-  let up = ""; if (a > 4.7) hx.forEach((x, i) => { for (let j = 0; j < 2; j++) { const p = ((a - 4.7) * 0.8 + j / 2 + i * 0.13) % 1, u = 1 - p, A = [x, HG - 330], B = [x, HG - 520], C2 = [DX + (i - 3) * 60, G + 300], D = [DX + (i - 3) * 40, G];
-    const q = [u * u * u * A[0] + 3 * u * u * p * B[0] + 3 * u * p * p * C2[0] + p * p * p * D[0], u * u * u * A[1] + 3 * u * u * p * B[1] + 3 * u * p * p * C2[1] + p * p * p * D[1]]; up += at(q[0], q[1], coin(18)); } });
+  const hx = [200, 580, 960, 1340, 1720];
+  const town = hx.map((x, i) => { const f = fronts[i % 4], dark = a > 5.25 + i * 0.15; return at(x, HG, house(f[0], f[1], { lit: dark ? [0, 0, 0] : [1, 1, 1] }), 1.45); }).join("");
+  const pipes = hx.map((x, i) => `<path d="M${x} ${HG - 420}C${x} ${HG - 600} ${DX + (i - 2) * 70} ${G + 300} ${DX + (i - 2) * 50} ${G}" fill="none" stroke="${P.steelD}" stroke-width="22"/>`).join("");
+  let up = ""; if (a > 4.7) hx.forEach((x, i) => { for (let j = 0; j < 2; j++) { const p = ((a - 4.7) * 0.8 + j / 2 + i * 0.13) % 1, u = 1 - p, A = [x, HG - 420], B = [x, HG - 600], C2 = [DX + (i - 2) * 70, G + 300], D = [DX + (i - 2) * 50, G];
+    const q = [u * u * u * A[0] + 3 * u * u * p * B[0] + 3 * u * p * p * C2[0] + p * p * p * D[0], u * u * u * A[1] + 3 * u * u * p * B[1] + 3 * u * p * p * C2[1] + p * p * p * D[1]]; up += at(q[0], q[1], coin(24)); } });
   const hill = `<path d="M-1200 ${G}H2600V${HG}H-1200Z" fill="#2a1556"/><path d="M-1200 ${G}H2600V${G + 20}H-1200Z" fill="#3a2a7a"/><rect x="-1200" y="${HG}" width="4800" height="800" fill="${P.ground}"/>`;
   const main = hill + pipes + up + town + dome + at(BX, G, bank({ inside: "#3b1d74", sign: [1, 1, 1, 1], inner: cracks(mend) }), 0.75) + saved + drawn(pipe, pipeP, P.steel, 40) + flow + fall + fig;
   const g = `<rect width="1920" height="1080" fill="url(#bstorm)"/>` + layer(clouds(tot * 2, 90, 3, "#2a1446", 0.7), c, 0.25) + layer(main, c);
-  return { g, in: toScreen(c, DX, G - 470), inC: P.stone, inZ: 14, out: toScreen(c, 720 - 63 * 1.1, HG - 115 * 1.1), outC: P.win, outZ: 26 };
+  return { g, in: toScreen(c, DX, G - 470), inC: P.stone, inZ: 14, out: toScreen(c, 960 - 63 * 1.45, HG - 115 * 1.45), outC: P.win, outZ: 26 };
 }
 // ---- 3: the houses get boarded up and go dark; the rescued bank rains gold and bonus envelopes ----
 function c3(a, tot) {
-  const c = camAt(a, [[0, 760, 560, 1.0], [2.3, 760, 560, 1.03], [3.1, 2620, 520, 1.0], [6.73, 2640, 520, 1.04]]), G = 900, BX = 2480;
+  const c = camAt(a, [[0, 740, 640, 1.18], [2.3, 740, 640, 1.2], [3.1, 2600, 560, 1.05], [6.73, 2620, 560, 1.08]]), G = 900, BX = 2480;
   const hs = [[300, 0], [720, 1], [1140, 2]].map(([x, i]) => { const b = seg(a, 0.38 + i * 0.35, 0.7 + i * 0.35), f = fronts[i], off = a > 0.6 + i * 0.35;
     return at(x, G, house(f[0], f[1], { lit: off ? [0, 0, 0] : [1, 1, 1] }) + boards(b), [1.35, 1.35 * bump(a, 0.6 + i * 0.35, 0.04)]); }).join("");
   const rain = a > 3.25 ? Array.from({ length: 40 }, (_, i) => { const u = (a - 3.25) * (0.5 + rnd(i) * 0.4) + rnd(i + 50) * 0.3, y = -120 + ((u * 900) % 1300), x = BX - 700 + rnd(i * 3) * 1400 + 40 * Math.sin(tot * 2 + i);
