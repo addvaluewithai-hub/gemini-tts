@@ -115,7 +115,7 @@ function stairs(t, c, tot, s) {
   // 5G: 2019, much faster packets, machines that talk to each other
   let five = "";
   if (u9 > 0 && u10 < 1.0) { const fade = 1 - seg(u10, 0.5, 1.0);
-    if (u9 > 0.83) five += at(850, 240, calPage("2019", "", 1, 150), pop(u9 - 0.83) * fade);
+    if (u9 > 0.83) five += at(640, 170, calPage("2019", "", 1, 150), pop(u9 - 0.83) * fade);
     if (u9 > 1.81) for (let q = 0; q < 8; q++) { const p = (u9 * 2.4 + q / 8) % 1, y = STOP(4) - 520 + (q % 4) * 40; five += at(lerp(SX(4) - 700, SX(4) - 60, p), y, packet(0.7), 1, 0, `opacity="${(fade * (1 - p * 0.3)).toFixed(2)}"`) + `<path d="M${(lerp(SX(4) - 700, SX(4) - 60, p) - 110).toFixed(1)} ${y}h70" stroke="${P.gold}" stroke-width="6" stroke-linecap="round" opacity="${(0.5 * fade).toFixed(2)}"/>`; }
     if (u9 > 3.92) five += radio(SX(4) + 40, STOP(4) - 70, tot, 120, { n: 2, speed: 1.6, w: 7, k: fade }) + radio(SX(4) + 130, STOP(4) - 250, tot + 0.3, 120, { n: 2, speed: 1.6, w: 7, k: fade }); }
   const ground = `<rect x="-2000" y="900" width="6000" height="900" fill="#1f1650"/>`;
@@ -155,7 +155,7 @@ function s6(a, tot) {
 // ---- 11: 5G covers more than half the planet ----
 function s11(a, tot) {
   const c = camAt(a, [[0, 960, 540, 1.0], [3.02, 960, 540, 1.05]]), R = 330, cov = 0.55 * ease(seg(a, 0.6, 2.42)), id = "g5";
-  const curtain = `<clipPath id="${id}c"><circle r="${R}"/></clipPath><g clip-path="url(#${id}c)"><rect x="${-R}" y="${-R}" width="${(2 * R * cov).toFixed(1)}" height="${2 * R}" fill="${WAVE}" opacity=".55"/>${Array.from({ length: 14 }, (_, k) => { const x = -R + rnd(k * 7) * 2 * R * cov, y = -R * 0.8 + rnd(k * 7 + 1) * 1.6 * R; return x < -R + 2 * R * cov ? rings(x, y, 16, "#fff", 0.6) : ""; }).join("")}</g>${cov > 0.02 ? `<path d="M${(-R + 2 * R * cov).toFixed(1)} ${-R}V${R}" stroke="#fff" stroke-width="6" stroke-dasharray="14 12" opacity=".7"/>` : ""}`;
+  const curtain = `<clipPath id="${id}c"><circle r="${R}"/></clipPath><g clip-path="url(#${id}c)"><rect x="${-R}" y="${-R}" width="${(2 * R * cov).toFixed(1)}" height="${2 * R}" fill="${WAVE}" opacity=".8"/>${Array.from({ length: 14 }, (_, k) => { const x = -R + rnd(k * 7) * 2 * R * cov, y = -R * 0.8 + rnd(k * 7 + 1) * 1.6 * R; return x < -R + 2 * R * cov ? rings(x, y, 16, "#fff", 0.6) : ""; }).join("")}</g>${cov > 0.02 ? `<path d="M${(-R + 2 * R * cov).toFixed(1)} ${-R}V${R}" stroke="#fff" stroke-width="6" stroke-dasharray="14 12" opacity=".7"/>` : ""}`;
   const pct = Math.round(lerp(0, 55, ease(seg(a, 1.14, 2.42))));
   const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(101, 120, -200, 2200, 1100, tot), c, 0.2) + layer(at(820, 560, globe(R, tot * 0.02, { id }) + curtain, pop(a + 0.3)) + (a > 1.14 ? at(1440, 600, `${rings(0, -40, 170, WAVE, 0.15)}${text(0, 0, pct + "%", 200, WAVE)}`, pop(a - 1.14)) : ""), c);
   return { g, in: toScreen(c, 820, 560), inC: "#1d6fb8", inZ: 14, out: toScreen(c, 820, 560), outC: "#1d6fb8", outZ: 14 };
@@ -167,8 +167,8 @@ function s12(a, tot) {
   const bar = (x, p, col, n, t0) => { const h = H * p;
     return at(x, G2 - 20, `<path d="${rr(-90, -H - 20, 180, H + 20, 40)}" fill="#ffffff" opacity=".1"/><path d="${rr(-90, -H - 20, 180, H + 20, 40)}" fill="none" stroke="#c4cbe6" stroke-width="8"/>${h > 2 ? `<path d="${rr(-78, -h - 8, 156, h, Math.min(30, h / 2))}" fill="${col}"/>` : ""}${a > t0 ? at(0, -H - 90, text(0, 0, Math.round(100 * p) + "%", 120, col), pop(a - t0)) : ""}`); };
   const rich = ease(seg(a, 0.9, 1.9)) * 0.84, poor = ease(seg(a, 3.3, 4.1)) * 0.04;
-  const richHouse = at(420, G2, house(P.gold, P.goldD, { roof: "#8a5200" }), 1.15);
-  const hut = at(1500, G2, `${two("M-110 0V-130H110V0Z", "#8a7a6a", "#6a5a4a", 10, 0)}${two("M-150 -120L0 -230L150 -120Z", "#a08560", "#7a6040", 0, 8)}<path d="M-24 0V-70H24V0Z" fill="${P.ink}"/>`, 1.0);
+  const richHouse = at(420, G2, house(P.gold, P.goldD, { roof: "#8a5200" }), 1.5);
+  const hut = at(1500, G2, `${two("M-110 0V-130H110V0Z", "#8a7a6a", "#6a5a4a", 10, 0)}${two("M-150 -120L0 -230L150 -120Z", "#a08560", "#7a6040", 0, 8)}<path d="M-24 0V-70H24V0Z" fill="${P.ink}"/>`, 1.4);
   const ground = `<rect x="-600" y="${G2}" width="3200" height="400" fill="#1f1650"/><rect x="-600" y="${G2}" width="3200" height="12" fill="#3a2f80"/>`;
   const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(107, 90, -300, 2300, 700, tot), c, 0.2) + layer(ground + richHouse + hut + bar(760, rich, WAVE, 84, 1.82) + bar(1180, poor, P.red, 4, 4.05), c);
   return { g, in: [960, 540], inC: "#1d6fb8", inZ: 12 };

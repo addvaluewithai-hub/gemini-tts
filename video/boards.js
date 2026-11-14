@@ -29,6 +29,13 @@ import { gensSet } from "./sets/gens.js";
 import { satSet } from "./sets/sat.js";
 import { ndictSet } from "./sets/ndict.js";
 import { nrecapSet } from "./sets/nrecap.js";
+// The network file has its own colour world: a blue-teal "signal" night instead of the crypto file's violet one
+// (the owner asked for a different look per file). Same drawings, the night colours swapped on the finished frame.
+const NET_NIGHT = { "#0d0b33": "#04132b", "#34206f": "#0c3a5a", "#141a45": "#0a2236", "#2c366f": "#1b4d6e", "#2a1f66": "#103957", "#22195a": "#0c2e4a",
+  "#1a1446": "#0a2238", "#2c2766": "#123a55", "#241d5e": "#0f3350", "#3a3290": "#1d5578", "#3a3478": "#1c4a6a", "#1a1240": "#04132b", "#ffb066": "#8ff0ff",
+  "#472080": "#124463", "#5a2a8c": "#165277", "#1f0f47": "#08213a", "#2a1556": "#0b2a45", "#2a1466": "#0a2a52", "#8a3391": "#1d6f8e", "#ff8a5c": "#5fd6c8", "#3a1c71": "#174266" };
+const NET_RE = new RegExp(Object.keys(NET_NIGHT).join("|"), "gi");
+const netNight = (svg) => svg.replace(NET_RE, (m) => NET_NIGHT[m.toLowerCase()]);
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -857,18 +864,18 @@ const BOARDS = {
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
   // Network part 1, scene by scene, in the same world (sets/<scene>.js, props in sets/net.js).
-  nintro: (s, step, age, total, cfg) => nintroSet(s, step, age, total, cfg),
-  voice: (s, step, age, total, cfg) => voiceSet(s, step, age, total, cfg),
-  radio: (s, step, age, total, cfg) => radioSet(s, step, age, total, cfg),
-  route: (s, step, age, total, cfg) => routeSet(s, step, age, total, cfg),
-  cells: (s, step, age, total, cfg) => cellsSet(s, step, age, total, cfg),
-  sim: (s, step, age, total, cfg) => simSet(s, step, age, total, cfg),
-  drop: (s, step, age, total, cfg) => dropSet(s, step, age, total, cfg),
-  history: (s, step, age, total, cfg) => historySet(s, step, age, total, cfg),
-  gens: (s, step, age, total, cfg) => gensSet(s, step, age, total, cfg),
-  sat: (s, step, age, total, cfg) => satSet(s, step, age, total, cfg),
-  ndict: (s, step, age, total, cfg) => ndictSet(s, step, age, total, cfg),
-  nrecap: (s, step, age, total, cfg) => nrecapSet(s, step, age, total, cfg),
+  nintro: (s, step, age, total, cfg) => netNight(nintroSet(s, step, age, total, cfg)),
+  voice: (s, step, age, total, cfg) => netNight(voiceSet(s, step, age, total, cfg)),
+  radio: (s, step, age, total, cfg) => netNight(radioSet(s, step, age, total, cfg)),
+  route: (s, step, age, total, cfg) => netNight(routeSet(s, step, age, total, cfg)),
+  cells: (s, step, age, total, cfg) => netNight(cellsSet(s, step, age, total, cfg)),
+  sim: (s, step, age, total, cfg) => netNight(simSet(s, step, age, total, cfg)),
+  drop: (s, step, age, total, cfg) => netNight(dropSet(s, step, age, total, cfg)),
+  history: (s, step, age, total, cfg) => netNight(historySet(s, step, age, total, cfg)),
+  gens: (s, step, age, total, cfg) => netNight(gensSet(s, step, age, total, cfg)),
+  sat: (s, step, age, total, cfg) => netNight(satSet(s, step, age, total, cfg)),
+  ndict: (s, step, age, total, cfg) => netNight(ndictSet(s, step, age, total, cfg)),
+  nrecap: (s, step, age, total, cfg) => netNight(nrecapSet(s, step, age, total, cfg)),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
