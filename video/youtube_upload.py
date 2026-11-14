@@ -145,21 +145,23 @@ def upload_short(argv):
     """A vertical Short: the video alone (its captions are burned in), private or scheduled."""
     ap = argparse.ArgumentParser(prog="youtube_upload.py short")
     ap.add_argument("episode"); ap.add_argument("key"); ap.add_argument("video"); ap.add_argument("--publish-at"); ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--privacy", default="private", choices=["private", "unlisted", "public"])
     a = ap.parse_args(argv)
     f, data = _shorts(a.episode); sh = next(x for x in data["shorts"] if x["key"] == a.key)
     if (sh.get("video") or {}).get("id"):
         sys.exit(f"{a.key} is already uploaded: {sh['video']['url']}")
     assert len(sh["title"]) <= 100, f"title is {len(sh['title'])} characters; the limit is 100"
-    status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "embeddable": True, "license": "youtube"}
+    status = {"privacyStatus": "private" if a.publish_at else a.privacy, "selfDeclaredMadeForKids": False, "embeddable": True, "license": "youtube"}
     if a.publish_at: status["publishAt"] = a.publish_at
     meta = {"snippet": {"title": sh["title"], "description": sh["description"], "tags": sh.get("tags", []), "categoryId": "27", "defaultLanguage": "ar", "defaultAudioLanguage": "ar"}, "status": status}
+    if sh.get("en"): meta["localizations"] = {"en": {"title": sh["en"]["title"], "description": sh["en"]["description"]}}     # the English title and description
     size = os.path.getsize(a.video)
-    print(f"{a.key}: \"{sh['title']}\" · {size / 1e6:.1f} MB · private" + (f" until {a.publish_at}" if a.publish_at else ""))
+    print(f"{a.key}: \"{sh['title']}\" · {size / 1e6:.1f} MB · {status['privacyStatus']}" + (f" until {a.publish_at}" if a.publish_at else ""))
     if a.dry_run:
         print(json.dumps(meta, ensure_ascii=False, indent=1)); return
     with tempfile.NamedTemporaryFile("w", suffix=".json", encoding="utf-8") as t:
         json.dump(meta, t, ensure_ascii=False); t.flush()
-        _, h = curl(["-X", "POST", f"{API}/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", "-H", "Content-Type: application/json; charset=UTF-8",
+        _, h = curl(["-X", "POST", f"{API}/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status" + (",localizations" if "localizations" in meta else ""), "-H", "Content-Type: application/json; charset=UTF-8",
                      "-H", "X-Upload-Content-Type: video/mp4", "-H", f"X-Upload-Content-Length: {size}", "--data-binary", "@" + t.name], want_headers=True)
     video = json.loads(curl(["-X", "PUT", h["location"], "-H", "Content-Type: video/mp4", "-T", a.video]))
     sh["video"] = {"id": video["id"], "url": f"https://youtube.com/shorts/{video['id']}", "privacy": video["status"]["privacyStatus"], "publishAt": video["status"].get("publishAt")}
