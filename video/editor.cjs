@@ -4,7 +4,7 @@
 // the running shot. Like the director, it is deterministic: same cues and words, same frames.
 //
 //   shot    wide | host | close | two | side | low | insert        slide   name in slides.json (also goes on the studio screen)
-//   story   { n, tag } for the chip                                 fact    { big, small, tone, riser } - side shots only
+//   story   { n, tag, icon? } for the chip                          fact    { big, small, tone, riser } - side shots only
 //   mark    "headline" or [x, y, w, h] of the slide to highlight    zoom / center   how far the insert pushes in, and on what
 //   duck    true: the host sinks behind the desk                    lurk    true: he reappears above the screen
 //   peek    true: his head rises over an insert                     paper   pockets | holes | over
@@ -70,8 +70,8 @@ function resolve(cues, words, slides) {
       const toInsert = seg.full, fromInsert = !!prev.full, ratio = prev.shot && !toInsert && !fromInsert ? SHOTS[seg.shot].s / SHOTS[prev.shot].s : 1;
       seg.trans = seg.trans || (toInsert ? "insert" : fromInsert ? "whip" : ratio > 1.2 ? "punch" : ratio < 0.84 ? "whip" : "cut");
       seg.dir = k % 2 ? 1 : -1;
-      if (k > 0) sfx.push(toInsert ? (seg.kind === "slide" ? { t: seg.t, type: "shutter" } : { t: seg.t, type: "tick", gain: 0.4 }) : seg.trans === "whip" ? { t: seg.t - 0.09, type: "whoosh" } : seg.trans === "punch" ? { t: seg.t, type: "tick" } : { t: seg.t, type: "tick", gain: 0.5 });
-      if (toInsert && k > 0) sfx.push({ t: seg.t - 0.16, type: "whoosh", gain: 0.7 });
+      if (k > 0) sfx.push(toInsert ? (seg.kind === "slide" ? { t: seg.t, type: "shutter" } : { t: seg.t, type: "tick", gain: 0.4 }) : seg.trans === "whip" ? { t: seg.t - 0.09, type: "whoosh", gain: cues.whooshGain ?? 1 } : seg.trans === "punch" ? { t: seg.t, type: "tick" } : { t: seg.t, type: "tick", gain: 0.5 });
+      if (toInsert && k > 0 && (cues.whooshGain ?? 1) > 0) sfx.push({ t: seg.t - 0.16, type: "whoosh", gain: 0.7 * (cues.whooshGain ?? 1) });   // settings.whooshGain turns the cut whoosh down (0 = off)
     }
     if (seg.fact) { if (seg.fact.riser) sfx.push({ t: seg.t - 0.55, type: "riser", len: 0.55 }); sfx.push({ t: seg.t, type: seg.fact.tone === "bubble" ? "pop" : "impact" }); if (seg.fact.tone !== "bubble") impacts.push(seg.t); }
     if (seg.mark) sfx.push({ t: seg.t + 0.14, type: "swipe" });
@@ -99,7 +99,8 @@ function resolve(cues, words, slides) {
 
 // Step 2: one studio state per frame.
 function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
-  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", explain = cues.layout === "explain", solo = cues.layout === "solo" || explain, vert = explain && !!cues.vertical, shots = short || vert ? SHORT : solo ? SOLO : SHOTS;
+  const { segs, impacts } = plan, frames = [], short = cues.layout === "short", explain = cues.layout === "explain", solo = cues.layout === "solo" || explain, vert = explain && !!cues.vertical, base = short || vert ? SHORT : solo ? SOLO : SHOTS,
+    shots = cues.shots ? Object.fromEntries(Object.entries(base).map(([k, v]) => [k, { ...v, ...(cues.shots[k] || {}) }])) : base;   // settings.shots loosens or tightens a framing per episode
   let pip = 0, room = 0, side = "right";
   let hostY = 0, vY = 0, lurk = 0, peek = 0, scrim = 0, lb = 0, chipA = 0, kb = 1, cx = 0.5, cy = 0.3, storyT = -9, lastStory = null, lastInsertCut = -9;
   for (let i = 0; i < N; i++) {
@@ -161,11 +162,11 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     pip += (((explain ? seg.host === "pip" : solo) && insert && !vert ? 1 : 0) - pip) * 0.3;
     room += (((short || vert) && (seg.fact || seg.meme || (vert && insert)) ? 1 : 0) - room) * (vert && i === 0 ? 1 : 0.26);       // a clip that opens on a board starts laid out for it
     const tight = !insert && (seg.shot === "close" || seg.shot === "low");
-    lb += ((tight && !short && !vert ? 62 : 0) - lb) * 0.22;
+    lb += ((tight && !short && !vert && cues.letterbox !== false ? 62 : 0) - lb) * 0.22;
     if (seg.story !== lastStory) { lastStory = seg.story; storyT = t; }
     chipA += ((seg.story && (!tight || short || vert) ? 1 : 0) - chipA) * 0.25;
     const sl = slides[seg.slide];
-    const chip = seg.story && chipA > 0.02 ? { n: seg.story.n, tag: seg.story.tag, src: sl && (!insert || (solo && slideOn)) ? `${sl.source} · ${sl.date}` : "", a: chipA, pop: 1 + 0.22 * Math.exp(-(t - storyT) * 9), low: solo && insert && !vert } : null;
+    const chip = seg.story && chipA > 0.02 ? { n: seg.story.n, tag: seg.story.tag, icon: seg.story.icon || null, src: sl && (!insert || (solo && slideOn)) ? `${sl.source} · ${sl.date}` : "", a: chipA, pop: 1 + 0.22 * Math.exp(-(t - storyT) * 9), low: solo && insert && !vert } : null;
 
     let drone = null;
     if (seg.drone) { const d = seg.drone, u = t - d.from, enter = smooth(clamp(u / 0.9)), p = droneAt(u);
@@ -179,6 +180,9 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
       host: vert || !insert || ins.enter < 1 ? (hostY < 590 ? { ...body, y: hostY } : null) : null,
       lurk: lurk > 0.02 && (!insert || ins.enter < 1) ? { ...spy(0.75 * Math.sin(2 * Math.PI * 0.7 * tv)), amt: lurk } : null,
       peek: peek > 0.02 ? (explain ? { ...body, paper: "pockets", shift: 0, armL: null, armR: null, amt: peek, side } : { ...spy(-0.75), amt: peek, rise: 262, rot: -7 }) : null,
+      // the host acting inside a full-frame set: placed by its feet, any size, optionally walking from one spot to another over the beat
+      actor: insert && seg.actor ? (() => { const a = seg.actor, to = a.to || {}, span = Math.max(0.3, (Math.min(seg.end, seg.t + 30) - seg.t) * (a.over ?? 0.75)), p = a.to ? smooth(clamp((t - seg.t - (a.wait ?? 0)) / span)) : 0, moving = !!a.to && p > 0.01 && p < 0.99;
+        return { ...body, ...(a.arms === false ? { armL: null, armR: null } : {}), x: lerp(a.x, to.x ?? a.x, p), y: lerp(a.y, to.y ?? a.y, p), size: lerp(a.size, to.size ?? a.size, p), flip: !!a.flip, hop: moving ? Math.abs(Math.sin(t * 10)) : 0, lean: moving ? 4 : 0 }; })() : null,
       board: insert && seg.kind === "board" ? { spec: seg.board, step: seg.step || 0, age: t - (seg.stepT ?? seg.t), total: t - seg.cutT } : null,
       tv: seg.slide, onair: Math.floor(tv * 0.8) % 2 ? 1 : 0.55, drone, insert: ins, fact, meme, chip, ...caption(i) });
   }

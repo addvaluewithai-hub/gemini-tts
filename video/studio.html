@@ -19,6 +19,7 @@
 #frame.solo #tv,#frame.solo #lurk,#frame.solo #tvglow{display:none!important}
 #frame.solo:not(.explain) #peek{display:none!important}
 #board{inset:0}#board>svg{display:block}
+#actor{transform-origin:50% 84%;filter:drop-shadow(0 10px 14px rgba(20,24,46,.25))}#actor svg{display:block}
 #frame.solo #host{left:510px}
 #frame.solo #win{left:0;top:0;width:1920px;height:1080px;border-radius:0;box-shadow:none}
 #frame.solo #winbar{display:none}
@@ -120,6 +121,22 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
 #cap .off{color:#c9d0ee;opacity:.55}#cap .now{color:#FFE66D}
 #vig{inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 52%,rgba(0,0,0,.55) 100%);pointer-events:none}
 #flash{inset:0;background:#fff}
+/* A theme (boards.js THEMES, chosen by the storyboard's "theme") sets the variables below on #frame and adds the class "themed";
+   without one none of these rules apply and the set is as it always was. */
+#frame.themed{background:var(--bg)}
+#frame.themed #insert{background:var(--insert)}
+#frame.themed #grid{background-image:linear-gradient(var(--grid) 2px,transparent 2px),linear-gradient(90deg,var(--grid) 2px,transparent 2px)}
+#frame.themed #w0 stop:nth-child(1){stop-color:var(--wall0)}#frame.themed #w0 stop:nth-child(2){stop-color:var(--wall1)}#frame.themed #w0 stop:nth-child(3){stop-color:var(--wall2)}
+#frame.themed #wall>ellipse{opacity:var(--glow)}
+#frame.themed #d0 stop:nth-child(1){stop-color:var(--desk0)}#frame.themed #d0 stop:nth-child(2){stop-color:var(--desk1)}
+#frame.themed #d1 stop:nth-child(1){stop-color:var(--front0)}#frame.themed #d1 stop:nth-child(2){stop-color:var(--front1)}#frame.themed #d1 stop:nth-child(3){stop-color:var(--front2)}
+#frame.themed #desklogo{fill:var(--logo)}#frame.themed #desktag{fill:var(--tag)}#frame.themed #wall rect[fill="#2c3268"]{fill:var(--shelf)}
+#frame.themed #pipdesk{background:var(--pipdesk)}
+#frame.themed #chipt,#frame.themed #chipi{background:var(--chipBg);color:var(--chipInk)}#frame.themed #chips{background:var(--chipBg);color:var(--chipSub)}
+#frame.themed #brand{color:var(--brand);text-shadow:var(--brandShadow)}#frame.themed #brand span{color:var(--brandSub)}
+#frame.themed #vig{background:var(--vig)}
+/* the chip's picture, when a story names an icon */
+#chipi{display:none;background:rgba(5,6,13,.82);padding:0 2px 0 12px;align-items:center}#chipi svg{display:block}
 </style></head><body>
 <div id="frame">
  <div id="world">
@@ -209,19 +226,20 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
    <div id="view"><div id="pan"><div class="textcard" id="viewcard"><div class="who"></div><div class="what"></div><div class="when"></div></div><div id="mark"></div></div></div></div>
  </div>
  <div id="board"></div>
+ <div id="actor"></div>
  <div id="peek"></div>
  <div id="pip"></div><div id="pipdesk"></div>
  <div id="fact"><svg id="factchart" viewBox="0 0 820 420"><path id="fcline" fill="none" stroke="#ff4654" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity=".85"/><path id="fchead" fill="#ff4654" opacity=".85"/></svg><div id="factbig"></div><div id="factsmall"></div></div>
  <div id="meme"></div>
  <div id="lbT"></div><div id="lbB"></div>
- <div id="chip"><div><span id="chipn"></span><span id="chipt"></span></div><span id="chips"></span></div>
+ <div id="chip"><div><span id="chipn"></span><span id="chipi"></span><span id="chipt"></span></div><span id="chips"></span></div>
  <div id="brand"><b id="brandname" style="font-weight:400">TECH<i>FOR</i>BADGUYS</b><span id="branddate"></span></div>
  <div id="cap"></div>
  <div id="vig"></div><div id="flash"></div>
 </div>
 <script type="module">
 import { peek3d } from "/characters/peek3d.js";
-import { board } from "/boards.js";
+import { board, icon, useTheme } from "/boards.js";
 import { EMOTES, GESTURES } from "/characters/acting.js";
 const $ = (id) => document.getElementById(id);
 const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;");
@@ -238,6 +256,10 @@ window.setup = async (config) => {
     $("desklogo").innerHTML = `${esc(a)} <tspan fill="#ff4fa3">${esc(b)}</tspan> ${esc(c)}`; $("desktag").textContent = tagline;
     $("brandname").innerHTML = `${esc(a)}${sp}<i>${esc(b)}</i>${sp}${esc(c)}`;
     if (arabic) { for (const id of ["desklogo", "desktag"]) $(id).setAttribute("letter-spacing", "0"); $("desktag").setAttribute("font-size", "30"); $("brand").style.letterSpacing = "0"; $("brandname").style.fontSize = "38px"; }
+  }
+  if (config.theme) {           // a theme from boards.js: its palette for the boards and icons, its studio variables for the set
+    const th = useTheme(config.theme); $("frame").classList.add("themed");
+    for (const [k, v] of Object.entries(th.studio || {})) $("frame").style.setProperty("--" + k, v);
   }
   $("tvdate").textContent = config.date || ""; $("branddate").textContent = config.date || "";
   const jobs = [];
@@ -326,6 +348,8 @@ window.draw = (st) => {
   const bd = st.board; show($("board"), !!bd); if (bd) $("board").innerHTML = board(bd.spec, bd.step, bd.age, bd.total, cfg);
   if (bd && cfg.vertical) { const k = cfg.boardZoom || 0.68, e = Math.min(1, (st.insert ? st.insert.enter : 1) * 3), p = 1 + 0.06 * (1 - e);   // the board as a card at the top
     $("board").style.transform = `translate(${540 - 960 * k * p}px,${250 + (1 - e) * 30}px) scale(${k * p})`; $("board").style.opacity = e; }
+  { const ac = st.actor, el = $("actor"); person(el, ac, ac ? Math.round(ac.size) : 0, "a3");                  // the host inside a set: feet at (x, y)
+    if (ac) { el.style.left = ac.x - ac.size / 2 + "px"; el.style.top = ac.y - ac.size * 0.845 - ac.hop * ac.size * 0.035 + "px"; el.style.transform = `${ac.flip ? "scaleX(-1) " : ""}rotate(${ac.lean}deg)`; } }
   person($("peek"), st.peek, 640, "r3");
   if (st.peek && st.peek.side) { const right = st.peek.side === "right", a = st.peek.amt;       // leaning in from the edge of the frame
     $("peek").style.top = "520px"; $("peek").style.left = (right ? 1920 - 430 * a : -640 + 430 * a) + "px"; $("peek").style.transform = `rotate(${right ? -15 : 15}deg)`; }
@@ -341,7 +365,8 @@ window.draw = (st) => {
   else if (lastMeme) { $("meme").innerHTML = ""; lastMeme = ""; }
   $("lbT").style.height = $("lbB").style.height = st.lb + "px";
   const ch = st.chip; show($("chip"), !!ch, "flex");
-  if (ch) { $("chipn").textContent = String(ch.n).padStart(2, "0"); $("chipt").textContent = ch.tag; $("chips").textContent = ch.src || ""; show($("chips"), !!ch.src); $("chip").style.opacity = ch.a; $("chip").style.transform = `translate(${(1 - ch.a) * -40}px,${st.lb}px) scale(${ch.pop})`;
+  if (ch) { if ((ch.icon || "") !== $("chipi").dataset.icon) { $("chipi").dataset.icon = ch.icon || ""; $("chipi").innerHTML = ch.icon ? `<svg viewBox="-115 -115 230 230" width="50" height="50">${icon(ch.icon)}</svg>` : ""; show($("chipi"), !!ch.icon, "flex"); }
+    $("chipn").textContent = String(ch.n).padStart(2, "0"); $("chipt").textContent = ch.tag; $("chips").textContent = ch.src || ""; show($("chips"), !!ch.src); $("chip").style.opacity = ch.a; $("chip").style.transform = `translate(${(1 - ch.a) * -40}px,${st.lb}px) scale(${ch.pop})`;
     $("chip").style.top = ch.low ? "auto" : cfg.layout === "short" ? "150px" : "48px"; $("chip").style.bottom = ch.low ? "40px" : "auto"; $("chip").style.transformOrigin = ch.low ? "0 100%" : "0 0"; }
   $("brand").style.opacity = st.brand; $("brand").style.transform = `translateY(${st.lb}px)`;
   // In a right-to-left caption, neighbouring Latin words (a person's name) are kept together left to right.

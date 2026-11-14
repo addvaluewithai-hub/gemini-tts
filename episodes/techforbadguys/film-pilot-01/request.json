@@ -1,0 +1,42 @@
+{
+ "turns": [
+  {
+   "style": "A small alien spy hiding a few steps from the humans he is watching, reporting live to his commanders in a low, quick, conspiratorial half-whisper, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry and deadpan; he never laughs. Each line is short and lands clearly. He has just spotted something. Hushed, alert.",
+   "text": "يا فندم.. علي هيدفع لمنى."
+  },
+  {
+   "style": "A small alien spy hiding a few steps from the humans he is watching, reporting live to his commanders in a low, quick, conspiratorial half-whisper, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry and deadpan; he never laughs. Each line is short and lands clearly. Annoyed aside, still hushed.",
+   "text": "بس عندهم واحد.. لازم يقف في النص."
+  },
+  {
+   "style": "A small alien spy hiding a few steps from the humans he is watching, reporting live to his commanders in a low, quick, conspiratorial half-whisper, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry and deadpan; he never laughs. Each line is short and lands clearly. Disbelief, slow and flat.",
+   "text": "ولا حاجة اتحركت. مسح رقم.. وكتب رقم."
+  },
+  {
+   "style": "A small alien spy hiding a few steps from the humans he is watching, reporting live to his commanders in a low, quick, conspiratorial half-whisper, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry and deadpan; he never laughs. Each line is short and lands clearly. The conclusion, dry, a little louder.",
+   "text": "الفلوس عندهم.. أرقام في دفتر."
+  },
+  {
+   "style": "A small alien spy hiding a few steps from the humans he is watching, reporting live to his commanders in a low, quick, conspiratorial half-whisper, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry and deadpan; he never laughs. Each line is short and lands clearly. Final line, ominous and amused.",
+   "text": "واللي ماسك الدفتر.. ماسك الكل."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "ar-EG"
+  ],
+  "write_vtt": true
+ },
+ "metadata": {
+  "channel": "techforbadguys",
+  "title": "Film pilot 01: the coin that never moves",
+  "language": "ar-EG",
+  "recorded_for": "2026-11-14",
+  "script": "episodes/techforbadguys/film-pilot-01/README.md"
+ }
+}

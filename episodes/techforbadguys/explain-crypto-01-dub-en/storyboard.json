@@ -1,0 +1,947 @@
+{
+ "title": "Earth Report: Cryptocurrency 1 (English dub track for the Arabic video)",
+ "recorded_for": "2026-11-13",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "English voice written to fit the timing of explain-crypto-01-world beat by beat (see video/dub.cjs). Adapted from the English version on the branch english-explainers, with 33 lines shortened to fit their slots. Only the audio is used; the picture is the Arabic video's.",
+  "Earth Report field file: Cryptocurrency, part 1 of 5, English version. Adapted from `../explain-crypto-01-ar`, not translated: same facts, same order of ideas, same boards, but the lines and the jokes are written for English speakers (Alice, Bob and Carol instead of Arabic names; the queue becomes cutting in line at the coffee shop; the drink-less pizza becomes 'not even deep dish'; the Halloween date of the paper and the hold music are new jokes in place of Egyptian ones). Why humans invented money without a bank: what money is, the bank as a ledger, the double-spend problem, 2008, the Bitcoin paper, the first block, the pizza, and Satoshi's exit.",
+  "",
+  "The picture carries the lesson: motion-graphics boards drawn in code (boards.js), laid out left to right because the storyboard says rtl false. The host appears in a few studio shots and leans in from the side now and then.",
+  "",
+  "Facts are the Arabic episode's, historical and stated from general knowledge: Zimbabwe issued a 100 trillion dollar note in 2009; in the 2013 Cyprus bail-in banks were shut for about twelve days and uninsured deposits over 100,000 euros at Bank of Cyprus were cut by 47.5 percent; Lebanese banks have restricted withdrawals of dollar deposits since 2019; the nine banks that took US rescue money paid 32.6 billion dollars in bonuses for 2008 (New York Attorney General report, 2009); gold convertibility of the dollar ended in 1971; DigiCash (David Chaum) went bankrupt in 1998; Lehman Brothers, founded 1850, failed on 15 September 2008; the US rescue programme was 700 billion dollars; the Bitcoin paper is nine pages, dated 31 October 2008; the first block is dated 3 January 2009 and carries The Times headline; the first transfer was 10 BTC to Hal Finney on 12 January 2009; the first recorded rate was about 1,309 BTC to the dollar; the pizza purchase was 10,000 BTC on 22 May 2010, about 41 dollars then; bitcoin first reached one dollar in February 2011; Satoshi's last known email is from April 2011 ('I've moved on to other things'); more than a billion adults have no bank account (World Bank Global Findex); the estimate of about one million untouched coins is researchers' estimate, not a certainty. 'Crypto' is from the Greek kryptos, hidden. No current prices are quoted. It says plainly that it is not investment advice."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan bureaucrat. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Higher-pitched, light and bright voice, slightly nasal, never deep or gravelly. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.55,
+  "voiceGain": 1.35
+ },
+ "ending": {
+  "card": {
+   "title": "NEXT REPORT",
+   "next": "The ledger that guards itself · Part 2 of 5",
+   "note": "Subscribe so the rest of the file reaches you"
+  }
+ },
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "boards": {
+  "title": {
+   "kind": "titlecard",
+   "kicker": "EARTH REPORT · FIELD FILE",
+   "title": "CRYPTOCURRENCY",
+   "sub": "PART 1 OF 5 · MONEY WITHOUT A BANK"
+  },
+  "pizza": {
+   "kind": "counter",
+   "to": 10000,
+   "unit": "BTC",
+   "icon": "pizza",
+   "count": 2,
+   "now": "RECENT YEARS: HUNDREDS OF MILLIONS"
+  },
+  "evo": {
+   "kind": "steps",
+   "title": "HOW MONEY CHANGED",
+   "items": [
+    {
+     "icon": "fish",
+     "label": "Barter",
+     "sub": "a fish for bread"
+    },
+    {
+     "icon": "gold",
+     "label": "Gold",
+     "sub": "rare, never rusts"
+    },
+    {
+     "icon": "cash",
+     "label": "Paper",
+     "sub": "a receipt for gold"
+    },
+    {
+     "icon": "phone",
+     "label": "Numbers",
+     "sub": "on a screen"
+    }
+   ]
+  },
+  "jobs": {
+   "kind": "steps",
+   "title": "MONEY HAS THREE JOBS",
+   "items": [
+    {
+     "icon": "cash",
+     "label": "Pay with it",
+     "sub": "medium of exchange"
+    },
+    {
+     "icon": "tag",
+     "label": "Price with it",
+     "sub": "unit of account"
+    },
+    {
+     "icon": "safe",
+     "label": "Save it",
+     "sub": "store of value"
+    }
+   ]
+  },
+  "zim": {
+   "kind": "story",
+   "title": "WHOEVER RUNS THE PRESS",
+   "icon": "cash",
+   "name": "one note",
+   "size": 56,
+   "lines": [
+    "Zimbabwe · 2009",
+    "$100,000,000,000,000",
+    "Not enough for a bus ticket"
+   ]
+  },
+  "frozen": {
+   "kind": "story",
+   "title": "WHOEVER HOLDS THE LEDGER",
+   "icon": "bank",
+   "name": "closed",
+   "size": 56,
+   "lines": [
+    "Cyprus 2013: banks shut",
+    "Over €100,000: half gone",
+    "Lebanon 2019: dollars stuck"
+   ]
+  },
+  "dict": {
+   "kind": "dict",
+   "title": "THE HUMAN DICTIONARY",
+   "items": [
+    {
+     "word": "Crypto",
+     "means": "From the Greek for hidden. They mean the science of codes"
+    },
+    {
+     "word": "Peer-to-peer",
+     "means": "From one person to another. Nobody in the middle"
+    }
+   ]
+  },
+  "led": {
+   "kind": "ledger",
+   "title": "THE BANK'S LEDGER",
+   "rows": [
+    {
+     "name": "Alice",
+     "amount": 100
+    },
+    {
+     "name": "Bob",
+     "amount": 50
+    },
+    {
+     "name": "Carol",
+     "amount": 20
+    }
+   ],
+   "ops": [
+    {
+     "from": 0,
+     "to": 1,
+     "amount": 30
+    }
+   ]
+  },
+  "mid": {
+   "kind": "flow",
+   "title": "EVERY TRANSFER HAS A MIDDLEMAN",
+   "actors": [
+    {
+     "icon": "person",
+     "label": "Alice"
+    },
+    {
+     "icon": "bank",
+     "label": "The bank",
+     "big": true
+    },
+    {
+     "icon": "person",
+     "label": "Bob",
+     "args": [
+      "#ff4fa3"
+     ]
+    }
+   ],
+   "sequence": [
+    {
+     "move": [
+      0,
+      1
+     ]
+    },
+    {
+     "move": [
+      1,
+      2
+     ],
+     "label": "minus the fee"
+    },
+    {
+     "badges": [
+      "FEES",
+      "DELAYS",
+      "FREEZES",
+      "COLLAPSE"
+     ],
+     "at": 1
+    }
+   ]
+  },
+  "dbl": {
+   "kind": "copy",
+   "title": "ANYTHING DIGITAL CAN BE COPIED",
+   "file": "100",
+   "name": "money.jpg",
+   "me": "Alice",
+   "a": "Bob",
+   "b": "Carol",
+   "warn": "DOUBLE SPENDING"
+  },
+  "tries": {
+   "kind": "steps",
+   "title": "PEOPLE TRIED BEFORE",
+   "items": [
+    {
+     "icon": "node",
+     "label": "Cypherpunks",
+     "sub": "1990s: money nobody watches"
+    },
+    {
+     "icon": "coin",
+     "label": "DigiCash",
+     "sub": "bankrupt in 1998",
+     "args": [
+      "#9fb0ff",
+      "D"
+     ]
+    }
+   ]
+  },
+  "crash": {
+   "kind": "chart",
+   "title": "2008",
+   "points": [
+    92,
+    96,
+    90,
+    94,
+    82,
+    86,
+    70,
+    74,
+    52,
+    56,
+    34,
+    38,
+    20
+   ],
+   "stamp": "BAILOUT",
+   "draw": 3.2
+  },
+  "paper": {
+   "kind": "doc",
+   "title": "Bitcoin: A Peer-to-Peer|Electronic Cash System",
+   "author": "Satoshi Nakamoto",
+   "date": "31 OCT 2008",
+   "who": "Who is this?"
+  },
+  "net": {
+   "kind": "network",
+   "title": "ONE LEDGER. EVERYONE HAS IT.",
+   "n": 34,
+   "cheat": 11
+  },
+  "gen": {
+   "kind": "block",
+   "title": "THE FIRST PAGE OF THE LEDGER",
+   "label": "BLOCK 0",
+   "date": "03 JAN 2009",
+   "message": "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+  },
+  "pizza2": {
+   "kind": "counter",
+   "title": "MAY 22, 2010",
+   "to": 10000,
+   "unit": "BTC",
+   "icon": "pizza",
+   "count": 2,
+   "now": "BACK THEN: ABOUT $41"
+  },
+  "sat": {
+   "kind": "person",
+   "title": "",
+   "name": "Satoshi Nakamoto",
+   "quote": "I've moved on|to other things.",
+   "stat": "≈ 1,000,000 BTC",
+   "statSub": "never moved since"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a ridiculous fact.",
+   "beats": [
+    {
+     "say": "Sir. A new field report from planet Earth.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: cryptocurrency. Money the humans invented without a bank. And without paper.",
+     "show": "board",
+     "board": "title"
+    },
+    {
+     "say": "I will tell you what it is, where it came from, and who made it. <short pause> And how one of them paid for two pizzas with what is now worth hundreds of millions of dollars.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "The year 2010. Ten thousand bitcoin...",
+     "show": "board",
+     "board": "pizza"
+    },
+    {
+     "say": "for two pizzas.",
+     "show": "board",
+     "board": "pizza"
+    },
+    {
+     "say": "At the prices of recent years, that comes to hundreds of millions of dollars.",
+     "show": "board",
+     "board": "pizza",
+     "host": "right"
+    },
+    {
+     "say": "The most expensive dinner on the planet. <short pause> And not even deep dish.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "But for Command to understand any of this, I have to start with the first thing I studied here: money itself.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "money",
+   "story": {
+    "n": 1,
+    "tag": "WHAT IS MONEY?"
+   },
+   "style": "Patient teacher explaining to beings who have never seen money, with dry asides.",
+   "beats": [
+    {
+     "say": "I checked their history. Long ago they swapped things. A fish for a loaf of bread.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "The problem: if the baker wants no fish today, you go hungry. Holding a fish.",
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "So they tried other things everybody would take. Salt. Shells. And on one island, stones as big as a car. <short pause> Imagine asking for change.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "They settled on gold: rare, never rots, hard to fake.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "But gold is heavy. So they left it with someone trusted and took a receipt. The receipt started changing hands: paper money.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "Then the trusted man discovered he could lend your gold to someone else while you were not looking. <short pause> And that, sir, is how the bank was born.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "In 1971 the dollar was cut loose from gold. The paper stood on its own.",
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "And whoever runs the printing press can print as much as they like. In Zimbabwe,",
+     "show": "board",
+     "board": "zim"
+    },
+    {
+     "say": "they printed a single note for one hundred trillion dollars.",
+     "show": "board",
+     "board": "zim"
+    },
+    {
+     "say": "It would not buy a bus ticket.",
+     "show": "board",
+     "board": "zim",
+     "host": "right"
+    },
+    {
+     "say": "So money's value comes from one thing: everyone believes in it. <short pause> A group agreement. Like a line at the coffee shop. It works until somebody cuts.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "And today most of their money is not even paper. It is numbers on a screen.",
+     "show": "board",
+     "board": "evo"
+    },
+    {
+     "say": "Most money on this planet has no physical form. Entries in tables. <short pause> And they are perfectly comfortable with that.",
+     "show": "board",
+     "board": "evo",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "I also recorded that their money has three jobs. You pay with it.",
+     "show": "board",
+     "board": "jobs"
+    },
+    {
+     "say": "You price things with it.",
+     "show": "board",
+     "board": "jobs"
+    },
+    {
+     "say": "And you save it for tomorrow. <short pause> Keep those three in the file, sir. We will need them later.",
+     "show": "board",
+     "board": "jobs",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "story": {
+    "n": 2,
+    "tag": "THE BANK IS A LEDGER"
+   },
+   "style": "Clear and slightly conspiratorial, like revealing how a magic trick works.",
+   "beats": [
+    {
+     "say": "I traced those numbers to where they actually live: in a ledger. Kept by an entity called the bank.",
+     "show": "board",
+     "board": "led"
+    },
+    {
+     "say": "When Alice pays Bob thirty dollars, nothing moves. The bank erases a number here, writes one there.",
+     "show": "board",
+     "board": "led"
+    },
+    {
+     "say": "Your salary: a number. Your rent: a number. You have never actually seen this money.",
+     "show": "board",
+     "board": "led",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "Every bank keeps its own ledger. So every night they check each other's. Because none of them trusts the others.",
+     "show": "board",
+     "board": "led",
+     "step": "hold",
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "So a bank is not a vault full of money. A bank is a ledger. <short pause> And whoever holds the ledger holds everything.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "middle",
+   "story": {
+    "n": 3,
+    "tag": "THE MIDDLEMAN"
+   },
+   "style": "Brisk, listing problems with mounting disbelief.",
+   "beats": [
+    {
+     "say": "I followed one transfer from start to finish. Every cent that moves between two humans has to pass through a third party.",
+     "show": "board",
+     "board": "mid"
+    },
+    {
+     "say": "Alice sends. The bank checks.",
+     "show": "board",
+     "board": "mid"
+    },
+    {
+     "say": "Then Bob receives it. Minus the fee.",
+     "show": "board",
+     "board": "mid"
+    },
+    {
+     "say": "The ledger holder can charge a fee, delay you, freeze your account, or go bankrupt with your money.",
+     "show": "board",
+     "board": "mid",
+     "host": "right"
+    },
+    {
+     "say": "This is not a theory. On the island of Cyprus, in 2013, people woke up to find the banks closed.",
+     "show": "board",
+     "board": "frozen"
+    },
+    {
+     "say": "Anyone with over a hundred thousand euros in the biggest bank lost almost half the excess. To rescue the bank.",
+     "show": "board",
+     "board": "frozen"
+    },
+    {
+     "say": "In Lebanon, since 2019, banks have locked up people's dollars. <short pause> Years later, they are still asking.",
+     "show": "board",
+     "board": "frozen",
+     "host": "right",
+     "calm": true
+    },
+    {
+     "say": "Their messages cross the planet in a second. A bank transfer can take three days. <short pause> Both are just numbers, sir.",
+     "show": "board",
+     "board": "frozen",
+     "step": "hold",
+     "host": "left",
+     "emote": "deadpan"
+    },
+    {
+     "say": "And over a billion adults here have no bank account. <short pause> No line in the ledger. As far as the system is concerned, they do not exist.",
+     "shot": "close",
+     "emote": "annoyed",
+     "calm": true
+    }
+   ]
+  },
+  {
+   "id": "copy",
+   "story": {
+    "n": 4,
+    "tag": "THE COPY PROBLEM"
+   },
+   "style": "Curious, then the catch.",
+   "beats": [
+    {
+     "say": "So I asked the obvious question: why not digital money without a bank? A file. You send it, done.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "present"
+    },
+    {
+     "say": "The problem is that anything digital can be copied.",
+     "show": "board",
+     "board": "dbl"
+    },
+    {
+     "say": "A photo, a song, a movie. Copy, paste. Free.",
+     "show": "board",
+     "board": "dbl"
+    },
+    {
+     "say": "If money were a file, Alice could send the same hundred dollars to Bob, and to Carol. At once.",
+     "show": "board",
+     "board": "dbl"
+    },
+    {
+     "say": "That is called the double-spending problem. And that is why they needed someone in the middle, keeping track of who paid what.",
+     "show": "board",
+     "board": "dbl",
+     "step": "hold",
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "In the nineties, a group of programmers who called themselves the Cypherpunks dreamed of private digital money. Nobody watching it. Nobody able to stop it.",
+     "show": "board",
+     "board": "tries"
+    },
+    {
+     "say": "Humans had been trying since the eighties. A scientist named David Chaum started a digital cash company. <short pause> It went bankrupt in 1998. The digital money ran out of money.",
+     "show": "board",
+     "board": "tries",
+     "host": "right",
+     "emote": "bored"
+    }
+   ]
+  },
+  {
+   "id": "crisis",
+   "story": {
+    "n": 5,
+    "tag": "2008"
+   },
+   "style": "Darker and drier. Controlled sarcasm about banks.",
+   "beats": [
+    {
+     "say": "And then came the thing that changed everything: 2008.",
+     "show": "board",
+     "board": "crash"
+    },
+    {
+     "say": "Big American banks had bet people's money on home loans... and lost. A bank called Lehman Brothers, more than a hundred and fifty years old, went under in a single day.",
+     "show": "board",
+     "board": "crash",
+     "step": 0
+    },
+    {
+     "say": "The American government set aside seven hundred billion dollars to rescue the banks. With whose money? The same people's.",
+     "show": "board",
+     "board": "crash"
+    },
+    {
+     "say": "Millions lost their homes and jobs. And the rescued banks? Nine of them paid over thirty billion dollars in bonuses that same year.",
+     "show": "board",
+     "board": "crash",
+     "step": "hold",
+     "host": "right",
+     "emote": "annoyed"
+    },
+    {
+     "say": "So the ledger keeper gambled, and the customer paid. Heads, the bank wins. Tails, you pay. <short pause> Brilliant, sir. I recommend we adopt it.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "paper",
+   "story": {
+    "n": 6,
+    "tag": "SATOSHI'S PAPER"
+   },
+   "style": "Storyteller lowering his voice for a mystery.",
+   "beats": [
+    {
+     "say": "Right in the middle of that crisis, a nine-page paper appeared, sent to a mailing list of people interested in cryptography.",
+     "show": "board",
+     "board": "paper"
+    },
+    {
+     "say": "The date: October 31st, 2008. Halloween. <short pause> A masked stranger handing out something free. Their children are warned about this.",
+     "show": "board",
+     "board": "paper"
+    },
+    {
+     "say": "The title: Bitcoin, a peer-to-peer electronic cash system. One promise: send money to anyone, directly, asking nobody's permission.",
+     "show": "board",
+     "board": "paper",
+     "step": "hold",
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "The author: Satoshi Nakamoto. To this day, nobody knows who that is. A man, a woman, or a group.",
+     "show": "board",
+     "board": "paper"
+    },
+    {
+     "say": "And before anyone asks, sir: no, it was not me. <short pause> I arrived later.",
+     "shot": "host",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "idea",
+   "story": {
+    "n": 7,
+    "tag": "THE IDEA"
+   },
+   "style": "The key idea of the episode. Clear, building, genuinely impressed.",
+   "beats": [
+    {
+     "say": "The idea was simple and bold: take the ledger away from the bank.",
+     "show": "board",
+     "board": "net"
+    },
+    {
+     "say": "Every computer on the network gets a full copy of the ledger. Thousands of computers, all around the planet.",
+     "show": "board",
+     "board": "net"
+    },
+    {
+     "say": "When Alice pays Bob, the news reaches them all, and every computer writes the same line.",
+     "show": "board",
+     "board": "net"
+    },
+    {
+     "say": "And if someone tries to cheat by editing their own copy, everyone else says: no. That is not what we have.",
+     "show": "board",
+     "board": "net",
+     "host": "left"
+    },
+    {
+     "say": "The ledger is also public. Anyone can read it all, from the first line. But the names are not names. They are long strings of letters and numbers. <short pause> Everyone sees everything, and nobody knows who is who. A masked ball, with receipts.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "No manager. No head office. <short pause> And no customer service line keeping you on hold for forty minutes with smooth jazz.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Which also means nobody can freeze your account, or print extra bitcoin to cover a deficit. The rules are written in code, and the code is out in the open.",
+     "show": "board",
+     "board": "net",
+     "step": "hold",
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "This shared ledger is called the blockchain. And how thousands of strangers agree on one copy without trusting each other? That is the subject of the next report.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "genesis",
+   "story": {
+    "n": 8,
+    "tag": "BLOCK ZERO"
+   },
+   "style": "Historian with a smirk.",
+   "beats": [
+    {
+     "say": "January 3rd, 2009. Satoshi switched the network on, and wrote the first page of the ledger: block number zero.",
+     "show": "board",
+     "board": "gen"
+    },
+    {
+     "say": "And inside that block, Satoshi left a message. The front-page headline of The Times of London that day: Chancellor on brink of second bailout for banks.",
+     "show": "board",
+     "board": "gen"
+    },
+    {
+     "say": "So the very first line of money without banks... is a dig at the banks. <short pause> This creature had a sense of humor, sir.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "That block also created fifty brand new bitcoin. Out of thin air. <short pause> But under rules written down from day one, which no single person can change. Quite different from the printing they are used to.",
+     "show": "board",
+     "board": "gen",
+     "step": "hold",
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "Nine days later came the first transfer: ten bitcoin, to a programmer named Hal Finney. The first two people on the network. One of them anonymous.",
+     "show": "board",
+     "board": "gen",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "pizza",
+   "story": {
+    "n": 9,
+    "tag": "PIZZA DAY"
+   },
+   "style": "Enjoying the absurdity. Fast.",
+   "beats": [
+    {
+     "say": "At first, nobody cared. Bitcoin was practically given away. The first exchange rate on record: more than a thousand bitcoin... for one dollar.",
+     "shot": "host",
+     "emote": "bored",
+     "gesture": "shrug"
+    },
+    {
+     "say": "Until May 2010. A programmer named Laszlo posted online: ten thousand bitcoin to whoever gets me two pizzas.",
+     "show": "board",
+     "board": "pizza2"
+    },
+    {
+     "say": "And on May 22nd... somebody did.",
+     "show": "board",
+     "board": "pizza2"
+    },
+    {
+     "say": "It was the first time bitcoin bought something real.",
+     "show": "board",
+     "board": "pizza2",
+     "host": "right"
+    },
+    {
+     "say": "Laszlo later said he has no regrets. <short pause> The pizza was good.",
+     "show": "board",
+     "board": "pizza2",
+     "step": "hold",
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "And the humans still celebrate that day every year. They call it Bitcoin Pizza Day. <short pause> They hold a party for the worst deal in their history. I am starting to like this planet.",
+     "shot": "host",
+     "emote": "grin",
+     "gesture": "cheer"
+    },
+    {
+     "say": "Less than a year later, one bitcoin reached one dollar. A whole dollar. <short pause> And the humans thought that was the top.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "vanish",
+   "story": {
+    "n": 10,
+    "tag": "THE VANISHING"
+   },
+   "style": "Mystery again, then a professional suspicion.",
+   "beats": [
+    {
+     "say": "As for Satoshi: in April 2011 came the last known message.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "I've moved on to other things.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "Then, gone.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "First, Satoshi handed the code to other programmers. No farewell. No press conference. Not even a photo.",
+     "show": "board",
+     "board": "sat",
+     "step": "hold",
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "And left behind about a million bitcoin, by researchers' estimates. As far as the humans can tell, those coins have never moved.",
+     "show": "board",
+     "board": "sat"
+    },
+    {
+     "say": "Invented a new money, became one of the richest beings on the planet, and never spent a cent. <short pause> Not human behavior, sir. I request an investigation. Satoshi may be one of ours.",
+     "shot": "close",
+     "emote": "skeptical"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 11,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "Before the summary, two words from the Human Dictionary. Crypto: from an old Greek word meaning hidden. They mean cryptography, the science of codes. Not that the money is hidden.",
+     "show": "board",
+     "board": "dict"
+    },
+    {
+     "say": "And peer-to-peer: from one person to another. With nobody in the middle. <short pause> And that, sir, is the whole story.",
+     "show": "board",
+     "board": "dict",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 12,
+    "tag": "SUMMARY"
+   },
+   "style": "Summary, then one sincere warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "Summary of the report, sir. One: money is an agreement, written down in a ledger. Two: that ledger was kept by the bank. Three: bitcoin took the ledger... and gave a copy to everyone.",
+     "show": "meme",
+     "meme": {
+      "kind": "list",
+      "title": "REPORT SUMMARY",
+      "items": [
+       "Money is an agreement in a ledger",
+       "The bank kept the ledger",
+       "Bitcoin gave the ledger to everyone"
+      ],
+      "step": 2.3
+     },
+     "host": "pip"
+    },
+    {
+     "say": "An important warning: this explains, it does not advise. These prices swing violently, and many people have lost money.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "Next report: who guards this ledger? What is mining? And who gets to change the rules?",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}

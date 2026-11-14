@@ -455,6 +455,7 @@ so any frame can be rendered alone:
 | `dict` | two words from the humans' vocabulary, one per step: the word and what it means |
 | `fork` | who changes the rules: machines pick a rule book, and when they disagree the chain splits in two |
 | `trace` | coins hop between unnamed addresses until one meets a name; then the whole trail has one |
+| `trail` | "the bank is a ledger" as five full-frame illustrated shots with nothing to read, one per beat (`sets/bank.js`) |
 | `rows` | a list that fills in a row at a time, each with a mark (`flag`, `x`, `check`, `half`), an optional `sub` line and `tag` |
 | `lever` | borrowed money: a small stake under a big bet, and the fall in price that takes all of it |
 | `versus` | two camps side by side, one per step |
@@ -468,6 +469,14 @@ so any frame can be rendered alone:
 | `packets` | a message cut into numbered packets, each by its own path, put back in order; one can be lost (`lose`) |
 | `pixels` | a picture as a grid of coloured squares, a close look at their numbers, then only what changed |
 | `budget` | where the milliseconds go: a bar that grows a part at a time against a "natural" and a "limit" line |
+| `cover` | a title card in pictures: the coin, and the two things it does without (`left`, `right`) struck through; `title`, `sub` |
+| `money` | where money came from, a scene per step: fish for bread, no deal, salt/shell/stone, gold, the safe and its receipt, `year` the note is cut loose, numbers on a screen |
+| `inflation` | a printing press piling up notes, one note with all its zeros (`note`), a wheelbarrow of them = one bus ticket |
+| `bankrun` | `a`: shutters come down on a bank; savings above `cut` sliced by `share`; `b`: doors chained while the years go by; a message in `fast`, a payment on a snail in `slow` |
+| `jobs` | the three jobs of money as three actions: pay (note over, loaf back), price (a tag on bread), save (a coin in a jar, still there days later); optional `labels` |
+| `glossary` | a word per step in big Latin letters, an optional `root`, and a small scene for its meaning (`pic`: `hidden` or `p2p`) |
+| `recap` | three pictures that come in at `at` seconds: the ledger between two people, kept by a bank, copied to everyone |
+| `endnext` | the closing frame without a sentence: `title`, `next` and `icons` for what the next report is about, with room for end-screen elements |
 
 In a storyboard, boards are named once under `boards` and used by beats:
 
@@ -486,6 +495,19 @@ small in the corner); without it he is only heard. `ending.card` closes the
 episode on an end card, and `tail` sets how long it holds.
 `cues/explain-crypto-01-ar.json` is the first episode made this way.
 
+### Themes
+
+`"theme": "day"` at the top of a storyboard draws the episode on a light set: the boards take the theme's palette
+and the studio (wall, desk, chip, brand, the backdrop behind the boards) takes its colours. Themes live in
+`THEMES` in `boards.js`: the colours the boards use, a `text` map that turns a bright fill (yellow, cyan, green)
+into a darker ink when it is used for text on a light ground, and `studio`, CSS variables that `studio.html`
+applies under `#frame.themed`. Without a theme nothing changes. A new theme is one more entry there; a storyboard
+can also pass an object of colours instead of a name.
+
+For a picture that has to work in every audio language (`explain-crypto-01-world`): a story's chip can carry an
+`icon` (`"story": { "n": 1, "tag": "MONEY", "icon": "cash" }`), a `ledger` row a `color` instead of a name, and
+`ending.card` a `kind` of its own (`endnext`).
+
 ### Taking out the dead air
 
 The voice comes back with a pause after every turn and many small ones in
@@ -502,6 +524,17 @@ Run it before `storyboard.cjs cues`, so the beats are placed on the tightened
 audio. `tempo` in the storyboard's settings then speeds the result up without
 changing its pitch. On the first crypto file this removed 55 seconds of
 silence from eight minutes.
+
+
+### Illustrated sets
+
+A set is a board that carries a line with the picture alone: no caption, no labels, no people. It lives in
+`sets/` and is built with `sets/kit.js`: one camera per shot with layers at different depths (`camAt`, `layer`),
+solid shapes with one shade step and hard-ring glow (`two`, `disc`, `rings`), arrivals with weight (`spring`),
+lines that draw themselves (`drawn`), and a hand-over from one shot to the next through a shape both share
+(`through`) instead of a fade. Actions are timed to the words of the beat. The host is not in a set: give the beat
+`"host": "left"` or `"right"` and keep the lower corner on that side clear. To check a set, ask of every shot:
+would someone who cannot hear the voice still get the line?
 
 ## Upload kit
 

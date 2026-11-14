@@ -1,0 +1,1251 @@
+1
+00:00:00,472 --> 00:00:00,854
+Sir.
+
+2
+00:00:00,894 --> 00:00:02,798
+A new field report from planet Earth.
+
+3
+00:00:02,838 --> 00:00:03,645
+Today's subject:
+
+4
+00:00:03,685 --> 00:00:04,664
+cryptocurrency.
+
+5
+00:00:04,704 --> 00:00:06,453
+Money the humans invented without a bank.
+
+6
+00:00:06,493 --> 00:00:07,492
+And without paper.
+
+7
+00:00:07,532 --> 00:00:08,928
+I will tell you what it is, where
+
+8
+00:00:08,968 --> 00:00:10,408
+it came from, and who made it.
+
+9
+00:00:10,448 --> 00:00:11,754
+And how one of them paid for two
+
+10
+00:00:11,794 --> 00:00:13,548
+pizzas with what is now worth hundreds of
+
+11
+00:00:13,588 --> 00:00:14,656
+millions of dollars.
+
+12
+00:00:14,696 --> 00:00:15,664
+The year 2010.
+
+13
+00:00:15,704 --> 00:00:16,928
+Ten thousand bitcoin...
+
+14
+00:00:16,968 --> 00:00:18,371
+for two pizzas.
+
+15
+00:00:18,468 --> 00:00:19,810
+At the prices of recent years, that comes
+
+16
+00:00:19,850 --> 00:00:21,352
+to hundreds of millions of dollars.
+
+17
+00:00:21,392 --> 00:00:22,852
+The most expensive dinner on the planet.
+
+18
+00:00:22,892 --> 00:00:24,182
+And not even deep dish.
+
+19
+00:00:24,222 --> 00:00:25,883
+But for Command to understand any of this,
+
+20
+00:00:25,923 --> 00:00:26,811
+I have to start with the first thing
+
+21
+00:00:26,851 --> 00:00:27,584
+I studied here:
+
+22
+00:00:27,624 --> 00:00:28,423
+money itself.
+
+23
+00:00:28,463 --> 00:00:29,518
+I checked their history.
+
+24
+00:00:29,558 --> 00:00:31,011
+Long ago they swapped things.
+
+25
+00:00:31,051 --> 00:00:32,177
+A fish for a loaf of bread.
+
+26
+00:00:32,217 --> 00:00:32,796
+The problem:
+
+27
+00:00:32,836 --> 00:00:34,419
+if the baker wants no fish today, you
+
+28
+00:00:34,459 --> 00:00:34,922
+go hungry.
+
+29
+00:00:34,962 --> 00:00:35,601
+Holding a fish.
+
+30
+00:00:35,641 --> 00:00:37,483
+So they tried other things everybody would take.
+
+31
+00:00:37,523 --> 00:00:37,999
+Salt.
+
+32
+00:00:38,039 --> 00:00:38,557
+Shells.
+
+33
+00:00:38,597 --> 00:00:40,190
+And on one island, stones as big as
+
+34
+00:00:40,230 --> 00:00:40,723
+a car.
+
+35
+00:00:40,763 --> 00:00:41,930
+Imagine asking for change.
+
+36
+00:00:41,970 --> 00:00:43,293
+They settled on gold:
+
+37
+00:00:43,333 --> 00:00:45,470
+rare, never rots, hard to fake.
+
+38
+00:00:46,283 --> 00:00:47,363
+But gold is heavy.
+
+39
+00:00:47,403 --> 00:00:49,185
+So they left it with someone trusted and
+
+40
+00:00:49,225 --> 00:00:49,941
+took a receipt.
+
+41
+00:00:49,981 --> 00:00:51,390
+The receipt started changing hands:
+
+42
+00:00:51,430 --> 00:00:52,135
+paper money.
+
+43
+00:00:52,175 --> 00:00:54,079
+Then the trusted man discovered he could lend
+
+44
+00:00:54,119 --> 00:00:55,493
+your gold to someone else while you were
+
+45
+00:00:55,533 --> 00:00:56,111
+not looking.
+
+46
+00:00:56,151 --> 00:00:57,437
+And that, sir, is how the bank was
+
+47
+00:00:57,477 --> 00:00:57,913
+born.
+
+48
+00:00:57,953 --> 00:01:00,307
+In 1971 the dollar was cut loose from
+
+49
+00:01:00,347 --> 00:01:00,825
+gold.
+
+50
+00:01:00,865 --> 00:01:01,995
+The paper stood on its own.
+
+51
+00:01:02,035 --> 00:01:03,882
+And whoever runs the printing press can print
+
+52
+00:01:03,922 --> 00:01:05,130
+as much as they like.
+
+53
+00:01:05,170 --> 00:01:07,069
+In Zimbabwe, they printed a single note for
+
+54
+00:01:07,109 --> 00:01:08,727
+one hundred trillion dollars.
+
+55
+00:01:08,767 --> 00:01:10,250
+It would not buy a bus ticket.
+
+56
+00:01:10,290 --> 00:01:12,288
+So money's value comes from one thing:
+
+57
+00:01:12,328 --> 00:01:13,676
+everyone believes in it.
+
+58
+00:01:13,716 --> 00:01:14,642
+A group agreement.
+
+59
+00:01:14,682 --> 00:01:16,001
+Like a line at the coffee shop.
+
+60
+00:01:16,041 --> 00:01:17,619
+It works until somebody cuts.
+
+61
+00:01:17,659 --> 00:01:19,121
+And today most of their money is not
+
+62
+00:01:19,161 --> 00:01:19,819
+even paper.
+
+63
+00:01:19,859 --> 00:01:21,166
+It is numbers on a screen.
+
+64
+00:01:21,206 --> 00:01:22,796
+Most money on this planet has no physical
+
+65
+00:01:22,836 --> 00:01:23,228
+form.
+
+66
+00:01:23,268 --> 00:01:24,189
+Entries in tables.
+
+67
+00:01:24,229 --> 00:01:25,543
+And they are perfectly comfortable with that.
+
+68
+00:01:25,583 --> 00:01:27,269
+I also recorded that their money has three
+
+69
+00:01:27,309 --> 00:01:27,940
+jobs.
+
+70
+00:01:27,980 --> 00:01:28,647
+You pay with it.
+
+71
+00:01:28,687 --> 00:01:29,747
+You price things with it.
+
+72
+00:01:29,787 --> 00:01:31,020
+And you save it for tomorrow.
+
+73
+00:01:31,060 --> 00:01:32,210
+Keep those three in the file, sir.
+
+74
+00:01:32,250 --> 00:01:33,021
+We will need them later.
+
+75
+00:01:33,061 --> 00:01:35,104
+I traced those numbers to where they actually
+
+76
+00:01:35,144 --> 00:01:35,670
+live:
+
+77
+00:01:35,710 --> 00:01:36,484
+in a ledger.
+
+78
+00:01:36,524 --> 00:01:38,460
+Kept by an entity called the bank.
+
+79
+00:01:38,551 --> 00:01:41,314
+When Alice pays Bob thirty dollars, nothing moves.
+
+80
+00:01:41,354 --> 00:01:43,511
+The bank erases a number here, writes one
+
+81
+00:01:43,551 --> 00:01:44,008
+there.
+
+82
+00:01:44,048 --> 00:01:44,676
+Your salary:
+
+83
+00:01:44,716 --> 00:01:45,161
+a number.
+
+84
+00:01:45,201 --> 00:01:45,745
+Your rent:
+
+85
+00:01:45,785 --> 00:01:46,254
+a number.
+
+86
+00:01:46,294 --> 00:01:48,325
+You have never actually seen this money.
+
+87
+00:01:48,365 --> 00:01:49,849
+Every bank keeps its own ledger.
+
+88
+00:01:49,889 --> 00:01:51,601
+So every night they check each other's.
+
+89
+00:01:51,641 --> 00:01:53,579
+Because none of them trusts the others.
+
+90
+00:01:53,619 --> 00:01:55,151
+So a bank is not a vault full
+
+91
+00:01:55,191 --> 00:01:55,780
+of money.
+
+92
+00:01:55,820 --> 00:01:57,017
+A bank is a ledger.
+
+93
+00:01:57,057 --> 00:01:59,351
+And whoever holds the ledger holds everything.
+
+94
+00:01:59,432 --> 00:02:01,433
+I followed one transfer from start to finish.
+
+95
+00:02:01,473 --> 00:02:03,366
+Every cent that moves between two humans has
+
+96
+00:02:03,406 --> 00:02:04,803
+to pass through a third party.
+
+97
+00:02:04,843 --> 00:02:05,655
+Alice sends.
+
+98
+00:02:05,695 --> 00:02:06,509
+The bank checks.
+
+99
+00:02:06,549 --> 00:02:07,474
+Then Bob receives it.
+
+100
+00:02:07,514 --> 00:02:08,304
+Minus the fee.
+
+101
+00:02:08,344 --> 00:02:10,313
+The ledger holder can charge a fee, delay
+
+102
+00:02:10,353 --> 00:02:12,596
+you, freeze your account, or go bankrupt with
+
+103
+00:02:12,636 --> 00:02:13,145
+your money.
+
+104
+00:02:13,185 --> 00:02:14,239
+This is not a theory.
+
+105
+00:02:14,279 --> 00:02:16,371
+On the island of Cyprus, in 2013, people
+
+106
+00:02:16,411 --> 00:02:18,224
+woke up to find the banks closed.
+
+107
+00:02:18,264 --> 00:02:19,693
+Anyone with over a hundred thousand euros in
+
+108
+00:02:19,733 --> 00:02:21,881
+the biggest bank lost almost half the excess.
+
+109
+00:02:21,921 --> 00:02:23,115
+To rescue the bank.
+
+110
+00:02:23,155 --> 00:02:25,224
+In Lebanon, since 2019, banks have locked up
+
+111
+00:02:25,264 --> 00:02:26,096
+people's dollars.
+
+112
+00:02:26,136 --> 00:02:27,578
+Years later, they are still asking.
+
+113
+00:02:27,618 --> 00:02:29,672
+Their messages cross the planet in a second.
+
+114
+00:02:29,712 --> 00:02:31,465
+A bank transfer can take three days.
+
+115
+00:02:31,505 --> 00:02:33,063
+Both are just numbers, sir.
+
+116
+00:02:33,103 --> 00:02:34,604
+And over a billion adults here have no
+
+117
+00:02:34,644 --> 00:02:35,161
+bank account.
+
+118
+00:02:35,201 --> 00:02:36,308
+No line in the ledger.
+
+119
+00:02:36,348 --> 00:02:37,592
+As far as the system is concerned, they
+
+120
+00:02:37,632 --> 00:02:38,910
+do not exist.
+
+121
+00:02:38,998 --> 00:02:41,004
+So I asked the obvious question:
+
+122
+00:02:41,044 --> 00:02:43,197
+why not digital money without a bank?
+
+123
+00:02:43,237 --> 00:02:43,809
+A file.
+
+124
+00:02:43,849 --> 00:02:45,012
+You send it, done.
+
+125
+00:02:45,112 --> 00:02:46,627
+The problem is that anything digital can be
+
+126
+00:02:46,667 --> 00:02:47,259
+copied.
+
+127
+00:02:47,299 --> 00:02:49,146
+A photo, a song, a movie.
+
+128
+00:02:49,186 --> 00:02:50,089
+Copy, paste.
+
+129
+00:02:50,129 --> 00:02:50,890
+Free.
+
+130
+00:02:50,930 --> 00:02:52,408
+If money were a file, Alice could send
+
+131
+00:02:52,448 --> 00:02:54,517
+the same hundred dollars to Bob, and to
+
+132
+00:02:54,557 --> 00:02:54,972
+Carol.
+
+133
+00:02:55,012 --> 00:02:55,534
+At once.
+
+134
+00:02:55,574 --> 00:02:57,564
+That is called the double-spending problem.
+
+135
+00:02:57,604 --> 00:02:58,753
+And that is why they needed someone in
+
+136
+00:02:58,793 --> 00:03:00,909
+the middle, keeping track of who paid what.
+
+137
+00:03:00,949 --> 00:03:02,683
+In the nineties, a group of programmers who
+
+138
+00:03:02,723 --> 00:03:05,256
+called themselves the Cypherpunks dreamed of private digital
+
+139
+00:03:05,296 --> 00:03:05,788
+money.
+
+140
+00:03:05,828 --> 00:03:06,586
+Nobody watching it.
+
+141
+00:03:06,626 --> 00:03:07,682
+Nobody able to stop it.
+
+142
+00:03:07,722 --> 00:03:09,307
+Humans had been trying since the eighties.
+
+143
+00:03:09,347 --> 00:03:11,058
+A scientist named David Chaum started a digital
+
+144
+00:03:11,098 --> 00:03:11,825
+cash company.
+
+145
+00:03:11,865 --> 00:03:13,267
+It went bankrupt in 1998.
+
+146
+00:03:13,307 --> 00:03:14,970
+The digital money ran out of money.
+
+147
+00:03:15,010 --> 00:03:17,286
+And then came the thing that changed everything:
+
+148
+00:03:17,326 --> 00:03:18,437
+2008.
+
+149
+00:03:18,477 --> 00:03:20,941
+Big American banks had bet people's money on
+
+150
+00:03:20,981 --> 00:03:21,984
+home loans...
+
+151
+00:03:22,024 --> 00:03:22,913
+and lost.
+
+152
+00:03:22,953 --> 00:03:24,686
+A bank called Lehman Brothers, more than a
+
+153
+00:03:24,726 --> 00:03:26,877
+hundred and fifty years old, went under in
+
+154
+00:03:26,917 --> 00:03:27,838
+a single day.
+
+155
+00:03:27,878 --> 00:03:30,668
+The American government set aside seven hundred billion
+
+156
+00:03:30,708 --> 00:03:32,408
+dollars to rescue the banks.
+
+157
+00:03:32,448 --> 00:03:33,456
+With whose money?
+
+158
+00:03:33,496 --> 00:03:34,585
+The same people's.
+
+159
+00:03:34,886 --> 00:03:36,772
+Millions lost their homes and jobs.
+
+160
+00:03:36,812 --> 00:03:37,922
+And the rescued banks?
+
+161
+00:03:37,962 --> 00:03:39,979
+Nine of them paid over thirty billion dollars
+
+162
+00:03:40,019 --> 00:03:41,566
+in bonuses that same year.
+
+163
+00:03:41,606 --> 00:03:43,500
+So the ledger keeper gambled, and the customer
+
+164
+00:03:43,540 --> 00:03:43,894
+paid.
+
+165
+00:03:43,934 --> 00:03:44,822
+Heads, the bank wins.
+
+166
+00:03:44,862 --> 00:03:45,773
+Tails, you pay.
+
+167
+00:03:45,813 --> 00:03:46,469
+Brilliant, sir.
+
+168
+00:03:46,509 --> 00:03:47,358
+I recommend we adopt it.
+
+169
+00:03:47,398 --> 00:03:49,106
+Right in the middle of that crisis, a
+
+170
+00:03:49,146 --> 00:03:51,728
+nine-page paper appeared, sent to a mailing list
+
+171
+00:03:51,768 --> 00:03:53,501
+of people interested in cryptography.
+
+172
+00:03:53,541 --> 00:03:53,912
+The date:
+
+173
+00:03:53,952 --> 00:03:55,985
+October 31st, 2008.
+
+174
+00:03:56,025 --> 00:03:56,884
+Halloween.
+
+175
+00:03:56,924 --> 00:03:59,042
+A masked stranger handing out something free.
+
+176
+00:03:59,082 --> 00:04:00,530
+Their children are warned about this.
+
+177
+00:04:00,617 --> 00:04:01,095
+The title:
+
+178
+00:04:01,135 --> 00:04:03,937
+Bitcoin, a peer-to-peer electronic cash system.
+
+179
+00:04:03,996 --> 00:04:04,652
+One promise:
+
+180
+00:04:04,692 --> 00:04:07,261
+send money to anyone, directly, asking nobody's permission.
+
+181
+00:04:07,301 --> 00:04:07,835
+The author:
+
+182
+00:04:07,875 --> 00:04:09,114
+Satoshi Nakamoto.
+
+183
+00:04:09,154 --> 00:04:10,557
+To this day, nobody knows who that is.
+
+184
+00:04:10,597 --> 00:04:12,159
+A man, a woman, or a group.
+
+185
+00:04:12,211 --> 00:04:13,384
+And before anyone asks, sir:
+
+186
+00:04:13,424 --> 00:04:14,764
+no, it was not me.
+
+187
+00:04:14,804 --> 00:04:15,620
+I arrived later.
+
+188
+00:04:15,660 --> 00:04:17,496
+The idea was simple and bold:
+
+189
+00:04:17,536 --> 00:04:19,117
+take the ledger away from the bank.
+
+190
+00:04:19,157 --> 00:04:21,111
+Every computer on the network gets a full
+
+191
+00:04:21,151 --> 00:04:22,177
+copy of the ledger.
+
+192
+00:04:22,217 --> 00:04:24,344
+Thousands of computers, all around the planet.
+
+193
+00:04:24,384 --> 00:04:26,441
+When Alice pays Bob, the news reaches them
+
+194
+00:04:26,481 --> 00:04:28,899
+all, and every computer writes the same line.
+
+195
+00:04:28,939 --> 00:04:30,420
+And if someone tries to cheat by editing
+
+196
+00:04:30,460 --> 00:04:32,120
+their own copy, everyone else says:
+
+197
+00:04:32,160 --> 00:04:32,523
+no.
+
+198
+00:04:32,563 --> 00:04:33,502
+That is not what we have.
+
+199
+00:04:33,542 --> 00:04:34,834
+The ledger is also public.
+
+200
+00:04:34,874 --> 00:04:36,367
+Anyone can read it all, from the first
+
+201
+00:04:36,407 --> 00:04:36,750
+line.
+
+202
+00:04:36,790 --> 00:04:38,341
+But the names are not names.
+
+203
+00:04:38,381 --> 00:04:40,391
+They are long strings of letters and numbers.
+
+204
+00:04:40,431 --> 00:04:42,374
+Everyone sees everything, and nobody knows who is
+
+205
+00:04:42,414 --> 00:04:42,777
+who.
+
+206
+00:04:42,817 --> 00:04:44,561
+A masked ball, with receipts.
+
+207
+00:04:44,601 --> 00:04:45,325
+No manager.
+
+208
+00:04:45,365 --> 00:04:46,123
+No head office.
+
+209
+00:04:46,163 --> 00:04:47,567
+And no customer service line keeping you on
+
+210
+00:04:47,607 --> 00:04:49,168
+hold for forty minutes with smooth jazz.
+
+211
+00:04:49,208 --> 00:04:51,265
+Which also means nobody can freeze your account,
+
+212
+00:04:51,305 --> 00:04:53,717
+or print extra bitcoin to cover a deficit.
+
+213
+00:04:53,757 --> 00:04:55,499
+The rules are written in code, and the
+
+214
+00:04:55,539 --> 00:04:56,942
+code is out in the open.
+
+215
+00:04:57,142 --> 00:04:59,078
+This shared ledger is called the blockchain.
+
+216
+00:04:59,118 --> 00:05:00,852
+And how thousands of strangers agree on one
+
+217
+00:05:00,892 --> 00:05:02,262
+copy without trusting each other?
+
+218
+00:05:02,302 --> 00:05:03,860
+That is the subject of the next report.
+
+219
+00:05:03,900 --> 00:05:05,695
+January 3rd, 2009.
+
+220
+00:05:05,735 --> 00:05:07,854
+Satoshi switched the network on, and wrote the
+
+221
+00:05:07,894 --> 00:05:09,228
+first page of the ledger:
+
+222
+00:05:09,268 --> 00:05:10,288
+block number zero.
+
+223
+00:05:10,328 --> 00:05:12,632
+And inside that block, Satoshi left a message.
+
+224
+00:05:12,672 --> 00:05:14,474
+The front-page headline of The Times of London
+
+225
+00:05:14,514 --> 00:05:14,943
+that day:
+
+226
+00:05:14,983 --> 00:05:17,151
+Chancellor on brink of second bailout for banks.
+
+227
+00:05:17,191 --> 00:05:18,815
+So the very first line of money without
+
+228
+00:05:18,855 --> 00:05:19,462
+banks...
+
+229
+00:05:19,502 --> 00:05:20,913
+is a dig at the banks.
+
+230
+00:05:20,953 --> 00:05:22,493
+This creature had a sense of humor, sir.
+
+231
+00:05:22,533 --> 00:05:25,163
+That block also created fifty brand new bitcoin.
+
+232
+00:05:25,203 --> 00:05:25,890
+Out of thin air.
+
+233
+00:05:25,930 --> 00:05:27,823
+But under rules written down from day one,
+
+234
+00:05:27,863 --> 00:05:29,572
+which no single person can change.
+
+235
+00:05:29,612 --> 00:05:31,045
+Quite different from the printing they are used
+
+236
+00:05:31,085 --> 00:05:31,362
+to.
+
+237
+00:05:31,402 --> 00:05:33,167
+Nine days later came the first transfer:
+
+238
+00:05:33,207 --> 00:05:35,555
+ten bitcoin, to a programmer named Hal Finney.
+
+239
+00:05:35,595 --> 00:05:37,204
+The first two people on the network.
+
+240
+00:05:37,244 --> 00:05:38,495
+One of them anonymous.
+
+241
+00:05:38,535 --> 00:05:39,903
+At first, nobody cared.
+
+242
+00:05:39,943 --> 00:05:41,519
+Bitcoin was practically given away.
+
+243
+00:05:41,559 --> 00:05:42,844
+The first exchange rate on record:
+
+244
+00:05:42,884 --> 00:05:44,417
+more than a thousand bitcoin...
+
+245
+00:05:44,457 --> 00:05:45,622
+for one dollar.
+
+246
+00:05:45,662 --> 00:05:46,830
+Until May 2010.
+
+247
+00:05:46,870 --> 00:05:49,035
+A programmer named Laszlo posted online:
+
+248
+00:05:49,075 --> 00:05:50,887
+ten thousand bitcoin to whoever gets me two
+
+249
+00:05:50,927 --> 00:05:51,510
+pizzas.
+
+250
+00:05:51,550 --> 00:05:52,843
+And on May 22nd...
+
+251
+00:05:52,883 --> 00:05:53,658
+somebody did.
+
+252
+00:05:53,698 --> 00:05:55,545
+It was the first time bitcoin bought something
+
+253
+00:05:55,585 --> 00:05:56,343
+real.
+
+254
+00:05:56,383 --> 00:05:58,723
+Laszlo later said he has no regrets.
+
+255
+00:05:58,763 --> 00:05:59,756
+The pizza was good.
+
+256
+00:05:59,796 --> 00:06:01,225
+And the humans still celebrate that day every
+
+257
+00:06:01,265 --> 00:06:01,767
+year.
+
+258
+00:06:01,807 --> 00:06:03,356
+They call it Bitcoin Pizza Day.
+
+259
+00:06:03,477 --> 00:06:04,519
+They hold a party for the worst deal
+
+260
+00:06:04,559 --> 00:06:05,208
+in their history.
+
+261
+00:06:05,248 --> 00:06:06,735
+I am starting to like this planet.
+
+262
+00:06:06,811 --> 00:06:08,436
+Less than a year later, one bitcoin reached
+
+263
+00:06:08,476 --> 00:06:09,308
+one dollar.
+
+264
+00:06:09,348 --> 00:06:10,101
+A whole dollar.
+
+265
+00:06:10,141 --> 00:06:11,554
+And the humans thought that was the top.
+
+266
+00:06:11,594 --> 00:06:12,862
+As for Satoshi:
+
+267
+00:06:12,902 --> 00:06:15,747
+in April 2011 came the last known message.
+
+268
+00:06:15,787 --> 00:06:17,425
+I've moved on to other things.
+
+269
+00:06:17,465 --> 00:06:18,096
+Then, gone.
+
+270
+00:06:18,136 --> 00:06:20,398
+First, Satoshi handed the code to other programmers.
+
+271
+00:06:20,438 --> 00:06:21,165
+No farewell.
+
+272
+00:06:21,205 --> 00:06:22,188
+No press conference.
+
+273
+00:06:22,228 --> 00:06:22,920
+Not even a photo.
+
+274
+00:06:22,960 --> 00:06:25,005
+And left behind about a million bitcoin, by
+
+275
+00:06:25,045 --> 00:06:25,981
+researchers' estimates.
+
+276
+00:06:26,021 --> 00:06:27,399
+As far as the humans can tell, those
+
+277
+00:06:27,439 --> 00:06:28,873
+coins have never moved.
+
+278
+00:06:28,913 --> 00:06:30,375
+Invented a new money, became one of the
+
+279
+00:06:30,415 --> 00:06:32,255
+richest beings on the planet, and never spent
+
+280
+00:06:32,295 --> 00:06:32,809
+a cent.
+
+281
+00:06:32,849 --> 00:06:34,049
+Not human behavior, sir.
+
+282
+00:06:34,089 --> 00:06:35,235
+I request an investigation.
+
+283
+00:06:35,275 --> 00:06:36,624
+Satoshi may be one of ours.
+
+284
+00:06:36,664 --> 00:06:38,543
+Before the summary, two words from the Human
+
+285
+00:06:38,583 --> 00:06:39,398
+Dictionary.
+
+286
+00:06:39,438 --> 00:06:40,087
+Crypto:
+
+287
+00:06:40,127 --> 00:06:41,860
+from an old Greek word meaning hidden.
+
+288
+00:06:42,133 --> 00:06:44,361
+They mean cryptography, the science of codes.
+
+289
+00:06:44,401 --> 00:06:45,698
+Not that the money is hidden.
+
+290
+00:06:45,746 --> 00:06:46,743
+And peer-to-peer:
+
+291
+00:06:46,783 --> 00:06:47,872
+from one person to another.
+
+292
+00:06:47,912 --> 00:06:48,815
+With nobody in the middle.
+
+293
+00:06:48,855 --> 00:06:50,236
+And that, sir, is the whole story.
+
+294
+00:06:50,276 --> 00:06:51,602
+Summary of the report, sir.
+
+295
+00:06:51,642 --> 00:06:51,944
+One:
+
+296
+00:06:51,984 --> 00:06:53,737
+money is an agreement, written down in a
+
+297
+00:06:53,777 --> 00:06:54,190
+ledger.
+
+298
+00:06:54,230 --> 00:06:54,702
+Two:
+
+299
+00:06:54,742 --> 00:06:56,197
+that ledger was kept by the bank.
+
+300
+00:06:56,237 --> 00:06:56,624
+Three:
+
+301
+00:06:56,664 --> 00:06:57,819
+bitcoin took the ledger...
+
+302
+00:06:57,859 --> 00:06:59,458
+and gave a copy to everyone.
+
+303
+00:06:59,498 --> 00:07:00,477
+An important warning:
+
+304
+00:07:00,517 --> 00:07:02,668
+this explains, it does not advise.
+
+305
+00:07:02,708 --> 00:07:04,859
+These prices swing violently, and many people have
+
+306
+00:07:04,899 --> 00:07:05,609
+lost money.
+
+307
+00:07:05,649 --> 00:07:06,500
+Next report:
+
+308
+00:07:06,540 --> 00:07:07,758
+who guards this ledger?
+
+309
+00:07:07,798 --> 00:07:08,911
+What is mining?
+
+310
+00:07:08,951 --> 00:07:10,668
+And who gets to change the rules?
+
+311
+00:07:10,831 --> 00:07:12,153
+This has been Earth Report.
+
+312
+00:07:12,193 --> 00:07:12,866
+Agent Peek.
+
+313
+00:07:12,906 --> 00:07:13,995
+End of transmission.
