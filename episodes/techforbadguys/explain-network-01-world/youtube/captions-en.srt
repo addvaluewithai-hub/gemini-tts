@@ -1,0 +1,1235 @@
+1
+00:00:00,487 --> 00:00:00,935
+Sir.
+
+2
+00:00:01,047 --> 00:00:02,960
+A new field file from planet Earth.
+
+3
+00:00:03,063 --> 00:00:04,034
+The Network file.
+
+4
+00:00:04,102 --> 00:00:04,897
+Report one:
+
+5
+00:00:04,965 --> 00:00:06,013
+the mobile phone.
+
+6
+00:00:06,062 --> 00:00:08,011
+The thing in every human pocket.
+
+7
+00:00:08,067 --> 00:00:10,003
+Just over eight billion humans...
+
+8
+00:00:10,106 --> 00:00:12,303
+and almost nine billion phone lines.
+
+9
+00:00:12,489 --> 00:00:13,941
+More lines than humans.
+
+10
+00:00:14,014 --> 00:00:14,685
+The owners?
+
+11
+00:00:14,811 --> 00:00:16,268
+Only about six billion.
+
+12
+00:00:16,352 --> 00:00:18,532
+So many carry two or three lines.
+
+13
+00:00:18,669 --> 00:00:19,549
+And answer one.
+
+14
+00:00:19,915 --> 00:00:20,348
+Today:
+
+15
+00:00:20,426 --> 00:00:22,740
+how a voice gets from pocket to pocket,
+
+16
+00:00:22,848 --> 00:00:24,226
+why it's called cellular,
+
+17
+00:00:24,344 --> 00:00:25,998
+and why it dies in elevators.
+
+18
+00:00:26,175 --> 00:00:26,982
+Strangest part:
+
+19
+00:00:27,071 --> 00:00:28,803
+almost none of them know where their voice
+
+20
+00:00:28,843 --> 00:00:29,394
+goes.
+
+21
+00:00:29,472 --> 00:00:30,191
+Every day.
+
+22
+00:00:30,280 --> 00:00:31,146
+Never wondered.
+
+23
+00:00:31,211 --> 00:00:33,350
+A human talks, the air shakes.
+
+24
+00:00:33,461 --> 00:00:35,118
+The microphone turns the shaking into an
+
+25
+00:00:35,158 --> 00:00:35,952
+electric wave.
+
+26
+00:00:36,015 --> 00:00:38,239
+The phone measures that wave thousands of
+
+27
+00:00:38,279 --> 00:00:39,170
+times a second.
+
+28
+00:00:39,254 --> 00:00:40,135
+On a normal call:
+
+29
+00:00:40,261 --> 00:00:41,366
+eight thousand.
+
+30
+00:00:41,406 --> 00:00:42,381
+Why eight thousand?
+
+31
+00:00:42,433 --> 00:00:44,016
+Human speech doesn't need more.
+
+32
+00:00:44,131 --> 00:00:45,725
+Music needs a lot more.
+
+33
+00:00:45,872 --> 00:00:47,928
+Which is why hold music sounds that
+
+34
+00:00:47,968 --> 00:00:48,471
+terrible.
+
+35
+00:00:49,770 --> 00:00:51,217
+Each measurement becomes a number.
+
+36
+00:00:51,279 --> 00:00:52,359
+The wave is done.
+
+37
+00:00:52,453 --> 00:00:54,509
+Only the numbers travel.
+
+38
+00:00:54,551 --> 00:00:56,770
+Then it squeezes them, dropping what human
+
+39
+00:00:56,810 --> 00:00:57,730
+ears won't miss.
+
+40
+00:00:57,876 --> 00:00:59,593
+So what arrives isn't your voice,
+
+41
+00:00:59,633 --> 00:01:00,000
+sir.
+
+42
+00:01:00,040 --> 00:01:01,128
+It's a summary.
+
+43
+00:01:01,201 --> 00:01:02,302
+Then out they go...
+
+44
+00:01:02,396 --> 00:01:02,983
+into the air.
+
+45
+00:01:03,291 --> 00:01:04,572
+Into the air how?
+
+46
+00:01:04,656 --> 00:01:05,629
+First surprise.
+
+47
+00:01:05,750 --> 00:01:07,246
+A mobile isn't a phone.
+
+48
+00:01:07,358 --> 00:01:08,791
+A mobile is a radio.
+
+49
+00:01:08,843 --> 00:01:10,439
+Humans can see light.
+
+50
+00:01:10,502 --> 00:01:12,514
+Radio is the same kind of wave,
+
+51
+00:01:12,556 --> 00:01:13,259
+same speed.
+
+52
+00:01:13,332 --> 00:01:14,338
+Just longer...
+
+53
+00:01:14,506 --> 00:01:15,764
+and invisible to them.
+
+54
+00:01:15,901 --> 00:01:19,207
+So each one carries a tiny radio station,
+
+55
+00:01:19,374 --> 00:01:21,299
+sending and receiving at the same time.
+
+56
+00:01:21,394 --> 00:01:22,232
+Not just one.
+
+57
+00:01:22,295 --> 00:01:23,050
+Station one:
+
+58
+00:01:23,176 --> 00:01:23,689
+the tower.
+
+59
+00:01:23,729 --> 00:01:24,359
+Wi-Fi:
+
+60
+00:01:24,399 --> 00:01:25,069
+radio two.
+
+61
+00:01:25,118 --> 00:01:25,821
+The earbuds:
+
+62
+00:01:25,861 --> 00:01:26,780
+radio three.
+
+63
+00:01:26,829 --> 00:01:28,711
+Location listens to satellites.
+
+64
+00:01:28,751 --> 00:01:29,398
+That's four.
+
+65
+00:01:29,481 --> 00:01:31,787
+Airplane mode does exactly one thing:
+
+66
+00:01:31,913 --> 00:01:33,118
+it silences them all.
+
+67
+00:01:33,457 --> 00:01:35,200
+One human, waiting for a bus,
+
+68
+00:01:35,365 --> 00:01:36,859
+beams four signals.
+
+69
+00:01:36,952 --> 00:01:39,484
+The planet is drowning in waves they can't
+
+70
+00:01:39,524 --> 00:01:39,909
+see.
+
+71
+00:01:39,949 --> 00:01:40,696
+I can, sir.
+
+72
+00:01:40,789 --> 00:01:41,494
+It's a mess.
+
+73
+00:01:41,993 --> 00:01:42,915
+Second surprise:
+
+74
+00:01:43,030 --> 00:01:44,701
+that wave doesn't go far.
+
+75
+00:01:44,764 --> 00:01:46,106
+Just to the nearest tower.
+
+76
+00:01:46,190 --> 00:01:47,238
+A few hundred meters.
+
+77
+00:01:47,665 --> 00:01:49,345
+From the tower it drops into an
+
+78
+00:01:49,385 --> 00:01:51,418
+underground cable, to the core:
+
+79
+00:01:51,512 --> 00:01:53,106
+a building full of computers.
+
+80
+00:01:53,375 --> 00:01:55,725
+The core finds the other phone and cables
+
+81
+00:01:55,765 --> 00:01:57,491
+it to her nearest tower.
+
+82
+00:01:57,531 --> 00:01:58,705
+The core does three things:
+
+83
+00:01:58,872 --> 00:02:00,499
+knows who you are, knows where the other
+
+84
+00:02:00,539 --> 00:02:02,122
+one is, and bills you.
+
+85
+00:02:02,195 --> 00:02:03,747
+Only the third never goes down.
+
+86
+00:02:04,208 --> 00:02:05,550
+And the last few hundred meters...
+
+87
+00:02:05,686 --> 00:02:06,521
+radio again.
+
+88
+00:02:06,584 --> 00:02:09,353
+So wireless is wireless only at both ends,
+
+89
+00:02:09,393 --> 00:02:09,678
+sir.
+
+90
+00:02:09,718 --> 00:02:11,437
+The middle is all wires.
+
+91
+00:02:11,542 --> 00:02:13,431
+The most wired thing on the planet...
+
+92
+00:02:13,471 --> 00:02:14,561
+and they call it wireless.
+
+93
+00:02:14,827 --> 00:02:16,556
+All in under a quarter second.
+
+94
+00:02:16,619 --> 00:02:18,047
+She hears him before he finishes the
+
+95
+00:02:18,087 --> 00:02:18,590
+sentence.
+
+96
+00:02:19,804 --> 00:02:21,244
+So why "cellular"?
+
+97
+00:02:21,284 --> 00:02:23,106
+Because their land is cut into cells.
+
+98
+00:02:23,211 --> 00:02:24,299
+Each cell has a tower.
+
+99
+00:02:24,362 --> 00:02:24,865
+The trick:
+
+100
+00:02:24,949 --> 00:02:26,584
+channels in the air are limited.
+
+101
+00:02:26,668 --> 00:02:28,714
+Each cell gets a set, and cells that don't
+
+102
+00:02:28,754 --> 00:02:29,792
+touch reuse it.
+
+103
+00:02:29,844 --> 00:02:31,731
+The same air, sold a thousand times.
+
+104
+00:02:33,128 --> 00:02:35,268
+City cells are tiny, a tower every few
+
+105
+00:02:35,308 --> 00:02:35,895
+streets.
+
+106
+00:02:35,979 --> 00:02:38,369
+Desert cells can span tens of kilometers.
+
+107
+00:02:38,587 --> 00:02:40,893
+Each tower has antennas facing every way.
+
+108
+00:02:40,998 --> 00:02:42,929
+A phone's signal is weaker than a tiny
+
+109
+00:02:42,969 --> 00:02:43,493
+bulb.
+
+110
+00:02:43,545 --> 00:02:44,887
+The tower has big ears.
+
+111
+00:02:45,120 --> 00:02:45,832
+Weak signal?
+
+112
+00:02:45,958 --> 00:02:47,478
+The phone shouts to be heard.
+
+113
+00:02:47,551 --> 00:02:48,979
+That's why batteries die fast where
+
+114
+00:02:49,019 --> 00:02:49,816
+coverage is bad.
+
+115
+00:02:50,840 --> 00:02:52,518
+Cities hate how towers look.
+
+116
+00:02:52,818 --> 00:02:54,488
+So they disguise them as palms.
+
+117
+00:02:54,577 --> 00:02:55,765
+A poor disguise, sir.
+
+118
+00:02:55,836 --> 00:02:57,004
+Honestly, better than mine.
+
+119
+00:02:57,128 --> 00:02:58,763
+The key fact for any spy:
+
+120
+00:02:58,847 --> 00:03:00,693
+a silent phone keeps whispering to the
+
+121
+00:03:00,733 --> 00:03:01,656
+nearest tower:
+
+122
+00:03:01,698 --> 00:03:02,327
+I'm here.
+
+123
+00:03:02,400 --> 00:03:03,029
+It has to.
+
+124
+00:03:03,155 --> 00:03:05,107
+How else would a call find it?
+
+125
+00:03:05,160 --> 00:03:06,711
+From the signal at nearby towers,
+
+126
+00:03:06,879 --> 00:03:08,933
+the network works out roughly where it is.
+
+127
+00:03:09,059 --> 00:03:10,086
+No satellites needed.
+
+128
+00:03:10,289 --> 00:03:12,052
+So the network always knows where they
+
+129
+00:03:12,092 --> 00:03:12,429
+are.
+
+130
+00:03:12,469 --> 00:03:14,733
+They pay monthly for a tracking device...
+
+131
+00:03:14,859 --> 00:03:16,910
+and complain when the data runs out.
+
+132
+00:03:16,962 --> 00:03:18,725
+In a moving car, the call is handed from
+
+133
+00:03:18,765 --> 00:03:20,673
+tower to tower in a split second.
+
+134
+00:03:20,746 --> 00:03:21,585
+He never notices.
+
+135
+00:03:23,089 --> 00:03:24,263
+And when the handover fails?
+
+136
+00:03:24,378 --> 00:03:24,778
+Hello?
+
+137
+00:03:24,818 --> 00:03:25,279
+Hello?
+
+138
+00:03:25,332 --> 00:03:25,919
+Can you hear me?
+
+139
+00:03:26,045 --> 00:03:27,808
+The most spoken sentence in this planet's
+
+140
+00:03:27,848 --> 00:03:28,351
+history.
+
+141
+00:03:28,733 --> 00:03:30,200
+How does it know who you are?
+
+142
+00:03:30,240 --> 00:03:30,905
+The SIM:
+
+143
+00:03:30,974 --> 00:03:32,563
+plastic the size of a fingernail.
+
+144
+00:03:32,615 --> 00:03:34,511
+The SIM is you, not the phone.
+
+145
+00:03:34,585 --> 00:03:36,429
+Move it, and your number moves too.
+
+146
+00:03:36,638 --> 00:03:38,862
+It holds a secret key the network uses to
+
+147
+00:03:38,902 --> 00:03:39,992
+check it's not a copy.
+
+148
+00:03:40,422 --> 00:03:41,974
+The newest ones aren't plastic at all.
+
+149
+00:03:42,099 --> 00:03:43,242
+They're built into the phone.
+
+150
+00:03:43,896 --> 00:03:45,699
+The phone has its own serial number,
+
+151
+00:03:45,741 --> 00:03:47,313
+so a stolen one can be locked.
+
+152
+00:03:48,452 --> 00:03:50,127
+The phone number is an address.
+
+153
+00:03:50,247 --> 00:03:50,964
+First digits:
+
+154
+00:03:51,004 --> 00:03:51,564
+the country.
+
+155
+00:03:51,616 --> 00:03:51,996
+Next:
+
+156
+00:03:52,036 --> 00:03:53,148
+the company.
+
+157
+00:03:53,189 --> 00:03:53,641
+The rest:
+
+158
+00:03:53,754 --> 00:03:54,154
+you.
+
+159
+00:03:54,278 --> 00:03:56,004
+The network reads it like a mail carrier
+
+160
+00:03:56,044 --> 00:03:56,875
+reads an envelope.
+
+161
+00:03:57,009 --> 00:03:58,619
+Travel abroad, and your phone finds a
+
+162
+00:03:58,659 --> 00:04:00,547
+foreign network and introduces itself.
+
+163
+00:04:00,639 --> 00:04:02,147
+The foreign network asks home:
+
+164
+00:04:02,310 --> 00:04:03,003
+one of yours?
+
+165
+00:04:03,069 --> 00:04:03,715
+Yours says:
+
+166
+00:04:03,829 --> 00:04:04,229
+yes.
+
+167
+00:04:04,399 --> 00:04:05,025
+And he'll pay.
+
+168
+00:04:05,073 --> 00:04:05,814
+He'll pay a lot.
+
+169
+00:04:06,124 --> 00:04:08,139
+All their networks talk and bill each
+
+170
+00:04:08,179 --> 00:04:08,598
+other.
+
+171
+00:04:08,682 --> 00:04:10,066
+Some countries won't speak at all...
+
+172
+00:04:10,171 --> 00:04:11,596
+yet their networks get along.
+
+173
+00:04:11,669 --> 00:04:13,405
+Money unites, sir.
+
+174
+00:04:13,456 --> 00:04:14,579
+Why do calls drop?
+
+175
+00:04:14,629 --> 00:04:15,398
+Reason one:
+
+176
+00:04:15,459 --> 00:04:16,066
+distance.
+
+177
+00:04:16,106 --> 00:04:17,280
+The farther from the tower,
+
+178
+00:04:17,320 --> 00:04:18,290
+the weaker the wave.
+
+179
+00:04:18,343 --> 00:04:19,050
+Reason two:
+
+180
+00:04:19,191 --> 00:04:19,757
+walls.
+
+181
+00:04:19,827 --> 00:04:21,834
+Concrete and steel swallow the wave.
+
+182
+00:04:21,890 --> 00:04:22,328
+Three:
+
+183
+00:04:22,393 --> 00:04:23,102
+the elevator.
+
+184
+00:04:23,195 --> 00:04:25,393
+A sealed metal box, the best radio shield
+
+185
+00:04:25,433 --> 00:04:26,133
+they ever built...
+
+186
+00:04:26,198 --> 00:04:27,597
+and they ride it mid-call.
+
+187
+00:04:27,906 --> 00:04:28,307
+Four:
+
+188
+00:04:28,431 --> 00:04:28,966
+crowds.
+
+189
+00:04:29,072 --> 00:04:30,600
+A tower serves only so many.
+
+190
+00:04:30,686 --> 00:04:32,577
+At a match, everyone's on their phone...
+
+191
+00:04:32,625 --> 00:04:33,504
+and the tower says:
+
+192
+00:04:33,619 --> 00:04:34,144
+enough.
+
+193
+00:04:34,351 --> 00:04:36,489
+Those bars on the screen measure signal,
+
+194
+00:04:36,573 --> 00:04:37,873
+not how busy the tower is.
+
+195
+00:04:37,988 --> 00:04:38,869
+Five bars...
+
+196
+00:04:38,911 --> 00:04:39,959
+nothing loads.
+
+197
+00:04:40,032 --> 00:04:41,925
+The bars are just to calm them.
+
+198
+00:04:41,977 --> 00:04:42,564
+To be fair:
+
+199
+00:04:42,700 --> 00:04:44,631
+in many countries, the emergency number
+
+200
+00:04:44,671 --> 00:04:46,684
+works without a SIM, on any network.
+
+201
+00:04:46,736 --> 00:04:47,912
+First time I've seen them agree on
+
+202
+00:04:47,952 --> 00:04:48,707
+something useful.
+
+203
+00:04:49,551 --> 00:04:51,649
+Before cells, there were car phones.
+
+204
+00:04:51,771 --> 00:04:53,757
+One tall tower for the whole city.
+
+205
+00:04:53,803 --> 00:04:55,023
+With a few channels.
+
+206
+00:04:55,134 --> 00:04:56,206
+A few calls at once...
+
+207
+00:04:56,326 --> 00:04:57,545
+for an entire city.
+
+208
+00:04:57,618 --> 00:04:59,167
+Everyone else waited their turn.
+
+209
+00:04:59,251 --> 00:05:01,785
+So the idea of cells made the mobile,
+
+210
+00:05:01,889 --> 00:05:02,769
+not the device.
+
+211
+00:05:02,881 --> 00:05:04,286
+It began on April third, nineteen
+
+212
+00:05:04,326 --> 00:05:05,531
+seventy-three.
+
+213
+00:05:05,631 --> 00:05:07,840
+An engineer named Martin Cooper stood on a
+
+214
+00:05:07,880 --> 00:05:08,995
+New York sidewalk...
+
+215
+00:05:09,037 --> 00:05:10,842
+and made the first call from a handheld
+
+216
+00:05:10,882 --> 00:05:11,302
+phone.
+
+217
+00:05:12,420 --> 00:05:13,133
+Who did he call?
+
+218
+00:05:13,258 --> 00:05:15,481
+His rival, at the company racing him.
+
+219
+00:05:15,627 --> 00:05:16,091
+To say:
+
+220
+00:05:16,131 --> 00:05:17,588
+I'm calling from the street.
+
+221
+00:05:18,596 --> 00:05:20,273
+The planet's first mobile call...
+
+222
+00:05:20,357 --> 00:05:21,196
+was a taunt.
+
+223
+00:05:21,322 --> 00:05:22,328
+I respect this being.
+
+224
+00:05:22,559 --> 00:05:23,880
+It weighed over a kilo.
+
+225
+00:05:24,197 --> 00:05:25,408
+Ten hours to charge...
+
+226
+00:05:25,450 --> 00:05:26,697
+for half an hour of talk.
+
+227
+00:05:27,059 --> 00:05:30,247
+Sold ten years later, it cost about four
+
+228
+00:05:30,287 --> 00:05:30,713
+thousand dollars.
+
+229
+00:05:30,753 --> 00:05:32,176
+The first commercial network opened in
+
+230
+00:05:32,216 --> 00:05:33,599
+Tokyo in seventy-nine.
+
+231
+00:05:33,678 --> 00:05:34,666
+First generation:
+
+232
+00:05:34,706 --> 00:05:35,457
+voice only.
+
+233
+00:05:35,546 --> 00:05:37,246
+Anyone with a radio could listen in.
+
+234
+00:05:37,344 --> 00:05:39,095
+Second generation, ninety-one:
+
+235
+00:05:39,251 --> 00:05:40,458
+the voice became numbers,
+
+236
+00:05:40,613 --> 00:05:41,674
+and texting came along.
+
+237
+00:05:41,732 --> 00:05:43,210
+The first text was sent in December
+
+238
+00:05:43,250 --> 00:05:43,951
+ninety-two.
+
+239
+00:05:44,019 --> 00:05:44,485
+It said:
+
+240
+00:05:44,525 --> 00:05:45,459
+Merry Christmas.
+
+241
+00:05:45,570 --> 00:05:47,638
+Texts had a hundred and sixty characters,
+
+242
+00:05:47,783 --> 00:05:49,812
+squeezed into a spare gap in the network's
+
+243
+00:05:49,852 --> 00:05:50,472
+signals.
+
+244
+00:05:50,627 --> 00:05:52,406
+Humans invented a whole slang...
+
+245
+00:05:52,458 --> 00:05:53,730
+for a spare slot.
+
+246
+00:05:53,772 --> 00:05:55,470
+Three put the internet in the phone.
+
+247
+00:05:55,632 --> 00:05:57,532
+Four made everything internet.
+
+248
+00:05:57,626 --> 00:05:58,419
+Even the voice.
+
+249
+00:05:58,534 --> 00:06:00,132
+And five, from twenty nineteen:
+
+250
+00:06:00,172 --> 00:06:00,889
+much faster.
+
+251
+00:06:01,005 --> 00:06:02,044
+And not just for humans.
+
+252
+00:06:02,089 --> 00:06:03,664
+For machines talking to machines.
+
+253
+00:06:03,757 --> 00:06:05,182
+Each generation, humans say:
+
+254
+00:06:05,285 --> 00:06:06,598
+this will change our lives.
+
+255
+00:06:06,757 --> 00:06:07,770
+What actually changes:
+
+256
+00:06:07,826 --> 00:06:09,063
+they watch the same videos...
+
+257
+00:06:09,166 --> 00:06:10,029
+in higher quality.
+
+258
+00:06:10,139 --> 00:06:12,112
+Today five G covers more than half the
+
+259
+00:06:12,152 --> 00:06:13,095
+planet's people.
+
+260
+00:06:13,168 --> 00:06:14,337
+But not fairly.
+
+261
+00:06:14,452 --> 00:06:15,246
+Rich countries:
+
+262
+00:06:15,371 --> 00:06:16,407
+eighty-four percent.
+
+263
+00:06:16,447 --> 00:06:17,324
+Poor countries:
+
+264
+00:06:17,407 --> 00:06:17,814
+four.
+
+265
+00:06:17,917 --> 00:06:19,042
+Latest development:
+
+266
+00:06:19,082 --> 00:06:20,625
+the towers went to space.
+
+267
+00:06:20,702 --> 00:06:21,725
+Since twenty twenty-five,
+
+268
+00:06:21,765 --> 00:06:23,850
+an ordinary phone can text a satellite
+
+269
+00:06:23,890 --> 00:06:24,405
+directly.
+
+270
+00:06:24,476 --> 00:06:25,997
+No dish, no special gear.
+
+271
+00:06:26,042 --> 00:06:28,006
+Desert, sea, anywhere that can see the
+
+272
+00:06:28,046 --> 00:06:28,469
+sky.
+
+273
+00:06:28,521 --> 00:06:30,704
+It flies hundreds of kilometers up at
+
+274
+00:06:30,744 --> 00:06:33,104
+twenty-seven thousand kilometers an hour,
+
+275
+00:06:33,144 --> 00:06:35,094
+and a pocket phone talks to it.
+
+276
+00:06:35,188 --> 00:06:36,734
+My ship can't do that, sir.
+
+277
+00:06:36,797 --> 00:06:38,313
+Calls are still being tested.
+
+278
+00:06:38,355 --> 00:06:40,574
+But soon, nowhere on this planet will be
+
+279
+00:06:40,614 --> 00:06:41,345
+out of range.
+
+280
+00:06:41,385 --> 00:06:42,630
+Bad news for us, sir.
+
+281
+00:06:42,729 --> 00:06:43,725
+I used to hide there.
+
+282
+00:06:43,848 --> 00:06:45,730
+Two words from the Human Dictionary.
+
+283
+00:06:45,844 --> 00:06:46,427
+Cell:
+
+284
+00:06:46,479 --> 00:06:48,350
+the area one tower covers.
+
+285
+00:06:48,465 --> 00:06:50,003
+That's where cellphone comes from.
+
+286
+00:06:50,105 --> 00:06:51,075
+And SIM:
+
+287
+00:06:51,156 --> 00:06:52,610
+the card that holds your identity.
+
+288
+00:06:52,701 --> 00:06:53,995
+They lose it more often than their house
+
+289
+00:06:54,035 --> 00:06:54,435
+keys.
+
+290
+00:06:54,791 --> 00:06:55,629
+Summary, sir.
+
+291
+00:06:55,829 --> 00:06:56,268
+One:
+
+292
+00:06:56,348 --> 00:06:58,622
+the mobile is a radio that reaches only
+
+293
+00:06:58,662 --> 00:06:59,580
+the nearest tower.
+
+294
+00:06:59,660 --> 00:07:00,099
+Two:
+
+295
+00:07:00,219 --> 00:07:01,815
+everything else is cables.
+
+296
+00:07:02,134 --> 00:07:02,533
+Three:
+
+297
+00:07:02,573 --> 00:07:04,369
+the network must know where you are...
+
+298
+00:07:04,409 --> 00:07:05,008
+to reach you.
+
+299
+00:07:05,064 --> 00:07:06,084
+One question remains:
+
+300
+00:07:06,211 --> 00:07:07,534
+where do those cables go?
+
+301
+00:07:07,582 --> 00:07:09,295
+And where does this internet actually
+
+302
+00:07:09,335 --> 00:07:09,735
+live?
+
+303
+00:07:09,814 --> 00:07:10,643
+Next report:
+
+304
+00:07:10,684 --> 00:07:11,347
+the internet.
+
+305
+00:07:11,410 --> 00:07:12,238
+The answer, sir...
+
+306
+00:07:12,321 --> 00:07:13,533
+is on the seabed.
+
+307
+00:07:13,624 --> 00:07:14,660
+This has been Earth Report.
+
+308
+00:07:14,731 --> 00:07:15,405
+Agent Peek.
+
+309
+00:07:15,485 --> 00:07:16,451
+End of transmission.

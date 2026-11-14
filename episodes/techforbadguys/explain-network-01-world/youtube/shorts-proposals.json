@@ -1,0 +1,101 @@
+{
+ "note": "PROPOSALS for network part 1 Shorts (not rendered, not recorded): parts are [from, to] seconds of the finished episode (cues/explain-network-01-world.json, lead included); each has its own closing line (cta Arabic, cta_en English) to record on Vertex once the owner picks. Order = recommendation.",
+ "full": "{full}",
+ "shorts": [
+  {
+   "key": "cooper",
+   "parts": [
+    [
+     302.81,
+     330.68
+    ]
+   ],
+   "icons": [
+    "mobile",
+    "tower"
+   ],
+   "title": "أول مكالمة موبايل في التاريخ.. كانت إغاظة 📞 #Shorts",
+   "en_title": "The First Mobile Call Ever Was a Taunt 📞 #Shorts",
+   "cta": "بس الجهاز ده لوحده ماكانش هيشتغل.. السر في حاجة اسمها الخلايا. والحكاية كاملة على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_en": "But that brick alone could never have worked. The secret is something called cells. The full story is on the Earth Report channel. <short pause> Subscribe to the channel and turn on the bell, so my secret reports on your planet reach you first.",
+   "why": "opens on a date and a person (3 April 1973, Martin Cooper): the kind of opening that worked for the crypto Shorts",
+   "seconds": 27.9
+  },
+  {
+   "key": "sms",
+   "parts": [
+    [
+     337.28,
+     370.07
+    ]
+   ],
+   "icons": [
+    "mobile",
+    "mail"
+   ],
+   "title": "أول رسالة SMS في التاريخ كان فيها إيه؟ ✉️ #Shorts",
+   "en_title": "What Did the First Text Message Say? ✉️ #Shorts",
+   "cta": "وده كله بيمشي في الهوا إزاي أصلاً؟ الموبايل طلع راديو.. والتقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_en": "And how does any of it travel through the air? Your phone is a radio. The full report is on the Earth Report channel. <short pause> Subscribe to the channel and turn on the bell, so my secret reports on your planet reach you first.",
+   "why": "an absurd fact (Merry Christmas, 160 characters squeezed into a spare gap)",
+   "seconds": 32.8
+  },
+  {
+   "key": "elevator",
+   "parts": [
+    [
+     253.39,
+     289.49
+    ]
+   ],
+   "icons": [
+    "mobile",
+    "x"
+   ],
+   "title": "ليه الشبكة بتقع في الأسانسير؟ 📶 #Shorts",
+   "en_title": "Why Does Your Signal Die in the Elevator? 📶 #Shorts",
+   "cta": "وعلى فكرة.. تليفونك وهو ساكت في جيبك بيبلّغ عن مكانك طول الوقت. التفاصيل في التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_en": "And by the way, your phone reports where you are even when it sits silent in your pocket. Details in the full report on the Earth Report channel. <short pause> Subscribe to the channel and turn on the bell, so my secret reports on your planet reach you first.",
+   "why": "a question everyone has asked; the bars that only calm them",
+   "seconds": 36.1
+  },
+  {
+   "key": "whisper",
+   "parts": [
+    [
+     177.05,
+     208.66
+    ]
+   ],
+   "icons": [
+    "mobile",
+    "pin"
+   ],
+   "title": "تليفونك بيهمس بمكانك طول اليوم 📍 #Shorts",
+   "en_title": "Your Phone Whispers Where You Are All Day 📍 #Shorts",
+   "cta": "طب الشبكة دي بتعرف إنت مين أصلاً؟ الإجابة حتة بلاستيك قد الضفر.. والتقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_en": "So how does the network know who you are? The answer is a piece of plastic the size of a fingernail. The full report is on the Earth Report channel. <short pause> Subscribe to the channel and turn on the bell, so my secret reports on your planet reach you first.",
+   "why": "spy angle, the most surprising fact of the episode; a paid tracking device",
+   "seconds": 31.6
+  },
+  {
+   "key": "radio",
+   "parts": [
+    [
+     63.23,
+     101.92
+    ]
+   ],
+   "icons": [
+    "mobile",
+    "wifi"
+   ],
+   "title": "موبايلك مش تليفون.. موبايلك راديو 📻 #Shorts",
+   "en_title": "Your Phone Isn't a Phone. It's a Radio 📻 #Shorts",
+   "cta": "بس الموجة دي مابتروحش بعيد.. فصوتك بيوصل للناحية التانية من الكوكب إزاي؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_en": "But that wave doesn't travel far. So how does your voice reach the other side of the planet? The full report is on the Earth Report channel. <short pause> Subscribe to the channel and turn on the bell, so my secret reports on your planet reach you first.",
+   "why": "the episode's main idea with four radios and airplane mode; good, but opens on an idea, not a person",
+   "seconds": 38.7
+  }
+ ]
+}

@@ -1,0 +1,1784 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-network-01-dub-en",
+ "transcript": "../../../video/cues/explain-network-01-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir. A new field file from planet Earth. The Net",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.77,
+   "say": "Report one: the mobile phone. The thing in every",
+   "board": {
+    "kind": "nintro",
+    "ends": [
+     3.97,
+     5.94,
+     5.91
+    ]
+   },
+   "step": 0,
+   "stepT": 3.77,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 7.63,
+   "say": "Just over eight billion humans... and almost nin",
+   "board": {
+    "kind": "nintro",
+    "ends": [
+     3.97,
+     5.94,
+     5.91
+    ]
+   },
+   "step": 1,
+   "stepT": 7.63
+  },
+  {
+   "t": 13.65,
+   "say": "The owners? Only about six billion. So many carr",
+   "board": {
+    "kind": "nintro",
+    "ends": [
+     3.97,
+     5.94,
+     5.91
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "deadpan",
+   "stepT": 13.65
+  },
+  {
+   "t": 18.74,
+   "say": "Today: how a voice gets from pocket to pocket, w",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 29.57,
+   "say": "A human talks, the air shakes. The microphone tu",
+   "board": {
+    "kind": "voice",
+    "ends": [
+     4.79,
+     5.39,
+     8.37,
+     4.78,
+     6.65,
+     2.1
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "SOUND",
+    "icon": "wave"
+   },
+   "stepT": 29.57,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 34.47,
+   "say": "The phone measures that wave thousands of times ",
+   "board": {
+    "kind": "voice",
+    "ends": [
+     4.79,
+     5.39,
+     8.37,
+     4.78,
+     6.65,
+     2.1
+    ]
+   },
+   "step": 1,
+   "stepT": 34.47
+  },
+  {
+   "t": 39.29,
+   "say": "Why eight thousand? Human speech doesn't need mo",
+   "board": {
+    "kind": "voice",
+    "ends": [
+     4.79,
+     5.39,
+     8.37,
+     4.78,
+     6.65,
+     2.1
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "bored",
+   "stepT": 39.29
+  },
+  {
+   "t": 45.72,
+   "say": "Each measurement becomes a number. The wave is d",
+   "board": {
+    "kind": "voice",
+    "ends": [
+     4.79,
+     5.39,
+     8.37,
+     4.78,
+     6.65,
+     2.1
+    ]
+   },
+   "step": 3,
+   "stepT": 45.72
+  },
+  {
+   "t": 49.2,
+   "say": "Then it squeezes them, dropping what human ears ",
+   "board": {
+    "kind": "voice",
+    "ends": [
+     4.79,
+     5.39,
+     8.37,
+     4.78,
+     6.65,
+     2.1
+    ]
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "sly",
+   "stepT": 49.2
+  },
+  {
+   "t": 55.2,
+   "say": "Then out they go... into the air.",
+   "board": {
+    "kind": "voice",
+    "ends": [
+     4.79,
+     5.39,
+     8.37,
+     4.78,
+     6.65,
+     2.1
+    ]
+   },
+   "step": 5,
+   "stepT": 55.2
+  },
+  {
+   "t": 56.91,
+   "say": "Into the air how? First surprise. A mobile isn't",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "present",
+   "story": {
+    "n": 2,
+    "tag": "RADIO",
+    "icon": "tower"
+   }
+  },
+  {
+   "t": 62.5,
+   "say": "Humans can see light.",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 0,
+   "stepT": 62.5,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 63.86,
+   "say": "Radio is the same kind of wave, same speed. Just",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 1,
+   "stepT": 63.86
+  },
+  {
+   "t": 68.71,
+   "say": "So each one carries a tiny radio station, sendin",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 68.71
+  },
+  {
+   "t": 73.66,
+   "say": "Not just one. Station one: the tower.",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 3,
+   "stepT": 73.66
+  },
+  {
+   "t": 75.76,
+   "say": "Wi-Fi: radio two.",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 4,
+   "stepT": 75.76
+  },
+  {
+   "t": 77.17,
+   "say": "The earbuds: radio three.",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 5,
+   "stepT": 77.17
+  },
+  {
+   "t": 78.82,
+   "say": "Location listens to satellites. That's four.",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 6,
+   "stepT": 78.82
+  },
+  {
+   "t": 81.37,
+   "say": "Airplane mode does exactly one thing: it silence",
+   "board": {
+    "kind": "radio",
+    "ends": [
+     1.66,
+     5.4,
+     5.49,
+     2.34,
+     1.39,
+     1.71,
+     2.65,
+     3.98
+    ]
+   },
+   "step": 7,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 81.37
+  },
+  {
+   "t": 84.75,
+   "say": "One human, waiting for a bus, beams four signals",
+   "shot": "close",
+   "emote": "annoyed"
+  },
+  {
+   "t": 92.51,
+   "say": "Second surprise: that wave doesn't go far.",
+   "board": {
+    "kind": "route",
+    "ends": [
+     2.77,
+     2.9,
+     5.71,
+     4.16,
+     6.67,
+     10.62,
+     4.99
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "ROUTE",
+    "icon": "route"
+   },
+   "stepT": 92.51,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 94.99,
+   "say": "Just to the nearest tower. A few hundred meters.",
+   "board": {
+    "kind": "route",
+    "ends": [
+     2.77,
+     2.9,
+     5.71,
+     4.16,
+     6.67,
+     10.62,
+     4.99
+    ]
+   },
+   "step": 1,
+   "stepT": 94.99
+  },
+  {
+   "t": 97.3,
+   "say": "From the tower it drops into an underground cabl",
+   "board": {
+    "kind": "route",
+    "ends": [
+     2.77,
+     2.9,
+     5.71,
+     4.16,
+     6.67,
+     10.62,
+     4.99
+    ]
+   },
+   "step": 2,
+   "stepT": 97.3
+  },
+  {
+   "t": 102.31,
+   "say": "The core finds the other phone and cables it to ",
+   "board": {
+    "kind": "route",
+    "ends": [
+     2.77,
+     2.9,
+     5.71,
+     4.16,
+     6.67,
+     10.62,
+     4.99
+    ]
+   },
+   "step": 3,
+   "stepT": 102.31
+  },
+  {
+   "t": 105.71,
+   "say": "The core does three things: knows who you are, k",
+   "board": {
+    "kind": "route",
+    "ends": [
+     2.77,
+     2.9,
+     5.71,
+     4.16,
+     6.67,
+     10.62,
+     4.99
+    ]
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "sly",
+   "stepT": 105.71
+  },
+  {
+   "t": 111.42,
+   "say": "And the last few hundred meters... radio again.",
+   "board": {
+    "kind": "route",
+    "ends": [
+     2.77,
+     2.9,
+     5.71,
+     4.16,
+     6.67,
+     10.62,
+     4.99
+    ]
+   },
+   "step": 5,
+   "stepT": 111.42
+  },
+  {
+   "t": 113.49,
+   "say": "So wireless is wireless only at both ends, sir. ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 120.78,
+   "say": "All in under a quarter second. She hears him bef",
+   "board": {
+    "kind": "route",
+    "ends": [
+     2.77,
+     2.9,
+     5.71,
+     4.16,
+     6.67,
+     10.62,
+     4.99
+    ]
+   },
+   "step": 6,
+   "host": "left",
+   "emote": "proud",
+   "stepT": 120.78,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 124.29,
+   "say": "So why \"cellular\"? Because their land is cut int",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 4,
+    "tag": "CELLS",
+    "icon": "tower"
+   },
+   "stepT": 124.29,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 129.19,
+   "say": "The trick: channels in the air are limited. Each",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 1,
+   "stepT": 129.19
+  },
+  {
+   "t": 135.93,
+   "say": "City cells are tiny, a tower every few streets. ",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 135.93
+  },
+  {
+   "t": 140.77,
+   "say": "Each tower has antennas facing every way. A phon",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 140.77
+  },
+  {
+   "t": 146.56,
+   "say": "Weak signal? The phone shouts to be heard. That'",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 4,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 146.56
+  },
+  {
+   "t": 150.88,
+   "say": "Cities hate how towers look.",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 5,
+   "stepT": 150.88
+  },
+  {
+   "t": 152.47,
+   "say": "So they disguise them as palms.",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 6,
+   "stepT": 152.47
+  },
+  {
+   "t": 154.22,
+   "say": "A poor disguise, sir. Honestly, better than mine",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "host": "left",
+   "step": 7,
+   "stepT": 154.22
+  },
+  {
+   "t": 156.6,
+   "say": "The key fact for any spy: a silent phone keeps w",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 8,
+   "stepT": 156.6
+  },
+  {
+   "t": 163.06,
+   "say": "From the signal at nearby towers, the network wo",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 9,
+   "host": "right",
+   "emote": "serious",
+   "stepT": 163.06
+  },
+  {
+   "t": 167.57,
+   "say": "So the network always knows where they are. They",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 173.02,
+   "say": "In a moving car, the call is handed from tower t",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 10,
+   "stepT": 173.02,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 177.25,
+   "say": "And when the handover fails? Hello? Hello? Can y",
+   "board": {
+    "kind": "cells",
+    "ends": [
+     4.55,
+     8.76,
+     5.46,
+     6.54,
+     5.72,
+     1.98,
+     1.76,
+     2.54,
+     8.04,
+     11.8,
+     6.12,
+     5.65
+    ]
+   },
+   "step": 11,
+   "host": "left",
+   "emote": "deadpan",
+   "stepT": 177.25
+  },
+  {
+   "t": 182.28,
+   "say": "How does it know who you are? The SIM: plastic t",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "SIM",
+    "icon": "key"
+   },
+   "stepT": 182.28,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 185.97,
+   "say": "The SIM is you, not the phone. Move it, and your",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 1,
+   "stepT": 185.97
+  },
+  {
+   "t": 189.59,
+   "say": "It holds a secret key the network uses to check ",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 2,
+   "stepT": 189.59
+  },
+  {
+   "t": 195.79,
+   "say": "The phone has its own serial number, so a stolen",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 195.79
+  },
+  {
+   "t": 199.13,
+   "say": "The phone number is an address. First digits: th",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 4,
+   "stepT": 199.13
+  },
+  {
+   "t": 202.12,
+   "say": "Next: the company.",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 5,
+   "stepT": 202.12
+  },
+  {
+   "t": 203.04,
+   "say": "The rest: you. The network reads it like a mail ",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 6,
+   "stepT": 203.04
+  },
+  {
+   "t": 206.55,
+   "say": "Travel abroad, and your phone finds a foreign ne",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 7,
+   "stepT": 206.55
+  },
+  {
+   "t": 209.87,
+   "say": "The foreign network asks home: one of yours?",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 8,
+   "stepT": 209.87
+  },
+  {
+   "t": 212.12,
+   "say": "Yours says: yes. And he'll pay. He'll pay a lot.",
+   "board": {
+    "kind": "sim",
+    "ends": [
+     3.88,
+     4.02,
+     7.26,
+     4.56,
+     3.16,
+     1.58,
+     3.82,
+     3.63,
+     2.43,
+     3.05
+    ]
+   },
+   "step": 9,
+   "stepT": 212.12
+  },
+  {
+   "t": 215.15,
+   "say": "All their networks talk and bill each other. Som",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 221.25,
+   "say": "Why do calls drop? Reason one: distance. The far",
+   "board": {
+    "kind": "drop",
+    "ends": [
+     4.89,
+     3.54,
+     6.02,
+     6.44,
+     7.62,
+     7.59
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 6,
+    "tag": "NO SIGNAL",
+    "icon": "x"
+   },
+   "stepT": 221.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 225.81,
+   "say": "Reason two: walls. Concrete and steel swallow th",
+   "board": {
+    "kind": "drop",
+    "ends": [
+     4.89,
+     3.54,
+     6.02,
+     6.44,
+     7.62,
+     7.59
+    ]
+   },
+   "step": 1,
+   "stepT": 225.81
+  },
+  {
+   "t": 229.59,
+   "say": "Three: the elevator. A sealed metal box, the bes",
+   "board": {
+    "kind": "drop",
+    "ends": [
+     4.89,
+     3.54,
+     6.02,
+     6.44,
+     7.62,
+     7.59
+    ]
+   },
+   "step": 2,
+   "stepT": 229.59
+  },
+  {
+   "t": 235.68,
+   "say": "Four: crowds. A tower serves only so many. At a ",
+   "board": {
+    "kind": "drop",
+    "ends": [
+     4.89,
+     3.54,
+     6.02,
+     6.44,
+     7.62,
+     7.59
+    ]
+   },
+   "step": 3,
+   "stepT": 235.68
+  },
+  {
+   "t": 242.04,
+   "say": "Those bars on the screen measure signal, not how",
+   "board": {
+    "kind": "drop",
+    "ends": [
+     4.89,
+     3.54,
+     6.02,
+     6.44,
+     7.62,
+     7.59
+    ]
+   },
+   "step": 4,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 242.04
+  },
+  {
+   "t": 248.44,
+   "say": "To be fair: in many countries, the emergency num",
+   "board": {
+    "kind": "drop",
+    "ends": [
+     4.89,
+     3.54,
+     6.02,
+     6.44,
+     7.62,
+     7.59
+    ]
+   },
+   "step": 5,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 248.44
+  },
+  {
+   "t": 254.58,
+   "say": "Before cells, there were car phones. One tall to",
+   "board": {
+    "kind": "history",
+    "ends": [
+     4.25,
+     3.81,
+     5.26,
+     6.15,
+     3.39,
+     6.17
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 7,
+    "tag": "1973",
+    "icon": "file"
+   },
+   "stepT": 254.58,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 258.86,
+   "say": "With a few channels. A few calls at once... for ",
+   "board": {
+    "kind": "history",
+    "ends": [
+     4.25,
+     3.81,
+     5.26,
+     6.15,
+     3.39,
+     6.17
+    ]
+   },
+   "step": 1,
+   "stepT": 258.86
+  },
+  {
+   "t": 262.75,
+   "say": "Everyone else waited their turn. So the idea of ",
+   "board": {
+    "kind": "history",
+    "ends": [
+     4.25,
+     3.81,
+     5.26,
+     6.15,
+     3.39,
+     6.17
+    ]
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 262.75
+  },
+  {
+   "t": 267.49,
+   "say": "It began on April third, nineteen seventy-three.",
+   "board": {
+    "kind": "history",
+    "ends": [
+     4.25,
+     3.81,
+     5.26,
+     6.15,
+     3.39,
+     6.17
+    ]
+   },
+   "step": 3,
+   "stepT": 267.49
+  },
+  {
+   "t": 273.27,
+   "say": "and made the first call from a handheld phone.",
+   "board": {
+    "kind": "history",
+    "ends": [
+     4.25,
+     3.81,
+     5.26,
+     6.15,
+     3.39,
+     6.17
+    ]
+   },
+   "step": 4,
+   "stepT": 273.27
+  },
+  {
+   "t": 275.39,
+   "say": "Who did he call? His rival, at the company racin",
+   "board": {
+    "kind": "history",
+    "ends": [
+     4.25,
+     3.81,
+     5.26,
+     6.15,
+     3.39,
+     6.17
+    ]
+   },
+   "step": 5,
+   "stepT": 275.39
+  },
+  {
+   "t": 280.12,
+   "say": "The planet's first mobile call... was a taunt. I",
+   "shot": "close",
+   "emote": "grin"
+  },
+  {
+   "t": 283.57,
+   "say": "It weighed over a kilo.",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 0,
+   "stepT": 283.57,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 284.83,
+   "say": "Ten hours to charge...",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 1,
+   "stepT": 284.83
+  },
+  {
+   "t": 286.06,
+   "say": "for half an hour of talk.",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 2,
+   "stepT": 286.06
+  },
+  {
+   "t": 287.25,
+   "say": "Sold ten years later, it cost about four thousan",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "host": "left",
+   "step": 3,
+   "stepT": 287.25
+  },
+  {
+   "t": 290.27,
+   "say": "The first commercial network opened in Tokyo in ",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 4,
+   "stepT": 290.27
+  },
+  {
+   "t": 296.57,
+   "say": "Second generation, ninety-one: the voice became ",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 5,
+   "stepT": 296.57
+  },
+  {
+   "t": 304.54,
+   "say": "Texts had a hundred and sixty characters, squeez",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 6,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 304.54
+  },
+  {
+   "t": 312.02,
+   "say": "Three put the internet in the phone.",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 7,
+   "stepT": 312.02
+  },
+  {
+   "t": 313.68,
+   "say": "Four made everything internet. Even the voice.",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 8,
+   "stepT": 313.68
+  },
+  {
+   "t": 316.31,
+   "say": "And five, from twenty nineteen: much faster. And",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 9,
+   "stepT": 316.31
+  },
+  {
+   "t": 321.81,
+   "say": "Each generation, humans say: this will change ou",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 10,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 321.81
+  },
+  {
+   "t": 328.23,
+   "say": "Today five G covers more than half the planet's ",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 11,
+   "stepT": 328.23
+  },
+  {
+   "t": 330.92,
+   "say": "But not fairly. Rich countries: eighty-four perc",
+   "board": {
+    "kind": "gens",
+    "ends": [
+     1.64,
+     1.25,
+     1.6,
+     3.7,
+     6.6,
+     8.22,
+     8.2,
+     1.86,
+     2.91,
+     5.22,
+     6.38,
+     3.02,
+     4.77
+    ]
+   },
+   "step": 12,
+   "stepT": 330.92
+  },
+  {
+   "t": 335.23,
+   "say": "Latest development: the towers went to space. Si",
+   "board": {
+    "kind": "sat",
+    "ends": [
+     6.55,
+     4.04,
+     8.27,
+     4.59
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "SPACE",
+    "icon": "globe"
+   },
+   "stepT": 335.23,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 342.44,
+   "say": "No dish, no special gear. Desert, sea, anywhere ",
+   "board": {
+    "kind": "sat",
+    "ends": [
+     6.55,
+     4.04,
+     8.27,
+     4.59
+    ]
+   },
+   "step": 1,
+   "stepT": 342.44
+  },
+  {
+   "t": 346.7,
+   "say": "It flies hundreds of kilometers up at twenty-sev",
+   "board": {
+    "kind": "sat",
+    "ends": [
+     6.55,
+     4.04,
+     8.27,
+     4.59
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "annoyed",
+   "stepT": 346.7
+  },
+  {
+   "t": 354.11,
+   "say": "Calls are still being tested. But soon, nowhere ",
+   "board": {
+    "kind": "sat",
+    "ends": [
+     6.55,
+     4.04,
+     8.27,
+     4.59
+    ]
+   },
+   "step": 3,
+   "stepT": 354.11
+  },
+  {
+   "t": 358.25,
+   "say": "Bad news for us, sir. I used to hide there.",
+   "shot": "close",
+   "emote": "worried"
+  },
+  {
+   "t": 360.58,
+   "say": "Two words from the Human Dictionary. Cell: the a",
+   "board": {
+    "kind": "ndict",
+    "ends": [
+     6.26,
+     4.69
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 360.58,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 366.26,
+   "say": "And SIM: the card that holds your identity. They",
+   "board": {
+    "kind": "ndict",
+    "ends": [
+     6.26,
+     4.69
+    ]
+   },
+   "host": "right",
+   "step": 1,
+   "stepT": 366.26
+  },
+  {
+   "t": 370.64,
+   "say": "Summary, sir. One: the mobile is a radio that re",
+   "board": {
+    "kind": "nrecap",
+    "ends": [
+     10.29
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 370.64,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 380.37,
+   "say": "One question remains: where do those cables go? ",
+   "shot": "close",
+   "emote": "skeptical"
+  },
+  {
+   "t": 385.97,
+   "say": "Next report: the internet. The answer, sir... is",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 389.44,
+   "say": "This has been Earth Report. Agent Peek. End of t",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 392.86,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "2 / 3",
+    "icons": [
+     "globe",
+     "server",
+     "wifi"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
