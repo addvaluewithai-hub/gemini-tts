@@ -68,8 +68,8 @@ function resolve(cues, words, slides) {
       const toInsert = seg.full, fromInsert = !!prev.full, ratio = prev.shot && !toInsert && !fromInsert ? SHOTS[seg.shot].s / SHOTS[prev.shot].s : 1;
       seg.trans = seg.trans || (toInsert ? "insert" : fromInsert ? "whip" : ratio > 1.2 ? "punch" : ratio < 0.84 ? "whip" : "cut");
       seg.dir = k % 2 ? 1 : -1;
-      if (k > 0) sfx.push(toInsert ? (seg.kind === "slide" ? { t: seg.t, type: "shutter" } : { t: seg.t, type: "tick", gain: 0.4 }) : seg.trans === "whip" ? { t: seg.t - 0.09, type: "whoosh" } : seg.trans === "punch" ? { t: seg.t, type: "tick" } : { t: seg.t, type: "tick", gain: 0.5 });
-      if (toInsert && k > 0) sfx.push({ t: seg.t - 0.16, type: "whoosh", gain: 0.7 });
+      if (k > 0) sfx.push(toInsert ? (seg.kind === "slide" ? { t: seg.t, type: "shutter" } : { t: seg.t, type: "tick", gain: 0.4 }) : seg.trans === "whip" ? { t: seg.t - 0.09, type: "whoosh", gain: cues.whooshGain ?? 1 } : seg.trans === "punch" ? { t: seg.t, type: "tick" } : { t: seg.t, type: "tick", gain: 0.5 });
+      if (toInsert && k > 0 && (cues.whooshGain ?? 1) > 0) sfx.push({ t: seg.t - 0.16, type: "whoosh", gain: 0.7 * (cues.whooshGain ?? 1) });   // settings.whooshGain turns the cut whoosh down (0 = off)
     }
     if (seg.fact) { if (seg.fact.riser) sfx.push({ t: seg.t - 0.55, type: "riser", len: 0.55 }); sfx.push({ t: seg.t, type: seg.fact.tone === "bubble" ? "pop" : "impact" }); if (seg.fact.tone !== "bubble") impacts.push(seg.t); }
     if (seg.mark) sfx.push({ t: seg.t + 0.14, type: "swipe" });

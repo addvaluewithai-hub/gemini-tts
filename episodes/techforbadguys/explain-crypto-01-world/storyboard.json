@@ -29,7 +29,8 @@
   "musicGain": 0.45,
   "sfxGain": 0.55,
   "voiceGain": 1.35,
-  "captions": false
+  "captions": false,
+  "whooshGain": 0.2
  },
  "ending": {
   "card": {
