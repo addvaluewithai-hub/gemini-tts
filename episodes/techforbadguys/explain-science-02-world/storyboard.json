@@ -66,16 +66,31 @@
    "kind": "choco"
   },
   "fairtest": {
-   "kind": "fairtest"
+   "kind": "fairtest",
+   "ends": [
+    3.38,
+    3.12,
+    4.93,
+    5.44,
+    8.29,
+    7.06,
+    5.8
+   ]
   },
   "headline": {
    "kind": "headline"
   },
   "lind": {
-   "kind": "lind"
-  },
-  "paper": {
-   "kind": "paper"
+   "kind": "lind",
+   "ends": [
+    7.09,
+    4.79,
+    3.43,
+    9.29,
+    5.73,
+    4.04,
+    3.59
+   ]
   },
   "repeat": {
    "kind": "repeat"
@@ -87,7 +102,23 @@
    "kind": "s2dict"
   },
   "s2intro": {
-   "kind": "s2intro"
+   "kind": "s2intro",
+   "ends": [
+    6.87,
+    3.55,
+    13.05,
+    4.31
+   ]
+  },
+  "s2paper": {
+   "kind": "s2paper",
+   "ends": [
+    5.37,
+    4.21,
+    7.82,
+    5.22,
+    5.32
+   ]
   },
   "s2recap": {
    "kind": "s2recap"
@@ -149,7 +180,7 @@
    ]
   },
   {
-   "id": "paper",
+   "id": "s2paper",
    "story": {
     "n": 1,
     "tag": "THE PAPER",
@@ -160,19 +191,19 @@
     {
      "say": "أول حاجة: البشر مابيعلنوش اكتشافاتهم في الشارع. بيكتبوها في حاجة اسمها ورقة علمية.",
      "show": "board",
-     "board": "paper",
+     "board": "s2paper",
      "step": 0
     },
     {
      "say": "ورقة بتقول: كان عندنا سؤال كذا، عملنا كذا بالظبط، ولقينا كذا.",
      "show": "board",
-     "board": "paper",
+     "board": "s2paper",
      "step": 1
     },
     {
      "say": "وأهم جزء فيها مش النتيجة يا فندم. أهم جزء هو \"عملنا إيه بالظبط\". علشان أي حد تاني يقدر يعمل نفس الحاجة ويشوف هيوصل لنفس الكلام ولا لأ.",
      "show": "board",
-     "board": "paper",
+     "board": "s2paper",
      "step": 2,
      "emote": "serious",
      "host": "right"
@@ -180,13 +211,13 @@
     {
      "say": "والبشر بينشروا من الورق ده حوالي تلاتة مليون ورقة في السنة. تلاتة مليون.",
      "show": "board",
-     "board": "paper",
+     "board": "s2paper",
      "step": 3
     },
     {
      "say": "يعني لو عالم واحد قرا ورقة كل يوم، هيخلّص ورق سنة واحدة بس بعد حوالي تمن آلاف سنة.",
      "show": "board",
-     "board": "paper",
+     "board": "s2paper",
      "step": 4
     },
     {

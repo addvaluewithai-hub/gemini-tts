@@ -17,6 +17,7 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { sintroSet } from "./sets/sintro.js";
+import { s2introSet, s2paperSet, fairtestSet, lindSet } from "./sets/part2a.js";
 import { sthumbSet } from "./sets/sthumb.js";
 import { sdictSet, srecapSet } from "./sets/sdict.js";
 import { trustSet } from "./sets/trust.js";
@@ -858,7 +859,7 @@ const BOARDS = {
   middle: (s, step, age, total, cfg) => middleSet(s, step, age, total, cfg),
   copy: (s, step, age, total, cfg) => copySet(s, step, age, total, cfg),
   crisis: (s, step, age, total, cfg) => crisisSet(s, step, age, total, cfg),
-  paper: (s, step, age, total, cfg) => paperSet(s, step, age, total, cfg),
+  s2paper: (s, step, age, total, cfg) => s2paperSet(s, step, age, total, cfg),
   idea: (s, step, age, total, cfg) => ideaSet(s, step, age, total, cfg),
   genesis: (s, step, age, total, cfg) => genesisSet(s, step, age, total, cfg),
   pizza: (s, step, age, total, cfg) => pizzaSet(s, step, age, total, cfg),
@@ -866,6 +867,10 @@ const BOARDS = {
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
   sintro: (s, step, age, total, cfg) => sintroSet(s, step, age, total, cfg),
+  s2intro: (s, step, age, total, cfg) => s2introSet(s, step, age, total, cfg),
+  paper: (s, step, age, total, cfg) => paperSet(s, step, age, total, cfg),
+  fairtest: (s, step, age, total, cfg) => fairtestSet(s, step, age, total, cfg),
+  lind: (s, step, age, total, cfg) => lindSet(s, step, age, total, cfg),
   sthumb: (s, step, age, total, cfg) => sthumbSet(s, step, age, total, cfg),
   srecap: (s, step, age, total, cfg) => srecapSet(s, step, age, total, cfg),
   sdict: (s, step, age, total, cfg) => sdictSet(s, step, age, total, cfg),
