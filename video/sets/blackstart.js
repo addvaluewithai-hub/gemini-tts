@@ -74,7 +74,7 @@ function s2(a, tot) {
   // hours on a clock, days on calendar pages
   const CX = v ? 760 : 1440, CY = v ? 1180 : 300;
   const clock = a > 3.3 ? at(CX, CY, `${stopwatch(seg(a, 3.36, 5.4) * 6, v ? 70 : 95)}${at(v ? 120 : 150, 0, text(0, 30, "h", v ? 80 : 100, P.gold))}`, pop(a - 3.36)) : "";
-  const days = a > 4.4 ? at(CX + (v ? 300 : 340), CY - 10, [0, 1, 2].map((k) => k === 0 ? calPage("3", "", 0.5, 150) : calFlip(String(k === 2 ? 1 : 2), "", seg(a, 4.6 + (2 - k) * 0.3, 4.9 + (2 - k) * 0.3), 150)).join(""), (v ? 0.5 : 0.62) * pop(a - 4.5)) : "";
+  const days = a > 4.4 ? at(CX + (v ? 300 : 340), CY - 10, [0, 1, 2].map((k) => k === 0 ? calPage("3", "", 0.5, 150) : calFlip(String(k === 2 ? 1 : 2), "", seg(a, 4.6 + (2 - k) * 0.3, 4.9 + (2 - k) * 0.3), 150)).join(""), 0.62 * pop(a - 4.5)) : "";
   // the fall and the rise
   const AX = v ? 760 : 1420, AY = v ? 1520 : 760;
   const fall = a > 5.4 ? at(AX, AY, `${drawn("M0 -150L0 120", seg(a, 5.44, 5.6), RED, 26)}<path d="M-50 70L0 140L50 70Z" fill="${RED}" opacity="${seg(a, 5.55, 5.65).toFixed(2)}"/>${at(90, 10, text(0, 30, "s", 90, RED), seg(a, 5.6, 5.8))}`) : "";
