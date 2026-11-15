@@ -1,0 +1,1339 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-science-02-dub-en",
+ "transcript": "../../../video/cues/explain-science-02-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir. Field report two in the Science File.",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.24,
+   "say": "In twenty fifteen, newspapers in many countries ",
+   "board": {
+    "kind": "s2intro",
+    "ends": [
+     6.87,
+     3.55,
+     13.05,
+     4.31
+    ]
+   },
+   "step": 0,
+   "stepT": 3.24,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 10.29,
+   "say": "People were happy. Shops were happy.",
+   "board": {
+    "kind": "s2intro",
+    "ends": [
+     6.87,
+     3.55,
+     13.05,
+     4.31
+    ]
+   },
+   "step": 1,
+   "stepT": 10.29
+  },
+  {
+   "t": 12.1,
+   "say": "Honestly, so was I.",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 13.26,
+   "say": "Weeks later, its author said: I did it on purpos",
+   "board": {
+    "kind": "s2intro",
+    "ends": [
+     6.87,
+     3.55,
+     13.05,
+     4.31
+    ]
+   },
+   "step": 2,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 13.26,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 18.25,
+   "say": "So today: how research is done, who checks it be",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 24.15,
+   "say": "And the big question: when you read \"a study say",
+   "board": {
+    "kind": "s2intro",
+    "ends": [
+     6.87,
+     3.55,
+     13.05,
+     4.31
+    ]
+   },
+   "step": 3,
+   "emote": "skeptical",
+   "host": "left",
+   "stepT": 24.15,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 27.8,
+   "say": "First: humans don't announce discoveries in the ",
+   "board": {
+    "kind": "s2paper",
+    "ends": [
+     5.37,
+     4.21,
+     7.82,
+     5.22,
+     5.32
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "THE PAPER",
+    "icon": "file"
+   },
+   "stepT": 27.8,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 32.61,
+   "say": "A paper says: we had this question, we did exact",
+   "board": {
+    "kind": "s2paper",
+    "ends": [
+     5.37,
+     4.21,
+     7.82,
+     5.22,
+     5.32
+    ]
+   },
+   "step": 1,
+   "stepT": 32.61
+  },
+  {
+   "t": 36.45,
+   "say": "And the key part isn't the result, sir. It's \"ex",
+   "board": {
+    "kind": "s2paper",
+    "ends": [
+     5.37,
+     4.21,
+     7.82,
+     5.22,
+     5.32
+    ]
+   },
+   "step": 2,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 36.45
+  },
+  {
+   "t": 42.93,
+   "say": "Humans publish about three million of these pape",
+   "board": {
+    "kind": "s2paper",
+    "ends": [
+     5.37,
+     4.21,
+     7.82,
+     5.22,
+     5.32
+    ]
+   },
+   "step": 3,
+   "stepT": 42.93
+  },
+  {
+   "t": 46.7,
+   "say": "If one scientist read a paper a day, one year's ",
+   "board": {
+    "kind": "s2paper",
+    "ends": [
+     5.37,
+     4.21,
+     7.82,
+     5.22,
+     5.32
+    ]
+   },
+   "step": 4,
+   "stepT": 46.7
+  },
+  {
+   "t": 51.47,
+   "say": "So every single day, some paper somewhere says s",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 57.13,
+   "say": "So how do you know one thing made the difference",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present",
+   "story": {
+    "n": 2,
+    "tag": "A FAIR TEST",
+    "icon": "eye"
+   }
+  },
+  {
+   "t": 60.96,
+   "say": "Two pots of soup. One gets a new spice, the othe",
+   "board": {
+    "kind": "fairtest",
+    "ends": [
+     3.38,
+     3.12,
+     4.93,
+     5.44,
+     8.29,
+     7.06,
+     5.8
+    ]
+   },
+   "step": 0,
+   "stepT": 60.96,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 64.11,
+   "say": "If the first tastes better, was it the spice? No",
+   "board": {
+    "kind": "fairtest",
+    "ends": [
+     3.38,
+     3.12,
+     4.93,
+     5.44,
+     8.29,
+     7.06,
+     5.8
+    ]
+   },
+   "step": 1,
+   "stepT": 64.11
+  },
+  {
+   "t": 67.2,
+   "say": "Both pots must match in everything else: same wa",
+   "board": {
+    "kind": "fairtest",
+    "ends": [
+     3.38,
+     3.12,
+     4.93,
+     5.44,
+     8.29,
+     7.06,
+     5.8
+    ]
+   },
+   "step": 2,
+   "stepT": 67.2
+  },
+  {
+   "t": 71.92,
+   "say": "The pot without the spice is the control group: ",
+   "board": {
+    "kind": "fairtest",
+    "ends": [
+     3.38,
+     3.12,
+     4.93,
+     5.44,
+     8.29,
+     7.06,
+     5.8
+    ]
+   },
+   "step": 3,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 71.92
+  },
+  {
+   "t": 76.99,
+   "say": "And humans have a strange problem, sir: tell the",
+   "board": {
+    "kind": "fairtest",
+    "ends": [
+     3.38,
+     3.12,
+     4.93,
+     5.44,
+     8.29,
+     7.06,
+     5.8
+    ]
+   },
+   "step": 4,
+   "stepT": 76.99
+  },
+  {
+   "t": 84.46,
+   "say": "So in serious trials, both groups get something ",
+   "board": {
+    "kind": "fairtest",
+    "ends": [
+     3.38,
+     3.12,
+     4.93,
+     5.44,
+     8.29,
+     7.06,
+     5.8
+    ]
+   },
+   "step": 5,
+   "stepT": 84.46
+  },
+  {
+   "t": 91.38,
+   "say": "In more serious trials, even the person handing ",
+   "board": {
+    "kind": "fairtest",
+    "ends": [
+     3.38,
+     3.12,
+     4.93,
+     5.44,
+     8.29,
+     7.06,
+     5.8
+    ]
+   },
+   "step": 6,
+   "emote": "neutral",
+   "host": "left",
+   "stepT": 91.38
+  },
+  {
+   "t": 96.88,
+   "say": "So humans have to blindfold everyone, just to se",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 100.1,
+   "say": "The first time humans did something close to thi",
+   "board": {
+    "kind": "lind",
+    "ends": [
+     7.09,
+     4.79,
+     3.43,
+     9.29,
+     5.73,
+     4.04,
+     3.59
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "12 SAILORS",
+    "icon": "ship"
+   },
+   "stepT": 100.1,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 106.04,
+   "say": "Sailors were dying of scurvy: bleeding gums, fal",
+   "board": {
+    "kind": "lind",
+    "ends": [
+     7.09,
+     4.79,
+     3.43,
+     9.29,
+     5.73,
+     4.04,
+     3.59
+    ]
+   },
+   "step": 1,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 106.04
+  },
+  {
+   "t": 110.82,
+   "say": "Everyone had a cure: vinegar, sea water, cider.",
+   "board": {
+    "kind": "lind",
+    "ends": [
+     7.09,
+     4.79,
+     3.43,
+     9.29,
+     5.73,
+     4.04,
+     3.59
+    ]
+   },
+   "step": 2,
+   "stepT": 110.82
+  },
+  {
+   "t": 113.85,
+   "say": "A ship's doctor named James Lind didn't take any",
+   "board": {
+    "kind": "lind",
+    "ends": [
+     7.09,
+     4.79,
+     3.43,
+     9.29,
+     5.73,
+     4.04,
+     3.59
+    ]
+   },
+   "step": 3,
+   "stepT": 113.85
+  },
+  {
+   "t": 123.06,
+   "say": "Days later, the pair given oranges and lemons we",
+   "board": {
+    "kind": "lind",
+    "ends": [
+     7.09,
+     4.79,
+     3.43,
+     9.29,
+     5.73,
+     4.04,
+     3.59
+    ]
+   },
+   "step": 4,
+   "stepT": 123.06
+  },
+  {
+   "t": 129.06,
+   "say": "Twelve sailors, sir, and we learned what the who",
+   "board": {
+    "kind": "lind",
+    "ends": [
+     7.09,
+     4.79,
+     3.43,
+     9.29,
+     5.73,
+     4.04,
+     3.59
+    ]
+   },
+   "step": 5,
+   "emote": "proud",
+   "host": "right",
+   "stepT": 129.06
+  },
+  {
+   "t": 132.48,
+   "say": "The embarrassing part: the navy acted on it abou",
+   "board": {
+    "kind": "lind",
+    "ends": [
+     7.09,
+     4.79,
+     3.43,
+     9.29,
+     5.73,
+     4.04,
+     3.59
+    ]
+   },
+   "step": 6,
+   "stepT": 132.48
+  },
+  {
+   "t": 135.92,
+   "say": "So sometimes the human problem isn't not knowing",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 140.5,
+   "say": "Second: how many people were tested.",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count",
+   "story": {
+    "n": 4,
+    "tag": "SAMPLE SIZE",
+    "icon": "coin"
+   }
+  },
+  {
+   "t": 142.78,
+   "say": "Flip a coin three times and get the same side th",
+   "board": {
+    "kind": "sample",
+    "ends": [
+     4.33,
+     2.2,
+     3.82,
+     7.02,
+     4.25
+    ]
+   },
+   "step": 0,
+   "stepT": 142.78,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 146.76,
+   "say": "No, sir. That happens by chance all the time.",
+   "board": {
+    "kind": "sample",
+    "ends": [
+     4.33,
+     2.2,
+     3.82,
+     7.02,
+     4.25
+    ]
+   },
+   "step": 1,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 146.76
+  },
+  {
+   "t": 149.06,
+   "say": "But flip it a thousand times and get nine hundre",
+   "board": {
+    "kind": "sample",
+    "ends": [
+     4.33,
+     2.2,
+     3.82,
+     7.02,
+     4.25
+    ]
+   },
+   "step": 2,
+   "stepT": 149.06
+  },
+  {
+   "t": 152.33,
+   "say": "Trials on humans are the same. Fifteen people lo",
+   "board": {
+    "kind": "sample",
+    "ends": [
+     4.33,
+     2.2,
+     3.82,
+     7.02,
+     4.25
+    ]
+   },
+   "step": 3,
+   "stepT": 152.33
+  },
+  {
+   "t": 159.27,
+   "say": "The bigger the number, the smaller the luck. Tha",
+   "board": {
+    "kind": "sample",
+    "ends": [
+     4.33,
+     2.2,
+     3.82,
+     7.02,
+     4.25
+    ]
+   },
+   "step": 4,
+   "stepT": 159.27
+  },
+  {
+   "t": 162.48,
+   "say": "\"A study of ten people proved\"... said something",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 165.59,
+   "say": "Back to the chocolate. The journalist was John B",
+   "board": {
+    "kind": "choco",
+    "ends": [
+     4.73,
+     13.84,
+     6.09,
+     8.2,
+     3.65,
+     6.62,
+     7.74
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "CHOCOLATE",
+    "icon": "heart"
+   },
+   "stepT": 165.59,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 169.75,
+   "say": "They recruited about fifteen people in three gro",
+   "board": {
+    "kind": "choco",
+    "ends": [
+     4.73,
+     13.84,
+     6.09,
+     8.2,
+     3.65,
+     6.62,
+     7.74
+    ]
+   },
+   "step": 1,
+   "stepT": 169.75
+  },
+  {
+   "t": 178.61,
+   "say": "So far, a respectable trial, right? But here's t",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "present"
+  },
+  {
+   "t": 181.86,
+   "say": "They measured not one thing, but eighteen: weigh",
+   "board": {
+    "kind": "choco",
+    "ends": [
+     4.73,
+     13.84,
+     6.09,
+     8.2,
+     3.65,
+     6.62,
+     7.74
+    ]
+   },
+   "step": 2,
+   "stepT": 181.86,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 185.78,
+   "say": "Few people, many measurements: something will di",
+   "board": {
+    "kind": "choco",
+    "ends": [
+     4.73,
+     13.84,
+     6.09,
+     8.2,
+     3.65,
+     6.62,
+     7.74
+    ]
+   },
+   "step": 3,
+   "stepT": 185.78
+  },
+  {
+   "t": 192.04,
+   "say": "This time, by chance... weight. The chocolate gr",
+   "board": {
+    "kind": "choco",
+    "ends": [
+     4.73,
+     13.84,
+     6.09,
+     8.2,
+     3.65,
+     6.62,
+     7.74
+    ]
+   },
+   "step": 4,
+   "stepT": 192.04
+  },
+  {
+   "t": 195.31,
+   "say": "They wrote the paper and sent it to a journal. I",
+   "board": {
+    "kind": "choco",
+    "ends": [
+     4.73,
+     13.84,
+     6.09,
+     8.2,
+     3.65,
+     6.62,
+     7.74
+    ]
+   },
+   "step": 5,
+   "stepT": 195.31
+  },
+  {
+   "t": 201.78,
+   "say": "Then a press release, and the papers did the res",
+   "board": {
+    "kind": "choco",
+    "ends": [
+     4.73,
+     13.84,
+     6.09,
+     8.2,
+     3.65,
+     6.62,
+     7.74
+    ]
+   },
+   "step": 6,
+   "emote": "bored",
+   "host": "right",
+   "stepT": 201.78
+  },
+  {
+   "t": 209.07,
+   "say": "When Bohannon revealed the hoax, many people wer",
+   "shot": "host",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 215.5,
+   "say": "But the message landed: the road from lab to new",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 219.72,
+   "say": "The guards?",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug",
+   "story": {
+    "n": 6,
+    "tag": "PEER REVIEW",
+    "icon": "shield"
+   }
+  },
+  {
+   "t": 220.58,
+   "say": "Humans have a system called peer review. A scien",
+   "board": {
+    "kind": "review",
+    "ends": [
+     9.32,
+     4.83,
+     3.24,
+     5.29,
+     4.37,
+     4.29
+    ]
+   },
+   "step": 0,
+   "stepT": 220.58,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 229.38,
+   "say": "They ask: why so few people? Where's the control",
+   "board": {
+    "kind": "review",
+    "ends": [
+     9.32,
+     4.83,
+     3.24,
+     5.29,
+     4.37,
+     4.29
+    ]
+   },
+   "step": 1,
+   "stepT": 229.38
+  },
+  {
+   "t": 234.39,
+   "say": "It catches plenty of mistakes, sir. But note two",
+   "board": {
+    "kind": "review",
+    "ends": [
+     9.32,
+     4.83,
+     3.24,
+     5.29,
+     4.37,
+     4.29
+    ]
+   },
+   "step": 2,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 234.39
+  },
+  {
+   "t": 237.33,
+   "say": "One: reviewers only read. They don't redo the ex",
+   "board": {
+    "kind": "review",
+    "ends": [
+     9.32,
+     4.83,
+     3.24,
+     5.29,
+     4.37,
+     4.29
+    ]
+   },
+   "step": 3,
+   "stepT": 237.33
+  },
+  {
+   "t": 242.41,
+   "say": "Two: not every journal is a journal. Some take a",
+   "board": {
+    "kind": "review",
+    "ends": [
+     9.32,
+     4.83,
+     3.24,
+     5.29,
+     4.37,
+     4.29
+    ]
+   },
+   "step": 4,
+   "stepT": 242.41
+  },
+  {
+   "t": 246.85,
+   "say": "Looks like a journal, called a journal, and insi",
+   "board": {
+    "kind": "review",
+    "ends": [
+     9.32,
+     4.83,
+     3.24,
+     5.29,
+     4.37,
+     4.29
+    ]
+   },
+   "step": 5,
+   "emote": "deadpan",
+   "host": "left",
+   "stepT": 246.85
+  },
+  {
+   "t": 251.89,
+   "say": "So what makes humans really trust a result? Some",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "present",
+   "story": {
+    "n": 7,
+    "tag": "DO IT AGAIN",
+    "icon": "dup"
+   }
+  },
+  {
+   "t": 256.04,
+   "say": "Another team, in another country, with other peo",
+   "board": {
+    "kind": "repeat",
+    "ends": [
+     7.69,
+     5.38,
+     4.32,
+     6.89,
+     8.05,
+     6.91
+    ]
+   },
+   "step": 0,
+   "stepT": 256.04,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 263.57,
+   "say": "If nobody can repeat it, it stays one result. Ma",
+   "board": {
+    "kind": "repeat",
+    "ends": [
+     7.69,
+     5.38,
+     4.32,
+     6.89,
+     8.05,
+     6.91
+    ]
+   },
+   "step": 1,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 263.57
+  },
+  {
+   "t": 268.47,
+   "say": "And there's a sneakier problem, sir. Imagine twe",
+   "board": {
+    "kind": "repeat",
+    "ends": [
+     7.69,
+     5.38,
+     4.32,
+     6.89,
+     8.05,
+     6.91
+    ]
+   },
+   "step": 2,
+   "stepT": 268.47
+  },
+  {
+   "t": 273.62,
+   "say": "Nineteen find nothing, say: nothing to write abo",
+   "board": {
+    "kind": "repeat",
+    "ends": [
+     7.69,
+     5.38,
+     4.32,
+     6.89,
+     8.05,
+     6.91
+    ]
+   },
+   "step": 3,
+   "stepT": 273.62
+  },
+  {
+   "t": 279.92,
+   "say": "Which gets published? Only that one. From outsid",
+   "board": {
+    "kind": "repeat",
+    "ends": [
+     7.69,
+     5.38,
+     4.32,
+     6.89,
+     8.05,
+     6.91
+    ]
+   },
+   "step": 4,
+   "stepT": 279.92
+  },
+  {
+   "t": 287.88,
+   "say": "So many scientists now write down and register t",
+   "board": {
+    "kind": "repeat",
+    "ends": [
+     7.69,
+     5.38,
+     4.32,
+     6.89,
+     8.05,
+     6.91
+    ]
+   },
+   "step": 5,
+   "stepT": 287.88
+  },
+  {
+   "t": 294.41,
+   "say": "And here's a surprise, sir, for a later report: ",
+   "shot": "host",
+   "emote": "worried"
+  },
+  {
+   "t": 301.92,
+   "say": "So I gathered some questions to ask any story th",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count",
+   "story": {
+    "n": 8,
+    "tag": "6 QUESTIONS",
+    "icon": "eye"
+   }
+  },
+  {
+   "t": 306.03,
+   "say": "One: how many people? Ten or ten thousand?",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 0,
+   "stepT": 306.03,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 308.44,
+   "say": "Two: was there a group to compare with?",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 1,
+   "stepT": 308.44
+  },
+  {
+   "t": 310.11,
+   "say": "Three: was it on humans, or on mice? Half the am",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 2,
+   "stepT": 310.11
+  },
+  {
+   "t": 314.75,
+   "say": "Thank you, mouse. But you're not me.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 316.44,
+   "say": "Four: did anyone else repeat it and get the same",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 3,
+   "stepT": 316.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 319.08,
+   "say": "Five: who paid for it? Not that paying makes any",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 4,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 319.08
+  },
+  {
+   "t": 323.17,
+   "say": "And six, my favorite: the risk doubled? Doubled ",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 5,
+   "stepT": 323.17
+  },
+  {
+   "t": 326.35,
+   "say": "If something happened to one in ten thousand peo",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 6,
+   "stepT": 326.35
+  },
+  {
+   "t": 332.63,
+   "say": "Meanwhile nine thousand, nine hundred and ninety",
+   "board": {
+    "kind": "headline",
+    "ends": [
+     2.77,
+     2.34,
+     6.85,
+     2.88,
+     4.54,
+     3.79,
+     7.71,
+     7.19
+    ]
+   },
+   "step": 7,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 332.63
+  },
+  {
+   "t": 339.54,
+   "say": "If the story passes all six questions... believe",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 342.29,
+   "say": "The Human Dictionary. Two words. Sample: the peo",
+   "board": {
+    "kind": "s2dict",
+    "ends": [
+     6.65,
+     5.79
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 342.29,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 349.38,
+   "say": "And peer review: scientists who read a study bef",
+   "board": {
+    "kind": "s2dict",
+    "ends": [
+     6.65,
+     5.79
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 349.38
+  },
+  {
+   "t": 355.71,
+   "say": "Summary, sir. One: a decent trial needs a compar",
+   "board": {
+    "kind": "s2recap",
+    "ends": [
+     6.82,
+     5.6,
+     5.76
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 355.71,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 361.26,
+   "say": "Two: measure many things in a few people, and yo",
+   "board": {
+    "kind": "s2recap",
+    "ends": [
+     6.82,
+     5.6,
+     5.76
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 361.26
+  },
+  {
+   "t": 366.82,
+   "say": "Three: review catches a lot, but not everything.",
+   "board": {
+    "kind": "s2recap",
+    "ends": [
+     6.82,
+     5.6,
+     5.76
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "stepT": 366.82
+  },
+  {
+   "t": 372.14,
+   "say": "Honestly, the chocolate wasn't the problem. The ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 376.92,
+   "say": "Next report: why do scientists keep changing the",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 383.8,
+   "say": "This was Earth Report. Agent Peek. End of transm",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 387.38,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "3 / 5",
+    "icons": [
+     "book",
+     "eye",
+     "rules"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
