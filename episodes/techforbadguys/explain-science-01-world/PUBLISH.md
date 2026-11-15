@@ -27,3 +27,19 @@ screen, no captions burned in, chapter chips in English, the last 13 s are the e
 - Shorts: `shorts.json` holds five proposals (cable, stick, dragon, halley, theory) with parts and closing lines
   (`shorts/cta-lines.json`, `cta-lines-en.json`); closing lines are recorded and the Shorts rendered once the owner
   picks; language-free thumbnails in `shorts/thumb-<key>-intl.jpg`.
+
+## Status when the file was paused (owner, 15 Nov 2026)
+
+The Science File is paused by the owner; the file is being re-split (five parts instead of four). Where things stand:
+
+- **Part 1** (this folder): rendered, checked and sent to the owner; no feedback yet. Files in R2 under `science-01/`.
+  After the re-split the storyboard, title, thumbnails and footer already say 1/5 and the end card says NEXT 2/5, but
+  the **render in R2 (`science-01/episode/full-ar.mp4`) still shows "2 / 4" on its end card**: re-render with produce.sh
+  (command above) before publishing. Shorts: five proposals in `youtube/shorts.json`, closing lines not recorded.
+- **Part 2** (`../explain-science-02-world`): storyboard (words unchanged), Arabic voice on Vertex (job
+  `techforbadguys-explain-science-02-ar-v`, 7:11.7 with the end card), every scene drawn (`video/sets/part2a.js`,
+  `part2b.js`, `part2c.js`, props `sci2.js`), English dub recorded and fitted (job
+  `techforbadguys-explain-science-02-dub-en-w`), upload kit, thumbnails AR/EN, four Shorts proposals. Rendered once
+  (end card NEXT 3/5); not yet reviewed by the owner. Files in R2 under `science-02/`.
+- **Parts 3 to 5**: on hold; the planner is rewriting them as three parts (rejected-then-right; why science seems to
+  contradict itself; when science really fools us).
