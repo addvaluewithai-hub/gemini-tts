@@ -23,16 +23,16 @@
    "parts": [
     [
      15.51,
-     21.77
+     21.95
     ],
     [
-     132.73,
-     159.9
+     133.03,
+     155.07
     ]
    ],
    "end": {
-    "audio": "shorts/cta-snail.wav",
-    "words": "shorts/cta-snail.words.json",
+    "audio": "shorts/cta-snail-short.wav",
+    "words": "shorts/cta-snail-short.words.json",
     "card": {
      "icons": [
       "snail",
@@ -55,7 +55,18 @@
      "electrons",
      "how a light switch works"
     ]
-   }
+   },
+   "total": 31.9,
+   "peekSides": [
+    [
+     142.1,
+     "left"
+    ],
+    [
+     150.3,
+     "right"
+    ]
+   ]
   },
   {
    "key": "lightning",
@@ -271,6 +282,8 @@
   }
  ],
  "peekFixed": {
-  "h": 0.25
- }
+  "h": 0.3,
+  "side": "right"
+ },
+ "captions": true
 }

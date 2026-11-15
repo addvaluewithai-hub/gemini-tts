@@ -104,6 +104,9 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
   let pip = 0, room = 0, side = "right";
   // peekFixed (a Short): Peek stands at the bottom the whole time, so a beat without a picture keeps the last one, frozen
   const fixed = vert && !!cues.peekFixed, firstBoard = fixed ? segs.find((g) => g.full && g.kind === "board") : null;
+  // where he stands: the side a beat leaves clear (its host: right | left), kept until another beat says otherwise; a Short can name sides by time
+  const sides = fixed ? (cues.peekFixed.sides || []) : [];
+  let fixSide = (cues.peekFixed && cues.peekFixed.side) || "right", fixX = fixSide === "left" ? 0 : 1;
   let held = firstBoard ? { spec: firstBoard.board, step: firstBoard.step || 0, age: 0, total: 0 } : null;
   let hostY = 0, vY = 0, lurk = 0, peek = 0, scrim = 0, lb = 0, chipA = 0, kb = 1, cx = 0.5, cy = 0.3, storyT = -9, lastStory = null, lastInsertCut = -9;
   for (let i = 0; i < N; i++) {
@@ -186,6 +189,8 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
       // the host acting inside a full-frame set: placed by its feet, any size, optionally walking from one spot to another over the beat
       actor: insert && seg.actor ? (() => { const a = seg.actor, to = a.to || {}, span = Math.max(0.3, (Math.min(seg.end, seg.t + 30) - seg.t) * (a.over ?? 0.75)), p = a.to ? smooth(clamp((t - seg.t - (a.wait ?? 0)) / span)) : 0, moving = !!a.to && p > 0.01 && p < 0.99;
         return { ...body, ...(a.arms === false ? { armL: null, armR: null } : {}), x: lerp(a.x, to.x ?? a.x, p), y: lerp(a.y, to.y ?? a.y, p), size: lerp(a.size, to.size ?? a.size, p), flip: !!a.flip, hop: moving ? Math.abs(Math.sin(t * 10)) : 0, lean: moving ? 4 : 0 }; })() : null,
+      fixX: fixed ? (() => { const o = sides.filter(([ts]) => ts <= t).pop(); fixSide = o ? o[1] : seg.host === "left" || seg.host === "right" ? seg.host : fixSide;
+        fixX += ((fixSide === "left" ? 0 : 1) - fixX) * (i === 0 ? 1 : 0.14); return fixX; })() : null,
       board: insert && seg.kind === "board" ? (held = { spec: seg.board, step: seg.step || 0, age: t - (seg.stepT ?? seg.t), total: t - seg.cutT }) : fixed ? held : null,
       tv: seg.slide, onair: Math.floor(tv * 0.8) % 2 ? 1 : 0.55, drone, insert: ins, fact, meme, chip, ...caption(i) });
   }
