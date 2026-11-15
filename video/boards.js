@@ -27,6 +27,16 @@ import { c2capSet } from "./sets/c2cap.js";
 import { c2rulesSet } from "./sets/c2rules.js";
 import { c2dictSet } from "./sets/c2dict.js";
 import { c2recapSet } from "./sets/c2recap.js";
+import { c3introSet } from "./sets/c3intro.js";
+import { c3keysSet } from "./sets/c3keys.js";
+import { c3walletSet } from "./sets/c3wallet.js";
+import { c3useSet } from "./sets/c3use.js";
+import { c3anonSet } from "./sets/c3anon.js";
+import { c3bankSet } from "./sets/c3bank.js";
+import { c3lostSet } from "./sets/c3lost.js";
+import { c3scamsSet } from "./sets/c3scams.js";
+import { c3dictSet } from "./sets/c3dict.js";
+import { c3recapSet } from "./sets/c3recap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -865,6 +875,17 @@ const BOARDS = {
   c2rules: (s, step, age, total, cfg) => c2rulesSet(s, step, age, total, cfg),
   c2dict: (s, step, age, total, cfg) => c2dictSet(s, step, age, total, cfg),
   c2recap: (s, step, age, total, cfg) => c2recapSet(s, step, age, total, cfg),
+  // Crypto part 3 (keys, wallets, exchanges, lost keys, scams), in the same world (sets/c3<scene>.js, props in sets/c3props.js).
+  c3intro: (s, step, age, total, cfg) => c3introSet(s, step, age, total, cfg),
+  c3keys: (s, step, age, total, cfg) => c3keysSet(s, step, age, total, cfg),
+  c3wallet: (s, step, age, total, cfg) => c3walletSet(s, step, age, total, cfg),
+  c3use: (s, step, age, total, cfg) => c3useSet(s, step, age, total, cfg),
+  c3anon: (s, step, age, total, cfg) => c3anonSet(s, step, age, total, cfg),
+  c3bank: (s, step, age, total, cfg) => c3bankSet(s, step, age, total, cfg),
+  c3lost: (s, step, age, total, cfg) => c3lostSet(s, step, age, total, cfg),
+  c3scams: (s, step, age, total, cfg) => c3scamsSet(s, step, age, total, cfg),
+  c3dict: (s, step, age, total, cfg) => c3dictSet(s, step, age, total, cfg),
+  c3recap: (s, step, age, total, cfg) => c3recapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
