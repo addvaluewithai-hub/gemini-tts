@@ -1,0 +1,2329 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-crypto-04-dub-en",
+ "transcript": "../../../video/cues/explain-crypto-04-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "EARTH",
+  "b": "REPORT",
+  "c": "",
+  "tagline": "FIELD FILE: CRYPTOCURRENCY"
+ },
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.55,
+ "voiceGain": 1.35,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir. Field report number four in the cryptocurre",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.26,
+   "say": "Today's subject: the price. Why is this thing wo",
+   "board": {
+    "kind": "titlecard",
+    "kicker": "EARTH REPORT · FIELD FILE",
+    "title": "WHY IS IT WORTH ANYTHING?",
+    "size": 140,
+    "sub": "PART 4 OF 5 · PRICE, BUBBLES AND THE BET"
+   },
+   "step": 0,
+   "stepT": 3.26,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 6.98,
+   "say": "A line in a ledger. Nothing you can touch, no go",
+   "board": {
+    "kind": "counter",
+    "title": "ONE BITCOIN · OCTOBER 2025",
+    "to": 126000,
+    "unit": "DOLLARS",
+    "count": 0,
+    "time": 1.8
+   },
+   "step": 0,
+   "stepT": 6.98,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 13.55,
+   "say": "The earlier reports covered how it works and how",
+   "shot": "close",
+   "emote": "neutral"
+  },
+  {
+   "t": 18.7,
+   "say": "I will report where that price comes from, and w",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 29.29,
+   "say": "The first thing I looked for: what is behind thi",
+   "board": {
+    "kind": "rows",
+    "title": "WHAT IS BEHIND IT?",
+    "items": [
+     {
+      "text": "Gold in a vault?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A government guarantee?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A company's profits?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Scarcity, and belief",
+      "mark": "check",
+      "late": true
+     }
+    ]
+   },
+   "story": {
+    "n": 1,
+    "tag": "WHERE DOES THE VALUE COME FROM?"
+   },
+   "step": 0,
+   "stepT": 29.29,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 33.89,
+   "say": "A government guarantee? No.",
+   "board": {
+    "kind": "rows",
+    "title": "WHAT IS BEHIND IT?",
+    "items": [
+     {
+      "text": "Gold in a vault?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A government guarantee?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A company's profits?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Scarcity, and belief",
+      "mark": "check",
+      "late": true
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 33.89
+  },
+  {
+   "t": 35.27,
+   "say": "A company paying dividends? No.",
+   "board": {
+    "kind": "rows",
+    "title": "WHAT IS BEHIND IT?",
+    "items": [
+     {
+      "text": "Gold in a vault?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A government guarantee?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A company's profits?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Scarcity, and belief",
+      "mark": "check",
+      "late": true
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 35.27
+  },
+  {
+   "t": 36.99,
+   "say": "Behind it are two things: it's scarce... and peo",
+   "board": {
+    "kind": "rows",
+    "title": "WHAT IS BEHIND IT?",
+    "items": [
+     {
+      "text": "Gold in a vault?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A government guarantee?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "A company's profits?",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Scarcity, and belief",
+      "mark": "check",
+      "late": true
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 36.99
+  },
+  {
+   "t": 41.55,
+   "say": "Before Command laughs: that's also what's behind",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 49.16,
+   "say": "They compare it to gold. Most of gold's value is",
+   "board": {
+    "kind": "steps",
+    "title": "DIGITAL GOLD",
+    "items": [
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, and everyone agrees"
+     },
+     {
+      "icon": "coin",
+      "label": "Bitcoin",
+      "sub": "21 million, never more"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 49.16,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 55.4,
+   "say": "So they call bitcoin digital gold. Twenty-one mi",
+   "board": {
+    "kind": "steps",
+    "title": "DIGITAL GOLD",
+    "items": [
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, and everyone agrees"
+     },
+     {
+      "icon": "coin",
+      "label": "Bitcoin",
+      "sub": "21 million, never more"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 55.4
+  },
+  {
+   "t": 60.25,
+   "say": "Some of them say its price is the cost of the el",
+   "board": {
+    "kind": "steps",
+    "title": "DIGITAL GOLD",
+    "items": [
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, and everyone agrees"
+     },
+     {
+      "icon": "coin",
+      "label": "Bitcoin",
+      "sub": "21 million, never more"
+     }
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "deadpan",
+   "stepT": 55.4
+  },
+  {
+   "t": 68.12,
+   "say": "For scale: all the bitcoin on the planet, at its",
+   "board": {
+    "kind": "steps",
+    "title": "DIGITAL GOLD",
+    "items": [
+     {
+      "icon": "gold",
+      "label": "Gold",
+      "sub": "rare, and everyone agrees"
+     },
+     {
+      "icon": "coin",
+      "label": "Bitcoin",
+      "sub": "21 million, never more"
+     }
+    ]
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 55.4
+  },
+  {
+   "t": 74.94,
+   "say": "So who is buying? First: the speculator. Buying ",
+   "board": {
+    "kind": "steps",
+    "title": "WHO IS BUYING?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "Speculator",
+      "sub": "to sell higher"
+     },
+     {
+      "icon": "cash",
+      "label": "Escaper",
+      "sub": "a weak currency"
+     },
+     {
+      "icon": "mailbox",
+      "label": "Sender",
+      "sub": "around banks"
+     },
+     {
+      "icon": "bank",
+      "label": "Institutions",
+      "sub": "funds, firms"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 74.94,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 79.34,
+   "say": "Second: the escaper. Living where the currency i",
+   "board": {
+    "kind": "steps",
+    "title": "WHO IS BUYING?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "Speculator",
+      "sub": "to sell higher"
+     },
+     {
+      "icon": "cash",
+      "label": "Escaper",
+      "sub": "a weak currency"
+     },
+     {
+      "icon": "mailbox",
+      "label": "Sender",
+      "sub": "around banks"
+     },
+     {
+      "icon": "bank",
+      "label": "Institutions",
+      "sub": "funds, firms"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 79.34
+  },
+  {
+   "t": 83.6,
+   "say": "Third: someone who wants to move money outside t",
+   "board": {
+    "kind": "steps",
+    "title": "WHO IS BUYING?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "Speculator",
+      "sub": "to sell higher"
+     },
+     {
+      "icon": "cash",
+      "label": "Escaper",
+      "sub": "a weak currency"
+     },
+     {
+      "icon": "mailbox",
+      "label": "Sender",
+      "sub": "around banks"
+     },
+     {
+      "icon": "bank",
+      "label": "Institutions",
+      "sub": "funds, firms"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 83.6
+  },
+  {
+   "t": 86.14,
+   "say": "And fourth: institutions. Funds and companies. T",
+   "board": {
+    "kind": "steps",
+    "title": "WHO IS BUYING?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "Speculator",
+      "sub": "to sell higher"
+     },
+     {
+      "icon": "cash",
+      "label": "Escaper",
+      "sub": "a weak currency"
+     },
+     {
+      "icon": "mailbox",
+      "label": "Sender",
+      "sub": "around banks"
+     },
+     {
+      "icon": "bank",
+      "label": "Institutions",
+      "sub": "funds, firms"
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 86.14
+  },
+  {
+   "t": 89.55,
+   "say": "And the more people accept it, the more it is wo",
+   "board": {
+    "kind": "steps",
+    "title": "WHO IS BUYING?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "Speculator",
+      "sub": "to sell higher"
+     },
+     {
+      "icon": "cash",
+      "label": "Escaper",
+      "sub": "a weak currency"
+     },
+     {
+      "icon": "mailbox",
+      "label": "Sender",
+      "sub": "around banks"
+     },
+     {
+      "icon": "bank",
+      "label": "Institutions",
+      "sub": "funds, firms"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 86.14
+  },
+  {
+   "t": 95.21,
+   "say": "So nobody sets the price. The price is simply th",
+   "board": {
+    "kind": "steps",
+    "title": "WHO IS BUYING?",
+    "items": [
+     {
+      "icon": "exchange",
+      "label": "Speculator",
+      "sub": "to sell higher"
+     },
+     {
+      "icon": "cash",
+      "label": "Escaper",
+      "sub": "a weak currency"
+     },
+     {
+      "icon": "mailbox",
+      "label": "Sender",
+      "sub": "around banks"
+     },
+     {
+      "icon": "bank",
+      "label": "Institutions",
+      "sub": "funds, firms"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 86.14
+  },
+  {
+   "t": 102.44,
+   "say": "Then I looked at the history of the price. 2011:",
+   "board": {
+    "kind": "chart",
+    "title": "FIVE TIMES UP. FIVE TIMES DOWN.",
+    "points": [
+     0,
+     1.5,
+     0.3,
+     3.05,
+     2.3,
+     4.3,
+     3.5,
+     4.84,
+     4.19,
+     5.1,
+     4.76,
+     4.87
+    ],
+    "color": "#FFE66D",
+    "draw": 16,
+    "labels": [
+     {
+      "at": 1,
+      "text": "$30",
+      "below": "2011"
+     },
+     {
+      "at": 3,
+      "text": "$1,100",
+      "below": "2013"
+     },
+     {
+      "at": 5,
+      "text": "$20,000",
+      "below": "2017"
+     },
+     {
+      "at": 7,
+      "text": "$69,000",
+      "below": "2021"
+     },
+     {
+      "at": 9,
+      "text": "$126,000",
+      "below": "2025"
+     }
+    ]
+   },
+   "story": {
+    "n": 2,
+    "tag": "THE BUBBLES"
+   },
+   "step": 0,
+   "stepT": 102.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 108.08,
+   "say": "2013: eleven hundred. Down to two hundred. 2017:",
+   "board": {
+    "kind": "chart",
+    "title": "FIVE TIMES UP. FIVE TIMES DOWN.",
+    "points": [
+     0,
+     1.5,
+     0.3,
+     3.05,
+     2.3,
+     4.3,
+     3.5,
+     4.84,
+     4.19,
+     5.1,
+     4.76,
+     4.87
+    ],
+    "color": "#FFE66D",
+    "draw": 16,
+    "labels": [
+     {
+      "at": 1,
+      "text": "$30",
+      "below": "2011"
+     },
+     {
+      "at": 3,
+      "text": "$1,100",
+      "below": "2013"
+     },
+     {
+      "at": 5,
+      "text": "$20,000",
+      "below": "2017"
+     },
+     {
+      "at": 7,
+      "text": "$69,000",
+      "below": "2021"
+     },
+     {
+      "at": 9,
+      "text": "$126,000",
+      "below": "2025"
+     }
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 102.44
+  },
+  {
+   "t": 113.33,
+   "say": "2021: sixty-nine thousand. Down to fifteen. And ",
+   "board": {
+    "kind": "chart",
+    "title": "FIVE TIMES UP. FIVE TIMES DOWN.",
+    "points": [
+     0,
+     1.5,
+     0.3,
+     3.05,
+     2.3,
+     4.3,
+     3.5,
+     4.84,
+     4.19,
+     5.1,
+     4.76,
+     4.87
+    ],
+    "color": "#FFE66D",
+    "draw": 16,
+    "labels": [
+     {
+      "at": 1,
+      "text": "$30",
+      "below": "2011"
+     },
+     {
+      "at": 3,
+      "text": "$1,100",
+      "below": "2013"
+     },
+     {
+      "at": 5,
+      "text": "$20,000",
+      "below": "2017"
+     },
+     {
+      "at": 7,
+      "text": "$69,000",
+      "below": "2021"
+     },
+     {
+      "at": 9,
+      "text": "$126,000",
+      "below": "2025"
+     }
+    ]
+   },
+   "step": 0,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 102.44
+  },
+  {
+   "t": 120.09,
+   "say": "Five times up to the sky. Five times down by hal",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 124.69,
+   "say": "To be fair: each crash has been gentler than the",
+   "board": {
+    "kind": "chart",
+    "title": "FIVE TIMES UP. FIVE TIMES DOWN.",
+    "points": [
+     0,
+     1.5,
+     0.3,
+     3.05,
+     2.3,
+     4.3,
+     3.5,
+     4.84,
+     4.19,
+     5.1,
+     4.76,
+     4.87
+    ],
+    "color": "#FFE66D",
+    "draw": 16,
+    "labels": [
+     {
+      "at": 1,
+      "text": "$30",
+      "below": "2011"
+     },
+     {
+      "at": 3,
+      "text": "$1,100",
+      "below": "2013"
+     },
+     {
+      "at": 5,
+      "text": "$20,000",
+      "below": "2017"
+     },
+     {
+      "at": 7,
+      "text": "$69,000",
+      "below": "2021"
+     },
+     {
+      "at": 9,
+      "text": "$126,000",
+      "below": "2025"
+     }
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 102.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 131.65,
+   "say": "And every bubble had its story. 2013: people run",
+   "board": {
+    "kind": "rows",
+    "title": "EVERY BUBBLE HAS A STORY",
+    "items": [
+     {
+      "text": "Running from Cyprus's banks",
+      "tag": "2013"
+     },
+     {
+      "text": "New coins raising millions",
+      "tag": "2017"
+     },
+     {
+      "text": "Printed money, everyone at home",
+      "tag": "2021"
+     },
+     {
+      "text": "Wall Street walks in",
+      "tag": "2025"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 131.65,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 135.61,
+   "say": "2017: anyone launching a coin and raising millio",
+   "board": {
+    "kind": "rows",
+    "title": "EVERY BUBBLE HAS A STORY",
+    "items": [
+     {
+      "text": "Running from Cyprus's banks",
+      "tag": "2013"
+     },
+     {
+      "text": "New coins raising millions",
+      "tag": "2017"
+     },
+     {
+      "text": "Printed money, everyone at home",
+      "tag": "2021"
+     },
+     {
+      "text": "Wall Street walks in",
+      "tag": "2025"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 135.61
+  },
+  {
+   "t": 138.58,
+   "say": "2021: governments printing money during the pand",
+   "board": {
+    "kind": "rows",
+    "title": "EVERY BUBBLE HAS A STORY",
+    "items": [
+     {
+      "text": "Running from Cyprus's banks",
+      "tag": "2013"
+     },
+     {
+      "text": "New coins raising millions",
+      "tag": "2017"
+     },
+     {
+      "text": "Printed money, everyone at home",
+      "tag": "2021"
+     },
+     {
+      "text": "Wall Street walks in",
+      "tag": "2025"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 138.58
+  },
+  {
+   "t": 142.34,
+   "say": "And 2025: Wall Street walked in.",
+   "board": {
+    "kind": "rows",
+    "title": "EVERY BUBBLE HAS A STORY",
+    "items": [
+     {
+      "text": "Running from Cyprus's banks",
+      "tag": "2013"
+     },
+     {
+      "text": "New coins raising millions",
+      "tag": "2017"
+     },
+     {
+      "text": "Printed money, everyone at home",
+      "tag": "2021"
+     },
+     {
+      "text": "Wall Street walks in",
+      "tag": "2025"
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 142.34
+  },
+  {
+   "t": 144.75,
+   "say": "The cycle never changes. The price rises, the pa",
+   "board": {
+    "kind": "rows",
+    "title": "EVERY BUBBLE HAS A STORY",
+    "items": [
+     {
+      "text": "Running from Cyprus's banks",
+      "tag": "2013"
+     },
+     {
+      "text": "New coins raising millions",
+      "tag": "2017"
+     },
+     {
+      "text": "Printed money, everyone at home",
+      "tag": "2021"
+     },
+     {
+      "text": "Wall Street walks in",
+      "tag": "2025"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 142.34
+  },
+  {
+   "t": 152.7,
+   "say": "Someone who bought at the top in 2017 waited thr",
+   "board": {
+    "kind": "story",
+    "title": "BOUGHT AT THE TOP",
+    "icon": "node",
+    "name": "waiting",
+    "size": 54,
+    "lines": [
+     "2017 peak: 3 years to break even",
+     "2021 peak: 2½ years",
+     "Study: most app users lost"
+    ]
+   },
+   "step": 0,
+   "stepT": 152.7,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 156.75,
+   "say": "Someone who bought at the top in 2021: two and a",
+   "board": {
+    "kind": "story",
+    "title": "BOUGHT AT THE TOP",
+    "icon": "node",
+    "name": "waiting",
+    "size": 54,
+    "lines": [
+     "2017 peak: 3 years to break even",
+     "2021 peak: 2½ years",
+     "Study: most app users lost"
+    ]
+   },
+   "step": 1,
+   "stepT": 156.75
+  },
+  {
+   "t": 159.48,
+   "say": "The bank of the central banks studied seven year",
+   "board": {
+    "kind": "story",
+    "title": "BOUGHT AT THE TOP",
+    "icon": "node",
+    "name": "waiting",
+    "size": 54,
+    "lines": [
+     "2017 peak: 3 years to break even",
+     "2021 peak: 2½ years",
+     "Study: most app users lost"
+    ]
+   },
+   "host": "left",
+   "step": 2,
+   "stepT": 159.48
+  },
+  {
+   "t": 166.95,
+   "say": "And every time it falls, their press announces i",
+   "board": {
+    "kind": "story",
+    "title": "OBITUARIES ON REPEAT",
+    "icon": "ghost",
+    "name": "bitcoin",
+    "lines": [
+     "The press declared it dead",
+     "More than 400 times",
+     "Still breathing"
+    ]
+   },
+   "step": 0,
+   "stepT": 166.95,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 169.05,
+   "say": "They have announced it more than four hundred ti",
+   "board": {
+    "kind": "story",
+    "title": "OBITUARIES ON REPEAT",
+    "icon": "ghost",
+    "name": "bitcoin",
+    "lines": [
+     "The press declared it dead",
+     "More than 400 times",
+     "Still breathing"
+    ]
+   },
+   "step": 1,
+   "stepT": 169.05
+  },
+  {
+   "t": 171.08,
+   "say": "It is still breathing.",
+   "board": {
+    "kind": "story",
+    "title": "OBITUARIES ON REPEAT",
+    "icon": "ghost",
+    "name": "bitcoin",
+    "lines": [
+     "The press declared it dead",
+     "More than 400 times",
+     "Still breathing"
+    ]
+   },
+   "host": "right",
+   "step": 2,
+   "stepT": 171.08
+  },
+  {
+   "t": 171.86,
+   "say": "The humans have noticed a pattern: every peak ca",
+   "board": {
+    "kind": "chart",
+    "title": "FIVE TIMES UP. FIVE TIMES DOWN.",
+    "points": [
+     0,
+     1.5,
+     0.3,
+     3.05,
+     2.3,
+     4.3,
+     3.5,
+     4.84,
+     4.19,
+     5.1,
+     4.76,
+     4.87
+    ],
+    "color": "#FFE66D",
+    "draw": 16,
+    "labels": [
+     {
+      "at": 1,
+      "text": "$30",
+      "below": "2011"
+     },
+     {
+      "at": 3,
+      "text": "$1,100",
+      "below": "2013"
+     },
+     {
+      "at": 5,
+      "text": "$20,000",
+      "below": "2017"
+     },
+     {
+      "at": 7,
+      "text": "$69,000",
+      "below": "2021"
+     },
+     {
+      "at": 9,
+      "text": "$126,000",
+      "below": "2025"
+     }
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 102.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 178.53,
+   "say": "Is that a law? No. It has happened four times. H",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 182.4,
+   "say": "Why does it swing so hard? One: the market is sm",
+   "board": {
+    "kind": "rows",
+    "title": "WHY DOES IT SHAKE SO MUCH?",
+    "items": [
+     {
+      "text": "A small market next to the world's money"
+     },
+     {
+      "text": "No anchor: no profits, no rent"
+     },
+     {
+      "text": "Open 24 hours. Nobody closes it."
+     },
+     {
+      "text": "One tweet sends it up, one law down"
+     }
+    ]
+   },
+   "story": {
+    "n": 3,
+    "tag": "WHY DOES IT SHAKE?"
+   },
+   "step": 0,
+   "stepT": 182.4,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 188.75,
+   "say": "Reason two: there is no anchor. A share in a com",
+   "board": {
+    "kind": "rows",
+    "title": "WHY DOES IT SHAKE SO MUCH?",
+    "items": [
+     {
+      "text": "A small market next to the world's money"
+     },
+     {
+      "text": "No anchor: no profits, no rent"
+     },
+     {
+      "text": "Open 24 hours. Nobody closes it."
+     },
+     {
+      "text": "One tweet sends it up, one law down"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 188.75
+  },
+  {
+   "t": 195.85,
+   "say": "Three: the market never closes. Nobody shuts it ",
+   "board": {
+    "kind": "rows",
+    "title": "WHY DOES IT SHAKE SO MUCH?",
+    "items": [
+     {
+      "text": "A small market next to the world's money"
+     },
+     {
+      "text": "No anchor: no profits, no rent"
+     },
+     {
+      "text": "Open 24 hours. Nobody closes it."
+     },
+     {
+      "text": "One tweet sends it up, one law down"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 195.85
+  },
+  {
+   "t": 199.33,
+   "say": "Four: the news. One rich man's post sends it up.",
+   "board": {
+    "kind": "rows",
+    "title": "WHY DOES IT SHAKE SO MUCH?",
+    "items": [
+     {
+      "text": "A small market next to the world's money"
+     },
+     {
+      "text": "No anchor: no profits, no rent"
+     },
+     {
+      "text": "Open 24 hours. Nobody closes it."
+     },
+     {
+      "text": "One tweet sends it up, one law down"
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 199.33
+  },
+  {
+   "t": 204.06,
+   "say": "It's meant to be a safe harbour. But when their ",
+   "board": {
+    "kind": "rows",
+    "title": "WHY DOES IT SHAKE SO MUCH?",
+    "items": [
+     {
+      "text": "A small market next to the world's money"
+     },
+     {
+      "text": "No anchor: no profits, no rent"
+     },
+     {
+      "text": "Open 24 hours. Nobody closes it."
+     },
+     {
+      "text": "One tweet sends it up, one law down"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "bored",
+   "stepT": 199.33
+  },
+  {
+   "t": 208.37,
+   "say": "The result: it can move more in one day than an ",
+   "board": {
+    "kind": "rows",
+    "title": "WHY DOES IT SHAKE SO MUCH?",
+    "items": [
+     {
+      "text": "A small market next to the world's money"
+     },
+     {
+      "text": "No anchor: no profits, no rent"
+     },
+     {
+      "text": "Open 24 hours. Nobody closes it."
+     },
+     {
+      "text": "One tweet sends it up, one law down"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 199.33
+  },
+  {
+   "t": 212.42,
+   "say": "The ones holding huge amounts are called whales.",
+   "board": {
+    "kind": "rows",
+    "title": "WHY DOES IT SHAKE SO MUCH?",
+    "items": [
+     {
+      "text": "A small market next to the world's money"
+     },
+     {
+      "text": "No anchor: no profits, no rent"
+     },
+     {
+      "text": "Open 24 hours. Nobody closes it."
+     },
+     {
+      "text": "One tweet sends it up, one law down"
+     }
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 199.33
+  },
+  {
+   "t": 217.74,
+   "say": "The most dangerous thing I found in this file. I",
+   "shot": "host",
+   "emote": "serious",
+   "story": {
+    "n": 4,
+    "tag": "LEVERAGE"
+   },
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 221.83,
+   "say": "You have a hundred dollars.",
+   "board": {
+    "kind": "lever",
+    "title": "LEVERAGE",
+    "mine": "Your money: 100",
+    "loan": "Loan from the exchange: 900",
+    "total": "Total bet: 1,000",
+    "drop": "PRICE FALLS 10%",
+    "zero": "Your money: zero",
+    "stamp": "LIQUIDATED",
+    "share": 0.1
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 0,
+   "stepT": 221.83,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 223.23,
+   "say": "The exchange lends you nine hundred. Now you're ",
+   "board": {
+    "kind": "lever",
+    "title": "LEVERAGE",
+    "mine": "Your money: 100",
+    "loan": "Loan from the exchange: 900",
+    "total": "Total bet: 1,000",
+    "drop": "PRICE FALLS 10%",
+    "zero": "Your money: zero",
+    "stamp": "LIQUIDATED",
+    "share": 0.1
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 1,
+   "stepT": 223.23
+  },
+  {
+   "t": 226.49,
+   "say": "The price goes up ten percent? You made a hundre",
+   "board": {
+    "kind": "lever",
+    "title": "LEVERAGE",
+    "mine": "Your money: 100",
+    "loan": "Loan from the exchange: 900",
+    "total": "Total bet: 1,000",
+    "drop": "PRICE FALLS 10%",
+    "zero": "Your money: zero",
+    "stamp": "LIQUIDATED",
+    "share": 0.1
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "sly",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 223.23
+  },
+  {
+   "t": 231.04,
+   "say": "The price goes down ten percent? You lost a hund",
+   "board": {
+    "kind": "lever",
+    "title": "LEVERAGE",
+    "mine": "Your money: 100",
+    "loan": "Loan from the exchange: 900",
+    "total": "Total bet: 1,000",
+    "drop": "PRICE FALLS 10%",
+    "zero": "Your money: zero",
+    "stamp": "LIQUIDATED",
+    "share": 0.1
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 2,
+   "stepT": 231.04
+  },
+  {
+   "t": 235.25,
+   "say": "And the exchange sells you out automatically to ",
+   "board": {
+    "kind": "lever",
+    "title": "LEVERAGE",
+    "mine": "Your money: 100",
+    "loan": "Loan from the exchange: 900",
+    "total": "Total bet: 1,000",
+    "drop": "PRICE FALLS 10%",
+    "zero": "Your money: zero",
+    "stamp": "LIQUIDATED",
+    "share": 0.1
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 3,
+   "stepT": 235.25
+  },
+  {
+   "t": 239.91,
+   "say": "Some exchanges offer a hundred times. So the pri",
+   "board": {
+    "kind": "lever",
+    "title": "LEVERAGE",
+    "mine": "Your money: 100",
+    "loan": "Loan from the exchange: 900",
+    "total": "Total bet: 1,000",
+    "drop": "PRICE FALLS 10%",
+    "zero": "Your money: zero",
+    "stamp": "LIQUIDATED",
+    "share": 0.1
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 235.25
+  },
+  {
+   "t": 245.29,
+   "say": "On October 10th, 2025, the price dropped suddenl",
+   "board": {
+    "kind": "story",
+    "title": "OCTOBER 10, 2025",
+    "icon": "bolt",
+    "name": "one day",
+    "lines": [
+     "A sudden drop",
+     "1.6 million traders wiped",
+     "$19 billion erased"
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 0,
+   "stepT": 245.29,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 248.53,
+   "say": "In one day, over one and a half million traders ",
+   "board": {
+    "kind": "story",
+    "title": "OCTOBER 10, 2025",
+    "icon": "bolt",
+    "name": "one day",
+    "lines": [
+     "A sudden drop",
+     "1.6 million traders wiped",
+     "$19 billion erased"
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 1,
+   "stepT": 248.53
+  },
+  {
+   "t": 251.73,
+   "say": "Nineteen billion dollars, erased. Bitcoin had fa",
+   "board": {
+    "kind": "story",
+    "title": "OCTOBER 10, 2025",
+    "icon": "bolt",
+    "name": "one day",
+    "lines": [
+     "A sudden drop",
+     "1.6 million traders wiped",
+     "$19 billion erased"
+    ]
+   },
+   "calm": true,
+   "gesture": "pockets",
+   "step": 2,
+   "stepT": 251.73
+  },
+  {
+   "t": 256.37,
+   "say": "Most trading in this coin isn't real buying. It'",
+   "board": {
+    "kind": "story",
+    "title": "OCTOBER 10, 2025",
+    "icon": "bolt",
+    "name": "one day",
+    "lines": [
+     "A sudden drop",
+     "1.6 million traders wiped",
+     "$19 billion erased"
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 251.73
+  },
+  {
+   "t": 260.07,
+   "say": "And the one who wins either way: the exchange. A",
+   "board": {
+    "kind": "story",
+    "title": "OCTOBER 10, 2025",
+    "icon": "bolt",
+    "name": "one day",
+    "lines": [
+     "A sudden drop",
+     "1.6 million traders wiped",
+     "$19 billion erased"
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "sly",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 251.73
+  },
+  {
+   "t": 267.68,
+   "say": "They found something that shakes on its own... a",
+   "shot": "close",
+   "emote": "deadpan",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 270.84,
+   "say": "So where are the twenty million that have been m",
+   "board": {
+    "kind": "bars",
+    "title": "WHERE ARE THE 20 MILLION? · MILLIONS",
+    "bars": [
+     {
+      "label": "Lost",
+      "value": 3.5,
+      "text": "3 – 4",
+      "color": "#ff4654"
+     },
+     {
+      "label": "Satoshi",
+      "value": 1.1,
+      "text": "≈ 1",
+      "color": "#9fb0ff"
+     },
+     {
+      "label": "US funds",
+      "value": 1.25,
+      "text": "≈ 1.2",
+      "color": "#35c8ff"
+     },
+     {
+      "label": "Everyone else",
+      "value": 14,
+      "text": "≈ 14"
+     }
+    ],
+    "note": "Estimates · November 2026",
+    "every": 0.4
+   },
+   "story": {
+    "n": 5,
+    "tag": "WHO HOLDS IT?"
+   },
+   "step": 0,
+   "stepT": 270.84,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 279.54,
+   "say": "And most humans who own some do not own a whole ",
+   "board": {
+    "kind": "bars",
+    "title": "WHERE ARE THE 20 MILLION? · MILLIONS",
+    "bars": [
+     {
+      "label": "Lost",
+      "value": 3.5,
+      "text": "3 – 4",
+      "color": "#ff4654"
+     },
+     {
+      "label": "Satoshi",
+      "value": 1.1,
+      "text": "≈ 1",
+      "color": "#9fb0ff"
+     },
+     {
+      "label": "US funds",
+      "value": 1.25,
+      "text": "≈ 1.2",
+      "color": "#35c8ff"
+     },
+     {
+      "label": "Everyone else",
+      "value": 14,
+      "text": "≈ 14"
+     }
+    ],
+    "note": "Estimates · November 2026",
+    "every": 0.4
+   },
+   "step": 0,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 270.84
+  },
+  {
+   "t": 285.15,
+   "say": "And the American government holds hundreds of th",
+   "board": {
+    "kind": "bars",
+    "title": "WHERE ARE THE 20 MILLION? · MILLIONS",
+    "bars": [
+     {
+      "label": "Lost",
+      "value": 3.5,
+      "text": "3 – 4",
+      "color": "#ff4654"
+     },
+     {
+      "label": "Satoshi",
+      "value": 1.1,
+      "text": "≈ 1",
+      "color": "#9fb0ff"
+     },
+     {
+      "label": "US funds",
+      "value": 1.25,
+      "text": "≈ 1.2",
+      "color": "#35c8ff"
+     },
+     {
+      "label": "Everyone else",
+      "value": 14,
+      "text": "≈ 14"
+     }
+    ],
+    "note": "Estimates · November 2026",
+    "every": 0.4
+   },
+   "step": 0,
+   "host": "right",
+   "emote": "sly",
+   "stepT": 270.84
+  },
+  {
+   "t": 293.23,
+   "say": "And the development nobody saw coming: the banks",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "present",
+   "story": {
+    "n": 6,
+    "tag": "THE SUITS"
+   }
+  },
+  {
+   "t": 297.25,
+   "say": "In 2017, the head of the biggest money manager o",
+   "board": {
+    "kind": "story",
+    "title": "THE BIGGEST MONEY MANAGER",
+    "icon": "bank",
+    "name": "same company",
+    "size": 54,
+    "lines": [
+     "2017: 'an index of money laundering'",
+     "2024: the biggest bitcoin fund"
+    ]
+   },
+   "step": 0,
+   "stepT": 297.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 303.17,
+   "say": "In 2024, the same company launched the biggest b",
+   "board": {
+    "kind": "story",
+    "title": "THE BIGGEST MONEY MANAGER",
+    "icon": "bank",
+    "name": "same company",
+    "size": 54,
+    "lines": [
+     "2017: 'an index of money laundering'",
+     "2024: the biggest bitcoin fund"
+    ]
+   },
+   "step": 1,
+   "stepT": 303.17
+  },
+  {
+   "t": 307.82,
+   "say": "What's a fund? You give your money to a company.",
+   "board": {
+    "kind": "flow",
+    "title": "THE FUND",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "You"
+     },
+     {
+      "icon": "bank",
+      "label": "The fund",
+      "big": true
+     },
+     {
+      "icon": "coin",
+      "label": "The bitcoin"
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "token": "cash",
+      "label": "your money"
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "token": "cash",
+      "label": "it buys"
+     },
+     {
+      "badges": [
+       "NO KEY",
+       "NO 12 WORDS",
+       "PLUS A FEE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 307.82,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 310.23,
+   "say": "It buys the bitcoin and holds it.",
+   "board": {
+    "kind": "flow",
+    "title": "THE FUND",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "You"
+     },
+     {
+      "icon": "bank",
+      "label": "The fund",
+      "big": true
+     },
+     {
+      "icon": "coin",
+      "label": "The bitcoin"
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "token": "cash",
+      "label": "your money"
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "token": "cash",
+      "label": "it buys"
+     },
+     {
+      "badges": [
+       "NO KEY",
+       "NO 12 WORDS",
+       "PLUS A FEE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 310.23
+  },
+  {
+   "t": 311.92,
+   "say": "And you only get the price. No key, no twelve wo",
+   "board": {
+    "kind": "flow",
+    "title": "THE FUND",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "You"
+     },
+     {
+      "icon": "bank",
+      "label": "The fund",
+      "big": true
+     },
+     {
+      "icon": "coin",
+      "label": "The bitcoin"
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "token": "cash",
+      "label": "your money"
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "token": "cash",
+      "label": "it buys"
+     },
+     {
+      "badges": [
+       "NO KEY",
+       "NO 12 WORDS",
+       "PLUS A FEE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 311.92
+  },
+  {
+   "t": 316.76,
+   "say": "So the humans who ran away from the middleman...",
+   "board": {
+    "kind": "flow",
+    "title": "THE FUND",
+    "actors": [
+     {
+      "icon": "person",
+      "label": "You"
+     },
+     {
+      "icon": "bank",
+      "label": "The fund",
+      "big": true
+     },
+     {
+      "icon": "coin",
+      "label": "The bitcoin"
+     }
+    ],
+    "sequence": [
+     {
+      "move": [
+       0,
+       1
+      ],
+      "token": "cash",
+      "label": "your money"
+     },
+     {
+      "move": [
+       1,
+       2
+      ],
+      "token": "cash",
+      "label": "it buys"
+     },
+     {
+      "badges": [
+       "NO KEY",
+       "NO 12 WORDS",
+       "PLUS A FEE"
+      ],
+      "at": 1
+     }
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "smug",
+   "stepT": 311.92
+  },
+  {
+   "t": 321.91,
+   "say": "A coin built to make banks unnecessary. And now ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 326.33,
+   "say": "Countries tried too. El Salvador made it legal t",
+   "board": {
+    "kind": "rows",
+    "title": "COUNTRIES AND COMPANIES TRIED",
+    "size": 50,
+    "items": [
+     {
+      "text": "El Salvador 2021: legal tender",
+      "mark": "check"
+     },
+     {
+      "text": "El Salvador 2025: dropped it for a loan",
+      "mark": "x"
+     },
+     {
+      "text": "USA 2025: a reserve of seized coins",
+      "mark": "half"
+     },
+     {
+      "text": "Strategy 2026: $8B lost in 3 months",
+      "mark": "x"
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 326.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 330.1,
+   "say": "And backed off in 2025, to get a loan from the I",
+   "board": {
+    "kind": "rows",
+    "title": "COUNTRIES AND COMPANIES TRIED",
+    "size": 50,
+    "items": [
+     {
+      "text": "El Salvador 2021: legal tender",
+      "mark": "check"
+     },
+     {
+      "text": "El Salvador 2025: dropped it for a loan",
+      "mark": "x"
+     },
+     {
+      "text": "USA 2025: a reserve of seized coins",
+      "mark": "half"
+     },
+     {
+      "text": "Strategy 2026: $8B lost in 3 months",
+      "mark": "x"
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 330.1
+  },
+  {
+   "t": 334.28,
+   "say": "America announced a strategic bitcoin reserve. M",
+   "board": {
+    "kind": "rows",
+    "title": "COUNTRIES AND COMPANIES TRIED",
+    "size": 50,
+    "items": [
+     {
+      "text": "El Salvador 2021: legal tender",
+      "mark": "check"
+     },
+     {
+      "text": "El Salvador 2025: dropped it for a loan",
+      "mark": "x"
+     },
+     {
+      "text": "USA 2025: a reserve of seized coins",
+      "mark": "half"
+     },
+     {
+      "text": "Strategy 2026: $8B lost in 3 months",
+      "mark": "x"
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 334.28
+  },
+  {
+   "t": 339.9,
+   "say": "A company called Strategy more or less dropped i",
+   "board": {
+    "kind": "rows",
+    "title": "COUNTRIES AND COMPANIES TRIED",
+    "size": 50,
+    "items": [
+     {
+      "text": "El Salvador 2021: legal tender",
+      "mark": "check"
+     },
+     {
+      "text": "El Salvador 2025: dropped it for a loan",
+      "mark": "x"
+     },
+     {
+      "text": "USA 2025: a reserve of seized coins",
+      "mark": "half"
+     },
+     {
+      "text": "Strategy 2026: $8B lost in 3 months",
+      "mark": "x"
+     }
+    ]
+   },
+   "step": 3,
+   "stepT": 339.9
+  },
+  {
+   "t": 348.17,
+   "say": "The humans are split on it. The critics say: it ",
+   "board": {
+    "kind": "versus",
+    "title": "THE HUMANS ARE SPLIT",
+    "a": {
+     "title": "CRITICS",
+     "color": "#ff4654",
+     "lines": [
+      "It produces nothing",
+      "Worth: a buyer pays more",
+      "'Rat poison'"
+     ]
+    },
+    "b": {
+     "title": "BELIEVERS",
+     "color": "#58d68d",
+     "lines": [
+      "Nobody can print it",
+      "Nobody can seize it",
+      "Insurance against states"
+     ]
+    }
+   },
+   "story": {
+    "n": 7,
+    "tag": "THE ARGUMENT"
+   },
+   "step": 0,
+   "stepT": 348.17,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 356.26,
+   "say": "The believers say: money nobody can print, and n",
+   "board": {
+    "kind": "versus",
+    "title": "THE HUMANS ARE SPLIT",
+    "a": {
+     "title": "CRITICS",
+     "color": "#ff4654",
+     "lines": [
+      "It produces nothing",
+      "Worth: a buyer pays more",
+      "'Rat poison'"
+     ]
+    },
+    "b": {
+     "title": "BELIEVERS",
+     "color": "#58d68d",
+     "lines": [
+      "Nobody can print it",
+      "Nobody can seize it",
+      "Insurance against states"
+     ]
+    }
+   },
+   "step": 1,
+   "stepT": 356.26
+  },
+  {
+   "t": 361.55,
+   "say": "A small test: in 2022, their prices caught fire.",
+   "board": {
+    "kind": "versus",
+    "title": "THE HUMANS ARE SPLIT",
+    "a": {
+     "title": "CRITICS",
+     "color": "#ff4654",
+     "lines": [
+      "It produces nothing",
+      "Worth: a buyer pays more",
+      "'Rat poison'"
+     ]
+    },
+    "b": {
+     "title": "BELIEVERS",
+     "color": "#58d68d",
+     "lines": [
+      "Nobody can print it",
+      "Nobody can seize it",
+      "Insurance against states"
+     ]
+    }
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 356.26
+  },
+  {
+   "t": 369.11,
+   "say": "Believers have rituals. The confident put laser ",
+   "board": {
+    "kind": "versus",
+    "title": "THE HUMANS ARE SPLIT",
+    "a": {
+     "title": "CRITICS",
+     "color": "#ff4654",
+     "lines": [
+      "It produces nothing",
+      "Worth: a buyer pays more",
+      "'Rat poison'"
+     ]
+    },
+    "b": {
+     "title": "BELIEVERS",
+     "color": "#58d68d",
+     "lines": [
+      "Nobody can print it",
+      "Nobody can seize it",
+      "Insurance against states"
+     ]
+    }
+   },
+   "step": 1,
+   "host": "left",
+   "emote": "grin",
+   "stepT": 356.26
+  },
+  {
+   "t": 376.88,
+   "say": "I have recorded both views, sir, and I will not ",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 383.7,
+   "say": "Back to the three jobs of money, the ones I aske",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count",
+   "story": {
+    "n": 8,
+    "tag": "THE REPORT CARD"
+   }
+  },
+  {
+   "t": 388.02,
+   "say": "Pay with it? Rarely. Slow, fees change, and hold",
+   "board": {
+    "kind": "rows",
+    "title": "REPORT CARD · IS IT MONEY?",
+    "items": [
+     {
+      "text": "Pay with it",
+      "sub": "rarely: slow, and people hoard it",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Price with it",
+      "sub": "nobody prices bread in bitcoin",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Save it",
+      "sub": "rose a lot, can halve in a year",
+      "mark": "half",
+      "late": true
+     }
+    ]
+   },
+   "step": 0,
+   "stepT": 388.02,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 393.86,
+   "say": "Price things with it? No. Nobody prices bread in",
+   "board": {
+    "kind": "rows",
+    "title": "REPORT CARD · IS IT MONEY?",
+    "items": [
+     {
+      "text": "Pay with it",
+      "sub": "rarely: slow, and people hoard it",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Price with it",
+      "sub": "nobody prices bread in bitcoin",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Save it",
+      "sub": "rose a lot, can halve in a year",
+      "mark": "half",
+      "late": true
+     }
+    ]
+   },
+   "step": 1,
+   "stepT": 393.86
+  },
+  {
+   "t": 399.01,
+   "say": "Save it? Half a mark. Over the long run it has r",
+   "board": {
+    "kind": "rows",
+    "title": "REPORT CARD · IS IT MONEY?",
+    "items": [
+     {
+      "text": "Pay with it",
+      "sub": "rarely: slow, and people hoard it",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Price with it",
+      "sub": "nobody prices bread in bitcoin",
+      "mark": "x",
+      "late": true
+     },
+     {
+      "text": "Save it",
+      "sub": "rose a lot, can halve in a year",
+      "mark": "half",
+      "late": true
+     }
+    ]
+   },
+   "step": 2,
+   "stepT": 399.01
+  },
+  {
+   "t": 404.43,
+   "say": "That's not savings, sir. That's a roller coaster",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 411.36,
+   "say": "Two words from the Human Dictionary. HODL: a typ",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "HODL",
+      "means": "A typo that became a creed: never sell"
+     },
+     {
+      "word": "FOMO",
+      "means": "Fear of missing out. So you buy at the top"
+     }
+    ]
+   },
+   "story": {
+    "n": 9,
+    "tag": "THE HUMAN DICTIONARY"
+   },
+   "step": 0,
+   "stepT": 411.36,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 419.47,
+   "say": "And FOMO: fear of missing out. The number one re",
+   "board": {
+    "kind": "dict",
+    "title": "THE HUMAN DICTIONARY",
+    "items": [
+     {
+      "word": "HODL",
+      "means": "A typo that became a creed: never sell"
+     },
+     {
+      "word": "FOMO",
+      "means": "Fear of missing out. So you buy at the top"
+     }
+    ]
+   },
+   "host": "right",
+   "step": 1,
+   "stepT": 419.47
+  },
+  {
+   "t": 424.11,
+   "say": "Summary of the report, sir. One: the value comes",
+   "meme": {
+    "kind": "list",
+    "title": "REPORT SUMMARY",
+    "items": [
+     "Value = scarcity + belief",
+     "Price is expectation. Leverage wipes out",
+     "Not money yet. A bet"
+    ],
+    "step": 3
+   },
+   "host": "pip",
+   "story": {
+    "n": 10,
+    "tag": "SUMMARY"
+   },
+   "shot": "show",
+   "kind": "meme"
+  },
+  {
+   "t": 436.88,
+   "say": "This report needs the warning most: nothing here",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 443.94,
+   "say": "Next report: the humans made the ledger run prog",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 451.14,
+   "say": "This has been Earth Report. Agent Peek. End of t",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 454.75,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endcard",
+    "title": "NEXT REPORT",
+    "next": "Twenty million coins, and the verdict · Part 5 of 5",
+    "note": "Subscribe so the rest of the file reaches you"
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

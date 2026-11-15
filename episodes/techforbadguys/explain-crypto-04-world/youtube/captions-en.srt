@@ -1,0 +1,1367 @@
+1
+00:00:00,510 --> 00:00:00,931
+Sir.
+
+2
+00:00:00,971 --> 00:00:04,033
+Field report number four in the cryptocurrency file.
+
+3
+00:00:04,073 --> 00:00:04,883
+Today's subject:
+
+4
+00:00:04,923 --> 00:00:05,647
+the price.
+
+5
+00:00:05,687 --> 00:00:07,382
+Why is this thing worth anything at all?
+
+6
+00:00:07,422 --> 00:00:08,388
+A line in a ledger.
+
+7
+00:00:08,428 --> 00:00:10,313
+Nothing you can touch, no government behind it.
+
+8
+00:00:10,353 --> 00:00:11,389
+And a single one of them reached a
+
+9
+00:00:11,429 --> 00:00:13,430
+hundred and twenty-six thousand dollars.
+
+10
+00:00:13,470 --> 00:00:15,694
+The earlier reports covered how it works and
+
+11
+00:00:15,734 --> 00:00:16,575
+how it is held.
+
+12
+00:00:16,615 --> 00:00:18,629
+That leaves the question the humans themselves fight
+
+13
+00:00:18,669 --> 00:00:19,356
+about.
+
+14
+00:00:19,396 --> 00:00:21,113
+I will report where that price comes from,
+
+15
+00:00:21,153 --> 00:00:22,788
+and why it shakes the way it does.
+
+16
+00:00:22,828 --> 00:00:24,281
+And how, in a single day, more than
+
+17
+00:00:24,321 --> 00:00:26,492
+one and a half million humans lost everything
+
+18
+00:00:26,532 --> 00:00:27,119
+they had put in...
+
+19
+00:00:27,159 --> 00:00:28,624
+while the price itself only dipped.
+
+20
+00:00:28,664 --> 00:00:29,867
+The first thing I looked for:
+
+21
+00:00:29,907 --> 00:00:31,666
+what is behind this coin?
+
+22
+00:00:31,706 --> 00:00:32,557
+Gold in a vault?
+
+23
+00:00:32,597 --> 00:00:32,927
+No.
+
+24
+00:00:32,967 --> 00:00:34,042
+A government guarantee?
+
+25
+00:00:34,082 --> 00:00:34,407
+No.
+
+26
+00:00:34,447 --> 00:00:35,959
+A company paying dividends?
+
+27
+00:00:35,999 --> 00:00:36,805
+No.
+
+28
+00:00:36,845 --> 00:00:37,942
+Behind it are two things:
+
+29
+00:00:37,982 --> 00:00:38,820
+it's scarce...
+
+30
+00:00:38,860 --> 00:00:40,610
+and people believe it has value.
+
+31
+00:00:40,650 --> 00:00:41,617
+Before Command laughs:
+
+32
+00:00:41,657 --> 00:00:43,713
+that's also what's behind their paper money since
+
+33
+00:00:43,753 --> 00:00:44,730
+1971.
+
+34
+00:00:44,770 --> 00:00:46,742
+But the paper has a government that collects
+
+35
+00:00:46,782 --> 00:00:47,570
+taxes in it.
+
+36
+00:00:47,610 --> 00:00:48,661
+This one has...
+
+37
+00:00:48,701 --> 00:00:49,378
+faith.
+
+38
+00:00:49,418 --> 00:00:50,455
+They compare it to gold.
+
+39
+00:00:50,495 --> 00:00:52,108
+Most of gold's value is not about what
+
+40
+00:00:52,148 --> 00:00:53,118
+you can make with it.
+
+41
+00:00:53,158 --> 00:00:54,964
+It is rare, and everyone agrees it is
+
+42
+00:00:55,004 --> 00:00:55,734
+precious.
+
+43
+00:00:55,774 --> 00:00:57,516
+So they call bitcoin digital gold.
+
+44
+00:00:57,556 --> 00:00:59,996
+Twenty-one million, and no new mine will ever
+
+45
+00:01:00,036 --> 00:01:00,710
+be discovered.
+
+46
+00:01:00,750 --> 00:01:02,121
+Some of them say its price is the
+
+47
+00:01:02,161 --> 00:01:04,292
+cost of the electricity burned to make it.
+
+48
+00:01:04,332 --> 00:01:04,635
+Wrong.
+
+49
+00:01:04,675 --> 00:01:05,897
+If you spend a million dollars digging a
+
+50
+00:01:05,937 --> 00:01:07,938
+hole, the hole is not worth a million
+
+51
+00:01:07,978 --> 00:01:08,466
+dollars.
+
+52
+00:01:08,506 --> 00:01:09,053
+For scale:
+
+53
+00:01:09,093 --> 00:01:10,689
+all the bitcoin on the planet, at its
+
+54
+00:01:10,729 --> 00:01:12,408
+peak, was worth about two and a half
+
+55
+00:01:12,448 --> 00:01:13,624
+trillion dollars.
+
+56
+00:01:13,664 --> 00:01:15,301
+All the gold is worth more than ten
+
+57
+00:01:15,341 --> 00:01:16,251
+times that.
+
+58
+00:01:16,420 --> 00:01:17,191
+So who is buying?
+
+59
+00:01:17,231 --> 00:01:17,649
+First:
+
+60
+00:01:17,689 --> 00:01:18,327
+the speculator.
+
+61
+00:01:18,367 --> 00:01:19,825
+Buying to sell it for more later.
+
+62
+00:01:19,865 --> 00:01:20,817
+That is most of them.
+
+63
+00:01:20,857 --> 00:01:21,242
+Second:
+
+64
+00:01:21,282 --> 00:01:21,961
+the escaper.
+
+65
+00:01:22,001 --> 00:01:24,151
+Living where the currency is collapsing, wanting anything
+
+66
+00:01:24,191 --> 00:01:24,518
+else.
+
+67
+00:01:24,558 --> 00:01:24,997
+Third:
+
+68
+00:01:25,037 --> 00:01:26,434
+someone who wants to move money outside the
+
+69
+00:01:26,474 --> 00:01:27,000
+banks.
+
+70
+00:01:27,040 --> 00:01:27,565
+And fourth:
+
+71
+00:01:27,605 --> 00:01:28,577
+institutions.
+
+72
+00:01:28,617 --> 00:01:29,736
+Funds and companies.
+
+73
+00:01:29,776 --> 00:01:30,517
+They arrived late.
+
+74
+00:01:30,557 --> 00:01:32,007
+And the more people accept it, the more
+
+75
+00:01:32,047 --> 00:01:32,893
+it is worth.
+
+76
+00:01:32,933 --> 00:01:33,930
+Like the telephone.
+
+77
+00:01:33,970 --> 00:01:35,501
+The first human to buy a telephone...
+
+78
+00:01:35,541 --> 00:01:36,558
+had nobody to call.
+
+79
+00:01:36,598 --> 00:01:38,128
+So nobody sets the price.
+
+80
+00:01:38,168 --> 00:01:39,910
+The price is simply the last number two
+
+81
+00:01:39,950 --> 00:01:40,963
+humans agreed on:
+
+82
+00:01:41,003 --> 00:01:42,704
+one who wanted to sell, and one who
+
+83
+00:01:42,744 --> 00:01:43,413
+wanted to buy.
+
+84
+00:01:43,453 --> 00:01:44,317
+Nothing more than that.
+
+85
+00:01:44,357 --> 00:01:45,773
+Then I looked at the history of the
+
+86
+00:01:45,813 --> 00:01:46,373
+price.
+
+87
+00:01:46,413 --> 00:01:47,211
+2011:
+
+88
+00:01:47,251 --> 00:01:48,885
+from one dollar to thirty dollars...
+
+89
+00:01:48,925 --> 00:01:49,769
+and back down to two.
+
+90
+00:01:49,809 --> 00:01:50,775
+2013:
+
+91
+00:01:50,815 --> 00:01:51,561
+eleven hundred.
+
+92
+00:01:51,601 --> 00:01:52,463
+Down to two hundred.
+
+93
+00:01:52,503 --> 00:01:53,469
+2017:
+
+94
+00:01:53,509 --> 00:01:54,528
+twenty thousand.
+
+95
+00:01:54,568 --> 00:01:56,234
+Down to three thousand.
+
+96
+00:01:56,274 --> 00:01:57,198
+2021:
+
+97
+00:01:57,238 --> 00:01:58,498
+sixty-nine thousand.
+
+98
+00:01:58,538 --> 00:01:59,462
+Down to fifteen.
+
+99
+00:01:59,502 --> 00:02:00,531
+And 2025:
+
+100
+00:02:00,571 --> 00:02:02,429
+a hundred and twenty-six thousand...
+
+101
+00:02:02,469 --> 00:02:03,851
+down to under sixty.
+
+102
+00:02:04,108 --> 00:02:05,507
+Five times up to the sky.
+
+103
+00:02:05,547 --> 00:02:07,464
+Five times down by half or more.
+
+104
+00:02:07,504 --> 00:02:08,512
+Surprised every time.
+
+105
+00:02:08,552 --> 00:02:09,099
+To be fair:
+
+106
+00:02:09,139 --> 00:02:11,321
+each crash has been gentler than the last.
+
+107
+00:02:11,361 --> 00:02:12,925
+The first one was ninety-three percent.
+
+108
+00:02:12,965 --> 00:02:14,309
+The latest, fifty-four.
+
+109
+00:02:14,349 --> 00:02:15,462
+Maybe it is growing up.
+
+110
+00:02:15,502 --> 00:02:16,402
+Maybe not.
+
+111
+00:02:16,895 --> 00:02:18,284
+And every bubble had its story.
+
+112
+00:02:18,324 --> 00:02:19,022
+2013:
+
+113
+00:02:19,062 --> 00:02:20,729
+people running from the banks of Cyprus.
+
+114
+00:02:20,769 --> 00:02:21,597
+2017:
+
+115
+00:02:21,637 --> 00:02:23,675
+anyone launching a coin and raising millions.
+
+116
+00:02:23,715 --> 00:02:24,527
+2021:
+
+117
+00:02:24,567 --> 00:02:26,905
+governments printing money during the pandemic, and everyone
+
+118
+00:02:26,945 --> 00:02:27,616
+stuck at home.
+
+119
+00:02:27,656 --> 00:02:28,992
+And 2025:
+
+120
+00:02:29,032 --> 00:02:30,052
+Wall Street walked in.
+
+121
+00:02:30,092 --> 00:02:31,212
+The cycle never changes.
+
+122
+00:02:31,252 --> 00:02:33,533
+The price rises, the papers write, your dentist
+
+123
+00:02:33,573 --> 00:02:35,172
+says buy, everybody gets in...
+
+124
+00:02:35,212 --> 00:02:36,035
+and down it goes.
+
+125
+00:02:36,075 --> 00:02:37,320
+Four years later, again.
+
+126
+00:02:37,360 --> 00:02:38,138
+Short memories.
+
+127
+00:02:38,178 --> 00:02:40,127
+Someone who bought at the top in 2017
+
+128
+00:02:40,167 --> 00:02:41,957
+waited three years just to get their money
+
+129
+00:02:41,997 --> 00:02:42,410
+back.
+
+130
+00:02:42,450 --> 00:02:44,246
+Someone who bought at the top in 2021:
+
+131
+00:02:44,286 --> 00:02:45,122
+two and a half years.
+
+132
+00:02:45,162 --> 00:02:46,902
+The bank of the central banks studied seven
+
+133
+00:02:46,942 --> 00:02:47,722
+years of data:
+
+134
+00:02:47,762 --> 00:02:49,371
+most people who came in through the apps...
+
+135
+00:02:49,411 --> 00:02:50,119
+lost money.
+
+136
+00:02:50,159 --> 00:02:51,778
+Because three quarters of them downloaded the app
+
+137
+00:02:51,818 --> 00:02:53,137
+when the price was already high.
+
+138
+00:02:53,177 --> 00:02:54,939
+And every time it falls, their press announces
+
+139
+00:02:54,979 --> 00:02:55,879
+its death.
+
+140
+00:02:56,120 --> 00:02:57,757
+They have announced it more than four hundred
+
+141
+00:02:57,797 --> 00:02:58,618
+times.
+
+142
+00:02:58,658 --> 00:02:59,705
+It is still breathing.
+
+143
+00:02:59,932 --> 00:03:01,139
+The humans have noticed a pattern:
+
+144
+00:03:01,179 --> 00:03:02,732
+every peak came a year to a year
+
+145
+00:03:02,772 --> 00:03:04,064
+and a half after a halving.
+
+146
+00:03:04,104 --> 00:03:06,328
+A smaller reward, so fewer new coins...
+
+147
+00:03:06,368 --> 00:03:07,891
+and the price takes off.
+
+148
+00:03:07,931 --> 00:03:08,583
+Is that a law?
+
+149
+00:03:08,623 --> 00:03:09,055
+No.
+
+150
+00:03:09,095 --> 00:03:10,260
+It has happened four times.
+
+151
+00:03:10,300 --> 00:03:12,018
+Humans have built religions on less.
+
+152
+00:03:12,506 --> 00:03:14,226
+Why does it swing so hard?
+
+153
+00:03:14,266 --> 00:03:14,756
+One:
+
+154
+00:03:14,796 --> 00:03:16,555
+the market is small next to the planet's
+
+155
+00:03:16,595 --> 00:03:16,995
+money.
+
+156
+00:03:17,035 --> 00:03:17,875
+One big seller...
+
+157
+00:03:17,915 --> 00:03:19,191
+and the whole price moves.
+
+158
+00:03:19,231 --> 00:03:19,878
+Reason two:
+
+159
+00:03:19,918 --> 00:03:20,801
+there is no anchor.
+
+160
+00:03:20,841 --> 00:03:22,599
+A share in a company has profits behind
+
+161
+00:03:22,639 --> 00:03:22,869
+it.
+
+162
+00:03:22,909 --> 00:03:23,735
+A house has rent.
+
+163
+00:03:23,775 --> 00:03:25,352
+This has expectations.
+
+164
+00:03:25,392 --> 00:03:25,814
+Three:
+
+165
+00:03:25,854 --> 00:03:27,113
+the market never closes.
+
+166
+00:03:27,153 --> 00:03:29,416
+Nobody shuts it when it loses its mind.
+
+167
+00:03:30,152 --> 00:03:30,604
+Four:
+
+168
+00:03:30,644 --> 00:03:31,264
+the news.
+
+169
+00:03:31,304 --> 00:03:32,909
+One rich man's post sends it up.
+
+170
+00:03:32,949 --> 00:03:34,530
+One government decision sends it down.
+
+171
+00:03:34,570 --> 00:03:36,291
+It's meant to be a safe harbour.
+
+172
+00:03:36,331 --> 00:03:37,643
+But when their stocks fall...
+
+173
+00:03:37,683 --> 00:03:38,660
+it falls too.
+
+174
+00:03:38,700 --> 00:03:40,105
+Faster.
+
+175
+00:03:40,145 --> 00:03:40,800
+The result:
+
+176
+00:03:40,840 --> 00:03:42,381
+it can move more in one day than
+
+177
+00:03:42,421 --> 00:03:44,238
+an ordinary currency moves in a year.
+
+178
+00:03:44,278 --> 00:03:46,785
+The ones holding huge amounts are called whales.
+
+179
+00:03:46,893 --> 00:03:48,357
+When the whale moves, it is the small
+
+180
+00:03:48,397 --> 00:03:49,287
+fish that drown.
+
+181
+00:03:49,327 --> 00:03:51,106
+The most dangerous thing I found in this
+
+182
+00:03:51,146 --> 00:03:51,525
+file.
+
+183
+00:03:51,565 --> 00:03:53,074
+It's called leverage.
+
+184
+00:03:53,114 --> 00:03:54,220
+You have a hundred dollars.
+
+185
+00:03:54,260 --> 00:03:55,863
+The exchange lends you nine hundred.
+
+186
+00:03:55,903 --> 00:03:56,974
+Now you're betting a thousand.
+
+187
+00:03:57,014 --> 00:03:58,341
+The price goes up ten percent?
+
+188
+00:03:58,381 --> 00:03:59,214
+You made a hundred.
+
+189
+00:03:59,254 --> 00:04:00,231
+Your money doubled.
+
+190
+00:04:00,271 --> 00:04:01,308
+That is the bait.
+
+191
+00:04:01,348 --> 00:04:02,965
+The price goes down ten percent?
+
+192
+00:04:03,005 --> 00:04:04,052
+You lost a hundred.
+
+193
+00:04:04,092 --> 00:04:05,157
+That is all of your money.
+
+194
+00:04:05,197 --> 00:04:07,121
+And the exchange sells you out automatically to
+
+195
+00:04:07,161 --> 00:04:07,980
+get its loan back.
+
+196
+00:04:08,020 --> 00:04:08,576
+They call it:
+
+197
+00:04:08,616 --> 00:04:09,481
+liquidation.
+
+198
+00:04:09,521 --> 00:04:11,329
+Some exchanges offer a hundred times.
+
+199
+00:04:11,369 --> 00:04:12,844
+So the price moves one percent against you...
+
+200
+00:04:12,884 --> 00:04:13,900
+and you are done.
+
+201
+00:04:13,940 --> 00:04:16,749
+On October 10th, 2025, the price dropped suddenly.
+
+202
+00:04:16,789 --> 00:04:18,171
+In one day, over one and a half
+
+203
+00:04:18,211 --> 00:04:19,689
+million traders were liquidated.
+
+204
+00:04:19,729 --> 00:04:21,897
+Nineteen billion dollars, erased.
+
+205
+00:04:21,937 --> 00:04:24,076
+Bitcoin had fallen less than fifteen percent.
+
+206
+00:04:24,116 --> 00:04:26,492
+Most trading in this coin isn't real buying.
+
+207
+00:04:26,532 --> 00:04:27,889
+It's leveraged bets.
+
+208
+00:04:27,929 --> 00:04:29,162
+And the one who wins either way:
+
+209
+00:04:29,202 --> 00:04:29,959
+the exchange.
+
+210
+00:04:29,999 --> 00:04:31,358
+A fee when the price goes up, and
+
+211
+00:04:31,398 --> 00:04:32,379
+a fee when it goes down.
+
+212
+00:04:32,419 --> 00:04:33,598
+Like a casino, sir.
+
+213
+00:04:33,638 --> 00:04:35,120
+The house always wins.
+
+214
+00:04:35,160 --> 00:04:36,774
+They found something that shakes on its own...
+
+215
+00:04:36,814 --> 00:04:38,016
+and bolted on a motor.
+
+216
+00:04:38,068 --> 00:04:40,007
+So where are the twenty million that have
+
+217
+00:04:40,047 --> 00:04:40,735
+been mined?
+
+218
+00:04:40,775 --> 00:04:42,540
+Three to four million are lost.
+
+219
+00:04:42,580 --> 00:04:44,734
+A million sit with the one who vanished.
+
+220
+00:04:44,774 --> 00:04:46,131
+And more than a million are in Wall
+
+221
+00:04:46,171 --> 00:04:46,973
+Street funds.
+
+222
+00:04:47,013 --> 00:04:48,715
+And most humans who own some do not
+
+223
+00:04:48,755 --> 00:04:49,845
+own a whole bitcoin.
+
+224
+00:04:49,885 --> 00:04:50,744
+They own fractions.
+
+225
+00:04:50,784 --> 00:04:52,481
+Pieces of a hundred-millionth.
+
+226
+00:04:52,521 --> 00:04:54,606
+And the American government holds hundreds of thousands,
+
+227
+00:04:54,646 --> 00:04:55,763
+seized from criminals.
+
+228
+00:04:55,803 --> 00:04:57,237
+So one of the biggest whales of the
+
+229
+00:04:57,277 --> 00:04:58,943
+coin made to escape governments...
+
+230
+00:04:58,983 --> 00:04:59,813
+is a government.
+
+231
+00:04:59,853 --> 00:05:01,698
+And the development nobody saw coming:
+
+232
+00:05:01,738 --> 00:05:03,221
+the banks themselves moved in.
+
+233
+00:05:03,261 --> 00:05:05,523
+In 2017, the head of the biggest money
+
+234
+00:05:05,563 --> 00:05:08,202
+manager on the planet called bitcoin an index
+
+235
+00:05:08,242 --> 00:05:09,131
+of money laundering.
+
+236
+00:05:09,171 --> 00:05:11,979
+In 2024, the same company launched the biggest
+
+237
+00:05:12,019 --> 00:05:13,408
+bitcoin fund in the world.
+
+238
+00:05:13,448 --> 00:05:14,222
+What's a fund?
+
+239
+00:05:14,262 --> 00:05:15,508
+You give your money to a company.
+
+240
+00:05:15,548 --> 00:05:17,073
+It buys the bitcoin and holds it.
+
+241
+00:05:17,113 --> 00:05:18,302
+And you only get the price.
+
+242
+00:05:18,342 --> 00:05:19,852
+No key, no twelve words.
+
+243
+00:05:19,892 --> 00:05:21,389
+And you pay a fee every year.
+
+244
+00:05:21,429 --> 00:05:22,715
+So the humans who ran away from the
+
+245
+00:05:22,755 --> 00:05:23,268
+middleman...
+
+246
+00:05:23,308 --> 00:05:24,910
+paid a new middleman to save them the
+
+247
+00:05:24,950 --> 00:05:25,704
+trouble of running.
+
+248
+00:05:25,744 --> 00:05:28,142
+A coin built to make banks unnecessary.
+
+249
+00:05:28,182 --> 00:05:29,644
+And now the banks sell it to you.
+
+250
+00:05:29,684 --> 00:05:30,269
+For a fee.
+
+251
+00:05:30,309 --> 00:05:31,384
+Countries tried too.
+
+252
+00:05:31,424 --> 00:05:33,619
+El Salvador made it legal tender in 2021.
+
+253
+00:05:33,659 --> 00:05:35,472
+And backed off in 2025, to get a
+
+254
+00:05:35,512 --> 00:05:37,127
+loan from the International Monetary Fund.
+
+255
+00:05:37,167 --> 00:05:39,338
+America announced a strategic bitcoin reserve.
+
+256
+00:05:39,378 --> 00:05:40,637
+Made of seized coins.
+
+257
+00:05:40,677 --> 00:05:41,732
+It has not bought a single one.
+
+258
+00:05:41,772 --> 00:05:43,642
+A company called Strategy more or less dropped
+
+259
+00:05:43,682 --> 00:05:45,594
+its business to borrow and buy bitcoin.
+
+260
+00:05:45,634 --> 00:05:48,283
+In 2026 it lost over eight billion dollars...
+
+261
+00:05:48,323 --> 00:05:49,093
+in three months.
+
+262
+00:05:49,133 --> 00:05:50,288
+The humans are split on it.
+
+263
+00:05:50,328 --> 00:05:50,917
+The critics say:
+
+264
+00:05:50,957 --> 00:05:52,301
+it produces nothing.
+
+265
+00:05:52,341 --> 00:05:54,062
+Its only value is that someone else will
+
+266
+00:05:54,102 --> 00:05:55,382
+buy it from you for more.
+
+267
+00:05:55,422 --> 00:05:57,311
+One of their most famous investors called it
+
+268
+00:05:57,351 --> 00:05:59,310
+rat poison.
+
+269
+00:05:59,350 --> 00:06:00,410
+The believers say:
+
+270
+00:06:00,450 --> 00:06:02,815
+money nobody can print, and nobody can seize.
+
+271
+00:06:02,855 --> 00:06:04,580
+Insurance against their own governments.
+
+272
+00:06:04,620 --> 00:06:05,419
+A small test:
+
+273
+00:06:05,459 --> 00:06:07,693
+in 2022, their prices caught fire.
+
+274
+00:06:07,733 --> 00:06:09,706
+That was the moment the insurance was supposed
+
+275
+00:06:09,746 --> 00:06:10,366
+to pay out.
+
+276
+00:06:10,406 --> 00:06:13,457
+That year, bitcoin fell more than sixty percent.
+
+277
+00:06:13,497 --> 00:06:14,799
+Believers have rituals.
+
+278
+00:06:14,839 --> 00:06:16,937
+The confident put laser eyes on their profile
+
+279
+00:06:16,977 --> 00:06:17,566
+pictures.
+
+280
+00:06:17,606 --> 00:06:19,296
+Those whose price fell say:
+
+281
+00:06:19,336 --> 00:06:20,774
+I'm a long-term investor.
+
+282
+00:06:20,814 --> 00:06:21,361
+Meaning:
+
+283
+00:06:21,401 --> 00:06:22,489
+I can't get out.
+
+284
+00:06:22,529 --> 00:06:23,961
+I have recorded both views, sir, and I
+
+285
+00:06:24,001 --> 00:06:24,758
+will not rule.
+
+286
+00:06:24,798 --> 00:06:25,770
+One observation:
+
+287
+00:06:25,810 --> 00:06:27,579
+both sides are extremely sure.
+
+288
+00:06:27,619 --> 00:06:28,510
+And on this planet...
+
+289
+00:06:28,550 --> 00:06:29,873
+that has never been a good sign.
+
+290
+00:06:29,913 --> 00:06:31,813
+Back to the three jobs of money, the
+
+291
+00:06:31,853 --> 00:06:32,969
+ones I asked you to keep in the
+
+292
+00:06:33,009 --> 00:06:34,139
+file from the first report.
+
+293
+00:06:34,179 --> 00:06:34,733
+Pay with it?
+
+294
+00:06:34,773 --> 00:06:35,405
+Rarely.
+
+295
+00:06:35,445 --> 00:06:38,126
+Slow, fees change, and holders fear spending it...
+
+296
+00:06:38,166 --> 00:06:39,469
+in case it's worth more tomorrow.
+
+297
+00:06:39,509 --> 00:06:40,256
+Price things with it?
+
+298
+00:06:40,296 --> 00:06:40,615
+No.
+
+299
+00:06:40,655 --> 00:06:42,394
+Nobody prices bread in bitcoin.
+
+300
+00:06:42,434 --> 00:06:44,135
+The price would change before the toast popped.
+
+301
+00:06:44,175 --> 00:06:44,630
+Save it?
+
+302
+00:06:44,670 --> 00:06:45,307
+Half a mark.
+
+303
+00:06:45,347 --> 00:06:46,902
+Over the long run it has risen a
+
+304
+00:06:46,942 --> 00:06:47,348
+lot.
+
+305
+00:06:47,388 --> 00:06:48,725
+And it can lose half in a year.
+
+306
+00:06:48,765 --> 00:06:49,810
+That's not savings, sir.
+
+307
+00:06:49,850 --> 00:06:50,852
+That's a roller coaster.
+
+308
+00:06:50,892 --> 00:06:53,014
+By their own definition, it isn't money yet.
+
+309
+00:06:53,054 --> 00:06:54,388
+It's a scarce asset...
+
+310
+00:06:54,428 --> 00:06:55,156
+people bet on.
+
+311
+00:06:55,196 --> 00:06:57,304
+Two words from the Human Dictionary.
+
+312
+00:06:57,344 --> 00:06:57,988
+HODL:
+
+313
+00:06:58,028 --> 00:07:00,145
+a typo for hold, on a forum, in
+
+314
+00:07:00,185 --> 00:07:01,330
+2013.
+
+315
+00:07:01,370 --> 00:07:02,601
+Now a creed:
+
+316
+00:07:02,641 --> 00:07:03,437
+never sell.
+
+317
+00:07:03,477 --> 00:07:04,565
+And FOMO:
+
+318
+00:07:04,605 --> 00:07:05,673
+fear of missing out.
+
+319
+00:07:05,713 --> 00:07:07,552
+The number one reason humans buy at the
+
+320
+00:07:07,592 --> 00:07:08,052
+top.
+
+321
+00:07:08,092 --> 00:07:09,447
+Summary of the report, sir.
+
+322
+00:07:09,487 --> 00:07:09,954
+One:
+
+323
+00:07:09,994 --> 00:07:11,509
+the value comes from scarcity...
+
+324
+00:07:11,549 --> 00:07:12,312
+and belief.
+
+325
+00:07:12,352 --> 00:07:12,683
+Two:
+
+326
+00:07:12,723 --> 00:07:15,591
+the price is expectations, and leverage wipes people
+
+327
+00:07:15,631 --> 00:07:15,920
+out.
+
+328
+00:07:15,960 --> 00:07:16,326
+Three:
+
+329
+00:07:16,366 --> 00:07:17,982
+by their own measure, it is not money
+
+330
+00:07:18,022 --> 00:07:18,422
+yet.
+
+331
+00:07:18,462 --> 00:07:19,481
+It is a bet.
+
+332
+00:07:19,536 --> 00:07:21,542
+This report needs the warning most:
+
+333
+00:07:21,582 --> 00:07:23,971
+nothing here is advice to buy or sell.
+
+334
+00:07:24,011 --> 00:07:25,220
+Put in money you need...
+
+335
+00:07:25,260 --> 00:07:26,855
+and you'll usually lose it.
+
+336
+00:07:26,895 --> 00:07:27,626
+Next report:
+
+337
+00:07:27,666 --> 00:07:29,774
+the humans made the ledger run programs.
+
+338
+00:07:29,814 --> 00:07:32,403
+Guarding without electricity, a digital dollar, and a
+
+339
+00:07:32,443 --> 00:07:33,555
+bank with no bank.
+
+340
+00:07:33,595 --> 00:07:35,023
+This has been Earth Report.
+
+341
+00:07:35,063 --> 00:07:35,872
+Agent Peek.
+
+342
+00:07:35,912 --> 00:07:37,000
+End of transmission.
