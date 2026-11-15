@@ -47,7 +47,9 @@
      "Agent Peek",
      "bitcoin",
      "explained simply"
-    ]
+    ],
+    "cta": "And that same trick is what makes the bitcoin ledger impossible to forge. How? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-hash.wav"
    }
   },
   {
@@ -97,7 +99,9 @@
      "Agent Peek",
      "bitcoin",
      "explained simply"
-    ]
+    ],
+    "cta": "So who writes the next page... and what stops them from cheating? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-chain.wav"
    }
   },
   {
@@ -144,7 +148,9 @@
      "Agent Peek",
      "bitcoin",
      "explained simply"
-    ]
+    ],
+    "cta": "And this contest burns as much electricity as a whole country. Why do humans put up with it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-mining.wav"
    }
   },
   {
@@ -190,7 +196,9 @@
      "Agent Peek",
      "bitcoin",
      "explained simply"
-    ]
+    ],
+    "cta": "And when the prizes run out... who will guard the ledger? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-energy.wav"
    }
   },
   {
@@ -240,7 +248,9 @@
      "Agent Peek",
      "bitcoin",
      "explained simply"
-    ]
+    ],
+    "cta": "Can that ceiling ever change? And who actually runs this network? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-cap.wav"
    }
   },
   {
@@ -290,7 +300,9 @@
      "Agent Peek",
      "bitcoin",
      "explained simply"
-    ]
+    ],
+    "cta": "So who really runs this network? The answer is strange... and the full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-bug-2010.wav"
    }
   }
  ]

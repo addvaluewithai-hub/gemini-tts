@@ -1,0 +1,25 @@
+{
+ "turns": [
+  {
+   "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. In Egyptian Arabic, Cairo street dialect. Brisk, bright, slightly nasal. The closing line of a short clip: a hook question, then an invitation to subscribe, warm and quick.",
+   "text": "طب مين اللي بيكتب الصفحة الجديدة.. وإيه اللي يمنعه يغش؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "ar-EG"
+  ],
+  "write_vtt": true
+ },
+ "metadata": {
+  "channel": "techforbadguys",
+  "job_id": "techforbadguys-crypto02-short-cta-chain",
+  "language": "ar-EG",
+  "title": "Crypto 2 Short closing line: chain (ar)"
+ }
+}

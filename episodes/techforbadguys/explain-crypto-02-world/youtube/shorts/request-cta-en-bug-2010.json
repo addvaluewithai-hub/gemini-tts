@@ -1,0 +1,25 @@
+{
+ "turns": [
+  {
+   "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. American English. Brisk, light and bright, slightly nasal; warm. The closing line of a short clip: a hook question, then an invitation to subscribe.",
+   "text": "So who really runs this network? The answer is strange... and the full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": true
+ },
+ "metadata": {
+  "channel": "techforbadguys",
+  "job_id": "techforbadguys-crypto02-short-cta-en-w-bug-2010",
+  "language": "en-US",
+  "title": "Crypto 2 Short closing line: bug-2010 (en)"
+ }
+}
