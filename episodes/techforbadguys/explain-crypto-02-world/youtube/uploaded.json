@@ -6,12 +6,12 @@
  "publishAt": "2026-11-20T16:00:00Z",
  "thumbnail": "thumbnail-r2.jpg",
  "captions": [
-  "ar"
+  "ar",
+  "en"
  ],
  "localizations": [
   "ar",
   "en"
  ],
- "captions_en_pending": "quotaExceeded on 2026-11-15 01:4x UTC; add captions-en.srt after the daily quota resets (08:00 UTC)",
  "english_audio": "add audio-en.m4a in Studio (Languages)"
 }
