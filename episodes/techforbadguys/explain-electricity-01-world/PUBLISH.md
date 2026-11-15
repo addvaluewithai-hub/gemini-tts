@@ -1,7 +1,7 @@
 # Publishing electricity part 1 (world picture)
 
-Waiting for the owner's look. Nothing is uploaded to YouTube or TikTok; the publisher does that only after the owner
-confirms this video and its time (proposed: Wed 18 Nov 2026, 18:00 Cairo).
+The owner watched this render and approved it on 2026-11-15 («الفيديو جااااامد»). Nothing is uploaded to YouTube or
+TikTok yet: the publisher uploads it once the owner confirms the publishing time (proposed: Wed 18 Nov 2026, 18:00 Cairo).
 
 ## The video
 
