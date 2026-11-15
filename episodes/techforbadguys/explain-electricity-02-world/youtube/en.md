@@ -42,6 +42,9 @@ US grid losses, about 5% (EIA): https://www.eia.gov/tools/faqs/faq.php?id=105&t=
 The 1990 England v West Germany TV pickup: https://en.wikipedia.org/wiki/TV_pickup
 Europe's clocks six minutes slow, 2018 (NPR): https://www.npr.org/sections/thetwo-way/2018/03/07/591528390/a-political-dispute-puts-a-wrinkle-in-time-slowing-millions-of-european-clocks
 Japan's 50 and 60 Hz grids (Japan Times): https://www.japantimes.co.jp/news/2011/07/19/reference/japans-incompatible-power-grids/
+Plug types: 15, lettered A to O (IEC World Plugs): https://www.worldstandards.eu/electricity/plugs-and-sockets/
+One fuel pellet holds about the energy of a ton of coal (NEI): https://www.nei.org/fundamentals/nuclear-fuel
+Solar about 1% of world electricity in 2015 (Ember): https://ember-energy.org/latest-insights/the-year-sunlight-went-global-how-the-paris-agreement-brought-solar-power-to-the-world
 
 This is one report in a four-part file on electricity. Watch them in order from the playlist.
 This is a general explanation, not safety guidance. Any fallen or hanging wire: keep away and report it.

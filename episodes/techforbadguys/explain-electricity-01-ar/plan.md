@@ -46,6 +46,12 @@ Sourced:
   Times, 18 August 1890; wording varies, so it is cited "as reported". Smithsonian link above.
 - A kettle draws about 2,000 W (typical kettles run 1,500 to 3,000 W; general knowledge, said as "حوالي").
   (These three added 2026-11-15 after the planner checked them.)
+- Plug types: 15, lettered A to O (IEC World Plugs). https://www.worldstandards.eu/electricity/plugs-and-sockets/
+- One uranium fuel pellet holds about the energy of one ton of coal (NEI; other estimates up to about 1.3 t, said as
+  "تقريباً"). https://www.nei.org/fundamentals/nuclear-fuel
+- Solar was about 1% of world electricity in 2015 (Ember: 1.1%), 8.7% in 2025.
+  https://ember-energy.org/latest-insights/the-year-sunlight-went-global-how-the-paris-agreement-brought-solar-power-to-the-world
+  (These three added 2026-11-15 after the planner checked them, for part 2.)
 
 General knowledge: Thales and amber about 600 BC; Gilbert coined "electricus" in 1600; like charges repel;
 Franklin's 1752 lightning proposal and Georg Richmann's death in 1753 repeating such an experiment; Volta's
