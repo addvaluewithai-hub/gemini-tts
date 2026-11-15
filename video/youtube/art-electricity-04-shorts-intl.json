@@ -1,0 +1,212 @@
+[
+ {
+  "file": "explain-electricity-04-world/youtube/shorts/thumb-duck-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": -600,
+     "y": -1600
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "duckCurve",
+   "at": {
+    "x": 540,
+    "y": 760
+   },
+   "s": 0.82
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-04-world/youtube/shorts/thumb-battery-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "batteryLadder",
+   "at": {
+    "x": 540,
+    "y": 760
+   },
+   "s": 0.9
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-04-world/youtube/shorts/thumb-bet-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "betField",
+   "at": {
+    "x": 540,
+    "y": 760
+   },
+   "s": 0.95
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-04-world/youtube/shorts/thumb-roofs-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": -600,
+     "y": -1600
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "roofCity",
+   "at": {
+    "x": 540,
+    "y": 760
+   },
+   "s": 0.86
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-04-world/youtube/shorts/thumb-dark-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": -600,
+     "y": -1600
+    },
+    "dark": true,
+    "spark": false
+   },
+   "item": "darkEarth",
+   "at": {
+    "x": 540,
+    "y": 700
+   },
+   "s": 1.0
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ }
+]

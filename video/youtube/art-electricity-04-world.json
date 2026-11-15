@@ -1,0 +1,122 @@
+[
+ {
+  "file": "explain-electricity-04-world/youtube/thumbnail-a.jpg",
+  "page": "scene.html",
+  "w": 1280,
+  "h": 720,
+  "rtl": true,
+  "scene": "solo",
+  "tag": "ملف [[الكهربا]] · 4/4",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#05060d",
+   "color": "#fff",
+   "hi": "#FFD23F"
+  },
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 640,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": -400,
+     "y": -400
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "solarTown",
+   "at": {
+    "x": 850,
+    "y": 560
+   },
+   "s": 0.6
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 230,
+   "y": 90,
+   "size": 960,
+   "look": 0.9,
+   "outline": 6,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": [
+   {
+    "t": "الكوكب [[بيدفع]]\nعلشان تسحب كهربا",
+    "x": 440,
+    "y": 96,
+    "w": 820,
+    "size": 86,
+    "align": "center",
+    "hi": "#FFD23F"
+   }
+  ]
+ },
+ {
+  "file": "explain-electricity-04-world/youtube/thumbnail-en.jpg",
+  "page": "scene.html",
+  "w": 1280,
+  "h": 720,
+  "rtl": false,
+  "scene": "solo",
+  "tag": "[[ELECTRICITY]] FILE · 4/4",
+  "tagStyle": {
+   "size": 50,
+   "rot": -2,
+   "bg": "#05060d",
+   "color": "#fff",
+   "hi": "#FFD23F"
+  },
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 640,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": -400,
+     "y": -400
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "solarTown",
+   "at": {
+    "x": 430,
+    "y": 560
+   },
+   "s": 0.6
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 1050,
+   "y": 90,
+   "size": 960,
+   "look": -0.9,
+   "outline": 6,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": [
+   {
+    "t": "Paid to [[Use]] Power",
+    "x": 20,
+    "y": 96,
+    "w": 860,
+    "size": 84,
+    "align": "center",
+    "hi": "#FFD23F"
+   }
+  ]
+ }
+]
