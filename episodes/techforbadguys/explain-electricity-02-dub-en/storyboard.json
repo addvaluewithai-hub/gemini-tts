@@ -1,0 +1,514 @@
+{
+ "title": "Earth Report: Electricity 2 (English dub track for the world-picture video)",
+ "recorded_for": "2026-11-15",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "English voice fitted to explain-electricity-02-world beat by beat (dub.cjs). Adapted, not translated."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. A warm, smooth, rounded voice in a comfortable middle register, relaxed and close to the microphone: never shrill, never nasal, soft on the s sounds. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "3 / 5",
+   "icons": [
+    "tower",
+    "cable",
+    "bolt"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "e2intro": {
+   "kind": "e2intro",
+   "ends": [
+    6.82,
+    7.06,
+    3.77
+   ]
+  },
+  "faraday": {
+   "kind": "faraday",
+   "ends": [
+    8.2,
+    7.62,
+    7.36,
+    8.44,
+    4.3,
+    6.33
+   ]
+  },
+  "steam": {
+   "kind": "steam",
+   "ends": [
+    4.72,
+    4.5,
+    5.66,
+    3.68,
+    3.46
+   ]
+  },
+  "sources": {
+   "kind": "sources",
+   "ends": [
+    6.75,
+    2.5,
+    3.54,
+    7.13
+   ]
+  },
+  "mix": {
+   "kind": "mix",
+   "ends": [
+    8.06,
+    6.27,
+    3.68
+   ]
+  },
+  "kettles": {
+   "kind": "kettles",
+   "ends": [
+    5.26,
+    4.93,
+    9.05,
+    9.23,
+    7.39
+   ]
+  },
+  "oldsun": {
+   "kind": "oldsun",
+   "ends": [
+    10.41,
+    7.62,
+    4.73,
+    4.55,
+    3.71,
+    7.67
+   ]
+  },
+  "e2dict": {
+   "kind": "e2dict",
+   "ends": [
+    7.33,
+    6.26
+   ]
+  },
+  "e2recap": {
+   "kind": "e2recap",
+   "ends": [
+    18.61
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir, field report number two on the electricity file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Last time we learned what electricity is: charge moving in a wire. Today's question: who moves it? Where is it made?",
+     "show": "board",
+     "board": "e2intro",
+     "step": 0
+    },
+    {
+     "say": "Strangest thing I found: nearly all the planet's power, coal, nuclear, dams, wind.. is made with the same motion.",
+     "show": "board",
+     "board": "e2intro",
+     "step": 1
+    },
+    {
+     "say": "Found by a blacksmith's son about two hundred years ago: a spinning magnet.",
+     "show": "board",
+     "board": "e2intro",
+     "step": 2
+    },
+    {
+     "say": "The only difference between one station and another: who turns it. And one kind of station.. doesn't turn at all.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "magnet",
+   "style": "Telling a discovery simply, with a dry aside about a boy who read on the job.",
+   "beats": [
+    {
+     "say": "In eighteen thirty-one, an Englishman named Faraday found something simple: move a magnet past a wire.. and the electrons in the wire move.",
+     "show": "board",
+     "board": "faraday",
+     "step": 0
+    },
+    {
+     "say": "Spin the magnet inside a coil of wire, and it keeps pushing the electrons. Back.. and forth. That's a generator. Which is why it makes alternating current.",
+     "show": "board",
+     "board": "faraday",
+     "step": 1
+    },
+    {
+     "say": "A motor is the same machine in reverse: feed it electricity.. it spins. The fan, the washing machine, the electric car: generators running backwards.",
+     "show": "board",
+     "board": "faraday",
+     "step": 2,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "Faraday was a blacksmith's son who left school early. He was a bookbinder's apprentice.. and he read what he bound.",
+     "show": "board",
+     "board": "faraday",
+     "step": 3
+    },
+    {
+     "say": "Their greatest invention: a guy reading on the job.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "One question left: who turns the magnet? They mount it on a giant fan called a turbine.",
+     "show": "board",
+     "board": "faraday",
+     "step": 4
+    },
+    {
+     "say": "From Faraday until today, most of the planet's power is made with this same motion. The only thing that changes: what turns the turbine.",
+     "show": "board",
+     "board": "faraday",
+     "step": 5,
+     "host": "left",
+     "emote": "neutral"
+    }
+   ],
+   "story": {
+    "n": 1,
+    "tag": "MAGNET",
+    "icon": "gear"
+   }
+  },
+  {
+   "id": "steam",
+   "style": "Brisk and amused, listing how humans boil water; deadpan on the last line.",
+   "beats": [
+    {
+     "say": "Their favorite way: boil water. Burn coal or gas under a boiler the size of a building.",
+     "show": "board",
+     "board": "steam",
+     "step": 0
+    },
+    {
+     "say": "High-pressure steam spins the turbine. The turbine spins the generator. Out comes electricity.",
+     "show": "board",
+     "board": "steam",
+     "step": 1
+    },
+    {
+     "say": "And the nuclear plant, sir? The most complex thing they ever built. They split the atom itself. To boil water.",
+     "show": "board",
+     "board": "steam",
+     "step": 2,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "A fingertip of nuclear fuel holds about as much energy as a ton of coal.",
+     "show": "board",
+     "board": "steam",
+     "step": 3
+    },
+    {
+     "say": "Countries with volcanoes take steam ready-made from underground. Still steam.",
+     "show": "board",
+     "board": "steam",
+     "step": 4
+    },
+    {
+     "say": "This planet is addicted to kettles.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 2,
+    "tag": "STEAM",
+    "icon": "cloud"
+   }
+  },
+  {
+   "id": "waterwind",
+   "style": "Quick and clear, counting the kinds, then the one exception.",
+   "beats": [
+    {
+     "say": "So kind one is steam: coal, gas, or nuclear. Kind two is water itself: a high dam, the water falls onto the turbine.",
+     "show": "board",
+     "board": "sources",
+     "step": 0
+    },
+    {
+     "say": "The planet's biggest station.. a dam in China.",
+     "show": "board",
+     "board": "sources",
+     "step": 1
+    },
+    {
+     "say": "Kind three is air: wind turbines. The wind keeps them turning.",
+     "show": "board",
+     "board": "sources",
+     "step": 2
+    },
+    {
+     "say": "And the one exception: the solar panel. Nothing turns at all. Light itself knocks the electrons and moves them. And it makes direct current.",
+     "show": "board",
+     "board": "sources",
+     "step": 3,
+     "host": "right",
+     "emote": "proud"
+    }
+   ],
+   "story": {
+    "n": 3,
+    "tag": "WATER WIND",
+    "icon": "fish"
+   }
+  },
+  {
+   "id": "mix",
+   "style": "Reading numbers from a field chart, then a small surprise.",
+   "beats": [
+    {
+     "say": "Here's each one's share of the planet's power in twenty twenty-five. Coal still first: a third. Then gas. Then dams, nuclear, solar and wind.",
+     "show": "board",
+     "board": "mix",
+     "step": 0
+    },
+    {
+     "say": "But that year, something happened for the first time in a century: all renewables together.. passed coal. By a hair.",
+     "show": "board",
+     "board": "mix",
+     "step": 1
+    },
+    {
+     "say": "Solar alone was about one percent ten years ago. Now it's nearly nine.",
+     "show": "board",
+     "board": "mix",
+     "step": 2
+    },
+    {
+     "say": "The fastest-growing thing they have.. is the only one that doesn't spin.",
+     "shot": "close",
+     "emote": "smug"
+    }
+   ],
+   "story": {
+    "n": 4,
+    "tag": "THE MIX",
+    "icon": "chartdown"
+   }
+  },
+  {
+   "id": "kettles",
+   "style": "A patient calculation with everyday things, then a serious hint at the next report.",
+   "beats": [
+    {
+     "say": "So how much does a station make? Let me count it in something every kitchen has: the kettle.",
+     "show": "board",
+     "board": "kettles",
+     "step": 0
+    },
+    {
+     "say": "A kettle running draws about two thousand watts. That's two thousand joules every second.",
+     "show": "board",
+     "board": "kettles",
+     "step": 1
+    },
+    {
+     "say": "A big ordinary station puts out about a thousand megawatts. A megawatt is a million watts. So one station can run about half a million kettles.. at the same moment.",
+     "show": "board",
+     "board": "kettles",
+     "step": 2
+    },
+    {
+     "say": "The biggest on the planet, that Chinese dam, called Three Gorges, puts out about twenty-two and a half thousand megawatts. About eleven million kettles at once.",
+     "show": "board",
+     "board": "kettles",
+     "step": 3
+    },
+    {
+     "say": "Humans have millions of kettles, millions of air conditioners, millions of screens. And all of them want power the instant someone presses the button.",
+     "show": "board",
+     "board": "kettles",
+     "step": 4,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "And that, believe me, is their hardest problem. It gets its own report.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ],
+   "story": {
+    "n": 5,
+    "tag": "KETTLES",
+    "icon": "bolt"
+   }
+  },
+  {
+   "id": "oldsun",
+   "style": "Slower and a little wondering, building to a dry punchline.",
+   "beats": [
+    {
+     "say": "Command needs to understand one thing, sir: a station doesn't make energy. Humans have a law that says energy is never created or destroyed. It only changes form. The station just converts it.",
+     "show": "board",
+     "board": "oldsun",
+     "step": 0,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "So where did it come from? Follow the coal backwards. Coal was forests, millions of years ago. Trees lived on sunlight, died, got buried, and pressed.",
+     "show": "board",
+     "board": "oldsun",
+     "step": 1
+    },
+    {
+     "say": "So when humans burn coal.. they burn old sunlight. Gas and oil, roughly the same story.",
+     "show": "board",
+     "board": "oldsun",
+     "step": 2
+    },
+    {
+     "say": "Dams? The sun lifts sea water into clouds, and drops it as rain on the mountain.",
+     "show": "board",
+     "board": "oldsun",
+     "step": 3
+    },
+    {
+     "say": "Wind? The sun heats one patch of ground more than another, and the air runs.",
+     "show": "board",
+     "board": "oldsun",
+     "step": 4
+    },
+    {
+     "say": "So nearly every station on the planet.. runs on the sun, through the back door. Except nuclear: that runs on energy locked in atoms since before the Earth was born.",
+     "show": "board",
+     "board": "oldsun",
+     "step": 5,
+     "host": "left",
+     "emote": "proud"
+    },
+    {
+     "say": "And humans argue about which station is best.. while they all spend from the same wallet.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 6,
+    "tag": "OLD SUN",
+    "icon": "calendar"
+   }
+  },
+  {
+   "id": "dict",
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "The human dictionary. Two words today. Turbine: the giant fan that steam, water or wind spins.. and it spins the generator.",
+     "show": "board",
+     "board": "e2dict",
+     "step": 0
+    },
+    {
+     "say": "And megawatt: a million watts. Enough for hundreds of homes. Or five hundred kettles at once.",
+     "show": "board",
+     "board": "e2dict",
+     "step": 1,
+     "host": "right"
+    }
+   ],
+   "story": {
+    "n": 7,
+    "tag": "WORDS",
+    "icon": "key"
+   }
+  },
+  {
+   "id": "recap",
+   "style": "Summary, then the next report, then the sign-off.",
+   "beats": [
+    {
+     "say": "Summary, sir. One: a generator is a magnet spinning inside a coil, from Faraday until today. Two: most stations boil water to spin it, even nuclear. Dams spin it with water, wind farms with wind. Three: solar is the only exception, the fastest-growing, and for the first time in a century, renewables together passed coal.",
+     "show": "board",
+     "board": "e2recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "But it's still sitting at the station. Next report: how it reaches your home faster than a blink, why the bird on the wire is fine, and how a football match made a country need two stations in minutes.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "This was Earth Report. Agent Peek. Transmission ends.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ],
+   "story": {
+    "n": 8,
+    "tag": "RECAP",
+    "icon": "rules"
+   }
+  }
+ ],
+ "youtube": {},
+ "theme": "day"
+}

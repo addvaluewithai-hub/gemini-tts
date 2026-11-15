@@ -1,0 +1,247 @@
+{
+ "note": "Shorts for electricity part 2 (world picture). Same format as part 1 (shorts.json there). Proposals until the owner picks: nothing is uploaded.",
+ "full": "",
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "faraday",
+   "title": "ابن الحدّاد اللي نوّر الكوكب ⚡ #Shorts",
+   "description": "سنة 1831 Faraday، ابن حدّاد ماكملش تعليمه وكان صبي في ورشة تجليد كتب، اكتشف إن المغناطيس لما يتحرك جنب سلك بيحرّك الإلكترونات. ومن ساعتها أغلب كهربا الكوكب بتتعمل بنفس الحركة.\n\nالتقرير كامل: الكهربا بتتعمل إزاي؟ كل المحطات بتعمل نفس الحركة | ملف الكهربا 2\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "Faraday",
+    "المولد الكهربائي",
+    "المغناطيس",
+    "توليد الكهرباء"
+   ],
+   "parts": [
+    [
+     26.39,
+     68.74
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-faraday.wav",
+    "words": "shorts/cta-faraday.words.json",
+    "card": {
+     "icons": [
+      "book",
+      "gear"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2"
+    }
+   },
+   "voice_s": 42.3,
+   "en": {
+    "title": "The Blacksmith's Son Who Lit Up the Planet ⚡ #Shorts",
+    "description": "In 1831 Faraday, a blacksmith's son who left school early and worked as a bookbinder's apprentice, found that a moving magnet pushes the electrons in a wire. Most of the planet's electricity is still made that way.\n\nThe full report: How Is Electricity Made? Every Station Does the Same Thing | Electricity File 2\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "Faraday",
+     "generator",
+     "how electricity is made"
+    ]
+   }
+  },
+  {
+   "key": "nuclear",
+   "title": "المحطة النووية بتعمل إيه؟ بتغلي مية 🫖 #Shorts",
+   "description": "أغلب محطات الكهربا بتغلي مية: البخار يلفّ التوربينة والتوربينة تلفّ المولّد. حتى النووي: بيشقّوا الذرّة نفسها.. علشان يغلوا مية.\n\nالتقرير كامل: الكهربا بتتعمل إزاي؟ كل المحطات بتعمل نفس الحركة | ملف الكهربا 2\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "المحطة النووية",
+    "محطة كهربا",
+    "البخار",
+    "التوربينة"
+   ],
+   "parts": [
+    [
+     68.64,
+     92.37
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-nuclear.wav",
+    "words": "shorts/cta-nuclear.words.json",
+    "card": {
+     "icons": [
+      "atom",
+      "cloud"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2"
+    }
+   },
+   "voice_s": 23.7,
+   "en": {
+    "title": "What Does a Nuclear Plant Do? It Boils Water 🫖 #Shorts",
+    "description": "Most power stations boil water: steam spins a turbine, the turbine spins a generator. Even nuclear: they split the atom.. to boil water.\n\nThe full report: How Is Electricity Made? Every Station Does the Same Thing | Electricity File 2\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "nuclear power",
+     "steam turbine",
+     "power station"
+    ]
+   }
+  },
+  {
+   "key": "solar",
+   "title": "المحطة الوحيدة اللي مابتلفّش ☀️ #Shorts",
+   "description": "كل محطات الكهربا بتلفّ مغناطيس.. إلا اللوح الشمسي: الضوء نفسه بيحرّك الإلكترونات. وسنة 2025 المصادر المتجددة مع بعض عدّت الفحم لأول مرة من مية سنة.\n\nالتقرير كامل: الكهربا بتتعمل إزاي؟ كل المحطات بتعمل نفس الحركة | ملف الكهربا 2\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "الطاقة الشمسية",
+    "اللوح الشمسي",
+    "الطاقة المتجددة",
+    "الفحم"
+   ],
+   "parts": [
+    [
+     105.06,
+     133.33
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-solar.wav",
+    "words": "shorts/cta-solar.words.json",
+    "card": {
+     "icons": [
+      "bolt",
+      "chartdown"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2"
+    }
+   },
+   "voice_s": 28.3,
+   "en": {
+    "title": "The Only Power Station That Doesn't Spin ☀️ #Shorts",
+    "description": "Every power station spins a magnet.. except the solar panel: light itself moves the electrons. And in 2025, renewables together passed coal for the first time in a century.\n\nThe full report: How Is Electricity Made? Every Station Does the Same Thing | Electricity File 2\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "solar power",
+     "renewables",
+     "coal"
+    ]
+   }
+  },
+  {
+   "key": "kettles",
+   "title": "محطة كهربا واحدة = نص مليون غلاية 🫖 #Shorts",
+   "description": "الغلاية بتسحب حوالي 2000 وات. ومحطة كبيرة عادية حوالي 1000 ميجاوات: نص مليون غلاية في نفس اللحظة. وأكبر محطة على الكوكب، سد Three Gorges في الصين، حوالي 11 مليون غلاية.\n\nالتقرير كامل: الكهربا بتتعمل إزاي؟ كل المحطات بتعمل نفس الحركة | ملف الكهربا 2\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "ميجاوات",
+    "الغلاية",
+    "Three Gorges",
+    "محطة كهربا"
+   ],
+   "parts": [
+    [
+     133.23,
+     172.54
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-kettles.wav",
+    "words": "shorts/cta-kettles.words.json",
+    "card": {
+     "icons": [
+      "bolt",
+      "gear"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2"
+    }
+   },
+   "voice_s": 39.3,
+   "en": {
+    "title": "One Power Station = Half a Million Kettles 🫖 #Shorts",
+    "description": "A kettle draws about 2,000 watts. A big ordinary station makes about 1,000 megawatts: half a million kettles at once. The biggest, China's Three Gorges dam: about eleven million.\n\nThe full report: How Is Electricity Made? Every Station Does the Same Thing | Electricity File 2\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "megawatt",
+     "Three Gorges",
+     "kettle"
+    ]
+   }
+  },
+  {
+   "key": "oldsun",
+   "title": "لما بتحرق فحم.. بتحرق شمس قديمة ☀️ #Shorts",
+   "description": "الفحم كان غابات عاشت على ضوء الشمس من ملايين السنين. والشمس هي اللي بترفع المية للسدود وبتحرّك الرياح. يعني تقريباً كل محطة كهربا شغالة بالشمس.. من باب خلفي.\n\nالتقرير كامل: الكهربا بتتعمل إزاي؟ كل المحطات بتعمل نفس الحركة | ملف الكهربا 2\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "الفحم",
+    "الشمس",
+    "الطاقة",
+    "السدود"
+   ],
+   "parts": [
+    [
+     182.85,
+     215.09
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-oldsun.wav",
+    "words": "shorts/cta-oldsun.words.json",
+    "card": {
+     "icons": [
+      "calendar",
+      "bolt"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2"
+    }
+   },
+   "voice_s": 32.2,
+   "en": {
+    "title": "Burning Coal Is Burning Old Sunlight ☀️ #Shorts",
+    "description": "Coal was forests that lived on sunlight millions of years ago. The sun also lifts the water behind the dams and drives the wind. So nearly every power station runs on the sun.. through the back door.\n\nThe full report: How Is Electricity Made? Every Station Does the Same Thing | Electricity File 2\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "coal",
+     "sunlight",
+     "energy"
+    ]
+   }
+  }
+ ]
+}
