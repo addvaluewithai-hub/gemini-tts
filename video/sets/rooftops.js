@@ -39,7 +39,7 @@ function s0(a, tot, s, o = {}) {
   const v = !!o.vert, c = camAt(a, v ? [[0, 960, 480, 1.0], [5.31, 960, 560, 1.0]] : [[0, 840, 540, 1.1], [1.9, 840, 540, 1.08], [2.6, 1200, 560, 1.0], [5.31, 1200, 560, 1.02]]);
   const map = at(v ? -184 : -444, v ? -400 : -130, two(PAK, LAND, LANDD, 0, 8) + [[780, 690], [880, 560], [980, 360], [1030, 280]].map(([x, y]) => `${rings(x, y, 24, P.win, 0.3, 1.5)}<circle cx="${x}" cy="${y}" r="10" fill="${P.win}"/>`).join(""), 1.3 * pop(a - 0.05, 7, 12));
   const fl = a > 1.0 ? at(v ? 1300 : 380, v ? 120 : 220, pkFlag(220), pop(a - 1.21)) : "";
-  const pl = a > 1.0 ? at(v ? 960 : 860, v ? 680 : 930, plate("PAKISTAN", 64), pop(a - 1.3)) : "";
+  const pl = a > 1.0 ? at(v ? 680 : 860, v ? 680 : 930, plate("PAKISTAN", 64), pop(a - 1.3)) : "";
   // the town: grid wire from a pylon to two flat houses
   const G = v ? 1200 : 860, TX = v ? 1040 : 1620;
   const cut = a < 3.39 ? 1 : a < 3.9 ? (Math.sin((a - 3.39) * 40) > 0.2 ? 0.8 : 0.1) : 0;
@@ -48,7 +48,7 @@ function s0(a, tot, s, o = {}) {
   const tip = pylonTips(420)[1];
   const wire = span([TX - 420 + tip[0], G + tip[1]], [TX - 110, G - 214], 30, mix("#16323f", E.el, cut), 6) + span([TX - 110, G - 214], [TX + 220, G - 214], 20, mix("#16323f", E.el, cut), 6);
   const hs = at(TX - 110, G, flatHouse(E.houseA, E.houseAD, cut), 0.9) + at(TX + 220, G, flatHouse(E.houseB, E.houseBD, Math.max(cut, self), self), 0.9);
-  const price = a > 2.9 ? at(TX + 40, G - 470, `${two("M-50 0L0 -56H190V56H0Z", P.cream, P.creamD, 0, 6)}${text(95, 26, "$$$", 66, RED)}`, pop(a - 3.05), 6 * Math.sin(tot * 3)) : "";
+  const price = a > 2.9 ? at(TX + (v ? 160 : 40), G - 470, `${two("M-50 0L0 -56H190V56H0Z", P.cream, P.creamD, 0, 6)}${text(95, 26, "$$$", 66, RED)}`, pop(a - 3.05), 6 * Math.sin(tot * 3)) : "";
   const town = (a > 1.8 || v) ? at(0, 0, `<rect x="-1200" y="${G}" width="4400" height="1400" fill="${P.ground}"/>` + py + wire + hs + price, 1) : "";
   const g = sky(c, tot) + layer(map + fl + pl + town, c);
   return { g, out: toScreen(c, TX + 220, G - 220), outC: E.houseB, outZ: 12 };
