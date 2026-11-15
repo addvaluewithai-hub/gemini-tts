@@ -1,0 +1,671 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-electricity-03-world",
+ "transcript": "../../../video/cues/explain-electricity-03-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني رقم تلاتة في ملف الكهربا. ",
+   "shot": "close",
+   "emote": "serious",
+   "slide": null
+  },
+  {
+   "t": 4.89,
+   "say": "في التقرير اللي فات عرفنا إن الشبكة ميزان: اللي ",
+   "board": {
+    "kind": "e3intro",
+    "ends": [
+     7.65,
+     8.1
+    ]
+   },
+   "step": 0,
+   "stepT": 4.89,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 12.54,
+   "say": "وأغرب حاجة رصدتها: سنة ألفين وتلاتة، خمسين مليون",
+   "board": {
+    "kind": "e3intro",
+    "ends": [
+     7.65,
+     8.1
+    ]
+   },
+   "step": 1,
+   "stepT": 12.54
+  },
+  {
+   "t": 20.64,
+   "say": "هقول لكم إزاي عطل صغير بيكبر، وأكبر انقطاعات في ",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 26.99,
+   "say": "دي شبكة: محطات، ومدن، وخطوط بينهم. والكهربا متوز",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "DOMINO",
+    "icon": "chartdown"
+   },
+   "stepT": 26.99,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 31.7,
+   "say": "خط واحد يفصل. لأي سبب. الحِمل اللي كان شايله ماب",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 1,
+   "stepT": 31.7
+  },
+  {
+   "t": 41.09,
+   "say": "وفي دقايق، وأحياناً ثواني، منطقة كاملة تبقى ضلمة",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 2,
+   "stepT": 41.09
+  },
+  {
+   "t": 44.44,
+   "say": "زي عمال شايلين عمود تقيل. واحد يسيب.. التقل يقع ",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 44.44
+  },
+  {
+   "t": 51.1,
+   "say": "والغريب إن اللي بيفصل الخطوط دي مش العطل نفسه. أ",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 4,
+   "stepT": 51.1
+  },
+  {
+   "t": 58.25,
+   "say": "يعني كل حتة بتنقذ نفسها.. والمجموع يقع. تصرّف بش",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 62.65,
+   "say": "نرجع للشجرة. أغسطس ألفين وتلاتة، يوم حر في ولاية",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "2003",
+    "icon": "node"
+   },
+   "stepT": 62.65,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 72.74,
+   "say": "في العادي ده بيتلحق في دقايق. بس برنامج الإنذار ",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 72.74
+  },
+  {
+   "t": 81.13,
+   "say": "وفي خلال ساعتين الدومينو اشتغل. خمسين مليون إنسا",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 2,
+   "stepT": 81.13
+  },
+  {
+   "t": 89.09,
+   "say": "المترو وقف بناسه في الأنفاق، والناس رجعت بيوتها ",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 3,
+   "stepT": 89.09
+  },
+  {
+   "t": 94.52,
+   "say": "أغلى شجرة على الكوكب.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 95.61,
+   "say": "وأكبر انقطاع في تاريخهم كان في الهند، يوليو ألفي",
+   "board": {
+    "kind": "india",
+    "ends": [
+     6.72,
+     4.92,
+     10.66
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "2012",
+    "icon": "node"
+   },
+   "stepT": 95.61,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 102.33,
+   "say": "السبب: صيف حر، وولايات بتسحب من الشبكة أكتر من ن",
+   "board": {
+    "kind": "india",
+    "ends": [
+     6.72,
+     4.92,
+     10.66
+    ]
+   },
+   "step": 1,
+   "stepT": 102.33
+  },
+  {
+   "t": 107.25,
+   "say": "في اليوم التاني، الضلمة غطّت منطقة فيها أكتر من ",
+   "board": {
+    "kind": "india",
+    "ends": [
+     6.72,
+     4.92,
+     10.66
+    ]
+   },
+   "step": 2,
+   "stepT": 107.25
+  },
+  {
+   "t": 117.91,
+   "say": "ومش كل انقطاع غلطة. فبراير ألفين واحد وعشرين، عا",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 0,
+   "calm": true,
+   "music": 0.5,
+   "story": {
+    "n": 4,
+    "tag": "TEXAS",
+    "icon": "shield"
+   },
+   "gesture": "pockets",
+   "stepT": 117.91,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 128.31,
+   "say": "الميزان اتقلب. فغرفة التحكم عملت الحاجة الوحيدة ",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 1,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 128.31
+  },
+  {
+   "t": 135.64,
+   "say": "وقالوا بعدها إن الشبكة كانت على بُعد أربع دقايق ",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 2,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 135.64
+  },
+  {
+   "t": 143.25,
+   "say": "الحصيلة الرسمية للولاية: ميتين ستة وأربعين إنسان",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 3,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 143.25
+  },
+  {
+   "t": 147.45,
+   "say": "الكهربا عندهم مش رفاهية يا فندم. دي اللي مخلّياه",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 150,
+   "say": "وآخر واحد كبير: ألفين خمسة وعشرين، أسبانيا والبر",
+   "board": {
+    "kind": "iberia",
+    "ends": [
+     5.51,
+     12.41,
+     5.31
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "2025",
+    "icon": "bolt"
+   },
+   "music": 1,
+   "stepT": 150,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 155.51,
+   "say": "الضغط على الشبكة علي عن حدّه. محطات فصلت نفسها ع",
+   "board": {
+    "kind": "iberia",
+    "ends": [
+     5.51,
+     12.41,
+     5.31
+    ]
+   },
+   "step": 1,
+   "stepT": 155.51
+  },
+  {
+   "t": 167.92,
+   "say": "والتقرير النهائي طلع بعدها بسنة تقريباً. وقال: م",
+   "board": {
+    "kind": "iberia",
+    "ends": [
+     5.51,
+     12.41,
+     5.31
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 167.92
+  },
+  {
+   "t": 173.23,
+   "say": "يعني بعد سنة تحقيق.. المتهم: الظروف.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 175.83,
+   "say": "وللشبكة أعداء من بره. أولهم الشمس نفسها. سنة ألف",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 6,
+    "tag": "ENEMIES",
+    "icon": "mask"
+   },
+   "stepT": 175.83,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 186.51,
+   "say": "وسنة ألف تمنمية تسعة وخمسين جت عاصفة شمسية أكبر ",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 1,
+   "stepT": 186.51
+  },
+  {
+   "t": 195.97,
+   "say": "التاني: البشر نفسهم. ديسمبر ألفين وخمستاشر في أو",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "serious",
+   "stepT": 195.97
+  },
+  {
+   "t": 207.18,
+   "say": "والتالت، وده بجد: السنجاب. حيوان صغير بيطلع على ",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 3,
+   "stepT": 207.18
+  },
+  {
+   "t": 213.81,
+   "say": "يعني الشبكة اللي بتستحمل عواصف.. بيوقّعها حيوان ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 218.68,
+   "say": "طيب، الشبكة وقعت كلها. ترجع إزاي؟ وهنا مشكلة ظري",
+   "board": {
+    "kind": "blackstart",
+    "ends": [
+     8.61,
+     8.96,
+     7.52
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 7,
+    "tag": "BLACK START",
+    "icon": "gear"
+   },
+   "stepT": 218.68,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 227.29,
+   "say": "فبيسيبوا محطات قليلة مخصوص، غالباً سدود، تقدر تق",
+   "board": {
+    "kind": "blackstart",
+    "ends": [
+     8.61,
+     8.96,
+     7.52
+    ]
+   },
+   "step": 1,
+   "stepT": 227.29
+  },
+  {
+   "t": 236.25,
+   "say": "ولازم كل حتة ترجع وهي ماشية على نفس النبض بالظبط",
+   "board": {
+    "kind": "blackstart",
+    "ends": [
+     8.61,
+     8.96,
+     7.52
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 236.25
+  },
+  {
+   "t": 243.77,
+   "say": "قاموس البشر. كلمتين النهارده. Blackout: انقطاع ك",
+   "board": {
+    "kind": "e3dict",
+    "ends": [
+     5.19,
+     9.03
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 243.77,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 248.96,
+   "say": "و Load shedding: قطع بالدور. يطفّوا عن حي ساعتين",
+   "board": {
+    "kind": "e3dict",
+    "ends": [
+     5.19,
+     9.03
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 248.96
+  },
+  {
+   "t": 257.99,
+   "say": "خلاصة التقرير يا فندم. واحد: الشبكة بتقع زي الدو",
+   "board": {
+    "kind": "e3recap",
+    "ends": [
+     15.74
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 257.99,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 273.73,
+   "say": "وتنبيه: لما النور بيقطع عندهم، الخطر مش في الضلم",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 281.2,
+   "say": "التقرير الجاي، والأخير في الملف: الكهربا رايحة ع",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 289.6,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 292.94,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "4 / 4",
+    "icons": [
+     "bolt",
+     "gear",
+     "tower"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

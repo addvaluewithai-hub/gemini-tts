@@ -1,0 +1,514 @@
+{
+ "title": "تقرير الأرض: الكهربا 3 (world picture)",
+ "recorded_for": "2026-11-15",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture, as explain-electricity-01-world. Script: ../explain-electricity-03-ar/script.md (four-part file, part 3 of 4). Facts: ../explain-electricity-01-ar/plan.md."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "4 / 4",
+   "icons": [
+    "bolt",
+    "gear",
+    "tower"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "e3intro": {
+   "kind": "e3intro",
+   "ends": [
+    7.65,
+    8.1
+   ]
+  },
+  "domino": {
+   "kind": "domino",
+   "ends": [
+    4.71,
+    9.39,
+    3.35,
+    6.66,
+    7.15
+   ]
+  },
+  "ohio": {
+   "kind": "ohio",
+   "ends": [
+    10.09,
+    8.39,
+    7.96,
+    5.43
+   ]
+  },
+  "india": {
+   "kind": "india",
+   "ends": [
+    6.72,
+    4.92,
+    10.66
+   ]
+  },
+  "texas": {
+   "kind": "texas",
+   "ends": [
+    10.4,
+    7.33,
+    7.61,
+    4.2
+   ]
+  },
+  "iberia": {
+   "kind": "iberia",
+   "ends": [
+    5.51,
+    12.41,
+    5.31
+   ]
+  },
+  "enemies": {
+   "kind": "enemies",
+   "ends": [
+    10.68,
+    9.46,
+    11.21,
+    6.63
+   ]
+  },
+  "blackstart": {
+   "kind": "blackstart",
+   "ends": [
+    8.61,
+    8.96,
+    7.52
+   ]
+  },
+  "e3dict": {
+   "kind": "e3dict",
+   "ends": [
+    5.19,
+    9.03
+   ]
+  },
+  "e3recap": {
+   "kind": "e3recap",
+   "ends": [
+    15.74
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم تلاتة في ملف الكهربا. موضوع النهارده: ليه النور بيقطع.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "في التقرير اللي فات عرفنا إن الشبكة ميزان: اللي بيتعمل لازم يساوي اللي بيتسحب، كل ثانية. النهارده: إيه اللي بيحصل لما الميزان يبوظ.",
+     "show": "board",
+     "board": "e3intro",
+     "step": 0
+    },
+    {
+     "say": "وأغرب حاجة رصدتها: سنة ألفين وتلاتة، خمسين مليون إنسان في أمريكا وكندا قعدوا في الضلمة. والسبب: شجرة.. وبرنامج كمبيوتر معلّق.",
+     "show": "board",
+     "board": "e3intro",
+     "step": 1
+    },
+    {
+     "say": "هقول لكم إزاي عطل صغير بيكبر، وأكبر انقطاعات في تاريخهم، ومين أعداء الشبكة، وإزاي بلد كاملة بتقوم من الضلمة.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "domino",
+   "style": "Explaining how a failure spreads, step by step, like a detective reconstructing a chain of events.",
+   "beats": [
+    {
+     "say": "دي شبكة: محطات، ومدن، وخطوط بينهم. والكهربا متوزعة على الخطوط كلها.",
+     "show": "board",
+     "board": "domino",
+     "step": 0
+    },
+    {
+     "say": "خط واحد يفصل. لأي سبب. الحِمل اللي كان شايله مابيختفيش. بيتحوّل على الخطوط اللي جنبه. فتشيل فوق طاقتها.. وتفصل هي كمان. واللي بعدها. واللي بعدها.",
+     "show": "board",
+     "board": "domino",
+     "step": 1
+    },
+    {
+     "say": "وفي دقايق، وأحياناً ثواني، منطقة كاملة تبقى ضلمة.",
+     "show": "board",
+     "board": "domino",
+     "step": 2
+    },
+    {
+     "say": "زي عمال شايلين عمود تقيل. واحد يسيب.. التقل يقع على الباقيين. اللي جنبه مايستحملش، فيسيب هو كمان. وهكذا.",
+     "show": "board",
+     "board": "domino",
+     "step": 3,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "والغريب إن اللي بيفصل الخطوط دي مش العطل نفسه. أجهزة الحماية. كل خط وكل محطة عليها جهاز بيفصلها لوحدها قبل ما تتحرق.",
+     "show": "board",
+     "board": "domino",
+     "step": 4
+    },
+    {
+     "say": "يعني كل حتة بتنقذ نفسها.. والمجموع يقع. تصرّف بشري جداً.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 1,
+    "tag": "DOMINO",
+    "icon": "chartdown"
+   }
+  },
+  {
+   "id": "us",
+   "style": "A true story told like an incident report, dry at the end.",
+   "beats": [
+    {
+     "say": "نرجع للشجرة. أغسطس ألفين وتلاتة، يوم حر في ولاية Ohio. الأسلاك لما بتسخن بتطول وتنزل. وسلك ضغط عالي نزل لحد ما لمس شجرة محدش قصّها. وفصل.",
+     "show": "board",
+     "board": "ohio",
+     "step": 0
+    },
+    {
+     "say": "في العادي ده بيتلحق في دقايق. بس برنامج الإنذار في غرفة التحكم كان فيه غلطة، ووقف من غير ما حد ياخد باله. فالمهندسين قاعدين قدام شاشات بتقول: كله تمام.",
+     "show": "board",
+     "board": "ohio",
+     "step": 1,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "وفي خلال ساعتين الدومينو اشتغل. خمسين مليون إنسان في أمريكا وكندا، منهم مدينة New York كلها. وفي أماكن النور رجع بعد يومين.",
+     "show": "board",
+     "board": "ohio",
+     "step": 2
+    },
+    {
+     "say": "المترو وقف بناسه في الأنفاق، والناس رجعت بيوتها مشي على الكباري. والخسارة اتقدّرت بمليارات الدولارات.",
+     "show": "board",
+     "board": "ohio",
+     "step": 3
+    },
+    {
+     "say": "أغلى شجرة على الكوكب.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 2,
+    "tag": "2003",
+    "icon": "node"
+   }
+  },
+  {
+   "id": "india",
+   "style": "Scale, stated plainly.",
+   "beats": [
+    {
+     "say": "وأكبر انقطاع في تاريخهم كان في الهند، يوليو ألفين واتناشر. الشبكة وقعت.. رجّعوها.. ووقعت تاني يوم أكبر.",
+     "show": "board",
+     "board": "india",
+     "step": 0
+    },
+    {
+     "say": "السبب: صيف حر، وولايات بتسحب من الشبكة أكتر من نصيبها، وخطوط شايلة فوق طاقتها.",
+     "show": "board",
+     "board": "india",
+     "step": 1
+    },
+    {
+     "say": "في اليوم التاني، الضلمة غطّت منطقة فيها أكتر من ستمية مليون إنسان. قطارات وقفت في نص السكة، وعمال مناجم اتحبسوا تحت الأرض لحد ما طلّعوهم. حوالي نص البلد.. في لحظة واحدة.",
+     "show": "board",
+     "board": "india",
+     "step": 2
+    }
+   ],
+   "story": {
+    "n": 3,
+    "tag": "2012",
+    "icon": "node"
+   }
+  },
+  {
+   "id": "texas",
+   "style": "A grave passage. People died. Slower, plain, no jokes.",
+   "beats": [
+    {
+     "say": "ومش كل انقطاع غلطة. فبراير ألفين واحد وعشرين، عاصفة تلج ضربت ولاية Texas في أمريكا. محطات كهربا وخطوط غاز اتجمّدت.. في نفس الوقت اللي الناس كلها شغّلت الدفايات.",
+     "show": "board",
+     "board": "texas",
+     "step": 0,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "الميزان اتقلب. فغرفة التحكم عملت الحاجة الوحيدة اللي فاضلة: قطعت الكهربا بإيدها عن أكتر من أربعة مليون بيت. في عز البرد.",
+     "show": "board",
+     "board": "texas",
+     "step": 1,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "وقالوا بعدها إن الشبكة كانت على بُعد أربع دقايق وسبعة وتلاتين ثانية من انهيار كامل. انهيار كان ممكن ياخد أسابيع علشان يتصلّح.",
+     "show": "board",
+     "board": "texas",
+     "step": 2,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "الحصيلة الرسمية للولاية: ميتين ستة وأربعين إنسان ماتوا. أغلبهم من البرد.",
+     "show": "board",
+     "board": "texas",
+     "step": 3,
+     "calm": true,
+     "music": 0.5
+    },
+    {
+     "say": "الكهربا عندهم مش رفاهية يا فندم. دي اللي مخلّياهم عايشين.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true,
+     "music": 0.5
+    }
+   ],
+   "story": {
+    "n": 4,
+    "tag": "TEXAS",
+    "icon": "shield"
+   }
+  },
+  {
+   "id": "spain",
+   "style": "Recent event, brisk; ends with a dry remark about official reports.",
+   "beats": [
+    {
+     "say": "وآخر واحد كبير: ألفين خمسة وعشرين، أسبانيا والبرتغال. يوم تمانية وعشرين أبريل، الضهر، والجو حلو.",
+     "show": "board",
+     "board": "iberia",
+     "step": 0
+    },
+    {
+     "say": "الضغط على الشبكة علي عن حدّه. محطات فصلت نفسها علشان تحمي أجهزتها. فالضغط علي أكتر. فمحطات تانية فصلت. وفي ثواني، بلدين كاملين من غير كهربا. عشرات الملايين من البشر. وفي أماكن النور رجع بعد ستاشر ساعة.",
+     "show": "board",
+     "board": "iberia",
+     "step": 1
+    },
+    {
+     "say": "والتقرير النهائي طلع بعدها بسنة تقريباً. وقال: مفيش سبب واحد. عاصفة كاملة من أسباب صغيرة.",
+     "show": "board",
+     "board": "iberia",
+     "step": 2,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "يعني بعد سنة تحقيق.. المتهم: الظروف.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 5,
+    "tag": "2025",
+    "icon": "bolt"
+   }
+  },
+  {
+   "id": "enemies",
+   "style": "A threat briefing that ends on an absurd but true enemy.",
+   "beats": [
+    {
+     "say": "وللشبكة أعداء من بره. أولهم الشمس نفسها. سنة ألف تسعمية تسعة وتمانين، عاصفة شمسية ضربت الأرض، وشبكة مقاطعة Quebec في كندا وقعت كلها في تسعين ثانية. ملايين قعدوا ساعات في الضلمة.",
+     "show": "board",
+     "board": "enemies",
+     "step": 0
+    },
+    {
+     "say": "وسنة ألف تمنمية تسعة وخمسين جت عاصفة شمسية أكبر بكتير. ولّعت شرار في مكاتب التلغراف. ساعتها ماكانش عندهم شبكات كهربا. لو جت واحدة زيها النهارده.. محدش فيهم متأكد إيه اللي هيحصل.",
+     "show": "board",
+     "board": "enemies",
+     "step": 1
+    },
+    {
+     "say": "التاني: البشر نفسهم. ديسمبر ألفين وخمستاشر في أوكرانيا، ناس دخلوا على كمبيوترات شركات الكهربا من بعيد، وفصلوا المفاتيح واحد ورا التاني. حوالي ميتين خمسة وعشرين ألف بيت. أول مرة معروفة هجوم إلكتروني يقطع النور.",
+     "show": "board",
+     "board": "enemies",
+     "step": 2,
+     "host": "right",
+     "emote": "serious"
+    },
+    {
+     "say": "والتالت، وده بجد: السنجاب. حيوان صغير بيطلع على المحوّلات ويقفل الدايرة بجسمه. من أكتر أسباب قطع النور في أمريكا الشمالية.",
+     "show": "board",
+     "board": "enemies",
+     "step": 3
+    },
+    {
+     "say": "يعني الشبكة اللي بتستحمل عواصف.. بيوقّعها حيوان وزنه نص كيلو. وهو كمان مابيطلعش منها سليم.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 6,
+    "tag": "ENEMIES",
+    "icon": "mask"
+   }
+  },
+  {
+   "id": "start",
+   "style": "A neat puzzle and its answer.",
+   "beats": [
+    {
+     "say": "طيب، الشبكة وقعت كلها. ترجع إزاي؟ وهنا مشكلة ظريفة: المحطة نفسها محتاجة كهربا علشان تشتغل. طلمبات، ومراوح، وكمبيوترات.",
+     "show": "board",
+     "board": "blackstart",
+     "step": 0
+    },
+    {
+     "say": "فبيسيبوا محطات قليلة مخصوص، غالباً سدود، تقدر تقوم لوحدها من غير أي حاجة من بره. تشتغل، وتصحّي المحطة اللي جنبها، ويفضلوا يكبّروا الجزيرة حتة حتة.",
+     "show": "board",
+     "board": "blackstart",
+     "step": 1
+    },
+    {
+     "say": "ولازم كل حتة ترجع وهي ماشية على نفس النبض بالظبط. علشان كده الرجوع بياخد ساعات، وأحياناً أيام. الوقعة في ثواني. والقومة بالراحة.",
+     "show": "board",
+     "board": "blackstart",
+     "step": 2,
+     "host": "left",
+     "emote": "neutral"
+    }
+   ],
+   "story": {
+    "n": 7,
+    "tag": "BLACK START",
+    "icon": "gear"
+   }
+  },
+  {
+   "id": "dict",
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "قاموس البشر. كلمتين النهارده. Blackout: انقطاع كبير. الشبكة كلها تقع.",
+     "show": "board",
+     "board": "e3dict",
+     "step": 0
+    },
+    {
+     "say": "و Load shedding: قطع بالدور. يطفّوا عن حي ساعتين، وبعدين اللي جنبه، علشان الكل مايقعش. وفي بلاد كتير دي مش كلمة في قاموس. ده جدول يومي.",
+     "show": "board",
+     "board": "e3dict",
+     "step": 1,
+     "host": "right"
+    }
+   ],
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   }
+  },
+  {
+   "id": "recap",
+   "style": "Summary, one sincere warning, then the next report and the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: الشبكة بتقع زي الدومينو، وأجهزة الحماية اللي بتنقذ كل حتة لوحدها.. هي اللي بتنشر الوقعة. اتنين: السبب ممكن يبقى شجرة، أو برد، أو الشمس، أو هاكر، أو سنجاب. تلاتة: الوقعة في ثواني، والقومة بالراحة، من محطات قليلة بتقوم لوحدها.",
+     "show": "board",
+     "board": "e3recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "وتنبيه: لما النور بيقطع عندهم، الخطر مش في الضلمة بس. في Texas ناس ماتت مخنوقة من مولّدات ودفايات شغّلوها جوّه البيوت.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "التقرير الجاي، والأخير في الملف: الكهربا رايحة على فين؟ بطاريات قد المخازن، وشمس بقت من أرخص كهربا في تاريخهم، ومين على الكوكب لسه مستني لمبة أصلاً.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ],
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   }
+  }
+ ],
+ "youtube": {},
+ "theme": "day"
+}

@@ -43,6 +43,16 @@ import { birdSet } from "./sets/bird.js";
 import { balanceSet } from "./sets/balance.js";
 import { gridSet } from "./sets/grid.js";
 import { peakSet } from "./sets/peak.js";
+import { e3introSet } from "./sets/e3intro.js";
+import { dominoSet } from "./sets/domino.js";
+import { ohioSet } from "./sets/ohio.js";
+import { indiaSet } from "./sets/india.js";
+import { texasSet } from "./sets/texas.js";
+import { iberiaSet } from "./sets/iberia.js";
+import { enemiesSet } from "./sets/enemies.js";
+import { blackstartSet } from "./sets/blackstart.js";
+import { e3dictSet } from "./sets/e3dict.js";
+import { e3recapSet } from "./sets/e3recap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -899,6 +909,17 @@ const BOARDS = {
   balance: (s, step, age, total, cfg) => balanceSet(s, step, age, total, cfg),
   grid: (s, step, age, total, cfg) => gridSet(s, step, age, total, cfg),
   peak: (s, step, age, total, cfg) => peakSet(s, step, age, total, cfg),
+  // Electricity part 3 of 4: why the lights go out.
+  e3intro: (s, step, age, total, cfg) => e3introSet(s, step, age, total, cfg),
+  domino: (s, step, age, total, cfg) => dominoSet(s, step, age, total, cfg),
+  ohio: (s, step, age, total, cfg) => ohioSet(s, step, age, total, cfg),
+  india: (s, step, age, total, cfg) => indiaSet(s, step, age, total, cfg),
+  texas: (s, step, age, total, cfg) => texasSet(s, step, age, total, cfg),
+  iberia: (s, step, age, total, cfg) => iberiaSet(s, step, age, total, cfg),
+  enemies: (s, step, age, total, cfg) => enemiesSet(s, step, age, total, cfg),
+  blackstart: (s, step, age, total, cfg) => blackstartSet(s, step, age, total, cfg),
+  e3dict: (s, step, age, total, cfg) => e3dictSet(s, step, age, total, cfg),
+  e3recap: (s, step, age, total, cfg) => e3recapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
