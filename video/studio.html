@@ -322,7 +322,7 @@ window.draw = (st) => {
     const c = st.cam;
     // vertical frame: the host is larger and centred when he is alone, smaller and lower when something sits above him
     const tall = cfg.layout === "short" || !!cfg.vertical, room = st.room || 0, vk = cfg.boardZoom || 0.68, zoom = tall ? c.s * (cfg.vertical ? 1.08 - 0.08 * room : 1.25 - 0.25 * room) : c.s, ax = tall ? 540 : 960, ay = tall ? 1280 + (cfg.vertical ? 330 : 274) * room : 540;
-    if (tall) $("cap").style.top = (cfg.vertical && cfg.peekFixed ? (cfg.peekFixed.capY || 1110) : cfg.vertical ? 400 + (1080 * vk - 126) * room : 1470 - 565 * room) + "px";   // peekFixed: the captions sit just above his hat
+    if (tall) $("cap").style.top = (cfg.vertical && cfg.peekFixed ? (cfg.peekFixed.capY || 1110) : cfg.vertical ? (cfg.capY && room < 0.5 ? cfg.capY : 400 + (1080 * vk - 126) * room) : 1470 - 565 * room) + "px";   // peekFixed: the captions sit just above his hat
     $("world").style.transform = `translate(${ax - c.x * zoom}px,${ay - c.y * zoom}px) scale(${zoom}) rotate(${c.r || 0}deg)`;
     $("world").style.filter = st.blur > 0.5 ? `blur(${st.blur.toFixed(1)}px)` : "";
     person($("host"), st.host, 900); if (st.host) $("host").style.transform = `translateY(${st.host.y}px)`;
@@ -355,7 +355,7 @@ window.draw = (st) => {
   const fullV = !!(bd && cfg.vertical && $("board").firstElementChild && $("board").firstElementChild.dataset && $("board").firstElementChild.dataset.frame === "1080x1920");
   $("frame").classList.toggle("fullv", fullV);
   const hostV = !!(cfg.portraitSets && cfg.vertical && !bd); $("frame").classList.toggle("hostv", hostV);
-  if (hostV) { const z = cfg.hostZoom || 1.2, hx = $("host").offsetLeft + 450; $("world").style.transform = `translate(${540 - hx * z}px,${1280 - 661 * z}px) scale(${z})`; }   // the same studio, framed for portrait: the desk top two thirds of the way down, the wall above him, the desk front with the name below
+  if (hostV) { const z = cfg.hostZoom || 1.2, hx = $("host").offsetLeft + 450; $("world").style.transform = `translate(${540 - hx * z}px,${1280 + (cfg.hostY || 0) - 661 * z}px) scale(${z})`; }   // the same studio, framed for portrait: the desk top two thirds of the way down, the wall above him, the desk front with the name below
   if (fullV) { const e = Math.min(1, (st.insert ? st.insert.enter : 1) * 3); $("board").style.transform = ""; $("board").style.opacity = e; }
   else if (bd && cfg.vertical) { const k = cfg.boardZoom || 0.68, e = Math.min(1, (st.insert ? st.insert.enter : 1) * 3), p = 1 + 0.06 * (1 - e);   // the board as a card at the top
     $("board").style.transform = `translate(${540 - 960 * k * p}px,${250 + (1 - e) * 30}px) scale(${k * p})`; $("board").style.opacity = e; }
@@ -364,7 +364,8 @@ window.draw = (st) => {
   person($("peek"), st.peek, 640, "r3");
   // peekFixed (a Short): Peek stands at the bottom centre all the time, over the picture, about a quarter of the frame tall
   if (cfg.peekFixed && cfg.vertical) { const pf = cfg.peekFixed, z = Math.round(1920 * (pf.h || 0.25) / 0.86), el = $("fixpeek"); $("frame").classList.add("fixpeek");
-    person(el, st.host ? { ...st.host, paper: "pockets", shift: 0 } : null, z, "f3"); const L = -z * (pf.out ?? 0.12), R = 1080 - z * (1 - (pf.out ?? 0.12)), fx = st.fixX ?? (pf.side === "left" ? 0 : 1); el.style.left = L + (R - L) * fx + (pf.x || 0) + "px"; el.style.top = 1920 - z * (pf.foot || 0.97) + "px"; }
+    person(el, st.host ? { ...st.host, paper: "pockets", shift: 0 } : null, z, "f3"); const L = -z * (pf.out ?? 0.12), R = 1080 - z * (1 - (pf.out ?? 0.12)), fx = st.fixX ?? (pf.side === "left" ? 0 : 1); el.style.left = L + (R - L) * fx + (pf.x || 0) + "px"; el.style.top = 1920 - z * (pf.foot || 0.97) + "px";
+    if (cfg.captions !== false) { const cx = st.fixX ?? 1; Object.assign($("cap").style, { top: (pf.capY || 1440) + "px", left: 40 + (1080 - z * 0.8) * (1 - cx) + "px", right: 40 + (1080 - z * 0.8) * cx + "px", fontSize: "64px" }); } }   // the captions beside him, on the side he leaves free
   if (st.peek && st.peek.side) { const right = st.peek.side === "right", a = st.peek.amt;       // leaning in from the edge of the frame
     const W = cfg.vertical ? 1080 : 1920; $("peek").style.top = (cfg.vertical ? 1300 : 520) + "px"; $("peek").style.left = (right ? W - 430 * a : -640 + 430 * a) + "px"; $("peek").style.transform = `rotate(${right ? -15 : 15}deg)`; }
   else if (st.peek) { $("peek").style.left = "1320px"; $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }

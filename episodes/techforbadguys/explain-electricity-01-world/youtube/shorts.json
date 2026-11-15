@@ -66,7 +66,9 @@
      150.3,
      "right"
     ]
-   ]
+   ],
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "lightning",
@@ -92,8 +94,8 @@
     ]
    ],
    "end": {
-    "audio": "shorts/cta-lightning.wav",
-    "words": "shorts/cta-lightning.words.json",
+    "audio": "shorts/cta-lightning-short.wav",
+    "words": "shorts/cta-lightning-short.words.json",
     "card": {
      "icons": [
       "cloud",
@@ -116,7 +118,9 @@
      "static electricity",
      "Franklin"
     ]
-   }
+   },
+   "look": "big",
+   "captions": false
   },
   {
    "key": "tea",
@@ -142,8 +146,8 @@
     ]
    ],
    "end": {
-    "audio": "shorts/cta-tea.wav",
-    "words": "shorts/cta-tea.words.json",
+    "audio": "shorts/cta-tea-short.wav",
+    "words": "shorts/cta-tea-short.words.json",
     "card": {
      "icons": [
       "tea",
@@ -166,7 +170,9 @@
      "kettle",
      "volt ampere ohm watt"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": true
   },
   {
    "key": "fish",
@@ -196,8 +202,8 @@
     ]
    ],
    "end": {
-    "audio": "shorts/cta-fish.wav",
-    "words": "shorts/cta-fish.words.json",
+    "audio": "shorts/cta-fish-short.wav",
+    "words": "shorts/cta-fish-short.words.json",
     "card": {
      "icons": [
       "eel",
@@ -220,7 +226,9 @@
      "Volta",
      "first battery"
     ]
-   }
+   },
+   "look": "big",
+   "captions": true
   },
   {
    "key": "edison-tesla",
