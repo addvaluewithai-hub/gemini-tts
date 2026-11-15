@@ -1,2 +1,2 @@
 // "c4lever" in portrait (1080 x 1920), for the Shorts. V[k]: a shot drawn for the tall frame, or how to reframe landscape shot k (see makeSet in kit.js).
-export const V = [];
+export const V = [{ z: 1.0, dx: 0 }, { z: 0.8, dx: 40 }, { z: 0.8, dx: 0 }, { z: 0.8, dx: 0 }, { z: 0.75, dx: 80 }, { z: 0.75, dx: 80 }, { z: 0.7 }, { z: 0.72 }, { stack: true, cx: [700, 1460] }, { z: 0.66, dx: -40 }, { stack: true, cx: [900, 1500] }];
