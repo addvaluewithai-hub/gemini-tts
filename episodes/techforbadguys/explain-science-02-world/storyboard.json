@@ -63,7 +63,16 @@
  "theme": "lab",
  "boards": {
   "choco": {
-   "kind": "choco"
+   "kind": "choco",
+   "ends": [
+    4.73,
+    13.84,
+    6.09,
+    8.2,
+    3.65,
+    6.62,
+    7.74
+   ]
   },
   "fairtest": {
    "kind": "fairtest",
@@ -78,7 +87,17 @@
    ]
   },
   "headline": {
-   "kind": "headline"
+   "kind": "headline",
+   "ends": [
+    2.77,
+    2.34,
+    6.85,
+    2.88,
+    4.54,
+    3.79,
+    7.71,
+    7.19
+   ]
   },
   "lind": {
    "kind": "lind",
@@ -93,13 +112,33 @@
    ]
   },
   "repeat": {
-   "kind": "repeat"
+   "kind": "repeat",
+   "ends": [
+    7.69,
+    5.38,
+    4.32,
+    6.89,
+    8.05,
+    6.91
+   ]
   },
   "review": {
-   "kind": "review"
+   "kind": "review",
+   "ends": [
+    9.32,
+    4.83,
+    3.24,
+    5.29,
+    4.37,
+    4.29
+   ]
   },
   "s2dict": {
-   "kind": "s2dict"
+   "kind": "s2dict",
+   "ends": [
+    6.65,
+    5.79
+   ]
   },
   "s2intro": {
    "kind": "s2intro",
@@ -121,10 +160,22 @@
    ]
   },
   "s2recap": {
-   "kind": "s2recap"
+   "kind": "s2recap",
+   "ends": [
+    6.82,
+    5.6,
+    5.76
+   ]
   },
   "sample": {
-   "kind": "sample"
+   "kind": "sample",
+   "ends": [
+    4.33,
+    2.2,
+    3.82,
+    7.02,
+    4.25
+   ]
   }
  },
  "scenes": [

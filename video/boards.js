@@ -17,6 +17,7 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { sintroSet } from "./sets/sintro.js";
+import { repeatSet, headlineSet, s2dictSet, s2recapSet } from "./sets/part2c.js";
 import { sampleSet, chocoSet, reviewSet } from "./sets/part2b.js";
 import { s2introSet, s2paperSet, fairtestSet, lindSet } from "./sets/part2a.js";
 import { sthumbSet } from "./sets/sthumb.js";
@@ -868,6 +869,10 @@ const BOARDS = {
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
   sintro: (s, step, age, total, cfg) => sintroSet(s, step, age, total, cfg),
+  repeat: (s, step, age, total, cfg) => repeatSet(s, step, age, total, cfg),
+  headline: (s, step, age, total, cfg) => headlineSet(s, step, age, total, cfg),
+  s2dict: (s, step, age, total, cfg) => s2dictSet(s, step, age, total, cfg),
+  s2recap: (s, step, age, total, cfg) => s2recapSet(s, step, age, total, cfg),
   sample: (s, step, age, total, cfg) => sampleSet(s, step, age, total, cfg),
   choco: (s, step, age, total, cfg) => chocoSet(s, step, age, total, cfg),
   review: (s, step, age, total, cfg) => reviewSet(s, step, age, total, cfg),
