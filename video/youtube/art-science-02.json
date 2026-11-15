@@ -1,0 +1,10 @@
+[
+ {"file": "explain-science-02-world/youtube/thumbnail-a.jpg", "kind": "thumb", "w": 1280, "h": 720, "rtl": true, "bg": "youtube/bg/science-02-choc.jpg",
+  "tag": "ملف العلم · 2/5", "big": "الشوكولاتة بتخسّس؟\n[[طلعت لعبة!]]", "emote": "skeptical", "gesture": "shrug", "size": 96, "top": 150, "width": 780},
+ {"file": "explain-science-02-world/youtube/thumbnail-b.jpg", "kind": "thumb", "w": 1280, "h": 720, "rtl": true, "bg": "youtube/bg/science-02-ship.jpg",
+  "tag": "ملف العلم · 2/5", "big": "12 بحّار\n[[وأول تجربة عادلة]]", "emote": "smug", "gesture": "present", "size": 112, "top": 150, "width": 760},
+ {"file": "explain-science-02-world/youtube/thumbnail-en.jpg", "kind": "thumb", "w": 1280, "h": 720, "rtl": false, "bg": "youtube/bg/science-02-choc.jpg",
+  "tag": "SCIENCE FILE · 2/5", "big": "Chocolate Makes You Thin?\n[[It Was a Prank]]", "emote": "skeptical", "gesture": "shrug", "size": 100, "top": 150, "width": 780},
+ {"file": "explain-science-02-world/youtube/thumbnail-en-b.jpg", "kind": "thumb", "w": 1280, "h": 720, "rtl": false, "bg": "youtube/bg/science-02-ship.jpg",
+  "tag": "SCIENCE FILE · 2/5", "big": "12 Sailors,\n[[One Fair Test]]", "emote": "smug", "gesture": "present", "size": 118, "top": 150, "width": 760}
+]
