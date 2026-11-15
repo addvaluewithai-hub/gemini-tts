@@ -1,0 +1,1259 @@
+1
+00:00:00,542 --> 00:00:01,157
+Sir.
+
+2
+00:00:01,197 --> 00:00:03,959
+Field report number two in the cryptocurrency file.
+
+3
+00:00:03,999 --> 00:00:04,875
+Today's subject:
+
+4
+00:00:04,915 --> 00:00:05,648
+the blockchain.
+
+5
+00:00:05,688 --> 00:00:06,984
+A ledger with no guard...
+
+6
+00:00:07,024 --> 00:00:08,229
+that guards itself.
+
+7
+00:00:08,302 --> 00:00:10,189
+I will report how this ledger gets written,
+
+8
+00:00:10,229 --> 00:00:11,791
+who guards it, and who can change its
+
+9
+00:00:11,831 --> 00:00:12,536
+rules.
+
+10
+00:00:12,576 --> 00:00:14,212
+And why guarding it burns a country's worth
+
+11
+00:00:14,252 --> 00:00:15,173
+of electricity.
+
+12
+00:00:15,216 --> 00:00:16,212
+Last report:
+
+13
+00:00:16,252 --> 00:00:18,165
+bitcoin took the ledger from the bank, and
+
+14
+00:00:18,205 --> 00:00:20,251
+gave a copy to thousands of computers.
+
+15
+00:00:20,291 --> 00:00:21,844
+Which raises a dangerous question:
+
+16
+00:00:21,884 --> 00:00:23,329
+if everyone has the ledger...
+
+17
+00:00:23,369 --> 00:00:25,446
+what stops anyone writing themselves a million?
+
+18
+00:00:25,486 --> 00:00:26,776
+The first trick I found is called a
+
+19
+00:00:26,816 --> 00:00:27,333
+hash.
+
+20
+00:00:27,373 --> 00:00:28,848
+A machine that takes any text, and gives
+
+21
+00:00:28,888 --> 00:00:29,807
+back a fingerprint:
+
+22
+00:00:29,847 --> 00:00:31,082
+a jumble of letters and numbers.
+
+23
+00:00:31,122 --> 00:00:32,652
+Change a single letter in the text...
+
+24
+00:00:32,692 --> 00:00:34,393
+and the whole fingerprint changes.
+
+25
+00:00:34,433 --> 00:00:35,785
+And you can't go back from the fingerprint
+
+26
+00:00:35,825 --> 00:00:36,466
+to the text.
+
+27
+00:00:36,506 --> 00:00:37,258
+One way only.
+
+28
+00:00:37,298 --> 00:00:38,324
+Like a meat grinder, sir.
+
+29
+00:00:38,364 --> 00:00:39,850
+Steak goes in, meatballs come out.
+
+30
+00:00:39,890 --> 00:00:41,080
+Meatballs never turn back into steak.
+
+31
+00:00:41,120 --> 00:00:42,904
+The humans use this trick everywhere.
+
+32
+00:00:42,944 --> 00:00:44,990
+A good website doesn't keep your password.
+
+33
+00:00:45,030 --> 00:00:46,737
+It keeps its fingerprint.
+
+34
+00:00:46,777 --> 00:00:49,397
+About every ten minutes, new transfers are gathered
+
+35
+00:00:49,437 --> 00:00:50,671
+onto one page.
+
+36
+00:00:50,711 --> 00:00:51,748
+They call it a block.
+
+37
+00:00:51,788 --> 00:00:53,748
+One page holds a few thousand transfers.
+
+38
+00:00:53,788 --> 00:00:55,771
+Then the page is stamped with its fingerprint.
+
+39
+00:00:55,811 --> 00:00:57,417
+The next page starts with the fingerprint of
+
+40
+00:00:57,457 --> 00:00:58,100
+the one before.
+
+41
+00:00:58,140 --> 00:01:00,026
+So every page holds on to the last.
+
+42
+00:01:00,066 --> 00:01:01,075
+Which makes a chain.
+
+43
+00:01:01,115 --> 00:01:01,682
+Block...
+
+44
+00:01:01,722 --> 00:01:02,269
+chain.
+
+45
+00:01:02,309 --> 00:01:04,189
+Naming things is not their strength.
+
+46
+00:01:04,229 --> 00:01:06,705
+This chain now has more than nine hundred
+
+47
+00:01:06,745 --> 00:01:09,210
+thousand pages, from the first one Satoshi wrote,
+
+48
+00:01:09,250 --> 00:01:10,956
+to the one written ten minutes ago.
+
+49
+00:01:10,996 --> 00:01:12,879
+Imagine someone goes back and changes one number
+
+50
+00:01:12,919 --> 00:01:13,678
+on an old page.
+
+51
+00:01:13,718 --> 00:01:14,880
+Its fingerprint changes...
+
+52
+00:01:14,920 --> 00:01:15,807
+the next page breaks...
+
+53
+00:01:15,847 --> 00:01:16,537
+and the next.
+
+54
+00:01:16,577 --> 00:01:18,876
+And the whole network sees a broken chain,
+
+55
+00:01:18,916 --> 00:01:19,660
+and rejects it.
+
+56
+00:01:19,700 --> 00:01:21,214
+It also means that what is written stays
+
+57
+00:01:21,254 --> 00:01:21,620
+written.
+
+58
+00:01:21,660 --> 00:01:23,417
+There is no undo button, and no clerk
+
+59
+00:01:23,457 --> 00:01:23,996
+to call.
+
+60
+00:01:24,036 --> 00:01:25,638
+Remember that one for the next report.
+
+61
+00:01:25,678 --> 00:01:27,576
+So to forge one line, you'd have to
+
+62
+00:01:27,616 --> 00:01:29,713
+rewrite every page after it.
+
+63
+00:01:31,421 --> 00:01:32,982
+And here comes the cleverest part.
+
+64
+00:01:33,022 --> 00:01:34,627
+I tracked one transfer from the moment it
+
+65
+00:01:34,667 --> 00:01:35,111
+was sent.
+
+66
+00:01:35,151 --> 00:01:37,284
+First, it is announced to the entire network.
+
+67
+00:01:37,324 --> 00:01:38,787
+Then it sits in a waiting room with
+
+68
+00:01:38,827 --> 00:01:40,238
+thousands of other transfers.
+
+69
+00:01:40,278 --> 00:01:41,776
+And whoever pays the higher fee...
+
+70
+00:01:41,816 --> 00:01:42,546
+goes in first.
+
+71
+00:01:42,586 --> 00:01:44,223
+Until it's written onto a page.
+
+72
+00:01:44,263 --> 00:01:45,848
+Every page written on top of it settles
+
+73
+00:01:45,888 --> 00:01:46,704
+it more firmly.
+
+74
+00:01:46,744 --> 00:01:48,484
+For large amounts, they wait for six pages.
+
+75
+00:01:48,524 --> 00:01:49,602
+That is about an hour.
+
+76
+00:01:49,642 --> 00:01:51,257
+An hour to confirm one transfer.
+
+77
+00:01:51,297 --> 00:01:52,741
+And the humans consider that fast.
+
+78
+00:01:52,781 --> 00:01:53,809
+Because they have used banks.
+
+79
+00:01:53,849 --> 00:01:55,866
+The whole network handles about seven transfers a
+
+80
+00:01:55,906 --> 00:01:56,504
+second.
+
+81
+00:01:56,544 --> 00:01:58,260
+Their card networks handle thousands.
+
+82
+00:01:58,300 --> 00:01:59,945
+Here, safety beats speed.
+
+83
+00:01:59,985 --> 00:02:01,427
+A strange choice, for humans.
+
+84
+00:02:01,467 --> 00:02:03,315
+And when the network gets crowded, the fees
+
+85
+00:02:03,355 --> 00:02:04,095
+catch fire.
+
+86
+00:02:04,135 --> 00:02:05,657
+On busy days they have reached tens of
+
+87
+00:02:05,697 --> 00:02:07,081
+dollars for a single transfer.
+
+88
+00:02:07,121 --> 00:02:08,777
+Which is why nobody buys coffee with it.
+
+89
+00:02:08,817 --> 00:02:10,864
+For speed, they built a second network on
+
+90
+00:02:10,904 --> 00:02:13,114
+top for small amounts, called Lightning.
+
+91
+00:02:13,154 --> 00:02:15,661
+Pay instantly, settle on the big ledger later.
+
+92
+00:02:15,701 --> 00:02:17,126
+Like a tab at the corner shop.
+
+93
+00:02:17,166 --> 00:02:18,735
+So who writes the new page?
+
+94
+00:02:18,775 --> 00:02:20,197
+And what stops that one from cheating?
+
+95
+00:02:20,237 --> 00:02:21,225
+The solution I found:
+
+96
+00:02:21,265 --> 00:02:22,043
+a contest.
+
+97
+00:02:22,083 --> 00:02:24,036
+For your page to be accepted, its fingerprint
+
+98
+00:02:24,076 --> 00:02:25,251
+has to start with a certain number of
+
+99
+00:02:25,291 --> 00:02:25,898
+zeros.
+
+100
+00:02:25,938 --> 00:02:27,035
+And there is no way to know in
+
+101
+00:02:27,075 --> 00:02:28,480
+advance, except trying.
+
+102
+00:02:28,520 --> 00:02:29,562
+Number after number.
+
+103
+00:02:29,602 --> 00:02:31,615
+The whole network together tries about a thousand
+
+104
+00:02:31,655 --> 00:02:32,815
+billion billion numbers...
+
+105
+00:02:32,855 --> 00:02:33,745
+every single second.
+
+106
+00:02:33,785 --> 00:02:34,951
+The first machine to find a number that
+
+107
+00:02:34,991 --> 00:02:35,825
+works wins:
+
+108
+00:02:35,865 --> 00:02:37,403
+its page joins the chain, and it gets
+
+109
+00:02:37,443 --> 00:02:37,921
+a prize.
+
+110
+00:02:37,961 --> 00:02:38,629
+New bitcoin.
+
+111
+00:02:38,669 --> 00:02:40,336
+Everyone else checks the answer instantly.
+
+112
+00:02:40,376 --> 00:02:41,977
+The answer is hard to find, and very
+
+113
+00:02:42,017 --> 00:02:42,687
+easy to check.
+
+114
+00:02:42,727 --> 00:02:43,837
+This is called mining.
+
+115
+00:02:43,877 --> 00:02:44,631
+No pickaxe.
+
+116
+00:02:44,671 --> 00:02:45,459
+No mine.
+
+117
+00:02:45,499 --> 00:02:47,973
+Warehouses full of machines guessing numbers, and fans
+
+118
+00:02:48,013 --> 00:02:48,668
+keeping them cool.
+
+119
+00:02:48,708 --> 00:02:50,443
+The official name is proof of work.
+
+120
+00:02:50,483 --> 00:02:52,333
+The fingerprint you found proves you really burned
+
+121
+00:02:52,373 --> 00:02:53,079
+the electricity.
+
+122
+00:02:53,119 --> 00:02:54,738
+The only certificate on this planet that cannot
+
+123
+00:02:54,778 --> 00:02:55,418
+be forged.
+
+124
+00:02:55,458 --> 00:02:56,764
+And if more machines join and it gets
+
+125
+00:02:56,804 --> 00:02:57,201
+easier?
+
+126
+00:02:57,241 --> 00:02:58,782
+The system makes it harder on its own
+
+127
+00:02:58,822 --> 00:03:00,598
+every two weeks, so a page still comes
+
+128
+00:03:00,638 --> 00:03:01,401
+every ten minutes.
+
+129
+00:03:01,441 --> 00:03:03,383
+At the start, Satoshi mined on an ordinary
+
+130
+00:03:03,423 --> 00:03:04,071
+home computer.
+
+131
+00:03:04,111 --> 00:03:06,362
+Today it takes specialized machines, in warehouses the
+
+132
+00:03:06,402 --> 00:03:07,438
+size of football fields.
+
+133
+00:03:07,478 --> 00:03:08,165
+The math is simple:
+
+134
+00:03:08,205 --> 00:03:09,866
+a machine whose electricity costs more than its
+
+135
+00:03:09,906 --> 00:03:11,049
+prize gets switched off.
+
+136
+00:03:11,089 --> 00:03:12,534
+So mines chase the cheapest power on the
+
+137
+00:03:12,574 --> 00:03:12,928
+planet.
+
+138
+00:03:12,968 --> 00:03:13,547
+Dams.
+
+139
+00:03:13,587 --> 00:03:14,939
+Gas once burned off into the air.
+
+140
+00:03:14,979 --> 00:03:15,790
+Even volcanoes.
+
+141
+00:03:15,830 --> 00:03:17,555
+Most mining used to be in China, until
+
+142
+00:03:17,595 --> 00:03:19,056
+China banned it in 2021.
+
+143
+00:03:19,096 --> 00:03:20,504
+So the machines were shipped to America and
+
+144
+00:03:20,544 --> 00:03:20,892
+Russia.
+
+145
+00:03:20,932 --> 00:03:22,982
+These mines move in cardboard boxes.
+
+146
+00:03:23,022 --> 00:03:23,810
+And China itself?
+
+147
+00:03:23,850 --> 00:03:24,385
+Still mining.
+
+148
+00:03:24,425 --> 00:03:24,926
+Quietly.
+
+149
+00:03:24,966 --> 00:03:26,381
+There, sir, a ban is more of a
+
+150
+00:03:26,421 --> 00:03:27,051
+suggestion.
+
+151
+00:03:27,091 --> 00:03:29,039
+Machine owners also team up and split the
+
+152
+00:03:29,079 --> 00:03:29,645
+prize.
+
+153
+00:03:29,685 --> 00:03:31,593
+Right now, just two teams win about half
+
+154
+00:03:31,633 --> 00:03:32,735
+of all the contests.
+
+155
+00:03:32,775 --> 00:03:33,916
+A network with no boss.
+
+156
+00:03:33,956 --> 00:03:35,393
+But with some very big players.
+
+157
+00:03:35,433 --> 00:03:36,745
+The humans themselves are worried about that.
+
+158
+00:03:36,785 --> 00:03:38,434
+And tens of thousands of computers do not
+
+159
+00:03:38,474 --> 00:03:39,113
+mine at all.
+
+160
+00:03:39,153 --> 00:03:40,655
+They just hold a copy of the ledger
+
+161
+00:03:40,695 --> 00:03:41,858
+and check every page.
+
+162
+00:03:41,898 --> 00:03:43,363
+Those are the referees.
+
+163
+00:03:43,403 --> 00:03:44,682
+And nobody pays them.
+
+164
+00:03:44,722 --> 00:03:46,391
+So the humans guard their money with a
+
+165
+00:03:46,431 --> 00:03:48,902
+lottery that has run every ten minutes since
+
+166
+00:03:48,942 --> 00:03:49,922
+2009.
+
+167
+00:03:49,962 --> 00:03:50,533
+Nonstop.
+
+168
+00:03:50,573 --> 00:03:52,030
+And why does this protect the ledger?
+
+169
+00:03:52,070 --> 00:03:53,919
+Because a forger has to win this contest
+
+170
+00:03:53,959 --> 00:03:57,091
+alone, against every machine on the planet, again
+
+171
+00:03:57,131 --> 00:03:57,661
+and again.
+
+172
+00:03:57,701 --> 00:04:00,042
+Which means more machines and more electricity than
+
+173
+00:04:00,082 --> 00:04:01,358
+half of the entire network.
+
+174
+00:04:01,398 --> 00:04:02,922
+Billions of dollars of hardware.
+
+175
+00:04:02,962 --> 00:04:04,806
+Theft is possible in theory, sir.
+
+176
+00:04:04,846 --> 00:04:06,439
+It just costs more than the loot.
+
+177
+00:04:06,479 --> 00:04:08,434
+They call it a fifty-one percent attack.
+
+178
+00:04:08,474 --> 00:04:10,509
+It has actually happened to small coins.
+
+179
+00:04:10,549 --> 00:04:11,783
+To bitcoin itself:
+
+180
+00:04:11,823 --> 00:04:12,217
+never.
+
+181
+00:04:12,257 --> 00:04:13,780
+And if two machines win at the same
+
+182
+00:04:13,820 --> 00:04:14,318
+moment?
+
+183
+00:04:14,358 --> 00:04:16,350
+The network follows the longer chain, and the
+
+184
+00:04:16,390 --> 00:04:17,328
+other one is forgotten.
+
+185
+00:04:17,368 --> 00:04:17,982
+No meeting.
+
+186
+00:04:18,022 --> 00:04:18,566
+No committee.
+
+187
+00:04:18,606 --> 00:04:19,968
+The price is paid in electricity.
+
+188
+00:04:20,008 --> 00:04:22,307
+By Cambridge University's estimates, the bitcoin network uses
+
+189
+00:04:22,347 --> 00:04:23,428
+about as much in a year as a
+
+190
+00:04:23,468 --> 00:04:24,502
+mid-sized country.
+
+191
+00:04:24,542 --> 00:04:26,328
+Roughly half a percent of all the electricity
+
+192
+00:04:26,368 --> 00:04:27,016
+on the planet.
+
+193
+00:04:27,056 --> 00:04:28,715
+A country's worth of electricity...
+
+194
+00:04:28,755 --> 00:04:30,423
+so nobody has to trust anybody.
+
+195
+00:04:30,463 --> 00:04:32,086
+Trust is expensive among these creatures.
+
+196
+00:04:32,126 --> 00:04:34,120
+Part of that electricity comes from sources that
+
+197
+00:04:34,160 --> 00:04:35,402
+would have been wasted anyway.
+
+198
+00:04:35,442 --> 00:04:36,500
+Part does not.
+
+199
+00:04:36,540 --> 00:04:38,008
+The humans are still arguing about it.
+
+200
+00:04:38,048 --> 00:04:39,585
+And the machines are replaced every few years,
+
+201
+00:04:39,625 --> 00:04:40,776
+because the newest ones win.
+
+202
+00:04:40,816 --> 00:04:42,384
+So the guarding also makes a mountain of
+
+203
+00:04:42,424 --> 00:04:43,324
+junk.
+
+204
+00:04:44,632 --> 00:04:45,485
+As for the prize:
+
+205
+00:04:45,525 --> 00:04:47,183
+it started at fifty bitcoin a page.
+
+206
+00:04:47,223 --> 00:04:48,816
+About every four years, it's cut in half.
+
+207
+00:04:48,856 --> 00:04:49,479
+Fifty.
+
+208
+00:04:49,519 --> 00:04:50,198
+Twenty-five.
+
+209
+00:04:50,238 --> 00:04:51,046
+Twelve and a half.
+
+210
+00:04:51,086 --> 00:04:51,673
+And today:
+
+211
+00:04:51,713 --> 00:04:52,511
+three and a bit.
+
+212
+00:04:52,551 --> 00:04:54,484
+The next halving is expected in 2028.
+
+213
+00:04:54,524 --> 00:04:55,704
+The prize will be about one and a
+
+214
+00:04:55,744 --> 00:04:56,103
+half.
+
+215
+00:04:56,143 --> 00:04:58,201
+And anyone with expensive electricity will pack up
+
+216
+00:04:58,241 --> 00:04:58,647
+and leave.
+
+217
+00:04:58,687 --> 00:05:00,073
+Because of all this, the total has a
+
+218
+00:05:00,113 --> 00:05:00,533
+ceiling:
+
+219
+00:05:00,573 --> 00:05:01,967
+twenty-one million bitcoin.
+
+220
+00:05:02,007 --> 00:05:02,529
+Never more.
+
+221
+00:05:02,569 --> 00:05:03,427
+It is written in the code.
+
+222
+00:05:03,467 --> 00:05:05,287
+About ninety-five percent of them have already been
+
+223
+00:05:05,327 --> 00:05:05,743
+mined.
+
+224
+00:05:05,783 --> 00:05:07,381
+The last one is expected around the year
+
+225
+00:05:07,421 --> 00:05:08,424
+2140.
+
+226
+00:05:08,464 --> 00:05:10,259
+Bitcoin number twenty million was mined in March
+
+227
+00:05:10,299 --> 00:05:11,161
+2026.
+
+228
+00:05:11,201 --> 00:05:12,038
+One million left...
+
+229
+00:05:12,078 --> 00:05:13,455
+and it will take more than a hundred
+
+230
+00:05:13,495 --> 00:05:13,840
+years.
+
+231
+00:05:13,880 --> 00:05:15,430
+And when the prizes run out, the miners
+
+232
+00:05:15,470 --> 00:05:16,586
+will live on fees alone.
+
+233
+00:05:16,626 --> 00:05:18,094
+Will that be enough to guard the ledger?
+
+234
+00:05:18,134 --> 00:05:18,943
+Nobody here knows.
+
+235
+00:05:18,983 --> 00:05:20,131
+It is an open question.
+
+236
+00:05:20,171 --> 00:05:22,583
+Each bitcoin splits into a hundred million pieces.
+
+237
+00:05:22,623 --> 00:05:24,036
+One piece is a satoshi.
+
+238
+00:05:24,076 --> 00:05:25,163
+Named after the one who left.
+
+239
+00:05:25,203 --> 00:05:26,792
+Money nobody can print more of.
+
+240
+00:05:26,832 --> 00:05:28,343
+On a planet that prints money whenever it's
+
+241
+00:05:28,383 --> 00:05:29,960
+in trouble, that's revolutionary.
+
+242
+00:05:30,055 --> 00:05:31,517
+And then I asked the question that matters
+
+243
+00:05:31,557 --> 00:05:33,158
+to any intelligence service:
+
+244
+00:05:33,198 --> 00:05:34,486
+who runs this network?
+
+245
+00:05:34,526 --> 00:05:35,846
+Who can change the rules?
+
+246
+00:05:35,886 --> 00:05:37,073
+The rules are a program.
+
+247
+00:05:37,113 --> 00:05:38,503
+And every computer holding a copy of the
+
+248
+00:05:38,543 --> 00:05:40,208
+ledger runs that program by choice.
+
+249
+00:05:40,248 --> 00:05:41,563
+Whoever wants to change a rule writes a
+
+250
+00:05:41,603 --> 00:05:42,789
+new version of the program.
+
+251
+00:05:42,829 --> 00:05:44,195
+Whoever is convinced runs it.
+
+252
+00:05:44,235 --> 00:05:45,312
+And if they disagree?
+
+253
+00:05:45,352 --> 00:05:46,679
+The chain splits in two.
+
+254
+00:05:46,719 --> 00:05:47,642
+They call it a fork.
+
+255
+00:05:47,682 --> 00:05:49,106
+They named it after cutlery.
+
+256
+00:05:49,146 --> 00:05:50,566
+This planet is always hungry.
+
+257
+00:05:50,606 --> 00:05:51,497
+It has happened.
+
+258
+00:05:51,537 --> 00:05:53,505
+In 2017, after years of fighting over the
+
+259
+00:05:53,545 --> 00:05:54,573
+size of the page.
+
+260
+00:05:54,613 --> 00:05:56,289
+Big companies and most of the miners wanted
+
+261
+00:05:56,329 --> 00:05:57,126
+bigger pages.
+
+262
+00:05:57,166 --> 00:05:58,956
+The people running the copies refused.
+
+263
+00:05:58,996 --> 00:05:59,750
+The rule stayed.
+
+264
+00:05:59,790 --> 00:06:00,997
+And a group of the losers took a
+
+265
+00:06:01,037 --> 00:06:02,163
+copy and left:
+
+266
+00:06:02,203 --> 00:06:03,943
+a new coin, Bitcoin Cash.
+
+267
+00:06:03,983 --> 00:06:05,765
+Only once did everyone agree quickly.
+
+268
+00:06:05,805 --> 00:06:08,311
+In 2010, a bug let someone create a
+
+269
+00:06:08,351 --> 00:06:10,125
+hundred and eighty-four billion bitcoin for themselves.
+
+270
+00:06:10,165 --> 00:06:10,884
+Out of thin air.
+
+271
+00:06:10,924 --> 00:06:12,663
+Within about five hours, the network was running
+
+272
+00:06:12,703 --> 00:06:14,651
+a fixed version, and that page was erased
+
+273
+00:06:14,691 --> 00:06:15,298
+from history.
+
+274
+00:06:15,338 --> 00:06:16,380
+So the ones with the machines and the
+
+275
+00:06:16,420 --> 00:06:17,733
+money could not force their way.
+
+276
+00:06:17,773 --> 00:06:19,597
+This network is not run by majority, sir.
+
+277
+00:06:19,637 --> 00:06:20,773
+It is run by stubbornness.
+
+278
+00:06:20,813 --> 00:06:22,810
+And can the twenty-one million ceiling change?
+
+279
+00:06:22,850 --> 00:06:23,888
+In theory, yes.
+
+280
+00:06:23,928 --> 00:06:24,570
+In practice:
+
+281
+00:06:24,610 --> 00:06:27,260
+convince people who bought something because it's scarce...
+
+282
+00:06:27,300 --> 00:06:28,516
+to make it less scarce.
+
+283
+00:06:28,556 --> 00:06:29,044
+Good luck.
+
+284
+00:06:29,084 --> 00:06:30,776
+Two words from the Human Dictionary.
+
+285
+00:06:30,816 --> 00:06:31,434
+Node:
+
+286
+00:06:31,474 --> 00:06:32,764
+a computer that keeps a copy of the
+
+287
+00:06:32,804 --> 00:06:33,800
+ledger and checks it.
+
+288
+00:06:33,840 --> 00:06:35,057
+The unpaid referees.
+
+289
+00:06:35,097 --> 00:06:35,855
+And halving:
+
+290
+00:06:35,895 --> 00:06:37,147
+the day the prize is cut in two.
+
+291
+00:06:37,187 --> 00:06:38,061
+Every four years.
+
+292
+00:06:38,101 --> 00:06:39,847
+The humans hold countdown parties for it.
+
+293
+00:06:39,887 --> 00:06:40,583
+For a pay cut.
+
+294
+00:06:40,623 --> 00:06:41,422
+Summary, sir.
+
+295
+00:06:41,462 --> 00:06:41,912
+One:
+
+296
+00:06:41,952 --> 00:06:44,046
+the pages are tied by fingerprints, so any
+
+297
+00:06:44,086 --> 00:06:45,280
+forgery shows.
+
+298
+00:06:45,345 --> 00:06:45,760
+Two:
+
+299
+00:06:45,800 --> 00:06:48,138
+mining is a contest that guards the ledger,
+
+300
+00:06:48,178 --> 00:06:49,371
+paid for in electricity.
+
+301
+00:06:49,411 --> 00:06:49,826
+Three:
+
+302
+00:06:49,866 --> 00:06:51,892
+the rules only change if everyone goes along.
+
+303
+00:06:51,932 --> 00:06:52,913
+And the same warning:
+
+304
+00:06:52,953 --> 00:06:55,120
+this is a report, not investment advice.
+
+305
+00:06:55,185 --> 00:06:55,773
+Next report:
+
+306
+00:06:55,813 --> 00:06:57,706
+the ledger is public, and everyone can see
+
+307
+00:06:57,746 --> 00:06:57,957
+it.
+
+308
+00:06:57,997 --> 00:06:59,581
+So what proves that a line in it
+
+309
+00:06:59,621 --> 00:07:00,489
+belongs to you?
+
+310
+00:07:00,529 --> 00:07:01,697
+Keys, wallets...
+
+311
+00:07:01,737 --> 00:07:03,552
+and how humans lose their money, or get
+
+312
+00:07:03,592 --> 00:07:04,107
+it stolen.
+
+313
+00:07:04,147 --> 00:07:05,279
+This has been Earth Report.
+
+314
+00:07:05,319 --> 00:07:06,026
+Agent Peek.
+
+315
+00:07:06,066 --> 00:07:07,098
+End of transmission.

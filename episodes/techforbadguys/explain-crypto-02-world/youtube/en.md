@@ -26,16 +26,16 @@ Step by step in drawings, no jargon. The picture tells the story, so it works in
 
 Chapters
 0:00 Intro
-0:23 1. The fingerprint
-0:45 2. The chain
-1:27 3. One transfer
-2:11 4. Mining
-3:45 5. Why it's hard to steal
-4:35 6. 21 million
-5:21 7. Who rules?
-6:16 8. The human dictionary
-6:28 9. Summary
-6:54 Next report
+0:25 1. The fingerprint
+0:46 2. The chain
+1:32 3. One transfer
+2:17 4. Mining
+3:50 5. Why it's hard to steal
+4:43 6. 21 million
+5:29 7. Who rules?
+6:29 8. The human dictionary
+6:40 9. Summary
+7:07 Next report
 
 Sources
 Cambridge University, Bitcoin Electricity Consumption Index: https://ccaf.io/cbnsi/cbeci

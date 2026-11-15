@@ -1,5 +1,5 @@
 {
- "note": "PROPOSED Shorts for the drawn version of crypto part 2, for the owner to pick (4 to 6). Nothing is rendered or recorded yet. `parts` are [from, to] in seconds of the finished episode (cue time plus the 0.3 s lead, cues/explain-crypto-02-world.json); `cta` is each Short's own closing line, to be recorded on Vertex AI (job techforbadguys-crypto02-short-cta-<key>) with its Speech-to-Text listen-back. {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs; thumbnails without words like video/youtube/art-crypto-01-shorts-intl.json.",
+ "note": "PROPOSED (timed to the Vertex take -ar-v) Shorts for the drawn version of crypto part 2, for the owner to pick (4 to 6). Nothing is rendered or recorded yet. `parts` are [from, to] in seconds of the finished episode (cue time plus the 0.3 s lead, cues/explain-crypto-02-world.json); `cta` is each Short's own closing line, to be recorded on Vertex AI (job techforbadguys-crypto02-short-cta-<key>) with its Speech-to-Text listen-back. {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs; thumbnails without words like video/youtube/art-crypto-01-shorts-intl.json.",
  "full": "",
  "boardZoom": 0.85,
  "shorts": [
@@ -21,8 +21,8 @@
    ],
    "parts": [
     [
-     23.28,
-     45.55
+     25.43,
+     46.71
     ]
    ],
    "cta": "والحيلة دي نفسها هي اللي بتخلّي دفتر البيتكوين مستحيل يتزوّر. إزاي؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
@@ -37,7 +37,7 @@
      "sub": "CRYPTO FILE · 2/5"
     }
    },
-   "body_seconds": 22.3,
+   "body_seconds": 21.3,
    "en": {
     "title": "A Hash Is a Meat Grinder for Data 🔐 #Shorts",
     "description": "A machine that turns any text into a fingerprint. Change one letter and the whole fingerprint changes. And there's no way back: steak becomes meatballs, never the other way round. Good websites don't store your password, only its fingerprint.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #hash #EarthReport",
@@ -69,12 +69,12 @@
    ],
    "parts": [
     [
-     45.55,
-     62.19
+     46.71,
+     64.16
     ],
     [
-     68.21,
-     82.65
+     70.94,
+     85.61
     ]
    ],
    "cta": "طب مين اللي بيكتب الصفحة الجديدة.. وإيه اللي يمنعه يغش؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
@@ -89,7 +89,7 @@
      "sub": "CRYPTO FILE · 2/5"
     }
    },
-   "body_seconds": 31.1,
+   "body_seconds": 32.1,
    "en": {
     "title": "Why Nobody Can Forge a Blockchain ⛓️ #Shorts",
     "description": "A new page every ten minutes, sealed with its fingerprint and starting with the fingerprint of the page before. Change one number on an old page and every page after it breaks, and the whole network rejects it. No undo button, no clerk to call.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #blockchain #EarthReport",
@@ -122,8 +122,8 @@
    ],
    "parts": [
     [
-     131.4,
-     163.89
+     137.11,
+     168.65
     ]
    ],
    "cta": "والمسابقة دي بتسحب كهربا قد دولة كاملة.. ليه البشر قابلين بده؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
@@ -138,7 +138,7 @@
      "sub": "CRYPTO FILE · 2/5"
     }
    },
-   "body_seconds": 32.5,
+   "body_seconds": 31.5,
    "en": {
     "title": "Bitcoin Mining: No Pickaxe, No Mine ⛏️ #Shorts",
     "description": "A contest every ten minutes: the fingerprint has to start with zeros, and the only way is to guess. The whole network tries about a thousand billion billion numbers a second. The first to hit it earns new bitcoin. Hard to find, easy to check.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoinmining #EarthReport",
@@ -170,8 +170,8 @@
    ],
    "parts": [
     [
-     251.56,
-     275.67
+     258.55,
+     283.16
     ]
    ],
    "cta": "طب ولو الجوايز خلصت.. مين هيحرس الدفتر؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
@@ -186,7 +186,7 @@
      "sub": "CRYPTO FILE · 2/5"
     }
    },
-   "body_seconds": 24.1,
+   "body_seconds": 24.6,
    "en": {
     "title": "Does Bitcoin Use as Much Power as a Country? ⚡ #Shorts",
     "description": "By Cambridge University's estimates (2025), the bitcoin network uses about as much electricity a year as a mid-sized country: roughly half a percent of the planet's. Some of it would have been wasted anyway, some not, and the argument goes on. A report, not investment advice.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
@@ -218,12 +218,12 @@
    ],
    "parts": [
     [
-     275.67,
-     284.01
+     283.16,
+     292.5
     ],
     [
-     290.33,
-     306.12
+     298.63,
+     313.82
     ]
    ],
    "cta": "طب السقف ده ممكن يتغير؟ ومين أصلاً بيحكم الشبكة؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
@@ -238,7 +238,7 @@
      "sub": "CRYPTO FILE · 2/5"
     }
    },
-   "body_seconds": 24.1,
+   "body_seconds": 24.5,
    "en": {
     "title": "Why There Will Only Ever Be 21 Million Bitcoin 🪙 #Shorts",
     "description": "The prize halves about every four years, and the total has a ceiling written in the code: 21 million. Bitcoin number 20 million was mined in March 2026; the last million will take more than a hundred years, until around 2140. A report, not investment advice.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
@@ -270,12 +270,12 @@
    ],
    "parts": [
     [
-     335.12,
-     340.88
+     344.17,
+     350.54
     ],
     [
-     353.1,
-     368.82
+     363.92,
+     380.65
     ]
    ],
    "cta": "يعني مين بيحكم الشبكة دي فعلاً؟ الإجابة غريبة.. والتقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
@@ -290,7 +290,7 @@
      "sub": "CRYPTO FILE · 2/5"
     }
    },
-   "body_seconds": 21.5,
+   "body_seconds": 23.1,
    "en": {
     "title": "The Day Someone Made 184 Billion Bitcoin 😳 #Shorts",
     "description": "In 2010 a bug let someone create 184 billion bitcoin out of thin air. Within about five hours the whole network was running a fixed version, and that page was erased from history.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
