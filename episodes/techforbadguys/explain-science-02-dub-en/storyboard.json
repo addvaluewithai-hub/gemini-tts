@@ -1,0 +1,806 @@
+{
+ "title": "Earth Report: Science 2 (English dub track for the world-picture video)",
+ "recorded_for": "2026-12-02",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "English voice written to fit the timing of explain-science-02-world beat by beat (video/dub.cjs); only the audio is used, the picture is the world-picture video's.",
+  "Adapted from ../explain-science-02-ar/script.md, not translated: same facts, same order; jokes rebuilt for English speakers (the cashier journal; the mice; believe it, a little).",
+  "Facts (sources in ../explain-science-01-ar/plan.md): about three million research articles a year; the chocolate study, 2015: John Bohannon with a German TV team, about 15 people in three groups for 21 days, 18 measurements, accepted by a fee-taking journal (about 600 euros) without real review, reported widely, then revealed. James Lind, HMS Salisbury, 1747: twelve sailors with scurvy in six pairs, the citrus pair recovered (one fit for duty after six days); the Royal Navy adopted citrus in 1795.",
+  "General knowledge, not re-checked: how peer review works; placebo, blind and double-blind trials; many early results come from mice; predatory journals; the file drawer, pre-registration, relative versus absolute risk (the 1-in-10,000 example is illustrative). No food or drug is recommended or warned against."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. A warm, smooth, rounded voice in a comfortable middle register, relaxed and close to the microphone: never shrill, never nasal, soft on the s sounds. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "3 / 4",
+   "icons": [
+    "book",
+    "eye",
+    "rules"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "boards": {
+  "choco": {
+   "kind": "choco",
+   "ends": [
+    4.73,
+    13.84,
+    6.09,
+    8.2,
+    3.65,
+    6.62,
+    7.74
+   ]
+  },
+  "fairtest": {
+   "kind": "fairtest",
+   "ends": [
+    3.38,
+    3.12,
+    4.93,
+    5.44,
+    8.29,
+    7.06,
+    5.8
+   ]
+  },
+  "headline": {
+   "kind": "headline",
+   "ends": [
+    2.77,
+    2.34,
+    6.85,
+    2.88,
+    4.54,
+    3.79,
+    7.71,
+    7.19
+   ]
+  },
+  "lind": {
+   "kind": "lind",
+   "ends": [
+    7.09,
+    4.79,
+    3.43,
+    9.29,
+    5.73,
+    4.04,
+    3.59
+   ]
+  },
+  "repeat": {
+   "kind": "repeat",
+   "ends": [
+    7.69,
+    5.38,
+    4.32,
+    6.89,
+    8.05,
+    6.91
+   ]
+  },
+  "review": {
+   "kind": "review",
+   "ends": [
+    9.32,
+    4.83,
+    3.24,
+    5.29,
+    4.37,
+    4.29
+   ]
+  },
+  "s2dict": {
+   "kind": "s2dict",
+   "ends": [
+    6.65,
+    5.79
+   ]
+  },
+  "s2intro": {
+   "kind": "s2intro",
+   "ends": [
+    6.87,
+    3.55,
+    13.05,
+    4.31
+   ]
+  },
+  "s2paper": {
+   "kind": "s2paper",
+   "ends": [
+    5.37,
+    4.21,
+    7.82,
+    5.22,
+    5.32
+   ]
+  },
+  "s2recap": {
+   "kind": "s2recap",
+   "ends": [
+    6.82,
+    5.6,
+    5.76
+   ]
+  },
+  "sample": {
+   "kind": "sample",
+   "ends": [
+    4.33,
+    2.2,
+    3.82,
+    7.02,
+    4.25
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report: the chocolate headline with mock delight, then the question.",
+   "beats": [
+    {
+     "say": "Sir. Field report two in the Science File.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "In twenty fifteen, newspapers in many countries ran the same story: a scientific study says chocolate helps you lose weight.",
+     "show": "board",
+     "board": "s2intro",
+     "step": 0
+    },
+    {
+     "say": "People were happy. Shops were happy.",
+     "show": "board",
+     "board": "s2intro",
+     "step": 1
+    },
+    {
+     "say": "Honestly, so was I.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "Weeks later, its author said: I did it on purpose, to show how easy it is to fool the world.",
+     "show": "board",
+     "board": "s2intro",
+     "step": 2,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "So today: how research is done, who checks it before it reaches you, and how the chocolate got past all of it.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "And the big question: when you read \"a study says\", do you believe it?",
+     "show": "board",
+     "board": "s2intro",
+     "step": 3,
+     "emote": "skeptical",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "s2paper",
+   "story": {
+    "n": 1,
+    "tag": "THE PAPER",
+    "icon": "file"
+   },
+   "style": "Clear explanation of how humans publish, with a dry sense of scale.",
+   "beats": [
+    {
+     "say": "First: humans don't announce discoveries in the street. They write them up in a scientific paper.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 0
+    },
+    {
+     "say": "A paper says: we had this question, we did exactly this, and we found this.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 1
+    },
+    {
+     "say": "And the key part isn't the result, sir. It's \"exactly what we did\". So anyone else can do the same thing and see if they get the same answer.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 2,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "Humans publish about three million of these papers a year. Three million.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 3
+    },
+    {
+     "say": "If one scientist read a paper a day, one year's worth would take about eight thousand years.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 4
+    },
+    {
+     "say": "So every single day, some paper somewhere says something strange. <short pause> And newspapers love strange.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "fair",
+   "story": {
+    "n": 2,
+    "tag": "A FAIR TEST",
+    "icon": "eye"
+   },
+   "style": "A kitchen analogy, patient and a little amused; the blindfold line lands dry.",
+   "beats": [
+    {
+     "say": "So how do you know one thing made the difference? Let me explain it with cooking.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "Two pots of soup. One gets a new spice, the other doesn't.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 0
+    },
+    {
+     "say": "If the first tastes better, was it the spice? Not necessarily.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 1
+    },
+    {
+     "say": "Both pots must match in everything else: same water, same heat, same time.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 2
+    },
+    {
+     "say": "The pot without the spice is the control group: what you compare against. Without it, a result means nothing.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 3,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "And humans have a strange problem, sir: tell them you gave them something helpful, and sometimes they feel better, even if it was sugar water. They call it the placebo.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 4
+    },
+    {
+     "say": "So in serious trials, both groups get something that looks exactly the same, and nobody knows which group they're in. That's a blind trial.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 5
+    },
+    {
+     "say": "In more serious trials, even the person handing it out doesn't know, so it doesn't show. That's double blind.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 6,
+     "emote": "neutral",
+     "host": "left"
+    },
+    {
+     "say": "So humans have to blindfold everyone, <short pause> just to see the truth.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "lind",
+   "story": {
+    "n": 3,
+    "tag": "12 SAILORS",
+    "icon": "ship"
+   },
+   "style": "A sea story told with growing respect, then a dry sting about waiting.",
+   "beats": [
+    {
+     "say": "The first time humans did something close to this was on a ship. In seventeen forty-seven, in the British navy.",
+     "show": "board",
+     "board": "lind",
+     "step": 0
+    },
+    {
+     "say": "Sailors were dying of scurvy: bleeding gums, falling teeth, a body breaking down.",
+     "show": "board",
+     "board": "lind",
+     "step": 1,
+     "calm": true
+    },
+    {
+     "say": "Everyone had a cure: vinegar, sea water, cider.",
+     "show": "board",
+     "board": "lind",
+     "step": 2
+    },
+    {
+     "say": "A ship's doctor named James Lind didn't take anyone's word for it. He took twelve sick sailors, split them into six pairs, gave each pair a different remedy, same food, same place.",
+     "show": "board",
+     "board": "lind",
+     "step": 3
+    },
+    {
+     "say": "Days later, the pair given oranges and lemons were up, and one was back at work in six days. The rest weren't.",
+     "show": "board",
+     "board": "lind",
+     "step": 4
+    },
+    {
+     "say": "Twelve sailors, sir, and we learned what the whole empire didn't know.",
+     "show": "board",
+     "board": "lind",
+     "step": 5,
+     "emote": "proud",
+     "host": "right"
+    },
+    {
+     "say": "The embarrassing part: the navy acted on it about fifty years later.",
+     "show": "board",
+     "board": "lind",
+     "step": 6
+    },
+    {
+     "say": "So sometimes the human problem isn't not knowing... <short pause> it's knowing, and waiting.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "sample",
+   "story": {
+    "n": 4,
+    "tag": "SAMPLE SIZE",
+    "icon": "coin"
+   },
+   "style": "Coin flips and chance, brisk and clear, ending on a sharp line.",
+   "beats": [
+    {
+     "say": "Second: how many people were tested.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "Flip a coin three times and get the same side three times. Is the coin rigged?",
+     "show": "board",
+     "board": "sample",
+     "step": 0
+    },
+    {
+     "say": "No, sir. That happens by chance all the time.",
+     "show": "board",
+     "board": "sample",
+     "step": 1,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "But flip it a thousand times and get nine hundred... now we're talking.",
+     "show": "board",
+     "board": "sample",
+     "step": 2
+    },
+    {
+     "say": "Trials on humans are the same. Fifteen people lost weight? Could be luck. Maybe one was sick. Maybe three skipped dinner because they were traveling.",
+     "show": "board",
+     "board": "sample",
+     "step": 3
+    },
+    {
+     "say": "The bigger the number, the smaller the luck. That number is called the sample.",
+     "show": "board",
+     "board": "sample",
+     "step": 4
+    },
+    {
+     "say": "\"A study of ten people proved\"... said something. <short pause> Proved nothing.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "choco",
+   "story": {
+    "n": 5,
+    "tag": "CHOCOLATE",
+    "icon": "heart"
+   },
+   "style": "The heist explained step by step, amused, then a fair, serious note on the ethics.",
+   "beats": [
+    {
+     "say": "Back to the chocolate. The journalist was John Bohannon, with a German TV team.",
+     "show": "board",
+     "board": "choco",
+     "step": 0
+    },
+    {
+     "say": "They recruited about fifteen people in three groups. One on a low-carb diet. One on the same diet plus a bar of dark chocolate a day. One changed nothing. Twenty-one days.",
+     "show": "board",
+     "board": "choco",
+     "step": 1
+    },
+    {
+     "say": "So far, a respectable trial, right? But here's the trick, sir.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "They measured not one thing, but eighteen: weight, cholesterol, sleep, mood...",
+     "show": "board",
+     "board": "choco",
+     "step": 2
+    },
+    {
+     "say": "Few people, many measurements: something will differ by chance. Like throwing eighteen darts, then drawing the target around one.",
+     "show": "board",
+     "board": "choco",
+     "step": 3
+    },
+    {
+     "say": "This time, by chance... weight. The chocolate group lost faster.",
+     "show": "board",
+     "board": "choco",
+     "step": 4
+    },
+    {
+     "say": "They wrote the paper and sent it to a journal. It was accepted fast, after a fee of about six hundred euros. Nobody asked a serious question.",
+     "show": "board",
+     "board": "choco",
+     "step": 5
+    },
+    {
+     "say": "Then a press release, and the papers did the rest: no reporter asked a scientist how many people. They copied the headline and added a chocolate photo.",
+     "show": "board",
+     "board": "choco",
+     "step": 6,
+     "emote": "bored",
+     "host": "right"
+    },
+    {
+     "say": "When Bohannon revealed the hoax, many people were angry at him, saying it was unethical, because he fooled the participants too. Maybe they had a point.",
+     "shot": "host",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "But the message landed: the road from lab to newspaper can have no guard at all.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "review",
+   "story": {
+    "n": 6,
+    "tag": "PEER REVIEW",
+    "icon": "shield"
+   },
+   "style": "How the guards work, fair about strengths and limits; the cashier line is deadpan.",
+   "beats": [
+    {
+     "say": "The guards?",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "Humans have a system called peer review. A scientist sends a paper to a journal. The journal sends it to two or three experts in the field, often anonymous, and unpaid.",
+     "show": "board",
+     "board": "review",
+     "step": 0
+    },
+    {
+     "say": "They ask: why so few people? Where's the control? How many things measured? Sometimes they reject it.",
+     "show": "board",
+     "board": "review",
+     "step": 1
+    },
+    {
+     "say": "It catches plenty of mistakes, sir. But note two things.",
+     "show": "board",
+     "board": "review",
+     "step": 2,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "One: reviewers only read. They don't redo the experiment. Cleverly faked numbers can get through.",
+     "show": "board",
+     "board": "review",
+     "step": 3
+    },
+    {
+     "say": "Two: not every journal is a journal. Some take anything, if you pay.",
+     "show": "board",
+     "board": "review",
+     "step": 4
+    },
+    {
+     "say": "Looks like a journal, called a journal, and inside... <short pause> a cash register. That's how the chocolate got in.",
+     "show": "board",
+     "board": "review",
+     "step": 5,
+     "emote": "deadpan",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "repeat",
+   "story": {
+    "n": 7,
+    "tag": "DO IT AGAIN",
+    "icon": "dup"
+   },
+   "style": "Why repeating matters, then the hidden drawer problem, then a teaser.",
+   "beats": [
+    {
+     "say": "So what makes humans really trust a result? Someone else repeating it.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "Another team, in another country, with other people, follows the steps in the paper... and gets the same thing. Only then does it start to become fact.",
+     "show": "board",
+     "board": "repeat",
+     "step": 0
+    },
+    {
+     "say": "If nobody can repeat it, it stays one result. Maybe right, maybe luck, <short pause> maybe a loose cable.",
+     "show": "board",
+     "board": "repeat",
+     "step": 1,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "And there's a sneakier problem, sir. Imagine twenty labs worldwide testing the same idea.",
+     "show": "board",
+     "board": "repeat",
+     "step": 2
+    },
+    {
+     "say": "Nineteen find nothing, say: nothing to write about, and put the result in a drawer. One, by chance, finds a difference.",
+     "show": "board",
+     "board": "repeat",
+     "step": 3
+    },
+    {
+     "say": "Which gets published? Only that one. From outside, you see one study saying \"we found it\", and not the nineteen in the drawer. Humans call it the file drawer problem.",
+     "show": "board",
+     "board": "repeat",
+     "step": 4
+    },
+    {
+     "say": "So many scientists now write down and register their plan before starting, so they can't say later: we were looking at weight all along.",
+     "show": "board",
+     "board": "repeat",
+     "step": 5
+    },
+    {
+     "say": "And here's a surprise, sir, for a later report: when humans went back and repeated lots of old studies, they found something very uncomfortable.",
+     "shot": "host",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "headline",
+   "story": {
+    "n": 8,
+    "tag": "6 QUESTIONS",
+    "icon": "eye"
+   },
+   "style": "A practical checklist read briskly, with the mice joke and the doubling trick.",
+   "beats": [
+    {
+     "say": "So I gathered some questions to ask any story that starts with \"a study says\".",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "One: how many people? Ten or ten thousand?",
+     "show": "board",
+     "board": "headline",
+     "step": 0
+    },
+    {
+     "say": "Two: was there a group to compare with?",
+     "show": "board",
+     "board": "headline",
+     "step": 1
+    },
+    {
+     "say": "Three: was it on humans, or on mice? Half the amazing news is about mice, sir.",
+     "show": "board",
+     "board": "headline",
+     "step": 2
+    },
+    {
+     "say": "Thank you, mouse. <short pause> But you're not me.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Four: did anyone else repeat it and get the same result?",
+     "show": "board",
+     "board": "headline",
+     "step": 3
+    },
+    {
+     "say": "Five: who paid for it? Not that paying makes anyone a liar. Just so you know.",
+     "show": "board",
+     "board": "headline",
+     "step": 4,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "And six, my favorite: the risk doubled? Doubled from what?",
+     "show": "board",
+     "board": "headline",
+     "step": 5
+    },
+    {
+     "say": "If something happened to one in ten thousand people, and now to two in ten thousand... that's exactly double. The headline says: risk doubles!",
+     "show": "board",
+     "board": "headline",
+     "step": 6
+    },
+    {
+     "say": "Meanwhile nine thousand, nine hundred and ninety-eight people are just fine, same as before. The number is right. The feeling the headline wants... is wrong.",
+     "show": "board",
+     "board": "headline",
+     "step": 7,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "If the story passes all six questions... believe it. <short pause> A little.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "The Human Dictionary. Two words. Sample: the people the trial was actually done on. The more there are, the less luck matters.",
+     "show": "board",
+     "board": "s2dict",
+     "step": 0
+    },
+    {
+     "say": "And peer review: scientists who read a study before it's published and look for mistakes, but don't redo the experiment.",
+     "show": "board",
+     "board": "s2dict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, one sincere line, the teaser, and the sign-off.",
+   "beats": [
+    {
+     "say": "Summary, sir. One: a decent trial needs a comparison group, a big number, and blindfolds.",
+     "show": "board",
+     "board": "s2recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "Two: measure many things in a few people, and you'll find a \"discovery\" by chance, like the chocolate.",
+     "show": "board",
+     "board": "s2recap",
+     "step": 1,
+     "host": "right"
+    },
+    {
+     "say": "Three: review catches a lot, but not everything. The truth shows when someone else repeats the experiment.",
+     "show": "board",
+     "board": "s2recap",
+     "step": 2,
+     "host": "right"
+    },
+    {
+     "say": "Honestly, the chocolate wasn't the problem. The problem is that humans love believing the news they like.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Next report: why do scientists keep changing their minds? And the doctor who told colleagues to wash their hands... and got fired.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    },
+    {
+     "say": "This was Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
