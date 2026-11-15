@@ -5,5 +5,22 @@
   "url": "https://youtube.com/shorts/1u0hEZ6G6UM",
   "look": "new look (small Peek at the side), no captions",
   "publishAt": "2026-11-15T19:30:00Z"
+ },
+ "fish": {
+  "id": "8KQHLAZCceM",
+  "url": "https://youtube.com/shorts/8KQHLAZCceM",
+  "look": "big Peek + burned captions",
+  "publishAt": "2026-11-15T21:30:00Z"
+ },
+ "lightning": {
+  "id": "iu2Av2Hj75c",
+  "url": "https://youtube.com/shorts/iu2Av2Hj75c",
+  "look": "big Peek, no captions",
+  "publishAt": "2026-11-15T22:30:00Z"
+ },
+ "tea": {
+  "look": "small Peek + burned captions",
+  "slot": "2026-11-15T20:30:00Z",
+  "status": "waiting for a re-render (caption over Peek's mouth at 0:06)"
  }
 }
