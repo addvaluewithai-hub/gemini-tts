@@ -43,3 +43,6 @@ The Science File is paused by the owner; the file is being re-split (five parts 
   (end card NEXT 3/5); not yet reviewed by the owner. Files in R2 under `science-02/`.
 - **Parts 3 to 5**: on hold; the planner is rewriting them as three parts (rejected-then-right; why science seems to
   contradict itself; when science really fools us).
+- Part 2's render (431.6 s, −16.4 LUFS, end card NEXT 3/5) and its English track are in R2 under `science-02/`. Notes
+  for the next pass: a few shots open on a nearly empty frame for a moment (fair test, the blindfold shot before the eyes
+  pop; the paper heap); part 1's thumbnails in R2 still say 1/4 (the ones in `youtube/` say 1/5).
