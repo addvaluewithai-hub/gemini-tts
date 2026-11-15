@@ -257,7 +257,10 @@ def main():
     if sh is not None:
         if "youtube" in result:
             y = result["youtube"]; sh["video"] = {"id": y["id"], "url": f"https://youtube.com/shorts/{y['id']}", "privacy": y["privacy"], "publishAt": y["publishAt"]}
-        if "tiktok" in result: sh.setdefault("tiktok", {})["upload"] = result["tiktok"]
+        if "tiktok" in result:
+            t = sh.setdefault("tiktok", {})
+            if t.get("upload"): t.setdefault("previous", []).append(t["upload"])
+            t["upload"] = result["tiktok"]
         with open(sf, "w", encoding="utf-8") as h: json.dump(data, h, ensure_ascii=False, indent=1); h.write("\n")
 
 

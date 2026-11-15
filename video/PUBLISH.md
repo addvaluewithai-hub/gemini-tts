@@ -52,8 +52,10 @@ auth-code`, saved in `~/.config/yt-upload/token.json`).
 
 ## TikTok limits (docs read 2026-11-14)
 
-- Until TikTok audits the app (it is in **Sandbox** now), direct posts are private only:
-  `unaudited_client_can_only_post_to_private_accounts`. Inbox drafts work.
+- Until TikTok audits the app (it is in **Sandbox** now), direct posts need the **account itself** set to Private in
+  the TikTok app, not only a SELF_ONLY post: otherwise every init is refused with
+  `unaudited_client_can_only_post_to_private_accounts` (seen 2026-11-15 on @earthreportar, a public account).
+  Inbox drafts work, but open only in the full TikTok mobile app (not the website, not TikTok Lite).
 - At most **5 pending inbox drafts in 24 hours** (`spam_risk_too_many_pending_share`).
 - 6 init requests a minute per account; there is also a daily API post cap (`spam_risk_too_many_posts`).
 - MP4/H.264, 23–60 fps, up to 10 minutes. Files up to 64 MB go in one piece, bigger ones in 10 MB chunks.
