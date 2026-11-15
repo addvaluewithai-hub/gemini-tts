@@ -1,0 +1,910 @@
+{
+ "title": "Earth Report: Science 1 (English dub track for the world-picture video)",
+ "recorded_for": "2026-11-24",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "English voice written to fit the timing of explain-science-01-world beat by beat (video/dub.cjs); only the audio is used, the picture is the world-picture video's.",
+  "Adapted from ../explain-science-01-ar/script.md, not translated: same facts, same order; jokes rebuilt for English speakers (sitting down / transferred to Archives; the neighbor stealing the newspaper; nobody steps off a roof to double-check; scientists agree only on results that keep coming back).",
+  "Facts (sources in ../explain-science-01-ar/plan.md): OPERA announced in September 2011 neutrinos arriving about 60 billionths of a second early over about 730 km from CERN (Geneva) to Gran Sasso (Italy), and asked other physicists to check; in February 2012 a loose fibre-optic cable on the GPS timing and a clock problem were found; ICARUS measured light speed; in June 2012 the revised OPERA result agreed with light speed; the OPERA leader stepped down in March 2012. Eratosthenes, about 240 BC: no shadow at noon on the summer solstice in Syene (Aswan), about 7 degrees (1/50 of a circle) in Alexandria, about 5,000 stadia apart, so 250,000 stadia; the stadion's length is uncertain, so 'very close' to 40,000 km.",
+  "General knowledge, not re-checked: the dragon-in-the-garage idea; Eratosthenes ran the Library of Alexandria; the 1919 eclipse measurement of starlight bending; Halley predicted (1705) the return around 1758, died 1742, the comet was seen on Christmas night 1758. No medical or religious claims."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. A warm, smooth, rounded voice in a comfortable middle register, relaxed and close to the microphone: never shrill, never nasal, soft on the s sounds. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "2 / 4",
+   "icons": [
+    "file",
+    "eye",
+    "rules"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "boards": {
+  "sintro": {
+   "kind": "sintro",
+   "ends": [
+    3.69,
+    4.89,
+    8.8,
+    8.16,
+    2.99
+   ]
+  },
+  "announce": {
+   "kind": "announce",
+   "ends": [
+    8.36,
+    5.25,
+    7.09,
+    1.92,
+    7.05,
+    3.52,
+    5.08
+   ]
+  },
+  "workshop": {
+   "kind": "workshop",
+   "ends": [
+    4.12,
+    3.31,
+    5.95,
+    5.15,
+    4.17,
+    6.47
+   ]
+  },
+  "shadow": {
+   "kind": "shadow",
+   "ends": [
+    4.92,
+    3.13,
+    7.83,
+    5.54,
+    3.96,
+    2.99,
+    2.36,
+    4.91,
+    5.06,
+    7.34,
+    4.45
+   ]
+  },
+  "dragon": {
+   "kind": "dragon",
+   "ends": [
+    2.87,
+    2.15,
+    2.72,
+    2.72,
+    8.84,
+    6.29,
+    7.17,
+    4.45
+   ]
+  },
+  "cable": {
+   "kind": "cable",
+   "ends": [
+    4.86,
+    3.93,
+    3.21,
+    4.65,
+    1.93,
+    5.24,
+    8.99,
+    6.33,
+    5.18
+   ]
+  },
+  "theory": {
+   "kind": "theory",
+   "ends": [
+    9.18,
+    3.1,
+    5.9,
+    3.19,
+    5.71,
+    7.07
+   ]
+  },
+  "halley": {
+   "kind": "halley",
+   "ends": [
+    5.68,
+    3.06,
+    3.41,
+    4.71,
+    1.45,
+    3.58,
+    1.13
+   ]
+  },
+  "trust": {
+   "kind": "trust",
+   "ends": [
+    4.58,
+    6.98,
+    8.46,
+    8.18,
+    6.06,
+    5.33
+   ]
+  },
+  "sdict": {
+   "kind": "sdict",
+   "ends": [
+    5.47,
+    4.81
+   ]
+  },
+  "srecap": {
+   "kind": "srecap",
+   "ends": [
+    5.41,
+    4.51,
+    5.82
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the new file at once, crisp and quick, then the strangest story he found.",
+   "beats": [
+    {
+     "say": "Sir. Field report one, in a new file: Science.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Humans have a thing called science. They trust it above almost anything.",
+     "show": "board",
+     "board": "sintro",
+     "step": 0
+    },
+    {
+     "say": "They fly because of it, take medicine because of it, build twenty floors high.",
+     "show": "board",
+     "board": "sintro",
+     "step": 1
+    },
+    {
+     "say": "And yet half the planet asks: why believe these scientists? What if they're fooling us?",
+     "show": "board",
+     "board": "sintro",
+     "step": 2,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "Today: what science is, and why they trust it.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "I'll start with the strangest story I found. In twenty eleven, scientists told the whole world: we've found something faster than light.",
+     "show": "board",
+     "board": "sintro",
+     "step": 3
+    },
+    {
+     "say": "Months later, the culprit: <short pause> a loose cable.",
+     "show": "board",
+     "board": "sintro",
+     "step": 4,
+     "emote": "deadpan",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "announce",
+   "story": {
+    "n": 1,
+    "tag": "FASTER THAN LIGHT?",
+    "icon": "atom",
+    "size": 54
+   },
+   "style": "A story told with growing disbelief, then admiration for an honest move, then a dry aside about his own bosses.",
+   "beats": [
+    {
+     "say": "It started in Europe, sir. A lab in Geneva, CERN, fires tiny particles called neutrinos through solid rock to a lab in Italy.",
+     "show": "board",
+     "board": "announce",
+     "step": 0
+    },
+    {
+     "say": "About seven hundred and thirty kilometers. A team called OPERA timed the trip.",
+     "show": "board",
+     "board": "announce",
+     "step": 1
+    },
+    {
+     "say": "In twenty eleven, the numbers looked strange: the particles arrived about sixty billionths of a second early.",
+     "show": "board",
+     "board": "announce",
+     "step": 2
+    },
+    {
+     "say": "Faster than light. <short pause> Which is impossible.",
+     "show": "board",
+     "board": "announce",
+     "step": 3,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "Einstein said nothing beats light. A century of physics rests on that.",
+     "show": "board",
+     "board": "announce",
+     "step": 4
+    },
+    {
+     "say": "Two options, sir.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    },
+    {
+     "say": "Hide it in a drawer. Or announce it: we don't believe it either.",
+     "show": "board",
+     "board": "announce",
+     "step": 5
+    },
+    {
+     "say": "They chose the second. A press conference: here are our numbers. Find our mistake.",
+     "show": "board",
+     "board": "announce",
+     "step": 6,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "I had to sit down, sir. <short pause> At Command, admitting a mistake gets you sent to Archives.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "workshop",
+   "story": {
+    "n": 2,
+    "tag": "METHOD",
+    "icon": "gear"
+   },
+   "style": "Patient teacher correcting a common mistake, simple and firm.",
+   "beats": [
+    {
+     "say": "First: humans think science is a big book of answers.",
+     "show": "board",
+     "board": "workshop",
+     "step": 0
+    },
+    {
+     "say": "Earth circles the Sun. Water boils at a hundred.",
+     "show": "board",
+     "board": "workshop",
+     "step": 1
+    },
+    {
+     "say": "That's not science, sir. That's what's left after it.",
+     "show": "board",
+     "board": "workshop",
+     "step": 2,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "Science is a method for not fooling yourself.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Simple: say something testable. Test it. Then try hard to prove it wrong.",
+     "show": "board",
+     "board": "workshop",
+     "step": 3
+    },
+    {
+     "say": "If it survives, believe it a little. If it survives your rivals, believe it more.",
+     "show": "board",
+     "board": "workshop",
+     "step": 4
+    },
+    {
+     "say": "Science isn't a library, sir. It's a workshop. Anything in it can be taken apart and rebuilt. Even Einstein.",
+     "show": "board",
+     "board": "workshop",
+     "step": 5,
+     "emote": "proud",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "shadow",
+   "story": {
+    "n": 3,
+    "tag": "STICK & SHADOW",
+    "icon": "sun",
+    "size": 54
+   },
+   "style": "Wonder at an old, simple idea, told step by step like a puzzle being solved.",
+   "beats": [
+    {
+     "say": "How old is this method? I went back over two thousand two hundred years.",
+     "show": "board",
+     "board": "shadow",
+     "step": 0
+    },
+    {
+     "say": "A man named Eratosthenes ran the Library of Alexandria.",
+     "show": "board",
+     "board": "shadow",
+     "step": 1
+    },
+    {
+     "say": "He heard that in a southern town, on one summer day at exactly noon, the Sun lit the bottom of a well. No shadow at all.",
+     "show": "board",
+     "board": "shadow",
+     "step": 2
+    },
+    {
+     "say": "So, same day, same hour, he planted a stick in Alexandria. It had a shadow.",
+     "show": "board",
+     "board": "shadow",
+     "step": 3
+    },
+    {
+     "say": "A small shadow, about seven degrees. One fiftieth of a circle.",
+     "show": "board",
+     "board": "shadow",
+     "step": 4
+    },
+    {
+     "say": "If the Earth were flat, the shadows would match.",
+     "show": "board",
+     "board": "shadow",
+     "step": 5
+    },
+    {
+     "say": "They don't. <short pause> So the Earth is round.",
+     "show": "board",
+     "board": "shadow",
+     "step": 6
+    },
+    {
+     "say": "A one-fiftieth difference means the towns are one fiftieth of the way around the planet.",
+     "show": "board",
+     "board": "shadow",
+     "step": 7
+    },
+    {
+     "say": "The distance was paced out: about five thousand stadia. Times fifty: two hundred and fifty thousand.",
+     "show": "board",
+     "board": "shadow",
+     "step": 8
+    },
+    {
+     "say": "Humans still argue about how long a stadion was, but by most counts that's very close to the real forty thousand kilometers.",
+     "show": "board",
+     "board": "shadow",
+     "step": 9,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "No plane, no satellite, no internet. A stick, a shadow, and a brain.",
+     "show": "board",
+     "board": "shadow",
+     "step": 10
+    },
+    {
+     "say": "But the number isn't the point, sir. Anyone with a stick and a friend in another town can repeat it today.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "No need to trust him. <short pause> Try it.",
+     "shot": "close",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "dragon",
+   "story": {
+    "n": 4,
+    "tag": "DRAGON",
+    "icon": "ghost"
+   },
+   "style": "A comic thought experiment, played straight, then the serious rule it proves.",
+   "beats": [
+    {
+     "say": "So what makes a claim scientific, and another one not?",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "Imagine someone says: I have a dragon in my garage.",
+     "show": "board",
+     "board": "dragon",
+     "step": 0
+    },
+    {
+     "say": "Show me. It's invisible.",
+     "show": "board",
+     "board": "dragon",
+     "step": 1
+    },
+    {
+     "say": "Spread flour to see its footprints? It floats.",
+     "show": "board",
+     "board": "dragon",
+     "step": 2
+    },
+    {
+     "say": "Measure the heat of its fire? Cold fire.",
+     "show": "board",
+     "board": "dragon",
+     "step": 3
+    },
+    {
+     "say": "Every test, he has an excuse.",
+     "show": "board",
+     "board": "dragon",
+     "step": 4,
+     "emote": "bored",
+     "host": "right"
+    },
+    {
+     "say": "True or false, that claim will never be science.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Because no experiment could ever prove it wrong.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "The main rule of science: a claim must be able to fail. You must say: if this happens, I'm wrong.",
+     "show": "board",
+     "board": "dragon",
+     "step": 5
+    },
+    {
+     "say": "Einstein did exactly that. His theory said starlight passing the Sun must bend by a set amount. If not, the theory was wrong.",
+     "show": "board",
+     "board": "dragon",
+     "step": 6
+    },
+    {
+     "say": "In nineteen nineteen, humans waited for an eclipse and measured. <short pause> The light bent.",
+     "show": "board",
+     "board": "dragon",
+     "step": 7,
+     "emote": "proud",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "cable",
+   "story": {
+    "n": 5,
+    "tag": "THE CABLE",
+    "icon": "cable"
+   },
+   "style": "Back to the mystery, now an investigation; quick and precise, then a quiet note about the team leader.",
+   "beats": [
+    {
+     "say": "Back to the particles faster than light. After the announcement, scientists everywhere started digging.",
+     "show": "board",
+     "board": "cable",
+     "step": 0
+    },
+    {
+     "say": "Not to believe it. To break it. As it should be.",
+     "show": "board",
+     "board": "cable",
+     "step": 1,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "Five months later, the team found the mistake.",
+     "show": "board",
+     "board": "cable",
+     "step": 2
+    },
+    {
+     "say": "A fibre-optic cable carrying the GPS time signal... wasn't plugged all the way in.",
+     "show": "board",
+     "board": "cable",
+     "step": 3
+    },
+    {
+     "say": "And a clock was off.",
+     "show": "board",
+     "board": "cable",
+     "step": 4
+    },
+    {
+     "say": "Tiny problems, but enough to create those sixty billionths they were so excited about.",
+     "show": "board",
+     "board": "cable",
+     "step": 5,
+     "emote": "deadpan",
+     "host": "left"
+    },
+    {
+     "say": "Meanwhile, another experiment in the same Italian lab, ICARUS, timed the same particles: exactly the speed of light. Not faster, not slower.",
+     "show": "board",
+     "board": "cable",
+     "step": 6
+    },
+    {
+     "say": "Cable fixed, math redone: the speed of light. Einstein wins.",
+     "show": "board",
+     "board": "cable",
+     "step": 7
+    },
+    {
+     "say": "The leader had resigned.",
+     "shot": "close",
+     "emote": "neutral"
+    },
+    {
+     "say": "Who caught it, sir? Not a journalist. Not a government. Science itself. In under a year.",
+     "show": "board",
+     "board": "cable",
+     "step": 8,
+     "emote": "serious",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "theory",
+   "story": {
+    "n": 6,
+    "tag": "THEORY",
+    "icon": "rules"
+   },
+   "style": "Clearing up a word everyone gets wrong, with a neighbourly joke and a dry one.",
+   "beats": [
+    {
+     "say": "There's a word humans misuse all the time: theory.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "On the street, a theory is a hunch. As in: I bet my neighbor steals my newspaper.",
+     "show": "board",
+     "board": "theory",
+     "step": 0
+    },
+    {
+     "say": "But to scientists, the word means something else entirely.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "It starts as a hypothesis: a guess you can test.",
+     "show": "board",
+     "board": "theory",
+     "step": 1
+    },
+    {
+     "say": "Tested a lot, survives, predicts things nobody has seen yet... only then is it a theory.",
+     "show": "board",
+     "board": "theory",
+     "step": 2
+    },
+    {
+     "say": "A theory isn't the bottom of the ladder, sir. It's the top.",
+     "show": "board",
+     "board": "theory",
+     "step": 3,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "Take gravity. Nobody calls it a hunch.",
+     "show": "board",
+     "board": "theory",
+     "step": 4
+    },
+    {
+     "say": "Nobody steps off a roof to check.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "And that diseases come from tiny creatures you can't see, germs, is also a theory. It's why humans wash their hands.",
+     "show": "board",
+     "board": "theory",
+     "step": 5
+    },
+    {
+     "say": "That one gets its own report.",
+     "shot": "host",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "halley",
+   "story": {
+    "n": 7,
+    "tag": "HALLEY",
+    "icon": "comet"
+   },
+   "style": "A slow-building story with a quiet, moving end.",
+   "beats": [
+    {
+     "say": "A harder test than explaining the past: predicting what will happen.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "count"
+    },
+    {
+     "say": "In seventeen oh five, an Englishman, Edmond Halley, read old records of comets.",
+     "show": "board",
+     "board": "halley",
+     "step": 0
+    },
+    {
+     "say": "He noticed one showed up about every seventy-six years.",
+     "show": "board",
+     "board": "halley",
+     "step": 1
+    },
+    {
+     "say": "Not three comets. One comet, coming back.",
+     "show": "board",
+     "board": "halley",
+     "step": 2
+    },
+    {
+     "say": "Using gravity, he said: it returns around seventeen fifty-eight.",
+     "show": "board",
+     "board": "halley",
+     "step": 3
+    },
+    {
+     "say": "He died sixteen years before.",
+     "show": "board",
+     "board": "halley",
+     "step": 4
+    },
+    {
+     "say": "And on Christmas night, seventeen fifty-eight... <short pause> the comet appeared.",
+     "show": "board",
+     "board": "halley",
+     "step": 5
+    },
+    {
+     "say": "It bears his name.",
+     "show": "board",
+     "board": "halley",
+     "step": 6,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "Imagine signing a prediction you won't live to see.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "Crazy, or sure of your method. <short pause> He wasn't crazy.",
+     "shot": "close",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "trust",
+   "story": {
+    "n": 8,
+    "tag": "WHY TRUST IT",
+    "icon": "shield",
+    "size": 54
+   },
+   "style": "The answer to the episode's question: clear, warm, with one dry joke about scientists.",
+   "beats": [
+    {
+     "say": "Right. Back to the question: why do humans trust science?",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "Not because scientists are smarter, or never wrong. They're wrong constantly, as we've seen.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "Humans trust it for two reasons.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "One: it's the only method built to hunt its own mistakes.",
+     "show": "board",
+     "board": "trust",
+     "step": 0
+    },
+    {
+     "say": "Anyone can repeat the experiment. Prove the big names wrong, and you get a prize, not punishment.",
+     "show": "board",
+     "board": "trust",
+     "step": 1
+    },
+    {
+     "say": "Not one scientist, sir. That's a mistake too.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "We trust many teams, in different countries, who dislike each other and chase the same prize, repeating the experiment and getting the same result.",
+     "show": "board",
+     "board": "trust",
+     "step": 2
+    },
+    {
+     "say": "Then a conspiracy gets very hard. It needs everyone to agree.",
+     "show": "board",
+     "board": "trust",
+     "step": 3,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "Scientists never agree on anything, sir... <short pause> except results that repeat.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "Reason two: it works. The phone in your hand, the plane overhead, the bridge you're crossing.",
+     "show": "board",
+     "board": "trust",
+     "step": 4
+    },
+    {
+     "say": "All scientific predictions. Humans bet their lives on them daily. <short pause> And win.",
+     "show": "board",
+     "board": "trust",
+     "step": 5,
+     "emote": "proud",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "The Human Dictionary. Two words. Hypothesis: a testable guess, not yet proven.",
+     "show": "board",
+     "board": "sdict",
+     "step": 0
+    },
+    {
+     "say": "Theory: a hypothesis tested a thousand times that held. Not a hunch.",
+     "show": "board",
+     "board": "sdict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, then one sincere line, the teaser, and the sign-off.",
+   "beats": [
+    {
+     "say": "Summary, sir. One: science isn't a book of answers. It's a method for not fooling yourself.",
+     "show": "board",
+     "board": "srecap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "Two: a scientific claim must be able to fail. Otherwise, it's a garage dragon.",
+     "show": "board",
+     "board": "srecap",
+     "step": 1,
+     "host": "right"
+    },
+    {
+     "say": "Three: scientists make mistakes, but the method catches them. Like the cable faster than light.",
+     "show": "board",
+     "board": "srecap",
+     "step": 2,
+     "host": "right"
+    },
+    {
+     "say": "I must admit: humans invented the only club on the planet that pays you to prove it wrong.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Next report: how research is done, who checks it before it reaches you, and how one journalist fooled the world with chocolate.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    },
+    {
+     "say": "This was Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
