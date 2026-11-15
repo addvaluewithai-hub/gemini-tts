@@ -20,18 +20,18 @@ function s0(a, tot) {
   // the four keys are typed in turn, then L and D swap places in an arc
   const typed = [3.3, 3.55, 3.8, 4.05], letters = ["H", "O", "L", "D"], swap = ease(seg(a, 4.55, 5.2)), banner = seg(a, 5.7, 6.2);
   let keys = "";
-  letters.forEach((ch, i) => { if (a < typed[i] - 0.3) return; let x = 600 + i * 240, y = 560;
+  letters.forEach((ch, i) => { if (a < typed[i]) { keys += at(600 + i * 240, 560, cap("", 0, 0), 1.45 * pop(a - 0.25 - i * 0.12)); return; } let x = 600 + i * 240, y = 560;
     if (i === 2) { x = lerp(600 + 480, 600 + 720, swap); y = 560 - 180 * Math.sin(Math.PI * swap); }
     if (i === 3) { x = lerp(600 + 720, 600 + 480, swap); y = 560 + 160 * Math.sin(Math.PI * swap); }
     const down = a > typed[i] && a < typed[i] + 0.12 ? 1 : 0, hot = i >= 2 ? seg(a, 4.5, 4.7) * (1 - seg(a, 5.3, 5.7)) : 0;
-    keys += at(x, y - 210 * banner, cap(ch, down, hot), (1.45 - 0.45 * banner) * pop(a - typed[i] + 0.3)); });
+    keys += at(x, y - 210 * banner, cap(ch, down, hot), (1.45 - 0.45 * banner)); });
   const flag = banner > 0 ? at(960, 350, `<path d="M-460 -80H460L420 0L460 80H-460L-420 0Z" fill="${P.red}"/>`, [ease(banner), 1]) : "";
   const cal = a > 4.6 ? at(1600, 560, calPage("2013", "", 1, 130), 0.6 * pop(a - 4.6), 6) : "";
   // the clamp holds the coin while a jagged line storms past
   const hold = a - 6.8, storm = seg(a, 7.0, 8.2);
   const line = hold > 0 ? `<path d="M300 ${700}L520 520L700 860L880 480L1060 900L1240 560L1420 820L1640 600" fill="none" stroke="${P.red}" stroke-width="10" stroke-linejoin="round" pathLength="1" stroke-dasharray="${storm.toFixed(3)} 1"/>` : "";
   const clampG = hold > 0 ? at(960, 720, `${two(rr(-150, -40, 60, 200, 10), P.steel, P.steelD, 0, 8)}${two(rr(90, -40, 60, 200, 10), P.steel, P.steelD, 0, 8)}<path d="M-120 140H120" stroke="${P.steelD}" stroke-width="30"/>${coin(80, "B")}`, pop(hold), 3 * Math.sin(a * 30) * storm * (1 - storm)) : "";
-  const g = night(c, tot, 61) + layer(flag + keys + cal + line + clampG, c) + label("HODL", a < 6.4 ? a - 1.5 : -1);
+  const g = night(c, tot, 61) + layer(flag + keys + cal + line + clampG, c) + (a < 6.4 && a > 1.5 ? at(lerp(960, 960, 0), lerp(300, 110, ease(seg(a, 2.9, 3.3))), at(-960, -110, label("HODL", a - 1.5)), lerp(2.2, 1, ease(seg(a, 2.9, 3.3)))) : "");
   return { g, out: toScreen(c, 960, 720), outC: P.gold, outZ: 16 };
 }
 
