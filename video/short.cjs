@@ -25,8 +25,11 @@ const cue = (from, to, hold) => {
   let edits = base.edit;
   if (spec.look === "big") {                                                     // big Peek: each drawing is a quick insert, then back to him
     const q = spec.insert || 2.8; edits = [];
-    base.edit.forEach((e, i) => { edits.push(e); const nx = base.edit[i + 1], isB = e.kind === "board" || (e.board && !e.shot) || e.shot === "show";
-      if (isB && e.board && nx && nx.t - e.t > q + 1.2) edits.push({ t: e.t + q, shot: "host", emote: e.emote || "neutral" }); });
+    let cut = false;                                                             // after a cut to him, the next drawing has to be brought back in
+    base.edit.forEach((e, i) => { const nx = base.edit[i + 1];
+      if (e.board && !e.shot && cut) { edits.push({ ...e, shot: "show", kind: "board" }); } else edits.push(e);
+      cut = !e.board ? false : cut;
+      if (e.board && nx && nx.t - e.t > q + 1.2) { edits.push({ t: e.t + q, shot: "host", emote: e.emote || "neutral" }); cut = true; } else if (e.board) cut = false; });
   }
   fs.writeFileSync(f, JSON.stringify({ ...base, edit: edits.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),
     episode: ep, ...vertical, from, to, hold }));                                  // no cut into the next beat during the hold
