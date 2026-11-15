@@ -1,0 +1,857 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-science-02-world",
+ "transcript": "../../../video/cues/explain-science-02-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني رقم اتنين في ملف العلم.",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.52,
+   "say": "سنة ألفين خمستاشر، الجرايد في بلاد كتير كتبت نفس",
+   "board": {
+    "kind": "s2intro"
+   },
+   "step": 0,
+   "stepT": 3.52,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 10.39,
+   "say": "الناس فرحت. المحلات فرحت.",
+   "board": {
+    "kind": "s2intro"
+   },
+   "step": 1,
+   "stepT": 10.39
+  },
+  {
+   "t": 12.45,
+   "say": "وأنا كمان، بصراحة، فرحت.",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 13.94,
+   "say": "بعدها بكام أسبوع، الراجل اللي عمل الدراسة طلع وق",
+   "board": {
+    "kind": "s2intro"
+   },
+   "step": 2,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 13.94,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 20.76,
+   "say": "فالنهارده هقول لكم البحث العلمي بيتعمل إزاي، مين",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 26.99,
+   "say": "والسؤال المهم: لما تقرا كلمة \"دراسة بتقول\"، تصدّ",
+   "board": {
+    "kind": "s2intro"
+   },
+   "step": 3,
+   "emote": "skeptical",
+   "host": "left",
+   "stepT": 26.99,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 31.3,
+   "say": "أول حاجة: البشر مابيعلنوش اكتشافاتهم في الشارع. ",
+   "board": {
+    "kind": "paper"
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "THE PAPER",
+    "icon": "file"
+   },
+   "stepT": 31.3,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 36.67,
+   "say": "ورقة بتقول: كان عندنا سؤال كذا، عملنا كذا بالظبط",
+   "board": {
+    "kind": "paper"
+   },
+   "step": 1,
+   "stepT": 36.67
+  },
+  {
+   "t": 40.88,
+   "say": "وأهم جزء فيها مش النتيجة يا فندم. أهم جزء هو \"عم",
+   "board": {
+    "kind": "paper"
+   },
+   "step": 2,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 40.88
+  },
+  {
+   "t": 48.7,
+   "say": "والبشر بينشروا من الورق ده حوالي تلاتة مليون ورق",
+   "board": {
+    "kind": "paper"
+   },
+   "step": 3,
+   "stepT": 48.7
+  },
+  {
+   "t": 53.92,
+   "say": "يعني لو عالم واحد قرا ورقة كل يوم، هيخلّص ورق سن",
+   "board": {
+    "kind": "paper"
+   },
+   "step": 4,
+   "stepT": 53.92
+  },
+  {
+   "t": 59.24,
+   "say": "وعلشان كده، في كل يوم، فيه ورقة في مكان ما بتقول",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 64.46,
+   "say": "طب إزاي تعرف إن حاجة معينة هي اللي عملت الفرق؟ خ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present",
+   "story": {
+    "n": 2,
+    "tag": "A FAIR TEST",
+    "icon": "eye"
+   }
+  },
+  {
+   "t": 68.73,
+   "say": "عندك حلّتين شوربة. واحدة حطيت فيها بهار جديد، وا",
+   "board": {
+    "kind": "fairtest"
+   },
+   "step": 0,
+   "stepT": 68.73,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 72.11,
+   "say": "لو الأولى طلعت أحلى، يبقى البهار هو السبب؟ مش أك",
+   "board": {
+    "kind": "fairtest"
+   },
+   "step": 1,
+   "stepT": 72.11
+  },
+  {
+   "t": 75.23,
+   "say": "لازم الحلّتين يكونوا زي بعض في كل حاجة تانية: نف",
+   "board": {
+    "kind": "fairtest"
+   },
+   "step": 2,
+   "stepT": 75.23
+  },
+  {
+   "t": 80.16,
+   "say": "الحلّة اللي من غير البهار دي اسمها المجموعة الضا",
+   "board": {
+    "kind": "fairtest"
+   },
+   "step": 3,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 80.16
+  },
+  {
+   "t": 85.6,
+   "say": "والبشر عندهم مشكلة غريبة يا فندم: لو قلت لبني آد",
+   "board": {
+    "kind": "fairtest"
+   },
+   "step": 4,
+   "stepT": 85.6
+  },
+  {
+   "t": 93.89,
+   "say": "فعلشان كده، في التجارب الجد، المجموعتين بياخدوا ",
+   "board": {
+    "kind": "fairtest"
+   },
+   "step": 5,
+   "stepT": 93.89
+  },
+  {
+   "t": 100.95,
+   "say": "وفي التجارب الأجد، حتى اللي بيدّي الحاجة نفسه ما",
+   "board": {
+    "kind": "fairtest"
+   },
+   "step": 6,
+   "emote": "neutral",
+   "host": "left",
+   "stepT": 100.95
+  },
+  {
+   "t": 106.75,
+   "say": "يعني البشر لازم يغمّوا عينين الكل، علشان يشوفوا ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 110.03,
+   "say": "وأول مرة البشر عملوا الحكاية دي بشكل قريب من كده",
+   "board": {
+    "kind": "lind"
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "12 SAILORS",
+    "icon": "ship"
+   },
+   "stepT": 110.03,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 117.12,
+   "say": "البحّارة كانوا بيموتوا من مرض اسمه الإسقربوط: ال",
+   "board": {
+    "kind": "lind"
+   },
+   "step": 1,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 117.12
+  },
+  {
+   "t": 121.91,
+   "say": "وكل واحد عنده علاج: خل، مية بحر، سيدر التفاح.",
+   "board": {
+    "kind": "lind"
+   },
+   "step": 2,
+   "stepT": 121.91
+  },
+  {
+   "t": 125.34,
+   "say": "دكتور على المركب اسمه James Lind، بدل ما يصدّق ح",
+   "board": {
+    "kind": "lind"
+   },
+   "step": 3,
+   "stepT": 125.34
+  },
+  {
+   "t": 134.63,
+   "say": "بعد أيام، الاتنين اللي خدوا برتقان وليمون قاموا،",
+   "board": {
+    "kind": "lind"
+   },
+   "step": 4,
+   "stepT": 134.63
+  },
+  {
+   "t": 140.36,
+   "say": "اتناشر بحّار يا فندم، وعرفنا حاجة الإمبراطورية ك",
+   "board": {
+    "kind": "lind"
+   },
+   "step": 5,
+   "emote": "proud",
+   "host": "right",
+   "stepT": 140.36
+  },
+  {
+   "t": 144.4,
+   "say": "والجزء اللي يكسف: البحرية ماعملتش بيها غير بعد ح",
+   "board": {
+    "kind": "lind"
+   },
+   "step": 6,
+   "stepT": 144.4
+  },
+  {
+   "t": 147.99,
+   "say": "يعني المشكلة عند البشر ساعات مش إنهم مايعرفوش.. ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 152.45,
+   "say": "الحاجة التانية: عدد الناس اللي اتجرّب عليهم.",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count",
+   "story": {
+    "n": 4,
+    "tag": "SAMPLE SIZE",
+    "icon": "coin"
+   }
+  },
+  {
+   "t": 154.98,
+   "say": "لو رميت عملة تلات مرات، وجت كتابة التلاتة، تقدر ",
+   "board": {
+    "kind": "sample"
+   },
+   "step": 0,
+   "stepT": 154.98,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 159.31,
+   "say": "لأ يا فندم. ده بيحصل بالصدفة كل شوية.",
+   "board": {
+    "kind": "sample"
+   },
+   "step": 1,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 159.31
+  },
+  {
+   "t": 161.51,
+   "say": "بس لو رميتها ألف مرة، وجت كتابة تسعمية مرة.. هنا",
+   "board": {
+    "kind": "sample"
+   },
+   "step": 2,
+   "stepT": 161.51
+  },
+  {
+   "t": 165.33,
+   "say": "التجارب على البشر نفس الحكاية. خمستاشر واحد خسّو",
+   "board": {
+    "kind": "sample"
+   },
+   "step": 3,
+   "stepT": 165.33
+  },
+  {
+   "t": 172.35,
+   "say": "كل ما العدد يكبر، كل ما الصدفة تصغر. والعدد ده ع",
+   "board": {
+    "kind": "sample"
+   },
+   "step": 4,
+   "stepT": 172.35
+  },
+  {
+   "t": 176.6,
+   "say": "واللي يقول لك \"دراسة على عشر أشخاص أثبتت\".. هو ق",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 181.17,
+   "say": "نرجع للشوكولاتة. الصحفي اسمه John Bohannon، ومعا",
+   "board": {
+    "kind": "choco"
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "CHOCOLATE",
+    "icon": "heart"
+   },
+   "stepT": 181.17,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 185.9,
+   "say": "جابوا حوالي خمستاشر واحد، وقسموهم تلات مجموعات. ",
+   "board": {
+    "kind": "choco"
+   },
+   "step": 1,
+   "stepT": 185.9
+  },
+  {
+   "t": 195.98,
+   "say": "لحد هنا، شكلها تجربة محترمة، صح؟ بس هنا الحيلة ي",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "present"
+  },
+  {
+   "t": 199.74,
+   "say": "هم ماقاسوش حاجة واحدة. قاسوا تمنتاشر حاجة: الوزن",
+   "board": {
+    "kind": "choco"
+   },
+   "step": 2,
+   "stepT": 199.74,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 205.83,
+   "say": "ومع عدد صغير وقياسات كتير، أكيد حاجة منهم هتطلع ",
+   "board": {
+    "kind": "choco"
+   },
+   "step": 3,
+   "stepT": 205.83
+  },
+  {
+   "t": 214.03,
+   "say": "واللي طلع بالصدفة المرة دي.. الوزن. مجموعة الشوك",
+   "board": {
+    "kind": "choco"
+   },
+   "step": 4,
+   "stepT": 214.03
+  },
+  {
+   "t": 217.68,
+   "say": "فكتبوا الورقة، وبعتوها لمجلة. والمجلة قبلتها بسر",
+   "board": {
+    "kind": "choco"
+   },
+   "step": 5,
+   "stepT": 217.68
+  },
+  {
+   "t": 224.3,
+   "say": "وبعدين بعتوا خبر صحفي. والجرايد عملت الباقي: ولا",
+   "board": {
+    "kind": "choco"
+   },
+   "step": 6,
+   "emote": "bored",
+   "host": "right",
+   "stepT": 224.3
+  },
+  {
+   "t": 232.04,
+   "say": "ولما Bohannon طلع وقال إنها لعبة، ناس كتير زعلوا",
+   "shot": "host",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 239.47,
+   "say": "بس الرسالة وصلت: الطريق من المعمل للجرنال ممكن ي",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 243.88,
+   "say": "طب فين الحراس؟",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug",
+   "story": {
+    "n": 6,
+    "tag": "PEER REVIEW",
+    "icon": "shield"
+   }
+  },
+  {
+   "t": 244.86,
+   "say": "عند البشر نظام اسمه مراجعة الأقران. العالم يبعت ",
+   "board": {
+    "kind": "review"
+   },
+   "step": 0,
+   "stepT": 244.86,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 254.18,
+   "say": "يقروها، ويسألوا: العينة صغيرة ليه؟ فين المجموعة ",
+   "board": {
+    "kind": "review"
+   },
+   "step": 1,
+   "stepT": 254.18
+  },
+  {
+   "t": 259.01,
+   "say": "والنظام ده بيمسك غلطات كتير يا فندم. بس فيه حاجت",
+   "board": {
+    "kind": "review"
+   },
+   "step": 2,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 259.01
+  },
+  {
+   "t": 262.25,
+   "say": "الأولانية: المراجعين بيقروا بس، مابيعيدوش التجرب",
+   "board": {
+    "kind": "review"
+   },
+   "step": 3,
+   "stepT": 262.25
+  },
+  {
+   "t": 267.54,
+   "say": "والتانية: مش كل اللي اسمه مجلة يبقى مجلة. فيه مج",
+   "board": {
+    "kind": "review"
+   },
+   "step": 4,
+   "stepT": 267.54
+  },
+  {
+   "t": 271.91,
+   "say": "شكلها مجلة، واسمها مجلة، وجواها.. كاشير. وده الل",
+   "board": {
+    "kind": "review"
+   },
+   "step": 5,
+   "emote": "deadpan",
+   "host": "left",
+   "stepT": 271.91
+  },
+  {
+   "t": 276.2,
+   "say": "طب إيه اللي يخلّي البشر يصدّقوا نتيجة بجد؟ إن حد",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "present",
+   "story": {
+    "n": 7,
+    "tag": "DO IT AGAIN",
+    "icon": "dup"
+   }
+  },
+  {
+   "t": 280.25,
+   "say": "فريق تاني، في بلد تانية، بناس تانيين، يعمل نفس ا",
+   "board": {
+    "kind": "repeat"
+   },
+   "step": 0,
+   "stepT": 280.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 287.94,
+   "say": "لو ماحدش قدر يعيدها، تفضل نتيجة واحدة. ممكن صح، ",
+   "board": {
+    "kind": "repeat"
+   },
+   "step": 1,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 287.94
+  },
+  {
+   "t": 293.32,
+   "say": "وفيه مشكلة تانية أخبث يا فندم. تخيّل عشرين معمل ",
+   "board": {
+    "kind": "repeat"
+   },
+   "step": 2,
+   "stepT": 293.32
+  },
+  {
+   "t": 297.64,
+   "say": "تسعتاشر منهم مالقوش حاجة، فقالوا: خلاص، مفيش حاج",
+   "board": {
+    "kind": "repeat"
+   },
+   "step": 3,
+   "stepT": 297.64
+  },
+  {
+   "t": 304.53,
+   "say": "مين اللي هيتنشر؟ الواحد ده بس. فاللي بيقرا من بر",
+   "board": {
+    "kind": "repeat"
+   },
+   "step": 4,
+   "stepT": 304.53
+  },
+  {
+   "t": 312.58,
+   "say": "وعلشان كده، علما كتير دلوقتي بيكتبوا خطة التجربة",
+   "board": {
+    "kind": "repeat"
+   },
+   "step": 5,
+   "stepT": 312.58
+  },
+  {
+   "t": 319.49,
+   "say": "وهنا فيه مفاجأة يا فندم، هحكيها لكم في تقرير جاي",
+   "shot": "host",
+   "emote": "worried"
+  },
+  {
+   "t": 326.21,
+   "say": "فجمعت لكم شوية أسئلة، تسألوها لأي خبر بيبدأ بـ\"د",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count",
+   "story": {
+    "n": 8,
+    "tag": "6 QUESTIONS",
+    "icon": "eye"
+   }
+  },
+  {
+   "t": 330.54,
+   "say": "أولاً: الدراسة على كام واحد؟ عشرة ولا عشرة آلاف؟",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 0,
+   "stepT": 330.54,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 333.31,
+   "say": "ثانياً: كان فيه مجموعة يقارنوا بيها، ولا لأ؟",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 1,
+   "stepT": 333.31
+  },
+  {
+   "t": 335.65,
+   "say": "ثالثاً: الدراسة على بشر، ولا على فيران؟ أصل نص ا",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 2,
+   "stepT": 335.65
+  },
+  {
+   "t": 340.5,
+   "say": "والفار ده يتشكر، بس هو مش أنا ولا انت.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 342.5,
+   "say": "رابعاً: حد تاني عمل نفس الدراسة ووصل لنفس النتيج",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 3,
+   "stepT": 342.5,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 345.38,
+   "say": "وخامساً: مين اللي دفع فلوسها؟ مش علشان أي حد دفع",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 4,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 345.38
+  },
+  {
+   "t": 349.92,
+   "say": "وسادساً، ودي أحلى واحدة: الخطر زاد الضعف؟ ضعف كا",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 5,
+   "stepT": 349.92
+  },
+  {
+   "t": 353.71,
+   "say": "أصل لو حاجة كانت بتحصل لواحد من كل عشر آلاف، وبق",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 6,
+   "stepT": 353.71
+  },
+  {
+   "t": 361.42,
+   "say": "والحقيقة إن تسعة آلاف تسعمية تمانية وتسعين واحد ",
+   "board": {
+    "kind": "headline"
+   },
+   "step": 7,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 361.42
+  },
+  {
+   "t": 368.61,
+   "say": "ولو الخبر عدّى من الست أسئلة دول.. صدّقه. بس صدّ",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 372.18,
+   "say": "قاموس البشر. كلمتين النهارده. عينة: الناس اللي ا",
+   "board": {
+    "kind": "s2dict"
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 372.18,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 378.83,
+   "say": "ومراجعة الأقران: علما بيقروا البحث قبل ما يتنشر ",
+   "board": {
+    "kind": "s2dict"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 378.83
+  },
+  {
+   "t": 384.62,
+   "say": "الخلاصة يا فندم. أولاً: التجربة المحترمة محتاجة ",
+   "board": {
+    "kind": "s2recap"
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 384.62,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 391.44,
+   "say": "ثانياً: قيس حاجات كتير في ناس قليلين، وهتلاقي \"ا",
+   "board": {
+    "kind": "s2recap"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 391.44
+  },
+  {
+   "t": 397.04,
+   "say": "ثالثاً: المراجعة بتمسك كتير بس مش كل حاجة، والحق",
+   "board": {
+    "kind": "s2recap"
+   },
+   "step": 2,
+   "host": "right",
+   "stepT": 397.04
+  },
+  {
+   "t": 402.8,
+   "say": "وبصراحة، الشوكولاتة ماكانتش هي المشكلة. المشكلة ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 408.81,
+   "say": "في التقرير الجاي: ليه العلما بيغيروا كلامهم كل ش",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 415.18,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 418.74,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "3 / 4",
+    "icons": [
+     "book",
+     "eye",
+     "rules"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
