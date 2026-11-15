@@ -1,2 +1,1 @@
-// "c5s1" in portrait (1080 x 1920), for the Shorts. V[k]: a shot drawn for the tall frame, or how to reframe landscape shot k (see makeSet in kit.js).
-export const V = [];
+export const V = [{ stack: true, cx: [700, 1300] }, { z: 0.8 }, { stack: true, cx: [560, 900] }, { z: 0.9, dy: -80 }, { z: 0.9, dy: -60 }, { stack: true, cx: [1100, 1060] }, { stack: true, cx: [720, 1240] }, { stack: true, cx: [700, 1300] }];
