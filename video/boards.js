@@ -38,6 +38,11 @@ import { kettlesSet } from "./sets/kettles.js";
 import { oldsunSet } from "./sets/oldsun.js";
 import { e2dictSet } from "./sets/e2dict.js";
 import { e2recapSet } from "./sets/e2recap.js";
+import { tripSet } from "./sets/trip.js";
+import { birdSet } from "./sets/bird.js";
+import { balanceSet } from "./sets/balance.js";
+import { gridSet } from "./sets/grid.js";
+import { peakSet } from "./sets/peak.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -888,6 +893,12 @@ const BOARDS = {
   oldsun: (s, step, age, total, cfg) => oldsunSet(s, step, age, total, cfg),
   e2dict: (s, step, age, total, cfg) => e2dictSet(s, step, age, total, cfg),
   e2recap: (s, step, age, total, cfg) => e2recapSet(s, step, age, total, cfg),
+  // Electricity part 2 of 4: the journey, the bird, the balance, one grid, the peak.
+  trip: (s, step, age, total, cfg) => tripSet(s, step, age, total, cfg),
+  bird: (s, step, age, total, cfg) => birdSet(s, step, age, total, cfg),
+  balance: (s, step, age, total, cfg) => balanceSet(s, step, age, total, cfg),
+  grid: (s, step, age, total, cfg) => gridSet(s, step, age, total, cfg),
+  peak: (s, step, age, total, cfg) => peakSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
