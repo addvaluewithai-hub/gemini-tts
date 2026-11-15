@@ -1,0 +1,212 @@
+[
+ {
+  "file": "explain-electricity-03-world/youtube/shorts/thumb-tree-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    },
+    "dark": true,
+    "spark": false
+   },
+   "item": "treeLine",
+   "at": {
+    "x": 620,
+    "y": 820
+   },
+   "s": 1.0
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-03-world/youtube/shorts/thumb-enemies-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "squirrelPole",
+   "at": {
+    "x": 520,
+    "y": 820
+   },
+   "s": 1.05
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-03-world/youtube/shorts/thumb-iberia-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    },
+    "dark": false,
+    "spark": false
+   },
+   "item": "iberiaNoon",
+   "at": {
+    "x": 560,
+    "y": 760
+   },
+   "s": 1.0
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-03-world/youtube/shorts/thumb-domino-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    },
+    "dark": true,
+    "spark": false
+   },
+   "item": "pylonDomino",
+   "at": {
+    "x": 500,
+    "y": 760
+   },
+   "s": 0.6
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-03-world/youtube/shorts/thumb-blackstart-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    },
+    "dark": true,
+    "spark": false
+   },
+   "item": "damIsland",
+   "at": {
+    "x": 540,
+    "y": 780
+   },
+   "s": 1.1
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ }
+]
