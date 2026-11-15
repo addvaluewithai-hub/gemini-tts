@@ -17,6 +17,13 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { sintroSet } from "./sets/sintro.js";
+import { sdictSet, srecapSet } from "./sets/sdict.js";
+import { trustSet } from "./sets/trust.js";
+import { halleySet } from "./sets/halley.js";
+import { theorySet } from "./sets/theory.js";
+import { cableSet } from "./sets/cable.js";
+import { dragonSet } from "./sets/dragon.js";
+import { shadowSet } from "./sets/shadow.js";
 import { workshopSet } from "./sets/workshop.js";
 import { announceSet } from "./sets/announce.js";
 import { shortEndV } from "./sets/shortend.v.js";
@@ -858,6 +865,14 @@ const BOARDS = {
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
   sintro: (s, step, age, total, cfg) => sintroSet(s, step, age, total, cfg),
+  srecap: (s, step, age, total, cfg) => srecapSet(s, step, age, total, cfg),
+  sdict: (s, step, age, total, cfg) => sdictSet(s, step, age, total, cfg),
+  trust: (s, step, age, total, cfg) => trustSet(s, step, age, total, cfg),
+  halley: (s, step, age, total, cfg) => halleySet(s, step, age, total, cfg),
+  theory: (s, step, age, total, cfg) => theorySet(s, step, age, total, cfg),
+  cable: (s, step, age, total, cfg) => cableSet(s, step, age, total, cfg),
+  dragon: (s, step, age, total, cfg) => dragonSet(s, step, age, total, cfg),
+  shadow: (s, step, age, total, cfg) => shadowSet(s, step, age, total, cfg),
   workshop: (s, step, age, total, cfg) => workshopSet(s, step, age, total, cfg),
   announce: (s, step, age, total, cfg) => announceSet(s, step, age, total, cfg),
 };
