@@ -318,8 +318,8 @@ window.draw = (st) => {
   if (studio) {
     const c = st.cam;
     // vertical frame: the host is larger and centred when he is alone, smaller and lower when something sits above him
-    const tall = cfg.layout === "short" || !!cfg.vertical, room = st.room || 0, vk = cfg.boardZoom || 0.68, zoom = tall ? c.s * (cfg.vertical ? 1.08 - 0.08 * room : 1.25 - 0.25 * room) : c.s, ax = tall ? 540 : 960, ay = tall ? 1280 + (cfg.vertical ? 330 : 274) * room : 540;
-    if (tall) $("cap").style.top = (cfg.vertical ? 400 + (1080 * vk - 126) * room : 1470 - 565 * room) + "px";
+    const tall = cfg.layout === "short" || !!cfg.vertical, room = st.room || 0, vk = cfg.boardZoom || 0.68, zoom = (tall ? c.s * (cfg.vertical ? 1.08 - 0.08 * room : 1.25 - 0.25 * room) : c.s) * (cfg.vertical && !room ? (cfg.hostZoom || 1) : 1), ax = tall ? 540 : 960, ay = tall ? 1280 + (cfg.vertical ? 330 : 274) * room + (cfg.vertical && !room ? (cfg.hostY || 0) : 0) : 540;
+    if (tall) $("cap").style.top = (cfg.vertical ? (cfg.capY && !room ? cfg.capY : 400 + (1080 * vk - 126) * room) : 1470 - 565 * room) + "px";
     $("world").style.transform = `translate(${ax - c.x * zoom}px,${ay - c.y * zoom}px) scale(${zoom}) rotate(${c.r || 0}deg)`;
     $("world").style.filter = st.blur > 0.5 ? `blur(${st.blur.toFixed(1)}px)` : "";
     person($("host"), st.host, 900); if (st.host) $("host").style.transform = `translateY(${st.host.y}px)`;

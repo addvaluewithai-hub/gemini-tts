@@ -1,0 +1,697 @@
+{
+ "note": "Big-Peek Shorts cut of crypto part 1 (owner's Shorts experiment 2026-11-15): the episode's cues with most boards turned into studio shots, five beats kept as full-frame drawings, a bigger host framing, captions burned in.",
+ "episode": "../../episodes/techforbadguys/explain-crypto-01-world",
+ "transcript": "../../../video/cues/explain-crypto-01-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": true,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.5
+  },
+  "close": {
+   "s": 1.72
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني جديد من كوكب الأرض.",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.25,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 8.11,
+   "say": "هقول لكم هي إيه، طلعت منين، ومين اللي عملها. وإز",
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 15.25,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 17.59,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 18.6,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 21.55,
+   "say": "أغلى وجبة في تاريخ الكوكب. ومن غير مشروب.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 24.11,
+   "say": "بس علشان القيادة تفهم ده، لازم أبدأ من أول حاجة ",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present"
+  },
+  {
+   "t": 29.22,
+   "board": {
+    "kind": "money",
+    "ends": [
+     3.67,
+     3.61,
+     6.19,
+     4.32,
+     10.7,
+     3.95,
+     3.33,
+     2.42,
+     8.87,
+     3.46,
+     4.13,
+     2.71,
+     1.06,
+     3.38
+    ]
+   },
+   "step": 0,
+   "stepT": 29.22,
+   "shot": "show",
+   "kind": "board",
+   "story": {
+    "n": 1,
+    "tag": "MONEY",
+    "icon": "cash"
+   }
+  },
+  {
+   "t": 32.89,
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present"
+  },
+  {
+   "t": 36.5,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 42.69,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 47.01,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 52.84,
+   "say": "والراجل الأمين اكتشف إنه يقدر يسلّف دهبك لحد تان",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 57.71,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 61.66,
+   "board": {
+    "kind": "money",
+    "ends": [
+     3.67,
+     3.61,
+     6.19,
+     4.32,
+     10.7,
+     3.95,
+     3.33,
+     2.42,
+     8.87,
+     3.46,
+     4.13,
+     2.71,
+     1.06,
+     3.38
+    ]
+   },
+   "step": 6,
+   "stepT": 61.66,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 64.99,
+   "shot": "close",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 67.41,
+   "board": {
+    "kind": "money",
+    "ends": [
+     3.67,
+     3.61,
+     6.19,
+     4.32,
+     10.7,
+     3.95,
+     3.33,
+     2.42,
+     8.87,
+     3.46,
+     4.13,
+     2.71,
+     1.06,
+     3.38
+    ]
+   },
+   "step": 8,
+   "stepT": 67.41,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 68.92,
+   "say": "يعني قيمتها جاية من حاجة واحدة بس: إن الكل مصدّق",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 76.28,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 79.74,
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 83.87,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 86.58,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 87.64,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 91.02,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 96,
+   "board": {
+    "kind": "trail",
+    "host": true
+   },
+   "step": 1,
+   "stepT": 96,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 102.14,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 106.92,
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "present"
+  },
+  {
+   "t": 111.95,
+   "shot": "close",
+   "emote": "serious",
+   "gesture": "count"
+  },
+  {
+   "t": 117.28,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 123.3,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 125.38,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 127.56,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 133.38,
+   "board": {
+    "kind": "middle",
+    "ends": [
+     6.02,
+     2.08,
+     2.18,
+     5.82,
+     5.1,
+     5.1,
+     5.04,
+     7.21
+    ]
+   },
+   "step": 4,
+   "stepT": 133.38,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 138.48,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 143.58,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 148.62,
+   "shot": "host",
+   "emote": "deadpan",
+   "gesture": "count"
+  },
+  {
+   "t": 155.83,
+   "say": "وفيه أكتر من مليار إنسان على الكوكب ماعندهمش حسا",
+   "shot": "close",
+   "emote": "annoyed",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 162.46,
+   "say": "فسألت السؤال اللي أي كائن عاقل يسأله: ليه مايعمل",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "present",
+   "story": {
+    "n": 4,
+    "tag": "COPY",
+    "icon": "dup"
+   }
+  },
+  {
+   "t": 168.21,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 170.47,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 173.8,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 178.72,
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "count"
+  },
+  {
+   "t": 183.72,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 190.8,
+   "shot": "host",
+   "emote": "bored",
+   "gesture": "count"
+  },
+  {
+   "t": 198.36,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 201.7,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 211.56,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 217.97,
+   "shot": "host",
+   "emote": "annoyed",
+   "gesture": "count"
+  },
+  {
+   "t": 225.07,
+   "say": "يعني اللي ماسك الدفتر غلط.. واللي دفع هو صاحب ال",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 230.99,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 237.47,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 244.16,
+   "shot": "host",
+   "emote": "proud",
+   "gesture": "count"
+  },
+  {
+   "t": 250.26,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 256.3,
+   "say": "وقبل ما حد يسأل يا فندم: لأ، مش أنا. أنا وصلت بع",
+   "shot": "host",
+   "emote": "smug"
+  },
+  {
+   "t": 259.62,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 263.33,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 268.91,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 273.82,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 278.64,
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "present"
+  },
+  {
+   "t": 289.42,
+   "say": "مفيش مدير. مفيش فرع رئيسي. ومفيش خدمة عملا تسيبك",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 293.89,
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "present"
+  },
+  {
+   "t": 302.14,
+   "say": "الدفتر المشترك ده اسمه: بلوكتشين. وإزاي آلاف الغ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 309.2,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 314.83,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 320.85,
+   "say": "يعني أول سطر في فلوس من غير بنوك.. تريقة على الب",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 325.72,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 333.82,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 340.29,
+   "say": "في الأول محدش اهتم. البيتكوين كان بيتوزّع تقريبا",
+   "shot": "host",
+   "emote": "bored",
+   "gesture": "shrug",
+   "story": {
+    "n": 9,
+    "tag": "PIZZA",
+    "icon": "pizza"
+   }
+  },
+  {
+   "t": 347.46,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 354.29,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 356.42,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 358.85,
+   "shot": "host",
+   "emote": "smug",
+   "gesture": "count"
+  },
+  {
+   "t": 361.62,
+   "say": "والبشر لسه بيحتفلوا باليوم ده كل سنة. اسمه: يوم ",
+   "shot": "host",
+   "emote": "grin",
+   "gesture": "cheer"
+  },
+  {
+   "t": 368.79,
+   "say": "وبعد أقل من سنة، البيتكوين الواحد وصل دولار. دول",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 373.86,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 377.91,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 379.51,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 380.18,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 385.92,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 392.52,
+   "say": "اخترع فلوس جديدة، بقى من أغنى الكائنات على الكوك",
+   "shot": "close",
+   "emote": "skeptical"
+  },
+  {
+   "t": 400.92,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 408.89,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 413.31,
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 422.02,
+   "say": "وتنبيه مهم: ده شرح، مش نصيحة استثمار. العملات دي",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 428.12,
+   "say": "التقرير الجاي: مين بيحرس الدفتر ده؟ يعني إيه تعد",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 432.96,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 436.14,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "2 / 5",
+    "icons": [
+     "shield",
+     "pickaxe",
+     "rules"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ],
+ "hostZoom": 1.6,
+ "hostY": 150,
+ "capY": 250
+}
