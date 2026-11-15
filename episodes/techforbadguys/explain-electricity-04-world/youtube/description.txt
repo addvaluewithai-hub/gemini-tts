@@ -1,0 +1,36 @@
+التقرير الرابع والأخير من العميل Peek لقيادته في ملف الكهربا: الكهربا رايحة على فين؟
+
+بطاريات قد المخازن بقت أرخص أكتر من 90%، والبطارية من جوّه: ليثيوم طالع نازل على سلم. رهان أكبر بطارية في العالم في أستراليا 2017، والشمس اللي بقت من أرخص الكهربا وعملت منحنى البطة، والبلاد اللي سعر الكهربا فيها بينزل تحت الصفر. باكستان اللي ناسها بنوا نص شبكة فوق السطوح، و730 مليون إنسان لسه من غير كهربا خالص، ومخازن الكمبيوترات الجديدة الجعانة.
+
+الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة.
+
+الفصول
+0:00 المقدمة
+0:25 1. التخزين
+1:01 2. البطارية من جوّه
+1:39 3. الرهان
+2:05 4. الشمس
+2:51 5. نص شبكة فوق السطوح
+3:13 6. اللي لسه في الضلمة
+3:34 7. الجوعان الجديد
+3:56 8. قاموس البشر
+4:08 9. خلاصة الملف
+
+مصادر
+أسعار البطاريات 108 دولار للكيلووات ساعة 2025، أقل 93% من 2010 (BloombergNEF): https://about.bnef.com/insights/clean-transport/new-record-lows-for-battery-prices/
+112 جيجاوات تخزين اتركّبت في 2025 (BloombergNEF): https://about.bnef.com/insights/clean-energy/energy-storage-enters-the-100-gigawatt-era-three-things-to-know/
+البطاريات عدّت تخزين المية لأول مرة (pv magazine): https://www.pv-magazine.com/2026/02/05/global-bess-capacity-tops-250-gw-overtaking-pumped-hydro-for-first-time/
+بطارية أستراليا "100 يوم أو ببلاش" 2017 (Energy Storage News): https://www.energy-storage.news/news/south-australia-takes-tesla-up-on-100-days-or-free-energy-storage-promise
+كهربا الشمس أرخص 90% من 2010 (IRENA عبر PV Tech): https://www.pv-tech.org/irena-solar-lcoe-falls-12-year-on-year-90-since-2010
+الشمس والرياح في 2025 (Ember، Global Electricity Review 2026): https://ember-energy.org/latest-insights/global-electricity-review-2026/
+أسعار الكهربا تحت الصفر الضهر في أوروبا 2025 (pv magazine): https://www.pv-magazine.com/2026/02/03/germany-france-netherlands-curtail-3-9-twh-of-renewables-in-2025/
+باكستان استوردت 17 جيجاوات ألواح شمسية في 2024 (Express Tribune، بيانات Ember): https://tribune.com.pk/story/2539779/heres-how-pakistan-quietly-became-worlds-biggest-solar-importer
+أعلى طلب على شبكة باكستان (Renewables First): https://renewablesfirst.org/resources/in-the-news/solar-surge-reshapes-pakistans-power-sector-report
+730 مليون من غير كهربا في 2024 (IEA): https://www.iea.org/commentaries/access-to-electricity-stagnates-leaving-globally-730-million-in-the-dark
+مخازن الكمبيوترات والذكاء الاصطناعي (IEA، Energy and AI): https://www.iea.org/reports/energy-and-ai/executive-summary
+
+ده آخر تقرير في ملف من أربع تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.
+ده شرح عام، مش إرشادات أمان ولا شغل كهربا. أي سلك واقع أو متدلدل: ابعد عنه وبلّغ.
+الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة.
+
+#تقرير_الأرض #الكهربا #شرح
