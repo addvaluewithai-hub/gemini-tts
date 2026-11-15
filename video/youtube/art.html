@@ -78,12 +78,14 @@ window.render = async (s) => {
       <div class="big" style="${text}:${cx - 740}px;top:${cy - 190}px;font-size:150px;text-align:${text}">${esc(s.big)}</div>
       <div class="small" style="${text}:${cx - 736}px;top:${cy + 10}px;font-size:40px;text-align:${text}">${esc(s.small || "")}</div>`;
   } else {
-    const size = (s.peek ? 900 : 940) * u, hx = s.rtl ? -150 * u : W - size + 150 * u, hy = (s.peek ? s.peekY ?? 118 : -20) * u, cx = hx + size / 2;
-    html += ring(cx, 330 * u, 430 * u) + ring(cx, 330 * u, 300 * u) + ring(cx, 330 * u, 170 * u)
+    const size = s.hostSize ?? (s.peek ? 900 : 940) * u, hx = s.hostX ?? (s.rtl ? -150 * u : W - size + 150 * u), hy = s.hostY ?? (s.peek ? s.peekY ?? 118 : -20) * u, cx = hx + size / 2;
+    // bg: a still from the episode's own drawings behind everything (path from the video folder), with a shade on the text side
+    if (s.bg) html = `<img src="/${s.bg}" style="position:absolute;left:${(s.bgX ?? 0) * u}px;top:0;width:${W * (s.bgZ ?? 1)}px;height:${H * (s.bgZ ?? 1)}px;object-fit:cover"/>` + (s.big ? `<div style="position:absolute;inset:0;background:linear-gradient(${s.rtl ? 270 : 90}deg,rgba(42,36,64,.78) 0%,rgba(42,36,64,.5) 40%,rgba(42,36,64,0) 62%)"></div>` : "");
+    html += (s.bg ? "" : ring(cx, 330 * u, 430 * u) + ring(cx, 330 * u, 300 * u) + ring(cx, 330 * u, 170 * u))
       + `<div class="host" style="left:${hx}px;top:${hy}px">${host(s.emote || "skeptical", s.peek ? "pockets" : s.gesture || "shrug", size, s.rtl ? 0.7 : -0.7)}</div>`
       + (s.peek ? `<div class="desk" style="height:${190 * u}px"></div>` : "")
-      + `<div class="tag" style="${text}:${44 * u}px;top:${40 * u}px;font-size:${44 * u}px">${esc(s.tag || "")}</div>
-      <div class="big" style="${text}:${44 * u}px;top:${(s.top ?? 150) * u}px;width:${(s.width ?? 700) * u}px;font-size:${(s.size ?? 132) * u}px;text-align:${text}">${esc(s.big)}</div>`
+      + (s.tag ? `<div class="tag" style="${text}:${44 * u}px;top:${40 * u}px;font-size:${44 * u}px">${esc(s.tag)}</div>` : "") + `
+      <div class="big" style="${text}:${44 * u}px;top:${(s.top ?? 150) * u}px;width:${(s.width ?? 700) * u}px;font-size:${(s.size ?? 132) * u}px;text-align:${text}">${esc(s.big || "")}</div>`
       + (s.small ? `<div class="small" style="${text}:${48 * u}px;bottom:${(s.peek ? 62 : 54) * u}px;font-size:${44 * u}px;text-align:${text}">${esc(s.small)}</div>` : "")
       + (s.icons || []).map((k) => `<svg style="left:${(k.x - 120 * (k.s || 1)) * u}px;top:${(k.y - 120 * (k.s || 1)) * u}px;filter:drop-shadow(0 ${8 * u}px ${10 * u}px rgba(5,6,13,.55))" width="${240 * (k.s || 1) * u}" height="${240 * (k.s || 1) * u}" viewBox="-120 -120 240 240"><g transform="rotate(${k.rot || 0})">${icon(k.name, ...(k.args || []))}</g></svg>`).join("")
       + (s.stamp ? `<div class="stamp" style="${text}:${(s.stampX ?? 60) * u}px;top:${(s.stampY ?? 560) * u}px;font-size:${58 * u}px;transform:rotate(-7deg)">${esc(s.stamp)}</div>` : "");

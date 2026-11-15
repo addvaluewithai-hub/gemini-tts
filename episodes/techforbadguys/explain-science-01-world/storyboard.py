@@ -144,7 +144,7 @@ for sc, want in zip(scenes, order):
     got = plain(" ".join(b["say"] for b in sc["beats"]))
     assert got == plain(want), f"scene {sc['id']} differs from the script:\n{got}\n---\n{plain(want)}"
 
-boards = {k: {"kind": k} for k in ["sintro", "announce", "workshop", "shadow", "dragon", "cable", "theory", "halley", "trust", "sdict", "srecap"]}
+boards = {k: {"kind": k} for k in ["sintro", "announce", "workshop", "shadow", "dragon", "cable", "theory", "halley", "trust", "sdict", "srecap", "sthumb"]}
 # keep ends written by sets/beats.cjs --write
 out = os.path.join(HERE, "storyboard.json")
 old = json.load(open(out, encoding="utf8")) if os.path.exists(out) else {}

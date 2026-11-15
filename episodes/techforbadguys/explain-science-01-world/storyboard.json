@@ -186,6 +186,9 @@
     4.51,
     5.82
    ]
+  },
+  "sthumb": {
+   "kind": "sthumb"
   }
  },
  "scenes": [
@@ -906,5 +909,84 @@
     }
    ]
   }
- ]
+ ],
+ "youtube": {
+  "titles": [
+   "ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/4",
+   "العلم يعني إيه؟ اشرحه لكائن فضائي | ملف العلم 1/4",
+   "إزاي واحد قاس الأرض بعصاية؟ وليه نصدّق العلما | ملف العلم 1/4"
+  ],
+  "description": [
+   "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن حاجة البشر بيصدّقوها أكتر من أي حاجة: العلم. هو العلم ده إيه أصلاً؟ وليه نصدّقه؟ مش ممكن يكونوا بيضحكوا علينا؟",
+   "",
+   "في التقرير الأول: علما أعلنوا سنة 2011 إنهم لقوا حاجة أسرع من الضوء، وبعدها بكام شهر طلع السبب كابل مش داخل كويس. ومعاه: راجل قاس الأرض بعصاية وضل من أكتر من ألفين سنة، والتنين اللي في الجراج، والفرق بين الفرضية والنظرية، ومذنّب Halley اللي رجع في معاده بعد ما صاحبه مات.",
+   "",
+   "الشرح بسيط ومناسب لأي حد، حتى لو أول مرة يسمع عن الموضوع."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "chapterNames": {
+   "FASTER THAN LIGHT?": "أسرع من الضوء؟",
+   "METHOD": "العلم مش كتاب",
+   "STICK & SHADOW": "عصاية وضل",
+   "DRAGON": "التنين اللي في الجراج",
+   "THE CABLE": "الكابل",
+   "THEORY": "نظرية يعني إيه؟",
+   "HALLEY": "التنبؤ: مذنّب Halley",
+   "WHY TRUST IT": "ليه نصدّقه؟",
+   "WORDS": "قاموس البشر",
+   "RECAP": "الخلاصة"
+  },
+  "sources": [
+   "تجربة OPERA والكابل اللي فسّر النتيجة (2012): https://www.livescience.com/18603-error-faster-light-neutrinos.html",
+   "استقالة رئيس فريق OPERA (2012): https://www.theregister.co.uk/2012/03/30/opera_spokesperson_resigns/",
+   "Eratosthenes وقياس محيط الأرض (APS): https://aps.org/publications/apsnews/200606/history.cfm"
+  ],
+  "footer": [
+   "دي حلقة من ملف من أربع تقارير عن العلم. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش نصيحة طبية.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#العلم",
+   "#ملف_العلم"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "ملف العلم",
+   "ليه نصدق العلم",
+   "يعني إيه علم",
+   "المنهج العلمي",
+   "أسرع من الضوء",
+   "نيوترينو",
+   "OPERA",
+   "CERN",
+   "إراتوستينس",
+   "Eratosthenes",
+   "قياس محيط الأرض",
+   "مذنب هالي",
+   "Halley",
+   "الفرق بين الفرضية والنظرية",
+   "نظرية علمية",
+   "التنين في الجراج",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "تبسيط العلوم",
+   "شرح علمي"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العلم (four parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "لو عندك تنين في الجراج، إيه التجربة اللي تثبت إنه مش موجود؟ اكتب فكرتك. القيادة بتقرا التعليقات."
+ }
 }

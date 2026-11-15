@@ -17,6 +17,7 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { sintroSet } from "./sets/sintro.js";
+import { sthumbSet } from "./sets/sthumb.js";
 import { sdictSet, srecapSet } from "./sets/sdict.js";
 import { trustSet } from "./sets/trust.js";
 import { halleySet } from "./sets/halley.js";
@@ -865,6 +866,7 @@ const BOARDS = {
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
   sintro: (s, step, age, total, cfg) => sintroSet(s, step, age, total, cfg),
+  sthumb: (s, step, age, total, cfg) => sthumbSet(s, step, age, total, cfg),
   srecap: (s, step, age, total, cfg) => srecapSet(s, step, age, total, cfg),
   sdict: (s, step, age, total, cfg) => sdictSet(s, step, age, total, cfg),
   trust: (s, step, age, total, cfg) => trustSet(s, step, age, total, cfg),
