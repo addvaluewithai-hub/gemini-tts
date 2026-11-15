@@ -37,6 +37,17 @@ import { c3lostSet } from "./sets/c3lost.js";
 import { c3scamsSet } from "./sets/c3scams.js";
 import { c3dictSet } from "./sets/c3dict.js";
 import { c3recapSet } from "./sets/c3recap.js";
+import { c4introSet } from "./sets/c4intro.js";
+import { c4valueSet } from "./sets/c4value.js";
+import { c4historySet } from "./sets/c4history.js";
+import { c4shakeSet } from "./sets/c4shake.js";
+import { c4leverSet } from "./sets/c4lever.js";
+import { c4whoSet } from "./sets/c4who.js";
+import { c4suitsSet } from "./sets/c4suits.js";
+import { c4debateSet } from "./sets/c4debate.js";
+import { c4scoreSet } from "./sets/c4score.js";
+import { c4dictSet } from "./sets/c4dict.js";
+import { c4recapSet } from "./sets/c4recap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -886,6 +897,18 @@ const BOARDS = {
   c3scams: (s, step, age, total, cfg) => c3scamsSet(s, step, age, total, cfg),
   c3dict: (s, step, age, total, cfg) => c3dictSet(s, step, age, total, cfg),
   c3recap: (s, step, age, total, cfg) => c3recapSet(s, step, age, total, cfg),
+  // Crypto part 4 (price), in the same world (sets/c4<scene>.js, props in sets/c4props.js).
+  c4intro: (s, step, age, total, cfg) => c4introSet(s, step, age, total, cfg),
+  c4value: (s, step, age, total, cfg) => c4valueSet(s, step, age, total, cfg),
+  c4history: (s, step, age, total, cfg) => c4historySet(s, step, age, total, cfg),
+  c4shake: (s, step, age, total, cfg) => c4shakeSet(s, step, age, total, cfg),
+  c4lever: (s, step, age, total, cfg) => c4leverSet(s, step, age, total, cfg),
+  c4who: (s, step, age, total, cfg) => c4whoSet(s, step, age, total, cfg),
+  c4suits: (s, step, age, total, cfg) => c4suitsSet(s, step, age, total, cfg),
+  c4debate: (s, step, age, total, cfg) => c4debateSet(s, step, age, total, cfg),
+  c4score: (s, step, age, total, cfg) => c4scoreSet(s, step, age, total, cfg),
+  c4dict: (s, step, age, total, cfg) => c4dictSet(s, step, age, total, cfg),
+  c4recap: (s, step, age, total, cfg) => c4recapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
