@@ -71,7 +71,7 @@ const turbHouse = (spin, lit) => `${two(rr(-90, -150, 180, 150, 8), "#5b7f8f", "
   ${at(0, -70, `${disc(0, 0, 52, "#2b5a74", "#1c4157")}<g transform="rotate(${spin.toFixed(1)})">${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M0 0L44 -12L44 12Z" fill="${mix("#6f93a8", E.water, lit)}" transform="rotate(${i * 60})"/>`).join("")}</g><circle r="10" fill="${P.ink}"/>`)}`;
 function s1(a, tot) {
   const v = portrait(), G = 950;
-  const c = camAt(a, v ? [[0, 900, 520, 0.58], [9.43, 820, 480, 0.62]] : [[0, 960, 590, 0.92], [5.0, 940, 580, 0.95], [7.6, 880, 560, 1.0], [9.43, 760, 470, 1.22]]);
+  const c = camAt(a, v ? [[0, 720, 560, 0.72], [9.43, 660, 480, 0.8]] : [[0, 960, 590, 0.92], [5.0, 940, 580, 0.95], [7.6, 880, 560, 1.0], [9.43, 760, 470, 1.22]]);
   const up = 3.41, down = 6.33;
   const lvlU = a < down ? lerp(0.25, 0.9, ease(seg(a, up, 5.6))) : lerp(0.9, 0.45, ease(seg(a, down, 9.0)));
   const lvlL = a < down ? lerp(0.85, 0.4, ease(seg(a, up, 5.6))) : lerp(0.4, 0.8, ease(seg(a, down, 9.0)));

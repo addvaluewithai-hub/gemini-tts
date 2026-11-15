@@ -33,7 +33,7 @@ export const ladder = (h, n, wear = 0, hi = 0, w = 260) => { const x = w / 2;
   return rails + rungs; };
 const LADX = -280, LADB = 235, LADH = 470, NR = 5;
 const rungY = (j) => LADB - LADH * (j + 1) / (NR + 1);
-export const li = (r = 34) => `${disc(0, 0, r, P.gold, P.goldD, 0.12)}${text(0, r * 0.36, "Li", r * 1.0, P.ink)}`;
+export const li = (r = 40) => `${disc(0, 0, r, P.gold, P.goldD, 0.12)}${text(0, r * 0.36, "Li", r * 1.0, P.ink)}`;
 
 // a point along a polyline, u 0..1 by length
 const along = (pts, u) => { const L = []; let tot = 0; for (let i = 1; i < pts.length; i++) { const d = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); L.push(d); tot += d; }
@@ -64,11 +64,11 @@ const camCell = (t, keys) => camAt(t, keys);
 function s0(a, tot) {
   const v = portrait(), T = 6.73;
   if (a < T) {
-    const c = camAt(a, v ? [[0, 960, 960, 0.95], [6.3, 960, 960, 0.97], [T, 960, 1420, 1.25]] : [[0, 960, 560, 1.0], [6.3, 960, 560, 1.02], [T, 1460, 600, 1.25]]);
+    const c = camAt(a, v ? [[0, 960, 960, 0.95], [6.3, 960, 960, 0.97], [T, 960, 1420, 1.25]] : [[0, 960, 600, 1.0], [6.3, 960, 640, 1.08], [T, 1460, 760, 1.3]]);
     const away = ease(seg(a, 1.9, 2.3));
-    const big = away < 1 ? at(960, v ? 1200 : 820, bigBattery({}), (v ? 1.5 : 1.3) * pop(a + 1) * (1 - away)) : "";
+    const big = away < 1 ? at(960, v ? 1200 : 900, bigBattery({}), (v ? 1.5 : 1.3) * pop(a + 1) * (1 - away)) : "";
     const q = a > 0.6 && away < 1 ? at(v ? 1260 : 1300, v ? 600 : 300, `${rings(0, -60, 120, P.gold, 0.2, 1.4)}${text(0, 40, "?", 260, P.gold)}`, pop(a - 1.21) * (1 - away)) : "";
-    const POS = v ? [[960, 520], [960, 980], [960, 1420]] : [[460, 600], [960, 640], [1460, 680]];
+    const POS = v ? [[960, 520], [960, 980], [960, 1420]] : [[460, 740], [960, 780], [1460, 800]];
     const items = [[(o) => phone({ on: 1, charge: 0.8 }), 2.25, v ? 0.9 : 0.95], [() => car(E.houseB, E.houseBD) + at(0, -70, `<path d="${rr(-34, -24, 68, 48, 8)}" fill="${P.ink}"/><path d="${rr(-26, -16, 40, 32, 5)}" fill="${P.green}"/>`), 3.19, v ? 1.9 : 1.9], [() => battBox(0.8), 4.51, v ? 1.05 : 1.15]];
     const things = items.map(([f, t0, k], i) => a > t0 - 0.05 ? at(POS[i][0], POS[i][1] + (i === 0 ? 0 : 120), f(), k * pop(a - t0)) : "").join("");
     const same = a > 5.1 ? POS.map(([x, y], i) => at(x, y - (v ? 250 : 300), `${rings(0, 0, 90, P.gold, 0.25 * (1 - seg(a, 5.8, 6.4)), 1.4)}${miniCell()}`, pop(a - 5.14 - i * 0.15))).join("")
@@ -97,14 +97,14 @@ function s1(a, tot) {
   const plugIn = a > 3.85 ? at(0, -470, source(), 0.9 * pop(a - 3.91)) : "";
   const pulses = a > 4.6 && a < 6.8 ? [0, 1, 2].map((k) => { const p = ((tot * 0.8 + k / 3) % 1); const [x, y] = along([[0, -470], [-280, -470], [-280, -280], [-280, -150]], p); return rings(x, y, 22, P.gold, 0.7, 1.5); }).join("") : "";
   const chev = a > 4.7 && a < 6.8 ? [0, 1].map((k) => { const s = ((tot * 1.2 + k / 2) % 1); return at(lerp(470, 120, s), 40, `<path d="M30 -40L-20 0L30 40" fill="none" stroke="${P.gold}" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>`, 1, 0, `opacity="${(Math.sin(Math.PI * s) * 0.8).toFixed(2)}"`); }).join("") : "";
-  const g = sky(c, tot, 71) + layer(at(CX, CY, outside(a > 4.6 && a < 6.8 ? 0.6 : 0) + cell({ hi }) + chev + dots + plugIn + pulses), c);
+  const g = sky(c, tot, 71) + layer(at(CX, CY, `<g opacity="${seg(a, 3.85, 4.15).toFixed(2)}">${outside(a > 4.6 && a < 6.8 ? 0.6 : 0)}</g>` + cell({ hi }) + chev + dots + plugIn + pulses), c);
   return { g };
 }
 
 // ---- 2: in use: Li climb back; their electrons go round the outside and light the phone (host left) ----
 function s2(a, tot) {
   const v = portrait();
-  const c = camAt(a, v ? [[0, CX, CY - 100, 0.9], [7.51, CX, CY - 110, 0.92]] : [[0, CX + 60, CY - 110, 0.98], [7.51, CX + 70, CY - 120, 1.0]]);
+  const c = camAt(a, v ? [[0, CX, CY - 100, 0.9], [7.51, CX, CY - 110, 0.92]] : [[0, CX + 230, CY - 110, 0.98], [7.51, CX + 240, CY - 120, 1.0]]);
   const q = 1 - ease(seg(a, 1.38, 2.9));
   const shine = ease(seg(a, 6.1, 6.4));
   const swap = ease(seg(a, 0.0, 0.5));
@@ -131,9 +131,9 @@ function s2(a, tot) {
 const crate = () => `${two(rr(-200, -200, 400, 400, 24), "#a86a3a", "#84502a", 0, 12)}<path d="M-200 -200L200 200M-200 -60H200M-200 60H200" stroke="#84502a" stroke-width="16"/>${disc(0, 0, 110, P.ink, "#020c16", 0.06)}${rings(0, 0, 110, P.gold, 0.2, 1.4)}<path d="${BOLT}" fill="${P.gold}" transform="scale(1.4)"/>`;
 function s3(a, tot) {
   const v = portrait();
-  const LX = v ? 960 : 1000, LB = v ? 1500 : 960, H = v ? 900 : 760, NN = 7;
-  const PX = v ? 960 : 1650, PY = v ? 1700 : 560;
-  const c = camAt(a, v ? [[0, 960, 760, 1.0], [1.9, 960, 760, 1.0], [2.6, 960, 1000, 0.95], [7.4, 960, 1040, 0.95], [8.2, 960, 1180, 0.82], [11.17, 960, 1180, 0.84]]
+  const LX = v ? 760 : 1000, LB = v ? 1500 : 960, H = v ? 900 : 760, NN = 7;
+  const PX = v ? 1240 : 1620, PY = v ? 1520 : 560;
+  const c = camAt(a, v ? [[0, 960, 760, 1.0], [1.9, 960, 760, 1.0], [2.6, 960, 1000, 0.95], [7.4, 960, 1040, 0.95], [8.2, 980, 1100, 0.9], [11.17, 980, 1100, 0.92]]
     : [[0, 700, 560, 1.1], [1.9, 760, 560, 1.05], [2.6, 1000, 540, 1.0], [7.4, 1000, 540, 1.04], [8.2, 1260, 540, 0.95], [11.17, 1260, 540, 0.97]]);
   const gone = ease(seg(a, 1.9, 2.5));
   const box = gone < 1 ? at(lerp(v ? 960 : 700, v ? -300 : -300, gone), v ? 760 : 600, crate() + cross(150, -150, 64, RED, a - 1.3), 1.2 * pop(a + 1)) : "";
@@ -146,8 +146,8 @@ function s3(a, tot) {
   const dust = wear > 0 && wear < 1 ? [0, 1, 2, 3].map((k) => { const s = (tot * 0.9 + k / 4) % 1; return `<circle cx="${LX - 100 + rnd(k) * 200}" cy="${LB + ry(Math.floor(rnd(k + 5) * NN)) + s * 200}" r="${6 - 4 * s}" fill="#c99a6a" opacity="${(1 - s).toFixed(2)}"/>`; }).join("") : "";
   // a phone whose full bar gets shorter as the years flip
   const yrs = seg(a, 8.5, 10.6), full = lerp(1, 0.55, ease(yrs));
-  const ph = a > 7.7 ? at(PX, PY, phone({ on: 1, charge: full }), (v ? 0.9 : 1.15) * pop(a - 7.78)) : "";
-  const pages = a > 7.9 ? at(PX + (v ? 330 : 0), PY + (v ? -40 : -390), [0, 1, 2].map((k) => k === 0 ? calPage("", "", 0.5, 120) : calFlip("", "", seg(a, 8.6 + (2 - k) * 0.7, 9.0 + (2 - k) * 0.7), 120)).join(""), (v ? 0.7 : 0.6) * pop(a - 8.0)) : "";
+  const ph = a > 7.7 ? at(PX, PY, phone({ on: 1, charge: full }), (v ? 1.3 : 1.15) * pop(a - 7.78)) : "";
+  const pages = a > 7.9 ? at(PX + (v ? 0 : 0), PY + (v ? -400 : -330), [0, 1, 2].map((k) => k === 0 ? calPage("", "", 0.5, 120) : calFlip("", "", seg(a, 8.6 + (2 - k) * 0.7, 9.0 + (2 - k) * 0.7), 120)).join(""), (v ? 1.0 : 1.0) * pop(a - 8.0)) : "";
   const g = sky(c, tot, 79) + layer(`<rect x="-1400" y="${LB}" width="4800" height="1600" fill="${P.ground}"/>` + box + lad + dust + ups + ph + pages, c);
   return { g, in: toScreen(c, v ? 960 : 700, v ? 760 : 600), inC: IN };
 }

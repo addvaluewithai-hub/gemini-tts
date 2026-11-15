@@ -33,7 +33,7 @@ function s0(a, tot) {
   // the warehouse: a padlock drops on «مابتتخزنش»; it rattles and the seam lights on «بتتغير»
   const drop = spring(a - 3.28, 8, 14), rattle = a > 6.25 ? 14 * Math.sin((a - 6.25) * 26) * Math.exp(-(a - 6.25) * 1.6) : 0, seam = ease(seg(a, 6.9, 8.0));
   const dp = at(DX, G, depot({ doors: 1, lockK: a > 3.2 ? 1 : 0, lockDY: -260 * (1 - drop), lockRot: rattle, seam, glow: 0 }), DK);
-  const no = a > 3.35 ? at(DX + 330 * DK, G - 200 * DK, cross(0, 0, 54, P.red, a - 3.4), 1, 0, `opacity="${(1 - seg(a, 6.3, 6.7)).toFixed(2)}"`) : "";
+  const no = a > 3.35 ? at(DX + (v ? -330 : 330) * DK, G - 200 * DK, cross(0, 0, 54, P.red, a - 3.4), 1, 0, `opacity="${(1 - seg(a, 6.3, 6.7)).toFixed(2)}"`) : "";
   // made and used in the same second: a pulse down the cord, the bulb lights, the stopwatch stops at < 1 s
   const on = ease(seg(a, 4.75, 4.95));
   const cordTop = G - 1200, bulbTop = G - 690;
