@@ -1,6 +1,6 @@
 {
  "note": "Shorts for electricity part 1 (world picture). `parts` are [from, to] in seconds of the finished episode (cues/explain-electricity-01-world.json); `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex job techforbadguys-elec01-short-cta-<key>, English -cta-en-w-<key>). {full} in a description is replaced by the full episode's link at upload. Proposals until the owner picks: nothing is uploaded.",
- "full": "",
+ "full": "https://youtu.be/yELDK_5MyGY",
  "boardZoom": 0.85,
  "shorts": [
   {
