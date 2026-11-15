@@ -22,28 +22,28 @@ const day = (c, dark, tot, cx = 1560, cy = 200) => `<rect width="${FW}" height="
 
 // ---- 0: sunny noon, 28 April 2025, 12:33 ----
 function s0(a, tot, s, o = {}) {
-  const v = !!o.vert, c = camAt(a, v ? [[0, 960, 700, 1.2], [5.51, 960, 700, 1.24]] : [[0, 960, 560, 1.0], [5.51, 960, 560, 1.06]]);
+  const v = !!o.vert, c = camAt(a, v ? [[0, 970, 760, 1.04], [5.51, 970, 760, 1.08]] : [[0, 990, 560, 1.3], [5.51, 990, 560, 1.36]]);
   const map = at(0, 0, iberia(ease(seg(a, 0.1, 0.7))), 1);
-  const cal = a > 1.1 ? at(v ? 700 : 330, v ? 1050 : 300, calPage("2025", "28 APR", 0.85, 150), pop(a - 1.21)) : "";
-  const es = a > 1.5 ? at(1050, 560, plate("SPAIN", 50), pop(a - 1.58)) : "", pt = a > 1.9 ? at(560, 900, plate("PORTUGAL", 40), pop(a - 1.95)) : "";
-  const clock = a > 4.0 ? at(v ? 1220 : 1600, v ? 1050 : 820, `${two(rr(-160, -70, 320, 140, 24), "#0f2a3a", "#071c28", 0, 8)}${text(0, 34, "12:33", 92, E.el)}`, pop(a - 4.15)) : "";
-  const g = day(c, 0, tot, v ? 1240 : 1560, v ? 150 : 200) + layer(map + es + pt + cal + clock, c);
+  const cal = a > 1.1 ? at(v ? 720 : 420, v ? 1150 : 330, calPage("2025", "28 APR", 0.7, 150), pop(a - 1.21)) : "";
+  const es = a > 1.5 ? at(1050, 560, plate("SPAIN", 50), pop(a - 1.58)) : "", pt = a > 1.9 ? at(v ? 660 : 560, 900, plate("PORTUGAL", 40), pop(a - 1.95)) : "";
+  const clock = a > 4.0 ? at(v ? 1200 : 1460, v ? 1150 : 820, `${two(rr(-160, -70, 320, 140, 24), "#0f2a3a", "#071c28", 0, 8)}${text(0, 34, "12:33", 92, E.el)}`, pop(a - 4.15)) : "";
+  const g = day(c, 0, tot, v ? 1240 : 1720, v ? 150 : 160) + layer(map + es + pt + cal + clock, c);
   return { g, out: toScreen(c, 960, 560), outC: LAND };
 }
 
 // ---- 1: voltage up; stations unplug; both countries dark; 10,000,000s; 16 h ----
 const PL = [[700, 480], [900, 640], [1100, 420], [1200, 680]];
 function s1(a, tot, s, o = {}) {
-  const v = !!o.vert, c = camAt(a, v ? [[0, 960, 860, 1.12], [12.41, 960, 860, 1.12]] : [[0, 900, 560, 1.0], [12.41, 900, 560, 1.0]]);
+  const v = !!o.vert, c = camAt(a, v ? [[0, 960, 860, 1.12], [12.41, 960, 860, 1.12]] : [[0, 900, 560, 1.26], [12.41, 900, 560, 1.28]]);
   const up = ease(seg(a, 0.34, 1.09)) * 0.35 + ease(seg(a, 3.76, 4.37)) * 0.3 + ease(seg(a, 4.8, 5.48)) * 0.2;
   const off = PL.map((_, i) => ease(seg(a, [1.54, 2.33, 4.8, 5.29][i], [1.54, 2.33, 4.8, 5.29][i] + 0.25)));
   const dark = ease(seg(a, 6.07, 6.9));
   const map = at(0, 0, iberia(1 - dark), 1);
   const plants = PL.map(([x, y], i) => at(x, y, plant(tot + i, 1 - Math.max(off[i], dark)) + (off[i] > 0 ? `<path d="M0 -330V${-330 - 140 * off[i]}" stroke="${E.grid}" stroke-width="10"/>` + cross(0, -470, 40, RED, (a - 1.54) * 4 * off[i]) : `<path d="M0 -330V-420" stroke="${E.el}" stroke-width="10"/>`), 0.32 * pop(a - 0.1 - i * 0.08) * bump(a, [1.54, 2.33, 4.8, 5.29][i], 0.1))).join("");
-  const gx = v ? 960 : 1600, gy = v ? 260 : 300, gg = at(gx, gy, (up > 0.5 ? rings(0, 0, 130, RED, 0.25 * up, 1.4) : "") + gauge(clamp(0.45 + up), { mark: "V" }), 1.15 * pop(a - 0.2) * bump(a, 3.76, 0.06));
-  const cnt = a > 8.6 ? at(v ? 960 : 900, v ? 1340 : 960, tagV("10,000,000s", "", { size: 84 }), pop(a - 8.78)) : "";
-  const h16 = a > 11.3 ? at(v ? 960 : 1600, v ? 1560 : 760, `${stopwatch(clamp((a - 11.44) / 0.8) * 0.66, 70)}` + text(170, 30, "16 h", 84, P.gold), pop(a - 11.44)) : "";
-  const g = day(c, dark, tot, v ? 1240 : 1560, v ? 120 : 160) + layer(map + plants + gg + cnt + h16, c);
+  const gx = v ? 960 : 260, gy = v ? 1110 : 300, gg = at(gx, gy, (up > 0.5 ? rings(0, 0, 130, RED, 0.25 * up, 1.4) : "") + gauge(clamp(0.45 + up), { mark: "V" }), 1.15 * pop(a - 0.2) * bump(a, 3.76, 0.06));
+  const cnt = a > 8.6 ? at(v ? 960 : 1040, v ? 1400 : 990, tagV("10,000,000s", "", { size: 84 }), pop(a - 8.78)) : "";
+  const h16 = a > 11.3 ? at(v ? 880 : 1680, v ? 1580 : 820, `${stopwatch(clamp((a - 11.44) / 0.8) * 0.66, 70)}` + text(170, 30, "16 h", 84, P.gold), pop(a - 11.44)) : "";
+  const g = day(c, dark, tot, v ? 1240 : 1740, v ? 120 : 150) + layer(map + plants + (v ? gg + cnt + h16 : ""), c) + (v ? "" : gg + cnt + h16);
   return { g, in: toScreen(c, 960, 560), inC: LAND, out: toScreen(c, 960, 560), outC: "#04121e" };
 }
 
@@ -63,8 +63,8 @@ function s2(a, tot, s, o = {}) {
   const v = !!o.vert, c = camAt(a, v ? [[0, 960, 900, 1.0], [5.31, 960, 900, 1.04]] : [[0, 860, 540, 1.0], [5.31, 860, 540, 1.04]]);
   const x0 = v ? 960 : 760, y0 = v ? 900 : 560, land = easeOut(seg(a, 0, 0.4)), open = ease(seg(a, 2.7, 3.3));
   const book = at(x0, lerp(y0 - 600, y0, land), `${two(rr(-260, -330, 520, 660, 22), "#ece8ff", "#c6c0e6", 10, 10)}${[0, 1, 2, 3, 4, 5].map((i) => `<path d="M-230 ${300 - i * 14}H230" stroke="#c6c0e6" stroke-width="5"/>`).join("")}
-    <g transform="translate(-260 0) scale(${(1 - 1.9 * open).toFixed(3)} 1) translate(260 0)">${two(rr(-260, -330, 520, 660, 22), "#1f4f6a", "#163a50", 0, 10)}${a > 1.2 ? at(0, -120, text(0, 0, "2026", 110, P.gold), pop(a - 1.35)) : ""}<path d="M-160 40H160M-160 100H120M-160 160H140" stroke="#5f8fa8" stroke-width="16" stroke-linecap="round"/></g>`, 1 * bump(a, 0.4, 0.06));
-  const ic = ICONS(tot), q = open > 0.5 ? QPTS.map(([x, y], i) => at(x0 + x * 1.5, y0 - 20 + y * 1.5, ic[i % ic.length], 1.15 * pop(a - 3.59 - i * 0.06))).join("") : "";
+    <g transform="translate(-260 0) scale(${Math.max(0.02, 1 - 1.9 * open).toFixed(3)} 1) translate(260 0)">${two(rr(-260, -330, 520, 660, 22), "#1f4f6a", "#163a50", 0, 10)}${a > 1.2 ? at(0, -120, text(0, 0, "2026", 110, P.gold), pop(a - 1.35)) : ""}<path d="M-160 40H160M-160 100H120M-160 160H140" stroke="#5f8fa8" stroke-width="16" stroke-linecap="round"/></g>`, 1 * bump(a, 0.4, 0.06));
+  const ic = ICONS(tot), q = open > 0.5 ? QPTS.map(([x, y], i) => at(x0 + x * 1.9, y0 - 10 + y * 1.9, `<circle r="40" fill="#04121e" opacity=".55"/>` + ic[i % ic.length], 1.5 * pop(a - 3.59 - i * 0.06))).join("") : "";
   const g = `<rect width="${FW}" height="${FH}" fill="#041624"/>` + layer(book + q, c);
   return { g, in: toScreen(c, x0, y0), inC: "#04121e" };
 }

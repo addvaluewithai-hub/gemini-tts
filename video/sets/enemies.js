@@ -46,8 +46,8 @@ const QK = 0.2;
 const QUEBEC = "M-560 -300L-380 -420L-120 -440L120 -400L360 -330L520 -200L560 -20L470 160L300 300L60 360L-160 330L-360 240L-520 80L-600 -120Z";
 const QCITY = [[-300, 180], [-120, 230], [60, 250], [220, 180], [-200, 40], [0, 80], [180, 30], [-60, -100], [140, -160], [-260, -180], [320, -60], [-400, -40]];
 function s0(a, tot) {
-  const v = portrait(), SX = v ? 960 : 330, SY = v ? -60 : 540, EX = v ? 960 : 1500, EY = v ? 980 : 520;
-  const c = camAt(a, v ? [[0, 960, 520, 0.92], [5.6, 960, 540, 0.95], [6.6, EX, EY, 5.6], [10.68, EX, EY + 2, 5.8]] : [[0, 960, 540, 1.0], [5.6, 930, 540, 1.04], [6.6, EX, EY, 5.5], [10.68, EX, EY + 2, 5.7]]);
+  const v = portrait(), SX = v ? 960 : 420, SY = v ? -60 : 560, EX = v ? 960 : 1450, EY = v ? 980 : 540, er = v ? 230 : 250;
+  const c = camAt(a, v ? [[0, 960, 520, 0.92], [5.6, 960, 540, 0.95], [6.6, EX, EY, 4.0], [10.68, EX, EY + 2, 4.15]] : [[0, 960, 540, 1.0], [5.6, 930, 540, 1.04], [6.6, EX, EY, 3.9], [10.68, EX, EY + 2, 4.05]]);
   const flare = seg(a, 1.84, 2.3) * (1 - 0.5 * seg(a, 3.0, 4.0)) + seg(a, 4.19, 4.5);
   // the storm: a stream of particles from the Sun to the Earth
   const go = seg(a, 4.19, 5.17);
@@ -57,11 +57,10 @@ function s0(a, tot) {
   // Quebec inside the Earth
   const dark = (x) => clamp((a - 7.17 - (x + 560) / 1120 * 0.7) / 0.18);
   const map = `${two(QUEBEC, "#1f8a7a", "#16705f", 0, 10)}${QCITY.map(([x, y]) => { const d = dark(x); return `${d < 1 ? rings(x, y, 32, P.win, 0.35 * (1 - d), 1.5) : ""}<circle cx="${x}" cy="${y}" r="14" fill="${mix(P.win, "#0f2a36", d)}"/>`; }).join("")}
-    ${a > 6.5 ? at(0, -540, plate("QUEBEC", 70), pop(a - 6.57)) : ""}
-    ${a > 8.0 ? at(470, -330, `${stopwatch(seg(a, 8.04, 8.7) * 1.5, 52)}${at(150, 0, tagBox("90 s", 64))}`, pop(a - 8.04)) : ""}`;
-  const inner = at(0, 0, map, QK);
-  const er = 170;
-  const world = (v ? "" : "") + at(SX, SY, sun(v ? 150 : 160, tot, flare)) + storm + at(EX, EY, earth(er, inner, { ring: hit * 0.9 })) + (hit > 0 ? rings(EX, EY, er * (1.2 + 0.6 * (1 - hit)), E.el, 0.25 * hit, 1.3) : "")
+    ${a > 6.5 ? at(0, -330, plate("QUEBEC", 64), pop(a - 6.57)) : ""}
+    ${a > 8.0 ? at(300, 330, `${stopwatch(seg(a, 8.04, 8.7) * 1.5, 52)}${at(150, 0, tagBox("90 s", 64))}`, pop(a - 8.04)) : ""}`;
+  const inner = at(0, 0, map, QK * er / 170);
+  const world = (v ? "" : "") + at(SX, SY, sun(v ? 190 : 220, tot, flare)) + storm + at(EX, EY, earth(er, inner, { ring: hit * 0.9 })) + (hit > 0 ? rings(EX, EY, er * (1.2 + 0.6 * (1 - hit)), E.el, 0.25 * hit, 1.3) : "")
     + (a > 2.6 ? at(v ? 960 : 960, v ? 330 : 190, calPage("1989", "", 0.62, 150), pop(a - 2.71) * (1 - seg(a, 5.6, 6.0))) : "");
   const g = `<rect width="${FW}" height="${FH}" fill="${SPACE}"/>` + layer(stars(17, 140, -1200, 3200, 1600, tot), c, 0.1) + layer(world, c);
   return { g, out: toScreen(c, EX, EY), outC: "#0b2a3c", outZ: 12 };
@@ -70,7 +69,7 @@ function s0(a, tot) {
 // ---- 1: 1859, the telegraph office sparks; today's grid, "?" ----
 function s1(a, tot) {
   const v = portrait();
-  const c = camAt(a, [[0, 960, 540, v ? 0.95 : 1.0], [6.4, 960, 540, v ? 0.98 : 1.04], [7.4, 3380, 540, v ? 0.9 : 1.0], [9.46, 3380, 530, v ? 0.92 : 1.03]]);
+  const c = camAt(a, v ? [[0, 1100, 520, 0.95], [6.4, 1100, 520, 0.98], [7.4, 3380, 540, 0.9], [9.46, 3380, 530, 0.92]] : [[0, 1150, 470, 1.35], [3.2, 1250, 520, 1.5], [6.4, 1250, 520, 1.55], [7.4, 3380, 540, 1.0], [9.46, 3380, 530, 1.03]]);
   const storm = seg(a, 1.81, 2.6);
   // the office: wall, window with an aurora and one telegraph line outside, a desk with a key, a sounder and a paper tape
   const aur = storm > 0 ? [0, 1, 2].map((i) => `<path d="M${560 + i * 40} ${150 + i * 30}Q${800} ${60 + i * 50 + 20 * Math.sin(tot + i)} ${1060 - i * 30} ${170 + i * 20}" fill="none" stroke="${i % 2 ? "#3ddc97" : "#5fd6ff"}" stroke-width="${26 - i * 6}" stroke-linecap="round" opacity="${(0.55 * storm).toFixed(2)}"/>`).join("") : "";
@@ -83,9 +82,9 @@ function s1(a, tot) {
   const key = at(1300, 700, `${two(rr(-160, -30, 320, 30, 8), "#5a3a20", "#3e2814", 0, 6)}<g transform="rotate(${(-6 * keyUp).toFixed(2)} -120 -40)">${two(rr(-130, -60, 230, 22, 10), "#d9a441", "#b07f2a", 0, 4)}</g>${disc(110, -50, 24, P.ink, "#000")}${disc(-110, -40, 14, "#d9a441", "#b07f2a")}`);
   const sounder = at(1560, 700, `${two(rr(-90, -120, 180, 120, 10), "#5a3a20", "#3e2814", 0, 6)}${disc(-40, -90, 26, "#d9a441", "#b07f2a")}${disc(40, -90, 26, "#d9a441", "#b07f2a")}`);
   const tape = `<path d="M600 690Q700 660 800 690T1000 690" fill="none" stroke="${P.cream}" stroke-width="22"/>${[620, 680, 720, 800, 860, 940].map((x, i) => `<rect x="${x}" y="682" width="${i % 2 ? 26 : 10}" height="8" fill="${P.ink}"/>`).join("")}`;
-  const sparks = a > 3.3 && a < 6.2 ? [[1300, 640], [1400, 420], [1460, 560], [1180, 260], [1560, 600]].map(([x, y], i) => { const on = Math.sin(a * 9 + i * 2.1) > 0.2 ? 1 : 0; return on ? spark([x - 30, y - 40], [x + 30, y + 30], 1, i * 5 + Math.floor(a * 8)) : ""; }).join("") : "";
+  const sparks = a > 3.3 && a < 6.2 ? [[1300, 640], [1400, 420], [1460, 560], [1180, 260], [1560, 600]].map(([x, y], i) => { const on = Math.sin(a * 9 + i * 2.1) > 0.2 ? 1 : 0; return on ? spark([x - 60, y - 70], [x + 60, y + 50], 1, i * 5 + Math.floor(a * 8)) + rings(x, y, 70, E.spark, 0.3, 1.5) : ""; }).join("") : "";
   const office = `<rect x="-400" y="-400" width="2420" height="1500" fill="${wallC}"/>` + win + wires + desk + tape + key + sounder + sparks
-    + (a > 0.2 ? at(v ? 960 : 250, v ? -120 : 300, calPage("1859", "", 0.75, 150), pop(a - 0.34)) : "");
+    + (a > 0.2 ? at(v ? 960 : 660, v ? -120 : 230, calPage("1859", "", 0.7, 150), pop(a - 0.34)) : "");
   // today: a dense grid under the same aurora sky, from x 2300
   const G = 820;
   const today = `<rect x="2020" y="-600" width="2600" height="1500" fill="url(#bnight)"/>${[0, 1, 2].map((i) => `<path d="M${2500 + i * 60} ${120 + i * 30}Q${3300} ${20 + i * 50 + 20 * Math.sin(tot + i)} ${4200 - i * 40} ${140 + i * 20}" fill="none" stroke="${i % 2 ? "#3ddc97" : "#5fd6ff"}" stroke-width="${30 - i * 6}" stroke-linecap="round" opacity=".5"/>`).join("")}
@@ -106,7 +105,7 @@ function s2(a, tot) {
   // the network on the screen: substations, the towns they feed (lit windows), lines between them
   const net = `${[[0, 1], [1, 2], [3, 4], [4, 5], [0, 3], [2, 5]].map(([i, j]) => `<path d="M${SUBS[i][0]} ${SUBS[i][1]}L${SUBS[j][0]} ${SUBS[j][1]}" stroke="${mix(E.el, "#2a3f4a", (open(i) + open(j)) / 2)}" stroke-width="6"/>`).join("")}
     ${SUBS.map(([x, y], i) => `${at(x, y, sub(open(i), 1 - open(i)))}${[0, 1, 2, 3].map((k) => `<rect x="${x - 60 + k * 32}" y="${y + 64}" width="22" height="22" rx="4" fill="${mix(P.win, "#123447", open(i))}"/>`).join("")}`).join("")}`;
-  const mon = at(MX, MY, `<path d="M-40 360h80l-10 -60h-60Z" fill="${P.steelD}"/><path d="${rr(-200, 356, 400, 24, 10)}" fill="${P.steelD}"/>${screen(1100, 620, tot, 9, 1, net)}`, MK);
+  const mon = at(MX, MY, `<path d="M-40 360h80l-10 -60h-60Z" fill="${P.steelD}"/><path d="${rr(-200, 356, 400, 24, 10)}" fill="${P.steelD}"/>${screen(1100, 620, tot, 9, 0, `<path d="${rr(-550, -310, 1100, 620, 8)}" fill="#0b3346"/>` + net)}`, MK);
   // the cursor: comes in from the right on «دخلوا», visits each switch and clicks
   let cx, cy; const path = [[MX + 700, MY + 260], ...SUBS.map(([x, y]) => [MX + (x + 36) * MK, MY + (y + 14) * MK])], tk = [3.3, ...CLICK];
   { let k = 0; while (k < tk.length - 1 && a > tk[k + 1]) k++; const p = k < tk.length - 1 ? ease(seg(a, tk[k] + 0.05, tk[k + 1])) : 1; const A = path[k], B = path[Math.min(k + 1, path.length - 1)]; cx = lerp(A[0], B[0], p); cy = lerp(A[1], B[1], p); }
@@ -123,7 +122,7 @@ function s2(a, tot) {
 const PX = 960, G3 = 900;
 function s3(a, tot) {
   const v = portrait();
-  const c = camAt(a, v ? [[0, PX, 640, 1.15], [4.5, PX, 640, 1.18], [6.0, PX + 200, 560, 0.55], [6.63, PX + 200, 560, 0.53]] : [[0, PX, 520, 1.0], [4.5, PX, 520, 1.05], [5.9, PX + 600, 470, 0.45], [6.63, PX + 600, 470, 0.43]]);
+  const c = camAt(a, v ? [[0, PX + 100, 700, 1.3], [2.6, PX + 40, 560, 1.4], [4.5, PX + 60, 520, 1.35], [6.0, PX + 400, 560, 0.62], [6.63, PX + 400, 560, 0.6]] : [[0, PX + 150, 640, 1.6], [2.6, PX + 80, 480, 1.7], [4.5, PX + 200, 480, 1.5], [5.9, PX + 900, 520, 0.6], [6.63, PX + 900, 520, 0.58]]);
   const dark = seg(a, 3.95, 4.15);
   const TY = G3 - 560;   // the transformer can
   const can = (x, f) => at(x, TY, `${two(rr(-46, -70, 92, 120, 20), "#7f93b8", "#5f7299", 8, 0)}${[-26, 0, 26].map((dx) => `<path d="M${dx} -70v-30" stroke="${P.cream}" stroke-width="8"/><circle cx="${dx}" cy="-104" r="9" fill="${P.cream}"/>`).join("")}${f > 0 ? rings(0, -100, 140 * f, "#ffffff", 0.6 * f, 1.6) + spark([-26, -104], [26, -104], f, 7) : ""}`);
@@ -137,8 +136,8 @@ function s3(a, tot) {
   if (a < 2.86) { sx = lerp(PX + 340, PX + 30, ease(seg(a, 1.2, 2.2))); }
   else if (a < 4.0) { sx = PX + 30; sy = lerp(G3, TY - 60, climb); rot = a < 3.69 ? -90 : 0; }
   else { sx = lerp(PX + 30, PX + 700, leap); sy = lerp(TY - 60, G3 - 60, leap) - 260 * Math.sin(Math.PI * leap); rot = 0; puff = 1; }
-  const sq = a > 1.2 && leap < 1 ? at(sx, sy, squirrel(tot, { puff }), 1.1, rot) : "";
-  const kg = a > 1.4 && a < 4.0 ? at(PX + 360, G3 - 230, tagBox("0.5 kg", 58), pop(a - 1.45)) : "";
+  const sq = a > 1.2 && leap < 1 ? at(sx, sy, squirrel(tot, { puff }), 1.5, rot) : "";
+  const kg = a > 1.4 && a < 4.0 ? at(sx + 20, sy - 250, tagBox("0.5 kg", 50), pop(a - 1.45)) : "";
   const flash = a > 3.69 ? Math.exp(-(a - 3.69) * 5) : 0;
   // more streets, revealed by the pull back, each transformer flashing in turn
   const more = [-2600, 2900, 5000].map((dx, i) => { const t0 = 4.9 + i * 0.4, f = a > t0 ? Math.exp(-(a - t0) * 5) : 0; return streetAt(PX + dx, f, seg(a, t0 + 0.1, t0 + 0.25), 40 + i); }).join("");

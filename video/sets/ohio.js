@@ -37,7 +37,7 @@ function o0(a, tot, s) {
 const bell = (frozenP, t) => { const grey = frozenP; return `${rings(0, -10, 80, mix(P.gold, "#7f93b8", grey), 0.3 * (1 - grey), 1.4)}<path d="M-62 44C-62 -46 -40 -82 0 -82C40 -82 62 -46 62 44L80 62H-80Z" fill="${mix(P.gold, "#56657c", grey)}"/><circle cy="-92" r="14" fill="${mix(P.gold, "#56657c", grey)}"/><circle cy="80" r="20" fill="${mix(P.goldD, "#3a4a62", grey)}"/>`
   + (grey > 0.5 ? at(70, 50, `${disc(0, 0, 44, P.cream, P.creamD)}<path d="M-18 -26H18L0 0L18 26H-18L0 0Z" fill="none" stroke="${P.ink}" stroke-width="6"/>`, pop(grey - 0.5)) : ""); };
 function o1(a, tot, s) {
-  const T = tall(), c = camAt(a, [[0, 900, 520, T ? 1.0 : 1.05], [4.0, 860, 520, T ? 1.0 : 1.12], [8.39, 900, 520, T ? 1.0 : 1.08]]);
+  const T = tall(), c = camAt(a, [[0, T ? 960 : 860, T ? 640 : 520, T ? 1.5 : 1.38], [4.0, T ? 960 : 900, T ? 640 : 480, T ? 1.6 : 1.5], [8.39, T ? 960 : 820, T ? 640 : 500, T ? 1.55 : 1.42]]);
   const fr = seg(a, 4.05, 4.6), ok = seg(a, 7.54, 7.9);
   const SX = T ? [700, 960, 1220] : [420, 760, 1100], SY = T ? [480, 480, 480] : [430, 430, 430];
   let scr = ""; for (let i = 0; i < 3; i++) scr += at(SX[i], SY[i], screen(T ? 220 : 280, T ? 160 : 190, a, i * 5, 1, at(0, 0, check(0, 0, T ? 44 : 56, GREEN, a - 0.4 - i * 0.12 - (i === 1 ? ok * 0 : 0)), 1 + 0.25 * ok)));
@@ -61,7 +61,7 @@ function o2(a, tot, s) {
 }
 // ---- 3: the dark city: a train stopped in a tunnel, people walking over the bridges, billions lost ----
 function o3(a, tot, s) {
-  const T = tall(), c = camAt(a, [[0, 960, T ? 560 : 640, 1.0], [1.4, 960, T ? 560 : 520, 1.0], [5.43, 960, T ? 520 : 480, 0.96]]);
+  const T = tall(), c = camAt(a, [[0, 900, T ? 1100 : 860, T ? 1.0 : 1.3], [1.4, 960, T ? 900 : 700, T ? 1.0 : 1.2], [5.43, 960, T ? 820 : 640, T ? 0.98 : 1.12]]);
   const GY = T ? 1050 : 760, TY = T ? 1380 : 940;
   const city = skyline(81, -400, 2400, GY - 160, 120, 380, "#123a57", "#16405a");
   // the river and a bridge with tiny moving lights (people), from 1.55
@@ -71,7 +71,7 @@ function o3(a, tot, s) {
   const tunnel = `<rect x="-400" y="${TY - 120}" width="2800" height="240" fill="#05141f"/><path d="M-400 ${TY - 120}H2400M-400 ${TY + 120}H2400" stroke="#123a57" stroke-width="10"/>`;
   const train = at(T ? 960 : 900, TY + 60, `${two(rr(-620, -150, 1240, 150, 40), "#7f93b8", "#5f7299", 0, 8)}${Array.from({ length: 10 }, (_, i) => `<path d="${rr(-580 + i * 120, -126, 80, 60, 10)}" fill="${P.win}"/>`).join("")}<path d="M-620 -40H620" stroke="${RED}" stroke-width="8"/>`, (T ? 0.8 : 1) * pop(a - 0.05));
   const stop = a > 0.34 ? at(T ? 960 : 1500, TY - 170, `${disc(0, 0, 50, RED, "#c41e2a")}<path d="${rr(-26, -8, 52, 16, 6)}" fill="#fff"/>`, pop(a - 0.34)) : "";
-  const money = a > 3.45 ? at(T ? 960 : 960, T ? 300 : 220, tagV("$ billions", "", { size: 110, fill: "#ff8a8a" }), pop(a - 3.45)) : "";
+  const money = a > 3.45 ? at(T ? 960 : 960, T ? 300 : 440, tagV("$ billions", "", { size: 110, fill: "#ff8a8a" }), pop(a - 3.45)) : "";
   const g = sky(c, tot, 35) + layer(city + bridge + `<rect x="-1200" y="${GY}" width="4400" height="2400" fill="${P.ground}"/>` + tunnel + train + stop + money, c);
   return { g, out: toScreen(c, 960, TY), outC: "#05141f", outZ: 12 };
 }
