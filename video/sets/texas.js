@@ -23,30 +23,30 @@ const ground = (G) => `<rect x="-1200" y="${G}" width="4400" height="1400" fill=
 
 // ---- 0: snow, Feb 2021, Texas; the station and the gas freeze; every heater on ----
 function s0(a, tot, s, o = {}) {
-  const v = !!o.vert, c = camAt(a, v ? [[0, 960, 900, 1.0], [10.4, 960, 880, 1.03]] : [[0, 960, 560, 1.0], [10.4, 960, 550, 1.04]]), G = v ? 1300 : 860;
-  const HX = v ? [700, 1220, 700, 1220] : [980, 1260, 1540, 1820], HY = v ? [G, G, G - 380, G - 380] : [G, G, G, G];
+  const v = !!o.vert, c = camAt(a, v ? [[0, 960, 900, 1.0], [10.4, 960, 880, 1.03]] : [[0, 1080, 620, 1.22], [10.4, 1080, 610, 1.27]]), G = v ? 1300 : 860;
+  const HX = v ? [700, 1220, 700, 1220] : [1060, 1330, 1600, 1870], HY = v ? [G, G, G - 380, G - 380] : [G, G, G, G];
   const heat = ease(seg(a, 9.49, 9.9)), frost = ease(seg(a, 5.67, 6.5)), gasF = ease(seg(a, 6.92, 7.5));
-  const st = at(v ? 760 : 420, v ? G - 820 : G, station(tot, { lit: 1 - 0.5 * frost, smoke: frost < 0.4 }) + (frost > 0 ? `<path d="M-320 -296L0 -420L320 -296Z" fill="${ICE}" opacity="${(0.9 * frost).toFixed(2)}"/><path d="${rr(150, -575, 110, 30, 6)}" fill="${ICE}" opacity="${frost.toFixed(2)}"/>${[-210, -70, 70, 210].map((x) => `<path d="M${x - 44} -190A44 44 0 0 1 ${x + 44} -190" fill="none" stroke="${ICE}" stroke-width="10" opacity="${frost.toFixed(2)}"/>`).join("")}` : ""), v ? 0.55 : 0.62);
-  const px = v ? 300 : 760, py = v ? G - 360 : G - 40;
+  const st = at(v ? 760 : 520, v ? G - 820 : G, station(tot, { lit: 1 - 0.5 * frost, smoke: frost < 0.4 }) + (frost > 0 ? `<path d="M-320 -296L0 -420L320 -296Z" fill="${ICE}" opacity="${(0.9 * frost).toFixed(2)}"/><path d="${rr(150, -575, 110, 30, 6)}" fill="${ICE}" opacity="${frost.toFixed(2)}"/>${[-210, -70, 70, 210].map((x) => `<path d="M${x - 44} -190A44 44 0 0 1 ${x + 44} -190" fill="none" stroke="${ICE}" stroke-width="10" opacity="${frost.toFixed(2)}"/>`).join("")}` : ""), v ? 0.55 : 0.72);
+  const px = v ? 300 : 840, py = v ? G - 360 : G - 40;
   const pipe = at(px, py, `<path d="M-200 0H200" stroke="${mix("#c8a24a", ICE, gasF)}" stroke-width="40" stroke-linecap="round"/>${gasF > 0 ? `<path d="M-200 -16H200" stroke="${SNOW}" stroke-width="12" stroke-linecap="round" opacity="${gasF.toFixed(2)}"/>` : ""}
     <path d="${rr(-30, -90, 60, 70, 10)}" fill="${P.steelD}"/>${gasF < 1 ? `<path d="M0 -150Q-26 -116 0 -96Q26 -116 0 -150Z" fill="#5fb6ff" opacity="${(1 - gasF).toFixed(2)}"/>` : ""}`, pop(a - 6.6));
-  const houses = HX.map((x, i) => at(x, HY[i], snowHouse(i, heat, 0), 0.72)).join("");
-  const cal = a > 1.4 ? at(v ? 960 : 960, v ? 260 : 210, calPage("2021", "FEB", 0.8, 150), pop(a - 1.5)) : "";
-  const pl = a > 4.6 ? at(v ? 960 : 1540, v ? 470 : 230, plate("TEXAS", 54), pop(a - 4.78)) : "";
+  const houses = HX.map((x, i) => at(x, HY[i], snowHouse(i, heat, 0), v ? 0.72 : 0.82)).join("");
+  const cal = a > 1.4 ? at(v ? 960 : 640, v ? 260 : 320, calPage("2021", "FEB", 0.75, 150), pop(a - 1.5)) : "";
+  const pl = a > 4.6 ? at(v ? 960 : 1500, v ? 470 : 330, plate("TEXAS", 54), pop(a - 4.78)) : "";
   const g = sky(c, tot, 101) + layer(ground(G) + st + pipe + houses + cal + pl, c) + snow(tot, 90, FW, FH);
   return { g, out: toScreen(c, v ? 960 : 1260, v ? G - 120 : G - 120), outC: "#0a2433" };
 }
 
 // ---- 1: the balance tips; blocks switched dark on purpose; 4,000,000+ homes ----
-const ROWS = (v) => (v ? [[300, 1050], [300, 1340], [300, 1630]] : [[180, 640], [180, 900]]);
+const ROWS = (v) => (v ? [[300, 1050], [300, 1340], [300, 1630]] : [[210, 650], [210, 960]]);
 function s1(a, tot, s, o = {}) {
   const v = !!o.vert, c = camAt(a, v ? [[0, 960, 960, 1.0], [7.33, 960, 960, 1.0]] : [[0, 960, 540, 1.0], [7.33, 960, 540, 1.02]]);
   const tip = ease(seg(a, 0.38, 0.9)), bx = v ? 960 : 960, by = v ? 330 : 190;
   const beam = at(bx, by, `<path d="M-30 120L0 0L30 120Z" fill="#7f93b8"/><g transform="rotate(${(-18 * tip).toFixed(1)})"><path d="M-260 0H260" stroke="${P.gold}" stroke-width="14" stroke-linecap="round"/><path d="${rr(-310, 20, 100, 40, 8)}" fill="${HEAT}"/><path d="${rr(210, 20, 100, 40, 8)}" fill="#7f93b8"/></g>${disc(0, 0, 16, P.gold, P.goldD)}`, 0.9 * pop(a - 0.1));
-  const N = v ? 6 : 7, rows = ROWS(v), cut = (r, i) => clamp((a - 3.56 - (r * N + i) * 0.11) / 0.12);
-  const town = rows.map(([x0, y], r) => Array.from({ length: N }, (_, i) => { const k = cut(r, i); return at(x0 + i * (v ? 120 : 260) + (v ? 0 : (r % 2) * 120), y, snowHouse(i + r, 1 - 0.0 * k, k), v ? 0.42 : 0.58); }).join("")).join("");
-  const cnt = a > 5.4 ? at(v ? 960 : 960, v ? 650 : 400, tagV("4,000,000+", "", { size: v ? 96 : 104 }) + at(v ? 360 : 380, -10, house(E.houseA, E.houseAD, { roof: E.roof, lit: [0, 0, 0] }), 0.28), pop(a - 5.52)) : "";
-  const g = sky(c, tot, 103) + layer(`<rect x="-1200" y="${v ? 1700 : 960}" width="4400" height="900" fill="#2a4a5c"/>` + beam + town + cnt, c) + snow(tot, 70, FW, FH, 9);
+  const N = v ? 6 : 6, rows = ROWS(v), cut = (r, i) => clamp((a - 3.56 - (r * N + i) * 0.11) / 0.12);
+  const town = rows.map(([x0, y], r) => Array.from({ length: N }, (_, i) => { const k = cut(r, i); return at(x0 + i * (v ? 120 : 300) + (v ? 0 : (r % 2) * 150), y, snowHouse(i + r, 1, k), v ? 0.42 : 0.78); }).join("")).join("");
+  const cnt = a > 5.4 ? at(v ? 960 : 960, v ? 650 : 360, tagV("4,000,000+", "", { size: v ? 96 : 104 }) + at(v ? 360 : 380, -10, house(E.houseA, E.houseAD, { roof: E.roof, lit: [0, 0, 0] }), 0.28), pop(a - 5.52)) : "";
+  const g = sky(c, tot, 103) + layer(`<rect x="-1200" y="${v ? 1700 : 975}" width="4400" height="900" fill="#2a4a5c"/>` + beam + town + cnt, c) + snow(tot, 70, FW, FH, 9);
   return { g, in: toScreen(c, 960, v ? 1100 : 700), inC: "#0a2433", out: toScreen(c, 960, v ? 1100 : 700), outC: "#04121e" };
 }
 
