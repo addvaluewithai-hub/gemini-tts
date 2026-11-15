@@ -1,0 +1,787 @@
+1
+00:00:00,520 --> 00:00:02,795
+Sir, field report number three on the electricity
+
+2
+00:00:02,835 --> 00:00:03,216
+file.
+
+3
+00:00:03,256 --> 00:00:03,802
+Today:
+
+4
+00:00:03,842 --> 00:00:05,200
+why the lights go out.
+
+5
+00:00:05,261 --> 00:00:06,688
+Last time we learned the grid is a
+
+6
+00:00:06,728 --> 00:00:07,443
+balance:
+
+7
+00:00:07,483 --> 00:00:10,556
+what's made must equal what's used, every second.
+
+8
+00:00:10,596 --> 00:00:11,070
+Today:
+
+9
+00:00:11,110 --> 00:00:12,862
+what happens when the balance breaks.
+
+10
+00:00:12,902 --> 00:00:13,943
+Strangest thing I found:
+
+11
+00:00:13,983 --> 00:00:16,281
+in two thousand three, fifty million people in
+
+12
+00:00:16,321 --> 00:00:18,227
+America and Canada sat in the dark.
+
+13
+00:00:18,267 --> 00:00:18,785
+The cause:
+
+14
+00:00:18,825 --> 00:00:19,343
+a tree..
+
+15
+00:00:19,383 --> 00:00:20,961
+and a frozen computer program.
+
+16
+00:00:21,001 --> 00:00:22,689
+I'll tell you how a small fault grows,
+
+17
+00:00:22,729 --> 00:00:25,093
+their biggest blackouts, the grid's enemies, and how
+
+18
+00:00:25,133 --> 00:00:27,306
+a whole country climbs out of the dark.
+
+19
+00:00:27,346 --> 00:00:28,257
+This is a grid:
+
+20
+00:00:28,297 --> 00:00:30,152
+stations, cities, and lines between them.
+
+21
+00:00:30,192 --> 00:00:32,075
+The power is shared across all the lines.
+
+22
+00:00:32,115 --> 00:00:33,104
+One line trips.
+
+23
+00:00:33,144 --> 00:00:33,943
+For any reason.
+
+24
+00:00:33,983 --> 00:00:35,850
+The load it carried doesn't vanish.
+
+25
+00:00:35,890 --> 00:00:37,470
+It moves onto the lines next to it.
+
+26
+00:00:37,510 --> 00:00:38,909
+They carry more than they can..
+
+27
+00:00:38,949 --> 00:00:39,872
+and trip too.
+
+28
+00:00:39,912 --> 00:00:40,673
+And the next.
+
+29
+00:00:40,713 --> 00:00:41,422
+And the next.
+
+30
+00:00:41,462 --> 00:00:44,231
+In minutes, sometimes seconds, a whole region goes
+
+31
+00:00:44,271 --> 00:00:44,769
+dark.
+
+32
+00:00:44,809 --> 00:00:46,762
+Like workers carrying a heavy pole.
+
+33
+00:00:46,802 --> 00:00:47,587
+One lets go..
+
+34
+00:00:47,627 --> 00:00:48,776
+the weight falls on the rest.
+
+35
+00:00:48,816 --> 00:00:50,154
+The next one can't take it, and lets
+
+36
+00:00:50,194 --> 00:00:50,759
+go too.
+
+37
+00:00:50,799 --> 00:00:51,427
+And so on.
+
+38
+00:00:51,467 --> 00:00:52,153
+The strange part:
+
+39
+00:00:52,193 --> 00:00:54,432
+what trips these lines isn't the fault itself.
+
+40
+00:00:54,472 --> 00:00:55,383
+It's the protection.
+
+41
+00:00:55,423 --> 00:00:57,141
+Every line and station has a device that
+
+42
+00:00:57,181 --> 00:00:58,587
+cuts it off before it burns.
+
+43
+00:00:58,627 --> 00:01:00,264
+Each piece saves itself..
+
+44
+00:01:00,304 --> 00:01:01,606
+and the whole thing falls.
+
+45
+00:01:01,646 --> 00:01:02,671
+Very human.
+
+46
+00:01:03,018 --> 00:01:03,861
+Back to the tree.
+
+47
+00:01:03,901 --> 00:01:06,092
+August two thousand three, a hot day in
+
+48
+00:01:06,132 --> 00:01:06,873
+Ohio.
+
+49
+00:01:06,913 --> 00:01:08,807
+Hot wires stretch and sag.
+
+50
+00:01:08,847 --> 00:01:10,852
+A high-voltage line sagged until it touched a
+
+51
+00:01:10,892 --> 00:01:12,265
+tree nobody had trimmed.
+
+52
+00:01:12,305 --> 00:01:13,064
+And tripped.
+
+53
+00:01:13,104 --> 00:01:14,519
+Normally that's fixed in minutes.
+
+54
+00:01:14,559 --> 00:01:16,325
+But the alarm software in the control room
+
+55
+00:01:16,365 --> 00:01:18,878
+had a bug, and stopped without anyone noticing.
+
+56
+00:01:18,918 --> 00:01:20,794
+So the engineers sat at screens saying:
+
+57
+00:01:20,834 --> 00:01:21,460
+all fine.
+
+58
+00:01:21,500 --> 00:01:23,339
+Within two hours the dominoes fell.
+
+59
+00:01:23,379 --> 00:01:26,060
+Fifty million people in America and Canada, all
+
+60
+00:01:26,100 --> 00:01:27,250
+of New York City among them.
+
+61
+00:01:27,290 --> 00:01:29,408
+Some places waited two days for the lights.
+
+62
+00:01:29,448 --> 00:01:31,177
+The subway stopped with people in the tunnels,
+
+63
+00:01:31,217 --> 00:01:32,771
+and people walked home over the bridges.
+
+64
+00:01:32,811 --> 00:01:34,837
+The losses ran into billions of dollars.
+
+65
+00:01:34,877 --> 00:01:36,266
+Priciest tree on Earth.
+
+66
+00:01:36,306 --> 00:01:38,610
+Their biggest blackout ever was in India, July
+
+67
+00:01:38,650 --> 00:01:39,394
+twenty twelve.
+
+68
+00:01:39,434 --> 00:01:40,247
+The grid fell..
+
+69
+00:01:40,287 --> 00:01:41,229
+they brought it back..
+
+70
+00:01:41,269 --> 00:01:42,652
+and the next day it fell bigger.
+
+71
+00:01:42,692 --> 00:01:43,311
+The cause:
+
+72
+00:01:43,351 --> 00:01:45,350
+a hot summer, states drawing more than their
+
+73
+00:01:45,390 --> 00:01:47,577
+share, lines carrying more than they could.
+
+74
+00:01:47,617 --> 00:01:49,262
+On the second day, the dark covered an
+
+75
+00:01:49,302 --> 00:01:51,827
+area with over six hundred million people.
+
+76
+00:01:51,867 --> 00:01:55,032
+Trains stopped mid-track, and miners were trapped underground
+
+77
+00:01:55,072 --> 00:01:56,067
+until they were pulled out.
+
+78
+00:01:56,107 --> 00:01:57,570
+About half the country..
+
+79
+00:01:57,610 --> 00:01:58,248
+at once.
+
+80
+00:01:58,288 --> 00:02:00,586
+Not every blackout is a mistake.
+
+81
+00:02:00,626 --> 00:02:04,034
+February twenty twenty-one, an ice storm hit Texas.
+
+82
+00:02:04,074 --> 00:02:06,183
+Power plants and gas lines froze..
+
+83
+00:02:06,223 --> 00:02:08,569
+just as everyone switched on their heaters.
+
+84
+00:02:08,671 --> 00:02:09,753
+The balance tipped.
+
+85
+00:02:09,793 --> 00:02:11,249
+So the control room did the only thing
+
+86
+00:02:11,289 --> 00:02:11,705
+left:
+
+87
+00:02:11,745 --> 00:02:13,822
+it cut power by hand to over four
+
+88
+00:02:13,862 --> 00:02:14,652
+million homes.
+
+89
+00:02:14,692 --> 00:02:15,973
+In the depth of the cold.
+
+90
+00:02:16,013 --> 00:02:18,176
+They said afterwards the grid was four minutes
+
+91
+00:02:18,216 --> 00:02:21,123
+and thirty-seven seconds from total collapse.
+
+92
+00:02:21,163 --> 00:02:23,040
+A collapse that could have taken weeks to
+
+93
+00:02:23,080 --> 00:02:23,582
+repair.
+
+94
+00:02:23,622 --> 00:02:24,840
+The state's official count:
+
+95
+00:02:24,880 --> 00:02:26,770
+two hundred forty-six people died.
+
+96
+00:02:26,810 --> 00:02:27,763
+Most from the cold.
+
+97
+00:02:27,803 --> 00:02:29,635
+Electricity isn't a luxury for them, sir.
+
+98
+00:02:29,675 --> 00:02:30,384
+It keeps them alive.
+
+99
+00:02:30,424 --> 00:02:31,301
+The last big one:
+
+100
+00:02:31,341 --> 00:02:33,133
+twenty twenty-five, Spain and Portugal.
+
+101
+00:02:33,173 --> 00:02:35,354
+The twenty-eighth of April, at noon, in fine
+
+102
+00:02:35,394 --> 00:02:35,827
+weather.
+
+103
+00:02:35,867 --> 00:02:37,539
+The voltage on the grid rose past its
+
+104
+00:02:37,579 --> 00:02:37,875
+limit.
+
+105
+00:02:37,915 --> 00:02:40,132
+Plants disconnected themselves to protect their equipment.
+
+106
+00:02:40,172 --> 00:02:41,433
+So the voltage rose more.
+
+107
+00:02:41,473 --> 00:02:42,667
+So more plants disconnected.
+
+108
+00:02:42,707 --> 00:02:45,319
+In seconds, two whole countries without power.
+
+109
+00:02:45,359 --> 00:02:46,678
+Tens of millions of people.
+
+110
+00:02:46,718 --> 00:02:48,238
+Some places waited sixteen hours.
+
+111
+00:02:48,278 --> 00:02:49,508
+The final report came out about a year
+
+112
+00:02:49,548 --> 00:02:50,013
+later.
+
+113
+00:02:50,053 --> 00:02:50,470
+It said:
+
+114
+00:02:50,510 --> 00:02:51,708
+no single cause.
+
+115
+00:02:51,748 --> 00:02:53,546
+A perfect storm of small ones.
+
+116
+00:02:53,586 --> 00:02:55,193
+So after a year of investigation..
+
+117
+00:02:55,233 --> 00:02:55,904
+the suspect:
+
+118
+00:02:55,944 --> 00:02:56,759
+circumstances.
+
+119
+00:02:56,799 --> 00:02:58,512
+The grid has enemies from outside.
+
+120
+00:02:58,552 --> 00:02:59,721
+First, the sun itself.
+
+121
+00:02:59,761 --> 00:03:01,667
+In nineteen eighty-nine a solar storm hit the
+
+122
+00:03:01,707 --> 00:03:04,083
+Earth, and Quebec's whole grid in Canada fell
+
+123
+00:03:04,123 --> 00:03:05,165
+in ninety seconds.
+
+124
+00:03:05,205 --> 00:03:06,834
+Millions sat in the dark for hours.
+
+125
+00:03:06,874 --> 00:03:09,387
+In eighteen fifty-nine a far bigger solar storm
+
+126
+00:03:09,427 --> 00:03:09,834
+came.
+
+127
+00:03:09,874 --> 00:03:11,997
+It set off sparks in telegraph offices.
+
+128
+00:03:12,037 --> 00:03:13,501
+Back then they had no power grids.
+
+129
+00:03:13,541 --> 00:03:15,006
+If one like it came today..
+
+130
+00:03:15,046 --> 00:03:16,293
+nobody is sure what would happen.
+
+131
+00:03:16,333 --> 00:03:16,762
+Second:
+
+132
+00:03:16,802 --> 00:03:17,760
+humans themselves.
+
+133
+00:03:17,800 --> 00:03:20,056
+December twenty fifteen, in Ukraine, people got into
+
+134
+00:03:20,096 --> 00:03:22,670
+power companies' computers remotely and opened the switches
+
+135
+00:03:22,710 --> 00:03:23,684
+one after another.
+
+136
+00:03:23,724 --> 00:03:25,628
+About two hundred twenty-five thousand homes.
+
+137
+00:03:25,668 --> 00:03:27,493
+The first known cyberattack to cut the lights.
+
+138
+00:03:27,533 --> 00:03:28,645
+And third, seriously:
+
+139
+00:03:28,685 --> 00:03:29,101
+the squirrel.
+
+140
+00:03:29,141 --> 00:03:31,112
+A small animal climbs onto transformers and closes
+
+141
+00:03:31,152 --> 00:03:32,016
+the circuit with its body.
+
+142
+00:03:32,056 --> 00:03:33,594
+One of the most common causes of outages
+
+143
+00:03:33,634 --> 00:03:34,371
+in North America.
+
+144
+00:03:34,411 --> 00:03:35,454
+A storm-proof grid..
+
+145
+00:03:35,494 --> 00:03:37,467
+felled by a half-kilo animal.
+
+146
+00:03:37,507 --> 00:03:39,008
+Who also comes off badly.
+
+147
+00:03:39,048 --> 00:03:40,570
+So the whole grid is down.
+
+148
+00:03:40,610 --> 00:03:41,660
+How does it come back?
+
+149
+00:03:41,700 --> 00:03:43,035
+Here's a neat problem:
+
+150
+00:03:43,075 --> 00:03:45,618
+a power station needs electricity to start.
+
+151
+00:03:45,658 --> 00:03:47,614
+Pumps, fans, computers.
+
+152
+00:03:47,654 --> 00:03:49,786
+So they keep a few special stations, mostly
+
+153
+00:03:49,826 --> 00:03:51,573
+dams, that can start on their own with
+
+154
+00:03:51,613 --> 00:03:52,545
+nothing from outside.
+
+155
+00:03:52,585 --> 00:03:54,648
+They start, wake the station next door, and
+
+156
+00:03:54,688 --> 00:03:56,571
+keep growing the island piece by piece.
+
+157
+00:03:56,611 --> 00:03:58,683
+Every piece must rejoin in exact step with
+
+158
+00:03:58,723 --> 00:03:59,434
+the same pulse.
+
+159
+00:03:59,474 --> 00:04:01,735
+That's why coming back takes hours, sometimes days.
+
+160
+00:04:01,775 --> 00:04:02,923
+The fall takes seconds.
+
+161
+00:04:02,963 --> 00:04:04,090
+The rise is slow.
+
+162
+00:04:04,130 --> 00:04:05,230
+The human dictionary.
+
+163
+00:04:05,270 --> 00:04:06,096
+Two words today.
+
+164
+00:04:06,136 --> 00:04:06,839
+Blackout:
+
+165
+00:04:06,879 --> 00:04:07,722
+a big outage.
+
+166
+00:04:07,762 --> 00:04:09,250
+The whole grid goes down.
+
+167
+00:04:09,316 --> 00:04:10,367
+And load shedding:
+
+168
+00:04:10,407 --> 00:04:11,810
+cutting power in turns.
+
+169
+00:04:11,850 --> 00:04:13,390
+Two hours off for one district, then the
+
+170
+00:04:13,430 --> 00:04:15,064
+next, so the whole doesn't fall.
+
+171
+00:04:15,104 --> 00:04:17,203
+In many countries that's not a dictionary word.
+
+172
+00:04:17,243 --> 00:04:18,316
+It's a daily timetable.
+
+173
+00:04:18,356 --> 00:04:19,553
+Report summary, sir.
+
+174
+00:04:19,593 --> 00:04:20,016
+One:
+
+175
+00:04:20,056 --> 00:04:22,243
+the grid falls like dominoes, and the protection
+
+176
+00:04:22,283 --> 00:04:23,452
+that saves each piece..
+
+177
+00:04:23,492 --> 00:04:24,670
+is what spreads the fall.
+
+178
+00:04:24,710 --> 00:04:25,085
+Two:
+
+179
+00:04:25,125 --> 00:04:27,048
+the cause can be a tree, the cold,
+
+180
+00:04:27,088 --> 00:04:29,210
+the sun, a hacker, or a squirrel.
+
+181
+00:04:29,250 --> 00:04:29,673
+Three:
+
+182
+00:04:29,713 --> 00:04:32,155
+the fall takes seconds, the rise is slow,
+
+183
+00:04:32,195 --> 00:04:33,741
+from a few stations that start on their
+
+184
+00:04:33,781 --> 00:04:34,056
+own.
+
+185
+00:04:34,096 --> 00:04:34,775
+And a warning:
+
+186
+00:04:34,815 --> 00:04:36,668
+when their lights go out, the danger isn't
+
+187
+00:04:36,708 --> 00:04:37,446
+only the dark.
+
+188
+00:04:37,486 --> 00:04:40,088
+In Texas people died from fumes of generators
+
+189
+00:04:40,128 --> 00:04:41,517
+and heaters run indoors.
+
+190
+00:04:41,557 --> 00:04:43,166
+Next report, the last in the file:
+
+191
+00:04:43,206 --> 00:04:44,394
+where is electricity going?
+
+192
+00:04:44,434 --> 00:04:46,648
+Batteries the size of warehouses, sunlight that became
+
+193
+00:04:46,688 --> 00:04:48,432
+their cheapest power, and who on this planet
+
+194
+00:04:48,472 --> 00:04:49,924
+is still waiting for a single bulb.
+
+195
+00:04:49,964 --> 00:04:50,918
+This was Earth Report.
+
+196
+00:04:50,958 --> 00:04:51,698
+Agent Peek.
+
+197
+00:04:51,738 --> 00:04:52,769
+Transmission ends.

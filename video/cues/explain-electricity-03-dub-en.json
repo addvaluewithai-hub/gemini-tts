@@ -1,0 +1,671 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-electricity-03-dub-en",
+ "transcript": "../../../video/cues/explain-electricity-03-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir, field report number three on the electricit",
+   "shot": "close",
+   "emote": "serious",
+   "slide": null
+  },
+  {
+   "t": 5.04,
+   "say": "Last time we learned the grid is a balance: what",
+   "board": {
+    "kind": "e3intro",
+    "ends": [
+     7.65,
+     8.1
+    ]
+   },
+   "step": 0,
+   "stepT": 5.04,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 11.82,
+   "say": "Strangest thing I found: in two thousand three, ",
+   "board": {
+    "kind": "e3intro",
+    "ends": [
+     7.65,
+     8.1
+    ]
+   },
+   "step": 1,
+   "stepT": 11.82
+  },
+  {
+   "t": 20.58,
+   "say": "I'll tell you how a small fault grows, their big",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 26.96,
+   "say": "This is a grid: stations, cities, and lines betw",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "DOMINO",
+    "icon": "chartdown"
+   },
+   "stepT": 26.96,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 32.76,
+   "say": "One line trips. For any reason. The load it carr",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 1,
+   "stepT": 32.76
+  },
+  {
+   "t": 42.01,
+   "say": "In minutes, sometimes seconds, a whole region go",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 2,
+   "stepT": 42.01
+  },
+  {
+   "t": 45.07,
+   "say": "Like workers carrying a heavy pole. One lets go.",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 45.07
+  },
+  {
+   "t": 51.09,
+   "say": "The strange part: what trips these lines isn't t",
+   "board": {
+    "kind": "domino",
+    "ends": [
+     4.71,
+     9.39,
+     3.35,
+     6.66,
+     7.15
+    ]
+   },
+   "step": 4,
+   "stepT": 51.09
+  },
+  {
+   "t": 58.61,
+   "say": "Each piece saves itself.. and the whole thing fa",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 62.11,
+   "say": "Back to the tree. August two thousand three, a h",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "2003",
+    "icon": "node"
+   },
+   "stepT": 62.11,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 72.35,
+   "say": "Normally that's fixed in minutes. But the alarm ",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 72.35
+  },
+  {
+   "t": 80.94,
+   "say": "Within two hours the dominoes fell. Fifty millio",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 2,
+   "stepT": 80.94
+  },
+  {
+   "t": 88.89,
+   "say": "The subway stopped with people in the tunnels, a",
+   "board": {
+    "kind": "ohio",
+    "ends": [
+     10.09,
+     8.39,
+     7.96,
+     5.43
+    ]
+   },
+   "step": 3,
+   "stepT": 88.89
+  },
+  {
+   "t": 94.77,
+   "say": "Priciest tree on Earth.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 96.51,
+   "say": "Their biggest blackout ever was in India, July t",
+   "board": {
+    "kind": "india",
+    "ends": [
+     6.72,
+     4.92,
+     10.66
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "2012",
+    "icon": "node"
+   },
+   "stepT": 96.51,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 103.5,
+   "say": "The cause: a hot summer, states drawing more tha",
+   "board": {
+    "kind": "india",
+    "ends": [
+     6.72,
+     4.92,
+     10.66
+    ]
+   },
+   "step": 1,
+   "stepT": 103.5
+  },
+  {
+   "t": 108.78,
+   "say": "On the second day, the dark covered an area with",
+   "board": {
+    "kind": "india",
+    "ends": [
+     6.72,
+     4.92,
+     10.66
+    ]
+   },
+   "step": 2,
+   "stepT": 108.78
+  },
+  {
+   "t": 119.76,
+   "say": "Not every blackout is a mistake. February twenty",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 0,
+   "calm": true,
+   "music": 0.5,
+   "story": {
+    "n": 4,
+    "tag": "TEXAS",
+    "icon": "shield"
+   },
+   "gesture": "pockets",
+   "stepT": 119.76,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 128.89,
+   "say": "The balance tipped. So the control room did the ",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 1,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 128.89
+  },
+  {
+   "t": 136.47,
+   "say": "They said afterwards the grid was four minutes a",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 2,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 136.47
+  },
+  {
+   "t": 143.51,
+   "say": "The state's official count: two hundred forty-si",
+   "board": {
+    "kind": "texas",
+    "ends": [
+     10.4,
+     7.33,
+     7.61,
+     4.2
+    ]
+   },
+   "step": 3,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 143.51
+  },
+  {
+   "t": 147.35,
+   "say": "Electricity isn't a luxury for them, sir. It kee",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 150.54,
+   "say": "The last big one: twenty twenty-five, Spain and ",
+   "board": {
+    "kind": "iberia",
+    "ends": [
+     5.51,
+     12.41,
+     5.31
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "2025",
+    "icon": "bolt"
+   },
+   "music": 1,
+   "stepT": 150.54,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 156.37,
+   "say": "The voltage on the grid rose past its limit. Pla",
+   "board": {
+    "kind": "iberia",
+    "ends": [
+     5.51,
+     12.41,
+     5.31
+    ]
+   },
+   "step": 1,
+   "stepT": 156.37
+  },
+  {
+   "t": 170.32,
+   "say": "The final report came out about a year later. It",
+   "board": {
+    "kind": "iberia",
+    "ends": [
+     5.51,
+     12.41,
+     5.31
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 170.32
+  },
+  {
+   "t": 176.47,
+   "say": "So after a year of investigation.. the suspect: ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 180.39,
+   "say": "The grid has enemies from outside. First, the su",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 6,
+    "tag": "ENEMIES",
+    "icon": "mask"
+   },
+   "stepT": 180.39,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 191.71,
+   "say": "In eighteen fifty-nine a far bigger solar storm ",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 1,
+   "stepT": 191.71
+  },
+  {
+   "t": 201.08,
+   "say": "Second: humans themselves. December twenty fifte",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "serious",
+   "stepT": 201.08
+  },
+  {
+   "t": 213.7,
+   "say": "And third, seriously: the squirrel. A small anim",
+   "board": {
+    "kind": "enemies",
+    "ends": [
+     10.68,
+     9.46,
+     11.21,
+     6.63
+    ]
+   },
+   "step": 3,
+   "stepT": 213.7
+  },
+  {
+   "t": 222.08,
+   "say": "A storm-proof grid.. felled by a half-kilo anima",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 226.68,
+   "say": "So the whole grid is down. How does it come back",
+   "board": {
+    "kind": "blackstart",
+    "ends": [
+     8.61,
+     8.96,
+     7.52
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 7,
+    "tag": "BLACK START",
+    "icon": "gear"
+   },
+   "stepT": 226.68,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 234.95,
+   "say": "So they keep a few special stations, mostly dams",
+   "board": {
+    "kind": "blackstart",
+    "ends": [
+     8.61,
+     8.96,
+     7.52
+    ]
+   },
+   "step": 1,
+   "stepT": 234.95
+  },
+  {
+   "t": 244.6,
+   "say": "Every piece must rejoin in exact step with the s",
+   "board": {
+    "kind": "blackstart",
+    "ends": [
+     8.61,
+     8.96,
+     7.52
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 244.6
+  },
+  {
+   "t": 253.2,
+   "say": "The human dictionary. Two words today. Blackout:",
+   "board": {
+    "kind": "e3dict",
+    "ends": [
+     5.19,
+     9.03
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 253.2,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 258.74,
+   "say": "And load shedding: cutting power in turns. Two h",
+   "board": {
+    "kind": "e3dict",
+    "ends": [
+     5.19,
+     9.03
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 258.74
+  },
+  {
+   "t": 268.66,
+   "say": "Report summary, sir. One: the grid falls like do",
+   "board": {
+    "kind": "e3recap",
+    "ends": [
+     15.74
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 268.66,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 284.39,
+   "say": "And a warning: when their lights go out, the dan",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 291.54,
+   "say": "Next report, the last in the file: where is elec",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 300.96,
+   "say": "This was Earth Report. Agent Peek. Transmission ",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 304.45,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "4 / 4",
+    "icons": [
+     "bolt",
+     "gear",
+     "tower"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
