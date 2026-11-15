@@ -1,5 +1,5 @@
 {
- "title": "Earth Report: Electricity 2 (English dub track for the world-picture video)",
+ "title": "Earth Report: Electricity 2 of 4 (English dub track for the world-picture video)",
  "recorded_for": "2026-11-15",
  "layout": "explain",
  "date": "",
@@ -42,11 +42,11 @@
   "card": {
    "kind": "endnext",
    "title": "NEXT",
-   "next": "3 / 5",
+   "next": "3 / 4",
    "icons": [
+    "bolt",
     "tower",
-    "cable",
-    "bolt"
+    "shield"
    ],
    "note": ""
   }
@@ -61,81 +61,122 @@
   "e2intro": {
    "kind": "e2intro",
    "ends": [
-    6.82,
-    7.06,
-    3.77
+    9.31,
+    8.15,
+    7.47
    ]
   },
   "faraday": {
    "kind": "faraday",
    "ends": [
+    7.75,
+    7.34,
+    7.25,
     8.2,
-    7.62,
-    7.36,
-    8.44,
-    4.3,
-    6.33
+    4.44,
+    6.06
    ]
   },
   "steam": {
    "kind": "steam",
    "ends": [
-    4.72,
-    4.5,
-    5.66,
-    3.68,
-    3.46
+    4.41,
+    4.47,
+    5.39,
+    4.18,
+    3.79
    ]
   },
   "sources": {
    "kind": "sources",
    "ends": [
-    6.75,
-    2.5,
-    3.54,
-    7.13
+    6,
+    2.69,
+    3.24,
+    6.76
    ]
   },
   "mix": {
    "kind": "mix",
    "ends": [
-    8.06,
-    6.27,
-    3.68
+    8.15,
+    6.42,
+    3.95
    ]
   },
-  "kettles": {
-   "kind": "kettles",
+  "trip": {
+   "kind": "trip",
+   "ends": [
+    7.19,
+    7.04,
+    9.65,
+    5.39,
+    6.92,
+    6.39,
+    6.34,
+    5.66,
+    5.46,
+    10.52,
+    10.89
+   ]
+  },
+  "bird": {
+   "kind": "bird",
    "ends": [
     5.26,
-    4.93,
-    9.05,
-    9.23,
-    7.39
+    8.66,
+    8.62,
+    6.66
    ]
   },
-  "oldsun": {
-   "kind": "oldsun",
+  "balance": {
+   "kind": "balance",
    "ends": [
-    10.41,
-    7.62,
-    4.73,
-    4.55,
-    3.71,
-    7.67
+    7.54,
+    7.39,
+    9.76,
+    9.06,
+    8.55,
+    6.56,
+    4.91,
+    6.06,
+    3.85,
+    5.52,
+    7.46
+   ]
+  },
+  "grid": {
+   "kind": "grid",
+   "ends": [
+    6.65,
+    5.66,
+    11.37,
+    9.03,
+    10.07,
+    11.38,
+    8.48
+   ]
+  },
+  "peak": {
+   "kind": "peak",
+   "ends": [
+    8.08,
+    7.18,
+    9.46,
+    6.44
    ]
   },
   "e2dict": {
    "kind": "e2dict",
    "ends": [
-    7.33,
-    6.26
+    4.07,
+    4.71
    ]
   },
   "e2recap": {
    "kind": "e2recap",
    "ends": [
-    18.61
+    14.56
    ]
   }
  },
@@ -150,49 +191,45 @@
      "emote": "serious"
     },
     {
-     "say": "Last time we learned what electricity is: charge moving in a wire. Today's question: who moves it? Where is it made?",
+     "say": "Today: where electricity is made.. and how it gets home. Last time we learned it's charge moving in a wire. Today: who moves it? And from where?",
      "show": "board",
      "board": "e2intro",
      "step": 0
     },
     {
-     "say": "Strangest thing I found: nearly all the planet's power, coal, nuclear, dams, wind.. is made with the same motion.",
+     "say": "Strangest thing I found: the power lighting their lamps right now.. was made less than a second ago. No warehouse. What's made is used that instant.",
      "show": "board",
      "board": "e2intro",
      "step": 1
     },
     {
-     "say": "Found by a blacksmith's son about two hundred years ago: a spinning magnet.",
+     "say": "Billions of humans, each pressing switches whenever they like.. and someone must supply exactly that, at that instant. No more, no less.",
      "show": "board",
      "board": "e2intro",
-     "step": 2
-    },
-    {
-     "say": "The only difference between one station and another: who turns it. And one kind of station.. doesn't turn at all.",
-     "shot": "host",
-     "emote": "sly",
-     "gesture": "present"
+     "step": 2,
+     "host": "right",
+     "emote": "skeptical"
     }
    ]
   },
   {
    "id": "magnet",
-   "style": "Telling a discovery simply, with a dry aside about a boy who read on the job.",
+   "style": "One simple discovery, shown step by step, with affection for the man who made it.",
    "beats": [
     {
-     "say": "In eighteen thirty-one, an Englishman named Faraday found something simple: move a magnet past a wire.. and the electrons in the wire move.",
+     "say": "In eighteen thirty-one, an Englishman named Faraday found something simple: move a magnet past a wire.. and its electrons move.",
      "show": "board",
      "board": "faraday",
      "step": 0
     },
     {
-     "say": "Spin the magnet inside a coil of wire, and it keeps pushing the electrons. Back.. and forth. That's a generator. Which is why it makes alternating current.",
+     "say": "Spin the magnet inside a coil of wire, and it keeps pushing the electrons. Back.. and forth. That's a generator. So naturally, it makes AC.",
      "show": "board",
      "board": "faraday",
      "step": 1
     },
     {
-     "say": "A motor is the same machine in reverse: feed it electricity.. it spins. The fan, the washing machine, the electric car: generators running backwards.",
+     "say": "A motor is the same machine in reverse: feed it power.. it spins. The fan, the washing machine, the electric car: generators running backwards.",
      "show": "board",
      "board": "faraday",
      "step": 2,
@@ -200,7 +237,7 @@
      "emote": "smug"
     },
     {
-     "say": "Faraday was a blacksmith's son who left school early. He was a bookbinder's apprentice.. and he read what he bound.",
+     "say": "Faraday was a blacksmith's son who left school early. A bookbinder's apprentice.. who read what he bound.",
      "show": "board",
      "board": "faraday",
      "step": 3
@@ -217,7 +254,7 @@
      "step": 4
     },
     {
-     "say": "From Faraday until today, most of the planet's power is made with this same motion. The only thing that changes: what turns the turbine.",
+     "say": "Since Faraday, most of the planet's power is made this same way. All that changes: what turns the turbine.",
      "show": "board",
      "board": "faraday",
      "step": 5,
@@ -232,8 +269,8 @@
    }
   },
   {
-   "id": "steam",
-   "style": "Brisk and amused, listing how humans boil water; deadpan on the last line.",
+   "id": "turn",
+   "style": "A tour of power stations by someone who finds them all suspiciously similar.",
    "beats": [
     {
      "say": "Their favorite way: boil water. Burn coal or gas under a boiler the size of a building.",
@@ -242,13 +279,13 @@
      "step": 0
     },
     {
-     "say": "High-pressure steam spins the turbine. The turbine spins the generator. Out comes electricity.",
+     "say": "Steam spins the turbine. The turbine spins the generator. Out comes electricity.",
      "show": "board",
      "board": "steam",
      "step": 1
     },
     {
-     "say": "And the nuclear plant, sir? The most complex thing they ever built. They split the atom itself. To boil water.",
+     "say": "The nuclear plant, sir? The most complex thing they ever built. They split the atom itself. To boil water.",
      "show": "board",
      "board": "steam",
      "step": 2,
@@ -256,13 +293,13 @@
      "emote": "skeptical"
     },
     {
-     "say": "A fingertip of nuclear fuel holds about as much energy as a ton of coal.",
+     "say": "A fingertip of nuclear fuel holds about a ton of coal's energy.",
      "show": "board",
      "board": "steam",
      "step": 3
     },
     {
-     "say": "Countries with volcanoes take steam ready-made from underground. Still steam.",
+     "say": "Countries with volcanoes take steam straight from underground. Still steam.",
      "show": "board",
      "board": "steam",
      "step": 4
@@ -271,20 +308,9 @@
      "say": "This planet is addicted to kettles.",
      "shot": "close",
      "emote": "deadpan"
-    }
-   ],
-   "story": {
-    "n": 2,
-    "tag": "STEAM",
-    "icon": "cloud"
-   }
-  },
-  {
-   "id": "waterwind",
-   "style": "Quick and clear, counting the kinds, then the one exception.",
-   "beats": [
+    },
     {
-     "say": "So kind one is steam: coal, gas, or nuclear. Kind two is water itself: a high dam, the water falls onto the turbine.",
+     "say": "So kind one is steam: coal, gas, nuclear. Kind two is water: a high dam, the water falls onto the turbine.",
      "show": "board",
      "board": "sources",
      "step": 0
@@ -296,30 +322,19 @@
      "step": 1
     },
     {
-     "say": "Kind three is air: wind turbines. The wind keeps them turning.",
+     "say": "Kind three is wind: turbines the wind keeps turning.",
      "show": "board",
      "board": "sources",
      "step": 2
     },
     {
-     "say": "And the one exception: the solar panel. Nothing turns at all. Light itself knocks the electrons and moves them. And it makes direct current.",
+     "say": "The one exception: the solar panel. Nothing spins at all. Light knocks the electrons and moves them. And it makes direct current.",
      "show": "board",
      "board": "sources",
      "step": 3,
      "host": "right",
      "emote": "proud"
-    }
-   ],
-   "story": {
-    "n": 3,
-    "tag": "WATER WIND",
-    "icon": "fish"
-   }
-  },
-  {
-   "id": "mix",
-   "style": "Reading numbers from a field chart, then a small surprise.",
-   "beats": [
+    },
     {
      "say": "Here's each one's share of the planet's power in twenty twenty-five. Coal still first: a third. Then gas. Then dams, nuclear, solar and wind.",
      "show": "board",
@@ -327,131 +342,354 @@
      "step": 0
     },
     {
-     "say": "But that year, something happened for the first time in a century: all renewables together.. passed coal. By a hair.",
+     "say": "But that year, for the first time in a century: all renewables together.. passed coal. By a hair.",
      "show": "board",
      "board": "mix",
      "step": 1
     },
     {
-     "say": "Solar alone was about one percent ten years ago. Now it's nearly nine.",
+     "say": "Solar alone was about one percent ten years ago. Now nearly nine.",
      "show": "board",
      "board": "mix",
      "step": 2
     },
     {
-     "say": "The fastest-growing thing they have.. is the only one that doesn't spin.",
+     "say": "Their fastest-growing source.. is the only one that doesn't spin.",
      "shot": "close",
      "emote": "smug"
     }
    ],
    "story": {
-    "n": 4,
-    "tag": "THE MIX",
-    "icon": "chartdown"
+    "n": 2,
+    "tag": "WHO TURNS IT",
+    "icon": "cloud"
    }
   },
   {
-   "id": "kettles",
-   "style": "A patient calculation with everyday things, then a serious hint at the next report.",
+   "id": "trip",
+   "style": "Following the electricity like a courier tracking a parcel, then explaining the one clever trick.",
    "beats": [
     {
-     "say": "So how much does a station make? Let me count it in something every kitchen has: the kettle.",
+     "say": "Now let's follow the power. The generator makes it at about twenty thousand volts. First stop: a transformer lifts it to hundreds of thousands.",
      "show": "board",
-     "board": "kettles",
+     "board": "trip",
      "step": 0
     },
     {
-     "say": "A kettle running draws about two thousand watts. That's two thousand joules every second.",
+     "say": "A transformer has no moving parts. Two coils of wire around iron. More turns on one side.. so the pressure comes out higher there. That's it.",
      "show": "board",
-     "board": "kettles",
+     "board": "trip",
      "step": 1
     },
     {
-     "say": "A big ordinary station puts out about a thousand megawatts. A megawatt is a million watts. So one station can run about half a million kettles.. at the same moment.",
+     "say": "Then it travels on tall towers. Hundreds of kilometers. Near the city, another transformer brings it down. Then smaller ones on the streets. Until it enters the house at one-ten or two-forty volts. Depends on the country.",
      "show": "board",
-     "board": "kettles",
+     "board": "trip",
      "step": 2
     },
     {
-     "say": "The biggest on the planet, that Chinese dam, called Three Gorges, puts out about twenty-two and a half thousand megawatts. About eleven million kettles at once.",
+     "say": "Humans agreed on volts, amps and ohms. But the plug itself? About fifteen kinds.",
      "show": "board",
-     "board": "kettles",
+     "board": "trip",
      "step": 3
     },
     {
-     "say": "Humans have millions of kettles, millions of air conditioners, millions of screens. And all of them want power the instant someone presses the button.",
+     "say": "Every traveler carries a little piece of plastic.. whose job is peace between two countries.",
      "show": "board",
-     "board": "kettles",
+     "board": "trip",
      "step": 4,
      "host": "right",
-     "emote": "neutral"
+     "emote": "smug"
     },
     {
-     "say": "And that, believe me, is their hardest problem. It gets its own report.",
+     "say": "The trip takes less than a blink. The only thing here that's on time.",
      "shot": "close",
-     "emote": "serious"
-    }
-   ],
-   "story": {
-    "n": 5,
-    "tag": "KETTLES",
-    "icon": "bolt"
-   }
-  },
-  {
-   "id": "oldsun",
-   "style": "Slower and a little wondering, building to a dry punchline.",
-   "beats": [
-    {
-     "say": "Command needs to understand one thing, sir: a station doesn't make energy. Humans have a law that says energy is never created or destroyed. It only changes form. The station just converts it.",
-     "show": "board",
-     "board": "oldsun",
-     "step": 0,
-     "host": "right",
-     "emote": "neutral"
+     "emote": "deadpan"
     },
     {
-     "say": "So where did it come from? Follow the coal backwards. Coal was forests, millions of years ago. Trees lived on sunlight, died, got buried, and pressed.",
+     "say": "Why raise the pressure, then lower it? Because current heats the wire. The bigger the current, the more power lost as heat.",
      "show": "board",
-     "board": "oldsun",
-     "step": 1
+     "board": "trip",
+     "step": 5
     },
     {
-     "say": "So when humans burn coal.. they burn old sunlight. Gas and oil, roughly the same story.",
+     "say": "The same power can be sent two ways: low pressure, big current.. or high pressure, small current. The second loses far less.",
      "show": "board",
-     "board": "oldsun",
-     "step": 2
+     "board": "trip",
+     "step": 6
     },
     {
-     "say": "Dams? The sun lifts sea water into clouds, and drops it as rain on the mountain.",
+     "say": "Like moving a thousand passengers. A thousand small cars jam the road and burn fuel. Or one fast train. High voltage is the train.",
      "show": "board",
-     "board": "oldsun",
-     "step": 3
+     "board": "trip",
+     "step": 7
     },
     {
-     "say": "Wind? The sun heats one patch of ground more than another, and the air runs.",
+     "say": "And the transformer only works on alternating current. That's the real reason Tesla beat Edison.",
      "show": "board",
-     "board": "oldsun",
-     "step": 4
-    },
-    {
-     "say": "So nearly every station on the planet.. runs on the sun, through the back door. Except nuclear: that runs on energy locked in atoms since before the Earth was born.",
-     "show": "board",
-     "board": "oldsun",
-     "step": 5,
+     "board": "trip",
+     "step": 8,
      "host": "left",
      "emote": "proud"
     },
     {
-     "say": "And humans argue about which station is best.. while they all spend from the same wallet.",
+     "say": "Even so, some is lost on the way. In America, about five percent. In countries with old or weak grids, much more. And some of what's lost there isn't lost.. it's stolen.",
+     "show": "board",
+     "board": "trip",
+     "step": 9
+    },
+    {
+     "say": "A warning for command: high-voltage lines are bare, no jacket. The air insulates them. Get close, even without touching, and the power can jump to you. Humans hang a skull on them. They're right.",
+     "show": "board",
+     "board": "trip",
+     "step": 10,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    }
+   ],
+   "story": {
+    "n": 3,
+    "tag": "THE TRIP",
+    "icon": "tower"
+   }
+  },
+  {
+   "id": "bird",
+   "style": "Answering a child's question properly, ending seriously.",
+   "beats": [
+    {
+     "say": "A question their children ask: the bird on that bare wire.. why doesn't it get shocked?",
+     "show": "board",
+     "board": "bird",
+     "step": 0
+    },
+    {
+     "say": "Both its feet are on the same wire. Current flows when there's a pressure difference between two points. Both feet are at the same pressure. So no current goes through it.",
+     "show": "board",
+     "board": "bird",
+     "step": 1
+    },
+    {
+     "say": "But if it touches another wire, or anything grounded, at the same moment.. it becomes the path.",
+     "show": "board",
+     "board": "bird",
+     "step": 2,
+     "calm": true
+    },
+    {
+     "say": "And humans stand on the ground all the time. So that rule is for birds only.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "That's also why towers are so tall, and wires hang far apart and far from everything. The distance itself insulates.",
+     "show": "board",
+     "board": "bird",
+     "step": 3
+    }
+   ],
+   "story": {
+    "n": 4,
+    "tag": "THE BIRD",
+    "icon": "eye"
+   }
+  },
+  {
+   "id": "balance",
+   "style": "The central idea of the report: a balance kept every second. Clear, a little awed, then a funny true story.",
+   "beats": [
+    {
+     "say": "Back to the big problem. The grid can't store power. So what stations make must equal what people draw. Every second.",
+     "show": "board",
+     "board": "balance",
+     "step": 0
+    },
+    {
+     "say": "One number tells them if the balance is right: the frequency. Generator turns per second. Fifty on most of the planet, sixty in North America.",
+     "show": "board",
+     "board": "balance",
+     "step": 1
+    },
+    {
+     "say": "People draw more than is made? The generators get heavier, slow down. The number drops. Control orders a station up. The number comes back. All day long, nobody notices.",
+     "show": "board",
+     "board": "balance",
+     "step": 2
+    },
+    {
+     "say": "Every grid has a control room, people at screens twenty-four hours a day. Their whole job: keep that number at fifty.",
+     "show": "board",
+     "board": "balance",
+     "step": 3,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "The planet's most important workers.. and nobody knows their names.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "The generators help too. Each is hundreds of tonnes of spinning iron. If something fails, the weight keeps spinning a few seconds.. buying the grid time.",
+     "show": "board",
+     "board": "balance",
+     "step": 4
+    },
+    {
+     "say": "If a big station drops out and the number falls fast? The grid cuts whole districts by itself. It sacrifices a part.. so the whole doesn't fall.",
+     "show": "board",
+     "board": "balance",
+     "step": 5
+    },
+    {
+     "say": "Their whole civilization rests on one number. It must stay fifty. Not forty-nine.",
+     "show": "board",
+     "board": "balance",
+     "step": 6,
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "It makes for strange moments. In nineteen ninety, England played Germany in the World Cup semi-final. It went to penalties.",
+     "show": "board",
+     "board": "balance",
+     "step": 7
+    },
+    {
+     "say": "The match ended.. and the whole country got up at once to switch on the kettle.",
+     "show": "board",
+     "board": "balance",
+     "step": 8
+    },
+    {
+     "say": "Demand jumped two thousand eight hundred megawatts in minutes. Two big power stations. Still their record.",
+     "show": "board",
+     "board": "balance",
+     "step": 9
+    },
+    {
+     "say": "Their grid engineers have studied the TV schedule ever since. They know when the show ends, and have a station ready for that second.",
+     "show": "board",
+     "board": "balance",
+     "step": 10,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "England lost the match. The grid won.",
      "shot": "close",
      "emote": "deadpan"
     }
    ],
    "story": {
+    "n": 5,
+    "tag": "BALANCE",
+    "icon": "chartdown"
+   }
+  },
+  {
+   "id": "one",
+   "style": "Zooming out to a continent; two true stories about what being connected, or not, costs.",
+   "beats": [
+    {
+     "say": "Grids grew and joined up. Europe: one grid from Portugal to Turkey. Over four hundred million people.",
+     "show": "board",
+     "board": "grid",
+     "step": 0
+    },
+    {
+     "say": "Every generator in it turns together. Same speed, same instant. Thousands of machines.. like one machine.",
+     "show": "board",
+     "board": "grid",
+     "step": 1
+    },
+    {
+     "say": "That makes it stronger: a station fails in one country, the neighbours cover. It also makes the neighbours' problems.. yours. They trade power every hour. A windy country sells today.. and buys tomorrow.",
+     "show": "board",
+     "board": "grid",
+     "step": 2,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "In twenty eighteen, Kosovo and Serbia argued over who should make up missing power. The whole grid slowed a hair. Instead of fifty: forty-nine point nine nine six.",
+     "show": "board",
+     "board": "grid",
+     "step": 3
+    },
+    {
+     "say": "Oven clocks and alarm clocks, which count time from the grid's pulse, fell six minutes behind. In twenty-five countries.",
+     "show": "board",
+     "board": "grid",
+     "step": 4
+    },
+    {
+     "say": "A quarrel between two.. made a whole continent late for work. Finally, a scientific excuse.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "Japan is the opposite. In eighteen ninety-five, Tokyo bought German generators turning at fifty. The next year, Osaka bought American ones at sixty. To this day the country is split in two, joined only by special converter stations.",
+     "show": "board",
+     "board": "grid",
+     "step": 5
+    },
+    {
+     "say": "In twenty eleven, after the great earthquake, the east needed power and the west had extra. Only a trickle could cross the link. Tokyo had rolling blackouts.",
+     "show": "board",
+     "board": "grid",
+     "step": 6,
+     "calm": true
+    },
+    {
+     "say": "A purchase made over a century ago.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ],
+   "story": {
     "n": 6,
-    "tag": "OLD SUN",
-    "icon": "calendar"
+    "tag": "ONE MACHINE",
+    "icon": "node"
+   }
+  },
+  {
+   "id": "peak",
+   "style": "Brisk, practical, slightly bored.",
+   "beats": [
+    {
+     "say": "Demand changes through the day. Low at dawn, rising in the morning, highest after sunset.. when everyone gets home and switches everything on.",
+     "show": "board",
+     "board": "peak",
+     "step": 0
+    },
+    {
+     "say": "So some stations run all the time, and others sit idle and run just two hours a day. For the peak. Their power is the most expensive.",
+     "show": "board",
+     "board": "peak",
+     "step": 1
+    },
+    {
+     "say": "The year's top peak comes with a heat wave, every air conditioner at once. Or a cold snap. So the grid is built for the worst hour of the year.. and half of it sits idle the rest of the time.",
+     "show": "board",
+     "board": "peak",
+     "step": 2,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "That's why in many countries power prices change by the hour. A washing machine at midnight.. costs less than one at sunset.",
+     "show": "board",
+     "board": "peak",
+     "step": 3
+    }
+   ],
+   "story": {
+    "n": 7,
+    "tag": "PEAK HOUR",
+    "icon": "bolt"
    }
   },
   {
@@ -459,13 +697,13 @@
    "style": "A quick aside, like reading two entries from a field dictionary.",
    "beats": [
     {
-     "say": "The human dictionary. Two words today. Turbine: the giant fan that steam, water or wind spins.. and it spins the generator.",
+     "say": "Two words from the human dictionary. Hertz: turns per second. The grid's pulse.",
      "show": "board",
      "board": "e2dict",
      "step": 0
     },
     {
-     "say": "And megawatt: a million watts. Enough for hundreds of homes. Or five hundred kettles at once.",
+     "say": "And megawatt: a million watts. Enough for hundreds of homes. Or one small data center.",
      "show": "board",
      "board": "e2dict",
      "step": 1,
@@ -473,24 +711,30 @@
     }
    ],
    "story": {
-    "n": 7,
+    "n": 8,
     "tag": "WORDS",
     "icon": "key"
    }
   },
   {
    "id": "recap",
-   "style": "Summary, then the next report, then the sign-off.",
+   "style": "Summary, one sincere warning, then the sign-off.",
    "beats": [
     {
-     "say": "Summary, sir. One: a generator is a magnet spinning inside a coil, from Faraday until today. Two: most stations boil water to spin it, even nuclear. Dams spin it with water, wind farms with wind. Three: solar is the only exception, the fastest-growing, and for the first time in a century, renewables together passed coal.",
+     "say": "Report summary, sir. One: a generator is a spinning magnet, and nearly every station is looking for something to spin it. Two: the voltage goes up so power can travel, and comes down before the house. Three: what's made must equal what's drawn. Every second.",
      "show": "board",
      "board": "e2recap",
      "step": 0,
      "host": "right"
     },
     {
-     "say": "But it's still sitting at the station. Next report: how it reaches your home faster than a blink, why the bird on the wire is fine, and how a football match made a country need two stations in minutes.",
+     "say": "Same warning: any wire in the street, fallen or hanging, nobody goes near it. Keep away.. and report it.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "Next report: what happens when this balance breaks? Why the lights go out, and how one tree darkened fifty million people.",
      "shot": "host",
      "emote": "neutral",
      "gesture": "count"
@@ -503,12 +747,11 @@
     }
    ],
    "story": {
-    "n": 8,
+    "n": 9,
     "tag": "RECAP",
     "icon": "rules"
    }
   }
  ],
- "youtube": {},
  "theme": "day"
 }

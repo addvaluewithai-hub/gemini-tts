@@ -753,6 +753,70 @@
    }
   }
  ],
- "youtube": {},
+ "youtube": {
+  "titles": [
+   "الكهربا بتيجي منين؟ وإزاي بتوصل بيتك في رمشة عين | ملف الكهربا 2/4",
+   "ليه العصفور مابيتكهربش؟ رحلة الكهربا من المحطة للفيشة | ملف الكهربا 2/4",
+   "ماتش كورة خلّى بلد كاملة محتاجة محطتين كهربا | 2/4"
+  ],
+  "description": [
+   "التقرير التاني من العميل Peek لقيادته في ملف الكهربا: الكهربا بتتعمل فين.. وبتوصل البيت إزاي في نفس اللحظة؟",
+   "",
+   "مغناطيس بيلفّ من أيام Faraday، والمحطات كلها بتدوّر على حاجة تلفّه: بخار أو مية أو هوا، والشمس الاستثناء الوحيد. وبعدين رحلة الكهربا: المحوّل اللي بيرفع الضغط وينزّله، ليه العصفور مابيتكهربش، والميزان اللي لازم يتظبط كل ثانية على رقم واحد. ومعاها ماتش كورة سنة 1990 خلّى إنجلترا محتاجة محطتين في دقايق، وساعات أوروبا اللي أخّرت ست دقايق، واليابان المقسومة نصين.",
+   "",
+   "الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "حصة كل مصدر في كهربا العالم 2025 (Ember، Global Electricity Review 2026): https://ember-energy.org/latest-insights/global-electricity-review-2026/",
+   "الفاقد في شبكات أمريكا، حوالي 5% (EIA): https://www.eia.gov/tools/faqs/faq.php?id=105&t=3",
+   "قفزة الطلب بعد ماتش إنجلترا وألمانيا 1990: https://en.wikipedia.org/wiki/TV_pickup",
+   "ساعات أوروبا اللي أخّرت ست دقايق سنة 2018 (NPR): https://www.npr.org/sections/thetwo-way/2018/03/07/591528390/a-political-dispute-puts-a-wrinkle-in-time-slowing-millions-of-european-clocks",
+   "شبكتين اليابان 50 و60 هيرتز (Japan Times): https://www.japantimes.co.jp/news/2011/07/19/reference/japans-incompatible-power-grids/"
+  ],
+  "footer": [
+   "دي حلقة من ملف من أربع تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش إرشادات أمان ولا شغل كهربا. أي سلك واقع أو متدلدل: ابعد عنه وبلّغ.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الكهربا",
+   "#شرح"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "الكهربا",
+   "الكهرباء",
+   "الكهربا بتيجي منين",
+   "محطة كهربا",
+   "المحول الكهربائي",
+   "الضغط العالي",
+   "ليه العصفور مابيتكهربش",
+   "التردد 50 هيرتز",
+   "شبكة الكهرباء",
+   "Faraday",
+   "توليد الكهرباء",
+   "الطاقة المتجددة",
+   "TV pickup",
+   "Earth Report",
+   "اشرحها لكائن فضائي",
+   "علوم مبسطة"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الكهربا (four parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "الفيشة في بلدكم شكلها إيه؟ ولو سافرت، كام محوّل في شنطتك؟ القيادة بتقرا التعليقات."
+ },
  "theme": "day"
 }

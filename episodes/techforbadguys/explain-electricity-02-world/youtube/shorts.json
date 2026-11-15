@@ -1,0 +1,252 @@
+{
+ "note": "Shorts for electricity part 2 of 4 (world picture). Same format as part 1. Proposals until the owner picks: nothing is uploaded.",
+ "full": "",
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "bird",
+   "title": "ليه العصفور مابيتكهربش على السلك؟ 🐦 #Shorts",
+   "description": "العصفور واقف على سلك ضغط عالي عريان ومش بيحصله حاجة، لأن رجليه الاتنين على نفس الضغط. بس لو لمس سلك تاني أو حاجة واصلة بالأرض.. بقى هو الطريق. والبشر واقفين على الأرض طول الوقت.\n\nالتقرير كامل: الكهربا بتيجي منين؟ وإزاي بتوصل بيتك في رمشة عين | ملف الكهربا 2/4\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "العصفور على السلك",
+    "الضغط العالي",
+    "الكهربا"
+   ],
+   "parts": [
+    [
+     214.39,
+     243.69
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-bird.wav",
+    "words": "shorts/cta-bird.words.json",
+    "card": {
+     "icons": [
+      "pylon",
+      "bolt"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2",
+     "look": "elec"
+    }
+   },
+   "voice_s": 29.3,
+   "en": {
+    "title": "Why Doesn't the Bird on the Wire Get Shocked? 🐦 #Shorts",
+    "description": "A bird sits on a bare high-voltage wire and nothing happens: both feet are at the same pressure. But touch another wire or anything grounded.. and it becomes the path. Humans are always standing on the ground.\n\nThe full report: Where Does Electricity Come From, and How Does It Reach You in a Blink? | Electricity File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "bird on a wire",
+     "high voltage"
+    ]
+   }
+  },
+  {
+   "key": "penalties",
+   "title": "ماتش كورة احتاج محطتين كهربا ⚽ #Shorts",
+   "description": "سنة 1990 إنجلترا وألمانيا وصلوا لضربات الجزاء في نص نهائي كاس العالم. أول ما الماتش خلص البلد كلها شغّلت الغلاية: الطلب نطّ 2800 ميجاوات في دقايق، قد محطتين كبار. ولسه رقم قياسي.\n\nالتقرير كامل: الكهربا بتيجي منين؟ وإزاي بتوصل بيتك في رمشة عين | ملف الكهربا 2/4\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "كاس العالم 1990",
+    "إنجلترا وألمانيا",
+    "الغلاية",
+    "TV pickup"
+   ],
+   "parts": [
+    [
+     297.36,
+     322.67
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-penalties.wav",
+    "words": "shorts/cta-penalties.words.json",
+    "card": {
+     "icons": [
+      "kettle",
+      "station"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2",
+     "look": "elec"
+    }
+   },
+   "voice_s": 25.3,
+   "en": {
+    "title": "A Football Match That Needed Two Power Stations ⚽ #Shorts",
+    "description": "In 1990 England and Germany went to penalties in the World Cup semi-final. When it ended the whole country switched on the kettle: demand jumped 2,800 MW in minutes, two big power stations. Still the record.\n\nThe full report: Where Does Electricity Come From, and How Does It Reach You in a Blink? | Electricity File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "TV pickup",
+     "1990 World Cup",
+     "kettle"
+    ]
+   }
+  },
+  {
+   "key": "clocks",
+   "title": "ليه ساعات أوروبا أخّرت 6 دقايق؟ ⏰ #Shorts",
+   "description": "سنة 2018 خلاف بين Kosovo و Serbia خلّى شبكة أوروبا كلها تلفّ أبطأ شعرة: 49.996 بدل 50. والساعات اللي بتعدّ من نبض الشبكة أخّرت ست دقايق في 25 دولة. واليابان مقسومة نصين من 1895: 50 و60.\n\nالتقرير كامل: الكهربا بتيجي منين؟ وإزاي بتوصل بيتك في رمشة عين | ملف الكهربا 2/4\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "ساعات أوروبا",
+    "50 هيرتز",
+    "اليابان 50 و60",
+    "شبكة الكهرباء"
+   ],
+   "parts": [
+    [
+     346.25,
+     365.45
+    ],
+    [
+     365.35,
+     387.37
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-clocks.wav",
+    "words": "shorts/cta-clocks.words.json",
+    "card": {
+     "icons": [
+      "station",
+      "bolt"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2",
+     "look": "elec"
+    }
+   },
+   "voice_s": 41.2,
+   "en": {
+    "title": "Why Did Europe's Clocks Run 6 Minutes Late? ⏰ #Shorts",
+    "description": "In 2018 a dispute between Kosovo and Serbia slowed Europe's whole grid a hair: 49.996 instead of 50. Clocks that count the grid's pulse fell six minutes behind in 25 countries. And Japan has been split in two since 1895: 50 and 60.\n\nThe full report: Where Does Electricity Come From, and How Does It Reach You in a Blink? | Electricity File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "Europe clocks 2018",
+     "50 Hz",
+     "Japan 50 60 Hz"
+    ]
+   }
+  },
+  {
+   "key": "plugs",
+   "title": "ليه في 15 شكل فيشة؟ والقطر اللي بيشيل الكهربا 🔌 #Shorts",
+   "description": "البشر اتفقوا على الفولت والأمبير، بس عندهم حوالي 15 شكل فيشة. وليه الكهربا بتسافر بضغط عالي؟ زي ما تنقل ألف راكب: ألف عربية تزحم الطريق.. أو قطر واحد. والمحوّل مابيشتغلش غير بالمتردد: وده اللي خلّى Tesla يكسب Edison.\n\nالتقرير كامل: الكهربا بتيجي منين؟ وإزاي بتوصل بيتك في رمشة عين | ملف الكهربا 2/4\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "أشكال الفيشة",
+    "الضغط العالي",
+    "المحول",
+    "Tesla و Edison"
+   ],
+   "parts": [
+    [
+     156.82,
+     193.08
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-plugs.wav",
+    "words": "shorts/cta-plugs.words.json",
+    "card": {
+     "icons": [
+      "bolt",
+      "pylon"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2",
+     "look": "elec"
+    }
+   },
+   "voice_s": 36.3,
+   "en": {
+    "title": "Why 15 Plug Shapes? And the Train That Carries Power 🔌 #Shorts",
+    "description": "Humans agreed on volts and amps, yet have about 15 plug shapes. Why does power travel at high voltage? Like moving a thousand passengers: a thousand cars jam the road.. or one train. And transformers need AC: that's why Tesla beat Edison.\n\nThe full report: Where Does Electricity Come From, and How Does It Reach You in a Blink? | Electricity File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "plug types",
+     "high voltage",
+     "transformer"
+    ]
+   }
+  },
+  {
+   "key": "faraday",
+   "title": "ابن الحدّاد اللي نوّر الكوكب ⚡ #Shorts",
+   "description": "سنة 1831 Faraday، ابن حدّاد ماكملش تعليمه وكان صبي في ورشة تجليد كتب، اكتشف إن المغناطيس لما يتحرك جنب سلك بيحرّك الإلكترونات. ومن ساعتها أغلب كهربا الكوكب بتتعمل بنفس الحركة.\n\nالتقرير كامل: الكهربا بتيجي منين؟ وإزاي بتوصل بيتك في رمشة عين | ملف الكهربا 2/4\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكهربا #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف الكهربا",
+    "شرح مبسط",
+    "Faraday",
+    "المولد الكهربائي",
+    "توليد الكهرباء"
+   ],
+   "parts": [
+    [
+     28.04,
+     69.18
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-faraday.wav",
+    "words": "shorts/cta-faraday.words.json",
+    "card": {
+     "icons": [
+      "book",
+      "gear"
+     ],
+     "sub": "ELECTRICITY FILE · PART 2",
+     "look": "elec"
+    }
+   },
+   "voice_s": 41.1,
+   "en": {
+    "title": "The Blacksmith's Son Who Lit Up the Planet ⚡ #Shorts",
+    "description": "In 1831 Faraday, a blacksmith's son who left school early and worked as a bookbinder's apprentice, found that a moving magnet pushes the electrons in a wire. Most of the planet's power is still made that way.\n\nThe full report: Where Does Electricity Come From, and How Does It Reach You in a Blink? | Electricity File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #electricity #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "electricity explained",
+     "Faraday",
+     "generator"
+    ]
+   }
+  }
+ ]
+}
