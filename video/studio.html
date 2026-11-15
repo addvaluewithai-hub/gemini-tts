@@ -365,7 +365,7 @@ window.draw = (st) => {
   // peekFixed (a Short): Peek stands at the bottom centre all the time, over the picture, about a quarter of the frame tall
   if (cfg.peekFixed && cfg.vertical) { const pf = cfg.peekFixed, z = Math.round(1920 * (pf.h || 0.25) / 0.86), el = $("fixpeek"); $("frame").classList.add("fixpeek");
     person(el, st.host ? { ...st.host, paper: "pockets", shift: 0 } : null, z, "f3"); const L = -z * (pf.out ?? 0.12), R = 1080 - z * (1 - (pf.out ?? 0.12)), fx = st.fixX ?? (pf.side === "left" ? 0 : 1); el.style.left = L + (R - L) * fx + (pf.x || 0) + "px"; el.style.top = 1920 - z * (pf.foot || 0.97) + "px";
-    if (cfg.captions !== false) { const cx = st.fixX ?? 1; Object.assign($("cap").style, { top: (pf.capY || 1440) + "px", left: 40 + (1080 - z * 0.8) * (1 - cx) + "px", right: 40 + (1080 - z * 0.8) * cx + "px", fontSize: "64px" }); } }   // the captions beside him, on the side he leaves free
+    if (cfg.captions !== false) { Object.assign($("cap").style, { top: (pf.capY || 1060) + "px", left: "60px", right: "60px", fontSize: "70px" }); } }   // the captions in a fixed band above his hat, never at his face
   if (st.peek && st.peek.side) { const right = st.peek.side === "right", a = st.peek.amt;       // leaning in from the edge of the frame
     const W = cfg.vertical ? 1080 : 1920; $("peek").style.top = (cfg.vertical ? 1300 : 520) + "px"; $("peek").style.left = (right ? W - 430 * a : -640 + 430 * a) + "px"; $("peek").style.transform = `rotate(${right ? -15 : 15}deg)`; }
   else if (st.peek) { $("peek").style.left = "1320px"; $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
