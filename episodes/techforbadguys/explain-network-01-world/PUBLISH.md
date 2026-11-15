@@ -26,3 +26,17 @@ Release planned: Friday 20 November 2026.
 `thumbnail-a.jpg` (Arabic) and `thumbnail-en.jpg`. Shorts: `shorts-proposals.json` (five, in order of
 recommendation, each with its own closing line in Arabic and English; not recorded or rendered until the owner picks)
 and `shorts/thumb-<key>-intl.jpg` (no words).
+
+## Paused (owner, 15 November 2026)
+
+The network file is paused while the channel works on crypto and electricity; how the file is split will be decided
+again with the owner. Two renders of part 1 exist; nothing else differs between them but the file count:
+
+| render | end card, titles, thumbnails | where | reproduce from |
+|---|---|---|---|
+| original | NEXT 2 / 3, 1/3 | R2 `network-01/episode/full-ar.mp4` (the one the owner saw); also `network-01-ar-next-2of3.mp4` in the producer's work directory | commit `233b0c3` |
+| four-part | NEXT 2 / 4, 1/4 | `network-01-ar-next-2of4.mp4` in the producer's work directory only (not in R2, by the planner's request) | commit `813d8fa` on `network-world` |
+
+The work directory is a session scratchpad and can be cleared; either render is rebuilt from its commit with
+`produce.sh` (about 15 minutes, identical voice and cues). The thumbnails in `youtube/` are the 1/4 ones; the 1/3 ones
+are in R2 (`network-01/thumbnails/episode-ar.jpg`, `episode-en.jpg`) and at commit `233b0c3`.
