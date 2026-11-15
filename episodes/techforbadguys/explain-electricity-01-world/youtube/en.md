@@ -1,4 +1,4 @@
-# YouTube: English entry for the world-picture video (Electricity File 1)
+# YouTube: English entry for the world-picture video (Electricity File 1/3)
 
 One video, several audio tracks. The picture is the language-neutral cut (`explain-electricity-01-world`), the original
 audio is Arabic, and this page is what goes into the video's **English** language entry: Translations (title and
@@ -13,9 +13,9 @@ description), the English audio track, and English subtitles.
 
 ## Title
 
-1. What Is Electricity, Really? Slower Than a Snail | Electricity File 1  ← recommended
-2. Volts, Amps and Watts, Explained With a Water Tank | Electricity File 1
-3. Edison vs Tesla: The Fight That Reached the Electric Chair | Electricity File 1
+1. What Is Electricity, Really? Slower Than a Snail | Electricity File 1/3  ← recommended
+2. Volts, Amps and Watts, Explained With a Water Tank | Electricity File 1/3
+3. Edison vs Tesla: The Fight That Reached the Electric Chair | 1/3
 
 ## Description
 
@@ -50,7 +50,7 @@ China's 1,100 kV line (Enerdata): https://www.enerdata.net/publications/daily-en
 The electric eel Electrophorus voltai, up to 860 volts (Nature Communications, 2019): https://phys.org/news/2019-09-species-electric-eel-highest-voltage.html
 Westinghouse's axe remark after the 1890 execution (as reported by the New York Times, 18 August 1890; wording varies between sources): https://www.smithsonianmag.com/history/edison-vs-westinghouse-a-shocking-rivalry-102146036/
 
-This is one report in a five-part file on electricity. Watch them in order from the playlist.
+This is one report in a three-part file on electricity. Watch them in order from the playlist.
 This is a general explanation, not safety guidance or instructions for electrical work. Electricity is dangerous: leave any work on it to a professional.
 The character, voice and animation are computer-generated. The facts come from the sources above and from general references.
 

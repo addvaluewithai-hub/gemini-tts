@@ -55,7 +55,7 @@ export const volcano = (t, smoke = 1) => `${[0, 1, 2].map((i) => { const q = ((t
 
 // ---- 0: a boiler the size of a building ----
 function s0(a, tot) {
-  const G = 900, c = camAt(a, [[0, 960, 560, 1.15], [1.3, 960, 540, 1.1], [3.5, 960, 470, 0.95], [4.72, 960, 450, 0.82]]);
+  const G = 900, c = camAt(a, [[0, 960, 600, 1.45], [1.3, 960, 580, 1.35], [3.5, 1000, 500, 1.0], [4.72, 1040, 470, 0.86]]);
   const fill = ease(seg(a, 1.33, 2.2)), coal = Math.floor(kf(a, [[2.56, 0], [3.0, 15]])), gas = seg(a, 3.02, 3.2), big = ease(seg(a, 3.51, 4.3));
   const heat = clamp(0.5 * seg(a, 2.6, 3.0) + 0.5 * gas), h = lerp(520, 980, big), X = 960;
   const coalG = coal > 0 ? at(X - 110, G - 4, coalPile(coal, 0.9)) : "", flames = gas > 0 ? [-60, 20, 100].map((dx, i) => at(X + dx, G - 4, flame(tot + i, 0.8 * spring(a - 3.02 - i * 0.05, 9, 16)))).join("") : "";
@@ -69,7 +69,7 @@ function s0(a, tot) {
 // ---- 1: steam → turbine → generator → bulb, one chain ----
 // L: positions of boiler mouth, turbine, generator, bulb and the camera keys (landscape or portrait)
 export const CHAIN_L = { boiler: [260, 760], pipe: [[300, 260], [560, 260], [760, 380]], turbine: [820, 470], gen: [1250, 470], wire: [[1400, 470], [1560, 470], [1560, 300]], bulb: [1560, 330],
-  cam: [[0, 520, 500, 1.2], [1.6, 820, 480, 1.15], [2.9, 1150, 470, 1.05], [4.5, 1000, 450, 0.92]] };
+  cam: [[0, 520, 520, 1.45], [1.6, 820, 480, 1.35], [2.9, 1200, 470, 1.3], [4.5, 1060, 480, 1.08]] };
 export function chain(a, tot, L = CHAIN_L) {
   const c = camAt(a, L.cam), sp = seg(a, 0.34, 1.29), spin = clamp(seg(a, 1.29, 1.9)), genOn = seg(a, 2.83, 3.2), lit = seg(a, 4.0, 4.3);
   const ang = 360 * (0.6 * Math.max(0, a - 1.29) ** 2 * (a < 2.5 ? 1 : 0) + (a >= 2.5 ? 0.6 * 1.21 ** 2 + 1.7 * (a - 2.5) : 0));
@@ -86,7 +86,7 @@ const s1 = (a, tot) => chain(a, tot);
 
 // ---- 2: nuclear: split the atom… to boil water (host right: keep the lower right clear) ----
 export function nuclear(a, tot, o = {}) {
-  const G = o.G ?? 860, RX = o.RX ?? 620, TX = o.TX ?? 1180, c = camAt(a, o.cam || [[0, 900, 520, 0.95], [2.9, 760, 440, 1.25], [4.4, 840, 420, 1.05], [5.66, 880, 400, 0.92]]);
+  const G = o.G ?? 860, RX = o.RX ?? 620, TX = o.TX ?? 1180, c = camAt(a, o.cam || [[0, 880, 560, 1.0], [2.4, 640, 560, 1.6], [3.1, 620, 600, 2.4], [3.9, 640, 560, 1.7], [4.6, 860, 480, 1.05], [5.66, 880, 460, 0.98]]);
   const split = seg(a, 3.1, 3.5), flash = a > 3.1 ? Math.exp(-(a - 3.1) * 4) : 0, steamOn = seg(a, 4.94, 5.3);
   const at0 = split <= 0 ? atom(tot, { n: 3, R: 62, r: 10, nr: 22 }) : [-1, 1].map((s) => at(s * 50 * ease(split), 0, nucleus(16 * (1 - 0.2 * split)))).join("") + Array.from({ length: 3 }, (_, i) => at(Math.cos(i * 2.1) * 90 * split, Math.sin(i * 2.1) * 90 * split, electron(9))).join("");
   const inside = at(0, -170, at0, pop(a - 0.95, 7, 12));
@@ -100,9 +100,9 @@ const s2 = (a, tot) => nuclear(a, tot);
 
 // ---- 3: one pellet weighs (in energy) as much as a ton of coal ----
 export function scale3(a, tot, o = {}) {
-  const X = o.X ?? 960, c = camAt(a, o.cam || [[0, 960, 560, 1.25], [1.6, 960, 520, 1.1], [3.68, 960, 520, 1.02]]), G = o.G ?? 960;
-  const pIn = pop(a - 0.6), coalIn = Math.floor(kf(a, [[2.4, 0], [3.0, 36]])), tilt = kf(a, [[0.6, 0], [1.0, -16], [2.5, -16], [3.13, 0]]);
-  const L = pIn > 0 ? at(0, -34, pellet(1.6 * pIn, seg(a, 1.81, 2.2))) : "", R = coalIn > 0 ? at(0, -8, coalPile(coalIn, 0.62)) : "";
+  const X = o.X ?? 960, c = camAt(a, o.cam || [[0, 960, 640, 1.5], [1.6, 960, 600, 1.35], [3.68, 960, 600, 1.28]]), G = o.G ?? 960;
+  const pIn = pop(a - 0.6), coalIn = Math.floor(kf(a, [[2.4, 0], [3.0, 28]])), tilt = kf(a, [[0.6, 0], [1.0, -16], [2.5, -16], [3.13, 0]]);
+  const L = pIn > 0 ? at(0, -34, pellet(1.6 * pIn, seg(a, 1.81, 2.2))) : "", R = coalIn > 0 ? at(0, -8, coalPile(coalIn, 0.85)) : "";
   const g = sky(c, tot, 53) + layer(ground(G) + at(X, G, balance(tilt, L, R, o.w ?? 440, 460), 1.05) + (a > 3.13 ? at(X, G - 560, check(0, 0, 44, P.green, a - 3.13)) : ""), c);
   return { g, in: toScreen(c, X, G - 400), inC: "#f6fbff", out: toScreen(c, X - (o.w ?? 440), G - 340), outC: "#9cff6a", outZ: 12 };
 }
@@ -110,7 +110,7 @@ const s3 = (a, tot) => scale3(a, tot);
 
 // ---- 4: a volcano land: steam from the ground ----
 export function geo(a, tot, o = {}) {
-  const G = o.G ?? 880, c = camAt(a, o.cam || [[0, 760, 460, 0.9], [1.6, 900, 560, 1.05], [3.46, 1080, 600, 1.15]]), TX = o.TX ?? 1380, CR = o.CR ?? [760, 920, 1080];
+  const G = o.G ?? 880, c = camAt(a, o.cam || [[0, 1000, 600, 0.85], [1.6, 1020, 620, 1.0], [3.46, 1120, 640, 1.12]]), TX = o.TX ?? 1380, CR = o.CR ?? [760, 920, 1080];
   const vents = seg(a, 1.02, 1.4), into = seg(a, 1.55, 2.4), spin = seg(a, 2.0, 2.64), ang = 360 * 1.2 * Math.max(0, a - 2.0) ** 1.5;
   const cracks = CR.map((x, i) => `<path d="M${x - 60} ${G + 4}L${x - 20} ${G - 6}L${x + 10} ${G + 6}L${x + 60} ${G - 4}" stroke="#ff7a3c" stroke-width="10" fill="none" opacity="${(0.4 + 0.6 * vents).toFixed(2)}"/>` + (vents > 0 ? [0, 1, 2].map((j) => { const q = ((tot * 0.7 + j / 3 + i * 0.2) % 1); const x0 = x + 20 * Math.sin(tot + j), y0 = G - q * 300; const tx = lerp(x0, TX - 220, into * q), ty = lerp(y0, G - 260, into * q); return at(tx, ty, puff(30 + 40 * q, 0.75 * vents * (1 - q))); }).join("") : "")).join("");
   const g = sky(c, tot, 59) + layer(at(o.VX ?? 320, G, volcano(tot), 1.1), c, 0.55) + layer(ground(G) + `<rect x="-1600" y="${G}" width="4800" height="20" fill="#3a2a2a"/>` + cracks + at(TX, G - 260, turbine(ang * spin, 140)) + `<path d="M${TX} ${G - 120}V${G}" stroke="#5d7089" stroke-width="36"/>`, c);

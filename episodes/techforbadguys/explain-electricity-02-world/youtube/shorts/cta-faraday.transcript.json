@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-15T01:08:21.360Z",
+  "duration_ms": 11920,
+  "word_count": 27,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "ومن الحركه دي بتتعمل تقريبا كل كهرباء الكوكب والتقرير كامل على قناه تقرير الارض اشترك في القناه وفعل الجرس علشان تقارير السريه عن كوكبكم توصلك اول باول",
+  "source_text": "ومن الحركة دي بتتعمل تقريباً كل كهربا الكوكب.. والتقرير كامل على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "ومن الحركة دي بتتعمل تقريباً كل كهربا الكوكب.. والتقرير كامل على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 400,
+      "text": "ومن"
+    },
+    {
+      "start_ms": 400,
+      "end_ms": 920,
+      "text": "الحركه"
+    },
+    {
+      "start_ms": 920,
+      "end_ms": 1240,
+      "text": "دي"
+    },
+    {
+      "start_ms": 1280,
+      "end_ms": 1840,
+      "text": "بتتعمل"
+    },
+    {
+      "start_ms": 1840,
+      "end_ms": 2320,
+      "text": "تقريبا"
+    },
+    {
+      "start_ms": 2320,
+      "end_ms": 2760,
+      "text": "كل"
+    },
+    {
+      "start_ms": 2760,
+      "end_ms": 3240,
+      "text": "كهرباء"
+    },
+    {
+      "start_ms": 3240,
+      "end_ms": 3800,
+      "text": "الكوكب"
+    },
+    {
+      "start_ms": 4280,
+      "end_ms": 4880,
+      "text": "والتقرير"
+    },
+    {
+      "start_ms": 4880,
+      "end_ms": 5400,
+      "text": "كامل"
+    },
+    {
+      "start_ms": 5440,
+      "end_ms": 5640,
+      "text": "على"
+    },
+    {
+      "start_ms": 5640,
+      "end_ms": 5880,
+      "text": "قناه"
+    },
+    {
+      "start_ms": 5880,
+      "end_ms": 6160,
+      "text": "تقرير"
+    },
+    {
+      "start_ms": 6160,
+      "end_ms": 6840,
+      "text": "الارض"
+    },
+    {
+      "start_ms": 6880,
+      "end_ms": 7280,
+      "text": "اشترك"
+    },
+    {
+      "start_ms": 7280,
+      "end_ms": 7360,
+      "text": "في"
+    },
+    {
+      "start_ms": 7360,
+      "end_ms": 7800,
+      "text": "القناه"
+    },
+    {
+      "start_ms": 7840,
+      "end_ms": 8200,
+      "text": "وفعل"
+    },
+    {
+      "start_ms": 8200,
+      "end_ms": 8680,
+      "text": "الجرس"
+    },
+    {
+      "start_ms": 8680,
+      "end_ms": 9000,
+      "text": "علشان"
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9400,
+      "text": "تقارير"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9840,
+      "text": "السريه"
+    },
+    {
+      "start_ms": 9840,
+      "end_ms": 9960,
+      "text": "عن"
+    },
+    {
+      "start_ms": 9960,
+      "end_ms": 10480,
+      "text": "كوكبكم"
+    },
+    {
+      "start_ms": 10520,
+      "end_ms": 11040,
+      "text": "توصلك"
+    },
+    {
+      "start_ms": 11040,
+      "end_ms": 11240,
+      "text": "اول"
+    },
+    {
+      "start_ms": 11240,
+      "end_ms": 11640,
+      "text": "باول"
+    }
+  ]
+}

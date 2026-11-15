@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-15T01:08:31.506Z",
+  "duration_ms": 11800,
+  "word_count": 37,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "So if they all boil water, which one doesn't? The full report is on the Earth Report channel. Subscribe to the channel and turn on the bell so my secret reports on your planet reach you first.",
+  "source_text": "So if they all boil water.. which one doesn't? The full report is on the Earth Report channel. Subscribe to the channel and turn on the bell, so my secret reports on your planet reach you first.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "So if they all boil water.. which one doesn't? The full report is on the Earth Report channel. Subscribe to the channel and turn on the bell, so my secret reports on your planet reach you first."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 440,
+      "text": "So"
+    },
+    {
+      "start_ms": 440,
+      "end_ms": 560,
+      "text": "if"
+    },
+    {
+      "start_ms": 560,
+      "end_ms": 760,
+      "text": "they"
+    },
+    {
+      "start_ms": 760,
+      "end_ms": 1080,
+      "text": "all"
+    },
+    {
+      "start_ms": 1080,
+      "end_ms": 1600,
+      "text": "boil"
+    },
+    {
+      "start_ms": 1600,
+      "end_ms": 2200,
+      "text": "water,"
+    },
+    {
+      "start_ms": 2480,
+      "end_ms": 2760,
+      "text": "which"
+    },
+    {
+      "start_ms": 2760,
+      "end_ms": 3000,
+      "text": "one"
+    },
+    {
+      "start_ms": 3000,
+      "end_ms": 3560,
+      "text": "doesn't?"
+    },
+    {
+      "start_ms": 4120,
+      "end_ms": 4240,
+      "text": "The"
+    },
+    {
+      "start_ms": 4240,
+      "end_ms": 4440,
+      "text": "full"
+    },
+    {
+      "start_ms": 4440,
+      "end_ms": 4840,
+      "text": "report"
+    },
+    {
+      "start_ms": 4840,
+      "end_ms": 4960,
+      "text": "is"
+    },
+    {
+      "start_ms": 4960,
+      "end_ms": 5040,
+      "text": "on"
+    },
+    {
+      "start_ms": 5040,
+      "end_ms": 5200,
+      "text": "the"
+    },
+    {
+      "start_ms": 5200,
+      "end_ms": 5400,
+      "text": "Earth"
+    },
+    {
+      "start_ms": 5400,
+      "end_ms": 5760,
+      "text": "Report"
+    },
+    {
+      "start_ms": 5760,
+      "end_ms": 6200,
+      "text": "channel."
+    },
+    {
+      "start_ms": 6680,
+      "end_ms": 7120,
+      "text": "Subscribe"
+    },
+    {
+      "start_ms": 7120,
+      "end_ms": 7200,
+      "text": "to"
+    },
+    {
+      "start_ms": 7200,
+      "end_ms": 7320,
+      "text": "the"
+    },
+    {
+      "start_ms": 7320,
+      "end_ms": 7720,
+      "text": "channel"
+    },
+    {
+      "start_ms": 7720,
+      "end_ms": 7840,
+      "text": "and"
+    },
+    {
+      "start_ms": 7840,
+      "end_ms": 8040,
+      "text": "turn"
+    },
+    {
+      "start_ms": 8040,
+      "end_ms": 8160,
+      "text": "on"
+    },
+    {
+      "start_ms": 8160,
+      "end_ms": 8240,
+      "text": "the"
+    },
+    {
+      "start_ms": 8240,
+      "end_ms": 8600,
+      "text": "bell"
+    },
+    {
+      "start_ms": 8600,
+      "end_ms": 8760,
+      "text": "so"
+    },
+    {
+      "start_ms": 8760,
+      "end_ms": 8960,
+      "text": "my"
+    },
+    {
+      "start_ms": 8960,
+      "end_ms": 9400,
+      "text": "secret"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9920,
+      "text": "reports"
+    },
+    {
+      "start_ms": 9920,
+      "end_ms": 10000,
+      "text": "on"
+    },
+    {
+      "start_ms": 10000,
+      "end_ms": 10200,
+      "text": "your"
+    },
+    {
+      "start_ms": 10200,
+      "end_ms": 10680,
+      "text": "planet"
+    },
+    {
+      "start_ms": 10680,
+      "end_ms": 10920,
+      "text": "reach"
+    },
+    {
+      "start_ms": 10920,
+      "end_ms": 11080,
+      "text": "you"
+    },
+    {
+      "start_ms": 11080,
+      "end_ms": 11600,
+      "text": "first."
+    }
+  ]
+}

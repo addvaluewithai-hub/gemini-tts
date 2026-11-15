@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-15T01:08:21.960Z",
+  "duration_ms": 11520,
+  "word_count": 28,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "طب لو كله بيغلي ميه، مين اللي ما بيغليش؟ التقرير كامل على قناه تقرير الارض، اشترك في القناه وفعل الجرس علشان تقاريري السريه عن كوكبكم توصلك اول باول.",
+  "source_text": "طب لو كله بيغلي مية.. مين اللي مابيغليش؟ التقرير كامل على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "طب لو كله بيغلي مية.. مين اللي مابيغليش؟ التقرير كامل على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 440,
+      "text": "طب"
+    },
+    {
+      "start_ms": 440,
+      "end_ms": 640,
+      "text": "لو"
+    },
+    {
+      "start_ms": 640,
+      "end_ms": 1080,
+      "text": "كله"
+    },
+    {
+      "start_ms": 1080,
+      "end_ms": 1520,
+      "text": "بيغلي"
+    },
+    {
+      "start_ms": 1520,
+      "end_ms": 2200,
+      "text": "ميه،"
+    },
+    {
+      "start_ms": 2240,
+      "end_ms": 2520,
+      "text": "مين"
+    },
+    {
+      "start_ms": 2520,
+      "end_ms": 2640,
+      "text": "اللي"
+    },
+    {
+      "start_ms": 2640,
+      "end_ms": 2760,
+      "text": "ما"
+    },
+    {
+      "start_ms": 2760,
+      "end_ms": 3600,
+      "text": "بيغليش؟"
+    },
+    {
+      "start_ms": 3880,
+      "end_ms": 4320,
+      "text": "التقرير"
+    },
+    {
+      "start_ms": 4320,
+      "end_ms": 4640,
+      "text": "كامل"
+    },
+    {
+      "start_ms": 4640,
+      "end_ms": 4840,
+      "text": "على"
+    },
+    {
+      "start_ms": 4840,
+      "end_ms": 5240,
+      "text": "قناه"
+    },
+    {
+      "start_ms": 5240,
+      "end_ms": 5680,
+      "text": "تقرير"
+    },
+    {
+      "start_ms": 5680,
+      "end_ms": 6480,
+      "text": "الارض،"
+    },
+    {
+      "start_ms": 6520,
+      "end_ms": 6920,
+      "text": "اشترك"
+    },
+    {
+      "start_ms": 6920,
+      "end_ms": 7000,
+      "text": "في"
+    },
+    {
+      "start_ms": 7000,
+      "end_ms": 7280,
+      "text": "القناه"
+    },
+    {
+      "start_ms": 7280,
+      "end_ms": 7560,
+      "text": "وفعل"
+    },
+    {
+      "start_ms": 7560,
+      "end_ms": 8000,
+      "text": "الجرس"
+    },
+    {
+      "start_ms": 8000,
+      "end_ms": 8360,
+      "text": "علشان"
+    },
+    {
+      "start_ms": 8360,
+      "end_ms": 8760,
+      "text": "تقاريري"
+    },
+    {
+      "start_ms": 8760,
+      "end_ms": 9360,
+      "text": "السريه"
+    },
+    {
+      "start_ms": 9360,
+      "end_ms": 9480,
+      "text": "عن"
+    },
+    {
+      "start_ms": 9480,
+      "end_ms": 10120,
+      "text": "كوكبكم"
+    },
+    {
+      "start_ms": 10120,
+      "end_ms": 10560,
+      "text": "توصلك"
+    },
+    {
+      "start_ms": 10560,
+      "end_ms": 10840,
+      "text": "اول"
+    },
+    {
+      "start_ms": 10840,
+      "end_ms": 11280,
+      "text": "باول."
+    }
+  ]
+}
