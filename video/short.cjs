@@ -19,7 +19,7 @@ const base = JSON.parse(fs.readFileSync(path.join(__dirname, "cues", name + ".js
 const zoom = spec.boardZoom || all.boardZoom || 0.68;
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "short-")), env = { ...process.env, NODE_PATH: process.env.NODE_PATH || "/opt/node-tools/node_modules" };
 const run = (cmd, args) => { const r = spawnSync(cmd, args, { stdio: "inherit", env, cwd: __dirname }); if (r.status !== 0) throw new Error(cmd + " failed"); };
-const vertical = { size: [1080, 1920], vertical: true, portraitSets: true, boardZoom: zoom, lead: 0, tail: 0 };
+const vertical = { size: [1080, 1920], vertical: true, portraitSets: true, boardZoom: zoom, lead: 0, tail: 0, ...((spec.peekFixed || all.peekFixed) ? { peekFixed: spec.peekFixed || all.peekFixed } : {}) };   // peekFixed: Peek standing at the bottom all the time ({ h: share of the height })
 const cue = (from, to, hold) => {
   const f = path.join(tmp, `cues-${from}.json`);
   fs.writeFileSync(f, JSON.stringify({ ...base, edit: base.edit.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),

@@ -45,6 +45,8 @@ html.short,html.short body,#frame.short{width:1080px;height:1920px}
 /* explain + vertical: the board is a card above the host; captions sit between them, clear of the bottom fifth and the right-hand buttons */
 #frame.vert #board{left:0;top:0;width:1920px;height:1080px;inset:auto;transform-origin:0 0;border-radius:40px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#1b2460,#070919 75%);box-shadow:0 0 0 6px rgba(127,212,255,.35),0 30px 80px rgba(0,0,0,.6)}
 #frame.vert:not(.fullv) #peek{display:none!important}
+#fixpeek{filter:drop-shadow(0 12px 22px rgba(0,0,0,.45))}#fixpeek svg{display:block}
+#frame.fixpeek #peek,#frame.fixpeek #host{display:none!important}
 
 #frame.vert.fullv #board{left:0;top:0;width:1080px;height:1920px;border-radius:0;box-shadow:none;background:none}
 #frame.vert #cap{left:60px;right:150px;font-size:76px}
@@ -230,6 +232,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#05060d}
  <div id="board"></div>
  <div id="actor"></div>
  <div id="peek"></div>
+ <div id="fixpeek"></div>
  <div id="pip"></div><div id="pipdesk"></div>
  <div id="fact"><svg id="factchart" viewBox="0 0 820 420"><path id="fcline" fill="none" stroke="#ff4654" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity=".85"/><path id="fchead" fill="#ff4654" opacity=".85"/></svg><div id="factbig"></div><div id="factsmall"></div></div>
  <div id="meme"></div>
@@ -359,6 +362,9 @@ window.draw = (st) => {
   { const ac = st.actor, el = $("actor"); person(el, ac, ac ? Math.round(ac.size) : 0, "a3");                  // the host inside a set: feet at (x, y)
     if (ac) { el.style.left = ac.x - ac.size / 2 + "px"; el.style.top = ac.y - ac.size * 0.845 - ac.hop * ac.size * 0.035 + "px"; el.style.transform = `${ac.flip ? "scaleX(-1) " : ""}rotate(${ac.lean}deg)`; } }
   person($("peek"), st.peek, 640, "r3");
+  // peekFixed (a Short): Peek stands at the bottom centre all the time, over the picture, about a quarter of the frame tall
+  if (cfg.peekFixed && cfg.vertical) { const pf = cfg.peekFixed, z = Math.round(1920 * (pf.h || 0.25) / 0.86), el = $("fixpeek"); $("frame").classList.add("fixpeek");
+    person(el, st.host ? { ...st.host, paper: "pockets", shift: 0 } : null, z, "f3"); el.style.left = 540 - z / 2 + (pf.x || 0) + "px"; el.style.top = 1920 - z * (pf.foot || 0.97) + "px"; }
   if (st.peek && st.peek.side) { const right = st.peek.side === "right", a = st.peek.amt;       // leaning in from the edge of the frame
     const W = cfg.vertical ? 1080 : 1920; $("peek").style.top = (cfg.vertical ? 1300 : 520) + "px"; $("peek").style.left = (right ? W - 430 * a : -640 + 430 * a) + "px"; $("peek").style.transform = `rotate(${right ? -15 : 15}deg)`; }
   else if (st.peek) { $("peek").style.left = "1320px"; $("peek").style.top = 1080 - st.peek.amt * st.peek.rise + "px"; $("peek").style.transform = `rotate(${st.peek.rot}deg)`; }
