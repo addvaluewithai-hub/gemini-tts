@@ -18,6 +18,7 @@
 import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, camAt, layer, toScreen, rr, circ, two, disc, rings, text, drawn, at, FW, FH, makeSet } from "./kit.js";
 import { P, E, house, stars, skyline, electron, cloud, bolt, boltPath, spark, nightTown, plate } from "./elec.js";
 import { calPage, globe } from "./props.js";
+import { V } from "./spark.v.js";
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
 const fmt = (v) => Math.round(v).toLocaleString("en");
@@ -137,7 +138,7 @@ function close(t, tot, s) {
   // the number: thousands of volts, rolled up on "آلاف الفولتات"; it shrinks away on "قليلة"
   const roll = seg(t, 1.1, 1.6), v = Math.round(lerp(0, 1000, ease(roll))), lab = t < 1.6 ? `${fmt(v)} V` : "1,000s V";
   const tagK = pop(t - 1.1) * (1 - 0.35 * ease(seg(u, 0.84, 1.2)));
-  const tag = t > 1.1 ? at(lerp(960, 960, 0), lerp(220, 190, ease(seg(u, 0.84, 1.2))), vtag(lab, 640, 110), tagK, 0, `opacity="${(1 - 0.5 * ease(seg(u, 0.84, 1.2))).toFixed(2)}"`) : "";
+  const tag = t > 1.1 ? at(FW / 2, lerp(220, 190, ease(seg(u, 0.84, 1.2))) + (FH > FW ? 330 : 0), vtag(lab, 640, 110), tagK, 0, `opacity="${(1 - 0.5 * ease(seg(u, 0.84, 1.2))).toFixed(2)}"`) : "";
   // behind the spark: only three little charges, on "الشحنة اللي وراها قليلة جداً"
   const three = [0, 1, 2].map((i) => { const ap = pop(u - 0.3 - i * 0.12), x = gx - 20 + i * 58, y = gy + 4 + 6 * Math.sin(tot * 6 + i), jump = seg(u, 1.48 + i * 0.04, 1.62 + i * 0.04);
     return jump >= 1 ? "" : at(lerp(x, 1330, ease(jump)), lerp(y, 560, ease(jump)), electron(26, { glow: seg(u, 0.84, 1.2) }), ap); }).join("");
@@ -177,7 +178,7 @@ function storm(t, tot, s) {
   // the tag: 300,000,000 V rolled up on "تلتمية مليون فولت", then flipped to 30,000 A on "تلاتين ألف أمبير"
   const vv = lerp(0, 300000000, ease(seg(u7, 1.5, 2.5))), flip = seg(u8, 0.35, 0.65), aa = lerp(0, 30000, ease(seg(u8, 0.5, 1.25)));
   const lab = flip < 0.5 ? `${fmt(vv)} V` : `${fmt(aa)} A`, tagK = pop(u7 - 0.2);
-  const tag = u7 > 0.2 ? at(1390, 470, vtag(lab, 760, 96, flip < 0.5 ? P.gold : E.el), [Math.max(0.04, Math.abs(Math.cos(Math.PI * flip))) * tagK, tagK]) : "";
+  const tag = u7 > 0.2 ? at(FH > FW ? FW / 2 : 1390, FH > FW ? 330 : 470, vtag(lab, 760, 96, flip < 0.5 ? P.gold : E.el), [Math.max(0.04, Math.abs(Math.cos(Math.PI * flip))) * tagK, tagK]) : "";
   const g = stormSky(1) + layer(rain(tot, -200, 2200, -200, 1100, 60, 0.18), c, 0.4) + layer(hills(GG + 40, "#0d3445") + skyline(21, -400, 2400, GG - 30, 60, 170, "#082636", "#ffcf6b"), c, 0.6)
     + layer(`<rect x="-800" y="${GG}" width="3600" height="600" fill="${E.hill}"/>` + groundHit + b + at(CX, CY, cloud(tot, ch, { c: C.cloud, cD: C.cloudD }), 1.45) + runners, c) + flashAll(0.4 * (t > 1.52 ? 1 - seg(t, 1.52, 1.9) : 0)) + tag;
   return { g, c };
@@ -194,8 +195,8 @@ function s9(a, tot) {
   for (let i = 0; i < 70; i++) { const t0 = i < 8 ? 0.15 + i * 0.16 : 1.28 + (i - 8) * 0.03, q = (a - t0) / 0.32; if (q < 0 || q > 1) continue;
     const ang = rnd(i * 13) * 6.28, rr0 = Math.sqrt(rnd(i * 13 + 1)) * R * 0.86, x = GX9 + Math.cos(ang) * rr0, y = GY9 + Math.sin(ang) * rr0, k = 1 - q;
     fl += rings(x, y, 60 * (0.5 + q), E.spark, 0.55 * k, 1.5) + disc(x, y, 16 * k, "#fff", E.spark) + bolt(x - 10, y - 46, x + 10, y + 30, i, 1, 1, 9 * k + 3); }
-  const turn = clamp((a - 2.0) / 1.0), sw = at(1500, 360, stopwatch(turn), pop(a - 0.4) * 1.35);
-  const oneS = a > 2.4 ? at(1500, 700, vtag("1 s", 260, 90, P.gold), pop(a - 2.4)) : "";
+  const turn = clamp((a - 2.0) / 1.0), sw = at(FH > FW ? FW / 2 : 1500, FH > FW ? 330 : 360, stopwatch(turn), pop(a - 0.4) * 1.35);
+  const oneS = a > 2.4 ? at(FH > FW ? FW / 2 : 1500, FH > FW ? 1520 : 700, vtag("1 s", 260, 90, P.gold), pop(a - 2.4)) : "";
   const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(9, 110, -300, 2300, 1080, tot), c, 0.2) + layer(at(GX9, GY9, globe(R, tot * 0.03, { night: 0.55, land: "#1fa86c", sea: "#0f4d78", glow: E.el })) + fl, c) + sw + oneS;
   return { g, in: toScreen(c, GX9, GY9), inC: "#e8fbff", inZ: 14, out: toScreen(c, GX9, GY9), outC: "#fff3c2", outZ: 12 };
 }
@@ -224,7 +225,7 @@ function s11(a, tot) {
   let air = "";
   for (let i = 0; i < 26; i++) { const ang = rnd(i * 3) * 6.28, d0 = 130 + rnd(i * 3 + 1) * 200, d = d0 + (burst > 0 ? 900 * easeOut(clamp(burst / 0.9)) : 6 * Math.sin(tot * 3 + i)), y0 = 200 + rnd(i * 3 + 2) * 600;
     air += `<circle cx="${(BX + Math.cos(ang) * d).toFixed(1)}" cy="${(y0 + Math.sin(ang) * d * 0.3).toFixed(1)}" r="${12 + 6 * rnd(i)}" fill="#cfeaf3" opacity="${(0.35 * (1 - seg(burst, 0.5, 0.9))).toFixed(2)}"/>`; }
-  const ringsB = burst > 0 ? [0, 1, 2].map((i) => { const q = clamp((burst - i * 0.12) / 0.8); return q <= 0 || q >= 1 ? "" : `<circle cx="${BX}" cy="520" r="${(80 + 1100 * easeOut(q)).toFixed(1)}" fill="none" stroke="${E.spark}" stroke-width="${(36 * (1 - q) + 4).toFixed(1)}" opacity="${(0.7 * (1 - q)).toFixed(2)}"/>`; }).join("") : "";
+  const ringsB = burst > 0 ? [0, 1, 2].map((i) => { const q = clamp((burst - i * 0.12) / 0.8); return q <= 0 || q >= 1 ? "" : `<circle cx="${FH > FW ? FW / 2 : BX}" cy="${FH > FW ? 940 : 520}" r="${(80 + 1100 * easeOut(q)).toFixed(1)}" fill="none" stroke="${E.spark}" stroke-width="${(36 * (1 - q) + 4).toFixed(1)}" opacity="${(0.7 * (1 - q)).toFixed(2)}"/>`; }).join("") : "";
   const g = stormSky(0.8) + `<g transform="translate(${sh.toFixed(1)} ${(sh * 0.5).toFixed(1)})">` + layer(hills(G + 30, "#0d3445"), c, 0.6) + layer(`<rect x="-800" y="${G}" width="3600" height="600" fill="${E.hill}"/>` + air + b + rings(BX + 20, G - 20, 140, E.spark, 0.25, 1.5), c) + "</g>" + ringsB + flashAll(burst > 0 ? 0.3 * (1 - seg(burst, 0, 0.3)) : 0);
   return { g, in: toScreen(c, BX, 400), inC: "#e8fbff", inZ: 14, out: toScreen(c, BX, 400), outC: C.stormT, outZ: 10 };
 }
@@ -266,5 +267,21 @@ function s13(a, tot) {
   return { g, in: toScreen(c, 370, 410), inC: "#071a28", inZ: 10 };
 }
 
+// ---- 10 in portrait (spark.v.js): the sun with its thermometer above, the bolt with its thermometer under it, the lower
+// right corner kept empty for the host ----
+export function s10v(a, tot) {
+  const c = camAt(a, [[0, 540, 960, 1.0], [3.86, 540, 960, 1.03]]), SX = 330, SY = 420, BX = 330, G = 1330, TH = 470, TX = 790;
+  const sun = rings(SX, SY, 220 * (1 + 0.02 * Math.sin(tot * 2)), C.sun, 0.18, 1.4) + disc(SX, SY, 160, "#ffd98a", "#ffb04a") + Array.from({ length: 12 }, (_, i) => { const q = i / 12 * 6.28 + tot * 0.2; return `<path d="M${SX + 185 * Math.cos(q)} ${SY + 185 * Math.sin(q)}L${SX + 228 * Math.cos(q)} ${SY + 228 * Math.sin(q)}" stroke="#ffd98a" stroke-width="14" stroke-linecap="round"/>`; }).join("");
+  const sunLv = 0.18 * ease(seg(a, 1.5, 1.95)) * 5, boltLv = lerp(0, 0.9, ease(seg(a, 2.0, 3.1)));
+  const fl = 0.75 + 0.25 * Math.sin(tot * 25);
+  const b = bolt(BX - 20, 720, BX + 20, G - 6, 23, 1, fl, 40) + rings(BX + 20, G - 20, 110, E.spark, 0.25, 1.5);
+  // each thermometer reads its own scale: the sun's fills a fifth of the bolt's
+  const tS = at(TX, 640, thermo(TH, Math.min(1, sunLv) * 0.18, "#ffb04a"), pop(a - 0.3)), tB = at(TX, G - 20, thermo(TH, boltLv, E.el), pop(a - 0.5));
+  const times = a > 2.85 ? at(TX - 10, G - 20 - TH - 90, `${two(rr(-150, -80, 300, 155, 40), P.ink, "#020c14", 0, 10)}<path d="M-96 -32L-40 24M-40 -32L-96 24" stroke="${E.el}" stroke-width="16" stroke-linecap="round"/>${text(40, 38, "5", 110, E.el)}`, pop(a - 2.85)) : "";
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(14, 60, -300, 1400, 1300, tot), c, 0.15) + layer(sun + `<rect x="-800" y="${G}" width="2600" height="900" fill="${E.hill}"/>` + b + tS + tB + times, c);
+  return { g, in: toScreen(c, SX, SY), inC: "#fff3c2", inZ: 12, out: toScreen(c, BX + 10, 900), outC: "#e8fbff", outZ: 14 };
+}
+
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13];
-export const sparkSet = makeSet(SHOTS, [], P);
+// in a Short (cfg.vertical) the portrait versions of spark.v.js (see makeSet in kit.js)
+export const sparkSet = makeSet(SHOTS, V, P);

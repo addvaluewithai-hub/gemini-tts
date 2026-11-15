@@ -10,6 +10,7 @@
 import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, circ, two, disc, rings, text, number, drawn, at, makeSet, FW, FH } from "./kit.js";
 import { P, E, mix, stars, electron, tagV, plate } from "./elec.js";
 import { calPage } from "./props.js";
+import { V } from "./body.v.js";
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
 const sky = () => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>`;
@@ -129,4 +130,6 @@ function s4(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4];
-export const bodySet = makeSet(SHOTS, [], P);
+export const bodySet = makeSet(SHOTS, V, P);
+// for the portrait versions (body.v.js)
+export { pop, sky, RED, brain, glove, heart, trace, phone, shout, eel, pile };

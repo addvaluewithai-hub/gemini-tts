@@ -12,6 +12,7 @@
 import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, camAt, layer, toScreen, through, rr, two, disc, rings, text, drawn, at, makeSet, FW, FH } from "./kit.js";
 import { P, E, mix, house, stars, skyline, pop, electron, tube, bulb, wallSwitch, snail, pole, span, spanAt, wire } from "./elec.js";
 import { car } from "./props.js";
+import { V } from "./eintro.v.js";
 
 // ---- shot 0: the wire, then inside it ----
 const G = 860, PL = [[-640, 0], [960, 0], [2560, 0]];   // poles
@@ -118,5 +119,5 @@ function s4(a, tot) {
   return { g, in: toScreen(c, 850, 150), inC: E.cuD };
 }
 
-const SHOTS = [s0, s1, s2, s3, s4];
-export const eintroSet = makeSet(SHOTS, [], P);
+export const SHOTS = [s0, s1, s2, s3, s4];
+export const eintroSet = makeSet(SHOTS, V, P);

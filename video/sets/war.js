@@ -15,6 +15,8 @@ import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, camAt, layer,
 import { fmt, coin } from "./bank.js";
 import { calPage, calFlip, hills } from "./props.js";
 import { P, E, mix, house, stars, skyline, pop, bulb, station, pylon, pylonTips, span, spanAt, plate, tagV, plugHead } from "./elec.js";
+import { V } from "./war.v.js";
+const tall = () => FH > FW;   // drawn for a Short (war.v.js): labels that sit on the screen move into the tall frame
 
 const bump = (a, t0, amt = 0.12) => (a > t0 ? 1 + amt * Math.exp(-(a - t0) * 8) * Math.cos((a - t0) * 14) : 1);
 const sky = (c, tot, seed = 7) => `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(seed, 80, -800, 2800, 700, tot) + `<circle cx="1600" cy="150" r="54" fill="${P.cream}"/><circle cx="1580" cy="136" r="48" fill="${P.night0}"/>`, c, 0.12);
@@ -65,7 +67,7 @@ function w0(a, tot) {
   const c = camAt(a, [[0, 960, 560, 0.95], [2.2, 960, 545, 1.0], [4.2, 960, 530, 1.07], [5.33, 960, 528, 1.09]]), lit = seg(a, 2.9, 3.5);
   const st = at(960, NYG, station(tot, { lit, smoke: lit > 0 }) + at(0, -245, plate("EDISON", 40)), 1.45 * bump(a, 2.9, 0.06));
   const glow = lit > 0 ? rings(960, NYG - 230, 560 * lit, P.gold, 0.14 * lit, 1.5) : "";
-  const g = nyBack(c, tot, lit) + layer(`<rect x="-900" y="${NYG}" width="3800" height="600" fill="${P.ground}"/><rect x="-900" y="${NYG + 50}" width="3800" height="110" fill="${P.road}"/>` + glow + st + at(1520, 420, plate("NEW YORK", 50), pop(a - 4.65)), c) + at(330, 250, year(a, 0.3, "1882", 1.05));
+  const g = nyBack(c, tot, lit) + layer(`<rect x="-900" y="${NYG}" width="3800" height="600" fill="${P.ground}"/><rect x="-900" y="${NYG + 50}" width="3800" height="110" fill="${P.road}"/>` + glow + st + at(tall() ? 760 : 1520, tall() ? 170 : 420, plate("NEW YORK", 50), pop(a - 4.65)), c) + at(330, 250, year(a, 0.3, "1882", 1.05));
   return { g, out: toScreen(c, 960, NYG - 120), outC: P.win, outZ: 14 };
 }
 // ---- 1: DC, 110 V; the lamps light around it, a counter to 400 ----
@@ -73,8 +75,8 @@ function w1(a, tot) {
   const c = camAt(a, [[0, 960, 560, 1.0], [4.2, 960, 540, 0.94]]), N = 12, n = kf(a, [[1.95, 0], [3.8, N]], (p) => p);
   let lamps = ""; for (let i = 0; i < N; i++) { const side = i % 2 ? 1 : -1, k = Math.floor(i / 2), x = 960 + side * (420 + k * 230), on = clamp(n - i); lamps += at(x, NYG - 10, lampPost(on > 0 ? 0.35 + 0.65 * ease(on) : 0)); }
   const cnt = Math.round(lerp(0, 400, ease(seg(a, 1.95, 3.81))));
-  const tags = at(700, 380, tagV("DC", "", { size: 70, fill: P.cream }), pop(a - 0.3)) + at(1220, 380, tagV("110", "V", { size: 70 }), pop(a - 0.95));
-  const counter = a > 1.9 ? at(960, 160, `${rings(-150, -24, 50, P.gold, 0.25)}${at(-150, 18, bulb(1), 0.28)}${number(40, 10, fmt(cnt), 92, P.gold)}`, pop(a - 1.9)) : "";
+  const tags = at(tall() ? 330 : 700, tall() ? 520 : 380, tagV("DC", "", { size: 70, fill: P.cream }), pop(a - 0.3)) + at(tall() ? 750 : 1220, tall() ? 520 : 380, tagV("110", "V", { size: 70 }), pop(a - 0.95));
+  const counter = a > 1.9 ? at(tall() ? 540 : 960, tall() ? 330 : 160, `${rings(-150, -24, 50, P.gold, 0.25)}${at(-150, 18, bulb(1), 0.28)}${number(40, 10, fmt(cnt), 92, P.gold)}`, pop(a - 1.9)) : "";
   const g = nyBack(c, tot, 1) + layer(`<rect x="-900" y="${NYG}" width="3800" height="600" fill="${P.ground}"/><rect x="-900" y="${NYG + 50}" width="3800" height="110" fill="${P.road}"/>` + at(960, NYG, station(tot, { lit: 1 }) + at(0, -245, plate("EDISON", 40))) + lamps, c) + tags + counter;
   return { g, in: [960, 700], inC: P.win };
 }
@@ -109,7 +111,7 @@ function w3(a, tot) {
 function w4(a, tot) {
   const c = camAt(a, [[0, 960, 660, 1.25], [2.75, 1000, 670, 1.3]]), G = 920;
   const inX = lerp(1500, 960, ease(seg(a, 0.0, 0.45))), out = seg(a, 1.85, 2.6), sx = a < 1.85 ? inX : lerp(960, 1520, ease(out)), vis = a < 0.5 || a > 1.85;
-  const months = a > 0.9 && a < 1.6 ? at(1400, 260, calPage(["MAR", "APR", "MAY"][Math.min(2, Math.floor((a - 0.9) / 0.22))], "", 0.8, 110), pop(a - 0.9)) : "";
+  const months = a > 0.9 && a < 1.6 ? at(tall() ? 820 : 1400, tall() ? 330 : 260, calPage(["MAR", "APR", "MAY"][Math.min(2, Math.floor((a - 0.9) / 0.22))], "", 0.8, 110), pop(a - 0.9)) : "";
   const clash = a > 1.49 && a < 2.2 ? rings(960, G - 200, 160, P.red, 0.4 * (1 - seg(a, 1.9, 2.2)), 1.5) + cross(960, G - 330, 70, P.red, a - 1.49) : "";
   const slam = a > 2.18 ? 1 - Math.exp(-(a - 2.18) * 10) : 0, door = `<path d="M890 ${G - 40}V${G - 190}A70 70 0 0 1 1030 ${G - 190}V${G - 40}Z" fill="${P.ink}"/><path d="M890 ${G - 40}V${G - 190}A70 70 0 0 1 1030 ${G - 190}V${G - 40}Z" fill="${P.woodD}" opacity="${a > 0.5 && a < 1.85 ? 1 : slam}"/>`;
   const st = at(960, G, station(tot, { lit: 1 }) + at(0, -245, plate("EDISON", 40)), [1.25, 1.25]);
@@ -197,4 +199,6 @@ function w10(a, tot) {
 }
 
 const SHOTS = [w0, w1, w2, w3, w4, w5, w6, w7, w8, w9, w10];
-export const warSet = makeSet(SHOTS, [], P);
+export const warSet = makeSet(SHOTS, V, P);
+// for the portrait versions (war.v.js)
+export { sky, year, lampPost, suitcase, whiteCity, bump };

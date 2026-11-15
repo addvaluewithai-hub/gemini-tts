@@ -13,6 +13,7 @@
 import { clamp, lerp, ease, easeOut, easeIn, seg, spring, rnd, kf, bez, camAt, layer, toScreen, rr, two, disc, rings, text, number, drawn, at, FW, FH, makeSet } from "./kit.js";
 import { P, E, pop, house, stars, skyline, mix, tank, flow, gauge, bulb, kettle, tea, plate, flag, tagV, tube, battery } from "./elec.js";
 import { calPage } from "./props.js";
+import { V } from "./pipes.v.js";
 
 const ends = (s) => s.ends || [4.97, 4.9, 4.57, 5.12, 4.59, 5.29, 3.69, 2, 8.79, 5.22, 0.79, 1.13, 1.17];
 const cum = (s, k) => ends(s).slice(0, k).reduce((a, b) => a + b, 0);
@@ -84,32 +85,35 @@ function s5(a, tot) {
 }
 
 // ---- 6: the balance: 10 W against 2,000 W ----
-function s6(a, tot) {
-  const c = camAt(a, [[0, 960, 520, 1.05], [3.69, 960, 540, 1.0]]), PX = 960, PYv = 300, L = 470;
-  const tilt = a < 2.0 ? -4 * ease(seg(a, 0.3, 0.8)) : -4 + 20 * spring(a - 2.0, 6, 12);
+// o: the layout; the landscape shot uses the defaults, the portrait one (pipes.v.js) a taller, narrower balance
+function s6(a, tot, s, o = {}) {
+  const c = camAt(a, o.keys || [[0, 960, 520, 1.05], [3.69, 960, 540, 1.0]]), PX = o.PX ?? 960, PYv = o.PYv ?? 300, L = o.L ?? 470, HANG = o.hang ?? 300, SH = o.stand ?? 640, TIP = o.tip ?? 20;
+  const tilt = a < 2.0 ? -4 * ease(seg(a, 0.3, 0.8)) : -4 + TIP * spring(a - 2.0, 6, 12);
   const r = tilt * Math.PI / 180, end = (d) => [PX + d * L * Math.cos(r), PYv + d * L * Math.sin(r)];
-  const pan = (d, inner) => { const [x, y] = end(d), py = y + 300; return `<path d="M${x} ${y}L${x - 150} ${py}M${x} ${y}L${x + 150} ${py}" stroke="${P.steel}" stroke-width="6"/>${two(`M${x - 190} ${py}h380q-20 50 -80 54h-220q-60 -4 -80 -54Z`, P.steel, P.steelD, 0, 8)}${at(x, py, inner)}`; };
+  const pan = (d, inner) => { const [x, y] = end(d), py = y + HANG; return `<path d="M${x} ${y}L${x - 150} ${py}M${x} ${y}L${x + 150} ${py}" stroke="${P.steel}" stroke-width="6"/>${two(`M${x - 190} ${py}h380q-20 50 -80 54h-220q-60 -4 -80 -54Z`, P.steel, P.steelD, 0, 8)}${at(x, py, inner)}`; };
   const bIn = a > 0.0 ? at(0, -900 * (1 - Math.min(1, spring(a, 7, 13))), bulb(1), 0.75) : "";
   const kIn = a > 2.0 ? at(0, 0, kettle(tot, 1), 0.85) : a > 1.7 ? at(0, -900 * (1 - seg(a, 1.7, 2.0)), kettle(tot, 1), 0.85) : "";
   const [lx, ly] = end(-1), [rx, ry] = end(1);
-  const t10 = a > 1.21 ? at(lx, ly + 300 - 330, tagV("10", "W", { size: 80 }), pop(a - 1.21)) : "";
-  const kw = kf(a, [[2.49, 0], [2.91, 2000]], easeOut), t2k = a > 2.49 ? at(rx, ry + 300 - 360, tagV(fmt(kw), "W", { size: 80, fill: kw > 1999 ? "#ff8a5c" : P.gold }), pop(a - 2.49)) : "";
-  const stand = `${two(rr(PX - 30, PYv, 60, 640, 10), P.wood, P.woodD, 8, 0)}${two(rr(PX - 220, PYv + 620, 440, 50, 16), P.wood, P.woodD, 0, 8)}${two("M" + (PX - 40) + " " + (PYv - 70) + "l40 -40l40 40Z", P.gold, P.goldD, 0, 6)}`;
+  const t10 = a > 1.21 ? at(lx, ly + HANG - 330, tagV("10", "W", { size: 80 }), pop(a - 1.21)) : "";
+  const kw = kf(a, [[2.49, 0], [2.91, 2000]], easeOut), t2k = a > 2.49 ? at(rx, ry + HANG - 360, tagV(fmt(kw), "W", { size: 80, fill: kw > 1999 ? "#ff8a5c" : P.gold }), pop(a - 2.49)) : "";
+  const stand = `${two(rr(PX - 30, PYv, 60, SH, 10), P.wood, P.woodD, 8, 0)}${two(rr(PX - 220, PYv + SH - 20, 440, 50, 16), P.wood, P.woodD, 0, 8)}${two("M" + (PX - 40) + " " + (PYv - 70) + "l40 -40l40 40Z", P.gold, P.goldD, 0, 6)}`;
   const beam = `<path d="M${lx} ${ly}L${rx} ${ry}" stroke="${P.goldD}" stroke-width="34" stroke-linecap="round"/><path d="M${lx} ${ly - 6}L${rx} ${ry - 6}" stroke="${P.gold}" stroke-width="18" stroke-linecap="round"/>${disc(PX, PYv, 34, P.gold, P.goldD)}`;
-  const thud = a > 2.0 && a < 2.6 ? rings(rx, ry + 330, 120 + 300 * seg(a, 2.0, 2.6), "#fff", 0.2 * (1 - seg(a, 2.0, 2.6)), 1.1) : "";
-  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(77, 60, -300, 2300, 1100, tot), c, 0.15) + layer(`<rect x="-600" y="${PYv + 670}" width="3200" height="500" fill="${P.ground}"/>` + stand + pan(-1, bIn) + pan(1, kIn) + beam + thud + t10 + t2k, c);
+  const thud = a > 2.0 && a < 2.6 ? rings(rx, ry + HANG + 30, 120 + 300 * seg(a, 2.0, 2.6), "#fff", 0.2 * (1 - seg(a, 2.0, 2.6)), 1.1) : "";
+  const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(stars(77, 60, -300, 2300, 1100, tot), c, 0.15) + layer(`<rect x="-600" y="${PYv + SH + 30}" width="3200" height="${o.PX ? 900 : 500}" fill="${P.ground}"/>` + stand + pan(-1, bIn) + pan(1, kIn) + beam + thud + t10 + t2k, c);
   return { g, in: toScreen(c, PX, PYv), inC: P.gold, inZ: 18, out: toScreen(c, rx, ry + 200), outC: "#ece8ff", outZ: 16 };
 }
 
 // ---- 7: one glass of tea is two hundred bulbs ----
-function s7(a, tot) {
-  const c = camAt(a, [[0, 960, 540, 1.12], [2.0, 960, 540, 1.0]]), CX = 860, CY = 560;
+// o: the layout; the landscape shot uses the defaults, the portrait one (pipes.v.js) a tall grid round the glass
+function s7(a, tot, s, o = {}) {
+  const c = camAt(a, o.keys || [[0, 960, 540, 1.12], [2.0, 960, 540, 1.0]]), CX = o.CX ?? 860, CY = o.CY ?? 560, NR = o.rows ?? 11, NQ = o.cols ?? 22, X0 = o.x0 ?? 60, Y0 = o.y0 ?? 60, DY = o.dy ?? 90;
+  const skip = o.skip || ((x, y) => x > 1540 && y > 440);
   let bulbs = ""; let n = 0; const cells = [];
-  for (let r = 0; r < 11; r++) for (let q = 0; q < 22; q++) { const x = 60 + q * 82, y = 60 + r * 90; if (Math.abs(x - CX) < 250 && Math.abs(y - CY) < 260) continue; if (x > 1540 && y > 440) continue; cells.push([x, y, Math.hypot(x - CX, y - CY)]); }
+  for (let r = 0; r < NR; r++) for (let q = 0; q < NQ; q++) { const x = X0 + q * 82, y = Y0 + r * DY; if (Math.abs(x - CX) < 250 && Math.abs(y - CY) < 260) continue; if (skip(x, y)) continue; cells.push([x, y, Math.hypot(x - CX, y - CY)]); }
   cells.sort((p, q) => p[2] - q[2]); const shown = cells.slice(0, 200);
   shown.forEach(([x, y, d], i) => { const t0 = 1.0 + 0.55 * (i / 200), on = clamp((a - t0) / 0.12); bulbs += at(x, y + 50, bulb(on), 0.2 * (0.5 + 0.5 * Math.min(1, spring(Math.max(0, a - 0.15 - i * 0.002), 9, 16)))); n++; });
   const glass = `${rings(CX, CY - 60, 230, "#ffad2a", 0.18)}${at(CX, CY + 180, tea(tot), 2.4)}`;
-  const tg = a > 1.11 ? at(CX, CY + 300, tagV("× 200", "", { size: 100 }), pop(a - 1.11)) : "";
+  const tg = a > 1.11 ? at(CX, CY + (o.tagDy ?? 300), tagV("× 200", "", { size: 100 }), pop(a - 1.11)) : "";
   const g = `<rect width="${FW}" height="${FH}" fill="url(#bnight)"/>` + layer(bulbs, c, 0.9) + layer(glass + tg, c);
   return { g, in: toScreen(c, CX, CY), inC: "#ece8ff", inZ: 16 };
 }
@@ -160,5 +164,25 @@ const shelfShot = (k) => (a, tot, s) => { const L = cum(s, k) - cum(s, 9) + a, c
   const g = `<rect width="${FW}" height="${FH}" fill="${P.mid}"/>` + layer(shelf(L, c, tot, s), c);
   return k === 9 ? { g, in: toScreen(c, SLOTS[0], SY - 140), inC: P.gold, inZ: 16 } : { g }; };
 
+// ---- 9–12 in portrait (pipes.v.js): the four names one under the other, a shelf each, the camera going down ----
+const VROWS = [470, 870, 1270, 1670], VX = 640;
+function shelfV(L, c, tot, s) {
+  const e = ends(s), A = e[9], O = A + e[10], W = O + e[11];
+  const row = (i, name, fl, tp, tf) => { const y = VROWS[i];
+    return `${two(rr(-400, y, 1900, 30, 6), P.wood, P.woodD, 0, 8)}` + (L > tp ? at(VX, y + 80, plate(name, 64), pop(L - tp)) : "") + (L > tf ? at(VX, y - 140, `<path d="M-90 60V140" stroke="${P.steelD}" stroke-width="10"/>${flag(fl, 220)}`, pop(L - tf)) : ""); };
+  const discs = Math.floor(kf(L, [[2.72, 0], [3.55, 12]], (p) => p));
+  const volt = (L > 2.72 ? at(260, VROWS[0], pile(discs), 0.95) : "") + (L > 3.66 ? at(880, 180, calPage("1800", "", 0.85, 150), pop(L - 3.66) * (1 - seg(L, A + 0.1, A + 0.5))) : "");
+  const wall = `<rect x="-600" y="-600" width="2300" height="3200" fill="${P.mid}"/>${[0, 1, 2, 3].map((i) => `<rect x="${-60 + i * 400}" y="-600" width="18" height="3200" fill="${P.far}"/>`).join("")}`;
+  const lamps = VROWS.map((y, i) => { const tp = [1.47, A, O, W + 0.49][i]; return L > tp ? `<path d="M${VX - 200} ${y}L${VX - 70} ${y - 360}H${VX + 70}L${VX + 200} ${y}Z" fill="#ffd98a" opacity="${(0.1 * clamp((L - tp) / 0.3)).toFixed(3)}"/>` : ""; }).join("");
+  return wall + lamps + volt + row(0, "VOLTA", "it", 1.47, 2.11) + row(1, "AMPÈRE", "fr", A, A + 0.08) + row(2, "OHM", "de", O, O + 0.45) + row(3, "WATT", "sco", W + 0.4, W + 0.49);
+}
+const SKEYSV = (s) => { const e = ends(s), A = e[9], O = A + e[10], W = O + e[11];
+  return [[0, 540, 520, 1.25], [A - 0.2, 540, 540, 1.25], [A + 0.4, 540, 760, 1.05], [O + 0.5, 540, 900, 0.98], [W + 0.6, 540, 1000, 0.94], [W + 1.2, 540, 1000, 0.93]]; };
+export const shelfShotV = (k) => (a, tot, s) => { const L = cum(s, k) - cum(s, 9) + a, c = camAt(L, SKEYSV(s));
+  const g = `<rect width="${FW}" height="${FH}" fill="${P.mid}"/>` + layer(shelfV(L, c, tot, s), c);
+  return k === 9 ? { g, in: toScreen(c, VX, VROWS[0] - 140), inC: P.gold, inZ: 16 } : { g }; };
+export { s6, s7 };
+
 const SHOTS = [rigShot(0), rigShot(1), rigShot(2), rigShot(3), rigShot(4), s5, s6, s7, s8, shelfShot(9), shelfShot(10), shelfShot(11), shelfShot(12)];
-export const pipesSet = makeSet(SHOTS, [], P);
+// in a Short (cfg.vertical) the portrait versions of pipes.v.js (see makeSet in kit.js)
+export const pipesSet = makeSet(SHOTS, V, P);

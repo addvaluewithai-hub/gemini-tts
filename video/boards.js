@@ -29,6 +29,15 @@ import { warSet } from "./sets/war.js";
 import { wonSet } from "./sets/won.js";
 import { edictSet } from "./sets/edict.js";
 import { erecapSet } from "./sets/erecap.js";
+import { e2introSet } from "./sets/e2intro.js";
+import { faradaySet } from "./sets/faraday.js";
+import { steamSet } from "./sets/steam.js";
+import { sourcesSet } from "./sets/sources.js";
+import { mixSet } from "./sets/mix.js";
+import { kettlesSet } from "./sets/kettles.js";
+import { oldsunSet } from "./sets/oldsun.js";
+import { e2dictSet } from "./sets/e2dict.js";
+import { e2recapSet } from "./sets/e2recap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -869,6 +878,16 @@ const BOARDS = {
   won: (s, step, age, total, cfg) => wonSet(s, step, age, total, cfg),
   edict: (s, step, age, total, cfg) => edictSet(s, step, age, total, cfg),
   erecap: (s, step, age, total, cfg) => erecapSet(s, step, age, total, cfg),
+  // Electricity part 2 (how it is made), same world and props.
+  e2intro: (s, step, age, total, cfg) => e2introSet(s, step, age, total, cfg),
+  faraday: (s, step, age, total, cfg) => faradaySet(s, step, age, total, cfg),
+  steam: (s, step, age, total, cfg) => steamSet(s, step, age, total, cfg),
+  sources: (s, step, age, total, cfg) => sourcesSet(s, step, age, total, cfg),
+  mix: (s, step, age, total, cfg) => mixSet(s, step, age, total, cfg),
+  kettles: (s, step, age, total, cfg) => kettlesSet(s, step, age, total, cfg),
+  oldsun: (s, step, age, total, cfg) => oldsunSet(s, step, age, total, cfg),
+  e2dict: (s, step, age, total, cfg) => e2dictSet(s, step, age, total, cfg),
+  e2recap: (s, step, age, total, cfg) => e2recapSet(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
