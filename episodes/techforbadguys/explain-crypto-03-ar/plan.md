@@ -94,3 +94,8 @@
 - السلفادور: https://cointelegraph.com/magazine/el-salvador-bitcoin-aspirations-closer-earth-2025
 - مكافآت 2008: https://law360.com/articles/114226/top-tarp-banks-paid-out-32-6b-in-bonuses-cuomo
 - بلا حساب بنكي: https://www.worldbank.org/en/publication/globalfindex/report
+- إطلاق Ethereum، 30 يوليو 2015: https://blog.ethereum.org/2015/07/30/ethereum-launches
+- سرقة The DAO، يونيو 2016 (حوالي 60 مليون دولار): https://www.bbc.com/news/technology-36585930
+- بيع عملة EOS، حوالي 4 مليار دولار (2018): https://www.cnbc.com/2018/05/31/a-blockchain-start-up-just-raised-4-billion-without-a-live-product.html
+- دراسة dappGambl، 95% من مجموعات الـNFT ماتساويش حاجة (سبتمبر 2023): https://www.theguardian.com/technology/2023/sep/22/nfts-worthless-price
+- Dogecoin، حوالي 88 مليار دولار في مايو 2021: https://journals.sagepub.com/doi/full/10.1177/13548565211070417
