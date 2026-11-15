@@ -68,7 +68,7 @@ function d1(a, tot, s) {
   const darkNode = (i) => { const n = NODES[i]; const near = EDGES.filter(([p, q]) => p === i || q === i).map((_, k2) => k2); const all = EDGES.map(([p, q], e) => (p === i || q === i ? trip(e) : 1)).filter((v, k2) => EDGES[k2][0] === i || EDGES[k2][1] === i); return Math.min(...all); };
   const lit = (i) => ({ pop: 1, on: 1 - 0.85 * darkNode(i) });
   // "for any reason": a question mark over the first line
-  const q = a > 1.09 && a < 3.6 ? at(918, 420, text(0, 0, "?", 140, P.gold), pop(a - 1.09) * (1 - seg(a, 3.2, 3.6))) : "";
+  const q = a > 1.09 && a < 3.6 ? at(930, 470, text(0, 0, "?", 140, P.gold), pop(a - 1.09) * (1 - seg(a, 3.2, 3.6))) : "";
   const g = sky(c, tot, 22) + layer(drawGrid(tot, st, lit) + q, c);
   return { g, out: toScreen(c, 940, 560), outC: "#04121e", outZ: 12 };
 }

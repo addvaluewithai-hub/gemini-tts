@@ -52,6 +52,14 @@ Sourced:
 - Solar was about 1% of world electricity in 2015 (Ember: 1.1%), 8.7% in 2025.
   https://ember-energy.org/latest-insights/the-year-sunlight-went-global-how-the-paris-agreement-brought-solar-power-to-the-world
   (These three added 2026-11-15 after the planner checked them, for part 2.)
+- Part 3 additions (checked by the planner, 2026-11-15):
+  2003 losses in the billions of dollars (US DOE about 6 billion, ICF 7 to 10 billion): https://knowledge.wharton.upenn.edu/article/lights-out-lessons-from-the-blackout/ ;
+  most of New York dark about 29 hours, some areas up to four days: https://www.history.com/this-day-in-history/august-14/blackout-hits-northeast-united-states ;
+  about 400 subway trains stuck, thousands walked over the bridges: https://qns.com/2003/08/boro-transit-riders-escape-dark-subways-take-buses ;
+  India 2012, about 200 miners in West Bengal stuck until rescued after about six hours: https://business-standard.com/article/pti-stories/200-miners-stuck-in-west-bengal-mines-rescued-112073100522_1.html ;
+  1859 Carrington event, sparks and fires in telegraph offices: https://www.history.com/articles/a-perfect-solar-superstorm-the-1859-carrington-event ;
+  squirrels the third leading cause of sustained outages in the US, first in the Midwest (APPA 2023), a grey squirrel 400 to 600 g (said "من أكتر أسباب", "نص كيلو"): https://nebraskapublicmedia.org/en/news/news-articles/squirrels-are-the-leading-cause-of-power-outages-in-the-midwest-and-its-driving-power-companies-nuts/ ;
+  Texas 2021, at least 17 carbon-monoxide deaths from generators and heaters indoors: https://www.texastribune.org/2021/12/17/texas-generators-winter-storm-carbon-monoxide-deaths/
 
 General knowledge: Thales and amber about 600 BC; Gilbert coined "electricus" in 1600; like charges repel;
 Franklin's 1752 lightning proposal and Georg Richmann's death in 1753 repeating such an experiment; Volta's
