@@ -52,6 +52,16 @@ import { iberiaSet } from "./sets/iberia.js";
 import { enemiesSet } from "./sets/enemies.js";
 import { blackstartSet } from "./sets/blackstart.js";
 import { e3dictSet } from "./sets/e3dict.js";
+import { e4introSet } from "./sets/e4intro.js";
+import { storageSet } from "./sets/storage.js";
+import { batterySet } from "./sets/battery.js";
+import { betSet } from "./sets/bet.js";
+import { sunSet } from "./sets/sun.js";
+import { rooftopsSet } from "./sets/rooftops.js";
+import { darkSet } from "./sets/dark.js";
+import { hungrySet } from "./sets/hungry.js";
+import { e4dictSet } from "./sets/e4dict.js";
+import { e4recapSet } from "./sets/e4recap.js";
 import { e3recapSet } from "./sets/e3recap.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
@@ -919,6 +929,16 @@ const BOARDS = {
   enemies: (s, step, age, total, cfg) => enemiesSet(s, step, age, total, cfg),
   blackstart: (s, step, age, total, cfg) => blackstartSet(s, step, age, total, cfg),
   e3dict: (s, step, age, total, cfg) => e3dictSet(s, step, age, total, cfg),
+  e4intro: (s, step, age, total, cfg) => e4introSet(s, step, age, total, cfg),
+  storage: (s, step, age, total, cfg) => storageSet(s, step, age, total, cfg),
+  battery: (s, step, age, total, cfg) => batterySet(s, step, age, total, cfg),
+  bet: (s, step, age, total, cfg) => betSet(s, step, age, total, cfg),
+  sun: (s, step, age, total, cfg) => sunSet(s, step, age, total, cfg),
+  rooftops: (s, step, age, total, cfg) => rooftopsSet(s, step, age, total, cfg),
+  dark: (s, step, age, total, cfg) => darkSet(s, step, age, total, cfg),
+  hungry: (s, step, age, total, cfg) => hungrySet(s, step, age, total, cfg),
+  e4dict: (s, step, age, total, cfg) => e4dictSet(s, step, age, total, cfg),
+  e4recap: (s, step, age, total, cfg) => e4recapSet(s, step, age, total, cfg),
   e3recap: (s, step, age, total, cfg) => e3recapSet(s, step, age, total, cfg),
 };
 
