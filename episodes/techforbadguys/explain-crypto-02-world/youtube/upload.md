@@ -16,7 +16,7 @@ Paste `description.txt` as it is. It already holds the chapters and the sources.
 
 ## Settings
 
-- Video: the drawn world picture (`../storyboard.json`), Arabic voice job `techforbadguys-explain-crypto-02-ar-c` (the same recording as the old slide video), no captions burned in, nothing in Arabic on screen.
+- Video: the drawn world picture (`../storyboard.json`), Arabic voice job `techforbadguys-explain-crypto-02-ar-v` (Vertex AI), no captions burned in, nothing in Arabic on screen.
 
 - Category: Education
 - Video language: Arabic. Upload captions.srt as Arabic.
