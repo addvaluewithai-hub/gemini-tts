@@ -509,6 +509,73 @@
    }
   }
  ],
- "youtube": {},
+ "youtube": {
+  "titles": [
+   "ليه النور بيقطع؟ شجرة واحدة ضلّمت على 50 مليون إنسان | ملف الكهربا 3/4",
+   "إزاي بلد كاملة بتقع في ثواني؟ أكبر انقطاعات الكهربا | ملف الكهربا 3/4",
+   "الشمس والهاكر والسنجاب: أعداء شبكة الكهربا | 3/4"
+  ],
+  "description": [
+   "التقرير التالت من العميل Peek لقيادته في ملف الكهربا: ليه النور بيقطع؟",
+   "",
+   "إزاي عطل صغير بيكبر زي الدومينو، وليه أجهزة الحماية هي اللي بتنشر الوقعة. شجرة في Ohio سنة 2003 ضلّمت على 50 مليون إنسان، الهند 2012 أكبر انقطاع في التاريخ، Texas 2021 على بُعد أربع دقايق من الانهيار، وأسبانيا والبرتغال 2025 في ثواني. ومعاها أعداء الشبكة: الشمس، والهاكرز، والسنجاب. وإزاي بلد كاملة بتقوم من الضلمة.",
+   "",
+   "الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "انقطاع أمريكا وكندا 2003 (تقرير فريق التحقيق، FERC): https://www.ferc.gov/sites/default/files/2020-08/blackout-presentation.pdf",
+   "غلطة برنامج الإنذار في 2003 (The Register): https://www.theregister.com/2004/04/08/blackout_bug_report/",
+   "انقطاع الهند 2012 (Scientific American): https://www.scientificamerican.com/article/why-india-just-suffered/",
+   "Texas 2021: أربع دقايق و37 ثانية من الانهيار (KERA): https://www.keranews.org/news/2021-02-25/texas-power-grid-was-4-minutes-and-37-seconds-away-from-collapsing-heres-how-it-happened",
+   "Texas 2021: الحصيلة النهائية 246 (Texas Tribune): https://www.texastribune.org/2022/01/02/texas-winter-storm-final-death-toll-246/",
+   "أسبانيا والبرتغال 2025، التقرير النهائي (POWER): https://www.powermag.com/anatomy-of-a-blackout-findings-from-the-spain-portugal-grid-collapse-final-report/",
+   "عاصفة Quebec الشمسية 1989: https://en.wikipedia.org/wiki/March_1989_geomagnetic_storm",
+   "الهجوم الإلكتروني على كهربا أوكرانيا 2015 (CISA): https://www.cisa.gov/news-events/ics-alerts/ir-alert-h-16-056-01"
+  ],
+  "footer": [
+   "دي حلقة من ملف من أربع تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش إرشادات أمان ولا شغل كهربا. أي سلك واقع أو متدلدل: ابعد عنه وبلّغ.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الكهربا",
+   "#شرح"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "الكهربا",
+   "انقطاع الكهرباء",
+   "ليه النور بيقطع",
+   "Blackout",
+   "انقطاع 2003",
+   "انقطاع الهند 2012",
+   "Texas 2021",
+   "انقطاع أسبانيا 2025",
+   "العاصفة الشمسية",
+   "هجوم إلكتروني",
+   "Load shedding",
+   "تخفيف الأحمال",
+   "شبكة الكهرباء",
+   "Earth Report",
+   "اشرحها لكائن فضائي",
+   "علوم مبسطة"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الكهربا (four parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "آخر مرة النور قطع عندك كان إيه السبب؟ شجرة، برد، ولا سنجاب؟ القيادة بتقرا التعليقات."
+ },
  "theme": "day"
 }
