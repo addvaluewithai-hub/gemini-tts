@@ -56,9 +56,9 @@ export const volcano = (t, smoke = 1) => `${[0, 1, 2].map((i) => { const q = ((t
 // ---- 0: a boiler the size of a building ----
 function s0(a, tot) {
   const G = 900, c = camAt(a, [[0, 960, 600, 1.45], [1.3, 960, 580, 1.35], [3.5, 1000, 500, 1.0], [4.72, 1040, 470, 0.86]]);
-  const fill = ease(seg(a, 1.33, 2.2)), coal = Math.floor(kf(a, [[2.56, 0], [3.0, 15]])), gas = seg(a, 3.02, 3.2), big = ease(seg(a, 3.51, 4.3));
+  const fill = ease(seg(a, 1.33, 2.2)), coal = Math.floor(kf(a, [[2.56, 0], [3.0, 15]])), gas = seg(a, 2.8, 2.98), big = ease(seg(a, 3.51, 4.3));
   const heat = clamp(0.5 * seg(a, 2.6, 3.0) + 0.5 * gas), h = lerp(520, 980, big), X = 960;
-  const coalG = coal > 0 ? at(X - 110, G - 4, coalPile(coal, 0.9)) : "", flames = gas > 0 ? [-60, 20, 100].map((dx, i) => at(X + dx, G - 4, flame(tot + i, 0.8 * spring(a - 3.02 - i * 0.05, 9, 16)))).join("") : "";
+  const coalG = coal > 0 ? at(X - 110, G - 4, coalPile(coal, 0.9)) : "", flames = gas > 0 ? [-60, 20, 100].map((dx, i) => at(X + dx, G - 4, flame(tot + i, 0.8 * spring(a - 2.8 - i * 0.05, 9, 16)))).join("") : "";
   const drops = a > 1.2 && a < 2.4 ? Array.from({ length: 6 }, (_, i) => { const q = ((a * 2 + i / 6) % 1); return `<circle cx="${X + 10 * Math.sin(i)}" cy="${G - h - 100 + q * 140}" r="12" fill="${E.water}" opacity="${(1 - q).toFixed(2)}"/>`; }).join("") : "";
   const hs = at(1460, G, house(E.houseA, E.houseAD, { roof: E.roof }), 0.95);
   const g = sky(c, tot, 41) + layer(skyline(5, -1200, 3200, G - 60, 120, 300, E.far, E.farLit), c, 0.4)
@@ -86,12 +86,12 @@ const s1 = (a, tot) => chain(a, tot);
 
 // ---- 2: nuclear: split the atom… to boil water (host right: keep the lower right clear) ----
 export function nuclear(a, tot, o = {}) {
-  const G = o.G ?? 860, RX = o.RX ?? 620, TX = o.TX ?? 1180, c = camAt(a, o.cam || [[0, 880, 560, 1.0], [2.4, 640, 560, 1.6], [3.1, 620, 600, 2.4], [3.9, 640, 560, 1.7], [4.6, 860, 480, 1.05], [5.66, 880, 460, 0.98]]);
-  const split = seg(a, 3.1, 3.5), flash = a > 3.1 ? Math.exp(-(a - 3.1) * 4) : 0, steamOn = seg(a, 4.94, 5.3);
+  const G = o.G ?? 860, RX = o.RX ?? 620, TX = o.TX ?? 1180, c = camAt(a, o.cam || [[0, 880, 560, 1.0], [2.4, 640, 560, 1.6], [3.1, 620, 600, 2.4], [3.9, 640, 560, 1.7], [4.5, 1000, 480, 1.0], [5.39, 1080, 470, 0.95]]);
+  const split = seg(a, 3.1, 3.5), flash = a > 3.1 ? Math.exp(-(a - 3.1) * 4) : 0, steamOn = seg(a, 4.71, 5.05);
   const at0 = split <= 0 ? atom(tot, { n: 3, R: 62, r: 10, nr: 22 }) : [-1, 1].map((s) => at(s * 50 * ease(split), 0, nucleus(16 * (1 - 0.2 * split)))).join("") + Array.from({ length: 3 }, (_, i) => at(Math.cos(i * 2.1) * 90 * split, Math.sin(i * 2.1) * 90 * split, electron(9))).join("");
   const inside = at(0, -170, at0, pop(a - 0.95, 7, 12));
   const R = at(RX, G, reactor(inside), 1.2);
-  const T = at(TX, G, tower(tot, steamOn), 1.15 * bump(a, 4.94, 0.06));
+  const T = at(TX, G, tower(tot, steamOn), 1.15 * bump(a, 4.71, 0.06));
   const g = sky(c, tot, 47) + layer(skyline(9, -1200, 3200, G - 60, 100, 260, E.far, E.farLit), c, 0.4) + layer(ground(G) + R + T + (flash > 0.02 ? rings(RX, G - 200 * 1.2, 260 * (1 + split), "#fff3b0", 0.5 * flash, 1.6) : ""), c)
     + (flash > 0.02 ? `<rect width="${FW}" height="${FH}" fill="#fff8dc" opacity="${(0.35 * flash).toFixed(3)}"/>` : "");
   return { g, out: toScreen(c, TX, G - 520), outC: "#f6fbff", outZ: 14 };
@@ -101,9 +101,9 @@ const s2 = (a, tot) => nuclear(a, tot);
 // ---- 3: one pellet weighs (in energy) as much as a ton of coal ----
 export function scale3(a, tot, o = {}) {
   const X = o.X ?? 960, c = camAt(a, o.cam || [[0, 960, 640, 1.5], [1.6, 960, 600, 1.35], [3.68, 960, 600, 1.28]]), G = o.G ?? 960;
-  const pIn = pop(a - 0.6), coalIn = Math.floor(kf(a, [[2.4, 0], [3.0, 28]])), tilt = kf(a, [[0.6, 0], [1.0, -16], [2.5, -16], [3.13, 0]]);
-  const L = pIn > 0 ? at(0, -34, pellet(1.6 * pIn, seg(a, 1.81, 2.2))) : "", R = coalIn > 0 ? at(0, -8, coalPile(coalIn, 0.85)) : "";
-  const g = sky(c, tot, 53) + layer(ground(G) + at(X, G, balance(tilt, L, R, o.w ?? 440, 460), 1.05) + (a > 3.13 ? at(X, G - 560, check(0, 0, 44, P.green, a - 3.13)) : ""), c);
+  const pIn = pop(a - 0.6), coalIn = Math.floor(kf(a, [[2.95, 0], [3.45, 28]])), tilt = kf(a, [[0.6, 0], [1.0, -16], [2.95, -16], [3.6, 0]]);
+  const L = pIn > 0 ? at(0, -34, pellet(1.6 * pIn, seg(a, 2.11, 2.5))) : "", R = coalIn > 0 ? at(0, -8, coalPile(coalIn, 0.85)) : "";
+  const g = sky(c, tot, 53) + layer(ground(G) + at(X, G, balance(tilt, L, R, o.w ?? 440, 460), 1.05) + (a > 3.6 ? at(X, G - 560, check(0, 0, 44, P.green, a - 3.6)) : ""), c);
   return { g, in: toScreen(c, X, G - 400), inC: "#f6fbff", out: toScreen(c, X - (o.w ?? 440), G - 340), outC: "#9cff6a", outZ: 12 };
 }
 const s3 = (a, tot) => scale3(a, tot);

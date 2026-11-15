@@ -1,4 +1,5 @@
-// "The magnet" of electricity part 2 (how it is made): six shots, nothing to read but a year, a name plate and a wave.
+// "The magnet" of electricity part 2 of 4 (made and delivered): six shots, nothing to read but a year, a name plate and a wave.
+// Timed to the four-part voice (techforbadguys-explain-electricity-02-ar-v2).
 //   0 a lamp-lit workbench, calendar 1831, plate FARADAY; a bar magnet slides past a copper wire and the electrons in
 //     the wire jump (move a magnet past a wire and its electrons move)
 //   1 the generator: the magnet spins inside a copper coil, the electrons in the coil rock back and forth, an AC wave
@@ -45,9 +46,9 @@ const bench = (c, tot, glowA = 1) => NIGHT(c) + layer(`<rect x="-900" y="180" wi
     + `<rect x="-900" y="760" width="3700" height="40" fill="${P.wood}"/><rect x="-900" y="800" width="3700" height="500" fill="${P.woodD}"/>`, c);
 function s0(a, tot) {
   const v = portrait(), c = v ? camAt(a, [[0, 960, 560, 1.15], [8.2, 960, 590, 1.25]]) : camAt(a, [[0, 960, 520, 1], [4.2, 960, 540, 1.08], [8.2, 960, 560, 1.16]]);
-  // the wire across the bench with its electrons; the magnet slides past it on «حرّك» (4.47 .. 5.6); they jump on «تتحرك» (7.51)
+  // the wire across the bench with its electrons; the magnet slides past it on «حرّك» (4.41 .. 5.5); they jump on «تتحرك» (7.05)
   const Y = 640, x0 = 360, x1 = 1560, mx = kf(a, [[4.3, -300], [5.5, 900], [7.4, 1150]], ease), my = Y - 170;
-  const jump = (i) => { const u = a - 6.0 - i * 0.03; return u > 0 ? Math.sin(u * 7 + i) * 26 * Math.exp(-Math.max(0, a - 7.6) * 0.6) + (a > 7.5 ? 36 * Math.sin(a * 10 + i) * spring(a - 7.5, 6, 10) * 0.6 : 0) : 0; };
+  const jump = (i) => { const u = a - 6.0 - i * 0.03; return u > 0 ? Math.sin(u * 7 + i) * 26 * Math.exp(-Math.max(0, a - 7.1) * 0.6) + (a > 7.0 ? 36 * Math.sin(a * 10 + i) * spring(a - 7.0, 6, 10) * 0.6 : 0) : 0; };
   const dots = Array.from({ length: 14 }, (_, i) => { const x = x0 + 40 + i * 82, jx = jump(i); return at(x + jx, Y + 4 * Math.sin(tot * 3 + i), electron(20, { sign: false, glow: a > 6 ? 1 : 0 })); }).join("");
   const wireP = `<path d="M${x0 - 300} ${Y}H${x1 + 300}" stroke="${E.cuD}" stroke-width="54" stroke-linecap="round"/><path d="M${x0 - 300} ${Y - 6}H${x1 + 300}" stroke="${E.cu}" stroke-width="30" stroke-linecap="round"/>`;
   const magnet = a > 4.2 ? at(mx, my, MAG(380, 110), 1, 6 * Math.sin(a * 3)) + (a > 5.2 ? `<path d="M${mx - 260} ${my}h-80M${mx - 260} ${my + 30}h-50" stroke="#cfe6f0" stroke-width="8" stroke-linecap="round" opacity="${(1 - seg(a, 6.6, 7.2)).toFixed(2)}"/>` : "") : "";
@@ -79,7 +80,7 @@ function s2(a, tot) {
   const bat = at(GX - (v ? 0 : 440), v ? GY + 520 : GY + 180, battery({ push: feed }), 0.8, v ? 0 : 0);
   const lead = v ? drawn(`M${GX} ${GY + 190}V${GY + 330}`, 1, E.cuD, 22) + drawn(`M${GX} ${GY + 190}V${GY + 330}`, feed, "#fff6c0", 10) : drawn(`M${GX - 440} ${GY - 135}V${GY - 200}H${GX - 200}`, 1, E.cuD, 22) + drawn(`M${GX - 440} ${GY - 135}V${GY - 200}H${GX - 200}`, feed, "#fff6c0", 10);
   const genG = at(GX, GY, gen(-spin, { R: 190, el: 1, glow: a > 2.73 ? 0.6 : 0 }));
-  const items = [[3.22, fanP(spin * 60)], [3.9, washer(spin * 70)], [4.65, wheelCar(spin * 90)]];
+  const items = [[3.06, fanP(spin * 60)], [3.77, washer(spin * 70)], [4.64, wheelCar(spin * 90)]];
   const pos = v ? [[760, 1020], [1180, 1020], [960, 1420]] : [[1260, 280], [1560, 280], [1380, 660]];
   const row = items.map(([t0, g], i) => (a > t0 ? at(pos[i][0], pos[i][1], `${rings(0, 0, 140, P.gold, 0.12 * (a > 5.75 ? 1 : 0.5), 1.3)}${g}`, pop(a - t0) * (i === 2 ? 0.85 : 1)) : "")).join("");
   const g = NIGHT(c) + layer(lead + bat + genG + row, c);
@@ -102,7 +103,7 @@ function s3(a, tot) {
   const candle = at(1300, 760, `${rings(0, -170, 90, "#ffe7a0", 0.22, 1.5)}<path d="${rr(-18, -150, 36, 150, 6)}" fill="${P.cream}"/><path d="M0 -150q-16 -26 0 -58q16 32 0 58Z" fill="#ffcf6b" transform="scale(${1 + 0.06 * Math.sin(tot * 9)} 1)"/>`);
   const open = at(1080, 740, `${glow > 0 ? rings(0, -60, 200, "#ffe7a0", 0.25 * glow, 1.5) : ""}<g transform="scale(${lerp(0.5, 1, op).toFixed(3)} 1)"><path d="M0 -10Q-90 -40 -180 -14V30Q-90 4 0 30Z" fill="${P.cream}"/><path d="M0 -10Q90 -40 180 -14V30Q90 4 0 30Z" fill="#fffaec"/>
     ${op > 0.6 ? [0, 1, 2, 3].map((i) => `<path d="M${-160 + 8 * i} ${-6 + i * 9}h${120 - i * 10}M${30 + 8 * i} ${-6 + i * 9}h${120 - i * 10}" stroke="#dccaa0" stroke-width="5"/>`).join("") : ""}</g>${op < 0.9 ? at(0, 0, bookP(BOOKC[0], 180, 30), [1 - op, 1]) : ""}`);
-  const pl = at(v ? 900 : 1500, v ? -20 : 120, plate("FARADAY", 56), pop(a - 0.05));
+  const pl = at(v ? 900 : 1360, v ? -20 : 300, plate("FARADAY", 56), pop(a - 0.05));
   const g = NIGHT(c) + layer(room + pressP + stacks + candle + open + pl, c);
   return { g, out: toScreen(c, 1080, 700), outC: "#ffe7a0", outZ: 14 };
 }
@@ -111,10 +112,10 @@ function s3(a, tot) {
 function s4(a, tot) {
   const v = portrait(), c = v ? camAt(a, [[0, 960, 640, 1.1], [4.3, 960, 640, 0.95]]) : camAt(a, [[0, 1180, 500, 1.2], [2.6, 1050, 500, 1.0], [4.3, 1000, 500, 0.92]]);
   const GX = v ? 960 : 1360, GY = v ? 1000 : 500, TX = v ? 960 : 560, TY = v ? 260 : 500;
-  const grow = ease(seg(a, 2.8, 3.6)), spin = a * 40 + Math.max(0, a - 3.5) * 220, ang = (spin * Math.PI) / 180;
+  const grow = ease(seg(a, 3.0, 3.8)), spin = a * 40 + Math.max(0, a - 3.5) * 220, ang = (spin * Math.PI) / 180;
   const shaft = v ? `<path d="${rr(GX - 18, TY, 36, GY - TY, 8)}" fill="${P.steelD}"/>` : `<path d="${rr(TX, GY - 18, GX - TX, 36, 8)}" fill="${P.steelD}"/>`;
   const q = a > 1.4 && a < 2.4 ? at(TX, TY, text(0, 50, "?", 200, P.gold), pop(a - 1.4) * (1 - seg(a, 2.1, 2.4))) : "";
-  const ring = a > 3.6 ? rings(TX, TY, 320, P.gold, 0.18 * (1 - seg(a, 4.0, 4.3)), 1.2) : "";
+  const ring = a > 3.8 ? rings(TX, TY, 320, P.gold, 0.18 * (1 - seg(a, 4.1, 4.4)), 1.2) : "";
   const g = NIGHT(c) + layer(shaft + ring + at(TX, TY, turbine(spin, 300, grow)) + q + at(GX, GY, gen(ang, { R: 170 })), c);
   return { g, in: toScreen(c, GX, GY), inC: P.gold, out: toScreen(c, TX, TY), outC: "#9fb6c8", outZ: 16 };
 }
@@ -126,7 +127,7 @@ const windFx = (t, on) => [0, 1, 2].map((i) => `<path d="M-130 ${-80 + i * 70}q6
 function s5(a, tot) {
   const v = portrait(), c = v ? camAt(a, [[0, 960, 640, 1.0], [6.3, 960, 660, 0.96]]) : camAt(a, [[0, 1100, 470, 1.25], [1.6, 1000, 470, 1.0], [6.3, 960, 460, 0.92]]);
   const spin = a * 120, ang = (spin * Math.PI) / 180;
-  const pick = a < 4.24 ? -1 : a < 5.11 ? 0 : a < 5.38 ? 1 : 2;   // which arch is lit
+  const pick = a < 4.95 ? -1 : a < 5.25 ? 0 : a < 5.55 ? 1 : 2;   // which arch is lit
   const pos = v ? [[960, -60], [960, 380], [960, 820]] : [[560, 470], [960, 470], [1360, 470]];
   const GX = v ? 960 : 1760, GY = v ? 1260 : 470;
   const fx = [steamFx, waterFx, windFx];
