@@ -1,0 +1,1644 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-science-01-dub-en",
+ "transcript": "../../../video/cues/explain-science-01-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir. Field report one, in a new file: Science.",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 3.28,
+   "say": "Humans have a thing called science. They trust i",
+   "board": {
+    "kind": "sintro",
+    "ends": [
+     3.69,
+     4.89,
+     8.8,
+     8.16,
+     2.99
+    ]
+   },
+   "step": 0,
+   "stepT": 3.28,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 6.64,
+   "say": "They fly because of it, take medicine because of",
+   "board": {
+    "kind": "sintro",
+    "ends": [
+     3.69,
+     4.89,
+     8.8,
+     8.16,
+     2.99
+    ]
+   },
+   "step": 1,
+   "stepT": 6.64
+  },
+  {
+   "t": 9.98,
+   "say": "And yet half the planet asks: why believe these ",
+   "board": {
+    "kind": "sintro",
+    "ends": [
+     3.69,
+     4.89,
+     8.8,
+     8.16,
+     2.99
+    ]
+   },
+   "step": 2,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 9.98
+  },
+  {
+   "t": 14.04,
+   "say": "Today: what science is, and why they trust it.",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 16.35,
+   "say": "I'll start with the strangest story I found. In ",
+   "board": {
+    "kind": "sintro",
+    "ends": [
+     3.69,
+     4.89,
+     8.8,
+     8.16,
+     2.99
+    ]
+   },
+   "step": 3,
+   "stepT": 16.35,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 21.78,
+   "say": "Months later, the culprit: a loose cable.",
+   "board": {
+    "kind": "sintro",
+    "ends": [
+     3.69,
+     4.89,
+     8.8,
+     8.16,
+     2.99
+    ]
+   },
+   "step": 4,
+   "emote": "deadpan",
+   "host": "left",
+   "stepT": 21.78
+  },
+  {
+   "t": 23.7,
+   "say": "It started in Europe, sir. A lab in Geneva, CERN",
+   "board": {
+    "kind": "announce",
+    "ends": [
+     8.36,
+     5.25,
+     7.09,
+     1.92,
+     7.05,
+     3.52,
+     5.08
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "FASTER THAN LIGHT?",
+    "icon": "atom",
+    "size": 54
+   },
+   "stepT": 23.7,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 31.47,
+   "say": "About seven hundred and thirty kilometers. A tea",
+   "board": {
+    "kind": "announce",
+    "ends": [
+     8.36,
+     5.25,
+     7.09,
+     1.92,
+     7.05,
+     3.52,
+     5.08
+    ]
+   },
+   "step": 1,
+   "stepT": 31.47
+  },
+  {
+   "t": 35.57,
+   "say": "In twenty eleven, the numbers looked strange: th",
+   "board": {
+    "kind": "announce",
+    "ends": [
+     8.36,
+     5.25,
+     7.09,
+     1.92,
+     7.05,
+     3.52,
+     5.08
+    ]
+   },
+   "step": 2,
+   "stepT": 35.57
+  },
+  {
+   "t": 41.44,
+   "say": "Faster than light. Which is impossible.",
+   "board": {
+    "kind": "announce",
+    "ends": [
+     8.36,
+     5.25,
+     7.09,
+     1.92,
+     7.05,
+     3.52,
+     5.08
+    ]
+   },
+   "step": 3,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 41.44
+  },
+  {
+   "t": 43.71,
+   "say": "Einstein said nothing beats light. A century of ",
+   "board": {
+    "kind": "announce",
+    "ends": [
+     8.36,
+     5.25,
+     7.09,
+     1.92,
+     7.05,
+     3.52,
+     5.08
+    ]
+   },
+   "step": 4,
+   "stepT": 43.71
+  },
+  {
+   "t": 47.58,
+   "say": "Two options, sir.",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 48.48,
+   "say": "Hide it in a drawer. Or announce it: we don't be",
+   "board": {
+    "kind": "announce",
+    "ends": [
+     8.36,
+     5.25,
+     7.09,
+     1.92,
+     7.05,
+     3.52,
+     5.08
+    ]
+   },
+   "step": 5,
+   "stepT": 48.48,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 51.67,
+   "say": "They chose the second. A press conference: here ",
+   "board": {
+    "kind": "announce",
+    "ends": [
+     8.36,
+     5.25,
+     7.09,
+     1.92,
+     7.05,
+     3.52,
+     5.08
+    ]
+   },
+   "step": 6,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 51.67
+  },
+  {
+   "t": 55.57,
+   "say": "I had to sit down, sir. At Command, admitting a ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 59.7,
+   "say": "First: humans think science is a big book of ans",
+   "board": {
+    "kind": "workshop",
+    "ends": [
+     4.12,
+     3.31,
+     5.95,
+     5.15,
+     4.17,
+     6.47
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "METHOD",
+    "icon": "gear"
+   },
+   "stepT": 59.7,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 63.25,
+   "say": "Earth circles the Sun. Water boils at a hundred.",
+   "board": {
+    "kind": "workshop",
+    "ends": [
+     4.12,
+     3.31,
+     5.95,
+     5.15,
+     4.17,
+     6.47
+    ]
+   },
+   "step": 1,
+   "stepT": 63.25
+  },
+  {
+   "t": 65.58,
+   "say": "That's not science, sir. That's what's left afte",
+   "board": {
+    "kind": "workshop",
+    "ends": [
+     4.12,
+     3.31,
+     5.95,
+     5.15,
+     4.17,
+     6.47
+    ]
+   },
+   "step": 2,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 65.58
+  },
+  {
+   "t": 68.1,
+   "say": "Science is a method for not fooling yourself.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 70.79,
+   "say": "Simple: say something testable. Test it. Then tr",
+   "board": {
+    "kind": "workshop",
+    "ends": [
+     4.12,
+     3.31,
+     5.95,
+     5.15,
+     4.17,
+     6.47
+    ]
+   },
+   "step": 3,
+   "stepT": 70.79,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 74.49,
+   "say": "If it survives, believe it a little. If it survi",
+   "board": {
+    "kind": "workshop",
+    "ends": [
+     4.12,
+     3.31,
+     5.95,
+     5.15,
+     4.17,
+     6.47
+    ]
+   },
+   "step": 4,
+   "stepT": 74.49
+  },
+  {
+   "t": 78.41,
+   "say": "Science isn't a library, sir. It's a workshop. A",
+   "board": {
+    "kind": "workshop",
+    "ends": [
+     4.12,
+     3.31,
+     5.95,
+     5.15,
+     4.17,
+     6.47
+    ]
+   },
+   "step": 5,
+   "emote": "proud",
+   "host": "left",
+   "stepT": 78.41
+  },
+  {
+   "t": 83.7,
+   "say": "How old is this method? I went back over two tho",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "STICK & SHADOW",
+    "icon": "sun",
+    "size": 54
+   },
+   "stepT": 83.7,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 88.01,
+   "say": "A man named Eratosthenes ran the Library of Alex",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 1,
+   "stepT": 88.01
+  },
+  {
+   "t": 91.14,
+   "say": "He heard that in a southern town, on one summer ",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 2,
+   "stepT": 91.14
+  },
+  {
+   "t": 97.36,
+   "say": "So, same day, same hour, he planted a stick in A",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 3,
+   "stepT": 97.36
+  },
+  {
+   "t": 101.89,
+   "say": "A small shadow, about seven degrees. One fiftiet",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 4,
+   "stepT": 101.89
+  },
+  {
+   "t": 105.41,
+   "say": "If the Earth were flat, the shadows would match.",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 5,
+   "stepT": 105.41
+  },
+  {
+   "t": 107.59,
+   "say": "They don't. So the Earth is round.",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 6,
+   "stepT": 107.59
+  },
+  {
+   "t": 109.26,
+   "say": "A one-fiftieth difference means the towns are on",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 7,
+   "stepT": 109.26
+  },
+  {
+   "t": 113.26,
+   "say": "The distance was paced out: about five thousand ",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 8,
+   "stepT": 113.26
+  },
+  {
+   "t": 118.04,
+   "say": "Humans still argue about how long a stadion was,",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 9,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 118.04
+  },
+  {
+   "t": 123.92,
+   "say": "No plane, no satellite, no internet. A stick, a ",
+   "board": {
+    "kind": "shadow",
+    "ends": [
+     4.92,
+     3.13,
+     7.83,
+     5.54,
+     3.96,
+     2.99,
+     2.36,
+     4.91,
+     5.06,
+     7.34,
+     4.45
+    ]
+   },
+   "step": 10,
+   "stepT": 123.92
+  },
+  {
+   "t": 128.18,
+   "say": "But the number isn't the point, sir. Anyone with",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "present"
+  },
+  {
+   "t": 132.94,
+   "say": "No need to trust him. Try it.",
+   "shot": "close",
+   "emote": "proud"
+  },
+  {
+   "t": 134.4,
+   "say": "So what makes a claim scientific, and another on",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug",
+   "story": {
+    "n": 4,
+    "tag": "DRAGON",
+    "icon": "ghost"
+   }
+  },
+  {
+   "t": 137.37,
+   "say": "Imagine someone says: I have a dragon in my gara",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 0,
+   "stepT": 137.37,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 140.2,
+   "say": "Show me. It's invisible.",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 1,
+   "stepT": 140.2
+  },
+  {
+   "t": 141.39,
+   "say": "Spread flour to see its footprints? It floats.",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 2,
+   "stepT": 141.39
+  },
+  {
+   "t": 143.83,
+   "say": "Measure the heat of its fire? Cold fire.",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 3,
+   "stepT": 143.83
+  },
+  {
+   "t": 145.71,
+   "say": "Every test, he has an excuse.",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 4,
+   "emote": "bored",
+   "host": "right",
+   "stepT": 145.71
+  },
+  {
+   "t": 147.45,
+   "say": "True or false, that claim will never be science.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 149.72,
+   "say": "Because no experiment could ever prove it wrong.",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 151.67,
+   "say": "The main rule of science: a claim must be able t",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 5,
+   "stepT": 151.67,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 156.72,
+   "say": "Einstein did exactly that. His theory said starl",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 6,
+   "stepT": 156.72
+  },
+  {
+   "t": 162.71,
+   "say": "In nineteen nineteen, humans waited for an eclip",
+   "board": {
+    "kind": "dragon",
+    "ends": [
+     2.87,
+     2.15,
+     2.72,
+     2.72,
+     8.84,
+     6.29,
+     7.17,
+     4.45
+    ]
+   },
+   "step": 7,
+   "emote": "proud",
+   "host": "right",
+   "stepT": 162.71
+  },
+  {
+   "t": 166.36,
+   "say": "Back to the particles faster than light. After t",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "THE CABLE",
+    "icon": "cable"
+   },
+   "stepT": 166.36,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 171.46,
+   "say": "Not to believe it. To break it. As it should be.",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 1,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 171.46
+  },
+  {
+   "t": 173.99,
+   "say": "Five months later, the team found the mistake.",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 2,
+   "stepT": 173.99
+  },
+  {
+   "t": 176.03,
+   "say": "A fibre-optic cable carrying the GPS time signal",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 3,
+   "stepT": 176.03
+  },
+  {
+   "t": 180.34,
+   "say": "And a clock was off.",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 4,
+   "stepT": 180.34
+  },
+  {
+   "t": 181.57,
+   "say": "Tiny problems, but enough to create those sixty ",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 5,
+   "emote": "deadpan",
+   "host": "left",
+   "stepT": 181.57
+  },
+  {
+   "t": 185.77,
+   "say": "Meanwhile, another experiment in the same Italia",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 6,
+   "stepT": 185.77
+  },
+  {
+   "t": 193.23,
+   "say": "Cable fixed, math redone: the speed of light. Ei",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 7,
+   "stepT": 193.23
+  },
+  {
+   "t": 197.45,
+   "say": "The leader had resigned.",
+   "shot": "close",
+   "emote": "neutral"
+  },
+  {
+   "t": 198.51,
+   "say": "Who caught it, sir? Not a journalist. Not a gove",
+   "board": {
+    "kind": "cable",
+    "ends": [
+     4.86,
+     3.93,
+     3.21,
+     4.65,
+     1.93,
+     5.24,
+     8.99,
+     6.33,
+     5.18
+    ]
+   },
+   "step": 8,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 198.51,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 203.02,
+   "say": "There's a word humans misuse all the time: theor",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "present",
+   "story": {
+    "n": 6,
+    "tag": "THEORY",
+    "icon": "rules"
+   }
+  },
+  {
+   "t": 206.42,
+   "say": "On the street, a theory is a hunch. As in: I bet",
+   "board": {
+    "kind": "theory",
+    "ends": [
+     9.18,
+     3.1,
+     5.9,
+     3.19,
+     5.71,
+     7.07
+    ]
+   },
+   "step": 0,
+   "stepT": 206.42,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 211.14,
+   "say": "But to scientists, the word means something else",
+   "shot": "host",
+   "emote": "neutral"
+  },
+  {
+   "t": 213.95,
+   "say": "It starts as a hypothesis: a guess you can test.",
+   "board": {
+    "kind": "theory",
+    "ends": [
+     9.18,
+     3.1,
+     5.9,
+     3.19,
+     5.71,
+     7.07
+    ]
+   },
+   "step": 1,
+   "stepT": 213.95,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 216.66,
+   "say": "Tested a lot, survives, predicts things nobody h",
+   "board": {
+    "kind": "theory",
+    "ends": [
+     9.18,
+     3.1,
+     5.9,
+     3.19,
+     5.71,
+     7.07
+    ]
+   },
+   "step": 2,
+   "stepT": 216.66
+  },
+  {
+   "t": 221.54,
+   "say": "A theory isn't the bottom of the ladder, sir. It",
+   "board": {
+    "kind": "theory",
+    "ends": [
+     9.18,
+     3.1,
+     5.9,
+     3.19,
+     5.71,
+     7.07
+    ]
+   },
+   "step": 3,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 221.54
+  },
+  {
+   "t": 224.34,
+   "say": "Take gravity. Nobody calls it a hunch.",
+   "board": {
+    "kind": "theory",
+    "ends": [
+     9.18,
+     3.1,
+     5.9,
+     3.19,
+     5.71,
+     7.07
+    ]
+   },
+   "step": 4,
+   "stepT": 224.34
+  },
+  {
+   "t": 226.19,
+   "say": "Nobody steps off a roof to check.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 227.72,
+   "say": "And that diseases come from tiny creatures you c",
+   "board": {
+    "kind": "theory",
+    "ends": [
+     9.18,
+     3.1,
+     5.9,
+     3.19,
+     5.71,
+     7.07
+    ]
+   },
+   "step": 5,
+   "stepT": 227.72,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 233.91,
+   "say": "That one gets its own report.",
+   "shot": "host",
+   "emote": "sly"
+  },
+  {
+   "t": 235.07,
+   "say": "A harder test than explaining the past: predicti",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "count",
+   "story": {
+    "n": 7,
+    "tag": "HALLEY",
+    "icon": "comet"
+   }
+  },
+  {
+   "t": 238.81,
+   "say": "In seventeen oh five, an Englishman, Edmond Hall",
+   "board": {
+    "kind": "halley",
+    "ends": [
+     5.68,
+     3.06,
+     3.41,
+     4.71,
+     1.45,
+     3.58,
+     1.13
+    ]
+   },
+   "step": 0,
+   "stepT": 238.81,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 243.14,
+   "say": "He noticed one showed up about every seventy-six",
+   "board": {
+    "kind": "halley",
+    "ends": [
+     5.68,
+     3.06,
+     3.41,
+     4.71,
+     1.45,
+     3.58,
+     1.13
+    ]
+   },
+   "step": 1,
+   "stepT": 243.14
+  },
+  {
+   "t": 246.12,
+   "say": "Not three comets. One comet, coming back.",
+   "board": {
+    "kind": "halley",
+    "ends": [
+     5.68,
+     3.06,
+     3.41,
+     4.71,
+     1.45,
+     3.58,
+     1.13
+    ]
+   },
+   "step": 2,
+   "stepT": 246.12
+  },
+  {
+   "t": 248.66,
+   "say": "Using gravity, he said: it returns around sevent",
+   "board": {
+    "kind": "halley",
+    "ends": [
+     5.68,
+     3.06,
+     3.41,
+     4.71,
+     1.45,
+     3.58,
+     1.13
+    ]
+   },
+   "step": 3,
+   "stepT": 248.66
+  },
+  {
+   "t": 252.12,
+   "say": "He died sixteen years before.",
+   "board": {
+    "kind": "halley",
+    "ends": [
+     5.68,
+     3.06,
+     3.41,
+     4.71,
+     1.45,
+     3.58,
+     1.13
+    ]
+   },
+   "step": 4,
+   "stepT": 252.12
+  },
+  {
+   "t": 253.52,
+   "say": "And on Christmas night, seventeen fifty-eight...",
+   "board": {
+    "kind": "halley",
+    "ends": [
+     5.68,
+     3.06,
+     3.41,
+     4.71,
+     1.45,
+     3.58,
+     1.13
+    ]
+   },
+   "step": 5,
+   "stepT": 253.52
+  },
+  {
+   "t": 257.34,
+   "say": "It bears his name.",
+   "board": {
+    "kind": "halley",
+    "ends": [
+     5.68,
+     3.06,
+     3.41,
+     4.71,
+     1.45,
+     3.58,
+     1.13
+    ]
+   },
+   "step": 6,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 257.34
+  },
+  {
+   "t": 258.17,
+   "say": "Imagine signing a prediction you won't live to s",
+   "shot": "host",
+   "emote": "serious"
+  },
+  {
+   "t": 260.44,
+   "say": "Crazy, or sure of your method. He wasn't crazy.",
+   "shot": "close",
+   "emote": "proud"
+  },
+  {
+   "t": 263.15,
+   "say": "Right. Back to the question: why do humans trust",
+   "shot": "host",
+   "emote": "neutral",
+   "story": {
+    "n": 8,
+    "tag": "WHY TRUST IT",
+    "icon": "shield",
+    "size": 54
+   }
+  },
+  {
+   "t": 266.85,
+   "say": "Not because scientists are smarter, or never wro",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug"
+  },
+  {
+   "t": 271.62,
+   "say": "Humans trust it for two reasons.",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 273.34,
+   "say": "One: it's the only method built to hunt its own ",
+   "board": {
+    "kind": "trust",
+    "ends": [
+     4.58,
+     6.98,
+     8.46,
+     8.18,
+     6.06,
+     5.33
+    ]
+   },
+   "step": 0,
+   "stepT": 273.34,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 276.53,
+   "say": "Anyone can repeat the experiment. Prove the big ",
+   "board": {
+    "kind": "trust",
+    "ends": [
+     4.58,
+     6.98,
+     8.46,
+     8.18,
+     6.06,
+     5.33
+    ]
+   },
+   "step": 1,
+   "stepT": 276.53
+  },
+  {
+   "t": 280.89,
+   "say": "Not one scientist, sir. That's a mistake too.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 283.49,
+   "say": "We trust many teams, in different countries, who",
+   "board": {
+    "kind": "trust",
+    "ends": [
+     4.58,
+     6.98,
+     8.46,
+     8.18,
+     6.06,
+     5.33
+    ]
+   },
+   "step": 2,
+   "stepT": 283.49,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 290.5,
+   "say": "Then a conspiracy gets very hard. It needs every",
+   "board": {
+    "kind": "trust",
+    "ends": [
+     4.58,
+     6.98,
+     8.46,
+     8.18,
+     6.06,
+     5.33
+    ]
+   },
+   "step": 3,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 290.5
+  },
+  {
+   "t": 294.06,
+   "say": "Scientists never agree on anything, sir... excep",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 297.81,
+   "say": "Reason two: it works. The phone in your hand, th",
+   "board": {
+    "kind": "trust",
+    "ends": [
+     4.58,
+     6.98,
+     8.46,
+     8.18,
+     6.06,
+     5.33
+    ]
+   },
+   "step": 4,
+   "stepT": 297.81,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 302.34,
+   "say": "All scientific predictions. Humans bet their liv",
+   "board": {
+    "kind": "trust",
+    "ends": [
+     4.58,
+     6.98,
+     8.46,
+     8.18,
+     6.06,
+     5.33
+    ]
+   },
+   "step": 5,
+   "emote": "proud",
+   "host": "left",
+   "stepT": 302.34
+  },
+  {
+   "t": 306.14,
+   "say": "The Human Dictionary. Two words. Hypothesis: a t",
+   "board": {
+    "kind": "sdict",
+    "ends": [
+     5.47,
+     4.81
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 306.14,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 311.84,
+   "say": "Theory: a hypothesis tested a thousand times tha",
+   "board": {
+    "kind": "sdict",
+    "ends": [
+     5.47,
+     4.81
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 311.84
+  },
+  {
+   "t": 316.23,
+   "say": "Summary, sir. One: science isn't a book of answe",
+   "board": {
+    "kind": "srecap",
+    "ends": [
+     5.41,
+     4.51,
+     5.82
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 316.23,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 321.17,
+   "say": "Two: a scientific claim must be able to fail. Ot",
+   "board": {
+    "kind": "srecap",
+    "ends": [
+     5.41,
+     4.51,
+     5.82
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 321.17
+  },
+  {
+   "t": 325.41,
+   "say": "Three: scientists make mistakes, but the method ",
+   "board": {
+    "kind": "srecap",
+    "ends": [
+     5.41,
+     4.51,
+     5.82
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "stepT": 325.41
+  },
+  {
+   "t": 330.03,
+   "say": "I must admit: humans invented the only club on t",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 334.69,
+   "say": "Next report: how research is done, who checks it",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 340.68,
+   "say": "This was Earth Report. Agent Peek. End of transm",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 344.02,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "2 / 4",
+    "icons": [
+     "file",
+     "eye",
+     "rules"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
