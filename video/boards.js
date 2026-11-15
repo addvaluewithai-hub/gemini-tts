@@ -48,6 +48,26 @@ import { c4debateSet } from "./sets/c4debate.js";
 import { c4scoreSet } from "./sets/c4score.js";
 import { c4dictSet } from "./sets/c4dict.js";
 import { c4recapSet } from "./sets/c4recap.js";
+import { c5introSet } from "./sets/c5intro.js";
+import { c5s1Set } from "./sets/c5s1.js";
+import { c5s2Set } from "./sets/c5s2.js";
+import { c5s3Set } from "./sets/c5s3.js";
+import { c5s4Set } from "./sets/c5s4.js";
+import { c5s5Set } from "./sets/c5s5.js";
+import { c5s6Set } from "./sets/c5s6.js";
+import { c5s7Set } from "./sets/c5s7.js";
+import { c5s8Set } from "./sets/c5s8.js";
+import { c5s9Set } from "./sets/c5s9.js";
+import { c6introSet } from "./sets/c6intro.js";
+import { c6s1Set } from "./sets/c6s1.js";
+import { c6s2Set } from "./sets/c6s2.js";
+import { c6s3Set } from "./sets/c6s3.js";
+import { c6s4Set } from "./sets/c6s4.js";
+import { c6s5Set } from "./sets/c6s5.js";
+import { c6s6Set } from "./sets/c6s6.js";
+import { c6s7Set } from "./sets/c6s7.js";
+import { c6s8Set } from "./sets/c6s8.js";
+import { c6s9Set } from "./sets/c6s9.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -909,6 +929,28 @@ const BOARDS = {
   c4score: (s, step, age, total, cfg) => c4scoreSet(s, step, age, total, cfg),
   c4dict: (s, step, age, total, cfg) => c4dictSet(s, step, age, total, cfg),
   c4recap: (s, step, age, total, cfg) => c4recapSet(s, step, age, total, cfg),
+  // Crypto part 5, in the same world (sets/c5<scene>.js, props in sets/c5props.js).
+  c5intro: (s, step, age, total, cfg) => c5introSet(s, step, age, total, cfg),
+  c5s1: (s, step, age, total, cfg) => c5s1Set(s, step, age, total, cfg),
+  c5s2: (s, step, age, total, cfg) => c5s2Set(s, step, age, total, cfg),
+  c5s3: (s, step, age, total, cfg) => c5s3Set(s, step, age, total, cfg),
+  c5s4: (s, step, age, total, cfg) => c5s4Set(s, step, age, total, cfg),
+  c5s5: (s, step, age, total, cfg) => c5s5Set(s, step, age, total, cfg),
+  c5s6: (s, step, age, total, cfg) => c5s6Set(s, step, age, total, cfg),
+  c5s7: (s, step, age, total, cfg) => c5s7Set(s, step, age, total, cfg),
+  c5s8: (s, step, age, total, cfg) => c5s8Set(s, step, age, total, cfg),
+  c5s9: (s, step, age, total, cfg) => c5s9Set(s, step, age, total, cfg),
+  // Crypto part 6, in the same world (sets/c6<scene>.js, props in sets/c6props.js).
+  c6intro: (s, step, age, total, cfg) => c6introSet(s, step, age, total, cfg),
+  c6s1: (s, step, age, total, cfg) => c6s1Set(s, step, age, total, cfg),
+  c6s2: (s, step, age, total, cfg) => c6s2Set(s, step, age, total, cfg),
+  c6s3: (s, step, age, total, cfg) => c6s3Set(s, step, age, total, cfg),
+  c6s4: (s, step, age, total, cfg) => c6s4Set(s, step, age, total, cfg),
+  c6s5: (s, step, age, total, cfg) => c6s5Set(s, step, age, total, cfg),
+  c6s6: (s, step, age, total, cfg) => c6s6Set(s, step, age, total, cfg),
+  c6s7: (s, step, age, total, cfg) => c6s7Set(s, step, age, total, cfg),
+  c6s8: (s, step, age, total, cfg) => c6s8Set(s, step, age, total, cfg),
+  c6s9: (s, step, age, total, cfg) => c6s9Set(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.
