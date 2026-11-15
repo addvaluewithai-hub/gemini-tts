@@ -1,0 +1,222 @@
+[
+ {
+  "file": "explain-electricity-02-world/youtube/shorts/thumb-bird-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "birdWire",
+   "at": {
+    "x": 560,
+    "y": 1150
+   },
+   "s": 1.4
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-02-world/youtube/shorts/thumb-penalties-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "penaltyKettles",
+   "at": {
+    "x": 540,
+    "y": 640
+   },
+   "s": 1.0
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-02-world/youtube/shorts/thumb-clocks-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "lagClock",
+   "at": {
+    "x": 560,
+    "y": 620
+   },
+   "s": 1.15
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-02-world/youtube/shorts/thumb-plugs-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "plugFan",
+   "at": {
+    "x": 560,
+    "y": 640
+   },
+   "s": 1.25
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ },
+ {
+  "file": "explain-electricity-02-world/youtube/shorts/thumb-faraday-intl.jpg",
+  "page": "scene.html",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "scene": "solo",
+  "opts": {
+   "backdrop": "elecNight",
+   "bd": {
+    "groundY": 480,
+    "poles": [
+     120,
+     640,
+     1160
+    ],
+    "houseA": -400,
+    "houseB": -400,
+    "moon": {
+     "x": 1020,
+     "y": -1060
+    }
+   },
+   "item": "magnetBench",
+   "at": {
+    "x": 540,
+    "y": 620
+   },
+   "s": 1.05
+  },
+  "host": {
+   "emote": "surprised",
+   "x": 330,
+   "y": 1000,
+   "size": 980,
+   "look": 0.6,
+   "lookY": -0.7,
+   "face": {
+    "eyeScale": 1.35,
+    "pupil": 0.5
+   }
+  },
+  "words": []
+ }
+]
