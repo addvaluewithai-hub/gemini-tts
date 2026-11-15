@@ -12,7 +12,7 @@ Release planned: Friday 20 November 2026.
   (cues and transcript come out unchanged).
 - Look: the network file's own blue-teal night (`netNight` in `video/boards.js`), the owner asked for a look apart
   from the crypto file. Sets in `video/sets/` (props `net.js`), shot list `shots.md`. No Arabic on screen, no captions.
-- Last 13 s: end card NEXT 2 / 3.
+- Last 13 s: end card NEXT 2 / 4.
 
 ## English
 

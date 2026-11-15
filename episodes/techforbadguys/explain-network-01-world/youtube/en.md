@@ -1,4 +1,4 @@
-# YouTube: English entry for the world-picture video (Network File 1/3)
+# YouTube: English entry for the world-picture video (Network File 1/4)
 
 One video, several audio tracks. The picture is the language-neutral cut (`explain-network-01-world`), the original
 audio is Arabic, and this page is what goes into the video's **English** language entry: Translations (title and
@@ -15,9 +15,9 @@ description), the English audio track, and English subtitles.
 
 ## Title
 
-1. How Does Your Phone Actually Work? Where Your Voice Goes | Network File 1/3  ← recommended
-2. Your Phone Isn't a Phone. It's a Radio | Network File 1/3
-3. Why Calls Drop in Elevators, and Why It's Called "Cellular" | 1/3
+1. How Does Your Phone Actually Work? Where Your Voice Goes | Network File 1/4  ← recommended
+2. Your Phone Isn't a Phone. It's a Radio | Network File 1/4
+3. Why Calls Drop in Elevators, and Why It's Called "Cellular" | 1/4
 
 ## Description
 
@@ -50,7 +50,7 @@ Ericsson, who was first (1979 and 1991): https://www.ericsson.com/en/about-us/hi
 The first text message, 3 December 1992: https://www.history.com/this-day-in-history/first-sms-text-message-sent
 Phones texting satellites directly (2025): https://keeptrack.space/deep-dive/starlink-direct-to-cell
 
-This is one report in a three-part file on the network: the phone, the internet, the video call. Watch them in order from the playlist.
+This is one report in a four-part file on the network: the phone, where the internet lives, how a message finds its way, the video call. Watch them in order from the playlist.
 Numbers in the video carry their dates.
 The character, voice and animation are computer-generated. The facts come from the sources above and from general references.
 
@@ -71,7 +71,7 @@ first mobile phone call, first text message
 ## Settings
 
 - Original video language: Arabic. English is an added audio track, not a YouTube auto-dub.
-- Category: Education. Audience: not made for kids. Playlist: Earth Report: The Network File (three parts, in order).
+- Category: Education. Audience: not made for kids. Playlist: Earth Report: The Network File (four parts, in order).
 - End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.
 - Altered or synthetic content: the host is plainly a cartoon; the voices are machine-generated and the description says so.
 
