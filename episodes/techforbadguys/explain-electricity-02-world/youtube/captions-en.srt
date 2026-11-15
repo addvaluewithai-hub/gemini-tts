@@ -1,0 +1,1227 @@
+1
+00:00:00,474 --> 00:00:03,007
+Sir, field report number two on the electricity
+
+2
+00:00:03,047 --> 00:00:03,506
+file.
+
+3
+00:00:03,546 --> 00:00:04,124
+Today:
+
+4
+00:00:04,164 --> 00:00:06,018
+where electricity is made..
+
+5
+00:00:06,058 --> 00:00:07,491
+and how it gets home.
+
+6
+00:00:07,531 --> 00:00:09,673
+Last time we learned it's charge moving in
+
+7
+00:00:09,713 --> 00:00:10,312
+a wire.
+
+8
+00:00:10,352 --> 00:00:10,971
+Today:
+
+9
+00:00:11,011 --> 00:00:11,959
+who moves it?
+
+10
+00:00:11,999 --> 00:00:12,812
+And from where?
+
+11
+00:00:12,852 --> 00:00:14,093
+Strangest thing I found:
+
+12
+00:00:14,133 --> 00:00:16,176
+the power lighting their lamps right now..
+
+13
+00:00:16,216 --> 00:00:17,888
+was made less than a second ago.
+
+14
+00:00:17,928 --> 00:00:18,799
+No warehouse.
+
+15
+00:00:18,839 --> 00:00:20,957
+What's made is used that instant.
+
+16
+00:00:20,997 --> 00:00:23,454
+Billions of humans, each pressing switches whenever they
+
+17
+00:00:23,494 --> 00:00:23,899
+like..
+
+18
+00:00:23,939 --> 00:00:26,699
+and someone must supply exactly that, at that
+
+19
+00:00:26,739 --> 00:00:27,257
+instant.
+
+20
+00:00:27,297 --> 00:00:28,438
+No more, no less.
+
+21
+00:00:28,478 --> 00:00:31,792
+In eighteen thirty-one, an Englishman named Faraday found
+
+22
+00:00:31,832 --> 00:00:32,788
+something simple:
+
+23
+00:00:32,828 --> 00:00:34,465
+move a magnet past a wire..
+
+24
+00:00:34,505 --> 00:00:36,172
+and its electrons move.
+
+25
+00:00:36,212 --> 00:00:38,326
+Spin the magnet inside a coil of wire,
+
+26
+00:00:38,366 --> 00:00:39,960
+and it keeps pushing the electrons.
+
+27
+00:00:40,000 --> 00:00:40,368
+Back..
+
+28
+00:00:40,408 --> 00:00:40,999
+and forth.
+
+29
+00:00:41,039 --> 00:00:41,825
+That's a generator.
+
+30
+00:00:41,865 --> 00:00:43,517
+So naturally, it makes AC.
+
+31
+00:00:43,557 --> 00:00:45,571
+A motor is the same machine in reverse:
+
+32
+00:00:45,611 --> 00:00:46,346
+feed it power..
+
+33
+00:00:46,386 --> 00:00:47,034
+it spins.
+
+34
+00:00:47,074 --> 00:00:49,340
+The fan, the washing machine, the electric car:
+
+35
+00:00:49,380 --> 00:00:50,769
+generators running backwards.
+
+36
+00:00:50,809 --> 00:00:52,866
+Faraday was a blacksmith's son who left school
+
+37
+00:00:52,906 --> 00:00:53,295
+early.
+
+38
+00:00:53,335 --> 00:00:54,595
+A bookbinder's apprentice..
+
+39
+00:00:54,635 --> 00:00:56,635
+who read what he bound.
+
+40
+00:00:56,675 --> 00:00:57,787
+Their greatest invention:
+
+41
+00:00:57,827 --> 00:00:58,963
+a guy reading on the job.
+
+42
+00:00:59,003 --> 00:01:00,020
+One question left:
+
+43
+00:01:00,060 --> 00:01:01,139
+who turns the magnet?
+
+44
+00:01:01,179 --> 00:01:02,800
+They mount it on a giant fan called
+
+45
+00:01:02,840 --> 00:01:03,415
+a turbine.
+
+46
+00:01:03,455 --> 00:01:05,637
+Since Faraday, most of the planet's power is
+
+47
+00:01:05,677 --> 00:01:06,728
+made this same way.
+
+48
+00:01:06,768 --> 00:01:07,776
+All that changes:
+
+49
+00:01:07,816 --> 00:01:09,282
+what turns the turbine.
+
+50
+00:01:09,500 --> 00:01:10,277
+Their favorite way:
+
+51
+00:01:10,317 --> 00:01:11,077
+boil water.
+
+52
+00:01:11,117 --> 00:01:12,857
+Burn coal or gas under a boiler the
+
+53
+00:01:12,897 --> 00:01:13,883
+size of a building.
+
+54
+00:01:13,923 --> 00:01:15,323
+Steam spins the turbine.
+
+55
+00:01:15,363 --> 00:01:17,010
+The turbine spins the generator.
+
+56
+00:01:17,050 --> 00:01:18,353
+Out comes electricity.
+
+57
+00:01:18,393 --> 00:01:19,490
+The nuclear plant, sir?
+
+58
+00:01:19,530 --> 00:01:21,185
+The most complex thing they ever built.
+
+59
+00:01:21,225 --> 00:01:22,811
+They split the atom itself.
+
+60
+00:01:22,851 --> 00:01:23,747
+To boil water.
+
+61
+00:01:23,787 --> 00:01:25,676
+A fingertip of nuclear fuel holds about a
+
+62
+00:01:25,716 --> 00:01:27,224
+ton of coal's energy.
+
+63
+00:01:27,960 --> 00:01:30,645
+Countries with volcanoes take steam straight from underground.
+
+64
+00:01:30,685 --> 00:01:31,704
+Still steam.
+
+65
+00:01:31,744 --> 00:01:33,479
+This planet is addicted to kettles.
+
+66
+00:01:33,519 --> 00:01:34,950
+So kind one is steam:
+
+67
+00:01:34,990 --> 00:01:36,227
+coal, gas, nuclear.
+
+68
+00:01:36,267 --> 00:01:37,437
+Kind two is water:
+
+69
+00:01:37,477 --> 00:01:38,946
+a high dam, the water falls onto the
+
+70
+00:01:38,986 --> 00:01:39,484
+turbine.
+
+71
+00:01:39,524 --> 00:01:40,867
+The planet's biggest station..
+
+72
+00:01:40,907 --> 00:01:41,996
+a dam in China.
+
+73
+00:01:42,215 --> 00:01:43,296
+Kind three is wind:
+
+74
+00:01:43,336 --> 00:01:45,415
+turbines the wind keeps turning.
+
+75
+00:01:45,455 --> 00:01:46,338
+The one exception:
+
+76
+00:01:46,378 --> 00:01:47,302
+the solar panel.
+
+77
+00:01:47,342 --> 00:01:48,308
+Nothing spins at all.
+
+78
+00:01:48,348 --> 00:01:50,331
+Light knocks the electrons and moves them.
+
+79
+00:01:50,371 --> 00:01:51,795
+And it makes direct current.
+
+80
+00:01:52,212 --> 00:01:53,790
+Here's each one's share of the planet's power
+
+81
+00:01:53,830 --> 00:01:54,954
+in twenty twenty-five.
+
+82
+00:01:54,994 --> 00:01:56,127
+Coal still first:
+
+83
+00:01:56,167 --> 00:01:56,704
+a third.
+
+84
+00:01:56,744 --> 00:01:57,554
+Then gas.
+
+85
+00:01:57,594 --> 00:02:00,318
+Then dams, nuclear, solar and wind.
+
+86
+00:02:00,358 --> 00:02:01,827
+But that year, for the first time in
+
+87
+00:02:01,867 --> 00:02:02,498
+a century:
+
+88
+00:02:02,538 --> 00:02:03,756
+all renewables together..
+
+89
+00:02:03,796 --> 00:02:04,626
+passed coal.
+
+90
+00:02:04,666 --> 00:02:05,566
+By a hair.
+
+91
+00:02:06,788 --> 00:02:08,886
+Solar alone was about one percent ten years
+
+92
+00:02:08,926 --> 00:02:09,274
+ago.
+
+93
+00:02:09,314 --> 00:02:10,680
+Now nearly nine.
+
+94
+00:02:10,720 --> 00:02:11,951
+Their fastest-growing source..
+
+95
+00:02:11,991 --> 00:02:13,325
+is the only one that doesn't spin.
+
+96
+00:02:13,365 --> 00:02:14,945
+Now let's follow the power.
+
+97
+00:02:14,985 --> 00:02:16,998
+The generator makes it at about twenty thousand
+
+98
+00:02:17,038 --> 00:02:17,462
+volts.
+
+99
+00:02:17,502 --> 00:02:18,173
+First stop:
+
+100
+00:02:18,213 --> 00:02:20,518
+a transformer lifts it to hundreds of thousands.
+
+101
+00:02:20,558 --> 00:02:22,214
+A transformer has no moving parts.
+
+102
+00:02:22,254 --> 00:02:24,048
+Two coils of wire around iron.
+
+103
+00:02:24,088 --> 00:02:25,398
+More turns on one side..
+
+104
+00:02:25,438 --> 00:02:27,086
+so the pressure comes out higher there.
+
+105
+00:02:27,126 --> 00:02:27,548
+That's it.
+
+106
+00:02:27,588 --> 00:02:29,216
+Then it travels on tall towers.
+
+107
+00:02:29,256 --> 00:02:30,276
+Hundreds of kilometers.
+
+108
+00:02:30,316 --> 00:02:32,326
+Near the city, another transformer brings it down.
+
+109
+00:02:32,366 --> 00:02:33,890
+Then smaller ones on the streets.
+
+110
+00:02:33,930 --> 00:02:35,592
+Until it enters the house at one-ten or
+
+111
+00:02:35,632 --> 00:02:36,426
+two-forty volts.
+
+112
+00:02:36,466 --> 00:02:37,212
+Depends on the country.
+
+113
+00:02:37,252 --> 00:02:39,864
+Humans agreed on volts, amps and ohms.
+
+114
+00:02:39,904 --> 00:02:41,017
+But the plug itself?
+
+115
+00:02:41,057 --> 00:02:42,587
+About fifteen kinds.
+
+116
+00:02:42,627 --> 00:02:44,443
+Every traveler carries a little piece of plastic..
+
+117
+00:02:44,483 --> 00:02:46,156
+whose job is peace between two countries.
+
+118
+00:02:46,196 --> 00:02:47,718
+The trip takes less than a blink.
+
+119
+00:02:47,758 --> 00:02:49,523
+The only thing here that's on time.
+
+120
+00:02:49,563 --> 00:02:51,576
+Why raise the pressure, then lower it?
+
+121
+00:02:51,616 --> 00:02:53,307
+Because current heats the wire.
+
+122
+00:02:53,347 --> 00:02:55,360
+The bigger the current, the more power lost
+
+123
+00:02:55,400 --> 00:02:55,913
+as heat.
+
+124
+00:02:55,953 --> 00:02:57,476
+The same power can be sent two ways:
+
+125
+00:02:57,516 --> 00:02:58,838
+low pressure, big current..
+
+126
+00:02:58,878 --> 00:03:00,562
+or high pressure, small current.
+
+127
+00:03:00,602 --> 00:03:02,238
+The second loses far less.
+
+128
+00:03:02,278 --> 00:03:03,614
+Like moving a thousand passengers.
+
+129
+00:03:03,654 --> 00:03:05,192
+A thousand small cars jam the road and
+
+130
+00:03:05,232 --> 00:03:05,717
+burn fuel.
+
+131
+00:03:05,757 --> 00:03:06,901
+Or one fast train.
+
+132
+00:03:06,941 --> 00:03:07,970
+High voltage is the train.
+
+133
+00:03:08,010 --> 00:03:11,052
+And the transformer only works on alternating current.
+
+134
+00:03:11,092 --> 00:03:13,377
+That's the real reason Tesla beat Edison.
+
+135
+00:03:13,417 --> 00:03:15,201
+Even so, some is lost on the way.
+
+136
+00:03:15,241 --> 00:03:16,930
+In America, about five percent.
+
+137
+00:03:16,970 --> 00:03:19,446
+In countries with old or weak grids, much
+
+138
+00:03:19,486 --> 00:03:19,876
+more.
+
+139
+00:03:19,916 --> 00:03:21,983
+And some of what's lost there isn't lost..
+
+140
+00:03:22,023 --> 00:03:22,923
+it's stolen.
+
+141
+00:03:23,933 --> 00:03:25,263
+A warning for command:
+
+142
+00:03:25,306 --> 00:03:27,614
+high-voltage lines are bare, no jacket.
+
+143
+00:03:27,654 --> 00:03:28,736
+The air insulates them.
+
+144
+00:03:28,776 --> 00:03:31,000
+Get close, even without touching, and the power
+
+145
+00:03:31,040 --> 00:03:31,912
+can jump to you.
+
+146
+00:03:31,952 --> 00:03:33,191
+Humans hang a skull on them.
+
+147
+00:03:33,231 --> 00:03:34,784
+They're right.
+
+148
+00:03:34,824 --> 00:03:36,472
+A question their children ask:
+
+149
+00:03:36,512 --> 00:03:38,275
+the bird on that bare wire..
+
+150
+00:03:38,315 --> 00:03:40,039
+why doesn't it get shocked?
+
+151
+00:03:40,079 --> 00:03:41,925
+Both its feet are on the same wire.
+
+152
+00:03:41,965 --> 00:03:44,567
+Current flows when there's a pressure difference between
+
+153
+00:03:44,607 --> 00:03:45,437
+two points.
+
+154
+00:03:45,477 --> 00:03:47,229
+Both feet are at the same pressure.
+
+155
+00:03:47,269 --> 00:03:48,690
+So no current goes through it.
+
+156
+00:03:48,730 --> 00:03:50,559
+But if it touches another wire, or anything
+
+157
+00:03:50,599 --> 00:03:51,978
+grounded, at the same moment..
+
+158
+00:03:52,018 --> 00:03:53,246
+it becomes the path.
+
+159
+00:03:53,286 --> 00:03:54,714
+And humans stand on the ground all the
+
+160
+00:03:54,754 --> 00:03:55,217
+time.
+
+161
+00:03:55,257 --> 00:03:57,315
+So that rule is for birds only.
+
+162
+00:03:57,355 --> 00:03:59,456
+That's also why towers are so tall, and
+
+163
+00:03:59,496 --> 00:04:02,112
+wires hang far apart and far from everything.
+
+164
+00:04:02,152 --> 00:04:03,979
+The distance itself insulates.
+
+165
+00:04:04,019 --> 00:04:05,362
+Back to the big problem.
+
+166
+00:04:05,402 --> 00:04:07,459
+The grid can't store power.
+
+167
+00:04:07,499 --> 00:04:09,891
+So what stations make must equal what people
+
+168
+00:04:09,931 --> 00:04:10,509
+draw.
+
+169
+00:04:10,549 --> 00:04:11,522
+Every second.
+
+170
+00:04:11,562 --> 00:04:13,175
+One number tells them if the balance is
+
+171
+00:04:13,215 --> 00:04:13,712
+right:
+
+172
+00:04:13,752 --> 00:04:14,528
+the frequency.
+
+173
+00:04:14,568 --> 00:04:16,067
+Generator turns per second.
+
+174
+00:04:16,107 --> 00:04:18,132
+Fifty on most of the planet, sixty in
+
+175
+00:04:18,172 --> 00:04:18,908
+North America.
+
+176
+00:04:18,948 --> 00:04:20,344
+People draw more than is made?
+
+177
+00:04:20,384 --> 00:04:22,367
+The generators get heavier, slow down.
+
+178
+00:04:22,407 --> 00:04:23,405
+The number drops.
+
+179
+00:04:23,445 --> 00:04:25,187
+Control orders a station up.
+
+180
+00:04:25,227 --> 00:04:26,078
+The number comes back.
+
+181
+00:04:26,118 --> 00:04:28,265
+All day long, nobody notices.
+
+182
+00:04:28,713 --> 00:04:30,601
+Every grid has a control room, people at
+
+183
+00:04:30,641 --> 00:04:32,195
+screens twenty-four hours a day.
+
+184
+00:04:32,235 --> 00:04:33,023
+Their whole job:
+
+185
+00:04:33,063 --> 00:04:35,386
+keep that number at fifty.
+
+186
+00:04:35,426 --> 00:04:36,940
+The planet's most important workers..
+
+187
+00:04:36,980 --> 00:04:38,011
+and nobody knows their names.
+
+188
+00:04:38,051 --> 00:04:39,332
+The generators help too.
+
+189
+00:04:39,372 --> 00:04:41,450
+Each is hundreds of tonnes of spinning iron.
+
+190
+00:04:41,490 --> 00:04:43,798
+If something fails, the weight keeps spinning a
+
+191
+00:04:43,838 --> 00:04:44,657
+few seconds..
+
+192
+00:04:44,697 --> 00:04:46,271
+buying the grid time.
+
+193
+00:04:46,311 --> 00:04:47,585
+If a big station drops out and the
+
+194
+00:04:47,625 --> 00:04:48,536
+number falls fast?
+
+195
+00:04:48,576 --> 00:04:50,446
+The grid cuts whole districts by itself.
+
+196
+00:04:50,486 --> 00:04:51,794
+It sacrifices a part..
+
+197
+00:04:51,834 --> 00:04:52,835
+so the whole doesn't fall.
+
+198
+00:04:52,875 --> 00:04:55,430
+Their whole civilization rests on one number.
+
+199
+00:04:55,470 --> 00:04:56,928
+It must stay fifty.
+
+200
+00:04:56,968 --> 00:04:57,750
+Not forty-nine.
+
+201
+00:04:57,790 --> 00:04:59,228
+It makes for strange moments.
+
+202
+00:04:59,268 --> 00:05:01,325
+In nineteen ninety, England played Germany in the
+
+203
+00:05:01,365 --> 00:05:02,541
+World Cup semi-final.
+
+204
+00:05:02,581 --> 00:05:03,753
+It went to penalties.
+
+205
+00:05:03,846 --> 00:05:04,568
+The match ended..
+
+206
+00:05:04,608 --> 00:05:06,649
+and the whole country got up at once
+
+207
+00:05:06,689 --> 00:05:07,661
+to switch on the kettle.
+
+208
+00:05:07,701 --> 00:05:10,350
+Demand jumped two thousand eight hundred megawatts in
+
+209
+00:05:10,390 --> 00:05:10,962
+minutes.
+
+210
+00:05:11,002 --> 00:05:12,367
+Two big power stations.
+
+211
+00:05:12,407 --> 00:05:13,183
+Still their record.
+
+212
+00:05:13,223 --> 00:05:15,573
+Their grid engineers have studied the TV schedule
+
+213
+00:05:15,613 --> 00:05:16,380
+ever since.
+
+214
+00:05:16,420 --> 00:05:18,225
+They know when the show ends, and have
+
+215
+00:05:18,265 --> 00:05:20,638
+a station ready for that second.
+
+216
+00:05:20,678 --> 00:05:21,857
+England lost the match.
+
+217
+00:05:21,897 --> 00:05:22,908
+The grid won.
+
+218
+00:05:23,003 --> 00:05:24,975
+Grids grew and joined up.
+
+219
+00:05:25,015 --> 00:05:25,478
+Europe:
+
+220
+00:05:25,518 --> 00:05:27,627
+one grid from Portugal to Turkey.
+
+221
+00:05:27,667 --> 00:05:29,604
+Over four hundred million people.
+
+222
+00:05:29,644 --> 00:05:31,659
+Every generator in it turns together.
+
+223
+00:05:31,699 --> 00:05:33,297
+Same speed, same instant.
+
+224
+00:05:33,337 --> 00:05:34,377
+Thousands of machines..
+
+225
+00:05:34,417 --> 00:05:35,268
+like one machine.
+
+226
+00:05:35,308 --> 00:05:36,495
+That makes it stronger:
+
+227
+00:05:36,535 --> 00:05:38,633
+a station fails in one country, the neighbours
+
+228
+00:05:38,673 --> 00:05:39,126
+cover.
+
+229
+00:05:39,166 --> 00:05:41,222
+It also makes the neighbours' problems..
+
+230
+00:05:41,262 --> 00:05:41,862
+yours.
+
+231
+00:05:41,902 --> 00:05:43,623
+They trade power every hour.
+
+232
+00:05:43,663 --> 00:05:45,258
+A windy country sells today..
+
+233
+00:05:45,298 --> 00:05:46,639
+and buys tomorrow.
+
+234
+00:05:46,679 --> 00:05:49,454
+In twenty eighteen, Kosovo and Serbia argued over
+
+235
+00:05:49,494 --> 00:05:51,010
+who should make up missing power.
+
+236
+00:05:51,050 --> 00:05:52,889
+The whole grid slowed a hair.
+
+237
+00:05:52,929 --> 00:05:53,760
+Instead of fifty:
+
+238
+00:05:53,800 --> 00:05:55,662
+forty-nine point nine nine six.
+
+239
+00:05:55,702 --> 00:05:57,720
+Oven clocks and alarm clocks, which count time
+
+240
+00:05:57,760 --> 00:06:00,051
+from the grid's pulse, fell six minutes behind.
+
+241
+00:06:00,091 --> 00:06:01,525
+In twenty-five countries.
+
+242
+00:06:01,565 --> 00:06:02,645
+A quarrel between two..
+
+243
+00:06:02,685 --> 00:06:04,240
+made a whole continent late for work.
+
+244
+00:06:04,280 --> 00:06:05,729
+Finally, a scientific excuse.
+
+245
+00:06:05,769 --> 00:06:06,934
+Japan is the opposite.
+
+246
+00:06:06,974 --> 00:06:09,892
+In eighteen ninety-five, Tokyo bought German generators turning
+
+247
+00:06:09,932 --> 00:06:10,422
+at fifty.
+
+248
+00:06:10,462 --> 00:06:12,503
+The next year, Osaka bought American ones at
+
+249
+00:06:12,543 --> 00:06:13,005
+sixty.
+
+250
+00:06:13,045 --> 00:06:14,721
+To this day the country is split in
+
+251
+00:06:14,761 --> 00:06:17,120
+two, joined only by special converter stations.
+
+252
+00:06:17,160 --> 00:06:19,591
+In twenty eleven, after the great earthquake, the
+
+253
+00:06:19,631 --> 00:06:22,021
+east needed power and the west had extra.
+
+254
+00:06:22,061 --> 00:06:23,915
+Only a trickle could cross the link.
+
+255
+00:06:23,955 --> 00:06:25,594
+Tokyo had rolling blackouts.
+
+256
+00:06:25,634 --> 00:06:27,659
+A purchase made over a century ago.
+
+257
+00:06:27,699 --> 00:06:29,584
+Demand changes through the day.
+
+258
+00:06:29,911 --> 00:06:31,873
+Low at dawn, rising in the morning, highest
+
+259
+00:06:31,913 --> 00:06:32,701
+after sunset..
+
+260
+00:06:32,741 --> 00:06:35,738
+when everyone gets home and switches everything on.
+
+261
+00:06:35,778 --> 00:06:37,962
+So some stations run all the time, and
+
+262
+00:06:38,002 --> 00:06:40,146
+others sit idle and run just two hours
+
+263
+00:06:40,186 --> 00:06:40,671
+a day.
+
+264
+00:06:40,711 --> 00:06:41,328
+For the peak.
+
+265
+00:06:41,368 --> 00:06:42,917
+Their power is the most expensive.
+
+266
+00:06:42,957 --> 00:06:44,392
+The year's top peak comes with a heat
+
+267
+00:06:44,432 --> 00:06:46,892
+wave, every air conditioner at once.
+
+268
+00:06:46,932 --> 00:06:47,825
+Or a cold snap.
+
+269
+00:06:47,865 --> 00:06:49,341
+So the grid is built for the worst
+
+270
+00:06:49,381 --> 00:06:50,212
+hour of the year..
+
+271
+00:06:50,252 --> 00:06:51,851
+and half of it sits idle the rest
+
+272
+00:06:51,891 --> 00:06:52,386
+of the time.
+
+273
+00:06:52,426 --> 00:06:54,985
+That's why in many countries power prices change
+
+274
+00:06:55,025 --> 00:06:55,803
+by the hour.
+
+275
+00:06:55,843 --> 00:06:57,145
+A washing machine at midnight..
+
+276
+00:06:57,185 --> 00:06:58,808
+costs less than one at sunset.
+
+277
+00:06:58,848 --> 00:07:00,340
+Two words from the human dictionary.
+
+278
+00:07:00,380 --> 00:07:00,980
+Hertz:
+
+279
+00:07:01,020 --> 00:07:01,991
+turns per second.
+
+280
+00:07:02,031 --> 00:07:02,888
+The grid's pulse.
+
+281
+00:07:02,928 --> 00:07:03,822
+And megawatt:
+
+282
+00:07:03,862 --> 00:07:04,910
+a million watts.
+
+283
+00:07:04,950 --> 00:07:06,270
+Enough for hundreds of homes.
+
+284
+00:07:06,310 --> 00:07:07,599
+Or one small data center.
+
+285
+00:07:07,639 --> 00:07:08,944
+Report summary, sir.
+
+286
+00:07:08,984 --> 00:07:09,528
+One:
+
+287
+00:07:09,568 --> 00:07:11,983
+a generator is a spinning magnet, and nearly
+
+288
+00:07:12,023 --> 00:07:14,048
+every station is looking for something to spin
+
+289
+00:07:14,088 --> 00:07:14,350
+it.
+
+290
+00:07:14,390 --> 00:07:14,935
+Two:
+
+291
+00:07:14,975 --> 00:07:17,049
+the voltage goes up so power can travel,
+
+292
+00:07:17,089 --> 00:07:18,734
+and comes down before the house.
+
+293
+00:07:18,774 --> 00:07:19,357
+Three:
+
+294
+00:07:19,397 --> 00:07:21,364
+what's made must equal what's drawn.
+
+295
+00:07:21,404 --> 00:07:22,167
+Every second.
+
+296
+00:07:22,207 --> 00:07:23,072
+Same warning:
+
+297
+00:07:23,112 --> 00:07:25,436
+any wire in the street, fallen or hanging,
+
+298
+00:07:25,476 --> 00:07:26,629
+nobody goes near it.
+
+299
+00:07:26,669 --> 00:07:27,451
+Keep away..
+
+300
+00:07:27,491 --> 00:07:28,234
+and report it.
+
+301
+00:07:28,274 --> 00:07:29,010
+Next report:
+
+302
+00:07:29,050 --> 00:07:30,781
+what happens when this balance breaks?
+
+303
+00:07:30,821 --> 00:07:32,375
+Why the lights go out, and how one
+
+304
+00:07:32,415 --> 00:07:34,787
+tree darkened fifty million people.
+
+305
+00:07:34,827 --> 00:07:36,044
+This was Earth Report.
+
+306
+00:07:36,084 --> 00:07:36,787
+Agent Peek.
+
+307
+00:07:36,827 --> 00:07:37,915
+Transmission ends.

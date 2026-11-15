@@ -1,0 +1,1358 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-electricity-02-dub-en",
+ "transcript": "../../../video/cues/explain-electricity-02-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir, field report number two on the electricity ",
+   "shot": "close",
+   "emote": "serious",
+   "slide": null
+  },
+  {
+   "t": 3.44,
+   "say": "Today: where electricity is made.. and how it ge",
+   "board": {
+    "kind": "e2intro",
+    "ends": [
+     9.31,
+     8.15,
+     7.47
+    ]
+   },
+   "step": 0,
+   "stepT": 3.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 11.97,
+   "say": "Strangest thing I found: the power lighting thei",
+   "board": {
+    "kind": "e2intro",
+    "ends": [
+     9.31,
+     8.15,
+     7.47
+    ]
+   },
+   "step": 1,
+   "stepT": 11.97
+  },
+  {
+   "t": 19.65,
+   "say": "Billions of humans, each pressing switches whene",
+   "board": {
+    "kind": "e2intro",
+    "ends": [
+     9.31,
+     8.15,
+     7.47
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 19.65
+  },
+  {
+   "t": 27.1,
+   "say": "In eighteen thirty-one, an Englishman named Fara",
+   "board": {
+    "kind": "faraday",
+    "ends": [
+     7.75,
+     7.34,
+     7.25,
+     8.2,
+     4.44,
+     6.06
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "MAGNET",
+    "icon": "gear"
+   },
+   "stepT": 27.1,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 33.88,
+   "say": "Spin the magnet inside a coil of wire, and it ke",
+   "board": {
+    "kind": "faraday",
+    "ends": [
+     7.75,
+     7.34,
+     7.25,
+     8.2,
+     4.44,
+     6.06
+    ]
+   },
+   "step": 1,
+   "stepT": 33.88
+  },
+  {
+   "t": 41.34,
+   "say": "A motor is the same machine in reverse: feed it ",
+   "board": {
+    "kind": "faraday",
+    "ends": [
+     7.75,
+     7.34,
+     7.25,
+     8.2,
+     4.44,
+     6.06
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 41.34
+  },
+  {
+   "t": 48.4,
+   "say": "Faraday was a blacksmith's son who left school e",
+   "board": {
+    "kind": "faraday",
+    "ends": [
+     7.75,
+     7.34,
+     7.25,
+     8.2,
+     4.44,
+     6.06
+    ]
+   },
+   "step": 3,
+   "stepT": 48.4
+  },
+  {
+   "t": 53.04,
+   "say": "Their greatest invention: a guy reading on the j",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 55.33,
+   "say": "One question left: who turns the magnet? They mo",
+   "board": {
+    "kind": "faraday",
+    "ends": [
+     7.75,
+     7.34,
+     7.25,
+     8.2,
+     4.44,
+     6.06
+    ]
+   },
+   "step": 4,
+   "stepT": 55.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 59.97,
+   "say": "Since Faraday, most of the planet's power is mad",
+   "board": {
+    "kind": "faraday",
+    "ends": [
+     7.75,
+     7.34,
+     7.25,
+     8.2,
+     4.44,
+     6.06
+    ]
+   },
+   "step": 5,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 59.97
+  },
+  {
+   "t": 65.07,
+   "say": "Their favorite way: boil water. Burn coal or gas",
+   "board": {
+    "kind": "steam",
+    "ends": [
+     4.41,
+     4.47,
+     5.39,
+     4.18,
+     3.79
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "WHO TURNS IT",
+    "icon": "cloud"
+   },
+   "stepT": 65.07,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 69.65,
+   "say": "Steam spins the turbine. The turbine spins the g",
+   "board": {
+    "kind": "steam",
+    "ends": [
+     4.41,
+     4.47,
+     5.39,
+     4.18,
+     3.79
+    ]
+   },
+   "step": 1,
+   "stepT": 69.65
+  },
+  {
+   "t": 73.75,
+   "say": "The nuclear plant, sir? The most complex thing t",
+   "board": {
+    "kind": "steam",
+    "ends": [
+     4.41,
+     4.47,
+     5.39,
+     4.18,
+     3.79
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 73.75
+  },
+  {
+   "t": 78.94,
+   "say": "A fingertip of nuclear fuel holds about a ton of",
+   "board": {
+    "kind": "steam",
+    "ends": [
+     4.41,
+     4.47,
+     5.39,
+     4.18,
+     3.79
+    ]
+   },
+   "step": 3,
+   "stepT": 78.94
+  },
+  {
+   "t": 81.89,
+   "say": "Countries with volcanoes take steam straight fro",
+   "board": {
+    "kind": "steam",
+    "ends": [
+     4.41,
+     4.47,
+     5.39,
+     4.18,
+     3.79
+    ]
+   },
+   "step": 4,
+   "stepT": 81.89
+  },
+  {
+   "t": 85.05,
+   "say": "This planet is addicted to kettles.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 86.81,
+   "say": "So kind one is steam: coal, gas, nuclear. Kind t",
+   "board": {
+    "kind": "sources",
+    "ends": [
+     6,
+     2.69,
+     3.24,
+     6.76
+    ]
+   },
+   "step": 0,
+   "stepT": 86.81,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 92.66,
+   "say": "The planet's biggest station.. a dam in China.",
+   "board": {
+    "kind": "sources",
+    "ends": [
+     6,
+     2.69,
+     3.24,
+     6.76
+    ]
+   },
+   "step": 1,
+   "stepT": 92.66
+  },
+  {
+   "t": 94.98,
+   "say": "Kind three is wind: turbines the wind keeps turn",
+   "board": {
+    "kind": "sources",
+    "ends": [
+     6,
+     2.69,
+     3.24,
+     6.76
+    ]
+   },
+   "step": 2,
+   "stepT": 94.98
+  },
+  {
+   "t": 97.47,
+   "say": "The one exception: the solar panel. Nothing spin",
+   "board": {
+    "kind": "sources",
+    "ends": [
+     6,
+     2.69,
+     3.24,
+     6.76
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "proud",
+   "stepT": 97.47
+  },
+  {
+   "t": 103.32,
+   "say": "Here's each one's share of the planet's power in",
+   "board": {
+    "kind": "mix",
+    "ends": [
+     8.15,
+     6.42,
+     3.95
+    ]
+   },
+   "step": 0,
+   "stepT": 103.32,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 110.92,
+   "say": "But that year, for the first time in a century: ",
+   "board": {
+    "kind": "mix",
+    "ends": [
+     8.15,
+     6.42,
+     3.95
+    ]
+   },
+   "step": 1,
+   "stepT": 110.92
+  },
+  {
+   "t": 115.43,
+   "say": "Solar alone was about one percent ten years ago.",
+   "board": {
+    "kind": "mix",
+    "ends": [
+     8.15,
+     6.42,
+     3.95
+    ]
+   },
+   "step": 2,
+   "stepT": 115.43
+  },
+  {
+   "t": 118.83,
+   "say": "Their fastest-growing source.. is the only one t",
+   "shot": "close",
+   "emote": "smug"
+  },
+  {
+   "t": 121.73,
+   "say": "Now let's follow the power. The generator makes ",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "THE TRIP",
+    "icon": "tower"
+   },
+   "stepT": 121.73,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 128.6,
+   "say": "A transformer has no moving parts. Two coils of ",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 1,
+   "stepT": 128.6
+  },
+  {
+   "t": 135.88,
+   "say": "Then it travels on tall towers. Hundreds of kilo",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 2,
+   "stepT": 135.88
+  },
+  {
+   "t": 146.36,
+   "say": "Humans agreed on volts, amps and ohms. But the p",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 3,
+   "stepT": 146.36
+  },
+  {
+   "t": 151.11,
+   "say": "Every traveler carries a little piece of plastic",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 4,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 151.11
+  },
+  {
+   "t": 155.44,
+   "say": "The trip takes less than a blink. The only thing",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 158.13,
+   "say": "Why raise the pressure, then lower it? Because c",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 5,
+   "stepT": 158.13,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 164.12,
+   "say": "The same power can be sent two ways: low pressur",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 6,
+   "stepT": 164.12
+  },
+  {
+   "t": 170.09,
+   "say": "Like moving a thousand passengers. A thousand sm",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 7,
+   "stepT": 170.09
+  },
+  {
+   "t": 177.07,
+   "say": "And the transformer only works on alternating cu",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 8,
+   "host": "left",
+   "emote": "proud",
+   "stepT": 177.07
+  },
+  {
+   "t": 181.78,
+   "say": "Even so, some is lost on the way. In America, ab",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 9,
+   "stepT": 181.78
+  },
+  {
+   "t": 190.17,
+   "say": "A warning for command: high-voltage lines are ba",
+   "board": {
+    "kind": "trip",
+    "ends": [
+     7.19,
+     7.04,
+     9.65,
+     5.39,
+     6.92,
+     6.39,
+     6.34,
+     5.66,
+     5.46,
+     10.52,
+     10.89
+    ]
+   },
+   "step": 10,
+   "host": "right",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 190.17
+  },
+  {
+   "t": 198.99,
+   "say": "A question their children ask: the bird on that ",
+   "board": {
+    "kind": "bird",
+    "ends": [
+     5.26,
+     8.66,
+     8.62,
+     6.66
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 4,
+    "tag": "THE BIRD",
+    "icon": "eye"
+   },
+   "stepT": 198.99,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 203.41,
+   "say": "Both its feet are on the same wire. Current flow",
+   "board": {
+    "kind": "bird",
+    "ends": [
+     5.26,
+     8.66,
+     8.62,
+     6.66
+    ]
+   },
+   "step": 1,
+   "stepT": 203.41
+  },
+  {
+   "t": 211.17,
+   "say": "But if it touches another wire, or anything grou",
+   "board": {
+    "kind": "bird",
+    "ends": [
+     5.26,
+     8.66,
+     8.62,
+     6.66
+    ]
+   },
+   "step": 2,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 211.17
+  },
+  {
+   "t": 216.12,
+   "say": "And humans stand on the ground all the time. So ",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 219.57,
+   "say": "That's also why towers are so tall, and wires ha",
+   "board": {
+    "kind": "bird",
+    "ends": [
+     5.26,
+     8.66,
+     8.62,
+     6.66
+    ]
+   },
+   "step": 3,
+   "stepT": 219.57,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 225.91,
+   "say": "Back to the big problem. The grid can't store po",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "BALANCE",
+    "icon": "chartdown"
+   },
+   "stepT": 225.91,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 232.67,
+   "say": "One number tells them if the balance is right: t",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 1,
+   "stepT": 232.67
+  },
+  {
+   "t": 239.42,
+   "say": "People draw more than is made? The generators ge",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 2,
+   "stepT": 239.42
+  },
+  {
+   "t": 247.68,
+   "say": "Every grid has a control room, people at screens",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 247.68
+  },
+  {
+   "t": 253.13,
+   "say": "The planet's most important workers.. and nobody",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 256.31,
+   "say": "The generators help too. Each is hundreds of ton",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 4,
+   "stepT": 256.31,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 263.32,
+   "say": "If a big station drops out and the number falls ",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 5,
+   "stepT": 263.32
+  },
+  {
+   "t": 270.48,
+   "say": "Their whole civilization rests on one number. It",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 6,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 270.48
+  },
+  {
+   "t": 275.55,
+   "say": "It makes for strange moments. In nineteen ninety",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 7,
+   "stepT": 275.55
+  },
+  {
+   "t": 280.77,
+   "say": "The match ended.. and the whole country got up a",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 8,
+   "stepT": 280.77
+  },
+  {
+   "t": 284.82,
+   "say": "Demand jumped two thousand eight hundred megawat",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 9,
+   "stepT": 284.82
+  },
+  {
+   "t": 290.01,
+   "say": "Their grid engineers have studied the TV schedul",
+   "board": {
+    "kind": "balance",
+    "ends": [
+     7.54,
+     7.39,
+     9.76,
+     9.06,
+     8.55,
+     6.56,
+     4.91,
+     6.06,
+     3.85,
+     5.52,
+     7.46
+    ]
+   },
+   "step": 10,
+   "host": "right",
+   "emote": "smug",
+   "stepT": 290.01
+  },
+  {
+   "t": 296.08,
+   "say": "England lost the match. The grid won.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 298.18,
+   "say": "Grids grew and joined up. Europe: one grid from ",
+   "board": {
+    "kind": "grid",
+    "ends": [
+     6.65,
+     5.66,
+     11.37,
+     9.03,
+     10.07,
+     11.38,
+     8.48
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 6,
+    "tag": "ONE MACHINE",
+    "icon": "node"
+   },
+   "stepT": 298.18,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 303.95,
+   "say": "Every generator in it turns together. Same speed",
+   "board": {
+    "kind": "grid",
+    "ends": [
+     6.65,
+     5.66,
+     11.37,
+     9.03,
+     10.07,
+     11.38,
+     8.48
+    ]
+   },
+   "step": 1,
+   "stepT": 303.95
+  },
+  {
+   "t": 310.08,
+   "say": "That makes it stronger: a station fails in one c",
+   "board": {
+    "kind": "grid",
+    "ends": [
+     6.65,
+     5.66,
+     11.37,
+     9.03,
+     10.07,
+     11.38,
+     8.48
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 310.08
+  },
+  {
+   "t": 320.09,
+   "say": "In twenty eighteen, Kosovo and Serbia argued ove",
+   "board": {
+    "kind": "grid",
+    "ends": [
+     6.65,
+     5.66,
+     11.37,
+     9.03,
+     10.07,
+     11.38,
+     8.48
+    ]
+   },
+   "step": 3,
+   "stepT": 320.09
+  },
+  {
+   "t": 329.29,
+   "say": "Oven clocks and alarm clocks, which count time f",
+   "board": {
+    "kind": "grid",
+    "ends": [
+     6.65,
+     5.66,
+     11.37,
+     9.03,
+     10.07,
+     11.38,
+     8.48
+    ]
+   },
+   "step": 4,
+   "stepT": 329.29
+  },
+  {
+   "t": 335.75,
+   "say": "A quarrel between two.. made a whole continent l",
+   "shot": "close",
+   "emote": "smug"
+  },
+  {
+   "t": 340.42,
+   "say": "Japan is the opposite. In eighteen ninety-five, ",
+   "board": {
+    "kind": "grid",
+    "ends": [
+     6.65,
+     5.66,
+     11.37,
+     9.03,
+     10.07,
+     11.38,
+     8.48
+    ]
+   },
+   "step": 5,
+   "stepT": 340.42,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 352.18,
+   "say": "In twenty eleven, after the great earthquake, th",
+   "board": {
+    "kind": "grid",
+    "ends": [
+     6.65,
+     5.66,
+     11.37,
+     9.03,
+     10.07,
+     11.38,
+     8.48
+    ]
+   },
+   "step": 6,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 352.18
+  },
+  {
+   "t": 360.08,
+   "say": "A purchase made over a century ago.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 362.07,
+   "say": "Demand changes through the day. Low at dawn, ris",
+   "board": {
+    "kind": "peak",
+    "ends": [
+     8.08,
+     7.18,
+     9.46,
+     6.44
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 7,
+    "tag": "PEAK HOUR",
+    "icon": "bolt"
+   },
+   "stepT": 362.07,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 368.55,
+   "say": "So some stations run all the time, and others si",
+   "board": {
+    "kind": "peak",
+    "ends": [
+     8.08,
+     7.18,
+     9.46,
+     6.44
+    ]
+   },
+   "step": 1,
+   "stepT": 368.55
+  },
+  {
+   "t": 375.25,
+   "say": "The year's top peak comes with a heat wave, ever",
+   "board": {
+    "kind": "peak",
+    "ends": [
+     8.08,
+     7.18,
+     9.46,
+     6.44
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "bored",
+   "stepT": 375.25
+  },
+  {
+   "t": 383.96,
+   "say": "That's why in many countries power prices change",
+   "board": {
+    "kind": "peak",
+    "ends": [
+     8.08,
+     7.18,
+     9.46,
+     6.44
+    ]
+   },
+   "step": 3,
+   "stepT": 383.96
+  },
+  {
+   "t": 389.69,
+   "say": "Two words from the human dictionary. Hertz: turn",
+   "board": {
+    "kind": "e2dict",
+    "ends": [
+     4.07,
+     4.71
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 389.69,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 394.25,
+   "say": "And megawatt: a million watts. Enough for hundre",
+   "board": {
+    "kind": "e2dict",
+    "ends": [
+     4.07,
+     4.71
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 394.25
+  },
+  {
+   "t": 399.15,
+   "say": "Report summary, sir. One: a generator is a spinn",
+   "board": {
+    "kind": "e2recap",
+    "ends": [
+     14.56
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 399.15,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 413.25,
+   "say": "Same warning: any wire in the street, fallen or ",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 418.82,
+   "say": "Next report: what happens when this balance brea",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 424.44,
+   "say": "This was Earth Report. Agent Peek. Transmission ",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 427.77,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "3 / 4",
+    "icons": [
+     "bolt",
+     "tower",
+     "shield"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
