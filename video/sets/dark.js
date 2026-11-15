@@ -67,8 +67,8 @@ function s1(a, tot) {
   // ten unlit bulbs; eight glide into the region south of the Sahara, two drift off to the rest of the world
   const BX0 = MX + 940, BY0 = MY + 230;
   const bulbs = Array.from({ length: 10 }, (_, i) => { const into = i < 8, p = ease(seg(a, 0.4 + i * 0.07, 1.3 + i * 0.07));
-    const sx = BX0 + (i - 4.5) * 64, sy = BY0, tx = into ? MX + 880 + (i % 4) * 66 : MX + 1260 + (i - 8) * 70, ty = into ? MY + 640 + Math.floor(i / 4) * 120 : MY + 200;
-    return at(lerp(sx, tx, p), lerp(sy, ty, p), bulb(0, {}), 0.3 * pop(a - 0.05 * i) * (into ? 1 : 1 - seg(a, 2.0, 2.4))); }).join("");
+    const sx = BX0 + (i - 4.5) * 64, sy = BY0, tx = into ? MX + 880 + (i % 4) * 66 : MX + 1160 + (i - 8) * 70, ty = into ? MY + 640 + Math.floor(i / 4) * 120 : MY + 330;
+    return at(lerp(sx, tx, p), lerp(sy, ty, p), bulb(0, {}), 0.3 * pop(a - 0.05 * i) * (into ? 1 : 1 - seg(a, 1.2, 1.6))); }).join("");
   const tally = a > 1.4 ? at(MX + (v ? 990 : 1340), MY + (v ? 980 : 560), tagBox("8 / 10", 70), pop(a - 1.45) * (1 - seg(a, 2.5, 2.9))) : "";
   const map = at(MX, MY, AFR_MAP());
   // 2010 = 2024: two calendars with the same bar

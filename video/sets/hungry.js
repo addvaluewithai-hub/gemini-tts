@@ -84,10 +84,10 @@ function s2(a, tot) {
   const id = "hplan";
   const planet = `${rings(GX, GY, R, E.el, 0.06, 1.12)}<clipPath id="${id}"><circle cx="${GX}" cy="${GY}" r="${R}"/></clipPath>${disc(GX, GY, R, "#1d5f8a", "#164a6a", 0.08)}<g clip-path="url(#${id})"><path d="M${GX - R} ${GY - 80}Q${GX - 200} ${GY - 260} ${GX - 40} ${GY - 160}Q${GX + 80} ${GY - 60} ${GX - 120} ${GY + 20}Z" fill="#1f8a7a"/><path d="M${GX + 120} ${GY - 120}Q${GX + 380} ${GY - 260} ${GX + R} ${GY - 40}V${GY + 100}Q${GX + 200} ${GY + 40} ${GX + 120} ${GY - 120}Z" fill="#1f8a7a"/></g>`;
   const glow = seg(a, 1.48, 1.9);
-  const [dx, dy] = pos(-32), [hx, hy] = pos(34);
+  const HA = v ? 26 : 34, [dx, dy] = pos(-32), [hx, hy] = pos(HA);
   const dc = at(dx, dy, dataCentre(1, tot, glow, { chip: true }), 0.55 * pop(a + 0.2), -32);
   const drink = pulses([[GX - 60, GY + 40], [GX - 120, GY - 140], [dx + 40, dy + 60]], tot, glow, 6, 0.9);
-  const hs = at(hx, hy, `${house(E.houseB, E.houseBD, { roof: E.roof, lit: [false, false, false] })}${a > 3.45 ? at(0, -420, bulb(0, {}), 1.0 * pop(a - 3.49)) : ""}`, 0.75 * pop(a - 0.35), 34);
+  const hs = at(hx, hy, `${house(E.houseB, E.houseBD, { roof: E.roof, lit: [false, false, false] })}${a > 3.45 ? at(0, v ? -340 : -400, bulb(0, {}), (v ? 0.85 : 1.0) * pop(a - 3.49)) : ""}`, 0.75 * pop(a - 0.35), HA);
   const g = NIGHT(c, tot, 51) + layer(planet + drink + dc + hs, c);
   return { g };
 }

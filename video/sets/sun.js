@@ -77,7 +77,7 @@ function s0(a, tot, s, o = {}) {
 }
 
 // chart placement: landscape full width; portrait narrower and lower
-const L = (v) => v ? { X0: 460, X1: 1460, YB: 900, H: 640 } : { X0: 200, X1: 1720, YB: 820, H: 560 };
+const L = (v) => v ? { X0: 450, X1: 1470, YB: 1150, H: 900 } : { X0: 200, X1: 1720, YB: 820, H: 560 };
 
 // ---- 1: demand across the day, then the sun's hump ----
 function s1(a, tot, s, o = {}) {
@@ -93,7 +93,7 @@ function s1(a, tot, s, o = {}) {
 
 // ---- 2: what is left: the duck ----
 function s2(a, tot, s, o = {}) {
-  const v = !!o.vert, { X0, X1, YB, H } = L(v), c = camAt(a, v ? [[0, 960, 640, 1.0], [7.4, 960, 640, 1.0], [8.3, 1000, 600, 1.12], [10.08, 1000, 600, 1.14]] : [[0, 960, 520, 1.0], [7.4, 960, 520, 1.0], [8.3, 960, 540, 1.06], [10.08, 960, 540, 1.08]]);
+  const v = !!o.vert, { X0, X1, YB, H } = L(v), c = camAt(a, v ? [[0, 960, 640, 1.0], [10.08, 960, 640, 1.0]] : [[0, 960, 520, 1.0], [7.4, 960, 520, 1.0], [8.3, 960, 540, 1.06], [10.08, 960, 540, 1.08]]);
   const take = ease(seg(a, 0.2, 1.9)), duckK = ease(seg(a, 7.6, 8.3));
   const f = (h) => net(h, take);
   const ghost = `<path d="${pathOf(D, X0, X1, YB, H)}" fill="none" stroke="${P.cream}" stroke-width="6" stroke-dasharray="14 16" opacity="${(0.45 * (1 - duckK)).toFixed(2)}"/>`;
@@ -132,13 +132,13 @@ function s3(a, tot, s, o = {}) {
 
 // ---- 4: the wind does as it likes; sun and wind ~17% (2025) ----
 function s4(a, tot, s, o = {}) {
-  const v = !!o.vert, c = camAt(a, v ? [[0, 960, 420, 1.0], [2.8, 960, 420, 1.0], [3.5, 960, 700, 1.0], [7.62, 960, 720, 1.0]] : [[0, 960, 480, 1.0], [2.8, 960, 470, 1.04], [3.6, 960, 760, 1.0], [7.62, 960, 760, 1.02]]);
+  const v = !!o.vert, c = camAt(a, v ? [[0, 960, 520, 1.0], [2.8, 960, 520, 1.0], [3.5, 960, 640, 1.0], [7.62, 960, 650, 1.0]] : [[0, 960, 480, 1.0], [2.8, 960, 470, 1.04], [3.6, 960, 760, 1.0], [7.62, 960, 760, 1.02]]);
   const G = v ? 700 : 760;
   // each turbine has its own mood: speed that comes and goes
   const ang = (i) => { let x = 0; const n = Math.floor(tot * 10); for (let k = 0; k < n; k++) x += 0.1 * Math.max(0, Math.sin(k * 0.1 * (0.7 + i * 0.35) + i * 2) * 4 + (rnd(i * 31 + Math.floor(k / 8)) - 0.5) * 3); return x; };
   const tb = (v ? [[700, 0.9], [960, 0.75], [1220, 0.85]] : [[220, 0.95], [540, 0.8], [860, 0.9]]).map(([x, k], i) => at(x, G, turbine(400, ang(i)), k * pop(a - 0.1 - i * 0.1))).join("");
   // wind vs demand, small chart
-  const CX = v ? 960 : 1360, CY = v ? -120 : 360, CW = v ? 760 : 820, CH = 300;
+  const CX = v ? 960 : 1360, CY = v ? 30 : 360, CW = v ? 760 : 820, CH = 300;
   let wd = ""; for (let i = 0; i <= 40; i++) { const x = -CW / 2 + 30 + i * (CW - 60) / 40, y = CH * 0.3 - (rnd(i * 7 + 3) * 0.9 + 0.2 * Math.sin(i * 0.5)) * CH * 0.55; wd += (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1); }
   const dm = pathOf(D, -CW / 2 + 30, CW / 2 - 30, CH * 0.36, CH * 0.75);
   const chart = a > 0.9 ? at(CX, CY, `${two(rr(-CW / 2, -CH / 2 - 30, CW, CH + 60, 22), "#0f3a55", "#0a2a3c", 0, 8)}${drawn(dm, seg(a, 2.05, 2.6), P.cream, 10)}${drawn(wd, seg(a, 1.18, 1.9), E.el, 10, 'stroke-linejoin="round"')}`, pop(a - 1.0)) : "";
@@ -158,9 +158,9 @@ function s5(a, tot, s, o = {}) {
   const G = v ? 1250 : 800;
   const sun = at(v ? 600 : 260, v ? 0 : 160, sunDisc(100, tot), pop(a - 0.1));
   const fm = v ? farm(3, 500, 200, G, 0.7, tot, 1) : farm(3, 140, 200, G, 0.8, tot, 1);
-  const PXl = v ? 1100 : 760;
+  const PXl = v ? 980 : 760;
   const py = at(PXl, G, pylon(v ? 460 : 520), pop(a - 0.2));
-  const HX = v ? 1380 : 1080, hs = at(HX, G, house(E.houseA, E.houseAD, { roof: E.roof }), v ? 0.55 : 0.6);
+  const HX = v ? 1260 : 1080, hs = at(HX, G, house(E.houseA, E.houseAD, { roof: E.roof }), v ? 0.55 : 0.6);
   // too much: gold dots heap at the pylon's foot
   const n = Math.round(12 * seg(a, 1.06, 2.9));
   const heap = Array.from({ length: n }, (_, i) => `<circle cx="${(PXl - 140 + (i % 6) * 56 + (Math.floor(i / 6) % 2) * 28).toFixed(1)}" cy="${(G - 26 - Math.floor(i / 6) * 48).toFixed(1)}" r="24" fill="${SUN}"/>`).join("");
