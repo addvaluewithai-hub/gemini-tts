@@ -15,7 +15,7 @@ Rendered on 2026-11-15 for the owner's review; **not approved yet, nothing uploa
 
 The science file's own look: a scientist's notebook in daylight (sand graph paper, terracotta, sage, ink), navy only for
 real night (the comet, the eclipse). Studio theme `lab` (warm walls, terracotta desk, plum desk front). No Arabic on
-screen, no captions burned in, chapter chips in English, the last 13 s are the end card (NEXT 2/4).
+screen, no captions burned in, chapter chips in English, the last 13 s are the end card (NEXT 2/5).
 
 ## Upload kit (`youtube/`)
 

@@ -1,4 +1,4 @@
-# YouTube: English entry for the world-picture video (Science File 1/4)
+# YouTube: English entry for the world-picture video (Science File 1/5)
 
 One video, several audio tracks. The picture is the language-neutral cut (`explain-science-01-world`), the original
 audio is Arabic, and this page is what goes into the video's **English** language entry: Translations
@@ -15,9 +15,9 @@ audio is Arabic, and this page is what goes into the video's **English** languag
 
 ## Title
 
-1. Why Trust Science? Faster Than Light... It Was a Cable | Science File 1/4  ← recommended
-2. What Is Science, Really? Explained to an Alien | Science File 1/4
-3. He Measured the Earth With a Stick: Why We Trust Science | 1/4
+1. Why Trust Science? Faster Than Light... It Was a Cable | Science File 1/5  ← recommended
+2. What Is Science, Really? Explained to an Alien | Science File 1/5
+3. He Measured the Earth With a Stick: Why We Trust Science | 1/5
 
 ## Description
 
@@ -47,7 +47,7 @@ OPERA and the cable that explained the result (2012): https://www.livescience.co
 The OPERA spokesperson steps down (2012): https://www.theregister.co.uk/2012/03/30/opera_spokesperson_resigns/
 Eratosthenes measures the Earth (APS News): https://aps.org/publications/apsnews/200606/history.cfm
 
-This is one report in a four-part file on science. Watch them in order from the playlist.
+This is one report in a five-part file on science. Watch them in order from the playlist.
 This is a general explanation, not medical advice.
 The character, voice and animation are computer-generated. The facts come from the sources above and from general references.
 
