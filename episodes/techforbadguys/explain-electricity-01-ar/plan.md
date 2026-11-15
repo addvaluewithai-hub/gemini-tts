@@ -40,6 +40,12 @@ Sourced:
   miles depending on the source (said as "أكتر من تلاتين كيلو"). https://spectrum.ieee.org/the-birthplace-of-the-ac-grid
 - Changji to Guquan line, China: direct current at 1,100 kV, about 3,300 km, 12 GW, in service 2019 (records
   as claimed by State Grid). https://www.enerdata.net/publications/daily-energy-news/state-grid-commissions-new-1100-kv-power-transmission-line-china.html
+- Electric eel: Electrophorus voltai, discharges up to 860 V measured in the field (de Santana et al., Nature
+  Communications 10:4000, 2019); said as a maximum. https://phys.org/news/2019-09-species-electric-eel-highest-voltage.html
+- Westinghouse on the Kemmler execution ("they would have done better using an axe"): widely attributed, New York
+  Times, 18 August 1890; wording varies, so it is cited "as reported". Smithsonian link above.
+- A kettle draws about 2,000 W (typical kettles run 1,500 to 3,000 W; general knowledge, said as "حوالي").
+  (These three added 2026-11-15 after the planner checked them.)
 
 General knowledge: Thales and amber about 600 BC; Gilbert coined "electricus" in 1600; like charges repel;
 Franklin's 1752 lightning proposal and Georg Richmann's death in 1753 repeating such an experiment; Volta's

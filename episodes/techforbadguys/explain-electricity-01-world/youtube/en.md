@@ -47,6 +47,8 @@ Pearl Street Station, 1882 (ETHW): https://ethw.org/Milestones:Pearl_Street_Stat
 The war of the currents (Smithsonian): https://www.smithsonianmag.com/history/edison-vs-westinghouse-a-shocking-rivalry-102146036/
 Niagara Falls and the first AC grid (IEEE Spectrum): https://spectrum.ieee.org/the-birthplace-of-the-ac-grid
 China's 1,100 kV line (Enerdata): https://www.enerdata.net/publications/daily-energy-news/state-grid-commissions-new-1100-kv-power-transmission-line-china.html
+The electric eel Electrophorus voltai, up to 860 volts (Nature Communications, 2019): https://phys.org/news/2019-09-species-electric-eel-highest-voltage.html
+Westinghouse's axe remark after the 1890 execution (as reported by the New York Times, 18 August 1890; wording varies between sources): https://www.smithsonianmag.com/history/edison-vs-westinghouse-a-shocking-rivalry-102146036/
 
 This is one report in a three-part file on electricity. Watch them in order from the playlist.
 This is a general explanation, not safety guidance or instructions for electrical work. Electricity is dangerous: leave any work on it to a professional.
