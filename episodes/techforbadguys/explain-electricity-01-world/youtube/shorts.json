@@ -36,9 +36,10 @@
     "card": {
      "icons": [
       "snail",
-      "bolt"
+      "bulb"
      ],
-     "sub": "ELECTRICITY FILE · PART 1"
+     "sub": "ELECTRICITY FILE · PART 1",
+     "look": "elec"
     }
    },
    "voice_s": 33.4,
@@ -87,7 +88,8 @@
       "cloud",
       "bolt"
      ],
-     "sub": "ELECTRICITY FILE · PART 1"
+     "sub": "ELECTRICITY FILE · PART 1",
+     "look": "elec"
     }
    },
    "voice_s": 30.8,
@@ -133,10 +135,11 @@
     "words": "shorts/cta-tea.words.json",
     "card": {
      "icons": [
-      "bolt",
-      "bread"
+      "tea",
+      "bulb"
      ],
-     "sub": "ELECTRICITY FILE · PART 1"
+     "sub": "ELECTRICITY FILE · PART 1",
+     "look": "elec"
     }
    },
    "voice_s": 27.2,
@@ -186,10 +189,11 @@
     "words": "shorts/cta-fish.words.json",
     "card": {
      "icons": [
-      "fish",
-      "heart"
+      "eel",
+      "battery"
      ],
-     "sub": "ELECTRICITY FILE · PART 1"
+     "sub": "ELECTRICITY FILE · PART 1",
+     "look": "elec"
     }
    },
    "voice_s": 27.7,
@@ -243,10 +247,11 @@
     "words": "shorts/cta-edison-tesla.words.json",
     "card": {
      "icons": [
-      "bolt",
-      "crown"
+      "station",
+      "pylon"
      ],
-     "sub": "ELECTRICITY FILE · PART 1"
+     "sub": "ELECTRICITY FILE · PART 1",
+     "look": "elec"
     }
    },
    "voice_s": 41.5,
