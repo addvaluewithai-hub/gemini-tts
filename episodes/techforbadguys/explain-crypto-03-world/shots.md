@@ -144,4 +144,4 @@ attempt dots, **the popcorn tin**, the people as houses in their colours, every 
 
 ## end card
 
-`endnext`, `NEXT 4 / 5` (to become `4 / 6` if the owner splits part 5): a falling chart, a coin, an eye.
+`endnext`, `NEXT 4 / 6`: a falling chart, a coin, an eye.

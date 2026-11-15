@@ -28,7 +28,7 @@ CLOUD_NAME=lskr7x7h video/produce.sh episodes/techforbadguys/explain-crypto-02-w
 - No Arabic on screen; chapter chips are English (`01 HASH` … `09 RECAP`); no captions burned in.
 - Every illustrated beat is a drawn set in part 1's world; shots hand over through shapes (short colour flashes of
   about 0.2 s are those hand-overs).
-- The last 13 s are the end card `NEXT 3/5` (key, safe, mask) for the end-screen elements.
+- The last 13 s are the end card `NEXT 3/6` (key, safe, mask) for the end-screen elements.
 
 ## Upload kit (`youtube/`)
 

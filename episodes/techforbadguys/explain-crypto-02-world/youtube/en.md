@@ -1,4 +1,4 @@
-# YouTube: English entry for the world-picture video (Crypto File 2/5)
+# YouTube: English entry for the world-picture video (Crypto File 2/6)
 
 One video, several audio tracks. The picture is the language-neutral cut (`explain-crypto-02-world`), the original
 audio is Arabic, and this page is what goes into the video's **English** language entry.
@@ -11,9 +11,9 @@ audio is Arabic, and this page is what goes into the video's **English** languag
 
 ## Title
 
-1. Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/5  ← recommended
-2. What Is Bitcoin Mining? And Who Runs the Network? | 2/5
-3. Why Does Bitcoin Use as Much Power as a Country? | 2/5
+1. Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6  ← recommended
+2. What Is Bitcoin Mining? And Who Runs the Network? | 2/6
+3. Why Does Bitcoin Use as Much Power as a Country? | 2/6
 
 ## Description
 
@@ -43,7 +43,7 @@ Fortune, the 20 millionth bitcoin is mined (March 2026): https://dc.fortune.com/
 Mining by country (October 2026): https://cryptoslate.com/3-countries-control-66-of-bitcoin-mining-but-1-rival-is-gaining/
 Hashrate Index, the largest mining pools: https://hashrateindex.com/blog/top-10-bitcoin-mining-pools-of-2026/
 
-This is one report in a five-part file on cryptocurrency. Watch them in order from the playlist.
+This is one report in a six-part file on cryptocurrency. Watch them in order from the playlist.
 This is an explanation, not investment advice. Figures in the video carry their dates and are not forecasts.
 The character, voice and animation are computer-generated. The facts come from the sources above and from general references.
 

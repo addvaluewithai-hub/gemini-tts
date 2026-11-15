@@ -9,7 +9,7 @@
  "face": "pear",
  "notes": [
   "World-language picture for one video with several audio tracks (Arabic original, an English dub, platform auto-dubs): same Arabic script, voice and beat timing as explain-crypto-02-ar (job techforbadguys-explain-crypto-02-ar-c, recorded 2026-11-12), drawn in the world of crypto part 1 (sets/kit.js, bank.js, props.js). No burned-in captions; on-screen text is limited to numbers, years, symbols and a few English labels.",
-  "Earth Report field file: Cryptocurrency, part 2 of 5. How the shared ledger is written and guarded: fingerprints (hashes), pages chained by them, mining as a guessing race, why forging is too expensive, the energy cost, the halving and the 21 million cap, who can change the rules (forks, the 2017 block size dispute and Bitcoin Cash), and where mining is concentrated.",
+  "Earth Report field file: Cryptocurrency, part 2 of 6. How the shared ledger is written and guarded: fingerprints (hashes), pages chained by them, mining as a guessing race, why forging is too expensive, the energy cost, the halving and the 21 million cap, who can change the rules (forks, the 2017 block size dispute and Bitcoin Cash), and where mining is concentrated.",
   "",
   "Facts are stated from general knowledge, not from pages captured for this episode: a block about every ten minutes; difficulty adjusts about every two weeks; the reward began at 50 BTC and halves about every four years (25 in 2012, 12.5 in 2016, 6.25 in 2020, 3.125 in 2024); supply is capped at 21 million with the last coin expected around 2140; about 95% is mined by late 2026; the network's yearly electricity use is in the range of a mid-sized country by Cambridge University's estimates; the 20 millionth coin was mined on 9 March 2026; the whole network makes about 10 to the 21 guesses a second (about one zettahash); by Hashrate Index estimates for October 2026 the United States has about 36 percent of mining, Russia 18 and China about 12 despite its 2021 ban; the two largest pools (Foundry USA and AntPool) find about half of all blocks; Bitcoin Cash split off on 1 August 2017 and fees per transfer have averaged tens of dollars on congested days (about 55 dollars in December 2017, over 100 on the April 2024 halving day); in August 2010 a bug let someone create about 184 billion coins and the network replaced that block within about five hours; Cambridge put the network at about 0.5 percent of world electricity in 2025; the SegWit2x block size increase backed by most miners and many companies was abandoned that November. The fingerprints shown on screen are stand-ins, not real hashes. No current prices are quoted, and it says it is not investment advice."
  ],
@@ -45,7 +45,7 @@
   "card": {
    "kind": "endnext",
    "title": "NEXT",
-   "next": "3 / 5",
+   "next": "3 / 6",
    "icons": [
     "key",
     "safe",
@@ -783,9 +783,9 @@
  ],
  "youtube": {
   "titles": [
-   "البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/5",
-   "يعني إيه تعدين بيتكوين؟ ومين بيحكم الشبكة؟ | 2/5",
-   "ليه البيتكوين بيسحب كهربا قد دولة كاملة؟ | 2/5"
+   "البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6",
+   "يعني إيه تعدين بيتكوين؟ ومين بيحكم الشبكة؟ | 2/6",
+   "ليه البيتكوين بيسحب كهربا قد دولة كاملة؟ | 2/6"
   ],
   "description": [
    "التقرير التاني من العميل Peek لقيادته: الدفتر اللي البشر بيحرسوه من غير حارس.",
@@ -805,7 +805,7 @@
    "Hashrate Index، أكبر فرق التعدين: https://hashrateindex.com/blog/top-10-bitcoin-mining-pools-of-2026/"
   ],
   "footer": [
-   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "دي حلقة من ملف من ست تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
    "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
    "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
   ],
@@ -846,7 +846,7 @@
    "Category: Education",
    "Video language: Arabic. Upload captions.srt as Arabic.",
    "Audience: not made for kids",
-   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "Playlist: ملف العملات المشفرة (six parts, in order)",
    "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
    "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
    "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."

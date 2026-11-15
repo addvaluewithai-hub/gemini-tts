@@ -9,7 +9,7 @@
  "face": "pear",
  "notes": [
   "World-language picture, drawn in the world of crypto parts 1 and 2 (sets/kit.js, bank.js, props.js, c2props.js, c3props.js). Voice: Vertex job techforbadguys-explain-crypto-03-ar-v. No burned-in captions; on-screen text is limited to numbers, years, symbols, names and a few English labels.",
-  "Earth Report field file: Cryptocurrency, part 3 of 5. How humans own and use the coins, and how they lose them: addresses and private keys, wallets, buying and sending, why the ledger is not anonymous, exchanges as the bank returning, lost keys, and the common frauds with their warning signs.",
+  "Earth Report field file: Cryptocurrency, part 3 of 6. How humans own and use the coins, and how they lose them: addresses and private keys, wallets, buying and sending, why the ledger is not anonymous, exchanges as the bank returning, lost keys, and the common frauds with their warning signs.",
   "",
   "Facts are stated from general knowledge and from web research on 12 November 2026 (see explain-crypto-03-ar/plan.md for links), not from pages captured for this episode: about 10 to the 77 possible private keys; in September 2023 Paxos paid about 500,000 dollars in fees on a transfer of about 2,000 dollars and the pool F2Pool returned it; Silk Road ran from 2011 until its founder Ross Ulbricht was arrested in a San Francisco public library in October 2013, he was sentenced to life in 2015 and pardoned in January 2025; James Zhong took about 50,000 BTC from Silk Road in 2012 and they were found in November 2021, some on a device in a popcorn tin; about 120,000 BTC were stolen from Bitfinex in 2016 and a married couple was arrested in 2022; Mt. Gox began as a trading-card site, handled about 70 percent of bitcoin trading, lost about 850,000 BTC in 2014, and its repayment deadline is now October 2027; FTX was valued at 32 billion dollars, collapsed in November 2022 about 8 billion short, and its founder was sentenced to 25 years; Bybit lost about 1.5 billion dollars in February 2025; Binance lost about 6.3 billion dollars in about twenty minutes on 29 October 2026, reported as attributed by the FBI to North Korea, and said customers would be made whole; James Howells threw away a drive in 2013 with the key to about 8,000 BTC, offered the council a quarter, lost in court and stopped trying to dig in August 2025; Stefan Thomas has 7,002 BTC on a drive with two password attempts left; three to four million BTC are estimated lost; the Canadian exchange QuadrigaCX failed after its founder died in December 2018 as the only holder of its keys, and the regulator later found he had run it fraudulently; a 2026 flaw in Coldcard hardware wallets' key generation led to thefts of more than 100 million dollars; crypto fraud took about 17 billion dollars in 2025 by Chainalysis' estimate; OneCoin took about 4 billion dollars, had no real blockchain, and its founder vanished in 2017. It says it is not investment advice."
  ],
@@ -45,7 +45,7 @@
   "card": {
    "kind": "endnext",
    "title": "NEXT",
-   "next": "4 / 5",
+   "next": "4 / 6",
    "icons": [
     "chartdown",
     "coin",
@@ -902,9 +902,9 @@
  ],
  "youtube": {
   "titles": [
-   "إزاي الناس بتخسر فلوسها في الكريبتو؟ مفاتيح، منصات، ونصب | 3/5",
-   "المحفظة والمفتاح الخاص.. وأشهر طرق النصب | ملف العملات المشفرة 3/5",
-   "مليارات في علبة فشار: البيتكوين مش مجهول زي ما إنت فاكر | 3/5"
+   "إزاي الناس بتخسر فلوسها في الكريبتو؟ مفاتيح، منصات، ونصب | 3/6",
+   "المحفظة والمفتاح الخاص.. وأشهر طرق النصب | ملف العملات المشفرة 3/6",
+   "مليارات في علبة فشار: البيتكوين مش مجهول زي ما إنت فاكر | 3/6"
   ],
   "description": [
    "التقرير التالت من العميل Peek: إزاي البشر بيملكوا العملة دي.. وإزاي بيضيّعوها.",
@@ -929,7 +929,7 @@
    "OCCRP عن OneCoin: https://www.occrp.org/en/daily/12109-us-indicts-co-founder-of-onecoin-ponzi-scheme"
   ],
   "footer": [
-   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "دي حلقة من ملف من ست تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
    "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
    "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
   ],
@@ -970,7 +970,7 @@
    "Category: Education",
    "Video language: Arabic. Upload captions.srt as Arabic.",
    "Audience: not made for kids",
-   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "Playlist: ملف العملات المشفرة (six parts, in order)",
    "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
    "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
    "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."

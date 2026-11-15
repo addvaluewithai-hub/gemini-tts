@@ -42,7 +42,7 @@ million coins**, **the code case** (the rules, from part 1).
 | 14 | 6.0 | Fly along the chain while a counter rolls to `900,000+` (1.5–2.2); at the far end the first gold page `0` with the hooded chair beside it (2.9–3.8 "Satoshi"); swing back to the newest page with the clock (5.3 "ten minutes"). Host right. | more than 900,000 pages, from the first to the last |
 | 15 | 5.8 | An old page: its 30 turns to 3000 in red (1.3–2.0 "changed a number"); its seal turns red (2.9 "its fingerprint changes"), the link to the next page goes red and the next seal red (3.9–4.3 "breaks"), and the next (4.8–5.0). | one change breaks everything after it |
 | 16 | 2.7 | Laptops round the chain look at it: ✗ ✗ ✗ (0.9–2.0); the broken part drops away (2.0). | the network rejects it |
-| 17 | 6.0 | An eraser rubs a row and nothing comes off (0.9–2.2 "not erased"); an undo key ⟲ is pressed and crossed out (2.3–2.6); a counter window with a bell: the shutter is down, the bell rings, nobody comes (3.4–3.9 "no employee"); a pin puts a note `3/5` on the page (4.5 "remember"). Host left. | what is written stays written |
+| 17 | 6.0 | An eraser rubs a row and nothing comes off (0.9–2.2 "not erased"); an undo key ⟲ is pressed and crossed out (2.3–2.6); a counter window with a bell: the shutter is down, the bell rings, nobody comes (3.4–3.9 "no employee"); a pin puts a note `3/6` on the page (4.5 "remember"). Host left. | what is written stays written |
 
 ## trip (`c2trip`)
 
@@ -127,4 +127,4 @@ million coins**, **the code case** (the rules, from part 1).
 
 ## end card
 
-`endnext`, `NEXT 3 / 5` with the key, the safe and the mask: keys, wallets, and a ledger that is not anonymous.
+`endnext`, `NEXT 3 / 6` with the key, the safe and the mask: keys, wallets, and a ledger that is not anonymous.
