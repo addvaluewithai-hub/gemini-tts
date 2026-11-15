@@ -160,6 +160,12 @@ Sourced:
   https://www.iea.org/commentaries/access-to-electricity-stagnates-leaving-globally-730-million-in-the-dark
 - Data centres used about 415 TWh in 2024, about 1.5% of the world's electricity; the IEA's base case is about
   945 TWh in 2030. https://www.iea.org/reports/energy-and-ai/executive-summary
+- Pakistan's grid peak demand is about 28,000–30,000 MW (Renewables First, Pakistan Electricity Review 2025).
+  https://renewablesfirst.org/resources/in-the-news/solar-surge-reshapes-pakistans-power-sector-report
+- Negative wholesale prices at midday when solar peaks: in 2025 Germany, France and the Netherlands each had over
+  500 hours below zero; Spain had its first in 2024 (Montel via pv magazine; oEnergetice).
+  https://www.pv-magazine.com/2026/02/03/germany-france-netherlands-curtail-3-9-twh-of-renewables-in-2025/ ,
+  https://oenergetice.cz/en/commodity-markets/the-number-of-hours-with-negative-electricity-prices-in-europe-is-rising-sharply
 
 General knowledge: how a cascade spreads (a tripped line's load moves to its neighbours); power stations need
 electricity to start and a few are kept able to start alone ("black start"); squirrels are among the commonest

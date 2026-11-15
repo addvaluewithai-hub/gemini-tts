@@ -59,34 +59,86 @@
  },
  "boards": {
   "e4intro": {
-   "kind": "e4intro"
+   "kind": "e4intro",
+   "ends": [
+    8.63,
+    10.63
+   ]
   },
   "storage": {
-   "kind": "storage"
+   "kind": "storage",
+   "ends": [
+    4.65,
+    9.43,
+    9.71,
+    9.94
+   ]
   },
   "battery": {
-   "kind": "battery"
+   "kind": "battery",
+   "ends": [
+    9.5,
+    8.28,
+    7.51,
+    11.17
+   ]
   },
   "bet": {
-   "kind": "bet"
+   "kind": "bet",
+   "ends": [
+    5.8,
+    7.87,
+    9.17
+   ]
   },
   "sun": {
-   "kind": "sun"
+   "kind": "sun",
+   "ends": [
+    9,
+    4.03,
+    10.08,
+    5.47,
+    7.62,
+    6.82
+   ]
   },
   "rooftops": {
-   "kind": "rooftops"
+   "kind": "rooftops",
+   "ends": [
+    5.31,
+    8.95,
+    5.84
+   ]
   },
   "dark": {
-   "kind": "dark"
+   "kind": "dark",
+   "ends": [
+    8.98,
+    7.78,
+    4.8
+   ]
   },
   "hungry": {
-   "kind": "hungry"
+   "kind": "hungry",
+   "ends": [
+    9.87,
+    4.31,
+    5.4
+   ]
   },
   "e4dict": {
-   "kind": "e4dict"
+   "kind": "e4dict",
+   "ends": [
+    5.43,
+    6.67
+   ]
   },
   "e4recap": {
-   "kind": "e4recap"
+   "kind": "e4recap",
+   "ends": [
+    19.01,
+    4.2
+   ]
   }
  },
  "scenes": [
@@ -456,6 +508,75 @@
    }
   }
  ],
- "youtube": {},
+ "youtube": {
+  "titles": [
+   "الكهربا رايحة على فين؟ بلاد بتدفع لك علشان تسحب كهربا | ملف الكهربا 4/4",
+   "البطارية بتخزّن الكهربا إزاي؟ ومنحنى البطة | ملف الكهربا 4/4",
+   "بلد بنت نص شبكة الكهربا فوق السطوح | ملف الكهربا 4/4"
+  ],
+  "description": [
+   "التقرير الرابع والأخير من العميل Peek لقيادته في ملف الكهربا: الكهربا رايحة على فين؟",
+   "",
+   "بطاريات قد المخازن بقت أرخص أكتر من 90%، والبطارية من جوّه: ليثيوم طالع نازل على سلم. رهان أكبر بطارية في العالم في أستراليا 2017، والشمس اللي بقت من أرخص الكهربا وعملت منحنى البطة، والبلاد اللي سعر الكهربا فيها بينزل تحت الصفر. باكستان اللي ناسها بنوا نص شبكة فوق السطوح، و730 مليون إنسان لسه من غير كهربا خالص، ومخازن الكمبيوترات الجديدة الجعانة.",
+   "",
+   "الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة."
+  ],
+  "intro": "المقدمة",
+  "outro": "الخلاصة",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "أسعار البطاريات 108 دولار للكيلووات ساعة 2025، أقل 93% من 2010 (BloombergNEF): https://about.bnef.com/insights/clean-transport/new-record-lows-for-battery-prices/",
+   "112 جيجاوات تخزين اتركّبت في 2025 (BloombergNEF): https://about.bnef.com/insights/clean-energy/energy-storage-enters-the-100-gigawatt-era-three-things-to-know/",
+   "البطاريات عدّت تخزين المية لأول مرة (pv magazine): https://www.pv-magazine.com/2026/02/05/global-bess-capacity-tops-250-gw-overtaking-pumped-hydro-for-first-time/",
+   "بطارية أستراليا \"100 يوم أو ببلاش\" 2017 (Energy Storage News): https://www.energy-storage.news/news/south-australia-takes-tesla-up-on-100-days-or-free-energy-storage-promise",
+   "كهربا الشمس أرخص 90% من 2010 (IRENA عبر PV Tech): https://www.pv-tech.org/irena-solar-lcoe-falls-12-year-on-year-90-since-2010",
+   "الشمس والرياح في 2025 (Ember، Global Electricity Review 2026): https://ember-energy.org/latest-insights/global-electricity-review-2026/",
+   "أسعار الكهربا تحت الصفر الضهر في أوروبا 2025 (pv magazine): https://www.pv-magazine.com/2026/02/03/germany-france-netherlands-curtail-3-9-twh-of-renewables-in-2025/",
+   "باكستان استوردت 17 جيجاوات ألواح شمسية في 2024 (Express Tribune، بيانات Ember): https://tribune.com.pk/story/2539779/heres-how-pakistan-quietly-became-worlds-biggest-solar-importer",
+   "أعلى طلب على شبكة باكستان (Renewables First): https://renewablesfirst.org/resources/in-the-news/solar-surge-reshapes-pakistans-power-sector-report",
+   "730 مليون من غير كهربا في 2024 (IEA): https://www.iea.org/commentaries/access-to-electricity-stagnates-leaving-globally-730-million-in-the-dark",
+   "مخازن الكمبيوترات والذكاء الاصطناعي (IEA، Energy and AI): https://www.iea.org/reports/energy-and-ai/executive-summary"
+  ],
+  "footer": [
+   "ده آخر تقرير في ملف من أربع تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش إرشادات أمان ولا شغل كهربا. أي سلك واقع أو متدلدل: ابعد عنه وبلّغ.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الكهربا",
+   "#شرح"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "الكهربا",
+   "مستقبل الكهرباء",
+   "البطارية بتشتغل إزاي",
+   "بطاريات الليثيوم",
+   "الطاقة الشمسية",
+   "منحنى البطة",
+   "Duck curve",
+   "أسعار كهرباء بالسالب",
+   "باكستان طاقة شمسية",
+   "بطارية أستراليا",
+   "الذكاء الاصطناعي والكهرباء",
+   "730 مليون من غير كهرباء",
+   "Earth Report",
+   "اشرحها لكائن فضائي",
+   "علوم مبسطة"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الكهربا (four parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "لو بيتك عليه ألواح شمسية أو بطارية، احكي لنا. والقيادة بتسأل: الملف الجاي يبقى عن إيه؟"
+ },
  "theme": "day"
 }

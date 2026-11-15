@@ -1,0 +1,739 @@
+1
+00:00:00,522 --> 00:00:03,078
+Sir, field report number four, and the last,
+
+2
+00:00:03,118 --> 00:00:04,440
+on the electricity file.
+
+3
+00:00:04,480 --> 00:00:04,959
+Today:
+
+4
+00:00:04,999 --> 00:00:06,500
+where electricity is going.
+
+5
+00:00:06,540 --> 00:00:07,876
+In the last reports I told you the
+
+6
+00:00:07,916 --> 00:00:09,004
+grid's biggest problem:
+
+7
+00:00:09,044 --> 00:00:10,294
+power can't be stored.
+
+8
+00:00:10,334 --> 00:00:12,167
+What's made must be used in the same
+
+9
+00:00:12,207 --> 00:00:12,663
+second.
+
+10
+00:00:12,703 --> 00:00:15,125
+And that is changing right before my eyes.
+
+11
+00:00:15,165 --> 00:00:17,849
+Warehouse-sized batteries, sunlight that became some of their
+
+12
+00:00:17,889 --> 00:00:19,892
+cheapest power, and a country that built half
+
+13
+00:00:19,932 --> 00:00:21,228
+its grid on its roofs.
+
+14
+00:00:21,268 --> 00:00:22,984
+And at the end, a number command must
+
+15
+00:00:23,024 --> 00:00:23,360
+know:
+
+16
+00:00:23,400 --> 00:00:25,440
+who here still has no light bulb at
+
+17
+00:00:25,480 --> 00:00:25,754
+all.
+
+18
+00:00:25,794 --> 00:00:27,316
+Start with the original problem:
+
+19
+00:00:27,356 --> 00:00:28,715
+power can't be stored.
+
+20
+00:00:28,755 --> 00:00:30,414
+But that's starting to change.
+
+21
+00:00:30,454 --> 00:00:31,290
+The old way:
+
+22
+00:00:31,330 --> 00:00:31,832
+water.
+
+23
+00:00:31,872 --> 00:00:34,127
+When power is spare and cheap, they pump
+
+24
+00:00:34,167 --> 00:00:35,837
+water up to a lake on a mountain.
+
+25
+00:00:35,877 --> 00:00:37,339
+When they need it, they let it fall
+
+26
+00:00:37,379 --> 00:00:38,351
+through a turbine.
+
+27
+00:00:38,391 --> 00:00:39,070
+A battery..
+
+28
+00:00:39,110 --> 00:00:39,835
+made of water.
+
+29
+00:00:39,875 --> 00:00:40,623
+The new way:
+
+30
+00:00:40,663 --> 00:00:42,388
+batteries like the one in your phone, but
+
+31
+00:00:42,428 --> 00:00:43,777
+the size of warehouses.
+
+32
+00:00:43,817 --> 00:00:46,067
+In twenty twenty-five alone, a hundred and twelve
+
+33
+00:00:46,107 --> 00:00:47,662
+gigawatts of them went in on the planet.
+
+34
+00:00:47,702 --> 00:00:49,557
+And for the first time they passed water.
+
+35
+00:00:49,597 --> 00:00:50,175
+The reason:
+
+36
+00:00:50,215 --> 00:00:50,710
+price.
+
+37
+00:00:50,750 --> 00:00:53,980
+Storing a kilowatt-hour cost about fifteen hundred dollars
+
+38
+00:00:54,020 --> 00:00:54,829
+in twenty ten.
+
+39
+00:00:54,869 --> 00:00:56,999
+By twenty twenty-five, a hundred and eight.
+
+40
+00:00:57,039 --> 00:00:59,498
+Down more than ninety percent.
+
+41
+00:00:59,538 --> 00:01:01,446
+The one thing here that gets cheaper.
+
+42
+00:01:01,486 --> 00:01:04,039
+So how does a battery store anything?
+
+43
+00:01:04,079 --> 00:01:06,066
+The one in your phone, your car, the
+
+44
+00:01:06,106 --> 00:01:06,940
+warehouse:
+
+45
+00:01:06,980 --> 00:01:08,242
+nearly the same idea.
+
+46
+00:01:08,282 --> 00:01:10,666
+Inside are two sides, with a wall between
+
+47
+00:01:10,706 --> 00:01:10,948
+them.
+
+48
+00:01:10,988 --> 00:01:13,418
+And tiny atoms of a metal called lithium
+
+49
+00:01:13,458 --> 00:01:14,799
+move from one side to the other.
+
+50
+00:01:14,839 --> 00:01:16,943
+When you charge, the power pushes the lithium
+
+51
+00:01:16,983 --> 00:01:18,787
+to one side, like sending people up a
+
+52
+00:01:18,827 --> 00:01:19,220
+ladder.
+
+53
+00:01:19,260 --> 00:01:20,943
+When you use the phone, the lithium goes
+
+54
+00:01:20,983 --> 00:01:23,018
+back, and the electrons that came with it
+
+55
+00:01:23,058 --> 00:01:24,952
+have to go round the outside, through the
+
+56
+00:01:24,992 --> 00:01:26,736
+wire, running the device on the way.
+
+57
+00:01:26,776 --> 00:01:29,305
+So a battery isn't a box of electricity,
+
+58
+00:01:29,345 --> 00:01:29,722
+sir.
+
+59
+00:01:29,762 --> 00:01:32,128
+It's a ladder, with lithium climbing up and
+
+60
+00:01:32,168 --> 00:01:32,535
+down.
+
+61
+00:01:32,575 --> 00:01:34,574
+Every trip wears the ladder a little.
+
+62
+00:01:34,614 --> 00:01:36,326
+That's why a phone battery after a few
+
+63
+00:01:36,366 --> 00:01:37,908
+years doesn't last like it did.
+
+64
+00:01:37,948 --> 00:01:38,883
+It isn't tired.
+
+65
+00:01:38,923 --> 00:01:39,959
+It's old.
+
+66
+00:01:39,999 --> 00:01:42,220
+Its most famous story was a bet.
+
+67
+00:01:42,260 --> 00:01:44,765
+In twenty seventeen, a state in Australia kept
+
+68
+00:01:44,805 --> 00:01:45,755
+losing power.
+
+69
+00:01:45,795 --> 00:01:47,702
+The owner of an electric car company posted
+
+70
+00:01:47,742 --> 00:01:48,363
+online:
+
+71
+00:01:48,403 --> 00:01:50,206
+I'll build you the world's biggest battery in
+
+72
+00:01:50,246 --> 00:01:51,110
+a hundred days..
+
+73
+00:01:51,150 --> 00:01:51,962
+or it's free.
+
+74
+00:01:52,002 --> 00:01:53,630
+It was done in about sixty-three.
+
+75
+00:01:53,670 --> 00:01:55,333
+In its first year it saved the grid
+
+76
+00:01:55,373 --> 00:01:57,578
+about forty million Australian dollars.
+
+77
+00:01:57,618 --> 00:01:59,475
+Because a battery answers any wobble in the
+
+78
+00:01:59,515 --> 00:02:01,062
+balance in under a second.
+
+79
+00:02:01,102 --> 00:02:02,791
+A normal plant needs minutes.
+
+80
+00:02:02,831 --> 00:02:04,664
+First time I've seen a rich human bet..
+
+81
+00:02:04,704 --> 00:02:05,758
+and the people win.
+
+82
+00:02:05,798 --> 00:02:07,058
+The other game changer:
+
+83
+00:02:07,098 --> 00:02:07,833
+the sun.
+
+84
+00:02:07,873 --> 00:02:10,810
+Solar power got about ninety percent cheaper since
+
+85
+00:02:10,850 --> 00:02:11,617
+twenty ten.
+
+86
+00:02:11,657 --> 00:02:13,294
+It's now some of the cheapest power they've
+
+87
+00:02:13,334 --> 00:02:14,742
+ever built.
+
+88
+00:02:14,782 --> 00:02:15,671
+One problem.
+
+89
+00:02:15,711 --> 00:02:17,173
+Here's demand through the day.
+
+90
+00:02:17,213 --> 00:02:18,783
+The sun peaks at noon.
+
+91
+00:02:18,823 --> 00:02:20,734
+So what's left for other plants is very
+
+92
+00:02:20,774 --> 00:02:21,650
+low at noon..
+
+93
+00:02:21,690 --> 00:02:23,642
+then shoots up like a wall at sunset,
+
+94
+00:02:23,682 --> 00:02:25,335
+when the sun leaves and people get home.
+
+95
+00:02:25,375 --> 00:02:27,416
+Engineers call this shape the duck curve.
+
+96
+00:02:27,456 --> 00:02:28,013
+Look at it.
+
+97
+00:02:28,053 --> 00:02:28,848
+It really is a duck.
+
+98
+00:02:28,888 --> 00:02:29,890
+Here batteries come in:
+
+99
+00:02:29,930 --> 00:02:31,478
+they charge at noon from the spare sun,
+
+100
+00:02:31,518 --> 00:02:32,826
+and empty after sunset.
+
+101
+00:02:32,866 --> 00:02:34,327
+They move noon into the night.
+
+102
+00:02:34,367 --> 00:02:35,520
+Wind is the same story:
+
+103
+00:02:35,560 --> 00:02:36,960
+it comes when it feels like it, not
+
+104
+00:02:37,000 --> 00:02:37,845
+when demand does.
+
+105
+00:02:37,885 --> 00:02:39,984
+Together the two made about seventeen percent of
+
+106
+00:02:40,024 --> 00:02:41,949
+the planet's power in twenty twenty-five.
+
+107
+00:02:41,989 --> 00:02:44,465
+And without storage, some countries have so much
+
+108
+00:02:44,505 --> 00:02:46,478
+power at noon that the price drops below
+
+109
+00:02:46,518 --> 00:02:47,222
+zero.
+
+110
+00:02:47,262 --> 00:02:48,767
+They pay you to use it.
+
+111
+00:02:48,807 --> 00:02:49,398
+Yes, sir.
+
+112
+00:02:49,438 --> 00:02:51,242
+This planet now pays to get rid of
+
+113
+00:02:51,282 --> 00:02:51,999
+electricity.
+
+114
+00:02:52,039 --> 00:02:53,004
+The strangest example:
+
+115
+00:02:53,044 --> 00:02:53,640
+Pakistan.
+
+116
+00:02:53,680 --> 00:02:55,473
+Grid power there is pricey and keeps cutting
+
+117
+00:02:55,513 --> 00:02:55,899
+out.
+
+118
+00:02:55,939 --> 00:02:57,320
+So people didn't wait for anyone.
+
+119
+00:02:57,360 --> 00:03:00,890
+In twenty twenty-four, the country imported seventeen gigawatts
+
+120
+00:03:00,930 --> 00:03:02,013
+of solar panels.
+
+121
+00:03:02,053 --> 00:03:02,835
+In one year.
+
+122
+00:03:02,875 --> 00:03:05,603
+Most went onto roofs of homes, factories and
+
+123
+00:03:05,643 --> 00:03:06,278
+farms.
+
+124
+00:03:06,318 --> 00:03:08,375
+The whole grid's peak demand there is about
+
+125
+00:03:08,415 --> 00:03:08,962
+thirty.
+
+126
+00:03:09,002 --> 00:03:11,037
+So people built half a grid..
+
+127
+00:03:11,077 --> 00:03:12,116
+on their roofs.
+
+128
+00:03:12,156 --> 00:03:13,150
+Nobody asked.
+
+129
+00:03:13,190 --> 00:03:15,524
+Before I close the file, a number command
+
+130
+00:03:15,564 --> 00:03:16,214
+must know.
+
+131
+00:03:16,254 --> 00:03:19,277
+In twenty twenty-four, about seven hundred thirty million
+
+132
+00:03:19,317 --> 00:03:20,493
+humans on this planet..
+
+133
+00:03:20,533 --> 00:03:22,128
+had no electricity at all.
+
+134
+00:03:22,168 --> 00:03:23,699
+Eight in ten of them are in Africa
+
+135
+00:03:23,739 --> 00:03:24,690
+south of the Sahara.
+
+136
+00:03:24,730 --> 00:03:26,410
+And the number there today is about what
+
+137
+00:03:26,450 --> 00:03:27,495
+it was in twenty ten.
+
+138
+00:03:27,535 --> 00:03:29,895
+Because people grow faster than wires.
+
+139
+00:03:29,935 --> 00:03:31,813
+So a child somewhere studies by a kerosene
+
+140
+00:03:31,853 --> 00:03:32,223
+lamp..
+
+141
+00:03:32,263 --> 00:03:34,110
+in the same year power sells below zero
+
+142
+00:03:34,150 --> 00:03:34,743
+somewhere else.
+
+143
+00:03:34,783 --> 00:03:37,558
+The new demand comes from somewhere else entirely:
+
+144
+00:03:37,598 --> 00:03:40,948
+warehouses of computers that run artificial intelligence.
+
+145
+00:03:40,988 --> 00:03:42,890
+In twenty twenty-four they drew about one and
+
+146
+00:03:42,930 --> 00:03:44,577
+a half percent of the planet's power.
+
+147
+00:03:44,617 --> 00:03:47,126
+And the International Energy Agency expects that to
+
+148
+00:03:47,166 --> 00:03:48,898
+roughly double by twenty thirty.
+
+149
+00:03:48,938 --> 00:03:49,947
+One planet, sir.
+
+150
+00:03:49,987 --> 00:03:51,907
+Computers drawing that much power..
+
+151
+00:03:51,947 --> 00:03:53,458
+and people who've never seen a bulb at
+
+152
+00:03:53,498 --> 00:03:54,285
+home.
+
+153
+00:03:54,325 --> 00:03:56,030
+The problem was never the physics.
+
+154
+00:03:56,070 --> 00:03:57,252
+The human dictionary.
+
+155
+00:03:57,292 --> 00:03:58,567
+The file's last two words.
+
+156
+00:03:58,607 --> 00:03:59,240
+Gigawatt:
+
+157
+00:03:59,280 --> 00:04:00,570
+a thousand megawatts.
+
+158
+00:04:00,610 --> 00:04:01,741
+One whole big power plant.
+
+159
+00:04:01,781 --> 00:04:03,111
+And the duck curve:
+
+160
+00:04:03,151 --> 00:04:04,662
+demand on the plants once the sun came
+
+161
+00:04:04,702 --> 00:04:04,918
+in.
+
+162
+00:04:04,958 --> 00:04:06,924
+Low at noon, a wall at night.
+
+163
+00:04:06,964 --> 00:04:08,133
+It really looks like a duck.
+
+164
+00:04:08,173 --> 00:04:09,680
+Summary of the whole file, sir.
+
+165
+00:04:09,720 --> 00:04:10,175
+One:
+
+166
+00:04:10,215 --> 00:04:12,464
+electricity is charges moving round a circuit, as
+
+167
+00:04:12,504 --> 00:04:13,778
+direct or alternating current.
+
+168
+00:04:13,818 --> 00:04:14,242
+Two:
+
+169
+00:04:14,282 --> 00:04:16,098
+it's made by a spinning magnet, travels at
+
+170
+00:04:16,138 --> 00:04:17,892
+high voltage, and the grid is a balance
+
+171
+00:04:17,932 --> 00:04:18,820
+set every second.
+
+172
+00:04:18,860 --> 00:04:19,284
+Three:
+
+173
+00:04:19,324 --> 00:04:21,233
+if the balance breaks, it falls like dominoes.
+
+174
+00:04:21,273 --> 00:04:21,820
+And four:
+
+175
+00:04:21,860 --> 00:04:23,491
+batteries and the sun are changing the rules
+
+176
+00:04:23,531 --> 00:04:23,736
+now.
+
+177
+00:04:23,776 --> 00:04:25,856
+But hundreds of millions still have no bulb,
+
+178
+00:04:25,896 --> 00:04:27,148
+and that problem was never the physics.
+
+179
+00:04:27,188 --> 00:04:28,756
+The electricity file is closed.
+
+180
+00:04:28,796 --> 00:04:29,568
+Four reports.
+
+181
+00:04:29,608 --> 00:04:31,146
+And this planet still has plenty that needs
+
+182
+00:04:31,186 --> 00:04:31,633
+explaining.
+
+183
+00:04:31,673 --> 00:04:32,607
+This was Earth Report.
+
+184
+00:04:32,647 --> 00:04:33,218
+Agent Peek.
+
+185
+00:04:33,258 --> 00:04:34,220
+Transmission ends.

@@ -1,0 +1,683 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-electricity-04-dub-en",
+ "transcript": "../../../video/cues/explain-electricity-04-dub-en.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": false,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "Sir, field report number four, and the last, on ",
+   "shot": "close",
+   "emote": "serious",
+   "slide": null
+  },
+  {
+   "t": 6.28,
+   "say": "In the last reports I told you the grid's bigges",
+   "board": {
+    "kind": "e4intro",
+    "ends": [
+     8.63,
+     10.63
+    ]
+   },
+   "step": 0,
+   "stepT": 6.28,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 14.8,
+   "say": "Warehouse-sized batteries, sunlight that became ",
+   "board": {
+    "kind": "e4intro",
+    "ends": [
+     8.63,
+     10.63
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 14.8
+  },
+  {
+   "t": 25.99,
+   "say": "Start with the original problem: power can't be ",
+   "board": {
+    "kind": "storage",
+    "ends": [
+     4.65,
+     9.43,
+     9.71,
+     9.94
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "STORAGE",
+    "icon": "safe"
+   },
+   "stepT": 25.99,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 30.82,
+   "say": "The old way: water. When power is spare and chea",
+   "board": {
+    "kind": "storage",
+    "ends": [
+     4.65,
+     9.43,
+     9.71,
+     9.94
+    ]
+   },
+   "step": 1,
+   "stepT": 30.82
+  },
+  {
+   "t": 39.35,
+   "say": "The new way: batteries like the one in your phon",
+   "board": {
+    "kind": "storage",
+    "ends": [
+     4.65,
+     9.43,
+     9.71,
+     9.94
+    ]
+   },
+   "step": 2,
+   "stepT": 39.35
+  },
+  {
+   "t": 49.11,
+   "say": "The reason: price. Storing a kilowatt-hour cost ",
+   "board": {
+    "kind": "storage",
+    "ends": [
+     4.65,
+     9.43,
+     9.71,
+     9.94
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "stepT": 49.11
+  },
+  {
+   "t": 57.26,
+   "say": "The one thing here that gets cheaper.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 58.9,
+   "say": "So how does a battery store anything? The one in",
+   "board": {
+    "kind": "battery",
+    "ends": [
+     9.5,
+     8.28,
+     7.51,
+     11.17
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "INSIDE A BATTERY",
+    "icon": "atom"
+   },
+   "stepT": 58.9,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 67.92,
+   "say": "And tiny atoms of a metal called lithium move fr",
+   "board": {
+    "kind": "battery",
+    "ends": [
+     9.5,
+     8.28,
+     7.51,
+     11.17
+    ]
+   },
+   "step": 1,
+   "stepT": 67.92
+  },
+  {
+   "t": 76.52,
+   "say": "When you use the phone, the lithium goes back, a",
+   "board": {
+    "kind": "battery",
+    "ends": [
+     9.5,
+     8.28,
+     7.51,
+     11.17
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 76.52
+  },
+  {
+   "t": 84.58,
+   "say": "So a battery isn't a box of electricity, sir. It",
+   "board": {
+    "kind": "battery",
+    "ends": [
+     9.5,
+     8.28,
+     7.51,
+     11.17
+    ]
+   },
+   "step": 3,
+   "stepT": 84.58
+  },
+  {
+   "t": 94.92,
+   "say": "It isn't tired. It's old.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 96.33,
+   "say": "Its most famous story was a bet. In twenty seven",
+   "board": {
+    "kind": "bet",
+    "ends": [
+     5.8,
+     7.87,
+     9.17
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "THE BET",
+    "icon": "cards"
+   },
+   "stepT": 96.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 101.92,
+   "say": "The owner of an electric car company posted onli",
+   "board": {
+    "kind": "bet",
+    "ends": [
+     5.8,
+     7.87,
+     9.17
+    ]
+   },
+   "step": 1,
+   "stepT": 101.92
+  },
+  {
+   "t": 110.46,
+   "say": "In its first year it saved the grid about forty ",
+   "board": {
+    "kind": "bet",
+    "ends": [
+     5.8,
+     7.87,
+     9.17
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 110.46
+  },
+  {
+   "t": 119.4,
+   "say": "First time I've seen a rich human bet.. and the ",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 122.43,
+   "say": "The other game changer: the sun. Solar power got",
+   "board": {
+    "kind": "sun",
+    "ends": [
+     9,
+     4.03,
+     10.08,
+     5.47,
+     7.62,
+     6.82
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 4,
+    "tag": "THE SUN",
+    "icon": "bolt"
+   },
+   "stepT": 122.43,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 129.9,
+   "say": "One problem. Here's demand through the day. The ",
+   "board": {
+    "kind": "sun",
+    "ends": [
+     9,
+     4.03,
+     10.08,
+     5.47,
+     7.62,
+     6.82
+    ]
+   },
+   "step": 1,
+   "stepT": 129.9
+  },
+  {
+   "t": 133.95,
+   "say": "So what's left for other plants is very low at n",
+   "board": {
+    "kind": "sun",
+    "ends": [
+     9,
+     4.03,
+     10.08,
+     5.47,
+     7.62,
+     6.82
+    ]
+   },
+   "step": 2,
+   "stepT": 133.95
+  },
+  {
+   "t": 143.5,
+   "say": "Here batteries come in: they charge at noon from",
+   "board": {
+    "kind": "sun",
+    "ends": [
+     9,
+     4.03,
+     10.08,
+     5.47,
+     7.62,
+     6.82
+    ]
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 143.5
+  },
+  {
+   "t": 149.74,
+   "say": "Wind is the same story: it comes when it feels l",
+   "board": {
+    "kind": "sun",
+    "ends": [
+     9,
+     4.03,
+     10.08,
+     5.47,
+     7.62,
+     6.82
+    ]
+   },
+   "step": 4,
+   "stepT": 149.74
+  },
+  {
+   "t": 156.73,
+   "say": "And without storage, some countries have so much",
+   "board": {
+    "kind": "sun",
+    "ends": [
+     9,
+     4.03,
+     10.08,
+     5.47,
+     7.62,
+     6.82
+    ]
+   },
+   "step": 5,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 156.73
+  },
+  {
+   "t": 162.72,
+   "say": "Yes, sir. This planet now pays to get rid of ele",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 165.77,
+   "say": "The strangest example: Pakistan. Grid power ther",
+   "board": {
+    "kind": "rooftops",
+    "ends": [
+     5.31,
+     8.95,
+     5.84
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "ROOFTOPS",
+    "icon": "tower"
+   },
+   "stepT": 165.77,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 172,
+   "say": "In twenty twenty-four, the country imported seve",
+   "board": {
+    "kind": "rooftops",
+    "ends": [
+     5.31,
+     8.95,
+     5.84
+    ]
+   },
+   "step": 1,
+   "stepT": 172
+  },
+  {
+   "t": 180.42,
+   "say": "The whole grid's peak demand there is about thir",
+   "board": {
+    "kind": "rooftops",
+    "ends": [
+     5.31,
+     8.95,
+     5.84
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 180.42
+  },
+  {
+   "t": 185.63,
+   "say": "Nobody asked.",
+   "shot": "close",
+   "emote": "proud"
+  },
+  {
+   "t": 186.44,
+   "say": "Before I close the file, a number command must k",
+   "board": {
+    "kind": "dark",
+    "ends": [
+     8.98,
+     7.78,
+     4.8
+    ]
+   },
+   "step": 0,
+   "calm": true,
+   "story": {
+    "n": 6,
+    "tag": "STILL DARK",
+    "icon": "eye"
+   },
+   "gesture": "pockets",
+   "stepT": 186.44,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 195.29,
+   "say": "Eight in ten of them are in Africa south of the ",
+   "board": {
+    "kind": "dark",
+    "ends": [
+     8.98,
+     7.78,
+     4.8
+    ]
+   },
+   "step": 1,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 195.29
+  },
+  {
+   "t": 203.14,
+   "say": "So a child somewhere studies by a kerosene lamp.",
+   "board": {
+    "kind": "dark",
+    "ends": [
+     8.98,
+     7.78,
+     4.8
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 203.14
+  },
+  {
+   "t": 209.04,
+   "say": "The new demand comes from somewhere else entirel",
+   "board": {
+    "kind": "hungry",
+    "ends": [
+     9.87,
+     4.31,
+     5.4
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 7,
+    "tag": "NEW APPETITE",
+    "icon": "server"
+   },
+   "stepT": 209.04,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 218.4,
+   "say": "And the International Energy Agency expects that",
+   "board": {
+    "kind": "hungry",
+    "ends": [
+     9.87,
+     4.31,
+     5.4
+    ]
+   },
+   "step": 1,
+   "stepT": 218.4
+  },
+  {
+   "t": 222.42,
+   "say": "One planet, sir. Computers drawing that much pow",
+   "board": {
+    "kind": "hungry",
+    "ends": [
+     9.87,
+     4.31,
+     5.4
+    ]
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 222.42
+  },
+  {
+   "t": 226.9,
+   "say": "The problem was never the physics.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 228.58,
+   "say": "The human dictionary. The file's last two words.",
+   "board": {
+    "kind": "e4dict",
+    "ends": [
+     5.43,
+     6.67
+    ]
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 228.58,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 235.54,
+   "say": "And the duck curve: demand on the plants once th",
+   "board": {
+    "kind": "e4dict",
+    "ends": [
+     5.43,
+     6.67
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 235.54
+  },
+  {
+   "t": 242.85,
+   "say": "Summary of the whole file, sir. One: electricity",
+   "board": {
+    "kind": "e4recap",
+    "ends": [
+     19.01,
+     4.2
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 242.85,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 261.89,
+   "say": "But hundreds of millions still have no bulb, and",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 266.25,
+   "say": "The electricity file is closed. Four reports. An",
+   "board": {
+    "kind": "e4recap",
+    "ends": [
+     19.01,
+     4.2
+    ]
+   },
+   "step": 1,
+   "stepT": 266.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 271.73,
+   "say": "This was Earth Report. Agent Peek. Transmission ",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 275.29,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "FILE CLOSED",
+    "next": "4 / 4",
+    "icons": [
+     "bolt",
+     "tower",
+     "gear"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

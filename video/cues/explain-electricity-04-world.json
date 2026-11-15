@@ -1,0 +1,503 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-electricity-04-world",
+ "transcript": "../../../video/cues/explain-electricity-04-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني رقم أربعة، والأخير، في ملف",
+   "shot": "close",
+   "emote": "serious",
+   "slide": null
+  },
+  {
+   "t": 6.17,
+   "say": "في التقارير اللي فاتت قلت لكم أكبر مشكلة في الشب",
+   "board": {
+    "kind": "e4intro"
+   },
+   "step": 0,
+   "stepT": 6.17,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 14.8,
+   "say": "بطاريات قد المخازن، وشمس بقت من أرخص كهربا بنوها",
+   "board": {
+    "kind": "e4intro"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 14.8
+  },
+  {
+   "t": 25.43,
+   "say": "نبدأ بالمشكلة الأصلية: الكهربا مابتتخزنش. بس ده ",
+   "board": {
+    "kind": "storage"
+   },
+   "step": 0,
+   "story": {
+    "n": 1,
+    "tag": "STORAGE",
+    "icon": "safe"
+   },
+   "stepT": 25.43,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 30.08,
+   "say": "الطريقة القديمة: مية. لما الكهربا تبقى زيادة ورخ",
+   "board": {
+    "kind": "storage"
+   },
+   "step": 1,
+   "stepT": 30.08
+  },
+  {
+   "t": 39.51,
+   "say": "والطريقة الجديدة: بطاريات زي بتاعة التليفون، بس ",
+   "board": {
+    "kind": "storage"
+   },
+   "step": 2,
+   "stepT": 39.51
+  },
+  {
+   "t": 49.22,
+   "say": "والسبب: السعر. تخزين الكيلووات ساعة كان بحوالي أ",
+   "board": {
+    "kind": "storage"
+   },
+   "step": 3,
+   "host": "right",
+   "stepT": 49.22
+  },
+  {
+   "t": 59.16,
+   "say": "الحاجة الوحيدة على الكوكب ده اللي بترخص.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 61.12,
+   "say": "طب البطارية دي بتخزّن إزاي أصلاً؟ اللي في التليف",
+   "board": {
+    "kind": "battery"
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "INSIDE A BATTERY",
+    "icon": "atom"
+   },
+   "stepT": 61.12,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 70.62,
+   "say": "وفيه ذرّات صغيرة من معدن اسمه الليثيوم، بتتنقل م",
+   "board": {
+    "kind": "battery"
+   },
+   "step": 1,
+   "stepT": 70.62
+  },
+  {
+   "t": 78.9,
+   "say": "ولما بتستخدم الموبايل، الليثيوم بيرجع للناحية ال",
+   "board": {
+    "kind": "battery"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 78.9
+  },
+  {
+   "t": 86.41,
+   "say": "يعني البطارية مش علبة فيها كهربا يا فندم. البطار",
+   "board": {
+    "kind": "battery"
+   },
+   "step": 3,
+   "stepT": 86.41
+  },
+  {
+   "t": 97.58,
+   "say": "هي ماتعبتش. هي عجّزت.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 99.63,
+   "say": "وأشهر حكاية فيها كانت رهان. سنة ألفين وسبعتاشر، ",
+   "board": {
+    "kind": "bet"
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "THE BET",
+    "icon": "cards"
+   },
+   "stepT": 99.63,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 105.43,
+   "say": "وصاحب شركة عربيات كهربا كتب على النت: أبني لكم أ",
+   "board": {
+    "kind": "bet"
+   },
+   "step": 1,
+   "stepT": 105.43
+  },
+  {
+   "t": 113.3,
+   "say": "وفي أول سنة وفّرت على الشبكة حوالي أربعين مليون ",
+   "board": {
+    "kind": "bet"
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "neutral",
+   "stepT": 113.3
+  },
+  {
+   "t": 122.47,
+   "say": "أول مرة أشوف إنسان غني يراهن.. والناس هي اللي تك",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 125.42,
+   "say": "والحاجة التانية اللي بتغيّر اللعبة: الشمس. كهربا",
+   "board": {
+    "kind": "sun"
+   },
+   "step": 0,
+   "story": {
+    "n": 4,
+    "tag": "THE SUN",
+    "icon": "bolt"
+   },
+   "stepT": 125.42,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 134.42,
+   "say": "بس ليها مشكلة. ده الطلب على مدار اليوم. والشمس ب",
+   "board": {
+    "kind": "sun"
+   },
+   "step": 1,
+   "stepT": 134.42
+  },
+  {
+   "t": 138.45,
+   "say": "فاللي فاضل على باقي المحطات بيبقى واطي قوي الضهر",
+   "board": {
+    "kind": "sun"
+   },
+   "step": 2,
+   "stepT": 138.45
+  },
+  {
+   "t": 148.53,
+   "say": "وهنا البطارية تدخل: تتشحن الضهر من الشمس الزيادة",
+   "board": {
+    "kind": "sun"
+   },
+   "step": 3,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 148.53
+  },
+  {
+   "t": 154,
+   "say": "والرياح نفس الحكاية: بتيجي على مزاجها، مش على مز",
+   "board": {
+    "kind": "sun"
+   },
+   "step": 4,
+   "stepT": 154
+  },
+  {
+   "t": 161.62,
+   "say": "ومن غير تخزين، فيه بلاد الكهربا عندها ساعة الضهر",
+   "board": {
+    "kind": "sun"
+   },
+   "step": 5,
+   "host": "right",
+   "emote": "skeptical",
+   "stepT": 161.62
+  },
+  {
+   "t": 168.44,
+   "say": "أيوه يا فندم. الكوكب ده وصل إنه يدفع علشان يتخلص",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 171.68,
+   "say": "وأغرب مثال: باكستان. كهربا الشبكة هناك غالية وبت",
+   "board": {
+    "kind": "rooftops"
+   },
+   "step": 0,
+   "story": {
+    "n": 5,
+    "tag": "ROOFTOPS",
+    "icon": "tower"
+   },
+   "stepT": 171.68,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 176.99,
+   "say": "سنة ألفين أربعة وعشرين، البلد استوردت ألواح شمسي",
+   "board": {
+    "kind": "rooftops"
+   },
+   "step": 1,
+   "stepT": 176.99
+  },
+  {
+   "t": 185.94,
+   "say": "والشبكة كلها هناك أعلى طلب عليها حوالي تلاتين. ي",
+   "board": {
+    "kind": "rooftops"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "neutral",
+   "stepT": 185.94
+  },
+  {
+   "t": 191.78,
+   "say": "من غير ما حد يطلب منهم.",
+   "shot": "close",
+   "emote": "proud"
+  },
+  {
+   "t": 192.82,
+   "say": "وقبل ما أقفل الملف، رقم لازم القيادة تعرفه. سنة ",
+   "board": {
+    "kind": "dark"
+   },
+   "step": 0,
+   "calm": true,
+   "story": {
+    "n": 6,
+    "tag": "STILL DARK",
+    "icon": "eye"
+   },
+   "gesture": "pockets",
+   "stepT": 192.82,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 201.8,
+   "say": "تمانية من كل عشرة منهم في أفريقيا جنوب الصحرا. و",
+   "board": {
+    "kind": "dark"
+   },
+   "step": 1,
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 201.8
+  },
+  {
+   "t": 209.58,
+   "say": "يعني فيه طفل بيذاكر على لمبة جاز.. في نفس السنة ",
+   "board": {
+    "kind": "dark"
+   },
+   "step": 2,
+   "host": "right",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets",
+   "stepT": 209.58
+  },
+  {
+   "t": 214.38,
+   "say": "والطلب الجديد جاي من حتة تانية خالص: مخازن الكمب",
+   "board": {
+    "kind": "hungry"
+   },
+   "step": 0,
+   "story": {
+    "n": 7,
+    "tag": "NEW APPETITE",
+    "icon": "server"
+   },
+   "stepT": 214.38,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 224.25,
+   "say": "ووكالة الطاقة الدولية متوقعة الرقم يتضاعف تقريبا",
+   "board": {
+    "kind": "hungry"
+   },
+   "step": 1,
+   "stepT": 224.25
+  },
+  {
+   "t": 228.56,
+   "say": "كوكب واحد يا فندم. فيه كمبيوترات بتسحب كهربا قد ",
+   "board": {
+    "kind": "hungry"
+   },
+   "step": 2,
+   "host": "left",
+   "emote": "serious",
+   "stepT": 228.56
+  },
+  {
+   "t": 233.96,
+   "say": "المشكلة عمرها ما كانت في الفيزيا.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 235.72,
+   "say": "قاموس البشر. آخر كلمتين في الملف. Gigawatt: ألف ",
+   "board": {
+    "kind": "e4dict"
+   },
+   "step": 0,
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 235.72,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 241.15,
+   "say": "ومنحنى البطة: شكل الطلب على المحطات بعد ما الشمس",
+   "board": {
+    "kind": "e4dict"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 241.15
+  },
+  {
+   "t": 247.82,
+   "say": "خلاصة الملف كله يا فندم. واحد: الكهربا شحنات ماش",
+   "board": {
+    "kind": "e4recap"
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 247.82,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 263.05,
+   "say": "بس لسه فيه مئات الملايين من غير لمبة، والمشكلة د",
+   "shot": "close",
+   "emote": "serious",
+   "calm": true,
+   "gesture": "pockets"
+  },
+  {
+   "t": 266.83,
+   "say": "ملف الكهربا اتقفل. أربع تقارير. والكوكب ده لسه ع",
+   "board": {
+    "kind": "e4recap"
+   },
+   "step": 1,
+   "stepT": 266.83,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 271.03,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 274.24,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "FILE CLOSED",
+    "next": "4 / 4",
+    "icons": [
+     "bolt",
+     "tower",
+     "gear"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

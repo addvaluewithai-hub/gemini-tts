@@ -1,0 +1,512 @@
+{
+ "title": "Earth Report: Electricity 4 of 4 (English dub track for the world-picture video)",
+ "recorded_for": "2026-11-15",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "English voice fitted to explain-electricity-04-world beat by beat (dub.cjs). Adapted, not translated."
+ ],
+ "style": "A small alien field agent reading his report on planet Earth aloud to his commanders back home, about something he has observed among humans. He calls them sir now and then. He explains what he found clearly and simply, a little amused. Quick, dry, deadpan. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. A warm, smooth, rounded voice in a comfortable middle register, relaxed and close to the microphone: never shrill, never nasal, soft on the s sounds. American English. He lets a joke land flat and never laughs at it.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "FILE CLOSED",
+   "next": "4 / 4",
+   "icons": [
+    "bolt",
+    "tower",
+    "gear"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "e4intro": {
+   "kind": "e4intro",
+   "ends": [
+    8.63,
+    10.63
+   ]
+  },
+  "storage": {
+   "kind": "storage",
+   "ends": [
+    4.65,
+    9.43,
+    9.71,
+    9.94
+   ]
+  },
+  "battery": {
+   "kind": "battery",
+   "ends": [
+    9.5,
+    8.28,
+    7.51,
+    11.17
+   ]
+  },
+  "bet": {
+   "kind": "bet",
+   "ends": [
+    5.8,
+    7.87,
+    9.17
+   ]
+  },
+  "sun": {
+   "kind": "sun",
+   "ends": [
+    9,
+    4.03,
+    10.08,
+    5.47,
+    7.62,
+    6.82
+   ]
+  },
+  "rooftops": {
+   "kind": "rooftops",
+   "ends": [
+    5.31,
+    8.95,
+    5.84
+   ]
+  },
+  "dark": {
+   "kind": "dark",
+   "ends": [
+    8.98,
+    7.78,
+    4.8
+   ]
+  },
+  "hungry": {
+   "kind": "hungry",
+   "ends": [
+    9.87,
+    4.31,
+    5.4
+   ]
+  },
+  "e4dict": {
+   "kind": "e4dict",
+   "ends": [
+    5.43,
+    6.67
+   ]
+  },
+  "e4recap": {
+   "kind": "e4recap",
+   "ends": [
+    19.01,
+    4.2
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "style": "Opening of the last report in the file. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "Sir, field report number four, and the last, on the electricity file. Today: where electricity is going.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "In the last reports I told you the grid's biggest problem: power can't be stored. What's made must be used in the same second. And that is changing right before my eyes.",
+     "show": "board",
+     "board": "e4intro",
+     "step": 0
+    },
+    {
+     "say": "Warehouse-sized batteries, sunlight that became some of their cheapest power, and a country that built half its grid on its roofs. And at the end, a number command must know: who here still has no light bulb at all.",
+     "show": "board",
+     "board": "e4intro",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "store",
+   "style": "The turn of the episode: something is changing. Brighter, with a good story.",
+   "beats": [
+    {
+     "say": "Start with the original problem: power can't be stored. But that's starting to change.",
+     "show": "board",
+     "board": "storage",
+     "step": 0
+    },
+    {
+     "say": "The old way: water. When power is spare and cheap, they pump water up to a lake on a mountain. When they need it, they let it fall through a turbine. A battery.. made of water.",
+     "show": "board",
+     "board": "storage",
+     "step": 1
+    },
+    {
+     "say": "The new way: batteries like the one in your phone, but the size of warehouses. In twenty twenty-five alone, a hundred and twelve gigawatts of them went in on the planet. And for the first time they passed water.",
+     "show": "board",
+     "board": "storage",
+     "step": 2
+    },
+    {
+     "say": "The reason: price. Storing a kilowatt-hour cost about fifteen hundred dollars in twenty ten. By twenty twenty-five, a hundred and eight. Down more than ninety percent.",
+     "show": "board",
+     "board": "storage",
+     "step": 3,
+     "host": "right"
+    },
+    {
+     "say": "The one thing here that gets cheaper.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 1,
+    "tag": "STORAGE",
+    "icon": "safe"
+   }
+  },
+  {
+   "id": "battery",
+   "style": "A patient teacher opening a battery up, simple and clear, with one dry aside.",
+   "beats": [
+    {
+     "say": "So how does a battery store anything? The one in your phone, your car, the warehouse: nearly the same idea. Inside are two sides, with a wall between them.",
+     "show": "board",
+     "board": "battery",
+     "step": 0
+    },
+    {
+     "say": "And tiny atoms of a metal called lithium move from one side to the other. When you charge, the power pushes the lithium to one side, like sending people up a ladder.",
+     "show": "board",
+     "board": "battery",
+     "step": 1
+    },
+    {
+     "say": "When you use the phone, the lithium goes back, and the electrons that came with it have to go round the outside, through the wire, running the device on the way.",
+     "show": "board",
+     "board": "battery",
+     "step": 2,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "So a battery isn't a box of electricity, sir. It's a ladder, with lithium climbing up and down. Every trip wears the ladder a little. That's why a phone battery after a few years doesn't last like it did.",
+     "show": "board",
+     "board": "battery",
+     "step": 3
+    },
+    {
+     "say": "It isn't tired. It's old.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 2,
+    "tag": "INSIDE A BATTERY",
+    "icon": "atom"
+   }
+  },
+  {
+   "id": "bet",
+   "style": "A true story told briskly, enjoying the bet and how it ended.",
+   "beats": [
+    {
+     "say": "Its most famous story was a bet. In twenty seventeen, a state in Australia kept losing power.",
+     "show": "board",
+     "board": "bet",
+     "step": 0
+    },
+    {
+     "say": "The owner of an electric car company posted online: I'll build you the world's biggest battery in a hundred days.. or it's free. It was done in about sixty-three.",
+     "show": "board",
+     "board": "bet",
+     "step": 1
+    },
+    {
+     "say": "In its first year it saved the grid about forty million Australian dollars. Because a battery answers any wobble in the balance in under a second. A normal plant needs minutes.",
+     "show": "board",
+     "board": "bet",
+     "step": 2,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "First time I've seen a rich human bet.. and the people win.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ],
+   "story": {
+    "n": 3,
+    "tag": "THE BET",
+    "icon": "cards"
+   }
+  },
+  {
+   "id": "sun",
+   "style": "Good news with a catch, then a surprising true story from Pakistan.",
+   "beats": [
+    {
+     "say": "The other game changer: the sun. Solar power got about ninety percent cheaper since twenty ten. It's now some of the cheapest power they've ever built.",
+     "show": "board",
+     "board": "sun",
+     "step": 0
+    },
+    {
+     "say": "One problem. Here's demand through the day. The sun peaks at noon.",
+     "show": "board",
+     "board": "sun",
+     "step": 1
+    },
+    {
+     "say": "So what's left for other plants is very low at noon.. then shoots up like a wall at sunset, when the sun leaves and people get home. Engineers call this shape the duck curve. Look at it. It really is a duck.",
+     "show": "board",
+     "board": "sun",
+     "step": 2
+    },
+    {
+     "say": "Here batteries come in: they charge at noon from the spare sun, and empty after sunset. They move noon into the night.",
+     "show": "board",
+     "board": "sun",
+     "step": 3,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Wind is the same story: it comes when it feels like it, not when demand does. Together the two made about seventeen percent of the planet's power in twenty twenty-five.",
+     "show": "board",
+     "board": "sun",
+     "step": 4
+    },
+    {
+     "say": "And without storage, some countries have so much power at noon that the price drops below zero. They pay you to use it.",
+     "show": "board",
+     "board": "sun",
+     "step": 5,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "Yes, sir. This planet now pays to get rid of electricity.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 4,
+    "tag": "THE SUN",
+    "icon": "bolt"
+   }
+  },
+  {
+   "id": "roofs",
+   "style": "A surprising true story, told with quiet respect for the people who did it.",
+   "beats": [
+    {
+     "say": "The strangest example: Pakistan. Grid power there is pricey and keeps cutting out. So people didn't wait for anyone.",
+     "show": "board",
+     "board": "rooftops",
+     "step": 0
+    },
+    {
+     "say": "In twenty twenty-four, the country imported seventeen gigawatts of solar panels. In one year. Most went onto roofs of homes, factories and farms.",
+     "show": "board",
+     "board": "rooftops",
+     "step": 1
+    },
+    {
+     "say": "The whole grid's peak demand there is about thirty. So people built half a grid.. on their roofs.",
+     "show": "board",
+     "board": "rooftops",
+     "step": 2,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "Nobody asked.",
+     "shot": "close",
+     "emote": "proud"
+    }
+   ],
+   "story": {
+    "n": 5,
+    "tag": "ROOFTOPS",
+    "icon": "tower"
+   }
+  },
+  {
+   "id": "dark",
+   "style": "The sincere passage of the file. Quiet and direct.",
+   "beats": [
+    {
+     "say": "Before I close the file, a number command must know. In twenty twenty-four, about seven hundred thirty million humans on this planet.. had no electricity at all.",
+     "show": "board",
+     "board": "dark",
+     "step": 0,
+     "calm": true
+    },
+    {
+     "say": "Eight in ten of them are in Africa south of the Sahara. And the number there today is about what it was in twenty ten. Because people grow faster than wires.",
+     "show": "board",
+     "board": "dark",
+     "step": 1,
+     "calm": true
+    },
+    {
+     "say": "So a child somewhere studies by a kerosene lamp.. in the same year power sells below zero somewhere else.",
+     "show": "board",
+     "board": "dark",
+     "step": 2,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    }
+   ],
+   "story": {
+    "n": 6,
+    "tag": "STILL DARK",
+    "icon": "eye"
+   }
+  },
+  {
+   "id": "hungry",
+   "style": "Brisk and a little wry: a new hungry customer for the grid.",
+   "beats": [
+    {
+     "say": "The new demand comes from somewhere else entirely: warehouses of computers that run artificial intelligence. In twenty twenty-four they drew about one and a half percent of the planet's power.",
+     "show": "board",
+     "board": "hungry",
+     "step": 0
+    },
+    {
+     "say": "And the International Energy Agency expects that to roughly double by twenty thirty.",
+     "show": "board",
+     "board": "hungry",
+     "step": 1
+    },
+    {
+     "say": "One planet, sir. Computers drawing that much power.. and people who've never seen a bulb at home.",
+     "show": "board",
+     "board": "hungry",
+     "step": 2,
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "The problem was never the physics.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ],
+   "story": {
+    "n": 7,
+    "tag": "NEW APPETITE",
+    "icon": "server"
+   }
+  },
+  {
+   "id": "dict",
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "The human dictionary. The file's last two words. Gigawatt: a thousand megawatts. One whole big power plant.",
+     "show": "board",
+     "board": "e4dict",
+     "step": 0
+    },
+    {
+     "say": "And the duck curve: demand on the plants once the sun came in. Low at noon, a wall at night. It really looks like a duck.",
+     "show": "board",
+     "board": "e4dict",
+     "step": 1,
+     "host": "right"
+    }
+   ],
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   }
+  },
+  {
+   "id": "recap",
+   "style": "Closing the whole file: summary, one sincere warning, and a slightly proud sign-off.",
+   "beats": [
+    {
+     "say": "Summary of the whole file, sir. One: electricity is charges moving round a circuit, as direct or alternating current. Two: it's made by a spinning magnet, travels at high voltage, and the grid is a balance set every second. Three: if the balance breaks, it falls like dominoes. And four: batteries and the sun are changing the rules now.",
+     "show": "board",
+     "board": "e4recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "But hundreds of millions still have no bulb, and that problem was never the physics.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "The electricity file is closed. Four reports. And this planet still has plenty that needs explaining.",
+     "show": "board",
+     "board": "e4recap",
+     "step": 1
+    },
+    {
+     "say": "This was Earth Report. Agent Peek. Transmission ends.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ],
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   }
+  }
+ ],
+ "theme": "day"
+}
