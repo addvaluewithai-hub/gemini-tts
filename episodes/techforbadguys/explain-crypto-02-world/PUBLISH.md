@@ -1,18 +1,24 @@
 # Publishing crypto part 2 (world picture)
 
-Not approved yet: this page describes the render sent to the owner for review. Nothing has been uploaded. Target
+The owner liked the first cut (old voice) on 2026-11-15; the final cut on the Vertex voice was sent for his look the same day. Nothing has been uploaded. Target
 release: Sunday 22 Nov 2026.
 
 ## The video
 
 - Branch `crypto-world`. Sets `video/sets/c2*.js` (shot list `shots.md`), shared props `video/sets/c2props.js`.
-- Voice: job `techforbadguys-explain-crypto-02-ar-c` (Arabic, Puck, the same direction as part 1; recorded
-  2026-11-12 for the slide version and kept, as part 1 kept its recording). Listen-back agreement: the heard text
-  matches the script except numbers written as digits and spelling (88% exact word match, no missing or added lines).
-- Length **427.5 s (7:07)**, 1920 x 1080, 30 fps; about 87 MB after the delivery encode; loudness −16.1 LUFS.
+- Voice: job `techforbadguys-explain-crypto-02-ar-v` (Arabic, Puck, recorded on Vertex AI with no API key, the same
+  model, voice and direction as part 1's -ar-v; Speech-to-Text listen-back agreement 0.913). Set ends retimed to it.
+- Length **440.0 s (7:20)**, 1920 x 1080, 30 fps, 13,200 frames; about 88 MB after the delivery encode; −16.4 LUFS.
+- English track: job `techforbadguys-explain-crypto-02-dub-en-w` (warm Puck, agreement 0.975), fitted with dub.cjs
+  (median 1.09x, two beats up to 1.4 s late), mixed with the video's music and effects: `audio-en.m4a`, −17.5 LUFS.
+
+## In R2 (bucket earth-report-assets)
+
+`crypto-02/video-world.mp4`, `crypto-02/audio-en.m4a`, `crypto-02/thumbnail-ar.jpg`, `crypto-02/thumbnail-en.jpg`,
+`crypto-02/captions-ar.srt`, `crypto-02/captions-en.srt`, `crypto-02/description-ar.txt`.
 
 ```
-video/produce.sh episodes/techforbadguys/explain-crypto-02-world techforbadguys-explain-crypto-02-ar-c /path/to/crypto02-world.mp4
+CLOUD_NAME=lskr7x7h video/produce.sh episodes/techforbadguys/explain-crypto-02-world techforbadguys-explain-crypto-02-ar-v /path/to/crypto02-world.mp4
 ```
 
 `transcript.json` and `video/cues/explain-crypto-02-world.json` come out unchanged (check `git diff`).
@@ -28,6 +34,5 @@ video/produce.sh episodes/techforbadguys/explain-crypto-02-world techforbadguys-
 
 - `upload.md` (titles, tags, settings, pinned comment), `description.txt` (chapters and sources), `captions.srt`.
 - `thumbnail-c.jpg`: the owner's own part 2 design (Arabic); `thumbnail-en.jpg`: the same picture in English.
-- `en.md`: the English entry. The English audio and `captions-en.srt` wait for the English voice (script ready in
-  `../explain-crypto-02-dub-en`, to be recorded on Vertex AI).
-- `shorts.json`: six proposed Shorts with their own closing lines, for the owner to pick from; not rendered.
+- `en.md`: the English entry. `captions-en.srt` is here; `audio-en.m4a` is in R2.
+- `shorts.json`: six proposed Shorts with their own closing lines (recorded on Vertex, Arabic and English), for the owner to pick from; not rendered.
