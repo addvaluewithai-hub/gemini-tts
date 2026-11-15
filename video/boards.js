@@ -59,7 +59,7 @@ const THEMES = {
     text: { "#f2b134": "#9a5a00", "#4a90c8": "#2a6496", "#5fa98a": "#2f7a5a", "#e0603a": "#a8401f" },
     bg: "radial-gradient(ellipse at 50% 38%,#fffaf0,#f7ead3 55%,#efc996 100%)",
     studio: { bg: "#f3dcb8", insert: "radial-gradient(ellipse at 50% 38%,#fffaf0,#f7ead3 55%,#efc996 100%)", grid: "rgba(150,100,50,.10)",
-      wall0: "#f7e6c8", wall1: "#efd2a4", wall2: "#e3b985", glow: ".3", desk0: "#e0603a", desk1: "#b94a2a", front0: "#e86d45", front1: "#c9522e", front2: "#a8401f",
+      wall0: "#f7e6c8", wall1: "#efd2a4", wall2: "#e3b985", glow: ".3", desk0: "#e0603a", desk1: "#b94a2a", front0: "#3a2f55", front1: "#2f2647", front2: "#251e3a",
       logo: "#fffaf0", tag: "#ffd9b8", shelf: "#c9a57a", pipdesk: "linear-gradient(#e0603a,#b94a2a)", chipBg: "rgba(255,250,240,.95)", chipInk: "#2a2440", chipSub: "#7a4a2a",
       brand: "#2a2440", brandShadow: "0 2px 0 rgba(255,250,240,.8)", brandSub: "#b94a2a", vig: "radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(80,40,0,.16) 100%)" } },
 };
