@@ -284,6 +284,5 @@
  "peekFixed": {
   "h": 0.3,
   "side": "right"
- },
- "captions": true
+ }
 }
