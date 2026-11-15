@@ -85,7 +85,10 @@ def tt_access_token():
 
 
 def tt_api(path, body):
-    st, _, j = _http("POST", TT + path, json.dumps(body).encode(), {"Authorization": "Bearer " + tt_access_token(), "Content-Type": "application/json; charset=UTF-8"})
+    for attempt in range(5):                                    # TikTok asks for a retry on 5xx
+        st, _, j = _http("POST", TT + path, json.dumps(body).encode(), {"Authorization": "Bearer " + tt_access_token(), "Content-Type": "application/json; charset=UTF-8"})
+        if st < 500: break
+        time.sleep(5 * (attempt + 1))
     err = (j.get("error") or {}) if isinstance(j, dict) else {}
     if st >= 300 or err.get("code") not in (None, "ok"):
         sys.exit(f"TikTok refused {path} ({st}): {err.get('code')}: {err.get('message')} log_id={err.get('log_id')}")
@@ -142,6 +145,7 @@ def tiktok_upload(video, mode, caption, cover_ms=None, aigc=False, no_comments=F
         if aigc: post["is_aigc"] = True
         d = tt_api("/v2/post/publish/video/init/", {"post_info": post, "source_info": source})
     pid, url = d["publish_id"], d["upload_url"]
+    print(f"tiktok publish_id {pid}", flush=True)                # printed first, so a later failure still leaves a handle
     with open(video, "rb") as f:
         for i in range(count):
             start = i * chunk; end = size - 1 if i == count - 1 else start + chunk - 1
