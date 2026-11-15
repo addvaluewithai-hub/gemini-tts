@@ -36,7 +36,7 @@ const DAM = TOWNS[0], ST = [960, 520];
 function s0(a, tot) {
   const v = portrait();
   const c = camAt(a, v ? [[0, 960, 540, 0.66], [3.6, 960, 540, 0.68], [4.6, ST[0], ST[1] + 20, 2.6], [8.61, ST[0], ST[1] + 20, 2.7]] : [[0, 960, 540, 1.0], [3.6, 960, 540, 1.04], [4.6, ST[0], ST[1] - 20, 3.0], [8.61, ST[0], ST[1] - 20, 3.12]]);
-  const q = a > 2.0 ? at(960, 120, `${rings(0, -60, 110, P.gold, 0.25)}${text(0, 30, "?", 220, P.gold)}`, pop(a - 2.14) * (1 - seg(a, 3.7, 4.2))) : "";
+  const q = a > 2.0 ? at(960, v ? 120 : 230, `${rings(0, -60, 110, P.gold, 0.25)}${text(0, 30, "?", 220, P.gold)}`, pop(a - 2.14) * (1 - seg(a, 3.7, 4.2))) : "";
   const st = at(ST[0], ST[1] + 60, station(tot, { lit: 0, smoke: false }), 0.3);
   const needs = [[6.28, -150, 0, pump], [7.0, 0, -130, fan], [7.64, 150, 0, pc]].map(([t0, dx, dy, f]) => a > t0 - 0.05 ? at(ST[0] + dx, ST[1] + dy, `${f(0, tot)}${at(44, -44, cross(0, 0, 22, RED, a - t0 - 0.15))}`, 0.42 * pop(a - t0)) : "").join("");
   const g = night(c, tot, 13) + layer(land(() => 0) + at(DAM[0], DAM[1] + 40, dam(0), 0.42) + st + needs + q, c);
@@ -62,21 +62,21 @@ function s1(a, tot) {
 function s2(a, tot) {
   const v = portrait();
   const c = camAt(a, v ? [[0, 960, 900, 1.0], [7.52, 960, 900, 1.02]] : [[0, 980, 520, 1.0], [7.52, 980, 520, 1.02]]);
-  const DX = v ? 960 : 1150, DY = v ? 420 : 400;
-  const big = at(DX, DY, dial(50 + 0.03 * Math.sin(tot * 3), { r: v ? 230 : 220 }));
+  const DX = v ? 960 : 1000, DY = v ? 420 : 380;
+  const big = at(DX, DY, dial(50 + 0.03 * Math.sin(tot * 3), { r: v ? 230 : 200 }));
   // three pieces with their own small dial; each needle sweeps, locks on 50, and the piece slides into the island
   const T = [0.34, 1.36, 2.0];
   const pieces = T.map((t0, i) => { const lock = seg(a, t0 + 0.4, t0 + 0.7), join = ease(seg(a, t0 + 0.7, t0 + 1.3));
     const f = lock < 1 ? 50 + 0.7 * Math.sin(a * 6 + i) * (1 - lock) : 50;
-    const x0 = v ? 300 + i * 240 : 480 + i * 30, y0 = v ? 900 : 230 + i * 180, x1 = v ? 760 + i * 140 : DX - 120 + i * 120, y1 = v ? 760 : DY + 330;
+    const x0 = v ? 300 + i * 240 : 480 + i * 30, y0 = v ? 900 : 230 + i * 180, x1 = v ? 760 + i * 140 : DX - 120 + i * 120, y1 = v ? 760 : DY + 300;
     const x = lerp(x0, x1, join), y = lerp(y0, y1, join), k = lerp(1, 0.6, join);
     return at(x, y, `${two(rr(-100, -60, 200, 120, 18), "#164a62", "#0f3a4f", 0, 6)}${[0, 1, 2].map((j) => `<rect x="${-70 + j * 26}" y="-30" width="18" height="40" rx="3" fill="${mix(DARKW, P.win, join)}"/>`).join("")}${at(56, -2, dial(f, { r: 40, lit: lock }), 1)}${lock >= 1 ? rings(56, -2, 50, P.green, 0.3 * (1 - join), 1.3) : ""}`, k); }).join("");
   // hours on a clock, days on calendar pages
-  const CX = v ? 760 : 1540, CY = v ? 1180 : 760;
-  const clock = a > 3.3 ? at(CX, CY, `${stopwatch(seg(a, 3.36, 5.4) * 6, 70)}${at(120, 0, text(0, 30, "h", 80, P.gold))}`, pop(a - 3.36)) : "";
-  const days = a > 4.4 ? at(CX + 300, CY - 10, [0, 1, 2].map((k) => k === 0 ? calPage("3", "", 0.5, 150) : calFlip(String(k === 2 ? 1 : 2), "", seg(a, 4.6 + (2 - k) * 0.3, 4.9 + (2 - k) * 0.3), 150)).join(""), 0.5 * pop(a - 4.5)) : "";
+  const CX = v ? 760 : 1440, CY = v ? 1180 : 300;
+  const clock = a > 3.3 ? at(CX, CY, `${stopwatch(seg(a, 3.36, 5.4) * 6, v ? 70 : 95)}${at(v ? 120 : 150, 0, text(0, 30, "h", v ? 80 : 100, P.gold))}`, pop(a - 3.36)) : "";
+  const days = a > 4.4 ? at(CX + (v ? 300 : 340), CY - 10, [0, 1, 2].map((k) => k === 0 ? calPage("3", "", 0.5, 150) : calFlip(String(k === 2 ? 1 : 2), "", seg(a, 4.6 + (2 - k) * 0.3, 4.9 + (2 - k) * 0.3), 150)).join(""), (v ? 0.5 : 0.62) * pop(a - 4.5)) : "";
   // the fall and the rise
-  const AX = v ? 760 : 780, AY = v ? 1520 : 800;
+  const AX = v ? 760 : 1420, AY = v ? 1520 : 760;
   const fall = a > 5.4 ? at(AX, AY, `${drawn("M0 -150L0 120", seg(a, 5.44, 5.6), RED, 26)}<path d="M-50 70L0 140L50 70Z" fill="${RED}" opacity="${seg(a, 5.55, 5.65).toFixed(2)}"/>${at(90, 10, text(0, 30, "s", 90, RED), seg(a, 5.6, 5.8))}`) : "";
   const rise = a > 6.25 ? at(AX + 300, AY, `${drawn("M0 140L0 -130", seg(a, 6.3, 7.4), P.gold, 26)}<path d="M-50 -80L0 -150L50 -80Z" fill="${P.gold}" opacity="${seg(a, 7.2, 7.4).toFixed(2)}"/>${at(90, 10, text(0, 30, "h", 90, P.gold), seg(a, 6.5, 6.8))}`) : "";
   const g = night(c, tot, 29) + layer(big + pieces + clock + days + fall + rise, c);
