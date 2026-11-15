@@ -1,0 +1,273 @@
+{
+ "note": "PROPOSED Shorts for crypto part 6 (drawn version), for the owner to pick. Not recorded or rendered: per the planner (2026-11-15) nothing is rendered until the owner has judged the two big-Peek tests; then they are rendered in the look he picks, with burned-in Arabic captions. `parts` are [from, to] in seconds of the finished episode (beat time plus the 0.3 s lead, cues/explain-crypto-06-world.json); the first part is the hook (first 2 s), and the order is chosen so the end loops back to it. `cta` is the closing line to record on Vertex AI (Arabic, Puck, part 1's direction) with its listen-back; `cta_short` is the shortened line for the big-Peek look. {full} is replaced by the episode's link once it is uploaded. Every figure is dated in the episode and in the description; nothing is advice.",
+ "full": null,
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "tweet",
+   "title": "أول تغريدة اتباعت بـ3 مليون.. وبعدها عرضوا 280 دولار 🐦 #Shorts",
+   "description": "أول تغريدة في تاريخ Twitter اتباعت بحوالي تلاتة مليون دولار سنة 2021. صاحبها عرضها للبيع بعد سنة، وأعلى عرض جاله: 280 دولار. اللي اشترى ماكانش بيشتري الصورة، كان بيشتري سطر في الدفتر. وبعد سنتين دراسة لقت إن 95% من مجموعات الـNFT بقت ماتساويش حاجة.\n\nالتقرير كامل: 20 مليون عملة.. وأكتر من نصهم مات | ملف العملات المشفرة 6/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #NFT #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "NFT"
+   ],
+   "parts": [
+    [
+     28.42,
+     36.08
+    ],
+    [
+     24.69,
+     28.42
+    ],
+    [
+     36.08,
+     58.88
+    ]
+   ],
+   "why": "Hook: 3 million to 280 dollars. Ends on 'the idea came back in a suit'.",
+   "cta": "الصورة أي حد ينسخها.. السطر بس اللي بتاعك. وإيه حكاية العملة اللي عليها كلب؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "الصورة أي حد ينسخها.. السطر بس اللي بتاعك. وإيه حكاية العملة اللي عليها كلب؟",
+   "end": {
+    "audio": "shorts/cta-tweet.wav",
+    "words": "shorts/cta-tweet.words.json",
+    "card": {
+     "icons": [
+      "file",
+      "cash"
+     ],
+     "sub": "CRYPTO FILE · 6/6"
+    }
+   },
+   "body_seconds": 34.2,
+   "en": {
+    "title": "The First Tweet Sold for $3 Million. A Year Later: $280 🐦 #Shorts",
+    "description": "The first tweet in Twitter's history sold for almost three million dollars in 2021. A year later its owner listed it; the best offer was 280 dollars. The buyer wasn't buying the picture, just a line in a ledger. Two years on, a study found 95 percent of NFT collections were worth nothing.\n\nThe full report: 20 Million Coins, and More Than Half Are Dead | Crypto File 6/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #NFT #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "NFT"
+    ],
+    "cta": "Anyone can copy the picture; only the line is yours. And what's the story of the coin with a dog on it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "Anyone can copy the picture; only the line is yours. And what's the story of the coin with a dog on it?",
+    "end_audio": "shorts/cta-en-tweet.wav"
+   }
+  },
+  {
+   "key": "doge",
+   "title": "نكتة عليها صورة كلب وصلت 90 مليار دولار 🐕 #Shorts",
+   "description": "سنة 2013 اتنين مبرمجين عملوا عملة تريقة عليها صورة كلب. سنة 2021 النكتة وصلت حوالي 90 مليار دولار. واحد من اللي عملوها باع نصيبه بدري واشترى عربية مستعملة. وحتى رئيس دولة عمل عملة باسمه قبل ما يستلم الحكم بتلات أيام: وصلت 74 دولار، وفي نوفمبر 2026 دولار وشوية.\n\nالتقرير كامل: 20 مليون عملة.. وأكتر من نصهم مات | ملف العملات المشفرة 6/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #Dogecoin #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "Dogecoin"
+   ],
+   "parts": [
+    [
+     63.34,
+     83.65
+    ],
+    [
+     88.06,
+     97.52
+    ]
+   ],
+   "why": "Hook: a dog-coin joke at 90 billion. Ends on the 98% fall, dated.",
+   "cta": "أكتر من نص العشرين مليون عملة مات. مين بيكسب في اللعبة دي؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "أكتر من نص العشرين مليون عملة مات. مين بيكسب في اللعبة دي؟",
+   "end": {
+    "audio": "shorts/cta-doge.wav",
+    "words": "shorts/cta-doge.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "chartdown"
+     ],
+     "sub": "CRYPTO FILE · 6/6"
+    }
+   },
+   "body_seconds": 29.8,
+   "en": {
+    "title": "A Joke Coin With a Dog on It Hit $90 Billion 🐕 #Shorts",
+    "description": "In 2013 two programmers made a joke coin with a dog on it. By 2021 the joke was worth about ninety billion dollars. One of its creators sold early and bought a used car. Even a head of state launched a coin three days before taking office: it hit 74 dollars, and in November 2026 it was just over one.\n\nThe full report: 20 Million Coins, and More Than Half Are Dead | Crypto File 6/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #Dogecoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "Dogecoin"
+    ],
+    "cta": "More than half of the twenty million coins are dead. Who wins this game? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "More than half of the twenty million coins are dead. Who wins this game?",
+    "end_audio": "shorts/cta-en-doge.wav"
+   }
+  },
+  {
+   "key": "rugpull",
+   "title": "20 مليون عملة.. وأكتر من نصهم مات 🪦 #Shorts",
+   "description": "البشر عملوا عشرين مليون عملة لحد آخر 2025، وأكتر من نصهم مات. واللعب نوعين: سحب السجادة، صاحب العملة يلمّ فلوس الناس ويختفي. والنفخ والتفريغ: يشتروا بدري ويعملوا دوشة، وأول ما إنت تدخل هم يطلعوا. وفي الحالتين اللي بيخسر دايماً: اللي جه متأخر.\n\nالتقرير كامل: 20 مليون عملة.. وأكتر من نصهم مات | ملف العملات المشفرة 6/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #عملات_الميم #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "عملات الميم"
+   ],
+   "parts": [
+    [
+     9.3,
+     14.0
+    ],
+    [
+     97.52,
+     118.68
+    ]
+   ],
+   "why": "Hook: twenty million coins. Loop: 'still looking for the next one' leads back to the twenty million.",
+   "cta": "عمر العملة هنا أقصر من عمر علبة الزبادي. والحكومات عملت إيه؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "عمر العملة هنا أقصر من عمر علبة الزبادي. والحكومات عملت إيه؟",
+   "end": {
+    "audio": "shorts/cta-rugpull.wav",
+    "words": "shorts/cta-rugpull.words.json",
+    "card": {
+     "icons": [
+      "ghost",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 6/6"
+    }
+   },
+   "body_seconds": 25.9,
+   "en": {
+    "title": "20 Million Coins, More Than Half Dead 🪦 #Shorts",
+    "description": "Humans made twenty million coins by the end of 2025, and more than half are dead. Two games: the rug pull, where the creator collects everyone's money and vanishes; and the pump and dump, where insiders buy early, make noise, and get out the moment you get in. Either way, the loser is whoever came late.\n\nThe full report: 20 Million Coins, and More Than Half Are Dead | Crypto File 6/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #memecoins #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "memecoins"
+    ],
+    "cta": "Here a coin lives shorter than a yogurt pot. So what did governments do? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "Here a coin lives shorter than a yogurt pot. So what did governments do?",
+    "end_audio": "shorts/cta-en-rugpull.wav"
+   }
+  },
+  {
+   "key": "verdict",
+   "title": "بعد 6 تقارير: الكريبتو نفع ولا لأ؟ ⚖️ #Shorts",
+   "description": "تقييم العميل Peek النهائي. اللي اشتغل: الدفتر نفسه شغال 17 سنة ومحدش قدر يغيّر فيه سطر قديم، وأول حاجة رقمية ماتتنسخش، والدولار الرقمي بيتستخدم بجد. واللي مااشتغلش: محدش بيشتري بيها عيش، والوسيط رجع تلات مرات، وحوالين الاختراع اتبنى أكبر كازينو على الكوكب.\n\nالتقرير كامل: 20 مليون عملة.. وأكتر من نصهم مات | ملف العملات المشفرة 6/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكريبتو #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "الكريبتو"
+   ],
+   "parts": [
+    [
+     145.29,
+     181.07
+    ]
+   ],
+   "why": "Hook: 'after six reports'. About 36 s; can end at 175.4 (32 s) if it must be shorter.",
+   "cta": "الاختراع عبقري.. والبشر استخدموه زي كل حاجة عبقرية. الحكم كامل في آخر تقرير. التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "الاختراع عبقري.. والبشر استخدموه زي كل حاجة عبقرية. الحكم كامل في آخر تقرير.",
+   "end": {
+    "audio": "shorts/cta-verdict.wav",
+    "words": "shorts/cta-verdict.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "bank"
+     ],
+     "sub": "CRYPTO FILE · 6/6"
+    }
+   },
+   "body_seconds": 35.8,
+   "en": {
+    "title": "After Six Reports: Did Crypto Work? ⚖️ #Shorts",
+    "description": "Agent Peek's final verdict. What worked: a ledger running for seventeen years that no one could rewrite, the first digital thing that can't be copied, and a digital dollar people really use. What didn't: no one buys bread with it, the middleman came back three times, and around the invention they built the biggest casino on the planet.\n\nThe full report: 20 Million Coins, and More Than Half Are Dead | Crypto File 6/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #crypto #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "crypto"
+    ],
+    "cta": "A brilliant invention, used the way humans use every brilliant thing. The full verdict is in the last report. The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "A brilliant invention, used the way humans use every brilliant thing. The full verdict is in the last report.",
+    "end_audio": "shorts/cta-en-verdict.wav"
+   }
+  },
+  {
+   "key": "quantum",
+   "title": "الكمبيوتر الكمّي ممكن يكسر البيتكوين؟ 🔓 #Shorts",
+   "description": "أجهزة جديدة اسمها الكمبيوتر الكمّي ممكن في يوم تكسر المفاتيح. وفي مارس 2026 باحثين في Google قالوا إن ده محتاج أجهزة أصغر عشرين مرة من المتوقع. والمبرمجين بيجهّزوا أقفال جديدة: سباق ولسه ماخلصش. والخلاصة: الاختراع عبقري، وربعه بيحل مشكلة وتلات أرباعه رهان.\n\nالتقرير كامل: 20 مليون عملة.. وأكتر من نصهم مات | ملف العملات المشفرة 6/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الكمبيوتر_الكمي #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "الكمبيوتر الكمي"
+   ],
+   "parts": [
+    [
+     187.1,
+     219.05
+    ]
+   ],
+   "why": "Hook: quantum breaking the keys. Ends on 'not authorised to give investment advice'.",
+   "cta": "سباق.. ولسه ماخلصش. الحكم النهائي على الملف كله في آخر تقرير. التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "سباق.. ولسه ماخلصش. الحكم النهائي على الملف كله في آخر تقرير.",
+   "end": {
+    "audio": "shorts/cta-quantum.wav",
+    "words": "shorts/cta-quantum.words.json",
+    "card": {
+     "icons": [
+      "file",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 6/6"
+    }
+   },
+   "body_seconds": 32.0,
+   "en": {
+    "title": "Could a Quantum Computer Break Bitcoin? 🔓 #Shorts",
+    "description": "New machines called quantum computers might one day break the keys. In March 2026 Google researchers said it would take machines twenty times smaller than expected. Programmers are building new locks: a race that isn't over. The verdict: a brilliant invention, a quarter solving problems, three quarters betting.\n\nThe full report: 20 Million Coins, and More Than Half Are Dead | Crypto File 6/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #quantum #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "quantum"
+    ],
+    "cta": "A race that isn't over. The final verdict on the whole file is in the last report. The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "A race that isn't over. The final verdict on the whole file is in the last report.",
+    "end_audio": "shorts/cta-en-quantum.wav"
+   }
+  }
+ ]
+}

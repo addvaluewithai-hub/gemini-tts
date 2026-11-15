@@ -1,0 +1,215 @@
+{
+ "note": "PROPOSED Shorts for crypto part 5 (drawn version), for the owner to pick. Not recorded or rendered: per the planner (2026-11-15) nothing is rendered until the owner has judged the two big-Peek tests; then they are rendered in the look he picks, with burned-in Arabic captions. `parts` are [from, to] in seconds of the finished episode (beat time plus the 0.3 s lead, cues/explain-crypto-05-world.json); the first part is the hook (first 2 s), and the order is chosen so the end loops back to it. `cta` is the closing line to record on Vertex AI (Arabic, Puck, part 1's direction) with its listen-back; `cta_short` is the shortened line for the big-Peek look. {full} is replaced by the episode's link once it is uploaded. Every figure is dated in the episode and in the description; nothing is advice.",
+ "full": null,
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "dao",
+   "title": "سحب 60 مليون دولار.. من غير ما يكسر حاجة 🧑‍💻 #Shorts",
+   "description": "سنة 2016 عقد ذكي كبير طلع فيه غلطة، وواحد سحب منه ستين مليون دولار. من غير ما يكسر حاجة: هو بس قرا العقد أحسن منهم. البشر رجّعوا الدفتر لورا والشبكة اتقسمت اتنين. شعارهم كان: الكود هو القانون.. لحد ما الكود خد فلوسهم. والقصة اتكررت مية مرة.\n\nالتقرير كامل: يعني إيه Ethereum والعقد الذكي والدولار الرقمي؟ | ملف العملات المشفرة 5/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #Ethereum #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "Ethereum"
+   ],
+   "parts": [
+    [
+     80.29,
+     99.28
+    ],
+    [
+     245.59,
+     253.41
+    ]
+   ],
+   "why": "Hook: 60 million taken. Loop: 'remember the 60 million contract?' leads back to the start.",
+   "cta": "البرنامج بيتنفذ زي ما اتكتب.. صح أو غلط. يعني إيه عقد ذكي أصلاً؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "البرنامج بيتنفذ زي ما اتكتب.. صح أو غلط. يعني إيه عقد ذكي أصلاً؟",
+   "end": {
+    "audio": "shorts/cta-dao.wav",
+    "words": "shorts/cta-dao.words.json",
+    "card": {
+     "icons": [
+      "file",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 5/6"
+    }
+   },
+   "body_seconds": 26.8,
+   "en": {
+    "title": "He Took $60 Million Without Breaking Anything 🧑‍💻 #Shorts",
+    "description": "In 2016 a big smart contract had a flaw, and someone drained sixty million dollars from it without breaking anything: he just read the contract better than they did. The humans rolled the ledger back and the network split in two. Their slogan was 'code is law', until the code took their money. It has happened a hundred times since.\n\nThe full report: Ethereum, Smart Contracts and the Digital Dollar | Crypto File 5/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #Ethereum #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "Ethereum"
+    ],
+    "cta": "The program runs as written, right or wrong. So what is a smart contract, anyway? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "The program runs as written, right or wrong. So what is a smart contract, anyway?",
+    "end_audio": "shorts/cta-en-dao.wav"
+   }
+  },
+  {
+   "key": "vending",
+   "title": "العقد الذكي = مكنة مشروبات 🥤 #Shorts",
+   "description": "سنة 2013 شاب عنده 19 سنة سأل: الدفتر ده ليه يسجّل فلوس بس؟ خلّوه يشغّل برامج. وسنة 2015 Ethereum اشتغل. العقد الذكي زي مكنة المشروبات: تحط العملة، المكنة تتأكد إن الشرط اتحقق، والحاجة تنزل لوحدها. من غير بيّاع، ومحدش يقدر يرجع في كلامه.\n\nالتقرير كامل: يعني إيه Ethereum والعقد الذكي والدولار الرقمي؟ | ملف العملات المشفرة 5/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #العقد_الذكي #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "العقد الذكي"
+   ],
+   "parts": [
+    [
+     25.86,
+     57.62
+    ]
+   ],
+   "why": "Hook: the 19-year-old's question. Ends on 'no one can change it once it's placed'.",
+   "cta": "اتفاق بين اتنين مايعرفوش بعض.. والضامن برنامج. طب لو البرنامج فيه غلطة؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "اتفاق بين اتنين مايعرفوش بعض.. والضامن برنامج. طب لو البرنامج فيه غلطة؟",
+   "end": {
+    "audio": "shorts/cta-vending.wav",
+    "words": "shorts/cta-vending.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "file"
+     ],
+     "sub": "CRYPTO FILE · 5/6"
+    }
+   },
+   "body_seconds": 31.8,
+   "en": {
+    "title": "A Smart Contract Is a Vending Machine 🥤 #Shorts",
+    "description": "In 2013 a nineteen-year-old asked: why should this ledger only record money? Let it run programs. In 2015 Ethereum went live. A smart contract is a vending machine: put in the coin, the machine checks the condition, and the item drops by itself. No seller, and no one can go back on the deal.\n\nThe full report: Ethereum, Smart Contracts and the Digital Dollar | Crypto File 5/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #smartcontract #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "smartcontract"
+    ],
+    "cta": "A deal between two strangers, guaranteed by a program. And if the program has a bug? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "A deal between two strangers, guaranteed by a program. And if the program has a bug?",
+    "end_audio": "shorts/cta-en-vending.wav"
+   }
+  },
+  {
+   "key": "freeze",
+   "title": "جمّدوا مليار ونص دولار في نص ساعة 🧊 #Shorts",
+   "description": "الدولار الرقمي: تدّي الشركة دولار حقيقي، وتديك دولار رقمي بيتحرك في دقايق لأي بلد. بس هنا فيه شركة، والشركة عندها زرار تجميد. بعد سرقة Binance في أكتوبر 2026، الشركة اللي ورا أكبر عملة مستقرة جمّدت حوالي مليار ونص دولار في نص ساعة.\n\nالتقرير كامل: يعني إيه Ethereum والعقد الذكي والدولار الرقمي؟ | ملف العملات المشفرة 5/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الدولار_الرقمي #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "الدولار الرقمي"
+   ],
+   "parts": [
+    [
+     197.77,
+     211.51
+    ],
+    [
+     163.38,
+     176.56
+    ]
+   ],
+   "why": "Hook: the freeze button. Loop: 'any day, any country' leads back to 'but there's a company here'.",
+   "cta": "بيتحرك زي العملات المشفرة.. وبيتجمّد زي البنوك. وإيه اللي حصل للنوع اللي من غير دولارات؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "بيتحرك زي العملات المشفرة.. وبيتجمّد زي البنوك. وإيه اللي حصل للنوع اللي من غير دولارات؟",
+   "end": {
+    "audio": "shorts/cta-freeze.wav",
+    "words": "shorts/cta-freeze.words.json",
+    "card": {
+     "icons": [
+      "cash",
+      "bank"
+     ],
+     "sub": "CRYPTO FILE · 5/6"
+    }
+   },
+   "body_seconds": 26.9,
+   "en": {
+    "title": "They Froze $1.5 Billion in Half an Hour 🧊 #Shorts",
+    "description": "The digital dollar: give the company a real dollar and get a digital one that moves to any country in minutes. But there's a company here, and it has a freeze button. After the Binance theft in October 2026, the company behind the biggest stablecoin froze about one and a half billion dollars within half an hour.\n\nThe full report: Ethereum, Smart Contracts and the Digital Dollar | Crypto File 5/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #stablecoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "stablecoin"
+    ],
+    "cta": "It moves like crypto and freezes like a bank. And what happened to the kind with no dollars behind it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "It moves like crypto and freezes like a bank. And what happened to the kind with no dollars behind it?",
+    "end_audio": "shorts/cta-en-freeze.wav"
+   }
+  },
+  {
+   "key": "stake",
+   "title": "الغني بيزيد غنى.. حتى على البلوكتشين 🎰 #Shorts",
+   "description": "Ethereum استغنى عن التعدين: اللي عايز يكتب الصفحة يحط عملاته رهن، والشبكة تختار واحد بالقرعة. يكتب صح ياخد مكافأة، يغش رهنه يتحرق. وفي سبتمبر 2022 كهربا الشبكة نزلت أكتر من 99% في ليلة. بس اللي راهن أكتر يكسب أكتر. البشر عندهم الاختراع ده من زمان: الاقتصاد.\n\nالتقرير كامل: يعني إيه Ethereum والعقد الذكي والدولار الرقمي؟ | ملف العملات المشفرة 5/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #إثبات_الحصة #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "إثبات الحصة"
+   ],
+   "parts": [
+    [
+     106.32,
+     141.02
+    ]
+   ],
+   "why": "Hook: the lottery and the burned stake. About 35 s; the longest of the set.",
+   "cta": "حراسة من غير كهربا.. بس الحارس هو اللي معاه فلوس أكتر. إزاي بنوا بنك من غير بنك؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "حراسة من غير كهربا.. بس الحارس هو اللي معاه فلوس أكتر. إزاي بنوا بنك من غير بنك؟",
+   "end": {
+    "audio": "shorts/cta-stake.wav",
+    "words": "shorts/cta-stake.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "chartdown"
+     ],
+     "sub": "CRYPTO FILE · 5/6"
+    }
+   },
+   "body_seconds": 34.7,
+   "en": {
+    "title": "The Rich Get Richer, Even on the Blockchain 🎰 #Shorts",
+    "description": "Ethereum dropped mining: whoever wants to write the page stakes their coins, and the network picks one by lottery. Write honestly, get a reward; cheat, and the stake burns. In September 2022 the network's electricity use fell more than 99 percent overnight. But whoever stakes more earns more. Humans invented this long ago: it's called the economy.\n\nThe full report: Ethereum, Smart Contracts and the Digital Dollar | Crypto File 5/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #proofofstake #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "proofofstake"
+    ],
+    "cta": "Guarding without electricity, but the guard is whoever has the most money. How did they build a bank with no bank? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "Guarding without electricity, but the guard is whoever has the most money. How did they build a bank with no bank?",
+    "end_audio": "shorts/cta-en-stake.wav"
+   }
+  }
+ ]
+}
