@@ -1,5 +1,5 @@
 {
- "note": "Shorts for science part 2 (world picture), in Science 1's snail look (owner, 16 Nov): Peek standing small at the side (peekFixed), no captions, no words on screen. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-02-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science02-short-cta-<key>). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
+ "note": "Shorts for science part 2 (world picture), in Science 1's snail look (owner, 16 Nov): Peek standing small at the side (peekFixed), no captions, no words on screen. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-02-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science02-short-cta-<key>; sailors uses take b, techforbadguys-science02-short-cta-sailors-b). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
  "peekFixed": {
   "h": 0.3,
   "side": "right"
