@@ -1,5 +1,5 @@
 {
- "note": "Shorts proposals for science part 1 (world picture), made at the owner's request (16 Nov): Peek standing small at the side (peekFixed, the electricity snail look), no captions. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-01-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science01-short-cta-<key>, English -en-w). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
+ "note": "Shorts proposals for science part 1 (world picture), made at the owner's request (16 Nov): Peek standing small at the side (peekFixed, the electricity snail look), no captions. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-01-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science01-short-cta-<key>; theory uses take b, techforbadguys-science01-short-cta-theory-b, English -en-w). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
  "full": "https://youtu.be/JmM_cagchzE",
  "boardZoom": 0.85,
  "shorts": [
