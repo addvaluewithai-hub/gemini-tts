@@ -1,5 +1,9 @@
 {
- "note": "Shorts proposals for science part 2 (world picture), for the owner to choose before rendering. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-02-world.json); closing lines recorded on Vertex once chosen.",
+ "note": "Shorts for science part 2 (world picture), in Science 1's snail look (owner, 16 Nov): Peek standing small at the side (peekFixed), no captions, no words on screen. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-02-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science02-short-cta-<key>). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ },
  "full": "",
  "boardZoom": 0.85,
  "shorts": [
@@ -21,12 +25,16 @@
    ],
    "parts": [
     [
-     3.88,
-     20.92
+     3.74,
+     11.06
     ],
     [
-     200.1,
-     224.49
+     14.79,
+     21.98
+    ],
+    [
+     210.31,
+     226.86
     ]
    ],
    "end": {
@@ -37,10 +45,11 @@
       "heart",
       "file"
      ],
-     "sub": "SCIENCE FILE · 2/4"
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
     }
    },
-   "content": 41.4,
+   "content": 31.1,
    "en": {
     "title": "A Study Said Chocolate Makes You Thin 🍫 It Was a Prank #Shorts",
     "description": "In 2015 newspapers reported that chocolate helps you lose weight. The trick: 18 measurements on about 15 people, so something was bound to come up by chance. Like throwing 18 darts and drawing the target around the one that stuck.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
@@ -51,7 +60,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "sailors",
@@ -71,8 +82,8 @@
    ],
    "parts": [
     [
-     110.39,
-     152.33
+     120.9,
+     153.0
     ]
    ],
    "end": {
@@ -83,10 +94,11 @@
       "ship",
       "cash"
      ],
-     "sub": "SCIENCE FILE · 2/4"
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
     }
    },
-   "content": 41.9,
+   "content": 32.1,
    "en": {
     "title": "12 Sailors, One Doctor, and the First Fair Test ⛵ #Shorts",
     "description": "In 1747 sailors were dying of scurvy and everyone had a cure. James Lind split 12 sick sailors into six pairs and tested. The pair given oranges and lemons recovered. The navy waited about fifty years.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
@@ -97,7 +109,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "placebo",
@@ -117,8 +131,8 @@
    ],
    "parts": [
     [
-     85.97,
-     109.9
+     90.75,
+     116.3
     ]
    ],
    "end": {
@@ -129,10 +143,11 @@
       "eye",
       "rules"
      ],
-     "sub": "SCIENCE FILE · 2/4"
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
     }
    },
-   "content": 23.9,
+   "content": 25.5,
    "en": {
     "title": "Why Do Scientists Blindfold Everyone? 🙈 #Shorts",
     "description": "Tell someone you gave them something helpful and sometimes they feel better, even if it was sugar water. So in serious trials nobody knows which group they're in... not even the person handing it out.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
@@ -143,7 +158,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "questions",
@@ -163,8 +180,8 @@
    ],
    "parts": [
     [
-     330.9,
-     372.48
+     345.79,
+     374.98
     ]
    ],
    "end": {
@@ -175,10 +192,11 @@
       "eye",
       "file"
      ],
-     "sub": "SCIENCE FILE · 2/4"
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
     }
    },
-   "content": 41.6,
+   "content": 29.2,
    "en": {
     "title": "6 Questions Before You Believe \"A Study Says\" 🧐 #Shorts",
     "description": "How many people? A comparison group? Humans or mice? Did anyone repeat it? Who paid? And the risk doubled... from what? If the story passes all six, believe it. A little.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
@@ -189,7 +207,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   }
  ]
 }

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-16T17:56:24.838Z",
+  "duration_ms": 11920,
+  "word_count": 27,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "ومع ذلك في دراسات بتعدي وهي غلط ازاي؟ التقرير كامل على قناه تقرير الارض اشترك في القناه وفعل الجرس علشان تقاريري السريه عن كوكبكم توصلك اول باول",
+  "source_text": "ومع ذلك فيه دراسات بتعدّي وهي غلط. إزاي؟ التقرير كامل على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "ومع ذلك فيه دراسات بتعدّي وهي غلط. إزاي؟ التقرير كامل على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول."
+    }
+  ],
+  "agreement": 0.963,
+  "flagged": false,
+  "missing_words": [
+    "فيه"
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 520,
+      "text": "ومع"
+    },
+    {
+      "start_ms": 520,
+      "end_ms": 1000,
+      "text": "ذلك"
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1200,
+      "text": "في"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1600,
+      "text": "دراسات"
+    },
+    {
+      "start_ms": 1600,
+      "end_ms": 2040,
+      "text": "بتعدي"
+    },
+    {
+      "start_ms": 2040,
+      "end_ms": 2280,
+      "text": "وهي"
+    },
+    {
+      "start_ms": 2280,
+      "end_ms": 2880,
+      "text": "غلط"
+    },
+    {
+      "start_ms": 2960,
+      "end_ms": 3560,
+      "text": "ازاي؟"
+    },
+    {
+      "start_ms": 3840,
+      "end_ms": 4440,
+      "text": "التقرير"
+    },
+    {
+      "start_ms": 4440,
+      "end_ms": 4760,
+      "text": "كامل"
+    },
+    {
+      "start_ms": 4760,
+      "end_ms": 4960,
+      "text": "على"
+    },
+    {
+      "start_ms": 4960,
+      "end_ms": 5240,
+      "text": "قناه"
+    },
+    {
+      "start_ms": 5240,
+      "end_ms": 5560,
+      "text": "تقرير"
+    },
+    {
+      "start_ms": 5560,
+      "end_ms": 6280,
+      "text": "الارض"
+    },
+    {
+      "start_ms": 6360,
+      "end_ms": 6760,
+      "text": "اشترك"
+    },
+    {
+      "start_ms": 6760,
+      "end_ms": 6840,
+      "text": "في"
+    },
+    {
+      "start_ms": 6840,
+      "end_ms": 7360,
+      "text": "القناه"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 7800,
+      "text": "وفعل"
+    },
+    {
+      "start_ms": 7800,
+      "end_ms": 8400,
+      "text": "الجرس"
+    },
+    {
+      "start_ms": 8440,
+      "end_ms": 8800,
+      "text": "علشان"
+    },
+    {
+      "start_ms": 8800,
+      "end_ms": 9160,
+      "text": "تقاريري"
+    },
+    {
+      "start_ms": 9160,
+      "end_ms": 9600,
+      "text": "السريه"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 9760,
+      "text": "عن"
+    },
+    {
+      "start_ms": 9760,
+      "end_ms": 10360,
+      "text": "كوكبكم"
+    },
+    {
+      "start_ms": 10360,
+      "end_ms": 10920,
+      "text": "توصلك"
+    },
+    {
+      "start_ms": 10920,
+      "end_ms": 11240,
+      "text": "اول"
+    },
+    {
+      "start_ms": 11240,
+      "end_ms": 11640,
+      "text": "باول"
+    }
+  ]
+}

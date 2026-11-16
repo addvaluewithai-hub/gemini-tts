@@ -57,7 +57,7 @@ function i3(a, tot) {
   const beam = `<g transform="rotate(${rock.toFixed(2)} ${CX} 420)"><path d="M${CX - 380} 420H${CX + 380}" stroke="${P.woodD}" stroke-width="18" stroke-linecap="round"/>${[-1, 1].map((s) => `<path d="M${CX + s * 360} 420v120" stroke="${P.steelD}" stroke-width="6"/><path d="M${CX + s * 360 - 120} 540h240l-30 30h-180Z" fill="${P.steel}"/>` + (s < 0 ? check(CX + s * 360, 500, 46, P.green, a - 0.9) : cross(CX + s * 360, 500, 46, P.red, a - 1.2))).join("")}</g>`;
   return { g: paperBg(c, tot) + layer(`<path d="M${CX} 420V880" stroke="${P.woodD}" stroke-width="22"/><path d="${rr(CX - 140, 870, 280, 30, 10)}" fill="${P.woodD}"/>` + beam + at(CX, 300, newspaper(front(), 0.45), 1, rock * 0.5) + (a > 2.0 ? at(CX, 120, `<circle r="60" fill="${P.ink}"/>${text(0, 30, "?", 90, P.gold)}`, pop(a - 2.0)) : ""), c) };
 }
-export const s2introSet = makeSet([i0, i1, i2, i3], [], P);
+export const s2introSet = makeSet([i0, i1, i2, i3], [{ z: 0.6 }, { z: 0.6 }, { z: 0.7 }, { z: 0.75 }], P);
 
 // ================= paper =================
 const megaphone = () => `${two("M-80 -40L60 -110V110L-80 40Z", P.coral, P.coralD, 0, 8)}${two(rr(-120, -44, 50, 88, 10), P.steel, P.steelD, 0, 6)}${[0, 1, 2].map((i) => `<path d="M${100 + i * 40} ${-60 - i * 20}q30 ${60 + i * 20} 0 ${120 + i * 40}" stroke="${P.ink}" stroke-width="8" fill="none" opacity=".4"/>`).join("")}`;
@@ -119,7 +119,7 @@ function f5(a, tot) { const c = camAt(a, [[0, 960, 540, 1.0], [7.06, 960, 540, 1
 function f6(a, tot) { const c = camAt(a, [[0, 1080, 540, 1.0], [5.8, 1100, 540, 1.04]]), band = ease(seg(a, 1.9, 2.5));
   const two_ = a > 4.6 ? [0, 1].map((i) => at(1500 + i * 120, 220, `<path d="${rr(-50, -18, 100, 36, 12)}" fill="${P.ink}"/>`, pop(a - 4.6 - i * 0.15))).join("") : "";
   return { g: paperBg(c, tot) + layer(floor(860) + at(780, 860, ladle(band), 1.4) + [0, 1, 2].map((i) => at(1200 + i * 180, 520, eye(1, 0), 0.9)).join("") + two_, c), in: [960, 420], inC: P.ink }; }
-export const fairtestSet = makeSet([f0, f1, f2, f3, f4, f5, f6], [], P);
+export const fairtestSet = makeSet([f0, f1, f2, f3, f4, f5, f6], [{ z: 0.6 }, { z: 0.6 }, { z: 0.6 }, { z: 0.7 }, { z: 0.8 }, { z: 0.8 }, { z: 0.75 }], P);
 
 // ================= lind =================
 const sea = (c, tot, dusk = 1) => `<rect width="${FW}" height="${FH}" fill="url(#bsky)"/>` + layer(`<circle cx="1500" cy="520" r="120" fill="#ffd98a" opacity="${dusk}"/>`, c, 0.2);
@@ -155,4 +155,4 @@ function l5(a, tot) { const c = camAt(a, [[0, 820, 540, 1.0], [4.04, 800, 540, 1
 function l6(a, tot) { const c = camAt(a, [[0, 960, 540, 1.0], [3.59, 960, 540, 1.04]]), yr = Math.round(lerp(1747, 1795, ease(seg(a, 0.8, 3.0))));
   const crates = a > 3.0 ? [0, 1, 2].map((i) => at(lerp(300, 820, ease(seg(a, 3.0 + i * 0.15, 3.5 + i * 0.15))), 720 - i * 6, `${two(rr(-60, -60, 120, 60, 6), P.wood, P.woodD, 0, 6)}${disc(-20, -70, 20, "#ffe066", "#e8c43a")}${disc(20, -70, 20, "#ff9f43", "#e07b1a")}`)).join("") : "";
   return { g: sea(c, tot, 0.8) + layer(at(1260, 780, ship(tot), 0.8) + at(0, 800, waves(-800, 3000, tot)) + `<path d="M300 760L900 640" stroke="${P.woodD}" stroke-width="16"/>` + crates + at(420, 260, calPage(String(yr), "", 0.9)), c) }; }
-export const lindSet = makeSet([l0, l1, l2, l3, l4, l5, l6], [], P);
+export const lindSet = makeSet([l0, l1, l2, l3, l4, l5, l6], [{ z: 0.65 }, { z: 0.8 }, { z: 0.6, bg: ["#1a1240", "#5a3f2a"] }, { z: 0.6, bg: ["#1a1240", "#5a3f2a"] }, { z: 0.6, bg: ["#1a1240", "#5a3f2a"] }, { z: 0.6 }, { z: 0.75 }], P);

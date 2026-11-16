@@ -75,7 +75,7 @@ function h6(a, tot) { const c = camAt(a, [[0, 960, 540, 1.0], [7.71, 960, 540, 1
 const face = (scared) => `<circle r="60" fill="${P.gold}"/><circle cx="-20" cy="-12" r="${scared ? 12 : 8}" fill="${P.ink}"/><circle cx="20" cy="-12" r="${scared ? 12 : 8}" fill="${P.ink}"/>${scared ? `<ellipse cx="0" cy="26" rx="16" ry="20" fill="${P.ink}"/>` : `<path d="M-24 20Q0 40 24 20" stroke="${P.ink}" stroke-width="8" fill="none"/>`}`;
 function h7(a, tot) { const c = camAt(a, [[0, 820, 540, 1.0], [7.19, 820, 540, 1.0]]);
   return { g: paperBg(c, tot) + layer(at(300, 240, dotGrid(2)) + (a > 2.3 ? at(1250, 300, tagNum("9,998", 80, P.green), pop(a - 2.3)) : "") + (a > 4.3 ? at(1250, 520, tagNum("2 / 10,000", 56) + check(230, 0, 40, P.green, a - 4.5), pop(a - 4.3)) : "") + (a > 5.3 ? at(1250, 760, face(true) + cross(110, -50, 40, P.red, a - 5.6), pop(a - 5.3)) : ""), c) }; }
-export const headlineSet = makeSet([h0, h1, h2, h3, h4, h5, h6, h7], [], P);
+export const headlineSet = makeSet([h0, h1, h2, h3, h4, h5, h6, h7], [{ z: 0.6 }, { z: 0.6 }, { z: 0.8 }, { z: 0.8 }, { z: 0.8 }, { z: 0.8 }, { z: 0.8 }, { z: 0.6 }], P);
 
 // ================= dictionary and recap =================
 const revMask = () => `<path d="M-60 -10Q-60 -40 -20 -36Q0 -30 20 -36Q60 -40 60 -10Q60 20 20 14Q0 6 -20 14Q-60 20 -60 -10Z" fill="${P.ink}"/><circle cx="-26" cy="-12" r="10" fill="#fffaf0"/><circle cx="26" cy="-12" r="10" fill="#fffaf0"/>`;

@@ -85,7 +85,7 @@ const phoneOld = () => `${two(rr(-90, -60, 180, 60, 14), P.ink, "#000", 0, 6)}${
 function c6(a, tot) { const c = camAt(a, [[0, 820, 540, 1.0], [7.74, 800, 540, 0.96]]), rel = seg(a, 0.2, 1.0);
   const papers = Array.from({ length: 9 }, (_, i) => { const t0 = 5.1 + i * 0.12; return a > t0 ? at(300 + (i % 3) * 260, 300 + Math.floor(i / 3) * 230, newspaper(at(0, 0, choc(), 0.75), 0.5), pop(a - t0), (i * 13) % 20 - 10) : ""; }).join("");
   return { g: paperBg(c, tot) + layer((rel > 0 && rel < 1 ? at(lerp(960, 600, rel), lerp(500, 400, rel), paperSheet([1, 1, 1], 0.4)) : "") + (a > 2.6 && a < 5.1 ? at(800, 640, phoneOld(), 1.4) + cross(960, 480, 50, P.red, a - 3.6) : "") + papers, c) }; }
-export const chocoSet = makeSet([c0, c1, c2, c3, c4, c5, c6], [], P);
+export const chocoSet = makeSet([c0, c1, c2, c3, c4, c5, c6], [{ z: 0.6 }, { z: 0.65 }, { z: 0.6 }, { z: 0.7 }, { z: 0.8 }, { z: 0.8 }, { z: 0.7 }], P);
 
 // ================= review =================
 const journal = (c = P.blue, cD = P.blueD) => `${two(rr(-160, -420, 320, 420, 10), c, cD, 14, 0)}<path d="${rr(-120, -380, 240, 80, 8)}" fill="#fffaf0"/><path d="M-90 -340h180" stroke="${P.ink}" stroke-width="12"/><path d="M-60 0V-180A60 60 0 0 1 60 -180V0Z" fill="${P.ink}"/>`;
