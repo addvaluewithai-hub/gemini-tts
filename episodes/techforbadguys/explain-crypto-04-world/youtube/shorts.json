@@ -1,0 +1,277 @@
+{
+ "note": "PROPOSED Shorts for crypto part 4 (drawn version), for the owner to pick. Not recorded or rendered: per the planner (2026-11-15) nothing is rendered until the owner has judged the two big-Peek tests; then they are rendered in the look he picks, with burned-in Arabic captions. `parts` are [from, to] in seconds of the finished episode (beat time plus the 0.3 s lead, cues/explain-crypto-04-world.json); the first part is the hook (first 2 s), and the order is chosen so the end loops back to it. `cta` is the closing line to record on Vertex AI (Arabic, Puck, part 1's direction) with its listen-back; `cta_short` is the shortened line for the big-Peek look. {full} is replaced by the episode's link once it is uploaded. Every figure is dated in the episode and in the description; nothing is advice.",
+ "full": null,
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "leverage",
+   "title": "معاك 100 دولار.. وخسرتهم والسعر نزل 10% بس 📉 #Shorts",
+   "description": "المنصة تسلّفك تسعمية فوق المية بتوعك، فبقيت بتراهن بألف. السعر يطلع عشرة في المية؟ فلوسك اتضاعفت. ينزل عشرة؟ كل فلوسك راحت، والمنصة تبيع عليك أوتوماتيك. يوم 10 أكتوبر 2025 اتصفّى أكتر من مليون ونص متداول، و19 مليار دولار اتمسحت.\n\nالتقرير كامل: البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ | ملف العملات المشفرة 4/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الرافعة_المالية #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "الرافعة المالية"
+   ],
+   "parts": [
+    [
+     233.06,
+     264.05
+    ]
+   ],
+   "why": "Hook: 'you have 100 dollars'. Ends on the 19 billion, no price forecast.",
+   "cta": "واللي كسبان في الحالتين: المنصة. ليه السعر بيتهز بالعنف ده أصلاً؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "واللي كسبان في الحالتين: المنصة. ليه السعر بيتهز بالعنف ده أصلاً؟",
+   "end": {
+    "audio": "shorts/cta-leverage.wav",
+    "words": "shorts/cta-leverage.words.json",
+    "card": {
+     "icons": [
+      "chartdown",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 4/6"
+    }
+   },
+   "body_seconds": 31.0,
+   "en": {
+    "title": "You Have $100. The Price Drops 10%. It's All Gone 📉 #Shorts",
+    "description": "The exchange lends you nine hundred on top of your hundred, so you're betting a thousand. Price up ten percent? Your money doubled. Down ten? All of it gone, and the exchange sells you out automatically. On 10 October 2025 over a million and a half traders were liquidated and 19 billion dollars wiped out.\n\nThe full report: Why Is Bitcoin Worth Anything? | Crypto File 4/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #leverage #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "leverage"
+    ],
+    "cta": "And the one who wins either way: the exchange. Why does the price swing this hard at all? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "And the one who wins either way: the exchange. Why does the price swing this hard at all?",
+    "end_audio": "shorts/cta-en-leverage.wav"
+   }
+  },
+  {
+   "key": "hole",
+   "title": "حفرت حفرة بمليون دولار.. تبقى بمليون؟ 🕳️ #Shorts",
+   "description": "فيه اللي بيقول تمن البيتكوين هو تمن الكهربا اللي اتحرقت فيه. غلط: لو صرفت مليون دولار على حفرة في الأرض.. الحفرة ماتبقاش بمليون. ورا البيتكوين لا دهب ولا حكومة ولا أرباح. اللي وراه حاجتين: الندرة، والناس اللي مصدّقة.\n\nالتقرير كامل: البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ | ملف العملات المشفرة 4/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #البيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "البيتكوين"
+   ],
+   "parts": [
+    [
+     60.69,
+     68.43
+    ],
+    [
+     28.6,
+     40.58
+    ],
+    [
+     49.35,
+     60.69
+    ]
+   ],
+   "why": "Hook: the million-dollar hole. Loop: 'no new mine' leads back to the electricity argument.",
+   "cta": "يعني القيمة كلها تصديق. طب ليه السعر طلع ووقع خمس مرات؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "يعني القيمة كلها تصديق. طب ليه السعر طلع ووقع خمس مرات؟",
+   "end": {
+    "audio": "shorts/cta-hole.wav",
+    "words": "shorts/cta-hole.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "cash"
+     ],
+     "sub": "CRYPTO FILE · 4/6"
+    }
+   },
+   "body_seconds": 31.1,
+   "en": {
+    "title": "A Million-Dollar Hole Isn't Worth a Million 🕳️ #Shorts",
+    "description": "Some say bitcoin is worth the electricity burned to make it. Wrong: spend a million dollars digging a hole and you don't get a million-dollar hole. No gold, no government, no profits behind it. Just two things: scarcity, and people who believe.\n\nThe full report: Why Is Bitcoin Worth Anything? | Crypto File 4/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "bitcoin"
+    ],
+    "cta": "So the value is belief. Then why has the price soared and crashed five times? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "So the value is belief. Then why has the price soared and crashed five times?",
+    "end_audio": "shorts/cta-en-hole.wav"
+   }
+  },
+  {
+   "key": "laundering",
+   "title": "قالوا عليه غسيل أموال.. وبعدين باعوه لك 🏦 #Shorts",
+   "description": "سنة 2017 رئيس أكبر شركة لإدارة الأموال قال: البيتكوين مؤشر على غسيل الأموال. وسنة 2024 نفس الشركة نزّلت أكبر صندوق بيتكوين في العالم. تدّي فلوسك للشركة، هي تمسك العملة، وإنت معاك السعر بس، وتدفع عمولة كل سنة.\n\nالتقرير كامل: البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ | ملف العملات المشفرة 4/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #البيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "البيتكوين"
+   ],
+   "parts": [
+    [
+     303.19,
+     325.68
+    ],
+    [
+     337.11,
+     341.61
+    ]
+   ],
+   "why": "Hook: the 2017 quote. Ends on the US reserve of seized coins.",
+   "cta": "البشر هربوا من الوسيط.. ودفعوا لوسيط تاني. مين ماسك البيتكوين فعلاً؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "البشر هربوا من الوسيط.. ودفعوا لوسيط تاني. مين ماسك البيتكوين فعلاً؟",
+   "end": {
+    "audio": "shorts/cta-laundering.wav",
+    "words": "shorts/cta-laundering.words.json",
+    "card": {
+     "icons": [
+      "bank",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 4/6"
+    }
+   },
+   "body_seconds": 27.0,
+   "en": {
+    "title": "First They Called It Money Laundering. Then They Sold It to You 🏦 #Shorts",
+    "description": "In 2017 the head of the world's biggest asset manager called bitcoin an index of money laundering. In 2024 the same firm launched the world's biggest bitcoin fund. You give the firm money, it holds the coins, you hold only the price, and pay a fee every year.\n\nThe full report: Why Is Bitcoin Worth Anything? | Crypto File 4/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "bitcoin"
+    ],
+    "cta": "Humans ran from the middleman, then paid a new one. Who actually holds the bitcoin? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "Humans ran from the middleman, then paid a new one. Who actually holds the bitcoin?",
+    "end_audio": "shorts/cta-en-laundering.wav"
+   }
+  },
+  {
+   "key": "obituaries",
+   "title": "أعلنوا وفاته 400 مرة.. ولسه بيتنفس ⚰️ #Shorts",
+   "description": "كل مرة البيتكوين يقع، الصحافة تعلن وفاته. أعلنوها أكتر من 400 مرة. ودورة البشر واحدة: السعر يطلع، الجرايد تكتب، الكل يدخل.. وينزل. واللي اشترى على قمة 2017 استنى تلات سنين علشان يرجّع فلوسه بس. ومش نصيحة: ده تاريخ، مش توقع.\n\nالتقرير كامل: البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ | ملف العملات المشفرة 4/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #البيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "البيتكوين"
+   ],
+   "parts": [
+    [
+     173.1,
+     179.86
+    ],
+    [
+     150.03,
+     173.1
+    ]
+   ],
+   "why": "Hook: declared dead 400 times. Loop: the central banks' study leads back to the obituaries.",
+   "cta": "التاريخ مش وعد. إيه اللي بيحرّك السعر بالعنف ده؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "التاريخ مش وعد. إيه اللي بيحرّك السعر بالعنف ده؟",
+   "end": {
+    "audio": "shorts/cta-obituaries.wav",
+    "words": "shorts/cta-obituaries.words.json",
+    "card": {
+     "icons": [
+      "chartdown",
+      "file"
+     ],
+     "sub": "CRYPTO FILE · 4/6"
+    }
+   },
+   "body_seconds": 29.8,
+   "en": {
+    "title": "Declared Dead 400 Times, Still Breathing ⚰️ #Shorts",
+    "description": "Every time bitcoin falls, the press declares it dead: over four hundred times. The human cycle is always the same: price rises, papers write, everyone jumps in, and down it goes. Whoever bought the 2017 peak waited three years just to break even. History, not a forecast.\n\nThe full report: Why Is Bitcoin Worth Anything? | Crypto File 4/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "bitcoin"
+    ],
+    "cta": "History isn't a promise. What moves the price this violently? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "History isn't a promise. What moves the price this violently?",
+    "end_audio": "shorts/cta-en-obituaries.wav"
+   }
+  },
+  {
+   "key": "hodl",
+   "title": "HODL: غلطة إملائية بقت عقيدة ⌨️ #Shorts",
+   "description": "HODL: واحد كان بيكتب hold سنة 2013 وغلط، والغلطة بقت عقيدة: ماتبيعش مهما حصل. وFOMO: الخوف إن القطر يفوتك، السبب الأول إن البشر بيشتروا على القمة. وكشف الدرجات: تدفع بيها؟ نادراً. تسعّر بيها؟ لأ. تحوّش بيها؟ نص درجة.\n\nالتقرير كامل: البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ | ملف العملات المشفرة 4/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #HODL #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "HODL"
+   ],
+   "parts": [
+    [
+     415.13,
+     428.03
+    ],
+    [
+     394.12,
+     408.7
+    ]
+   ],
+   "why": "Hook: the typo. Ends on the report card.",
+   "cta": "يعني البيتكوين لسه مش فلوس بالمعنى الكامل. إيه اللي جه بعده؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "يعني البيتكوين لسه مش فلوس بالمعنى الكامل. إيه اللي جه بعده؟",
+   "end": {
+    "audio": "shorts/cta-hodl.wav",
+    "words": "shorts/cta-hodl.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "book"
+     ],
+     "sub": "CRYPTO FILE · 4/6"
+    }
+   },
+   "body_seconds": 27.5,
+   "en": {
+    "title": "HODL: A Typo That Became a Religion ⌨️ #Shorts",
+    "description": "HODL: someone typing 'hold' in 2013 made a typo, and it became a creed: never sell, whatever happens. FOMO: the fear of missing the train, the number one reason humans buy at the top. And the report card: pay with it? Rarely. Price things in it? No. Save in it? Half a mark.\n\nThe full report: Why Is Bitcoin Worth Anything? | Crypto File 4/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #HODL #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "HODL"
+    ],
+    "cta": "So bitcoin isn't quite money yet. What came after it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "So bitcoin isn't quite money yet. What came after it?",
+    "end_audio": "shorts/cta-en-hodl.wav"
+   }
+  }
+ ]
+}

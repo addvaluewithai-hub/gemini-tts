@@ -19,10 +19,19 @@ const base = JSON.parse(fs.readFileSync(path.join(__dirname, "cues", name + ".js
 const zoom = spec.boardZoom || all.boardZoom || 0.68;
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "short-")), env = { ...process.env, NODE_PATH: process.env.NODE_PATH || "/opt/node-tools/node_modules" };
 const run = (cmd, args) => { const r = spawnSync(cmd, args, { stdio: "inherit", env, cwd: __dirname }); if (r.status !== 0) throw new Error(cmd + " failed"); };
-const vertical = { size: [1080, 1920], vertical: true, portraitSets: true, boardZoom: zoom, lead: 0, tail: 0 };
+const vertical = { size: [1080, 1920], vertical: true, portraitSets: true, boardZoom: zoom, lead: 0, tail: 0, ...(spec.look !== "big" && (spec.peekFixed || all.peekFixed) ? { peekFixed: { ...(spec.peekFixed || all.peekFixed), sides: spec.peekSides || [] } } : {}), captions: !!(spec.captions ?? all.captions), ...(spec.look === "big" ? { hostZoom: spec.hostZoom || 1.6, hostY: spec.hostY || 0, capY: spec.capY || 250 } : {}) };   // look "big": Peek big in the studio, the drawings as quick inserts   // peekFixed: Peek standing at the bottom all the time ({ h: share of the height })
 const cue = (from, to, hold) => {
   const f = path.join(tmp, `cues-${from}.json`);
-  fs.writeFileSync(f, JSON.stringify({ ...base, edit: base.edit.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),
+  let edits = base.edit;
+  if (spec.look === "big") {                                                     // big Peek: each drawing is a quick insert, then back to him
+    const q = spec.insert || 2.8; edits = [];
+    let cut = false;                                                             // after a cut to him, the next drawing has to be brought back in
+    base.edit.forEach((e, i) => { const nx = base.edit[i + 1];
+      if (e.board && !e.shot && cut) { edits.push({ ...e, shot: "show", kind: "board" }); } else edits.push(e);
+      cut = !e.board ? false : cut;
+      if (e.board && nx && nx.t - e.t > q + 1.2) { edits.push({ t: e.t + q, shot: "host", emote: e.emote || "neutral" }); cut = true; } else if (e.board) cut = false; });
+  }
+  fs.writeFileSync(f, JSON.stringify({ ...base, edit: edits.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),
     episode: ep, ...vertical, from, to, hold }));                                  // no cut into the next beat during the hold
   return f;
 };
@@ -33,7 +42,9 @@ const endCue = () => {
   const w = words.words, first = w[0].start_ms / 1000 / tempo, last = w[w.length - 1].end_ms / 1000 / tempo;
   const sub = w.find((x) => /اشترك/.test(x.text)), board = { kind: "shortend", ...spec.end.card };
   const edit = [{ t: -1, shot: "show", kind: "board", board, step: 0, stepT: first - 0.1, story: null, music: 1, host: "right" }];   // he leans in once more to say goodbye
-  if (sub) edit.push({ t: sub.start_ms / 1000 / tempo - 0.05, kind: "board", board, step: 1, host: "right" });
+  // the bell comes in on اشترك; a question-only line (no اشترك) rings it halfway through, or at spec.end.bell seconds
+  const bellT = sub ? sub.start_ms / 1000 / tempo - 0.05 : spec.end.bell != null ? spec.end.bell : first + (last - first) * 0.5;
+  edit.push({ t: bellT, kind: "board", board, step: 1, host: "right" });
   const f = path.join(tmp, "cues-end.json");
   fs.writeFileSync(f, JSON.stringify({ ...base, episode: dir, transcript: "transcript.json", slides: "none.json", edit, ...vertical, from: Math.max(0, first - 0.08), to: last + 0.3, hold: 1.0 }));
   return f;

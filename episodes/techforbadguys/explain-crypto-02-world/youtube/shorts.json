@@ -1,0 +1,344 @@
+{
+ "note": "PROPOSED (timed to the Vertex take -ar-v) Shorts for the drawn version of crypto part 2, for the owner to pick (4 to 6). Nothing is rendered or recorded yet. `parts` are [from, to] in seconds of the finished episode (cue time plus the 0.3 s lead, cues/explain-crypto-02-world.json); `cta` is each Short's own closing line, to be recorded on Vertex AI (job techforbadguys-crypto02-short-cta-<key>) with its Speech-to-Text listen-back. {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs; thumbnails without words like video/youtube/art-crypto-01-shorts-intl.json. Owner (16 Nov): every Short in the snail look, Peek standing small at the side (peekFixed), no captions; four per episode: bug-2010 (20 Nov 20:00 Cairo), energy (20 Nov 22:00), hash (21 Nov 14:00), cap (21 Nov 20:00); chain and mining to the stock.",
+ "full": "https://youtu.be/7D8rK9TlVdQ",
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "hash",
+   "title": "الهاش: المفرمة اللي بتحمي باسوردك 🔐 #Shorts",
+   "description": "مكنة بتاخد أي كلام وتطلّع له بصمة. غيّر حرف واحد، البصمة كلها تتغير. ومفيش رجوع من البصمة للكلام.. زي المفرمة: اللحمة تبقى كفتة، والكفتة عمرها ما ترجع لحمة. ومواقع كتير مابتخزنش باسوردك.. بتخزن بصمته.\n\nالتقرير كامل: البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الهاش #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "يعني إيه هاش",
+    "الهاش",
+    "البصمة الرقمية",
+    "كلمة السر",
+    "بلوكتشين",
+    "شرح مبسط"
+   ],
+   "parts": [
+    [
+     37.55,
+     40.8
+    ],
+    [
+     25.43,
+     37.55
+    ],
+    [
+     40.8,
+     46.35
+    ]
+   ],
+   "cta": "والحيلة دي نفسها هي اللي بتخلّي دفتر البيتكوين مستحيل يتزوّر. إزاي؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "end": {
+    "audio": "shorts/cta-hash.wav",
+    "words": "shorts/cta-hash.words.json",
+    "card": {
+     "icons": [
+      "lock",
+      "file"
+     ],
+     "sub": "CRYPTO FILE · 2/6"
+    }
+   },
+   "body_seconds": 20.9,
+   "en": {
+    "title": "A Hash Is a Meat Grinder for Data 🔐 #Shorts",
+    "description": "A machine that turns any text into a fingerprint. Change one letter and the whole fingerprint changes. And there's no way back: steak becomes meatballs, never the other way round. Good websites don't store your password, only its fingerprint.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #hash #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ],
+    "cta": "And that same trick is what makes the bitcoin ledger impossible to forge. How? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-hash.wav"
+   },
+   "look": "fixed",
+   "captions": false,
+   "why": "Re-cut (publisher, 16 Nov): the first 2 s show what the title promises (cold open), then the explanation."
+  },
+  {
+   "key": "chain",
+   "title": "ليه محدش يقدر يزوّر البلوكتشين؟ ⛓️ #Shorts",
+   "description": "كل عشر دقايق صفحة جديدة، متختومة ببصمتها، وبتبدأ ببصمة اللي قبلها. غيّر رقم في صفحة قديمة.. بصمتها تتغير، واللي بعدها تبوظ، والشبكة كلها ترفضها. مفيش زرار تراجع، ومفيش موظف تكلّمه.\n\nالتقرير كامل: البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #بلوكتشين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "يعني إيه بلوكتشين",
+    "البلوكتشين",
+    "Blockchain",
+    "بيتكوين",
+    "شرح مبسط"
+   ],
+   "parts": [
+    [
+     46.71,
+     64.16
+    ],
+    [
+     70.94,
+     85.61
+    ]
+   ],
+   "cta": "طب مين اللي بيكتب الصفحة الجديدة.. وإيه اللي يمنعه يغش؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "end": {
+    "audio": "shorts/cta-chain.wav",
+    "words": "shorts/cta-chain.words.json",
+    "card": {
+     "icons": [
+      "file",
+      "shield"
+     ],
+     "sub": "CRYPTO FILE · 2/6"
+    }
+   },
+   "body_seconds": 32.1,
+   "en": {
+    "title": "Why Nobody Can Forge a Blockchain ⛓️ #Shorts",
+    "description": "A new page every ten minutes, sealed with its fingerprint and starting with the fingerprint of the page before. Change one number on an old page and every page after it breaks, and the whole network rejects it. No undo button, no clerk to call.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #blockchain #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ],
+    "cta": "So who writes the next page... and what stops them from cheating? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-chain.wav"
+   },
+   "look": "fixed",
+   "captions": false
+  },
+  {
+   "key": "mining",
+   "title": "تعدين البيتكوين: مفيش فاس ولا منجم ⛏️ #Shorts",
+   "description": "مسابقة كل عشر دقايق: لازم البصمة تبدأ بأصفار، ومفيش طريقة غير إنك تجرّب. الشبكة كلها بتجرّب حوالي ألف مليار مليار رقم في الثانية. أول جهاز يلاقي الرقم ياخد بيتكوين جديدة. صعب تلاقيه، وسهل جداً تتأكد منه.\n\nالتقرير كامل: البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #تعدين_البيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "يعني إيه تعدين",
+    "تعدين البيتكوين",
+    "إثبات العمل",
+    "Proof of Work",
+    "بيتكوين",
+    "شرح مبسط"
+   ],
+   "parts": [
+    [
+     137.11,
+     168.65
+    ]
+   ],
+   "cta": "والمسابقة دي بتسحب كهربا قد دولة كاملة.. ليه البشر قابلين بده؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "end": {
+    "audio": "shorts/cta-mining.wav",
+    "words": "shorts/cta-mining.words.json",
+    "card": {
+     "icons": [
+      "pickaxe",
+      "bolt"
+     ],
+     "sub": "CRYPTO FILE · 2/6"
+    }
+   },
+   "body_seconds": 31.5,
+   "en": {
+    "title": "Bitcoin Mining: No Pickaxe, No Mine ⛏️ #Shorts",
+    "description": "A contest every ten minutes: the fingerprint has to start with zeros, and the only way is to guess. The whole network tries about a thousand billion billion numbers a second. The first to hit it earns new bitcoin. Hard to find, easy to check.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoinmining #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ],
+    "cta": "And this contest burns as much electricity as a whole country. Why do humans put up with it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-mining.wav"
+   },
+   "look": "fixed",
+   "captions": false
+  },
+  {
+   "key": "energy",
+   "title": "بيتكوين بيسحب كهربا قد دولة؟ ⚡ #Shorts",
+   "description": "حسب تقديرات جامعة Cambridge (2025): شبكة البيتكوين بتسحب في السنة قد دولة متوسطة، حوالي نص في المية من كهربا الكوكب. جزء منها كان هيتهدر أصلاً وجزء لأ، والخناقة لسه شغالة. ده تقرير، مش نصيحة استثمار.\n\nالتقرير كامل: البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #بيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "استهلاك البيتكوين للكهرباء",
+    "تعدين البيتكوين",
+    "الطاقة",
+    "Cambridge",
+    "شرح مبسط"
+   ],
+   "parts": [
+    [
+     258.55,
+     283.16
+    ]
+   ],
+   "cta": "طب ولو الجوايز خلصت.. مين هيحرس الدفتر؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "end": {
+    "audio": "shorts/cta-energy.wav",
+    "words": "shorts/cta-energy.words.json",
+    "card": {
+     "icons": [
+      "bolt",
+      "node"
+     ],
+     "sub": "CRYPTO FILE · 2/6"
+    }
+   },
+   "body_seconds": 24.6,
+   "en": {
+    "title": "Does Bitcoin Use as Much Power as a Country? ⚡ #Shorts",
+    "description": "By Cambridge University's estimates (2025), the bitcoin network uses about as much electricity a year as a mid-sized country: roughly half a percent of the planet's. Some of it would have been wasted anyway, some not, and the argument goes on. A report, not investment advice.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ],
+    "cta": "And when the prizes run out... who will guard the ledger? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-energy.wav"
+   },
+   "look": "fixed",
+   "captions": false
+  },
+  {
+   "key": "cap",
+   "title": "ليه مفيش غير 21 مليون بيتكوين؟ 🪙 #Shorts",
+   "description": "الجايزة بتتقسم على اتنين كل أربع سنين تقريباً، والعدد كله ليه سقف مكتوب في الكود: 21 مليون. البيتكوين رقم 20 مليون اتعدّن في مارس 2026، والمليون الأخير هياخد أكتر من مية سنة.. لحد حوالي سنة 2140. ده تقرير، مش نصيحة استثمار.\n\nالتقرير كامل: البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #بيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "21 مليون بيتكوين",
+    "التنصيف",
+    "Halving",
+    "بيتكوين",
+    "شرح مبسط"
+   ],
+   "parts": [
+    [
+     298.6,
+     302.8
+    ],
+    [
+     283.16,
+     292.5
+    ],
+    [
+     303.0,
+     313.82
+    ]
+   ],
+   "cta": "طب السقف ده ممكن يتغير؟ ومين أصلاً بيحكم الشبكة؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "end": {
+    "audio": "shorts/cta-cap.wav",
+    "words": "shorts/cta-cap.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "rules"
+     ],
+     "sub": "CRYPTO FILE · 2/6"
+    }
+   },
+   "body_seconds": 24.4,
+   "en": {
+    "title": "Why There Will Only Ever Be 21 Million Bitcoin 🪙 #Shorts",
+    "description": "The prize halves about every four years, and the total has a ceiling written in the code: 21 million. Bitcoin number 20 million was mined in March 2026; the last million will take more than a hundred years, until around 2140. A report, not investment advice.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ],
+    "cta": "Can that ceiling ever change? And who actually runs this network? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-cap.wav"
+   },
+   "look": "fixed",
+   "captions": false,
+   "why": "Re-cut (publisher, 16 Nov): the first 2 s show what the title promises (cold open), then the explanation."
+  },
+  {
+   "key": "bug-2010",
+   "title": "اليوم اللي واحد خلق فيه 184 مليار بيتكوين 😳 #Shorts",
+   "description": "سنة 2010 ثغرة خلّت واحد يخلق لنفسه 184 مليار بيتكوين من الهوا. في حوالي خمس ساعات الشبكة كلها شغّلت نسخة مصلّحة، والصفحة دي اتشالت من التاريخ. ومرة تانية في 2017 الخناقة قسمت العملة اتنين.\n\nالتقرير كامل: البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #بيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ثغرة بيتكوين 2010",
+    "Bitcoin Cash",
+    "فورك",
+    "بيتكوين",
+    "شرح مبسط"
+   ],
+   "parts": [
+    [
+     367.02,
+     369.37
+    ],
+    [
+     344.17,
+     350.54
+    ],
+    [
+     362.6,
+     380.65
+    ]
+   ],
+   "cta": "يعني مين بيحكم الشبكة دي فعلاً؟ الإجابة غريبة.. والتقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "end": {
+    "audio": "shorts/cta-bug-2010.wav",
+    "words": "shorts/cta-bug-2010.words.json",
+    "card": {
+     "icons": [
+      "rules",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 2/6"
+    }
+   },
+   "body_seconds": 26.8,
+   "en": {
+    "title": "The Day Someone Made 184 Billion Bitcoin 😳 #Shorts",
+    "description": "In 2010 a bug let someone create 184 billion bitcoin out of thin air. Within about five hours the whole network was running a fixed version, and that page was erased from history.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ],
+    "cta": "So who really runs this network? The answer is strange... and the full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "end_audio": "shorts/cta-en-bug-2010.wav"
+   },
+   "look": "fixed",
+   "captions": false,
+   "why": "Re-cut (publisher, 16 Nov): the first 2 s show what the title promises (cold open), then the explanation."
+  }
+ ],
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
+}

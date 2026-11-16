@@ -1,0 +1,1 @@
+export const V = [{ stack: true, cx: [700, 1300] }, { z: 0.8 }, { stack: true, cx: [560, 900] }, { z: 0.9, dy: -80 }, { z: 0.9, dy: -60 }, { stack: true, cx: [1100, 1060] }, { stack: true, cx: [720, 1240] }, { stack: true, cx: [700, 1300] }];

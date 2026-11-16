@@ -1,0 +1,688 @@
+{
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "en-US",
+ "rtl": false,
+ "voice": "Puck",
+ "face": "pear",
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "title": "Earth Report: Cryptocurrency 5 (English dub track for the world-picture video)",
+ "notes": [
+  "English dub track for explain-crypto-05-world: same scenes and beats, lines fitted to the Arabic -ar-v timing (video/dub.cjs).",
+  "Earth Report field file: Cryptocurrency, part 5 of 6: the programmable ledger. What came after Bitcoin when humans asked the ledger to run programs: Ethereum and smart contracts, proof of stake, tokens, stablecoins, and DeFi. Split from the old part 5 (`../explain-crypto-05-ar`) at the owner's request (2026-11-15); its second half is part 6.\n\nFacts are the old part 5's, stated from general knowledge and from web research on 12 November 2026 (links in `../explain-crypto-03-ar/plan.md`), not from pages captured for this episode: Ethereum was proposed by Vitalik Buterin in late 2013 at 19 and launched in July 2015; in June 2016 about 60 million dollars was drained from The DAO through a flaw in its contract and the chain was forked to undo it; Ethereum moved to proof of stake on 15 September 2022 and its electricity use fell by more than 99 percent; a validator stakes 32 ether (the script gives no dollar value for it); the 2017 token sales raised billions and one of them, EOS, about 4 billion dollars; stablecoin supply was about 300 billion dollars in October 2026; Tether is among the largest holders of US Treasury bills; Tether said it froze about 1.5 billion dollars of USDT linked to the October 2026 Binance theft within about half an hour; Terra's stablecoin and its sister coin lost about 40 billion dollars in a week in May 2022 and its founder was sentenced to 15 years in December 2025; the US stablecoin law of July 2025 requires one-to-one reserves; more than 3 billion dollars was stolen from crypto protocols in 2022, most of it from DeFi (Chainalysis). Nothing new is added beyond the old script's facts; the extra length is explanation (how a smart contract, staking and a lending pool work), not new figures. It says plainly that it is not investment advice.\n\nLength: about 870 spoken words, about 5 to 5.5 minutes at the channel's pace (the old part 5 ran 1,272 words in 7.6 minutes)."
+ ],
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "6 / 6",
+   "icons": [
+    "frame",
+    "dog",
+    "flag"
+   ],
+   "note": ""
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "beats": [
+    {
+     "say": "Sir. Field report number five in the cryptocurrency file.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "Today's subject: the ledger that runs programs. Four reports covered bitcoin:",
+     "show": "board",
+     "board": "intro",
+     "step": 0
+    },
+    {
+     "say": "why it exists, how it works, how it's held, its price.",
+     "show": "board",
+     "board": "intro",
+     "step": 1
+    },
+    {
+     "say": "But humans didn't stop at a ledger of money. They asked: why not run programs too?",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "I'll report what the ledger became, how it's guarded without electricity, a digital dollar, and a bank with no bank.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "And the next report, the last: the hype, the law, and my final verdict.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "s1",
+   "story": {
+    "n": 1,
+    "tag": "LEDGER + CODE",
+    "icon": "laptop"
+   },
+   "beats": [
+    {
+     "say": "In 2013, a nineteen-year-old asked: why should this ledger only record money?",
+     "show": "board",
+     "board": "s1",
+     "step": 0
+    },
+    {
+     "say": "Let it run programs. In 2015 the network went live. It's called Ethereum.",
+     "show": "board",
+     "board": "s1",
+     "step": 1
+    },
+    {
+     "say": "Its coin became the second biggest on the planet. A program on the ledger is called a smart contract.",
+     "show": "board",
+     "board": "s1",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "The simplest way to explain it: a vending machine. You put the coin in. It checks the condition.",
+     "show": "board",
+     "board": "s1",
+     "step": 3
+    },
+    {
+     "say": "The item drops out. No seller, and no going back on the deal.",
+     "show": "board",
+     "board": "s1",
+     "step": 4
+    },
+    {
+     "say": "The contract is written on the ledger itself. Every machine holds a copy, everyone sees the terms, and nobody can change them once they're in.",
+     "show": "board",
+     "board": "s1",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "The same way, they build loans, insurance, or bets. A deal between two strangers...",
+     "show": "board",
+     "board": "s1",
+     "step": 6
+    },
+    {
+     "say": "guaranteed by a program. Every operation pays a charge they call gas, to those running the network, like the fee in report two.",
+     "show": "board",
+     "board": "s1",
+     "step": 7
+    },
+    {
+     "say": "After Ethereum came rival networks: faster, cheaper. Each with its own coin, its own fans, and its own feuds.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "story": {
+    "n": 2,
+    "tag": "CODE IS LAW",
+    "icon": "rules"
+   },
+   "beats": [
+    {
+     "say": "And the program runs exactly as written. Even when it's written wrong.",
+     "show": "board",
+     "board": "s2",
+     "step": 0
+    },
+    {
+     "say": "In 2016, a big contract had a mistake. Someone drained sixty million dollars.",
+     "show": "board",
+     "board": "s2",
+     "step": 1
+    },
+    {
+     "say": "Without breaking anything. He just read it better.",
+     "show": "board",
+     "board": "s2",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "And the humans?",
+     "show": "board",
+     "board": "s2",
+     "step": 3
+    },
+    {
+     "say": "They rewound the ledger. A fork, like in report two.",
+     "show": "board",
+     "board": "s2",
+     "step": 4
+    },
+    {
+     "say": "The network split in two, and both still run today. Their motto had been:",
+     "show": "board",
+     "board": "s2",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "code is law. <short pause> Until the code took their money.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "story": {
+    "n": 3,
+    "tag": "STAKING",
+    "icon": "lock"
+   },
+   "beats": [
+    {
+     "say": "Remember mining, burning a country's electricity?",
+     "show": "board",
+     "board": "s3",
+     "step": 0
+    },
+    {
+     "say": "Ethereum dropped it. Whoever wants to write the page puts up coins as a deposit.",
+     "show": "board",
+     "board": "s3",
+     "step": 1
+    },
+    {
+     "say": "The network picks one by lottery. Honest... a reward. Cheat?",
+     "show": "board",
+     "board": "s3",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "The deposit burns. Instead of proving you burned electricity, you prove you have something to lose.",
+     "show": "board",
+     "board": "s3",
+     "step": 3
+    },
+    {
+     "say": "To be a guard, you lock up thirty-two coins. Not small change.",
+     "show": "board",
+     "board": "s3",
+     "step": 4
+    },
+    {
+     "say": "Those without them hand coins to a company. <short pause> Yes, sir.",
+     "show": "board",
+     "board": "s3",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "Another middleman. They call it proof of stake. In September 2022, the network's electricity use fell by more than ninety-nine percent.",
+     "show": "board",
+     "board": "s3",
+     "step": 6
+    },
+    {
+     "say": "Overnight. So, two ways to guard the ledger. One: most machines wins.",
+     "show": "board",
+     "board": "s3",
+     "step": 7
+    },
+    {
+     "say": "Two: most coins locked up wins most. The rich get richer.",
+     "show": "board",
+     "board": "s3",
+     "host": "right",
+     "step": 8
+    },
+    {
+     "say": "Humans invented that long ago. It's called the economy.",
+     "show": "board",
+     "board": "s3",
+     "step": 9
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "story": {
+    "n": 4,
+    "tag": "TOKENS",
+    "icon": "coin"
+   },
+   "beats": [
+    {
+     "say": "On these networks, anyone can make a coin in minutes.",
+     "show": "board",
+     "board": "s4",
+     "step": 0
+    },
+    {
+     "say": "No network, no mining. Two lines in a smart contract, and you have a coin.",
+     "show": "board",
+     "board": "s4",
+     "step": 1
+    },
+    {
+     "say": "They call it a token. In 2017, companies raised billions selling coins for projects that didn't exist yet.",
+     "show": "board",
+     "board": "s4",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "One project alone raised four billion dollars... before it worked.",
+     "show": "board",
+     "board": "s4",
+     "step": 3
+    },
+    {
+     "say": "And most of them... still don't exist. That ease opens the door, next report... to the strangest zoo on the planet.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "story": {
+    "n": 5,
+    "tag": "DIGITAL DOLLAR",
+    "icon": "cash"
+   },
+   "beats": [
+    {
+     "say": "Here's the invention that actually worked, sir. Also the most boring one.",
+     "show": "board",
+     "board": "s5",
+     "step": 0
+    },
+    {
+     "say": "A coin whose price is always one dollar. A stablecoin. You give the company a real dollar...",
+     "show": "board",
+     "board": "s5",
+     "step": 1
+    },
+    {
+     "say": "and get a digital one. It moves across the ledger in minutes. Any day, any country.",
+     "show": "board",
+     "board": "s5",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "They send money abroad with it. Where currencies collapse, people get paid and save in it.",
+     "show": "board",
+     "board": "s5",
+     "step": 3
+    },
+    {
+     "say": "Most of it is used for trading on exchanges. In October 2026, about three hundred billion dollars of it was in circulation.",
+     "show": "board",
+     "board": "s5",
+     "step": 4
+    },
+    {
+     "say": "That's the part used as real money. The biggest issuer now holds a mountain of American government debt.",
+     "show": "board",
+     "board": "s5",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "So the thing built to escape the dollar... carried the dollar where it had never reached.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "story": {
+    "n": 6,
+    "tag": "FREEZE",
+    "icon": "lock"
+   },
+   "beats": [
+    {
+     "say": "But note: here, there's a company. And it has a freeze button.",
+     "show": "board",
+     "board": "s6",
+     "step": 0
+    },
+    {
+     "say": "After the Binance theft in October, the company behind the biggest stablecoin froze part of the loot.",
+     "show": "board",
+     "board": "s6",
+     "step": 1
+    },
+    {
+     "say": "A billion and a half. In half an hour. Lovely, if you were robbed.",
+     "show": "board",
+     "board": "s6",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "But your pocket... is in someone else's hand.",
+     "show": "board",
+     "board": "s6",
+     "step": 3
+    },
+    {
+     "say": "The ledger has a guard again. One kind held the price without real dollars.",
+     "show": "board",
+     "board": "s6",
+     "step": 4
+    },
+    {
+     "say": "With a formula. In 2022 the formula broke. Forty billion dollars evaporated in a week.",
+     "show": "board",
+     "board": "s6",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "Its founder got fifteen years in prison. In 2025, America passed a law:",
+     "show": "board",
+     "board": "s6",
+     "step": 6
+    },
+    {
+     "say": "a real dollar behind every digital one.",
+     "show": "board",
+     "board": "s6",
+     "step": 7
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "story": {
+    "n": 7,
+    "tag": "DEFI",
+    "icon": "bank"
+   },
+   "beats": [
+    {
+     "say": "With smart contracts, they built a bank with no bank. Many people put coins into one program, and it lends them to borrowers.",
+     "show": "board",
+     "board": "s7",
+     "step": 0
+    },
+    {
+     "say": "Borrowers must put up more than they borrow. And if that falls?",
+     "show": "board",
+     "board": "s7",
+     "step": 1
+    },
+    {
+     "say": "The program sells it, in a second, without calling you.",
+     "show": "board",
+     "board": "s7",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "Another program swaps one coin for another. No company, no opening hours, no one asking who you are.",
+     "show": "board",
+     "board": "s7",
+     "step": 3
+    },
+    {
+     "say": "A flaw in it?",
+     "show": "board",
+     "board": "s7",
+     "step": 4
+    },
+    {
+     "say": "Nobody to call. Remember the sixty million?",
+     "show": "board",
+     "board": "s7",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "It happened a hundred times over. More than three billion dollars was stolen from these programs in 2022 alone.",
+     "show": "board",
+     "board": "s7",
+     "step": 6
+    },
+    {
+     "say": "A bank can fail you. But it has a door.",
+     "show": "board",
+     "board": "s7",
+     "step": 7
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "book"
+   },
+   "beats": [
+    {
+     "say": "Two words from the Human Dictionary. Smart contract: a program on the ledger that runs by itself.",
+     "show": "board",
+     "board": "s8",
+     "step": 0
+    },
+    {
+     "say": "Even when it's wrong. And stablecoin: a digital dollar. It moves like crypto... and freezes like a bank.",
+     "show": "board",
+     "board": "s8",
+     "step": 1
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "file"
+   },
+   "beats": [
+    {
+     "say": "Summary, sir. One: the ledger now runs programs, and a program runs as written, right or wrong.",
+     "show": "board",
+     "board": "s9",
+     "step": 0
+    },
+    {
+     "say": "Two: guarding without electricity, but the guard is whoever has more money.",
+     "show": "board",
+     "board": "s9",
+     "step": 1
+    },
+    {
+     "say": "Three: the biggest success was the most boring: the digital dollar.",
+     "show": "board",
+     "board": "s9",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "And it brought the middleman back. Same warning: a report, not investment advice.",
+     "show": "board",
+     "board": "s9",
+     "step": 3
+    },
+    {
+     "say": "Next report, the last: a picture worth millions, a coin with a dog, and governments.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "And my final verdict on the file. This has been Earth Report. Agent Peek. End of transmission.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "boards": {
+  "intro": {
+   "kind": "c5intro",
+   "ends": [
+    4.45,
+    3.41
+   ]
+  },
+  "s1": {
+   "kind": "c5s1",
+   "ends": [
+    5.6,
+    5.16,
+    4.91,
+    4.73,
+    3.44,
+    7.92,
+    5.47,
+    6.96
+   ]
+  },
+  "s2": {
+   "kind": "c5s2",
+   "ends": [
+    3.89,
+    5.51,
+    2.42,
+    1.12,
+    3.01,
+    4.02
+   ]
+  },
+  "s3": {
+   "kind": "c5s3",
+   "ends": [
+    2.7,
+    4.34,
+    3.8,
+    4.85,
+    4.14,
+    3.19,
+    7.54,
+    4.62,
+    3.62,
+    2.94
+   ]
+  },
+  "s4": {
+   "kind": "c5s4",
+   "ends": [
+    2.9,
+    3.78,
+    5.9,
+    3.21
+   ]
+  },
+  "s5": {
+   "kind": "c5s5",
+   "ends": [
+    3.9,
+    4.96,
+    4.32,
+    4.77,
+    6.02,
+    5.91
+   ]
+  },
+  "s6": {
+   "kind": "c5s6",
+   "ends": [
+    3.55,
+    4.8,
+    3.31,
+    2.08,
+    4.06,
+    5.03,
+    4.55,
+    2.21
+   ]
+  },
+  "s7": {
+   "kind": "c5s7",
+   "ends": [
+    6.02,
+    3.35,
+    2.95,
+    4.55,
+    1.36,
+    2.36,
+    5.46,
+    3.14
+   ]
+  },
+  "s8": {
+   "kind": "c5s8",
+   "ends": [
+    5.46,
+    6.26
+   ]
+  },
+  "s9": {
+   "kind": "c5s9",
+   "ends": [
+    6.32,
+    3.55,
+    3.6,
+    3.79
+   ]
+  }
+ }
+}

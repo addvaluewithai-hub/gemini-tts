@@ -1,0 +1,155 @@
+{
+ "note": "Big-Peek Shorts experiment (not uploaded): Peek big in the portrait studio for most of the Short, drawings as full-frame inserts at the key beats, burned-in Arabic captions, the hook first and a loop back to it. Parts are in cue seconds of cues/explain-crypto-01-bigpeek.json; the closing line is the first sentence of the recorded one.",
+ "full": "https://youtu.be/4j9TKUDMmrY",
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "money",
+   "title": "الفلوس ليه ليها قيمة أصلاً؟ 💵 #Shorts",
+   "description": "من سمكة قصاد رغيف، للدهب، للورق.. وسنة 1971 الدهب اتشال من ورا الورق. في زيمبابوي طبعوا ورقة بـ100 تريليون دولار وماكانتش تجيب تذكرة أتوبيس. يعني قيمة الفلوس جاية من حاجة واحدة: إن الكل مصدّق إن ليها قيمة.\n\nالتقرير كامل: البيتكوين اتعمل ليه؟ القصة من الأول | ملف العملات المشفرة 1/5\nhttps://youtu.be/4j9TKUDMmrY\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #الفلوس #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "الفلوس ليه ليها قيمة",
+    "تاريخ الفلوس",
+    "زيمبابوي",
+    "التضخم",
+    "الدهب"
+   ],
+   "parts": [
+    [
+     64.95,
+     68.9
+    ],
+    [
+     29.18,
+     36.48
+    ],
+    [
+     42.65,
+     52.85
+    ],
+    [
+     57.67,
+     63.85
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-money-short.wav",
+    "words": "shorts/cta-money-short.words.json",
+    "card": {
+     "icons": [
+      "fish",
+      "cash"
+     ],
+     "sub": "CRYPTO FILE · 1/6"
+    }
+   },
+   "total": 42.4,
+   "en": {
+    "title": "Why Does Money Have Any Value? 💵 #Shorts",
+    "description": "From a fish for a loaf of bread, to gold, to paper... and in 1971 the gold was taken out from behind the paper. Zimbabwe printed a 100 trillion dollar note that couldn't buy a bus ticket. So money's value comes from one thing: everyone believes in it.\n\nThe full report: How Does Bitcoin Work? The Story From the Beginning | Crypto File 1/5\nhttps://youtu.be/4j9TKUDMmrY\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #money #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ]
+   },
+   "video": {
+    "id": "mFR2OBYkQx0",
+    "url": "https://youtube.com/shorts/mFR2OBYkQx0",
+    "privacy": "public",
+    "publishAt": null,
+    "thumbnail": "shorts/thumb-money-intl.jpg (no words, 2026-11-14)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaaTUMrqiSNeRiTfttwU0jZwsTpzwvg5Yty1c-Lv",
+      "file": "shorts/captions/money-ar.srt"
+     },
+     "en": {
+      "id": "AUieDab2va1lx_AwyRthB7iJnmd0OlNhzFk8FLCg2DQF",
+      "file": "shorts/captions/money-en.srt"
+     }
+    }
+   }
+  },
+  {
+   "key": "bank",
+   "title": "فلوسك مش في خزنة البنك.. فلوسك سطر في دفتر 🏦 #Shorts",
+   "description": "البنك مش خزنة مليانة فلوس، البنك دفتر. مرتبك رقم، والإيجار رقم، والتحويل مسح رقم هنا وكتابة رقم هناك. واللي ماسك الدفتر يقدر ياخد عمولة، يأخّر، يجمّد.. وفي قبرص سنة 2013 اتاخد من الحسابات الكبيرة حوالي نصها.\n\nالتقرير كامل: البيتكوين اتعمل ليه؟ القصة من الأول | ملف العملات المشفرة 1/5\nhttps://youtu.be/4j9TKUDMmrY\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #البنوك #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "البنك بيشتغل ازاي",
+    "فلوسك في البنك",
+    "قبرص 2013",
+    "تجميد الحسابات",
+    "البنوك"
+   ],
+   "parts": [
+    [
+     111.91,
+     114.95
+    ],
+    [
+     95.96,
+     106.9
+    ],
+    [
+     127.52,
+     143.6
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-bank-short.wav",
+    "words": "shorts/cta-bank-short.words.json",
+    "card": {
+     "icons": [
+      "bank",
+      "book"
+     ],
+     "sub": "CRYPTO FILE · 1/6"
+    }
+   },
+   "total": 42.4,
+   "en": {
+    "title": "Your Money Isn't in a Vault. It's a Line in a Ledger 🏦 #Shorts",
+    "description": "A bank is not a vault full of money. A bank is a ledger. Your salary is a number, your rent is a number, a transfer is one number erased and another written. And whoever holds the ledger can charge you, delay you, freeze you... in Cyprus in 2013, big accounts lost almost half.\n\nThe full report: How Does Bitcoin Work? The Story From the Beginning | Crypto File 1/5\nhttps://youtu.be/4j9TKUDMmrY\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #banks #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "bitcoin",
+     "explained simply"
+    ]
+   },
+   "video": {
+    "id": "B2F0Gtgb5t8",
+    "url": "https://youtube.com/shorts/B2F0Gtgb5t8",
+    "privacy": "public",
+    "publishAt": null,
+    "thumbnail": "shorts/thumb-bank-intl.jpg (no words, 2026-11-14)",
+    "captions": {
+     "ar": {
+      "id": "AUieDaaDv5H2rjDaQixcnc6QmsCOOGozhf71uvWSOHXS",
+      "file": "shorts/captions/bank-ar.srt"
+     },
+     "en": {
+      "id": "AUieDaZ-S-05_adgRuuOUCmt1UZpjj2TgArt-MlLfl9T",
+      "file": "shorts/captions/bank-en.srt"
+     }
+    }
+   }
+  }
+ ]
+}

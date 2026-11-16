@@ -1,0 +1,1319 @@
+1
+00:00:00,513 --> 00:00:00,934
+Sir.
+
+2
+00:00:00,974 --> 00:00:03,921
+Field report number three in the cryptocurrency file.
+
+3
+00:00:03,961 --> 00:00:04,924
+Today's subject:
+
+4
+00:00:04,964 --> 00:00:06,829
+how the humans own this money...
+
+5
+00:00:06,869 --> 00:00:08,242
+and how they lose it.
+
+6
+00:00:08,350 --> 00:00:10,037
+I will report what a key is, what
+
+7
+00:00:10,077 --> 00:00:12,072
+a wallet is, and why this money is
+
+8
+00:00:12,112 --> 00:00:13,771
+not as anonymous as they think.
+
+9
+00:00:13,811 --> 00:00:15,575
+And how one of them spent twelve years
+
+10
+00:00:15,615 --> 00:00:17,341
+trying to dig up a garbage dump, looking
+
+11
+00:00:17,381 --> 00:00:18,920
+for hundreds of millions of dollars.
+
+12
+00:00:18,960 --> 00:00:20,723
+In the last report we learned the ledger
+
+13
+00:00:20,763 --> 00:00:23,113
+is public, shared by everyone, and nobody can
+
+14
+00:00:23,153 --> 00:00:23,987
+forge it.
+
+15
+00:00:24,027 --> 00:00:25,396
+But there are no names in it.
+
+16
+00:00:25,436 --> 00:00:26,796
+So what proves that a line in that
+
+17
+00:00:26,836 --> 00:00:27,815
+ledger is yours?
+
+18
+00:00:27,855 --> 00:00:29,207
+Everyone has an address.
+
+19
+00:00:29,247 --> 00:00:30,212
+Like an account number.
+
+20
+00:00:30,252 --> 00:00:31,295
+You give it to anyone who wants to
+
+21
+00:00:31,335 --> 00:00:31,689
+pay you.
+
+22
+00:00:31,729 --> 00:00:32,741
+And a private key:
+
+23
+00:00:32,781 --> 00:00:34,210
+a very long secret number.
+
+24
+00:00:34,250 --> 00:00:35,068
+That's what opens it.
+
+25
+00:00:35,108 --> 00:00:36,522
+When you want to send money, the key
+
+26
+00:00:36,562 --> 00:00:37,566
+signs the transfer.
+
+27
+00:00:37,606 --> 00:00:39,020
+And the network checks the signature...
+
+28
+00:00:39,060 --> 00:00:40,551
+without ever seeing the key itself.
+
+29
+00:00:40,591 --> 00:00:42,376
+Like a stamp that marks every page a
+
+30
+00:00:42,416 --> 00:00:43,056
+little differently.
+
+31
+00:00:43,096 --> 00:00:44,672
+Everyone can tell it is your stamp...
+
+32
+00:00:44,712 --> 00:00:45,616
+and nobody can copy it.
+
+33
+00:00:45,656 --> 00:00:47,998
+And the number of possible keys has seventy-seven
+
+34
+00:00:48,038 --> 00:00:48,492
+digits.
+
+35
+00:00:48,532 --> 00:00:50,132
+Far, far more than all the grains of
+
+36
+00:00:50,172 --> 00:00:51,029
+sand on this planet.
+
+37
+00:00:51,069 --> 00:00:52,575
+So nobody is going to guess yours.
+
+38
+00:00:52,615 --> 00:00:54,431
+The ledger is public, so anyone can see
+
+39
+00:00:54,471 --> 00:00:55,506
+any address's balance.
+
+40
+00:00:55,546 --> 00:00:56,442
+Even Satoshi's.
+
+41
+00:00:56,482 --> 00:00:58,143
+Humans still toss it small change.
+
+42
+00:00:58,183 --> 00:00:58,839
+Like a fountain.
+
+43
+00:00:58,879 --> 00:00:59,148
+So:
+
+44
+00:00:59,188 --> 00:01:01,530
+no name, no ID card, no signature in
+
+45
+00:01:01,570 --> 00:01:01,831
+ink.
+
+46
+00:01:01,871 --> 00:01:03,332
+Whoever holds the key owns the money.
+
+47
+00:01:03,372 --> 00:01:03,747
+Period.
+
+48
+00:01:03,787 --> 00:01:06,057
+The wallet they talk about holds no money.
+
+49
+00:01:06,097 --> 00:01:07,313
+It holds the key.
+
+50
+00:01:07,353 --> 00:01:08,911
+The money is a line in the ledger.
+
+51
+00:01:08,951 --> 00:01:11,657
+The key is written as twelve ordinary words.
+
+52
+00:01:11,697 --> 00:01:12,570
+Official advice:
+
+53
+00:01:12,610 --> 00:01:14,450
+write them on paper and hide it.
+
+54
+00:01:14,490 --> 00:01:16,165
+Their finest financial tech...
+
+55
+00:01:16,205 --> 00:01:17,466
+is a note in a drawer.
+
+56
+00:01:17,506 --> 00:01:18,782
+There are wallets on the phone.
+
+57
+00:01:18,822 --> 00:01:20,436
+Easy, but connected to the internet.
+
+58
+00:01:20,476 --> 00:01:22,168
+And wallets on a small device that never
+
+59
+00:01:22,208 --> 00:01:22,876
+goes online.
+
+60
+00:01:22,916 --> 00:01:24,532
+They call that a cold wallet.
+
+61
+00:01:24,616 --> 00:01:26,281
+So where do humans get this money?
+
+62
+00:01:26,321 --> 00:01:28,153
+Mining is no longer for individuals.
+
+63
+00:01:28,193 --> 00:01:29,711
+Most buy on an exchange:
+
+64
+00:01:29,751 --> 00:01:31,566
+a company that takes ordinary money and gives
+
+65
+00:01:31,606 --> 00:01:32,289
+you coins.
+
+66
+00:01:32,329 --> 00:01:33,736
+Most will ask for your ID and a
+
+67
+00:01:33,776 --> 00:01:34,821
+photo of your face.
+
+68
+00:01:34,861 --> 00:01:35,709
+Remember that.
+
+69
+00:01:35,749 --> 00:01:37,326
+Or person to person, directly.
+
+70
+00:01:37,366 --> 00:01:38,025
+And to send it:
+
+71
+00:01:38,065 --> 00:01:39,809
+you copy the other person's address.
+
+72
+00:01:39,849 --> 00:01:41,733
+A long line of letters and numbers.
+
+73
+00:01:41,773 --> 00:01:43,079
+You pay a fee to whoever writes the
+
+74
+00:01:43,119 --> 00:01:43,587
+page.
+
+75
+00:01:43,627 --> 00:01:45,006
+And you wait for the page.
+
+76
+00:01:45,046 --> 00:01:46,327
+And no undo.
+
+77
+00:01:46,367 --> 00:01:47,309
+One wrong character?
+
+78
+00:01:47,349 --> 00:01:48,042
+The money's gone.
+
+79
+00:01:48,082 --> 00:01:49,090
+Nobody to complain to.
+
+80
+00:01:49,130 --> 00:01:51,107
+There is even malicious software whose only job
+
+81
+00:01:51,147 --> 00:01:52,693
+is to swap the address you copied for
+
+82
+00:01:52,733 --> 00:01:53,297
+the thief's.
+
+83
+00:01:53,337 --> 00:01:54,949
+So careful humans check the first and last
+
+84
+00:01:54,989 --> 00:01:55,718
+few characters.
+
+85
+00:01:55,758 --> 00:01:56,721
+Every single time.
+
+86
+00:01:56,761 --> 00:01:58,954
+In 2023, a big company sent a transfer
+
+87
+00:01:58,994 --> 00:02:00,145
+of two thousand dollars.
+
+88
+00:02:00,185 --> 00:02:02,470
+And paid half a million dollars in fees.
+
+89
+00:02:02,510 --> 00:02:03,153
+By mistake.
+
+90
+00:02:03,193 --> 00:02:04,251
+The team that won the page gave it
+
+91
+00:02:04,291 --> 00:02:04,709
+back.
+
+92
+00:02:04,749 --> 00:02:05,697
+Pure good manners.
+
+93
+00:02:05,737 --> 00:02:06,383
+No law.
+
+94
+00:02:06,423 --> 00:02:09,302
+Humans think this money is anonymous, that nobody
+
+95
+00:02:09,342 --> 00:02:10,896
+knows who pays whom.
+
+96
+00:02:10,936 --> 00:02:11,824
+Wrong, sir.
+
+97
+00:02:11,864 --> 00:02:13,649
+Some paid for that mistake in prison.
+
+98
+00:02:13,689 --> 00:02:14,938
+The ledger is public.
+
+99
+00:02:14,978 --> 00:02:17,335
+Every transfer, recorded forever.
+
+100
+00:02:17,375 --> 00:02:18,912
+And once one address is tied to your
+
+101
+00:02:18,952 --> 00:02:19,437
+name...
+
+102
+00:02:19,477 --> 00:02:21,111
+say, an exchange took your ID...
+
+103
+00:02:21,151 --> 00:02:22,601
+everything before lights up.
+
+104
+00:02:22,641 --> 00:02:23,484
+Retroactively.
+
+105
+00:02:23,524 --> 00:02:25,900
+In 2011, a secret online market opened, called
+
+106
+00:02:25,940 --> 00:02:26,504
+Silk Road.
+
+107
+00:02:26,544 --> 00:02:27,332
+Illegal goods...
+
+108
+00:02:27,372 --> 00:02:28,513
+paid for in bitcoin.
+
+109
+00:02:28,553 --> 00:02:29,940
+Its founder thought he was hidden.
+
+110
+00:02:29,980 --> 00:02:31,376
+Arrested in 2013.
+
+111
+00:02:31,416 --> 00:02:32,449
+In a public library.
+
+112
+00:02:32,489 --> 00:02:33,486
+Sentenced to life.
+
+113
+00:02:33,526 --> 00:02:36,063
+Pardoned in 2025.
+
+114
+00:02:36,103 --> 00:02:38,597
+Another man stole fifty thousand bitcoin from it.
+
+115
+00:02:38,637 --> 00:02:39,897
+The ledger remembered.
+
+116
+00:02:39,937 --> 00:02:41,616
+Nine years later, the police knocked on his
+
+117
+00:02:41,656 --> 00:02:42,287
+door.
+
+118
+00:02:42,327 --> 00:02:43,898
+In a popcorn tin.
+
+119
+00:02:44,084 --> 00:02:45,100
+Billions of dollars.
+
+120
+00:02:45,140 --> 00:02:46,179
+In a popcorn tin.
+
+121
+00:02:46,219 --> 00:02:47,499
+In a bathroom closet.
+
+122
+00:02:47,539 --> 00:02:48,618
+I love this planet, sir.
+
+123
+00:02:48,658 --> 00:02:50,071
+Same with the exchange Bitfinex:
+
+124
+00:02:50,111 --> 00:02:52,214
+a hundred and twenty thousand bitcoin stolen.
+
+125
+00:02:52,254 --> 00:02:54,193
+A married couple arrested six years later.
+
+126
+00:02:54,233 --> 00:02:55,600
+One of them was also a rapper.
+
+127
+00:02:55,640 --> 00:02:56,804
+That was a crime of its own.
+
+128
+00:02:56,844 --> 00:02:57,829
+Cash gets forgotten.
+
+129
+00:02:57,869 --> 00:02:58,958
+This ledger doesn't.
+
+130
+00:02:58,998 --> 00:03:00,267
+The worst place to hide a crime...
+
+131
+00:03:00,307 --> 00:03:02,142
+a public ledger, kept forever.
+
+132
+00:03:02,203 --> 00:03:03,526
+Back to the exchanges.
+
+133
+00:03:03,566 --> 00:03:04,941
+Most humans buy their coins...
+
+134
+00:03:04,981 --> 00:03:05,736
+and leave them there.
+
+135
+00:03:05,776 --> 00:03:07,482
+So the bitcoin now sits with the company.
+
+136
+00:03:07,522 --> 00:03:08,843
+And you hold a receipt.
+
+137
+00:03:08,883 --> 00:03:09,711
+A line in their ledger.
+
+138
+00:03:09,751 --> 00:03:11,357
+Remember the trusted man with the gold, from
+
+139
+00:03:11,397 --> 00:03:11,999
+the first report?
+
+140
+00:03:12,039 --> 00:03:12,774
+He is back, sir.
+
+141
+00:03:12,814 --> 00:03:13,629
+With the same receipt.
+
+142
+00:03:13,669 --> 00:03:15,183
+And the same problems came back with him:
+
+143
+00:03:15,223 --> 00:03:17,100
+hacks, bankruptcy, frozen accounts.
+
+144
+00:03:17,140 --> 00:03:18,575
+The first big exchange was Mt.
+
+145
+00:03:18,615 --> 00:03:19,159
+Gox.
+
+146
+00:03:19,199 --> 00:03:20,741
+It began as a site for trading game
+
+147
+00:03:20,781 --> 00:03:22,935
+cards, and grew to seventy percent of all
+
+148
+00:03:22,975 --> 00:03:23,777
+bitcoin trading.
+
+149
+00:03:23,817 --> 00:03:26,491
+In 2014, eight hundred and fifty thousand bitcoin
+
+150
+00:03:26,531 --> 00:03:27,297
+disappeared from it.
+
+151
+00:03:27,337 --> 00:03:29,298
+Its customers are still being repaid to this
+
+152
+00:03:29,338 --> 00:03:29,772
+day.
+
+153
+00:03:29,812 --> 00:03:31,154
+The latest deadline has been pushed back to
+
+154
+00:03:31,194 --> 00:03:32,158
+2027.
+
+155
+00:03:32,198 --> 00:03:33,707
+Thirteen years, sir.
+
+156
+00:03:33,747 --> 00:03:34,858
+Even their banks are faster.
+
+157
+00:03:34,898 --> 00:03:35,805
+In 2022:
+
+158
+00:03:35,845 --> 00:03:36,656
+FTX.
+
+159
+00:03:36,696 --> 00:03:39,246
+Valued at thirty-two billion dollars, its name on
+
+160
+00:03:39,286 --> 00:03:39,899
+a stadium.
+
+161
+00:03:39,939 --> 00:03:41,586
+Its founder spent customers' money.
+
+162
+00:03:41,626 --> 00:03:42,152
+The hole:
+
+163
+00:03:42,192 --> 00:03:43,074
+eight billion.
+
+164
+00:03:43,114 --> 00:03:44,240
+He got twenty-five years.
+
+165
+00:03:44,280 --> 00:03:44,872
+The customers?
+
+166
+00:03:44,912 --> 00:03:47,041
+Repaid years later, at the crash-day price.
+
+167
+00:03:47,081 --> 00:03:48,499
+Meanwhile the coins had multiplied.
+
+168
+00:03:48,539 --> 00:03:49,149
+Without them.
+
+169
+00:03:49,189 --> 00:03:50,257
+An exchange in Canada:
+
+170
+00:03:50,297 --> 00:03:52,003
+its founder died suddenly in 2018.
+
+171
+00:03:52,043 --> 00:03:53,065
+He was the only one who had the
+
+172
+00:03:53,105 --> 00:03:53,538
+keys.
+
+173
+00:03:53,578 --> 00:03:55,760
+Investigators found he'd lost the customers' money long
+
+174
+00:03:55,800 --> 00:03:56,357
+before.
+
+175
+00:03:56,397 --> 00:03:57,206
+He cheated them...
+
+176
+00:03:57,246 --> 00:03:58,843
+and died before anyone knew.
+
+177
+00:03:58,883 --> 00:04:00,255
+And the heists keep getting bigger.
+
+178
+00:04:00,295 --> 00:04:01,884
+The exchange Bybit lost a billion and a
+
+179
+00:04:01,924 --> 00:04:03,468
+half dollars in 2025.
+
+180
+00:04:03,508 --> 00:04:05,894
+And in October 2026, the biggest heist in
+
+181
+00:04:05,934 --> 00:04:06,518
+their history:
+
+182
+00:04:06,558 --> 00:04:07,143
+Binance.
+
+183
+00:04:07,183 --> 00:04:08,799
+More than six billion dollars...
+
+184
+00:04:08,839 --> 00:04:09,947
+in twenty minutes.
+
+185
+00:04:09,987 --> 00:04:11,236
+The thief never left his chair.
+
+186
+00:04:11,276 --> 00:04:13,711
+US investigators point to North Korean hackers.
+
+187
+00:04:13,751 --> 00:04:15,826
+The company says it will repay customers itself.
+
+188
+00:04:15,866 --> 00:04:17,307
+Which is why the humans have a saying:
+
+189
+00:04:17,347 --> 00:04:18,364
+not your keys?
+
+190
+00:04:18,404 --> 00:04:19,291
+Not your coins.
+
+191
+00:04:19,331 --> 00:04:20,814
+So you hold your own key?
+
+192
+00:04:20,854 --> 00:04:21,408
+Excellent.
+
+193
+00:04:21,448 --> 00:04:22,693
+But there is no bank.
+
+194
+00:04:22,733 --> 00:04:24,073
+So there is no button that says:
+
+195
+00:04:24,113 --> 00:04:25,076
+forgot password.
+
+196
+00:04:25,116 --> 00:04:26,879
+A man named James Howells threw out an
+
+197
+00:04:26,919 --> 00:04:28,877
+old hard drive in 2013.
+
+198
+00:04:28,951 --> 00:04:31,008
+On it was the key to about eight
+
+199
+00:04:31,048 --> 00:04:31,797
+thousand bitcoin.
+
+200
+00:04:31,837 --> 00:04:33,474
+Twelve years trying to dig through the town
+
+201
+00:04:33,514 --> 00:04:33,988
+dump.
+
+202
+00:04:34,028 --> 00:04:35,350
+He offered the council a quarter.
+
+203
+00:04:35,390 --> 00:04:37,240
+A court said no.
+
+204
+00:04:37,280 --> 00:04:38,655
+And in 2025...
+
+205
+00:04:38,695 --> 00:04:39,243
+he gave up.
+
+206
+00:04:39,283 --> 00:04:41,340
+Hundreds of millions of dollars.
+
+207
+00:04:41,380 --> 00:04:43,226
+Under garbage bags in Wales.
+
+208
+00:04:43,266 --> 00:04:44,917
+And I thought my mission was difficult, sir.
+
+209
+00:04:44,957 --> 00:04:46,930
+A programmer named Stefan Thomas has more than
+
+210
+00:04:46,970 --> 00:04:49,673
+seven thousand bitcoin on an encrypted drive.
+
+211
+00:04:49,741 --> 00:04:50,652
+And forgot the password.
+
+212
+00:04:50,692 --> 00:04:52,580
+The drive gives him ten attempts, then wipes
+
+213
+00:04:52,620 --> 00:04:53,094
+itself.
+
+214
+00:04:53,134 --> 00:04:54,634
+He has used eight.
+
+215
+00:04:54,674 --> 00:04:55,232
+Two left.
+
+216
+00:04:55,272 --> 00:04:57,025
+I am following this file personally.
+
+217
+00:04:57,065 --> 00:04:58,996
+Estimates say three to four million bitcoin have
+
+218
+00:04:59,036 --> 00:05:00,544
+been lost forever this way.
+
+219
+00:05:01,273 --> 00:05:02,034
+Nobody stole them.
+
+220
+00:05:02,074 --> 00:05:02,817
+The owners just...
+
+221
+00:05:02,857 --> 00:05:03,382
+forgot.
+
+222
+00:05:03,422 --> 00:05:04,995
+And if the key holder dies without telling
+
+223
+00:05:05,035 --> 00:05:05,890
+anyone the words?
+
+224
+00:05:05,930 --> 00:05:06,834
+The money dies with them.
+
+225
+00:05:06,874 --> 00:05:08,299
+The ledger has no next of kin.
+
+226
+00:05:08,339 --> 00:05:10,202
+Some humans have been kidnapped for their keys.
+
+227
+00:05:10,242 --> 00:05:11,114
+So their first rule is:
+
+228
+00:05:11,154 --> 00:05:12,879
+never tell anyone how much you hold.
+
+229
+00:05:12,919 --> 00:05:14,568
+And even a cold wallet is no guarantee.
+
+230
+00:05:14,608 --> 00:05:16,498
+In 2026, a popular model turned out to
+
+231
+00:05:16,538 --> 00:05:17,265
+have a flaw.
+
+232
+00:05:17,305 --> 00:05:19,448
+The keys it made could be guessed.
+
+233
+00:05:19,488 --> 00:05:21,272
+Over a hundred million dollars stolen.
+
+234
+00:05:21,312 --> 00:05:23,423
+From devices that are never online.
+
+235
+00:05:23,463 --> 00:05:24,550
+So there are two choices.
+
+236
+00:05:24,590 --> 00:05:25,704
+Leave it on an exchange:
+
+237
+00:05:25,744 --> 00:05:26,124
+easy.
+
+238
+00:05:26,164 --> 00:05:27,769
+But if the exchange falls, you fall with
+
+239
+00:05:27,809 --> 00:05:27,986
+it.
+
+240
+00:05:28,026 --> 00:05:29,213
+Or hold it yourself:
+
+241
+00:05:29,253 --> 00:05:30,114
+nobody can freeze it.
+
+242
+00:05:30,154 --> 00:05:30,963
+But if you forget...
+
+243
+00:05:31,003 --> 00:05:32,992
+nobody reminds you.
+
+244
+00:05:33,032 --> 00:05:34,503
+With a company, it gets stolen.
+
+245
+00:05:34,543 --> 00:05:35,906
+With you, it gets lost.
+
+246
+00:05:35,946 --> 00:05:37,751
+The humans invented money that requires each of
+
+247
+00:05:37,791 --> 00:05:39,507
+them to be a bank, a vault, and
+
+248
+00:05:39,547 --> 00:05:40,341
+a security guard.
+
+249
+00:05:40,381 --> 00:05:42,330
+Most of them cannot remember their email password.
+
+250
+00:05:42,370 --> 00:05:44,060
+And there is a third way to lose
+
+251
+00:05:44,100 --> 00:05:44,878
+your money here:
+
+252
+00:05:44,918 --> 00:05:46,777
+hand it to the thief yourself.
+
+253
+00:05:46,817 --> 00:05:49,560
+Crypto fraud took about seventeen billion dollars in
+
+254
+00:05:49,600 --> 00:05:51,015
+2025 alone.
+
+255
+00:05:51,055 --> 00:05:51,695
+The best known:
+
+256
+00:05:51,735 --> 00:05:52,291
+the pyramid.
+
+257
+00:05:52,331 --> 00:05:54,085
+Invest with us, and get a guaranteed return
+
+258
+00:05:54,125 --> 00:05:54,680
+every month.
+
+259
+00:05:54,720 --> 00:05:55,855
+And the returns are paid out of the
+
+260
+00:05:55,895 --> 00:05:57,611
+money from the people who joined after you.
+
+261
+00:05:57,651 --> 00:06:00,056
+A coin called OneCoin raised about four billion
+
+262
+00:06:00,096 --> 00:06:00,951
+dollars this way.
+
+263
+00:06:00,991 --> 00:06:02,156
+It never even had a blockchain.
+
+264
+00:06:02,196 --> 00:06:04,265
+Its founder vanished in 2017.
+
+265
+00:06:04,305 --> 00:06:05,322
+She is still wanted.
+
+266
+00:06:05,362 --> 00:06:05,893
+The second:
+
+267
+00:06:05,933 --> 00:06:06,782
+fake romance.
+
+268
+00:06:06,822 --> 00:06:08,687
+Someone charming gets to know you, earns your
+
+269
+00:06:08,727 --> 00:06:09,814
+trust for months...
+
+270
+00:06:09,854 --> 00:06:11,727
+and then points you to an investment platform.
+
+271
+00:06:11,767 --> 00:06:12,500
+Their platform.
+
+272
+00:06:12,540 --> 00:06:13,124
+The third:
+
+273
+00:06:13,164 --> 00:06:14,038
+fake tech support.
+
+274
+00:06:14,078 --> 00:06:16,183
+Someone contacts you to fix a problem...
+
+275
+00:06:16,223 --> 00:06:17,690
+and asks for your twelve words.
+
+276
+00:06:17,730 --> 00:06:18,494
+And the fourth:
+
+277
+00:06:18,534 --> 00:06:20,257
+a video of a celebrity saying, send me
+
+278
+00:06:20,297 --> 00:06:21,952
+coins and I will send back double.
+
+279
+00:06:21,992 --> 00:06:23,940
+The video is made with artificial intelligence.
+
+280
+00:06:23,980 --> 00:06:25,268
+The celebrity knows nothing about it.
+
+281
+00:06:25,308 --> 00:06:26,305
+Already scammed?
+
+282
+00:06:26,345 --> 00:06:28,318
+A second scammer offers to get your money
+
+283
+00:06:28,358 --> 00:06:28,894
+back.
+
+284
+00:06:28,934 --> 00:06:30,236
+For a small fee.
+
+285
+00:06:30,276 --> 00:06:32,165
+Robbed twice for the same money.
+
+286
+00:06:32,205 --> 00:06:33,320
+That takes effort.
+
+287
+00:06:33,360 --> 00:06:34,377
+Four red flags.
+
+288
+00:06:34,417 --> 00:06:34,880
+One:
+
+289
+00:06:34,920 --> 00:06:36,114
+guaranteed profit.
+
+290
+00:06:36,154 --> 00:06:37,370
+Nothing here is guaranteed.
+
+291
+00:06:37,410 --> 00:06:37,848
+Two:
+
+292
+00:06:37,888 --> 00:06:38,509
+urgency.
+
+293
+00:06:38,549 --> 00:06:39,988
+You have to pay right now.
+
+294
+00:06:40,028 --> 00:06:40,405
+Three:
+
+295
+00:06:40,445 --> 00:06:42,295
+anyone asking for your key or your twelve
+
+296
+00:06:42,335 --> 00:06:42,808
+words.
+
+297
+00:06:42,848 --> 00:06:43,421
+Anyone at all.
+
+298
+00:06:43,461 --> 00:06:43,873
+Four:
+
+299
+00:06:43,913 --> 00:06:45,645
+you cannot withdraw your money until you pay
+
+300
+00:06:45,685 --> 00:06:46,551
+a fee first.
+
+301
+00:06:46,591 --> 00:06:47,425
+And remember the rule:
+
+302
+00:06:47,465 --> 00:06:48,902
+here, there is no undo.
+
+303
+00:06:48,942 --> 00:06:49,497
+What is gone...
+
+304
+00:06:49,537 --> 00:06:49,884
+is gone.
+
+305
+00:06:49,924 --> 00:06:51,678
+Two words from the Human Dictionary.
+
+306
+00:06:51,718 --> 00:06:52,505
+Seed phrase:
+
+307
+00:06:52,545 --> 00:06:53,433
+the twelve words.
+
+308
+00:06:53,473 --> 00:06:54,737
+Whoever knows them owns your money.
+
+309
+00:06:54,777 --> 00:06:55,861
+And custody:
+
+310
+00:06:55,901 --> 00:06:56,796
+who holds the key.
+
+311
+00:06:56,836 --> 00:06:57,406
+You...
+
+312
+00:06:57,446 --> 00:06:58,302
+or a company.
+
+313
+00:06:58,342 --> 00:07:00,301
+The most important question in this whole file.
+
+314
+00:07:00,341 --> 00:07:01,237
+Summary, sir.
+
+315
+00:07:01,277 --> 00:07:01,747
+One:
+
+316
+00:07:01,787 --> 00:07:03,074
+the key is ownership.
+
+317
+00:07:03,114 --> 00:07:03,474
+Two:
+
+318
+00:07:03,514 --> 00:07:05,811
+the ledger isn't anonymous, and never forgets.
+
+319
+00:07:05,851 --> 00:07:06,283
+Three:
+
+320
+00:07:06,323 --> 00:07:07,774
+with a company it gets stolen...
+
+321
+00:07:07,814 --> 00:07:09,082
+with you, it gets lost.
+
+322
+00:07:09,122 --> 00:07:09,939
+Same warning:
+
+323
+00:07:09,979 --> 00:07:12,010
+a report, not investment advice.
+
+324
+00:07:12,050 --> 00:07:12,771
+Next report:
+
+325
+00:07:12,811 --> 00:07:14,684
+why is this thing worth anything at all?
+
+326
+00:07:14,724 --> 00:07:15,711
+Who sets the price?
+
+327
+00:07:15,751 --> 00:07:17,185
+And why does it shake like that?
+
+328
+00:07:17,225 --> 00:07:18,248
+This has been Earth Report.
+
+329
+00:07:18,288 --> 00:07:18,929
+Agent Peek.
+
+330
+00:07:18,969 --> 00:07:20,116
+End of transmission.

@@ -1,0 +1,961 @@
+{
+ "title": "تقرير الأرض: العملات المشفرة 4 (world picture)",
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture, drawn in the world of crypto parts 1 to 3 (sets/kit.js, bank.js, props.js, c2props.js, c3props.js, c4props.js). Voice: Vertex job techforbadguys-explain-crypto-04-ar-v. No burned-in captions; on-screen text is limited to numbers, years, symbols, names and a few English labels.",
+  "Earth Report field file: Cryptocurrency, part 4 of 6. Why the coin has a price: nothing stands behind it but scarcity and belief; the repeated booms and crashes; why it swings; leverage and liquidation; who holds it; Wall Street and governments arriving; critics and believers; and a scorecard against the three jobs of money from part 1.",
+  "",
+  "Facts are stated from general knowledge and from web research on 12 November 2026 (see explain-crypto-03-ar/plan.md for links), not from pages captured for this episode: the all-time high was about 126,000 dollars on 6 October 2025; earlier peaks and lows were about 30 then 2 dollars (2011), 1,100 then 200 (2013 to 2015), 20,000 then 3,200 (2017 to 2018), 69,000 then 15,500 (2021 to 2022), and the 2026 low was about 58,000 in June; the chart on screen is on a logarithmic scale; the 99Bitcoins obituary list passed 400 entries; each peak came 12 to 18 months after a halving; on 10 October 2025 more than 19 billion dollars of leveraged positions and about 1.6 million traders were liquidated in a day while bitcoin itself fell less than 15 percent; three to four million coins are estimated lost and about 1.1 million attributed to Satoshi; US spot bitcoin funds held about 93 billion dollars on 10 November 2026, about 1.2 million coins; the US government holds a few hundred thousand seized coins and has bought none; Larry Fink of BlackRock called bitcoin an index of money laundering in October 2017 and BlackRock launched its bitcoin fund in January 2024; El Salvador made bitcoin legal tender in 2021 and removed that status in 2025 under an IMF programme; Strategy sold bitcoin in 2026 for the first time since 2022 and reported an 8.32 billion dollar loss for the second quarter; Warren Buffett called bitcoin rat poison squared in 2018; bitcoin fell about 64 percent during 2022; HODL comes from a December 2013 forum post; a buyer at the December 2017 peak waited until December 2020 to break even and a buyer at the November 2021 peak until March 2024; BIS Bulletin 69 (2023) found that a majority of crypto app users in nearly all economies lost money on bitcoin between 2015 and 2022 and that about three quarters downloaded the app when the price was above 20,000 dollars; the first crash was about 93 percent (2011) and the latest about 54 percent (2025 to 2026); all bitcoin was worth about 2.5 trillion dollars at the peak, less than a tenth of all gold; most trading volume is in leveraged derivatives rather than spot. No price forecast is made and it says plainly that nothing in it is advice."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "5 / 6",
+   "icons": [
+    "laptop",
+    "coin",
+    "bank"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "intro": {
+   "kind": "c4intro",
+   "ends": [
+    3.35,
+    6.04
+   ]
+  },
+  "value": {
+   "kind": "c4value",
+   "ends": [
+    4.3,
+    1.47,
+    2.42,
+    12.56,
+    6.36,
+    4.98,
+    7.74,
+    7.92,
+    4.45,
+    3.69,
+    2.48,
+    3.52,
+    6.04,
+    7.76
+   ]
+  },
+  "history": {
+   "kind": "c4history",
+   "ends": [
+    5.44,
+    6.47,
+    12.28,
+    8.35,
+    3.87,
+    2.94,
+    3.95,
+    2.44,
+    8.08,
+    4.27,
+    2.71,
+    8.01,
+    2.95,
+    2.54,
+    1.27,
+    8
+   ]
+  },
+  "shake": {
+   "kind": "c4shake",
+   "ends": [
+    6.73,
+    6.15,
+    4.77,
+    4.41,
+    5.58,
+    4.14,
+    5.05
+   ]
+  },
+  "lever": {
+   "kind": "c4lever",
+   "ends": [
+    0.99,
+    2.9,
+    4.34,
+    3.85,
+    4.33,
+    4.32,
+    2.94,
+    2.94,
+    4.38,
+    3.82,
+    7.23
+   ]
+  },
+  "who": {
+   "kind": "c4who",
+   "ends": [
+    8.95,
+    5.51,
+    7.34
+   ]
+  },
+  "suits": {
+   "kind": "c4suits",
+   "ends": [
+    5.92,
+    4.28,
+    2.1,
+    1.56,
+    4.32,
+    8.88,
+    3.35,
+    3.51,
+    4.5,
+    7.45
+   ]
+  },
+  "debate": {
+   "kind": "c4debate",
+   "ends": [
+    10.22,
+    5.27,
+    8.87,
+    9.04
+   ]
+  },
+  "score": {
+   "kind": "c4score",
+   "ends": [
+    5.33,
+    4.67,
+    4.58
+   ]
+  },
+  "dict": {
+   "kind": "c4dict",
+   "ends": [
+    8.28,
+    4.62
+   ]
+  },
+  "recap": {
+   "kind": "c4recap",
+   "ends": [
+    11.44
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم أربعة في ملف العملات المشفرة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: السعر. الحاجة دي ليه ليها تمن أصلاً؟",
+     "show": "board",
+     "board": "intro",
+     "step": 0
+    },
+    {
+     "say": "سطر في دفتر. مالوش وجود تلمسه، ومفيش حكومة وراه. والواحد منه وصل مية ستة وعشرين ألف دولار.",
+     "show": "board",
+     "board": "intro",
+     "step": 1
+    },
+    {
+     "say": "في التقارير اللي فاتت عرفنا هي بتشتغل إزاي، وبتتمسك إزاي. فاضل السؤال اللي البشر نفسهم بيتخانقوا عليه.",
+     "shot": "close",
+     "emote": "neutral"
+    },
+    {
+     "say": "هقول لكم التمن ده جاي منين، وليه بيتهز بالشكل ده. <short pause> وإزاي في يوم واحد، أكتر من مليون ونص إنسان خسروا كل اللي حاطينه.. والسعر نفسه مانزلش غير شوية.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "value",
+   "story": {
+    "n": 1,
+    "tag": "VALUE",
+    "icon": "gold"
+   },
+   "style": "Patient and clear, with one dry aside. He is honestly puzzled by humans here.",
+   "beats": [
+    {
+     "say": "أول حاجة دوّرت عليها: إيه اللي ورا العملة دي؟ دهب في خزنة؟ لأ.",
+     "show": "board",
+     "board": "value",
+     "step": 0
+    },
+    {
+     "say": "حكومة بتضمنها؟ لأ.",
+     "show": "board",
+     "board": "value",
+     "step": 1
+    },
+    {
+     "say": "شركة بتكسب وتوزّع أرباح؟ برضه لأ.",
+     "show": "board",
+     "board": "value",
+     "step": 2
+    },
+    {
+     "say": "اللي وراها حاجتين بس: إنها نادرة.. وإن فيه ناس مصدّقة إن ليها قيمة.",
+     "show": "board",
+     "board": "value",
+     "step": 3
+    },
+    {
+     "say": "وقبل ما القيادة تضحك: ده نفس اللي ورا الورقة اللي في جيوبهم من سنة واحد وسبعين. <short pause> الفرق إن الورقة وراها حكومة بتاخد بيها الضرايب. ودي وراها.. الإيمان.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وهم بيشبّهوها بالدهب. الدهب أغلب قيمته مش علشان بيتصنّع منه حاجة. علشان نادر، والكل متفق إنه غالي.",
+     "show": "board",
+     "board": "value",
+     "step": 4
+    },
+    {
+     "say": "فسمّوا البيتكوين: الدهب الرقمي. واحد وعشرين مليون، ومفيش منجم جديد هيتكشف.",
+     "show": "board",
+     "board": "value",
+     "step": 5
+    },
+    {
+     "say": "وفيه منهم اللي بيقول: تمنها هو تمن الكهربا اللي اتحرقت فيها. غلط. <short pause> لو صرفت مليون دولار على حفرة في الأرض.. الحفرة ماتبقاش بمليون.",
+     "show": "board",
+     "board": "value",
+     "step": 6,
+     "host": "right",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وللمقارنة: كل البيتكوين اللي على الكوكب، وهو على قمته، كان يساوي اتنين ونص تريليون دولار. الدهب يساوي أكتر من عشر أضعاف ده.",
+     "show": "board",
+     "board": "value",
+     "step": 7,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "طيب مين بيشتري؟ أول واحد: المضارب. شاري علشان يبيع أغلى. وده الأغلبية.",
+     "show": "board",
+     "board": "value",
+     "step": 8
+    },
+    {
+     "say": "التاني: الهربان. ساكن في بلد عملتها بتنهار، وعايز أي حاجة غيرها.",
+     "show": "board",
+     "board": "value",
+     "step": 9
+    },
+    {
+     "say": "التالت: اللي عايز يحوّل فلوس برّه البنوك.",
+     "show": "board",
+     "board": "value",
+     "step": 10
+    },
+    {
+     "say": "والرابع: المؤسسات. صناديق وشركات. ودول جم متأخر.",
+     "show": "board",
+     "board": "value",
+     "step": 11
+    },
+    {
+     "say": "وكل ما ناس أكتر تقبلها، قيمتها تزيد. زي التليفون: أول واحد اشترى تليفون على الكوكب.. ماكانش عنده حد يكلّمه.",
+     "show": "board",
+     "board": "value",
+     "step": 12,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "يعني السعر مش حد بيحدده. السعر هو آخر رقم اتنين اتفقوا عليه: واحد عايز يبيع، وواحد عايز يشتري. <short pause> مش أكتر من كده.",
+     "show": "board",
+     "board": "value",
+     "step": 13,
+     "host": "right",
+     "emote": "neutral"
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "story": {
+    "n": 2,
+    "tag": "BUBBLES",
+    "icon": "chartdown"
+   },
+   "style": "A historian reading a chart of repeated madness, enjoying it.",
+   "beats": [
+    {
+     "say": "وبصّيت على تاريخ السعر. سنة ألفين وحداشر: من دولار لتلاتين دولار.. ورجع لاتنين.",
+     "show": "board",
+     "board": "history",
+     "step": 0
+    },
+    {
+     "say": "ألفين وتلتاشر: ألف ومية. ونزل لميتين. ألفين وسبعتاشر: عشرين ألف. ونزل لتلات آلاف.",
+     "show": "board",
+     "board": "history",
+     "step": 1,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "ألفين واحد وعشرين: تسعة وستين ألف. ونزل لخمستاشر. وألفين خمسة وعشرين: مية ستة وعشرين ألف.. ونزل لأقل من ستين.",
+     "show": "board",
+     "board": "history",
+     "step": 2,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "خمس مرات يطلع للسما، وخمس مرات يقع أكتر من النص. <short pause> والبشر كل مرة متفاجئين.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وللإنصاف: كل وقعة أهدى من اللي قبلها. الأولى كانت تلاتة وتسعين في المية. والأخيرة أربعة وخمسين. <short pause> يمكن بتكبر وتعقل. ويمكن لأ.",
+     "show": "board",
+     "board": "history",
+     "step": 3,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "وكل فقاعة كان ليها حكاية. ألفين وتلتاشر: ناس هربانة من بنوك قبرص.",
+     "show": "board",
+     "board": "history",
+     "step": 4
+    },
+    {
+     "say": "ألفين وسبعتاشر: أي حد بيعمل عملة جديدة ويلمّ ملايين.",
+     "show": "board",
+     "board": "history",
+     "step": 5
+    },
+    {
+     "say": "ألفين واحد وعشرين: حكومات طبعت فلوس أيام الوباء، والناس قاعدة في البيت.",
+     "show": "board",
+     "board": "history",
+     "step": 6
+    },
+    {
+     "say": "وألفين خمسة وعشرين: وول ستريت دخلت.",
+     "show": "board",
+     "board": "history",
+     "step": 7
+    },
+    {
+     "say": "ودورة البشر واحدة: السعر يطلع، الجرايد تكتب، سواق التاكسي ينصحك تشتري، الكل يدخل.. وينزل. <short pause> وبعد أربع سنين تتعاد. ذاكرة الكائنات دي قصيرة.",
+     "show": "board",
+     "board": "history",
+     "step": 8,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "واللي اشترى على قمة ألفين وسبعتاشر، استنى تلات سنين علشان يرجّع فلوسه بس.",
+     "show": "board",
+     "board": "history",
+     "step": 9
+    },
+    {
+     "say": "واللي اشترى على قمة ألفين واحد وعشرين: سنتين ونص.",
+     "show": "board",
+     "board": "history",
+     "step": 10
+    },
+    {
+     "say": "وبنك البنوك المركزية درس سبع سنين من البيانات: أغلبية اللي دخلوا عن طريق التطبيقات.. خسروا. لأن تلات أرباعهم نزّل التطبيق والسعر فوق.",
+     "show": "board",
+     "board": "history",
+     "host": "left",
+     "step": 11
+    },
+    {
+     "say": "وكل مرة يقع، الصحافة عندهم تعلن وفاته.",
+     "show": "board",
+     "board": "history",
+     "step": 12
+    },
+    {
+     "say": "أعلنوها أكتر من أربعمية مرة.",
+     "show": "board",
+     "board": "history",
+     "step": 13
+    },
+    {
+     "say": "ولسه بيتنفس.",
+     "show": "board",
+     "board": "history",
+     "host": "right",
+     "step": 14
+    },
+    {
+     "say": "والبشر لاحظوا نمط: كل قمة جت بعد التنصيف بسنة لسنة ونص. جايزة أقل، يعني عملات جديدة أقل.. والسعر يولّع.",
+     "show": "board",
+     "board": "history",
+     "step": 15,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "هل ده قانون؟ لأ. ده حصل أربع مرات بس. <short pause> والبشر بيبنوا عقايد على أقل من كده.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "shake",
+   "story": {
+    "n": 3,
+    "tag": "SWINGS",
+    "icon": "bolt"
+   },
+   "style": "Brisk list of causes, matter-of-fact.",
+   "beats": [
+    {
+     "say": "وليه بيتهز بالعنف ده؟ أول سبب: السوق صغير قصاد فلوس الكوكب. واحد كبير يبيع.. السعر كله يتحرك.",
+     "show": "board",
+     "board": "shake",
+     "step": 0
+    },
+    {
+     "say": "تاني سبب: مفيش مرساة. سهم الشركة وراه أرباح. البيت وراه إيجار. دي وراها توقعات.",
+     "show": "board",
+     "board": "shake",
+     "step": 1
+    },
+    {
+     "say": "تالت سبب: السوق شغال أربعة وعشرين ساعة، كل يوم. ومحدش بيقفله لما يتجنن.",
+     "show": "board",
+     "board": "shake",
+     "step": 2
+    },
+    {
+     "say": "ورابع سبب: الأخبار. تصريح من واحد غني يطلّعه. وقرار حكومة ينزّله.",
+     "show": "board",
+     "board": "shake",
+     "step": 3
+    },
+    {
+     "say": "والمفروض إنها ملاذ بعيد عن أسواقهم. بس لما البورصة عندهم بتقع.. هي بتقع معاها. وأسرع.",
+     "show": "board",
+     "board": "shake",
+     "step": 4,
+     "host": "left",
+     "emote": "bored"
+    },
+    {
+     "say": "النتيجة: ممكن يتحرك في يوم واحد أكتر ما عملة عادية بتتحرك في سنة.",
+     "show": "board",
+     "board": "shake",
+     "step": 5,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "واللي ماسكين كميات كبيرة بيسمّوهم الحيتان. <short pause> لما الحوت يتحرك، السمك الصغير هو اللي بيغرق.",
+     "show": "board",
+     "board": "shake",
+     "step": 6,
+     "host": "left",
+     "emote": "smug"
+    }
+   ]
+  },
+  {
+   "id": "lever",
+   "story": {
+    "n": 4,
+    "tag": "LEVERAGE",
+    "icon": "tag"
+   },
+   "style": "The most dangerous thing he found. Clear, a little grim, no jokes until the last line.",
+   "calm": true,
+   "beats": [
+    {
+     "say": "وهنا أخطر حاجة رصدتها في الملف كله. اسمها الرافعة.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "إنت معاك مية دولار.",
+     "show": "board",
+     "board": "lever",
+     "step": 0
+    },
+    {
+     "say": "المنصة تسلّفك تسعمية فوقهم. فبقيت بتراهن بألف.",
+     "show": "board",
+     "board": "lever",
+     "step": 1
+    },
+    {
+     "say": "السعر طلع عشرة في المية؟ كسبت مية. فلوسك اتضاعفت. <short pause> وده الطُعم.",
+     "show": "board",
+     "board": "lever",
+     "step": 2,
+     "host": "right",
+     "emote": "sly"
+    },
+    {
+     "say": "السعر نزل عشرة في المية؟ الخسارة مية. يعني كل فلوسك إنت.",
+     "show": "board",
+     "board": "lever",
+     "step": 3
+    },
+    {
+     "say": "والمنصة بتبيع عليك أوتوماتيك علشان تاخد سلفتها. بيسمّوها: تصفية.",
+     "show": "board",
+     "board": "lever",
+     "step": 4
+    },
+    {
+     "say": "وفيه منصات بتدّي مية ضعف. يعني السعر يتحرك واحد في المية ضدك.. وخلاص.",
+     "show": "board",
+     "board": "lever",
+     "step": 5,
+     "host": "left",
+     "emote": "annoyed"
+    },
+    {
+     "say": "يوم عشرة أكتوبر ألفين خمسة وعشرين، السعر نزل فجأة.",
+     "show": "board",
+     "board": "lever",
+     "step": 6
+    },
+    {
+     "say": "وفي يوم واحد اتصفّى أكتر من مليون ونص متداول.",
+     "show": "board",
+     "board": "lever",
+     "step": 7
+    },
+    {
+     "say": "تسعتاشر مليار دولار اتمسحت. والبيتكوين نفسه كان نزل أقل من خمستاشر في المية.",
+     "show": "board",
+     "board": "lever",
+     "step": 8
+    },
+    {
+     "say": "وأغلب التداول على العملة دي مش شرا وبيع حقيقي أصلاً. رهانات بالرافعة على السعر.",
+     "show": "board",
+     "board": "lever",
+     "step": 9,
+     "host": "right",
+     "emote": "annoyed"
+    },
+    {
+     "say": "واللي كسبان في الحالتين: المنصة. بتاخد عمولة والسعر طالع، وعمولة والسعر نازل. <short pause> زي الكازينو يا فندم. البيت دايماً بيكسب.",
+     "show": "board",
+     "board": "lever",
+     "step": 10,
+     "host": "left",
+     "emote": "sly"
+    },
+    {
+     "say": "البشر لقوا حاجة بتتهز لوحدها.. <short pause> فركّبوا لها موتور.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "who",
+   "story": {
+    "n": 5,
+    "tag": "WHO HOLDS IT",
+    "icon": "crown"
+   },
+   "style": "Counting who holds what, dry.",
+   "beats": [
+    {
+     "say": "طيب العشرين مليون اللي اتعدّنوا دول فين؟ من تلاتة لأربعة مليون ضايعين. مليون عند الغايب. وأكتر من مليون في صناديق وول ستريت.",
+     "show": "board",
+     "board": "who",
+     "step": 0
+    },
+    {
+     "say": "وأغلب البشر اللي معاهم مش بيملكوا بيتكوين كامل. بيملكوا كسور. حتة من مية مليون.",
+     "show": "board",
+     "board": "who",
+     "step": 1,
+     "host": "left",
+     "emote": "neutral"
+    },
+    {
+     "say": "وحكومة أمريكا معاها مئات الآلاف، مصادَرين من مجرمين. <short pause> يعني من أكبر حيتان العملة اللي اتعملت علشان تهرب من الحكومات.. حكومة.",
+     "show": "board",
+     "board": "who",
+     "step": 2,
+     "host": "right",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "suits",
+   "story": {
+    "n": 6,
+    "tag": "WALL STREET",
+    "icon": "bank"
+   },
+   "style": "Enjoying the irony of bankers selling the anti-bank coin.",
+   "beats": [
+    {
+     "say": "والتطور اللي محدش كان متوقعه: البنوك نفسها دخلت.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "رئيس أكبر شركة لإدارة الأموال على الكوكب قال سنة ألفين وسبعتاشر: البيتكوين مؤشر على غسيل الأموال.",
+     "show": "board",
+     "board": "suits",
+     "step": 0
+    },
+    {
+     "say": "وسنة ألفين أربعة وعشرين، نفس الشركة نزّلت أكبر صندوق بيتكوين في العالم.",
+     "show": "board",
+     "board": "suits",
+     "step": 1
+    },
+    {
+     "say": "والصندوق ده معناه إيه؟ تدّي فلوسك لشركة.",
+     "show": "board",
+     "board": "suits",
+     "step": 2
+    },
+    {
+     "say": "وهي تشتري البيتكوين وتمسكه.",
+     "show": "board",
+     "board": "suits",
+     "step": 3
+    },
+    {
+     "say": "وإنت معاك السعر بس. لا مفتاح، ولا اتناشر كلمة. وتدفع عمولة كل سنة.",
+     "show": "board",
+     "board": "suits",
+     "step": 4
+    },
+    {
+     "say": "يعني البشر اللي هربوا من الوسيط.. دفعوا لوسيط تاني علشان يريّحهم من الهروب.",
+     "show": "board",
+     "board": "suits",
+     "step": 5,
+     "host": "left",
+     "emote": "smug"
+    },
+    {
+     "say": "عملة اتعملت علشان تستغنى عن البنوك. <short pause> والبنوك دلوقتي بتبيعها لك.. بعمولة.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "ودول جرّبت. السلفادور خلّتها عملة رسمية سنة ألفين واحد وعشرين.",
+     "show": "board",
+     "board": "suits",
+     "step": 6
+    },
+    {
+     "say": "وتراجعت سنة ألفين خمسة وعشرين، علشان تاخد قرض من صندوق النقد.",
+     "show": "board",
+     "board": "suits",
+     "step": 7
+    },
+    {
+     "say": "أمريكا أعلنت احتياطي بيتكوين استراتيجي. من العملات المصادَرة. وماشترتش ولا واحدة.",
+     "show": "board",
+     "board": "suits",
+     "step": 8
+    },
+    {
+     "say": "وشركة اسمها Strategy سابت شغلها وبقت تستلف علشان تشتري بيتكوين. في ألفين ستة وعشرين خسرت أكتر من تمانية مليار دولار.. في تلات شهور.",
+     "show": "board",
+     "board": "suits",
+     "step": 9
+    }
+   ]
+  },
+  {
+   "id": "debate",
+   "story": {
+    "n": 7,
+    "tag": "THE DEBATE",
+    "icon": "mic"
+   },
+   "style": "Even-handed. He reports both camps and refuses to pick, with one sharp observation.",
+   "beats": [
+    {
+     "say": "والبشر منقسمين عليها. النقاد بيقولوا: مابتنتجش حاجة. قيمتها الوحيدة إن حد تاني هيشتريها منك أغلى. واحد من أشهر مستثمرينهم سمّاها: سم فيران.",
+     "show": "board",
+     "board": "debate",
+     "step": 0
+    },
+    {
+     "say": "والمؤمنين بيقولوا: فلوس محدش يقدر يطبعها، ولا يصادرها. تأمين ضد حكوماتهم.",
+     "show": "board",
+     "board": "debate",
+     "step": 1
+    },
+    {
+     "say": "واختبار صغير: سنة ألفين اتنين وعشرين الأسعار عندهم ولّعت. وده اليوم اللي التأمين المفروض يشتغل فيه. <short pause> البيتكوين نزل يومها أكتر من ستين في المية.",
+     "show": "board",
+     "board": "debate",
+     "step": 2,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "والمؤمنين ليهم طقوس. اللي واثق يحط عينين ليزر في صورته. واللي السعر نزل عليه يقول: أنا مستثمر على المدى الطويل. <short pause> دي جملة معناها عندهم: أنا محبوس.",
+     "show": "board",
+     "board": "debate",
+     "step": 3,
+     "host": "left",
+     "emote": "grin"
+    },
+    {
+     "say": "أنا مسجّل الرأيين يا فندم، ومش هحكم. بس ملاحظة: الطرفين متأكدين جداً. <short pause> وده على الكوكب ده.. عمره ما كان علامة كويسة.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "score",
+   "story": {
+    "n": 8,
+    "tag": "SCORECARD",
+    "icon": "rules"
+   },
+   "style": "Marking an exam paper, fair but unsentimental.",
+   "beats": [
+    {
+     "say": "نرجع للتلات شغلانات بتوع الفلوس، اللي طلبت منكم تحتفظوا بيهم من التقرير الأول.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "تدفع بيها؟ نادراً. بطيئة، وعمولتها بتتغير. واللي معاه خايف يصرفها.. لتغلى بكرة.",
+     "show": "board",
+     "board": "score",
+     "step": 0
+    },
+    {
+     "say": "تسعّر بيها؟ لأ. محدش بيسعّر العيش بالبيتكوين. السعر هيتغير قبل ما العيش يبرد.",
+     "show": "board",
+     "board": "score",
+     "step": 1
+    },
+    {
+     "say": "تحوّش بيها؟ نص درجة. على المدى الطويل طلعت كتير. وممكن تنزل النص في سنة.",
+     "show": "board",
+     "board": "score",
+     "step": 2
+    },
+    {
+     "say": "ده مش تحويش يا فندم. ده ملاهي. <short pause> يعني بمقياسهم هم: لسه مش فلوس. دي حاجة جديدة: أصل نادر.. بيتراهن عليه.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "book"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "كلمتين من قاموس البشر. HODL: غلطة إملائية من واحد كان بيكتب hold سنة ألفين وتلتاشر. بقت عقيدة: ماتبيعش مهما حصل.",
+     "show": "board",
+     "board": "dict",
+     "step": 0
+    },
+    {
+     "say": "و FOMO: الخوف إن القطر يفوتك. <short pause> وده السبب الأول إن البشر بيشتروا على القمة.",
+     "show": "board",
+     "board": "dict",
+     "host": "right",
+     "step": 1
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "file"
+   },
+   "style": "Summary, one sincere and firm warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: القيمة جاية من الندرة.. والتصديق. اتنين: السعر توقعات، والرافعة بتمسح الناس. تلاتة: بمقياسهم هم، دي لسه مش فلوس. دي رهان.",
+     "show": "board",
+     "host": "right",
+     "board": "recap",
+     "step": 0
+    },
+    {
+     "say": "وده أكتر تقرير محتاج التنبيه: مفيش في كلامي نصيحة تشتري ولا تبيع. <short pause> واللي بيدخل هنا بفلوس محتاجها.. غالباً بيخسرها.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "التقرير الجاي: البشر خلّوا الدفتر يشغّل برامج. حراسة من غير كهربا، ودولار رقمي، وبنك من غير بنك.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "البيتكوين ليه ليه تمن؟ وليه سعره بيتهز كده؟ | ملف العملات المشفرة 4/5",
+   "5 فقاعات و5 وقعات: قصة سعر البيتكوين | 4/5",
+   "الرافعة المالية: إزاي تخسر كل حاجة والسعر نزل 10% بس | 4/5"
+  ],
+  "description": [
+   "التقرير الرابع من العميل Peek: سطر في دفتر، مفيش حكومة وراه، والواحد منه وصل 126 ألف دولار. ليه؟",
+   "",
+   "القيمة جاية منين لو مفيش دهب ولا حكومة ولا شركة؟ ليه السعر طلع ووقع خمس مرات؟ ليه بيتهز بالعنف ده؟ يعني إيه رافعة وتصفية، وإزاي أكتر من مليون ونص متداول اتمسحوا في يوم واحد؟ مين ماسك البيتكوين فعلاً؟ وليه وول ستريت بتبيع دلوقتي العملة اللي اتعملت علشان تستغنى عنها؟",
+   "",
+   "وفي الآخر كشف درجات: هل البيتكوين فلوس بالمعنى الحقيقي؟",
+   "",
+   "مفيش في الحلقة أي توقع للسعر ولا نصيحة شرا أو بيع."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "بنك التسويات الدولية، خسائر الأفراد في البيتكوين (Bulletin 69): https://www.bis.org/publ/bisbull69.htm",
+   "CoinDesk عن بيع Strategy وخسارتها في 2026: https://www.coindesk.com/markets/2026/07/06/one-month-that-shook-the-market-saylor-s-struggles-over-bitcoin-strategy-yields-big-loss",
+   "هبوط يونيو 2026: https://news.bitcoin.com/bitcoin-falls-below-58000-q2-2026/",
+   "صناديق البيتكوين الأمريكية (نوفمبر 2026): https://cryptobriefing.com/bitcoin-spot-etfs-412m-outflows-november-6/",
+   "السلفادور والبيتكوين: https://cointelegraph.com/magazine/el-salvador-bitcoin-aspirations-closer-earth-2025",
+   "الاحتياطي الاستراتيجي الأمريكي: https://en.wikipedia.org/wiki/U.S._Strategic_Bitcoin_Reserve"
+  ],
+  "footer": [
+   "دي حلقة من ملف من ست تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#بيتكوين",
+   "#العملات_المشفرة"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "العملات المشفرة",
+   "ما هي الرافعة المالية",
+   "لماذا يرتفع سعر البيتكوين",
+   "العملات الرقمية",
+   "بيتكوين",
+   "Bitcoin",
+   "كريبتو",
+   "شرح بيتكوين",
+   "شرح العملات الرقمية",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "سعر البيتكوين",
+   "ليه البيتكوين غالي",
+   "فقاعة البيتكوين",
+   "الرافعة المالية",
+   "التصفية",
+   "Leverage",
+   "الدهب الرقمي",
+   "صناديق البيتكوين",
+   "Bitcoin ETF",
+   "Strategy",
+   "السلفادور",
+   "HODL",
+   "FOMO",
+   "هل البيتكوين فلوس"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العملات المشفرة (five parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review."
+  ],
+  "pinned": "سؤال القيادة: البيتكوين دهب رقمي ولا أكبر رهان في التاريخ؟ اكتب رأيك.. من غير ما تنصح حد يشتري."
+ },
+ "theme": "day"
+}

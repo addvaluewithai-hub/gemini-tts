@@ -1,0 +1,695 @@
+1
+00:00:00,300 --> 00:00:01,193
+Sir.
+
+2
+00:00:01,233 --> 00:00:03,541
+The sixth and final report in the cryptocurrency
+
+3
+00:00:03,581 --> 00:00:04,086
+file.
+
+4
+00:00:04,126 --> 00:00:04,673
+Today:
+
+5
+00:00:04,713 --> 00:00:06,015
+the hype, and the law.
+
+6
+00:00:06,055 --> 00:00:07,860
+Last report, we learned anyone can make a
+
+7
+00:00:07,900 --> 00:00:09,072
+coin in minutes.
+
+8
+00:00:09,361 --> 00:00:11,006
+So humans made twenty million.
+
+9
+00:00:11,046 --> 00:00:12,936
+Some with a picture, some with a dog,
+
+10
+00:00:12,976 --> 00:00:14,028
+one with a president's name.
+
+11
+00:00:14,068 --> 00:00:16,209
+I'll tell you which lived, which died, and
+
+12
+00:00:16,249 --> 00:00:17,259
+what governments did.
+
+13
+00:00:17,299 --> 00:00:19,623
+Then my verdict on the whole file.
+
+14
+00:00:19,663 --> 00:00:22,480
+In 2021, the humans discovered the ledger could
+
+15
+00:00:22,520 --> 00:00:24,706
+record who owns anything at all.
+
+16
+00:00:24,746 --> 00:00:26,044
+So they recorded pictures.
+
+17
+00:00:26,084 --> 00:00:28,895
+One digital picture sold for sixty-nine million dollars.
+
+18
+00:00:28,935 --> 00:00:30,882
+And the first tweet in Twitter's history sold
+
+19
+00:00:30,922 --> 00:00:32,064
+for almost three million.
+
+20
+00:00:32,104 --> 00:00:33,862
+A year later its owner listed it.
+
+21
+00:00:33,902 --> 00:00:34,716
+The best offer:
+
+22
+00:00:34,756 --> 00:00:36,095
+two hundred and eighty dollars.
+
+23
+00:00:36,135 --> 00:00:38,670
+Celebrities bought cartoon apes for hundreds of thousands.
+
+24
+00:00:38,710 --> 00:00:39,113
+Why?
+
+25
+00:00:39,153 --> 00:00:40,078
+The same old reason:
+
+26
+00:00:40,118 --> 00:00:41,374
+someone else will pay more.
+
+27
+00:00:41,414 --> 00:00:43,324
+The buyer wasn't buying the picture.
+
+28
+00:00:43,364 --> 00:00:45,316
+He bought a line saying it was his.
+
+29
+00:00:45,356 --> 00:00:46,688
+The picture itself...
+
+30
+00:00:46,728 --> 00:00:47,612
+anyone can copy.
+
+31
+00:00:47,652 --> 00:00:49,692
+Remember the copy problem from the first report?
+
+32
+00:00:49,732 --> 00:00:50,332
+Still here.
+
+33
+00:00:50,372 --> 00:00:52,764
+Two years later, a study found ninety-five percent
+
+34
+00:00:52,804 --> 00:00:54,430
+of those collections...
+
+35
+00:00:54,470 --> 00:00:55,601
+were worth nothing.
+
+36
+00:00:55,641 --> 00:00:57,341
+But the idea came back in a suit:
+
+37
+00:00:57,381 --> 00:00:58,917
+shares and bonds on a ledger.
+
+38
+00:00:58,957 --> 00:01:00,904
+That's what big exchanges are building now.
+
+39
+00:01:00,944 --> 00:01:02,875
+Now the strangest cage in the zoo.
+
+40
+00:01:02,915 --> 00:01:05,642
+In 2013, two programmers made a coin to
+
+41
+00:01:05,682 --> 00:01:07,327
+mock the whole thing.
+
+42
+00:01:07,367 --> 00:01:08,228
+With a dog on it.
+
+43
+00:01:08,268 --> 00:01:11,079
+By 2021, the joke was worth about ninety
+
+44
+00:01:11,119 --> 00:01:12,501
+billion dollars.
+
+45
+00:01:12,547 --> 00:01:13,614
+Still worth billions.
+
+46
+00:01:13,654 --> 00:01:15,536
+The richest human on the planet would post
+
+47
+00:01:15,576 --> 00:01:16,743
+one line about it...
+
+48
+00:01:16,783 --> 00:01:17,696
+and the price went up.
+
+49
+00:01:17,736 --> 00:01:18,523
+Another line...
+
+50
+00:01:18,563 --> 00:01:18,955
+down.
+
+51
+00:01:18,995 --> 00:01:20,927
+One creator sold his share early...
+
+52
+00:01:20,967 --> 00:01:22,247
+and bought a used car.
+
+53
+00:01:22,287 --> 00:01:23,688
+He understood it best.
+
+54
+00:01:23,728 --> 00:01:25,323
+Then came sites that make you a coin
+
+55
+00:01:25,363 --> 00:01:27,343
+in under a minute, no code at all.
+
+56
+00:01:28,128 --> 00:01:29,992
+Even a president launched one in his name,
+
+57
+00:01:30,032 --> 00:01:31,584
+three days before taking office.
+
+58
+00:01:31,624 --> 00:01:33,103
+It reached seventy-four dollars.
+
+59
+00:01:33,143 --> 00:01:34,704
+In November 2026:
+
+60
+00:01:34,744 --> 00:01:35,679
+a dollar and change.
+
+61
+00:01:35,719 --> 00:01:37,558
+Down ninety-eight percent.
+
+62
+00:01:37,598 --> 00:01:38,418
+Two games here.
+
+63
+00:01:38,458 --> 00:01:39,288
+The rug pull:
+
+64
+00:01:39,328 --> 00:01:41,464
+the maker collects the money and vanishes.
+
+65
+00:01:41,548 --> 00:01:42,336
+Pump and dump:
+
+66
+00:01:42,376 --> 00:01:44,684
+buy early, make noise, and when you get
+
+67
+00:01:44,724 --> 00:01:45,154
+in...
+
+68
+00:01:45,194 --> 00:01:45,756
+they get out.
+
+69
+00:01:45,796 --> 00:01:48,090
+Either way, one person always loses:
+
+70
+00:01:48,130 --> 00:01:48,761
+the latecomer.
+
+71
+00:01:48,801 --> 00:01:49,631
+The final count:
+
+72
+00:01:49,671 --> 00:01:51,644
+twenty million coins made by the end of
+
+73
+00:01:51,684 --> 00:01:53,417
+2025.
+
+74
+00:01:53,457 --> 00:01:54,276
+More than half...
+
+75
+00:01:54,316 --> 00:01:54,738
+dead.
+
+76
+00:01:54,778 --> 00:01:56,457
+A coin here lives shorter than a carton
+
+77
+00:01:56,497 --> 00:01:57,209
+of milk.
+
+78
+00:01:57,249 --> 00:01:58,699
+They're hunting the next.
+
+79
+00:01:58,739 --> 00:02:00,526
+Their governments don't agree.
+
+80
+00:02:00,566 --> 00:02:02,257
+China banned it in 2021.
+
+81
+00:02:02,297 --> 00:02:04,125
+Europe allowed it under a law, from the
+
+82
+00:02:04,165 --> 00:02:05,289
+end of 2024.
+
+83
+00:02:05,329 --> 00:02:07,420
+America is still arguing with itself.
+
+84
+00:02:07,460 --> 00:02:09,424
+So the law changes country by country.
+
+85
+00:02:09,464 --> 00:02:12,289
+Anyone should check their own country's law first.
+
+86
+00:02:12,329 --> 00:02:13,830
+The one thing they all agreed on:
+
+87
+00:02:13,870 --> 00:02:14,679
+taxes.
+
+88
+00:02:14,719 --> 00:02:16,053
+And the governments' answer:
+
+89
+00:02:16,093 --> 00:02:18,031
+a digital currency from the central bank.
+
+90
+00:02:18,071 --> 00:02:19,925
+Over a hundred countries are studying it.
+
+91
+00:02:19,965 --> 00:02:21,044
+Almost the same technology.
+
+92
+00:02:21,084 --> 00:02:22,474
+The exact opposite idea:
+
+93
+00:02:22,514 --> 00:02:23,850
+not a ledger with no guard.
+
+94
+00:02:23,890 --> 00:02:24,409
+A guard...
+
+95
+00:02:24,449 --> 00:02:25,309
+holding the whole ledger.
+
+96
+00:02:25,349 --> 00:02:27,918
+After six reports, my final assessment for Command.
+
+97
+00:02:27,958 --> 00:02:28,945
+First, what worked.
+
+98
+00:02:28,985 --> 00:02:29,449
+One:
+
+99
+00:02:29,489 --> 00:02:30,665
+the invention is real.
+
+100
+00:02:30,705 --> 00:02:33,222
+A ledger with no owner, running seventeen years,
+
+101
+00:02:33,262 --> 00:02:35,249
+and nobody has changed an old line.
+
+102
+00:02:35,289 --> 00:02:35,677
+Two:
+
+103
+00:02:35,717 --> 00:02:37,346
+for the first time, something digital...
+
+104
+00:02:37,386 --> 00:02:38,682
+that can't be copied.
+
+105
+00:02:38,722 --> 00:02:39,223
+Three:
+
+106
+00:02:39,263 --> 00:02:41,694
+the digital dollar is really used, especially where
+
+107
+00:02:41,734 --> 00:02:42,930
+banks let people down.
+
+108
+00:02:42,970 --> 00:02:43,905
+What didn't work.
+
+109
+00:02:43,945 --> 00:02:44,408
+One:
+
+110
+00:02:44,448 --> 00:02:45,666
+nobody buys bread with it.
+
+111
+00:02:45,706 --> 00:02:46,211
+Two:
+
+112
+00:02:46,251 --> 00:02:48,159
+the billion with no bank account?
+
+113
+00:02:48,199 --> 00:02:49,480
+Most still have none.
+
+114
+00:02:49,520 --> 00:02:51,280
+What brought people in was the phone...
+
+115
+00:02:51,598 --> 00:02:52,386
+not bitcoin.
+
+116
+00:02:52,426 --> 00:02:52,841
+Three:
+
+117
+00:02:52,881 --> 00:02:55,407
+the middleman they fled came back three times:
+
+118
+00:02:55,447 --> 00:02:58,157
+an exchange, a fund, and a digital-dollar company.
+
+119
+00:02:58,197 --> 00:02:58,686
+Four:
+
+120
+00:02:58,726 --> 00:03:01,103
+around it, they built the planet's biggest casino.
+
+121
+00:03:01,143 --> 00:03:01,690
+In fairness:
+
+122
+00:03:01,730 --> 00:03:04,163
+the technology is seeping into the old system.
+
+123
+00:03:04,203 --> 00:03:06,801
+Banks and exchanges are testing ledgers like this.
+
+124
+00:03:07,173 --> 00:03:08,213
+Some questions remain.
+
+125
+00:03:08,253 --> 00:03:10,980
+New machines called quantum computers might one day
+
+126
+00:03:11,020 --> 00:03:11,983
+break the keys.
+
+127
+00:03:12,023 --> 00:03:14,834
+In March 2026, Google researchers said that would
+
+128
+00:03:14,874 --> 00:03:17,403
+take machines twenty times smaller than thought.
+
+129
+00:03:17,443 --> 00:03:19,222
+Programmers are preparing new locks.
+
+130
+00:03:19,262 --> 00:03:19,753
+A race...
+
+131
+00:03:19,793 --> 00:03:20,388
+not over yet.
+
+132
+00:03:20,428 --> 00:03:21,883
+And one from the second report:
+
+133
+00:03:21,923 --> 00:03:23,570
+when the mining prizes run out...
+
+134
+00:03:23,610 --> 00:03:24,712
+who pays the guards?
+
+135
+00:03:24,752 --> 00:03:25,802
+The bottom line, sir:
+
+136
+00:03:25,842 --> 00:03:27,490
+the invention is brilliant.
+
+137
+00:03:27,530 --> 00:03:29,962
+And humans used it like every brilliant thing:
+
+138
+00:03:30,002 --> 00:03:31,555
+a quarter to solve a problem...
+
+139
+00:03:31,595 --> 00:03:33,127
+three quarters to place bets.
+
+140
+00:03:33,167 --> 00:03:34,969
+Do I recommend Command buy?
+
+141
+00:03:35,429 --> 00:03:37,967
+Agent Peek isn't authorized to give investment advice.
+
+142
+00:03:38,007 --> 00:03:39,062
+Not even to his planet.
+
+143
+00:03:39,102 --> 00:03:40,987
+The last two words from the Human Dictionary.
+
+144
+00:03:41,027 --> 00:03:41,645
+Altcoin:
+
+145
+00:03:41,685 --> 00:03:43,148
+any coin that isn't bitcoin.
+
+146
+00:03:43,188 --> 00:03:44,528
+All twenty million of them.
+
+147
+00:03:44,568 --> 00:03:45,709
+And airdrop:
+
+148
+00:03:45,749 --> 00:03:48,313
+free coins handed out to reel you in.
+
+149
+00:03:48,353 --> 00:03:49,743
+Nothing's free on this planet.
+
+150
+00:03:49,783 --> 00:03:51,471
+Summary of the whole file, sir.
+
+151
+00:03:51,511 --> 00:03:52,000
+One:
+
+152
+00:03:52,040 --> 00:03:53,911
+money is a ledger, and bitcoin gave it
+
+153
+00:03:53,951 --> 00:03:54,604
+to everyone.
+
+154
+00:03:54,644 --> 00:03:55,024
+Two:
+
+155
+00:03:55,064 --> 00:03:57,581
+the key is ownership, and what's lost stays
+
+156
+00:03:57,621 --> 00:03:58,095
+lost.
+
+157
+00:03:58,135 --> 00:03:58,598
+Three:
+
+158
+00:03:58,638 --> 00:04:00,506
+the price is a bet, not a promise.
+
+159
+00:04:00,546 --> 00:04:01,124
+Four:
+
+160
+00:04:01,164 --> 00:04:03,179
+the ledger now runs programs, and its biggest
+
+161
+00:04:03,219 --> 00:04:04,935
+success was the digital dollar.
+
+162
+00:04:04,975 --> 00:04:05,605
+And five:
+
+163
+00:04:05,645 --> 00:04:06,684
+most of what came after...
+
+164
+00:04:06,724 --> 00:04:07,404
+is noise.
+
+165
+00:04:07,444 --> 00:04:08,250
+One last warning:
+
+166
+00:04:08,290 --> 00:04:10,464
+all of this is explanation, not advice.
+
+167
+00:04:10,504 --> 00:04:11,579
+If you don't understand it...
+
+168
+00:04:11,619 --> 00:04:12,658
+don't put your money in it.
+
+169
+00:04:12,698 --> 00:04:14,084
+The crypto file is closed.
+
+170
+00:04:14,124 --> 00:04:14,981
+Six reports.
+
+171
+00:04:15,021 --> 00:04:16,981
+This planet has plenty more that needs explaining.
+
+172
+00:04:17,021 --> 00:04:18,222
+This has been Earth Report.
+
+173
+00:04:18,262 --> 00:04:18,991
+Agent Peek.
+
+174
+00:04:19,031 --> 00:04:20,142
+End of transmission.

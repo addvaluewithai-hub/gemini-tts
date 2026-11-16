@@ -1,0 +1,688 @@
+{
+ "recorded_for": "2026-11-12",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "title": "تقرير الأرض: العملات المشفرة 5 (world picture)",
+ "notes": [
+  "World-language picture, drawn in the world of crypto parts 1 to 4. Voice: Vertex job techforbadguys-explain-crypto-05-ar-v. Built from script.md (approved by the owner 2026-11-15); beats split at sentences.",
+  "Earth Report field file: Cryptocurrency, part 5 of 6: the programmable ledger. What came after Bitcoin when humans asked the ledger to run programs: Ethereum and smart contracts, proof of stake, tokens, stablecoins, and DeFi. Split from the old part 5 (`../explain-crypto-05-ar`) at the owner's request (2026-11-15); its second half is part 6.\n\nFacts are the old part 5's, stated from general knowledge and from web research on 12 November 2026 (links in `../explain-crypto-03-ar/plan.md`), not from pages captured for this episode: Ethereum was proposed by Vitalik Buterin in late 2013 at 19 and launched in July 2015; in June 2016 about 60 million dollars was drained from The DAO through a flaw in its contract and the chain was forked to undo it; Ethereum moved to proof of stake on 15 September 2022 and its electricity use fell by more than 99 percent; a validator stakes 32 ether (the script gives no dollar value for it); the 2017 token sales raised billions and one of them, EOS, about 4 billion dollars; stablecoin supply was about 300 billion dollars in October 2026; Tether is among the largest holders of US Treasury bills; Tether said it froze about 1.5 billion dollars of USDT linked to the October 2026 Binance theft within about half an hour; Terra's stablecoin and its sister coin lost about 40 billion dollars in a week in May 2022 and its founder was sentenced to 15 years in December 2025; the US stablecoin law of July 2025 requires one-to-one reserves; more than 3 billion dollars was stolen from crypto protocols in 2022, most of it from DeFi (Chainalysis). Nothing new is added beyond the old script's facts; the extra length is explanation (how a smart contract, staking and a lending pool work), not new figures. It says plainly that it is not investment advice.\n\nLength: about 870 spoken words, about 5 to 5.5 minutes at the channel's pace (the old part 5 ran 1,272 words in 7.6 minutes)."
+ ],
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "6 / 6",
+   "icons": [
+    "frame",
+    "dog",
+    "flag"
+   ],
+   "note": ""
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم خمسة في ملف العملات المشفرة.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: الدفتر اللي بيشغّل برامج. في أربع تقارير شرحنا بيتكوين:",
+     "show": "board",
+     "board": "intro",
+     "step": 0
+    },
+    {
+     "say": "اتعمل ليه، بيشتغل إزاي، بيتمسك إزاي، وليه ليه تمن.",
+     "show": "board",
+     "board": "intro",
+     "step": 1
+    },
+    {
+     "say": "بس البشر ماوقفوش عند دفتر بيسجّل فلوس. سألوا: طب ليه مايشغّلش برامج كمان؟",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "هقول لكم الدفتر ده بقى إيه، وإزاي اتحرس من غير كهربا، وإزاي عملوا عليه دولار رقمي، وبنك من غير بنك.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "والتقرير الجاي، الأخير: الهوجة، والقانون، وحكمي النهائي على الملف.",
+     "shot": "host",
+     "emote": "smug",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "s1",
+   "story": {
+    "n": 1,
+    "tag": "LEDGER + CODE",
+    "icon": "laptop"
+   },
+   "beats": [
+    {
+     "say": "سنة ألفين وتلتاشر، شاب عنده تسعتاشر سنة سأل: الدفتر ده ليه يسجّل فلوس بس؟",
+     "show": "board",
+     "board": "s1",
+     "step": 0
+    },
+    {
+     "say": "خلّوه يشغّل برامج. وسنة ألفين وخمستاشر الشبكة اشتغلت. اسمها Ethereum.",
+     "show": "board",
+     "board": "s1",
+     "step": 1
+    },
+    {
+     "say": "وعملتها بقت تاني أكبر عملة على الكوكب. البرنامج اللي بيتحط على الدفتر بيسمّوه عقد ذكي.",
+     "show": "board",
+     "board": "s1",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "وأبسط شرح ليه: مكنة المشروبات. تحط العملة. المكنة تتأكد إن الشرط اتحقق.",
+     "show": "board",
+     "board": "s1",
+     "step": 3
+    },
+    {
+     "say": "والحاجة تنزل لوحدها. من غير بيّاع، ومن غير ما حد يقدر يرجع في كلامه.",
+     "show": "board",
+     "board": "s1",
+     "step": 4
+    },
+    {
+     "say": "والعقد ده متكتب على الدفتر نفسه. يعني نسخة منه عند كل جهاز، والكل شايف شروطه، ومحدش يقدر يغيّر فيها بعد ما اتحطّت.",
+     "show": "board",
+     "board": "s1",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "بنفس الطريقة يعملوا سلفة، أو تأمين، أو رهان. اتفاق بين اتنين مايعرفوش بعض..",
+     "show": "board",
+     "board": "s1",
+     "step": 6
+    },
+    {
+     "say": "والضامن برنامج. وكل عملية ليها رسم بيسمّوه الغاز. بتدفعه للي بيشغّلوا الشبكة، زي العمولة في التقرير التاني.",
+     "show": "board",
+     "board": "s1",
+     "step": 7
+    },
+    {
+     "say": "وبعد Ethereum طلعت شبكات تانية بتنافسه: أسرع وأرخص. وكل واحدة ليها عملتها، وجمهورها، وخناقاتها.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "story": {
+    "n": 2,
+    "tag": "CODE IS LAW",
+    "icon": "rules"
+   },
+   "beats": [
+    {
+     "say": "والبرنامج بيتنفذ زي ما اتكتب بالظبط. حتى لو اتكتب غلط.",
+     "show": "board",
+     "board": "s2",
+     "step": 0
+    },
+    {
+     "say": "سنة ألفين وستاشر، عقد كبير طلع فيه غلطة. وواحد سحب منه ستين مليون دولار.",
+     "show": "board",
+     "board": "s2",
+     "step": 1
+    },
+    {
+     "say": "من غير ما يكسر حاجة. هو بس قرا العقد أحسن منهم.",
+     "show": "board",
+     "board": "s2",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "والبشر عملوا إيه؟",
+     "show": "board",
+     "board": "s2",
+     "step": 3
+    },
+    {
+     "say": "رجّعوا الدفتر لورا. فورك، زي اللي شفناه في التقرير التاني.",
+     "show": "board",
+     "board": "s2",
+     "step": 4
+    },
+    {
+     "say": "والشبكة اتقسمت اتنين، ولسه الاتنين شغالين لحد النهارده. شعارهم كان:",
+     "show": "board",
+     "board": "s2",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "الكود هو القانون. لحد ما الكود خد فلوسهم.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "story": {
+    "n": 3,
+    "tag": "STAKING",
+    "icon": "lock"
+   },
+   "beats": [
+    {
+     "say": "وفاكرين مسابقة التعدين اللي بتحرق كهربا دولة؟",
+     "show": "board",
+     "board": "s3",
+     "step": 0
+    },
+    {
+     "say": "Ethereum استغنى عنها خالص. اللي عايز يكتب الصفحة بيحط عملاته رهن.",
+     "show": "board",
+     "board": "s3",
+     "step": 1
+    },
+    {
+     "say": "الشبكة تختار واحد بالقرعة. يكتب صح.. ياخد مكافأة. يغش؟",
+     "show": "board",
+     "board": "s3",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "رهنه يتحرق. يعني بدل ما تثبت إنك حرقت كهربا، بتثبت إن عندك حاجة تخسرها.",
+     "show": "board",
+     "board": "s3",
+     "step": 3
+    },
+    {
+     "say": "وعلشان تبقى حارس لازم ترهن اتنين وتلاتين عملة. مبلغ مش صغير.",
+     "show": "board",
+     "board": "s3",
+     "step": 4
+    },
+    {
+     "say": "واللي مامعاهوش بيدّي عملاته لشركة ترهنها له. أيوه يا فندم.",
+     "show": "board",
+     "board": "s3",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "وسيط تاني. بيسمّوها إثبات الحصة. وفي سبتمبر ألفين اتنين وعشرين، كهربا الشبكة نزلت أكتر من تسعة وتسعين في المية.",
+     "show": "board",
+     "board": "s3",
+     "step": 6
+    },
+    {
+     "say": "في ليلة واحدة. يعني طريقتين لحراسة الدفتر. الأولى: اللي معاه أجهزة أكتر يكسب.",
+     "show": "board",
+     "board": "s3",
+     "step": 7
+    },
+    {
+     "say": "والتانية: اللي راهن أكتر يكسب أكتر. يعني الغني بيزيد غنى.",
+     "show": "board",
+     "board": "s3",
+     "host": "right",
+     "step": 8
+    },
+    {
+     "say": "البشر عندهم الاختراع ده من زمان. اسمه: الاقتصاد.",
+     "show": "board",
+     "board": "s3",
+     "step": 9
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "story": {
+    "n": 4,
+    "tag": "TOKENS",
+    "icon": "coin"
+   },
+   "beats": [
+    {
+     "say": "وعلى الشبكات دي، أي حد يعمل عملة جديدة في دقايق.",
+     "show": "board",
+     "board": "s4",
+     "step": 0
+    },
+    {
+     "say": "من غير شبكة، ومن غير تعدين. سطرين في عقد ذكي، وبقى عندك عملة.",
+     "show": "board",
+     "board": "s4",
+     "step": 1
+    },
+    {
+     "say": "بيسمّوها توكن. سنة ألفين وسبعتاشر، شركات لمّت مليارات ببيع عملات لمشاريع لسه ماتعملتش.",
+     "show": "board",
+     "board": "s4",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "مشروع واحد منهم لمّ أربعة مليار دولار.. قبل ما يشتغل.",
+     "show": "board",
+     "board": "s4",
+     "step": 3
+    },
+    {
+     "say": "وأغلبها.. ماتعملش لحد النهارده. والسهولة دي هي اللي هتفتح لنا الباب في التقرير الجاي.. لأغرب حديقة على الكوكب.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "story": {
+    "n": 5,
+    "tag": "DIGITAL DOLLAR",
+    "icon": "cash"
+   },
+   "beats": [
+    {
+     "say": "وهنا الاختراع اللي نجح فعلاً يا فندم. وهو أكتر واحد ممل فيهم.",
+     "show": "board",
+     "board": "s5",
+     "step": 0
+    },
+    {
+     "say": "عملة سعرها دايماً دولار واحد. بيسمّوها عملة مستقرة. تدّي الشركة دولار حقيقي..",
+     "show": "board",
+     "board": "s5",
+     "step": 1
+    },
+    {
+     "say": "وتديك دولار رقمي. بيتحرك على الدفتر في دقايق. أي يوم، لأي بلد.",
+     "show": "board",
+     "board": "s5",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "وبيستخدموه في تحويل الفلوس بين البلاد. وناس في بلاد عملتها بتقع، بيقبضوا ويحوّشوا بيه.",
+     "show": "board",
+     "board": "s5",
+     "step": 3
+    },
+    {
+     "say": "وأغلبه شغال في التداول على المنصات. المتداول منه في أكتوبر ألفين ستة وعشرين حوالي تلتمية مليار دولار.",
+     "show": "board",
+     "board": "s5",
+     "step": 4
+    },
+    {
+     "say": "ده الجزء اللي بيتستخدم كفلوس بجد. وأكبر شركة فيهم بقت من أكبر اللي بيشتروا ديون الحكومة الأمريكية على الكوكب.",
+     "show": "board",
+     "board": "s5",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "يعني الحاجة اللي اتعملت علشان تهرب من الدولار.. وصّلت الدولار لأماكن ماكانش بيوصلها.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "story": {
+    "n": 6,
+    "tag": "FREEZE",
+    "icon": "lock"
+   },
+   "beats": [
+    {
+     "say": "بس خدوا بالكم: هنا فيه شركة. والشركة عندها زرار تجميد.",
+     "show": "board",
+     "board": "s6",
+     "step": 0
+    },
+    {
+     "say": "بعد سرقة Binance في أكتوبر، الشركة اللي ورا أكبر عملة مستقرة جمّدت جزء من المسروق.",
+     "show": "board",
+     "board": "s6",
+     "step": 1
+    },
+    {
+     "say": "مليار ونص دولار. في نص ساعة. حلو لو إنت اللي اتسرقت.",
+     "show": "board",
+     "board": "s6",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "بس معناه إن اللي في جيبك.. في إيد حد تاني.",
+     "show": "board",
+     "board": "s6",
+     "step": 3
+    },
+    {
+     "say": "يعني الدفتر رجع لحارسه. وفيه نوع حاول يثبّت السعر من غير دولارات حقيقية.",
+     "show": "board",
+     "board": "s6",
+     "step": 4
+    },
+    {
+     "say": "بمعادلة. سنة ألفين اتنين وعشرين المعادلة باظت. أربعين مليار دولار اتبخروا في أسبوع.",
+     "show": "board",
+     "board": "s6",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "وصاحبها خد خمستاشر سنة سجن. وأمريكا بعدها، سنة ألفين خمسة وعشرين، عملت قانون:",
+     "show": "board",
+     "board": "s6",
+     "step": 6
+    },
+    {
+     "say": "كل دولار رقمي لازم وراه دولار حقيقي.",
+     "show": "board",
+     "board": "s6",
+     "step": 7
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "story": {
+    "n": 7,
+    "tag": "DEFI",
+    "icon": "bank"
+   },
+   "beats": [
+    {
+     "say": "وبالعقود الذكية بنوا بنك من غير بنك. ناس كتير تحط عملاتها في برنامج واحد، والبرنامج يسلّف منها للي عايز ياخد.",
+     "show": "board",
+     "board": "s7",
+     "step": 0
+    },
+    {
+     "say": "واللي بيستلف لازم يحط رهن أكبر من السلفة. ولو سعر الرهن نزل؟",
+     "show": "board",
+     "board": "s7",
+     "step": 1
+    },
+    {
+     "say": "البرنامج يبيعه لوحده، في ثانية، من غير ما يتصل بيك.",
+     "show": "board",
+     "board": "s7",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "وبرنامج تاني يبدّل لك عملة بعملة. من غير شركة، ومن غير مواعيد، ومن غير ما حد يسألك إنت مين.",
+     "show": "board",
+     "board": "s7",
+     "step": 3
+    },
+    {
+     "say": "بس لو البرنامج فيه ثغرة؟",
+     "show": "board",
+     "board": "s7",
+     "step": 4
+    },
+    {
+     "say": "مفيش حد ترجع له. فاكرين العقد بتاع الستين مليون؟",
+     "show": "board",
+     "board": "s7",
+     "host": "left",
+     "step": 5
+    },
+    {
+     "say": "اتكرّر مية مرة. واتسرق من البرامج دي أكتر من تلاتة مليار دولار في سنة ألفين اتنين وعشرين لوحدها.",
+     "show": "board",
+     "board": "s7",
+     "step": 6
+    },
+    {
+     "say": "البنك العادي ممكن يخذلك. بس على الأقل ليه باب تخبّط عليه.",
+     "show": "board",
+     "board": "s7",
+     "step": 7
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "book"
+   },
+   "beats": [
+    {
+     "say": "كلمتين من قاموس البشر. Smart contract: برنامج متكتب على الدفتر، بيتنفذ لوحده.",
+     "show": "board",
+     "board": "s8",
+     "step": 0
+    },
+    {
+     "say": "حتى لو غلطان. و Stablecoin: دولار رقمي. بيتحرك زي العملات المشفرة.. وبيتجمّد زي البنوك.",
+     "show": "board",
+     "board": "s8",
+     "step": 1
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "file"
+   },
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: الدفتر بقى بيشغّل برامج، والبرنامج بيتنفذ زي ما اتكتب، صح أو غلط.",
+     "show": "board",
+     "board": "s9",
+     "step": 0
+    },
+    {
+     "say": "اتنين: فيه حراسة من غير كهربا، بس الحارس هو اللي معاه فلوس أكتر.",
+     "show": "board",
+     "board": "s9",
+     "step": 1
+    },
+    {
+     "say": "تلاتة: أنجح حاجة طلعت كانت أممل حاجة: الدولار الرقمي.",
+     "show": "board",
+     "board": "s9",
+     "host": "right",
+     "step": 2
+    },
+    {
+     "say": "وده جاب الوسيط معاه. ونفس التنبيه: ده تقرير، مش نصيحة استثمار.",
+     "show": "board",
+     "board": "s9",
+     "step": 3
+    },
+    {
+     "say": "التقرير الجاي والأخير: صورة بملايين، عملة عليها كلب، والحكومات.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "وحكمي النهائي على الملف كله. ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "boards": {
+  "intro": {
+   "kind": "c5intro",
+   "ends": [
+    4.45,
+    3.41
+   ]
+  },
+  "s1": {
+   "kind": "c5s1",
+   "ends": [
+    5.6,
+    5.16,
+    4.91,
+    4.73,
+    3.44,
+    7.92,
+    5.47,
+    6.96
+   ]
+  },
+  "s2": {
+   "kind": "c5s2",
+   "ends": [
+    3.89,
+    5.51,
+    2.42,
+    1.12,
+    3.01,
+    4.02
+   ]
+  },
+  "s3": {
+   "kind": "c5s3",
+   "ends": [
+    2.7,
+    4.34,
+    3.8,
+    4.85,
+    4.14,
+    3.19,
+    7.54,
+    4.62,
+    3.62,
+    2.94
+   ]
+  },
+  "s4": {
+   "kind": "c5s4",
+   "ends": [
+    2.9,
+    3.78,
+    5.9,
+    3.21
+   ]
+  },
+  "s5": {
+   "kind": "c5s5",
+   "ends": [
+    3.9,
+    4.96,
+    4.32,
+    4.77,
+    6.02,
+    5.91
+   ]
+  },
+  "s6": {
+   "kind": "c5s6",
+   "ends": [
+    3.55,
+    4.8,
+    3.31,
+    2.08,
+    4.06,
+    5.03,
+    4.55,
+    2.21
+   ]
+  },
+  "s7": {
+   "kind": "c5s7",
+   "ends": [
+    6.02,
+    3.35,
+    2.95,
+    4.55,
+    1.36,
+    2.36,
+    5.46,
+    3.14
+   ]
+  },
+  "s8": {
+   "kind": "c5s8",
+   "ends": [
+    5.46,
+    6.26
+   ]
+  },
+  "s9": {
+   "kind": "c5s9",
+   "ends": [
+    6.32,
+    3.55,
+    3.6,
+    3.79
+   ]
+  }
+ }
+}

@@ -1,0 +1,38 @@
+# YouTube upload: تقرير الأرض: العملات المشفرة 2 (world picture)
+
+## Title
+
+1. البلوكتشين والتعدين.. بأبسط شرح ممكن | ملف العملات المشفرة 2/6  ← recommended
+2. يعني إيه تعدين بيتكوين؟ ومين بيحكم الشبكة؟ | 2/6
+3. ليه البيتكوين بيسحب كهربا قد دولة كاملة؟ | 2/6
+
+## Description
+
+Paste `description.txt` as it is. It already holds the chapters and the sources.
+
+## Tags
+
+تقرير الأرض, العميل Peek, العملات المشفرة, شرح البلوكشين, كيف يعمل تعدين البيتكوين, ما هو البلوكتشين, العملات الرقمية, بيتكوين, Bitcoin, كريبتو, شرح بيتكوين, شرح العملات الرقمية, اشرحها لكائن فضائي, Earth Report, بلوكتشين, Blockchain, تعدين البيتكوين, يعني إيه تعدين, الهاش, التنصيف, Halving, 21 مليون بيتكوين, Bitcoin Cash, هجوم 51%, Lightning Network, إثبات العمل
+
+## Settings
+
+- Video: the drawn world picture (`../storyboard.json`), Arabic voice job `techforbadguys-explain-crypto-02-ar-v` (Vertex AI), no captions burned in, nothing in Arabic on screen.
+
+- Category: Education
+- Video language: Arabic. Upload captions.srt as Arabic.
+- Audience: not made for kids
+- Playlist: ملف العملات المشفرة (six parts, in order)
+- End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.
+- Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.
+- Comments: crypto videos attract scam replies (fake support, 'recovery' services, giveaways). Hold comments with links for review.
+
+## Files
+
+- `thumbnail-a.jpg` (recommended) and `thumbnail-b.jpg`: 1280 x 720, frames from the video itself, no Arabic
+- `en.md`: the English language entry (title, description, `captions-en.srt`, the English audio track)
+- `captions.srt`: upload under Subtitles, language as set above
+- `description.txt`
+
+## Pinned comment
+
+لو كنت مكان البشر: تحرق كهربا دولة علشان ماتثقش في حد.. ولا تثق في بنك وخلاص؟ القيادة عايزة رأيك.

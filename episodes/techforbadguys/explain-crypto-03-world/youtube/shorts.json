@@ -1,0 +1,327 @@
+{
+ "note": "PROPOSED Shorts for crypto part 3 (drawn version), for the owner to pick. Not recorded or rendered: per the planner (2026-11-15) nothing is rendered until the owner has judged the two big-Peek tests; then they are rendered in the look he picks, with burned-in Arabic captions. `parts` are [from, to] in seconds of the finished episode (beat time plus the 0.3 s lead, cues/explain-crypto-03-world.json); the first part is the hook (first 2 s), and the order is chosen so the end loops back to it. `cta` is the closing line to record on Vertex AI (Arabic, Puck, part 1's direction) with its listen-back; `cta_short` is the shortened line for the big-Peek look. {full} is replaced by the episode's link once it is uploaded. Every figure is dated in the episode and in the description; nothing is advice. Owner (16 Nov): snail look (peekFixed), no captions; four Shorts: harddisk, popcorn, fee, scammed-twice (gox to the stock). Closing lines: Vertex jobs techforbadguys-crypto03-short-cta-<key>-ar-v. From Crypto 3 on (publisher, 16 Nov): the closing line is the question only (cta_short), Vertex jobs ...-ar-q; the bell rings halfway through it.",
+ "full": null,
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "harddisk",
+   "title": "رمى هارد ديسك عليه تمان آلاف بيتكوين 🗑️ #Shorts",
+   "description": "واحد رمى هارد ديسك قديم سنة 2013 عليه مفتاح حوالي تمان آلاف بيتكوين، وقعد اتناشر سنة يحاول يحفر مقلب الزبالة. وواحد تاني نسي باسورد فلاشة عليها أكتر من سبع آلاف. ومن تلاتة لأربعة مليون بيتكوين ضاعوا كده للأبد.\n\nالتقرير كامل: المفتاح والمحفظة والنصابين | ملف العملات المشفرة 3/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #البيتكوين_الضايع #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "البيتكوين الضايع"
+   ],
+   "parts": [
+    [
+     268.88,
+     271.76
+    ],
+    [
+     265.04,
+     268.88
+    ],
+    [
+     271.76,
+     279.21
+    ],
+    [
+     284.88,
+     294.6
+    ],
+    [
+     296.99,
+     302.95
+    ]
+   ],
+   "why": "Cold open (publisher, 16 Nov): the first 2 s show what the title promises, then the story.",
+   "cta": "مفيش ورثة عند الدفتر.. ولا حد يفكّرك بالباسورد. إزاي تمسك مفتاحك من غير ما يضيع؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "مفيش ورثة عند الدفتر.. ولا حد يفكّرك بالباسورد. إزاي تمسك مفتاحك من غير ما يضيع؟",
+   "end": {
+    "audio": "shorts/cta-harddisk-q.wav",
+    "words": "shorts/cta-harddisk-q.words.json",
+    "card": {
+     "icons": [
+      "file",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 3/6"
+    }
+   },
+   "body_seconds": 29.8,
+   "en": {
+    "title": "He Threw Away a Hard Drive With 8,000 Bitcoin 🗑️ #Shorts",
+    "description": "In 2013 a man threw out an old hard drive holding the key to about eight thousand bitcoin, and spent twelve years trying to dig up the landfill. Another forgot the password to a drive with over seven thousand. Three to four million bitcoin are lost forever this way.\n\nThe full report: Keys, Wallets and Scams | Crypto File 3/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #lostbitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "lostbitcoin"
+    ],
+    "cta": "The ledger has no heirs, and no one to remind you of the password. How do you hold your key without losing it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "The ledger has no heirs, and no one to remind you of the password. How do you hold your key without losing it?",
+    "end_audio": "shorts/cta-en-harddisk.wav"
+   },
+   "look": "fixed",
+   "captions": false,
+   "cta_job": "techforbadguys-crypto03-short-cta-harddisk-ar-q"
+  },
+  {
+   "key": "popcorn",
+   "title": "الفلوس المسروقة كانت في علبة فشار 🍿 #Shorts",
+   "description": "واحد سرق خمسين ألف بيتكوين من سوق سري، وبعد تسع سنين الشرطة خبّطت على بابه ولقوا الفلوس في علبة فشار. ليه؟ لأن الدفتر علني، وكل تحويل متسجّل للأبد. وأول ما عنوان واحد يتربط باسمك.. كل اللي عملته يبان بأثر رجعي.\n\nالتقرير كامل: المفتاح والمحفظة والنصابين | ملف العملات المشفرة 3/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #بيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "بيتكوين"
+   ],
+   "parts": [
+    [
+     162.25,
+     164.03
+    ],
+    [
+     156.03,
+     162.25
+    ],
+    [
+     133.62,
+     143.46
+    ],
+    [
+     168.59,
+     176.78
+    ]
+   ],
+   "why": "Cold open (publisher, 16 Nov): the first 2 s show what the title promises, then the story.",
+   "cta": "الدفتر مابينساش. طب ليه البشر لسه فاكرين إن البيتكوين مجهول؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "الدفتر مابينساش. طب ليه البشر لسه فاكرين إن البيتكوين مجهول؟",
+   "end": {
+    "audio": "shorts/cta-popcorn-q.wav",
+    "words": "shorts/cta-popcorn-q.words.json",
+    "card": {
+     "icons": [
+      "file",
+      "ghost"
+     ],
+     "sub": "CRYPTO FILE · 3/6"
+    }
+   },
+   "body_seconds": 26.0,
+   "en": {
+    "title": "The Stolen Bitcoin Was in a Popcorn Tin 🍿 #Shorts",
+    "description": "A man stole fifty thousand bitcoin from a dark market. Nine years later the police knocked on his door and found it in a popcorn tin. Why? The ledger is public and every transfer is recorded forever. Once one address is tied to your name, everything you did shows, after the fact.\n\nThe full report: Keys, Wallets and Scams | Crypto File 3/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "bitcoin"
+    ],
+    "cta": "The ledger never forgets. So why do humans still think bitcoin is anonymous? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "The ledger never forgets. So why do humans still think bitcoin is anonymous?",
+    "end_audio": "shorts/cta-en-popcorn.wav"
+   },
+   "look": "fixed",
+   "captions": false,
+   "cta_job": "techforbadguys-crypto03-short-cta-popcorn-ar-q"
+  },
+  {
+   "key": "fee",
+   "title": "دفعوا نص مليون دولار عمولة.. بالغلط 💸 #Shorts",
+   "description": "شركة كبيرة بعتت تحويل بألفين دولار ودفعت عليه عمولة نص مليون دولار بالغلط (2023). والتحويل في البيتكوين مالوش رجوع: حرف غلط في العنوان والفلوس راحت.\n\nالتقرير كامل: المفتاح والمحفظة والنصابين | ملف العملات المشفرة 3/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #بيتكوين #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "بيتكوين"
+   ],
+   "parts": [
+    [
+     120.12,
+     123.13
+    ],
+    [
+     116.7,
+     120.12
+    ],
+    [
+     123.13,
+     126.35
+    ],
+    [
+     97.3,
+     109.07
+    ]
+   ],
+   "why": "Cold open (publisher, 16 Nov): the first 2 s show what the title promises, then the story.",
+   "cta": "في الدفتر ده مفيش زرار تراجع. إيه اللي لازم تعرفه قبل ما تبعت أي تحويل؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "في الدفتر ده مفيش زرار تراجع. إيه اللي لازم تعرفه قبل ما تبعت أي تحويل؟",
+   "end": {
+    "audio": "shorts/cta-fee-q.wav",
+    "words": "shorts/cta-fee-q.words.json",
+    "card": {
+     "icons": [
+      "coin",
+      "file"
+     ],
+     "sub": "CRYPTO FILE · 3/6"
+    }
+   },
+   "body_seconds": 21.4,
+   "en": {
+    "title": "They Paid a Half-Million-Dollar Fee, by Mistake 💸 #Shorts",
+    "description": "In 2023 a big company sent a two-thousand-dollar transfer and paid half a million dollars in fees, by mistake. A bitcoin transfer can't be undone: one wrong letter in the address and the money is gone.\n\nThe full report: Keys, Wallets and Scams | Crypto File 3/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "bitcoin"
+    ],
+    "cta": "On this ledger there's no undo button. What should you know before you send anything? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "On this ledger there's no undo button. What should you know before you send anything?",
+    "end_audio": "shorts/cta-en-fee.wav"
+   },
+   "look": "fixed",
+   "captions": false,
+   "cta_job": "techforbadguys-crypto03-short-cta-fee-ar-q"
+  },
+  {
+   "key": "scammed-twice",
+   "title": "بيتنصب عليهم مرتين في نفس الفلوس 🎣 #Shorts",
+   "description": "لو اتنصب عليك، هييجي لك نصاب تاني يقول: هرجّع لك فلوسك برسوم بسيطة. وفيديوهات مشاهير معمولة بالذكاء الاصطناعي بتقول ابعت عملة وهرجّعها اتنين. علامات الخطر أربعة: ربح مضمون، استعجال، حد يطلب الاتناشر كلمة، ورسوم قبل السحب.\n\nالتقرير كامل: المفتاح والمحفظة والنصابين | ملف العملات المشفرة 3/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #النصب #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "النصب"
+   ],
+   "parts": [
+    [
+     389.95,
+     393.29
+    ],
+    [
+     385.23,
+     389.95
+    ],
+    [
+     377.67,
+     385.23
+    ],
+    [
+     393.29,
+     406.54
+    ]
+   ],
+   "why": "Cold open (publisher, 16 Nov): the masked scammer, 'scammed twice for the same money'; then the recovery lie, the AI video, the four signs.",
+   "cta": "أي حد يطلب الاتناشر كلمة.. نصاب. إيه الطرق التانية اللي بيستخدموها؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "أي حد يطلب الاتناشر كلمة.. نصاب. إيه الطرق التانية اللي بيستخدموها؟",
+   "end": {
+    "audio": "shorts/cta-scammed-twice-q.wav",
+    "words": "shorts/cta-scammed-twice-q.words.json",
+    "card": {
+     "icons": [
+      "ghost",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 3/6"
+    }
+   },
+   "body_seconds": 28.9,
+   "en": {
+    "title": "Humans Get Scammed Twice for the Same Money 🎣 #Shorts",
+    "description": "If you've been scammed, a second scammer comes along: I'll get your money back, for a small fee. AI videos of celebrities promise to double any coin you send. The four warning signs: guaranteed profit, hurry, anyone asking for the twelve words, and fees before you can withdraw.\n\nThe full report: Keys, Wallets and Scams | Crypto File 3/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #scam #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "scam"
+    ],
+    "cta": "Anyone asking for your twelve words is a scammer. What other tricks do they use? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "Anyone asking for your twelve words is a scammer. What other tricks do they use?",
+    "end_audio": "shorts/cta-en-scammed-twice.wav"
+   },
+   "look": "fixed",
+   "captions": false,
+   "cta_job": "techforbadguys-crypto03-short-cta-scammed-twice-ar-q"
+  },
+  {
+   "key": "gox",
+   "title": "منصة بدأت تبيع كروت لعب.. وضاع منها 850 ألف بيتكوين #Shorts",
+   "description": "Mt. Gox بدأت موقع لتبديل كروت لعب، وبقت بتعدّي سبعين في المية من تداول البيتكوين. سنة 2014 اختفى منها 850 ألف بيتكوين، والعملاء لسه بيستلموا فلوسهم. وسنة 2022 FTX: الناقص تمانية مليار، وصاحبها خد 25 سنة.\n\nالتقرير كامل: المفتاح والمحفظة والنصابين | ملف العملات المشفرة 3/6\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر بيستخدموها كل يوم ومايعرفوش بتشتغل إزاي. اشترك وفعّل الجرس.\n\n#Shorts #المنصات #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "العملات المشفرة",
+    "شرح مبسط",
+    "المنصات"
+   ],
+   "parts": [
+    [
+     197.08,
+     229.13
+    ]
+   ],
+   "why": "Hook: card-trading site to 70% of bitcoin. Ends on the FTX customers paid at the crash price.",
+   "cta": "مش مفاتيحك.. مش فلوسك. طب الحل إنك تمسكها بنفسك؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+   "cta_short": "مش مفاتيحك.. مش فلوسك. طب الحل إنك تمسكها بنفسك؟",
+   "end": {
+    "audio": "shorts/cta-gox.wav",
+    "words": "shorts/cta-gox.words.json",
+    "card": {
+     "icons": [
+      "bank",
+      "coin"
+     ],
+     "sub": "CRYPTO FILE · 3/6"
+    }
+   },
+   "body_seconds": 32.0,
+   "en": {
+    "title": "It Started as a Card-Trading Site, Then Lost 850,000 Bitcoin #Shorts",
+    "description": "Mt. Gox started as a site for trading game cards and grew to handle over seventy percent of bitcoin trading. In 2014, 850,000 bitcoin vanished; customers are still being repaid. And in 2022, FTX: eight billion missing, and its founder got 25 years.\n\nThe full report: Keys, Wallets and Scams | Crypto File 3/6\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #crypto #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "crypto",
+     "explained simply",
+     "crypto"
+    ],
+    "cta": "Not your keys, not your coins. So should you hold them yourself? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
+    "cta_short": "Not your keys, not your coins. So should you hold them yourself?",
+    "end_audio": "shorts/cta-en-gox.wav"
+   },
+   "look": "fixed",
+   "captions": false
+  }
+ ],
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
+}

@@ -17,6 +17,57 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { shortEndV } from "./sets/shortend.v.js";
+import { c2introSet } from "./sets/c2intro.js";
+import { c2hashSet } from "./sets/c2hash.js";
+import { c2chainSet } from "./sets/c2chain.js";
+import { c2tripSet } from "./sets/c2trip.js";
+import { c2mineSet } from "./sets/c2mine.js";
+import { c2secureSet } from "./sets/c2secure.js";
+import { c2capSet } from "./sets/c2cap.js";
+import { c2rulesSet } from "./sets/c2rules.js";
+import { c2dictSet } from "./sets/c2dict.js";
+import { c2recapSet } from "./sets/c2recap.js";
+import { c3introSet } from "./sets/c3intro.js";
+import { c3keysSet } from "./sets/c3keys.js";
+import { c3walletSet } from "./sets/c3wallet.js";
+import { c3useSet } from "./sets/c3use.js";
+import { c3anonSet } from "./sets/c3anon.js";
+import { c3bankSet } from "./sets/c3bank.js";
+import { c3lostSet } from "./sets/c3lost.js";
+import { c3scamsSet } from "./sets/c3scams.js";
+import { c3dictSet } from "./sets/c3dict.js";
+import { c3recapSet } from "./sets/c3recap.js";
+import { c4introSet } from "./sets/c4intro.js";
+import { c4valueSet } from "./sets/c4value.js";
+import { c4historySet } from "./sets/c4history.js";
+import { c4shakeSet } from "./sets/c4shake.js";
+import { c4leverSet } from "./sets/c4lever.js";
+import { c4whoSet } from "./sets/c4who.js";
+import { c4suitsSet } from "./sets/c4suits.js";
+import { c4debateSet } from "./sets/c4debate.js";
+import { c4scoreSet } from "./sets/c4score.js";
+import { c4dictSet } from "./sets/c4dict.js";
+import { c4recapSet } from "./sets/c4recap.js";
+import { c5introSet } from "./sets/c5intro.js";
+import { c5s1Set } from "./sets/c5s1.js";
+import { c5s2Set } from "./sets/c5s2.js";
+import { c5s3Set } from "./sets/c5s3.js";
+import { c5s4Set } from "./sets/c5s4.js";
+import { c5s5Set } from "./sets/c5s5.js";
+import { c5s6Set } from "./sets/c5s6.js";
+import { c5s7Set } from "./sets/c5s7.js";
+import { c5s8Set } from "./sets/c5s8.js";
+import { c5s9Set } from "./sets/c5s9.js";
+import { c6introSet } from "./sets/c6intro.js";
+import { c6s1Set } from "./sets/c6s1.js";
+import { c6s2Set } from "./sets/c6s2.js";
+import { c6s3Set } from "./sets/c6s3.js";
+import { c6s4Set } from "./sets/c6s4.js";
+import { c6s5Set } from "./sets/c6s5.js";
+import { c6s6Set } from "./sets/c6s6.js";
+import { c6s7Set } from "./sets/c6s7.js";
+import { c6s8Set } from "./sets/c6s8.js";
+import { c6s9Set } from "./sets/c6s9.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -844,6 +895,62 @@ const BOARDS = {
   vanish: (s, step, age, total, cfg) => vanishSet(s, step, age, total, cfg),
   dict: (s, step, age, total, cfg) => dictSet(s, step, age, total, cfg),
   recap: (s, step, age, total, cfg) => recapSet(s, step, age, total, cfg),
+  // Crypto part 2 (blockchain and mining), scene by scene, in the same world (sets/c2<scene>.js, props in sets/c2props.js).
+  c2intro: (s, step, age, total, cfg) => c2introSet(s, step, age, total, cfg),
+  c2hash: (s, step, age, total, cfg) => c2hashSet(s, step, age, total, cfg),
+  c2chain: (s, step, age, total, cfg) => c2chainSet(s, step, age, total, cfg),
+  c2trip: (s, step, age, total, cfg) => c2tripSet(s, step, age, total, cfg),
+  c2mine: (s, step, age, total, cfg) => c2mineSet(s, step, age, total, cfg),
+  c2secure: (s, step, age, total, cfg) => c2secureSet(s, step, age, total, cfg),
+  c2cap: (s, step, age, total, cfg) => c2capSet(s, step, age, total, cfg),
+  c2rules: (s, step, age, total, cfg) => c2rulesSet(s, step, age, total, cfg),
+  c2dict: (s, step, age, total, cfg) => c2dictSet(s, step, age, total, cfg),
+  c2recap: (s, step, age, total, cfg) => c2recapSet(s, step, age, total, cfg),
+  // Crypto part 3 (keys, wallets, exchanges, lost keys, scams), in the same world (sets/c3<scene>.js, props in sets/c3props.js).
+  c3intro: (s, step, age, total, cfg) => c3introSet(s, step, age, total, cfg),
+  c3keys: (s, step, age, total, cfg) => c3keysSet(s, step, age, total, cfg),
+  c3wallet: (s, step, age, total, cfg) => c3walletSet(s, step, age, total, cfg),
+  c3use: (s, step, age, total, cfg) => c3useSet(s, step, age, total, cfg),
+  c3anon: (s, step, age, total, cfg) => c3anonSet(s, step, age, total, cfg),
+  c3bank: (s, step, age, total, cfg) => c3bankSet(s, step, age, total, cfg),
+  c3lost: (s, step, age, total, cfg) => c3lostSet(s, step, age, total, cfg),
+  c3scams: (s, step, age, total, cfg) => c3scamsSet(s, step, age, total, cfg),
+  c3dict: (s, step, age, total, cfg) => c3dictSet(s, step, age, total, cfg),
+  c3recap: (s, step, age, total, cfg) => c3recapSet(s, step, age, total, cfg),
+  // Crypto part 4 (price), in the same world (sets/c4<scene>.js, props in sets/c4props.js).
+  c4intro: (s, step, age, total, cfg) => c4introSet(s, step, age, total, cfg),
+  c4value: (s, step, age, total, cfg) => c4valueSet(s, step, age, total, cfg),
+  c4history: (s, step, age, total, cfg) => c4historySet(s, step, age, total, cfg),
+  c4shake: (s, step, age, total, cfg) => c4shakeSet(s, step, age, total, cfg),
+  c4lever: (s, step, age, total, cfg) => c4leverSet(s, step, age, total, cfg),
+  c4who: (s, step, age, total, cfg) => c4whoSet(s, step, age, total, cfg),
+  c4suits: (s, step, age, total, cfg) => c4suitsSet(s, step, age, total, cfg),
+  c4debate: (s, step, age, total, cfg) => c4debateSet(s, step, age, total, cfg),
+  c4score: (s, step, age, total, cfg) => c4scoreSet(s, step, age, total, cfg),
+  c4dict: (s, step, age, total, cfg) => c4dictSet(s, step, age, total, cfg),
+  c4recap: (s, step, age, total, cfg) => c4recapSet(s, step, age, total, cfg),
+  // Crypto part 5, in the same world (sets/c5<scene>.js, props in sets/c5props.js).
+  c5intro: (s, step, age, total, cfg) => c5introSet(s, step, age, total, cfg),
+  c5s1: (s, step, age, total, cfg) => c5s1Set(s, step, age, total, cfg),
+  c5s2: (s, step, age, total, cfg) => c5s2Set(s, step, age, total, cfg),
+  c5s3: (s, step, age, total, cfg) => c5s3Set(s, step, age, total, cfg),
+  c5s4: (s, step, age, total, cfg) => c5s4Set(s, step, age, total, cfg),
+  c5s5: (s, step, age, total, cfg) => c5s5Set(s, step, age, total, cfg),
+  c5s6: (s, step, age, total, cfg) => c5s6Set(s, step, age, total, cfg),
+  c5s7: (s, step, age, total, cfg) => c5s7Set(s, step, age, total, cfg),
+  c5s8: (s, step, age, total, cfg) => c5s8Set(s, step, age, total, cfg),
+  c5s9: (s, step, age, total, cfg) => c5s9Set(s, step, age, total, cfg),
+  // Crypto part 6, in the same world (sets/c6<scene>.js, props in sets/c6props.js).
+  c6intro: (s, step, age, total, cfg) => c6introSet(s, step, age, total, cfg),
+  c6s1: (s, step, age, total, cfg) => c6s1Set(s, step, age, total, cfg),
+  c6s2: (s, step, age, total, cfg) => c6s2Set(s, step, age, total, cfg),
+  c6s3: (s, step, age, total, cfg) => c6s3Set(s, step, age, total, cfg),
+  c6s4: (s, step, age, total, cfg) => c6s4Set(s, step, age, total, cfg),
+  c6s5: (s, step, age, total, cfg) => c6s5Set(s, step, age, total, cfg),
+  c6s6: (s, step, age, total, cfg) => c6s6Set(s, step, age, total, cfg),
+  c6s7: (s, step, age, total, cfg) => c6s7Set(s, step, age, total, cfg),
+  c6s8: (s, step, age, total, cfg) => c6s8Set(s, step, age, total, cfg),
+  c6s9: (s, step, age, total, cfg) => c6s9Set(s, step, age, total, cfg),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.

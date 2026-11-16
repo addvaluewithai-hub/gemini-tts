@@ -8,7 +8,7 @@
  "voice": "Puck",
  "face": "pear",
  "notes": [
-  "Earth Report field file: Cryptocurrency, part 4 of 5. Why the coin has a price: nothing stands behind it but scarcity and belief; the repeated booms and crashes; why it swings; leverage and liquidation; who holds it; Wall Street and governments arriving; critics and believers; and a scorecard against the three jobs of money from part 1.",
+  "Earth Report field file: Cryptocurrency, part 4 of 6. Why the coin has a price: nothing stands behind it but scarcity and belief; the repeated booms and crashes; why it swings; leverage and liquidation; who holds it; Wall Street and governments arriving; critics and believers; and a scorecard against the three jobs of money from part 1.",
   "",
   "Facts are stated from general knowledge and from web research on 12 November 2026 (see explain-crypto-03-ar/plan.md for links), not from pages captured for this episode: the all-time high was about 126,000 dollars on 6 October 2025; earlier peaks and lows were about 30 then 2 dollars (2011), 1,100 then 200 (2013 to 2015), 20,000 then 3,200 (2017 to 2018), 69,000 then 15,500 (2021 to 2022), and the 2026 low was about 58,000 in June; the chart on screen is on a logarithmic scale; the 99Bitcoins obituary list passed 400 entries; each peak came 12 to 18 months after a halving; on 10 October 2025 more than 19 billion dollars of leveraged positions and about 1.6 million traders were liquidated in a day while bitcoin itself fell less than 15 percent; three to four million coins are estimated lost and about 1.1 million attributed to Satoshi; US spot bitcoin funds held about 93 billion dollars on 10 November 2026, about 1.2 million coins; the US government holds a few hundred thousand seized coins and has bought none; Larry Fink of BlackRock called bitcoin an index of money laundering in October 2017 and BlackRock launched its bitcoin fund in January 2024; El Salvador made bitcoin legal tender in 2021 and removed that status in 2025 under an IMF programme; Strategy sold bitcoin in 2026 for the first time since 2022 and reported an 8.32 billion dollar loss for the second quarter; Warren Buffett called bitcoin rat poison squared in 2018; bitcoin fell about 64 percent during 2022; HODL comes from a December 2013 forum post; a buyer at the December 2017 peak waited until December 2020 to break even and a buyer at the November 2021 peak until March 2024; BIS Bulletin 69 (2023) found that a majority of crypto app users in nearly all economies lost money on bitcoin between 2015 and 2022 and that about three quarters downloaded the app when the price was above 20,000 dollars; the first crash was about 93 percent (2011) and the latest about 54 percent (2025 to 2026); all bitcoin was worth about 2.5 trillion dollars at the peak, less than a tenth of all gold; most trading volume is in leveraged derivatives rather than spot. No price forecast is made and it says plainly that nothing in it is advice."
  ],
@@ -1049,7 +1049,7 @@
      "calm": true
     },
     {
-     "say": "التقرير الجاي والأخير: بعد بيتكوين، البشر عملوا عشرين مليون عملة. منها اللي غيّر حاجات، ومنها اللي عليه صورة كلب. <short pause> وحكمي النهائي على الملف كله.",
+     "say": "التقرير الجاي: البشر خلّوا الدفتر يشغّل برامج. حراسة من غير كهربا، ودولار رقمي، وبنك من غير بنك.",
      "shot": "host",
      "emote": "neutral",
      "gesture": "count"
@@ -1091,7 +1091,7 @@
    "الاحتياطي الاستراتيجي الأمريكي: https://en.wikipedia.org/wiki/U.S._Strategic_Bitcoin_Reserve"
   ],
   "footer": [
-   "دي حلقة من ملف من خمس تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
+   "دي حلقة من ملف من ست تقارير عن العملات المشفرة. شوفهم بالترتيب من قايمة التشغيل.",
    "ده شرح، مش نصيحة استثمار. الأسعار اللي في الحلقة بتاريخها ومش توقعات.",
    "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
   ],
