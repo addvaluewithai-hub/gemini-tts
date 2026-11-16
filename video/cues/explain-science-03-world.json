@@ -1,0 +1,884 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-science-03-world",
+ "transcript": "../../../video/cues/explain-science-03-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني رقم تلاتة في ملف العلم.",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 2.92,
+   "say": "سنة ألف تمنمية سبعة وأربعين، في مستشفى في فيينا،",
+   "board": {
+    "kind": "s3intro"
+   },
+   "step": 0,
+   "stepT": 2.92,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 8.42,
+   "say": "اللي سمعوا الكلام، الوفيات عندهم نزلت من حوالي ت",
+   "board": {
+    "kind": "s3intro"
+   },
+   "step": 1,
+   "stepT": 8.42
+  },
+  {
+   "t": 13.32,
+   "say": "وبعدها.. المستشفى لغت القاعدة، والدكتور خرج من ش",
+   "board": {
+    "kind": "s3intro"
+   },
+   "step": 2,
+   "emote": "worried",
+   "host": "right",
+   "stepT": 13.32
+  },
+  {
+   "t": 16.57,
+   "say": "النهارده هتكلم عن أكتر حاجة بتجنن البشر في العلم",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 20.89,
+   "say": "امبارح البيض وحش، النهارده البيض كويس.",
+   "board": {
+    "kind": "s3intro"
+   },
+   "step": 3,
+   "stepT": 20.89,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 23.92,
+   "say": "فالبشر بيسألوا: لو العلم بيغير رأيه كل شوية، أصد",
+   "board": {
+    "kind": "s3intro"
+   },
+   "step": 4,
+   "emote": "skeptical",
+   "host": "left",
+   "stepT": 23.92
+  },
+  {
+   "t": 27.23,
+   "say": "وأنا هقول لكم ليه دي بالظبط الحاجة اللي تخلّيكم ",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 30.17,
+   "say": "أول حاجة يا فندم: البشر عندهم صورة غلط عن العلم.",
+   "shot": "host",
+   "emote": "neutral",
+   "story": {
+    "n": 1,
+    "tag": "THE WEATHERVANE",
+    "icon": "gear"
+   }
+  },
+  {
+   "t": 33.36,
+   "say": "فاكرين إن العالم المحترم هو اللي عمره ما يغير رأ",
+   "board": {
+    "kind": "vane"
+   },
+   "step": 0,
+   "stepT": 33.36,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 35.93,
+   "say": "بس في العلم، العكس. العالم المحترم هو اللي بيغير",
+   "board": {
+    "kind": "vane"
+   },
+   "step": 1,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 35.93
+  },
+  {
+   "t": 40.5,
+   "say": "واللي مايغيرش رأيه أبداً.. ده مش عالم، ده عنده ح",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 43.52,
+   "say": "المشكلة إن الجرايد بتنقل كل ورقة جديدة كأنها الك",
+   "board": {
+    "kind": "vane"
+   },
+   "step": 2,
+   "stepT": 43.52,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 47.03,
+   "say": "فالناس شايفة دوّارة بتلف: البيض وحش، البيض كويس،",
+   "board": {
+    "kind": "vane"
+   },
+   "step": 3,
+   "stepT": 47.03
+  },
+  {
+   "t": 52.29,
+   "say": "بس اللي بيحصل جوه العلم مش دوّارة. ده أقرب لحد ب",
+   "board": {
+    "kind": "vane"
+   },
+   "step": 4,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 52.29
+  },
+  {
+   "t": 57.65,
+   "say": "نرجع لفيينا. الدكتور اسمه Ignaz Semmelweis.",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "WASH YOUR HANDS",
+    "icon": "heart"
+   },
+   "stepT": 57.65,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 61.07,
+   "say": "المستشفى كان فيها عنبرين ولادة. عنبر بيشتغل فيه ",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 1,
+   "stepT": 61.07
+  },
+  {
+   "t": 66.03,
+   "say": "والغريب إن الستات في عنبر الدكاترة كانوا بيموتوا",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 2,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 66.03
+  },
+  {
+   "t": 73.54,
+   "say": "Semmelweis قعد يدوّر. وبعدين زميل ليه، دكتور تان",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 3,
+   "stepT": 73.54
+  },
+  {
+   "t": 80.47,
+   "say": "هنا الفكرة جت له: الدكاترة بيروحوا من أوضة التشر",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 4,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 80.47
+  },
+  {
+   "t": 86.6,
+   "say": "فخلّاهم يغسلوا إيديهم في محلول كلور قبل ما يلمسو",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 5,
+   "stepT": 86.6
+  },
+  {
+   "t": 89.96,
+   "say": "والأرقام وقعت: في أبريل، حوالي تمنتاشر في المية ",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 6,
+   "stepT": 89.96
+  },
+  {
+   "t": 98.03,
+   "say": "مفيش دوا، ولا جهاز، ولا عملية. مية وكلور.",
+   "shot": "close",
+   "emote": "proud"
+  },
+  {
+   "t": 100.92,
+   "say": "وبعدين؟ الدكاترة زعلوا. أصل الكلام ده معناه إنهم",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 7,
+   "emote": "worried",
+   "host": "right",
+   "stepT": 100.92,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 106.74,
+   "say": "وكمان ماكانش عنده تفسير: ماحدش لسه يعرف حاجة اسم",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 8,
+   "stepT": 106.74
+  },
+  {
+   "t": 111.93,
+   "say": "وبعد سنين، لما Pasteur وغيره أثبتوا إن فيه كائنا",
+   "board": {
+    "kind": "semmel"
+   },
+   "step": 9,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 111.93
+  },
+  {
+   "t": 119.51,
+   "say": "ودي حاجة لازم تفهموها يا فندم: العلم ماكانش غلطا",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "present"
+  },
+  {
+   "t": 126.9,
+   "say": "حكاية تانية. سنة ألف تسعمية اتناشر، عالم ألماني ",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 0,
+   "story": {
+    "n": 3,
+    "tag": "MOVING CONTINENTS",
+    "icon": "ship"
+   },
+   "stepT": 126.9,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 133.96,
+   "say": "شط أمريكا الجنوبية وشط أفريقيا داخلين في بعض زي ",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 1,
+   "stepT": 133.96
+  },
+  {
+   "t": 137.25,
+   "say": "ولقى نفس الحفريات، لنفس الحيوانات، على الناحيتين",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 2,
+   "stepT": 137.25
+  },
+  {
+   "t": 140.7,
+   "say": "فقال: القارات دي كانت لازقة في بعض، وبعدين اتحرك",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 3,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 140.7
+  },
+  {
+   "t": 142.99,
+   "say": "علما الجيولوجيا ضحكوا. مش علشان هم أغبيا يا فندم",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 4,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 142.99
+  },
+  {
+   "t": 148.6,
+   "say": "وهو ماكانش عنده إجابة. وبحلول سنة ألف تسعمية تلا",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 5,
+   "stepT": 148.6
+  },
+  {
+   "t": 154.52,
+   "say": "وبعدها بتلاتين سنة، البشر نزلوا يقيسوا قاع المحي",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 6,
+   "stepT": 154.52
+  },
+  {
+   "t": 161.33,
+   "say": "وفي الستينات، الفكرة بقت أساس علم الأرض كله، باس",
+   "board": {
+    "kind": "wegener"
+   },
+   "step": 7,
+   "stepT": 161.33
+  },
+  {
+   "t": 165.39,
+   "say": "يعني العلما رفضوه علشان الدليل ماكانش كفاية. ولم",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 172.23,
+   "say": "الحكاية التالتة أجرأ. في أستراليا، في التمانينات",
+   "board": {
+    "kind": "marshall"
+   },
+   "step": 0,
+   "story": {
+    "n": 4,
+    "tag": "THE DRINK",
+    "icon": "shield"
+   },
+   "stepT": 172.23,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 178.8,
+   "say": "دكتورين، Robin Warren و Barry Marshall، شافوا بك",
+   "board": {
+    "kind": "marshall"
+   },
+   "step": 1,
+   "stepT": 178.8
+  },
+  {
+   "t": 185.46,
+   "say": "ماحدش صدّقهم. معدة الإنسان فيها حمض قوي جداً، إز",
+   "board": {
+    "kind": "marshall"
+   },
+   "step": 2,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 185.46
+  },
+  {
+   "t": 189.46,
+   "say": "وMarshall زهق. فسنة ألف تسعمية أربعة وتمانين، عم",
+   "board": {
+    "kind": "marshall"
+   },
+   "step": 3,
+   "stepT": 189.46
+  },
+  {
+   "t": 193.44,
+   "say": "جاب البكتيريا في كوباية.. وشربها.",
+   "board": {
+    "kind": "marshall"
+   },
+   "step": 4,
+   "stepT": 193.44
+  },
+  {
+   "t": 195.65,
+   "say": "بعد أيام، جاله التهاب في المعدة، وبقى عنده نفس ا",
+   "board": {
+    "kind": "marshall"
+   },
+   "step": 5,
+   "stepT": 195.65
+  },
+  {
+   "t": 201.32,
+   "say": "وبعدها، تجارب أكبر وأكبر أكّدت. وسنة ألفين خمسة،",
+   "board": {
+    "kind": "marshall"
+   },
+   "step": 6,
+   "stepT": 201.32
+  },
+  {
+   "t": 205.55,
+   "say": "ويا فندم، أنا مش بقول إن الطريقة دي هي الطريقة. ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 209.17,
+   "say": "أنا بقول إن العلم في الآخر سمع للدليل، حتى لما ا",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 213.55,
+   "say": "وفيه نوع تالت من تغيير الرأي، ودي أشيك واحدة.",
+   "shot": "host",
+   "emote": "sly",
+   "story": {
+    "n": 5,
+    "tag": "NEWTON",
+    "icon": "comet"
+   }
+  },
+  {
+   "t": 216.47,
+   "say": "Isaac Newton كتب قوانين الجاذبية من أكتر من تلتم",
+   "board": {
+    "kind": "newton"
+   },
+   "step": 0,
+   "stepT": 216.47,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 223.94,
+   "say": "ما عدا حاجة صغيرة. كوكب عطارد، أقرب كوكب للشمس، ",
+   "board": {
+    "kind": "newton"
+   },
+   "step": 1,
+   "stepT": 223.94
+  },
+  {
+   "t": 230.69,
+   "say": "فرق صغير لدرجة إن الفلكيين قعدوا عشرات السنين يد",
+   "board": {
+    "kind": "newton"
+   },
+   "step": 2,
+   "stepT": 230.69
+  },
+  {
+   "t": 236.42,
+   "say": "وبعدين، سنة ألف تسعمية خمستاشر، أينشتاين جاب نظر",
+   "board": {
+    "kind": "newton"
+   },
+   "step": 3,
+   "stepT": 236.42
+  },
+  {
+   "t": 242.81,
+   "say": "يعني نيوتن طلع غلط؟ لأ يا فندم. نيوتن طلع ناقص.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 246.25,
+   "say": "لحد النهارده، البشر بيبنوا الكباري ويبعتوا صواري",
+   "board": {
+    "kind": "newton"
+   },
+   "step": 4,
+   "stepT": 246.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 255.55,
+   "say": "العلم ماهدّش البيت. العلم بنى دور فوقه.",
+   "board": {
+    "kind": "newton"
+   },
+   "step": 5,
+   "emote": "proud",
+   "host": "right",
+   "stepT": 255.55
+  },
+  {
+   "t": 258.07,
+   "say": "طب والبيض؟ دي الحكاية اللي كل البشر حافظينها.",
+   "shot": "host",
+   "emote": "sly",
+   "story": {
+    "n": 6,
+    "tag": "EGGS",
+    "icon": "dup"
+   }
+  },
+  {
+   "t": 260.75,
+   "say": "لسنين طويلة، الإرشادات في أمريكا كانت بتقول: مات",
+   "board": {
+    "kind": "eggs"
+   },
+   "step": 0,
+   "stepT": 260.75,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 268.63,
+   "say": "سنة ألفين خمستاشر، الإرشادات الجديدة شالت الرقم ",
+   "board": {
+    "kind": "eggs"
+   },
+   "step": 1,
+   "stepT": 268.63
+  },
+  {
+   "t": 277.97,
+   "say": "والجرايد كتبت: العلما رجعوا في كلامهم، البيض بقى",
+   "board": {
+    "kind": "eggs"
+   },
+   "step": 2,
+   "stepT": 277.97
+  },
+  {
+   "t": 281.59,
+   "say": "بس اللي حصل فعلاً أصغر من كده بكتير. الإرشادات ن",
+   "board": {
+    "kind": "eggs"
+   },
+   "step": 3,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 281.59
+  },
+  {
+   "t": 286.45,
+   "say": "يعني العلم ماقلبش. العلم صلّح رقم واحد، لما الدل",
+   "board": {
+    "kind": "eggs"
+   },
+   "step": 4,
+   "stepT": 286.45
+  },
+  {
+   "t": 291.43,
+   "say": "وأنا مش هقول لكم تاكلوا بيض ولا ماتاكلوش. أنا جا",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 294.75,
+   "say": "وفيه سبب تاني للأخبار اللي بتلف: خلط حاجتين ببعض",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present",
+   "story": {
+    "n": 7,
+    "tag": "ICE CREAM",
+    "icon": "sun"
+   }
+  },
+  {
+   "t": 298.34,
+   "say": "في الصيف، بياع الآيس كريم بيبيع أكتر. وفي الصيف ",
+   "board": {
+    "kind": "icecream"
+   },
+   "step": 0,
+   "stepT": 298.34,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 302.67,
+   "say": "لو رسمت الاتنين على ورقة، هتلاقيهم طالعين ونازلي",
+   "board": {
+    "kind": "icecream"
+   },
+   "step": 1,
+   "stepT": 302.67
+  },
+  {
+   "t": 307.35,
+   "say": "لأ يا فندم. فيه حاجة تالتة ورا الاتنين: الشمس. ا",
+   "board": {
+    "kind": "icecream"
+   },
+   "step": 2,
+   "stepT": 307.35
+  },
+  {
+   "t": 313.31,
+   "say": "ده اسمه ارتباط، مش سبب.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 315.04,
+   "say": "ودراسات كتير بتلاقي إن الناس اللي بيعملوا حاجة م",
+   "board": {
+    "kind": "icecream"
+   },
+   "step": 3,
+   "stepT": 315.04,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 322.21,
+   "say": "والعنوان بيكتب: الحاجة دي بتطوّل العمر. وبعد سنة",
+   "board": {
+    "kind": "icecream"
+   },
+   "step": 4,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 322.21
+  },
+  {
+   "t": 330.15,
+   "say": "لأ. العلما ما قالوش أصلاً. العنوان هو اللي قال.",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 332.83,
+   "say": "فإزاي تفرق بين علم بيتغير، وعلم مالوش لازمة؟ فكّ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present",
+   "story": {
+    "n": 8,
+    "tag": "BRICK AND WALL",
+    "icon": "rules"
+   }
+  },
+  {
+   "t": 337.59,
+   "say": "الدراسة الواحدة طوبة. الطوبة ممكن تطلع مكسورة.",
+   "board": {
+    "kind": "brick"
+   },
+   "step": 0,
+   "stepT": 337.59,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 340.5,
+   "say": "بس لما عشرات الفرق، في بلاد مختلفة، بطرق مختلفة،",
+   "board": {
+    "kind": "brick"
+   },
+   "step": 1,
+   "stepT": 340.5
+  },
+  {
+   "t": 348.58,
+   "say": "الأخبار بتجري ورا الطوبة الجديدة كل يوم. بس الحي",
+   "board": {
+    "kind": "brick"
+   },
+   "step": 2,
+   "stepT": 348.58
+  },
+  {
+   "t": 357.97,
+   "say": "يعني مثلاً: إن الأرض بتلف حوالين الشمس، ده حيطة.",
+   "board": {
+    "kind": "brick"
+   },
+   "step": 3,
+   "stepT": 357.97
+  },
+  {
+   "t": 367.2,
+   "say": "لكن إن نوع معين من الأكل بيقلل خطر حاجة بنسبة صغ",
+   "board": {
+    "kind": "brick"
+   },
+   "step": 4,
+   "stepT": 367.2
+  },
+  {
+   "t": 375.65,
+   "say": "والفرق بين الاتنين، هو اللي العناوين مابتقولوش.",
+   "board": {
+    "kind": "brick"
+   },
+   "step": 5,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 375.65
+  },
+  {
+   "t": 378.22,
+   "say": "فلما تسمع إن العلما غيروا رأيهم، اسأل سؤال واحد:",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count"
+  },
+  {
+   "t": 382.65,
+   "say": "قاموس البشر. كلمتين النهارده. ارتباط: حاجتين بيط",
+   "board": {
+    "kind": "s3dict"
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 382.65,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 389.67,
+   "say": "وإجماع علمي: لما أغلب الفرق اللي درست حاجة، كل و",
+   "board": {
+    "kind": "s3dict"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 389.67
+  },
+  {
+   "t": 395.63,
+   "say": "الخلاصة يا فندم. أولاً: العالم اللي بيغير رأيه ل",
+   "board": {
+    "kind": "s3recap"
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 395.63,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 401.67,
+   "say": "ثانياً: غسيل الإيدين، والقارات، والبكتيريا، كلهم",
+   "board": {
+    "kind": "s3recap"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 401.67
+  },
+  {
+   "t": 408.28,
+   "say": "ثالثاً: أغلب اللي بيلف هو العناوين، مش العلم: طو",
+   "board": {
+    "kind": "s3recap"
+   },
+   "step": 2,
+   "host": "right",
+   "stepT": 408.28
+  },
+  {
+   "t": 413.63,
+   "say": "والبشر عندهم مقولة عجبتني: العلم مش بيكذب نفسه. ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 418.64,
+   "say": "في التقرير الجاي، والأخير في الملف ده: إمتى العل",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 426.43,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 429.86,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "NEXT",
+    "next": "4 / 4",
+    "icons": [
+     "book",
+     "eye",
+     "rules"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

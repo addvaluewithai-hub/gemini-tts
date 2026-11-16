@@ -1,0 +1,806 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/explain-science-04-world",
+ "transcript": "../../../video/cues/explain-science-04-world.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "date": "",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 13,
+ "tempo": 1.06,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، تقرير ميداني رقم أربعة، والأخير، في ملف",
+   "shot": "close",
+   "emote": "serious",
+   "story": null,
+   "slide": null
+  },
+  {
+   "t": 4.25,
+   "say": "سنة ألفين تلاتة وعشرين، البشر سحبوا أكتر من عشر ",
+   "board": {
+    "kind": "s4intro"
+   },
+   "step": 0,
+   "stepT": 4.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 12.07,
+   "say": "رقم قياسي.",
+   "board": {
+    "kind": "s4intro"
+   },
+   "step": 1,
+   "emote": "deadpan",
+   "host": "right",
+   "stepT": 12.07
+  },
+  {
+   "t": 13.25,
+   "say": "في التلات تقارير اللي فاتوا قلت لكم ليه البشر بي",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 17.54,
+   "say": "إمتى العلم بيضحك عليهم فعلاً؟ نصب، وفلوس، وأبحاث",
+   "board": {
+    "kind": "s4intro"
+   },
+   "step": 2,
+   "stepT": 17.54,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 21.71,
+   "say": "وفي الآخر، أهم سؤال: مين اللي بيكشف كل ده؟",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "count"
+  },
+  {
+   "t": 24.1,
+   "say": "أبدأ بالاعتراف يا فندم: العلما بشر. وده خبر وحش.",
+   "shot": "host",
+   "emote": "deadpan",
+   "story": {
+    "n": 1,
+    "tag": "PUBLISH OR PERISH",
+    "icon": "file"
+   }
+  },
+  {
+   "t": 27.99,
+   "say": "يعني مش ملايكة لابسين بالطو أبيض، ولا آلات حاسبة",
+   "board": {
+    "kind": "pressure"
+   },
+   "step": 0,
+   "stepT": 27.99,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 33.96,
+   "say": "والجامعات عندهم بتقيس العالم بعدد الأبحاث اللي ن",
+   "board": {
+    "kind": "pressure"
+   },
+   "step": 1,
+   "stepT": 33.96
+  },
+  {
+   "t": 39.01,
+   "say": "فلما العالم يبقى محتاج نتيجة، وماعندوش نتيجة، في",
+   "board": {
+    "kind": "pressure"
+   },
+   "step": 2,
+   "stepT": 39.01
+  },
+  {
+   "t": 43.12,
+   "say": "يا يلف ويدوّر في الأرقام لحد ما يطلع حاجة: يشيل ",
+   "board": {
+    "kind": "pressure"
+   },
+   "step": 3,
+   "stepT": 43.12
+  },
+  {
+   "t": 53.61,
+   "say": "ده مش كدب صريح يا فندم. ده تعذيب للأرقام لحد ما ",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 56.78,
+   "say": "يا يخترعها من أصله. وأغلبهم بيصبروا. بس مش كلهم.",
+   "board": {
+    "kind": "pressure"
+   },
+   "step": 4,
+   "emote": "neutral",
+   "host": "right",
+   "stepT": 56.78,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 59.99,
+   "say": "وفيه كمان طرف تاني: اللي بيدفع. شركة عايزة بحث ي",
+   "board": {
+    "kind": "pressure"
+   },
+   "step": 5,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 59.99
+  },
+  {
+   "t": 67.01,
+   "say": "أول حكاية. أول الألفينات، في معمل من أشهر معامل ",
+   "board": {
+    "kind": "schon"
+   },
+   "step": 0,
+   "story": {
+    "n": 2,
+    "tag": "THE STAR",
+    "icon": "atom"
+   },
+   "stepT": 67.01,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 75.35,
+   "say": "بينشر أبحاث في أكبر المجلات، زي Science و Nature",
+   "board": {
+    "kind": "schon"
+   },
+   "step": 1,
+   "stepT": 75.35
+  },
+  {
+   "t": 85,
+   "say": "بس فيه علما تانيين حاولوا يعيدوا تجاربه.. ومحدش ",
+   "board": {
+    "kind": "schon"
+   },
+   "step": 2,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 85
+  },
+  {
+   "t": 87.64,
+   "say": "وبعدين، كام عالم لاحظوا حاجة غريبة: رسمتين بياني",
+   "board": {
+    "kind": "schon"
+   },
+   "step": 3,
+   "stepT": 87.64
+  },
+  {
+   "t": 98.03,
+   "say": "يعني الرسمة اتنسخت. زي ما يكون عندك صورتين لسحاب",
+   "board": {
+    "kind": "schon"
+   },
+   "step": 4,
+   "stepT": 98.03
+  },
+  {
+   "t": 103.72,
+   "say": "سنة ألفين اتنين، لجنة تحقيق طلعت إن Schön عمل تل",
+   "board": {
+    "kind": "schon"
+   },
+   "step": 5,
+   "stepT": 103.72
+  },
+  {
+   "t": 110.17,
+   "say": "والملاحظ يا فندم: اللي مسكه مش بوليس. علما قعدوا",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "present"
+  },
+  {
+   "t": 114.61,
+   "say": "الحكاية التانية مش مضحكة خالص يا فندم.",
+   "shot": "close",
+   "emote": "serious",
+   "story": {
+    "n": 3,
+    "tag": "ONE PAPER",
+    "icon": "shield"
+   }
+  },
+  {
+   "t": 116.89,
+   "say": "سنة ألف تسعمية تمانية وتسعين، مجلة طبية كبيرة اس",
+   "board": {
+    "kind": "wakefield"
+   },
+   "step": 0,
+   "stepT": 116.89,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 128.92,
+   "say": "الفكرة انتشرت في الدنيا. أهالي كتير خافوا.",
+   "board": {
+    "kind": "wakefield"
+   },
+   "step": 1,
+   "stepT": 128.92
+  },
+  {
+   "t": 131.49,
+   "say": "وبعدها، صحفي اسمه Brian Deer قعد سنين يحقق. واكت",
+   "board": {
+    "kind": "wakefield"
+   },
+   "step": 2,
+   "stepT": 131.49
+  },
+  {
+   "t": 138.65,
+   "say": "سنة ألفين عشرة، المجلة سحبت البحث بالكامل، وقالت",
+   "board": {
+    "kind": "wakefield"
+   },
+   "step": 3,
+   "stepT": 138.65
+  },
+  {
+   "t": 146.08,
+   "say": "وفي الوقت ده، دراسات كبيرة على أعداد ضخمة من الأ",
+   "board": {
+    "kind": "wakefield"
+   },
+   "step": 4,
+   "stepT": 146.08
+  },
+  {
+   "t": 151.22,
+   "say": "بس الخوف كان عدّى البحر خلاص. والخوف ده لسه ليه ",
+   "board": {
+    "kind": "wakefield"
+   },
+   "step": 5,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 151.22
+  },
+  {
+   "t": 157.45,
+   "say": "أنا مش هقول لحد يعمل إيه يا فندم. أنا بقول اللي ",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 164.25,
+   "say": "الحكاية التالتة عن الفلوس. سنة ألف تسعمية تسعة و",
+   "board": {
+    "kind": "doubt"
+   },
+   "step": 0,
+   "story": {
+    "n": 4,
+    "tag": "SELLING DOUBT",
+    "icon": "coin"
+   },
+   "stepT": 164.25,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 171.92,
+   "say": "بس بعد سنين، في قضايا في المحاكم، المذكرات دي طل",
+   "board": {
+    "kind": "doubt"
+   },
+   "step": 1,
+   "stepT": 171.92
+  },
+  {
+   "t": 180.09,
+   "say": "يعني الشركة ماكانتش محتاجة تثبت إن السجاير مش مض",
+   "board": {
+    "kind": "doubt"
+   },
+   "step": 2,
+   "emote": "skeptical",
+   "host": "right",
+   "stepT": 180.09
+  },
+  {
+   "t": 186.05,
+   "say": "تموّل أبحاث بتسأل أسئلة جانبية، تطلّع خبرا في ال",
+   "board": {
+    "kind": "doubt"
+   },
+   "step": 3,
+   "stepT": 186.05
+  },
+  {
+   "t": 192.26,
+   "say": "وده بيشتغل يا فندم، لأن العلم بطبيعته بيقول \"غال",
+   "board": {
+    "kind": "doubt"
+   },
+   "step": 4,
+   "stepT": 192.26
+  },
+  {
+   "t": 200.79,
+   "say": "وعلشان كده، لما تلاقي حد بيقول \"العلما لسه مختلف",
+   "shot": "host",
+   "emote": "serious",
+   "gesture": "count"
+  },
+  {
+   "t": 208.07,
+   "say": "الحكاية الرابعة أهدى، بس يمكن أخطر.",
+   "shot": "host",
+   "emote": "serious",
+   "story": {
+    "n": 5,
+    "tag": "DO IT AGAIN",
+    "icon": "dup"
+   }
+  },
+  {
+   "t": 210.33,
+   "say": "سنة ألفين خمستاشر، حوالي ميتين وسبعين باحث قرروا",
+   "board": {
+    "kind": "replic"
+   },
+   "step": 0,
+   "stepT": 210.33,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 218.95,
+   "say": "النتيجة؟ البحوث الأصلية، تقريباً كلها، كانت لاقي",
+   "board": {
+    "kind": "replic"
+   },
+   "step": 1,
+   "stepT": 218.95
+  },
+  {
+   "t": 224.44,
+   "say": "والباقي، النتيجة ماظهرتش، أو ظهرت أضعف بكتير. وح",
+   "board": {
+    "kind": "replic"
+   },
+   "step": 2,
+   "stepT": 224.44
+  },
+  {
+   "t": 236.58,
+   "say": "ده مش نصب يا فندم. أغلبه اللي حكيته لكم في التقر",
+   "shot": "close",
+   "emote": "neutral"
+  },
+  {
+   "t": 244.22,
+   "say": "والبشر سمّوها أزمة. بس شوف الحكاية من بعيد: العل",
+   "board": {
+    "kind": "replic"
+   },
+   "step": 3,
+   "emote": "proud",
+   "host": "right",
+   "stepT": 244.22,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 252.58,
+   "say": "وبعدها، مجلات كتير بقت تطلب تسجيل خطة البحث قبل ",
+   "board": {
+    "kind": "replic"
+   },
+   "step": 4,
+   "stepT": 252.58
+  },
+  {
+   "t": 256.28,
+   "say": "والحكاية الأخيرة، الأحدث.",
+   "shot": "host",
+   "emote": "neutral",
+   "story": {
+    "n": 6,
+    "tag": "PAPER MILLS",
+    "icon": "gear"
+   }
+  },
+  {
+   "t": 258.19,
+   "say": "على الإنترنت ظهر حاجة اسمها مصانع الورق. شركات ب",
+   "board": {
+    "kind": "mills"
+   },
+   "step": 0,
+   "stepT": 258.19,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 269.42,
+   "say": "وطريقة اكتشافهم ساعات بتضحك يا فندم. المصانع دي ",
+   "board": {
+    "kind": "mills"
+   },
+   "step": 1,
+   "stepT": 269.42
+  },
+  {
+   "t": 276.82,
+   "say": "فالباحثين لقوا أبحاث مكتوب فيها بدل الذكاء الاصط",
+   "board": {
+    "kind": "mills"
+   },
+   "step": 2,
+   "emote": "sly",
+   "host": "right",
+   "stepT": 276.82
+  },
+  {
+   "t": 282.22,
+   "say": "فبقوا يدوّروا على الجمل الغريبة اللي زي دي في مل",
+   "board": {
+    "kind": "mills"
+   },
+   "step": 3,
+   "stepT": 282.22
+  },
+  {
+   "t": 287.72,
+   "say": "وسنة ألفين تلاتة وعشرين، دار نشر واحدة اسمها Hin",
+   "board": {
+    "kind": "mills"
+   },
+   "step": 4,
+   "stepT": 287.72
+  },
+  {
+   "t": 297.18,
+   "say": "والشركة الأم، Wiley، قررت بعدها تقفل الاسم ده خا",
+   "board": {
+    "kind": "mills"
+   },
+   "step": 5,
+   "stepT": 297.18
+  },
+  {
+   "t": 303.41,
+   "say": "ولو حد قال لك: شفت؟ العلم كله نصب! قول له:",
+   "shot": "host",
+   "emote": "skeptical",
+   "gesture": "shrug"
+  },
+  {
+   "t": 305.88,
+   "say": "الرقم ده موجود علشان حد قعد يدوّر ويسحب. البلد ا",
+   "shot": "close",
+   "emote": "deadpan"
+  },
+  {
+   "t": 311.34,
+   "say": "ارجع للحكايات كلها يا فندم.",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count",
+   "story": {
+    "n": 7,
+    "tag": "WHO CAUGHT THEM",
+    "icon": "eye"
+   }
+  },
+  {
+   "t": 315.1,
+   "say": "Schön؟ كشفه علما بصّوا على الرسومات.",
+   "board": {
+    "kind": "sleuths"
+   },
+   "step": 0,
+   "stepT": 315.1,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 315.15,
+   "say": "Wakefield؟ كشفه صحفي، وأكّدت كلامه دراسات أكبر.",
+   "board": {
+    "kind": "sleuths"
+   },
+   "step": 1,
+   "stepT": 315.15
+  },
+  {
+   "t": 318.22,
+   "say": "شركات السجاير؟ كشفتها مستنداتها، والأبحاث المستق",
+   "board": {
+    "kind": "sleuths"
+   },
+   "step": 2,
+   "stepT": 318.22
+  },
+  {
+   "t": 321.48,
+   "say": "أزمة التكرار؟ كشفها العلما نفسهم وهم بيعيدوا أبح",
+   "board": {
+    "kind": "sleuths"
+   },
+   "step": 3,
+   "stepT": 321.48
+  },
+  {
+   "t": 325,
+   "say": "ومصانع الورق؟ فيه ناس متطوعين على الإنترنت شغلته",
+   "board": {
+    "kind": "sleuths"
+   },
+   "step": 4,
+   "stepT": 325
+  },
+  {
+   "t": 334.05,
+   "say": "يعني الماكينة بتشتغل. بطيئة؟ جداً. ساعات بتاخد س",
+   "shot": "host",
+   "emote": "neutral"
+  },
+  {
+   "t": 339.07,
+   "say": "وفاكرين Semmelweis؟ اللي قال اغسلوا إيديكم؟ الما",
+   "board": {
+    "kind": "sleuths"
+   },
+   "step": 5,
+   "emote": "serious",
+   "host": "right",
+   "stepT": 339.07,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 344.67,
+   "say": "الطريقة بتوصل للحقيقة، بس مش بتوصل في ميعاد.",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 347.57,
+   "say": "وعلشان كده البشر بيحاولوا دايماً يسرّعوها: تسجيل",
+   "board": {
+    "kind": "sleuths"
+   },
+   "step": 6,
+   "stepT": 347.57,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 355.77,
+   "say": "بس مفيش ماكينة تانية عند البشر بتكشف نفسها بالشك",
+   "shot": "host",
+   "emote": "proud",
+   "gesture": "present"
+  },
+  {
+   "t": 358.71,
+   "say": "فعملت لكم قايمة، أي خبر علمي يعدّي عليها قبل ما ",
+   "shot": "host",
+   "emote": "neutral",
+   "gesture": "count",
+   "story": {
+    "n": 8,
+    "tag": "THE CHECKLIST",
+    "icon": "rules"
+   }
+  },
+  {
+   "t": 362.55,
+   "say": "مين اللي بيقول؟ عالم في تخصصه، ولا حد بيبيع كورس",
+   "board": {
+    "kind": "checklist"
+   },
+   "step": 0,
+   "stepT": 362.55,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 365.86,
+   "say": "اتنشر فين؟ مجلة محترمة، ولا كاشير؟",
+   "board": {
+    "kind": "checklist"
+   },
+   "step": 1,
+   "stepT": 365.86
+  },
+  {
+   "t": 368.76,
+   "say": "على كام واحد؟ حد تاني عمله ووصل لنفس النتيجة؟",
+   "board": {
+    "kind": "checklist"
+   },
+   "step": 2,
+   "stepT": 368.76
+  },
+  {
+   "t": 371.59,
+   "say": "ده بحث واحد، ولا مراجعة بتجمع عشرات الأبحاث مع ب",
+   "board": {
+    "kind": "checklist"
+   },
+   "step": 3,
+   "stepT": 371.59
+  },
+  {
+   "t": 377.49,
+   "say": "مين دفع؟ وأغلب الفرق اللي درست الموضوع، قالوا إي",
+   "board": {
+    "kind": "checklist"
+   },
+   "step": 4,
+   "stepT": 377.49
+  },
+  {
+   "t": 380.85,
+   "say": "ولو الكلام بيقول لك إن كل العلما بيضحكوا عليك، و",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 386.85,
+   "say": "قاموس البشر. آخر كلمتين في الملف. سحب البحث: لما",
+   "board": {
+    "kind": "s4dict"
+   },
+   "step": 0,
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "stepT": 386.85,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 395.39,
+   "say": "وتضارب المصالح: لما اللي عامل البحث، أو اللي داف",
+   "board": {
+    "kind": "s4dict"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 395.39
+  },
+  {
+   "t": 400.02,
+   "say": "الخلاصة يا فندم. أولاً: أيوه، العلم بيتضحك عليه،",
+   "board": {
+    "kind": "s4recap"
+   },
+   "step": 0,
+   "host": "right",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "stepT": 400.02,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 406.04,
+   "say": "ثانياً: كل حكاية من دول، اللي كشفها كان علما، وص",
+   "board": {
+    "kind": "s4recap"
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 406.04
+  },
+  {
+   "t": 412.96,
+   "say": "ثالثاً: ماتصدّقش عالم لوحده، وماتصدّقش بحث لوحده",
+   "board": {
+    "kind": "s4recap"
+   },
+   "step": 2,
+   "host": "right",
+   "stepT": 412.96
+  },
+  {
+   "t": 418.82,
+   "say": "وده اللي هكتبه في تقريري الأخير عن الموضوع ده: ا",
+   "shot": "close",
+   "emote": "serious"
+  },
+  {
+   "t": 427.78,
+   "say": "وده آخر تقرير في ملف العلم. والملف الجاي، هتعرفو",
+   "shot": "host",
+   "emote": "sly",
+   "gesture": "present"
+  },
+  {
+   "t": 432.04,
+   "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+   "shot": "wide",
+   "emote": "proud",
+   "gesture": "wave"
+  },
+  {
+   "t": 435.6,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "endnext",
+    "title": "SCIENCE FILE",
+    "next": "4 / 4",
+    "icons": [
+     "book",
+     "eye",
+     "rules"
+    ],
+    "note": ""
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}

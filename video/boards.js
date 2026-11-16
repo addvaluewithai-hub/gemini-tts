@@ -20,6 +20,7 @@ import { sintroSet } from "./sets/sintro.js";
 import { repeatSet, headlineSet, s2dictSet, s2recapSet } from "./sets/part2c.js";
 import { sampleSet, chocoSet, reviewSet } from "./sets/part2b.js";
 import { s2introSet, s2paperSet, fairtestSet, lindSet } from "./sets/part2a.js";
+import { s3introSet, vaneSet, semmelSet } from "./sets/part3a.js";
 import { sthumbSet } from "./sets/sthumb.js";
 import { sdictSet, srecapSet } from "./sets/sdict.js";
 import { trustSet } from "./sets/trust.js";
@@ -873,6 +874,9 @@ const BOARDS = {
   headline: (s, step, age, total, cfg) => headlineSet(s, step, age, total, cfg),
   s2dict: (s, step, age, total, cfg) => s2dictSet(s, step, age, total, cfg),
   s2recap: (s, step, age, total, cfg) => s2recapSet(s, step, age, total, cfg),
+  s3intro: (s, step, age, total, cfg) => s3introSet(s, step, age, total, cfg),
+  vane: (s, step, age, total, cfg) => vaneSet(s, step, age, total, cfg),
+  semmel: (s, step, age, total, cfg) => semmelSet(s, step, age, total, cfg),
   sample: (s, step, age, total, cfg) => sampleSet(s, step, age, total, cfg),
   choco: (s, step, age, total, cfg) => chocoSet(s, step, age, total, cfg),
   review: (s, step, age, total, cfg) => reviewSet(s, step, age, total, cfg),
