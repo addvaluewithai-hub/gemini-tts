@@ -138,7 +138,7 @@ server.listen(0, "127.0.0.1", async () => {
     const page = await browser.newPage({ viewport: { width: vw, height: vh } });
     page.on("pageerror", (err) => { console.error("PAGE ERROR", err.message); process.exitCode = 1; });
     await page.goto(url); await page.waitForFunction("window.__ready === true", null, { timeout: 20000 });
-    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl, layout: cues.layout || "", vertical: !!cues.vertical, portraitSets: !!cues.portraitSets, boardZoom: cues.boardZoom || null, hostZoom: cues.hostZoom || 1, hostY: cues.hostY || 0, capY: cues.capY || 0, brand: cues.brand || null, theme: cues.theme || null });
+    if (studio) await page.evaluate((c) => window.setup(c), { slides, face: cues.face, date: cues.date || "", rtl: !!cues.rtl, layout: cues.layout || "", vertical: !!cues.vertical, portraitSets: !!cues.portraitSets, boardZoom: cues.boardZoom || null, peekFixed: cues.peekFixed || null, hostZoom: cues.hostZoom || null, hostY: cues.hostY || 0, capY: cues.capY || 0, brand: cues.brand || null, theme: cues.theme || null });
     return { page, cdp: await page.context().newCDPSession(page) };
   };
   const shot = async (w, i, format = "jpeg") => {

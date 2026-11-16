@@ -1,5 +1,5 @@
 {
- "note": "PROPOSED (timed to the Vertex take -ar-v) Shorts for the drawn version of crypto part 2, for the owner to pick (4 to 6). Nothing is rendered or recorded yet. `parts` are [from, to] in seconds of the finished episode (cue time plus the 0.3 s lead, cues/explain-crypto-02-world.json); `cta` is each Short's own closing line, to be recorded on Vertex AI (job techforbadguys-crypto02-short-cta-<key>) with its Speech-to-Text listen-back. {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs; thumbnails without words like video/youtube/art-crypto-01-shorts-intl.json.",
+ "note": "PROPOSED (timed to the Vertex take -ar-v) Shorts for the drawn version of crypto part 2, for the owner to pick (4 to 6). Nothing is rendered or recorded yet. `parts` are [from, to] in seconds of the finished episode (cue time plus the 0.3 s lead, cues/explain-crypto-02-world.json); `cta` is each Short's own closing line, to be recorded on Vertex AI (job techforbadguys-crypto02-short-cta-<key>) with its Speech-to-Text listen-back. {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs; thumbnails without words like video/youtube/art-crypto-01-shorts-intl.json. Owner (16 Nov): every Short in the snail look, Peek standing small at the side (peekFixed), no captions; four per episode: bug-2010 (20 Nov 20:00 Cairo), energy (20 Nov 22:00), hash (21 Nov 14:00), cap (21 Nov 20:00); chain and mining to the stock.",
  "full": "https://youtu.be/7D8rK9TlVdQ",
  "boardZoom": 0.85,
  "shorts": [
@@ -50,7 +50,9 @@
     ],
     "cta": "And that same trick is what makes the bitcoin ledger impossible to forge. How? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "end_audio": "shorts/cta-en-hash.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "chain",
@@ -102,7 +104,9 @@
     ],
     "cta": "So who writes the next page... and what stops them from cheating? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "end_audio": "shorts/cta-en-chain.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "mining",
@@ -151,7 +155,9 @@
     ],
     "cta": "And this contest burns as much electricity as a whole country. Why do humans put up with it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "end_audio": "shorts/cta-en-mining.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "energy",
@@ -199,7 +205,9 @@
     ],
     "cta": "And when the prizes run out... who will guard the ledger? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "end_audio": "shorts/cta-en-energy.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "cap",
@@ -251,7 +259,9 @@
     ],
     "cta": "Can that ceiling ever change? And who actually runs this network? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "end_audio": "shorts/cta-en-cap.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "bug-2010",
@@ -303,7 +313,13 @@
     ],
     "cta": "So who really runs this network? The answer is strange... and the full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "end_audio": "shorts/cta-en-bug-2010.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   }
- ]
+ ],
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
 }
