@@ -1,1 +1,167 @@
-{"success":false,"url":"https://res.cloudinary.com/lskr7x7h/raw/upload/v179484949759/gemini-tts/techforbadguys-science01-short-cta-dragon.transcript.json","error":{"code":404,"message":"Resource not found - gemini-tts/techforbadguys-science01-short-cta-dragon.transcript.json","requestId":"-"}}
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-16T17:21:24.787Z",
+  "duration_ms": 11880,
+  "word_count": 28,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "واينشتاين نفسه حط نظريته على المحك بالشكل ده وكسب الحكايه كامله على قناه تقرير الارض اشترك في القناه وفعل الجرس علشان تقاريري السريه عن كوكبكم توصلك اول باول",
+  "source_text": "وأينشتاين نفسه حط نظريته على المحك بالشكل ده، وكسب. الحكاية كاملة على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "وأينشتاين نفسه حط نظريته على المحك بالشكل ده، وكسب. الحكاية كاملة على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 840,
+      "text": "واينشتاين"
+    },
+    {
+      "start_ms": 840,
+      "end_ms": 1240,
+      "text": "نفسه"
+    },
+    {
+      "start_ms": 1240,
+      "end_ms": 1520,
+      "text": "حط"
+    },
+    {
+      "start_ms": 1520,
+      "end_ms": 2040,
+      "text": "نظريته"
+    },
+    {
+      "start_ms": 2040,
+      "end_ms": 2200,
+      "text": "على"
+    },
+    {
+      "start_ms": 2200,
+      "end_ms": 2680,
+      "text": "المحك"
+    },
+    {
+      "start_ms": 2680,
+      "end_ms": 3120,
+      "text": "بالشكل"
+    },
+    {
+      "start_ms": 3120,
+      "end_ms": 3520,
+      "text": "ده"
+    },
+    {
+      "start_ms": 3560,
+      "end_ms": 4360,
+      "text": "وكسب"
+    },
+    {
+      "start_ms": 4600,
+      "end_ms": 5120,
+      "text": "الحكايه"
+    },
+    {
+      "start_ms": 5120,
+      "end_ms": 5520,
+      "text": "كامله"
+    },
+    {
+      "start_ms": 5560,
+      "end_ms": 5760,
+      "text": "على"
+    },
+    {
+      "start_ms": 5760,
+      "end_ms": 6040,
+      "text": "قناه"
+    },
+    {
+      "start_ms": 6040,
+      "end_ms": 6360,
+      "text": "تقرير"
+    },
+    {
+      "start_ms": 6360,
+      "end_ms": 6960,
+      "text": "الارض"
+    },
+    {
+      "start_ms": 7040,
+      "end_ms": 7400,
+      "text": "اشترك"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 7440,
+      "text": "في"
+    },
+    {
+      "start_ms": 7440,
+      "end_ms": 7720,
+      "text": "القناه"
+    },
+    {
+      "start_ms": 7720,
+      "end_ms": 8040,
+      "text": "وفعل"
+    },
+    {
+      "start_ms": 8040,
+      "end_ms": 8600,
+      "text": "الجرس"
+    },
+    {
+      "start_ms": 8640,
+      "end_ms": 9000,
+      "text": "علشان"
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9400,
+      "text": "تقاريري"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9800,
+      "text": "السريه"
+    },
+    {
+      "start_ms": 9800,
+      "end_ms": 9920,
+      "text": "عن"
+    },
+    {
+      "start_ms": 9920,
+      "end_ms": 10520,
+      "text": "كوكبكم"
+    },
+    {
+      "start_ms": 10560,
+      "end_ms": 11000,
+      "text": "توصلك"
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 11240,
+      "text": "اول"
+    },
+    {
+      "start_ms": 11240,
+      "end_ms": 11680,
+      "text": "باول"
+    }
+  ]
+}
