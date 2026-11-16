@@ -1,0 +1,689 @@
+{
+ "title": "تقرير الأرض: العلم 4 (world picture)",
+ "recorded_for": "2026-12-08",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture (one video, several audio tracks), drawn in the notebook look of explain-science-01-world: no Arabic on screen, no burned-in captions, every board beat a wordless illustrated shot. Script: ../explain-science-04-ar/script.md, words unchanged.",
+  "Earth Report field file: Science, part 4 of 4 (the last). When science really fools us, and who catches it: publish or perish and torturing the data; Jan Hendrik Schön (2002); the 1998 vaccine-autism paper, withdrawn in 2010 (serious passage); the tobacco memo 'doubt is our product' (1969); the replication crisis (2015); paper mills and the 2023 record of withdrawn papers; who caught each one; a checklist for any science claim.",
+  "Facts (sources in ../explain-science-01-ar/plan.md): Schön, Bell Labs, misconduct in at least 16 cases (2002); Wakefield, The Lancet 1998, 12 children, fully retracted February 2010, struck off May 2010, Brian Deer's investigation; 1969 tobacco memo; Open Science Collaboration 2015, 100 psychology studies, about a third replicated, effects about half; more than 10,000 retractions in 2023, more than 8,000 from Hindawi (Wiley).",
+  "The vaccine passage is serious and calm: no jokes, no children shown hurt or ill, no syringes aimed at anyone, no medical advice (the host says so). Pictures show papers, records, a journalist's magnifier, and many studies finding no link. No company or country is mocked; the tobacco memo is told as a documented case."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "SCIENCE FILE",
+   "next": "4 / 4",
+   "icons": [
+    "book",
+    "eye",
+    "rules"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "boards": {
+  "checklist": {
+   "kind": "checklist"
+  },
+  "doubt": {
+   "kind": "doubt"
+  },
+  "mills": {
+   "kind": "mills"
+  },
+  "pressure": {
+   "kind": "pressure"
+  },
+  "replic": {
+   "kind": "replic"
+  },
+  "s4dict": {
+   "kind": "s4dict"
+  },
+  "s4intro": {
+   "kind": "s4intro"
+  },
+  "s4recap": {
+   "kind": "s4recap"
+  },
+  "schon": {
+   "kind": "schon"
+  },
+  "sleuths": {
+   "kind": "sleuths"
+  },
+  "wakefield": {
+   "kind": "wakefield"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of the last field report: a record number told with dry wonder, then the question.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم أربعة، والأخير، في ملف العلم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "سنة ألفين تلاتة وعشرين، البشر سحبوا أكتر من عشر آلاف بحث علمي. يعني قالوا رسمياً: الأبحاث دي ماتتصدّقش، اعتبروها مااتكتبتش.",
+     "show": "board",
+     "board": "s4intro",
+     "step": 0
+    },
+    {
+     "say": "رقم قياسي.",
+     "show": "board",
+     "board": "s4intro",
+     "step": 1,
+     "emote": "deadpan",
+     "host": "right"
+    },
+    {
+     "say": "في التلات تقارير اللي فاتوا قلت لكم ليه البشر بيصدّقوا العلم. النهارده الوش التاني.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "إمتى العلم بيضحك عليهم فعلاً؟ نصب، وفلوس، وأبحاث مالهاش أساس.",
+     "show": "board",
+     "board": "s4intro",
+     "step": 2
+    },
+    {
+     "say": "وفي الآخر، أهم سؤال: مين اللي بيكشف كل ده؟",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "pressure",
+   "story": {
+    "n": 1,
+    "tag": "PUBLISH OR PERISH",
+    "icon": "file"
+   },
+   "style": "An honest admission, dry and a little sympathetic; the torture line lands deadpan.",
+   "beats": [
+    {
+     "say": "أبدأ بالاعتراف يا فندم: العلما بشر. وده خبر وحش.",
+     "shot": "host",
+     "emote": "deadpan"
+    },
+    {
+     "say": "يعني مش ملايكة لابسين بالطو أبيض، ولا آلات حاسبة بتمشي على رجلين. بيغيروا، وبيتعبوا، وعايزين ترقية.",
+     "show": "board",
+     "board": "pressure",
+     "step": 0
+    },
+    {
+     "say": "والجامعات عندهم بتقيس العالم بعدد الأبحاث اللي نشرها. عندهم مقولة: انشر.. أو اختفي.",
+     "show": "board",
+     "board": "pressure",
+     "step": 1
+    },
+    {
+     "say": "فلما العالم يبقى محتاج نتيجة، وماعندوش نتيجة، فيه تلات طرق. يا يصبر.",
+     "show": "board",
+     "board": "pressure",
+     "step": 2
+    },
+    {
+     "say": "يا يلف ويدوّر في الأرقام لحد ما يطلع حاجة: يشيل الناس اللي مش عاجبينه من العينة، يقيس عشرين حاجة ويكتب الواحدة اللي طلعت، يجرّب طريقة حساب، وتانية، وتالتة، لحد ما الرقم يرضى عنه.",
+     "show": "board",
+     "board": "pressure",
+     "step": 3
+    },
+    {
+     "say": "ده مش كدب صريح يا فندم. ده تعذيب للأرقام لحد ما تعترف.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "يا يخترعها من أصله. وأغلبهم بيصبروا. بس مش كلهم.",
+     "show": "board",
+     "board": "pressure",
+     "step": 4,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "وفيه كمان طرف تاني: اللي بيدفع. شركة عايزة بحث يقول إن منتجها كويس. والفلوس، زي ما انتم عارفين، عندها طريقتها في إقناع الأرقام.",
+     "show": "board",
+     "board": "pressure",
+     "step": 5,
+     "emote": "sly",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "schon",
+   "story": {
+    "n": 2,
+    "tag": "THE STAR",
+    "icon": "atom"
+   },
+   "style": "A rise and fall told briskly; quiet respect for the scientists with rulers.",
+   "beats": [
+    {
+     "say": "أول حكاية. أول الألفينات، في معمل من أشهر معامل العالم في أمريكا، اسمه Bell Labs، كان فيه عالم ألماني شاب اسمه Jan Hendrik Schön. نجم.",
+     "show": "board",
+     "board": "schon",
+     "step": 0
+    },
+    {
+     "say": "بينشر أبحاث في أكبر المجلات، زي Science و Nature، ورا بعض، بسرعة ماحدش في المجال كان بيقدر يجاريها. نتايج مذهلة عن أجهزة صغيرة جداً هتغير الإلكترونيات. الناس بدأت تتكلم عن نوبل.",
+     "show": "board",
+     "board": "schon",
+     "step": 1
+    },
+    {
+     "say": "بس فيه علما تانيين حاولوا يعيدوا تجاربه.. ومحدش قدر.",
+     "show": "board",
+     "board": "schon",
+     "step": 2,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "وبعدين، كام عالم لاحظوا حاجة غريبة: رسمتين بيانيين، في بحثين مختلفين، عن تجربتين مختلفين.. فيهم نفس التذبذب الصغير بالظبط. نفس الرعشة، في نفس المكان.",
+     "show": "board",
+     "board": "schon",
+     "step": 3
+    },
+    {
+     "say": "يعني الرسمة اتنسخت. زي ما يكون عندك صورتين لسحابتين في سما مختلفة، وطالعين نفس الشكل بالظبط.",
+     "show": "board",
+     "board": "schon",
+     "step": 4
+    },
+    {
+     "say": "سنة ألفين اتنين، لجنة تحقيق طلعت إن Schön عمل تلاعب في ستاشر حالة على الأقل. وأبحاث كتير اتسحبت. النجم وقع.",
+     "show": "board",
+     "board": "schon",
+     "step": 5
+    },
+    {
+     "say": "والملاحظ يا فندم: اللي مسكه مش بوليس. علما قعدوا يبصوا على الرسومات بتاعته بالمسطرة.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "wakefield",
+   "story": {
+    "n": 3,
+    "tag": "ONE PAPER",
+    "icon": "shield"
+   },
+   "style": "Serious and calm throughout. No sarcasm, no jokes; slower, plain, respectful of the families.",
+   "beats": [
+    {
+     "say": "الحكاية التانية مش مضحكة خالص يا فندم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "سنة ألف تسعمية تمانية وتسعين، مجلة طبية كبيرة اسمها The Lancet نشرت بحث لدكتور بريطاني اسمه Andrew Wakefield. البحث كان على اتناشر طفل بس. وطلّع فكرة إن فيه علاقة بين تطعيم الأطفال والتوحد.",
+     "show": "board",
+     "board": "wakefield",
+     "step": 0
+    },
+    {
+     "say": "الفكرة انتشرت في الدنيا. أهالي كتير خافوا.",
+     "show": "board",
+     "board": "wakefield",
+     "step": 1
+    },
+    {
+     "say": "وبعدها، صحفي اسمه Brian Deer قعد سنين يحقق. واكتشف إن بيانات الأطفال في البحث اتغيّرت عن السجلات الأصلية.",
+     "show": "board",
+     "board": "wakefield",
+     "step": 2
+    },
+    {
+     "say": "سنة ألفين عشرة، المجلة سحبت البحث بالكامل، وقالت إنها اتخدعت. ونفس السنة، Wakefield اتشطب من سجل الأطبا في بريطانيا.",
+     "show": "board",
+     "board": "wakefield",
+     "step": 3
+    },
+    {
+     "say": "وفي الوقت ده، دراسات كبيرة على أعداد ضخمة من الأطفال، في بلاد مختلفة، مالقيتش العلاقة دي.",
+     "show": "board",
+     "board": "wakefield",
+     "step": 4
+    },
+    {
+     "say": "بس الخوف كان عدّى البحر خلاص. والخوف ده لسه ليه تمن لحد النهارده، وبيدفعه أطفال ماليهومش ذنب.",
+     "show": "board",
+     "board": "wakefield",
+     "step": 5,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "أنا مش هقول لحد يعمل إيه يا فندم. أنا بقول اللي حصل: بحث مزوّر واحد، على اتناشر طفل، عمل ضرر ماحدش قدر يلمّه.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "doubt",
+   "story": {
+    "n": 4,
+    "tag": "SELLING DOUBT",
+    "icon": "coin"
+   },
+   "style": "A documented case told plainly, with a dry edge; the closing question firm.",
+   "beats": [
+    {
+     "say": "الحكاية التالتة عن الفلوس. سنة ألف تسعمية تسعة وستين، موظف في شركة سجاير كبيرة كتب مذكرة داخلية. ماكانش المفروض حد يشوفها.",
+     "show": "board",
+     "board": "doubt",
+     "step": 0
+    },
+    {
+     "say": "بس بعد سنين، في قضايا في المحاكم، المذكرات دي طلعت للنور. وفيها جملة البشر لحد النهارده بيستشهدوا بيها: الشك هو منتجنا.",
+     "show": "board",
+     "board": "doubt",
+     "step": 1
+    },
+    {
+     "say": "يعني الشركة ماكانتش محتاجة تثبت إن السجاير مش مضرة. كانت محتاجة بس تخلّي الناس يقولوا: العلما لسه مختلفين.",
+     "show": "board",
+     "board": "doubt",
+     "step": 2,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "تموّل أبحاث بتسأل أسئلة جانبية، تطلّع خبرا في التلفزيون، وتكرر جملة واحدة: الموضوع لسه مش محسوم.",
+     "show": "board",
+     "board": "doubt",
+     "step": 3
+    },
+    {
+     "say": "وده بيشتغل يا فندم، لأن العلم بطبيعته بيقول \"غالباً\" و\"على حسب الأدلة\". فاللي عايز يبيع شك، بياخد التواضع ده ويعمل منه سلاح.",
+     "show": "board",
+     "board": "doubt",
+     "step": 4
+    },
+    {
+     "say": "وعلشان كده، لما تلاقي حد بيقول \"العلما لسه مختلفين\" على حاجة الحيطة بتاعتها مبنية من زمان، اسأل: مين اللي بيدفع؟",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "replic",
+   "story": {
+    "n": 5,
+    "tag": "DO IT AGAIN",
+    "icon": "dup"
+   },
+   "style": "Calm, a little sobering, then quietly proud of the scientists who checked themselves.",
+   "beats": [
+    {
+     "say": "الحكاية الرابعة أهدى، بس يمكن أخطر.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "سنة ألفين خمستاشر، حوالي ميتين وسبعين باحث قرروا يعملوا حاجة ماحدش بيحب يعملها: يعيدوا مية بحث قديم في علم النفس، اتنشروا في مجلات محترمة.",
+     "show": "board",
+     "board": "replic",
+     "step": 0
+    },
+    {
+     "say": "النتيجة؟ البحوث الأصلية، تقريباً كلها، كانت لاقية نتيجة. الإعادة، حوالي تلتها بس.",
+     "show": "board",
+     "board": "replic",
+     "step": 1
+    },
+    {
+     "say": "والباقي، النتيجة ماظهرتش، أو ظهرت أضعف بكتير. وحتى اللي ظهرت، كان حجمها في المتوسط حوالي نص اللي اتكتب في البحث الأصلي. يعني لو البحث القديم قال إن حاجة بتفرق عشرة، الإعادة لقيتها بتفرق خمسة. أو ولا حاجة.",
+     "show": "board",
+     "board": "replic",
+     "step": 2
+    },
+    {
+     "say": "ده مش نصب يا فندم. أغلبه اللي حكيته لكم في التقرير التاني: عينات صغيرة، وقياسات كتير، والصدفة اللي بتتنشر، والتسعتاشر بحث اللي في الدرج.",
+     "shot": "close",
+     "emote": "neutral"
+    },
+    {
+     "say": "والبشر سمّوها أزمة. بس شوف الحكاية من بعيد: العلما هم اللي قرروا يفتشوا ورا نفسهم، وهم اللي نشروا النتيجة المحرجة دي، في واحدة من أكبر المجلات.",
+     "show": "board",
+     "board": "replic",
+     "step": 3,
+     "emote": "proud",
+     "host": "right"
+    },
+    {
+     "say": "وبعدها، مجلات كتير بقت تطلب تسجيل خطة البحث قبل ما يبدأ.",
+     "show": "board",
+     "board": "replic",
+     "step": 4
+    }
+   ]
+  },
+  {
+   "id": "mills",
+   "story": {
+    "n": 6,
+    "tag": "PAPER MILLS",
+    "icon": "gear"
+   },
+   "style": "Amused by the clumsy fakes, then firm about what the record number means.",
+   "beats": [
+    {
+     "say": "والحكاية الأخيرة، الأحدث.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "على الإنترنت ظهر حاجة اسمها مصانع الورق. شركات بتكتب أبحاث شكلها علمي، أرقام وجداول وكلام كبير، وبتبيع اسمك عليها لو دفعت. ومعاها شبكات مراجعين مزيفين، بيوافقوا على ورق بعض.",
+     "show": "board",
+     "board": "mills",
+     "step": 0
+    },
+    {
+     "say": "وطريقة اكتشافهم ساعات بتضحك يا فندم. المصانع دي بتاخد أبحاث حقيقية، وتغيّر كلامها ببرامج بتجيب مرادفات، علشان النسخ مايبانش.",
+     "show": "board",
+     "board": "mills",
+     "step": 1
+    },
+    {
+     "say": "فالباحثين لقوا أبحاث مكتوب فيها بدل الذكاء الاصطناعي: الوعي المزيّف. مصطلح ماحدش في الدنيا بيقوله.",
+     "show": "board",
+     "board": "mills",
+     "step": 2,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "فبقوا يدوّروا على الجمل الغريبة اللي زي دي في ملايين الأبحاث، وكل جملة بتجر وراها كومة ورق مضروب.",
+     "show": "board",
+     "board": "mills",
+     "step": 3
+    },
+    {
+     "say": "وسنة ألفين تلاتة وعشرين، دار نشر واحدة اسمها Hindawi، سحبت أكتر من تمن آلاف بحث، أغلبهم من أعداد خاصة، المراجعة فيها كانت مضروبة. وده اللي خلّى رقم السنة دي يكسر الرقم القياسي.",
+     "show": "board",
+     "board": "mills",
+     "step": 4
+    },
+    {
+     "say": "والشركة الأم، Wiley، قررت بعدها تقفل الاسم ده خالص. دار نشر بحالها، اسمها اتشال من السوق، علشان المراجعة فيها اتباعت.",
+     "show": "board",
+     "board": "mills",
+     "step": 5
+    },
+    {
+     "say": "ولو حد قال لك: شفت؟ العلم كله نصب! قول له:",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "الرقم ده موجود علشان حد قعد يدوّر ويسحب. البلد اللي مابتقبضش على حد.. مش معناها إن مفيهاش حرامية.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "sleuths",
+   "story": {
+    "n": 7,
+    "tag": "WHO CAUGHT THEM",
+    "icon": "eye"
+   },
+   "style": "A brisk roll call, then honest about how slow it is; sincere at the end.",
+   "beats": [
+    {
+     "say": "ارجع للحكايات كلها يا فندم.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "Schön؟ كشفه علما بصّوا على الرسومات.",
+     "show": "board",
+     "board": "sleuths",
+     "step": 0
+    },
+    {
+     "say": "Wakefield؟ كشفه صحفي، وأكّدت كلامه دراسات أكبر.",
+     "show": "board",
+     "board": "sleuths",
+     "step": 1
+    },
+    {
+     "say": "شركات السجاير؟ كشفتها مستنداتها، والأبحاث المستقلة.",
+     "show": "board",
+     "board": "sleuths",
+     "step": 2
+    },
+    {
+     "say": "أزمة التكرار؟ كشفها العلما نفسهم وهم بيعيدوا أبحاث زمايلهم.",
+     "show": "board",
+     "board": "sleuths",
+     "step": 3
+    },
+    {
+     "say": "ومصانع الورق؟ فيه ناس متطوعين على الإنترنت شغلتهم يدوّروا على الصور المنسوخة والجمل الغريبة في الأبحاث، وموقع اسمه Retraction Watch بيسجّل كل بحث اتسحب.",
+     "show": "board",
+     "board": "sleuths",
+     "step": 4
+    },
+    {
+     "say": "يعني الماكينة بتشتغل. بطيئة؟ جداً. ساعات بتاخد سنين، وساعات ناس بتتأذي قبل ما توصل.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "وفاكرين Semmelweis؟ اللي قال اغسلوا إيديكم؟ الماكينة صلّحت غلطة زمايله، بس بعد ما هو مات.",
+     "show": "board",
+     "board": "sleuths",
+     "step": 5,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "الطريقة بتوصل للحقيقة، بس مش بتوصل في ميعاد.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "وعلشان كده البشر بيحاولوا دايماً يسرّعوها: تسجيل خطة البحث من الأول، ونشر البيانات كلها علشان أي حد يراجعها، ومجلات بتنشر الإعادات حتى لو فشلت.",
+     "show": "board",
+     "board": "sleuths",
+     "step": 6
+    },
+    {
+     "say": "بس مفيش ماكينة تانية عند البشر بتكشف نفسها بالشكل ده.",
+     "shot": "host",
+     "emote": "proud",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "checklist",
+   "story": {
+    "n": 8,
+    "tag": "THE CHECKLIST",
+    "icon": "rules"
+   },
+   "style": "A practical checklist read briskly; the last question sly.",
+   "beats": [
+    {
+     "say": "فعملت لكم قايمة، أي خبر علمي يعدّي عليها قبل ما يدخل تقاريري.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "مين اللي بيقول؟ عالم في تخصصه، ولا حد بيبيع كورس؟",
+     "show": "board",
+     "board": "checklist",
+     "step": 0
+    },
+    {
+     "say": "اتنشر فين؟ مجلة محترمة، ولا كاشير؟",
+     "show": "board",
+     "board": "checklist",
+     "step": 1
+    },
+    {
+     "say": "على كام واحد؟ حد تاني عمله ووصل لنفس النتيجة؟",
+     "show": "board",
+     "board": "checklist",
+     "step": 2
+    },
+    {
+     "say": "ده بحث واحد، ولا مراجعة بتجمع عشرات الأبحاث مع بعض؟ لأن المراجعة دي هي الحيطة، والبحث الواحد طوبة.",
+     "show": "board",
+     "board": "checklist",
+     "step": 3
+    },
+    {
+     "say": "مين دفع؟ وأغلب الفرق اللي درست الموضوع، قالوا إيه؟",
+     "show": "board",
+     "board": "checklist",
+     "step": 4
+    },
+    {
+     "say": "ولو الكلام بيقول لك إن كل العلما بيضحكوا عليك، وهو بس اللي عارف الحقيقة.. اسأله: طب انت جبت الكلام ده منين؟",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading the last two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "قاموس البشر. آخر كلمتين في الملف. سحب البحث: لما المجلة تعلن رسمياً إن بحث منشور ماينفعش يتصدّق، بسبب غلطة أو تزوير.",
+     "show": "board",
+     "board": "s4dict",
+     "step": 0
+    },
+    {
+     "say": "وتضارب المصالح: لما اللي عامل البحث، أو اللي دافع فلوسه، ليه مصلحة في النتيجة.",
+     "show": "board",
+     "board": "s4dict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, the sincere closing line of the whole file, and the sign-off.",
+   "beats": [
+    {
+     "say": "الخلاصة يا فندم. أولاً: أيوه، العلم بيتضحك عليه، بالتزوير، وبالفلوس، وبالصدفة اللي بتتنشر.",
+     "show": "board",
+     "board": "s4recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "ثانياً: كل حكاية من دول، اللي كشفها كان علما، وصحفيين، وناس بتعيد التجارب. يعني العلم بيتكشف بالعلم.",
+     "show": "board",
+     "board": "s4recap",
+     "step": 1,
+     "host": "right"
+    },
+    {
+     "say": "ثالثاً: ماتصدّقش عالم لوحده، وماتصدّقش بحث لوحده. صدّق اللي اتكرر، واسأل مين اللي دفع.",
+     "show": "board",
+     "board": "s4recap",
+     "step": 2,
+     "host": "right"
+    },
+    {
+     "say": "وده اللي هكتبه في تقريري الأخير عن الموضوع ده: البشر ماعندهمش حد مابيغلطش. بس عندهم طريقة بتمسك الغلط، ولو بعد حين. ثق في الطريقة، مش في الشخص.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "وده آخر تقرير في ملف العلم. والملف الجاي، هتعرفوه أول ما القيادة توافق عليه.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
