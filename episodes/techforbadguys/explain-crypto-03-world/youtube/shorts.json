@@ -214,8 +214,12 @@
    ],
    "parts": [
     [
-     385.23,
+     389.95,
      393.29
+    ],
+    [
+     385.23,
+     389.95
     ],
     [
      377.67,
@@ -226,7 +230,7 @@
      406.54
     ]
    ],
-   "why": "Hook: scammed twice. Loop: the fourth sign (pay fees first) leads back to the 'recovery' scammer.",
+   "why": "Cold open (publisher, 16 Nov): the masked scammer, 'scammed twice for the same money'; then the recovery lie, the AI video, the four signs.",
    "cta": "أي حد يطلب الاتناشر كلمة.. نصاب. إيه الطرق التانية اللي بيستخدموها؟ التقرير كامل على قناة تقرير الأرض. <short pause> اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
    "cta_short": "أي حد يطلب الاتناشر كلمة.. نصاب. إيه الطرق التانية اللي بيستخدموها؟",
    "end": {
