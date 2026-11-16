@@ -20,19 +20,23 @@
    ],
    "parts": [
     [
-     62.59,
+     94.46,
      95.65
+    ],
+    [
+     63.62,
+     94.56
     ]
    ],
    "end": {
-    "audio": "shorts/cta-tree.wav",
-    "words": "shorts/cta-tree.words.json",
+    "audio": "shorts/cta-tree-short.wav",
+    "words": "shorts/cta-tree-short.words.json",
     "card": {
      "icons": [
       "pylon",
       "bolt"
      ],
-     "sub": "ELECTRICITY FILE · PART 3",
+     "sub": "ELECTRICITY FILE · 3/4",
      "look": "elec"
     }
    },
@@ -48,7 +52,20 @@
      "2003 blackout",
      "Northeast blackout"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 34.5,
+   "peekSides": [
+    [
+     72.6,
+     "left"
+    ],
+    [
+     81.1,
+     "right"
+    ]
+   ]
   },
   {
    "key": "enemies",
@@ -68,18 +85,22 @@
    "parts": [
     [
      175.77,
+     186.57
+    ],
+    [
+     195.91,
      218.72
     ]
    ],
    "end": {
-    "audio": "shorts/cta-enemies.wav",
-    "words": "shorts/cta-enemies.words.json",
+    "audio": "shorts/cta-enemies-short.wav",
+    "words": "shorts/cta-enemies-short.words.json",
     "card": {
      "icons": [
       "bolt",
       "station"
      ],
-     "sub": "ELECTRICITY FILE · PART 3",
+     "sub": "ELECTRICITY FILE · 3/4",
      "look": "elec"
     }
    },
@@ -96,7 +117,10 @@
      "cyberattack",
      "squirrel outage"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 37.2
   },
   {
    "key": "iberia",
@@ -115,19 +139,19 @@
    ],
    "parts": [
     [
-     149.94,
+     151.24,
      175.87
     ]
    ],
    "end": {
-    "audio": "shorts/cta-iberia.wav",
-    "words": "shorts/cta-iberia.words.json",
+    "audio": "shorts/cta-iberia-short.wav",
+    "words": "shorts/cta-iberia-short.words.json",
     "card": {
      "icons": [
       "bolt",
       "pylon"
      ],
-     "sub": "ELECTRICITY FILE · PART 3",
+     "sub": "ELECTRICITY FILE · 3/4",
      "look": "elec"
     }
    },
@@ -143,7 +167,10 @@
      "Iberian blackout",
      "Spain blackout 2025"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 27.7
   },
   {
    "key": "domino",
@@ -162,19 +189,23 @@
    ],
    "parts": [
     [
-     26.93,
+     58.19,
      62.69
+    ],
+    [
+     26.93,
+     58.3
     ]
    ],
    "end": {
-    "audio": "shorts/cta-domino.wav",
-    "words": "shorts/cta-domino.words.json",
+    "audio": "shorts/cta-domino-short.wav",
+    "words": "shorts/cta-domino-short.words.json",
     "card": {
      "icons": [
       "pylon",
       "station"
      ],
-     "sub": "ELECTRICITY FILE · PART 3",
+     "sub": "ELECTRICITY FILE · 3/4",
      "look": "elec"
     }
    },
@@ -190,7 +221,10 @@
      "blackout",
      "cascading failure"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 39.4
   },
   {
    "key": "blackstart",
@@ -221,7 +255,7 @@
       "station",
       "gear"
      ],
-     "sub": "ELECTRICITY FILE · PART 3",
+     "sub": "ELECTRICITY FILE · 3/4",
      "look": "elec"
     }
    },
@@ -237,7 +271,12 @@
      "black start",
      "power grid"
     ]
-   }
+   },
+   "stock": true
   }
- ]
+ ],
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
 }
