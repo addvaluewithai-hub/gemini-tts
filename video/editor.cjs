@@ -107,7 +107,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
   // where he stands: the side a beat leaves clear (its host: right | left), kept until another beat says otherwise; a Short can name sides by time
   const sides = fixed ? (cues.peekFixed.sides || []) : [];
   let fixSide = (cues.peekFixed && cues.peekFixed.side) || "right", fixX = fixSide === "left" ? 0 : 1;
-  let held = firstBoard ? { spec: firstBoard.board, step: firstBoard.step || 0, age: 0, total: 0 } : null;
+  let held = firstBoard ? { spec: firstBoard.board, step: firstBoard.step || 0, age: 30, total: 30 } : null;   // a held picture is shown finished
   let hostY = 0, vY = 0, lurk = 0, peek = 0, scrim = 0, lb = 0, chipA = 0, kb = 1, cx = 0.5, cy = 0.3, storyT = -9, lastStory = null, lastInsertCut = -9;
   for (let i = 0; i < N; i++) {
     const tv = i / FPS, t = tAudio(i);

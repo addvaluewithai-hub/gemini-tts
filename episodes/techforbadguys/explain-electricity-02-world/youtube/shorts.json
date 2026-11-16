@@ -51,7 +51,8 @@
    },
    "look": "fixed",
    "captions": false,
-   "total": 34.8
+   "total": 34.8,
+   "preroll": 5.0
   },
   {
    "key": "penalties",
@@ -173,7 +174,8 @@
      355.2,
      "left"
     ]
-   ]
+   ],
+   "preroll": 0.8
   },
   {
    "key": "plugs",
@@ -235,7 +237,8 @@
      187.5,
      "left"
     ]
-   ]
+   ],
+   "preroll": 5.5
   },
   {
    "key": "faraday",

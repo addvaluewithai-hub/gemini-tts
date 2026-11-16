@@ -31,7 +31,10 @@ const cue = (from, to, hold) => {
       cut = !e.board ? false : cut;
       if (e.board && nx && nx.t - e.t > q + 1.2) { edits.push({ t: e.t + q, shot: "host", emote: e.emote || "neutral" }); cut = true; } else if (e.board) cut = false; });
   }
-  fs.writeFileSync(f, JSON.stringify({ ...base, edit: edits.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),
+  let list = edits.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e));
+  const pre = from === spec.parts[0][0] ? (spec.preroll ?? all.preroll ?? 0) : 0;      // preroll: the Short's first frame shows the picture already drawn, not its draw-in
+  if (pre) { const k = list.map((e, i) => [e, i]).filter(([e]) => e.board && e.t <= from).pop(); if (k) list[k[1]] = { ...k[0], stepT: Math.min(k[0].stepT ?? k[0].t, from - pre) }; }
+  fs.writeFileSync(f, JSON.stringify({ ...base, edit: list,
     episode: ep, ...vertical, from, to, hold }));                                  // no cut into the next beat during the hold
   return f;
 };
