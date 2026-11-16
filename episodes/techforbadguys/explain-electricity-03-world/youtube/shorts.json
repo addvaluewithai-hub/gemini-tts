@@ -238,7 +238,8 @@
    },
    "look": "fixed",
    "captions": false,
-   "total": 39.4
+   "total": 39.4,
+   "stock": true
   },
   {
    "key": "blackstart",
@@ -289,8 +290,7 @@
    "look": "fixed",
    "captions": false,
    "total": 28.3,
-   "preroll": 3.0,
-   "stock": true
+   "preroll": 3.0
   }
  ],
  "peekFixed": {
