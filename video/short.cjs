@@ -42,7 +42,9 @@ const endCue = () => {
   const w = words.words, first = w[0].start_ms / 1000 / tempo, last = w[w.length - 1].end_ms / 1000 / tempo;
   const sub = w.find((x) => /اشترك/.test(x.text)), board = { kind: "shortend", ...spec.end.card };
   const edit = [{ t: -1, shot: "show", kind: "board", board, step: 0, stepT: first - 0.1, story: null, music: 1, host: "right" }];   // he leans in once more to say goodbye
-  if (sub) edit.push({ t: sub.start_ms / 1000 / tempo - 0.05, kind: "board", board, step: 1, host: "right" });
+  // the bell comes in on اشترك; a question-only line (no اشترك) rings it halfway through, or at spec.end.bell seconds
+  const bellT = sub ? sub.start_ms / 1000 / tempo - 0.05 : spec.end.bell != null ? spec.end.bell : first + (last - first) * 0.5;
+  edit.push({ t: bellT, kind: "board", board, step: 1, host: "right" });
   const f = path.join(tmp, "cues-end.json");
   fs.writeFileSync(f, JSON.stringify({ ...base, episode: dir, transcript: "transcript.json", slides: "none.json", edit, ...vertical, from: Math.max(0, first - 0.08), to: last + 0.3, hold: 1.0 }));
   return f;
