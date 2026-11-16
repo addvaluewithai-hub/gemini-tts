@@ -145,4 +145,4 @@ function s10(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10];
-export const shadowSet = makeSet(SHOTS, [{ z: 0.9 }, { z: 0.62 }, { z: 0.62, dx: -40 }, { z: 0.62 }, { z: 0.56 }, { z: 0.56 }, { z: 0.56 }, { z: 0.8 }, { z: 0.56 }, { z: 0.56, dx: -80 }, { z: 0.56 }], P);
+export const shadowSet = makeSet(SHOTS, [{ z: 0.9 }, { z: 0.72 }, { z: 0.85, dx: 120 }, { z: 0.85 }, { z: 0.75 }, { z: 0.75 }, { z: 0.75 }, { z: 0.8 }, { z: 0.56 }, { z: 0.56, dx: -80 }, { z: 0.56 }], P);
