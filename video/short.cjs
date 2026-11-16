@@ -31,8 +31,8 @@ const cue = (from, to, hold) => {
       cut = !e.board ? false : cut;
       if (e.board && nx && nx.t - e.t > q + 1.2) { edits.push({ t: e.t + q, shot: "host", emote: e.emote || "neutral" }); cut = true; } else if (e.board) cut = false; });
   }
-  fs.writeFileSync(f, JSON.stringify({ ...base, edit: edits.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),
-    episode: ep, ...vertical, from, to, hold }));                                  // no cut into the next beat during the hold
+  fs.writeFileSync(f, JSON.stringify({ ...base, edit: edits.filter((e) => e.t < to - 0.4).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e)),
+    episode: ep, ...vertical, from, to, hold }));                                  // no cut into the next beat during the hold, nor in a part's last 0.4 s (a word that runs past a shot change keeps its picture)
   return f;
 };
 // the closing card: its own little "episode" folder holding the recorded line's word timings
@@ -42,7 +42,8 @@ const endCue = () => {
   const w = words.words, first = w[0].start_ms / 1000 / tempo, last = w[w.length - 1].end_ms / 1000 / tempo;
   const sub = w.find((x) => /اشترك/.test(x.text)), board = { kind: "shortend", ...spec.end.card };
   const edit = [{ t: -1, shot: "show", kind: "board", board, step: 0, stepT: first - 0.1, story: null, music: 1, host: "right" }];   // he leans in once more to say goodbye
-  if (sub) edit.push({ t: sub.start_ms / 1000 / tempo - 0.05, kind: "board", board, step: 1, host: "right" });
+  const bellT = sub ? sub.start_ms / 1000 / tempo - 0.05 : first + Math.min(1.2, (last - first) * 0.35);   // a question-only line has no "subscribe": ring the bell early on
+  edit.push({ t: bellT, kind: "board", board, step: 1, host: "right" });
   const f = path.join(tmp, "cues-end.json");
   fs.writeFileSync(f, JSON.stringify({ ...base, episode: dir, transcript: "transcript.json", slides: "none.json", edit, ...vertical, from: Math.max(0, first - 0.08), to: last + 0.3, hold: 1.0 }));
   return f;
