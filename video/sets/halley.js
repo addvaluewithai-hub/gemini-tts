@@ -63,4 +63,4 @@ function s6(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6];
-export const halleySet = makeSet(SHOTS, [], P);
+export const halleySet = makeSet(SHOTS, [{ z: 0.62, dx: -120 }, { z: 0.56 }, { z: 0.56, dx: 40 }, { z: 0.56, dx: 40 }, { z: 0.62 }, { z: 0.62 }, { z: 0.62, dx: -60 }], P);

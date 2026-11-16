@@ -1,6 +1,6 @@
 {
- "note": "Shorts proposals for science part 1 (world picture), for the owner to choose before rendering. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-01-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science01-short-cta-<key>, English -en-w). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
- "full": "",
+ "note": "Shorts proposals for science part 1 (world picture), made at the owner's request (16 Nov): Peek standing small at the side (peekFixed, the electricity snail look), no captions. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-01-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science01-short-cta-<key>, English -en-w). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
+ "full": "https://youtu.be/JmM_cagchzE",
  "boardZoom": 0.85,
  "shorts": [
   {
@@ -46,7 +46,8 @@
       "cable",
       "atom"
      ],
-     "sub": "SCIENCE FILE · 1/4"
+     "sub": "SCIENCE FILE · 1/4",
+     "look": "sci"
     }
    },
    "content": 33.7,
@@ -60,7 +61,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "stick",
@@ -98,10 +101,11 @@
     "words": "shorts/cta-stick.words.json",
     "card": {
      "icons": [
-      "book",
-      "frame"
+      "stick",
+      "sun"
      ],
-     "sub": "SCIENCE FILE · 1/4"
+     "sub": "SCIENCE FILE · 1/4",
+     "look": "sci"
     }
    },
    "content": 35.1,
@@ -115,7 +119,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "dragon",
@@ -147,7 +153,8 @@
       "ghost",
       "eye"
      ],
-     "sub": "SCIENCE FILE · 1/4"
+     "sub": "SCIENCE FILE · 1/4",
+     "look": "sci"
     }
    },
    "content": 25.6,
@@ -161,7 +168,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "halley",
@@ -191,10 +200,11 @@
     "words": "shorts/cta-halley.words.json",
     "card": {
      "icons": [
-      "sat",
-      "calendar"
+      "comet",
+      "sun"
      ],
-     "sub": "SCIENCE FILE · 1/4"
+     "sub": "SCIENCE FILE · 1/4",
+     "look": "sci"
     }
    },
    "content": 29.4,
@@ -208,7 +218,9 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "theory",
@@ -238,9 +250,10 @@
     "card": {
      "icons": [
       "rules",
-      "book"
+      "card"
      ],
-     "sub": "SCIENCE FILE · 1/4"
+     "sub": "SCIENCE FILE · 1/4",
+     "look": "sci"
     }
    },
    "content": 30.4,
@@ -254,7 +267,13 @@
      "science",
      "explained simply"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false
   }
- ]
+ ],
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
 }

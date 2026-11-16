@@ -4,6 +4,12 @@
 import { clamp, ease, easeOut, spring, rr, two, disc, rings, text, at, frame, setFrame, layer } from "./kit.js";
 import { P, bank, book, coin, stars, skyline, clouds } from "./bank.js";
 import { banknote, fish, pizzaBox, hoodChair, calPage } from "./props.js";
+import { P as PS, cablePlug, card, dragonGhost, comet, sun, ladder, stopwatch } from "./sci.js";
+// the science file's closing card (spec look: "sci"): the notebook look and its props
+const PROPS = { cable: () => at(60, 0, cablePlug(0.6, 0), 0.42), atom: () => at(0, 0, stopwatch(110, 0.17, "60", { bigFill: PS.coral })), sun: () => at(0, 0, sun(90, 0)),
+  stick: () => `<path d="M0 120V-120" stroke="${PS.wood}" stroke-width="22" stroke-linecap="round"/><path d="M0 120H130" stroke="${PS.ink}" stroke-width="18" opacity=".35"/>`,
+  ghost: () => at(0, 80, dragonGhost(1, 0), 0.75), comet: () => at(-40, 0, comet(260, 0, 0.8), 1, -20), rules: () => at(0, 150, ladder(3, 90), 0.8) + at(0, -110, card("✓", 1), 0.45),
+  card: () => card("?", 0, 0.8), eye: () => `<ellipse rx="90" ry="56" fill="#fff" stroke="${PS.ink}" stroke-width="10"/><circle r="30" fill="${PS.blue}"/><circle r="14" fill="${PS.ink}"/>` };
 
 const pop = (a, k = 9, w = 16) => (a <= 0 ? 0 : 0.2 + 0.8 * spring(a, k, w));
 // what the report is about, drawn as a prop of the sets (the names are the Short's `end.card.icons`)
@@ -17,6 +23,7 @@ const PROP = {
 };
 export function shortEndV(s, step, age, total) {
   setFrame(1080, 1920);
+  if (s.look === "sci") return sciEnd(s, step, age, total);
   try {
     const t = total, b = step >= 1 ? age : -1, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0, c = { x: 540, y: 960, z: 1 + 0.02 * t };
     const town = `<rect width="1080" height="1920" fill="url(#bsky)"/>` + layer(stars(5, 90, -100, 1200, 900, t), c, 0.2)
@@ -37,5 +44,25 @@ export function shortEndV(s, step, age, total) {
     const waves = b > 0 ? [1, -1].map((d) => `<path d="M${d * 104} -40Q${d * 128} 0 ${d * 104} 40M${d * 134} -62Q${d * 166} 0 ${d * 134} 62" fill="none" stroke="${P.gold}" stroke-width="9" stroke-linecap="round" opacity="${clamp(1 - (b % 0.6) / 0.6)}"/>`).join("") : "";
     const sub = b >= 0 ? at(540, 1250, `${at(-290, 0, bell + waves, 1.05)}${two(rr(-160, -66, 520, 132, 66), "#ff2d3a", "#c41e2a", 0, 10)}${text(100, 30, "SUBSCRIBE", 84, "#fff")}`, pop(b)) : "";
     return frame(town + title + screen + label + sub, P);
+  } finally { setFrame(1920, 1080); }
+}
+
+// the same card in the science file's notebook look: graph paper, terracotta screen, the file's props
+function sciEnd(s, step, age, total) {
+  const P = PS;
+  try {
+    const t = total, b = step >= 1 ? age : -1, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0;
+    const paper = `<rect width="1080" height="1920" fill="${P.sky0}"/><path d="${Array.from({ length: 30 }, (_, i) => `M${i * 80} 0V1920M0 ${i * 80 - 40}H1080`).join("")}" stroke="${P.grid}" stroke-width="3"/><rect y="1790" width="1080" height="200" fill="${P.floor}"/>`;
+    const title = at(540, 250 - 260 * (1 - pop(t)), `${two(rr(-450, -100, 900, 170, 28), P.ink, "#15102a", 0, 10)}<text x="0" y="22" text-anchor="middle" font-family="Anton" font-size="112"><tspan fill="#fff8ec">EARTH </tspan><tspan fill="${P.coral}">REPORT</tspan></text>`);
+    const ic = (s.icons || []).slice(0, 2), f = pop(t - 0.15), pulse = 1 + 0.06 * Math.sin(t * 5) * clamp(t - 0.6);
+    const screen = at(540, 620, `${two(rr(-450, -300, 900, 600, 40), P.violet, P.violetD, 0, 14)}<path d="${rr(-414, -264, 828, 528, 22)}" fill="#fffaf0"/>
+      <clipPath id="sevid"><path d="${rr(-414, -264, 828, 528, 22)}"/></clipPath><g clip-path="url(#sevid)"><path d="${Array.from({ length: 12 }, (_, i) => `M${-414 + i * 80} -264V264M-414 ${-264 + i * 80}H414`).join("")}" stroke="${P.grid}" stroke-width="3"/>
+      ${ic.map((name, i) => at(i ? 230 : -230, 0, (PROPS[name] || PROPS.card)(), 1.0 * pop(t - 0.5 - i * 0.15))).join("")}</g>
+      ${rings(0, 0, 130 * pulse, P.coral, 0.22)}${disc(0, 0, 110 * pulse, P.coral, P.coralD)}<path d="M-34 -58L64 0L-34 58Z" fill="#fff"/>`, [f, f]);
+    const label = at(540, 1050, `${two(rr(-400, -110, 800, 220, 30), P.ink, "#15102a", 0, 10)}${text(0, 0, "FULL REPORT", 104, P.gold)}${text(0, 76, s.sub || "", 54, "#f3dcb8")}`, pop(t - 0.45));
+    const bell = `<g transform="rotate(${swing} 0 -92)"><path d="M-62 44C-62 -46 -40 -82 0 -82C40 -82 62 -46 62 44L80 62H-80Z" fill="${P.gold}"/><circle cy="-92" r="14" fill="${P.gold}"/><circle cy="80" r="20" fill="${P.goldD}"/></g>`;
+    const waves = b > 0 ? [1, -1].map((d) => `<path d="M${d * 104} -40Q${d * 128} 0 ${d * 104} 40M${d * 134} -62Q${d * 166} 0 ${d * 134} 62" fill="none" stroke="${P.goldD}" stroke-width="9" stroke-linecap="round" opacity="${clamp(1 - (b % 0.6) / 0.6)}"/>`).join("") : "";
+    const sub = b >= 0 ? at(540, 1250, `${at(-290, 0, bell + waves, 1.05)}${two(rr(-160, -66, 520, 132, 66), "#e0302a", "#b0221e", 0, 10)}${text(100, 30, "SUBSCRIBE", 84, "#fff")}`, pop(b)) : "";
+    return frame(paper + title + screen + label + sub, P);
   } finally { setFrame(1920, 1080); }
 }

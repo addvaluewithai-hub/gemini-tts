@@ -61,4 +61,4 @@ function s5(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5];
-export const theorySet = makeSet(SHOTS, [], P);
+export const theorySet = makeSet(SHOTS, [{ z: 0.56 }, { z: 0.7, dx: -160 }, { z: 0.6, dx: -100, dy: -60 }, { z: 0.6, dx: -160 }, { z: 0.6, dx: 80 }, { z: 0.56 }], P);

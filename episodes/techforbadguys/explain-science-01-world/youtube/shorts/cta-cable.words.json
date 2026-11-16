@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-16T16:47:45.825Z",
+  "duration_ms": 10920,
+  "word_count": 29,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "طب ليه البشر بيصدقوا العلم اصلا لو العلماء بيغلطوا كده؟ الاجابه كامله على قناه تقرير الارض، اشترك في القناه وفعل الجرس علشان تقاريري السريه عن كوكبكم توصلك اول باول.",
+  "source_text": "طب ليه البشر بيصدّقوا العلم أصلاً، لو العلما بيغلطوا كده؟ الإجابة كاملة على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "طب ليه البشر بيصدّقوا العلم أصلاً، لو العلما بيغلطوا كده؟ الإجابة كاملة على قناة تقرير الأرض. اشترك في القناة وفعّل الجرس.. علشان تقاريري السرية عن كوكبكم توصلك أول بأول."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 320,
+      "text": "طب"
+    },
+    {
+      "start_ms": 320,
+      "end_ms": 440,
+      "text": "ليه"
+    },
+    {
+      "start_ms": 440,
+      "end_ms": 840,
+      "text": "البشر"
+    },
+    {
+      "start_ms": 840,
+      "end_ms": 1320,
+      "text": "بيصدقوا"
+    },
+    {
+      "start_ms": 1320,
+      "end_ms": 1640,
+      "text": "العلم"
+    },
+    {
+      "start_ms": 1640,
+      "end_ms": 2040,
+      "text": "اصلا"
+    },
+    {
+      "start_ms": 2040,
+      "end_ms": 2160,
+      "text": "لو"
+    },
+    {
+      "start_ms": 2160,
+      "end_ms": 2560,
+      "text": "العلماء"
+    },
+    {
+      "start_ms": 2560,
+      "end_ms": 2960,
+      "text": "بيغلطوا"
+    },
+    {
+      "start_ms": 2960,
+      "end_ms": 3240,
+      "text": "كده؟"
+    },
+    {
+      "start_ms": 3840,
+      "end_ms": 4320,
+      "text": "الاجابه"
+    },
+    {
+      "start_ms": 4320,
+      "end_ms": 4640,
+      "text": "كامله"
+    },
+    {
+      "start_ms": 4640,
+      "end_ms": 4800,
+      "text": "على"
+    },
+    {
+      "start_ms": 4800,
+      "end_ms": 5080,
+      "text": "قناه"
+    },
+    {
+      "start_ms": 5080,
+      "end_ms": 5440,
+      "text": "تقرير"
+    },
+    {
+      "start_ms": 5440,
+      "end_ms": 6000,
+      "text": "الارض،"
+    },
+    {
+      "start_ms": 6040,
+      "end_ms": 6360,
+      "text": "اشترك"
+    },
+    {
+      "start_ms": 6360,
+      "end_ms": 6440,
+      "text": "في"
+    },
+    {
+      "start_ms": 6440,
+      "end_ms": 6800,
+      "text": "القناه"
+    },
+    {
+      "start_ms": 6800,
+      "end_ms": 7160,
+      "text": "وفعل"
+    },
+    {
+      "start_ms": 7160,
+      "end_ms": 7720,
+      "text": "الجرس"
+    },
+    {
+      "start_ms": 7760,
+      "end_ms": 8080,
+      "text": "علشان"
+    },
+    {
+      "start_ms": 8080,
+      "end_ms": 8480,
+      "text": "تقاريري"
+    },
+    {
+      "start_ms": 8480,
+      "end_ms": 8920,
+      "text": "السريه"
+    },
+    {
+      "start_ms": 8920,
+      "end_ms": 9040,
+      "text": "عن"
+    },
+    {
+      "start_ms": 9040,
+      "end_ms": 9560,
+      "text": "كوكبكم"
+    },
+    {
+      "start_ms": 9560,
+      "end_ms": 10120,
+      "text": "توصلك"
+    },
+    {
+      "start_ms": 10120,
+      "end_ms": 10320,
+      "text": "اول"
+    },
+    {
+      "start_ms": 10320,
+      "end_ms": 10680,
+      "text": "باول."
+    }
+  ]
+}

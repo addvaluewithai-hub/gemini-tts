@@ -94,4 +94,4 @@ function s7(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6, s7];
-export const dragonSet = makeSet(SHOTS, [], P);
+export const dragonSet = makeSet(SHOTS, [{ z: 0.62 }, { z: 0.62 }, { z: 0.62 }, { z: 0.62 }, { z: 0.85, dx: -140 }, { z: 0.72, dx: 130 }, { z: 0.56 }, { z: 0.6 }], P);

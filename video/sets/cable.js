@@ -93,4 +93,4 @@ function s8(a, tot) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6, s7, s8];
-export const cableSet = makeSet(SHOTS, [], P);
+export const cableSet = makeSet(SHOTS, [{ z: 0.8 }, { z: 0.8, dx: -180 }, { z: 0.62, dx: 40 }, { z: 0.7, dx: 120 }, { z: 0.9 }, { z: 1.0, dx: 200 }, { z: 0.6, dx: 200, dy: -40 }, { z: 0.78, dy: -160 }, { z: 0.56, dx: -40 }], P);

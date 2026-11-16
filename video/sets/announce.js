@@ -104,4 +104,4 @@ function s6(a, tot, s) {
 }
 
 const SHOTS = [s0, s1, s2, s3, s4, s5, s6];
-export const announceSet = makeSet(SHOTS, [], P);
+export const announceSet = makeSet(SHOTS, [{ z: 0.62 }, { z: 0.55 }, { z: 0.7, dx: 260, dy: -60 }, { z: 0.8, dx: -120 }, { z: 0.62, dy: -60 }, { z: 0.56 }, { z: 0.6, dx: -120 }], P);
