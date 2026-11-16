@@ -25,14 +25,14 @@
     ]
    ],
    "end": {
-    "audio": "shorts/cta-bird.wav",
-    "words": "shorts/cta-bird.words.json",
+    "audio": "shorts/cta-bird-short.wav",
+    "words": "shorts/cta-bird-short.words.json",
     "card": {
      "icons": [
       "pylon",
       "bolt"
      ],
-     "sub": "ELECTRICITY FILE · PART 2",
+     "sub": "ELECTRICITY FILE · 2/4",
      "look": "elec"
     }
    },
@@ -48,7 +48,10 @@
      "bird on a wire",
      "high voltage"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 34.8
   },
   {
    "key": "penalties",
@@ -68,19 +71,19 @@
    ],
    "parts": [
     [
-     297.36,
+     298.64,
      322.67
     ]
    ],
    "end": {
-    "audio": "shorts/cta-penalties.wav",
-    "words": "shorts/cta-penalties.words.json",
+    "audio": "shorts/cta-penalties-short.wav",
+    "words": "shorts/cta-penalties-short.words.json",
     "card": {
      "icons": [
       "kettle",
       "station"
      ],
-     "sub": "ELECTRICITY FILE · PART 2",
+     "sub": "ELECTRICITY FILE · 2/4",
      "look": "elec"
     }
    },
@@ -97,7 +100,10 @@
      "1990 World Cup",
      "kettle"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 28.8
   },
   {
    "key": "clocks",
@@ -117,23 +123,27 @@
    ],
    "parts": [
     [
-     346.25,
-     365.45
+     355.28,
+     361.25
     ],
     [
-     365.35,
-     387.37
+     346.25,
+     355.38
+    ],
+    [
+     361.15,
+     365.45
     ]
    ],
    "end": {
-    "audio": "shorts/cta-clocks.wav",
-    "words": "shorts/cta-clocks.words.json",
+    "audio": "shorts/cta-clocks-short.wav",
+    "words": "shorts/cta-clocks-short.words.json",
     "card": {
      "icons": [
       "station",
       "bolt"
      ],
-     "sub": "ELECTRICITY FILE · PART 2",
+     "sub": "ELECTRICITY FILE · 2/4",
      "look": "elec"
     }
    },
@@ -150,7 +160,20 @@
      "50 Hz",
      "Japan 50 60 Hz"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 23.3,
+   "peekSides": [
+    [
+     346.2,
+     "right"
+    ],
+    [
+     355.2,
+     "left"
+    ]
+   ]
   },
   {
    "key": "plugs",
@@ -171,18 +194,22 @@
    "parts": [
     [
      156.82,
+     165.97
+    ],
+    [
+     169.43,
      193.08
     ]
    ],
    "end": {
-    "audio": "shorts/cta-plugs.wav",
-    "words": "shorts/cta-plugs.words.json",
+    "audio": "shorts/cta-plugs-short.wav",
+    "words": "shorts/cta-plugs-short.words.json",
     "card": {
      "icons": [
       "bolt",
       "pylon"
      ],
-     "sub": "ELECTRICITY FILE · PART 2",
+     "sub": "ELECTRICITY FILE · 2/4",
      "look": "elec"
     }
    },
@@ -199,7 +226,16 @@
      "high voltage",
      "transformer"
     ]
-   }
+   },
+   "look": "fixed",
+   "captions": false,
+   "total": 38.4,
+   "peekSides": [
+    [
+     187.5,
+     "left"
+    ]
+   ]
   },
   {
    "key": "faraday",
@@ -230,7 +266,7 @@
       "book",
       "gear"
      ],
-     "sub": "ELECTRICITY FILE · PART 2",
+     "sub": "ELECTRICITY FILE · 2/4",
      "look": "elec"
     }
    },
@@ -246,7 +282,12 @@
      "Faraday",
      "generator"
     ]
-   }
+   },
+   "stock": true
   }
- ]
+ ],
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
 }
