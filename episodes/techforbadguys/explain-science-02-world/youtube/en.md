@@ -1,4 +1,4 @@
-# YouTube: English entry for the world-picture video (Science File 2/5)
+# YouTube: English entry for the world-picture video (Science File 2/4)
 
 One video, several audio tracks. The picture is the language-neutral cut (`explain-science-02-world`), the original
 audio is Arabic, and this page is what goes into the video's **English** language entry.
@@ -13,9 +13,9 @@ audio is Arabic, and this page is what goes into the video's **English** languag
 
 ## Title
 
-1. A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/5  ← recommended
-2. How Do You Know a Study Can Be Trusted? Explained to an Alien | Science File 2/5
-3. The Chocolate Study That Fooled the Press: How Research Gets Checked | Science File 2/5
+1. A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4  ← recommended
+2. How Do You Know a Study Can Be Trusted? Explained to an Alien | Science File 2/4
+3. The Chocolate Study That Fooled the Press: How Research Gets Checked | Science File 2/4
 
 ## Description
 
@@ -45,7 +45,7 @@ The chocolate study and John Bohannon (2015): https://www.wgbh.org/news/2015-05-
 James Lind and scurvy (1747): https://www.bbvaopenmind.com/en/james-lind-and-scurvy-the-first-clinical-trial-in-history/
 How many research articles are published each year: https://revistapesquisa.fapesp.br/en/drop-in-number-of-scientific-articles-published-worldwide/
 
-This is one report in a five-part file on science. Watch them in order from the playlist.
+This is one report in a four-part file on science. Watch them in order from the playlist.
 This is a general explanation, not medical or dietary advice.
 The character, voice and animation are computer-generated. The facts come from the sources above and from general references.
 

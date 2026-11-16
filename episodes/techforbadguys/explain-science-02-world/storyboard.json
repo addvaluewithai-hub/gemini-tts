@@ -45,7 +45,7 @@
   "card": {
    "kind": "endnext",
    "title": "NEXT",
-   "next": "3 / 5",
+   "next": "3 / 4",
    "icons": [
     "book",
     "eye",
@@ -805,9 +805,9 @@
  ],
  "youtube": {
   "titles": [
-   "دراسة بتقول الشوكولاتة بتخسّس.. نصدّق؟ إزاي البحث العلمي بيتعمل | ملف العلم 2/5",
-   "إزاي تعرف إن الدراسة دي تتصدّق؟ اشرحها لكائن فضائي | ملف العلم 2/5",
-   "الشوكولاتة اللي ضحكت على الجرايد: البحث العلمي بيتراجع إزاي | ملف العلم 2/5"
+   "دراسة بتقول الشوكولاتة بتخسّس.. نصدّق؟ إزاي البحث العلمي بيتعمل | ملف العلم 2/4",
+   "إزاي تعرف إن الدراسة دي تتصدّق؟ اشرحها لكائن فضائي | ملف العلم 2/4",
+   "الشوكولاتة اللي ضحكت على الجرايد: البحث العلمي بيتراجع إزاي | ملف العلم 2/4"
   ],
   "description": [
    "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن البشر: سنة 2015 جرايد في بلاد كتير كتبت إن دراسة علمية بتقول الشوكولاتة بتخسّس.. وبعدها صاحب الدراسة قال إنه عملها علشان يوري قد إيه سهل يضحك على العالم.",
@@ -838,7 +838,7 @@
    "عدد الأبحاث المنشورة في السنة: https://revistapesquisa.fapesp.br/en/drop-in-number-of-scientific-articles-published-worldwide/"
   ],
   "footer": [
-   "دي حلقة من ملف عن العلم. شوفهم بالترتيب من قايمة التشغيل.",
+   "دي حلقة من ملف من أربع تقارير عن العلم. شوفهم بالترتيب من قايمة التشغيل.",
    "ده شرح عام، مش نصيحة طبية ولا غذائية.",
    "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
   ],
@@ -871,7 +871,7 @@
    "Category: Education",
    "Video language: Arabic. Upload captions.srt as Arabic.",
    "Audience: not made for kids",
-   "Playlist: ملف العلم (in order)",
+   "Playlist: ملف العلم | تقرير الأرض (four parts, in order)",
    "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
    "Altered or synthetic content: the host is plainly a cartoon; the voice is machine-generated and the description says so.",
    "Comments: hold comments with links for review."
