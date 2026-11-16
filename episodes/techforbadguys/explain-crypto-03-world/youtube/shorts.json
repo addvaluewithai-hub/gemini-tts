@@ -1,5 +1,5 @@
 {
- "note": "PROPOSED Shorts for crypto part 3 (drawn version), for the owner to pick. Not recorded or rendered: per the planner (2026-11-15) nothing is rendered until the owner has judged the two big-Peek tests; then they are rendered in the look he picks, with burned-in Arabic captions. `parts` are [from, to] in seconds of the finished episode (beat time plus the 0.3 s lead, cues/explain-crypto-03-world.json); the first part is the hook (first 2 s), and the order is chosen so the end loops back to it. `cta` is the closing line to record on Vertex AI (Arabic, Puck, part 1's direction) with its listen-back; `cta_short` is the shortened line for the big-Peek look. {full} is replaced by the episode's link once it is uploaded. Every figure is dated in the episode and in the description; nothing is advice.",
+ "note": "PROPOSED Shorts for crypto part 3 (drawn version), for the owner to pick. Not recorded or rendered: per the planner (2026-11-15) nothing is rendered until the owner has judged the two big-Peek tests; then they are rendered in the look he picks, with burned-in Arabic captions. `parts` are [from, to] in seconds of the finished episode (beat time plus the 0.3 s lead, cues/explain-crypto-03-world.json); the first part is the hook (first 2 s), and the order is chosen so the end loops back to it. `cta` is the closing line to record on Vertex AI (Arabic, Puck, part 1's direction) with its listen-back; `cta_short` is the shortened line for the big-Peek look. {full} is replaced by the episode's link once it is uploaded. Every figure is dated in the episode and in the description; nothing is advice. Owner (16 Nov): snail look (peekFixed), no captions; four Shorts: harddisk, popcorn, fee, scammed-twice (gox to the stock). Closing lines: Vertex jobs techforbadguys-crypto03-short-cta-<key>-ar-v.",
  "full": null,
  "boardZoom": 0.85,
  "shorts": [
@@ -59,7 +59,9 @@
     "cta": "The ledger has no heirs, and no one to remind you of the password. How do you hold your key without losing it? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "cta_short": "The ledger has no heirs, and no one to remind you of the password. How do you hold your key without losing it?",
     "end_audio": "shorts/cta-en-harddisk.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "popcorn",
@@ -117,7 +119,9 @@
     "cta": "The ledger never forgets. So why do humans still think bitcoin is anonymous? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "cta_short": "The ledger never forgets. So why do humans still think bitcoin is anonymous?",
     "end_audio": "shorts/cta-en-popcorn.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "fee",
@@ -171,7 +175,9 @@
     "cta": "On this ledger there's no undo button. What should you know before you send anything? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "cta_short": "On this ledger there's no undo button. What should you know before you send anything?",
     "end_audio": "shorts/cta-en-fee.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "scammed-twice",
@@ -229,7 +235,9 @@
     "cta": "Anyone asking for your twelve words is a scammer. What other tricks do they use? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "cta_short": "Anyone asking for your twelve words is a scammer. What other tricks do they use?",
     "end_audio": "shorts/cta-en-scammed-twice.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   },
   {
    "key": "gox",
@@ -279,7 +287,13 @@
     "cta": "Not your keys, not your coins. So should you hold them yourself? The full report is on the Earth Report channel. <short pause> Subscribe and turn on the bell, so my secret reports on your planet reach you first.",
     "cta_short": "Not your keys, not your coins. So should you hold them yourself?",
     "end_audio": "shorts/cta-en-gox.wav"
-   }
+   },
+   "look": "fixed",
+   "captions": false
   }
- ]
+ ],
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
 }
