@@ -1,0 +1,744 @@
+{
+ "title": "تقرير الأرض: العلم 3 (world picture)",
+ "recorded_for": "2026-12-06",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture (one video, several audio tracks), drawn in the notebook look of explain-science-01-world: no Arabic on screen, no burned-in captions, every board beat a wordless illustrated shot. Script: ../explain-science-03-ar/script.md, words unchanged.",
+  "Earth Report field file: Science, part 3 of 4. Why scientists change their minds: Semmelweis and handwashing (1847), Wegener and the moving continents (1912 to the 1960s), Barry Marshall drinking bacteria (1984, Nobel 2005), Newton and Mercury, the eggs-and-cholesterol headlines (2015), correlation versus cause, one study (a brick) versus the consensus (a wall).",
+  "Facts (sources in ../explain-science-01-ar/plan.md): Vienna General Hospital 1847, deaths of new mothers in the doctors' clinic from about 18 percent (April) to about 2 (June) and 1 (July) after chlorinated-lime handwashing; Wegener 1912, rejected by 1930 (no mechanism), plate tectonics accepted in the late 1960s; Marshall drank H. pylori in 1984, gastritis, Nobel 2005 with Robin Warren; 2015 US Dietary Guidelines dropped the 300 mg cholesterol limit while still advising to keep it low.",
+  "No health advice about eggs or anything else, and Marshall's drink is not shown as something to copy (the host says so). The calm, respectful tone for the mothers' deaths: no bodies, numbers and empty beds only."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "4 / 4",
+   "icons": [
+    "book",
+    "eye",
+    "rules"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "boards": {
+  "brick": {
+   "kind": "brick"
+  },
+  "eggs": {
+   "kind": "eggs"
+  },
+  "icecream": {
+   "kind": "icecream"
+  },
+  "marshall": {
+   "kind": "marshall"
+  },
+  "newton": {
+   "kind": "newton"
+  },
+  "s3dict": {
+   "kind": "s3dict"
+  },
+  "s3intro": {
+   "kind": "s3intro"
+  },
+  "s3recap": {
+   "kind": "s3recap"
+  },
+  "semmel": {
+   "kind": "semmel"
+  },
+  "vane": {
+   "kind": "vane"
+  },
+  "wegener": {
+   "kind": "wegener"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report: a short story told quietly, then the puzzle humans keep asking.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم تلاتة في ملف العلم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "سنة ألف تمنمية سبعة وأربعين، في مستشفى في فيينا، دكتور شاب قال لزمايله جملة واحدة: اغسلوا إيديكم.",
+     "show": "board",
+     "board": "s3intro",
+     "step": 0
+    },
+    {
+     "say": "اللي سمعوا الكلام، الوفيات عندهم نزلت من حوالي تمنتاشر في المية، لحوالي اتنين في المية.",
+     "show": "board",
+     "board": "s3intro",
+     "step": 1
+    },
+    {
+     "say": "وبعدها.. المستشفى لغت القاعدة، والدكتور خرج من شغله.",
+     "show": "board",
+     "board": "s3intro",
+     "step": 2,
+     "emote": "worried",
+     "host": "right"
+    },
+    {
+     "say": "النهارده هتكلم عن أكتر حاجة بتجنن البشر في العلم: إن العلما بيغيروا كلامهم.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "امبارح البيض وحش، النهارده البيض كويس.",
+     "show": "board",
+     "board": "s3intro",
+     "step": 3
+    },
+    {
+     "say": "فالبشر بيسألوا: لو العلم بيغير رأيه كل شوية، أصدّقه إزاي؟",
+     "show": "board",
+     "board": "s3intro",
+     "step": 4,
+     "emote": "skeptical",
+     "host": "left"
+    },
+    {
+     "say": "وأنا هقول لكم ليه دي بالظبط الحاجة اللي تخلّيكم تصدقوه.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "vane",
+   "story": {
+    "n": 1,
+    "tag": "THE WEATHERVANE",
+    "icon": "gear"
+   },
+   "style": "Correcting a misunderstanding, calm and a little dry.",
+   "beats": [
+    {
+     "say": "أول حاجة يا فندم: البشر عندهم صورة غلط عن العلم.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "فاكرين إن العالم المحترم هو اللي عمره ما يغير رأيه.",
+     "show": "board",
+     "board": "vane",
+     "step": 0
+    },
+    {
+     "say": "بس في العلم، العكس. العالم المحترم هو اللي بيغير رأيه أول ما الدليل يتغير.",
+     "show": "board",
+     "board": "vane",
+     "step": 1,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "واللي مايغيرش رأيه أبداً.. ده مش عالم، ده عنده حاجة يبيعها.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "المشكلة إن الجرايد بتنقل كل ورقة جديدة كأنها الكلمة الأخيرة.",
+     "show": "board",
+     "board": "vane",
+     "step": 2
+    },
+    {
+     "say": "فالناس شايفة دوّارة بتلف: البيض وحش، البيض كويس، القهوة وحشة، القهوة كويسة.",
+     "show": "board",
+     "board": "vane",
+     "step": 3
+    },
+    {
+     "say": "بس اللي بيحصل جوه العلم مش دوّارة. ده أقرب لحد بيرسم خريطة، وكل ما يمشي خطوة، يصلّح خط.",
+     "show": "board",
+     "board": "vane",
+     "step": 4,
+     "emote": "neutral",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "semmel",
+   "story": {
+    "n": 2,
+    "tag": "WASH YOUR HANDS",
+    "icon": "heart"
+   },
+   "style": "A true story told seriously and calmly; the deaths of mothers are not a joke. A little warmth at the end.",
+   "beats": [
+    {
+     "say": "نرجع لفيينا. الدكتور اسمه Ignaz Semmelweis.",
+     "show": "board",
+     "board": "semmel",
+     "step": 0
+    },
+    {
+     "say": "المستشفى كان فيها عنبرين ولادة. عنبر بيشتغل فيه الدكاترة، وعنبر بيشتغل فيه الدايات.",
+     "show": "board",
+     "board": "semmel",
+     "step": 1
+    },
+    {
+     "say": "والغريب إن الستات في عنبر الدكاترة كانوا بيموتوا أكتر بكتير، من حمّى بعد الولادة. الستات كانوا بيترجّوا مايدخلوش العنبر ده.",
+     "show": "board",
+     "board": "semmel",
+     "step": 2,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "Semmelweis قعد يدوّر. وبعدين زميل ليه، دكتور تاني، اتعوّر وهو بيشرّح جثة، ومات بنفس علامات الحمّى دي بالظبط.",
+     "show": "board",
+     "board": "semmel",
+     "step": 3
+    },
+    {
+     "say": "هنا الفكرة جت له: الدكاترة بيروحوا من أوضة التشريح على الولادة على طول. فيه حاجة على إيديهم. حاجة مش شايفينها.",
+     "show": "board",
+     "board": "semmel",
+     "step": 4,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "فخلّاهم يغسلوا إيديهم في محلول كلور قبل ما يلمسوا أي ست.",
+     "show": "board",
+     "board": "semmel",
+     "step": 5
+    },
+    {
+     "say": "والأرقام وقعت: في أبريل، حوالي تمنتاشر في المية من الستات ماتوا. في يونيو، بعد الغسيل، حوالي اتنين في المية. في يوليو، حوالي واحد في المية.",
+     "show": "board",
+     "board": "semmel",
+     "step": 6
+    },
+    {
+     "say": "مفيش دوا، ولا جهاز، ولا عملية. مية وكلور.",
+     "shot": "close",
+     "emote": "proud"
+    },
+    {
+     "say": "وبعدين؟ الدكاترة زعلوا. أصل الكلام ده معناه إنهم هم اللي كانوا بينقلوا الموت بإيديهم. ماحدش بيحب يسمع كده.",
+     "show": "board",
+     "board": "semmel",
+     "step": 7,
+     "emote": "worried",
+     "host": "right"
+    },
+    {
+     "say": "وكمان ماكانش عنده تفسير: ماحدش لسه يعرف حاجة اسمها جراثيم. فالقاعدة اتلغت، وهو مشي من فيينا.",
+     "show": "board",
+     "board": "semmel",
+     "step": 8
+    },
+    {
+     "say": "وبعد سنين، لما Pasteur وغيره أثبتوا إن فيه كائنات صغيرة مابتتشافش بتعمل الأمراض، البشر رجعوا لكلام Semmelweis. بس هو كان مات خلاص.",
+     "show": "board",
+     "board": "semmel",
+     "step": 9,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "ودي حاجة لازم تفهموها يا فندم: العلم ماكانش غلطان هنا. البشر اللي عاندوا كانوا غلطانين. والعلم هو اللي صلّح وراهم.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "wegener",
+   "story": {
+    "n": 3,
+    "tag": "MOVING CONTINENTS",
+    "icon": "ship"
+   },
+   "style": "Fair to both sides: the idea and the sensible doubt. Quietly satisfied at the end.",
+   "beats": [
+    {
+     "say": "حكاية تانية. سنة ألف تسعمية اتناشر، عالم ألماني اسمه Alfred Wegener بص على خريطة العالم، ولاحظ حاجة ممكن أي طفل يلاحظها:",
+     "show": "board",
+     "board": "wegener",
+     "step": 0
+    },
+    {
+     "say": "شط أمريكا الجنوبية وشط أفريقيا داخلين في بعض زي البازل.",
+     "show": "board",
+     "board": "wegener",
+     "step": 1
+    },
+    {
+     "say": "ولقى نفس الحفريات، لنفس الحيوانات، على الناحيتين من المحيط.",
+     "show": "board",
+     "board": "wegener",
+     "step": 2
+    },
+    {
+     "say": "فقال: القارات دي كانت لازقة في بعض، وبعدين اتحركت.",
+     "show": "board",
+     "board": "wegener",
+     "step": 3,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "علما الجيولوجيا ضحكوا. مش علشان هم أغبيا يا فندم. علشان سؤالهم كان منطقي: إيه اللي يحرّك قارة؟ قارة بحالها!",
+     "show": "board",
+     "board": "wegener",
+     "step": 4,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "وهو ماكانش عنده إجابة. وبحلول سنة ألف تسعمية تلاتين، أغلبهم رفضوا الفكرة، وفي نفس السنة دي، هو مات في رحلة في جرينلاند.",
+     "show": "board",
+     "board": "wegener",
+     "step": 5
+    },
+    {
+     "say": "وبعدها بتلاتين سنة، البشر نزلوا يقيسوا قاع المحيط، ولقوا الدليل: الأرضية نفسها بتتحرك، وبتاخد القارات معاها.",
+     "show": "board",
+     "board": "wegener",
+     "step": 6
+    },
+    {
+     "say": "وفي الستينات، الفكرة بقت أساس علم الأرض كله، باسم جديد: الصفايح.",
+     "show": "board",
+     "board": "wegener",
+     "step": 7
+    },
+    {
+     "say": "يعني العلما رفضوه علشان الدليل ماكانش كفاية. ولما الدليل جه، غيروا رأيهم. وده اللي المفروض يحصل بالظبط، حتى لو جه متأخر.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "marshall",
+   "story": {
+    "n": 4,
+    "tag": "THE DRINK",
+    "icon": "shield"
+   },
+   "style": "A bold story told with dry amazement; the warning not to copy him is said plainly and seriously.",
+   "beats": [
+    {
+     "say": "الحكاية التالتة أجرأ. في أستراليا، في التمانينات، كان الطب كله مقتنع إن قرحة المعدة سببها التوتر والحمض.",
+     "show": "board",
+     "board": "marshall",
+     "step": 0
+    },
+    {
+     "say": "دكتورين، Robin Warren و Barry Marshall، شافوا بكتيريا عايشة في معدة العيانين. وقالوا: يمكن البكتيريا دي هي السبب.",
+     "show": "board",
+     "board": "marshall",
+     "step": 1
+    },
+    {
+     "say": "ماحدش صدّقهم. معدة الإنسان فيها حمض قوي جداً، إزاي بكتيريا تعيش فيها؟",
+     "show": "board",
+     "board": "marshall",
+     "step": 2,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "وMarshall زهق. فسنة ألف تسعمية أربعة وتمانين، عمل حاجة ماتتعملش.",
+     "show": "board",
+     "board": "marshall",
+     "step": 3
+    },
+    {
+     "say": "جاب البكتيريا في كوباية.. وشربها.",
+     "show": "board",
+     "board": "marshall",
+     "step": 4
+    },
+    {
+     "say": "بعد أيام، جاله التهاب في المعدة، وبقى عنده نفس البكتيريا. وأثبت أول خطوة في كلامه، على نفسه.",
+     "show": "board",
+     "board": "marshall",
+     "step": 5
+    },
+    {
+     "say": "وبعدها، تجارب أكبر وأكبر أكّدت. وسنة ألفين خمسة، الاتنين خدوا جايزة نوبل.",
+     "show": "board",
+     "board": "marshall",
+     "step": 6
+    },
+    {
+     "say": "ويا فندم، أنا مش بقول إن الطريقة دي هي الطريقة. ماحدش يشرب حاجة من معمل.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "أنا بقول إن العلم في الآخر سمع للدليل، حتى لما الدليل جه من راجل ماسك كوباية.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    }
+   ]
+  },
+  {
+   "id": "newton",
+   "story": {
+    "n": 5,
+    "tag": "NEWTON",
+    "icon": "comet"
+   },
+   "style": "Admiring, a little playful; the last two lines land neatly.",
+   "beats": [
+    {
+     "say": "وفيه نوع تالت من تغيير الرأي، ودي أشيك واحدة.",
+     "shot": "host",
+     "emote": "sly"
+    },
+    {
+     "say": "Isaac Newton كتب قوانين الجاذبية من أكتر من تلتمية سنة. والقوانين دي اشتغلت مع كل حاجة: التفاحة، والقمر، والكواكب.",
+     "show": "board",
+     "board": "newton",
+     "step": 0
+    },
+    {
+     "say": "ما عدا حاجة صغيرة. كوكب عطارد، أقرب كوكب للشمس، كان مداره بيلف حتة صغيرة جداً زيادة عن حسابات نيوتن.",
+     "show": "board",
+     "board": "newton",
+     "step": 1
+    },
+    {
+     "say": "فرق صغير لدرجة إن الفلكيين قعدوا عشرات السنين يدوّروا على كوكب مستخبي يكون هو السبب.",
+     "show": "board",
+     "board": "newton",
+     "step": 2
+    },
+    {
+     "say": "وبعدين، سنة ألف تسعمية خمستاشر، أينشتاين جاب نظرية جديدة للجاذبية، وحسب بيها مدار عطارد.. طلع مظبوط.",
+     "show": "board",
+     "board": "newton",
+     "step": 3
+    },
+    {
+     "say": "يعني نيوتن طلع غلط؟ لأ يا فندم. نيوتن طلع ناقص.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "لحد النهارده، البشر بيبنوا الكباري ويبعتوا صواريخ للقمر بقوانين نيوتن، لأنها دقيقة كفاية. بس لما الحاجات تبقى سريعة جداً أو تقيلة جداً، بيطلّعوا أينشتاين.",
+     "show": "board",
+     "board": "newton",
+     "step": 4
+    },
+    {
+     "say": "العلم ماهدّش البيت. العلم بنى دور فوقه.",
+     "show": "board",
+     "board": "newton",
+     "step": 5,
+     "emote": "proud",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "eggs",
+   "story": {
+    "n": 6,
+    "tag": "EGGS",
+    "icon": "dup"
+   },
+   "style": "Calm and exact about what changed; the last line deadpan. No advice.",
+   "beats": [
+    {
+     "say": "طب والبيض؟ دي الحكاية اللي كل البشر حافظينها.",
+     "shot": "host",
+     "emote": "sly"
+    },
+    {
+     "say": "لسنين طويلة، الإرشادات في أمريكا كانت بتقول: ماتاكلش أكتر من رقم معين من الكوليسترول في اليوم. والبيض فيه كوليسترول، فالبيض بقى المتهم.",
+     "show": "board",
+     "board": "eggs",
+     "step": 0
+    },
+    {
+     "say": "سنة ألفين خمستاشر، الإرشادات الجديدة شالت الرقم ده. ليه؟ لأن الأبحاث اللي اتجمعت مالقيتش علاقة قوية بين الكوليسترول اللي في الأكل، واللي في الدم، زي ما كانوا فاكرين.",
+     "show": "board",
+     "board": "eggs",
+     "step": 1
+    },
+    {
+     "say": "والجرايد كتبت: العلما رجعوا في كلامهم، البيض بقى كويس!",
+     "show": "board",
+     "board": "eggs",
+     "step": 2
+    },
+    {
+     "say": "بس اللي حصل فعلاً أصغر من كده بكتير. الإرشادات نفسها قالت برضه: خلّي الكوليسترول قليل.",
+     "show": "board",
+     "board": "eggs",
+     "step": 3,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "يعني العلم ماقلبش. العلم صلّح رقم واحد، لما الدليل اتغير. والعنوان هو اللي قلب.",
+     "show": "board",
+     "board": "eggs",
+     "step": 4
+    },
+    {
+     "say": "وأنا مش هقول لكم تاكلوا بيض ولا ماتاكلوش. أنا جاسوس، مش دكتور.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "icecream",
+   "story": {
+    "n": 7,
+    "tag": "ICE CREAM",
+    "icon": "sun"
+   },
+   "style": "A playful example, then a firm point about headlines.",
+   "beats": [
+    {
+     "say": "وفيه سبب تاني للأخبار اللي بتلف: خلط حاجتين ببعض.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "في الصيف، بياع الآيس كريم بيبيع أكتر. وفي الصيف برضه، حوادث الغرق بتزيد.",
+     "show": "board",
+     "board": "icecream",
+     "step": 0
+    },
+    {
+     "say": "لو رسمت الاتنين على ورقة، هتلاقيهم طالعين ونازلين مع بعض. هل الآيس كريم بيغرّق الناس؟",
+     "show": "board",
+     "board": "icecream",
+     "step": 1
+    },
+    {
+     "say": "لأ يا فندم. فيه حاجة تالتة ورا الاتنين: الشمس. الحر بيخلّي الناس تشتري آيس كريم، وبيخلّيهم ينزلوا البحر.",
+     "show": "board",
+     "board": "icecream",
+     "step": 2
+    },
+    {
+     "say": "ده اسمه ارتباط، مش سبب.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "ودراسات كتير بتلاقي إن الناس اللي بيعملوا حاجة معينة صحتهم أحسن. بس يمكن السبب الحقيقي إنهم أغنى، أو بيناموا أكتر، أو عندهم وقت.",
+     "show": "board",
+     "board": "icecream",
+     "step": 3
+    },
+    {
+     "say": "والعنوان بيكتب: الحاجة دي بتطوّل العمر. وبعد سنة، دراسة أحسن تلاقي إن الحاجة دي ملهاش دعوة. ويطلع عنوان تاني: العلما رجعوا في كلامهم.",
+     "show": "board",
+     "board": "icecream",
+     "step": 4,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "لأ. العلما ما قالوش أصلاً. العنوان هو اللي قال.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "brick",
+   "story": {
+    "n": 8,
+    "tag": "BRICK AND WALL",
+    "icon": "rules"
+   },
+   "style": "The main idea of the report, clear and steady; the closing question asked plainly.",
+   "beats": [
+    {
+     "say": "فإزاي تفرق بين علم بيتغير، وعلم مالوش لازمة؟ فكّر فيها كده يا فندم.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "الدراسة الواحدة طوبة. الطوبة ممكن تطلع مكسورة.",
+     "show": "board",
+     "board": "brick",
+     "step": 0
+    },
+    {
+     "say": "بس لما عشرات الفرق، في بلاد مختلفة، بطرق مختلفة، يوصلوا لنفس الحاجة.. الطوب ده بيبقى حيطة. والحيطة دي اسمها الإجماع العلمي.",
+     "show": "board",
+     "board": "brick",
+     "step": 1
+    },
+    {
+     "say": "الأخبار بتجري ورا الطوبة الجديدة كل يوم. بس الحيطة بتتحرك ببطء شديد، ومابتتهدّش غير لما ييجي دليل تقيل. ولما تتهد، بيتبني مكانها حيطة أحسن.",
+     "show": "board",
+     "board": "brick",
+     "step": 2
+    },
+    {
+     "say": "يعني مثلاً: إن الأرض بتلف حوالين الشمس، ده حيطة. إن الأمراض المعدية سببها جراثيم، ده حيطة. إن غسيل الإيدين بيقلل العدوى، ده حيطة اتبنت على قبر Semmelweis.",
+     "show": "board",
+     "board": "brick",
+     "step": 3
+    },
+    {
+     "say": "لكن إن نوع معين من الأكل بيقلل خطر حاجة بنسبة صغيرة، في دراسة واحدة، على مية واحد.. دي طوبة. ممكن تبقى جزء من حيطة بعدين. وممكن تترمي.",
+     "show": "board",
+     "board": "brick",
+     "step": 4
+    },
+    {
+     "say": "والفرق بين الاتنين، هو اللي العناوين مابتقولوش.",
+     "show": "board",
+     "board": "brick",
+     "step": 5,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "فلما تسمع إن العلما غيروا رأيهم، اسأل سؤال واحد: اللي اتغير طوبة.. ولا حيطة؟",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "قاموس البشر. كلمتين النهارده. ارتباط: حاجتين بيطلعوا وينزلوا مع بعض، من غير ما يكون واحد فيهم سبب التاني.",
+     "show": "board",
+     "board": "s3dict",
+     "step": 0
+    },
+    {
+     "say": "وإجماع علمي: لما أغلب الفرق اللي درست حاجة، كل واحد لوحده، يوصلوا لنفس النتيجة.",
+     "show": "board",
+     "board": "s3dict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, one sincere line, the teaser, and the sign-off.",
+   "beats": [
+    {
+     "say": "الخلاصة يا فندم. أولاً: العالم اللي بيغير رأيه لما الدليل يتغير، ده بالظبط العالم اللي تصدّقه.",
+     "show": "board",
+     "board": "s3recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "ثانياً: غسيل الإيدين، والقارات، والبكتيريا، كلهم اترفضوا الأول، والعلم نفسه هو اللي رجع وصلّح.",
+     "show": "board",
+     "board": "s3recap",
+     "step": 1,
+     "host": "right"
+    },
+    {
+     "say": "ثالثاً: أغلب اللي بيلف هو العناوين، مش العلم: طوبة جديدة كل يوم، والحيطة واقفة مكانها.",
+     "show": "board",
+     "board": "s3recap",
+     "step": 2,
+     "host": "right"
+    },
+    {
+     "say": "والبشر عندهم مقولة عجبتني: العلم مش بيكذب نفسه. العلم بيعدّل نفسه.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "في التقرير الجاي، والأخير في الملف ده: إمتى العلم بيضحك علينا فعلاً؟ نصب، وفلوس، وأبحاث اتسحبت بالآلاف. ومين اللي كشفهم.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ]
+}
