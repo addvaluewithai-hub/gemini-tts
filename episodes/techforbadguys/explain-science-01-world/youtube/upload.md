@@ -2,9 +2,9 @@
 
 ## Title
 
-1. ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/5  ← recommended
-2. العلم يعني إيه؟ اشرحه لكائن فضائي | ملف العلم 1/5
-3. إزاي واحد قاس الأرض بعصاية؟ وليه نصدّق العلما | ملف العلم 1/5
+1. ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/4  ← recommended
+2. العلم يعني إيه؟ اشرحه لكائن فضائي | ملف العلم 1/4
+3. إزاي واحد قاس الأرض بعصاية؟ وليه نصدّق العلما | ملف العلم 1/4
 
 ## Description
 
@@ -19,7 +19,7 @@ Paste `description.txt` as it is. It already holds the chapters and the sources.
 - Category: Education
 - Video language: Arabic. Upload captions.srt as Arabic.
 - Audience: not made for kids
-- Playlist: ملف العلم (five parts, in order)
+- Playlist: ملف العلم (four parts, in order)
 - End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.
 - Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.
 - Comments: hold comments with links for review.
