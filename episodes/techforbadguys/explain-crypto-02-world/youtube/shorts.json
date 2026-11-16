@@ -21,7 +21,15 @@
    ],
    "parts": [
     [
+     36.33,
+     40.8
+    ],
+    [
      25.43,
+     36.33
+    ],
+    [
+     40.8,
      46.71
     ]
    ],
@@ -52,7 +60,8 @@
     "end_audio": "shorts/cta-en-hash.wav"
    },
    "look": "fixed",
-   "captions": false
+   "captions": false,
+   "why": "Re-cut (publisher, 16 Nov): the first 2 s show what the title promises (cold open), then the explanation."
   },
   {
    "key": "chain",
@@ -226,11 +235,15 @@
    ],
    "parts": [
     [
+     298.6,
+     302.8
+    ],
+    [
      283.16,
      292.5
     ],
     [
-     298.63,
+     303.0,
      313.82
     ]
    ],
@@ -246,7 +259,7 @@
      "sub": "CRYPTO FILE · 2/6"
     }
    },
-   "body_seconds": 24.5,
+   "body_seconds": 24.4,
    "en": {
     "title": "Why There Will Only Ever Be 21 Million Bitcoin 🪙 #Shorts",
     "description": "The prize halves about every four years, and the total has a ceiling written in the code: 21 million. Bitcoin number 20 million was mined in March 2026; the last million will take more than a hundred years, until around 2140. A report, not investment advice.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
@@ -261,7 +274,8 @@
     "end_audio": "shorts/cta-en-cap.wav"
    },
    "look": "fixed",
-   "captions": false
+   "captions": false,
+   "why": "Re-cut (publisher, 16 Nov): the first 2 s show what the title promises (cold open), then the explanation."
   },
   {
    "key": "bug-2010",
@@ -280,11 +294,15 @@
    ],
    "parts": [
     [
+     367.02,
+     369.37
+    ],
+    [
      344.17,
      350.54
     ],
     [
-     363.92,
+     362.6,
      380.65
     ]
    ],
@@ -300,7 +318,7 @@
      "sub": "CRYPTO FILE · 2/6"
     }
    },
-   "body_seconds": 23.1,
+   "body_seconds": 26.8,
    "en": {
     "title": "The Day Someone Made 184 Billion Bitcoin 😳 #Shorts",
     "description": "In 2010 a bug let someone create 184 billion bitcoin out of thin air. Within about five hours the whole network was running a fixed version, and that page was erased from history.\n\nThe full report: Blockchain and Bitcoin Mining, Explained Simply | Crypto File 2/6\nhttps://youtu.be/7D8rK9TlVdQ\n\nAgent Peek is an alien spy filing reports to his commanders about everyday things humans can't explain. Subscribe and turn on the bell.\n\n#Shorts #bitcoin #EarthReport",
@@ -315,7 +333,8 @@
     "end_audio": "shorts/cta-en-bug-2010.wav"
    },
    "look": "fixed",
-   "captions": false
+   "captions": false,
+   "why": "Re-cut (publisher, 16 Nov): the first 2 s show what the title promises (cold open), then the explanation."
   }
  ],
  "peekFixed": {
