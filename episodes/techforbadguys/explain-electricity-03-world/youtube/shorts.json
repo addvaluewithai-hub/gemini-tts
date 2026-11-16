@@ -65,7 +65,9 @@
      81.1,
      "right"
     ]
-   ]
+   ],
+   "openStep": 0,
+   "preroll": 30
   },
   {
    "key": "enemies",
@@ -120,7 +122,18 @@
    },
    "look": "fixed",
    "captions": false,
-   "total": 37.2
+   "total": 37.2,
+   "preroll": 3.0,
+   "peekSides": [
+    [
+     175.7,
+     "left"
+    ],
+    [
+     186.0,
+     "right"
+    ]
+   ]
   },
   {
    "key": "iberia",
@@ -170,7 +183,8 @@
    },
    "look": "fixed",
    "captions": false,
-   "total": 27.7
+   "total": 27.7,
+   "preroll": 3.0
   },
   {
    "key": "domino",
@@ -224,7 +238,8 @@
    },
    "look": "fixed",
    "captions": false,
-   "total": 39.4
+   "total": 39.4,
+   "stock": true
   },
   {
    "key": "blackstart",
@@ -248,8 +263,8 @@
     ]
    ],
    "end": {
-    "audio": "shorts/cta-blackstart.wav",
-    "words": "shorts/cta-blackstart.words.json",
+    "audio": "shorts/cta-blackstart-short.wav",
+    "words": "shorts/cta-blackstart-short.words.json",
     "card": {
      "icons": [
       "station",
@@ -272,7 +287,10 @@
      "power grid"
     ]
    },
-   "stock": true
+   "look": "fixed",
+   "captions": false,
+   "total": 28.3,
+   "preroll": 3.0
   }
  ],
  "peekFixed": {

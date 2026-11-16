@@ -33,7 +33,7 @@ const cue = (from, to, hold) => {
   }
   let list = edits.filter((e) => e.t < to - 0.05).map((e) => (e.t > from && e.t < from + 0.2 ? { ...e, t: from - 0.01, ...(e.stepT === e.t ? { stepT: from - 0.01 } : {}) } : e));
   const pre = from === spec.parts[0][0] ? (spec.preroll ?? all.preroll ?? 0) : 0;      // preroll: the Short's first frame shows the picture already drawn, not its draw-in
-  if (pre) { const k = list.map((e, i) => [e, i]).filter(([e]) => e.board && e.t <= from).pop(); if (k) list[k[1]] = { ...k[0], stepT: Math.min(k[0].stepT ?? k[0].t, from - pre) }; }
+  if (pre) { const k = list.map((e, i) => [e, i]).filter(([e]) => e.board && e.t <= from).pop(); if (k) list[k[1]] = { ...k[0], stepT: Math.min(k[0].stepT ?? k[0].t, from - pre), ...(spec.openStep != null ? { step: spec.openStep } : {}) }; }   // openStep: a cold open on Peek holds that step of the picture before it
   fs.writeFileSync(f, JSON.stringify({ ...base, edit: list,
     episode: ep, ...vertical, from, to, hold }));                                  // no cut into the next beat during the hold
   return f;
