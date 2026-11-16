@@ -1,0 +1,260 @@
+{
+ "note": "Shorts proposals for science part 1 (world picture), for the owner to choose before rendering. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-01-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science01-short-cta-<key>, English -en-w). {full} in a description is replaced by the full episode's link at upload. Render with video/short.cjs.",
+ "full": "",
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "cable",
+   "title": "علما لقوا حاجة أسرع من الضوء.. وطلع كابل 🔌 #Shorts",
+   "description": "سنة 2011 فريق علما أعلن إن جزيئات وصلت أسرع من الضوء، وطلب من العالم يدوّر على الغلطة. بعد حوالي خمس شهور الفريق نفسه لقاها: كابل مش داخل للآخر، وساعة ماشية غلط. وأينشتاين كسب.\n\nالتقرير كامل: ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/5\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #العلم #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "تجربة OPERA",
+    "أسرع من الضوء",
+    "نيوترينو",
+    "أينشتاين",
+    "CERN"
+   ],
+   "parts": [
+    [
+     47.11,
+     56.13
+    ],
+    [
+     66.7,
+     71.73
+    ],
+    [
+     216.72,
+     231.57
+    ],
+    [
+     240.74,
+     245.5
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-cable.wav",
+    "words": "shorts/cta-cable.words.json",
+    "card": {
+     "icons": [
+      "cable",
+      "atom"
+     ],
+     "sub": "SCIENCE FILE · 1/5"
+    }
+   },
+   "content": 33.7,
+   "en": {
+    "title": "Scientists Found Something Faster Than Light... It Was a Cable 🔌 #Shorts",
+    "description": "In 2011 a team announced particles faster than light, and asked the world to find their mistake. About five months later they found it themselves: a cable not plugged all the way in, and a clock running off. Einstein won.\n\nThe full report: Why Trust Science? Faster Than Light... It Was a Cable | Science File 1/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   }
+  },
+  {
+   "key": "stick",
+   "title": "راجل قاس الأرض كلها بعصاية من 2200 سنة 🌍 #Shorts",
+   "description": "Eratosthenes لاحظ إن الشمس في الجنوب مالهاش ضل الضهر، وفي إسكندرية العصاية ليها ضل سبع درجات. الفرق ده كشف إن الأرض مدوّرة، وطلّع لفّتها قريب جداً من 40 ألف كيلو. من غير طيارة ولا قمر صناعي.\n\nالتقرير كامل: ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/5\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #الأرض #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "إراتوستينس",
+    "Eratosthenes",
+    "محيط الأرض",
+    "الأرض كروية",
+    "مكتبة الإسكندرية"
+   ],
+   "parts": [
+    [
+     111.0,
+     136.77
+    ],
+    [
+     141.72,
+     146.8
+    ],
+    [
+     154.12,
+     158.33
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-stick.wav",
+    "words": "shorts/cta-stick.words.json",
+    "card": {
+     "icons": [
+      "book",
+      "frame"
+     ],
+     "sub": "SCIENCE FILE · 1/5"
+    }
+   },
+   "content": 35.1,
+   "en": {
+    "title": "He Measured the Whole Earth With a Stick, 2,200 Years Ago 🌍 #Shorts",
+    "description": "Eratosthenes noticed the noon Sun cast no shadow in a southern town, while a stick in Alexandria cast a seven-degree shadow. That difference showed the Earth is round, and gave its size very close to 40,000 km. No plane, no satellite.\n\nThe full report: Why Trust Science? Faster Than Light... It Was a Cable | Science File 1/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   }
+  },
+  {
+   "key": "dragon",
+   "title": "عندي تنين في الجراج.. بس مش بيتشاف 🐉 #Shorts",
+   "description": "كل ما تجيب تجربة، يجيب لك سبب: مش بيتشاف، بيطير، ناره باردة. الكلام ده ممكن يكون صح أو غلط، بس عمره ما هيبقى علم. ليه؟ لأن مفيش تجربة ممكن تثبت إنه غلط.\n\nالتقرير كامل: ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/5\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #التفكير_النقدي #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "التنين في الجراج",
+    "المنهج العلمي",
+    "القابلية للتكذيب",
+    "التفكير النقدي"
+   ],
+   "parts": [
+    [
+     170.72,
+     196.28
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-dragon.wav",
+    "words": "shorts/cta-dragon.words.json",
+    "card": {
+     "icons": [
+      "ghost",
+      "eye"
+     ],
+     "sub": "SCIENCE FILE · 1/5"
+    }
+   },
+   "content": 25.6,
+   "en": {
+    "title": "There's a Dragon in My Garage... It's Invisible 🐉 #Shorts",
+    "description": "Every test you bring, he brings an excuse: it's invisible, it floats, its fire is cold. That claim might be true or false, but it will never be science, because no experiment could ever prove it wrong.\n\nThe full report: Why Trust Science? Faster Than Light... It Was a Cable | Science File 1/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   }
+  },
+  {
+   "key": "halley",
+   "title": "اتنبأ برجوع مذنّب.. ومات قبل ما يشوفه ☄️ #Shorts",
+   "description": "سنة 1705 Edmond Halley قال: المذنّب اللي بيظهر كل حوالي 76 سنة هو مذنّب واحد، وهيرجع حوالي 1758. مات قبلها بستاشر سنة. وفي ليلة الكريسماس 1758.. المذنّب ظهر.\n\nالتقرير كامل: ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/5\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #الفلك #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "مذنب هالي",
+    "Halley",
+    "التنبؤ العلمي",
+    "الجاذبية",
+    "فلك"
+   ],
+   "parts": [
+    [
+     297.53,
+     326.97
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-halley.wav",
+    "words": "shorts/cta-halley.words.json",
+    "card": {
+     "icons": [
+      "sat",
+      "calendar"
+     ],
+     "sub": "SCIENCE FILE · 1/5"
+    }
+   },
+   "content": 29.4,
+   "en": {
+    "title": "He Predicted a Comet's Return... and Died Before It Came ☄️ #Shorts",
+    "description": "In 1705 Edmond Halley said the comet seen about every 76 years was one comet, coming back around 1758. He died sixteen years before. On Christmas night 1758... the comet appeared.\n\nThe full report: Why Trust Science? Faster Than Light... It Was a Cable | Science File 1/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   }
+  },
+  {
+   "key": "theory",
+   "title": "«عندي نظرية» مش معناها اللي إنت فاكره 🪜 #Shorts",
+   "description": "في الشارع النظرية يعني تخمين: جاري هو اللي بياخد الجرنال. عند العلما النظرية آخر السلم مش أوله: فرضية اتجرّبت كتير وصمدت ونجحت تتنبأ بحاجات ماحدش شافها. زي الجاذبية.\n\nالتقرير كامل: ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/5\n{full}\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #العلم #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "يعني إيه نظرية",
+    "الفرق بين الفرضية والنظرية",
+    "نظرية علمية",
+    "الجاذبية"
+   ],
+   "parts": [
+    [
+     252.25,
+     282.65
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-theory.wav",
+    "words": "shorts/cta-theory.words.json",
+    "card": {
+     "icons": [
+      "rules",
+      "book"
+     ],
+     "sub": "SCIENCE FILE · 1/5"
+    }
+   },
+   "content": 30.4,
+   "en": {
+    "title": "\"It's Just a Theory\" Doesn't Mean What You Think 🪜 #Shorts",
+    "description": "On the street, a theory is a hunch: my neighbor steals my newspaper. To scientists, a theory is the top of the ladder: a hypothesis tested many times that held up and predicted things nobody had seen. Like gravity.\n\nThe full report: Why Trust Science? Faster Than Light... It Was a Cable | Science File 1/5\n{full}\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   }
+  }
+ ]
+}

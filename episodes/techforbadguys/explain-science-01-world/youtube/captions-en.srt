@@ -1,0 +1,951 @@
+1
+00:00:00,552 --> 00:00:01,172
+Sir.
+
+2
+00:00:01,212 --> 00:00:03,247
+Field report one, in a new file:
+
+3
+00:00:03,287 --> 00:00:04,946
+Science.
+
+4
+00:00:04,986 --> 00:00:06,769
+Humans have a thing called science.
+
+5
+00:00:06,809 --> 00:00:08,635
+They trust it above almost anything.
+
+6
+00:00:08,675 --> 00:00:10,690
+They fly because of it, take medicine because
+
+7
+00:00:10,730 --> 00:00:12,531
+of it, build twenty floors high.
+
+8
+00:00:13,565 --> 00:00:14,866
+And yet half the planet asks:
+
+9
+00:00:14,906 --> 00:00:16,837
+why believe these scientists?
+
+10
+00:00:16,877 --> 00:00:18,217
+What if they're fooling us?
+
+11
+00:00:18,991 --> 00:00:19,454
+Today:
+
+12
+00:00:19,494 --> 00:00:22,322
+what science is, and why they trust it.
+
+13
+00:00:22,362 --> 00:00:23,979
+I'll start with the strangest story I found.
+
+14
+00:00:24,019 --> 00:00:26,389
+In twenty eleven, scientists told the whole world:
+
+15
+00:00:26,429 --> 00:00:28,566
+we've found something faster than light.
+
+16
+00:00:30,527 --> 00:00:31,755
+Months later, the culprit:
+
+17
+00:00:31,795 --> 00:00:33,469
+a loose cable.
+
+18
+00:00:33,509 --> 00:00:35,225
+It started in Europe, sir.
+
+19
+00:00:35,265 --> 00:00:38,554
+A lab in Geneva, CERN, fires tiny particles
+
+20
+00:00:38,594 --> 00:00:41,315
+called neutrinos through solid rock to a lab
+
+21
+00:00:41,355 --> 00:00:41,835
+in Italy.
+
+22
+00:00:41,875 --> 00:00:44,057
+About seven hundred and thirty kilometers.
+
+23
+00:00:44,097 --> 00:00:47,079
+A team called OPERA timed the trip.
+
+24
+00:00:47,119 --> 00:00:49,700
+In twenty eleven, the numbers looked strange:
+
+25
+00:00:49,740 --> 00:00:52,425
+the particles arrived about sixty billionths of a
+
+26
+00:00:52,465 --> 00:00:53,784
+second early.
+
+27
+00:00:54,199 --> 00:00:54,981
+Faster than light.
+
+28
+00:00:55,021 --> 00:00:56,091
+Which is impossible.
+
+29
+00:00:56,131 --> 00:00:58,219
+Einstein said nothing beats light.
+
+30
+00:00:58,259 --> 00:01:01,518
+A century of physics rests on that.
+
+31
+00:01:01,558 --> 00:01:02,731
+Two options, sir.
+
+32
+00:01:03,184 --> 00:01:04,352
+Hide it in a drawer.
+
+33
+00:01:04,392 --> 00:01:05,424
+Or announce it:
+
+34
+00:01:05,464 --> 00:01:06,663
+we don't believe it either.
+
+35
+00:01:06,703 --> 00:01:07,701
+They chose the second.
+
+36
+00:01:07,741 --> 00:01:08,655
+A press conference:
+
+37
+00:01:08,695 --> 00:01:09,955
+here are our numbers.
+
+38
+00:01:09,995 --> 00:01:11,739
+Find our mistake.
+
+39
+00:01:11,779 --> 00:01:13,070
+I had to sit down, sir.
+
+40
+00:01:13,110 --> 00:01:15,418
+At Command, admitting a mistake gets you sent
+
+41
+00:01:15,458 --> 00:01:16,505
+to Archives.
+
+42
+00:01:16,911 --> 00:01:17,668
+First:
+
+43
+00:01:17,708 --> 00:01:20,016
+humans think science is a big book of
+
+44
+00:01:20,056 --> 00:01:20,999
+answers.
+
+45
+00:01:21,039 --> 00:01:22,256
+Earth circles the Sun.
+
+46
+00:01:22,296 --> 00:01:24,298
+Water boils at a hundred.
+
+47
+00:01:24,338 --> 00:01:25,640
+That's not science, sir.
+
+48
+00:01:25,680 --> 00:01:27,287
+That's what's left after it.
+
+49
+00:01:27,327 --> 00:01:30,256
+Science is a method for not fooling yourself.
+
+50
+00:01:30,296 --> 00:01:30,780
+Simple:
+
+51
+00:01:30,820 --> 00:01:31,902
+say something testable.
+
+52
+00:01:31,942 --> 00:01:32,405
+Test it.
+
+53
+00:01:32,445 --> 00:01:35,401
+Then try hard to prove it wrong.
+
+54
+00:01:35,441 --> 00:01:37,247
+If it survives, believe it a little.
+
+55
+00:01:37,287 --> 00:01:39,569
+If it survives your rivals, believe it more.
+
+56
+00:01:39,609 --> 00:01:41,330
+Science isn't a library, sir.
+
+57
+00:01:41,370 --> 00:01:42,304
+It's a workshop.
+
+58
+00:01:42,344 --> 00:01:43,982
+Anything in it can be taken apart and
+
+59
+00:01:44,022 --> 00:01:44,600
+rebuilt.
+
+60
+00:01:44,640 --> 00:01:46,041
+Even Einstein.
+
+61
+00:01:46,081 --> 00:01:47,771
+How old is this method?
+
+62
+00:01:47,811 --> 00:01:50,245
+I went back over two thousand two hundred
+
+63
+00:01:50,285 --> 00:01:50,955
+years.
+
+64
+00:01:50,995 --> 00:01:53,333
+A man named Eratosthenes ran the Library of
+
+65
+00:01:53,373 --> 00:01:54,095
+Alexandria.
+
+66
+00:01:54,135 --> 00:01:56,066
+He heard that in a southern town, on
+
+67
+00:01:56,106 --> 00:01:58,812
+one summer day at exactly noon, the Sun
+
+68
+00:01:58,852 --> 00:02:00,038
+lit the bottom of a well.
+
+69
+00:02:00,078 --> 00:02:01,209
+No shadow at all.
+
+70
+00:02:01,962 --> 00:02:04,563
+So, same day, same hour, he planted a
+
+71
+00:02:04,603 --> 00:02:05,968
+stick in Alexandria.
+
+72
+00:02:06,008 --> 00:02:07,096
+It had a shadow.
+
+73
+00:02:07,500 --> 00:02:09,818
+A small shadow, about seven degrees.
+
+74
+00:02:09,858 --> 00:02:11,419
+One fiftieth of a circle.
+
+75
+00:02:11,459 --> 00:02:13,221
+If the Earth were flat, the shadows would
+
+76
+00:02:13,261 --> 00:02:14,161
+match.
+
+77
+00:02:14,458 --> 00:02:15,058
+They don't.
+
+78
+00:02:15,098 --> 00:02:16,480
+So the Earth is round.
+
+79
+00:02:16,818 --> 00:02:19,881
+A one-fiftieth difference means the towns are one
+
+80
+00:02:19,921 --> 00:02:21,684
+fiftieth of the way around the planet.
+
+81
+00:02:21,724 --> 00:02:22,953
+The distance was paced out:
+
+82
+00:02:22,993 --> 00:02:24,610
+about five thousand stadia.
+
+83
+00:02:24,650 --> 00:02:25,419
+Times fifty:
+
+84
+00:02:25,459 --> 00:02:26,741
+two hundred and fifty thousand.
+
+85
+00:02:26,781 --> 00:02:28,795
+Humans still argue about how long a stadion
+
+86
+00:02:28,835 --> 00:02:31,185
+was, but by most counts that's very close
+
+87
+00:02:31,225 --> 00:02:34,074
+to the real forty thousand kilometers.
+
+88
+00:02:34,114 --> 00:02:36,695
+No plane, no satellite, no internet.
+
+89
+00:02:36,735 --> 00:02:38,533
+A stick, a shadow, and a brain.
+
+90
+00:02:38,573 --> 00:02:40,294
+But the number isn't the point, sir.
+
+91
+00:02:40,334 --> 00:02:41,887
+Anyone with a stick and a friend in
+
+92
+00:02:41,927 --> 00:02:45,327
+another town can repeat it today.
+
+93
+00:02:45,367 --> 00:02:46,459
+No need to trust him.
+
+94
+00:02:46,499 --> 00:02:47,399
+Try it.
+
+95
+00:02:47,527 --> 00:02:50,008
+So what makes a claim scientific, and another
+
+96
+00:02:50,048 --> 00:02:50,685
+one not?
+
+97
+00:02:50,725 --> 00:02:51,871
+Imagine someone says:
+
+98
+00:02:51,911 --> 00:02:53,561
+I have a dragon in my garage.
+
+99
+00:02:53,601 --> 00:02:54,064
+Show me.
+
+100
+00:02:54,104 --> 00:02:55,710
+It's invisible.
+
+101
+00:02:55,750 --> 00:02:57,659
+Spread flour to see its footprints?
+
+102
+00:02:57,699 --> 00:02:58,434
+It floats.
+
+103
+00:02:58,474 --> 00:02:59,828
+Measure the heat of its fire?
+
+104
+00:02:59,868 --> 00:03:00,768
+Cold fire.
+
+105
+00:03:01,191 --> 00:03:03,587
+Every test, he has an excuse.
+
+106
+00:03:03,627 --> 00:03:05,473
+True or false, that claim will never be
+
+107
+00:03:05,513 --> 00:03:06,413
+science.
+
+108
+00:03:07,150 --> 00:03:09,496
+Because no experiment could ever prove it wrong.
+
+109
+00:03:10,033 --> 00:03:11,377
+The main rule of science:
+
+110
+00:03:11,417 --> 00:03:13,253
+a claim must be able to fail.
+
+111
+00:03:13,293 --> 00:03:13,882
+You must say:
+
+112
+00:03:13,922 --> 00:03:15,818
+if this happens, I'm wrong.
+
+113
+00:03:16,320 --> 00:03:17,622
+Einstein did exactly that.
+
+114
+00:03:17,662 --> 00:03:20,096
+His theory said starlight passing the Sun must
+
+115
+00:03:20,136 --> 00:03:21,406
+bend by a set amount.
+
+116
+00:03:21,446 --> 00:03:23,153
+If not, the theory was wrong.
+
+117
+00:03:23,491 --> 00:03:25,715
+In nineteen nineteen, humans waited for an eclipse
+
+118
+00:03:25,755 --> 00:03:26,312
+and measured.
+
+119
+00:03:26,352 --> 00:03:27,399
+The light bent.
+
+120
+00:03:27,931 --> 00:03:29,806
+Back to the particles faster than light.
+
+121
+00:03:29,846 --> 00:03:32,766
+After the announcement, scientists everywhere started digging.
+
+122
+00:03:32,806 --> 00:03:33,783
+Not to believe it.
+
+123
+00:03:33,823 --> 00:03:34,653
+To break it.
+
+124
+00:03:34,693 --> 00:03:35,771
+As it should be.
+
+125
+00:03:36,734 --> 00:03:39,154
+Five months later, the team found the mistake.
+
+126
+00:03:39,939 --> 00:03:42,994
+A fibre-optic cable carrying the GPS time signal...
+
+127
+00:03:43,034 --> 00:03:44,553
+wasn't plugged all the way in.
+
+128
+00:03:44,593 --> 00:03:46,479
+And a clock was off.
+
+129
+00:03:46,519 --> 00:03:49,330
+Tiny problems, but enough to create those sixty
+
+130
+00:03:49,370 --> 00:03:51,727
+billionths they were so excited about.
+
+131
+00:03:51,767 --> 00:03:54,579
+Meanwhile, another experiment in the same Italian lab,
+
+132
+00:03:54,619 --> 00:03:56,885
+ICARUS, timed the same particles:
+
+133
+00:03:56,925 --> 00:03:58,436
+exactly the speed of light.
+
+134
+00:03:58,476 --> 00:04:00,204
+Not faster, not slower.
+
+135
+00:04:00,749 --> 00:04:02,554
+Cable fixed, math redone:
+
+136
+00:04:02,594 --> 00:04:03,906
+the speed of light.
+
+137
+00:04:03,946 --> 00:04:05,637
+Einstein wins.
+
+138
+00:04:05,677 --> 00:04:07,043
+The leader had resigned.
+
+139
+00:04:07,083 --> 00:04:07,965
+Who caught it, sir?
+
+140
+00:04:08,005 --> 00:04:08,888
+Not a journalist.
+
+141
+00:04:08,928 --> 00:04:09,632
+Not a government.
+
+142
+00:04:09,672 --> 00:04:11,015
+Science itself.
+
+143
+00:04:11,055 --> 00:04:12,216
+In under a year.
+
+144
+00:04:12,256 --> 00:04:14,955
+There's a word humans misuse all the time:
+
+145
+00:04:14,995 --> 00:04:15,658
+theory.
+
+146
+00:04:15,698 --> 00:04:18,090
+On the street, a theory is a hunch.
+
+147
+00:04:18,130 --> 00:04:18,677
+As in:
+
+148
+00:04:18,717 --> 00:04:21,455
+I bet my neighbor steals my newspaper.
+
+149
+00:04:21,495 --> 00:04:23,803
+But to scientists, the word means something else
+
+150
+00:04:23,843 --> 00:04:24,847
+entirely.
+
+151
+00:04:24,887 --> 00:04:26,639
+It starts as a hypothesis:
+
+152
+00:04:26,679 --> 00:04:27,944
+a guess you can test.
+
+153
+00:04:27,984 --> 00:04:30,837
+Tested a lot, survives, predicts things nobody has
+
+154
+00:04:30,877 --> 00:04:31,613
+seen yet...
+
+155
+00:04:31,653 --> 00:04:33,841
+only then is it a theory.
+
+156
+00:04:33,881 --> 00:04:35,644
+A theory isn't the bottom of the ladder,
+
+157
+00:04:35,684 --> 00:04:36,105
+sir.
+
+158
+00:04:36,145 --> 00:04:37,033
+It's the top.
+
+159
+00:04:37,073 --> 00:04:37,809
+Take gravity.
+
+160
+00:04:37,849 --> 00:04:39,262
+Nobody calls it a hunch.
+
+161
+00:04:40,312 --> 00:04:42,176
+Nobody steps off a roof to check.
+
+162
+00:04:42,780 --> 00:04:45,172
+And that diseases come from tiny creatures you
+
+163
+00:04:45,212 --> 00:04:47,845
+can't see, germs, is also a theory.
+
+164
+00:04:47,885 --> 00:04:49,809
+It's why humans wash their hands.
+
+165
+00:04:49,849 --> 00:04:51,304
+That one gets its own report.
+
+166
+00:04:52,559 --> 00:04:55,035
+A harder test than explaining the past:
+
+167
+00:04:55,075 --> 00:04:56,876
+predicting what will happen.
+
+168
+00:04:57,535 --> 00:05:00,556
+In seventeen oh five, an Englishman, Edmond Halley,
+
+169
+00:05:00,596 --> 00:05:03,169
+read old records of comets.
+
+170
+00:05:03,209 --> 00:05:05,611
+He noticed one showed up about every seventy-six
+
+171
+00:05:05,651 --> 00:05:06,236
+years.
+
+172
+00:05:06,276 --> 00:05:07,326
+Not three comets.
+
+173
+00:05:07,366 --> 00:05:09,644
+One comet, coming back.
+
+174
+00:05:09,684 --> 00:05:11,279
+Using gravity, he said:
+
+175
+00:05:11,319 --> 00:05:14,351
+it returns around seventeen fifty-eight.
+
+176
+00:05:14,391 --> 00:05:15,791
+He died sixteen years before.
+
+177
+00:05:15,831 --> 00:05:18,019
+And on Christmas night, seventeen fifty-eight...
+
+178
+00:05:18,059 --> 00:05:19,383
+the comet appeared.
+
+179
+00:05:19,423 --> 00:05:20,513
+It bears his name.
+
+180
+00:05:20,553 --> 00:05:22,652
+Imagine signing a prediction you won't live to
+
+181
+00:05:22,692 --> 00:05:23,737
+see.
+
+182
+00:05:23,777 --> 00:05:25,792
+Crazy, or sure of your method.
+
+183
+00:05:25,832 --> 00:05:26,952
+He wasn't crazy.
+
+184
+00:05:27,134 --> 00:05:27,742
+Right.
+
+185
+00:05:27,782 --> 00:05:28,768
+Back to the question:
+
+186
+00:05:28,808 --> 00:05:30,628
+why do humans trust science?
+
+187
+00:05:30,668 --> 00:05:33,453
+Not because scientists are smarter, or never wrong.
+
+188
+00:05:33,493 --> 00:05:35,548
+They're wrong constantly, as we've seen.
+
+189
+00:05:35,636 --> 00:05:37,647
+Humans trust it for two reasons.
+
+190
+00:05:37,863 --> 00:05:38,368
+One:
+
+191
+00:05:38,408 --> 00:05:40,339
+it's the only method built to hunt its
+
+192
+00:05:40,379 --> 00:05:41,583
+own mistakes.
+
+193
+00:05:42,438 --> 00:05:43,918
+Anyone can repeat the experiment.
+
+194
+00:05:43,958 --> 00:05:45,517
+Prove the big names wrong, and you get
+
+195
+00:05:45,557 --> 00:05:47,007
+a prize, not punishment.
+
+196
+00:05:47,047 --> 00:05:48,446
+Not one scientist, sir.
+
+197
+00:05:48,486 --> 00:05:49,384
+That's a mistake too.
+
+198
+00:05:49,424 --> 00:05:51,984
+We trust many teams, in different countries, who
+
+199
+00:05:52,024 --> 00:05:54,457
+dislike each other and chase the same prize,
+
+200
+00:05:54,497 --> 00:05:57,378
+repeating the experiment and getting the same result.
+
+201
+00:05:57,883 --> 00:06:00,191
+Then a conspiracy gets very hard.
+
+202
+00:06:00,231 --> 00:06:01,991
+It needs everyone to agree.
+
+203
+00:06:02,145 --> 00:06:04,309
+Scientists never agree on anything, sir...
+
+204
+00:06:04,349 --> 00:06:06,025
+except results that repeat.
+
+205
+00:06:06,065 --> 00:06:06,863
+Reason two:
+
+206
+00:06:06,903 --> 00:06:07,702
+it works.
+
+207
+00:06:07,742 --> 00:06:09,840
+The phone in your hand, the plane overhead,
+
+208
+00:06:09,880 --> 00:06:12,083
+the bridge you're crossing.
+
+209
+00:06:12,123 --> 00:06:13,750
+All scientific predictions.
+
+210
+00:06:13,790 --> 00:06:15,710
+Humans bet their lives on them daily.
+
+211
+00:06:15,750 --> 00:06:17,405
+And win.
+
+212
+00:06:17,445 --> 00:06:18,718
+The Human Dictionary.
+
+213
+00:06:18,758 --> 00:06:19,623
+Two words.
+
+214
+00:06:19,663 --> 00:06:20,637
+Hypothesis:
+
+215
+00:06:20,677 --> 00:06:22,882
+a testable guess, not yet proven.
+
+216
+00:06:22,922 --> 00:06:23,595
+Theory:
+
+217
+00:06:23,635 --> 00:06:26,758
+a hypothesis tested a thousand times that held.
+
+218
+00:06:26,798 --> 00:06:27,688
+Not a hunch.
+
+219
+00:06:27,728 --> 00:06:28,598
+Summary, sir.
+
+220
+00:06:28,638 --> 00:06:29,176
+One:
+
+221
+00:06:29,216 --> 00:06:31,036
+science isn't a book of answers.
+
+222
+00:06:31,076 --> 00:06:33,100
+It's a method for not fooling yourself.
+
+223
+00:06:33,140 --> 00:06:33,582
+Two:
+
+224
+00:06:33,622 --> 00:06:36,070
+a scientific claim must be able to fail.
+
+225
+00:06:36,110 --> 00:06:37,609
+Otherwise, it's a garage dragon.
+
+226
+00:06:37,649 --> 00:06:38,196
+Three:
+
+227
+00:06:38,236 --> 00:06:41,099
+scientists make mistakes, but the method catches them.
+
+228
+00:06:41,139 --> 00:06:43,431
+Like the cable faster than light.
+
+229
+00:06:43,471 --> 00:06:44,228
+I must admit:
+
+230
+00:06:44,268 --> 00:06:46,450
+humans invented the only club on the planet
+
+231
+00:06:46,490 --> 00:06:49,362
+that pays you to prove it wrong.
+
+232
+00:06:49,402 --> 00:06:50,138
+Next report:
+
+233
+00:06:50,178 --> 00:06:52,297
+how research is done, who checks it before
+
+234
+00:06:52,337 --> 00:06:54,655
+it reaches you, and how one journalist fooled
+
+235
+00:06:54,695 --> 00:06:56,747
+the world with chocolate.
+
+236
+00:06:56,787 --> 00:06:57,834
+This was Earth Report.
+
+237
+00:06:57,874 --> 00:06:58,543
+Agent Peek.
+
+238
+00:06:58,583 --> 00:06:59,687
+End of transmission.
