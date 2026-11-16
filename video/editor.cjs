@@ -103,7 +103,7 @@ function build({ cues, plan, acting, slides, N, FPS, tAudio, caption }) {
     shots = cues.shots ? Object.fromEntries(Object.entries(base).map(([k, v]) => [k, { ...v, ...(cues.shots[k] || {}) }])) : base;   // settings.shots loosens or tightens a framing per episode
   let pip = 0, room = 0, side = "right";
   // peekFixed (a Short): Peek stands at the bottom the whole time, so a beat without a picture keeps the last one, frozen
-  const fixed = vert && !!cues.peekFixed, firstBoard = fixed ? segs.find((g) => g.full && g.kind === "board") : null;
+  const fixed = vert && !!cues.peekFixed, firstBoard = fixed ? (segs.find((g) => g.full && g.kind === "board" && g.t >= (cues.from ?? 0) - 0.3) || segs.find((g) => g.full && g.kind === "board")) : null;   // the first picture of this cut, not of the whole episode
   // where he stands: the side a beat leaves clear (its host: right | left), kept until another beat says otherwise; a Short can name sides by time
   const sides = fixed ? (cues.peekFixed.sides || []) : [];
   let fixSide = (cues.peekFixed && cues.peekFixed.side) || "right", fixX = fixSide === "left" ? 0 : 1;
