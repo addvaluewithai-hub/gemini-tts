@@ -1,0 +1,992 @@
+{
+ "title": "تقرير الأرض: العلم 1 (world picture)",
+ "recorded_for": "2026-11-24",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture (one video, several audio tracks), drawn in the sets style of explain-crypto-01-world: no Arabic on screen, no burned-in captions, every board beat a wordless illustrated shot (video/sets/sci-*.js). Script: ../explain-science-01-ar/script.md, words unchanged.",
+  "Earth Report field file: Science, part 1 of 4. What science is: a method for not fooling yourself; Eratosthenes measuring the planet with a stick and a shadow; why a claim that cannot fail is not science (the dragon in the garage); the 2011 OPERA 'faster than light' neutrinos and the loose cable; what 'theory' means to scientists; Halley's prediction; why the method earns trust.",
+  "Facts (sources in ../explain-science-01-ar/plan.md): OPERA announced in September 2011 neutrinos arriving about 60 billionths of a second early over about 730 km from CERN (Geneva) to Gran Sasso (Italy), and asked other physicists to check; in February 2012 a loose fibre-optic cable on the GPS timing and a clock problem were found; ICARUS measured light speed; in June 2012 the revised OPERA result agreed with light speed; the OPERA leader stepped down in March 2012. Eratosthenes, about 240 BC: no shadow at noon on the summer solstice in Syene (Aswan), about 7 degrees (1/50 of a circle) in Alexandria, about 5,000 stadia apart, so 250,000 stadia; the stadion's length is uncertain, so 'very close' to 40,000 km.",
+  "General knowledge, not re-checked: the dragon-in-the-garage idea; Eratosthenes ran the Library of Alexandria; the 1919 eclipse measurement of starlight bending; Halley predicted (1705) the return around 1758, died 1742, the comet was seen on Christmas night 1758. No medical or religious claims."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "2 / 5",
+   "icons": [
+    "file",
+    "eye",
+    "rules"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "boards": {
+  "sintro": {
+   "kind": "sintro",
+   "ends": [
+    3.69,
+    4.89,
+    8.8,
+    8.16,
+    2.99
+   ]
+  },
+  "announce": {
+   "kind": "announce",
+   "ends": [
+    8.36,
+    5.25,
+    7.09,
+    1.92,
+    7.05,
+    3.52,
+    5.08
+   ]
+  },
+  "workshop": {
+   "kind": "workshop",
+   "ends": [
+    4.12,
+    3.31,
+    5.95,
+    5.15,
+    4.17,
+    6.47
+   ]
+  },
+  "shadow": {
+   "kind": "shadow",
+   "ends": [
+    4.92,
+    3.13,
+    7.83,
+    5.54,
+    3.96,
+    2.99,
+    2.36,
+    4.91,
+    5.06,
+    7.34,
+    4.45
+   ]
+  },
+  "dragon": {
+   "kind": "dragon",
+   "ends": [
+    2.87,
+    2.15,
+    2.72,
+    2.72,
+    8.84,
+    6.29,
+    7.17,
+    4.45
+   ]
+  },
+  "cable": {
+   "kind": "cable",
+   "ends": [
+    4.86,
+    3.93,
+    3.21,
+    4.65,
+    1.93,
+    5.24,
+    8.99,
+    6.33,
+    5.18
+   ]
+  },
+  "theory": {
+   "kind": "theory",
+   "ends": [
+    9.18,
+    3.1,
+    5.9,
+    3.19,
+    5.71,
+    7.07
+   ]
+  },
+  "halley": {
+   "kind": "halley",
+   "ends": [
+    5.68,
+    3.06,
+    3.41,
+    4.71,
+    1.45,
+    3.58,
+    1.13
+   ]
+  },
+  "trust": {
+   "kind": "trust",
+   "ends": [
+    4.58,
+    6.98,
+    8.46,
+    8.18,
+    6.06,
+    5.33
+   ]
+  },
+  "sdict": {
+   "kind": "sdict",
+   "ends": [
+    5.47,
+    4.81
+   ]
+  },
+  "srecap": {
+   "kind": "srecap",
+   "ends": [
+    5.41,
+    4.51,
+    5.82
+   ]
+  },
+  "sthumb": {
+   "kind": "sthumb"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report. He states the new file at once, crisp and quick, then the strangest story he found.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم واحد في ملف جديد: ملف العلم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "البشر عندهم حاجة اسمها العلم، بيصدّقوها أكتر من أي حاجة تانية.",
+     "show": "board",
+     "board": "sintro",
+     "step": 0
+    },
+    {
+     "say": "بيركبوا طيارات علشانها، وبياخدوا دوا علشانها، وبيبنوا عمارات بعشرين دور علشانها.",
+     "show": "board",
+     "board": "sintro",
+     "step": 1
+    },
+    {
+     "say": "وفي نفس الوقت، نص الكوكب بيسأل نفس السؤال: هو إحنا ليه نصدّق العلما دول؟ مش ممكن يكونوا بيضحكوا علينا؟",
+     "show": "board",
+     "board": "sintro",
+     "step": 2,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "النهارده هشرح لكم العلم ده إيه أصلاً، وليه البشر واثقين فيه.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "وهبدأ بأغرب حكاية لقيتها: سنة ألفين وحداشر، مجموعة علما وقفوا قدام العالم كله وقالوا: إحنا لقينا حاجة أسرع من الضوء.",
+     "show": "board",
+     "board": "sintro",
+     "step": 3
+    },
+    {
+     "say": "وبعدها بكام شهر، طلع المتهم.. <short pause> كابل مش داخل كويس.",
+     "show": "board",
+     "board": "sintro",
+     "step": 4,
+     "emote": "deadpan",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "announce",
+   "story": {
+    "n": 1,
+    "tag": "FASTER THAN LIGHT?",
+    "icon": "atom",
+    "size": 54
+   },
+   "style": "A story told with growing disbelief, then admiration for an honest move, then a dry aside about his own bosses.",
+   "beats": [
+    {
+     "say": "الحكاية يا فندم بدأت في أوروبا. فيه معمل كبير في جنيف اسمه CERN، بيضرب جزيئات صغيرة جداً اسمها نيوترينو، تحت الأرض، لحد معمل تاني في إيطاليا.",
+     "show": "board",
+     "board": "announce",
+     "step": 0
+    },
+    {
+     "say": "المسافة حوالي سبعمية وتلاتين كيلو. وفريق اسمه OPERA كان بيقيس الرحلة دي بالساعة.",
+     "show": "board",
+     "board": "announce",
+     "step": 1
+    },
+    {
+     "say": "سنة ألفين وحداشر، الأرقام طلعت غريبة: الجزيئات وصلت بدري. بدري بحوالي ستين جزء من مليار من الثانية.",
+     "show": "board",
+     "board": "announce",
+     "step": 2
+    },
+    {
+     "say": "يعني أسرع من الضوء. <short pause> وده المفروض مستحيل.",
+     "show": "board",
+     "board": "announce",
+     "step": 3,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "أينشتاين قال إن مفيش حاجة تسبق الضوء، وكل الفيزيا اللي البشر بنوها من مية سنة قايمة على الكلام ده.",
+     "show": "board",
+     "board": "announce",
+     "step": 4
+    },
+    {
+     "say": "هنا البشر عندهم اختيارين يا فندم.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    },
+    {
+     "say": "يا يخبّوا النتيجة في الدرج. يا يعلنوها ويقولوا: إحنا مش مصدّقين نفسنا.",
+     "show": "board",
+     "board": "announce",
+     "step": 5
+    },
+    {
+     "say": "وهم عملوا التانية. عملوا مؤتمر صحفي، وقالوا للعالم كله: دي أرقامنا، دوّروا لنا على الغلطة.",
+     "show": "board",
+     "board": "announce",
+     "step": 6,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "وأنا لما قريت ده يا فندم، قعدت ساكت شوية. <short pause> عندنا في القيادة، اللي يقول إنه غلطان بينقلوه قسم الأرشيف.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "workshop",
+   "story": {
+    "n": 2,
+    "tag": "METHOD",
+    "icon": "gear"
+   },
+   "style": "Patient teacher correcting a common mistake, simple and firm.",
+   "beats": [
+    {
+     "say": "أول حاجة لازم تفهموها: البشر فاكرين إن العلم كتاب كبير فيه الإجابات.",
+     "show": "board",
+     "board": "workshop",
+     "step": 0
+    },
+    {
+     "say": "الأرض بتلف حوالين الشمس، المية بتغلي على مية درجة، وهكذا.",
+     "show": "board",
+     "board": "workshop",
+     "step": 1
+    },
+    {
+     "say": "بس ده مش العلم يا فندم. ده اللي فاضل بعد العلم.",
+     "show": "board",
+     "board": "workshop",
+     "step": 2,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "العلم نفسه طريقة. طريقة علشان البني آدم مايضحكش على نفسه.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "وهي بسيطة جداً: قول حاجة ممكن تتجرب. جرّبها. وبعدين حاول بكل قوتك تثبت إنها غلط.",
+     "show": "board",
+     "board": "workshop",
+     "step": 3
+    },
+    {
+     "say": "لو صمدت، نصدّقها شوية. لو صمدت قدام ناس كتير مش بيحبوك.. نصدّقها أكتر.",
+     "show": "board",
+     "board": "workshop",
+     "step": 4
+    },
+    {
+     "say": "يعني العلم مش مكتبة يا فندم. العلم ورشة. وكل حاجة في الورشة دي ممكن تتفك وتتركّب من أول وجديد، حتى أينشتاين نفسه.",
+     "show": "board",
+     "board": "workshop",
+     "step": 5,
+     "emote": "proud",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "shadow",
+   "story": {
+    "n": 3,
+    "tag": "STICK & SHADOW",
+    "icon": "sun",
+    "size": 54
+   },
+   "style": "Wonder at an old, simple idea, told step by step like a puzzle being solved.",
+   "beats": [
+    {
+     "say": "وعلشان تعرفوا الطريقة دي قديمة قد إيه، روحت لحكاية من أكتر من ألفين ومتين سنة.",
+     "show": "board",
+     "board": "shadow",
+     "step": 0
+    },
+    {
+     "say": "راجل اسمه Eratosthenes، كان مسؤول عن مكتبة إسكندرية.",
+     "show": "board",
+     "board": "shadow",
+     "step": 1
+    },
+    {
+     "say": "سمع إن في مدينة في الجنوب اسمها أسوان، في يوم معين في الصيف، الضهر بالظبط، الشمس بتنور قاع البير. يعني مفيش ضل خالص.",
+     "show": "board",
+     "board": "shadow",
+     "step": 2
+    },
+    {
+     "say": "فعمل حاجة بسيطة: في نفس اليوم، في نفس الساعة، غرز عصاية في الأرض في إسكندرية. ولقى لها ضل.",
+     "show": "board",
+     "board": "shadow",
+     "step": 3
+    },
+    {
+     "say": "ضل صغير، زاويته حوالي سبع درجات. يعني جزء من خمسين من الدايرة.",
+     "show": "board",
+     "board": "shadow",
+     "step": 4
+    },
+    {
+     "say": "فقال: لو الأرض مسطحة، الضلين المفروض يبقوا زي بعض.",
+     "show": "board",
+     "board": "shadow",
+     "step": 5
+    },
+    {
+     "say": "بما إنهم مختلفين.. <short pause> يبقى الأرض مدوّرة.",
+     "show": "board",
+     "board": "shadow",
+     "step": 6
+    },
+    {
+     "say": "وبما إن الفرق جزء من خمسين، يبقى المسافة بين المدينتين جزء من خمسين من لفّة الأرض كلها.",
+     "show": "board",
+     "board": "shadow",
+     "step": 7
+    },
+    {
+     "say": "المسافة اتقاست بالخطوات، حوالي خمس آلاف استاديون. ضرب في خمسين، وطلع ميتين وخمسين ألف.",
+     "show": "board",
+     "board": "shadow",
+     "step": 8
+    },
+    {
+     "say": "البشر لحد النهارده مختلفين الاستاديون ده طوله قد إيه بالظبط، بس على أغلب الحسابات، الرقم قريب جداً من الأربعين ألف كيلو الحقيقيين.",
+     "show": "board",
+     "board": "shadow",
+     "step": 9,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "من غير طيارة، ولا قمر صناعي، ولا إنترنت. عصاية، وضل، ودماغ.",
+     "show": "board",
+     "board": "shadow",
+     "step": 10
+    },
+    {
+     "say": "وأهم حاجة في الحكاية مش الرقم يا فندم. أهم حاجة إن أي حد في الدنيا، معاه عصاية وصاحب في مدينة تانية، يقدر يعيدها النهارده ويشوف بنفسه.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "ومحتاجش يصدّق Eratosthenes. <short pause> يجرّب.",
+     "shot": "close",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "dragon",
+   "story": {
+    "n": 4,
+    "tag": "DRAGON",
+    "icon": "ghost"
+   },
+   "style": "A comic thought experiment, played straight, then the serious rule it proves.",
+   "beats": [
+    {
+     "say": "طب إيه اللي يخلّي كلام يبقى علمي، وكلام تاني لأ؟",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "تخيّل يا فندم واحد جه قال لك: عندي تنين في الجراج.",
+     "show": "board",
+     "board": "dragon",
+     "step": 0
+    },
+    {
+     "say": "تقول له: وريني. يقول لك: ده تنين مش بيتشاف.",
+     "show": "board",
+     "board": "dragon",
+     "step": 1
+    },
+    {
+     "say": "طب نرش دقيق على الأرض نشوف رجليه. يقول لك: ده بيطير.",
+     "show": "board",
+     "board": "dragon",
+     "step": 2
+    },
+    {
+     "say": "طب نقيس حرارة النار اللي بيطلّعها. يقول لك: ناره باردة.",
+     "show": "board",
+     "board": "dragon",
+     "step": 3
+    },
+    {
+     "say": "كل ما تجيب طريقة تختبر بيها، يجيب لك سبب.",
+     "show": "board",
+     "board": "dragon",
+     "step": 4,
+     "emote": "bored",
+     "host": "right"
+    },
+    {
+     "say": "الكلام ده ممكن يكون صح، وممكن يكون غلط، بس عمره ما هيبقى علم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "ليه؟ لأن مفيش أي تجربة في الدنيا ممكن تثبت إنه غلط.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "وده أهم شرط عند البشر في العلم: لازم الكلام يكون ممكن يغلط. لازم تقول: لو حصل كذا، أبقى أنا غلطان.",
+     "show": "board",
+     "board": "dragon",
+     "step": 5
+    },
+    {
+     "say": "أينشتاين نفسه عمل كده. نظريته قالت إن ضوء النجوم اللي بيعدّي جنب الشمس لازم يتني بقدر معين. لو ما اتناش، تبقى النظرية غلط.",
+     "show": "board",
+     "board": "dragon",
+     "step": 6
+    },
+    {
+     "say": "وسنة ألف تسعمية تسعتاشر، البشر استنوا كسوف الشمس، وراحوا قاسوا. <short pause> والضوء اتنى.",
+     "show": "board",
+     "board": "dragon",
+     "step": 7,
+     "emote": "proud",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "cable",
+   "story": {
+    "n": 5,
+    "tag": "THE CABLE",
+    "icon": "cable"
+   },
+   "style": "Back to the mystery, now an investigation; quick and precise, then a quiet note about the team leader.",
+   "beats": [
+    {
+     "say": "نرجع للجزيئات اللي أسرع من الضوء. بعد الإعلان، علما من كل حتة في العالم قعدوا يدوّروا.",
+     "show": "board",
+     "board": "cable",
+     "step": 0
+    },
+    {
+     "say": "مش علشان يصدّقوا. علشان يكسروا النتيجة. وده بالظبط اللي المفروض يحصل.",
+     "show": "board",
+     "board": "cable",
+     "step": 1,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "وبعد حوالي خمس شهور، الفريق نفسه لقى الغلطة.",
+     "show": "board",
+     "board": "cable",
+     "step": 2
+    },
+    {
+     "say": "كابل ألياف ضوئية بيوصّل إشارة الوقت من جهاز الـ GPS للكمبيوتر.. ماكانش داخل للآخر.",
+     "show": "board",
+     "board": "cable",
+     "step": 3
+    },
+    {
+     "say": "وكمان فيه ساعة في الجهاز كانت ماشية غلط.",
+     "show": "board",
+     "board": "cable",
+     "step": 4
+    },
+    {
+     "say": "مشاكل صغيرة جداً، بس كفاية تغيّر النتيجة الستين جزء من مليار اللي كانوا فرحانين بيهم.",
+     "show": "board",
+     "board": "cable",
+     "step": 5,
+     "emote": "deadpan",
+     "host": "left"
+    },
+    {
+     "say": "وفي نفس الوقت، تجربة تانية في نفس المعمل الإيطالي، اسمها ICARUS، قاست سرعة نفس الجزيئات. ولقيتها ماشية بسرعة الضوء بالظبط. لا أسرع، ولا أبطأ.",
+     "show": "board",
+     "board": "cable",
+     "step": 6
+    },
+    {
+     "say": "وبعد ما الفريق صلّح الكابل وعاد الحسابات، طلعت النتيجة: سرعة الضوء. أينشتاين كسب.",
+     "show": "board",
+     "board": "cable",
+     "step": 7
+    },
+    {
+     "say": "ورئيس الفريق كان استقال قبلها.",
+     "shot": "close",
+     "emote": "neutral"
+    },
+    {
+     "say": "ولاحظ يا فندم، مين اللي كشف الغلطة؟ مش صحفي، ولا حكومة. العلم نفسه. في أقل من سنة.",
+     "show": "board",
+     "board": "cable",
+     "step": 8,
+     "emote": "serious",
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "theory",
+   "story": {
+    "n": 6,
+    "tag": "THEORY",
+    "icon": "rules"
+   },
+   "style": "Clearing up a word everyone gets wrong, with a neighbourly joke and a dry one.",
+   "beats": [
+    {
+     "say": "فيه كلمة البشر بيستخدموها غلط طول الوقت: نظرية.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "في الشارع، لما حد يقول عندي نظرية، يقصد عنده تخمين. يعني: أنا حاسس إن جاري هو اللي بياخد الجرنال.",
+     "show": "board",
+     "board": "theory",
+     "step": 0
+    },
+    {
+     "say": "بس عند العلما، الكلمة دي معناها حاجة تانية خالص.",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "البداية بتبقى فرضية: تخمين ممكن يتجرب.",
+     "show": "board",
+     "board": "theory",
+     "step": 1
+    },
+    {
+     "say": "لو اتجرّبت كتير، وصمدت، ونجحت تتنبأ بحاجات ماحدش شافها لسه.. ساعتها بس تبقى نظرية.",
+     "show": "board",
+     "board": "theory",
+     "step": 2
+    },
+    {
+     "say": "يعني النظرية عندهم مش أول السلم يا فندم. دي آخره.",
+     "show": "board",
+     "board": "theory",
+     "step": 3,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "نظرية الجاذبية مثلاً. محدش بيقول عليها: أي كلام.",
+     "show": "board",
+     "board": "theory",
+     "step": 4
+    },
+    {
+     "say": "بدليل إن محدش بينط من الشباك علشان يجرّبها.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "ونظرية إن الأمراض بتيجي من كائنات صغيرة مابتتشافش بالعين، الجراثيم، دي كمان نظرية. وبسببها البشر بيغسلوا إيديهم.",
+     "show": "board",
+     "board": "theory",
+     "step": 5
+    },
+    {
+     "say": "وده موضوع، صدّقني، ليه حكاية في تقرير جاي.",
+     "shot": "host",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "halley",
+   "story": {
+    "n": 7,
+    "tag": "HALLEY",
+    "icon": "comet"
+   },
+   "style": "A slow-building story with a quiet, moving end.",
+   "beats": [
+    {
+     "say": "وفيه اختبار أصعب من إنك تشرح حاجة حصلت: إنك تقول حاجة هتحصل، قبل ما تحصل.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "count"
+    },
+    {
+     "say": "سنة ألف سبعمية وخمسة، راجل إنجليزي اسمه Edmond Halley كان بيقرا تسجيلات قديمة لمذنّبات ظهرت في السما.",
+     "show": "board",
+     "board": "halley",
+     "step": 0
+    },
+    {
+     "say": "لاحظ إن فيه مذنّب بيظهر كل حوالي ستة وسبعين سنة.",
+     "show": "board",
+     "board": "halley",
+     "step": 1
+    },
+    {
+     "say": "فقال: ده مش تلات مذنبات. ده مذنب واحد بيرجع.",
+     "show": "board",
+     "board": "halley",
+     "step": 2
+    },
+    {
+     "say": "وحسب بقوانين الجاذبية، وقال: هيرجع تاني حوالي سنة ألف سبعمية تمانية وخمسين.",
+     "show": "board",
+     "board": "halley",
+     "step": 3
+    },
+    {
+     "say": "Halley مات قبلها بستاشر سنة.",
+     "show": "board",
+     "board": "halley",
+     "step": 4
+    },
+    {
+     "say": "وفي ليلة الكريسماس سنة تمانية وخمسين.. <short pause> المذنّب ظهر.",
+     "show": "board",
+     "board": "halley",
+     "step": 5
+    },
+    {
+     "say": "البشر سمّوه باسمه.",
+     "show": "board",
+     "board": "halley",
+     "step": 6,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "تخيّل يا فندم تحط اسمك على تنبؤ هتموت قبل ما تشوفه.",
+     "shot": "host",
+     "emote": "serious"
+    },
+    {
+     "say": "ده يا مجنون، يا واثق في الطريقة اللي حسب بيها. <short pause> وهو ماكانش مجنون.",
+     "shot": "close",
+     "emote": "proud"
+    }
+   ]
+  },
+  {
+   "id": "trust",
+   "story": {
+    "n": 8,
+    "tag": "WHY TRUST IT",
+    "icon": "shield",
+    "size": 54
+   },
+   "style": "The answer to the episode's question: clear, warm, with one dry joke about scientists.",
+   "beats": [
+    {
+     "say": "طيب. نرجع للسؤال الأصلي: ليه البشر يصدّقوا العلم؟",
+     "shot": "host",
+     "emote": "neutral"
+    },
+    {
+     "say": "مش علشان العلما أذكى من باقي الناس. ولا علشان مابيغلطوش. ده هم بيغلطوا طول الوقت، زي ما شفنا.",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "البشر بيصدّقوه علشان سببين.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "الأول: هو الطريقة الوحيدة عندهم اللي مبنية علشان تدوّر على غلطها بنفسها.",
+     "show": "board",
+     "board": "trust",
+     "step": 0
+    },
+    {
+     "say": "أي واحد يقدر يعيد التجربة. وأي عالم يثبت إن الكبار غلطانين.. بياخد جايزة، مش عقاب.",
+     "show": "board",
+     "board": "trust",
+     "step": 1
+    },
+    {
+     "say": "ومش بنصدّق عالم واحد يا فندم. ده غلط برضه.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "اللي بنصدّقه هو لما فرق كتير، في بلاد مختلفة، مش بيحبوا بعض، ومنافسين على نفس الجايزة، يعيدوا نفس التجربة ويوصلوا لنفس النتيجة.",
+     "show": "board",
+     "board": "trust",
+     "step": 2
+    },
+    {
+     "say": "ساعتها الكلام ده بيبقى صعب جداً يكون مؤامرة. لأن المؤامرة محتاجة الكل يتفق.",
+     "show": "board",
+     "board": "trust",
+     "step": 3,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "والعلما يا فندم ماتفقوش على حاجة في حياتهم.. <short pause> غير على النتايج اللي اتكررت.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "والسبب التاني أبسط: إنها بتشتغل. الموبايل اللي في إيدك، والطيارة اللي فوق راسك، والكوبري اللي معدّي عليه.",
+     "show": "board",
+     "board": "trust",
+     "step": 4
+    },
+    {
+     "say": "كل دول تنبؤات علمية، والبشر بيراهنوا بحياتهم عليها كل يوم. <short pause> والرهان بيكسب.",
+     "show": "board",
+     "board": "trust",
+     "step": 5,
+     "emote": "proud",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "قاموس البشر. كلمتين النهارده. فرضية: تخمين ممكن يتجرب، ولسه ماحدش أثبته.",
+     "show": "board",
+     "board": "sdict",
+     "step": 0
+    },
+    {
+     "say": "ونظرية: فرضية اتجرّبت ألف مرة وصمدت، مش تخمين زي ما الناس فاكرة.",
+     "show": "board",
+     "board": "sdict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, then one sincere line, the teaser, and the sign-off.",
+   "beats": [
+    {
+     "say": "الخلاصة يا فندم. أولاً: العلم مش كتاب إجابات. العلم طريقة علشان ماتضحكش على نفسك.",
+     "show": "board",
+     "board": "srecap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "ثانياً: الكلام العلمي لازم يكون ممكن يغلط، وإلا يبقى تنين في جراج.",
+     "show": "board",
+     "board": "srecap",
+     "step": 1,
+     "host": "right"
+    },
+    {
+     "say": "ثالثاً: العلما بيغلطوا، بس الطريقة نفسها هي اللي بتكشف الغلط، زي الكابل اللي كان أسرع من الضوء.",
+     "show": "board",
+     "board": "srecap",
+     "step": 2,
+     "host": "right"
+    },
+    {
+     "say": "ودي حاجة لازم أعترف بيها: البشر اخترعوا نادي، الوحيد على الكوكب، اللي بيدفع لك لو أثبتّ إنه غلطان.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "في التقرير الجاي: البحث العلمي بيتعمل إزاي؟ ومين بيراجعه قبل ما يوصل لك؟ وإزاي صحفي واحد ضحك على العالم كله بالشوكولاتة.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "ليه نصدّق العلم أصلاً؟ أسرع من الضوء.. وطلع كابل | ملف العلم 1/4",
+   "العلم يعني إيه؟ اشرحه لكائن فضائي | ملف العلم 1/4",
+   "إزاي واحد قاس الأرض بعصاية؟ وليه نصدّق العلما | ملف العلم 1/4"
+  ],
+  "description": [
+   "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن حاجة البشر بيصدّقوها أكتر من أي حاجة: العلم. هو العلم ده إيه أصلاً؟ وليه نصدّقه؟ مش ممكن يكونوا بيضحكوا علينا؟",
+   "",
+   "في التقرير الأول: علما أعلنوا سنة 2011 إنهم لقوا حاجة أسرع من الضوء، وبعدها بكام شهر طلع السبب كابل مش داخل كويس. ومعاه: راجل قاس الأرض بعصاية وضل من أكتر من ألفين سنة، والتنين اللي في الجراج، والفرق بين الفرضية والنظرية، ومذنّب Halley اللي رجع في معاده بعد ما صاحبه مات.",
+   "",
+   "الشرح بسيط ومناسب لأي حد، حتى لو أول مرة يسمع عن الموضوع."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "chapterNames": {
+   "FASTER THAN LIGHT?": "أسرع من الضوء؟",
+   "METHOD": "العلم مش كتاب",
+   "STICK & SHADOW": "عصاية وضل",
+   "DRAGON": "التنين اللي في الجراج",
+   "THE CABLE": "الكابل",
+   "THEORY": "نظرية يعني إيه؟",
+   "HALLEY": "التنبؤ: مذنّب Halley",
+   "WHY TRUST IT": "ليه نصدّقه؟",
+   "WORDS": "قاموس البشر",
+   "RECAP": "الخلاصة"
+  },
+  "sources": [
+   "تجربة OPERA والكابل اللي فسّر النتيجة (2012): https://www.livescience.com/18603-error-faster-light-neutrinos.html",
+   "استقالة رئيس فريق OPERA (2012): https://www.theregister.co.uk/2012/03/30/opera_spokesperson_resigns/",
+   "Eratosthenes وقياس محيط الأرض (APS): https://aps.org/publications/apsnews/200606/history.cfm"
+  ],
+  "footer": [
+   "دي حلقة من ملف من أربع تقارير عن العلم. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش نصيحة طبية.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#العلم",
+   "#ملف_العلم"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "ملف العلم",
+   "ليه نصدق العلم",
+   "يعني إيه علم",
+   "المنهج العلمي",
+   "أسرع من الضوء",
+   "نيوترينو",
+   "OPERA",
+   "CERN",
+   "إراتوستينس",
+   "Eratosthenes",
+   "قياس محيط الأرض",
+   "مذنب هالي",
+   "Halley",
+   "الفرق بين الفرضية والنظرية",
+   "نظرية علمية",
+   "التنين في الجراج",
+   "اشرحها لكائن فضائي",
+   "Earth Report",
+   "تبسيط العلوم",
+   "شرح علمي"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العلم (four parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "لو عندك تنين في الجراج، إيه التجربة اللي تثبت إنه مش موجود؟ اكتب فكرتك. القيادة بتقرا التعليقات."
+ }
+}
