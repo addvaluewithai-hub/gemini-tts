@@ -115,7 +115,13 @@
     ]
    },
    "look": "fixed",
-   "captions": false
+   "captions": false,
+   "video": {
+    "id": "hQ1kl3AN53c",
+    "url": "https://youtube.com/shorts/hQ1kl3AN53c",
+    "privacy": "private",
+    "publishAt": "2026-11-16T19:00:00Z"
+   }
   },
   {
    "key": "dragon",
