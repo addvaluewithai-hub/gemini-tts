@@ -170,7 +170,13 @@
     ]
    },
    "look": "fixed",
-   "captions": false
+   "captions": false,
+   "video": {
+    "id": "Mas9sdtYXU4",
+    "url": "https://youtube.com/shorts/Mas9sdtYXU4",
+    "privacy": "private",
+    "publishAt": "2026-11-17T09:00:00Z"
+   }
   },
   {
    "key": "halley",
