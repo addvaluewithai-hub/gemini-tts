@@ -1,0 +1,1059 @@
+1
+00:00:00,505 --> 00:00:01,141
+Sir.
+
+2
+00:00:01,181 --> 00:00:03,820
+Field report two in the Science File.
+
+3
+00:00:03,880 --> 00:00:06,488
+In twenty fifteen, newspapers in many countries ran
+
+4
+00:00:06,528 --> 00:00:07,435
+the same story:
+
+5
+00:00:07,475 --> 00:00:10,266
+a scientific study says chocolate helps you lose
+
+6
+00:00:10,306 --> 00:00:10,726
+weight.
+
+7
+00:00:10,766 --> 00:00:11,774
+People were happy.
+
+8
+00:00:11,814 --> 00:00:12,788
+Shops were happy.
+
+9
+00:00:12,828 --> 00:00:14,115
+Honestly, so was I.
+
+10
+00:00:14,318 --> 00:00:16,049
+Weeks later, its author said:
+
+11
+00:00:16,089 --> 00:00:17,978
+I did it on purpose, to show how
+
+12
+00:00:18,018 --> 00:00:21,095
+easy it is to fool the world.
+
+13
+00:00:21,135 --> 00:00:21,931
+So today:
+
+14
+00:00:21,971 --> 00:00:24,243
+how research is done, who checks it before
+
+15
+00:00:24,283 --> 00:00:26,275
+it reaches you, and how the chocolate got
+
+16
+00:00:26,315 --> 00:00:27,324
+past all of it.
+
+17
+00:00:27,364 --> 00:00:28,341
+And the big question:
+
+18
+00:00:28,381 --> 00:00:30,710
+when you read "a study says", do you
+
+19
+00:00:30,750 --> 00:00:31,635
+believe it?
+
+20
+00:00:31,675 --> 00:00:32,222
+First:
+
+21
+00:00:32,262 --> 00:00:35,032
+humans don't announce discoveries in the street.
+
+22
+00:00:35,072 --> 00:00:37,006
+They write them up in a scientific paper.
+
+23
+00:00:37,046 --> 00:00:37,709
+A paper says:
+
+24
+00:00:37,749 --> 00:00:40,150
+we had this question, we did exactly this,
+
+25
+00:00:40,190 --> 00:00:41,217
+and we found this.
+
+26
+00:00:41,257 --> 00:00:43,271
+And the key part isn't the result, sir.
+
+27
+00:00:43,311 --> 00:00:45,242
+It's "exactly what we did".
+
+28
+00:00:45,282 --> 00:00:46,877
+So anyone else can do the same thing
+
+29
+00:00:46,917 --> 00:00:49,038
+and see if they get the same answer.
+
+30
+00:00:49,078 --> 00:00:51,805
+Humans publish about three million of these papers
+
+31
+00:00:51,845 --> 00:00:52,455
+a year.
+
+32
+00:00:52,495 --> 00:00:54,251
+Three million.
+
+33
+00:00:54,291 --> 00:00:56,641
+If one scientist read a paper a day,
+
+34
+00:00:56,681 --> 00:00:59,031
+one year's worth would take about eight thousand
+
+35
+00:00:59,071 --> 00:00:59,562
+years.
+
+36
+00:00:59,602 --> 00:01:01,651
+So every single day, some paper somewhere says
+
+37
+00:01:01,691 --> 00:01:02,521
+something strange.
+
+38
+00:01:02,561 --> 00:01:04,796
+And newspapers love strange.
+
+39
+00:01:04,836 --> 00:01:06,892
+So how do you know one thing made
+
+40
+00:01:06,932 --> 00:01:07,731
+the difference?
+
+41
+00:01:07,771 --> 00:01:09,063
+Let me explain it with cooking.
+
+42
+00:01:09,103 --> 00:01:10,096
+Two pots of soup.
+
+43
+00:01:10,136 --> 00:01:12,410
+One gets a new spice, the other doesn't.
+
+44
+00:01:12,480 --> 00:01:14,040
+If the first tastes better, was it the
+
+45
+00:01:14,080 --> 00:01:14,555
+spice?
+
+46
+00:01:14,595 --> 00:01:15,557
+Not necessarily.
+
+47
+00:01:15,597 --> 00:01:17,912
+Both pots must match in everything else:
+
+48
+00:01:17,952 --> 00:01:20,496
+same water, same heat, same time.
+
+49
+00:01:20,536 --> 00:01:22,318
+The pot without the spice is the control
+
+50
+00:01:22,358 --> 00:01:22,753
+group:
+
+51
+00:01:22,793 --> 00:01:23,958
+what you compare against.
+
+52
+00:01:23,998 --> 00:01:25,918
+Without it, a result means nothing.
+
+53
+00:01:25,974 --> 00:01:28,038
+And humans have a strange problem, sir:
+
+54
+00:01:28,078 --> 00:01:30,216
+tell them you gave them something helpful, and
+
+55
+00:01:30,256 --> 00:01:32,090
+sometimes they feel better, even if it was
+
+56
+00:01:32,130 --> 00:01:32,802
+sugar water.
+
+57
+00:01:32,842 --> 00:01:34,220
+They call it the placebo.
+
+58
+00:01:34,260 --> 00:01:36,645
+So in serious trials, both groups get something
+
+59
+00:01:36,685 --> 00:01:38,926
+that looks exactly the same, and nobody knows
+
+60
+00:01:38,966 --> 00:01:39,956
+which group they're in.
+
+61
+00:01:39,996 --> 00:01:41,277
+That's a blind trial.
+
+62
+00:01:41,317 --> 00:01:43,863
+In more serious trials, even the person handing
+
+63
+00:01:43,903 --> 00:01:45,913
+it out doesn't know, so it doesn't show.
+
+64
+00:01:45,953 --> 00:01:47,075
+That's double blind.
+
+65
+00:01:47,115 --> 00:01:49,592
+So humans have to blindfold everyone, just to
+
+66
+00:01:49,632 --> 00:01:50,368
+see the truth.
+
+67
+00:01:50,408 --> 00:01:52,883
+The first time humans did something close to
+
+68
+00:01:52,923 --> 00:01:54,036
+this was on a ship.
+
+69
+00:01:54,076 --> 00:01:57,157
+In seventeen forty-seven, in the British navy.
+
+70
+00:01:57,484 --> 00:01:59,079
+Sailors were dying of scurvy:
+
+71
+00:01:59,119 --> 00:02:02,244
+bleeding gums, falling teeth, a body breaking down.
+
+72
+00:02:02,284 --> 00:02:03,554
+Everyone had a cure:
+
+73
+00:02:03,594 --> 00:02:05,666
+vinegar, sea water, cider.
+
+74
+00:02:05,706 --> 00:02:08,102
+A ship's doctor named James Lind didn't take
+
+75
+00:02:08,142 --> 00:02:09,177
+anyone's word for it.
+
+76
+00:02:09,217 --> 00:02:11,271
+He took twelve sick sailors, split them into
+
+77
+00:02:11,311 --> 00:02:13,659
+six pairs, gave each pair a different remedy,
+
+78
+00:02:13,699 --> 00:02:14,950
+same food, same place.
+
+79
+00:02:14,990 --> 00:02:17,184
+Days later, the pair given oranges and lemons
+
+80
+00:02:17,224 --> 00:02:18,770
+were up, and one was back at work
+
+81
+00:02:18,810 --> 00:02:19,743
+in six days.
+
+82
+00:02:19,783 --> 00:02:20,690
+The rest weren't.
+
+83
+00:02:20,730 --> 00:02:22,901
+Twelve sailors, sir, and we learned what the
+
+84
+00:02:22,941 --> 00:02:24,730
+whole empire didn't know.
+
+85
+00:02:24,770 --> 00:02:25,803
+The embarrassing part:
+
+86
+00:02:25,843 --> 00:02:27,812
+the navy acted on it about fifty years
+
+87
+00:02:27,852 --> 00:02:28,310
+later.
+
+88
+00:02:28,350 --> 00:02:30,974
+So sometimes the human problem isn't not knowing...
+
+89
+00:02:31,014 --> 00:02:32,783
+it's knowing, and waiting.
+
+90
+00:02:32,823 --> 00:02:33,506
+Second:
+
+91
+00:02:33,546 --> 00:02:35,315
+how many people were tested.
+
+92
+00:02:35,355 --> 00:02:36,998
+Flip a coin three times and get the
+
+93
+00:02:37,038 --> 00:02:38,517
+same side three times.
+
+94
+00:02:38,557 --> 00:02:39,637
+Is the coin rigged?
+
+95
+00:02:39,677 --> 00:02:40,188
+No, sir.
+
+96
+00:02:40,228 --> 00:02:41,840
+That happens by chance all the time.
+
+97
+00:02:41,880 --> 00:02:43,643
+But flip it a thousand times and get
+
+98
+00:02:43,683 --> 00:02:44,513
+nine hundred...
+
+99
+00:02:44,553 --> 00:02:45,657
+now we're talking.
+
+100
+00:02:45,697 --> 00:02:47,098
+Trials on humans are the same.
+
+101
+00:02:47,138 --> 00:02:48,510
+Fifteen people lost weight?
+
+102
+00:02:48,550 --> 00:02:49,274
+Could be luck.
+
+103
+00:02:49,314 --> 00:02:50,247
+Maybe one was sick.
+
+104
+00:02:50,287 --> 00:02:52,687
+Maybe three skipped dinner because they were traveling.
+
+105
+00:02:52,727 --> 00:02:54,752
+The bigger the number, the smaller the luck.
+
+106
+00:02:54,792 --> 00:02:56,457
+That number is called the sample.
+
+107
+00:02:56,975 --> 00:02:58,779
+"A study of ten people proved"...
+
+108
+00:02:58,819 --> 00:02:59,639
+said something.
+
+109
+00:02:59,679 --> 00:03:01,508
+Proved nothing.
+
+110
+00:03:01,548 --> 00:03:02,756
+Back to the chocolate.
+
+111
+00:03:02,796 --> 00:03:05,313
+The journalist was John Bohannon, with a German
+
+112
+00:03:05,353 --> 00:03:06,228
+TV team.
+
+113
+00:03:06,268 --> 00:03:09,383
+They recruited about fifteen people in three groups.
+
+114
+00:03:09,423 --> 00:03:10,956
+One on a low-carb diet.
+
+115
+00:03:10,996 --> 00:03:12,549
+One on the same diet plus a bar
+
+116
+00:03:12,589 --> 00:03:13,974
+of dark chocolate a day.
+
+117
+00:03:14,014 --> 00:03:15,117
+One changed nothing.
+
+118
+00:03:15,157 --> 00:03:16,246
+Twenty-one days.
+
+119
+00:03:16,357 --> 00:03:18,392
+So far, a respectable trial, right?
+
+120
+00:03:18,432 --> 00:03:20,072
+But here's the trick, sir.
+
+121
+00:03:20,112 --> 00:03:22,430
+They measured not one thing, but eighteen:
+
+122
+00:03:22,470 --> 00:03:24,628
+weight, cholesterol, sleep, mood...
+
+123
+00:03:26,207 --> 00:03:28,221
+Few people, many measurements:
+
+124
+00:03:28,261 --> 00:03:30,066
+something will differ by chance.
+
+125
+00:03:30,106 --> 00:03:32,414
+Like throwing eighteen darts, then drawing the target
+
+126
+00:03:32,454 --> 00:03:34,361
+around one.
+
+127
+00:03:34,401 --> 00:03:35,703
+This time, by chance...
+
+128
+00:03:35,743 --> 00:03:36,195
+weight.
+
+129
+00:03:36,235 --> 00:03:38,009
+The chocolate group lost faster.
+
+130
+00:03:38,049 --> 00:03:39,322
+They wrote the paper and sent it to
+
+131
+00:03:39,362 --> 00:03:39,872
+a journal.
+
+132
+00:03:39,912 --> 00:03:41,802
+It was accepted fast, after a fee of
+
+133
+00:03:41,842 --> 00:03:43,125
+about six hundred euros.
+
+134
+00:03:43,165 --> 00:03:44,633
+Nobody asked a serious question.
+
+135
+00:03:44,673 --> 00:03:46,677
+Then a press release, and the papers did
+
+136
+00:03:46,717 --> 00:03:47,268
+the rest:
+
+137
+00:03:47,308 --> 00:03:49,912
+no reporter asked a scientist how many people.
+
+138
+00:03:49,952 --> 00:03:51,875
+They copied the headline and added a chocolate
+
+139
+00:03:51,915 --> 00:03:52,369
+photo.
+
+140
+00:03:52,409 --> 00:03:54,675
+When Bohannon revealed the hoax, many people were
+
+141
+00:03:54,715 --> 00:03:56,939
+angry at him, saying it was unethical, because
+
+142
+00:03:56,979 --> 00:03:58,574
+he fooled the participants too.
+
+143
+00:03:58,614 --> 00:03:59,799
+Maybe they had a point.
+
+144
+00:03:59,839 --> 00:04:00,933
+But the message landed:
+
+145
+00:04:00,973 --> 00:04:02,983
+the road from lab to newspaper can have
+
+146
+00:04:03,023 --> 00:04:04,210
+no guard at all.
+
+147
+00:04:04,250 --> 00:04:05,195
+The guards?
+
+148
+00:04:05,235 --> 00:04:07,633
+Humans have a system called peer review.
+
+149
+00:04:07,673 --> 00:04:09,831
+A scientist sends a paper to a journal.
+
+150
+00:04:09,871 --> 00:04:11,230
+The journal sends it to two or three
+
+151
+00:04:11,270 --> 00:04:14,501
+experts in the field, often anonymous, and unpaid.
+
+152
+00:04:14,541 --> 00:04:15,010
+They ask:
+
+153
+00:04:15,050 --> 00:04:16,247
+why so few people?
+
+154
+00:04:16,287 --> 00:04:17,375
+Where's the control?
+
+155
+00:04:17,415 --> 00:04:18,321
+How many things measured?
+
+156
+00:04:18,361 --> 00:04:19,339
+Sometimes they reject it.
+
+157
+00:04:19,379 --> 00:04:21,273
+It catches plenty of mistakes, sir.
+
+158
+00:04:21,313 --> 00:04:22,579
+But note two things.
+
+159
+00:04:22,619 --> 00:04:23,011
+One:
+
+160
+00:04:23,051 --> 00:04:24,465
+reviewers only read.
+
+161
+00:04:24,505 --> 00:04:25,968
+They don't redo the experiment.
+
+162
+00:04:26,008 --> 00:04:27,861
+Cleverly faked numbers can get through.
+
+163
+00:04:27,901 --> 00:04:28,381
+Two:
+
+164
+00:04:28,421 --> 00:04:30,386
+not every journal is a journal.
+
+165
+00:04:30,426 --> 00:04:32,225
+Some take anything, if you pay.
+
+166
+00:04:32,265 --> 00:04:33,928
+Looks like a journal, called a journal, and
+
+167
+00:04:33,968 --> 00:04:34,538
+inside...
+
+168
+00:04:34,578 --> 00:04:35,349
+a cash register.
+
+169
+00:04:35,389 --> 00:04:36,521
+That's how the chocolate got in.
+
+170
+00:04:36,561 --> 00:04:39,283
+So what makes humans really trust a result?
+
+171
+00:04:39,323 --> 00:04:40,575
+Someone else repeating it.
+
+172
+00:04:40,615 --> 00:04:43,273
+Another team, in another country, with other people,
+
+173
+00:04:43,313 --> 00:04:44,805
+follows the steps in the paper...
+
+174
+00:04:44,845 --> 00:04:46,067
+and gets the same thing.
+
+175
+00:04:46,107 --> 00:04:48,268
+Only then does it start to become fact.
+
+176
+00:04:48,308 --> 00:04:50,340
+If nobody can repeat it, it stays one
+
+177
+00:04:50,380 --> 00:04:51,044
+result.
+
+178
+00:04:51,084 --> 00:04:53,637
+Maybe right, maybe luck, maybe a loose cable.
+
+179
+00:04:53,677 --> 00:04:55,320
+And there's a sneakier problem, sir.
+
+180
+00:04:55,370 --> 00:04:57,975
+Imagine twenty labs worldwide testing the same idea.
+
+181
+00:04:58,015 --> 00:04:59,822
+Nineteen find nothing, say:
+
+182
+00:04:59,862 --> 00:05:01,638
+nothing to write about, and put the result
+
+183
+00:05:01,678 --> 00:05:02,381
+in a drawer.
+
+184
+00:05:02,421 --> 00:05:04,861
+One, by chance, finds a difference.
+
+185
+00:05:04,901 --> 00:05:05,844
+Which gets published?
+
+186
+00:05:05,884 --> 00:05:06,598
+Only that one.
+
+187
+00:05:06,638 --> 00:05:08,735
+From outside, you see one study saying "we
+
+188
+00:05:08,775 --> 00:05:10,471
+found it", and not the nineteen in the
+
+189
+00:05:10,511 --> 00:05:10,939
+drawer.
+
+190
+00:05:10,979 --> 00:05:12,907
+Humans call it the file drawer problem.
+
+191
+00:05:12,947 --> 00:05:15,383
+So many scientists now write down and register
+
+192
+00:05:15,423 --> 00:05:17,499
+their plan before starting, so they can't say
+
+193
+00:05:17,539 --> 00:05:18,098
+later:
+
+194
+00:05:18,138 --> 00:05:19,805
+we were looking at weight all along.
+
+195
+00:05:19,845 --> 00:05:21,257
+And here's a surprise, sir, for a later
+
+196
+00:05:21,297 --> 00:05:21,705
+report:
+
+197
+00:05:21,745 --> 00:05:23,562
+when humans went back and repeated lots of
+
+198
+00:05:23,602 --> 00:05:26,443
+old studies, they found something very uncomfortable.
+
+199
+00:05:26,574 --> 00:05:28,641
+So I gathered some questions to ask any
+
+200
+00:05:28,681 --> 00:05:30,871
+story that starts with "a study says".
+
+201
+00:05:30,911 --> 00:05:31,270
+One:
+
+202
+00:05:31,310 --> 00:05:32,108
+how many people?
+
+203
+00:05:32,148 --> 00:05:33,647
+Ten or ten thousand?
+
+204
+00:05:33,687 --> 00:05:34,108
+Two:
+
+205
+00:05:34,148 --> 00:05:35,982
+was there a group to compare with?
+
+206
+00:05:36,022 --> 00:05:36,456
+Three:
+
+207
+00:05:36,496 --> 00:05:38,270
+was it on humans, or on mice?
+
+208
+00:05:38,310 --> 00:05:40,839
+Half the amazing news is about mice, sir.
+
+209
+00:05:40,879 --> 00:05:41,635
+Thank you, mouse.
+
+210
+00:05:41,675 --> 00:05:42,836
+But you're not me.
+
+211
+00:05:42,876 --> 00:05:43,268
+Four:
+
+212
+00:05:43,308 --> 00:05:44,956
+did anyone else repeat it and get the
+
+213
+00:05:44,996 --> 00:05:45,708
+same result?
+
+214
+00:05:45,748 --> 00:05:46,127
+Five:
+
+215
+00:05:46,167 --> 00:05:46,902
+who paid for it?
+
+216
+00:05:46,942 --> 00:05:48,787
+Not that paying makes anyone a liar.
+
+217
+00:05:48,827 --> 00:05:49,999
+Just so you know.
+
+218
+00:05:50,293 --> 00:05:51,511
+And six, my favorite:
+
+219
+00:05:51,551 --> 00:05:52,454
+the risk doubled?
+
+220
+00:05:52,494 --> 00:05:54,042
+Doubled from what?
+
+221
+00:05:54,082 --> 00:05:55,761
+If something happened to one in ten thousand
+
+222
+00:05:55,801 --> 00:05:57,858
+people, and now to two in ten thousand...
+
+223
+00:05:57,898 --> 00:05:59,241
+that's exactly double.
+
+224
+00:05:59,281 --> 00:05:59,996
+The headline says:
+
+225
+00:06:00,036 --> 00:06:01,209
+risk doubles!
+
+226
+00:06:01,791 --> 00:06:04,068
+Meanwhile nine thousand, nine hundred and ninety-eight people
+
+227
+00:06:04,108 --> 00:06:05,677
+are just fine, same as before.
+
+228
+00:06:05,717 --> 00:06:06,561
+The number is right.
+
+229
+00:06:06,601 --> 00:06:08,131
+The feeling the headline wants...
+
+230
+00:06:08,171 --> 00:06:08,941
+is wrong.
+
+231
+00:06:08,981 --> 00:06:10,922
+If the story passes all six questions...
+
+232
+00:06:10,962 --> 00:06:11,488
+believe it.
+
+233
+00:06:11,528 --> 00:06:12,428
+A little.
+
+234
+00:06:12,544 --> 00:06:13,955
+The Human Dictionary.
+
+235
+00:06:13,995 --> 00:06:14,584
+Two words.
+
+236
+00:06:14,624 --> 00:06:15,362
+Sample:
+
+237
+00:06:15,402 --> 00:06:17,212
+the people the trial was actually done on.
+
+238
+00:06:17,252 --> 00:06:19,148
+The more there are, the less luck matters.
+
+239
+00:06:19,188 --> 00:06:20,183
+And peer review:
+
+240
+00:06:20,223 --> 00:06:22,185
+scientists who read a study before it's published
+
+241
+00:06:22,225 --> 00:06:24,187
+and look for mistakes, but don't redo the
+
+242
+00:06:24,227 --> 00:06:24,951
+experiment.
+
+243
+00:06:24,991 --> 00:06:26,062
+Summary, sir.
+
+244
+00:06:26,102 --> 00:06:26,691
+One:
+
+245
+00:06:26,731 --> 00:06:29,290
+a decent trial needs a comparison group, a
+
+246
+00:06:29,330 --> 00:06:31,299
+big number, and blindfolds.
+
+247
+00:06:31,811 --> 00:06:32,379
+Two:
+
+248
+00:06:32,419 --> 00:06:34,165
+measure many things in a few people, and
+
+249
+00:06:34,205 --> 00:06:36,750
+you'll find a "discovery" by chance, like the
+
+250
+00:06:36,790 --> 00:06:37,372
+chocolate.
+
+251
+00:06:37,412 --> 00:06:37,944
+Three:
+
+252
+00:06:37,984 --> 00:06:40,273
+review catches a lot, but not everything.
+
+253
+00:06:40,313 --> 00:06:42,398
+The truth shows when someone else repeats the
+
+254
+00:06:42,438 --> 00:06:43,135
+experiment.
+
+255
+00:06:43,175 --> 00:06:45,273
+Honestly, the chocolate wasn't the problem.
+
+256
+00:06:45,313 --> 00:06:47,412
+The problem is that humans love believing the
+
+257
+00:06:47,452 --> 00:06:49,135
+news they like.
+
+258
+00:06:49,175 --> 00:06:49,834
+Next report:
+
+259
+00:06:49,874 --> 00:06:51,965
+why do scientists keep changing their minds?
+
+260
+00:06:52,005 --> 00:06:53,887
+And the doctor who told colleagues to wash
+
+261
+00:06:53,927 --> 00:06:54,560
+their hands...
+
+262
+00:06:54,600 --> 00:06:55,510
+and got fired.
+
+263
+00:06:55,550 --> 00:06:56,740
+This was Earth Report.
+
+264
+00:06:56,780 --> 00:06:57,505
+Agent Peek.
+
+265
+00:06:57,545 --> 00:06:58,686
+End of transmission.

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-16T18:25:17.086Z",
+  "duration_ms": 3280,
+  "word_count": 9,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "طب ازاي تعرف الدراسه اللي تتصدق من اللي لا؟",
+  "source_text": "طب إزاي تعرف الدراسة اللي تتصدّق من اللي لأ؟",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "طب إزاي تعرف الدراسة اللي تتصدّق من اللي لأ؟"
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 400,
+      "text": "طب"
+    },
+    {
+      "start_ms": 400,
+      "end_ms": 720,
+      "text": "ازاي"
+    },
+    {
+      "start_ms": 720,
+      "end_ms": 1080,
+      "text": "تعرف"
+    },
+    {
+      "start_ms": 1080,
+      "end_ms": 1520,
+      "text": "الدراسه"
+    },
+    {
+      "start_ms": 1520,
+      "end_ms": 1680,
+      "text": "اللي"
+    },
+    {
+      "start_ms": 1680,
+      "end_ms": 2320,
+      "text": "تتصدق"
+    },
+    {
+      "start_ms": 2320,
+      "end_ms": 2480,
+      "text": "من"
+    },
+    {
+      "start_ms": 2480,
+      "end_ms": 2680,
+      "text": "اللي"
+    },
+    {
+      "start_ms": 2680,
+      "end_ms": 3000,
+      "text": "لا؟"
+    }
+  ]
+}
