@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T23:24:59.302Z",
+  "duration_ms": 32360,
+  "word_count": 84,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Commander, field report number two. Their moon is not bolted to the sky. I checked and here everything falls. So, it is coming down. I threw apples at it. The harder I threw, the farther they landed. But their planet is round. Throw hard enough and the ground curves away under the apple as fast as it falls. It never lands. It falls all the way around and hits you in the back of the head. So, why doesn't the moon fall? Because it",
+  "source_text": "Commander. Field report number two. Their Moon is not bolted to the sky. I checked. And here, everything falls. So: it is coming down. I threw apples at it. The harder I threw, the farther they landed. But their planet is round. Throw hard enough, and the ground curves away under the apple as fast as it falls. It never lands. It falls all the way around... and hits you in the back of the head. So why doesn't the Moon fall? Because it...",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Commander. Field report number two. Their Moon is not bolted to the sky. I checked. And here, everything falls. So: it is coming down. I threw apples at it. The harder I threw, the farther they landed. But their planet is round. Throw hard enough, and the ground curves away under the apple as fast as it falls. It never lands. It falls all the way around... and hits you in the back of the head. So why doesn't the Moon fall? Because it..."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 160,
+      "end_ms": 920,
+      "text": "Commander,"
+    },
+    {
+      "start_ms": 1280,
+      "end_ms": 1560,
+      "text": "field"
+    },
+    {
+      "start_ms": 1560,
+      "end_ms": 2080,
+      "text": "report"
+    },
+    {
+      "start_ms": 2080,
+      "end_ms": 2400,
+      "text": "number"
+    },
+    {
+      "start_ms": 2400,
+      "end_ms": 2840,
+      "text": "two."
+    },
+    {
+      "start_ms": 3480,
+      "end_ms": 3680,
+      "text": "Their"
+    },
+    {
+      "start_ms": 3680,
+      "end_ms": 4200,
+      "text": "moon"
+    },
+    {
+      "start_ms": 4360,
+      "end_ms": 4560,
+      "text": "is"
+    },
+    {
+      "start_ms": 4560,
+      "end_ms": 5120,
+      "text": "not"
+    },
+    {
+      "start_ms": 5120,
+      "end_ms": 5480,
+      "text": "bolted"
+    },
+    {
+      "start_ms": 5480,
+      "end_ms": 5560,
+      "text": "to"
+    },
+    {
+      "start_ms": 5560,
+      "end_ms": 5640,
+      "text": "the"
+    },
+    {
+      "start_ms": 5640,
+      "end_ms": 6120,
+      "text": "sky."
+    },
+    {
+      "start_ms": 6400,
+      "end_ms": 6520,
+      "text": "I"
+    },
+    {
+      "start_ms": 6520,
+      "end_ms": 7080,
+      "text": "checked"
+    },
+    {
+      "start_ms": 7360,
+      "end_ms": 7560,
+      "text": "and"
+    },
+    {
+      "start_ms": 7560,
+      "end_ms": 8000,
+      "text": "here"
+    },
+    {
+      "start_ms": 8360,
+      "end_ms": 9040,
+      "text": "everything"
+    },
+    {
+      "start_ms": 9040,
+      "end_ms": 9600,
+      "text": "falls."
+    },
+    {
+      "start_ms": 9960,
+      "end_ms": 10360,
+      "text": "So,"
+    },
+    {
+      "start_ms": 10600,
+      "end_ms": 10760,
+      "text": "it"
+    },
+    {
+      "start_ms": 10760,
+      "end_ms": 10920,
+      "text": "is"
+    },
+    {
+      "start_ms": 10920,
+      "end_ms": 11240,
+      "text": "coming"
+    },
+    {
+      "start_ms": 11240,
+      "end_ms": 11680,
+      "text": "down."
+    },
+    {
+      "start_ms": 12240,
+      "end_ms": 12320,
+      "text": "I"
+    },
+    {
+      "start_ms": 12320,
+      "end_ms": 12560,
+      "text": "threw"
+    },
+    {
+      "start_ms": 12560,
+      "end_ms": 12880,
+      "text": "apples"
+    },
+    {
+      "start_ms": 12880,
+      "end_ms": 13040,
+      "text": "at"
+    },
+    {
+      "start_ms": 13040,
+      "end_ms": 13320,
+      "text": "it."
+    },
+    {
+      "start_ms": 13560,
+      "end_ms": 13680,
+      "text": "The"
+    },
+    {
+      "start_ms": 13680,
+      "end_ms": 14000,
+      "text": "harder"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14080,
+      "text": "I"
+    },
+    {
+      "start_ms": 14080,
+      "end_ms": 14520,
+      "text": "threw,"
+    },
+    {
+      "start_ms": 14600,
+      "end_ms": 14720,
+      "text": "the"
+    },
+    {
+      "start_ms": 14720,
+      "end_ms": 15080,
+      "text": "farther"
+    },
+    {
+      "start_ms": 15080,
+      "end_ms": 15200,
+      "text": "they"
+    },
+    {
+      "start_ms": 15200,
+      "end_ms": 15720,
+      "text": "landed."
+    },
+    {
+      "start_ms": 16120,
+      "end_ms": 16280,
+      "text": "But"
+    },
+    {
+      "start_ms": 16280,
+      "end_ms": 16440,
+      "text": "their"
+    },
+    {
+      "start_ms": 16440,
+      "end_ms": 17040,
+      "text": "planet"
+    },
+    {
+      "start_ms": 17040,
+      "end_ms": 17400,
+      "text": "is"
+    },
+    {
+      "start_ms": 17400,
+      "end_ms": 18080,
+      "text": "round."
+    },
+    {
+      "start_ms": 18480,
+      "end_ms": 18720,
+      "text": "Throw"
+    },
+    {
+      "start_ms": 18720,
+      "end_ms": 19000,
+      "text": "hard"
+    },
+    {
+      "start_ms": 19000,
+      "end_ms": 19440,
+      "text": "enough"
+    },
+    {
+      "start_ms": 19480,
+      "end_ms": 19600,
+      "text": "and"
+    },
+    {
+      "start_ms": 19600,
+      "end_ms": 19680,
+      "text": "the"
+    },
+    {
+      "start_ms": 19680,
+      "end_ms": 20200,
+      "text": "ground"
+    },
+    {
+      "start_ms": 20200,
+      "end_ms": 20680,
+      "text": "curves"
+    },
+    {
+      "start_ms": 20680,
+      "end_ms": 21040,
+      "text": "away"
+    },
+    {
+      "start_ms": 21040,
+      "end_ms": 21240,
+      "text": "under"
+    },
+    {
+      "start_ms": 21240,
+      "end_ms": 21440,
+      "text": "the"
+    },
+    {
+      "start_ms": 21440,
+      "end_ms": 21840,
+      "text": "apple"
+    },
+    {
+      "start_ms": 21880,
+      "end_ms": 22080,
+      "text": "as"
+    },
+    {
+      "start_ms": 22080,
+      "end_ms": 22480,
+      "text": "fast"
+    },
+    {
+      "start_ms": 22480,
+      "end_ms": 22600,
+      "text": "as"
+    },
+    {
+      "start_ms": 22600,
+      "end_ms": 22720,
+      "text": "it"
+    },
+    {
+      "start_ms": 22720,
+      "end_ms": 23240,
+      "text": "falls."
+    },
+    {
+      "start_ms": 23560,
+      "end_ms": 23760,
+      "text": "It"
+    },
+    {
+      "start_ms": 23760,
+      "end_ms": 24120,
+      "text": "never"
+    },
+    {
+      "start_ms": 24120,
+      "end_ms": 24680,
+      "text": "lands."
+    },
+    {
+      "start_ms": 24960,
+      "end_ms": 25120,
+      "text": "It"
+    },
+    {
+      "start_ms": 25120,
+      "end_ms": 25440,
+      "text": "falls"
+    },
+    {
+      "start_ms": 25440,
+      "end_ms": 25800,
+      "text": "all"
+    },
+    {
+      "start_ms": 25800,
+      "end_ms": 25920,
+      "text": "the"
+    },
+    {
+      "start_ms": 25920,
+      "end_ms": 26080,
+      "text": "way"
+    },
+    {
+      "start_ms": 26080,
+      "end_ms": 26680,
+      "text": "around"
+    },
+    {
+      "start_ms": 27000,
+      "end_ms": 27400,
+      "text": "and"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 27840,
+      "text": "hits"
+    },
+    {
+      "start_ms": 27840,
+      "end_ms": 27880,
+      "text": "you"
+    },
+    {
+      "start_ms": 27880,
+      "end_ms": 27960,
+      "text": "in"
+    },
+    {
+      "start_ms": 27960,
+      "end_ms": 28000,
+      "text": "the"
+    },
+    {
+      "start_ms": 28000,
+      "end_ms": 28200,
+      "text": "back"
+    },
+    {
+      "start_ms": 28200,
+      "end_ms": 28240,
+      "text": "of"
+    },
+    {
+      "start_ms": 28240,
+      "end_ms": 28320,
+      "text": "the"
+    },
+    {
+      "start_ms": 28320,
+      "end_ms": 28680,
+      "text": "head."
+    },
+    {
+      "start_ms": 29240,
+      "end_ms": 29600,
+      "text": "So,"
+    },
+    {
+      "start_ms": 29960,
+      "end_ms": 30120,
+      "text": "why"
+    },
+    {
+      "start_ms": 30120,
+      "end_ms": 30440,
+      "text": "doesn't"
+    },
+    {
+      "start_ms": 30440,
+      "end_ms": 30520,
+      "text": "the"
+    },
+    {
+      "start_ms": 30520,
+      "end_ms": 30720,
+      "text": "moon"
+    },
+    {
+      "start_ms": 30720,
+      "end_ms": 31120,
+      "text": "fall?"
+    },
+    {
+      "start_ms": 31480,
+      "end_ms": 31960,
+      "text": "Because"
+    },
+    {
+      "start_ms": 31960,
+      "end_ms": 32240,
+      "text": "it"
+    }
+  ]
+}

@@ -33,8 +33,8 @@ python3 audio/ep01_sound.py out/ep01-mix.wav --voices audio/ep01 --shared audio/
 node audio/mouths.cjs out/ep01.json                                                   # lip sync into the cue file
 node render.cjs shots/ep01.js out/x.mp4 --still 0.3,9.7,36.3                          # check frames: out/x.mp4-<t>.jpg
 node render.cjs shots/ep01.js out/peek-ep01-gravity.mp4 --audio out/ep01-mix.wav     # about 13 minutes
-# Episode 2 (drop --placeholder once the takes are in audio/ep02)
-python3 audio/ep02_sound.py out/ep02-mix.wav --voices audio/ep02 --cues out/ep02.json --placeholder
+# Episode 2 (add --placeholder to build without the takes)
+python3 audio/ep02_sound.py out/ep02-mix.wav --voices audio/ep02 --cues out/ep02.json
 node audio/mouths.cjs out/ep02.json
 node render.cjs shots/ep02.js out/x2.mp4 --still 0.3,5.7,22,42.7,61.6,85.2
 # the first test (chase cold open)

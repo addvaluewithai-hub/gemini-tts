@@ -224,7 +224,7 @@ function rFalls(t, env) {
 }
 // ---- the throws on the board, and the planet that turns out to be round
 const ER = 9000, ETOP = 880;                               // the board's ground: the planet's top at y ETOP when it is huge
-const THROWS = [{ R: 230, at: "threw", d: 0.35, dur: 0.55, lab: "HARD" }, { R: 440, at: "harder", d: 0.1, dur: 0.75, lab: "HARDER" }, { R: 740, at: "farther", d: 0.1, dur: 1.0, lab: "HARDEST" }];
+const THROWS = [{ R: 230, at: "threw", d: 0.3, dur: 0.45, lab: "HARD" }, { R: 440, at: "harder", d: 0.0, dur: 0.6, lab: "HARDER" }, { R: 740, at: "farther", d: -0.15, dur: 0.75, lab: "HARDEST" }];
 const TH = Math.tan(55 * Math.PI / 180), X0 = 180, Y0 = ETOP - 40;
 const arcY = (dx, R) => Y0 - TH * dx + ((40 + TH * R) / (R * R)) * dx * dx;   // one parabola per throw, same angle; the speed sets the range
 function flatThrows(t, b, o = 1) {
@@ -239,10 +239,10 @@ const planet = (x, y, R, turn = 0) => { if (R < 600) return X.earth(x, y, R, tur
   return `<clipPath id="${id}"><circle cx="${x}" cy="${y}" r="${(R * 1.006).toFixed(1)}"/></clipPath><g clip-path="url(#${id})">${X.earth(x, y, R, turn)}</g><circle cx="${x}" cy="${y}" r="${(R * 1.003).toFixed(1)}" fill="none" stroke="#7fd4ff" stroke-width="8" opacity=".45"/>`; };
 function tinyPeek(x, y, e, o = {}, k = 0.2) { return peek(e, { shadow: false, id: o.id || "tiny", ...o }, x, y, k); }
 function rThrows(t, env) {
-  const b = env.beats, crash = t > b.farther + 0.1 + 1.0, arm = THROWS.some((q) => pulse(t, b[q.at] + q.d - 0.25, b[q.at] + q.d + 0.1, 0.08) > 0);
+  const b = env.beats, crash = t > b.farther - 0.15 + 0.75, arm = THROWS.some((q) => pulse(t, b[q.at] + q.d - 0.25, b[q.at] + q.d + 0.1, 0.08) > 0);
   return boardFrame(t, env, b.threw - 0.12, planet(540, ETOP + ER, ER, 0) + house(X0 + 740, crash) + flatThrows(t, b)
     + tinyPeek(X0 - 40, ETOP, F("angry", { lookY: -0.6, look: 0.8 }), { turn: 0.7, armR: arm ? { x: 960, y: 380 } : { x: 860, y: 340 } })
-    + (crash ? X.label(X0 + 740, ETOP - 240, "CRASH!", 70, "#ff4f6d", 1, easeOutBack(seg(t, b.farther + 1.1, b.farther + 1.3))) : ""), TALK, "point", pulse(t, b.harder, b.round - 0.2, 0.2));
+    + (crash ? X.label(X0 + 740, ETOP - 240, "CRASH!", 70, "#ff4f6d", 1, easeOutBack(seg(t, b.farther + 0.6, b.farther + 0.8))) : ""), TALK, "point", pulse(t, b.harder, b.round - 0.2, 0.2));
 }
 // the planet's size and place while the camera pulls back: p 0 = huge and flat, 1 = whole (radius 230 at the centre)
 const shrink = (p) => { const R = Math.exp(lerp(Math.log(ER), Math.log(230), p)), top = lerp(ETOP, 640 - 230, ease(p)); return { R, ex: 540, ey: top + R }; };
@@ -377,7 +377,7 @@ function rDime(t, env) {                                    // "With it, it fall
     + `<path d="${arc}" stroke="#9fd0ff" stroke-width="8" fill="none"/>` + `<g opacity=".4">${M.bigMoon(sx, sy, 40, 0.2)}</g>` + M.bigMoon(mx, my, 44, 0.6)
     + (gap > 0 ? X.arrow(sx, sy + 44, mx, my - 46, 12, "#ffe66d", t * 2, gap) + X.label(sx - 210, (sy + my) / 2 + 30, "FALLS 1.4 mm", 66, "#ffe66d", gap) : "")
     + X.label(270, 300, "IN ONE SECOND", 56, "#9fd0ff", fade(t, b.with)) + X.label(540, 980, "TO EARTH ↓", 46, "#9fd0ff", fade(t, b.with + 0.3))
-    + (coin > 0 ? `<g transform="translate(210 760) scale(${coin})">${M.dime(0, 0, 70, 0.22)}</g>${X.label(210, 880, "A DIME: 1.35 mm", 48, "#fff", coin)}` : "")
+    + (coin > 0 ? `<g transform="translate(210 760) scale(${coin})">${M.dime(0, 0, 70, 0.22)}</g>${X.label(255, 880, "A DIME: 1.35 mm", 48, "#fff", coin)}` : "")
     + X.label(840, 990, "NOT TO SCALE", 34, "#9fd0ff", 0.85) + X.label(780, 300, "EVERY SECOND", 56, "#ffe66d", fade(t, b.every)), HUSH, "point", pulse(t, b.dime, b.bend - 0.2, 0.2));
 }
 function rCircle(t, env) {                                  // "...just enough to bend its path into a circle around this planet. Once every twenty-seven days."
@@ -400,7 +400,7 @@ function rAstro(t, env) {                                   // "Which raises a q
   const port = popIn(t, b.float - 0.1, 0.3), drift = Math.sin(t * 1.3) * 18, spin = t * 25;
   const porthole = port > 0 ? `<g transform="translate(250 380) scale(${port})"><circle r="150" fill="#cfd6ee"/><circle r="128" fill="#0b0e30"/><clipPath id="portc2"><circle r="128"/></clipPath><g clip-path="url(#portc2)"><rect x="-140" y="40" width="280" height="10" fill="#3a4490"/>
     <g transform="translate(0 ${drift - 10}) rotate(${spin})">${X.human(0, 90, 0.55, { shirt: "#f2f4fb", hair: "#5a3a22", armL: 70, armR: -60 })}</g></g></g>${X.label(250, 330, "?", 150, "#ffe66d", port, easeOutBack(seg(t, b.float + 0.2, b.float + 0.5)))}` : "";
-  return B(t, env, b.question - 0.15, `<circle cx="${ex}" cy="${ey}" r="${sr}" fill="none" stroke="#9fd0ff" stroke-width="4" stroke-dasharray="6 14" opacity=".5"/>` + X.earth(ex, ey, R, t * 0.15) + M.station(sx, sy, 0.32, th * 180 / Math.PI + 90)
+  return B(t, env, b.question - 0.15, `<circle cx="${ex}" cy="${ey}" r="${sr}" fill="none" stroke="#9fd0ff" stroke-width="4" stroke-dasharray="6 14" opacity=".5"/>` + X.earth(ex, ey, R, t * 0.15) + M.station(sx, sy, 0.46, th * 180 / Math.PI + 90)
     + X.arrow(sx + dx / L * 50, sy + dy / L * 50, sx + dx / L * (L - R - 20), sy + dy / L * (L - R - 20), 12, "#ffe66d", t * 2, fade(t, b.astro)) + X.label(820, 330, "SAME PULL", 56, "#ffe66d", fade(t, b.astro + 0.2))
     + porthole + X.label(540, 990, "WHY DO THEY FLOAT?", 56, "#fff", fade(t, b.float + 0.4)), HUSH, "point", pulse(t, b.astro, b.out - 0.2, 0.2));
 }

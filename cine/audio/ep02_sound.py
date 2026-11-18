@@ -102,9 +102,9 @@ crA, cwA = prepared("crowe", pick=lambda i, n: i < n // 2, keep=0.3, over=0.45) 
 crB, cwB = prepared("crowe", pick=lambda i, n: i >= n // 2, keep=0.3, over=0.45)  # "Small mouth... big teeth."
 cmd, cmw = prepared("commander", keep=0.18, over=0.3)
 I_CROWE = IS + 1.45                                    # Crowe steps out and speaks
-I_CMD = I_CROWE + cwA[-1][1] + 0.75                    # the Commander crackles out of Peek's antennae
+I_CMD = I_CROWE + cwA[-1][1] + 0.5                    # the Commander crackles out of Peek's antennae
 repB, wB = prepared("reportB", keep=0.2, over=0.28)
-BS = I_CMD + cmw[-1][1] + 1.7                          # the beam crawls over the AC, moves on; Peek whispers "...is falling"
+BS = I_CMD + cmw[-1][1] + 1.5                          # the beam crawls over the AC, moves on; Peek whispers "...is falling"
 RB = len(repB) / SR
 TS = BS + 0.0 + RB + 0.9                               # "Peek out." then he tiptoes off; the tag starts
 END = TS + 5.2
@@ -116,11 +116,12 @@ def place(x, at, gain=1.0, pan=0.0):
     x = x[: N - i] * gain; L[i:i + len(x)] += x * np.sqrt(0.5 * (1 - pan)); R[i:i + len(x)] += x * np.sqrt(0.5 * (1 + pan))
 tracks = {k: np.zeros(N) for k in ("peek", "commander", "crowe")}
 caption_words = []
-FIX = {"mi": "miles", "mi.": "miles", "peak": "Peek", "peak.": "Peek.", "2300": "2,300", "dimes": "dime's"}
+FIX = {"mi": "miles", "mi.": "miles", "2300": "2,300", "dime": "dime's", "dimes": "dime's"}   # speech-to-text mishearings, fixed in the captions
+def fixw(w): return re.sub(r"(?i)\bpeak\b", "Peek", FIX.get(w.lower(), w))
 def say(who, y, words, at, gain, line, treat=None):
     z = treat(y) if treat else y
     i = int(at * SR); n = min(len(z), N - i); tracks[who][i:i + n] += z[:n] * gain
-    for s, e, w in words: caption_words.append({"t": round(at + s, 3), "e": round(at + e, 3), "w": FIX.get(w.lower(), w.replace("Peak", "Peek")), "who": who, "line": line})
+    for s, e, w in words: caption_words.append({"t": round(at + s, 3), "e": round(at + e, 3), "w": fixw(w), "who": who, "line": line})
 
 def radio(x):                                          # a small speaker: band-limited, a little crunch, a click in and out
     y = np.tanh(bp(x, 500, 3200) * 3) * 0.6
@@ -236,8 +237,8 @@ bed(RS + 0.2, IS - 0.1, 0.085, 1)
 for key in ("bolted", "falls", "threw", "round", "throw", "never", "why"): place(whoosh(0.24, 500, 3500), beats[key] - 0.22, 0.08)
 for key in ("checked", "coming", "harder", "farther", "curves", "around"): place(pop(700 + 40 * (len(key) % 7)), beats[key] + 0.02, 0.07)
 place(thud(240, 40, 0.2), beats["checked"] + 0.35, 0.25)                             # the NO BOLTS stamp
-for q in range(3): place(whoosh(0.3, 700, 4000), beats["threw"] + 0.3 + q * (beats["round"] - beats["threw"] - 0.6) / 3, 0.07)
-place(glass(0.5), beats["round"] - 0.35, 0.12, 0.3)                                  # the third throw's little window
+for at in (beats["threw"] + 0.3, beats["harder"], beats["farther"] - 0.15): place(whoosh(0.3, 700, 4000), at - 0.05, 0.07)   # the three board throws
+place(glass(0.5), beats["farther"] + 0.6, 0.12, 0.3)                                 # the third throw's little window (shots/ep02.js THROWS)
 place(thud(300, 45, 0.2), beats["head"] + 0.45, 0.35); place(pluck(1318.5, 0.3), beats["head"] + 0.47, 0.06)   # bonk
 k, s_ = 0, IS - 3.0
 while s_ < IS - 0.05: place(step(140 + 10 * (k % 2)), s_, 0.04 + 0.1 * (s_ - (IS - 3.0)) / 3.0, -0.4); s_ += 0.5; k += 1      # footsteps coming up the stairs
@@ -276,7 +277,11 @@ beats["next"] = round(TS + 3.35, 3)
 place(tracks["peek"], 0, 1.55); place(tracks["commander"], 0, 1.3, -0.2); place(tracks["crowe"], 0, 1.5, -0.15)
 mix = np.stack([L, R], axis=1); mix = np.tanh(mix * 1.15) / np.tanh(1.15); mix /= max(1e-9, np.abs(mix).max()) / 0.89
 raw = a.out.replace(".wav", ".raw.wav"); os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True); wavfile.write(raw, SR, (mix * 32767).astype(np.int16))
-subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", raw, "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", a.out], check=True); os.remove(raw)
+# two-pass loudness: measure, then normalise linearly to -14 LUFS (a single dynamic pass lands short of the target)
+r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", raw, "-af", "loudnorm=I=-14:TP=-1.0:LRA=11:print_format=json", "-f", "null", "-"], capture_output=True, text=True, check=True)
+m = json.loads(r.stderr[r.stderr.rindex("{"):])
+ln = f"loudnorm=I=-14:TP=-1.0:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true"
+subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", raw, "-af", ln, "-ar", "48000", a.out], check=True); os.remove(raw)
 
 hop = SR // a.fps; env = {}
 for who, tr in tracks.items():

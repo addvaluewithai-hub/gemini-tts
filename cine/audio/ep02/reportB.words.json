@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T23:24:59.080Z",
+  "duration_ms": 34520,
+  "word_count": 84,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "is falling all the time. But it is also moving sideways 2,300 mi an hour. Without the pull, it would fly off in a straight line. With it, it falls a dime thickness every second, just enough to bend its path into a circle around this planet once every 27 days. So, the Moon is falling, it moves sideways so fast that it keeps missing us, which raises a question. The same pull reaches their astronauts, so why do they float? Investigating. Peek out.",
+  "source_text": "...is falling. All the time. But it is also moving sideways. Two thousand three hundred miles an hour. Without the pull, it would fly off in a straight line. With it, it falls a dime's thickness every second... just enough to bend its path into a circle around this planet. Once every twenty-seven days. So: the Moon is falling. It moves sideways so fast that it keeps missing us. Which raises a question. The same pull reaches their astronauts. So why do they float? Investigating. Peek out.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "...is falling. All the time. But it is also moving sideways. Two thousand three hundred miles an hour. Without the pull, it would fly off in a straight line. With it, it falls a dime's thickness every second... just enough to bend its path into a circle around this planet. Once every twenty-seven days. So: the Moon is falling. It moves sideways so fast that it keeps missing us. Which raises a question. The same pull reaches their astronauts. So why do they float? Investigating. Peek out."
+    }
+  ],
+  "agreement": 0.931,
+  "flagged": false,
+  "missing_words": [
+    "Two",
+    "thousand",
+    "three",
+    "hundred",
+    "miles",
+    "twenty-seven"
+  ],
+  "words": [
+    {
+      "start_ms": 280,
+      "end_ms": 680,
+      "text": "is"
+    },
+    {
+      "start_ms": 680,
+      "end_ms": 1560,
+      "text": "falling"
+    },
+    {
+      "start_ms": 2080,
+      "end_ms": 2280,
+      "text": "all"
+    },
+    {
+      "start_ms": 2280,
+      "end_ms": 2400,
+      "text": "the"
+    },
+    {
+      "start_ms": 2400,
+      "end_ms": 2920,
+      "text": "time."
+    },
+    {
+      "start_ms": 3320,
+      "end_ms": 3680,
+      "text": "But"
+    },
+    {
+      "start_ms": 3680,
+      "end_ms": 3760,
+      "text": "it"
+    },
+    {
+      "start_ms": 3760,
+      "end_ms": 4000,
+      "text": "is"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4360,
+      "text": "also"
+    },
+    {
+      "start_ms": 4360,
+      "end_ms": 4760,
+      "text": "moving"
+    },
+    {
+      "start_ms": 4760,
+      "end_ms": 5720,
+      "text": "sideways"
+    },
+    {
+      "start_ms": 5880,
+      "end_ms": 7640,
+      "text": "2,300"
+    },
+    {
+      "start_ms": 7640,
+      "end_ms": 7920,
+      "text": "mi"
+    },
+    {
+      "start_ms": 7920,
+      "end_ms": 8080,
+      "text": "an"
+    },
+    {
+      "start_ms": 8080,
+      "end_ms": 8480,
+      "text": "hour."
+    },
+    {
+      "start_ms": 8880,
+      "end_ms": 9200,
+      "text": "Without"
+    },
+    {
+      "start_ms": 9200,
+      "end_ms": 9320,
+      "text": "the"
+    },
+    {
+      "start_ms": 9320,
+      "end_ms": 9760,
+      "text": "pull,"
+    },
+    {
+      "start_ms": 9760,
+      "end_ms": 9880,
+      "text": "it"
+    },
+    {
+      "start_ms": 9880,
+      "end_ms": 10080,
+      "text": "would"
+    },
+    {
+      "start_ms": 10080,
+      "end_ms": 10600,
+      "text": "fly"
+    },
+    {
+      "start_ms": 10600,
+      "end_ms": 10920,
+      "text": "off"
+    },
+    {
+      "start_ms": 10920,
+      "end_ms": 11040,
+      "text": "in"
+    },
+    {
+      "start_ms": 11040,
+      "end_ms": 11080,
+      "text": "a"
+    },
+    {
+      "start_ms": 11080,
+      "end_ms": 11520,
+      "text": "straight"
+    },
+    {
+      "start_ms": 11520,
+      "end_ms": 11920,
+      "text": "line."
+    },
+    {
+      "start_ms": 12280,
+      "end_ms": 12480,
+      "text": "With"
+    },
+    {
+      "start_ms": 12480,
+      "end_ms": 12800,
+      "text": "it,"
+    },
+    {
+      "start_ms": 12840,
+      "end_ms": 12960,
+      "text": "it"
+    },
+    {
+      "start_ms": 12960,
+      "end_ms": 13240,
+      "text": "falls"
+    },
+    {
+      "start_ms": 13240,
+      "end_ms": 13320,
+      "text": "a"
+    },
+    {
+      "start_ms": 13320,
+      "end_ms": 13800,
+      "text": "dime"
+    },
+    {
+      "start_ms": 13800,
+      "end_ms": 14480,
+      "text": "thickness"
+    },
+    {
+      "start_ms": 14480,
+      "end_ms": 14840,
+      "text": "every"
+    },
+    {
+      "start_ms": 14840,
+      "end_ms": 15440,
+      "text": "second,"
+    },
+    {
+      "start_ms": 15600,
+      "end_ms": 15840,
+      "text": "just"
+    },
+    {
+      "start_ms": 15840,
+      "end_ms": 16080,
+      "text": "enough"
+    },
+    {
+      "start_ms": 16080,
+      "end_ms": 16200,
+      "text": "to"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16560,
+      "text": "bend"
+    },
+    {
+      "start_ms": 16560,
+      "end_ms": 16720,
+      "text": "its"
+    },
+    {
+      "start_ms": 16720,
+      "end_ms": 17040,
+      "text": "path"
+    },
+    {
+      "start_ms": 17040,
+      "end_ms": 17240,
+      "text": "into"
+    },
+    {
+      "start_ms": 17240,
+      "end_ms": 17280,
+      "text": "a"
+    },
+    {
+      "start_ms": 17280,
+      "end_ms": 17720,
+      "text": "circle"
+    },
+    {
+      "start_ms": 17720,
+      "end_ms": 18080,
+      "text": "around"
+    },
+    {
+      "start_ms": 18080,
+      "end_ms": 18240,
+      "text": "this"
+    },
+    {
+      "start_ms": 18240,
+      "end_ms": 18840,
+      "text": "planet"
+    },
+    {
+      "start_ms": 19040,
+      "end_ms": 19400,
+      "text": "once"
+    },
+    {
+      "start_ms": 19400,
+      "end_ms": 19640,
+      "text": "every"
+    },
+    {
+      "start_ms": 19640,
+      "end_ms": 20200,
+      "text": "27"
+    },
+    {
+      "start_ms": 20200,
+      "end_ms": 20600,
+      "text": "days."
+    },
+    {
+      "start_ms": 21000,
+      "end_ms": 21320,
+      "text": "So,"
+    },
+    {
+      "start_ms": 21480,
+      "end_ms": 21600,
+      "text": "the"
+    },
+    {
+      "start_ms": 21600,
+      "end_ms": 21760,
+      "text": "Moon"
+    },
+    {
+      "start_ms": 21760,
+      "end_ms": 21880,
+      "text": "is"
+    },
+    {
+      "start_ms": 21880,
+      "end_ms": 22440,
+      "text": "falling,"
+    },
+    {
+      "start_ms": 22480,
+      "end_ms": 22600,
+      "text": "it"
+    },
+    {
+      "start_ms": 22600,
+      "end_ms": 22880,
+      "text": "moves"
+    },
+    {
+      "start_ms": 22880,
+      "end_ms": 23480,
+      "text": "sideways"
+    },
+    {
+      "start_ms": 23480,
+      "end_ms": 23720,
+      "text": "so"
+    },
+    {
+      "start_ms": 23720,
+      "end_ms": 24440,
+      "text": "fast"
+    },
+    {
+      "start_ms": 24440,
+      "end_ms": 24560,
+      "text": "that"
+    },
+    {
+      "start_ms": 24560,
+      "end_ms": 24720,
+      "text": "it"
+    },
+    {
+      "start_ms": 24720,
+      "end_ms": 25200,
+      "text": "keeps"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25720,
+      "text": "missing"
+    },
+    {
+      "start_ms": 25720,
+      "end_ms": 26000,
+      "text": "us,"
+    },
+    {
+      "start_ms": 26800,
+      "end_ms": 27120,
+      "text": "which"
+    },
+    {
+      "start_ms": 27120,
+      "end_ms": 27440,
+      "text": "raises"
+    },
+    {
+      "start_ms": 27440,
+      "end_ms": 27520,
+      "text": "a"
+    },
+    {
+      "start_ms": 27520,
+      "end_ms": 28160,
+      "text": "question."
+    },
+    {
+      "start_ms": 28480,
+      "end_ms": 28600,
+      "text": "The"
+    },
+    {
+      "start_ms": 28600,
+      "end_ms": 29040,
+      "text": "same"
+    },
+    {
+      "start_ms": 29040,
+      "end_ms": 29360,
+      "text": "pull"
+    },
+    {
+      "start_ms": 29360,
+      "end_ms": 29720,
+      "text": "reaches"
+    },
+    {
+      "start_ms": 29720,
+      "end_ms": 29960,
+      "text": "their"
+    },
+    {
+      "start_ms": 29960,
+      "end_ms": 30760,
+      "text": "astronauts,"
+    },
+    {
+      "start_ms": 30880,
+      "end_ms": 31080,
+      "text": "so"
+    },
+    {
+      "start_ms": 31080,
+      "end_ms": 31240,
+      "text": "why"
+    },
+    {
+      "start_ms": 31240,
+      "end_ms": 31400,
+      "text": "do"
+    },
+    {
+      "start_ms": 31400,
+      "end_ms": 31560,
+      "text": "they"
+    },
+    {
+      "start_ms": 31560,
+      "end_ms": 32240,
+      "text": "float?"
+    },
+    {
+      "start_ms": 32800,
+      "end_ms": 33560,
+      "text": "Investigating."
+    },
+    {
+      "start_ms": 33800,
+      "end_ms": 34080,
+      "text": "Peek"
+    },
+    {
+      "start_ms": 34080,
+      "end_ms": 34400,
+      "text": "out."
+    }
+  ]
+}
