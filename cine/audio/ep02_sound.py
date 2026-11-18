@@ -211,7 +211,7 @@ place(whoosh(0.3, 600, 4000), REL[1] - 0.08, 0.22, 0.2)
 place(thud(300, 45, 0.18), 1.92, 0.32, -0.1); place(pluck(660, 0.2), 1.93, 0.05)   # apple 1 bonks the roof, rolls
 n = int(0.5 * SR); place(lp(noise(n), 400) * np.exp(-tx(n) * 6) * 0.6, 1.98, 0.15)
 place(whoosh(0.5, 400, 3500), REL[2] - 0.15, 0.3, 0.3)
-place(thud(180, 35, 0.25), 4.08, 0.22, 0.5)                                         # apple 2 lands across the alley
+place(thud(180, 35, 0.25), 4.28, 0.22, 0.5)                                         # apple 2 lands across the alley (shots/ep02.js throw2)
 place(crunch(0.18), 4.62, 0.5); [place(crunch(0.08), s_, 0.18) for s_ in (4.86, 5.04, 5.2)]   # the bite, three chews
 place(whoosh(0.55, 150, 1500), 5.25, 0.35, -0.2); place(whoosh(0.7, 500, 5000), REL[3] - 0.1, 0.4, 0.3)   # the spin, the throw
 n = int(0.9 * SR); t = tx(n); f = 1800 * np.exp(-t * 1.2); place(np.sin(2 * np.pi * np.cumsum(f) / SR) * np.clip(t / 0.05, 0, 1) * np.exp(-t * 1.5), 6.0, 0.05)   # it whistles away
