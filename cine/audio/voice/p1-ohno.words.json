@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T16:26:55.348Z",
+  "duration_ms": 2000,
+  "word_count": 3,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Mhm. Oh no.",
+  "source_text": "Oh... no.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Oh... no."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 40,
+      "end_ms": 360,
+      "text": "Mhm."
+    },
+    {
+      "start_ms": 1000,
+      "end_ms": 1160,
+      "text": "Oh"
+    },
+    {
+      "start_ms": 1160,
+      "end_ms": 1520,
+      "text": "no."
+    }
+  ]
+}

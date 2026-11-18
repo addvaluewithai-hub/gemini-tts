@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T16:27:04.909Z",
+  "duration_ms": 4480,
+  "word_count": 6,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Relax. On my planet, we float.",
+  "source_text": "Relaaax... on MY planet... we float.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Relaaax... on MY planet... we float."
+    }
+  ],
+  "agreement": 0.8333,
+  "flagged": false,
+  "missing_words": [
+    "Relaaax..."
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 1600,
+      "text": "Relax."
+    },
+    {
+      "start_ms": 1680,
+      "end_ms": 1960,
+      "text": "On"
+    },
+    {
+      "start_ms": 1960,
+      "end_ms": 2360,
+      "text": "my"
+    },
+    {
+      "start_ms": 2360,
+      "end_ms": 3080,
+      "text": "planet,"
+    },
+    {
+      "start_ms": 3120,
+      "end_ms": 3360,
+      "text": "we"
+    },
+    {
+      "start_ms": 3360,
+      "end_ms": 4120,
+      "text": "float."
+    }
+  ]
+}

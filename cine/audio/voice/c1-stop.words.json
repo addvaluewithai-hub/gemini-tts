@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T16:27:12.077Z",
+  "duration_ms": 4200,
+  "word_count": 3,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Stop right there.",
+  "source_text": "STOP! RIGHT! THERE!",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "STOP! RIGHT! THERE!"
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 1480,
+      "text": "Stop"
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 2640,
+      "text": "right"
+    },
+    {
+      "start_ms": 2680,
+      "end_ms": 3760,
+      "text": "there."
+    }
+  ]
+}
