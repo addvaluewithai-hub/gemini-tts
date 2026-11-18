@@ -68,7 +68,8 @@ export const label = (x, y, text, size = 64, fill = "#fff", o = 1, k = 1) => (o 
 export function captions(words, t, { y = 1340, size = 92 } = {}) {
   if (!words || !words.length) return "";
   if (!words.groups) { const groups = []; let g = [];
-    words.forEach((w, i) => { g.push(w); const nxt = words[i + 1]; if (g.length >= 3 || /[.,?!:]$/.test(w.w) || !nxt || nxt.t - w.e > 0.45 || nxt.line !== w.line) { groups.push(g); g = []; } });
+    const chars = (q) => q.reduce((n, w) => n + w.w.length + 1, 0);      // a line must fit the frame: about 22 characters
+    words.forEach((w, i) => { g.push(w); const nxt = words[i + 1]; if (g.length >= 3 || /[.,?!:]$/.test(w.w) || !nxt || nxt.t - w.e > 0.45 || nxt.line !== w.line || chars(g) + nxt.w.length > 22) { groups.push(g); g = []; } });
     words.groups = groups; }
   const g = words.groups.find((q) => t >= q[0].t - 0.04 && t < Math.max(q[q.length - 1].e + 0.25, q[q.length - 1].t + 0.5) && true);
   if (!g) return ""; const nextG = words.groups[words.groups.indexOf(g) + 1]; if (nextG && t >= nextG[0].t - 0.04) return "";
