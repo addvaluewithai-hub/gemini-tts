@@ -75,8 +75,8 @@ export function captions(words, t, { y = 1340, size = 92 } = {}) {            //
     const chars = (q) => q.reduce((n, w) => n + w.w.length + 1, 0);      // a line must fit the frame: about 22 characters
     words.forEach((w, i) => { g.push(w); const nxt = words[i + 1]; if (g.length >= 3 || /[.,?!:]$/.test(w.w) || !nxt || nxt.t - w.e > 0.45 || nxt.line !== w.line || chars(g) + nxt.w.length > 22) { groups.push(g); g = []; } });
     words.groups = groups; }
-  const g = words.groups.find((q) => t >= q[0].t - 0.04 && t < Math.max(q[q.length - 1].e + 0.25, q[q.length - 1].t + 0.5) && true);
-  if (!g) return ""; const nextG = words.groups[words.groups.indexOf(g) + 1]; if (nextG && t >= nextG[0].t - 0.04) return "";
+  let g = null; for (const q of words.groups) { if (t >= q[0].t - 0.04) g = q; else break; }          // the newest line that has started: no blank between lines
+  if (!g || t >= Math.max(g[g.length - 1].e + 0.25, g[g.length - 1].t + 0.5)) return "";
   const pop = 1 + 0.12 * (1 - easeOut(seg(t, g[0].t - 0.04, g[0].t + 0.12)));
   const spans = g.map((w) => `<tspan fill="${t >= w.t - 0.03 && t < w.e + 0.06 ? "#ffe66d" : "#ffffff"}">${w.w.toUpperCase().replace(/&/g, "&amp;").replace(/</g, "&lt;")} </tspan>`).join("");
   return `<text x="540" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" letter-spacing="1.5" stroke="#06071a" stroke-width="16" stroke-linejoin="round" paint-order="stroke" transform="translate(540 ${y}) scale(${pop.toFixed(3)}) translate(-540 ${-y})">${spans}</text>`;

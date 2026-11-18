@@ -194,7 +194,7 @@ function rMe(t, env) {                                      // "Me." a flash of 
 function rGravity(t, env) {                                 // "They call it gravity." the word falls in, letter by letter
   const b = env.beats, t0 = b.gravity - 0.05, letters = [..."GRAVITY"].map((ch, i) => { const a = t - (b.gravity + 0.38 + i * 0.07), y = a < 0 ? -200 : 620 - Math.abs(spring(a, 5, 16)) * 170 * (a < 0.6 ? 1 : 0) - (a < 0.22 ? (1 - a / 0.22) ** 2 * 900 : 0);
     return a < 0 ? "" : X.label(204 + i * 112, y, ch, 215, i % 2 ? "#ffe66d" : "#ffffff", 1, 1); }).join("");
-  return boardFrame(t, env, t0, letters + X.arrow(540, 700, 540, 930, 24, "#ff4fa3", t, seg(t, b.gravity + 0.95, b.gravity + 1.15)), TALK, "point", pulse(t, b.gravity + 0.3, b.pulls - 0.2, 0.2));
+  return boardFrame(t, env, t0, X.label(540, 360, "THEY CALL IT", 72, "#9fd0ff", seg(t, b.gravity + 0.02, b.gravity + 0.18)) + letters + X.arrow(540, 700, 540, 930, 24, "#ff4fa3", t, seg(t, b.gravity + 0.95, b.gravity + 1.15)), TALK, "point", pulse(t, b.gravity + 0.3, b.pulls - 0.2, 0.2));
 }
 function rPulls(t, env) {                                   // "Everything pulls on everything else."
   const b = env.beats, u = seg(t, b.pulls, b.heavier), pull = ease(u) * 0.17, P = [[250, 370], [840, 430], [540, 850]], [cx, cy] = [540, 560];
@@ -252,7 +252,7 @@ function rYou(t, env) {                                     // "You pull on the 
     + X.arrow(780, top - 40, 780, top - 330, 26, "#ff7ab8", t * 1.5, aR) + X.label(780, top - 372, "YOU PULL IT", 56, "#ff9fd0", aR)
     + `<g transform="translate(540 ${top - 330}) scale(${eq})">${X.label(0, 50, "=", 170, "#fff")}</g>`
     + peek(e, { shadow: false, id: "tiny" }, 540, top + 12 - hop, 0.27)
-    + X.label(540, top + 330, "TOO HEAVY TO CARE", 64, "#fff", care), blend(F("skeptical"), TALK, 0.3), "shrug", pulse(t, b.care, b.phone - 0.2, 0.2));
+    , blend(F("skeptical"), TALK, 0.3), "shrug", pulse(t, b.care, b.phone - 0.2, 0.2));
 }
 function rPhone(t, env) {                                   // "Drop your phone: the planet takes it."
   const b = env.beats, G = 930, d = t - (b.phone + 0.35), fall = d > 0 ? Math.min(1, (d / (b.takes + 0.45 - b.phone - 0.35)) ** 2) : 0, py = lerp(G - 330, G - 50, fall), crack = seg(t, b.takes + 0.45, b.takes + 0.55);
