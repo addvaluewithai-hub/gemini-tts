@@ -104,10 +104,33 @@ export const alley = () => once("alley", () => `
   <rect x="-400" y="1740" width="1880" height="600" fill="#12122e"/><rect x="-400" y="1740" width="1880" height="8" fill="#3d3a70"/>
   <ellipse cx="540" cy="1800" rx="420" ry="34" fill="#9aa8ff" opacity=".12"/>
   <path d="M900 900 V760 Q900 720 860 720" stroke="#080616" stroke-width="14" fill="none"/><circle cx="846" cy="730" r="20" fill="#ffe2a8"/><circle cx="846" cy="730" r="330" fill="url(#lampg)"/>`);
-export const dumpster = (lid = 0, squash = 0) => { const y = 1420 + squash * 30;
-  return `<g transform="translate(540 1760) scale(${1 + squash * 0.06} ${1 - squash * 0.07}) translate(-540 -1760)">
+const LID = (deg) => `<g transform="rotate(${deg} 270 1420)"><rect x="262" y="1392" width="556" height="34" rx="10" fill="#2f7a52"/><rect x="262" y="1392" width="556" height="10" rx="5" fill="#4aa474"/></g>`;
+// lid 0 = open, 1 = shut. withLid false leaves the lid out, so it can be drawn behind whoever is inside (dumpsterLid).
+export const dumpster = (lid = 0, squash = 0, withLid = true) => `<g transform="translate(540 1760) scale(${1 + squash * 0.06} ${1 - squash * 0.07}) translate(-540 -1760)">
   <rect x="270" y="${1420}" width="540" height="340" rx="16" fill="#1d5a3a"/><rect x="270" y="1420" width="540" height="40" rx="10" fill="#2f7a52"/>
   ${[330, 440, 550, 660].map((x) => `<rect x="${x}" y="1490" width="24" height="230" rx="8" fill="#174a30"/>`).join("")}
   <rect x="300" y="1750" width="60" height="30" rx="8" fill="#0a0a14"/><rect x="720" y="1750" width="60" height="30" rx="8" fill="#0a0a14"/>
-  <g transform="rotate(${-72 * (1 - lid)} 270 1420)"><rect x="262" y="1392" width="556" height="34" rx="10" fill="#2f7a52"/><rect x="262" y="1392" width="556" height="10" rx="5" fill="#4aa474"/></g></g>`; };
+  ${withLid ? LID(-72 * (1 - lid)) : ""}</g>`;
+export const dumpsterLid = (lid = 0) => LID(-104 * (1 - lid));
 export const dumpsterBack = () => `<rect x="286" y="1424" width="508" height="60" fill="#06150d"/>${[[360, 1418, 70], [470, 1404, 84], [600, 1412, 76], [700, 1424, 62]].map(([x, y, r]) => `<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r * 0.62}" fill="#0b0b12"/><ellipse cx="${x - r * 0.3}" cy="${y - r * 0.25}" rx="${r * 0.25}" ry="${r * 0.12}" fill="#fff" opacity=".12"/>`).join("")}`;
+
+// ---- Peek's capsule: a small pod, base at (0, 0), about 300 tall. open 0..1 swings the dome back; heat 0..1 glows.
+export function capsule(open = 0, heat = 0, part = "all") {
+  const back = `<ellipse cx="0" cy="-196" rx="92" ry="26" fill="#3a0d28"/>`;
+  const front = `<defs><linearGradient id="capg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe3f1"/><stop offset=".45" stop-color="#ff7ab8"/><stop offset="1" stop-color="#a81f65"/></linearGradient>
+    <radialGradient id="capw" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#e8fbff"/><stop offset=".5" stop-color="#57c8ff"/><stop offset="1" stop-color="#0b5ea8"/></radialGradient>
+    <radialGradient id="caph"><stop offset="0" stop-color="#ffb347" stop-opacity=".9"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient></defs>
+    <path d="M-128 0 L-176 26 L-118 -40 Z" fill="#8e1754"/><path d="M128 0 L176 26 L118 -40 Z" fill="#8e1754"/>
+    <path d="M-122 6 C-156 -70 -138 -160 -96 -200 C-60 -184 60 -184 96 -200 C138 -160 156 -70 122 6 Z" fill="url(#capg)"/>
+    <path d="M-143 -60 C-80 -40 80 -40 143 -60 L141 -38 C80 -18 -80 -18 -141 -38 Z" fill="#8e1754" opacity=".55"/>
+    <circle cx="0" cy="-118" r="50" fill="#7a1846"/><circle cx="0" cy="-118" r="40" fill="url(#capw)"/><ellipse cx="-14" cy="-132" rx="12" ry="8" fill="#fff" opacity=".7"/>
+    <ellipse cx="-84" cy="-150" rx="16" ry="34" fill="#fff" opacity=".3" transform="rotate(18 -84 -150)"/>
+    ${heat > 0 ? `<ellipse cx="0" cy="0" rx="240" ry="70" fill="url(#caph)" opacity="${heat}"/>` : ""}`;
+  const dome = `<g transform="rotate(${(-118 * open).toFixed(1)} -98 -198)"><path d="M-96 -200 C-80 -262 -30 -286 0 -286 C30 -286 80 -262 96 -200 C60 -184 -60 -184 -96 -200 Z" fill="url(#capg)"/>
+    <path d="M0 -286 V-318" stroke="#8e1754" stroke-width="8" stroke-linecap="round"/><circle cx="0" cy="-326" r="13" fill="#ffe66d"/><ellipse cx="-36" cy="-246" rx="14" ry="22" fill="#fff" opacity=".35" transform="rotate(24 -36 -246)"/></g>`;
+  return part === "back" ? back : part === "front" ? front + dome : back + front + dome;
+}
+export const crater = () => once("crater", () => `<ellipse cx="0" cy="8" rx="250" ry="46" fill="#05071a" opacity=".8"/>
+  ${[[-210, 14, 44, 20, -12], [-120, 32, 60, 22, 6], [10, 40, 70, 24, -4], [130, 30, 56, 22, 10], [214, 12, 40, 18, 16]].map(([x, y, w, h, r]) => `<path d="M${x - w / 2} ${y + h / 2} L${x - w / 3} ${y - h / 2} L${x + w / 3} ${y - h / 2 - 6} L${x + w / 2} ${y + h / 2} Z" fill="#2c3566" transform="rotate(${r} ${x} ${y})"/><path d="M${x - w / 3} ${y - h / 2} L${x + w / 3} ${y - h / 2 - 6}" stroke="#5661a8" stroke-width="3"/>`).join("")}
+  <path d="M-250 10 L-330 -6 M250 10 L340 0 M-180 40 L-260 70 M190 40 L270 76" stroke="#05071a" stroke-width="6" stroke-linecap="round"/>`);
+export const footprints = (x0, x1, y, glow = 1) => { let s = ""; for (let x = x0, i = 0; x < x1; x += 62, i++) s += `<ellipse cx="${x}" cy="${y + (i % 2 ? 16 : -6)}" rx="26" ry="11" fill="#ff4fa3" opacity="${(0.75 * glow).toFixed(2)}"/><ellipse cx="${x}" cy="${y + (i % 2 ? 16 : -6)}" rx="50" ry="22" fill="#ff4fa3" opacity="${(0.18 * glow).toFixed(2)}"/>`; return s; };

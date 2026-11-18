@@ -20,7 +20,7 @@ export const mix = (a, b, p) => { const out = {}; for (const k of new Set([...Ob
 
 // ---- per-frame filter registry
 let DEFS = new Map();
-const def = (id, text) => { if (!DEFS.has(id)) DEFS.set(id, text); return id; };
+export const def = (id, text) => { if (!DEFS.has(id)) DEFS.set(id, text); return id; };
 export function frame(build, { bg = "#000" } = {}) {
   DEFS = new Map();
   const body = build();

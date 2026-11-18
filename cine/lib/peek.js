@@ -2,6 +2,7 @@
 //   turn / nod   2.5D head turn and nod: the features slide over the head, the far eye narrows, hat and card follow
 //   legL / legR  { x, y, rot, front } foot offsets, so he can step, run and tuck his legs in the air
 //   hatRot / hatLift  the hat lags behind the head and can leave it
+//   hat  false = before the disguise: no hat, the antennae grow from the head; hatExtra = SVG drawn on the hat
 //   shadow, filter, id  contact shadow on or off, a lighting filter for the whole figure, a unique id per instance
 // Everything else is unchanged, so the same expression objects and EMOTES still work.
 //
@@ -254,7 +255,7 @@ function newspaper(top, holes, c) {
 const HAT_DY = -22;
 export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox = "0 0 1200 1200", paperShift = 0, bob = 0, tilt = 0, bg = true, grain = true,
   armL = null, armR = null, shrug = 0, sway = 0, bounce = 0, squash = 1, roll: showRoll = true,
-  turn = 0, nod = 0, legL = null, legR = null, hatRot = 0, hatLift = 0, shadow = true, filter = null, id = "" } = {}) {
+  turn = 0, nod = 0, legL = null, legR = null, hatRot = 0, hatLift = 0, shadow = true, filter = null, id = "", hat: showHat = true, hatExtra = "" } = {}) {
   e = { look: 0, lid: 0.14, ...e, turn };
   const TK = 58, fx = turn * TK, fy = nod * 20;                       // how far the features slide for a full turn / nod
   const c = FACES[face];
@@ -329,7 +330,7 @@ export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox 
     <g transform="translate(${(fx * 1.3).toFixed(1)} ${(fy * 1.15).toFixed(1)})">${c.over ? c.over(G) : ""}</g>
   </g>
   ${sweat}
-  <g clip-path="url(#${G}head)"><ellipse cx="600" cy="${262 + HAT_DY}" rx="330" ry="74" fill="#1F0614" opacity=".55" filter="url(#${G}b14)"/></g>`;
+  ${showHat ? `<g clip-path="url(#${G}head)"><ellipse cx="600" cy="${262 + HAT_DY}" rx="330" ry="74" fill="#1F0614" opacity=".55" filter="url(#${G}b14)"/></g>` : ""}`;
   const hat = `<g transform="translate(${(turn * 6).toFixed(1)} ${HAT_DY - hatLift}) rotate(${-5 + hatRot} 600 240)">
     <ellipse cx="600" cy="262" rx="336" ry="62" fill="#050508"/>
     <ellipse cx="600" cy="246" rx="336" ry="60" fill="url(#${G}brim)"/>
@@ -340,8 +341,10 @@ export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox 
     <path d="M431 200 C480 230 720 230 769 200 L770 240 C720 268 480 268 430 240 Z" fill="url(#${G}band)"/>
     <path d="M440 208 C480 228 560 234 610 233" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".4"/>
     <g transform="translate(${(turn * 52 - Math.max(0, turn) * 40).toFixed(1)} ${(Math.abs(turn) * 6).toFixed(1)}) rotate(12 716 196) translate(720 192) scale(${(1 - 0.35 * Math.max(0, turn)).toFixed(3)} 1) translate(-720 -192)" filter="url(#${G}drop)"><rect x="672" y="162" width="96" height="60" rx="5" fill="url(#${G}paper)"/><text x="720" y="201" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="800" font-size="24" fill="#22201C">PRESS</text></g>
-    ${antenna(false)}${antenna(true)}
+    ${antenna(false)}${antenna(true)}${hatExtra}
   </g>`;
+  // without the hat the antennae grow from the top of the head (drawn behind it)
+  const bare = `<g transform="translate(${(turn * 5).toFixed(1)} 0)"><g transform="translate(128 -4)">${antenna(false)}</g><g transform="translate(-128 -4)">${antenna(true)}</g></g>`;
   const low = Math.max(...c.eyes.map((q) => q.cy + q.ry));
   const sheet = (top, holes, y) => gripBack(292, y, 1) + gripBack(908, y - 8, -1) + newspaper(top, holes, c) + grip(292, y, 1, lo) + grip(908, y - 8, -1, lo);
   const paperLayer = paper === "over" ? sheet(low + 4, false, low + 110) : paper === "holes" ? sheet(292 + HAT_DY, true, 560) : "";
@@ -357,7 +360,7 @@ export function peek3d(e, { face = "A", paper = "pockets", size = 1200, viewBox 
   ${paper === "roll" ? sleeve(false) + mitt(419, 872, 1, lo) + cuff(false) + sleeve(true) + cuff(true) + roll : ""}
   ${paper !== "roll" ? (showRoll ? tucked : "") + (free(armL) ? "" : sleeve(false)) + (free(armR) ? "" : sleeve(true)) + flap(false) + flap(true)
     + (free(armL) && !armL.front ? freeArm(-1, armL) : "") + (free(armR) && !armR.front ? freeArm(1, armR) : "") : ""}
-  ${collar}<g transform="${pose}">${head}</g><g transform="translate(0 ${paperShift})">${paperLayer}</g><g transform="${pose}">${hat}</g>
+  ${collar}<g transform="${pose}">${showHat ? "" : bare}${head}</g><g transform="translate(0 ${paperShift})">${paperLayer}</g><g transform="${pose}">${showHat ? hat : ""}</g>
   ${free(armL) && armL.front ? freeArm(-1, armL) : ""}${free(armR) && armR.front ? freeArm(1, armR) : ""}
   <g transform="${pose}">${symbol}</g>
   ${legs(true)}

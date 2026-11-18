@@ -10,7 +10,7 @@ const shot = await import("/" + q.get("shot"));
 let env = null;
 try { if (shot.ENV) env = await (await fetch("/" + shot.ENV)).json(); } catch { env = null; }
 const el = document.getElementById("s");
-window.DUR = shot.DUR;
+window.DUR = shot.duration ? shot.duration(env) : shot.DUR;
 window.draw = (t) => { el.innerHTML = shot.draw(t, env); };
 await document.fonts.load("40px Anton").catch(() => {});
 window.__ready = true;

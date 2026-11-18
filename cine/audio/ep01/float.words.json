@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T17:02:22.308Z",
+  "duration_ms": 4080,
+  "word_count": 5,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "On my planet, we float.",
+  "source_text": "On MY planet... we float.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "On MY planet... we float."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 600,
+      "text": "On"
+    },
+    {
+      "start_ms": 600,
+      "end_ms": 1080,
+      "text": "my"
+    },
+    {
+      "start_ms": 1080,
+      "end_ms": 1960,
+      "text": "planet,"
+    },
+    {
+      "start_ms": 2120,
+      "end_ms": 2680,
+      "text": "we"
+    },
+    {
+      "start_ms": 2680,
+      "end_ms": 3960,
+      "text": "float."
+    }
+  ]
+}

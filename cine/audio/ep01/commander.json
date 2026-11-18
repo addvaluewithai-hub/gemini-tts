@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing THE COMMANDER, a stern alien military officer heard over a crackling radio in an animated comedy short. Deep, clipped, urgent, hard emphasis on the word NOT.",
+   "text": "Agent Peek. Do NOT be seen."
+  }
+ ],
+ "voice": "Charon",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP01 gravity commander"
+ }
+}
