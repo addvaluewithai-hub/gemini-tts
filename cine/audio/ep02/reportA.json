@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing PEEK, a tiny pink cartoon alien spy in an animated comedy short. Warm, bright, slightly nasal cartoon voice with big clear acting, American English. He is secretly filing a field report to his Commander over the radio, sitting on a rooftop at night under the Moon. Dry, deadpan and a little smug, like a tiny detective narrating; brisk, clear, no dead air; every joke is delivered completely straight and he never laughs. Slightly hushed, as if he might be overheard.",
+   "text": "Commander. Field report number two. <short pause> Their Moon is not bolted to the sky. I checked. And here, everything falls. So: it is coming down. <short pause> I threw apples at it. The harder I threw, the farther they landed. <short pause> But their planet is round. Throw hard enough, and the ground curves away under the apple as fast as it falls. It never lands. It falls all the way around... and hits you in the back of the head. <short pause> So why doesn't the Moon fall? Because it..."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP02 moon reportA"
+ }
+}

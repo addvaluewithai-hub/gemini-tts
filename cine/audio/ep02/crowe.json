@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing AGENT CROWE, a tall grim government agent in an animated comedy short. Deep, gravelly, slow American voice. He is on a dark rooftop at night, holding up an apple with a small bite out of it in his torch light. Quiet, certain, slow, almost a whisper to himself, like a detective reading a clue.",
+   "text": "Thrown... from up here. <long pause> Small mouth... big teeth."
+  }
+ ],
+ "voice": "Algenib",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP02 moon crowe"
+ }
+}
