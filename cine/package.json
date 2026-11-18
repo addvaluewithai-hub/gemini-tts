@@ -1,1 +1,1 @@
-{ "name": "cine", "private": true, "type": "module", "description": "2.5D cinematic Shorts with the drawn Peek (SVG, headless Chromium)", "dependencies": { "@fontsource/anton": "^5.0.0" } }
+{"name":"cine","private":true,"type":"module","description":"2.5D cinematic Shorts with the drawn Peek (SVG, headless Chromium)","dependencies":{"@fontsource/anton":"^5.0.0","cmu-pronouncing-dictionary":"^3.0.0"}}

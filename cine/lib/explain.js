@@ -45,14 +45,18 @@ const earthFace = (r, f) => `<g opacity="${f.o ?? 1}"><ellipse cx="${-0.3 * r}" 
   <path d="M${-0.14 * r} ${0.2 * r} H${0.14 * r}" stroke="#0a1030" stroke-width="${0.03 * r}" stroke-linecap="round"/></g>`;
 export function moon(x, y, r) { G("moong2", [[0, "#fffdf0"], [0.7, "#f3ecd2"], [1, "#b9b196"]], 'cx=".4" cy=".36" r=".75"'); G("moonglow2", [[0, "#cfe0ff", 0.5], [1, "#9fb8ff", 0]], "");
   return at(x, y, 1, 0, `<circle r="${r * 2.2}" fill="url(#moonglow2)"/><circle r="${r}" fill="url(#moong2)"/>${[[-0.35, -0.2, 0.2], [0.3, 0.28, 0.26], [0.1, -0.45, 0.12], [-0.42, 0.38, 0.14], [0.5, -0.15, 0.1]].map(([a, b, c]) => `<circle cx="${a * r}" cy="${b * r}" r="${c * r}" fill="#b9b196" opacity=".4"/>`).join("")}`); }
-// a human, as a friendly sign-like figure. arms / legs: angles in degrees; mood: "ok" | "shock"
-export function human(x, y, k = 1, { color = "#ffd27a", armL = 20, armR = -20, bend = 0, mood = "ok", jumpStretch = 0 } = {}) {
-  G(`hum${color.replace("#", "")}`, [[0, "#fff6d8"], [0.5, color], [1, "#b9812a"]]);
-  const f = `url(#hum${color.replace("#", "")})`;
-  const face = mood === "shock" ? `<circle cx="-13" cy="-246" r="7" fill="#3a2a10"/><circle cx="13" cy="-246" r="7" fill="#3a2a10"/><ellipse cx="0" cy="-222" rx="9" ry="12" fill="#3a2a10"/>` : `<circle cx="-13" cy="-244" r="5" fill="#3a2a10"/><circle cx="13" cy="-244" r="5" fill="#3a2a10"/><path d="M-10 -226 Q0 -218 10 -226" stroke="#3a2a10" stroke-width="4" fill="none" stroke-linecap="round"/>`;
-  return at(x, y, [k, k * (1 + jumpStretch)], 0, `<path d="M-22 -96 L-28 ${-6 + bend * 0} " stroke="${color}" stroke-width="26" stroke-linecap="round"/><path d="M22 -96 L28 -6" stroke="${color}" stroke-width="26" stroke-linecap="round"/>
-    <g transform="rotate(${armL} -40 -186)"><path d="M-40 -186 L-46 -96" stroke="${color}" stroke-width="22" stroke-linecap="round"/></g><g transform="rotate(${armR} 40 -186)"><path d="M40 -186 L46 -96" stroke="${color}" stroke-width="22" stroke-linecap="round"/></g>
-    <rect x="-46" y="-200" width="92" height="120" rx="36" fill="${f}"/><circle cx="0" cy="-240" r="38" fill="${f}"/>${face}`);
+// a human, as a friendly toy-like figure: feet at (x, y), about 300 tall at k = 1.
+//   shirt, hair: colours; armL / armR: degrees from hanging; mood: "ok" | "shock"; rot turns the whole figure about its feet
+export function human(x, y, k = 1, { shirt = "#ffb347", hair = "#5a3a22", armL = 12, armR = -12, mood = "ok", stretch = 0, rot = 0 } = {}) {
+  const sid = `hs${shirt.replace("#", "")}`; G(sid, [[0, "#ffffff"], [0.25, shirt], [1, "#00000055"]], 'cx=".3" cy=".25" r="1"'); G("hskin", [[0, "#fff3e2"], [0.6, "#ffd9b3"], [1, "#d9a878"]]);
+  const eye = mood === "shock" ? 8 : 5.5, mouth = mood === "shock" ? `<ellipse cx="0" cy="-232" rx="10" ry="14" fill="#5a2a1a"/>` : `<path d="M-12 -238 Q0 -226 12 -238" stroke="#5a2a1a" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+  const brow = mood === "shock" ? `<path d="M-26 -284 l16 -8 M26 -284 l-16 -8" stroke="${hair}" stroke-width="5" stroke-linecap="round"/>` : "";
+  const arm = (s, deg) => `<g transform="rotate(${deg} ${s * 44} -196)"><path d="M${s * 44} -196 L${s * 52} -112" stroke="${shirt}" stroke-width="26" stroke-linecap="round"/><circle cx="${s * 53}" cy="-98" r="15" fill="url(#hskin)"/></g>`;
+  return at(x, y, [k, k * (1 + stretch)], rot, `<path d="M-22 -104 L-24 -18" stroke="#2f3a66" stroke-width="30" stroke-linecap="round"/><path d="M22 -104 L24 -18" stroke="#28325a" stroke-width="30" stroke-linecap="round"/>
+    <ellipse cx="-28" cy="-8" rx="26" ry="13" fill="#15151b"/><ellipse cx="28" cy="-8" rx="26" ry="13" fill="#15151b"/>
+    ${arm(-1, armL)}<rect x="-50" y="-212" width="100" height="126" rx="40" fill="url(#${sid})"/>${arm(1, armR)}
+    <circle cx="0" cy="-256" r="46" fill="url(#hskin)"/><path d="M-46 -262 C-50 -316 44 -322 46 -264 C30 -286 -10 -292 -46 -262 Z" fill="${hair}"/>
+    <circle cx="-16" cy="-258" r="${eye}" fill="#2a1a10"/><circle cx="16" cy="-258" r="${eye}" fill="#2a1a10"/><ellipse cx="-30" cy="-244" rx="9" ry="6" fill="#ff9f8f" opacity=".5"/><ellipse cx="30" cy="-244" rx="9" ry="6" fill="#ff9f8f" opacity=".5"/>${brow}${mouth}`);
 }
 // a glowing arrow from a to b; `w` is its weight; dashes run along it with time
 export function arrow(x1, y1, x2, y2, w = 14, color = "#ffe66d", t = 0, o = 1) {
@@ -65,7 +69,7 @@ export function arrow(x1, y1, x2, y2, w = 14, color = "#ffe66d", t = 0, o = 1) {
 export const label = (x, y, text, size = 64, fill = "#fff", o = 1, k = 1) => (o <= 0 ? "" : `<text x="${x}" y="${y}" text-anchor="middle" font-family="Anton" font-size="${size}" letter-spacing="2" fill="${fill}" opacity="${o}" stroke="#080a20" stroke-width="${size * 0.14}" stroke-linejoin="round" paint-order="stroke" transform="translate(${x} ${y}) scale(${k}) translate(${-x} ${-y})">${text}</text>`);
 
 // ---- captions: up to three words at a time, the spoken word in yellow
-export function captions(words, t, { y = 1340, size = 92 } = {}) {
+export function captions(words, t, { y = 1340, size = 92 } = {}) {            // y 1340 is above the Shorts interface; boards use 1090
   if (!words || !words.length) return "";
   if (!words.groups) { const groups = []; let g = [];
     const chars = (q) => q.reduce((n, w) => n + w.w.length + 1, 0);      // a line must fit the frame: about 22 characters

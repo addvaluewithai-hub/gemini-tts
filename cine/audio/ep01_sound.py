@@ -4,7 +4,7 @@
   python3 audio/ep01_sound.py out/ep01-mix.wav --voices audio/ep01 --shared audio/voice --cues out/ep01.json
 
 Timeline: the cold open is fixed (0 to RS); the report starts at RS and is as long as its voice take (silences
-tightened, tempo 1.06); the tag and end card follow. Every effect is synthesized. The cue file holds the durations,
+tightened, tempo fitted so the whole Short stays under a minute); the tag follows and the Short ends on it. Every effect is synthesized. The cue file holds the durations,
 every spoken word with its time (for captions), the beats of the report (for the pictures) and the loudness of each
 voice per frame (for the mouths).
 """
@@ -65,12 +65,12 @@ def prepared(folder, name, tempo=1.0, fit=None, pick=None, **kw):
     y = atempo(y, tempo)
     return y, [[s / tempo, e / tempo, w] for s, e, w in w2]
 
-RS = 10.3                                             # the report starts here
-report, rwords = prepared(a.voices, "report", tempo=1.06)
+RS = 11.0                                             # the report starts here
+report, rwords = prepared(a.voices, "report3", tempo=1.06, fit=49.8, keep=0.18, over=0.27)
 RD = len(report) / SR
 TS = RS + 0.15 + RD + 0.25                            # the tag starts here
-END = TS + 3.3                                        # end card
-DUR = round(END + 2.6, 2)
+END = TS + 4.2                                        # the Short ends here, on the cut to black
+DUR = round(END, 2)
 N = int(SR * DUR); L = np.zeros(N); R = np.zeros(N); T = np.arange(N) / SR
 def place(x, at, gain=1.0, pan=0.0):
     i = int(at * SR)
@@ -81,7 +81,7 @@ caption_words = []
 def say(who, y, words, at, gain, line, treat=None):
     z = treat(y) if treat else y
     i = int(at * SR); n = min(len(z), N - i); tracks[who][i:i + n] += z[:n] * gain
-    for s, e, w in words: caption_words.append({"t": round(at + s, 3), "e": round(at + e, 3), "w": w.replace("Peak", "Peek"), "who": who, "line": line})
+    for s, e, w in words: caption_words.append({"t": round(at + s, 3), "e": round(at + e, 3), "w": {"mi": "miles", "mi.": "miles"}.get(w.lower(), w.replace("Peak", "Peek")), "who": who, "line": line})
 
 def radio(x):                                          # a small speaker: band-limited, a little crunch, a click in and out
     y = np.tanh(bp(x, 500, 3200) * 3) * 0.6
@@ -94,24 +94,28 @@ y, w = prepared(a.voices, "commander", fit=1.75); say("commander", norm(y, 0.8),
 y, w = prepared(a.voices, "relax", fit=0.95); say("peek", fades(norm(y, 0.7)), w, 3.28, 1.0, 1)
 y, w = prepared(a.voices, "float", fit=2.2, keep=0.32); say("peek", fades(norm(y, 0.75)), w, 4.95, 1.0, 2, echo)
 y, w = prepared(a.shared, "p4-uhoh", keep=0.1); say("peek", fades(norm(y, 0.6)), w, 7.38, 1.0, 3)
-sc, _ = take(a.shared, "p5-scream"); sc = sc[int(0.2 * SR): int(1.7 * SR)]; sc = signal.resample(sc, int(len(sc) * 0.42)); sc = sc * np.linspace(1, 0.06, len(sc)) ** 1.4
+sc, _ = take(a.shared, "p5-scream"); sc0 = sc[int(0.2 * SR): int(1.9 * SR)]; sc = signal.resample(sc0, int(len(sc0) * 0.5)); sc = sc * np.linspace(1, 0.06, len(sc)) ** 1.4
 i = int(7.8 * SR); tracks["peek"][i:i + len(sc)] += fades(norm(sc, 0.8), 0.01, 0.08)
+inside = fades(norm(lp(sc0[: int(0.72 * SR)], 1400), 0.5), 0.01, 0.05)      # the same scream, heard through the capsule wall
+tracks["peek"][: len(inside)] += inside
 say("peek", norm(report, 0.8), rwords, RS + 0.15, 1.0, 10)
-y, w = prepared(a.voices, "here", keep=0.12); say("crowe", fades(norm(y, 0.8)), w, TS + 1.55, 1.0, 20)
+y, w = prepared(a.voices, "what", keep=0.3, over=0.45); say("crowe", fades(norm(y, 0.8)), w, TS + 1.15, 1.0, 20)
 
 # ---------------------------------------------------------------- beats of the report (for the pictures)
 clean = lambda s: re.sub(r"[^a-z']", "", s.lower())
 R0 = RS + 0.15
 rw = [(R0 + s, R0 + e, clean(w)) for s, e, w in rwords]
-def find(seq, start=0):
-    seq = [clean(s) for s in seq.split()]
-    for i in range(start, len(rw) - len(seq) + 1):
-        if all(rw[i + j][2] == seq[j] for j in range(len(seq))): return i
-    raise SystemExit(f"beat not found in the take: {seq}")
+def find(options, start=0):
+    for seq in options.split("|"):
+        seq = [clean(x) for x in seq.split()]
+        for i in range(start, len(rw) - len(seq) + 1):
+            if all(rw[i + j][2] == seq[j] for j in range(len(seq))): return i
+    raise SystemExit(f"beat not found in the take: {options}")
 order = [("report", "commander field"), ("problem", "this planet"), ("falls", "everything falls"), ("apples", "apples"), ("cups", "cups"), ("me", "me"),
-         ("gravity", "they call"), ("pulls", "everything pulls on"), ("heavier", "the heavier"), ("planet", "and the heaviest"), ("is", "is the planet"), ("wins", "so it wins"),
-         ("you", "you pull"), ("notice", "it just"), ("jump", "jump"), ("back", "it pulls you"), ("phone", "drop your"), ("takes", "it takes"), ("humans", "humans do"), ("surprised", "and still"),
-         ("sum1", "so everything"), ("sum2", "heavier pulls"), ("sum3", "that's gravity"), ("question", "which raises"), ("moon", "it even"), ("why", "so why"), ("out", "investigating"), ("peekout", "peek out")]
+         ("gravity", "they call"), ("pulls", "everything pulls on"), ("heavier", "the heavier"), ("harder", "the harder"), ("planet", "and the heaviest"), ("is", "is the planet"), ("wins", "so it wins"),
+         ("down", "that's all|thats all|that is all"), ("toward", "toward the|towards the"), ("speed", "and it doesn't|and it does not|and it doesnt"), ("every", "every second"), ("hit", "i hit"), ("strange", "and here's|and here is|and heres"), ("youpull", "you pull"), ("exactly", "exactly as"), ("care", "it's just|its just"),
+         ("phone", "drop your"), ("takes", "the planet takes"), ("humans", "humans do"), ("surprised", "and still"),
+         ("sum1", "so everything"), ("sum2", "heavier pulls"), ("sum3", "that's gravity|thats gravity"), ("question", "which raises"), ("moon", "it even"), ("why", "so why"), ("out", "investigating"), ("peekout", "peek out")]
 beats, idx = {}, 0
 for key, seq in order:
     idx = find(seq, idx); beats[key] = round(rw[idx][0], 3)
@@ -144,13 +148,14 @@ sm = np.clip((T - (SLOW[0] - 0.15)) / 0.25, 0, 1) * np.clip((SLOW[1] - T) / 0.05
 out_door = ((T < RS) | (T >= TS)) & (T < END)
 # night rain: full outside in the cold open and the tag, a hush under the report
 rainL, rainR = hp(lp(noise(N), 7000), 400), hp(lp(noise(N), 7000), 400)
-rg = np.where(out_door, 0.04, 0.0) * (1 - 0.8 * sm) + np.where((T >= RS) & (T < TS), 0.012, 0.0)
+rg = np.where(out_door, 0.013, 0.0) * (1 - 0.8 * sm)        # owner, 2026-11-18: quieter outdoors, none under the report
 rg = lp(rg, 8)
 L += (rainL * (1 - sm) + lp(noise(N), 600) * 1.5 * sm) * rg; R += (rainR * (1 - sm) + lp(noise(N), 600) * 1.5 * sm) * rg
 
 # the capsule comes in: a falling whistle and a rumble, then the hit
 n = int(1.0 * SR); t = tx(n); f = 2600 * np.exp(-t * 1.5)
 place(np.sin(2 * np.pi * np.cumsum(f) / SR) * (t / 1.0) ** 1.5 * 0.5 + lp(noise(n), 300) * (t / 1.0) ** 2, 0.0, 0.3, -0.3)
+n = int(0.75 * SR); t = tx(n); place(lp(noise(n), 500) * (0.6 + 0.4 * np.sin(2 * np.pi * 9 * t)) * np.minimum(1, t / 0.03) * np.clip((0.75 - t) / 0.08, 0, 1), 0.0, 0.5)   # the capsule burning in
 place(boom(), 1.0, 0.75)
 n = int(0.7 * SR); t = tx(n); place(hp(noise(n), 4000) * np.exp(-t * 5) * np.minimum(1, t / 0.02), 1.45, 0.12)      # hatch steam
 place(pop(500), 1.45, 0.3); place(pop(1300), 1.62, 0.2)
@@ -165,12 +170,13 @@ for i, f in enumerate((523.3, 659.3, 784, 987.8, 1046.5, 1318.5)):
     j = int((0.12 + i * 0.09) * SR); m = pn - j; harp[j:] += np.sin(2 * np.pi * f * tx(m)) * np.exp(-tx(m) * 3.5) * 0.6
 place(lp(pad + harp, 4500), SLOW[0], 0.04)
 sn = int(0.22 * SR); st = tx(sn); place(bp(noise(sn), 600, 3000) * np.sin(2 * np.pi * (40 - 120 * st) * st) * np.exp(-st * 8), SLOW[1] - 0.03, 0.4)
-n = int(0.6 * SR); t = tx(n); f = 1500 * np.exp(-t * 2.2); place(np.sin(2 * np.pi * np.cumsum(f) / SR) * np.clip(t / 0.05, 0, 1), 7.82, 0.09)
-place(whoosh(0.6, 150, 1500), 7.85, 0.3)
-place(boom(), 8.4, 0.6); place(clang(), 8.52, 0.36, 0.1)
-n = int(0.42 * SR); t = tx(n); place(np.sin(2 * np.pi * (300 + 260 * t / 0.42) * t + 3 * np.sin(2 * np.pi * 31 * t)) * np.sin(np.pi * t / 0.42) * 0.5, 8.95, 0.08)   # the lid creaks open
-for i, f in enumerate((392, 523.3, 659.3)): place(pluck(f, 0.6), 9.32 + i * 0.09, 0.1)                                         # ta-da
-place(thud(70, 9, 0.6), 9.5, 0.5)                                                                                              # title
+n = int(0.74 * SR); t = tx(n); f = 1500 * np.exp(-t * 1.9); place(np.sin(2 * np.pi * np.cumsum(f) / SR) * np.clip(t / 0.05, 0, 1), 7.82, 0.09)
+place(whoosh(0.72, 150, 1500), 7.85, 0.3)
+place(boom(), 8.55, 0.6); place(clang(), 8.67, 0.36, 0.1)
+n = int(0.42 * SR); t = tx(n); place(np.sin(2 * np.pi * (300 + 260 * t / 0.42) * t + 3 * np.sin(2 * np.pi * 31 * t)) * np.sin(np.pi * t / 0.42) * 0.5, 9.1, 0.08)    # the lid creaks open: the hat comes up alone
+for s_ in (9.5, 9.66): place(pop(520), s_, 0.1)                                                                                # the hat looks left, then right
+for i, f in enumerate((392, 523.3, 659.3)): place(pluck(f, 0.6), 10.0 + i * 0.09, 0.1)                                         # ta-da: his eyes come up under it
+place(thud(70, 9, 0.6), 10.3, 0.5)                                                                                             # title
 
 # the report: a quiet sneaking bed (plucked bass and a soft click), and small sounds on the beats
 bpm = 104; beat = 60 / bpm; bass = [110, 0, 130.8, 0, 146.8, 0, 164.8, 146.8, 110, 0, 130.8, 164.8, 146.8, 0, 130.8, 123.5]
@@ -183,22 +189,23 @@ while s_ < TS - 0.3:
 place(thud(300, 40, 0.15), beats["apples"] + 0.12, 0.3); place(pluck(880, 0.2), beats["apples"] + 0.14, 0.06)                   # the apple bonks his hat
 n = int(0.35 * SR); t = tx(n); place(bp(noise(n), 3000, 9000) * np.exp(-t * 14) * (rng.random(n) < 0.08) * 4 + thud(400, 60, 0.35) * 0.4, beats["cups"] + 0.14, 0.14, 0.3)   # the cup breaks
 place(whoosh(0.3, 400, 3000), beats["me"] - 0.02, 0.18)
-for key in ("gravity", "heavier", "planet", "you", "jump", "phone", "humans", "sum1", "sum2", "sum3", "moon"):
+for key in ("gravity", "heavier", "harder", "planet", "down", "speed", "youpull", "exactly", "phone", "humans", "sum1", "sum2", "sum3", "moon"):
     place(pop(700 + 40 * (hash(key) % 7)), beats[key] + 0.02, 0.07)
-for key in ("gravity", "planet", "sum1", "question", "out"): place(whoosh(0.28, 500, 3500), beats[key] - 0.2, 0.1)
+for key in ("gravity", "pulls", "heavier", "planet", "down", "speed", "strange", "phone", "humans", "sum1", "question", "moon", "out"): place(whoosh(0.24, 500, 3500), beats[key] - 0.22, 0.08)
 place(thud(90, 12, 0.5), beats["wins"] + 0.1, 0.3)
-place(thud(260, 40, 0.15), beats["back"] + 0.35, 0.2)
-n = int(0.2 * SR); t = tx(n); place(bp(noise(n), 3000, 9000) * np.exp(-t * 25) * (rng.random(n) < 0.1) * 4, beats["takes"] + 0.05, 0.1)   # the phone cracks
+place(thud(200, 30, 0.2), beats["harder"] + 0.55, 0.22)                                                                         # the apple slams into the heavy rock
+n = int(0.2 * SR); t = tx(n); place(bp(noise(n), 3000, 9000) * np.exp(-t * 25) * (rng.random(n) < 0.1) * 4, beats["takes"] + 0.45, 0.1)   # the phone cracks
+for q in (1, 2, 3): place(pop(500 + 220 * q), beats["every"] + 0.1 + (beats["hit"] - 0.25 - beats["every"]) * (q / 3.25), 0.09)       # the speed marks, rising
+place(boom(), beats["hit"] + 0.15, 0.3); place(clang(), beats["hit"] + 0.27, 0.12)                                              # "I hit that dumpster at thirty-five"
 place(clang(), beats["peekout"] + 0.45, 0.2)                                                                                    # he shuts the lid
 
 # the tag: the detector, a low drone, then the hit into the end card
-drone = sum(np.sin(2 * np.pi * f * T) for f in (55, 65.4, 82.4)); dg = np.interp(T, [TS - 0.2, TS + 0.4, END - 0.05, END + 0.1], [0, 0.05, 0.07, 0])
+drone = sum(np.sin(2 * np.pi * f * T) for f in (55, 65.4, 82.4)); dg = np.interp(T, [TS - 0.2, TS + 0.4, END - 0.3, END], [0, 0.05, 0.07, 0])
 place(lp(drone, 400) * dg, 0)
 s_, gap = TS + 0.15, 0.36
-while s_ < END - 0.05: place(beep(1900, 0.05), s_, 0.11, 0.2); gap = max(0.07, gap * 0.86); s_ += gap
+while s_ < END - 0.1: place(beep(1900, 0.05), s_, 0.09, 0.2); gap = max(0.09, gap * 0.9); s_ += gap
 bn = int(1.6 * SR); bt = tx(bn)
-place(lp(sum(signal.sawtooth(2 * np.pi * f * bt) for f in (43.65, 43.9, 87.3, 65.4)), 600) * np.clip(bt / 0.02, 0, 1) * np.exp(-bt * 1.5), END - 0.02, 0.3)
-for i, f in enumerate((440, 523.3, 659.3, 880)): place(pluck(f, 0.9), END + 0.5 + i * 0.1, 0.07)
+place(lp(sum(signal.sawtooth(2 * np.pi * f * bt) for f in (43.65, 43.9, 87.3, 65.4)), 600) * np.clip(bt / 0.02, 0, 1) * np.exp(-bt * 1.5), TS + 2.55, 0.26)   # the hit when the next question lands
 
 place(tracks["peek"], 0, 1.55); place(tracks["commander"], 0, 1.3, -0.2); place(tracks["crowe"], 0, 1.5, -0.15)
 mix = np.stack([L, R], axis=1); mix = np.tanh(mix * 1.15) / np.tanh(1.15); mix /= max(1e-9, np.abs(mix).max()) / 0.89
@@ -210,5 +217,5 @@ for who, tr in tracks.items():
     rms = np.sqrt(np.convolve(tr ** 2, np.ones(hop) / hop, mode="same"))[::hop]
     env[who] = np.round(np.clip(rms / (np.percentile(rms[rms > 1e-4], 90) + 1e-9), 0, 1), 3).tolist()
 json.dump({"fps": a.fps, "dur": DUR, "rs": RS, "ts": round(TS, 3), "end": round(END, 3), "beats": beats, "words": sorted(caption_words, key=lambda w: w["t"]), **env}, open(a.cues, "w"))
-print(f"{a.out}: {DUR} s; report {RD:.1f} s from {RS}; tag at {TS:.2f}; end card at {END:.2f}")
+print(f"{a.out}: {DUR} s; report {RD:.1f} s from {RS}; tag at {TS:.2f}")
 print({k: v for k, v in beats.items()})

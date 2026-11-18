@@ -13,6 +13,11 @@ export const blend = (a, b, p) => { const o = fx.mix(a, b, p); o.m = fx.mix(a.m,
 export const ants = (e, l = 0, r = 0) => ({ ...e, antL: (e.ant || 0) + l, antR: (e.ant || 0) + r });
 export const say = (e, open) => ({ ...e, m: { ...e.m, jaw: Math.max(e.m.jaw, open * 0.95), w: lerp(e.m.w, 0.78, clamp(open) * 0.6) } });
 export const lv = (env, who, t) => (env && env[who] ? clamp((env[who][Math.round(t * env.fps)] || 0) * 1.25) : 0);
+// real mouth shapes when the cue file has them (audio/mouths.cjs), loudness otherwise
+export const speak = (e, env, t, who = "peek") => { const m = env && env.mouth && env.mouth[who] ? env.mouth[who][Math.round(t * env.fps)] : null;
+  if (!m) return say(e, lv(env, who, t));
+  const [p, w, smile, jaw, tongue] = m; if (p <= 0.01) return e;
+  return { ...e, m: fx.mix(e.m, { w, smile: smile + (e.talk?.smile ?? 0), jaw, smirk: (e.talk?.smirk ?? 0) * 0.5, tongue }, p) }; };
 export const blink = (t, at) => at.reduce((v, a) => Math.max(v, pulse(t, a, a + 0.14, 0.06)), 0);
 // regular blinks, a little irregular, for long takes
 export const blinks = (t, every = 2.7, seed = 1) => { const k = Math.floor(t / every), at = (k + 0.3 + 0.5 * fx.rnd(k * 7 + seed)) * every; return pulse(t, at, at + 0.14, 0.06); };

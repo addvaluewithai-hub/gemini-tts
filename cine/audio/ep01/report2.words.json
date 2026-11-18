@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T20:02:21.940Z",
+  "duration_ms": 53040,
+  "word_count": 122,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Commander, field report number one. This planet has a problem. Everything falls. Apples, cups, me. They call it gravity. Everything pulls on everything else. The heavier the thing, the harder it pulls. And the heaviest thing around here is the planet. So it wins, every time. That's all down means, toward the planet. And here's the strange part. You pull on the planet exactly as hard as it pulls on you. It's just too heavy to care. Drop your phone, the planet takes it. Humans do this daily and still act surprised. So, everything pulls everything. Heavier pulls harder, that's gravity. Which raises a question, Commander. It even holds their moon. So why doesn't the moon fall on them? Investigating. Peek out.",
+  "source_text": "Commander. Field report number one. This planet has a problem: everything falls. Apples. Cups. Me. They call it gravity. Everything pulls on everything else. The heavier the thing, the harder it pulls. And the heaviest thing around here... is the planet. So it wins. Every time. That's all DOWN means: toward the planet. And here is the strange part. You pull on the planet exactly as hard as it pulls on you. It's just too heavy to care. Drop your phone: the planet takes it. Humans do this daily... and still act surprised. So: everything pulls everything. Heavier pulls harder. That's gravity. Which raises a question, Commander. It even holds their Moon. So why doesn't the Moon fall on them? Investigating. Peek out.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Commander. Field report number one. This planet has a problem: everything falls. Apples. Cups. Me. They call it gravity. Everything pulls on everything else. The heavier the thing, the harder it pulls. And the heaviest thing around here... is the planet. So it wins. Every time. That's all DOWN means: toward the planet. And here is the strange part. You pull on the planet exactly as hard as it pulls on you. It's just too heavy to care. Drop your phone: the planet takes it. Humans do this daily... and still act surprised. So: everything pulls everything. Heavier pulls harder. That's gravity. Which raises a question, Commander. It even holds their Moon. So why doesn't the Moon fall on them? Investigating. Peek out."
+    }
+  ],
+  "agreement": 0.9919,
+  "flagged": false,
+  "missing_words": [
+    "is"
+  ],
+  "words": [
+    {
+      "start_ms": 240,
+      "end_ms": 800,
+      "text": "Commander,"
+    },
+    {
+      "start_ms": 1040,
+      "end_ms": 1280,
+      "text": "field"
+    },
+    {
+      "start_ms": 1280,
+      "end_ms": 1680,
+      "text": "report"
+    },
+    {
+      "start_ms": 1680,
+      "end_ms": 2000,
+      "text": "number"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2480,
+      "text": "one."
+    },
+    {
+      "start_ms": 2920,
+      "end_ms": 3160,
+      "text": "This"
+    },
+    {
+      "start_ms": 3160,
+      "end_ms": 3720,
+      "text": "planet"
+    },
+    {
+      "start_ms": 3720,
+      "end_ms": 3920,
+      "text": "has"
+    },
+    {
+      "start_ms": 3920,
+      "end_ms": 4000,
+      "text": "a"
+    },
+    {
+      "start_ms": 4000,
+      "end_ms": 4760,
+      "text": "problem."
+    },
+    {
+      "start_ms": 5040,
+      "end_ms": 5440,
+      "text": "Everything"
+    },
+    {
+      "start_ms": 5440,
+      "end_ms": 6160,
+      "text": "falls."
+    },
+    {
+      "start_ms": 6440,
+      "end_ms": 7040,
+      "text": "Apples,"
+    },
+    {
+      "start_ms": 7200,
+      "end_ms": 7800,
+      "text": "cups,"
+    },
+    {
+      "start_ms": 8040,
+      "end_ms": 8520,
+      "text": "me."
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9120,
+      "text": "They"
+    },
+    {
+      "start_ms": 9120,
+      "end_ms": 9400,
+      "text": "call"
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9640,
+      "text": "it"
+    },
+    {
+      "start_ms": 9640,
+      "end_ms": 10360,
+      "text": "gravity."
+    },
+    {
+      "start_ms": 10800,
+      "end_ms": 11280,
+      "text": "Everything"
+    },
+    {
+      "start_ms": 11280,
+      "end_ms": 11760,
+      "text": "pulls"
+    },
+    {
+      "start_ms": 11760,
+      "end_ms": 11880,
+      "text": "on"
+    },
+    {
+      "start_ms": 11880,
+      "end_ms": 12280,
+      "text": "everything"
+    },
+    {
+      "start_ms": 12280,
+      "end_ms": 12720,
+      "text": "else."
+    },
+    {
+      "start_ms": 13080,
+      "end_ms": 13200,
+      "text": "The"
+    },
+    {
+      "start_ms": 13200,
+      "end_ms": 13600,
+      "text": "heavier"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 13720,
+      "text": "the"
+    },
+    {
+      "start_ms": 13720,
+      "end_ms": 14080,
+      "text": "thing,"
+    },
+    {
+      "start_ms": 14240,
+      "end_ms": 14360,
+      "text": "the"
+    },
+    {
+      "start_ms": 14360,
+      "end_ms": 14680,
+      "text": "harder"
+    },
+    {
+      "start_ms": 14680,
+      "end_ms": 14800,
+      "text": "it"
+    },
+    {
+      "start_ms": 14800,
+      "end_ms": 15320,
+      "text": "pulls."
+    },
+    {
+      "start_ms": 15760,
+      "end_ms": 15880,
+      "text": "And"
+    },
+    {
+      "start_ms": 15880,
+      "end_ms": 15960,
+      "text": "the"
+    },
+    {
+      "start_ms": 15960,
+      "end_ms": 16280,
+      "text": "heaviest"
+    },
+    {
+      "start_ms": 16280,
+      "end_ms": 16440,
+      "text": "thing"
+    },
+    {
+      "start_ms": 16440,
+      "end_ms": 16720,
+      "text": "around"
+    },
+    {
+      "start_ms": 16720,
+      "end_ms": 17160,
+      "text": "here"
+    },
+    {
+      "start_ms": 17680,
+      "end_ms": 17880,
+      "text": "is"
+    },
+    {
+      "start_ms": 17880,
+      "end_ms": 18000,
+      "text": "the"
+    },
+    {
+      "start_ms": 18000,
+      "end_ms": 18720,
+      "text": "planet."
+    },
+    {
+      "start_ms": 18960,
+      "end_ms": 19120,
+      "text": "So"
+    },
+    {
+      "start_ms": 19120,
+      "end_ms": 19240,
+      "text": "it"
+    },
+    {
+      "start_ms": 19240,
+      "end_ms": 19760,
+      "text": "wins,"
+    },
+    {
+      "start_ms": 20040,
+      "end_ms": 20280,
+      "text": "every"
+    },
+    {
+      "start_ms": 20280,
+      "end_ms": 20800,
+      "text": "time."
+    },
+    {
+      "start_ms": 21320,
+      "end_ms": 21560,
+      "text": "That's"
+    },
+    {
+      "start_ms": 21560,
+      "end_ms": 21760,
+      "text": "all"
+    },
+    {
+      "start_ms": 21760,
+      "end_ms": 22280,
+      "text": "down"
+    },
+    {
+      "start_ms": 22280,
+      "end_ms": 22800,
+      "text": "means,"
+    },
+    {
+      "start_ms": 23040,
+      "end_ms": 23360,
+      "text": "toward"
+    },
+    {
+      "start_ms": 23360,
+      "end_ms": 23440,
+      "text": "the"
+    },
+    {
+      "start_ms": 23440,
+      "end_ms": 24000,
+      "text": "planet."
+    },
+    {
+      "start_ms": 24640,
+      "end_ms": 24800,
+      "text": "And"
+    },
+    {
+      "start_ms": 24800,
+      "end_ms": 25120,
+      "text": "here's"
+    },
+    {
+      "start_ms": 25120,
+      "end_ms": 25200,
+      "text": "the"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25680,
+      "text": "strange"
+    },
+    {
+      "start_ms": 25680,
+      "end_ms": 26160,
+      "text": "part."
+    },
+    {
+      "start_ms": 26520,
+      "end_ms": 26880,
+      "text": "You"
+    },
+    {
+      "start_ms": 26880,
+      "end_ms": 27360,
+      "text": "pull"
+    },
+    {
+      "start_ms": 27360,
+      "end_ms": 27480,
+      "text": "on"
+    },
+    {
+      "start_ms": 27480,
+      "end_ms": 27600,
+      "text": "the"
+    },
+    {
+      "start_ms": 27600,
+      "end_ms": 28080,
+      "text": "planet"
+    },
+    {
+      "start_ms": 28080,
+      "end_ms": 28880,
+      "text": "exactly"
+    },
+    {
+      "start_ms": 28880,
+      "end_ms": 29000,
+      "text": "as"
+    },
+    {
+      "start_ms": 29040,
+      "end_ms": 29400,
+      "text": "hard"
+    },
+    {
+      "start_ms": 29400,
+      "end_ms": 29520,
+      "text": "as"
+    },
+    {
+      "start_ms": 29520,
+      "end_ms": 29680,
+      "text": "it"
+    },
+    {
+      "start_ms": 29680,
+      "end_ms": 30000,
+      "text": "pulls"
+    },
+    {
+      "start_ms": 30000,
+      "end_ms": 30240,
+      "text": "on"
+    },
+    {
+      "start_ms": 30240,
+      "end_ms": 30640,
+      "text": "you."
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 31160,
+      "text": "It's"
+    },
+    {
+      "start_ms": 31160,
+      "end_ms": 31360,
+      "text": "just"
+    },
+    {
+      "start_ms": 31360,
+      "end_ms": 31480,
+      "text": "too"
+    },
+    {
+      "start_ms": 31480,
+      "end_ms": 31680,
+      "text": "heavy"
+    },
+    {
+      "start_ms": 31680,
+      "end_ms": 31800,
+      "text": "to"
+    },
+    {
+      "start_ms": 31800,
+      "end_ms": 32200,
+      "text": "care."
+    },
+    {
+      "start_ms": 32720,
+      "end_ms": 32960,
+      "text": "Drop"
+    },
+    {
+      "start_ms": 32960,
+      "end_ms": 33040,
+      "text": "your"
+    },
+    {
+      "start_ms": 33040,
+      "end_ms": 33440,
+      "text": "phone,"
+    },
+    {
+      "start_ms": 33640,
+      "end_ms": 33720,
+      "text": "the"
+    },
+    {
+      "start_ms": 33720,
+      "end_ms": 34040,
+      "text": "planet"
+    },
+    {
+      "start_ms": 34040,
+      "end_ms": 34280,
+      "text": "takes"
+    },
+    {
+      "start_ms": 34280,
+      "end_ms": 34560,
+      "text": "it."
+    },
+    {
+      "start_ms": 34960,
+      "end_ms": 35240,
+      "text": "Humans"
+    },
+    {
+      "start_ms": 35240,
+      "end_ms": 35360,
+      "text": "do"
+    },
+    {
+      "start_ms": 35360,
+      "end_ms": 35560,
+      "text": "this"
+    },
+    {
+      "start_ms": 35560,
+      "end_ms": 36160,
+      "text": "daily"
+    },
+    {
+      "start_ms": 36600,
+      "end_ms": 36760,
+      "text": "and"
+    },
+    {
+      "start_ms": 36760,
+      "end_ms": 37080,
+      "text": "still"
+    },
+    {
+      "start_ms": 37080,
+      "end_ms": 37280,
+      "text": "act"
+    },
+    {
+      "start_ms": 37280,
+      "end_ms": 38000,
+      "text": "surprised."
+    },
+    {
+      "start_ms": 38640,
+      "end_ms": 39160,
+      "text": "So,"
+    },
+    {
+      "start_ms": 39360,
+      "end_ms": 39800,
+      "text": "everything"
+    },
+    {
+      "start_ms": 39800,
+      "end_ms": 40440,
+      "text": "pulls"
+    },
+    {
+      "start_ms": 40560,
+      "end_ms": 41240,
+      "text": "everything."
+    },
+    {
+      "start_ms": 41520,
+      "end_ms": 41840,
+      "text": "Heavier"
+    },
+    {
+      "start_ms": 41840,
+      "end_ms": 42120,
+      "text": "pulls"
+    },
+    {
+      "start_ms": 42120,
+      "end_ms": 42600,
+      "text": "harder,"
+    },
+    {
+      "start_ms": 42960,
+      "end_ms": 43200,
+      "text": "that's"
+    },
+    {
+      "start_ms": 43200,
+      "end_ms": 43720,
+      "text": "gravity."
+    },
+    {
+      "start_ms": 44360,
+      "end_ms": 44600,
+      "text": "Which"
+    },
+    {
+      "start_ms": 44600,
+      "end_ms": 45000,
+      "text": "raises"
+    },
+    {
+      "start_ms": 45000,
+      "end_ms": 45080,
+      "text": "a"
+    },
+    {
+      "start_ms": 45080,
+      "end_ms": 45640,
+      "text": "question,"
+    },
+    {
+      "start_ms": 45640,
+      "end_ms": 46160,
+      "text": "Commander."
+    },
+    {
+      "start_ms": 46680,
+      "end_ms": 46840,
+      "text": "It"
+    },
+    {
+      "start_ms": 46840,
+      "end_ms": 47080,
+      "text": "even"
+    },
+    {
+      "start_ms": 47080,
+      "end_ms": 47400,
+      "text": "holds"
+    },
+    {
+      "start_ms": 47400,
+      "end_ms": 47600,
+      "text": "their"
+    },
+    {
+      "start_ms": 47600,
+      "end_ms": 48160,
+      "text": "moon."
+    },
+    {
+      "start_ms": 48480,
+      "end_ms": 48720,
+      "text": "So"
+    },
+    {
+      "start_ms": 48720,
+      "end_ms": 48960,
+      "text": "why"
+    },
+    {
+      "start_ms": 48960,
+      "end_ms": 49280,
+      "text": "doesn't"
+    },
+    {
+      "start_ms": 49280,
+      "end_ms": 49360,
+      "text": "the"
+    },
+    {
+      "start_ms": 49360,
+      "end_ms": 49800,
+      "text": "moon"
+    },
+    {
+      "start_ms": 49800,
+      "end_ms": 50120,
+      "text": "fall"
+    },
+    {
+      "start_ms": 50120,
+      "end_ms": 50280,
+      "text": "on"
+    },
+    {
+      "start_ms": 50280,
+      "end_ms": 50720,
+      "text": "them?"
+    },
+    {
+      "start_ms": 51280,
+      "end_ms": 52000,
+      "text": "Investigating."
+    },
+    {
+      "start_ms": 52240,
+      "end_ms": 52480,
+      "text": "Peek"
+    },
+    {
+      "start_ms": 52480,
+      "end_ms": 52720,
+      "text": "out."
+    }
+  ]
+}

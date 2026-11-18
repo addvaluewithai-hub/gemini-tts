@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing PEEK, a tiny pink cartoon alien spy in an animated comedy short. Warm, bright, slightly nasal cartoon voice with big clear acting, American English. He is secretly filing a field report to his Commander over the radio, hiding in an alley. Dry, deadpan and a little smug, like a tiny detective narrating; brisk, clear, no dead air; every joke is delivered completely straight and he never laughs. Slightly hushed, as if he might be overheard.",
+   "text": "Commander. Field report number one. <short pause> This planet has a problem: everything falls. Apples. Cups. Me. <short pause> They call it gravity. Everything pulls on everything else. The heavier the thing, the harder it pulls. And the heaviest thing around here... is the planet. So it wins. Every time. <short pause> That's all DOWN means: toward the planet. <short pause> And it doesn't just pull. It speeds you up. Every second you fall, you go twenty-two miles an hour faster. I hit that dumpster at thirty-five. <short pause> And here is the strange part. You pull on the planet exactly as hard as it pulls on you. It's just too heavy to care. <short pause> Drop your phone: the planet takes it. Humans do this daily... and still act surprised. <short pause> So: everything pulls everything. Heavier pulls harder. That's gravity. <short pause> Which raises a question, Commander. It even holds their Moon. So why doesn't the Moon fall on them? <short pause> Investigating. Peek out."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP01 gravity report3"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing AGENT CROWE, a tall grim government agent in an animated comedy short. Deep, gravelly, slow American voice. He has just found a small smoking pink capsule on a rooftop and has no idea what it is. Quiet, puzzled, suspicious, to himself.",
+   "text": "What... is this?"
+  }
+ ],
+ "voice": "Algenib",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP01 gravity what"
+ }
+}
