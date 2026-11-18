@@ -92,3 +92,10 @@ export function along(path, p) {
 export const trail = (path, p, map, attrs = "") => { const { x, y, i } = along(path, p); if (p <= 0) return "";
   const d = path.pts.slice(0, i).map(([px, py]) => map(px, py)).concat([map(x, y)]).map(([a, b], k) => `${k ? "L" : "M"}${a.toFixed(1)} ${b.toFixed(1)}`).join("");
   return `<path d="${d}" fill="none" ${attrs}/>`; };
+
+// ---- an astronaut, floating: white suit, life-support pack, round helmet with a dark gold-tinted visor (centre x, y; size k)
+export const astronaut = (x, y, k = 1) => at(x, y, k, 0, `<rect x="-62" y="-70" width="124" height="120" rx="20" fill="#b9c0d6"/>
+  <path d="M-30 40 L-44 120 L-14 124 L-6 52 Z M30 40 L44 120 L14 124 L6 52 Z" fill="#eef1f8"/><rect x="-50" y="112" width="40" height="20" rx="8" fill="#8a93b0"/><rect x="10" y="112" width="40" height="20" rx="8" fill="#8a93b0"/>
+  <path d="M-46 -44 L-104 4 L-86 22 L-36 -16 Z M46 -44 L104 -14 L92 8 L36 -16 Z" fill="#eef1f8"/><circle cx="-96" cy="14" r="15" fill="#c9cfe0"/><circle cx="99" cy="-3" r="15" fill="#c9cfe0"/>
+  <rect x="-48" y="-60" width="96" height="110" rx="30" fill="#f4f6fb"/><rect x="-26" y="-20" width="52" height="30" rx="6" fill="#c9cfe0"/><circle cx="-12" cy="-5" r="5" fill="#ff5a5a"/><circle cx="4" cy="-5" r="5" fill="#57c8ff"/>
+  <circle cx="0" cy="-100" r="52" fill="#f4f6fb"/><ellipse cx="4" cy="-98" rx="38" ry="30" fill="#1b2350"/><ellipse cx="4" cy="-98" rx="38" ry="30" fill="#e6b84a" opacity=".25"/><ellipse cx="-10" cy="-110" rx="14" ry="7" fill="#fff" opacity=".7"/>`);

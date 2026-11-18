@@ -105,7 +105,7 @@ function throw2(t, env) {                                   // 2.4 - 4.3: a seco
 }
 
 function throw3(t, env) {                                   // 4.3 - 6.5: the glare, the bite, the spin, "GET! BACK!", the whip pan
-  const k = 1.15, px = 430, py = 1700;
+  const k = 1.15, px = 430, py = 1620;
   const bite = seg(t, 4.5, 4.66), chew = t > 4.7 && t < 5.25, spin = seg(t, 5.25, 5.85);
   const toMouth = pulse(t, 4.42, 4.82, 0.12);
   let arm = t < 5.25 ? { x: lerp(820, 650, toMouth), y: lerp(640, 520, toMouth) } : throwArm(t, 5.4, REL[3], 1.2);
@@ -114,14 +114,14 @@ function throw3(t, env) {                                   // 4.3 - 6.5: the gl
   const turn = t < 5.25 ? 0.7 : Math.cos(spin * Math.PI * 2) * 0.9;
   const f = night("Lt3", [{ color: "#fff3d6", az: 45, power: 1.6, size: 12 }, { color: "#9fd0ff", az: 225, power: 0.5, size: 8 }], [0.82, 0.72, 0.98], 0.03);
   const [hx, hy] = hand(px, py, k, arm);
-  const whip = seg(t, REL[3], 6.5), c = fx.camera(t, [[4.3, 540, 960, 1.0, 0], [REL[3], 560, 960, 1.0, 0], [6.5, 1900, 700, 1.0, -6]], easeIn);
+  const whip = seg(t, REL[3], 6.5), c = fx.camera(t, [[4.3, 540, 960, 1.0, 0], [5.3, 540, 960, 1.0, 0], [REL[3] - 0.02, 520, 1110, 1.12, 2], [REL[3] + 0.06, 600, 1000, 1.05, -2], [6.5, 1900, 700, 1.0, -6]], easeIn);
   let ap = "";
   if (t < REL[3]) ap = t > 4.42 ? M.bitten(hx, hy - 30, 66, 20, t > 4.62 ? 1 : 0) : (t > 4.3 ? X.apple(hx, hy - 30, 66, 20) : "");
   else { const u = t - REL[3]; ap = M.bitten(hx + u * 2600, hy - 30 - u * 1500 + u * u * 300, 66, u * 900); }
-  const crumbs = bite > 0 && t < 5.0 ? [0, 1, 2, 3].map((i) => `<circle cx="${640 + i * 18 + (t - 4.62) * 200 * (i - 1.5)}" cy="${940 + (t - 4.62) * 600 + i * 6}" r="7" fill="#fff4d2"/>`).join("") : "";
+  const crumbs = bite > 0 && t < 5.0 ? [0, 1, 2, 3].map((i) => `<circle cx="${640 + i * 18 + (t - 4.62) * 200 * (i - 1.5)}" cy="${860 + (t - 4.62) * 600 + i * 6}" r="7" fill="#fff4d2"/>`).join("") : "";
   return [fx.layer(N.sky(NOMOON), c, 0.04), fx.layer(M.bigMoon(760, 420, 520), c, 0.06), fx.layer(N.cityFar(), { ...c, y: c.y - 160 }, 0.12, { blur: 4 }),
-    fx.layer(ground(py - 40), c, 1), fx.layer(peek(e, { filter: f, shadow: false, turn, nod: t < 5.25 ? -0.55 : -0.3, armR: arm, armL: { x: 400, y: 720 }, tilt: Math.sin(spin * Math.PI * 2) * 6, squash: 1 + 0.05 * Math.sin(spin * Math.PI) }, px, py, k) + ap + crumbs, c, 1),
-    whip > 0 ? fx.blurred(fx.speedLines(t, { angle: -20, o: 0.6 * whip, n: 24 }), 2) : "",
+    fx.layer(ground(py - 40), c, 1), fx.layer(peek(e, { filter: f, shadow: false, turn, nod: t < 5.25 ? -0.55 : -0.3, armR: arm, armL: { x: 400, y: 720 }, tilt: Math.sin(spin * Math.PI * 2) * 6, squash: 1 - 0.16 * pulse(t, 5.62, REL[3] - 0.02, 0.12) + 0.12 * pulse(t, REL[3] - 0.02, REL[3] + 0.25, 0.08) }, px, py, k) + ap + crumbs, c, 1),
+    whip > 0 ? fx.blurred(fx.speedLines(t, { angle: -20, o: 0.8 * Math.min(1, whip * 3), n: 34 }), 2) : "", fx.flash(pulse(t, REL[3] - 0.02, REL[3] + 0.08, 0.03) * 0.35, "#fff8e0"),
     ...finish(t, t, { o: 0.18, vig: 0.6, grade: ["#2a3cc0", 0.22], warm: 0.06, streak: 1 + whip * 2 }), caps(env, t, OUT)];
 }
 
@@ -180,6 +180,7 @@ function strip(t, env, face = TALK, gesture = null, g = 0, o = {}, hide = 0) {
   return `<rect x="0" y="1722" width="${W}" height="200" fill="#151a46"/><rect x="0" y="1722" width="${W}" height="7" fill="#4a4680"/>` + (hide ? me + ac : ac + me)
     + tips.map(([x, y]) => fx.glow(x, y, 46, "#ffe66d", glow * 0.5)).join("") + sweep;
 }
+const shhArm = (p, o) => (p <= 0.01 ? o : { ...o, armR: { x: lerp(780, 612, p), y: lerp(760, 548, p), front: true } });   // a finger to his lips
 function boardFrame(t, env, t0, inner, face, gesture, g, o, { hide = 0, tone = "#161b4a", dark = 0 } = {}) {
   const age = t - t0, slide = (1 - easeOut(clamp(age / 0.22))) * 260, drift = 1 + 0.03 * clamp(age / 4);
   fx.def("zonec", `<clipPath id="zonec"><rect x="${ZONE.x}" y="${ZONE.y}" width="${ZONE.w}" height="${ZONE.h}" rx="44"/></clipPath>`);
@@ -188,7 +189,7 @@ function boardFrame(t, env, t0, inner, face, gesture, g, o, { hide = 0, tone = "
     <g clip-path="url(#zonec)"><g transform="translate(${ZC[0] + slide} ${ZC[1]}) scale(${drift.toFixed(4)}) translate(${-ZC[0]} ${-ZC[1]})" opacity="${clamp(age / 0.12)}">${inner}</g></g>
     <rect x="${ZONE.x}" y="${ZONE.y}" width="${ZONE.w}" height="${ZONE.h}" rx="44" fill="none" stroke="#7fd4ff" stroke-width="5" opacity=".55"/>`,
     dark ? `<rect width="${W}" height="${H}" fill="#02030c" opacity="${dark}"/>` : "",
-    fx.vignette(0.4 + dark * 0.4), strip(t, env, face, gesture, g, o, hide), fx.grain(t, 0.07), caps(env, t, BOARD)];
+    fx.vignette(0.4 + dark * 0.4), strip(t, env, face, gesture, g, shhArm(hide ? pulse(age, 0.05, 0.85, 0.15) : 0, o), hide), fx.grain(t, 0.07), caps(env, t, BOARD)];
 }
 const NOTE = (x, y, text, size, col, o, rot = -5) => (o <= 0 ? "" : `<g transform="rotate(${rot} ${x} ${y})">${X.label(x, y, text, size, col, o)}</g>`);
 
@@ -310,13 +311,12 @@ function interrupt(t, env) {
   // world, so "the beam crawls over the AC just above his hat" is exact.
   const b = env.beats, u = t - env.is, IS = env.is, cmd = b.cmd, cmdE = b.cmd_end, bs = env.bs, ACTOP = N.FLOOR - 350;
   const door = easeOut(seg(t, IS, IS + 0.12));
-  const walkOut = ease(seg(t, IS + 0.45, b.crowe - 0.1)), walkOff = ease(seg(t, cmdE + 1.6, bs + 0.6)), flip = t > cmdE + 1.5;
-  const cx = flip ? lerp(470, 250, walkOff) : lerp(400, 470, walkOut), moving = (walkOut > 0 && walkOut < 1) || (walkOff > 0 && walkOff < 1);
-  const stepBob = moving ? Math.abs(Math.sin((walkOut + walkOff) * Math.PI * 3)) * 10 : 0, show = seg(t, IS + 0.3, IS + 0.5);
+  // Crowe never slides in plain view: he stands still, a silhouette in the lit doorway; he moves to the parapet while the camera is close on Peek
+  const flip = t >= bs - 0.55, cx = flip ? 250 : 430, moving = false, stepBob = 0, show = seg(t, IS + 0.3, IS + 0.5);
   // where the beam points (world): the floor, the apple in his hand, the roof, the AC, just over the hat, past it, down over the far parapet
-  const [ax0, ay0] = (([x, y]) => [x + 95, y + 34])(torchAt(470, 14, false));          // the apple, held up just in front of the torch
-  const tgt = [kf(t, [[IS + 0.5, 700], [b.crowe - 0.3, 760], [b.crowe + 0.1, ax0], [b.crowe_end + 0.3, ax0], [cmd + 0.3, 1200], [cmdE + 0.25, 700], [cmdE + 0.85, 1000], [cmdE + 1.3, 1350], [bs + 0.6, -200]]),
-               kf(t, [[IS + 0.5, 1640], [b.crowe - 0.3, 1600], [b.crowe + 0.1, ay0], [b.crowe_end + 0.3, ay0], [cmd + 0.3, 1650], [cmdE + 0.25, 1300], [cmdE + 0.85, 1150], [cmdE + 1.3, 1170], [bs + 0.6, 1700]])];
+  const [ax0, ay0] = (([x, y]) => [x + 95, y + 34])(torchAt(430, 14, false));          // the apple, held up just in front of the torch
+  const tgt = [kf(t, [[IS + 0.5, 700], [b.crowe - 0.3, 760], [b.crowe + 0.1, ax0], [b.crowe_end + 0.3, ax0], [cmd + 0.3, 1200], [cmdE + 0.2, 700], [cmdE + 0.55, 1000], [cmdE + 0.9, 1350], [bs + 0.6, -200]]),
+               kf(t, [[IS + 0.5, 1640], [b.crowe - 0.3, 1600], [b.crowe + 0.1, ay0], [b.crowe_end + 0.3, ay0], [cmd + 0.3, 1650], [cmdE + 0.2, 1300], [cmdE + 0.55, 1150], [cmdE + 0.9, 1170], [bs + 0.6, 1700]])];
   const [ox, oy] = torchAt(cx, -8, flip);
   let ang = Math.atan2(tgt[1] - oy, tgt[0] - ox) * 180 / Math.PI;      // screen-style degrees, 0 = right, positive = down
   const aim = flip ? 180 - ang - 4 : ang - 4, [bx, by] = torchAt(cx, Math.max(-40, Math.min(40, aim)), flip);
@@ -324,7 +324,7 @@ function interrupt(t, env) {
   const crowe = show > 0 ? `<g opacity="${show}" transform="translate(0 ${-stepBob})">${CRO(cx, Math.max(-40, Math.min(40, aim)), { flip, red, lean: moving ? 4 : 0 })}</g>` : "";
   const apple = t > b.crowe - 0.25 && t < b.crowe_end + 0.5 ? (() => { const r = ease(seg(t, b.crowe - 0.25, b.crowe + 0.1)) * (1 - ease(seg(t, b.crowe_end + 0.1, b.crowe_end + 0.5))); return `<g opacity="${r}">${M.bitten(ax0, ay0, 30, -20)}</g>`; })() : "";
   // Peek: frozen in the open; the dive behind the AC; peering over it; the Commander; the clamp; ducking under the beam; out at the side to whisper
-  const dive = seg(t, IS + 0.3, IS + 0.75), behind = dive >= 0.8 && t < bs - 0.55, ducked = pulse(t, cmdE + 0.5, cmdE + 1.4, 0.15);
+  const dive = seg(t, IS + 0.3, IS + 0.75), behind = dive >= 0.8 && t < bs - 0.55, ducked = pulse(t, cmdE + 0.3, cmdE + 1.0, 0.12);
   const radioOn = lv(env, "commander", t), pop = t < cmdE ? ease(seg(t, cmd - 0.05, cmd + 0.1)) : 1, clampA = ease(seg(t, cmdE - 0.05, cmdE + 0.2));
   const k = 0.62, PEER = ACTOP + (1010 - 380) * k * 0.92 - 26;                                     // feet such that his eyes clear the AC top
   let px, py, sq = 0.92;
@@ -424,12 +424,12 @@ function rSummary(t, env) {                                 // "So: the Moon is 
     + row(840, b.sum3, orbitMini(200, 840), "IT KEEPS MISSING", "#ffe66d"), HUSH, "point", pulse(t, b.sum1 + 0.2, b.question - 0.25, 0.2));
 }
 function rAstro(t, env) {                                   // "Which raises a question. The same pull reaches their astronauts. So why do they float?"
-  const b = env.beats, ex = 600, ey = 680, R = 170, sr = 245, th = -Math.PI / 2 - (t - b.question) * 0.8, sx = ex + Math.cos(th) * sr, sy = ey + Math.sin(th) * sr, dx = ex - sx, dy = ey - sy, L = Math.hypot(dx, dy);
+  const b = env.beats, ex = 660, ey = 700, R = 160, sr = 240, th = -Math.PI / 2 - (t - b.question) * 0.8, sx = ex + Math.cos(th) * sr, sy = ey + Math.sin(th) * sr, dx = ex - sx, dy = ey - sy, L = Math.hypot(dx, dy);
   const port = popIn(t, b.float - 0.1, 0.3), drift = Math.sin(t * 1.3) * 18, spin = t * 25;
-  const porthole = port > 0 ? `<g transform="translate(250 380) scale(${port})"><circle r="150" fill="#cfd6ee"/><circle r="128" fill="#0b0e30"/><clipPath id="portc2"><circle r="128"/></clipPath><g clip-path="url(#portc2)"><rect x="-140" y="40" width="280" height="10" fill="#3a4490"/>
-    <g transform="translate(0 ${drift - 10}) rotate(${spin})">${X.human(0, 90, 0.55, { shirt: "#f2f4fb", hair: "#5a3a22", armL: 70, armR: -60 })}</g></g></g>${X.label(250, 330, "?", 150, "#ffe66d", port, easeOutBack(seg(t, b.float + 0.2, b.float + 0.5)))}` : "";
+  const porthole = port > 0 ? `<g transform="translate(250 430) scale(${port})"><circle r="195" fill="#cfd6ee"/><circle r="170" fill="#0b0e30"/><clipPath id="portc2"><circle r="170"/></clipPath><g clip-path="url(#portc2)"><rect x="-180" y="70" width="360" height="12" fill="#3a4490"/>
+    <g transform="translate(0 ${drift - 6}) rotate(${spin})">${M.astronaut(0, 0, 0.95)}</g></g></g>${X.label(480, 380, "?", 140, "#ffe66d", port, easeOutBack(seg(t, b.float + 0.2, b.float + 0.5)))}` : "";
   return B(t, env, b.question - 0.15, `<circle cx="${ex}" cy="${ey}" r="${sr}" fill="none" stroke="#9fd0ff" stroke-width="4" stroke-dasharray="6 14" opacity=".5"/>` + X.earth(ex, ey, R, t * 0.15) + M.station(sx, sy, 0.46, th * 180 / Math.PI + 90)
-    + X.arrow(sx + dx / L * 50, sy + dy / L * 50, sx + dx / L * (L - R - 20), sy + dy / L * (L - R - 20), 12, "#ffe66d", t * 2, fade(t, b.astro)) + X.label(820, 330, "SAME PULL", 56, "#ffe66d", fade(t, b.astro + 0.2))
+    + X.arrow(sx + dx / L * 50, sy + dy / L * 50, sx + dx / L * (L - R - 20), sy + dy / L * (L - R - 20), 12, "#ffe66d", t * 2, fade(t, b.astro)) + X.label(860, 300, "SAME PULL", 58, "#ffe66d", fade(t, b.astro + 0.2))
     + porthole, HUSH, "point", pulse(t, b.astro, b.out - 0.2, 0.2));
 }
 function rExit(t, env) {                                    // "Investigating. Peek out." already tiptoeing away, turned away, while Crowe looks the other way
@@ -457,10 +457,10 @@ function tagClose(t, env, u) {                             // the close-up: the 
     `<g transform="translate(${cx} ${cy}) scale(${push}) translate(${-cx} ${-cy})">${M.bitten(cx, cy + wob, R, -6)}${hand}</g>`, fx.vignette(0.7), fx.grain(t, 0.1)];
 }
 function tag(t, env) {
-  const u = t - env.ts, walk = ease(seg(u, 0, 1.2)), cx = lerp(460, 1340, walk), flip = true, raise = ease(seg(u, 1.0, 1.4));
+  const u = t - env.ts, walk = 1, cx = 1340, flip = true, raise = ease(seg(u, 0.45, 0.95));
   const aim = lerp(30, -18, raise), [bx, by] = torchAt(cx, aim, flip), close = u > 1.35, nb = env.beats.next;
   const [ax, ay] = [bx - 80, by - 6];
-  const c = fx.camera(u, [[0, 900, 1250, 0.84, 0], [1.35, 1100, 1230, 1.0, 0]]);
+  const c = fx.camera(u, [[0, 1150, 1250, 0.9, 0], [1.35, 1200, 1230, 1.0, 0]]);
   const beam = fx.beam(...fx.toScreen(c, bx, by), 180 - aim - 4, 2400, 12, "#fff3d6", 0.5, 10) + fx.glow(...fx.toScreen(c, bx, by), 120 * c.z, "#fff6dc", 0.8);
   const apple = raise > 0 ? `<g opacity="${raise}">${M.bitten(ax, ay, 40, 160)}</g>` : "";
   const q = seg(t, nb, nb + 0.2);
