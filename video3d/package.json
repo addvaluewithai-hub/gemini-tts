@@ -1,0 +1,7 @@
+{
+  "name": "video3d",
+  "private": true,
+  "type": "module",
+  "description": "Code-drawn 3D shots for the Peek Shorts (three.js, rendered headless, frame by frame)",
+  "dependencies": { "three": "0.187.0" }
+}
