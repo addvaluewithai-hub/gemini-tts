@@ -172,7 +172,13 @@
     ]
    },
    "look": "fixed",
-   "captions": false
+   "captions": false,
+   "video": {
+    "id": "DT_lD4h_M28",
+    "url": "https://youtube.com/shorts/DT_lD4h_M28",
+    "privacy": "private",
+    "publishAt": "2026-11-19T12:00:00Z"
+   }
   },
   {
    "key": "questions",
@@ -229,7 +235,13 @@
     ]
    },
    "look": "fixed",
-   "captions": false
+   "captions": false,
+   "video": {
+    "id": "NvQIYAg6EwU",
+    "url": "https://youtube.com/shorts/NvQIYAg6EwU",
+    "privacy": "private",
+    "publishAt": "2026-11-19T18:00:00Z"
+   }
   }
  ]
 }
