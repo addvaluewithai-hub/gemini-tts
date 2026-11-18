@@ -35,7 +35,10 @@ export const bag = (n = 3) => `<path d="M-90 0 L-104 -190 L104 -190 L90 0 Z" fil
 // ---- a lit window (x, y top-left, w, h) that breaks at p 0..1: the glass flies, the room goes dark
 export function windowPane(x, y, w, h, p = 0, t = 0) {
   const lit = p <= 0 ? 1 : Math.max(0.25, 1 - p * 0.9);
-  const frame = `<rect x="${x - 10}" y="${y - 10}" width="${w + 20}" height="${h + 20}" fill="#0b0920"/><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#ffcf7a" opacity="${(0.75 * lit).toFixed(2)}"/>`;
+  def("winG", `<radialGradient id="winG" cx=".5" cy=".4" r=".75"><stop offset="0" stop-color="#fff6d8"/><stop offset=".6" stop-color="#ffd27a"/><stop offset="1" stop-color="#e8943c"/></radialGradient>`);
+  const room = `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#winG)" opacity="${lit.toFixed(2)}"/><path d="M${x + w * 0.5} ${y} V${y + h * 0.22}" stroke="#5a3a22" stroke-width="3"/><path d="M${x + w * 0.38} ${y + h * 0.3} L${x + w * 0.62} ${y + h * 0.3} L${x + w * 0.56} ${y + h * 0.22} L${x + w * 0.44} ${y + h * 0.22} Z" fill="#8a4a2a" opacity="${lit.toFixed(2)}"/>
+    <path d="M${x} ${y} C${x + w * 0.2} ${y + h * 0.3} ${x + w * 0.1} ${y + h * 0.7} ${x + w * 0.22} ${y + h} H${x} Z M${x + w} ${y} C${x + w * 0.8} ${y + h * 0.3} ${x + w * 0.9} ${y + h * 0.7} ${x + w * 0.78} ${y + h} H${x + w} Z" fill="#c2405a" opacity="${(0.85 * lit).toFixed(2)}"/>`;
+  const frame = `<rect x="${x - 10}" y="${y - 10}" width="${w + 20}" height="${h + 20}" fill="#0b0920"/>` + room;
   if (p <= 0) return frame + `<path d="M${x + w / 2} ${y} V${y + h} M${x} ${y + h * 0.45} H${x + w}" stroke="#0b0920" stroke-width="8"/>`;
   const shards = Array.from({ length: 16 }, (_, i) => { const a = rnd(i * 5) * 6.28, v = 260 + rnd(i * 3) * 520, sx = x + w * (0.2 + 0.6 * rnd(i * 11)), sy = y + h * (0.2 + 0.6 * rnd(i * 13));
     const px = sx + Math.cos(a) * v * p, py = sy + Math.sin(a) * v * p * 0.6 + 900 * p * p, s = 10 + rnd(i * 7) * 18;
