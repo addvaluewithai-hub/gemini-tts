@@ -8,7 +8,7 @@ takes (speech drives time), so they move by a second or two.
 | Cold open | 0.0 to 10.8 | three apples at the Moon, a window breaks, Crowe's detector, "Oops.", title |
 | Report A | 10.8 to about 41.5 | 84 words, ends on the cliffhanger "Because it..." |
 | Crowe interruption | about 41.5 to 48.5 | 7 s, on the real rooftop |
-| Report B | about 48.5 to 80 | 86 words, whispered, hiding behind the AC unit |
+| Report B | about 48.5 to 80 | 87 words, hushed, hiding behind the AC unit |
 | Exit + tag | about 80 to 87.5 | Peek tiptoes off; Crowe one step closer; NEXT REPORT / WHY DO ASTRONAUTS FLOAT? |
 
 ## The script
@@ -26,18 +26,18 @@ takes (speech drives time), so they move by a second or two.
 **Interruption:** Crowe (take `crowe`, first half): "Thrown... from up here."  Commander over the radio (take
 `commander`): "Because it WHAT, Agent Peek?"
 
-**Report B (Peek, hushed stage whisper, 86 words):**
+**Report B (Peek, low, hushed, fully voiced, 87 words):**
 > ...is falling. All the time.
 > But it is also moving sideways. Two thousand three hundred miles an hour.
 > Without the pull, it would fly off in a straight line. With it, it falls a dime's thickness every second... just
-> enough to bend its path into a circle around us. Once every twenty-seven days.
+> enough to bend its path into a circle around this planet. Once every twenty-seven days.
 > So: the Moon is falling. It moves sideways so fast that it keeps missing us.
 > Which raises a question. The same pull reaches their astronauts. So why do they float?
 > Investigating. Peek out.
 
 **Tag:** Crowe (take `crowe`, second half): "Small mouth... big teeth."
 
-Total report: 170 words for about 62 s (Puck about 2.7 words a second after tightening; tempo 1.0, no speed-up).
+Total report: 171 words for about 62 s (Puck about 2.7 words a second after tightening; tempo 1.0, no speed-up).
 
 ## Cold open, shot by shot (about 10.8 s)
 
@@ -84,7 +84,7 @@ report continues in a changed state: whispering, hiding, the antennae dimmed, an
 | "But it is also moving sideways. Two thousand three hundred miles an hour." | A pink arrow along the orbit, at right angles to the pull. Label 2,300 mph / 3,700 km/h. | arrows ride with the Moon | it moves sideways, fast |
 | "Without the pull, it would fly off in a straight line." | A ghost Moon leaves along the tangent, dashed line, label NO PULL, and drifts off the board. | ghost slides away | what the sideways motion alone would do |
 | "With it, it falls a dime's thickness every second..." | Zoom on one second of the path: the straight dashed line and the real curved path; the gap between them is marked "falls 1.4 mm"; a dime beside it (1.35 mm). Label: NOT TO SCALE (the gap is 1.4 mm against 1 km sideways). | the gap opens, the dime flips in | the fall is tiny and constant |
-| "...just enough to bend its path into a circle around us. Once every twenty-seven days." | The Moon traces a full orbit, the trail drawing the circle, a day counter 0 to 27 DAYS. | trail and counter | that is an orbit |
+| "...just enough to bend its path into a circle around this planet. Once every twenty-seven days." | The Moon traces a full orbit, the trail drawing the circle, a day counter 0 to 27 DAYS. | trail and counter | that is an orbit |
 | "So: the Moon is falling. It moves sideways so fast that it keeps missing us." | Summary rows as in Episode 1: THE MOON IS FALLING (down arrow) / SIDEWAYS, SO FAST (side arrow) / IT KEEPS MISSING (the circle). | rows pop in on the words | the one sentence |
 | "Which raises a question. The same pull reaches their astronauts. So why do they float?" | Earth, a small space station on its own circle with the same yellow pull arrow; inside, an astronaut floating with "?". | station circling, astronaut drifting | the next question |
 | "Investigating. Peek out." | Live rooftop: Peek tips his hat and tiptoes off behind Crowe's back (Crowe at the far parapet, looking down). | the tiptoe | sign-off |
@@ -119,9 +119,20 @@ scale; "Peek's theory" is labelled as his wrong idea.
 | peek-en-ep02-throws | Puck | "Back! / Get BACK! / GET! BACK!" |
 | peek-en-ep02-oops | Puck | "...Oops." |
 | peek-en-ep02-reportA | Puck | Report A, 84 words |
-| peek-en-ep02-reportB | Puck | Report B, 86 words, hushed stage whisper |
+| peek-en-ep02-reportB | Puck | Report B, 87 words, low hushed voice (fully voiced) |
 | peek-en-ep02-commander | Charon | "Because it WHAT, Agent Peek?" (radio-filtered in the sound script) |
 | peek-en-ep02-crowe | Algenib | "Thrown... from up here. / Small mouth... big teeth." (one take, split by word times) |
 
 The requests are in `cine/audio/ep02/*.json`; style prompts copied from `cine/audio/ep01/*.json`, with the situation
 changed.
+
+## Changes after the manager's Gate 1 review
+
+- Report B: "a circle around us" became "a circle around this planet" ("keeps missing us" stays). The style asks for a
+  low, hushed, urgent voice that is fully voiced, not a whisper.
+- Frame one opens close on Peek's terrified, sweating face in the hat, with the enormous Moon behind him and his arm
+  already cocked (about 0.6 s), then cuts wide for the release. The cold open may run to 12 s for clarity.
+- Peek's face on the roof strip stays above y 1440 and out of the right 190 px; captions stay at y 1100.
+- Very quiet footsteps on the stairs under the last three seconds of Report A set up the door slam. The interruption
+  may run to 9 s.
+- Rain is silent under both report halves and very low in the interruption and the tag.
