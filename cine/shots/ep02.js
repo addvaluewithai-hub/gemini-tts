@@ -11,6 +11,7 @@ import * as fx from "../lib/fx.js";
 import * as N from "../sets/night.js";
 import * as M from "../sets/moon.js";
 import * as X from "../lib/explain.js";
+import { crowe as drawCrowe, croweHands, WALK_CYCLE } from "../lib/crowe.js";
 import { K, PY, F, blend, ants, speak, lv, blink, blinks, peek, night, finish, rainBack, roof, PANIC, DREAD, DEADPAN } from "../lib/act.js";
 
 const { seg, lerp, ease, easeOut, easeIn, easeOutBack, kf, clamp, spring, pulse, noise, W, H } = fx;
@@ -52,6 +53,19 @@ function lob(t, t0, t1, x0, y0, x1, y1, h) {
 }
 
 const puff = (x, y, p, k = 1) => (p <= 0 || p >= 1 ? "" : [0, 1, 2, 3, 4].map((i) => `<ellipse cx="${(x + Math.cos(i * 1.4 + 0.3) * (20 + 70 * p) * k).toFixed(1)}" cy="${(y - 6 - Math.abs(Math.sin(i * 1.4)) * 30 * p * k).toFixed(1)}" rx="${(22 * k * (1 - p * 0.4)).toFixed(1)}" ry="${(14 * k * (1 - p * 0.4)).toFixed(1)}" fill="#c9d2ff" opacity="${(0.45 * (1 - p)).toFixed(2)}"/>`).join(""));
+// ---- Agent Crowe, drawn (lib/crowe.js): placed in the world at (x, y), scale k, mirrored when he faces left. Returns the SVG
+// and, in world coordinates, the torch lens, the beam's direction, and his far hand (which holds the apple).
+const CK = 0.75;                                            // about 880 tall on the roof: a head and a half taller than Peek
+const crLight = (id, warm = 0.6, cool = 1.5) => night(id, [{ color: "#cfe3ff", az: 225, power: cool, size: 9 }, { color: "#ffd9a0", az: 20, power: warm, size: 12 }], [0.36, 0.36, 0.64], 0.0);
+function CR(x, o, { flip = false, k = CK, y = N.FLOOR - 2 } = {}) {
+  const h = croweHands(o), sg = flip ? -1 : 1, P = ([a, b]) => [x + sg * a * k, y + b * k], aim = o.aim ?? -8;
+  return { svg: `<g transform="translate(${x.toFixed(1)} ${y}) scale(${(sg * k).toFixed(3)} ${k})">${drawCrowe(o)}</g>`, lens: P(h.lens), far: P(h.far), beamA: flip ? 180 - aim : aim };
+}
+// the hand target that points the torch from his near hand at a world point (in his own coordinates, unmirrored)
+const aimAt = (hx, hy, tx, ty) => Math.atan2(ty - hy, tx - hx) * 180 / Math.PI;
+const jawOf = (env, t) => clamp(lv(env, "crowe", t) * 0.95);
+const ALERT = (t) => (Math.sin(t * 40) > 0 ? 1 : 0.35);
+
 // ============================================================ COLD OPEN
 const REL = { 1: 0.68, 2: 3.15, 3: 5.95 };                 // the apple leaves his hand (matches the sound script)
 const C1_MOON = { x: 790, y: 400, r: 470 };
@@ -133,20 +147,24 @@ function window_(t, env) {                                  // 6.5 - 7.4: long l
     fx.flash(t > hit ? Math.exp(-(t - hit) * 14) * 0.6 : 0, "#e8f6ff"), ...finish(t, t, { o: 0.15, vig: 0.7, grade: ["#3a2a90", 0.22], warm: 0.1 })];
 }
 
-function alleyCrowe(t, env) {                               // 7.4 - 9.2: the alley; the apple bounces to Crowe's shoe; the detector screams; he looks up
-  const c = fx.camera(t, [[7.4, 520, 1300, 1.18, 0], [9.2, 540, 1250, 1.24, 0]]);
-  const cx = 360, bounce = [[7.4, 300, 900], [7.55, 520, 1735], [7.72, 600, 1690], [7.85, 640, 1735], [8.3, 470, 1735]];
-  let ax, ay;
-  if (t < 7.55) { const u = seg(t, 7.4, 7.55); ax = lerp(560, 520, u); ay = lerp(1150, 1735, u * u); }
-  else if (t < 7.85) { const u = seg(t, 7.55, 7.85); ax = lerp(520, 640, u); ay = 1735 - Math.sin(u * Math.PI) * 120; }
-  else { const u = easeOut(seg(t, 7.85, 8.3)); ax = lerp(640, cx + 110, u); ay = 1735; }
-  const pick = ease(seg(t, 8.35, 8.75)), raise = ease(seg(t, 8.75, 9.1)), lean = pick * 14 - raise * 18;
-  const aim = lerp(-8, -30, raise), [tx_, ty_] = N.croweTorch(aim), tipX = cx + tx_ * 0.78, tipY = 1745 + ty_ * 0.78;
-  const apX = lerp(ax, tipX + 70, pick), apY = lerp(ay, tipY - 10, pick) - raise * 50;
-  const red = Math.sin(t * 40) > 0 ? 1 : 0.3;
-  const crowe = `<g transform="translate(${cx} 1745) scale(.78)">${N.crowe({ aim, lean, glint: 0.5 + 0.5 * raise, green: 0 })}<g transform="rotate(${lean} 0 -480)"><rect x="-128" y="-528" width="40" height="30" rx="4" fill="#ff3b3b" opacity="${red}"/></g></g>`;
-  return [fx.layer(N.alley() + N.dumpsterBack() + N.dumpster(1, 0) + crowe + (t < 9.2 ? M.bitten(apX, apY, 24, (8.3 - Math.min(t, 8.3)) * 600) : ""), c, 1),
-    fx.glow(...fx.toScreen(c, cx - 85, 1745 - 400), 90, "#ff3b3b", 0.5 * red), pick > 0.3 ? fx.glow(...fx.toScreen(c, apX, apY), 120, "#fff6dc", 0.6 * pick) : "", ...finish(t, t, { o: 0.25, vig: 0.66, grade: ["#3a2a90", 0.24], warm: 0.1 }), caps(env, t, OUT)];
+function alleyCrowe(t, env) {                               // 7.4 - 9.2: the alley; the apple bounces up and Crowe catches it; the detector screams; he looks up at the roofs
+  const c = fx.camera(t, [[7.4, 520, 1300, 1.18, 0], [9.2, 540, 1250, 1.24, 0]]), k = 0.67, cx = 330, Y = 1745;
+  const catchT = 7.95, reach = ease(seg(t, 7.6, catchT)), look = ease(seg(t, 8.0, 8.25)) * (1 - ease(seg(t, 8.75, 9.0))), up = ease(seg(t, 8.75, 9.05));
+  const handL = { x: lerp(-60, 175, reach), y: lerp(-520, lerp(-760, -820, up), reach) };
+  const hand = { x: lerp(232, 210, look), y: lerp(-706, -600, look) };
+  const o0 = { handL, hand };
+  const far0 = CR(cx, o0, { k, y: Y }).far;
+  const aim = up > 0.01 ? lerp(aimAt(210, -600, 175, -760), -62, up) : look > 0.01 ? aimAt(hand.x, hand.y, handL.x, handL.y + 10) : lerp(40, 30, seg(t, 7.4, 7.9));
+  const o = { ...o0, aim, nod: lerp(14, 22, look) * (1 - up) - 26 * up, lean: 4 * look, glint: 0.6 + 0.4 * look, led: "#ff3b3b", ledO: ALERT(t), torch: 1, filter: crLight("Lcw1", 1.1, 1.2) };
+  const C = CR(cx, o, { k, y: Y });
+  let ax, ay;                                                // the apple: down from the window, a bounce, up into his hand
+  if (t < 7.55) { const u = seg(t, 7.4, 7.55); ax = lerp(560, 540, u); ay = lerp(1150, 1735, u * u); }
+  else if (t < catchT) { const u = seg(t, 7.55, catchT); ax = lerp(540, far0[0] + 10, u); ay = lerp(1735, far0[1] - 6, u) - Math.sin(u * Math.PI) * 260; }
+  else { ax = C.far[0] + 10; ay = C.far[1] - 6; }
+  const beam = look > 0.05 || up > 0.05 ? fx.beam(...fx.toScreen(c, ...C.lens), C.beamA, 1600, 14, "#fff3d6", 0.45 * Math.max(look, up), 9) : "";
+  return [fx.layer(N.alley() + N.dumpsterBack() + N.dumpster(1, 0) + C.svg + M.bitten(ax, ay, 24, t < catchT ? (t - 7.4) * 600 : 330), c, 1), beam,
+    fx.glow(...fx.toScreen(c, ...C.lens), 70, "#fff6dc", 0.8), look > 0.3 ? fx.glow(...fx.toScreen(c, ax, ay), 110, "#fff6dc", 0.5 * look) : "",
+    ...finish(t, t, { o: 0.25, vig: 0.66, grade: ["#3a2a90", 0.24], warm: 0.1 }), caps(env, t, OUT)];
 }
 
 function oops(t, env) {                                     // 9.2 - rs: Peek, small, guilty; the Moon is still there; the title
@@ -202,7 +220,7 @@ function rRoof(t, env) {
   const radio = tips.map(([x, y]) => fx.glow(x, y, 70, "#ffe66d", 0.8) + [0, 0.5].map((d) => { const a = (t * 2.2 + d) % 1; return `<circle cx="${x}" cy="${y}" r="${24 + a * 70}" fill="none" stroke="#ffe66d" stroke-width="5" opacity="${(0.8 * (1 - a)).toFixed(2)}"/>`; }).join("")).join("");
   const plane = acUnit2() + peek(e, { filter: f, turn: -0.35, armL: { x: 330, y: 560 }, armR: { x: 760, y: 790 } }, px, PY, k) + radio;
   return [fx.layer(N.sky(NOMOON), c, 0.04), fx.layer(M.bigMoon(760, 480, 330), c, 0.04), fx.layer(N.cityFar(), c, 0.12, { blur: 2.6 }), fx.layer(N.cityMid(), c, 0.3, { blur: 1.6 }),
-    fx.fog(t, { y: 1250, o: 0.2 }), fx.layer(N.cityNear(), c, 0.55, { blur: 0.8 }), fx.layer(N.roofBack() + N.hut(0) + N.roofFloor() + plane, c, 1),
+    fx.fog(t, { y: 1250, o: 0.2 }), fx.layer(N.cityNear(), c, 0.55, { blur: 0.8 }), fx.layer(N.roofBack() + hut2(0) + N.roofFloor() + plane, c, 1),
     ...finish(t, t, { rain: false, vig: 0.62, grade: ["#2a3cc0", 0.25], warm: 0.05 }), caps(env, t, OUT)];
 }
 // ---- "Their Moon is not bolted to the sky. I checked."
@@ -291,18 +309,18 @@ function rWhy(t, env) {                                     // "So why doesn't t
 }
 
 // ============================================================ THE INTERRUPTION (live, on the rooftop)
-// Rooftop layout for Episode 2 (world x): the stairwell door at 400 (Crowe stands at CRX); the AC unit moved right to
-// 1030-1370 (top at y 1250) so that in the wide shot (camera x 822, zoom 0.8) Crowe is at screen x ~170-360 and the
-// AC at ~700-970, with clear roof between them. Peek reports at PX_SIT, hides behind the AC at PX_HIDE, whispers at PX_OUT.
-const AC_SHIFT = 180, AC_L = N.AC_X - 170 + AC_SHIFT, AC_R = N.AC_X + 170 + AC_SHIFT;
-const PX_SIT = 900, PX_HIDE = (AC_L + AC_R) / 2, PX_OUT = AC_R + 60, CRX = 280;
+// Rooftop layout for Episode 2 (world x). The stairwell hut is moved 200 left (its door centred at DOORX 200) and the AC unit
+// 200 right (1050-1390, top at y 1250). In the wide shot (camera x 822, zoom 0.75) Crowe walks two steps out of the door to
+// CRX and stands at screen x ~150-360 with his torch hand drawn in; the AC is at ~711-966: about 350 px of empty roof between.
+const HUT_SHIFT = -200, DOORX = N.DOOR_X + HUT_SHIFT, AC_SHIFT = 200, AC_L = N.AC_X - 170 + AC_SHIFT, AC_R = N.AC_X + 170 + AC_SHIFT;
+const PX_SIT = 920, PX_HIDE = (AC_L + AC_R) / 2, PX_OUT = AC_R + 60, CRX = DOORX + WALK_CYCLE * CK;   // one cycle (two steps) out of the door
 const acUnit2 = () => `<g transform="translate(${AC_SHIFT} 0)">${N.acUnit()}</g>`;
-const CRO = (x, aim, { lean = 0, flip = false, glint = 1, red = 0, k = 0.92 } = {}) => `<g transform="translate(${x} ${N.FLOOR - 2}) scale(${flip ? -k : k} ${k})">${N.crowe({ aim, lean, glint, green: red ? 0 : 1 })}${red ? `<g transform="rotate(${lean} 0 -480)"><rect x="-128" y="-528" width="40" height="30" rx="4" fill="#ff3b3b" opacity="${red}"/></g>` : ""}</g>`;
-const torchAt = (x, aim, flip = false, k = 0.92) => { const [tx_, ty_] = N.croweTorch(aim); return [x + (flip ? -tx_ : tx_) * k, N.FLOOR - 2 + ty_ * k]; };
+const hut2 = (door) => `<g transform="translate(${HUT_SHIFT} 0)">${N.hut(door)}</g>`;
+const HOLD = { x: 150, y: -760 };                           // his torch hand drawn in to the chest (keeps the distance to the AC)
 function liveRoof(t, c, plane, { door = 0, beam = null, vig = 0.66, rain = 1 } = {}) {
   return [fx.layer(N.sky(NOMOON), c, 0.04), fx.layer(M.bigMoon(760, 470, 300, 0.8), c, 0.04), fx.layer(N.cityFar(), c, 0.12, { blur: 2.6 }), fx.layer(N.cityMid(), c, 0.3, { blur: 1.6 }),
     fx.fog(t, { y: 1250, o: 0.2 }), fx.layer(N.cityNear(), c, 0.55, { blur: 0.8 }), rain ? rainBack(t, 8, 1, 0.12) : "",
-    fx.layer(N.roofBack() + N.hut(door) + N.roofFloor() + plane, c, 1), beam || "", ...finish(t, t, { o: 0.12 * rain, vig, grade: ["#2a3cc0", 0.28], warm: 0.04 })];
+    fx.layer(N.roofBack() + hut2(door) + N.roofFloor() + plane, c, 1), beam || "", ...finish(t, t, { o: 0.12 * rain, vig, grade: ["#2a3cc0", 0.28], warm: 0.04 })];
 }
 function hiddenPeek(t, env, e, { k = 0.62, clamp_ = 0, px = PX_HIDE } = {}) {
   const f = night("Lh2", [{ color: "#9fd0ff", az: 225, power: 0.9, size: 9 }], [0.7, 0.62, 0.92], 0.0);
@@ -310,20 +328,24 @@ function hiddenPeek(t, env, e, { k = 0.62, clamp_ = 0, px = PX_HIDE } = {}) {
   return peek(e, { filter: f, turn: -0.6, squash: 0.94, ...arms }, px, PY + 14, k);
 }
 function interrupt(t, env) {
-  // Crowe stays by the door, still; the AC and Peek are far right. The apple is held up near Crowe's own head in his
-  // torch light. The beam never crosses Peek's face: aimed at world points, it passes well above the AC while he ducks.
+  // Crowe walks two steps out of the lit door and plants; he holds the apple up at his chest in his own torch light and nods
+  // down at it; the beam stays high, only crossing Peek's height inside a cut, and passes well above the AC while Peek ducks.
+  // No part of him is in the Commander close-up; he leaves for the parapet while the camera is close on Peek.
   const b = env.beats, u = t - env.is, IS = env.is, cmd = b.cmd, cmdE = b.cmd_end, bs = env.bs, ACTOP = N.FLOOR - 350;
   const door = easeOut(seg(t, IS, IS + 0.12));
-  const flip = t >= bs - 0.55, cx = flip ? 150 : CRX, show = seg(t, IS + 0.3, IS + 0.5);
-  // the torch arm: down at the floor, up to the apple by his head, out over the roof, across ABOVE the AC, away
-  const held = pulse(t, b.crowe - 0.2, b.crowe_end + 0.3, 0.25);
-  // the beam stays high (searching "up here"), holds the apple by his head, and only swings across Peek's height inside a cut;
-  // after the Commander close-up it dips to pass just over the AC while Peek is ducked, then lifts away
-  const aim = t < cmdE + 0.1 ? kf(t, [[IS + 0.5, -18], [b.crowe - 0.3, -32], [b.crowe + 0.1, -55], [cmd, -55]]) : kf(t, [[cmdE + 0.1, -6], [cmdE + 0.55, 4], [cmdE + 0.95, -6], [bs, -12]]);
-  const [bx, by] = torchAt(cx, aim, flip), beamA = flip ? 180 - aim - 4 : aim + 4;
-  const red = t > cmd - 0.2 && t < cmdE + 1.5 ? (Math.sin(t * 40) > 0 ? 1 : 0.3) : 0;
-  const crowe = show > 0 ? `<g opacity="${show}">${CRO(cx, aim, { flip, red })}</g>` : "";
-  const apple = held > 0 ? `<g opacity="${held}">${M.bitten(bx + Math.cos(beamA * Math.PI / 180) * 70, by + Math.sin(beamA * Math.PI / 180) * 70, 30, -20)}</g>` : "";
+  const show = seg(t, IS + 0.25, IS + 0.4), wk = ease(seg(t, IS + 0.45, b.crowe - 0.25)), cx = lerp(DOORX, CRX, wk);
+  const walk = wk > 0 ? (cx - DOORX) / CK : undefined;       // one full cycle: he ends planted, both feet down
+  const held = ease(seg(t, b.crowe - 0.25, b.crowe + 0.15)) * (1 - ease(seg(t, b.crowe_end + 0.2, b.crowe_end + 0.6)));
+  const appleH = { x: 165, y: -770 }, torchH = { x: 235, y: -560 };
+  const hand = held > 0 ? { x: lerp(HOLD.x, torchH.x, held), y: lerp(HOLD.y, torchH.y, held) } : HOLD;
+  const handL = held > 0 ? { x: lerp(-60, appleH.x, held), y: lerp(-520, appleH.y, held) } : undefined;
+  const aimHigh = t < cmdE + 0.1 ? kf(t, [[IS + 0.5, -16], [b.crowe - 0.3, -28], [cmd, -34]]) : kf(t, [[cmdE + 0.1, -6], [cmdE + 0.55, 2], [cmdE + 0.95, -6], [bs, -12]]);
+  const aim = held > 0.02 ? lerp(aimHigh, aimAt(torchH.x, torchH.y, appleH.x, appleH.y), held) : aimHigh;
+  const alert = t > cmd - 0.2 && t < cmdE + 1.5;
+  const o = { walk, hand, handL, aim, nod: 18 * held - 6 * (1 - held), glint: 0.85, jaw: jawOf(env, t), led: alert ? "#ff3b3b" : "#46ff7a", ledO: alert ? ALERT(t) : 0.9, filter: crLight("Lcw2", 0.4 + 0.8 * door, 1.5) };
+  const C = CR(cx, o), [bx, by] = C.lens, beamA = C.beamA;
+  const crowe = show > 0 ? `<g opacity="${show}">${C.svg}</g>` : "";
+  const apple = held > 0.02 ? `<g opacity="${clamp(held * 1.5)}">${M.bitten(C.far[0] + 6, C.far[1] - 8, 26, -20)}</g>${fx.glow(C.far[0], C.far[1], 70, "#fff6dc", 0.5 * held)}` : "";
   // Peek: frozen in the open; the dive behind the AC; peering over it; the Commander; the clamp; ducking under the beam; out at the far side
   const dive = seg(t, IS + 0.3, IS + 0.75), behind = dive >= 0.8 && t < bs - 0.55, ducked = pulse(t, cmdE + 0.05, cmdE + 1.05, 0.1);
   const radioOn = lv(env, "commander", t), pop = t < cmdE ? ease(seg(t, cmd - 0.05, cmd + 0.1)) : 1, clampA = ease(seg(t, cmdE - 0.05, cmdE + 0.2));
@@ -348,13 +370,14 @@ function interrupt(t, env) {
   const tips = [-1, 1].map((sg) => [px + sg * 285 * k, py - 915 * k * sq]);
   const radio = radioOn > 0.05 && clampA < 0.5 ? tips.map(([x, y]) => fx.glow(x, y, 60 + 60 * radioOn, "#ffe66d", 0.9 * radioOn) + `<circle cx="${x}" cy="${y}" r="${30 + ((t * 2.4) % 1) * 80}" fill="none" stroke="#ffe66d" stroke-width="6" opacity="${(0.8 * (1 - (t * 2.4) % 1)).toFixed(2)}"/>`).join("") : "";
   // cameras: wide (Crowe and the AC far apart); close on the AC top for the Commander (no Crowe in frame); close at the far side for "...is falling"
-  const closeCmd = t > cmd - 0.2 && t < cmdE + 0.2, closeEnd = t > bs - 0.55;
-  const c = closeEnd ? fx.camera(t, [[bs - 0.55, PX_OUT - 20, 1300, 1.55, 0], [bs + 2, PX_OUT - 10, 1310, 1.65, 0]])
+  const closeCmd = t > cmd - 0.2 && t < cmdE + 0.2, closeEnd = t > bs - 0.55, onCrowe = t > b.crowe - 0.15 && t < b.crowe_end + 0.25;
+  const c = onCrowe ? fx.camera(t, [[b.crowe - 0.15, CRX + 70, 1045, 1.45, 0], [b.crowe_end + 0.25, CRX + 70, 1035, 1.55, 0]])   // a medium shot on Crowe for his line: the AC and Peek are far off frame
+    : closeEnd ? fx.camera(t, [[bs - 0.55, PX_OUT - 20, 1300, 1.55, 0], [bs + 2, PX_OUT - 10, 1310, 1.65, 0]])
     : closeCmd ? fx.shake(fx.camera(t, [[cmd - 0.2, PX_HIDE, 1200, 1.75, 0], [cmdE + 0.2, PX_HIDE + 5, 1195, 1.85, 0]]), t, 5 * radioOn, 3, 14)
-    : fx.shake(fx.camera(t, [[IS, 822, 1250, 0.8, 0], [bs - 0.55, 822, 1250, 0.82, 0]]), t, u < 0.5 ? 26 * Math.exp(-u * 7) : 2, 4, 12);
+    : fx.shake(fx.camera(t, [[IS, 822, 1250, 0.75, 0], [bs - 0.55, 822, 1250, 0.77, 0]]), t, u < 0.5 ? 26 * Math.exp(-u * 7) : 2, 4, 12);
   // in the Commander close-up the beam is a threat far behind and above him: drawn from off frame, high
   const beam = show > 0.5 ? (closeCmd ? fx.beam(-200, 140, 8 + 6 * Math.sin(t * 1.5), 1800, 6, "#fff3d6", 0.3, 10)
-    : fx.beam(...fx.toScreen(c, bx, by), beamA, 2400, 6, "#fff3d6", 0.5, 9) + fx.glow(...fx.toScreen(c, bx, by), 110 * c.z, "#fff6dc", 0.8)) : "";
+    : fx.beam(...fx.toScreen(c, bx, by), beamA, lerp(2400, 230, held) * (onCrowe ? 1.5 : 1), held > 0.5 ? 26 : 6, "#fff3d6", 0.5, 9) + fx.glow(...fx.toScreen(c, bx, by), 110 * c.z, "#fff6dc", 0.8)) : "";
   const plane = (behind ? pk + radio : "") + acUnit2() + crowe + apple + (behind ? "" : pk + radio);
   return [...liveRoof(t, c, plane, { door: Math.max(door, 0.85), beam, rain: 1 }), fx.flash(t < IS + 0.12 ? 0.55 * (1 - u / 0.12) : 0, "#fff3d6"), caps(env, t, OUT)];
 }
@@ -444,30 +467,39 @@ function rExit(t, env) {                                    // "Investigating. P
   const pk = peek(e, { filter: f, turn: 0.9, squash: 0.94, bounce: Math.abs(Math.sin(ph)) * 20, tilt: 6,
     armR: tip > 0.02 ? { x: lerp(780, 800, tip), y: lerp(560, 300, tip), front: true } : { x: 780, y: 560, front: true }, armL: { x: 560, y: 580, front: true }, hatRot: -6 * tip,
     legL: { x: 34 * Math.cos(ph), y: -70 * lift, rot: 18 * Math.sin(ph) }, legR: { x: -34 * Math.cos(ph), y: -70 * Math.max(0, -Math.sin(ph)), rot: -18 * Math.sin(ph) } }, px, PY + 14, 0.62);
-  const cx = 250, aim = 30 + Math.sin(t * 0.8) * 6, [bx, by] = torchAt(cx, aim, true);
-  const beam = fx.beam(...fx.toScreen(c, bx, by), 180 - aim - 4, 2400, 12, "#fff3d6", 0.45, 10);
-  return [...liveRoof(t, c, acUnit2() + CRO(cx, aim, { flip: true }) + N.footprints(PX_OUT + 40, px - 40, PY + 14, 0.6) + pk, { door: 0.85, beam, rain: 1 }), caps(env, t, OUT)];
+  const wk = ease(seg(t, b.out - 0.12, env.ts - 0.1)), cx = lerp(440, 440 - WALK_CYCLE * CK, wk), aim = 34 + Math.sin(t * 0.8) * 5;
+  const C = CR(cx, { walk: (440 - cx) / CK, hand: HOLD, aim, nod: 10, glint: 0.7, led: "#46ff7a", ledO: 0.9, filter: crLight("Lcw3", 0.5, 1.4) }, { flip: true });
+  const beam = fx.beam(...fx.toScreen(c, ...C.lens), C.beamA, 2400, 12, "#fff3d6", 0.45, 10);
+  return [...liveRoof(t, c, acUnit2() + C.svg + N.footprints(PX_OUT + 40, px - 40, PY + 14, 0.6) + pk, { door: 0.85, beam, rain: 1 }), caps(env, t, OUT)];
 }
 
 // ============================================================ TAG: Crowe at the AC with the apple; the next question; cut to black
 function tagClose(t, env, u) {                             // the close-up: the bitten apple, big, in the torch light, in Crowe's gloved hand
   const push = 1 + 0.06 * ease(seg(u, 1.35, 5.2)), cx = 520, cy = 760, R = 230, wob = Math.sin(t * 2.2) * 2;
   const c = { x: 540, y: 1150, z: 1.25, rot: 0 };
-  const hand = `<g transform="translate(${cx} ${cy + R * 0.86})"><path d="M-190 40 C-200 -40 -150 -70 -110 -60 C-120 -110 -60 -130 -30 -90 C-10 -140 60 -140 70 -90 C100 -130 170 -110 160 -50 C200 -60 230 0 200 60 C150 150 -120 160 -190 40 Z" fill="#04050e"/>
-    <path d="M-190 40 C-200 -40 -150 -70 -110 -60 C-120 -110 -60 -130 -30 -90 C-10 -140 60 -140 70 -90 C100 -130 170 -110 160 -50 C200 -60 230 0 200 60" fill="none" stroke="#ffd9a0" stroke-width="6" opacity=".55"/><rect x="-150" y="80" width="300" height="400" fill="#04050e"/></g>`;
+  // his gloved hand from below, in the rig's glove and sleeve shading (lib/crowe.js cwGlove, cwSleeve), lit by the torch from the right
+  fx.def("cwGlove", `<radialGradient id="cwGlove" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#4a5066"/><stop offset=".6" stop-color="#1b1e2a"/><stop offset="1" stop-color="#08090e"/></radialGradient>`);
+  fx.def("cwSleeve", `<linearGradient id="cwSleeve" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#262b3a"/><stop offset=".32" stop-color="#5a6480"/><stop offset=".6" stop-color="#3f4860"/><stop offset="1" stop-color="#191c29"/></linearGradient>`);
+  const fingers = "M-190 40 C-200 -40 -150 -70 -110 -60 C-120 -110 -60 -130 -30 -90 C-10 -140 60 -140 70 -90 C100 -130 170 -110 160 -50 C200 -60 230 0 200 60 C150 150 -120 160 -190 40 Z";
+  const hand = `<g transform="translate(${cx} ${cy + R * 0.86})"><rect x="-170" y="70" width="340" height="420" rx="40" fill="url(#cwSleeve)"/><rect x="-170" y="70" width="340" height="50" rx="20" fill="#151823"/>
+    <path d="${fingers}" fill="url(#cwGlove)"/><path d="M-60 -112 C-30 -126 20 -128 50 -112 M100 -108 C130 -112 150 -96 156 -76" fill="none" stroke="#8a93ab" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+    <path d="M-120 -66 L-118 30 M-30 -96 L-28 20 M70 -94 L68 22" stroke="#05060a" stroke-width="5" opacity=".6"/>
+    <path d="M200 60 C230 0 200 -60 160 -50" fill="none" stroke="#fff1cf" stroke-width="6" opacity=".5"/></g>`;
   return [fx.layer(N.sky(NOMOON), c, 0.04), fx.layer(N.cityFar(), c, 0.12, { blur: 7 }), fx.layer(N.cityMid(), c, 0.3, { blur: 6 }), `<rect width="${W}" height="${H}" fill="#03040e" opacity=".55"/>`,
     fx.beam(1250, 420, 158, 1700, 14, "#fff3d6", 0.35, 14), fx.glow(cx + 60, cy - 20, 560, "#fff1cf", 0.55),
     `<g transform="translate(${cx} ${cy}) scale(${push}) translate(${-cx} ${-cy})">${M.bitten(cx, cy + wob, R, -6)}${hand}</g>`, fx.vignette(0.7), fx.grain(t, 0.1)];
 }
 function tag(t, env) {
-  const u = t - env.ts, walk = 1, cx = PX_OUT + 170, flip = true, raise = ease(seg(u, 0.45, 0.95));
-  const aim = lerp(30, -18, raise), [bx, by] = torchAt(cx, aim, flip), close = u > 1.35, nb = env.beats.next;
-  const [ax, ay] = [bx - 80, by - 6];
-  const c = fx.camera(u, [[0, 1250, 1250, 0.9, 0], [1.35, 1300, 1230, 1.0, 0]]);
-  const beam = fx.beam(...fx.toScreen(c, bx, by), 180 - aim - 4, 2400, 12, "#fff3d6", 0.5, 10) + fx.glow(...fx.toScreen(c, bx, by), 120 * c.z, "#fff6dc", 0.8);
-  const apple = raise > 0 ? `<g opacity="${raise}">${M.bitten(ax, ay, 40, 160)}</g>` : "";
+  const u = t - env.ts, nb = env.beats.next, close = u > 1.35, X1 = AC_L - 150, X0 = X1 - WALK_CYCLE * CK;
+  const wk = ease(seg(u, 0, 0.85)), cx = lerp(X0, X1, wk), held = ease(seg(u, 0.8, 1.2));
+  const appleH = { x: 170, y: -760 }, torchH = { x: 240, y: -560 };
+  const o = { walk: (cx - X0) / CK, hand: { x: lerp(HOLD.x, torchH.x, held), y: lerp(HOLD.y, torchH.y, held) }, handL: held > 0 ? { x: lerp(-60, appleH.x, held), y: lerp(-520, appleH.y, held) } : undefined,
+    aim: lerp(30, aimAt(torchH.x, torchH.y, appleH.x, appleH.y), held), nod: 8 + 12 * held, glint: 0.85, jaw: jawOf(env, t), led: "#ff3b3b", ledO: ALERT(t), filter: crLight("Lcw4", 0.5, 1.5) };
+  const C = CR(cx, o), c = fx.camera(u, [[0, 980, 1250, 0.9, 0], [1.35, 1010, 1230, 1.0, 0]]);
+  const beam = fx.beam(...fx.toScreen(c, ...C.lens), C.beamA, 2400, 12, "#fff3d6", 0.5, 10) + fx.glow(...fx.toScreen(c, ...C.lens), 110 * c.z, "#fff6dc", 0.8);
+  const apple = held > 0 ? `<g opacity="${held}">${M.bitten(C.far[0] + 6, C.far[1] - 8, 26, -20)}</g>` : "";
   const q = seg(t, nb, nb + 0.2);
-  const plane = acUnit2() + N.footprints(PX_OUT + 40, 2100, PY + 14, 0.7) + `<g transform="translate(0 ${-Math.abs(Math.sin(walk * Math.PI * 4)) * 8 * (walk < 1 ? 1 : 0)})">${CRO(cx, aim, { flip, red: Math.sin(t * 30) > 0 ? 1 : 0.3, lean: raise * 4 })}</g>` + apple;
+  const plane = acUnit2() + N.footprints(PX_OUT + 40, 2100, PY + 14, 0.7) + C.svg + apple;
   fx.def("tagfade", `<linearGradient id="tagfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#02030c" stop-opacity="0"/><stop offset=".25" stop-color="#02030c" stop-opacity=".88"/><stop offset=".85" stop-color="#02030c" stop-opacity=".88"/><stop offset="1" stop-color="#02030c" stop-opacity="0"/></linearGradient>`);
   return [...(close ? tagClose(t, env, u) : liveRoof(t, c, plane, { door: 0.85, beam, rain: 1, vig: 0.72 })), q > 0 ? "" : caps(env, t, OUT),
     `<rect x="0" y="930" width="${W}" height="560" fill="url(#tagfade)" opacity="${q}"/>`,
