@@ -11,9 +11,9 @@ const studio = `<defs><linearGradient id="stu" x1="0" y1="0" x2="0" y2="1"><stop
 export function draw(t) {
   return fx.frame(() => {
     if (t < 1) return studio + at(210, 1500, 0.62, N.crowe({})) + at(560, 1500, 0.62, crowe({ shadow: true })) + peek(ants(F("smug"), 4, 4), { shadow: true }, 900, 1500, 0.46)
-      + at(200, 640, 0.36, crowe({ shadow: true, hand: { x: 150, y: -940 }, aim: -60, nod: -8 })) + at(540, 640, 0.36, crowe({ shadow: true, crouch: 0.6, lean: 14, hand: { x: 250, y: -470 }, aim: 30, nod: 14 })) + at(880, 640, 0.36, crowe({ shadow: true, handL: { x: -60, y: -1010 }, led: "#ff3b3b" }), true)
+      + at(200, 640, 0.36, crowe({ shadow: true, hand: { x: 150, y: -940 }, aim: -60, nod: -8 })) + at(540, 640, 0.36, crowe({ shadow: true, crouch: 0.7, lean: 16, hand: { x: 250, y: -430 }, aim: 30, nod: 14 })) + at(880, 640, 0.36, crowe({ shadow: true, handL: { x: -60, y: -1010 }, led: "#ff3b3b" }), true)
       + X.label(210, 1580, "OLD", 44, "#fff") + X.label(560, 1580, "NEW", 44, "#ffe66d");
-    if (t < 2) return studio + [0, 1, 2, 3, 4, 5, 6, 7].map((i) => at(150 + (i % 4) * 260, i < 4 ? 880 : 1500, 0.5, crowe({ walk: i / 8 * WALK_CYCLE, shadow: true }))).join("");
+    if (t < 2) return studio + [0, 1, 2, 3, 4, 5, 6, 7].map((i) => at(150 + (i % 4) * 260, i < 4 ? 880 : 1500, 0.5, crowe({ walk: i < 4 ? i / 8 * WALK_CYCLE : 0.3 * WALK_CYCLE, settle: i < 4 ? 0 : (i - 4) / 3, shadow: true }))).join("") + X.label(540, 1620, "SETTLE 0 TO 1", 40, "#fff");
     if (t < 3 || t >= 4) { const u = t < 3 ? 0 : t - 4, cx = t < 3 ? 420 : 60 + u * 215, k = 0.9, sw = t < 3 ? -14 : -10 + Math.sin(u * 2.1) * 16, o = { walk: t < 3 ? undefined : (cx - 60) / k, aim: sw, nod: t < 3 ? 0 : Math.sin(u * 2.1 + 0.5) * 7, glint: 0.9, filter: night("Lc", [{ color: "#cfe3ff", az: 225, power: 1.5, size: 9 }, { color: "#ffd9a0", az: 20, power: 0.7, size: 12 }], [0.62, 0.6, 0.95], 0.0) };
       const h = croweHands(o), bx = cx + h.lens[0] * k, by = N.FLOOR - 4 + h.lens[1] * k, c = fx.camera(u, [[0, 560, 1180, 0.92, 0], [4, 760, 1180, 0.96, 0]]);
       const plane = at(cx, N.FLOOR - 4, k, crowe(o)) + fx.beam(bx, by, sw, 2200, 16, "#fff3d6", 0.5, 10) + fx.glow(bx, by, 120, "#fff6dc", 0.9)

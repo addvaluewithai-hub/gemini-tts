@@ -12,7 +12,10 @@
 //     hand     { x, y } where the torch hand is (default: held forward at chest height)
 //     aim      which way the torch points, in degrees (0 = right, negative = up)
 //     handL    { x, y } for the other hand (default: hanging; it carries the wrist detector)
+//     settle   0..1 blends the stride into the standing stance: ease it from 0 to 1 over the last half step when he stops
+//              (and from 1 to 0 when he sets off), so he never freezes mid-stride or pops to the stand pose
 //     lean     degrees the body leans forward from the hips; crouch 0..1 lowers the hips and bends the knees
+//              (he cannot reach the floor: bring a prop up to his hand instead)
 //     nod      degrees the head tips down (negative = up)
 //     glint    0..1, how bright the lenses of his glasses are; led / ledO the detector light's colour and brightness
 //     torch    0..1, the torch lens glow; jaw 0..1 opens the mouth for speech
@@ -65,10 +68,11 @@ function step(q, S) {
 
 function pose(o) {
   const { walk, lean = 0, crouch = 0, aim = -8 } = o, S = WALK_CYCLE / 2;
-  const walking = walk != null, p = walking ? frac(walk / WALK_CYCLE) : 0;
-  const bob = walking ? 9 * (1 + Math.cos(4 * Math.PI * p)) / 2 : 0, drop = bob + crouch * 190;
-  const near = walking ? step(p, S) : { x: 34, y: 0, pitch: 0 }, far = walking ? step(frac(p + 0.5), S) : { x: -30, y: 0, pitch: 0 };
-  const swing = walking ? Math.sin(2 * Math.PI * p) : 0;
+  const settle = Math.max(0, Math.min(1, o.settle ?? 0)), w = walk != null ? 1 - sm(settle) : 0, walking = w > 0.001, p = walking ? frac(walk / WALK_CYCLE) : 0;
+  const STN = { x: 34, y: 0, pitch: 0 }, STF = { x: -30, y: 0, pitch: 0 }, bl = (a, b) => ({ x: mixn(b.x, a.x, w), y: a.y * w, pitch: a.pitch * w });
+  const bob = walking ? w * 9 * (1 + Math.cos(4 * Math.PI * p)) / 2 : 0, drop = bob + crouch * 190;
+  const near = walking ? bl(step(p, S), STN) : STN, far = walking ? bl(step(frac(p + 0.5), S), STF) : STF;
+  const swing = walking ? w * Math.sin(2 * Math.PI * p) : 0;
   const a = rad(lean), ca = Math.cos(a), sa = Math.sin(a);
   const out = (x, y) => [x * ca - (y - HIP_Y) * sa, HIP_Y + x * sa + (y - HIP_Y) * ca + drop];          // torso frame -> his own frame
   const inn = (x, y) => { const yy = y - drop - HIP_Y; return [x * ca + yy * sa, HIP_Y - x * sa + yy * ca]; };   // and back
@@ -77,7 +81,7 @@ function pose(o) {
   const sN = [84, -792], sF = [-98, -794], hN = inn(hand.x, hand.y), hF = inn(handL.x, handL.y);
   const armN = ik(sN[0], sN[1], hN[0], hN[1], UPPER, FORE, 1), armF = ik(sF[0], sF[1], hF[0], hF[1], UPPER, FORE, hF[0] > sF[0] + 40 ? 1 : 1);
   const lens = out(armN[2] + Math.cos(rad(aim - lean)) * TORCH, armN[3] + Math.sin(rad(aim - lean)) * TORCH);
-  return { S, walking, p, drop, near, far, swing, armN, armF, sN, sF, lens, out, near_: out(armN[2], armN[3]), far_: out(armF[2], armF[3]) };
+  return { S, walking, w, p, drop, near, far, swing, armN, armF, sN, sF, lens, out, near_: out(armN[2], armN[3]), far_: out(armF[2], armF[3]) };
 }
 export function croweHands(o = {}) { const q = pose(o); return { near: q.near_, far: q.far_, lens: q.lens }; }
 
@@ -95,10 +99,10 @@ function dark(o, q) {
     return limb(hx, hy, kx, ky, 50, null, 42) + limb(kx, ky, ax, ay, 42, null, 32) + `<g transform="translate(${(ax - 6).toFixed(1)} ${(ay + 34).toFixed(1)}) rotate(${f.pitch.toFixed(1)})"><path d="M-30 -30 C-38 -8 -38 0 -28 0 L80 0 C88 0 88 -16 74 -22 C52 -30 28 -32 16 -40 L-18 -40 Z"/></g>`; };
   const legs = legD(hipF[0], hipF[1], q.far) + legD(hipN[0], hipN[1], q.near);
   // the coat's hem follows the legs a moment late: it opens with the stride and swings back
-  const lag = q.walking ? Math.sin(2 * Math.PI * q.p - 0.9) : 0, open = q.walking ? Math.abs(q.swing) : 0;
+  const lag = q.walking ? q.w * Math.sin(2 * Math.PI * q.p - 0.9) : 0, open = q.walking ? Math.abs(q.swing) : 0, hb = Math.min(-214, -q.drop - 16);
   const fwd = Math.max(q.near.x, q.far.x) - 34, back = Math.min(q.near.x, q.far.x) + 30;
   const a1 = -150 + back * 0.55 + lag * 10, e1 = 112 + fwd * 0.5 + lag * 10, mid = lag * 14;
-  const coat = `<path d="M-60 -822 C-108 -812 -118 -760 -110 -690 L-100 -330 C-104 -280 ${(a1 + 22).toFixed(1)} -250 ${a1.toFixed(1)} ${(-224 - open * 8).toFixed(1)} L${(-60 + back * 0.3 + mid).toFixed(1)} -214 L${mid.toFixed(1)} ${(-232 + open * 6).toFixed(1)} L${(70 + fwd * 0.3 + mid).toFixed(1)} -214 L${e1.toFixed(1)} ${(-226 - open * 8).toFixed(1)} C${(e1 - 8).toFixed(1)} -270 100 -300 102 -340 L108 -690 C116 -760 104 -814 62 -822 Z"/>`;
+  const coat = `<path d="M-60 -822 C-108 -812 -118 -760 -110 -690 L-100 -330 C-104 ${Math.max(-300, hb - 66)} ${(a1 + 22).toFixed(1)} ${hb - 36} ${a1.toFixed(1)} ${(hb - 10 - open * 8).toFixed(1)} L${(-60 + back * 0.3 + mid).toFixed(1)} ${hb} L${mid.toFixed(1)} ${(hb - 18 + open * 6).toFixed(1)} L${(70 + fwd * 0.3 + mid).toFixed(1)} ${hb} L${e1.toFixed(1)} ${(hb - 12 - open * 8).toFixed(1)} C${(e1 - 8).toFixed(1)} ${hb - 56} 100 ${Math.max(-320, hb - 86)} 102 -340 L108 -690 C116 -760 104 -814 62 -822 Z"/>`;
   const headT = `rotate(${nod} 4 -850)`;
   const head = `<g transform="${headT}"><path d="M-52 -838 L-84 -770 L-26 -800 Z"/><path d="M54 -838 L86 -770 L28 -800 Z"/><rect x="-16" y="-860" width="36" height="64" rx="10"/>
     <path d="M-40 -1000 C-46 -1052 40 -1062 50 -1004 L54 -930 C64 -926 70 -910 58 -904 L56 -876 C54 -850 30 -838 4 -838 C-24 -838 -42 -852 -42 -880 Z"/>
@@ -120,7 +124,7 @@ export function crowe(o = {}) {
   if (o.dark !== false) return dark(o, pose(o));
   grads();
   const { lean = 0, nod = 0, glint = 1, led = "#46ff7a", ledO = 1, torch = 1, jaw = 0, aim = -8, shadow = false, filter = null } = o;
-  const q = pose(o), sway = q.walking ? Math.sin(2 * Math.PI * q.p + 0.6) * 16 : 0, flare = q.walking ? Math.abs(q.swing) * 10 : 0;
+  const q = pose(o), sway = q.walking ? q.w * Math.sin(2 * Math.PI * q.p + 0.6) * 16 : 0, flare = q.walking ? Math.abs(q.swing) * 10 : 0;
   const hipN = [16, HIP_Y + q.drop], hipF = [-14, HIP_Y + q.drop];
   const legs = leg(hipF[0], hipF[1], q.far) + leg(hipN[0], hipN[1], q.near);
 
