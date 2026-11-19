@@ -63,25 +63,25 @@ const puff = (x, y, p, k = 1) => p <= 0 || p >= 1 ? "" : Array.from({ length: 9 
 const pkLight = () => night("Lsto", [{ color: "#dfe8ff", az: 100, power: 1.1, size: 12 }, { color: "#ff9fd0", az: 260, power: 0.5, size: 9 }], [0.84, 0.82, 1.0], 0.04);
 const storeGrade = (t, vig = 0.58) => finish(t, t, { rain: false, vig, grade: ["#2a3cc0", 0.16] });
 // the aisle world: the store beyond, the far rack (left, with the bowling balls), Peek's rack (right), the floor
-function aisle(t, { cracked = 0, plankOut = 1, plankRot = 0, attached = true, items = true, ballY = BALL_Y0, appleY = APPLE_Y0, appleX = APPLE_X, ballSpin = 0, peekSvg = "", front = "" } = {}) {
+function aisle(t, { cracked = 0, plankOut = 1, plankRot = 0, attached = true, items = true, ballY = BALL_Y0, appleY = APPLE_Y0, appleX = APPLE_X, ballSpin = 0, peekSvg = "", front = "", noPlank = false } = {}) {
   const rot = plankOut === 0 ? -88 : plankRot;                  // the plank is hinged at the shelf edge; after the fall it hangs down
   const onPlank = ST.ball(BALL_X, BALL_Y0, BALL_R, 0) + X.apple(APPLE_X, APPLE_Y0, APPLE_R, 0);
-  return ST.back(t) + ST.rack(-2200, -900, { seed: 3, labels: ["BALLS", "BATS", "SKATES", "HELMETS"] }) + ST.ballRack(-1600, ST.LEVELS[0] + 0) + ST.floor(cracked)
+  return ST.back(t) + ST.rack(-2200, -900, { seed: 3, labels: ["BALLS", "BATS", "SKATES", "HELMETS"] }) + ST.ballRack(-1600, ST.LEVELS[0] + 0) + ST.floor(cracked) + ST.shaft(CROWE_X, 1000, 0.13)
     + ST.rack(RACK_X, RACK_X + 1600, { seed: 1 }) + peekSvg + ST.plank(RACK_X + 260, RACK_X, DECK)
-    + `<g transform="rotate(${rot.toFixed(2)} ${RACK_X} ${DECK})">${ST.plank(RACK_X, 150, DECK)}${items && attached ? onPlank : ""}</g>`
+    + (noPlank ? "" : `<g transform="rotate(${rot.toFixed(2)} ${RACK_X} ${DECK})">${ST.plank(RACK_X, 150, DECK)}${items && attached ? onPlank : ""}</g>`)
     + (items && !attached ? ST.ball(BALL_X, ballY, BALL_R, ballSpin) + X.apple(appleX, appleY, APPLE_R, 0) : "") + front;
 }
 const teeter = (t, amp = 1.2) => amp * (Math.sin(t * 7) * 0.7 + Math.sin(t * 11.3) * 0.3);const deckBoxes = () => ST.box(RACK_X + 330, DECK, 300, 330, "PILLOWS") + ST.box(RACK_X + 650, DECK, 260, 280, "DUVETS");
 
 // ============================================================ COLD OPEN
-function coClose(t, env) {                                    // 0 - 1.0: frame one: Peek frozen, both hands out toward the teetering plank with the ball and the apple on it; "Stay..."
-  const c = fx.camera(t, [[0, 455, DECK - 150, 1.7, 0], [1.0, 455, DECK - 150, 1.76, 0]]);
+function coClose(t, env) {                                    // 0 - 1.0: frame one: Peek frozen, both hands out toward the teetering plank; the ball and the apple large in the foreground; "Stay..."
+  const z = lerp(2.5, 2.6, clamp(t / 1.0)), c = { x: 690, y: DECK - 170, z, rot: 0 };
   const e = ants(speak({ ...F("worried", { lid: 0, eyeScale: 1.32, pupil: 0.45, look: -1, lookY: 0.75, browTilt: 1.1, browL: 0.9, browR: 0.9, sweat: 1 }), m: { ...MOUTHS.wobble, tongue: 0 } }, env, t), -36 + noise(t * 20, 2) * 8, -36 - noise(t * 20, 3) * 8);
   const shake = noise(t * 25, 5) * 6;
-  const pk = peek(e, { filter: pkLight(), shadow: false, armL: { x: 250 + shake, y: 700, front: true }, armR: { x: 380 - shake, y: 760, front: true }, turn: -0.4, nod: 0.3 }, 680, DECK, 0.34);
-  return [fx.layer(aisle(t, { plankRot: teeter(t), peekSvg: deckBoxes() + pk }), c, 1), ...storeGrade(t), caps(env, t, OUT)];
-}
-function coHigh(t, env) {                                     // 1.0 - heavyw: the tall view down past the plank: Crowe walks in below with the plush and stops right under it; checks his detector
+  const pk = peek(e, { filter: pkLight(), shadow: false, armL: { x: 240 + shake, y: 720, front: true }, armR: { x: 360 - shake, y: 780, front: true }, turn: -0.45, nod: 0.3 }, 760, DECK, 0.34);
+  const rot = teeter(t, 2.2), fg = `<g transform="translate(250 1330) rotate(${rot.toFixed(2)} 330 0)">${ST.plank(-700, 360, 0).replace(/height="22"/g, 'height="34"')}<g transform="scale(1)">${ST.ball(-110, -18 - 150, 150, 0)}${X.apple(150, -18 - 63, 63, 0)}</g></g>`;
+  return [fx.layer(aisle(t, { noPlank: true, peekSvg: deckBoxes() + pk }), c, 1), fx.blurred(fg, 1.5), ...storeGrade(t), caps(env, t, OUT)];
+}function coHigh(t, env) {                                     // 1.0 - heavyw: the tall view down past the plank: Crowe walks in below with the plush and stops right under it; checks his detector
   const b = env.beats, c = fx.camera(t, [[1.0, 440, 400, 0.64, 0], [b.heavyw, 430, 420, 0.66, 0]]);
   const e = ants(F("worried", { lid: 0, eyeScale: 1.3, look: -1, lookY: 1, sweat: 1, m: { ...MOUTHS.wobble, tongue: 0 } }), -36, -36);
   const pk = peek(speak(e, env, t), { filter: pkLight(), shadow: false, armL: { x: 250, y: 700, front: true }, armR: { x: 380, y: 760, front: true }, turn: -0.4, nod: 0.3 }, 680, DECK, 0.3);
@@ -94,27 +94,29 @@ function coHigh(t, env) {                                     // 1.0 - heavyw: t
   const e = ants(speak({ ...F("worried", { lid: shut, eyeScale: 1.3, look: -1, lookY: 0.8, browTilt: 1.2, sweat: 1 }), m: { ...MOUTHS.wobble, tongue: 0 } }, env, t), -40, -40);
   const pk = peek(e, { filter: pkLight(), shadow: false, armL: { x: lerp(260, 420, shut), y: lerp(700, 560, shut), front: true }, armR: { x: lerp(380, 780, shut), y: lerp(760, 560, shut), front: true }, turn: -0.4, squash: 1 + 0.04 * shut }, 680, DECK, 0.34);
   return [fx.layer(aisle(t, { plankRot: rot, attached: t < b.yank, ballY: BALL_Y0 + dy, appleY: APPLE_Y0 + dy, peekSvg: deckBoxes() + pk }), c, 1), ...storeGrade(t), caps(env, t, OUT)];
-}function coFall(t, env) {                                     // yank + 0.3 - land + 0.6: the camera falls with them, level the whole way; Crowe under them; both land on the same frame
-  const b = env.beats, u = clamp((t - b.yank) / (b.land - b.yank)), dt = Math.min(t, b.land) - b.yank, dy = 0.5 * G * dt * dt;
-  const z = 1.45, camY = Math.min(BALL_Y0 + dy + 120, FLOOR_Y - 470), c = { x: CROWE_X, y: camY, z, rot: 0 };
+}function coFall(t, env) {                                     // yank + 0.15 - land + 0.6: tight on the pair, level the whole way; the camera pulls back as they reach the floor; both land on the same frame
+  const b = env.beats, dt = clamp(Math.min(t, b.land) - b.yank, 0, 1), dy = 0.5 * G * dt * dt, v = G * dt;
   const landed = t >= b.land, after = Math.max(0, t - b.land);
   const bounce = landed ? Math.abs(Math.sin(after * 9)) * 70 * Math.exp(-after * 6) : 0;
   const ballY = landed ? FLOOR_Y - BALL_R : BALL_Y0 + dy, appleY = landed ? FLOOR_Y - APPLE_R - bounce : APPLE_Y0 + dy;
-  const streak = landed ? "" : [[BALL_X, ballY, BALL_R], [APPLE_X, appleY, APPLE_R]].map(([x, y, r]) => `<path d="M${x} ${y - r - 20} v${-Math.min(420, 0.09 * G * dt)}" stroke="#cfe0ff" stroke-width="${r * 0.7}" stroke-linecap="round" opacity=".08"/>`).join("");
+  const pull = ease(seg(t, b.land - 0.28, b.land));                       // the pull-back to the floor
+  const tight = { x: (BALL_X + APPLE_X) / 2, y: (ballY + appleY) / 2, z: 2.8 }, wide = { x: CROWE_X, y: FLOOR_Y - 470, z: 1.45 };
+  const c0 = { x: lerp(tight.x, wide.x, pull), y: lerp(Math.min(tight.y, FLOOR_Y - 200), wide.y, pull), z: Math.exp(lerp(Math.log(tight.z), Math.log(wide.z), pull)), rot: 0 };
+  const cam = landed ? fx.shake(c0, t, 14 * Math.exp(-after * 8)) : c0;
+  const level = !landed && pull < 0.6 ? `<path d="M${BALL_X + BALL_R + 14} ${(ballY + appleY) / 2} H${APPLE_X - APPLE_R - 14}" stroke="#fff" stroke-width="3" stroke-dasharray="10 10" opacity="${(0.5 * (1 - pull)).toFixed(2)}"/>` : "";
+  const streak = landed ? "" : [[BALL_X, ballY, BALL_R], [APPLE_X, appleY, APPLE_R]].map(([x, y, r]) => `<path d="M${x} ${y - r - 10} v${-Math.min(300, 0.07 * v)}" stroke="#fff" stroke-width="${r * 0.9}" stroke-linecap="round" opacity=".1"/>`).join("");
   const Wk = walkIn(t, b), jolt = pulse(t, b.land, b.land + 0.35, 0.06), det = 1 - ease(seg(t, b.land, b.land + 0.3));
-  const C = { svg: crowePlush(t, Wk, { det, jolt }) };
-  const cam = landed ? fx.shake(c, t, 14 * Math.exp(-after * 8)) : c;
-  return [fx.layer(aisle(t, { cracked: landed ? 1 : 0, plankOut: 0, attached: false, ballY, appleY, appleX: APPLE_X + (landed ? after * 40 * Math.exp(-after * 2) : 0), ballSpin: landed ? 0 : dt * 30, front: C.svg + streak
-      + (landed ? puff(BALL_X, FLOOR_Y, seg(t, b.land, b.land + 0.5), 1) + puff(APPLE_X, FLOOR_Y, seg(t, b.land, b.land + 0.35), 0.4) : "") }), cam, 1),
-    fx.flash(pulse(t, b.land, b.land + 0.08, 0.02) * 0.25, "#fff"), ...storeGrade(t), caps(env, t, OUT)];
-}
-function coLook(t, env) {                                     // land + 0.6 - ohno - 0.35: he looks down at the ball, at the apple, then up; then his view up the rack: empty
+  const lines = landed || pull > 0.7 ? "" : fx.speedLines(t, { n: 22, angle: 90, o: 0.22 * (0.3 + 0.7 * dt), color: "#cfe0ff", len: 300 + 400 * dt, speed: 2600 + 3000 * dt, seed: 7 });
+  return [fx.layer(aisle(t, { cracked: landed ? 1 : 0, plankOut: 0, attached: false, ballY, appleY, appleX: APPLE_X + (landed ? after * 40 * Math.exp(-after * 2) : 0), ballSpin: landed ? 0 : dt * 30,
+      front: crowePlush(t, Wk, { det, jolt }) + streak + level + (landed ? puff(BALL_X, FLOOR_Y, seg(t, b.land, b.land + 0.5), 1) + puff(APPLE_X, FLOOR_Y, seg(t, b.land, b.land + 0.35), 0.4) : "") }), cam, 1),
+    lines, fx.flash(pulse(t, b.land, b.land + 0.08, 0.02) * 0.25, "#fff"), ...storeGrade(t), caps(env, t, OUT)];
+}function coLook(t, env) {                                     // land + 0.6 - ohno - 0.35: he looks down at the ball, at the apple, then up; then his view up the rack: empty
   const b = env.beats, l0 = b.land + 0.6, up = ease(seg(t, l0 + 1.1, l0 + 1.5)), pov = t > l0 + 1.6;
   if (pov) {                                                  // his view: the top deck edge, the plank gone, nobody
     const c = fx.camera(t, [[l0 + 1.6, 700, DECK - 100, 1.25, 0], [env.beats.ohno, 700, DECK - 140, 1.3, 0]]);
     return [fx.layer(aisle(t, { cracked: 1, plankOut: 0, items: false, peekSvg: deckBoxes() + ST.box(RACK_X + 40, DECK, 260, 300, "PILLOWS") }), c, 1), fx.vignette(0.7), ...storeGrade(t, 0.7), caps(env, t, OUT)];
   }
-  const nod = 22 * ease(seg(t, l0 + 0.1, l0 + 0.4)) * (1 - up) - 30 * up;
+  const nod = 22 * ease(seg(t, l0 + 0.1, l0 + 0.4)) * (1 - up) - 16 * up;
   const C = { svg: crowePlush(t, { x: CROWE_X, walk: 0, settle: 1, lean: 0, nodSettle: 0, arrive: 1 }, { nod, flip: seg(t, l0 + 0.55, l0 + 0.6) > 0.5 && t < l0 + 1.05 }) };
   const c = fx.camera(t, [[l0, CROWE_X, FLOOR_Y - 470, 1.45, 0], [l0 + 1.6, CROWE_X, FLOOR_Y - 520, 1.5, 0]]);
   return [fx.layer(aisle(t, { cracked: 1, plankOut: 0, attached: false, ballY: FLOOR_Y - BALL_R, appleY: FLOOR_Y - APPLE_R, appleX: APPLE_X + 18, front: C.svg }), c, 1), ...storeGrade(t), caps(env, t, OUT)];
@@ -169,25 +171,24 @@ const B = (t, env, t0, inner) => boardFrame(t, env, t0, inner, null, null, 0, 1)
 const tinyPeek = (x, y, e, o = {}, k = 0.2) => peek(e, { shadow: false, id: o.id || "tiny", ...o }, x, y, k);
 const bracket = (x, y0, y1, col, o = 1, side = 1) => o <= 0 ? "" : `<path d="M${x - 16 * side} ${y0} H${x} V${y1} H${x - 16 * side}" fill="none" stroke="${col}" stroke-width="6" stroke-linejoin="round" opacity="${o}"/>`;
 const ground = (y = 905, col = "#3a4490") => `<rect x="40" y="${y}" width="1000" height="40" fill="${col}"/><rect x="40" y="${y}" width="1000" height="6" fill="#7fd4ff" opacity=".5"/>`;
-const ballB = (x, y, r = 60, o = 1) => `<g opacity="${o}"><circle cx="${x}" cy="${y}" r="${r + 5}" fill="#cfd6ff"/>${ST.ball(x, y, r, 0)}</g>`;
+const ballB = (x, y, r = 60, o = 1) => `<g opacity="${o}">${ST.ball(x, y, r, 0)}</g>`;
 const appleB = (x, y, r = 24, o = 1) => `<g opacity="${o}">${X.apple(x, y, r, 0)}</g>`;
 const dashed = (x0, x1, y, o = 1) => `<path d="M${x0} ${y} H${x1}" stroke="#ffe66d" stroke-width="4" stroke-dasharray="10 12" opacity="${(0.7 * o).toFixed(2)}"/>`;
 // the strobe picture: ball (left) and apple (right) at equal time steps, each pair joined by a level line; the gaps grow
-function strobe(t, t0, { n = 5, x1 = 380, x2 = 700, top = 270, bot = 860, every = 0.22 } = {}) {
+function strobe(t, t0, { n = 5, x1 = 330, x2 = 750, top = 290, bot = 830, every = 0.15, r1 = 80, r2 = 34 } = {}) {
   let s = "";
-  for (let k = 0; k < n; k++) { const o = fade(t, t0 + k * every, 0.12), y = top + (bot - top) * (k / (n - 1)) ** 2, last = k === n - 1;
-    if (o <= 0) continue; const g = last ? 1 : 0.65;
-    s += dashed(x1 + 70, x2 - 40, y, o) + ballB(x1, y, 56, o * g) + appleB(x2, y, 24, o * g); }
+  for (let k = 0; k < n; k++) { const o = fade(t, t0 + k * every, 0.1), y = top + (bot - top) * (k / (n - 1)) ** 2, last = k === n - 1;
+    if (o <= 0) continue; const g = last ? 1 : 0.6;
+    s += dashed(x1 + r1 + 14, x2 - r2 - 14, y, o) + ballB(x1, y, r1, o * g) + appleB(x2, y, r2, o * g); }
   return s;
 }
-
 // ---- report A
 function bStrobe(t, env) {                                    // "I ran an experiment. By accident. Right above an agent."
   const b = env.beats, ag = fade(t, b.agent);
-  const shoes = ag > 0 ? `<g opacity="${ag}"><path d="M470 885 h70 q14 0 14 14 v6 h-96 v-8 q0 -12 12 -12 Z M560 885 h70 q14 0 14 14 v6 h-96 v-8 q0 -12 12 -12 Z" fill="#05060f"/><rect x="480" y="745" width="40" height="142" fill="#05060f"/><rect x="580" y="745" width="40" height="142" fill="#05060f"/></g>`
-    + X.label(540, 700, "!", 160, "#ff4f6d", ag, easeOutBack(seg(t, b.agent, b.agent + 0.3))) : "";
-  const crack = ag > 0 ? `<path d="M380 906 l-60 10 M380 906 l50 14 M380 906 l-14 20" stroke="#05060f" stroke-width="5" opacity="${ag}"/>` : "";
-  return A(t, env, b.ran - 0.12, ground(905) + strobe(t, b.ran + 0.15, { bot: 860 }) + shoes + crack, TALK, "point", pulse(t, b.ran, b.agent, 0.2));
+  const shoes = ag > 0 ? `<g opacity="${ag}"><path d="M470 885 h70 q14 0 14 14 v6 h-96 v-8 q0 -12 12 -12 Z M560 885 h70 q14 0 14 14 v6 h-96 v-8 q0 -12 12 -12 Z" fill="#05060f"/><rect x="480" y="730" width="40" height="157" fill="#05060f"/><rect x="580" y="730" width="40" height="157" fill="#05060f"/></g>`
+    + X.label(540, 680, "!", 160, "#ff4f6d", ag, easeOutBack(seg(t, b.agent, b.agent + 0.3))) : "";
+  const crack = ag > 0 ? `<path d="M330 906 l-70 10 M330 906 l60 14 M330 906 l-14 20" stroke="#05060f" stroke-width="5" opacity="${ag}"/>` : "";
+  return A(t, env, b.ran - 0.12, ground(905) + strobe(t, b.ran - 0.05, { bot: 820 }) + shoes + crack, TALK, "point", pulse(t, b.ran, b.agent, 0.2));
 }
 function bReport1(t, env) {                                   // "Remember report one: the heavier the thing, the harder the pull."
   const b = env.beats, d = easeOutBack(seg(t, b.remember - 0.05, b.remember + 0.35)), st = fade(t, b.ball40 - 0.9);
@@ -207,22 +208,23 @@ function bScale(t, env) {                                     // "The ball is fo
     <path d="M${L0[0]} ${L0[1]} L${R0[0]} ${R0[1]}" stroke="#cfd6ee" stroke-width="16" stroke-linecap="round"/><circle cx="${piv[0]}" cy="${piv[1]}" r="18" fill="#ffd23f"/>`
     + pan(L0) + pan(R0) + ballB(L0[0], L0[1] + 112, 58) + apples + X.label(R0[0], R0[1] - 30, "×40", 84, "#ffe66d", fade(t, b.ball40 + 1.0)), TALK, "point", pulse(t, b.ball40, b.pull40 - 0.2, 0.2));
 }
-function bPull(t, env) {                                      // "so their planet pulls on it forty times harder."
-  const b = env.beats, g = ease(seg(t, b.pull40 + 0.2, b.pull40 + 1.0)), unit = 11, y0 = 400;
+function bPull(t, env) {                                      // "so their planet pulls on it forty times harder." (the ball's arrow is cut: forty times the apple's will not fit)
+  const b = env.beats, g = ease(seg(t, b.pull40 + 0.15, b.pull40 + 0.8)), y0 = 380, ua = 70;
+  const cut = (x, y) => `<rect x="${x - 40}" y="${y - 14}" width="80" height="28" fill="#0b0e30"/><path d="M${x - 34} ${y - 4} l68 -18 M${x - 34} ${y + 18} l68 -18" stroke="#ffe66d" stroke-width="7"/>`;
   return A(t, env, b.pull40 - 0.12, `<path d="M40 905 Q540 860 1040 905 L1040 945 L40 945 Z" fill="#2a8a5a"/><path d="M40 905 Q540 860 1040 905" stroke="#7fd4ff" stroke-width="6" fill="none" opacity=".5"/>`
-    + ballB(330, y0, 58) + X.apple(760, y0 + 30, 24, 0)
-    + (g > 0.02 ? X.arrow(330, y0 + 64, 330, y0 + 64 + 40 * unit * g, 22, "#ffe66d", t * 2) : "") + X.arrow(760, y0 + 58, 760, y0 + 58 + unit, 10, "#ffe66d", 0)
-    + bracket(430, y0 + 64, y0 + 64 + 40 * unit * g, "#ffe66d", g, 1) + X.label(520, y0 + 64 + 20 * unit * g + 26, "×40", 76, "#ffe66d", fade(t, b.pull40 + 1.0))
-    + bracket(830, y0 + 58, y0 + 58 + unit, "#ffe66d", 1, 1) + X.label(900, y0 + 92, "×1", 60, "#ffe66d", 1) + X.label(540, 300, "ONE SCALE", 56, "#9fd0ff", fade(t, b.pull40 + 0.6)), TALK, "point", pulse(t, b.pull40, b.theory - 0.2, 0.2));
-}
-function bTheory(t, env) {                                    // "Theory: the harder pull wins. The ball lands first." "Wrong. They landed together. One bang."
-  const b = env.beats, u = clamp((t - b.first - 0.1) / 0.55), back = fade(t, b.land2 - 0.2, 0.3), stamp = easeOutBack(seg(t, b.wrong, b.wrong + 0.25));
-  const theory = `<g opacity="${1 - back}">${ballB(420, lerp(380, 845, u * u), 56)}${X.apple(720, lerp(380, 410, u), 24, 0)}${u >= 1 ? puff(420, 905, seg(t, b.first + 0.65, b.first + 1.1), 0.8) : ""}</g>`;
-  return A(t, env, b.theory - 0.12, ground(905) + theory + (back > 0 ? `<g opacity="${back}">${strobe(t, b.land2 - 0.1, { every: 0.12, top: 400, x1: 490, x2: 790 })}${puff(490, 905, seg(t, b.bang, b.bang + 0.5), 1.2)}${puff(790, 905, seg(t, b.bang, b.bang + 0.5), 0.8)}</g>` : "")
+    + ballB(300, y0, 125) + X.apple(760, y0 + 70, 52, 0)
+    + (g > 0.02 ? X.arrow(300, y0 + 132, 300, y0 + 132 + 360 * g, 30, "#ffe66d", t * 2) + (g > 0.6 ? cut(300, y0 + 132 + 180) : "") : "") + X.arrow(760, y0 + 128, 760, y0 + 128 + ua, 22, "#ffe66d", 0)
+    + X.label(440, y0 + 330, "×40", 88, "#ffe66d", fade(t, b.pull40 + 0.6)) + X.label(440, y0 + 400, "ARROW CUT", 56, "#ffe66d", fade(t, b.pull40 + 0.8))
+    + X.label(870, y0 + 190, "×1", 76, "#ffe66d", 1), TALK, "point", pulse(t, b.pull40, b.theory - 0.2, 0.2));
+}function bTheory(t, env) {                                    // "Theory: the harder pull wins. The ball lands first." "Wrong. They landed together. One bang."
+  const b = env.beats, u = clamp((t - b.first - 0.05) / 0.5), back = fade(t, b.land2 - 0.2, 0.3), stamp = easeOutBack(seg(t, b.wrong, b.wrong + 0.25)), lab = fade(t, b.first + 0.5);
+  const by = lerp(390, 820, u * u), ay = lerp(390, 520, u);
+  const theory = `<g opacity="${1 - back}">${ballB(380, by, 82)}${appleB(760, ay, 34)}${u >= 1 ? puff(380, 905, seg(t, b.first + 0.55, b.first + 1.0), 1.2) : ""}
+    ${X.label(560, 860, "FIRST", 72, "#ffe66d", lab)}${X.label(900, ay + 14, "LATER", 64, "#ffe66d", lab)}</g>`;
+  return A(t, env, b.theory - 0.12, ground(905) + theory + (back > 0 ? `<g opacity="${back}">${strobe(t, b.land2 - 0.1, { every: 0.1, top: 430, bot: 820, x1: 470, x2: 820, r1: 70, r2: 30 })}${puff(470, 905, seg(t, b.bang, b.bang + 0.5), 1.2)}${puff(820, 905, seg(t, b.bang, b.bang + 0.5), 0.8)}</g>` : "")
     + NOTE(250, 290, "PEEK'S THEORY", 56, "#ff9fd0", fade(t, b.theory))
     + (stamp > 0 ? `<g transform="translate(260 380) rotate(-12) scale(${stamp})"><rect x="-170" y="-70" width="340" height="120" rx="12" fill="none" stroke="#ff4f6d" stroke-width="12"/>${X.label(0, 30, "WRONG", 96, "#ff4f6d")}</g>` : ""), TALK, "point", pulse(t, b.theory, b.wrong - 0.2, 0.2));
-}
-function bBecause(t, env) {                                   // "Because the ball..."
+}function bBecause(t, env) {                                   // "Because the ball..."
   const b = env.beats, p = popIn(t, b.because - 0.05, 0.3);
   return A(t, env, b.because - 0.12, `<g transform="translate(470 420) scale(${p})"><circle r="176" fill="#cfd6ff"/>${ST.ball(0, 0, 170, t * 10)}</g>` + X.arrow(470, 610, 470, 900, 30, "#ffe66d", t * 2, p)
     + X.label(820, 470, "?", 220, "#ffe66d", fade(t, b.because + 0.2), easeOutBack(seg(t, b.because + 0.2, b.because + 0.5))), TALK, "point", 0);
@@ -344,7 +346,7 @@ function bSpeed(t, env) {                                     // "Everything spe
   let s = ground(905);
   [0, 1, 2].forEach((k) => { const o = fade(t, b.speeds + 0.2 + k * 0.7, 0.15), y = top + (bot - top) * (k / 2) ** 2; if (o <= 0) return; const g = k === 2 ? 1 : 0.5;
     s += dashed(x1 + 70, x2 - 40, y, o) + ballB(x1, y, 56, o * g) + appleB(x2, y, 24, o * g)
-      + X.label(x1 - 170, y + 20, `${k * 35} km/h`, 56, "#ffe66d", o) + X.label(x2 + 160, y + 20, `${k * 35} km/h`, 56, "#ffe66d", o); });
+      + X.label(x1 - 175, y + 24, `${k * 35} km/h`, 66, "#ffe66d", o) + X.label(x2 + 165, y + 24, `${k * 35} km/h`, 66, "#ffe66d", o); });
   const pa = fade(t, b.speeds + 1.6), yl = top;                // the pulls on the last pair, at one scale (the ball's is broken: 40 times too long to draw)
   s += pa > 0 ? `<g opacity="${pa}">${X.arrow(x1, yl + 62, x1, yl + 150, 16, "#ffe66d", t * 2)}<path d="M${x1 - 26} ${yl + 108} l52 -16 M${x1 - 26} ${yl + 124} l52 -16" stroke="#ffe66d" stroke-width="6"/>${X.arrow(x2, yl + 28, x2, yl + 40, 8, "#ffe66d", 0)}</g>` : "";
   return B(t, env, b.speeds - 0.12, s);
@@ -358,7 +360,7 @@ function bAir(t, env) {                                       // "Except a feath
   return B(t, env, b.feather - 0.12, dots + ground(905) + ballB(330, by, 56) + X.arrow(330, by + 62, 330, by + 200 > 900 ? by + 62 : by + 200, 16, "#ffe66d", t * 2, by < 840 ? 1 : 0)
     + `<g transform="translate(${fx_} ${fy}) rotate(${rot})">${ST.feather(0, 0, 1.6, 0)}</g>`
     + X.arrow(fx_ + 110, fy - 20, fx_ + 110, fy + 90, 14, "#ffe66d", t * 2) + X.arrow(fx_ + 150, fy + 100, fx_ + 150, fy - 10, 14, "#ff7ab8", t * 2, air)
-    + X.label(fx_ + 210, fy + 64, "AIR", 60, "#ff7ab8", air));
+    + X.label(fx_ + 225, fy + 70, "AIR", 72, "#ff7ab8", air));
 }
 function bMoon(t, env) {                                      // "On their Moon there is almost no air."
   const b = env.beats, gone = ease(seg(t, b.moon + 0.1, b.moon + 0.8));
@@ -399,12 +401,13 @@ function bQuestion(t, env) {                                  // "Which raises a
 function rExit(t, env) {                                      // "Investigating. Peek out." he tips his hat and jumps off the rack into the pillow display; the feathers drift down slowly
   const b = env.beats, tip = pulse(t, b.peekout - 0.1, b.peekout + 0.45, 0.15), j0 = b.peekout + 0.5, u = Math.max(0, t - j0), fallT = Math.sqrt(2 * (FLOOR_Y - 200 - DECK) / G);
   const landed = u >= fallT, py = landed ? FLOOR_Y - 150 : DECK + (u > 0 ? -Math.sin(Math.min(1, u * 3) * Math.PI / 2) * 60 * (1 - u / fallT) + 0.5 * G * u * u : 0), px = PEEK_DX + (u > 0 ? -Math.min(u / fallT, 1) * 420 : 0);
-  const c = t < j0 ? fx.camera(t, [[b.out - 0.12, PEEK_DX, DECK - 170, 2.0, 0], [j0, PEEK_DX, DECK - 170, 2.0, 0]]) : fx.camera(t, [[j0, 470, 650, 0.62, 0], [env.ts, 470, 680, 0.64, 0]]);
+  const c = t < j0 ? fx.camera(t, [[b.out - 0.12, PEEK_DX, DECK - 170, 2.0, 0], [j0, PEEK_DX, DECK - 170, 2.0, 0]])
+    : { x: lerp(PEEK_DX - 120, PEEK_DX - 400, ease(clamp(u / fallT))), y: Math.min(Math.max(py - 150, DECK), FLOOR_Y - 420), z: 1.25, rot: 0 };   // follows him down, then holds on the pillows
   const e = ants(speak({ ...F("sly", { look: -0.4 }), lid: Math.max(0.4, blinks(t, 2.5)) }, env, t), 6, 6);
   const pk = landed ? "" : peek(e, { filter: pkLight(), shadow: false, turn: u > 0 ? -0.8 : 0, armR: tip > 0.02 ? { x: lerp(820, 800, tip), y: lerp(700, 300, tip), front: true } : { x: 820, y: 700 }, hatRot: -6 * tip, legL: u > 0 ? { y: -40, rot: -20 } : null, legR: u > 0 ? { y: -40, rot: 20 } : null }, px, py, 0.3);
   const squash = landed ? Math.exp(-(u - fallT) * 5) : 0;
   return [fx.layer(aisle(t, { cracked: 1, plankOut: 0, ballY: FLOOR_Y - BALL_R, appleY: FLOOR_Y - APPLE_R, appleX: APPLE_X + 18, attached: false, peekSvg: ST.box(RACK_X + 520, DECK, 300, 330, "PILLOWS") + pk,
-    front: ST.pillows(PEEK_DX - 420, FLOOR_Y, squash) + (landed ? ST.feathers(t, j0 + fallT, PEEK_DX - 420, FLOOR_Y - 160, 16, 380) : "") }), c, 1), ...storeGrade(t), caps(env, t, OUT)];
+    front: ST.pillows(PEEK_DX - 420, FLOOR_Y, squash) + (landed ? ST.feathers(t, j0 + fallT, PEEK_DX - 420, FLOOR_Y - 160, 26, 560, 1.4) : "") }), c, 1), ...storeGrade(t), caps(env, t, OUT)];
 }
 
 // ============================================================ TAG: the detector plays "...Peek out." back; "...Peek."
@@ -412,7 +415,7 @@ function tag(t, env) {
   const b = env.beats, nb = b.next, q = seg(t, nb, nb + 0.2);
   fx.def("tagfade", `<linearGradient id="tagfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#02030c" stop-opacity="0"/><stop offset=".25" stop-color="#02030c" stop-opacity=".88"/><stop offset=".85" stop-color="#02030c" stop-opacity=".88"/><stop offset="1" stop-color="#02030c" stop-opacity="0"/></linearGradient>`);
   const wrist = ease(seg(t, env.ts + 0.1, b.po - 0.05)) * (1 - ease(seg(t, b.po_end + 0.2, b.po_end + 0.6))), lift = ease(seg(t, b.cpeek - 0.5, b.cpeek + 0.1));
-  const o = { walk: 0, settle: 1, hand: { x: lerp(110, 150, lift), y: lerp(-560, -980, lift) }, handL: { x: lerp(-20, 120, wrist), y: lerp(-560, -900, wrist) }, handLFront: true, aim: -40, torch: 0,
+  const o = { walk: 0, settle: 1, hand: { x: lerp(110, 120, lift), y: lerp(-560, -760, lift) }, handL: { x: lerp(-20, 120, wrist), y: lerp(-560, -900, wrist) }, handLFront: true, aim: -40, torch: 0,
     nod: lerp(16, 6, lift), led: "#46ff7a", ledO: 0.9, glint: 0.6 + 0.4 * lift };
   const C = CR(470, o), [hx, hy] = C.near, [dx, dy] = C.far, playing = t >= b.po && t <= b.po_end + 0.1;
   const lvl = env.radio ? clamp((env.radio[Math.round(t * env.fps)] || 0) * 1.3) : 0;
@@ -420,7 +423,8 @@ function tag(t, env) {
     ${Array.from({ length: 9 }, (_, i) => { const h = playing ? 8 + lvl * 60 * (0.4 + 0.6 * Math.abs(Math.sin(t * 30 + i * 1.7))) : 4; return `<rect x="${-56 + i * 13}" y="${-h / 2}" width="8" height="${h}" rx="3" fill="#46ff7a"/>`; }).join("")}</g>`
     + fx.glow(dx, dy - 10, 120, "#46ff7a", playing ? 0.45 : 0.15);
   const detShow = wrist > 0.3 ? det : "";
-  const plush = FR.plush(hx + 10, hy + 70, PLUSH_K, "crown", { teeth: 1.35, tilt: lerp(20, -4, lift) });
+  const faceX = 470 + 100, faceBase = FLOOR_Y - 850 * CK + 300 * PLUSH_K * 0.55;           // the plush's face level with his, just in front of it
+  const plush = FR.plush(lerp(hx + 10, faceX, lift), lerp(hy + 70, faceBase, lift), PLUSH_K, "crown", { teeth: 1.35, tilt: lerp(20, 0, lift) });
   const c = fx.camera(t, [[env.ts, 520, FLOOR_Y - 690, 1.25, 0], [b.po, 520, FLOOR_Y - 700, 1.27, 0], [b.tagline_end, 520, FLOOR_Y - 710, 1.32, 0]]);
   const shot = [fx.layer(ST.desk(t) + ST.mic(800, ST.DESK_Y - 30) + ST.dome(860, 470, ALERT(t)) + C.svg + plush + detShow, c, 1), ...storeGrade(t, 0.6)];
   return [...shot, q > 0 ? "" : caps(env, t, OUT), `<rect x="0" y="930" width="${W}" height="560" fill="url(#tagfade)" opacity="${q}"/>`,
