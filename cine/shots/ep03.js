@@ -89,7 +89,7 @@ function coBrake(t, env) {                                  // 4.4 - 5.4: the br
     ...finish(t, t, { rain: false, vig: 0.6, grade: ["#2a3cc0", 0.2] }), caps(env, t, OUT)];
 }
 function coBottom(t, env) {                                 // 5.4 - 8.0: the seats arrive at the bottom; Crowe takes two steps toward them; the detector goes red
-  const c = fx.camera(t, [[5.4, 420, 1420, 0.6, 0], [8.0, 430, 1430, 0.62, 0]]);
+  const c = fx.camera(t, [[6.2, 60, 1330, 0.62, 0], [7.2, 180, 1330, 0.63, 0], [8.0, 185, 1330, 0.635, 0]]);  // pans with his step; the frame width caps the push-in
   const ringY = lerp(-400, 1560, easeOut(seg(t, 5.4, 5.95))), ring = FR.seatRing(540, ringY, 1), [px, py] = ring.seat(0);
   const Wk = walkOf(t, 6.2, 7.2, -560, -560 + WALK_CYCLE * CK), red = t > 6.0;
   const C = CR(Wk.x, { walk: Wk.walk, settle: Wk.settle, hand: swingHand(Wk, HOLD, Wk.arrive), aim: 30, torch: 0.3, lean: Wk.lean, nod: 6 + 4 * Wk.nodSettle, led: red ? "#ff3b3b" : "#46ff7a", ledO: red ? ALERT(t) : 0.9 });
@@ -199,10 +199,10 @@ function bScale(t, env) {                                   // "Their station is
 }
 function bPull(t, env) {                                    // "And the pull there is about nine tenths of the pull down here. Almost the same."
   const b = env.beats, L = 520, y0 = 330, g = popIn(t, b.pull + 0.1), s = ease(seg(t, b.pull + 0.5, b.pull + 1.3)) * 0.885;
-  return A(t, env, b.pull - 0.12, X.arrow(330, y0, 330, y0 + L * clamp(g), 26, "#ffe66d", t * 2) + (s > 0.02 ? X.arrow(750, y0, 750, y0 + L * s, 26, "#ffe66d", t * 2) : "")
-    + bracket(440, y0, y0 + L, "#ffe66d", g, 1) + X.label(520, y0 + L / 2, "100 %", 64, "#ffe66d", g)
-    + bracket(860, y0, y0 + L * 0.885, "#ffe66d", fade(t, b.pull + 1.3), 1) + X.label(950, y0 + L * 0.44, "90 %", 64, "#ffe66d", fade(t, b.pull + 1.3))
-    + X.label(330, 930, "ON THE GROUND", 56, "#fff", g) + X.label(750, 930, "AT THE STATION", 56, "#fff", fade(t, b.pull + 0.4)), TALK, "point", pulse(t, b.pull, b.why - 0.2, 0.2));
+  return A(t, env, b.pull - 0.12, X.arrow(330, y0, 330, y0 + L * clamp(g), 26, "#ffe66d", t * 2) + (s > 0.02 ? X.arrow(720, y0, 720, y0 + L * s, 26, "#ffe66d", t * 2) : "")
+    + bracket(440, y0, y0 + L, "#ffe66d", g, 1) + X.label(550, y0 + L / 2 + 28, "100 %", 84, "#ffe66d", g)
+    + bracket(820, y0, y0 + L * 0.885, "#ffe66d", fade(t, b.pull + 1.3), 1) + X.label(915, y0 + L * 0.44 + 28, "90 %", 84, "#ffe66d", fade(t, b.pull + 1.3))
+    + X.label(330, 935, "GROUND", 76, "#fff", g) + X.label(720, 935, "STATION", 76, "#fff", fade(t, b.pull + 0.4)), TALK, "point", pulse(t, b.pull, b.why - 0.2, 0.2));
 }
 function bWhy(t, env) {                                     // "So why do they float? Here is the secret. They are..."
   const b = env.beats, port = popIn(t, b.why - 0.1, 0.35), drift = Math.sin(t * 1.3) * 22, spin = t * 22;
@@ -282,12 +282,12 @@ function bTogether(t, env) {                                // "Their station is
   return B(t, env, b.never - 0.12, planet(540, 2200, 1300, t * 0.02) + `<rect x="140" y="300" width="800" height="440" rx="120" fill="#cfd6ee" opacity=".15" stroke="#cfd6ee" stroke-width="10"/>`
     + `<g transform="translate(470 ${500 + drift}) rotate(${Math.sin(t) * 10})">${M.astronaut(0, 0, 1.0)}</g>` + X.arrow(470, 640 + drift, 470, 780 + drift, 13, "#ffe66d", t * 2, fade(t, b.never + 0.4))
     + X.arrow(850, 650, 850, 790, 13, "#ffe66d", t * 2, fade(t, b.never + 0.6)) + X.label(800, 400, "SHIP", 60, "#cfd6ee", fade(t, b.never + 0.6))
-    + X.label(540, 930, "FALLING TOGETHER", 64, "#ffe66d", fade(t, b.never + 0.8)));
+    + X.label(540, 872, "FALLING TOGETHER", 64, "#ffe66d", fade(t, b.never + 0.8)));
 }
 function bOrbit(t, env) {                                   // "It falls toward the planet, but it moves sideways seventeen thousand miles an hour, so it keeps missing."
   const b = env.beats, th = -Math.PI * 0.75 - (t - b.falls) * 0.9;
   return B(t, env, b.falls - 0.12, orbitPic(t, 180, 280, th, { pull: 1, side: fade(t, b.sideways), sideLen: 230 })
-    + `<g opacity="${fade(t, b.mph)}" transform="translate(300 830) scale(${lerp(1.25, 1, easeOut(seg(t, b.mph, b.mph + 0.3)))})">${X.label(0, 0, "ALMOST 5 MILES", 60, "#ffe66d")}${X.label(0, 64, "EVERY SECOND", 56, "#ffe66d")}</g>`);
+    + `<g opacity="${fade(t, b.mph)}" transform="translate(290 880) scale(${lerp(1.25, 1, easeOut(seg(t, b.mph, b.mph + 0.3)))})">${X.label(0, 0, "27,600 km/h", 72, "#ffe66d")}</g>`);
 }
 function bMoon(t, env) {                                    // "Just like their Moon, only lower and faster."
   const b = env.beats, Rm = 330, a = -Math.PI / 2 - (t - b.moon) * 0.25, mx = OC[0] + Math.cos(a) * Rm, my = OC[1] + Math.sin(a) * Rm, ths = -(t - b.moon) * 3.2;
