@@ -11,7 +11,8 @@
 //              One full cycle (two steps) is WALK_CYCLE units; leave it undefined to stand.
 //     hand     { x, y } where the torch hand is (default: held forward at chest height)
 //     aim      which way the torch points, in degrees (0 = right, negative = up)
-//     handL    { x, y } for the other hand (default: hanging; it carries the wrist detector)
+//     handL    { x, y } for the other hand (default: hanging; it carries the wrist detector). That arm is behind the coat;
+//              handLFront: true draws it in front, for holding something across his chest
 //     settle   0..1 blends the stride into the standing stance: ease it from 0 to 1 over the last half step when he stops
 //              (and from 1 to 0 when he sets off), so he never freezes mid-stride or pops to the stand pose
 //     lean     degrees the body leans forward from the hips; crouch 0..1 lowers the hips and bends the knees
@@ -113,11 +114,13 @@ function dark(o, q) {
   const armNear = limb(q.sN[0] - 10, q.sN[1] + 10, nex, ney, 44, null, 40) + limb(nex, ney, nhx, nhy, 40, null, 36)
     + `<g transform="${nearT}"><circle cx="6" cy="0" r="24"/><rect x="-12" y="-17" width="112" height="34" rx="8"/><rect x="${TORCH - 30}" y="-25" width="30" height="50" rx="6"/></g>`;
   const torso = `<g transform="translate(0 ${q.drop.toFixed(1)}) rotate(${lean} 0 ${HIP_Y})">`;
-  const shape = `${torso}${armFar}</g>${legs}${torso}${coat}${head}${armNear}</g>`;
+  // the detector's light belongs to the far arm: the coat hides it when the arm is behind him (it must not shine through)
+  const ledEl = `<g transform="${farT}"><rect x="-30" y="-20" width="30" height="40" rx="4" fill="${led}" opacity="${ledO}"/></g>`;
+  const shapeOf = (lit) => (o.handLFront ? `${legs}${torso}${coat}${head}${armFar}${lit ? ledEl : ""}${armNear}</g>` : `${torso}${armFar}${lit ? ledEl : ""}</g>${legs}${torso}${coat}${head}${armNear}</g>`);
   const lights = `${torso}<g transform="${headT}"><ellipse cx="20" cy="-952" rx="13" ry="8" fill="#bfe6ff" opacity="${(0.85 * glint).toFixed(2)}"/><ellipse cx="50" cy="-952" rx="9" ry="7" fill="#bfe6ff" opacity="${(0.7 * glint).toFixed(2)}"/></g>
-    <g transform="${farT}"><rect x="-30" y="-20" width="30" height="40" rx="4" fill="${led}" opacity="${ledO}"/></g><g transform="${nearT}"><rect x="${TORCH - 4}" y="-22" width="6" height="44" rx="3" fill="#fff6dc" opacity="${(0.9 * torch).toFixed(2)}"/></g></g>`;
+    <g transform="${nearT}"><rect x="${TORCH - 4}" y="-22" width="6" height="44" rx="3" fill="#fff6dc" opacity="${(0.9 * torch).toFixed(2)}"/></g></g>`;
   return (shadow ? `<ellipse cx="10" cy="4" rx="170" ry="26" fill="#03040a" opacity=".45"/>` : "")
-    + `<g fill="${halo}" opacity="${haloO}" transform="translate(-5 -4) scale(1.012)">${shape}</g><g fill="#04050e">${shape}</g>${lights}`;
+    + `<g fill="${halo}" opacity="${haloO}" transform="translate(-5 -4) scale(1.012)">${shapeOf(false)}</g><g fill="#04050e">${shapeOf(true)}</g>${lights}`;
 }
 
 export function crowe(o = {}) {
