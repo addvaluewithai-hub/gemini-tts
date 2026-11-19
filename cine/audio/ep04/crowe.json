@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing AGENT CROWE, a tall grim government agent in an animated comedy short. Deep, gravelly, slow American voice. At night in a closed superstore he speaks into the customer-service microphone, and his voice booms through the empty aisles; he holds up a pink plush toy to the security camera. Calm, slow, menacing politeness, like a store announcement from a nightmare. After a long pause, the last word is alone and different: he has just heard a name crackle from his detector, and he says it slowly, quietly, savouring it, a dark smile in the voice.",
+   "text": "Attention, shoppers. <short pause> Have you seen... this? <long pause> ...Peek."
+  }
+ ],
+ "voice": "Algenib",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP04 drop crowe"
+ }
+}
