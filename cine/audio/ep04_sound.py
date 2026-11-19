@@ -98,14 +98,15 @@ def find(rw, options, start=0, name=""):
 
 # ---- the takes and the timeline
 FALL = 1.0                                             # 4.9 m takes 1.0 s
-LINE_AT = {"drop": 0.6}
-yD, wD = prepared("drop", keep=0.3, over=0.4)
+LINE_AT = {"drop": 0.3}                                # "Stay... stay... If it goes... heavy one first... then the apple..."
+yD, wD = prepared("drop", keep=0.45, over=0.55)
 cD = [clean(w) for _, _, w in wD]
-i_sci = next((i for i, w in enumerate(cD) if w.startswith("science")), len(wD) - 1)
-i_light = next((i for i, w in enumerate(cD) if w.startswith("light")), max(0, i_sci - 2))
-HEAVY, LIGHT, SCI = LINE_AT["drop"] + wD[0][0], LINE_AT["drop"] + wD[i_light][0], LINE_AT["drop"] + wD[i_sci][0]
-YANK = SCI + 0.18                                      # he yanks the plank on "science"
-LAND = YANK + FALL                                     # both land on the same frame
+i_if = next((i for i, w in enumerate(cD) if w == "if"), max(0, len(wD) - 7))
+i_heavy = next((i for i, w in enumerate(cD) if w.startswith("heavy")), i_if + 3)
+STAY2, IFGOES, HEAVYW = LINE_AT["drop"] + wD[min(1, len(wD) - 1)][0], LINE_AT["drop"] + wD[i_if][0], LINE_AT["drop"] + wD[i_heavy][0]
+GO = LINE_AT["drop"] + wD[-1][1] + 0.25                # the plank swings down: both are let go at the same instant
+YANK = GO                                              # (the name the pictures use for the release)
+LAND = YANK + FALL                                     # one bang
 yO, wO = prepared("p1-ohno", pick=lambda i, n: i >= 1, folder=a.shared, keep=0.2)   # "Oh no." (the take opens with a breath, as in Episode 1)
 OHNO = LAND + 3.1                                      # the held beat, the looks down, left, right, then up at the empty shelf edge
 TITLE = OHNO + wO[-1][1] + 0.35
@@ -122,12 +123,17 @@ for i, w in enumerate(cw_):
 if g: groups.append(g)
 while len(groups) > 3: groups[-2] += groups.pop()      # "Attention, shoppers." / "Have you seen... this?" / "...Peek."
 crowe_lines = [tighten(cx_, [cw_[i] for i in g], keep=0.35, over=0.5) for g in groups]
-CHIME = IS + 0.12
-I_ATT = IS + 1.0                                       # on Crowe at the desk, the microphone
-I_HYS = I_ATT + crowe_lines[0][1][-1][1] + 0.75        # he lifts the plush to the camera
-TVW = I_HYS + crowe_lines[1][1][-1][1] + 0.12          # the TV wall fills with the plush's face
+CHIME = IS + 0.08
+I_ATT = IS + 0.65                                      # on Crowe at the desk, the microphone
+I_HYS = I_ATT + crowe_lines[0][1][-1][1] + 0.6         # he lifts the plush to the camera
+TVW = I_HYS + crowe_lines[1][1][-1][1] + 0.1           # the TV wall fills with the plush's face
+FEEDS = TVW + 0.75                                     # the screens flick to the security cameras; one swivels to the shelf top
+HAT = FEEDS + 0.5                                      # the top of Peek's hat on one screen
+PILLOW = FEEDS + 1.05                                  # Peek's shot: the red light, the pillow over the lens
+STATIC = PILLOW + 0.45
+TURN = PILLOW + 0.85                                   # the desk: Crowe turns to the monitors and takes one step
 repB, wB = prepared("reportB", keep=0.2, over=0.28)
-BS = TVW + 2.5                                         # Peek's sink behind the box, then "...is also forty times harder..."
+BS = TURN + 1.05 + 0.6                                 # Peek crouched behind the box, then "...is also forty times harder..."
 RB = len(repB) / SR
 TS = BS + RB + 1.7                                     # "Peek out." then the jump into the pillows (1 s fall); the tag starts
 po_i = max(0, len(wB) - 2)                             # "Peek out." from the reportB take, through the detector
@@ -174,21 +180,21 @@ A0, B0 = RS + 0.15, BS
 rwA = [(A0 + s, A0 + e, clean(w)) for s, e, w in wA[: cut + 1]]
 rwB = [(B0 + s, B0 + e, clean(w)) for s, e, w in wB]
 beats, idx = {}, 0
-orderA = [("report", "commander field|field report"), ("dropped", "i dropped"), ("same", "same height"), ("landed", "they landed"), ("agent", "right next"),
-          ("remember", "remember"), ("ball40", "the ball is"), ("pull40", "so their planet|so their"), ("theory", "theory"), ("wrong", "wrong"), ("land2", "they land"),
-          ("every", "every time"), ("because", "because the ball|because")]
+orderA = [("report", "commander field|field report"), ("ran", "i ran"), ("accident", "by accident"), ("agent", "right above"), ("remember", "remember"),
+          ("ball40", "the ball is"), ("pull40", "so their planet|so their"), ("theory", "theory"), ("first", "the ball lands|lands first"), ("wrong", "wrong"),
+          ("land2", "they landed"), ("bang", "one bang"), ("because", "because the ball|because")]
 for key, seq in orderA:
     idx = find(rwA, seq, idx, "reportA"); beats[key] = round(rwA[idx][0], 3)
 beats["cut"] = round(IS, 3)
 idx = 0
-orderB = [("harder", "is also|also"), ("stuff", "forty times the|40 times the"), ("evens", "it evens"), ("speeds", "everything speeds"),
-          ("mph", "twentytwo|twenty two|22"), ("second", "every second"), ("feather", "except a feather|except"), ("air", "air pushes"), ("wide", "but on|on light"),
-          ("moon", "on their moon"), ("astro", "an astronaut"), ("together", "they landed"), ("sum1", "so heavier"), ("sum2", "but also"), ("sum3", "only air"),
-          ("question", "which raises"), ("bunny", "up there"), ("weigh", "so why"), ("out", "investigating"), ("peekout", "peek out")]
+orderB = [("harder", "is also|also"), ("carts", "same push"), ("empty", "the empty"), ("full", "the full"), ("stuff", "more pull"), ("evens", "it evens"),
+          ("speeds", "everything speeds"), ("mph", "twentytwo|twenty two|22"), ("second", "every second"), ("feather", "except a feather|except"), ("air", "air pushes"),
+          ("wide", "but on|on light"), ("moon", "on their moon"), ("astro", "an astronaut"), ("together", "they landed"), ("sum1", "so more"), ("sum2", "but harder"),
+          ("sum3", "only air"), ("question", "which raises"), ("bunny", "up there"), ("weigh", "so why"), ("out", "investigating"), ("peekout", "peek out")]
 for key, seq in orderB:
     idx = find(rwB, seq, idx, "reportB"); beats[key] = round(rwB[idx][0], 3)
 beats["end"] = round(rwB[-1][1], 3)
-beats.update({"heavy": round(HEAVY, 3), "light": round(LIGHT, 3), "science": round(SCI, 3), "yank": round(YANK, 3), "land": round(LAND, 3), "ohno": round(OHNO, 3), "title": round(TITLE, 3),
+beats.update({"stay2": round(STAY2, 3), "ifgoes": round(IFGOES, 3), "heavyw": round(HEAVYW, 3), "yank": round(YANK, 3), "feeds": round(FEEDS, 3), "hat": round(HAT, 3), "pillow": round(PILLOW, 3), "static": round(STATIC, 3), "turn": round(TURN, 3), "land": round(LAND, 3), "ohno": round(OHNO, 3), "title": round(TITLE, 3),
               "chime": round(CHIME, 3), "att": round(I_ATT, 3), "att_end": round(I_ATT + crowe_lines[0][1][-1][1], 3), "hys": round(I_HYS, 3), "hys_this": round(I_HYS + crowe_lines[1][1][-1][0], 3),
               "hys_end": round(I_HYS + crowe_lines[1][1][-1][1], 3), "tvw": round(TVW, 3), "po": round(PO, 3), "po_end": round(PO + po1 - po0, 3), "cpeek": round(CPEEK, 3), "tagline_end": round(TAG_END, 3)})
 
@@ -223,8 +229,11 @@ ag = np.where(T < RS, 0.03, 0.0) + np.where((T >= IS) & (T < BS + 0.9), 0.02, 0.
 ag = lp(ag, 6); L += amb * ag; R += np.roll(amb, 2400) * ag
 
 # ---- cold open: the plank, the fall, the landing, Crowe's steps, the held silence, "Oh... no.", the title
-place(pop(520), HEAVY + 0.1, 0.1); place(pop(760), LIGHT + 0.1, 0.08)                   # the pats
-n = int(0.22 * SR); place(bp(noise(n), 300, 2500) * np.exp(-tx(n) * 10), YANK - 0.05, 0.3)   # the plank scrapes back
+def creak(d=0.5, f=180):
+    n = int(d * SR); t = tx(n); return bp(signal.sawtooth(2 * np.pi * (f + 60 * np.sin(2 * np.pi * 3 * t)) * t) * (rng.random(n) < 0.6), 300, 2500) * np.sin(np.pi * t / d)
+for s_ in (0.5, 1.6, IFGOES - 0.2, HEAVYW + 0.1): place(creak(0.45, 160 + 40 * rng.random()), s_, 0.12, 0.2)   # the plank, teetering
+for i in range(int((GO - 0.2) / 0.5)): place(heart(), 0.2 + i * 0.5, 0.5)
+place(creak(0.3, 120), GO - 0.25, 0.2); place(whoosh(0.18, 400, 2500), GO - 0.02, 0.2); place(thud(300, 60, 0.1), GO + 0.12, 0.25, 0.3)   # it swings down, clacks against the rack
 n = int(FALL * SR); t = tx(n); place(bp(noise(n), 300, 4000) * (t / FALL) ** 1.5, YANK, 0.28)   # the air rushing past
 for s_ in np.arange(YANK - 0.55, LAND - 0.1, 0.42): place(step(120), s_, 0.18, -0.4)   # Crowe walks in under them
 place(boom(1.2), LAND, 0.6); place(crack(), LAND, 0.4, -0.2)                            # the ball, the tile
@@ -244,23 +253,28 @@ def bed(t0, t1, gain=0.085, every=2):
         if k % 4 == 2: n = int(0.03 * SR); place(bp(noise(n), 2500, 7000) * np.exp(-tx(n) * 160), s_, gain * 0.6, 0.3)
         k += 1; s_ += beat / 2
 bed(RS + 0.2, IS - 0.1, 0.085, 1)
-for key in ("dropped", "remember", "ball40", "theory", "because"): place(whoosh(0.24, 500, 3500), beats[key] - 0.22, 0.08)
-for key in ("same", "landed", "agent", "pull40", "land2"): place(pop(700 + 40 * (len(key) % 7)), beats[key] + 0.02, 0.07)
-place(thud(240, 40, 0.2), beats["wrong"] + 0.15, 0.3)                                     # the WRONG stamp
+for key in ("ran", "remember", "ball40", "theory", "because"): place(whoosh(0.24, 500, 3500), beats[key] - 0.22, 0.08)
+for key in ("accident", "agent", "pull40", "first", "land2"): place(pop(700 + 40 * (len(key) % 7)), beats[key] + 0.02, 0.07)
+place(thud(240, 40, 0.2), beats["wrong"] + 0.15, 0.3); place(boom(0.5), beats["bang"] + 0.1, 0.12)                                     # the WRONG stamp
 
 # ---- the interruption: the chime, the voice on the speakers, the TV wall switching on, Peek's heart
 place(chime(), CHIME, 0.22)
+for i in range(9): place(beep(1600 - 60 * i, 0.03), FEEDS + i * 0.05, 0.05, -0.6 + 0.15 * i)   # the screens flick to the cameras
+n = int(0.45 * SR); place(bp(noise(n), 2000, 5000) * (0.6 + 0.4 * np.sin(2 * np.pi * 40 * tx(n))) * np.sin(np.pi * tx(n) / 0.45), FEEDS + 0.05, 0.08)   # the camera's motor
+place(beep(2900, 0.05), PILLOW + 0.05, 0.08)                                              # its red light
+place(thud(140, 30, 0.25), STATIC - 0.03, 0.3); n = int(1.0 * SR); place(bp(noise(n), 3000, 9000) * np.exp(-tx(n) * 2.5), STATIC, 0.07)   # the pillow, the static
+place(step(120), TURN + 0.45, 0.18, -0.2)                                                  # Crowe's step toward the monitors
 drone = sum(np.sin(2 * np.pi * f * T) for f in (55, 65.4, 82.4)); dg = np.interp(T, [IS, IS + 0.6, BS + 0.6, BS + 2.0, TS - 0.2, TS + 0.4, END - 0.3, END], [0, 0.05, 0.05, 0.018, 0.018, 0.05, 0.07, 0])
 place(lp(drone, 400) * dg, 0)
 n = int(0.3 * SR); place(bp(noise(n), 600, 3000) * np.exp(-tx(n) * 12), I_HYS - 0.35, 0.12)   # he lifts the plush
-for i in range(9): place(beep(2400 + 80 * i, 0.03), TVW + 0.05 + i * 0.09, 0.05, -0.6 + 0.15 * i)   # the screens switch over, one by one
-n = int(2.0 * SR); place(bp(noise(n), 6000, 12000) * np.clip(tx(n) / 0.2, 0, 1) * np.clip((2.0 - tx(n)) / 0.3, 0, 1), TVW, 0.04)
-for i in range(3): place(heart(), TVW + 0.6 + i * 0.45, 0.6)
+for i in range(9): place(beep(2400 + 80 * i, 0.03), TVW + 0.05 + i * 0.07, 0.05, -0.6 + 0.15 * i)   # the screens switch over, one by one
+for i in range(4): place(heart(), HAT + i * 0.45, 0.6)
 
 # ---- report B: a quieter bed, small sounds on the beats; the jump into the pillows
 bed(BS + 0.9, TS - 0.6, 0.06, 2)
-for key in ("stuff", "speeds", "feather", "moon", "sum1", "question"): place(whoosh(0.24, 500, 3500), beats[key] - 0.22, 0.07)
-for key in ("evens", "second", "air", "astro", "together", "sum2", "sum3", "bunny"): place(pop(650 + 30 * (len(key) % 5)), beats[key] + 0.02, 0.06)
+for key in ("carts", "stuff", "speeds", "feather", "moon", "sum1", "question"): place(whoosh(0.24, 500, 3500), beats[key] - 0.22, 0.07)
+n = int(0.9 * SR); place(bp(noise(n), 1500, 6000) * (rng.random(n) < 0.3) * np.exp(-tx(n) * 3), beats["empty"] + 0.1, 0.06, 0.4)   # the empty cart rattles off
+for key in ("full", "evens", "second", "air", "astro", "together", "sum2", "sum3", "bunny"): place(pop(650 + 30 * (len(key) % 5)), beats[key] + 0.02, 0.06)
 place(thud(90, 20, 0.4), beats["peekout"] + 1.5, 0.25); place(rustle(1.2), beats["peekout"] + 1.5, 0.15)   # the pillows, the feathers
 
 # ---- the tag: the detector's crackle and playback, then the hit when the next question lands
