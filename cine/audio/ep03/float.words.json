@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-19T05:41:51.517Z",
+  "duration_ms": 2240,
+  "word_count": 3,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "I, I float.",
+  "source_text": "I... I FLOAT!",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "I... I FLOAT!"
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 760,
+      "text": "I,"
+    },
+    {
+      "start_ms": 920,
+      "end_ms": 1120,
+      "text": "I"
+    },
+    {
+      "start_ms": 1120,
+      "end_ms": 2000,
+      "text": "float."
+    }
+  ]
+}

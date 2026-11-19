@@ -1,0 +1,507 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-19T05:42:17.444Z",
+  "duration_ms": 40480,
+  "word_count": 95,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "falling all the time. On that ride, my seat fell with me. Nothing pushed on me. So, I floated. Their station is a ride that never stops. It falls toward the planet, but it moves sideways 17,000 mi an hour. So, it keeps missing, just like their moon, only lower and faster. So, astronauts are not out of the pole. They float because they fall around the planet together with their ship. Which raises a question, commander. Up there, a wrench floats right beside a pencil. So, do heavy things fall faster? Investigating, Peek Out.",
+  "source_text": "...falling. All the time. On that ride, my seat fell with me. Nothing pushed on me. So I floated. Their station is a ride that never stops. It falls toward the planet, but it moves sideways seventeen thousand miles an hour, so it keeps missing. Just like their Moon, only lower and faster. So: astronauts are not out of the pull. They float because they fall around the planet, together with their ship. Which raises a question, Commander. Up there, a wrench floats right beside a pencil. So do heavy things fall faster? Investigating. Peek out.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "...falling. All the time. On that ride, my seat fell with me. Nothing pushed on me. So I floated. Their station is a ride that never stops. It falls toward the planet, but it moves sideways seventeen thousand miles an hour, so it keeps missing. Just like their Moon, only lower and faster. So: astronauts are not out of the pull. They float because they fall around the planet, together with their ship. Which raises a question, Commander. Up there, a wrench floats right beside a pencil. So do heavy things fall faster? Investigating. Peek out."
+    }
+  ],
+  "agreement": 0.9583,
+  "flagged": false,
+  "missing_words": [
+    "seventeen",
+    "thousand",
+    "miles",
+    "pull."
+  ],
+  "words": [
+    {
+      "start_ms": 280,
+      "end_ms": 1080,
+      "text": "falling"
+    },
+    {
+      "start_ms": 1440,
+      "end_ms": 1800,
+      "text": "all"
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 1920,
+      "text": "the"
+    },
+    {
+      "start_ms": 1920,
+      "end_ms": 2520,
+      "text": "time."
+    },
+    {
+      "start_ms": 3200,
+      "end_ms": 3360,
+      "text": "On"
+    },
+    {
+      "start_ms": 3360,
+      "end_ms": 3600,
+      "text": "that"
+    },
+    {
+      "start_ms": 3600,
+      "end_ms": 4120,
+      "text": "ride,"
+    },
+    {
+      "start_ms": 4200,
+      "end_ms": 4400,
+      "text": "my"
+    },
+    {
+      "start_ms": 4400,
+      "end_ms": 4800,
+      "text": "seat"
+    },
+    {
+      "start_ms": 4800,
+      "end_ms": 5080,
+      "text": "fell"
+    },
+    {
+      "start_ms": 5080,
+      "end_ms": 5320,
+      "text": "with"
+    },
+    {
+      "start_ms": 5320,
+      "end_ms": 5600,
+      "text": "me."
+    },
+    {
+      "start_ms": 5840,
+      "end_ms": 6200,
+      "text": "Nothing"
+    },
+    {
+      "start_ms": 6200,
+      "end_ms": 6560,
+      "text": "pushed"
+    },
+    {
+      "start_ms": 6560,
+      "end_ms": 6680,
+      "text": "on"
+    },
+    {
+      "start_ms": 6680,
+      "end_ms": 6960,
+      "text": "me."
+    },
+    {
+      "start_ms": 7240,
+      "end_ms": 7680,
+      "text": "So,"
+    },
+    {
+      "start_ms": 7720,
+      "end_ms": 7880,
+      "text": "I"
+    },
+    {
+      "start_ms": 7880,
+      "end_ms": 8720,
+      "text": "floated."
+    },
+    {
+      "start_ms": 9400,
+      "end_ms": 9560,
+      "text": "Their"
+    },
+    {
+      "start_ms": 9560,
+      "end_ms": 10160,
+      "text": "station"
+    },
+    {
+      "start_ms": 10160,
+      "end_ms": 10320,
+      "text": "is"
+    },
+    {
+      "start_ms": 10320,
+      "end_ms": 10400,
+      "text": "a"
+    },
+    {
+      "start_ms": 10400,
+      "end_ms": 10800,
+      "text": "ride"
+    },
+    {
+      "start_ms": 10800,
+      "end_ms": 10960,
+      "text": "that"
+    },
+    {
+      "start_ms": 10960,
+      "end_ms": 11280,
+      "text": "never"
+    },
+    {
+      "start_ms": 11280,
+      "end_ms": 11880,
+      "text": "stops."
+    },
+    {
+      "start_ms": 12120,
+      "end_ms": 12280,
+      "text": "It"
+    },
+    {
+      "start_ms": 12280,
+      "end_ms": 12560,
+      "text": "falls"
+    },
+    {
+      "start_ms": 12560,
+      "end_ms": 12880,
+      "text": "toward"
+    },
+    {
+      "start_ms": 12880,
+      "end_ms": 12960,
+      "text": "the"
+    },
+    {
+      "start_ms": 12960,
+      "end_ms": 13560,
+      "text": "planet,"
+    },
+    {
+      "start_ms": 13600,
+      "end_ms": 13680,
+      "text": "but"
+    },
+    {
+      "start_ms": 13680,
+      "end_ms": 13800,
+      "text": "it"
+    },
+    {
+      "start_ms": 13800,
+      "end_ms": 14080,
+      "text": "moves"
+    },
+    {
+      "start_ms": 14080,
+      "end_ms": 14680,
+      "text": "sideways"
+    },
+    {
+      "start_ms": 14680,
+      "end_ms": 15720,
+      "text": "17,000"
+    },
+    {
+      "start_ms": 15720,
+      "end_ms": 16040,
+      "text": "mi"
+    },
+    {
+      "start_ms": 16040,
+      "end_ms": 16200,
+      "text": "an"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16560,
+      "text": "hour."
+    },
+    {
+      "start_ms": 16720,
+      "end_ms": 16840,
+      "text": "So,"
+    },
+    {
+      "start_ms": 16840,
+      "end_ms": 16960,
+      "text": "it"
+    },
+    {
+      "start_ms": 16960,
+      "end_ms": 17280,
+      "text": "keeps"
+    },
+    {
+      "start_ms": 17280,
+      "end_ms": 17840,
+      "text": "missing,"
+    },
+    {
+      "start_ms": 18240,
+      "end_ms": 18480,
+      "text": "just"
+    },
+    {
+      "start_ms": 18480,
+      "end_ms": 18680,
+      "text": "like"
+    },
+    {
+      "start_ms": 18680,
+      "end_ms": 18800,
+      "text": "their"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 19200,
+      "text": "moon,"
+    },
+    {
+      "start_ms": 19440,
+      "end_ms": 19880,
+      "text": "only"
+    },
+    {
+      "start_ms": 19960,
+      "end_ms": 20280,
+      "text": "lower"
+    },
+    {
+      "start_ms": 20280,
+      "end_ms": 20440,
+      "text": "and"
+    },
+    {
+      "start_ms": 20440,
+      "end_ms": 20960,
+      "text": "faster."
+    },
+    {
+      "start_ms": 21600,
+      "end_ms": 22120,
+      "text": "So,"
+    },
+    {
+      "start_ms": 22400,
+      "end_ms": 23080,
+      "text": "astronauts"
+    },
+    {
+      "start_ms": 23080,
+      "end_ms": 23200,
+      "text": "are"
+    },
+    {
+      "start_ms": 23200,
+      "end_ms": 23840,
+      "text": "not"
+    },
+    {
+      "start_ms": 23880,
+      "end_ms": 24040,
+      "text": "out"
+    },
+    {
+      "start_ms": 24040,
+      "end_ms": 24160,
+      "text": "of"
+    },
+    {
+      "start_ms": 24160,
+      "end_ms": 24240,
+      "text": "the"
+    },
+    {
+      "start_ms": 24240,
+      "end_ms": 24680,
+      "text": "pole."
+    },
+    {
+      "start_ms": 25040,
+      "end_ms": 25200,
+      "text": "They"
+    },
+    {
+      "start_ms": 25200,
+      "end_ms": 25800,
+      "text": "float"
+    },
+    {
+      "start_ms": 25840,
+      "end_ms": 26080,
+      "text": "because"
+    },
+    {
+      "start_ms": 26080,
+      "end_ms": 26200,
+      "text": "they"
+    },
+    {
+      "start_ms": 26200,
+      "end_ms": 26600,
+      "text": "fall"
+    },
+    {
+      "start_ms": 26600,
+      "end_ms": 27160,
+      "text": "around"
+    },
+    {
+      "start_ms": 27160,
+      "end_ms": 27240,
+      "text": "the"
+    },
+    {
+      "start_ms": 27240,
+      "end_ms": 27960,
+      "text": "planet"
+    },
+    {
+      "start_ms": 28080,
+      "end_ms": 28480,
+      "text": "together"
+    },
+    {
+      "start_ms": 28480,
+      "end_ms": 28600,
+      "text": "with"
+    },
+    {
+      "start_ms": 28600,
+      "end_ms": 28760,
+      "text": "their"
+    },
+    {
+      "start_ms": 28760,
+      "end_ms": 29040,
+      "text": "ship."
+    },
+    {
+      "start_ms": 30040,
+      "end_ms": 30280,
+      "text": "Which"
+    },
+    {
+      "start_ms": 30280,
+      "end_ms": 30640,
+      "text": "raises"
+    },
+    {
+      "start_ms": 30640,
+      "end_ms": 30720,
+      "text": "a"
+    },
+    {
+      "start_ms": 30720,
+      "end_ms": 31240,
+      "text": "question,"
+    },
+    {
+      "start_ms": 31240,
+      "end_ms": 31840,
+      "text": "commander."
+    },
+    {
+      "start_ms": 32240,
+      "end_ms": 32440,
+      "text": "Up"
+    },
+    {
+      "start_ms": 32440,
+      "end_ms": 32840,
+      "text": "there,"
+    },
+    {
+      "start_ms": 32920,
+      "end_ms": 33040,
+      "text": "a"
+    },
+    {
+      "start_ms": 33040,
+      "end_ms": 33520,
+      "text": "wrench"
+    },
+    {
+      "start_ms": 33520,
+      "end_ms": 33960,
+      "text": "floats"
+    },
+    {
+      "start_ms": 33960,
+      "end_ms": 34280,
+      "text": "right"
+    },
+    {
+      "start_ms": 34280,
+      "end_ms": 34720,
+      "text": "beside"
+    },
+    {
+      "start_ms": 34720,
+      "end_ms": 34760,
+      "text": "a"
+    },
+    {
+      "start_ms": 34760,
+      "end_ms": 35280,
+      "text": "pencil."
+    },
+    {
+      "start_ms": 35640,
+      "end_ms": 36000,
+      "text": "So,"
+    },
+    {
+      "start_ms": 36160,
+      "end_ms": 36320,
+      "text": "do"
+    },
+    {
+      "start_ms": 36320,
+      "end_ms": 36600,
+      "text": "heavy"
+    },
+    {
+      "start_ms": 36600,
+      "end_ms": 36960,
+      "text": "things"
+    },
+    {
+      "start_ms": 36960,
+      "end_ms": 37240,
+      "text": "fall"
+    },
+    {
+      "start_ms": 37240,
+      "end_ms": 37880,
+      "text": "faster?"
+    },
+    {
+      "start_ms": 38560,
+      "end_ms": 39320,
+      "text": "Investigating,"
+    },
+    {
+      "start_ms": 39720,
+      "end_ms": 39960,
+      "text": "Peek"
+    },
+    {
+      "start_ms": 39960,
+      "end_ms": 40240,
+      "text": "Out."
+    }
+  ]
+}

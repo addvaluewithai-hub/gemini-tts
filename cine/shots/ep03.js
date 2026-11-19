@@ -124,7 +124,7 @@ function stallShot(t, env, c, plane, extra = [], front = "") {
 const pkLight = () => night("Lst", [{ color: "#ffe0a8", az: 90, power: 1.2, size: 12 }], [0.92, 0.84, 0.95], 0.06);
 function rReveal(t, env) {                                  // rs - news: the reveal (he is on the prize shelf), then on him: "Commander. Field report number three."
   const b = env.beats, wide = t < env.rs + 1.15;
-  const c = wide ? fx.camera(t, [[env.rs, 540, 1000, 0.98, 0], [env.rs + 1.15, 540, 990, 1.02, 0]]) : fx.camera(t, [[env.rs + 1.15, PEEK_X, 900, 2.3, 0], [b.news, PEEK_X, 900, 2.4, 0]]);
+  const c = wide ? fx.camera(t, [[env.rs, 540, 960, 0.98, 0], [env.rs + 1.15, 540, 950, 1.02, 0]]) : fx.camera(t, [[env.rs + 1.15, PEEK_X, 900, 2.3, 0], [b.news, PEEK_X, 900, 2.4, 0]]);
   const e = ants(speak({ ...blend(DEADPAN, TALK, seg(t, b.report - 0.2, b.report + 0.1)), look: 0.4, lid: Math.max(0.3, blinks(t, 2.6)) }, env, t), Math.sin(t * 6) * 6, -Math.sin(t * 6) * 6);
   const tips = [-1, 1].map((sg) => [PEEK_X + sg * 285 * PK, FR.SHELF_Y - 915 * PK]);
   const radio = tips.map(([x, y]) => fx.glow(x, y, 26, "#ffe66d", 0.8) + `<circle cx="${x}" cy="${y}" r="${10 + ((t * 2.2) % 1) * 30}" fill="none" stroke="#ffe66d" stroke-width="3" opacity="${(0.8 * (1 - (t * 2.2) % 1)).toFixed(2)}"/>`).join("");
@@ -166,7 +166,7 @@ const bracket = (x, y0, y1, col, o = 1, side = 1) => o <= 0 ? "" : `<path d="M${
 
 // ---- report A
 function bStopwatch(t, env) {                               // "Good news: I floated. Bad news: for two seconds."
-  const b = env.beats, fall = ease(seg(t, b.news + 0.1, b.bad + 0.9)), ringY = lerp(330, 880, fall), sec = clamp((t - b.news - 0.1) / Math.max(0.6, b.bad + 0.9 - b.news - 0.1)) * 2;
+  const b = env.beats, fall = ease(seg(t, b.news + 0.1, b.bad + 0.9)), ringY = lerp(500, 880, fall), sec = clamp((t - b.news - 0.1) / Math.max(0.6, b.bad + 0.9 - b.news - 0.1)) * 2;
   const ring = `<rect x="160" y="250" width="44" height="700" fill="#2f2860"/><rect x="100" y="${ringY - 40}" width="164" height="60" rx="14" fill="#a3304f"/><rect x="100" y="${ringY + 14}" width="164" height="16" rx="6" fill="#ffd23f"/>`;
   const me = tinyPeek(182, ringY - 30 - 24 * Math.sin(Math.PI * fall), { ...BLISS, lid: 0.4 }, { armL: { x: 260, y: 520 }, armR: { x: 940, y: 520 }, hatLift: -40 }, 0.22);
   const ang = -90 + sec / 2 * 360, cx = 680, cy = 600, R = 250;
@@ -180,20 +180,20 @@ function bHigher(t, env) {                                  // "Theory: the high
   const b = env.beats, pts = [[1.1, -122], [1.5, -90], [2.0, -58]];
   const items = pts.map(([r, deg], i) => { const a = deg * Math.PI / 180, x = EC[0] + Math.cos(a) * r * ER, y = EC[1] + Math.sin(a) * r * ER, L = 300 / (r * r), on = popIn(t, b.higher + 0.15 + i * 0.35);
     return on > 0 ? `<g transform="translate(${x} ${y}) scale(${on}) translate(${-x} ${-y})">${X.apple(x, y, 44, 0)}</g>` + X.arrow(x - Math.cos(a) * 52, y - Math.sin(a) * 52, x - Math.cos(a) * (52 + L), y - Math.sin(a) * (52 + L), 14, "#ffe66d", t * 2, seg(t, b.higher + 0.3 + i * 0.35, b.higher + 0.5 + i * 0.35)) : ""; }).join("");
-  return A(t, env, b.theory - 0.12, X.earth(EC[0], EC[1], ER, t * 0.1) + items + X.label(540, 300, "HIGHER = WEAKER", 72, "#ffe66d", fade(t, b.higher + 1.0)), TALK, "point", pulse(t, b.higher, b.upwhere - 0.2, 0.2));
+  return A(t, env, b.theory - 0.12, X.earth(EC[0], EC[1], ER, t * 0.1) + items + NOTE(270, 300, "PEEK'S THEORY", 56, "#ff9fd0", fade(t, b.theory + 0.3)), TALK, "point", pulse(t, b.higher, b.upwhere - 0.2, 0.2));
 }
 function bZero(t, env) {                                    // "Up where their astronauts live, it is switched off. Zero gravity. I checked. Wrong."
   const b = env.beats, sx = 540, sy = 430, x = 600, stamp = popIn(t, b.wrong, 0.25);
   return A(t, env, b.upwhere - 0.12, X.earth(EC[0], EC[1], ER, t * 0.1) + M.station(sx, sy, 0.7, 0)
     + `<g opacity="${fade(t, b.upwhere + 0.4)}">${X.arrow(sx, sy + 70, sx, sy + 260, 16, "#ffe66d", t * 2)}<path d="M${sx - 70} ${sy + 110} L${sx + 70} ${sy + 230} M${sx + 70} ${sy + 110} L${sx - 70} ${sy + 230}" stroke="#ff4f6d" stroke-width="16" stroke-linecap="round" opacity="${fade(t, b.zero - 0.2)}"/></g>`
-    + X.label(800, 370, "0", 150, "#ff4f6d", fade(t, b.zero)) + NOTE(270, 300, "PEEK'S THEORY:", 56, "#ff9fd0", fade(t, b.upwhere + 0.2)) + NOTE(270, 370, "ZERO GRAVITY", 60, "#ff9fd0", fade(t, b.zero))
+    + X.label(800, 370, "0", 150, "#ff4f6d", fade(t, b.zero)) + NOTE(270, 300, "PEEK'S THEORY", 56, "#ff9fd0", 1)
     + (stamp > 0 ? `<g transform="translate(330 470) rotate(-12) scale(${stamp})"><rect x="-170" y="-70" width="340" height="120" rx="12" fill="none" stroke="#ff4f6d" stroke-width="12"/>${X.label(0, 30, "WRONG", 96, "#ff4f6d")}</g>` : ""),
     F("skeptical"), "point", pulse(t, b.zero, b.station - 0.2, 0.2));
 }
 function bScale(t, env) {                                   // "Their station is only two hundred and fifty miles up." TO SCALE: the orbit hugs the planet
   const b = env.beats, z = lerp(1.6, 1, easeOut(seg(t, b.station - 0.12, b.station + 0.5))), R = 1400, top = 880, cy = top + R, ro = R * (6771 / 6371), oy = cy - ro;
   const inner = `<g transform="translate(540 ${top}) scale(${z}) translate(-540 ${-top})">${planet(540, cy, R, 0)}<circle cx="540" cy="${cy}" r="${ro}" fill="none" stroke="#ffe66d" stroke-width="5" stroke-dasharray="10 12"/>${M.station(540, oy, 0.28, 0)}</g>`
-    + bracket(780, oy, top, "#ffe66d", fade(t, b.station + 0.6), 1) + X.label(900, (oy + top) / 2 - 2, "250 mi", 68, "#ffe66d", fade(t, b.station + 0.6)) + X.label(900, (oy + top) / 2 + 58, "400 km", 46, "#9fd0ff", fade(t, b.station + 0.6))
+    + bracket(780, oy, top, "#ffe66d", fade(t, b.station + 0.6), 1) + X.label(900, (oy + top) / 2 + 22, "400 km", 64, "#ffe66d", fade(t, b.station + 0.6))
     + X.label(540, 330, "TO SCALE", 92, "#fff", fade(t, b.station + 0.2)) + X.label(540, 420, "IT HUGS THE PLANET", 56, "#9fd0ff", fade(t, b.station + 1.0));
   return A(t, env, b.station - 0.12, inner, TALK, "point", pulse(t, b.station + 0.3, b.pull - 0.2, 0.2));
 }
@@ -207,7 +207,7 @@ function bPull(t, env) {                                    // "And the pull the
 function bWhy(t, env) {                                     // "So why do they float? Here is the secret. They are..."
   const b = env.beats, port = popIn(t, b.why - 0.1, 0.35), drift = Math.sin(t * 1.3) * 22, spin = t * 22;
   return A(t, env, b.why - 0.12, `<g transform="translate(540 600) scale(${port})"><circle r="330" fill="#cfd6ee"/><circle r="300" fill="#0b0e30"/><clipPath id="portc3"><circle r="300"/></clipPath><g clip-path="url(#portc3)"><rect x="-320" y="150" width="640" height="16" fill="#3a4490"/>
-    <g transform="translate(0 ${drift - 20}) rotate(${spin})">${M.astronaut(0, 0, 1.6)}</g></g></g>` + X.label(860, 330, "?", 200, "#ffe66d", fade(t, b.why + 0.8), easeOutBack(seg(t, b.why + 0.8, b.why + 1.1))),
+    <g transform="translate(0 ${drift - 20}) rotate(${spin})">${M.astronaut(0, 0, 1.6)}</g></g></g>` + X.label(860, 410, "?", 200, "#ffe66d", fade(t, b.why + 0.8), easeOutBack(seg(t, b.why + 0.8, b.why + 1.1))),
     F("skeptical", { lookY: -0.6 }), "point", pulse(t, b.secret, b.they + 0.3, 0.2));
 }
 
@@ -218,10 +218,10 @@ function interrupt(t, env) {
   const stops = [160, 313, 619].map((x) => x - 198);          // his body x when the apple is beside toy 1, 2 and 3
   // his moves: in from the left (3 half steps), a half step, a whole step past Peek, then away to the left (3 cycles)
   let Wk, flip = false;
-  if (t < n2 - 0.85) Wk = walkOf(t, IS + 1.0, n1 - 0.4, stops[0] - 3 * 180 * CK, stops[0]);
+  if (t < n2 - 0.85) Wk = walkOf(t, IS + 0.7, n1 - 0.3, stops[0] - 2 * 180 * CK, stops[0]);
   else if (t < you - 1.0) Wk = walkOf(t, n2 - 0.85, n2 - 0.15, stops[0], stops[1]);
   else if (t < you + 0.9) Wk = walkOf(t, you - 1.0, you - 0.15, stops[1], stops[2]);
-  else { flip = true; Wk = walkOf(t, you + 0.95, bs + 0.4, stops[2], stops[2] - 3 * WALK_CYCLE * CK); }
+  else { flip = true; Wk = walkOf(t, you + 0.95, bs + 0.6, stops[2], stops[2] - 3 * WALK_CYCLE * CK); }
   const raise = Math.max(pulse(t, n1 - 0.35, n2 - 0.75, 0.25), pulse(t, n2 - 0.15, you - 1.0, 0.2), ease(seg(t, you - 0.2, you + 0.1)) * (1 - ease(seg(t, you + 0.5, you + 0.8))));
   const tucked = t > you + 0.6, carried = ease(seg(t, you + 0.5, you + 0.8));
   const rest = { x: -40, y: -520 }, handL = tucked ? { x: 90, y: -760 } : { x: lerp(rest.x, appleH.x, raise), y: lerp(rest.y, appleH.y, raise) };
@@ -231,7 +231,7 @@ function interrupt(t, env) {
   const apple = !tucked && raise > 0.05 ? M.bitten(C.far[0] + 4, C.far[1] - 30, 30, -10) : "";
   const prize = tucked ? FR.plush(C.far[0] + (flip ? -10 : 10), C.far[1] + 120, 0.7, "crown", { teeth: 1.35, tilt: flip ? -14 : 14 }) : "";
   // Peek: snapped into his plush pose; in his close-up he hides his teeth (lips shut, cheeks puffed)
-  const hide = pulse(t, n2 + 0.2, you + 0.3, 0.15);
+  const hide = pulse(t, b.not2_end - 0.1, you + 0.3, 0.15);
   const snap = ease(seg(t, IS + 0.2, IS + 0.45));
   let pe = snap > 0.5 ? { ...FROZEN, look: hide > 0.3 ? (Math.sin(t * 2.4) > 0 ? -0.7 : 0.7) : 0, lookY: 0 } : { ...F("surprised", { look: -1 }) };
   if (hide > 0.3) pe = { ...pe, m: { ...MOUTHS.flat, w: 0.5, smile: -0.05, jaw: 0, tongue: 0 }, blush: 0.9, sweat: 1 };
@@ -239,8 +239,8 @@ function interrupt(t, env) {
   pe = ants(pe, snap > 0.5 ? -4 : 20, snap > 0.5 ? 4 : 20);
   const po = { filter: pkLight(), armL: { x: lerp(400, 300, snap), y: lerp(700, 650, snap) }, armR: { x: lerp(800, 900, snap), y: lerp(700, 650, snap) }, squash: hide > 0.3 ? 1.03 : 1 };
   // cameras: close on Peek at the start, wide on the line-up, close on Peek between "Not you" and "You" (no Crowe), close at the end
-  const closeA = t < IS + 1.0, closeB = t > n2 + 0.55 && t < you - 1.0, closeC = t > bs - 0.6;
-  const c = closeA || closeB || closeC ? fx.camera(t, [[IS, PEEK_X, 930, 2.6, 0], [bs + 2, PEEK_X, 935, 2.7, 0]]) : fx.camera(t, [[IS + 1.0, 400, 1120, 0.95, 0], [bs, 420, 1110, 0.97, 0]]);
+  const closeA = t < IS + 0.7, closeB = t > b.not2_end + 0.05 && t < you - 1.0, closeC = t > bs - 0.6;
+  const c = closeA || closeB || closeC ? fx.camera(t, [[IS, PEEK_X, 930, 2.6, 0], [bs + 2, PEEK_X, 935, 2.7, 0]]) : fx.camera(t, [[IS + 0.7, 400, 1075, 0.95, 0], [bs, 420, 1065, 0.97, 0]]);
   const showCrowe = !(closeA || closeB || closeC);
   const plane = shelfRow(t, pe, po, { taken: tucked });
   // hiding his teeth: lips pressed shut over them, cheeks puffed (the face rig always draws the teeth)
@@ -261,7 +261,7 @@ function orbitPic(t, R, rs, th, { pull = 1, side = 0, label = null, sideLen = 20
 }
 function bFalling(t, env) {                                 // "...falling. All the time."
   const b = env.beats, th = -Math.PI * 0.7 - (t - b.alltime) * 0.6, rs = 290, sx = OC[0] + Math.cos(th) * rs, sy = OC[1] + Math.sin(th) * rs;
-  return B(t, env, b.alltime - 0.15, orbitPic(t, 190, rs, th, { pull: fade(t, b.alltime - 0.1) }) + X.label(sx + 170, sy + 120, "PULL", 70, "#ffe66d", fade(t, b.alltime), lerp(1.2, 1, easeOut(seg(t, b.alltime, b.alltime + 0.3)))));
+  return B(t, env, b.alltime - 0.15, orbitPic(t, 190, rs, th, { pull: fade(t, b.alltime - 0.1) }) + X.label(OC[0] + (sx - OC[0]) / rs * (rs + 115), OC[1] + (sy - OC[1]) / rs * (rs + 115) + 25, "PULL", 70, "#ffe66d", fade(t, b.alltime), lerp(1.2, 1, easeOut(seg(t, b.alltime, b.alltime + 0.3)))));
 }
 function seatPanel(cx, top, falling, t, t0, peekE) {        // one panel of the ride picture: the seat, Peek, the arrows
   const drop = falling ? ease(seg(t, t0, t0 + 0.6)) * 120 : 0, gap = falling ? 26 * ease(seg(t, t0 + 0.1, t0 + 0.5)) : 0, y = top + 360 + drop;
@@ -287,18 +287,18 @@ function bTogether(t, env) {                                // "Their station is
 function bOrbit(t, env) {                                   // "It falls toward the planet, but it moves sideways seventeen thousand miles an hour, so it keeps missing."
   const b = env.beats, th = -Math.PI * 0.75 - (t - b.falls) * 0.9;
   return B(t, env, b.falls - 0.12, orbitPic(t, 180, 280, th, { pull: 1, side: fade(t, b.sideways), sideLen: 230 })
-    + `<g opacity="${fade(t, b.mph)}" transform="translate(760 880) scale(${lerp(1.25, 1, easeOut(seg(t, b.mph, b.mph + 0.3)))})">${X.label(0, 0, "17,000 mph", 84, "#ffe66d")}${X.label(0, 56, "27,600 km/h", 44, "#9fd0ff")}</g>`);
+    + `<g opacity="${fade(t, b.mph)}" transform="translate(300 830) scale(${lerp(1.25, 1, easeOut(seg(t, b.mph, b.mph + 0.3)))})">${X.label(0, 0, "ALMOST 5 MILES", 60, "#ffe66d")}${X.label(0, 64, "EVERY SECOND", 56, "#ffe66d")}</g>`);
 }
 function bMoon(t, env) {                                    // "Just like their Moon, only lower and faster."
-  const b = env.beats, Rm = 380, a = -Math.PI / 2 - (t - b.moon) * 0.25, mx = OC[0] + Math.cos(a) * Rm, my = OC[1] + Math.sin(a) * Rm, ths = -(t - b.moon) * 3.2;
+  const b = env.beats, Rm = 330, a = -Math.PI / 2 - (t - b.moon) * 0.25, mx = OC[0] + Math.cos(a) * Rm, my = OC[1] + Math.sin(a) * Rm, ths = -(t - b.moon) * 3.2;
   return B(t, env, b.moon - 0.12, `<circle cx="${OC[0]}" cy="${OC[1]}" r="${Rm}" fill="none" stroke="#9fd0ff" stroke-width="4" stroke-dasharray="6 14" opacity=".5"/>` + orbitPic(t, 110, 160, ths, { pull: 0.9 })
-    + M.bigMoon(mx, my, 50, 0.5) + X.label(mx, Math.max(my - 80, 290) + (my - 80 < 290 ? 170 : 0), "MOON", 56, "#fff", fade(t, b.moon + 0.2)) + X.label(OC[0], OC[1] + 240, "STATION", 56, "#ffe66d", fade(t, b.lower)) + X.label(540, 935, "NOT TO SCALE", 38, "#9fd0ff", 0.85));
+    + M.bigMoon(mx, my, 50, 0.5) + X.label(mx - 150, my + 20, "MOON", 56, "#fff", fade(t, b.moon + 0.2)) + X.label(OC[0], OC[1] + 240, "STATION", 56, "#ffe66d", fade(t, b.lower)) + X.label(830, 300, "NOT TO SCALE", 56, "#9fd0ff", 0.9));
 }
 function bSummary(t, env) {                                 // "So: astronauts are not out of the pull. They float because they fall around the planet, together with their ship."
   const b = env.beats, row = (y, at, inner, text, col = "#fff") => { const a = popIn(t, at, 0.3); return a <= 0 ? "" : `<g transform="translate(540 ${y}) scale(${a}) translate(-540 ${-y})"><rect x="80" y="${y - 108}" width="920" height="216" rx="40" fill="#1c2250" stroke="#7fd4ff" stroke-width="5" opacity=".95"/>${inner}${X.label(650, y + 22, text, 60, col)}</g>`; };
   return B(t, env, b.sum1 - 0.15, row(320, b.sum1 + 0.3, M.station(200, 290, 0.28, 0) + X.arrow(200, 320, 200, 400, 10, "#ffe66d", t), "STILL PULLED")
-    + row(580, b.sum2 + 0.3, `<circle cx="200" cy="580" r="70" fill="none" stroke="#ffe66d" stroke-width="5"/>${X.earth(200, 580, 30, t * 0.2)}${M.station(200 + Math.cos(-t * 2) * 70, 580 + Math.sin(-t * 2) * 70, 0.13, 0)}`, "FALLING AROUND", "#ffe66d")
-    + row(840, b.sum3 + 0.2, `<g transform="translate(200 ${840 + Math.sin(t * 2) * 8})">${M.astronaut(0, 0, 0.32)}</g>`, "WITH THEIR SHIP"));
+    + row(580, b.sum2 + 0.3, `<circle cx="200" cy="580" r="70" fill="none" stroke="#ffe66d" stroke-width="5"/>${X.earth(200, 580, 30, t * 0.2)}${M.station(200 + Math.cos(-t * 2) * 70, 580 + Math.sin(-t * 2) * 70, 0.13, 0)}`, "FALL + MISS", "#ffe66d")
+    + row(840, b.sum3 + 0.2, `<g transform="translate(200 ${840 + Math.sin(t * 2) * 8})">${M.astronaut(0, 0, 0.32)}</g>`, "SHIP FALLS TOO"));
 }
 function bWrench(t, env) {                                  // "Which raises a question... a wrench floats right beside a pencil. So do heavy things fall faster?"
   const b = env.beats, d = Math.sin(t * 1.1) * 14, w = fade(t, b.wrench + 0.2);
@@ -319,12 +319,12 @@ function rExit(t, env) {                                    // "Investigating. P
 
 // ============================================================ TAG: Crowe on a bench with the wrong plush: "These teeth... are sewn on."
 function tag(t, env) {
-  const u = t - env.ts, nb = env.beats.next, close = u > 1.1, line = env.beats.tagline;
+  const u = t - env.ts, nb = env.beats.next, line = env.beats.tagline, close = t > env.beats.tagline_end + 0.08;
   const q = seg(t, nb, nb + 0.2);
   fx.def("tagfade", `<linearGradient id="tagfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#02030c" stop-opacity="0"/><stop offset=".25" stop-color="#02030c" stop-opacity=".88"/><stop offset=".85" stop-color="#02030c" stop-opacity=".88"/><stop offset="1" stop-color="#02030c" stop-opacity="0"/></linearGradient>`);
   let shot;
   if (!close) {                                             // under the lamp: he walks in (one cycle), stops and raises the plush to his face
-    const c = fx.camera(u, [[0, 600, 1300, 0.85, 0], [1.1, 620, 1280, 0.92, 0]]);
+    const c = fx.camera(t, [[env.ts, 470, 1250, 1.0, 0], [line, 480, 1240, 1.06, 0], [env.beats.tagline_end, 485, 1235, 1.1, 0]]);
     const Wk = walkOf(u, 0, 0.75, 360 - WALK_CYCLE * CK, 360), raise = ease(seg(u, 0.7, 1.05));
     const o = { walk: Wk.walk, settle: Wk.settle, lean: Wk.lean, hand: swingHand(Wk, HOLD, Wk.arrive), aim: 50, torch: 0, handL: { x: lerp(90, 160, raise), y: lerp(-700, -900, raise) }, handLFront: true,
       nod: 6 + 12 * raise + 5 * Wk.nodSettle, glint: 0.8 + 0.2 * raise, led: "#46ff7a", ledO: 0.9 };
@@ -334,10 +334,10 @@ function tag(t, env) {
         + FR.plush(C.far[0] + 30, C.far[1] + 110, 0.6, "crown", { teeth: 1.35, tilt: 10 }), c, 1),
       ...finish(t, t, { rain: false, vig: 0.66, grade: ["#2a3cc0", 0.24] })];
   } else {                                                  // the close: the plush's sewn teeth beside the bitten apple, both big in the lamp light
-    const push = 1 + 0.05 * ease(seg(u, 1.1, 5)), up = ease(seg(t, line + 2.0, line + 2.4));
+    const push = 1 + 0.05 * ease(seg(t, env.beats.tagline_end, env.end)), up = ease(seg(t, nb - 0.4, nb));
     shot = [`<rect width="${W}" height="${H}" fill="#0a0820"/>`, fx.layer(FR.fairground(1640, t), { x: 540, y: 1300, z: 1.4, rot: 0 }, 0.5, { blur: 8 }), `<rect width="${W}" height="${H}" fill="#03040e" opacity=".45"/>`,
-      fx.glow(560, 640, 560, "#ffd59a", 0.4), `<g transform="translate(540 760) scale(${push}) translate(-540 -760)">${FR.plush(380, 1180, 2.2, "crown", { teeth: 1.35, tilt: -4 })}${M.bitten(820, 640 - up * 30, 200, -14)}</g>`,
-      X.label(380, 300, "SEWN ON", 64, "#ffe66d", fade(t, line + 1.0)) , fx.vignette(0.7), fx.grain(t, 0.1)];
+      fx.glow(560, 390, 560, "#ffd59a", 0.4), `<g transform="translate(540 510) scale(${push}) translate(-540 -760)">${FR.plush(380, 1180, 2.2, "crown", { teeth: 1.35, tilt: -4 })}${M.bitten(820, 640 - up * 30, 200, -14)}</g>`,
+      fx.vignette(0.7), fx.grain(t, 0.1)];
   }
   return [...shot, q > 0 ? "" : caps(env, t, OUT), `<rect x="0" y="930" width="${W}" height="560" fill="url(#tagfade)" opacity="${q}"/>`,
     X.label(540, 1040, "NEXT REPORT", 62, "#7fd4ff", q), X.label(540, 1150, "DO HEAVY THINGS", 92, "#fff", q, lerp(1.2, 1, easeOut(seg(t, nb, nb + 0.3)))),

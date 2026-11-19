@@ -102,14 +102,17 @@ repA = repA[: int((wA[cut][1] + 0.04) * SR)]; repA = fades(repA, 0.004, 0.02)
 cx_, cw_ = take("crowe")
 groups = [[0, 1], [2, 3], [4], list(range(5, len(cw_)))] if len(cw_) >= 6 else [[i] for i in range(len(cw_))]
 crowe_lines = [tighten(cx_, [cw_[i] for i in g], keep=0.3, over=0.45) for g in groups]   # "Not you." / "Not you." / "...You." / "These teeth... are sewn on."
-I_NOT1 = IS + 2.35                                     # Crowe has walked in and raised the apple to the first plush
-I_NOT2 = I_NOT1 + crowe_lines[0][1][-1][1] + 1.05      # a half step to the next one
-I_YOU = I_NOT2 + crowe_lines[1][1][-1][1] + 1.75       # the close on Peek; then a whole step past him to the plush beside him
+I_NOT1 = IS + 1.7                                      # Crowe has walked in (two half steps) and raised the apple to the first plush
+I_NOT2 = I_NOT1 + crowe_lines[0][1][-1][1] + 0.65      # a half step to the next one
+I_YOU = I_NOT2 + crowe_lines[1][1][-1][1] + 1.75       # the close on Peek (after the line); then a whole step past him to the plush beside him
 repB, wB = prepared("reportB", keep=0.2, over=0.28)
-BS = I_YOU + crowe_lines[2][1][-1][1] + 1.45           # he tucks it under his arm and walks off; Peek exhales: "...falling."
+BS = I_YOU + crowe_lines[2][1][-1][1] + 0.8            # he tucks it under his arm and walks off; Peek exhales: "...falling."
 RB = len(repB) / SR
 TS = BS + RB + 0.8                                     # "Peek out." then he hops down; the tag starts
-END = TS + 5.0
+TAGLINE = TS + 1.15                                     # he has walked in and raised the plush to his face
+TAG_END = TAGLINE + (crowe_lines[3][1][-1][1] if len(crowe_lines) > 3 else 2.0)
+NEXT = TAG_END + 0.75                                  # the close on the sewn teeth, then the next question
+END = NEXT + 1.8
 DUR = round(END, 2)
 N = int(SR * DUR); L = np.zeros(N); R = np.zeros(N); T = np.arange(N) / SR
 def place(x, at, gain=1.0, pan=0.0):
@@ -118,7 +121,7 @@ def place(x, at, gain=1.0, pan=0.0):
     x = x[: N - i] * gain; L[i:i + len(x)] += x * np.sqrt(0.5 * (1 - pan)); R[i:i + len(x)] += x * np.sqrt(0.5 * (1 + pan))
 tracks = {k: np.zeros(N) for k in ("peek", "commander", "crowe")}
 caption_words = []
-FIX = {"mi": "miles", "mi.": "miles", "17000": "17,000", "250": "250"}   # speech-to-text mishearings, fixed in the captions
+FIX = {"mi": "miles", "mi.": "miles", "9/10": "nine tenths", "pole.": "pull.", "pole": "pull", "i,": "I...", "float.": "float!", "out.": "out.", "commander.": "Commander."}   # speech-to-text mishearings, fixed in the captions
 def fixw(w): return re.sub(r"(?i)\bpeak\b", "Peek", FIX.get(w.lower(), w))
 def say(who, y, words, at, gain, line, treat=None):
     z = treat(y) if treat else y
@@ -131,7 +134,6 @@ y, w = prepared("p4-uhoh", folder=a.shared, keep=0.1); say("peek", fades(norm(y,
 say("peek", norm(repA, 0.8), wA[: cut + 1], RS + 0.15, 1.0, 10)
 for k, at in enumerate((I_NOT1, I_NOT2, I_YOU)): say("crowe", fades(norm(crowe_lines[k][0], 0.8)), crowe_lines[k][1], at, 1.0, 20 + k)
 say("peek", norm(repB, 0.72), wB, BS, 1.0, 30)
-TAGLINE = TS + 1.35
 if len(crowe_lines) > 3: say("crowe", fades(norm(crowe_lines[3][0], 0.8)), crowe_lines[3][1], TAGLINE, 1.0, 40)
 
 # ---------------------------------------------------------------- beats (for the pictures)
@@ -155,7 +157,7 @@ for key, seq in orderB:
 i_side = find(rwB, "sideways", find(rwB, "but it moves|it moves sideways", 0, "reportB"), "reportB")
 beats["mph"] = round(rwB[i_side + 1][0], 3)
 beats["end"] = round(rwB[-1][1], 3)
-beats.update({"not1": round(I_NOT1, 3), "not2": round(I_NOT2, 3), "you": round(I_YOU, 3), "you_end": round(I_YOU + crowe_lines[2][1][-1][1], 3), "tagline": round(TAGLINE, 3)})
+beats.update({"not1": round(I_NOT1, 3), "not2": round(I_NOT2, 3), "not1_end": round(I_NOT1 + crowe_lines[0][1][-1][1], 3), "not2_end": round(I_NOT2 + crowe_lines[1][1][-1][1], 3), "you": round(I_YOU, 3), "you_end": round(I_YOU + crowe_lines[2][1][-1][1], 3), "tagline": round(TAGLINE, 3), "tagline_end": round(TAG_END, 3)})
 
 # ---------------------------------------------------------------- effects
 def whoosh(d=0.6, lo=300, hi=3000):
@@ -228,9 +230,9 @@ while s_ < BS - 0.3: place(beep(1900, 0.05), s_, 0.07, -0.2); gap = 0.42 if s_ <
 drone = sum(np.sin(2 * np.pi * f * T) for f in (55, 65.4, 82.4)); dg = np.interp(T, [IS, IS + 0.6, BS + 0.6, BS + 2.0, TS - 0.2, TS + 0.4, END - 0.3, END], [0, 0.05, 0.05, 0.018, 0.018, 0.05, 0.07, 0])
 place(lp(drone, 400) * dg, 0)
 place(pop(320), IS + 0.3, 0.25)                                                           # he snaps into the plush pose
-for s_ in np.arange(IS + 1.25, I_NOT1 - 0.2, 0.5): place(step(120), s_, 0.16, -0.3)
+for s_ in np.arange(IS + 0.75, I_NOT1 - 0.2, 0.45): place(step(120), s_, 0.16, -0.3)
 for s_ in (I_NOT2 - 0.7, I_YOU - 0.95, I_YOU - 0.5): place(step(120), s_, 0.16, 0)
-for i in range(3): place(heart(), I_NOT2 + 0.9 + i * 0.5, 0.6)                             # Peek holds his breath
+for i in range(2): place(heart(), I_NOT2 + crowe_lines[1][1][-1][1] + 0.1 + i * 0.4, 0.6)   # Peek holds his breath
 n = int(0.25 * SR); place(bp(noise(n), 800, 3000) * np.exp(-tx(n) * 14), I_YOU + 0.75, 0.2)   # the plush grabbed (a soft squish)
 for s_ in np.arange(I_YOU + 1.0, BS + 0.2, 0.45): place(step(120), s_, 0.12, 0.3)
 n = int(0.6 * SR); t = tx(n); place(lp(noise(n), 1200) * np.sin(np.pi * t / 0.6), BS - 0.45, 0.12)   # Peek exhales
@@ -242,11 +244,11 @@ for key in ("nothing", "mph", "missing", "lower", "sum2", "sum3", "wrench"): pla
 place(thud(260, 50, 0.15), beats["peekout"] + 0.7, 0.2)                                  # he hops down
 
 # ---- the tag: the detector starts again, the hit when the next question lands
-s_, gap = TS + 2.6, 0.4
+s_, gap = TAG_END + 0.1, 0.4
 while s_ < END - 0.1: place(beep(1900, 0.05), s_, 0.08, 0.2); gap = max(0.09, gap * 0.88); s_ += gap
 bn = int(1.6 * SR); bt = tx(bn)
-place(lp(sum(signal.sawtooth(2 * np.pi * f * bt) for f in (43.65, 43.9, 87.3, 65.4)), 600) * np.clip(bt / 0.02, 0, 1) * np.exp(-bt * 1.5), TS + 3.3, 0.26)
-beats["next"] = round(TS + 3.3, 3)
+place(lp(sum(signal.sawtooth(2 * np.pi * f * bt) for f in (43.65, 43.9, 87.3, 65.4)), 600) * np.clip(bt / 0.02, 0, 1) * np.exp(-bt * 1.5), NEXT, 0.26)
+beats["next"] = round(NEXT, 3)
 
 place(tracks["peek"], 0, 1.55); place(tracks["commander"], 0, 1.3, -0.2); place(tracks["crowe"], 0, 1.5, -0.15)
 mix = np.stack([L, R], axis=1); mix = np.tanh(mix * 1.15) / np.tanh(1.15); mix /= max(1e-9, np.abs(mix).max()) / 0.89
