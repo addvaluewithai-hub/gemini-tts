@@ -10,7 +10,7 @@ Planned length about 88 s (80 to 90). Report times come from the takes (speech d
 | Cold open | 0 to 11.5 | the drop tower: fear at the top, "I... I FLOAT!", the brakes, Crowe at the gate, "Uh-oh.", title |
 | Report A | about 11.5 to 37.5 | 74 words, Peek on the top shelf of a fair's prize stall, among pink alien plush toys |
 | Interruption | about 37.5 to 46 | Crowe checks the plush toys' teeth against the bitten apple; Peek frozen as a plush |
-| Report B | about 46 to 82 | 96 words, hushed, through a frozen grin, still on the shelf |
+| Report B | about 46 to 82 | 96 words, hushed (Episode 2 Report B direction), still on the shelf |
 | Exit + tag | about 82 to 88 | Peek slips away; Crowe on a bench with the wrong plush: "These teeth... are sewn on." |
 
 ## The script
@@ -27,7 +27,7 @@ Planned length about 88 s (80 to 90). Report times come from the takes (speech d
 
 **Interruption, Crowe (take `crowe`, first three lines):** "Not you." / "Not you." / "...You."
 
-**Report B (Peek, hushed through a frozen grin, fully voiced, 96 words):**
+**Report B (Peek, low, hushed, urgent, fully voiced, as Episode 2 Report B; the frozen grin is in the picture only; 96 words):**
 > ...falling. All the time.
 > On that ride, my seat fell with me. Nothing pushed on me. So I floated.
 > Their station is a ride that never stops. It falls toward the planet, but it moves sideways seventeen thousand miles
@@ -125,7 +125,7 @@ and is corrected; "Nothing pushed on me" (no contact force), not "nothing pulled
 |---|---|---|
 | peek-en-ep03-float | Puck | "I... I FLOAT!" |
 | peek-en-ep03-reportA | Puck | Report A, 74 words |
-| peek-en-ep03-reportB | Puck | Report B, 96 words, hushed through a frozen grin, fully voiced |
+| peek-en-ep03-reportB | Puck | Report B, 96 words, Episode 2 Report B direction (low, hushed, fully voiced) |
 | peek-en-ep03-crowe | Algenib | "Not you. / Not you. / ...You. / These teeth... are sewn on." (split by word times) |
 
 Reused, no cost: "Uh-oh." (`audio/voice/p4-uhoh`, Episode 1). Requests in `cine/audio/ep03/*.json`, style prompts from
