@@ -19,6 +19,6 @@ export function draw(t) {
       const plane = at(cx, N.FLOOR - 4, k, crowe(o)) + fx.beam(bx, by, sw, 2200, 16, "#fff3d6", 0.5, 10) + fx.glow(bx, by, 120, "#fff6dc", 0.9)
         + N.acUnit() + peek(ants(F("worried"), -30, -30), { filter: night("Lp", [{ color: "#cfe3ff", az: 225, power: 1.5, size: 10 }]), shadow: false }, 1240, N.FLOOR + 30, 0.62);
       return [...roof(c, t, t, { plane, hut: true }), ...finish(t, t, { vig: 0.6 })].join(""); }
-    return studio + at(430, 3560, 2.9, crowe({})) ;
+    return studio + at(430, 3560, 2.9, crowe({ dark: false }));
   });
 }

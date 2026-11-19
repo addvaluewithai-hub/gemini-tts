@@ -1,8 +1,12 @@
-// Agent Crowe, drawn: a tall thin man in a long trench coat and a fedora, shaded in the same toy-like way as Peek, with a
-// real walk. He replaces the flat silhouette (sets/night.js `crowe`) from Episode 2 on; Episode 1 keeps the silhouette.
+// Agent Crowe on a rig: the black silhouette of Episode 1, now with joints and a real walk (the owner liked him black;
+// what was wrong was that he slid like a paper cut-out). A shaded, drawn version of him is kept behind `dark: false`.
+// He replaces sets/night.js `crowe` from Episode 2 on; Episode 1 keeps the old one.
 //
 // Feet on (0, 0), about 1170 tall with the hat, facing right in three-quarter view (mirror the group to face left).
-//   crowe({ walk, hand, aim, handL, lean, crouch, nod, glint, led, ledO, torch, jaw, filter, shadow })
+//   crowe({ dark, walk, hand, aim, handL, lean, crouch, nod, glint, led, ledO, torch, jaw, filter, shadow, halo, haloO })
+//     dark     true (the default) is the look the owner chose: the black silhouette of Episode 1 with its warm outline
+//              (halo, haloO), only the glasses, the detector and the torch lens alight. false is the shaded, drawn
+//              figure (it takes filter and jaw; the silhouette ignores them).
 //     walk     distance walked so far, in his own units: the feet plant and the body bobs, with no sliding.
 //              One full cycle (two steps) is WALK_CYCLE units; leave it undefined to stand.
 //     hand     { x, y } where the torch hand is (default: held forward at chest height)
@@ -51,7 +55,7 @@ function ik(ax, ay, tx, ty, l1, l2, bend) {
   return [ax + Math.cos(ja) * l1, ay + Math.sin(ja) * l1, ax + dx, ay + dy];
 }
 const limb = (ax, ay, bx, by, w, g, w2 = w) => { const L = Math.hypot(bx - ax, by - ay), a = Math.atan2(by - ay, bx - ax) * 180 / Math.PI;
-  return `<g transform="translate(${ax.toFixed(1)} ${ay.toFixed(1)}) rotate(${a.toFixed(1)})"><path d="M0 ${-w / 2} L${L.toFixed(1)} ${-w2 / 2} A${w2 / 2} ${w2 / 2} 0 0 1 ${L.toFixed(1)} ${w2 / 2} L0 ${w / 2} A${w / 2} ${w / 2} 0 0 1 0 ${-w / 2} Z" fill="url(#${g})"/></g>`; };
+  return `<g transform="translate(${ax.toFixed(1)} ${ay.toFixed(1)}) rotate(${a.toFixed(1)})"><path d="M0 ${-w / 2} L${L.toFixed(1)} ${-w2 / 2} A${w2 / 2} ${w2 / 2} 0 0 1 ${L.toFixed(1)} ${w2 / 2} L0 ${w / 2} A${w / 2} ${w / 2} 0 0 1 0 ${-w / 2} Z"${g ? ` fill="url(#${g})"` : ""}/></g>`; };
 
 // where one foot is in the walk cycle: q in 0..1 (0 - 0.5 planted and sliding back under the body, 0.5 - 1 swinging forward)
 function step(q, S) {
@@ -83,7 +87,37 @@ function leg(hx, hy, f) {
   return limb(hx, hy, kx, ky, 62, "cwLeg", 54) + limb(kx, ky, ax, ay, 54, "cwLeg", 44) + shoe(ax - 8, ay + 36, f.pitch);
 }
 
+// ---- the look the owner chose: the black silhouette of Episode 1 (the same head, quiff and long coat), now on the walking rig
+function dark(o, q) {
+  const { lean = 0, nod = 0, glint = 1, led = "#46ff7a", ledO = 1, torch = 1, aim = -8, halo = "#ffd9a0", haloO = 0.85, shadow = false } = o;
+  const hipN = [14, HIP_Y + q.drop], hipF = [-12, HIP_Y + q.drop];
+  const legD = (hx, hy, f) => { const ax = f.x, ay = -34 + f.y, [kx, ky] = ik(hx, hy, ax, ay, THIGH, SHIN, -1);
+    return limb(hx, hy, kx, ky, 50, null, 42) + limb(kx, ky, ax, ay, 42, null, 32) + `<g transform="translate(${(ax - 6).toFixed(1)} ${(ay + 34).toFixed(1)}) rotate(${f.pitch.toFixed(1)})"><path d="M-30 -30 C-38 -8 -38 0 -28 0 L80 0 C88 0 88 -16 74 -22 C52 -30 28 -32 16 -40 L-18 -40 Z"/></g>`; };
+  const legs = legD(hipF[0], hipF[1], q.far) + legD(hipN[0], hipN[1], q.near);
+  // the coat's hem follows the legs a moment late: it opens with the stride and swings back
+  const lag = q.walking ? Math.sin(2 * Math.PI * q.p - 0.9) : 0, open = q.walking ? Math.abs(q.swing) : 0;
+  const fwd = Math.max(q.near.x, q.far.x) - 34, back = Math.min(q.near.x, q.far.x) + 30;
+  const a1 = -150 + back * 0.55 + lag * 10, e1 = 112 + fwd * 0.5 + lag * 10, mid = lag * 14;
+  const coat = `<path d="M-60 -822 C-108 -812 -118 -760 -110 -690 L-100 -330 C-104 -280 ${(a1 + 22).toFixed(1)} -250 ${a1.toFixed(1)} ${(-224 - open * 8).toFixed(1)} L${(-60 + back * 0.3 + mid).toFixed(1)} -214 L${mid.toFixed(1)} ${(-232 + open * 6).toFixed(1)} L${(70 + fwd * 0.3 + mid).toFixed(1)} -214 L${e1.toFixed(1)} ${(-226 - open * 8).toFixed(1)} C${(e1 - 8).toFixed(1)} -270 100 -300 102 -340 L108 -690 C116 -760 104 -814 62 -822 Z"/>`;
+  const headT = `rotate(${nod} 4 -850)`;
+  const head = `<g transform="${headT}"><path d="M-52 -838 L-84 -770 L-26 -800 Z"/><path d="M54 -838 L86 -770 L28 -800 Z"/><rect x="-16" y="-860" width="36" height="64" rx="10"/>
+    <path d="M-40 -1000 C-46 -1052 40 -1062 50 -1004 L54 -930 C64 -926 70 -910 58 -904 L56 -876 C54 -850 30 -838 4 -838 C-24 -838 -42 -852 -42 -880 Z"/>
+    <path d="M-44 -1000 C-52 -1070 30 -1086 62 -1040 C40 -1048 14 -1040 -6 -1022 C-20 -1010 -34 -1004 -44 -1000 Z"/></g>`;
+  const [fex, fey, fhx, fhy] = q.armF, fa = Math.atan2(fhy - fey, fhx - fex) * 180 / Math.PI, farT = `translate(${fhx.toFixed(1)} ${fhy.toFixed(1)}) rotate(${fa.toFixed(1)})`;
+  const armFar = limb(q.sF[0], q.sF[1], fex, fey, 42, null, 40) + limb(fex, fey, fhx, fhy, 40, null, 36) + `<g transform="${farT}"><rect x="-46" y="-30" width="84" height="60" rx="8"/></g>`;
+  const [nex, ney, nhx, nhy] = q.armN, ta = aim - lean, nearT = `translate(${nhx.toFixed(1)} ${nhy.toFixed(1)}) rotate(${ta.toFixed(1)})`;
+  const armNear = limb(q.sN[0] - 10, q.sN[1] + 10, nex, ney, 44, null, 40) + limb(nex, ney, nhx, nhy, 40, null, 36)
+    + `<g transform="${nearT}"><circle cx="6" cy="0" r="24"/><rect x="-12" y="-17" width="112" height="34" rx="8"/><rect x="${TORCH - 30}" y="-25" width="30" height="50" rx="6"/></g>`;
+  const torso = `<g transform="translate(0 ${q.drop.toFixed(1)}) rotate(${lean} 0 ${HIP_Y})">`;
+  const shape = `${torso}${armFar}</g>${legs}${torso}${coat}${head}${armNear}</g>`;
+  const lights = `${torso}<g transform="${headT}"><ellipse cx="20" cy="-952" rx="13" ry="8" fill="#bfe6ff" opacity="${(0.85 * glint).toFixed(2)}"/><ellipse cx="50" cy="-952" rx="9" ry="7" fill="#bfe6ff" opacity="${(0.7 * glint).toFixed(2)}"/></g>
+    <g transform="${farT}"><rect x="-30" y="-20" width="30" height="40" rx="4" fill="${led}" opacity="${ledO}"/></g><g transform="${nearT}"><rect x="${TORCH - 4}" y="-22" width="6" height="44" rx="3" fill="#fff6dc" opacity="${(0.9 * torch).toFixed(2)}"/></g></g>`;
+  return (shadow ? `<ellipse cx="10" cy="4" rx="170" ry="26" fill="#03040a" opacity=".45"/>` : "")
+    + `<g fill="${halo}" opacity="${haloO}" transform="translate(-5 -4) scale(1.012)">${shape}</g><g fill="#04050e">${shape}</g>${lights}`;
+}
+
 export function crowe(o = {}) {
+  if (o.dark !== false) return dark(o, pose(o));
   grads();
   const { lean = 0, nod = 0, glint = 1, led = "#46ff7a", ledO = 1, torch = 1, jaw = 0, aim = -8, shadow = false, filter = null } = o;
   const q = pose(o), sway = q.walking ? Math.sin(2 * Math.PI * q.p + 0.6) * 16 : 0, flare = q.walking ? Math.abs(q.swing) * 10 : 0;
