@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing PEEK, a tiny pink cartoon alien spy in an animated comedy short. Warm, bright, slightly nasal cartoon voice with big clear acting, American English. He is on a drop-tower ride at a fair; the ride has just let go and for a moment he floats up off his seat. On his home planet everyone floats, and he thinks he has it back: pure joy, astonished, a blissful shout that rises.",
+   "text": "I... I FLOAT!"
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP03 float float"
+ }
+}
