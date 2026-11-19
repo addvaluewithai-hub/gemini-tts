@@ -64,10 +64,11 @@ function CR(x, o, { flip = false, k = CK, y = N.FLOOR - 2 } = {}) {
 // lean into the walk that follows his speed, a head settle after he stops, and `arrive` 0..1 for the torch arm to come to
 // rest a beat after the body. The rig's default near hand (croweHands) is the arm swinging with the stride.
 function walkOf(t, t0, t1, x0, x1, k = CK) {
-  const u = seg(t, t0, t1), x = lerp(x0, x1, ease(u)), speed = 6 * u * (1 - u) / 1.5;
-  return { x, walk: u > 0 ? Math.abs(x - x0) / k : undefined, lean: 3 * speed, settle: t > t1 ? spring(t - t1, 5, 12) : 0, arrive: ease(seg(t, t1 - 0.05, t1 + 0.45)), moving: u > 0 && u < 1 };
+  const u = seg(t, t0, t1), x = lerp(x0, x1, ease(u)), speed = 6 * u * (1 - u) / 1.5, d = Math.abs(x - x0) / k, total = Math.abs(x1 - x0) / k, half = WALK_CYCLE / 2;
+  const settle = u <= 0 ? 1 : Math.max(1 - clamp(d / half), 1 - clamp((total - d) / half));   // the rig's `settle`: standing at both ends, the stride blended in and out over a half step
+  return { x, walk: d, settle, lean: 3 * speed, nodSettle: t > t1 ? spring(t - t1, 5, 12) : 0, arrive: ease(seg(t, t1 - 0.05, t1 + 0.45)), moving: u > 0 && u < 1 };
 }
-const swingHand = (walk, rest, arrive) => { const d = croweHands({ walk }).near; return { x: lerp(d[0], rest.x, arrive), y: lerp(d[1], rest.y, arrive) }; };
+const swingHand = (W, rest, arrive) => { const d = croweHands({ walk: W.walk, settle: W.settle }).near; return { x: lerp(d[0], rest.x, arrive), y: lerp(d[1], rest.y, arrive) }; };
 // the hand target that points the torch from his near hand at a world point (in his own coordinates, unmirrored)
 const aimAt = (hx, hy, tx, ty) => Math.atan2(ty - hy, tx - hx) * 180 / Math.PI;
 const ALERT = (t) => (Math.sin(t * 40) > 0 ? 1 : 0.35);
@@ -339,15 +340,18 @@ function interrupt(t, env) {
   // No part of him is in the Commander close-up; he leaves for the parapet while the camera is close on Peek.
   const b = env.beats, u = t - env.is, IS = env.is, cmd = b.cmd, cmdE = b.cmd_end, bs = env.bs, ACTOP = N.FLOOR - 350;
   const door = easeOut(seg(t, IS, IS + 0.12));
-  const show = seg(t, IS + 0.25, IS + 0.4), W1 = walkOf(t, IS + 0.45, b.crowe - 0.3, DOORX, CRX), cx = W1.x, walk = W1.walk;   // two steps out of the door
+  const show = seg(t, IS + 0.25, IS + 0.4), W1 = walkOf(t, IS + 0.45, b.crowe - 0.3, DOORX, CRX), cx = W1.x, walk = W1.walk, settle = W1.settle;   // two steps out of the door
   const held = ease(seg(t, b.crowe - 0.25, b.crowe + 0.15)) * (1 - ease(seg(t, b.crowe_end + 0.2, b.crowe_end + 0.6)));
   const appleH = { x: 165, y: -770 }, torchH = { x: 235, y: -560 };
-  const rest = swingHand(walk, HOLD, W1.arrive), hand = held > 0 ? { x: lerp(rest.x, torchH.x, held), y: lerp(rest.y, torchH.y, held) } : rest;
+  const rest = swingHand(W1, HOLD, W1.arrive), hand = held > 0 ? { x: lerp(rest.x, torchH.x, held), y: lerp(rest.y, torchH.y, held) } : rest;
   const handL = held > 0 ? { x: lerp(-60, appleH.x, held), y: lerp(-520, appleH.y, held) } : undefined;
   const aimHigh = t < cmdE + 0.1 ? kf(t, [[IS + 0.45, -34], [IS + 1.0, -26], [b.crowe - 0.45, -30], [b.crowe - 0.05, -36], [cmd, -38]]) : kf(t, [[cmdE + 0.1, -6], [cmdE + 0.55, 2], [cmdE + 0.95, -6], [bs, -12]]);
   const aim = held > 0.02 ? lerp(aimHigh, aimAt(torchH.x, torchH.y, appleH.x, appleH.y), held) : aimHigh;
   const alert = t > cmd - 0.2 && t < cmdE + 1.5;
-  const o = { walk, hand, handL, aim, lean: W1.lean, nod: 18 * held - 6 * (1 - held) + 6 * W1.settle, glint: 0.85, led: alert ? "#ff3b3b" : "#46ff7a", ledO: alert ? ALERT(t) : 0.9 };
+  // his line, as a silhouette: the apple up in his torch, a slow nod down to it across the line, the glasses catching the light, the detector turning red
+  const study = ease(seg(t, b.crowe - 0.1, b.crowe_end)), alarm = alert || (held > 0.5 && t > b.crowe + 0.4);
+  const o = { walk, settle, hand, handL, aim, lean: W1.lean, nod: 26 * study * held - 6 * (1 - held) + 6 * W1.nodSettle, glint: held > 0.3 ? 0.7 + 0.3 * Math.abs(Math.sin(t * 2.2)) : 0.85,
+    led: alarm ? "#ff3b3b" : "#46ff7a", ledO: alarm ? ALERT(t) : 0.9, halo: "#ffd9a0", haloO: 0.6 + 0.3 * door };
   const C = CR(cx, o), [bx, by] = C.lens, beamA = C.beamA;
   const crowe = show > 0 ? `<g opacity="${show}">${C.svg}</g>` : "";
   const apple = held > 0.02 ? `<g opacity="${clamp(held * 1.5)}">${M.bitten(C.far[0] + 6, C.far[1] - 8, 26, -20)}</g>${fx.glow(C.far[0], C.far[1], 70, "#fff6dc", 0.5 * held)}` : "";
@@ -473,7 +477,7 @@ function rExit(t, env) {                                    // "Investigating. P
     armR: tip > 0.02 ? { x: lerp(780, 800, tip), y: lerp(560, 300, tip), front: true } : { x: 780, y: 560, front: true }, armL: { x: 560, y: 580, front: true }, hatRot: -6 * tip,
     legL: { x: 34 * Math.cos(ph), y: -70 * lift, rot: 18 * Math.sin(ph) }, legR: { x: -34 * Math.cos(ph), y: -70 * Math.max(0, -Math.sin(ph)), rot: -18 * Math.sin(ph) } }, px, PY + 14, 0.62);
   const W = walkOf(t, b.out - 0.12, env.ts - 0.1, 440, 440 - WALK_CYCLE * CK), aim = 30 + Math.sin(t * 0.8) * 5;
-  const C = CR(W.x, { walk: W.walk, hand: swingHand(W.walk, HOLD, 0.35), aim, lean: W.lean, nod: 10, glint: 0.7, led: "#46ff7a", ledO: 0.9 }, { flip: true });
+  const C = CR(W.x, { walk: W.walk, settle: W.settle, hand: swingHand(W, HOLD, 0.35), aim, lean: W.lean, nod: 10, glint: 0.7, led: "#46ff7a", ledO: 0.9 }, { flip: true });
   const beam = fx.beam(...fx.toScreen(c, ...C.lens), C.beamA, 2400, 12, "#fff3d6", 0.45, 10);
   return [...liveRoof(t, c, acUnit2() + C.svg + N.footprints(PX_OUT + 40, px - 40, PY + 14, 0.6) + pk, { door: 0.85, beam, rain: 1 }), caps(env, t, OUT)];
 }
@@ -494,9 +498,9 @@ function tagClose(t, env, u) {                             // the close-up: the 
 function tag(t, env) {
   const u = t - env.ts, nb = env.beats.next, close = u > 1.35, X1 = AC_L - 150, X0 = X1 - WALK_CYCLE * CK;
   const W = walkOf(u, 0, 0.85, X0, X1), cx = W.x, held = ease(seg(u, 0.85, 1.25));
-  const appleH = { x: 170, y: -760 }, torchH = { x: 240, y: -560 }, rest = swingHand(W.walk, HOLD, W.arrive);
-  const o = { walk: W.walk, hand: { x: lerp(rest.x, torchH.x, held), y: lerp(rest.y, torchH.y, held) }, handL: held > 0 ? { x: lerp(-60, appleH.x, held), y: lerp(-520, appleH.y, held) } : undefined,
-    aim: lerp(lerp(22, 32, W.arrive), aimAt(torchH.x, torchH.y, appleH.x, appleH.y), held), lean: W.lean, nod: 8 + 12 * held + 6 * W.settle, glint: 0.85, led: "#ff3b3b", ledO: ALERT(t) };
+  const appleH = { x: 170, y: -760 }, torchH = { x: 240, y: -560 }, rest = swingHand(W, HOLD, W.arrive);
+  const o = { walk: W.walk, settle: W.settle, hand: { x: lerp(rest.x, torchH.x, held), y: lerp(rest.y, torchH.y, held) }, handL: held > 0 ? { x: lerp(-60, appleH.x, held), y: lerp(-520, appleH.y, held) } : undefined,
+    aim: lerp(lerp(22, 32, W.arrive), aimAt(torchH.x, torchH.y, appleH.x, appleH.y), held), lean: W.lean, nod: 8 + 14 * held + 6 * W.nodSettle, glint: 0.7 + 0.3 * held, led: "#ff3b3b", ledO: ALERT(t) };
   const C = CR(cx, o), c = fx.camera(u, [[0, 980, 1250, 0.9, 0], [1.35, 1010, 1230, 1.0, 0]]);
   const beam = fx.beam(...fx.toScreen(c, ...C.lens), C.beamA, 2400, 12, "#fff3d6", 0.5, 10) + fx.glow(...fx.toScreen(c, ...C.lens), 110 * c.z, "#fff6dc", 0.8);
   const apple = held > 0 ? `<g opacity="${held}">${M.bitten(C.far[0] + 6, C.far[1] - 8, 26, -20)}</g>` : "";
