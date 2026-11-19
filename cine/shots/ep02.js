@@ -162,7 +162,7 @@ function alleyCrowe(t, env) {                               // 7.4 - 9.2: the al
   const o0 = { handL, hand };
   const far0 = CR(cx, o0, { k, y: Y }).far;
   const aim = up > 0.01 ? lerp(aimAt(210, -600, 175, -760), -62, up) : look > 0.01 ? aimAt(hand.x, hand.y, handL.x, handL.y + 10) : lerp(40, 30, seg(t, 7.4, 7.9));
-  const o = { ...o0, aim, nod: lerp(14, 22, look) * (1 - up) - 26 * up + 5 * spring(t - catchT, 6, 14), lean: 4 * look - 3 * up, glint: 0.6 + 0.4 * Math.max(look, up), led: "#ff3b3b", ledO: ALERT(t), torch: 1 };
+  const o = { ...o0, handLFront: reach > 0.3, aim, nod: lerp(14, 22, look) * (1 - up) - 14 * up + 5 * spring(t - catchT, 6, 14), lean: 4 * look * (1 - up) - 2 * up, glint: 0.6 + 0.4 * Math.max(look, up), led: "#ff3b3b", ledO: ALERT(t), torch: 1 };
   const C = CR(cx, o, { k, y: Y });
   let ax, ay;                                                // the apple: down from the window, a bounce, up into his hand
   if (t < 7.55) { const u = seg(t, 7.4, 7.55); ax = lerp(560, 540, u); ay = lerp(1150, 1735, u * u); }
@@ -350,7 +350,7 @@ function interrupt(t, env) {
   const alert = t > cmd - 0.2 && t < cmdE + 1.5;
   // his line, as a silhouette: the apple up in his torch, a slow nod down to it across the line, the glasses catching the light, the detector turning red
   const study = ease(seg(t, b.crowe - 0.1, b.crowe_end)), alarm = alert || (held > 0.5 && t > b.crowe + 0.4);
-  const o = { walk, settle, hand, handL, aim, lean: W1.lean, nod: 26 * study * held - 6 * (1 - held) + 6 * W1.nodSettle, glint: held > 0.3 ? 0.7 + 0.3 * Math.abs(Math.sin(t * 2.2)) : 0.85,
+  const o = { walk, settle, hand, handL, handLFront: held > 0.15, aim, lean: W1.lean, nod: 26 * study * held - 6 * (1 - held) + 6 * W1.nodSettle, glint: held > 0.3 ? 0.7 + 0.3 * Math.abs(Math.sin(t * 2.2)) : 0.85,
     led: alarm ? "#ff3b3b" : "#46ff7a", ledO: alarm ? ALERT(t) : 0.9, halo: "#ffd9a0", haloO: 0.6 + 0.3 * door };
   const C = CR(cx, o), [bx, by] = C.lens, beamA = C.beamA;
   const crowe = show > 0 ? `<g opacity="${show}">${C.svg}</g>` : "";
@@ -486,20 +486,26 @@ function rExit(t, env) {                                    // "Investigating. P
 function tagClose(t, env, u) {                             // the close-up: the bitten apple, big, in the torch light, in Crowe's gloved hand
   const push = 1 + 0.06 * ease(seg(u, 1.35, 5.2)), cx = 520, cy = 760, R = 230, wob = Math.sin(t * 2.2) * 2;
   const c = { x: 540, y: 1150, z: 1.25, rot: 0 };
-  // his hand from below, black like the silhouette, with its warm outline and the torch catching the knuckles
-  const fingers = "M-190 40 C-200 -40 -150 -70 -110 -60 C-120 -110 -60 -130 -30 -90 C-10 -140 60 -140 70 -90 C100 -130 170 -110 160 -50 C200 -60 230 0 200 60 C150 150 -120 160 -190 40 Z";
-  const hand = `<g transform="translate(${cx} ${cy + R * 0.86})"><path d="${fingers}" fill="#ffd9a0" opacity=".85" transform="translate(-5 -4) scale(1.02)"/><rect x="-176" y="72" width="352" height="420" rx="40" fill="#ffd9a0" opacity=".85"/>
-    <rect x="-170" y="70" width="340" height="420" rx="40" fill="#04050e"/><path d="${fingers}" fill="#04050e"/>
-    <path d="M200 60 C230 0 200 -60 160 -50" fill="none" stroke="#fff1cf" stroke-width="6" opacity=".55"/></g>`;
+  // his arm comes in on a diagonal from the lower right, tapering to the wrist, with a coat cuff; the glove grips the apple
+  // from below and behind (palm behind it, fingers wrapped round the front); black like the silhouette, with its warm outline
+  const B0 = [1200, 1520], W0 = [cx + 150, cy + R * 0.95], dx = W0[0] - B0[0], dy = W0[1] - B0[1], L = Math.hypot(dx, dy), nx = -dy / L, ny = dx / L;
+  const quad = (a, b, wa, wb) => `M${(a[0] + nx * wa).toFixed(1)} ${(a[1] + ny * wa).toFixed(1)} L${(b[0] + nx * wb).toFixed(1)} ${(b[1] + ny * wb).toFixed(1)} L${(b[0] - nx * wb).toFixed(1)} ${(b[1] - ny * wb).toFixed(1)} L${(a[0] - nx * wa).toFixed(1)} ${(a[1] - ny * wa).toFixed(1)} Z`;
+  const P = (u) => [B0[0] + dx * u, B0[1] + dy * u];
+  const INK = `fill="#04050e" stroke="#ffd9a0" stroke-width="7" stroke-opacity=".8" stroke-linejoin="round"`;
+  const armBack = `<path d="${quad(B0, W0, 150, 78)}" ${INK}/><path d="${quad(P(0.74), P(0.9), 104, 92)}" ${INK}/><path d="${quad(P(0.74), P(0.9), 104, 92)}" fill="#11131f"/>`
+    + `<ellipse cx="${cx + 120}" cy="${cy + R * 0.82}" rx="135" ry="95" transform="rotate(-38 ${cx + 120} ${cy + R * 0.82})" ${INK}/>`;
+  const finger = (x0, y0, x1, y1, w) => `<path d="M${x0} ${y0} Q${(x0 + x1) / 2 - 20} ${Math.max(y0, y1) + 30} ${x1} ${y1}" fill="none" stroke="#ffd9a0" stroke-opacity=".8" stroke-width="${w + 14}" stroke-linecap="round"/><path d="M${x0} ${y0} Q${(x0 + x1) / 2 - 20} ${Math.max(y0, y1) + 30} ${x1} ${y1}" fill="none" stroke="#04050e" stroke-width="${w}" stroke-linecap="round"/>`;
+  const handFront = finger(cx + 110, cy + R * 0.92, cx - 120, cy + R * 0.7, 54) + finger(cx + 90, cy + R * 0.82, cx - 175, cy + R * 0.45, 50) + finger(cx + 70, cy + R * 0.7, cx - 200, cy + R * 0.18, 46)
+    + finger(cx + 175, cy + R * 0.72, cx + 205, cy + R * 0.38, 52);
   return [fx.layer(N.sky(NOMOON), c, 0.04), fx.layer(N.cityFar(), c, 0.12, { blur: 7 }), fx.layer(N.cityMid(), c, 0.3, { blur: 6 }), `<rect width="${W}" height="${H}" fill="#03040e" opacity=".55"/>`,
     fx.beam(1250, 420, 158, 1700, 14, "#fff3d6", 0.35, 14), fx.glow(cx + 60, cy - 20, 560, "#fff1cf", 0.55),
-    `<g transform="translate(${cx} ${cy}) scale(${push}) translate(${-cx} ${-cy})">${M.bitten(cx, cy + wob, R, -6)}${hand}</g>`, fx.vignette(0.7), fx.grain(t, 0.1)];
+    `<g transform="translate(${cx} ${cy}) scale(${push}) translate(${-cx} ${-cy})">${armBack}${M.bitten(cx, cy + wob, R, -6)}${handFront}</g>`, fx.vignette(0.7), fx.grain(t, 0.1)];
 }
 function tag(t, env) {
   const u = t - env.ts, nb = env.beats.next, close = u > 1.35, X1 = AC_L - 150, X0 = X1 - WALK_CYCLE * CK;
   const W = walkOf(u, 0, 0.85, X0, X1), cx = W.x, held = ease(seg(u, 0.85, 1.25));
   const appleH = { x: 170, y: -760 }, torchH = { x: 240, y: -560 }, rest = swingHand(W, HOLD, W.arrive);
-  const o = { walk: W.walk, settle: W.settle, hand: { x: lerp(rest.x, torchH.x, held), y: lerp(rest.y, torchH.y, held) }, handL: held > 0 ? { x: lerp(-60, appleH.x, held), y: lerp(-520, appleH.y, held) } : undefined,
+  const o = { walk: W.walk, settle: W.settle, hand: { x: lerp(rest.x, torchH.x, held), y: lerp(rest.y, torchH.y, held) }, handL: held > 0 ? { x: lerp(-60, appleH.x, held), y: lerp(-520, appleH.y, held) } : undefined, handLFront: held > 0.15,
     aim: lerp(lerp(22, 32, W.arrive), aimAt(torchH.x, torchH.y, appleH.x, appleH.y), held), lean: W.lean, nod: 8 + 14 * held + 6 * W.nodSettle, glint: 0.7 + 0.3 * held, led: "#ff3b3b", ledO: ALERT(t) };
   const C = CR(cx, o), c = fx.camera(u, [[0, 980, 1250, 0.9, 0], [1.35, 1010, 1230, 1.0, 0]]);
   const beam = fx.beam(...fx.toScreen(c, ...C.lens), C.beamA, 2400, 12, "#fff3d6", 0.5, 10) + fx.glow(...fx.toScreen(c, ...C.lens), 110 * c.z, "#fff6dc", 0.8);
