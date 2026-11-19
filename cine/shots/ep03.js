@@ -146,7 +146,7 @@ function strip(t, env, face = TALK, gesture = null, g = 0, frozen = 0) {
     : gesture === "palm" ? { armR: { x: lerp(770, 652, g), y: lerp(770, 420, g), front: true } } : {};
   const sh = `<rect x="0" y="1740" width="${W}" height="200" fill="#2a1630"/><rect x="0" y="1740" width="${W}" height="16" fill="#b07a4a"/><rect x="0" y="1740" width="${W}" height="5" fill="#e0a86a" opacity=".6"/>`;
   return sh + FR.plush(70, 1748, 1.6, "beanie", { tilt: frozen ? 0 : Math.sin(t) * 1.5 }) + FR.plush(640, 1748, 1.6, "crown", { teeth: 1.35, tilt: frozen ? 0 : Math.sin(t + 1) * 1.5 })
-    + peek(e, { turn: frozen ? 0 : 0.4, tilt: frozen ? 0 : Math.sin(t * 1.7) * 1.5, bob: frozen ? 0 : Math.sin(t * 3.1) * 3, ...arms }, 330, 1750, 0.62) + (frozen ? priceTag(380, 1460) : "");
+    + peek(e, { turn: frozen ? 0 : 0.4, tilt: frozen ? 0 : Math.sin(t * 1.7) * 1.5, bob: frozen ? 0 : Math.sin(t * 3.1) * 3, ...arms }, 330, 1750, 0.62) + (frozen ? priceTag(395, 1600) : "");
 }
 function boardFrame(t, env, t0, inner, face, gesture, g, frozen = 0) {
   const age = t - t0, slide = (1 - easeOut(clamp(age / 0.22))) * 260, drift = 1 + 0.03 * clamp(age / 4);
