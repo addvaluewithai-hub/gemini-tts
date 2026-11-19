@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing AGENT CROWE, a tall grim government agent in an animated comedy short. Deep, gravelly, slow American voice. He looks down at the trapped alien. Quiet, slow, deeply satisfied, a dark smile in the voice, almost a growl.",
+   "text": "Gotcha."
+  }
+ ],
+ "voice": "Algenib",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "S01 cold open c2-gotcha"
+ }
+}

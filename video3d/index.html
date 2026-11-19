@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<script type="module">
+// Loads a shot module (?shot=shots/x.js) and exposes window.__render(t) -> JPEG data URL of frame at time t.
+import * as THREE from "three";
+const params = new URLSearchParams(location.search);
+const shot = (await import("/" + params.get("shot"))).default;
+const scale = Number(params.get("scale") || 1);
+const W = Math.round(shot.width * scale), H = Math.round(shot.height * scale);
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, powerPreference: "high-performance" });
+renderer.setPixelRatio(1);
+renderer.setSize(W, H);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.0;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+const ctx = await shot.setup({ THREE, renderer, width: W, height: H, params });
+window.__render = async (t, quality = 0.93) => {
+  await ctx.frame(t);
+  return renderer.domElement.toDataURL("image/jpeg", quality);
+};
+window.__ready = true;
+</script>
+</body>
+</html>

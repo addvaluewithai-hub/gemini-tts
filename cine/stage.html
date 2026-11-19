@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#000;overflow:hidden}#s svg{display:block}
+@font-face{font-family:Anton;src:url(/node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2) format("woff2")}</style></head>
+<body><div id="s"></div>
+<script type="module">
+// Loads a shot (?shot=shots/x.js): the module exports { DUR, draw(t, env) -> svg text }.
+const q = new URLSearchParams(location.search);
+const shot = await import("/" + q.get("shot"));
+let env = null;
+try { if (shot.ENV) env = await (await fetch("/" + shot.ENV)).json(); } catch { env = null; }
+const el = document.getElementById("s");
+window.DUR = shot.duration ? shot.duration(env) : shot.DUR;
+window.draw = (t) => { el.innerHTML = shot.draw(t, env); };
+await document.fonts.load("40px Anton").catch(() => {});
+window.__ready = true;
+</script></body></html>

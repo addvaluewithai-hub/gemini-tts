@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T16:27:37.756Z",
+  "duration_ms": 2160,
+  "word_count": 5,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "ha ha ha ha ha",
+  "source_text": "Hah! Hah! Hah! Hah! Hah! Hah!",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Hah! Hah! Hah! Hah! Hah! Hah!"
+    }
+  ],
+  "agreement": 0,
+  "flagged": true,
+  "missing_words": [
+    "Hah!",
+    "Hah!",
+    "Hah!",
+    "Hah!",
+    "Hah!",
+    "Hah!"
+  ],
+  "words": [
+    {
+      "start_ms": 1600,
+      "end_ms": 1640,
+      "text": "ha"
+    },
+    {
+      "start_ms": 1640,
+      "end_ms": 1720,
+      "text": "ha"
+    },
+    {
+      "start_ms": 1720,
+      "end_ms": 1760,
+      "text": "ha"
+    },
+    {
+      "start_ms": 1760,
+      "end_ms": 1840,
+      "text": "ha"
+    },
+    {
+      "start_ms": 1840,
+      "end_ms": 1880,
+      "text": "ha"
+    }
+  ]
+}

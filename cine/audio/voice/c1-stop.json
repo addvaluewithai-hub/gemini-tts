@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing AGENT CROWE, a tall grim government agent in an animated comedy short. Deep, gravelly, slow American voice. He has finally found the alien after years of hunting. He bellows across a rooftop in the rain: furious, commanding, loud, each word hit hard.",
+   "text": "STOP! RIGHT! THERE!"
+  }
+ ],
+ "voice": "Algenib",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "S01 cold open c1-stop"
+ }
+}
