@@ -266,7 +266,7 @@ function feed(i, w, h, t, { pan = 0, hat = 0, stat = 0 } = {}) {
   return s + `</g><text x="${-w / 2 + 10}" y="${-h / 2 + 24}" font-family="Anton" font-size="20" fill="#cfe0d8">CAM ${String(i + 1).padStart(2, "0")}</text><circle cx="${w / 2 - 18}" cy="${-h / 2 + 18}" r="7" fill="#ff3b3b" opacity="${Math.sin(t * 8) > 0 ? 1 : 0.3}"/>`;
 }
 function iTV(t, env) {                                        // tvw - pillow: the TV wall fills with the plush's face; then the security feeds; one camera swivels and finds the top of Peek's hat
-  const b = env.beats, on = Array.from({ length: 9 }, (_, i) => fade(t, b.tvw + 0.04 + i * 0.07, 0.05)), feeds = t >= b.feeds;
+  const b = env.beats, on = Array.from({ length: 9 }, (_, i) => fade(t, b.tvw + 0.04 + i * 0.04, 0.04)), feeds = t >= b.feeds;
   const flick = Array.from({ length: 9 }, (_, i) => t >= b.feeds + i * 0.05);
   const pan = ease(seg(t, b.feeds + 0.05, b.hat)), hat = fade(t, b.hat, 0.1);
   const content = (i) => feeds && flick[i] ? feed(i, 300, 270, t, i === 4 ? { pan, hat } : { pan: 0.15 * (i % 3) }) : `<g transform="scale(0.78)">${FR.plush(0, 150, 1.0, "crown", { teeth: 1.35 })}</g>`;
@@ -288,7 +288,7 @@ function iPillow(t, env) {                                    // pillow - turn: 
     fx.flash(pulse(t, b.static - 0.05, b.static + 0.05, 0.02) * 0.15, "#fff"), ...storeGrade(t), caps(env, t, OUT)];
 }
 function iTurn(t, env) {                                      // turn - bs - 0.6: the desk: Crowe turns to the security monitors and takes one step toward them; one shows static
-  const b = env.beats, Wk = walkOf(t, b.turn + 0.15, b.turn + 0.8, 420, 420 + 180 * CK), look = ease(seg(t, b.turn, b.turn + 0.3));
+  const b = env.beats, Wk = walkOf(t, b.turn + 0.1, b.turn + 0.65, 420, 420 + 180 * CK), look = ease(seg(t, b.turn, b.turn + 0.3));
   const o = { walk: Wk.walk, settle: Wk.settle, hand: swingHand(Wk, HOLD, Wk.arrive), handL: { x: -20, y: -560 }, aim: 0, torch: 0, lean: Wk.lean, nod: lerp(6, -16, look) + 4 * Wk.nodSettle, glint: 1, led: "#46ff7a", ledO: 0.9 };
   const C = CR(Wk.x, o), [hx, hy] = C.near;
   const c = fx.camera(t, [[b.turn, 560, FLOOR_Y - 680, 1.0, 0], [env.bs, 600, FLOOR_Y - 700, 1.08, 0]]);
@@ -435,7 +435,7 @@ export function draw(t, env) {
   let f;
   if (t < env.rs) f = t < 1.0 ? coClose : t < b.heavyw - 0.1 ? coHigh : t < b.yank + 0.15 ? coSide : t < b.land + 0.6 ? coFall : t < b.ohno - 0.35 ? coLook : coOhno;
   else if (t < env.is) f = t < b.ran - 0.12 ? rReveal : t < b.remember - 0.12 ? bStrobe : t < b.ball40 - 0.12 ? bReport1 : t < b.pull40 - 0.12 ? bScale : t < b.theory - 0.12 ? bPull : t < b.because - 0.12 ? bTheory : bBecause;
-  else if (t < env.bs) f = t < b.att - 0.15 ? iChime : t < b.tvw ? iDesk : t < b.pillow ? iTV : t < b.turn ? iPillow : t < env.bs - 0.6 ? iTurn : iPeek;
+  else if (t < env.bs) f = t < b.att - 0.15 ? iChime : t < b.tvw ? iDesk : t < b.pillow ? iTV : t < b.turn ? iPillow : iTurn;
   else if (t < env.ts) f = t < b.carts - 0.12 ? bKick : t < b.stuff - 0.12 ? bCarts : t < b.speeds - 0.12 ? bBits : t < b.feather - 0.12 ? bSpeed : t < b.moon - 0.12 ? bAir : t < b.astro - 0.12 ? bMoon
     : t < b.sum1 - 0.15 ? bHammer : t < b.question - 0.15 ? bSum : t < b.out - 0.12 ? bQuestion : rExit;
   else f = tag;

@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-19T07:50:15.441Z",
+  "duration_ms": 26920,
+  "word_count": 62,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Commander, field report number four. I ran an experiment by accident right above an agent. Remember report one? The heavier the thing, the harder the pull. The ball is 40 times heavier than the apple, so their planet pulls on it 40 times harder. Theory? The harder pull wins. The ball lands first. Wrong! They landed together. One bang, because the ball",
+  "source_text": "Commander. Field report number four. I ran an experiment. By accident. Right above an agent. Remember report one: the heavier the thing, the harder the pull. The ball is forty times heavier than the apple, so their planet pulls on it forty times harder. Theory: the harder pull wins. The ball lands first. Wrong. They landed together. One bang. Because the ball...",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Commander. Field report number four. I ran an experiment. By accident. Right above an agent. Remember report one: the heavier the thing, the harder the pull. The ball is forty times heavier than the apple, so their planet pulls on it forty times harder. Theory: the harder pull wins. The ball lands first. Wrong. They landed together. One bang. Because the ball..."
+    }
+  ],
+  "agreement": 0.9677,
+  "flagged": false,
+  "missing_words": [
+    "forty",
+    "forty"
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 800,
+      "text": "Commander,"
+    },
+    {
+      "start_ms": 1120,
+      "end_ms": 1400,
+      "text": "field"
+    },
+    {
+      "start_ms": 1400,
+      "end_ms": 1800,
+      "text": "report"
+    },
+    {
+      "start_ms": 1800,
+      "end_ms": 2120,
+      "text": "number"
+    },
+    {
+      "start_ms": 2120,
+      "end_ms": 2600,
+      "text": "four."
+    },
+    {
+      "start_ms": 3160,
+      "end_ms": 3280,
+      "text": "I"
+    },
+    {
+      "start_ms": 3280,
+      "end_ms": 3440,
+      "text": "ran"
+    },
+    {
+      "start_ms": 3440,
+      "end_ms": 3520,
+      "text": "an"
+    },
+    {
+      "start_ms": 3520,
+      "end_ms": 4320,
+      "text": "experiment"
+    },
+    {
+      "start_ms": 4640,
+      "end_ms": 4960,
+      "text": "by"
+    },
+    {
+      "start_ms": 5040,
+      "end_ms": 5760,
+      "text": "accident"
+    },
+    {
+      "start_ms": 5920,
+      "end_ms": 6400,
+      "text": "right"
+    },
+    {
+      "start_ms": 6440,
+      "end_ms": 6960,
+      "text": "above"
+    },
+    {
+      "start_ms": 6960,
+      "end_ms": 7160,
+      "text": "an"
+    },
+    {
+      "start_ms": 7160,
+      "end_ms": 7760,
+      "text": "agent."
+    },
+    {
+      "start_ms": 8280,
+      "end_ms": 8640,
+      "text": "Remember"
+    },
+    {
+      "start_ms": 8640,
+      "end_ms": 9040,
+      "text": "report"
+    },
+    {
+      "start_ms": 9040,
+      "end_ms": 9320,
+      "text": "one?"
+    },
+    {
+      "start_ms": 9600,
+      "end_ms": 9760,
+      "text": "The"
+    },
+    {
+      "start_ms": 9760,
+      "end_ms": 10120,
+      "text": "heavier"
+    },
+    {
+      "start_ms": 10120,
+      "end_ms": 10240,
+      "text": "the"
+    },
+    {
+      "start_ms": 10240,
+      "end_ms": 10600,
+      "text": "thing,"
+    },
+    {
+      "start_ms": 10800,
+      "end_ms": 10920,
+      "text": "the"
+    },
+    {
+      "start_ms": 10920,
+      "end_ms": 11320,
+      "text": "harder"
+    },
+    {
+      "start_ms": 11320,
+      "end_ms": 11400,
+      "text": "the"
+    },
+    {
+      "start_ms": 11400,
+      "end_ms": 11840,
+      "text": "pull."
+    },
+    {
+      "start_ms": 12320,
+      "end_ms": 12400,
+      "text": "The"
+    },
+    {
+      "start_ms": 12400,
+      "end_ms": 12680,
+      "text": "ball"
+    },
+    {
+      "start_ms": 12680,
+      "end_ms": 12880,
+      "text": "is"
+    },
+    {
+      "start_ms": 12880,
+      "end_ms": 13280,
+      "text": "40"
+    },
+    {
+      "start_ms": 13280,
+      "end_ms": 13680,
+      "text": "times"
+    },
+    {
+      "start_ms": 13680,
+      "end_ms": 14000,
+      "text": "heavier"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14120,
+      "text": "than"
+    },
+    {
+      "start_ms": 14120,
+      "end_ms": 14280,
+      "text": "the"
+    },
+    {
+      "start_ms": 14280,
+      "end_ms": 14720,
+      "text": "apple,"
+    },
+    {
+      "start_ms": 15120,
+      "end_ms": 15280,
+      "text": "so"
+    },
+    {
+      "start_ms": 15280,
+      "end_ms": 15440,
+      "text": "their"
+    },
+    {
+      "start_ms": 15440,
+      "end_ms": 15800,
+      "text": "planet"
+    },
+    {
+      "start_ms": 15800,
+      "end_ms": 16080,
+      "text": "pulls"
+    },
+    {
+      "start_ms": 16080,
+      "end_ms": 16240,
+      "text": "on"
+    },
+    {
+      "start_ms": 16240,
+      "end_ms": 16400,
+      "text": "it"
+    },
+    {
+      "start_ms": 16400,
+      "end_ms": 16800,
+      "text": "40"
+    },
+    {
+      "start_ms": 16800,
+      "end_ms": 17160,
+      "text": "times"
+    },
+    {
+      "start_ms": 17160,
+      "end_ms": 17600,
+      "text": "harder."
+    },
+    {
+      "start_ms": 18280,
+      "end_ms": 18760,
+      "text": "Theory?"
+    },
+    {
+      "start_ms": 19040,
+      "end_ms": 19160,
+      "text": "The"
+    },
+    {
+      "start_ms": 19160,
+      "end_ms": 19400,
+      "text": "harder"
+    },
+    {
+      "start_ms": 19400,
+      "end_ms": 19640,
+      "text": "pull"
+    },
+    {
+      "start_ms": 19640,
+      "end_ms": 20080,
+      "text": "wins."
+    },
+    {
+      "start_ms": 20360,
+      "end_ms": 20440,
+      "text": "The"
+    },
+    {
+      "start_ms": 20440,
+      "end_ms": 20680,
+      "text": "ball"
+    },
+    {
+      "start_ms": 20680,
+      "end_ms": 21040,
+      "text": "lands"
+    },
+    {
+      "start_ms": 21040,
+      "end_ms": 21560,
+      "text": "first."
+    },
+    {
+      "start_ms": 22120,
+      "end_ms": 22760,
+      "text": "Wrong!"
+    },
+    {
+      "start_ms": 23080,
+      "end_ms": 23200,
+      "text": "They"
+    },
+    {
+      "start_ms": 23200,
+      "end_ms": 23560,
+      "text": "landed"
+    },
+    {
+      "start_ms": 23560,
+      "end_ms": 24320,
+      "text": "together."
+    },
+    {
+      "start_ms": 24560,
+      "end_ms": 24880,
+      "text": "One"
+    },
+    {
+      "start_ms": 24880,
+      "end_ms": 25480,
+      "text": "bang,"
+    },
+    {
+      "start_ms": 25720,
+      "end_ms": 26000,
+      "text": "because"
+    },
+    {
+      "start_ms": 26000,
+      "end_ms": 26120,
+      "text": "the"
+    },
+    {
+      "start_ms": 26120,
+      "end_ms": 26760,
+      "text": "ball"
+    }
+  ]
+}

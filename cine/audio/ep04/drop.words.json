@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-19T07:49:51.653Z",
+  "duration_ms": 6200,
+  "word_count": 11,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Stake, stake. If it goes, heavy one first, then the apple.",
+  "source_text": "Stay... stay... If it goes... heavy one first... then the apple...",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Stay... stay... If it goes... heavy one first... then the apple..."
+    }
+  ],
+  "agreement": 0.8182,
+  "flagged": false,
+  "missing_words": [
+    "Stay...",
+    "stay..."
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 760,
+      "text": "Stake,"
+    },
+    {
+      "start_ms": 1160,
+      "end_ms": 1640,
+      "text": "stake."
+    },
+    {
+      "start_ms": 2480,
+      "end_ms": 2600,
+      "text": "If"
+    },
+    {
+      "start_ms": 2600,
+      "end_ms": 2720,
+      "text": "it"
+    },
+    {
+      "start_ms": 2720,
+      "end_ms": 3120,
+      "text": "goes,"
+    },
+    {
+      "start_ms": 3800,
+      "end_ms": 4040,
+      "text": "heavy"
+    },
+    {
+      "start_ms": 4040,
+      "end_ms": 4240,
+      "text": "one"
+    },
+    {
+      "start_ms": 4240,
+      "end_ms": 4880,
+      "text": "first,"
+    },
+    {
+      "start_ms": 5160,
+      "end_ms": 5360,
+      "text": "then"
+    },
+    {
+      "start_ms": 5360,
+      "end_ms": 5480,
+      "text": "the"
+    },
+    {
+      "start_ms": 5480,
+      "end_ms": 5960,
+      "text": "apple."
+    }
+  ]
+}
