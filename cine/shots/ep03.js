@@ -301,11 +301,11 @@ function bSummary(t, env) {                                 // "So: astronauts a
     + row(840, b.sum3 + 0.2, `<g transform="translate(200 ${840 + Math.sin(t * 2) * 8})">${M.astronaut(0, 0, 0.32)}</g>`, "SHIP FALLS TOO"));
 }
 function bWrench(t, env) {                                  // "Which raises a question... a wrench floats right beside a pencil. So do heavy things fall faster?"
-  const b = env.beats, d = Math.sin(t * 1.1) * 14, w = fade(t, b.wrench + 0.2);
+  const b = env.beats, d = Math.sin(t * 1.1) * 14, w = fade(t, b.wrench + 0.2), mv = ease(seg(t, b.wrench, b.wrench + 0.45));   // a big "?" from "question"; it rises as the wrench and pencil float in
   const wrench = `<g transform="translate(380 ${600 + d}) rotate(${-20 + Math.sin(t * 0.8) * 6})"><rect x="-140" y="-24" width="280" height="48" rx="20" fill="#9aa4c8"/><path d="M140 -70 C210 -70 230 -10 220 -24 L170 -24 L170 24 L220 24 C230 10 210 70 140 70 C110 70 100 40 100 0 C100 -40 110 -70 140 -70 Z" fill="#9aa4c8"/><path d="M-140 -58 C-190 -58 -205 -12 -198 -20 L-160 -20 L-160 20 L-198 20 C-205 12 -190 58 -140 58 C-118 58 -110 30 -110 0 C-110 -30 -118 -58 -140 -58 Z" fill="#9aa4c8"/><rect x="-120" y="-8" width="230" height="10" fill="#cfd6ee" opacity=".7"/></g>`;
   const pencil = `<g transform="translate(720 ${560 - d}) rotate(${30 + Math.sin(t * 0.9) * 6})"><rect x="-150" y="-16" width="260" height="32" fill="#ffd23f"/><path d="M110 -16 L170 0 L110 16 Z" fill="#f0c890"/><path d="M152 -5 L170 0 L152 5 Z" fill="#333"/><rect x="-180" y="-16" width="30" height="32" fill="#ff9fb0"/></g>`;
   return B(t, env, b.question - 0.15, `<g opacity="${w}">${wrench}${pencil}</g>` + X.label(380, 800, "HEAVY", 56, "#fff", w) + X.label(720, 800, "LIGHT", 56, "#fff", w)
-    + X.label(540, 430, "?", 200, "#ffe66d", fade(t, b.heavy), easeOutBack(seg(t, b.heavy, b.heavy + 0.3))));
+    + X.label(540, lerp(700, 430, mv), "?", 200, "#ffe66d", fade(t, b.question), easeOutBack(seg(t, b.question, b.question + 0.35)) * lerp(2.2, 1, mv)));
 }
 function rExit(t, env) {                                    // "Investigating. Peek out." he tips his hat, hops off the shelf and drops behind the counter
   const b = env.beats, tip = pulse(t, b.peekout - 0.1, b.peekout + 0.45, 0.15), hop = seg(t, b.peekout + 0.5, env.ts + 0.2);
