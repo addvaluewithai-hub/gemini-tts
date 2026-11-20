@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-18T23:24:48.529Z",
+  "duration_ms": 2640,
+  "word_count": 5,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Because it what, agent peak?",
+  "source_text": "Because it WHAT, Agent Peek?",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Because it WHAT, Agent Peek?"
+    }
+  ],
+  "agreement": 0.8,
+  "flagged": false,
+  "missing_words": [
+    "Peek?"
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 680,
+      "text": "Because"
+    },
+    {
+      "start_ms": 680,
+      "end_ms": 880,
+      "text": "it"
+    },
+    {
+      "start_ms": 880,
+      "end_ms": 1520,
+      "text": "what,"
+    },
+    {
+      "start_ms": 1560,
+      "end_ms": 2000,
+      "text": "agent"
+    },
+    {
+      "start_ms": 2000,
+      "end_ms": 2440,
+      "text": "peak?"
+    }
+  ]
+}

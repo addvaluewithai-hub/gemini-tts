@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing THE COMMANDER, a stern alien military officer heard over a crackling radio in an animated comedy short. Deep, clipped, impatient, loud at exactly the wrong moment; hard emphasis on the word WHAT.",
+   "text": "Because it WHAT, Agent Peek?"
+  }
+ ],
+ "voice": "Charon",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP02 moon commander"
+ }
+}

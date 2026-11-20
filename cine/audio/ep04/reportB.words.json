@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-20T08:32:07.451Z",
+  "duration_ms": 29080,
+  "word_count": 70,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "A feather. Air pushes back on everything, but on light wide things, it wins. On their moon, there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So, more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the moon? Investigating. Peek out.",
+  "source_text": "...a feather. Air pushes back on everything, but on light, wide things, it wins. On their Moon there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So: more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the Moon? Investigating. Peek out.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "...a feather. Air pushes back on everything, but on light, wide things, it wins. On their Moon there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So: more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the Moon? Investigating. Peek out."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 280,
+      "end_ms": 360,
+      "text": "A"
+    },
+    {
+      "start_ms": 360,
+      "end_ms": 960,
+      "text": "feather."
+    },
+    {
+      "start_ms": 1440,
+      "end_ms": 1760,
+      "text": "Air"
+    },
+    {
+      "start_ms": 1760,
+      "end_ms": 2160,
+      "text": "pushes"
+    },
+    {
+      "start_ms": 2160,
+      "end_ms": 2440,
+      "text": "back"
+    },
+    {
+      "start_ms": 2440,
+      "end_ms": 2640,
+      "text": "on"
+    },
+    {
+      "start_ms": 2640,
+      "end_ms": 3240,
+      "text": "everything,"
+    },
+    {
+      "start_ms": 3240,
+      "end_ms": 3480,
+      "text": "but"
+    },
+    {
+      "start_ms": 3480,
+      "end_ms": 3720,
+      "text": "on"
+    },
+    {
+      "start_ms": 3720,
+      "end_ms": 4200,
+      "text": "light"
+    },
+    {
+      "start_ms": 4200,
+      "end_ms": 4680,
+      "text": "wide"
+    },
+    {
+      "start_ms": 4680,
+      "end_ms": 5200,
+      "text": "things,"
+    },
+    {
+      "start_ms": 5240,
+      "end_ms": 5480,
+      "text": "it"
+    },
+    {
+      "start_ms": 5480,
+      "end_ms": 6040,
+      "text": "wins."
+    },
+    {
+      "start_ms": 6760,
+      "end_ms": 6920,
+      "text": "On"
+    },
+    {
+      "start_ms": 6920,
+      "end_ms": 7080,
+      "text": "their"
+    },
+    {
+      "start_ms": 7080,
+      "end_ms": 7520,
+      "text": "moon,"
+    },
+    {
+      "start_ms": 7600,
+      "end_ms": 7760,
+      "text": "there"
+    },
+    {
+      "start_ms": 7760,
+      "end_ms": 7920,
+      "text": "is"
+    },
+    {
+      "start_ms": 7920,
+      "end_ms": 8400,
+      "text": "almost"
+    },
+    {
+      "start_ms": 8400,
+      "end_ms": 8760,
+      "text": "no"
+    },
+    {
+      "start_ms": 8760,
+      "end_ms": 9200,
+      "text": "air."
+    },
+    {
+      "start_ms": 9560,
+      "end_ms": 9720,
+      "text": "An"
+    },
+    {
+      "start_ms": 9720,
+      "end_ms": 10240,
+      "text": "astronaut"
+    },
+    {
+      "start_ms": 10240,
+      "end_ms": 10560,
+      "text": "dropped"
+    },
+    {
+      "start_ms": 10560,
+      "end_ms": 10600,
+      "text": "a"
+    },
+    {
+      "start_ms": 10600,
+      "end_ms": 11080,
+      "text": "hammer"
+    },
+    {
+      "start_ms": 11080,
+      "end_ms": 11200,
+      "text": "and"
+    },
+    {
+      "start_ms": 11200,
+      "end_ms": 11240,
+      "text": "a"
+    },
+    {
+      "start_ms": 11240,
+      "end_ms": 11600,
+      "text": "feather"
+    },
+    {
+      "start_ms": 11600,
+      "end_ms": 11960,
+      "text": "there."
+    },
+    {
+      "start_ms": 12240,
+      "end_ms": 12400,
+      "text": "They"
+    },
+    {
+      "start_ms": 12400,
+      "end_ms": 12760,
+      "text": "landed"
+    },
+    {
+      "start_ms": 12760,
+      "end_ms": 13400,
+      "text": "together."
+    },
+    {
+      "start_ms": 14040,
+      "end_ms": 14520,
+      "text": "So,"
+    },
+    {
+      "start_ms": 14960,
+      "end_ms": 15320,
+      "text": "more"
+    },
+    {
+      "start_ms": 15320,
+      "end_ms": 15880,
+      "text": "pull,"
+    },
+    {
+      "start_ms": 16000,
+      "end_ms": 16200,
+      "text": "but"
+    },
+    {
+      "start_ms": 16200,
+      "end_ms": 16520,
+      "text": "harder"
+    },
+    {
+      "start_ms": 16520,
+      "end_ms": 16600,
+      "text": "to"
+    },
+    {
+      "start_ms": 16600,
+      "end_ms": 17040,
+      "text": "move."
+    },
+    {
+      "start_ms": 17360,
+      "end_ms": 17800,
+      "text": "Only"
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 18160,
+      "text": "air"
+    },
+    {
+      "start_ms": 18160,
+      "end_ms": 18360,
+      "text": "gets"
+    },
+    {
+      "start_ms": 18360,
+      "end_ms": 18440,
+      "text": "in"
+    },
+    {
+      "start_ms": 18440,
+      "end_ms": 18520,
+      "text": "the"
+    },
+    {
+      "start_ms": 18520,
+      "end_ms": 18920,
+      "text": "way."
+    },
+    {
+      "start_ms": 19760,
+      "end_ms": 20120,
+      "text": "Which"
+    },
+    {
+      "start_ms": 20120,
+      "end_ms": 20480,
+      "text": "raises"
+    },
+    {
+      "start_ms": 20480,
+      "end_ms": 20560,
+      "text": "a"
+    },
+    {
+      "start_ms": 20560,
+      "end_ms": 21160,
+      "text": "question,"
+    },
+    {
+      "start_ms": 21160,
+      "end_ms": 21720,
+      "text": "Commander."
+    },
+    {
+      "start_ms": 22120,
+      "end_ms": 22320,
+      "text": "Up"
+    },
+    {
+      "start_ms": 22320,
+      "end_ms": 22840,
+      "text": "there,"
+    },
+    {
+      "start_ms": 22880,
+      "end_ms": 23520,
+      "text": "astronauts"
+    },
+    {
+      "start_ms": 23520,
+      "end_ms": 23880,
+      "text": "bounce"
+    },
+    {
+      "start_ms": 23880,
+      "end_ms": 24120,
+      "text": "like"
+    },
+    {
+      "start_ms": 24120,
+      "end_ms": 24680,
+      "text": "bunnies."
+    },
+    {
+      "start_ms": 24960,
+      "end_ms": 25120,
+      "text": "So"
+    },
+    {
+      "start_ms": 25120,
+      "end_ms": 25320,
+      "text": "why"
+    },
+    {
+      "start_ms": 25320,
+      "end_ms": 25680,
+      "text": "do"
+    },
+    {
+      "start_ms": 25680,
+      "end_ms": 25880,
+      "text": "you"
+    },
+    {
+      "start_ms": 25880,
+      "end_ms": 26040,
+      "text": "weigh"
+    },
+    {
+      "start_ms": 26040,
+      "end_ms": 26320,
+      "text": "less"
+    },
+    {
+      "start_ms": 26320,
+      "end_ms": 26400,
+      "text": "on"
+    },
+    {
+      "start_ms": 26400,
+      "end_ms": 26480,
+      "text": "the"
+    },
+    {
+      "start_ms": 26480,
+      "end_ms": 26880,
+      "text": "moon?"
+    },
+    {
+      "start_ms": 27400,
+      "end_ms": 28120,
+      "text": "Investigating."
+    },
+    {
+      "start_ms": 28480,
+      "end_ms": 28680,
+      "text": "Peek"
+    },
+    {
+      "start_ms": 28680,
+      "end_ms": 29000,
+      "text": "out."
+    }
+  ]
+}

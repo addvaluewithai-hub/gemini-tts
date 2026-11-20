@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing PEEK, a tiny pink cartoon alien spy in an animated comedy short. Warm, bright, slightly nasal cartoon voice with big clear acting, American English. At night in a closed superstore he hides on top of a tall shelf. A bowling ball and an apple are teetering on a plank at the edge, right above a government agent who is walking below and has not noticed. Peek holds both hands out toward them, frozen, terrified, and whispers to himself so the agent cannot hear: a tiny, shaky, breathless whisper, pleading with the plank, then bracing for the worst. Fully voiced enough to be understood on a phone speaker.",
+   "text": "Stay... <short pause> stay... <long pause> If it goes... heavy one first... <short pause> then the apple..."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP04 drop drop"
+ }
+}

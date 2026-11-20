@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing PEEK, a tiny pink cartoon alien spy in an animated comedy short. Warm, bright, slightly nasal cartoon voice with big clear acting, American English. He is secretly filing a field report to his Commander over the radio, hiding on top of a tall shelf in a closed superstore at night, among boxes of pillows. Dry, deadpan and a little smug, like a tiny detective narrating; brisk, clear, no dead air; every joke is delivered completely straight and he never laughs. Slightly hushed, as if he might be overheard.",
+   "text": "Commander. Field report number four. <short pause> I ran an experiment. By accident. Right above an agent. <short pause> Remember report one: the heavier the thing, the harder the pull. The ball is forty times heavier than the apple, so their planet pulls on it forty times harder. <short pause> Theory: the harder pull wins. The ball lands first. <short pause> Wrong. They landed together. One bang. Because the ball is also forty times harder to get moving. <short pause> Same push on two shopping carts: the empty one rolls away, the full one barely moves. <short pause> More pull, but more stuff to move. It evens out. Everything speeds up the same: twenty-two miles an hour faster, every second. <short pause> Except..."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP04 drop reportA2"
+ }
+}

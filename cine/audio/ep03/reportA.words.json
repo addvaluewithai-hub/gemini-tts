@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-19T05:42:12.280Z",
+  "duration_ms": 29160,
+  "word_count": 70,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Commander, field report number three. Good news, I floated. Bad news, for 2 seconds. Theory, the higher you go the weaker their pull. Up where their astronauts live, it is switched off, zero gravity. I checked. Wrong. Their station is only 250 mi up and the pull there is about 9/10 of the pull down here, almost the same. So why do they float? Here is the secret. They are",
+  "source_text": "Commander. Field report number three. Good news: I floated. Bad news: for two seconds. Theory: the higher you go, the weaker their pull. Up where their astronauts live, it is switched off. Zero gravity. I checked. Wrong. Their station is only two hundred and fifty miles up. And the pull there is about nine tenths of the pull down here. Almost the same. So why do they float? Here is the secret. They are...",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Commander. Field report number three. Good news: I floated. Bad news: for two seconds. Theory: the higher you go, the weaker their pull. Up where their astronauts live, it is switched off. Zero gravity. I checked. Wrong. Their station is only two hundred and fifty miles up. And the pull there is about nine tenths of the pull down here. Almost the same. So why do they float? Here is the secret. They are..."
+    }
+  ],
+  "agreement": 0.8919,
+  "flagged": false,
+  "missing_words": [
+    "two",
+    "two",
+    "hundred",
+    "and",
+    "fifty",
+    "miles",
+    "nine",
+    "tenths"
+  ],
+  "words": [
+    {
+      "start_ms": 320,
+      "end_ms": 920,
+      "text": "Commander,"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1520,
+      "text": "field"
+    },
+    {
+      "start_ms": 1520,
+      "end_ms": 1880,
+      "text": "report"
+    },
+    {
+      "start_ms": 1880,
+      "end_ms": 2080,
+      "text": "number"
+    },
+    {
+      "start_ms": 2080,
+      "end_ms": 2480,
+      "text": "three."
+    },
+    {
+      "start_ms": 3280,
+      "end_ms": 3440,
+      "text": "Good"
+    },
+    {
+      "start_ms": 3440,
+      "end_ms": 3880,
+      "text": "news,"
+    },
+    {
+      "start_ms": 4120,
+      "end_ms": 4280,
+      "text": "I"
+    },
+    {
+      "start_ms": 4280,
+      "end_ms": 4880,
+      "text": "floated."
+    },
+    {
+      "start_ms": 5240,
+      "end_ms": 5480,
+      "text": "Bad"
+    },
+    {
+      "start_ms": 5480,
+      "end_ms": 5920,
+      "text": "news,"
+    },
+    {
+      "start_ms": 6200,
+      "end_ms": 6400,
+      "text": "for"
+    },
+    {
+      "start_ms": 6400,
+      "end_ms": 6640,
+      "text": "2"
+    },
+    {
+      "start_ms": 6640,
+      "end_ms": 7240,
+      "text": "seconds."
+    },
+    {
+      "start_ms": 8120,
+      "end_ms": 8560,
+      "text": "Theory,"
+    },
+    {
+      "start_ms": 8880,
+      "end_ms": 9000,
+      "text": "the"
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9320,
+      "text": "higher"
+    },
+    {
+      "start_ms": 9320,
+      "end_ms": 9480,
+      "text": "you"
+    },
+    {
+      "start_ms": 9480,
+      "end_ms": 9800,
+      "text": "go"
+    },
+    {
+      "start_ms": 9840,
+      "end_ms": 9960,
+      "text": "the"
+    },
+    {
+      "start_ms": 9960,
+      "end_ms": 10240,
+      "text": "weaker"
+    },
+    {
+      "start_ms": 10240,
+      "end_ms": 10400,
+      "text": "their"
+    },
+    {
+      "start_ms": 10400,
+      "end_ms": 10760,
+      "text": "pull."
+    },
+    {
+      "start_ms": 11240,
+      "end_ms": 11400,
+      "text": "Up"
+    },
+    {
+      "start_ms": 11400,
+      "end_ms": 11520,
+      "text": "where"
+    },
+    {
+      "start_ms": 11520,
+      "end_ms": 11680,
+      "text": "their"
+    },
+    {
+      "start_ms": 11680,
+      "end_ms": 12280,
+      "text": "astronauts"
+    },
+    {
+      "start_ms": 12280,
+      "end_ms": 12640,
+      "text": "live,"
+    },
+    {
+      "start_ms": 12680,
+      "end_ms": 12880,
+      "text": "it"
+    },
+    {
+      "start_ms": 12880,
+      "end_ms": 13080,
+      "text": "is"
+    },
+    {
+      "start_ms": 13080,
+      "end_ms": 13520,
+      "text": "switched"
+    },
+    {
+      "start_ms": 13520,
+      "end_ms": 13880,
+      "text": "off,"
+    },
+    {
+      "start_ms": 14000,
+      "end_ms": 14400,
+      "text": "zero"
+    },
+    {
+      "start_ms": 14400,
+      "end_ms": 14960,
+      "text": "gravity."
+    },
+    {
+      "start_ms": 15520,
+      "end_ms": 15680,
+      "text": "I"
+    },
+    {
+      "start_ms": 15680,
+      "end_ms": 16160,
+      "text": "checked."
+    },
+    {
+      "start_ms": 16800,
+      "end_ms": 17320,
+      "text": "Wrong."
+    },
+    {
+      "start_ms": 17840,
+      "end_ms": 18040,
+      "text": "Their"
+    },
+    {
+      "start_ms": 18040,
+      "end_ms": 18400,
+      "text": "station"
+    },
+    {
+      "start_ms": 18400,
+      "end_ms": 18520,
+      "text": "is"
+    },
+    {
+      "start_ms": 18520,
+      "end_ms": 18800,
+      "text": "only"
+    },
+    {
+      "start_ms": 18800,
+      "end_ms": 19800,
+      "text": "250"
+    },
+    {
+      "start_ms": 19800,
+      "end_ms": 20120,
+      "text": "mi"
+    },
+    {
+      "start_ms": 20120,
+      "end_ms": 20520,
+      "text": "up"
+    },
+    {
+      "start_ms": 20800,
+      "end_ms": 20920,
+      "text": "and"
+    },
+    {
+      "start_ms": 20920,
+      "end_ms": 21000,
+      "text": "the"
+    },
+    {
+      "start_ms": 21000,
+      "end_ms": 21240,
+      "text": "pull"
+    },
+    {
+      "start_ms": 21240,
+      "end_ms": 21440,
+      "text": "there"
+    },
+    {
+      "start_ms": 21440,
+      "end_ms": 21560,
+      "text": "is"
+    },
+    {
+      "start_ms": 21560,
+      "end_ms": 21840,
+      "text": "about"
+    },
+    {
+      "start_ms": 21840,
+      "end_ms": 22480,
+      "text": "9/10"
+    },
+    {
+      "start_ms": 22480,
+      "end_ms": 22560,
+      "text": "of"
+    },
+    {
+      "start_ms": 22560,
+      "end_ms": 22640,
+      "text": "the"
+    },
+    {
+      "start_ms": 22640,
+      "end_ms": 22840,
+      "text": "pull"
+    },
+    {
+      "start_ms": 22840,
+      "end_ms": 23080,
+      "text": "down"
+    },
+    {
+      "start_ms": 23080,
+      "end_ms": 23400,
+      "text": "here,"
+    },
+    {
+      "start_ms": 23480,
+      "end_ms": 23800,
+      "text": "almost"
+    },
+    {
+      "start_ms": 23800,
+      "end_ms": 23880,
+      "text": "the"
+    },
+    {
+      "start_ms": 23880,
+      "end_ms": 24320,
+      "text": "same."
+    },
+    {
+      "start_ms": 25000,
+      "end_ms": 25240,
+      "text": "So"
+    },
+    {
+      "start_ms": 25240,
+      "end_ms": 25480,
+      "text": "why"
+    },
+    {
+      "start_ms": 25480,
+      "end_ms": 25600,
+      "text": "do"
+    },
+    {
+      "start_ms": 25600,
+      "end_ms": 25720,
+      "text": "they"
+    },
+    {
+      "start_ms": 25720,
+      "end_ms": 26240,
+      "text": "float?"
+    },
+    {
+      "start_ms": 26600,
+      "end_ms": 27080,
+      "text": "Here"
+    },
+    {
+      "start_ms": 27120,
+      "end_ms": 27280,
+      "text": "is"
+    },
+    {
+      "start_ms": 27280,
+      "end_ms": 27360,
+      "text": "the"
+    },
+    {
+      "start_ms": 27360,
+      "end_ms": 27960,
+      "text": "secret."
+    },
+    {
+      "start_ms": 28400,
+      "end_ms": 28600,
+      "text": "They"
+    },
+    {
+      "start_ms": 28600,
+      "end_ms": 28960,
+      "text": "are"
+    }
+  ]
+}

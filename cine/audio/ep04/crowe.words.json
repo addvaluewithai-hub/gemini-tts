@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-19T07:50:08.368Z",
+  "duration_ms": 8600,
+  "word_count": 7,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Attention shoppers, have you seen this peak?",
+  "source_text": "Attention, shoppers. Have you seen... this? ...Peek.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Attention, shoppers. Have you seen... this? ...Peek."
+    }
+  ],
+  "agreement": 0.8571,
+  "flagged": false,
+  "missing_words": [
+    "...Peek."
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 1400,
+      "text": "Attention"
+    },
+    {
+      "start_ms": 1400,
+      "end_ms": 2600,
+      "text": "shoppers,"
+    },
+    {
+      "start_ms": 3240,
+      "end_ms": 3440,
+      "text": "have"
+    },
+    {
+      "start_ms": 3440,
+      "end_ms": 3680,
+      "text": "you"
+    },
+    {
+      "start_ms": 3680,
+      "end_ms": 4520,
+      "text": "seen"
+    },
+    {
+      "start_ms": 5040,
+      "end_ms": 5920,
+      "text": "this"
+    },
+    {
+      "start_ms": 7400,
+      "end_ms": 8360,
+      "text": "peak?"
+    }
+  ]
+}

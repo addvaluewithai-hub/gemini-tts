@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-19T05:42:10.691Z",
+  "duration_ms": 10880,
+  "word_count": 10,
+  "diarization": false,
+  "language_codes": [
+    "en-US"
+  ],
+  "recognized_text": "Not you. Not you. You. These teeth are sewn on.",
+  "source_text": "Not you. Not you. ...You. These teeth... are sewn on.",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "Not you. Not you. ...You. These teeth... are sewn on."
+    }
+  ],
+  "agreement": 1,
+  "flagged": false,
+  "missing_words": [],
+  "words": [
+    {
+      "start_ms": 240,
+      "end_ms": 960,
+      "text": "Not"
+    },
+    {
+      "start_ms": 960,
+      "end_ms": 1680,
+      "text": "you."
+    },
+    {
+      "start_ms": 2680,
+      "end_ms": 3320,
+      "text": "Not"
+    },
+    {
+      "start_ms": 3320,
+      "end_ms": 4160,
+      "text": "you."
+    },
+    {
+      "start_ms": 5360,
+      "end_ms": 6280,
+      "text": "You."
+    },
+    {
+      "start_ms": 7520,
+      "end_ms": 7920,
+      "text": "These"
+    },
+    {
+      "start_ms": 7920,
+      "end_ms": 8600,
+      "text": "teeth"
+    },
+    {
+      "start_ms": 9000,
+      "end_ms": 9160,
+      "text": "are"
+    },
+    {
+      "start_ms": 9160,
+      "end_ms": 9880,
+      "text": "sewn"
+    },
+    {
+      "start_ms": 9960,
+      "end_ms": 10640,
+      "text": "on."
+    }
+  ]
+}

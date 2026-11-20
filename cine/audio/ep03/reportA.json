@@ -1,0 +1,23 @@
+{
+ "turns": [
+  {
+   "style": "You are voicing PEEK, a tiny pink cartoon alien spy in an animated comedy short. Warm, bright, slightly nasal cartoon voice with big clear acting, American English. He is secretly filing a field report to his Commander over the radio, hiding on the top shelf of a prize stall at a night fair, among the plush toys. Dry, deadpan and a little smug, like a tiny detective narrating; brisk, clear, no dead air; every joke is delivered completely straight and he never laughs. Slightly hushed, as if he might be overheard.",
+   "text": "Commander. Field report number three. <short pause> Good news: I floated. Bad news: for two seconds. <short pause> Theory: the higher you go, the weaker their pull. Up where their astronauts live, it is switched off. Zero gravity. <short pause> I checked. Wrong. Their station is only two hundred and fifty miles up. And the pull there is about nine tenths of the pull down here. Almost the same. <short pause> So why do they float? Here is the secret. They are..."
+  }
+ ],
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": false
+ },
+ "metadata": {
+  "channel": "peek-en",
+  "title": "EP03 float reportA"
+ }
+}
