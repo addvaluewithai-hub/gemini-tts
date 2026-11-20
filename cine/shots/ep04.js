@@ -152,12 +152,28 @@ function strip(t, env, face = TALK, gesture = null, g = 0, hidden = 0) {
   let e = hidden ? { ...F("worried", { lid: 0.15, browTilt: 0.6, sweat: 0.6 }), look: dart, lookY: -0.2, lid: Math.max(0.15, blinks(t, 3.1)) } : { ...face, lid: Math.max(face.lid, blinks(t, 2.9)), look: face.look ?? 0.55, lookY: face.lookY ?? -0.6 };
   e = ants(speak(e, env, t), hidden ? -24 : Math.sin(t * 2) * 3, hidden ? -24 : Math.sin(t * 2 + 1) * 3);
   g *= 1 - hidden;
-  const arms = hidden ? { armL: { x: 420, y: 700, front: true }, armR: { x: 780, y: 700, front: true } }
+  let arms = hidden ? { armL: { x: 420, y: 700, front: true }, armR: { x: 780, y: 700, front: true } }
     : gesture === "point" ? { armR: { x: lerp(770, 900, g), y: lerp(770, 470, g) + Math.sin(t * 5) * 6 } } : {};
+  if (!hidden && env) { const a = actA(t, env.beats); if (a) { arms = a.arms; if (a.face) e = { ...e, ...a.face, m: e.m }; } }
   const sh = `<rect x="0" y="1740" width="${W}" height="200" fill="#2f5fb8"/><rect x="0" y="1740" width="${W}" height="12" fill="#5a8ae0"/>`;
   const boxes = ST.box(-20, 1742, 250, 300, "PILLOWS") + ST.box(560, 1742, 330, 240, "DUVETS");
   const pk = peek(e, { filter: pkLight(), turn: hidden ? 0.1 : 0.4, tilt: hidden ? 0 : Math.sin(t * 1.7) * 1.5, bob: hidden ? 0 : Math.sin(t * 3.1) * 3, hatLift: hidden ? 34 : 0, ...arms }, 330, hidden ? 1830 : 1750, 0.62);
   return sh + boxes + pk + (hidden ? ST.box(140, 1742, 400, 150, "PILLOWS", "#c49468") : "");
+}
+// a small piece of acting on each idea of report A, so his pose never holds much more than six seconds
+function actA(t, b) {
+  const on = (a, z) => t >= a && t < z, w = (a, z) => pulse(t, a, z, 0.18);
+  if (on(b.remember - 0.1, b.ball40 - 0.2)) { const k = w(b.remember - 0.1, b.ball40 - 0.2); return { arms: { armR: { x: lerp(770, 690, k), y: lerp(770, 330, k), front: true } }, face: { look: 0.3, lookY: -0.8 } }; }   // a finger to his temple
+  if (on(b.theory - 0.1, b.wrong - 0.05)) { const k = w(b.theory - 0.1, b.wrong - 0.05); return { arms: { armL: { x: lerp(430, 700, k), y: 720, front: true }, armR: { x: lerp(770, 500, k), y: 740, front: true } } }; }   // arms folded, smug
+  if (on(b.wrong - 0.05, b.wrong + 1.1)) { const k = w(b.wrong - 0.05, b.wrong + 1.1); return { arms: { armR: { x: lerp(770, 640, k), y: lerp(770, 430, k), front: true } }, face: { lid: lerp(0.3, 0.85, k) } }; }   // a face-palm
+  if (on(b.carts - 0.1, b.stuff - 0.2)) { const k = w(b.carts - 0.1, b.stuff - 0.2), p = Math.max(0, Math.sin((t - b.carts) * 4)) * 60;   // a two-handed push, twice
+    return { arms: { armL: { x: lerp(430, 380, k) - p * k, y: lerp(770, 600, k), front: true }, armR: { x: lerp(770, 820, k) + p * k * 0.2, y: lerp(770, 600, k), front: true } } }; }
+  if (on(b.evens - 0.15, b.speeds - 0.15)) { const k = w(b.evens - 0.15, b.speeds - 0.15), s = Math.sin((t - b.evens) * 5) * 60 * k;   // a balancing shrug: the two hands like scale pans
+    return { arms: { armL: { x: lerp(430, 250, k), y: lerp(770, 560, k) + s, front: false }, armR: { x: lerp(770, 950, k), y: lerp(770, 560, k) - s, front: false } } }; }
+  if (on(b.speeds - 0.1, b.except - 0.15)) { const k = w(b.speeds - 0.1, b.except - 0.15), tap = Math.max(0, Math.sin((t - b.mph) * Math.PI * 1.6)) * 50;   // pointing down at the tags, tapping each second
+    return { arms: { armR: { x: lerp(770, 900, k), y: lerp(770, 880, k) + tap * k } }, face: { lookY: 0.4 } }; }
+  if (t >= b.except - 0.15) { const k = ease(seg(t, b.except - 0.15, b.except + 0.1)); return { arms: { armR: { x: lerp(770, 830, k), y: lerp(770, 250, k), front: true } }, face: { browL: 0.6, browR: 0.6 } }; }   // one finger up: "Except..."
+  return null;
 }
 function boardFrame(t, env, t0, inner, face, gesture, g, hidden = 0) {
   const age = t - t0, slide = (1 - easeOut(clamp(age / 0.22))) * 260, drift = 1 + 0.03 * clamp(age / 4);
