@@ -1,0 +1,825 @@
+{
+ "title": "تقرير الأرض: الكهربا 2 (world picture)",
+ "recorded_for": "2026-11-15",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture, as explain-electricity-01-world. Script: ../explain-electricity-02-ar/script.md (four-part file, part 2 of 4). Facts: ../explain-electricity-01-ar/plan.md."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "3 / 4",
+   "icons": [
+    "bolt",
+    "tower",
+    "shield"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "boards": {
+  "e2intro": {
+   "kind": "e2intro",
+   "ends": [
+    9.31,
+    8.15,
+    7.47
+   ]
+  },
+  "faraday": {
+   "kind": "faraday",
+   "ends": [
+    7.75,
+    7.34,
+    7.25,
+    8.2,
+    4.44,
+    6.06
+   ]
+  },
+  "steam": {
+   "kind": "steam",
+   "ends": [
+    4.41,
+    4.47,
+    5.39,
+    4.18,
+    3.79
+   ]
+  },
+  "sources": {
+   "kind": "sources",
+   "ends": [
+    6,
+    2.69,
+    3.24,
+    6.76
+   ]
+  },
+  "mix": {
+   "kind": "mix",
+   "ends": [
+    8.15,
+    6.42,
+    3.95
+   ]
+  },
+  "trip": {
+   "kind": "trip",
+   "ends": [
+    7.19,
+    7.04,
+    9.65,
+    5.39,
+    6.92,
+    6.39,
+    6.34,
+    5.66,
+    5.46,
+    10.52,
+    10.89
+   ]
+  },
+  "bird": {
+   "kind": "bird",
+   "ends": [
+    5.26,
+    8.66,
+    8.62,
+    6.66
+   ]
+  },
+  "balance": {
+   "kind": "balance",
+   "ends": [
+    7.54,
+    7.39,
+    9.76,
+    9.06,
+    8.55,
+    6.56,
+    4.91,
+    6.06,
+    3.85,
+    5.52,
+    7.46
+   ]
+  },
+  "grid": {
+   "kind": "grid",
+   "ends": [
+    6.65,
+    5.66,
+    11.37,
+    9.03,
+    10.07,
+    11.38,
+    8.48
+   ]
+  },
+  "peak": {
+   "kind": "peak",
+   "ends": [
+    8.08,
+    7.18,
+    9.46,
+    6.44
+   ]
+  },
+  "e2dict": {
+   "kind": "e2dict",
+   "ends": [
+    4.07,
+    4.71
+   ]
+  },
+  "e2recap": {
+   "kind": "e2recap",
+   "ends": [
+    14.56
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "style": "Opening of a field report. He states the subject at once, crisp and quick, then a hook.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم اتنين في ملف الكهربا.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "موضوع النهارده: الكهربا بتتعمل فين.. وبتوصل البيت إزاي. في التقرير اللي فات عرفنا إن الكهربا شحنات ماشية في سلك. النهارده: مين اللي بيمشّيها؟ ومنين؟",
+     "show": "board",
+     "board": "e2intro",
+     "step": 0
+    },
+    {
+     "say": "وأغرب حاجة رصدتها: الكهربا اللي منوّرة لمبتهم دلوقتي.. اتعملت من أقل من ثانية. مفيش مخزن. اللي بيتعمل بيتستهلك في لحظتها.",
+     "show": "board",
+     "board": "e2intro",
+     "step": 1
+    },
+    {
+     "say": "يعني مليارات البشر، كل واحد بيدوس زرار على مزاجه.. وحد لازم يطلّع له اللي طلبه في نفس اللحظة. بالظبط. لا أكتر ولا أقل.",
+     "show": "board",
+     "board": "e2intro",
+     "step": 2,
+     "host": "right",
+     "emote": "skeptical"
+    }
+   ]
+  },
+  {
+   "id": "magnet",
+   "style": "One simple discovery, shown step by step, with affection for the man who made it.",
+   "beats": [
+    {
+     "say": "سنة ألف تمنمية واحد وتلاتين، واحد إنجليزي اسمه Faraday اكتشف حاجة بسيطة: حرّك مغناطيس جنب سلك.. الإلكترونات اللي في السلك تتحرك.",
+     "show": "board",
+     "board": "faraday",
+     "step": 0
+    },
+    {
+     "say": "لفّ المغناطيس جوّه ملف سلك، وهيفضل يزقّ الإلكترونات. رايح.. جاي. ده المولّد. وطبيعي إن اللي بيطلع منه تيار متردد.",
+     "show": "board",
+     "board": "faraday",
+     "step": 1
+    },
+    {
+     "say": "والموتور هو نفس الجهاز بالعكس: تدّيله كهربا.. يلفّ. المروحة، والغسالة، والعربية الكهربا: كلها مولّدات ماشية بالمقلوب.",
+     "show": "board",
+     "board": "faraday",
+     "step": 2,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "و Faraday ده كان ابن حدّاد، وماكملش تعليمه. اشتغل صبي في ورشة تجليد كتب.. وكان بيقرا اللي بيجلّده.",
+     "show": "board",
+     "board": "faraday",
+     "step": 3
+    },
+    {
+     "say": "أهم اختراع عندهم طلع من واحد بيقرا في وقت الشغل.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "وفاضل سؤال واحد: مين اللي هيلفّ المغناطيس؟ بيركّبوه على مروحة ضخمة اسمها توربينة.",
+     "show": "board",
+     "board": "faraday",
+     "step": 4
+    },
+    {
+     "say": "ومن ساعة Faraday لحد النهارده، أغلب كهربا الكوكب بتتعمل بنفس الحركة دي. اللي بيتغير بس: إيه اللي بيلفّ التوربينة.",
+     "show": "board",
+     "board": "faraday",
+     "step": 5,
+     "host": "left",
+     "emote": "neutral"
+    }
+   ],
+   "story": {
+    "n": 1,
+    "tag": "MAGNET",
+    "icon": "gear"
+   }
+  },
+  {
+   "id": "turn",
+   "style": "A tour of power stations by someone who finds them all suspiciously similar.",
+   "beats": [
+    {
+     "say": "وأشهر طريقة عندهم: يغلوا مية. يحرقوا فحم أو غاز تحت غلاية قد العمارة.",
+     "show": "board",
+     "board": "steam",
+     "step": 0
+    },
+    {
+     "say": "البخار يطلع بضغط عالي، ويلفّ التوربينة. والتوربينة تلفّ المولّد. وتطلع كهربا.",
+     "show": "board",
+     "board": "steam",
+     "step": 1
+    },
+    {
+     "say": "والمحطة النووية يا فندم؟ أعقد حاجة بنوها في تاريخهم. بيشقّوا الذرّة نفسها. علشان يغلوا مية.",
+     "show": "board",
+     "board": "steam",
+     "step": 2,
+     "host": "right",
+     "emote": "skeptical"
+    },
+    {
+     "say": "وحتة وقود نووي قد عقلة الصباع، فيها طاقة قد طن فحم تقريباً.",
+     "show": "board",
+     "board": "steam",
+     "step": 3
+    },
+    {
+     "say": "وفي بلاد فيها براكين، بياخدوا البخار جاهز من باطن الأرض. برضه بخار.",
+     "show": "board",
+     "board": "steam",
+     "step": 4
+    },
+    {
+     "say": "الكوكب ده مدمن غلايات.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "يعني النوع الأول بخار: فحم، أو غاز، أو نووي. التاني المية نفسها: سد عالي، والمية تنزل على التوربينة.",
+     "show": "board",
+     "board": "sources",
+     "step": 0
+    },
+    {
+     "say": "وأكبر محطة كهربا على الكوكب.. سد في الصين.",
+     "show": "board",
+     "board": "sources",
+     "step": 1
+    },
+    {
+     "say": "التالت الهوا: مراوح الرياح. الهوا بيلفّها على طول.",
+     "show": "board",
+     "board": "sources",
+     "step": 2
+    },
+    {
+     "say": "والاستثناء الوحيد: اللوح الشمسي. مفيش حاجة بتلفّ خالص. الضوء نفسه بيخبط في الإلكترونات ويمشّيها. وبيطلّع تيار مستمر.",
+     "show": "board",
+     "board": "sources",
+     "step": 3,
+     "host": "right",
+     "emote": "proud"
+    },
+    {
+     "say": "ودي حصة كل واحد في كهربا الكوكب سنة ألفين خمسة وعشرين. الفحم لسه الأول: التلت. بعده الغاز. وبعدين السدود، والنووي، والشمس، والرياح.",
+     "show": "board",
+     "board": "mix",
+     "step": 0
+    },
+    {
+     "say": "بس في السنة دي حصل حاجة لأول مرة من مية سنة: المصادر المتجددة كلها مع بعض.. عدّت الفحم. بشعرة.",
+     "show": "board",
+     "board": "mix",
+     "step": 1
+    },
+    {
+     "say": "والشمس لوحدها كانت من عشر سنين حوالي واحد في المية. بقت قرب تسعة.",
+     "show": "board",
+     "board": "mix",
+     "step": 2
+    },
+    {
+     "say": "أسرع حاجة بتكبر عندهم.. هي الوحيدة اللي مابتلفّش.",
+     "shot": "close",
+     "emote": "smug"
+    }
+   ],
+   "story": {
+    "n": 2,
+    "tag": "WHO TURNS IT",
+    "icon": "cloud"
+   }
+  },
+  {
+   "id": "trip",
+   "style": "Following the electricity like a courier tracking a parcel, then explaining the one clever trick.",
+   "beats": [
+    {
+     "say": "نمشي بقى ورا الكهربا. المولّد بيطلّعها بحوالي عشرين ألف فولت. أول محطة في الطريق: محوّل يرفع الضغط لمئات الآلاف.",
+     "show": "board",
+     "board": "trip",
+     "step": 0
+    },
+    {
+     "say": "والمحوّل ده مفيهوش حاجة بتتحرك. ملفّين سلك حوالين حتة حديد. اللفّات في ناحية أكتر من التانية.. فالضغط يطلع من الناحية دي أعلى. بس كده.",
+     "show": "board",
+     "board": "trip",
+     "step": 1
+    },
+    {
+     "say": "وتسافر على الأبراج العالية. مئات الكيلوهات. قرب المدينة، محوّل تاني ينزّل الضغط. وبعده محوّلات أصغر في الشوارع. لحد ما تدخل البيت بمية وعشرة أو ميتين وأربعين فولت. حسب البلد.",
+     "show": "board",
+     "board": "trip",
+     "step": 2
+    },
+    {
+     "say": "والبشر اتفقوا على الفولت والأمبير والأوم. بس شكل الفيشة نفسها؟ عندهم حوالي خمستاشر نوع.",
+     "show": "board",
+     "board": "trip",
+     "step": 3
+    },
+    {
+     "say": "كل مسافر فيهم شايل في شنطته حتة بلاستيك.. شغلتها تصالح بلدين.",
+     "show": "board",
+     "board": "trip",
+     "step": 4,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "والرحلة دي كلها بتاخد أقل من رمشة عين. الحاجة الوحيدة عندهم اللي بتوصل في ميعادها.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "طيب ليه يرفعوا الضغط وبعدين ينزّلوه؟ لأن السلك بيسخن من التيار. كل ما التيار أكبر، كهربا أكتر تضيع حرارة في السكة.",
+     "show": "board",
+     "board": "trip",
+     "step": 5
+    },
+    {
+     "say": "ونفس الشغل ممكن يتبعت بطريقتين: ضغط واطي وتيار كبير.. أو ضغط عالي وتيار صغير. والتانية بتضيّع أقل بكتير.",
+     "show": "board",
+     "board": "trip",
+     "step": 6
+    },
+    {
+     "say": "زي ما تنقل ألف راكب. ألف عربية صغيرة تزحم الطريق وتحرق بنزين. أو قطر واحد سريع. الضغط العالي هو القطر.",
+     "show": "board",
+     "board": "trip",
+     "step": 7
+    },
+    {
+     "say": "والمحوّل اللي بيرفع وينزّل ده، مابيشتغلش غير بالتيار المتردد. وده السبب الحقيقي إن Tesla كسب Edison.",
+     "show": "board",
+     "board": "trip",
+     "step": 8,
+     "host": "left",
+     "emote": "proud"
+    },
+    {
+     "say": "ومع كل ده، حتة بتضيع في الطريق. في أمريكا مثلاً: حوالي خمسة في المية. وفي البلاد اللي شبكاتها قديمة أو ضعيفة، الرقم أكبر بكتير. وجزء من اللي بيضيع هناك مابيضيعش.. بيتسرق.",
+     "show": "board",
+     "board": "trip",
+     "step": 9
+    },
+    {
+     "say": "وتنبيه للقيادة: أسلاك الضغط العالي دي عريانة، من غير جاكتة. الهوا هو اللي عازلها. واللي يقرّب منها، حتى من غير ما يلمس، الكهربا ممكن تنطّ له. البشر بيعلّقوا عليها جمجمة. ومعاهم حق.",
+     "show": "board",
+     "board": "trip",
+     "step": 10,
+     "host": "right",
+     "emote": "serious",
+     "calm": true
+    }
+   ],
+   "story": {
+    "n": 3,
+    "tag": "THE TRIP",
+    "icon": "tower"
+   }
+  },
+  {
+   "id": "bird",
+   "style": "Answering a child's question properly, ending seriously.",
+   "beats": [
+    {
+     "say": "وسؤال سمعت أطفالهم بيسألوه: العصفور اللي واقف على السلك العريان ده.. ليه مابيتكهربش؟",
+     "show": "board",
+     "board": "bird",
+     "step": 0
+    },
+    {
+     "say": "لأن رجليه الاتنين على نفس السلك. الكهربا بتمشي لما يبقى فيه فرق في الضغط بين نقطتين. ورجليه الاتنين على نفس الضغط. فمفيش تيار يعدّي فيه.",
+     "show": "board",
+     "board": "bird",
+     "step": 1
+    },
+    {
+     "say": "لكن لو لمس سلك تاني، أو حاجة واصلة بالأرض، في نفس اللحظة.. بقى هو الطريق.",
+     "show": "board",
+     "board": "bird",
+     "step": 2,
+     "calm": true
+    },
+    {
+     "say": "والإنسان واقف على الأرض طول الوقت. علشان كده القاعدة دي للعصافير بس.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "وعلشان كده برضه الأبراج عالية قوي، والأسلاك متعلّقة بعيد عن بعض وعن أي حاجة. المسافة نفسها هي العازل.",
+     "show": "board",
+     "board": "bird",
+     "step": 3
+    }
+   ],
+   "story": {
+    "n": 4,
+    "tag": "THE BIRD",
+    "icon": "eye"
+   }
+  },
+  {
+   "id": "balance",
+   "style": "The central idea of the report: a balance kept every second. Clear, a little awed, then a funny true story.",
+   "beats": [
+    {
+     "say": "نرجع للمشكلة الكبيرة. الكهربا مابتتخزنش في الشبكة. فاللي المحطات بتطلّعه لازم يساوي اللي الناس بتسحبه. كل ثانية.",
+     "show": "board",
+     "board": "balance",
+     "step": 0
+    },
+    {
+     "say": "وعندهم رقم واحد بيقول الميزان مظبوط ولا لأ: التردد. عدد لفّات المولّدات في الثانية. خمسين في أغلب الكوكب، وستين في أمريكا الشمالية.",
+     "show": "board",
+     "board": "balance",
+     "step": 1
+    },
+    {
+     "say": "الناس سحبت أكتر من اللي بيتعمل؟ المولّدات تتقل عليها، فتبطّأ. والرقم ينزل. فغرفة التحكم تأمر محطة تزوّد. والرقم يرجع. ده بيحصل طول اليوم، من غير ما حد يحس.",
+     "show": "board",
+     "board": "balance",
+     "step": 2
+    },
+    {
+     "say": "وفي كل شبكة أوضة تحكم، فيها ناس قاعدين قدام شاشات أربعة وعشرين ساعة. شغلتهم كلها إن الرقم ده يفضل خمسين.",
+     "show": "board",
+     "board": "balance",
+     "step": 3,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "أهم موظفين على الكوكب.. ومحدش يعرف أساميهم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "والمولّدات نفسها بتساعد. كل واحد فيهم مئات الأطنان من الحديد بتلفّ. فلو حصلت مشكلة، تُقلها بيفضل يلفّ كام ثانية.. وبيدّي الشبكة وقت تتصرف.",
+     "show": "board",
+     "board": "balance",
+     "step": 4
+    },
+    {
+     "say": "ولو محطة كبيرة وقعت فجأة، والرقم نزل بسرعة؟ الشبكة بتفصل أحياء كاملة لوحدها. تضحّي بجزء.. علشان الكل مايقعش.",
+     "show": "board",
+     "board": "balance",
+     "step": 5
+    },
+    {
+     "say": "يعني حضارتهم كلها واقفة على رقم واحد. ولازم يفضل خمسين. مش تسعة وأربعين.",
+     "show": "board",
+     "board": "balance",
+     "step": 6,
+     "host": "left",
+     "emote": "serious"
+    },
+    {
+     "say": "وده بيعمل مواقف غريبة. سنة ألف تسعمية وتسعين، إنجلترا بتلعب مع ألمانيا في نص نهائي كاس العالم. ووصلوا لضربات الجزاء.",
+     "show": "board",
+     "board": "balance",
+     "step": 7
+    },
+    {
+     "say": "الماتش خلص.. والبلد كلها قامت في نفس اللحظة تشغّل الغلاية وتعمل شاي.",
+     "show": "board",
+     "board": "balance",
+     "step": 8
+    },
+    {
+     "say": "الطلب نطّ ألفين وتمنمية ميجاوات في دقايق. قد محطتين كبار. ولسه رقم قياسي عندهم.",
+     "show": "board",
+     "board": "balance",
+     "step": 9
+    },
+    {
+     "say": "ومن زمان مهندسين الشبكة هناك بيذاكروا جدول التليفزيون. عارفين المسلسل هيخلص إمتى، ومجهّزين محطة تدخل في الثانية دي.",
+     "show": "board",
+     "board": "balance",
+     "step": 10,
+     "host": "right",
+     "emote": "smug"
+    },
+    {
+     "say": "إنجلترا خسرت الماتش. بس الشبكة كسبت.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ],
+   "story": {
+    "n": 5,
+    "tag": "BALANCE",
+    "icon": "chartdown"
+   }
+  },
+  {
+   "id": "one",
+   "style": "Zooming out to a continent; two true stories about what being connected, or not, costs.",
+   "beats": [
+    {
+     "say": "والشبكات كبرت واتوصّلت ببعض. أوروبا مثلاً: شبكة واحدة من البرتغال لتركيا. أكتر من ربعمية مليون إنسان.",
+     "show": "board",
+     "board": "grid",
+     "step": 0
+    },
+    {
+     "say": "وكل المولّدات فيها بتلفّ مع بعض. نفس السرعة، في نفس اللحظة. آلاف المكن.. كأنها مكنة واحدة.",
+     "show": "board",
+     "board": "grid",
+     "step": 1
+    },
+    {
+     "say": "وده بيخليها أقوى: محطة تقع في بلد، الجيران يشيلوا مكانها. وبيخلّي مشاكل الجيران.. مشاكلك. وبيبيعوا ويشتروا كهربا من بعض كل ساعة. بلد عندها رياح كتير النهارده تبيع لجارتها.. وبكرة تشتري منها.",
+     "show": "board",
+     "board": "grid",
+     "step": 2,
+     "host": "right",
+     "emote": "neutral"
+    },
+    {
+     "say": "سنة ألفين وتمنتاشر، Kosovo و Serbia اختلفوا مين فيهم يعوّض كهربا ناقصة. فالشبكة كلها بقت تلفّ أبطأ شعرة. بدل خمسين: تسعة وأربعين وتسعمية ستة وتسعين من ألف.",
+     "show": "board",
+     "board": "grid",
+     "step": 3
+    },
+    {
+     "say": "وساعات الأفران والمنبّهات، اللي بتعدّ الوقت من نبض الشبكة، أخّرت ست دقايق. في خمسة وعشرين دولة.",
+     "show": "board",
+     "board": "grid",
+     "step": 4
+    },
+    {
+     "say": "خلاف بين اتنين.. خلّى قارة كاملة تتأخر على الشغل. وأخيراً بقى عندهم عذر علمي.",
+     "shot": "close",
+     "emote": "smug"
+    },
+    {
+     "say": "وعكس كده اليابان. سنة ألف تمنمية خمسة وتسعين، Tokyo اشترت مولّدات ألماني بتلفّ خمسين. والسنة اللي بعدها، Osaka اشترت أمريكاني بتلفّ ستين. ولحد النهارده البلد نصين. مابيتوصّلوش غير بمحطات تحويل خاصة.",
+     "show": "board",
+     "board": "grid",
+     "step": 5
+    },
+    {
+     "say": "وسنة ألفين وحداشر، بعد الزلزال الكبير، الشرق كان محتاج كهربا والغرب عنده زيادة. واللي قدر يعدّي من الوصلة كان حتة صغيرة. والنور فضل يقطع بالدور عن Tokyo.",
+     "show": "board",
+     "board": "grid",
+     "step": 6,
+     "calm": true
+    },
+    {
+     "say": "قرار شرا عمره أكتر من مية سنة.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ],
+   "story": {
+    "n": 6,
+    "tag": "ONE MACHINE",
+    "icon": "node"
+   }
+  },
+  {
+   "id": "peak",
+   "style": "Brisk, practical, slightly bored.",
+   "beats": [
+    {
+     "say": "والطلب نفسه بيتغير على مدار اليوم. واطي في الفجر، يعلى الصبح، وأعلى حاجة بعد المغرب.. لما الكل يرجع البيت ويشغّل كل حاجة.",
+     "show": "board",
+     "board": "peak",
+     "step": 0
+    },
+    {
+     "say": "فعندهم محطات شغالة طول الوقت، ومحطات تانية قاعدة مطفية وتشتغل ساعتين في اليوم بس. للذروة. وكهربتها أغلى كهربا.",
+     "show": "board",
+     "board": "peak",
+     "step": 1
+    },
+    {
+     "say": "وأعلى ذروة في السنة بتيجي مع موجة حر، لما كل التكييفات تشتغل مع بعض. أو موجة برد. يعني الشبكة بتتبني على مقاس أسوأ ساعة في السنة.. وباقي الوقت نصها قاعد.",
+     "show": "board",
+     "board": "peak",
+     "step": 2,
+     "host": "right",
+     "emote": "bored"
+    },
+    {
+     "say": "وعلشان كده في بلاد كتير سعر الكهربا بيتغير من ساعة لساعة. والغسالة اللي تشتغل نص الليل.. أرخص من اللي تشتغل المغرب.",
+     "show": "board",
+     "board": "peak",
+     "step": 3
+    }
+   ],
+   "story": {
+    "n": 7,
+    "tag": "PEAK HOUR",
+    "icon": "bolt"
+   }
+  },
+  {
+   "id": "dict",
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "كلمتين من قاموس البشر. Hertz: عدد اللفّات في الثانية. نبض الشبكة.",
+     "show": "board",
+     "board": "e2dict",
+     "step": 0
+    },
+    {
+     "say": "و Megawatt: مليون وات. يشغّل مئات البيوت. أو مخزن كمبيوترات واحد صغير.",
+     "show": "board",
+     "board": "e2dict",
+     "step": 1,
+     "host": "right"
+    }
+   ],
+   "story": {
+    "n": 8,
+    "tag": "WORDS",
+    "icon": "key"
+   }
+  },
+  {
+   "id": "recap",
+   "style": "Summary, one sincere warning, then the sign-off.",
+   "beats": [
+    {
+     "say": "خلاصة التقرير يا فندم. واحد: المولّد مغناطيس بيلفّ، وكل المحطات تقريباً بتدوّر على حاجة تلفّه. اتنين: الضغط بيترفع علشان الكهربا تسافر، وبينزل قبل البيت. تلاتة: اللي بيتعمل لازم يساوي اللي بيتسحب. كل ثانية.",
+     "show": "board",
+     "board": "e2recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "ونفس التنبيه: أي سلك في الشارع، واقع أو متدلدل، محدش منهم يقرّب منه. يبعد.. ويبلّغ.",
+     "shot": "close",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "التقرير الجاي: إيه اللي بيحصل لما الميزان ده يبوظ؟ ليه النور بيقطع، وإزاي شجرة واحدة ضلّمت على خمسين مليون إنسان.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ],
+   "story": {
+    "n": 9,
+    "tag": "RECAP",
+    "icon": "rules"
+   }
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "ليه العصفور مابيتكهربش؟ رحلة الكهربا من المحطة للفيشة | ملف الكهربا 2/4",
+   "الكهربا بتيجي منين؟ وإزاي بتوصل بيتك في رمشة عين | ملف الكهربا 2/4",
+   "ماتش كورة خلّى بلد كاملة محتاجة محطتين كهربا | 2/4"
+  ],
+  "description": [
+   "التقرير التاني من العميل Peek لقيادته في ملف الكهربا: الكهربا بتتعمل فين.. وبتوصل البيت إزاي في نفس اللحظة؟",
+   "",
+   "مغناطيس بيلفّ من أيام Faraday، والمحطات كلها بتدوّر على حاجة تلفّه: بخار أو مية أو هوا، والشمس الاستثناء الوحيد. وبعدين رحلة الكهربا: المحوّل اللي بيرفع الضغط وينزّله، ليه العصفور مابيتكهربش، والميزان اللي لازم يتظبط كل ثانية على رقم واحد. ومعاها ماتش كورة سنة 1990 خلّى إنجلترا محتاجة محطتين في دقايق، وساعات أوروبا اللي أخّرت ست دقايق، واليابان المقسومة نصين.",
+   "",
+   "الشرح بالرسوم المتحركة خطوة بخطوة، من غير مصطلحات صعبة."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "sources": [
+   "حصة كل مصدر في كهربا العالم 2025 (Ember، Global Electricity Review 2026): https://ember-energy.org/latest-insights/global-electricity-review-2026/",
+   "الفاقد في شبكات أمريكا، حوالي 5% (EIA): https://www.eia.gov/tools/faqs/faq.php?id=105&t=3",
+   "قفزة الطلب بعد ماتش إنجلترا وألمانيا 1990: https://en.wikipedia.org/wiki/TV_pickup",
+   "ساعات أوروبا اللي أخّرت ست دقايق سنة 2018 (NPR): https://www.npr.org/sections/thetwo-way/2018/03/07/591528390/a-political-dispute-puts-a-wrinkle-in-time-slowing-millions-of-european-clocks",
+   "شبكتين اليابان 50 و60 هيرتز (Japan Times): https://www.japantimes.co.jp/news/2011/07/19/reference/japans-incompatible-power-grids/",
+   "أشكال الفيشة، 15 نوع من A لـ O (IEC World Plugs): https://www.worldstandards.eu/electricity/plugs-and-sockets/",
+   "حبّاية وقود نووي قد طن فحم تقريباً (NEI): https://www.nei.org/fundamentals/nuclear-fuel",
+   "الطاقة الشمسية حوالي 1% من كهربا العالم سنة 2015 (Ember): https://ember-energy.org/latest-insights/the-year-sunlight-went-global-how-the-paris-agreement-brought-solar-power-to-the-world"
+  ],
+  "footer": [
+   "دي حلقة من ملف من أربع تقارير عن الكهربا. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش إرشادات أمان ولا شغل كهربا. أي سلك واقع أو متدلدل: ابعد عنه وبلّغ.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#الكهربا",
+   "#شرح"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "الكهربا",
+   "الكهرباء",
+   "الكهربا بتيجي منين",
+   "محطة كهربا",
+   "المحول الكهربائي",
+   "الضغط العالي",
+   "ليه العصفور مابيتكهربش",
+   "التردد 50 هيرتز",
+   "شبكة الكهرباء",
+   "Faraday",
+   "توليد الكهرباء",
+   "الطاقة المتجددة",
+   "TV pickup",
+   "Earth Report",
+   "اشرحها لكائن فضائي",
+   "علوم مبسطة"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف الكهربا (four parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon, so the label for realistic synthetic media is not required. The voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "الفيشة في بلدكم شكلها إيه؟ ولو سافرت، كام محوّل في شنطتك؟ القيادة بتقرا التعليقات."
+ },
+ "theme": "day"
+}
