@@ -22,6 +22,8 @@ export const ENV = "out/ep04.json";
 export const DUR = 89;
 export const duration = (env) => (env ? env.dur : DUR);
 const caps = (env, t, o) => (env ? X.captions(env.words, t, o) : "");
+// captions for one speaker only (so a line does not run on into a cut to someone else)
+const capsWho = (env, t, o, who) => { if (!env) return ""; env._w = env._w || {}; env._w[who] = env._w[who] || env.words.filter((w) => w.who === who); return X.captions(env._w[who], t, o); };
 const OUT = { y: 1340 }, BOARD = { y: 1100 };
 const TALK = F("neutral", { lid: 0.3, browL: -0.1, browR: 0.3 });
 const popIn = (t, at, d = 0.3) => easeOutBack(seg(t, at, at + d));
@@ -247,7 +249,7 @@ function iDesk(t, env) {                                      // att - tvw: Crow
   const o = { walk: 0, settle: 1, hand: { x: lerp(120, 170, lift), y: lerp(-560, -1180, lift) }, handL: { x: -20, y: -560 }, aim: -60 * lift, torch: 0, lean: 8 * (1 - lift), nod: lerp(10, -14, lift), led: "#46ff7a", ledO: 0.9 };
   const C = CR(420, o), [hx, hy] = C.near;
   const plush = FR.plush(hx + 10, hy + 70, PLUSH_K, "crown", { teeth: 1.35, tilt: lerp(20, -6, lift) });
-  return [fx.layer(ST.desk(t) + monitors(t, b, 1) + ST.mic(800, ST.DESK_Y - 30) + ST.dome(860, 470, ALERT(t)) + C.svg + plush, c, 1), ...storeGrade(t, 0.55), caps(env, t, OUT)];
+  return [fx.layer(ST.desk(t) + monitors(t, b, 1) + ST.mic(800, ST.DESK_Y - 30) + ST.dome(860, 470, ALERT(t)) + C.svg + plush, c, 1), ...storeGrade(t, 0.55), capsWho(env, t, OUT, "crowe")];
 }
 const ALERT = (t) => (Math.sin(t * 12) > 0 ? 1 : 0.3);
 const plushFace = (i) => `<g transform="scale(0.72)">${FR.plush(0, 150, 1.0, "crown", { teeth: 1.35 })}</g>`;
@@ -268,18 +270,18 @@ function feed(i, w, h, t, { pan = 0, hat = 0, stat = 0 } = {}) {
   return s + `</g><text x="${-w / 2 + 10}" y="${-h / 2 + 24}" font-family="Anton" font-size="20" fill="#cfe0d8">CAM ${String(i + 1).padStart(2, "0")}</text><circle cx="${w / 2 - 18}" cy="${-h / 2 + 18}" r="7" fill="#ff3b3b" opacity="${Math.sin(t * 8) > 0 ? 1 : 0.3}"/>`;
 }
 function iTV(t, env) {                                        // tvw - pillow: the TV wall fills with the plush's face; then the security feeds; one camera swivels and finds the top of Peek's hat
-  const b = env.beats, on = Array.from({ length: 9 }, (_, i) => fade(t, b.tvw + 0.04 + i * 0.04, 0.04)), feeds = t >= b.feeds;
+  const b = env.beats, on = Array.from({ length: 9 }, (_, i) => fade(t, b.tvw + 0.02 + i * 0.02, 0.03)), feeds = t >= b.feeds;
   const flick = Array.from({ length: 9 }, (_, i) => t >= b.feeds + i * 0.05);
   const pan = ease(seg(t, b.feeds + 0.05, b.hat)), hat = fade(t, b.hat, 0.1);
   const content = (i) => feeds && flick[i] ? feed(i, 300, 270, t, i === 4 ? { pan, hat } : { pan: 0.15 * (i % 3) }) : `<g transform="scale(0.78)">${FR.plush(0, 150, 1.0, "crown", { teeth: 1.35 })}</g>`;
   const push = ease(seg(t, b.hat - 0.1, b.pillow)), c = { x: lerp(540, 540, push), y: lerp(960, 820, push), z: lerp(1, 1.9, push), rot: 0 };
   const wall = `<rect width="${W}" height="${H}" fill="#0b0c22"/><rect x="0" y="200" width="${W}" height="110" fill="#1c2050"/>` + X.label(540, 280, "ELECTRONICS", 76, "#9fd0ff")
     + ST.tvWall(66, 420, 3, 3, 300, 270, content, feeds ? Array(9).fill(1) : on);
-  return [fx.layer(wall, c, 1), fx.glow(540, 960, 600, feeds ? "#9fe6c0" : "#ff9fd0", 0.1), ...storeGrade(t, 0.5)];
+  return [fx.layer(wall, c, 1), fx.glow(540, 960, 600, feeds ? "#9fe6c0" : "#ff9fd0", 0.1), ...storeGrade(t, 0.5), capsWho(env, t, OUT, "crowe")];   // his voice is on the store's speakers
 }
 const secCam = (x, y, led = 1, turn = 0) => `<rect x="${x - 6}" y="${y - 60}" width="12" height="60" fill="#3a3e64"/><g transform="rotate(${turn} ${x} ${y})"><rect x="${x - 70}" y="${y - 22}" width="90" height="44" rx="8" fill="#d8dcf0"/><circle cx="${x - 70}" cy="${y}" r="16" fill="#1a1a2a"/><circle cx="${x - 70}" cy="${y}" r="8" fill="#3a5ab8"/><circle cx="${x + 8}" cy="${y - 10}" r="6" fill="#ff3b3b" opacity="${led}"/></g>`;
 function iPillow(t, env) {                                    // pillow - turn: Peek's own shot: the camera's red light is on him; he slaps a pillow over the lens
-  const b = env.beats, c = fx.camera(t, [[b.pillow, PEEK_DX + 120, DECK - 200, 2.1, 0], [b.turn, PEEK_DX + 130, DECK - 200, 2.15, 0]]);
+  const b = env.beats, c = fx.camera(t, [[b.pillow, PEEK_DX + 120, DECK - 200, 2.1, 0], [env.bs, PEEK_DX + 130, DECK - 200, 2.15, 0]]);
   const grab = ease(seg(t, b.pillow + 0.1, b.static - 0.05)), slap = t >= b.static - 0.05;
   const camX = PEEK_DX + 330, camY = DECK - 300;
   const e = ants({ ...F("worried", { lid: 0, eyeScale: 1.3, pupil: 0.5, look: 0.9, lookY: -0.5, browTilt: 1, sweat: 1 }), m: { ...MOUTHS.o, w: 0.45, jaw: 0.6, tongue: 0 } }, -30, -30);
@@ -311,7 +313,7 @@ function bKick(t, env) {                                      // "...is also for
   const leg = (at) => pulse(t, at - 0.15, at + 0.2, 0.08);
   const ouch = seg(t, k2 + 0.1, k2 + 0.3);
   const e1 = F("grin", { lid: 0.2 }), e2 = ouch > 0 ? F("worried", { lid: 0.3, sweat: 0.8, m: { ...MOUTHS.o, w: 0.5, jaw: 0.6, tongue: 0 } }) : F("grin", { lid: 0.2 });
-  return B(t, env, b.harder - 0.12, `<path d="M540 230 V900" stroke="#7fd4ff" stroke-width="3" opacity=".4"/>` + ground(905) + `<g transform="translate(540 905) scale(1.3) translate(-540 -905)">`
+  return A(t, env, b.harder - 0.12, `<path d="M540 230 V900" stroke="#7fd4ff" stroke-width="3" opacity=".4"/>` + ground(905) + `<g transform="translate(540 905) scale(1.3) translate(-540 -905)">`
     + tinyPeek(265, 905, e1, { id: "k1", legR: leg(k1) > 0 ? { x: 60 * leg(k1), y: -40 * leg(k1), rot: -40 * leg(k1) } : null }, 0.24) + X.apple(370 + fly * 140, 880 - Math.sin(Math.PI * fly) * 240, 26, fly * 400)
     + tinyPeek(640, 905, e2, { id: "k2", legR: leg(k2) > 0 ? { x: 60 * leg(k2), y: -40 * leg(k2), rot: -40 * leg(k2) } : null, armL: ouch > 0 ? { x: 520, y: 980, front: true } : null }, 0.24) + ballB(775 + roll * 22, 845, 60) + `</g>`
     + X.label(540, 320, "SAME KICK", 72, "#ffe66d", fade(t, b.harder + 0.3)));
@@ -326,7 +328,7 @@ function bCarts(t, env) {                                     // "Same push on t
   const e1 = Math.max(0, t - b.empty - 0.05), x1 = 330 + 0.5 * 2600 * Math.min(e1, 0.35) ** 2 + (e1 > 0.35 ? 2600 * 0.35 * (e1 - 0.35) : 0);
   const x2 = 330 + 22 * ease(seg(t, b.full, b.full + 0.8));
   const arrow = (x, y, o) => X.arrow(x - 300, y - 170, x - 210, y - 170, 18, "#ff7ab8", t * 2, o);
-  return B(t, env, b.carts - 0.12, ground(905) + `<path d="M40 480 H1040" stroke="#3a4490" stroke-width="6"/>` + cart(x1, 470, false, t) + cart(x2, 895, true, t)
+  return A(t, env, b.carts - 0.12, ground(905) + `<path d="M40 480 H1040" stroke="#3a4490" stroke-width="6"/>` + cart(x1, 470, false, t) + cart(x2, 895, true, t)
     + arrow(330, 470, fade(t, b.carts + 0.2) * (1 - fade(t, b.empty + 0.2))) + arrow(330, 895, fade(t, b.carts + 0.2) * (1 - fade(t, b.full + 0.5))));
 }
 function bBits(t, env) {                                      // "More pull, but more stuff to move. It evens out."
@@ -338,7 +340,7 @@ function bBits(t, env) {                                      // "More pull, but
   pts.forEach(([x, y]) => { pieces += `<circle cx="${cx + x}" cy="${cy + y}" r="20" fill="#e5333f" stroke="#7a0f1c" stroke-width="3"/>` + (each > 0 ? X.arrow(cx + x, cy + y + 18, cx + x, cy + y + 58, 7, "#ffe66d", 0, each) : ""); });
   const whole = `<g opacity="${1 - bits}">${ballB(cx, cy, R)}</g>`;
   const big = `<g opacity="${(1 - bits) * fade(t, b.stuff)}">${X.arrow(cx, cy + R + 10, cx, 820, 26, "#ffe66d", t * 2)}<path d="M${cx - 30} 830 l60 -20 M${cx - 30} 850 l60 -20" stroke="#ffe66d" stroke-width="8"/>${X.label(cx + 120, 790, "×40", 76, "#ffe66d")}</g>`;
-  return B(t, env, b.stuff - 0.12, whole + big + `<g opacity="${bits}">${pieces}</g>` + X.apple(800, cy, 20, 0) + X.arrow(800, cy + 18, 800, cy + 58, 7, "#ffe66d", 0)
+  return A(t, env, b.stuff - 0.12, whole + big + `<g opacity="${bits}">${pieces}</g>` + X.apple(800, cy, 20, 0) + X.arrow(800, cy + 18, 800, cy + 58, 7, "#ffe66d", 0)
     + X.label(540, 900, "EACH BIT: SAME PULL", 64, "#ffe66d", each));
 }
 function bSpeed(t, env) {                                     // "Everything speeds up the same: twenty-two miles an hour faster, every second."
@@ -349,7 +351,7 @@ function bSpeed(t, env) {                                     // "Everything spe
       + X.label(x1 - 175, y + 24, `${k * 35} km/h`, 66, "#ffe66d", o) + X.label(x2 + 165, y + 24, `${k * 35} km/h`, 66, "#ffe66d", o); });
   const pa = fade(t, b.speeds + 1.6), yl = top;                // the pulls on the last pair, at one scale (the ball's is broken: 40 times too long to draw)
   s += pa > 0 ? `<g opacity="${pa}">${X.arrow(x1, yl + 62, x1, yl + 150, 16, "#ffe66d", t * 2)}<path d="M${x1 - 26} ${yl + 108} l52 -16 M${x1 - 26} ${yl + 124} l52 -16" stroke="#ffe66d" stroke-width="6"/>${X.arrow(x2, yl + 28, x2, yl + 40, 8, "#ffe66d", 0)}</g>` : "";
-  return B(t, env, b.speeds - 0.12, s);
+  return A(t, env, b.speeds - 0.12, s);
 }
 function bAir(t, env) {                                       // "Except a feather. Air pushes back on everything, but on light, wide things, it wins."
   const b = env.beats, u = t - b.feather;
@@ -438,9 +440,10 @@ export function draw(t, env) {
   const b = env.beats;
   let f;
   if (t < env.rs) f = t < 1.0 ? coClose : t < b.heavyw - 0.1 ? coHigh : t < b.yank + 0.15 ? coSide : t < b.land + 0.6 ? coFall : t < b.ohno - 0.35 ? coLook : coOhno;
-  else if (t < env.is) f = t < b.ran - 0.12 ? rReveal : t < b.remember - 0.12 ? bStrobe : t < b.ball40 - 0.12 ? bReport1 : t < b.pull40 - 0.12 ? bScale : t < b.theory - 0.12 ? bPull : t < b.because - 0.12 ? bTheory : bBecause;
-  else if (t < env.bs) f = t < b.att - 0.15 ? iChime : t < b.tvw ? iDesk : t < b.pillow ? iTV : t < b.turn ? iPillow : iTurn;
-  else if (t < env.ts) f = t < b.carts - 0.12 ? bKick : t < b.stuff - 0.12 ? bCarts : t < b.speeds - 0.12 ? bBits : t < b.feather - 0.12 ? bSpeed : t < b.moon - 0.12 ? bAir : t < b.astro - 0.12 ? bMoon
+  else if (t < env.is) f = t < b.ran - 0.12 ? rReveal : t < b.remember - 0.12 ? bStrobe : t < b.ball40 - 0.12 ? bReport1 : t < b.pull40 - 0.12 ? bScale : t < b.theory - 0.12 ? bPull : t < b.because - 0.12 ? bTheory : t < b.harder - 0.12 ? bBecause
+    : t < b.carts - 0.12 ? bKick : t < b.stuff - 0.12 ? bCarts : t < b.speeds - 0.12 ? bBits : bSpeed;
+  else if (t < env.bs) f = t < b.tvw ? iDesk : t < b.pillow ? iTV : iPillow;
+  else if (t < env.ts) f = t < b.moon - 0.12 ? bAir : t < b.astro - 0.12 ? bMoon
     : t < b.sum1 - 0.15 ? bHammer : t < b.question - 0.15 ? bSum : t < b.out - 0.12 ? bQuestion : rExit;
   else f = tag;
   return fx.frame(() => f(t, env));

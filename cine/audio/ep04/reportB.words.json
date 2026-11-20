@@ -4,604 +4,373 @@
   "alignment_mode": "whole_audio_speech_to_text",
   "alignment_provider": "google-speech",
   "alignment_model": "chirp_3",
-  "generated_at": "2026-11-19T07:50:27.099Z",
-  "duration_ms": 46760,
-  "word_count": 115,
+  "generated_at": "2026-11-20T08:32:07.451Z",
+  "duration_ms": 29080,
+  "word_count": 70,
   "diarization": false,
   "language_codes": [
     "en-US"
   ],
-  "recognized_text": "is also 40 times harder to get moving. Same push on two shopping carts. The empty one rolls away. The full one barely moves. More pull but more stuff to move. It evens out. Everything speeds up the same. 22 mi/h faster every second. Except a feather. Air pushes back on everything, but on light wide things it wins. On their moon, there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So, more pull but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So, why do you weigh less on the moon? Investigating. Peek out.",
-  "source_text": "...is also forty times harder to get moving. Same push on two shopping carts: the empty one rolls away, the full one barely moves. More pull, but more stuff to move. It evens out. Everything speeds up the same: twenty-two miles an hour faster, every second. Except a feather. Air pushes back on everything, but on light, wide things, it wins. On their Moon there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So: more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the Moon? Investigating. Peek out.",
+  "recognized_text": "A feather. Air pushes back on everything, but on light wide things, it wins. On their moon, there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So, more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the moon? Investigating. Peek out.",
+  "source_text": "...a feather. Air pushes back on everything, but on light, wide things, it wins. On their Moon there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So: more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the Moon? Investigating. Peek out.",
   "source_turns": [
     {
       "index": 0,
-      "text": "...is also forty times harder to get moving. Same push on two shopping carts: the empty one rolls away, the full one barely moves. More pull, but more stuff to move. It evens out. Everything speeds up the same: twenty-two miles an hour faster, every second. Except a feather. Air pushes back on everything, but on light, wide things, it wins. On their Moon there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So: more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the Moon? Investigating. Peek out."
+      "text": "...a feather. Air pushes back on everything, but on light, wide things, it wins. On their Moon there is almost no air. An astronaut dropped a hammer and a feather there. They landed together. So: more pull, but harder to move. Only air gets in the way. Which raises a question, Commander. Up there, astronauts bounce like bunnies. So why do you weigh less on the Moon? Investigating. Peek out."
     }
   ],
-  "agreement": 0.9573,
+  "agreement": 1,
   "flagged": false,
-  "missing_words": [
-    "forty",
-    "twenty-two",
-    "miles",
-    "an",
-    "hour"
-  ],
+  "missing_words": [],
   "words": [
     {
-      "start_ms": 160,
-      "end_ms": 440,
-      "text": "is"
+      "start_ms": 280,
+      "end_ms": 360,
+      "text": "A"
     },
     {
-      "start_ms": 440,
-      "end_ms": 920,
-      "text": "also"
+      "start_ms": 360,
+      "end_ms": 960,
+      "text": "feather."
     },
     {
-      "start_ms": 920,
-      "end_ms": 1400,
-      "text": "40"
+      "start_ms": 1440,
+      "end_ms": 1760,
+      "text": "Air"
     },
     {
-      "start_ms": 1400,
-      "end_ms": 1800,
-      "text": "times"
-    },
-    {
-      "start_ms": 1800,
+      "start_ms": 1760,
       "end_ms": 2160,
-      "text": "harder"
+      "text": "pushes"
     },
     {
       "start_ms": 2160,
-      "end_ms": 2320,
-      "text": "to"
+      "end_ms": 2440,
+      "text": "back"
     },
     {
-      "start_ms": 2320,
-      "end_ms": 2560,
-      "text": "get"
-    },
-    {
-      "start_ms": 2560,
-      "end_ms": 3240,
-      "text": "moving."
-    },
-    {
-      "start_ms": 3760,
-      "end_ms": 4120,
-      "text": "Same"
-    },
-    {
-      "start_ms": 4120,
-      "end_ms": 4440,
-      "text": "push"
-    },
-    {
-      "start_ms": 4440,
-      "end_ms": 4640,
+      "start_ms": 2440,
+      "end_ms": 2640,
       "text": "on"
     },
     {
-      "start_ms": 4640,
-      "end_ms": 4840,
-      "text": "two"
+      "start_ms": 2640,
+      "end_ms": 3240,
+      "text": "everything,"
     },
     {
-      "start_ms": 4840,
-      "end_ms": 5240,
-      "text": "shopping"
+      "start_ms": 3240,
+      "end_ms": 3480,
+      "text": "but"
+    },
+    {
+      "start_ms": 3480,
+      "end_ms": 3720,
+      "text": "on"
+    },
+    {
+      "start_ms": 3720,
+      "end_ms": 4200,
+      "text": "light"
+    },
+    {
+      "start_ms": 4200,
+      "end_ms": 4680,
+      "text": "wide"
+    },
+    {
+      "start_ms": 4680,
+      "end_ms": 5200,
+      "text": "things,"
     },
     {
       "start_ms": 5240,
-      "end_ms": 5680,
-      "text": "carts."
+      "end_ms": 5480,
+      "text": "it"
     },
     {
-      "start_ms": 5880,
+      "start_ms": 5480,
       "end_ms": 6040,
-      "text": "The"
+      "text": "wins."
     },
     {
-      "start_ms": 6040,
-      "end_ms": 6320,
-      "text": "empty"
+      "start_ms": 6760,
+      "end_ms": 6920,
+      "text": "On"
     },
     {
-      "start_ms": 6320,
-      "end_ms": 6600,
-      "text": "one"
+      "start_ms": 6920,
+      "end_ms": 7080,
+      "text": "their"
     },
     {
-      "start_ms": 6720,
-      "end_ms": 7040,
-      "text": "rolls"
+      "start_ms": 7080,
+      "end_ms": 7520,
+      "text": "moon,"
     },
     {
-      "start_ms": 7040,
-      "end_ms": 7480,
-      "text": "away."
-    },
-    {
-      "start_ms": 7680,
+      "start_ms": 7600,
       "end_ms": 7760,
-      "text": "The"
+      "text": "there"
     },
     {
       "start_ms": 7760,
-      "end_ms": 8000,
-      "text": "full"
+      "end_ms": 7920,
+      "text": "is"
     },
     {
-      "start_ms": 8000,
-      "end_ms": 8240,
-      "text": "one"
+      "start_ms": 7920,
+      "end_ms": 8400,
+      "text": "almost"
     },
     {
       "start_ms": 8400,
       "end_ms": 8760,
-      "text": "barely"
-    },
-    {
-      "start_ms": 8760,
-      "end_ms": 9320,
-      "text": "moves."
-    },
-    {
-      "start_ms": 10120,
-      "end_ms": 10360,
-      "text": "More"
-    },
-    {
-      "start_ms": 10360,
-      "end_ms": 10800,
-      "text": "pull"
-    },
-    {
-      "start_ms": 10960,
-      "end_ms": 11200,
-      "text": "but"
-    },
-    {
-      "start_ms": 11200,
-      "end_ms": 11440,
-      "text": "more"
-    },
-    {
-      "start_ms": 11440,
-      "end_ms": 11880,
-      "text": "stuff"
-    },
-    {
-      "start_ms": 11880,
-      "end_ms": 12040,
-      "text": "to"
-    },
-    {
-      "start_ms": 12040,
-      "end_ms": 12640,
-      "text": "move."
-    },
-    {
-      "start_ms": 12840,
-      "end_ms": 12960,
-      "text": "It"
-    },
-    {
-      "start_ms": 12960,
-      "end_ms": 13240,
-      "text": "evens"
-    },
-    {
-      "start_ms": 13240,
-      "end_ms": 13600,
-      "text": "out."
-    },
-    {
-      "start_ms": 14280,
-      "end_ms": 14600,
-      "text": "Everything"
-    },
-    {
-      "start_ms": 14600,
-      "end_ms": 14880,
-      "text": "speeds"
-    },
-    {
-      "start_ms": 14880,
-      "end_ms": 15000,
-      "text": "up"
-    },
-    {
-      "start_ms": 15000,
-      "end_ms": 15120,
-      "text": "the"
-    },
-    {
-      "start_ms": 15120,
-      "end_ms": 15520,
-      "text": "same."
-    },
-    {
-      "start_ms": 15760,
-      "end_ms": 16240,
-      "text": "22"
-    },
-    {
-      "start_ms": 16240,
-      "end_ms": 16800,
-      "text": "mi/h"
-    },
-    {
-      "start_ms": 16800,
-      "end_ms": 17320,
-      "text": "faster"
-    },
-    {
-      "start_ms": 17360,
-      "end_ms": 17720,
-      "text": "every"
-    },
-    {
-      "start_ms": 17720,
-      "end_ms": 18240,
-      "text": "second."
-    },
-    {
-      "start_ms": 18840,
-      "end_ms": 19320,
-      "text": "Except"
-    },
-    {
-      "start_ms": 19320,
-      "end_ms": 19400,
-      "text": "a"
-    },
-    {
-      "start_ms": 19400,
-      "end_ms": 19920,
-      "text": "feather."
-    },
-    {
-      "start_ms": 20680,
-      "end_ms": 20920,
-      "text": "Air"
-    },
-    {
-      "start_ms": 20920,
-      "end_ms": 21240,
-      "text": "pushes"
-    },
-    {
-      "start_ms": 21240,
-      "end_ms": 21520,
-      "text": "back"
-    },
-    {
-      "start_ms": 21520,
-      "end_ms": 21640,
-      "text": "on"
-    },
-    {
-      "start_ms": 21640,
-      "end_ms": 22160,
-      "text": "everything,"
-    },
-    {
-      "start_ms": 22360,
-      "end_ms": 22520,
-      "text": "but"
-    },
-    {
-      "start_ms": 22520,
-      "end_ms": 22720,
-      "text": "on"
-    },
-    {
-      "start_ms": 22720,
-      "end_ms": 23080,
-      "text": "light"
-    },
-    {
-      "start_ms": 23080,
-      "end_ms": 23400,
-      "text": "wide"
-    },
-    {
-      "start_ms": 23400,
-      "end_ms": 23800,
-      "text": "things"
-    },
-    {
-      "start_ms": 23800,
-      "end_ms": 23960,
-      "text": "it"
-    },
-    {
-      "start_ms": 23960,
-      "end_ms": 24480,
-      "text": "wins."
-    },
-    {
-      "start_ms": 25160,
-      "end_ms": 25320,
-      "text": "On"
-    },
-    {
-      "start_ms": 25320,
-      "end_ms": 25480,
-      "text": "their"
-    },
-    {
-      "start_ms": 25480,
-      "end_ms": 26000,
-      "text": "moon,"
-    },
-    {
-      "start_ms": 26120,
-      "end_ms": 26240,
-      "text": "there"
-    },
-    {
-      "start_ms": 26240,
-      "end_ms": 26360,
-      "text": "is"
-    },
-    {
-      "start_ms": 26360,
-      "end_ms": 26720,
-      "text": "almost"
-    },
-    {
-      "start_ms": 26720,
-      "end_ms": 27040,
       "text": "no"
     },
     {
-      "start_ms": 27040,
-      "end_ms": 27360,
+      "start_ms": 8760,
+      "end_ms": 9200,
       "text": "air."
     },
     {
-      "start_ms": 27840,
-      "end_ms": 28040,
+      "start_ms": 9560,
+      "end_ms": 9720,
       "text": "An"
     },
     {
-      "start_ms": 28040,
-      "end_ms": 28520,
+      "start_ms": 9720,
+      "end_ms": 10240,
       "text": "astronaut"
     },
     {
-      "start_ms": 28520,
-      "end_ms": 28840,
+      "start_ms": 10240,
+      "end_ms": 10560,
       "text": "dropped"
     },
     {
-      "start_ms": 28840,
-      "end_ms": 28920,
+      "start_ms": 10560,
+      "end_ms": 10600,
       "text": "a"
     },
     {
-      "start_ms": 29040,
-      "end_ms": 29360,
+      "start_ms": 10600,
+      "end_ms": 11080,
       "text": "hammer"
     },
     {
-      "start_ms": 29360,
-      "end_ms": 29480,
+      "start_ms": 11080,
+      "end_ms": 11200,
       "text": "and"
     },
     {
-      "start_ms": 29480,
-      "end_ms": 29560,
+      "start_ms": 11200,
+      "end_ms": 11240,
       "text": "a"
     },
     {
-      "start_ms": 29560,
-      "end_ms": 29880,
+      "start_ms": 11240,
+      "end_ms": 11600,
       "text": "feather"
     },
     {
-      "start_ms": 29880,
-      "end_ms": 30240,
+      "start_ms": 11600,
+      "end_ms": 11960,
       "text": "there."
     },
     {
-      "start_ms": 30520,
-      "end_ms": 30640,
+      "start_ms": 12240,
+      "end_ms": 12400,
       "text": "They"
     },
     {
-      "start_ms": 30640,
-      "end_ms": 30960,
+      "start_ms": 12400,
+      "end_ms": 12760,
       "text": "landed"
     },
     {
-      "start_ms": 30960,
-      "end_ms": 31520,
+      "start_ms": 12760,
+      "end_ms": 13400,
       "text": "together."
     },
     {
-      "start_ms": 32360,
-      "end_ms": 32680,
+      "start_ms": 14040,
+      "end_ms": 14520,
       "text": "So,"
     },
     {
-      "start_ms": 32960,
-      "end_ms": 33200,
+      "start_ms": 14960,
+      "end_ms": 15320,
       "text": "more"
     },
     {
-      "start_ms": 33200,
-      "end_ms": 33560,
-      "text": "pull"
+      "start_ms": 15320,
+      "end_ms": 15880,
+      "text": "pull,"
     },
     {
-      "start_ms": 33720,
-      "end_ms": 33960,
+      "start_ms": 16000,
+      "end_ms": 16200,
       "text": "but"
     },
     {
-      "start_ms": 33960,
-      "end_ms": 34280,
+      "start_ms": 16200,
+      "end_ms": 16520,
       "text": "harder"
     },
     {
-      "start_ms": 34280,
-      "end_ms": 34440,
+      "start_ms": 16520,
+      "end_ms": 16600,
       "text": "to"
     },
     {
-      "start_ms": 34440,
-      "end_ms": 34920,
+      "start_ms": 16600,
+      "end_ms": 17040,
       "text": "move."
     },
     {
-      "start_ms": 35160,
-      "end_ms": 35520,
+      "start_ms": 17360,
+      "end_ms": 17800,
       "text": "Only"
     },
     {
-      "start_ms": 35520,
-      "end_ms": 35840,
+      "start_ms": 17800,
+      "end_ms": 18160,
       "text": "air"
     },
     {
-      "start_ms": 35840,
-      "end_ms": 36000,
+      "start_ms": 18160,
+      "end_ms": 18360,
       "text": "gets"
     },
     {
-      "start_ms": 36000,
-      "end_ms": 36080,
+      "start_ms": 18360,
+      "end_ms": 18440,
       "text": "in"
     },
     {
-      "start_ms": 36080,
-      "end_ms": 36160,
+      "start_ms": 18440,
+      "end_ms": 18520,
       "text": "the"
     },
     {
-      "start_ms": 36160,
-      "end_ms": 36560,
+      "start_ms": 18520,
+      "end_ms": 18920,
       "text": "way."
     },
     {
-      "start_ms": 37400,
-      "end_ms": 37600,
+      "start_ms": 19760,
+      "end_ms": 20120,
       "text": "Which"
     },
     {
-      "start_ms": 37600,
-      "end_ms": 38000,
+      "start_ms": 20120,
+      "end_ms": 20480,
       "text": "raises"
     },
     {
-      "start_ms": 38000,
-      "end_ms": 38080,
+      "start_ms": 20480,
+      "end_ms": 20560,
       "text": "a"
     },
     {
-      "start_ms": 38080,
-      "end_ms": 38560,
+      "start_ms": 20560,
+      "end_ms": 21160,
       "text": "question,"
     },
     {
-      "start_ms": 38560,
-      "end_ms": 39080,
+      "start_ms": 21160,
+      "end_ms": 21720,
       "text": "Commander."
     },
     {
-      "start_ms": 39640,
-      "end_ms": 39840,
+      "start_ms": 22120,
+      "end_ms": 22320,
       "text": "Up"
     },
     {
-      "start_ms": 39840,
-      "end_ms": 40200,
+      "start_ms": 22320,
+      "end_ms": 22840,
       "text": "there,"
     },
     {
-      "start_ms": 40400,
-      "end_ms": 40960,
+      "start_ms": 22880,
+      "end_ms": 23520,
       "text": "astronauts"
     },
     {
-      "start_ms": 40960,
-      "end_ms": 41280,
+      "start_ms": 23520,
+      "end_ms": 23880,
       "text": "bounce"
     },
     {
-      "start_ms": 41280,
-      "end_ms": 41440,
+      "start_ms": 23880,
+      "end_ms": 24120,
       "text": "like"
     },
     {
-      "start_ms": 41440,
-      "end_ms": 41960,
+      "start_ms": 24120,
+      "end_ms": 24680,
       "text": "bunnies."
     },
     {
-      "start_ms": 42280,
-      "end_ms": 42480,
-      "text": "So,"
+      "start_ms": 24960,
+      "end_ms": 25120,
+      "text": "So"
     },
     {
-      "start_ms": 42480,
-      "end_ms": 42720,
+      "start_ms": 25120,
+      "end_ms": 25320,
       "text": "why"
     },
     {
-      "start_ms": 42720,
-      "end_ms": 42840,
+      "start_ms": 25320,
+      "end_ms": 25680,
       "text": "do"
     },
     {
-      "start_ms": 42840,
-      "end_ms": 42960,
+      "start_ms": 25680,
+      "end_ms": 25880,
       "text": "you"
     },
     {
-      "start_ms": 42960,
-      "end_ms": 43200,
+      "start_ms": 25880,
+      "end_ms": 26040,
       "text": "weigh"
     },
     {
-      "start_ms": 43200,
-      "end_ms": 43600,
+      "start_ms": 26040,
+      "end_ms": 26320,
       "text": "less"
     },
     {
-      "start_ms": 43600,
-      "end_ms": 43720,
+      "start_ms": 26320,
+      "end_ms": 26400,
       "text": "on"
     },
     {
-      "start_ms": 43720,
-      "end_ms": 43800,
+      "start_ms": 26400,
+      "end_ms": 26480,
       "text": "the"
     },
     {
-      "start_ms": 43800,
-      "end_ms": 44280,
+      "start_ms": 26480,
+      "end_ms": 26880,
       "text": "moon?"
     },
     {
-      "start_ms": 44960,
-      "end_ms": 45800,
+      "start_ms": 27400,
+      "end_ms": 28120,
       "text": "Investigating."
     },
     {
-      "start_ms": 46000,
-      "end_ms": 46200,
+      "start_ms": 28480,
+      "end_ms": 28680,
       "text": "Peek"
     },
     {
-      "start_ms": 46200,
-      "end_ms": 46520,
+      "start_ms": 28680,
+      "end_ms": 29000,
       "text": "out."
     }
   ]

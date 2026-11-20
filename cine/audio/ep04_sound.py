@@ -112,9 +112,9 @@ OHNO = LAND + 3.1                                      # the held beat, the look
 TITLE = OHNO + wO[-1][1] + 0.35
 RS = round(TITLE + 1.5, 3)                             # the cold open ends, report A starts
 repA, wA = prepared("reportA", keep=0.2, over=0.28)
-cut = len(wA) - 1                                      # report A is cut right after its last word, "ball"
+cut = len(wA) - 1                                      # report A runs through the whole answer and is cut right after its last word, "Except..."
 wA[cut][2] = wA[cut][2].rstrip(".,") + "..."
-IS = RS + 0.15 + wA[cut][1] + 0.04                     # the interruption starts: the store chime
+IS = RS + 0.15 + wA[cut][1] + 0.04                     # the interruption starts: the store chime (6 to 6.5 s, the picture beats overlapping the lines)
 repA = repA[: int((wA[cut][1] + 0.04) * SR)]; repA = fades(repA, 0.004, 0.02)
 cx_, cw_ = take("crowe")
 if len(cw_) == 7: groups = [[0, 1], [2, 3, 4, 5], [6]]  # "Attention, shoppers." / "Have you seen... this?" / "...Peek." (the transcript has no stops)
@@ -126,18 +126,20 @@ else:
     if g: groups.append(g)
     while len(groups) > 3: groups[-2] += groups.pop()
 crowe_lines = [tighten(cx_, [cw_[i] for i in g], keep=0.35, over=0.5) for g in groups]
-CHIME = IS + 0.08
-I_ATT = IS + 0.45                                       # on Crowe at the desk, the microphone
-I_HYS = I_ATT + crowe_lines[0][1][-1][1] + 0.3         # he lifts the plush to the camera
-TVW = I_HYS + crowe_lines[1][1][-1][1] + 0.1           # the TV wall fills with the plush's face
-FEEDS = TVW + 0.85                                     # the screens flick to the security cameras; one swivels to the shelf top
-HAT = FEEDS + 0.35                                      # the top of Peek's hat on one screen
-PILLOW = FEEDS + 0.8                                  # Peek's shot: the red light, the pillow over the lens
-STATIC = PILLOW + 0.4
-TURN = PILLOW + 0.6                                   # the desk: Crowe turns to the monitors and takes one step
+CHIME = IS + 0.02
+I_ATT = IS + 0.3                                       # on Crowe at the desk, the microphone (the chime's second note under his first word)
+I_HYS = I_ATT + crowe_lines[0][1][-1][1] + 0.15        # he lifts the plush to the camera
+HYS_THIS = I_HYS + crowe_lines[1][1][-1][0]
+HYS_END = I_HYS + crowe_lines[1][1][-1][1]
+TVW = HYS_THIS - 0.05                                  # the TV wall fills with the plush's face while he is still saying "this?"
+FEEDS = TVW + 0.5                                      # the screens flick to the security cameras; one swivels under the tail of the line
+HAT = FEEDS + 0.3                                      # the top of Peek's hat on one screen
+PILLOW = max(HYS_END + 0.05, HAT + 0.35)              # Peek's own shot: the red light, the pillow over the lens
+STATIC = PILLOW + 0.3
+TURN = STATIC                                          # (Crowe's turn-and-step is dropped in this cut)
 repB, wB = prepared("reportB", keep=0.2, over=0.28)
-wB[0][2] = "..." + wB[0][2].lstrip(".")
-BS = TURN + 0.75                                # Peek crouched behind the box, then "...is also forty times harder..."
+wB[0][2] = "..." + wB[0][2].lstrip(".").lower()       # "...a feather."
+BS = STATIC + 0.3                                      # Peek crouched behind the box: "...a feather."
 RB = len(repB) / SR
 TS = BS + RB + 1.5                                     # "Peek out." then the jump into the pillows (1 s fall); the tag starts
 po_i = max(0, len(wB) - 2)                             # "Peek out." from the reportB take, through the detector
@@ -187,20 +189,20 @@ rwB = [(B0 + s, B0 + e, clean(w)) for s, e, w in wB]
 beats, idx = {}, 0
 orderA = [("report", "commander field|field report"), ("ran", "i ran"), ("accident", "by accident"), ("agent", "right above"), ("remember", "remember"),
           ("ball40", "the ball is"), ("pull40", "so their planet|so their"), ("theory", "theory"), ("first", "the ball lands|lands first"), ("wrong", "wrong"),
-          ("land2", "they landed"), ("bang", "one bang"), ("because", "because the ball|because")]
+          ("land2", "they landed"), ("bang", "one bang"), ("because", "because the ball|because"), ("harder", "is also|also"), ("carts", "same push"), ("empty", "the empty"),
+          ("full", "the full"), ("stuff", "more pull"), ("evens", "it evens"), ("speeds", "everything speeds"), ("mph", "twentytwo|twenty two|22"), ("second", "every second"),
+          ("except", "except")]
 for key, seq in orderA:
     idx = find(rwA, seq, idx, "reportA"); beats[key] = round(rwA[idx][0], 3)
 beats["cut"] = round(IS, 3)
 idx = 0
-orderB = [("harder", "is also|also"), ("carts", "same push"), ("empty", "the empty"), ("full", "the full"), ("stuff", "more pull"), ("evens", "it evens"),
-          ("speeds", "everything speeds"), ("mph", "twentytwo|twenty two|22"), ("second", "every second"), ("feather", "except a feather|except"), ("air", "air pushes"),
-          ("wide", "but on|on light"), ("moon", "on their moon"), ("astro", "an astronaut"), ("together", "they landed"), ("sum1", "so more"), ("sum2", "but harder"),
-          ("sum3", "only air"), ("question", "which raises"), ("bunny", "up there"), ("weigh", "so why"), ("out", "investigating"), ("peekout", "peek out")]
+orderB = [("feather", "a feather|feather"), ("air", "air pushes"), ("wide", "but on|on light"), ("moon", "on their moon"), ("astro", "an astronaut"), ("together", "they landed"),
+          ("sum1", "so more"), ("sum2", "but harder"), ("sum3", "only air"), ("question", "which raises"), ("bunny", "up there"), ("weigh", "so why"), ("out", "investigating"), ("peekout", "peek out")]
 for key, seq in orderB:
     idx = find(rwB, seq, idx, "reportB"); beats[key] = round(rwB[idx][0], 3)
 beats["end"] = round(rwB[-1][1], 3)
 beats.update({"stay2": round(STAY2, 3), "ifgoes": round(IFGOES, 3), "heavyw": round(HEAVYW, 3), "yank": round(YANK, 3), "feeds": round(FEEDS, 3), "hat": round(HAT, 3), "pillow": round(PILLOW, 3), "static": round(STATIC, 3), "turn": round(TURN, 3), "land": round(LAND, 3), "ohno": round(OHNO, 3), "title": round(TITLE, 3),
-              "chime": round(CHIME, 3), "att": round(I_ATT, 3), "att_end": round(I_ATT + crowe_lines[0][1][-1][1], 3), "hys": round(I_HYS, 3), "hys_this": round(I_HYS + crowe_lines[1][1][-1][0], 3),
+              "chime": round(CHIME, 3), "att": round(I_ATT, 3), "att_end": round(I_ATT + crowe_lines[0][1][-1][1], 3), "hys": round(I_HYS, 3), "hys_this": round(HYS_THIS, 3),
               "hys_end": round(I_HYS + crowe_lines[1][1][-1][1], 3), "tvw": round(TVW, 3), "po": round(PO, 3), "po_end": round(PO + po1 - po0, 3), "cpeek": round(CPEEK, 3), "tagline_end": round(TAG_END, 3)})
 
 # ---------------------------------------------------------------- effects
@@ -268,12 +270,11 @@ for i in range(9): place(beep(1600 - 60 * i, 0.03), FEEDS + i * 0.05, 0.05, -0.6
 n = int(0.45 * SR); place(bp(noise(n), 2000, 5000) * (0.6 + 0.4 * np.sin(2 * np.pi * 40 * tx(n))) * np.sin(np.pi * tx(n) / 0.45), FEEDS + 0.05, 0.08)   # the camera's motor
 place(beep(2900, 0.05), PILLOW + 0.05, 0.08)                                              # its red light
 place(thud(140, 30, 0.25), STATIC - 0.03, 0.3); n = int(1.0 * SR); place(bp(noise(n), 3000, 9000) * np.exp(-tx(n) * 2.5), STATIC, 0.07)   # the pillow, the static
-place(step(120), TURN + 0.45, 0.18, -0.2)                                                  # Crowe's step toward the monitors
 drone = sum(np.sin(2 * np.pi * f * T) for f in (55, 65.4, 82.4)); dg = np.interp(T, [IS, IS + 0.6, BS + 0.6, BS + 2.0, TS - 0.2, TS + 0.4, END - 0.3, END], [0, 0.05, 0.05, 0.018, 0.018, 0.05, 0.07, 0])
 place(lp(drone, 400) * dg, 0)
 n = int(0.3 * SR); place(bp(noise(n), 600, 3000) * np.exp(-tx(n) * 12), I_HYS - 0.35, 0.12)   # he lifts the plush
-for i in range(9): place(beep(2400 + 80 * i, 0.03), TVW + 0.04 + i * 0.04, 0.05, -0.6 + 0.15 * i)   # the screens switch over, one by one
-for i in range(4): place(heart(), HAT + i * 0.45, 0.6)
+for i in range(9): place(beep(2400 + 80 * i, 0.03), TVW + 0.02 + i * 0.02, 0.05, -0.6 + 0.15 * i)   # the screens switch over, one by one
+for i in range(2): place(heart(), HAT + i * 0.4, 0.6)
 
 # ---- report B: a quieter bed, small sounds on the beats; the jump into the pillows
 bed(BS + 0.9, TS - 0.6, 0.06, 2)
