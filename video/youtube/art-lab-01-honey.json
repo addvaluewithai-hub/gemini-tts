@@ -1,0 +1,18 @@
+[
+ {
+  "file": "shorts-lab/lab-01-honey/thumb.jpg",
+  "kind": "thumb",
+  "w": 1080,
+  "h": 1920,
+  "rtl": false,
+  "bg": "youtube/bg/lab-01-honey.jpg",
+  "big": "",
+  "emote": "sly",
+  "gesture": "present",
+  "hostSize": 720,
+  "hostX": 520,
+  "hostY": 1260,
+  "bgZ": 1.15,
+  "bgX": 0
+ }
+]

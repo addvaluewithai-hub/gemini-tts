@@ -2,7 +2,12 @@
  "shorts": [
   {
    "key": "lab-01-honey",
-   "parts": []
+   "parts": [
+    [
+     0,
+     44.93
+    ]
+   ]
   }
  ],
  "note": "Standalone Short (shorts lab): one part, the whole voice; the sign-off card is the last beat.",

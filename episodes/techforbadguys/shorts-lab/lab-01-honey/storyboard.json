@@ -57,7 +57,19 @@
  "theme": "lab",
  "boards": {
   "honey": {
-   "kind": "honey"
+   "kind": "honey",
+   "ends": [
+    3.95,
+    7.25,
+    4.09,
+    2.03,
+    3.84,
+    3.4,
+    3.71,
+    3.17,
+    5.13,
+    4.57
+   ]
   },
   "signoff": {
    "kind": "shortend",
