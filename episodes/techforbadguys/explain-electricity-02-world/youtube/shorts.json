@@ -52,7 +52,14 @@
    "look": "fixed",
    "captions": false,
    "total": 34.8,
-   "preroll": 5.0
+   "preroll": 5.0,
+   "video": {
+    "id": "fmeB2qO4Wlc",
+    "url": "https://youtube.com/shorts/fmeB2qO4Wlc",
+    "privacy": "private",
+    "publishAt": null,
+    "held": "2026-11-20"
+   }
   },
   {
    "key": "penalties",
@@ -104,7 +111,14 @@
    },
    "look": "fixed",
    "captions": false,
-   "total": 28.8
+   "total": 28.8,
+   "video": {
+    "id": "ie-vpJAJfNo",
+    "url": "https://youtube.com/shorts/ie-vpJAJfNo",
+    "privacy": "private",
+    "publishAt": null,
+    "held": "2026-11-20"
+   }
   },
   {
    "key": "clocks",

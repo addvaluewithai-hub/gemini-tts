@@ -10,8 +10,8 @@ One video, several audio tracks. This page is what goes into the video's **Engli
 
 ## Title
 
-1. Where Does Electricity Come From, and How Does It Reach You in a Blink? | Electricity File 2/4  ← recommended
-2. Why Doesn't the Bird on the Wire Get Shocked? From Power Station to Socket | Electricity File 2/4
+1. Why Doesn't the Bird on the Wire Get Shocked? From Power Station to Socket | Electricity File 2/4  ← recommended
+2. Where Does Electricity Come From, and How Does It Reach You in a Blink? | Electricity File 2/4
 3. The Football Match That Needed Two Power Stations | Electricity File 2/4
 
 ## Description

@@ -1,0 +1,881 @@
+{
+ "title": "تقرير الأرض: العلم 2 (world picture)",
+ "recorded_for": "2026-12-02",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "World-language picture (one video, several audio tracks), drawn in the notebook look of explain-science-01-world: no Arabic on screen, no burned-in captions, every board beat a wordless illustrated shot. Script: ../explain-science-02-ar/script.md, words unchanged.",
+  "Earth Report field file: Science, part 2 of 4. How a study is made and checked: the research paper; the fair test (control group, placebo, blind and double blind); James Lind's twelve sailors (1747); sample size; the 2015 chocolate diet hoax; peer review and pay-to-publish journals; replication and the file drawer; six questions for any science headline.",
+  "Facts (sources in ../explain-science-01-ar/plan.md): about three million research articles a year; the chocolate study, 2015: John Bohannon with a German TV team, about 15 people in three groups for 21 days, 18 measurements, accepted by a fee-taking journal (about 600 euros) without real review, reported widely, then revealed. James Lind, HMS Salisbury, 1747: twelve sailors with scurvy in six pairs, the citrus pair recovered (one fit for duty after six days); the Royal Navy adopted citrus in 1795.",
+  "General knowledge, not re-checked: how peer review works; placebo, blind and double-blind trials; many early results come from mice; predatory journals; the file drawer, pre-registration, relative versus absolute risk (the 1-in-10,000 example is illustrative). No food or drug is recommended or warned against."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 13,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "NEXT",
+   "next": "3 / 4",
+   "icons": [
+    "book",
+    "eye",
+    "rules"
+   ],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "boards": {
+  "choco": {
+   "kind": "choco",
+   "ends": [
+    4.73,
+    13.84,
+    6.09,
+    8.2,
+    3.65,
+    6.62,
+    7.74
+   ]
+  },
+  "fairtest": {
+   "kind": "fairtest",
+   "ends": [
+    3.38,
+    3.12,
+    4.93,
+    5.44,
+    8.29,
+    7.06,
+    5.8
+   ]
+  },
+  "headline": {
+   "kind": "headline",
+   "ends": [
+    2.77,
+    2.34,
+    6.85,
+    2.88,
+    4.54,
+    3.79,
+    7.71,
+    7.19
+   ]
+  },
+  "lind": {
+   "kind": "lind",
+   "ends": [
+    7.09,
+    4.79,
+    3.43,
+    9.29,
+    5.73,
+    4.04,
+    3.59
+   ]
+  },
+  "repeat": {
+   "kind": "repeat",
+   "ends": [
+    7.69,
+    5.38,
+    4.32,
+    6.89,
+    8.05,
+    6.91
+   ]
+  },
+  "review": {
+   "kind": "review",
+   "ends": [
+    9.32,
+    4.83,
+    3.24,
+    5.29,
+    4.37,
+    4.29
+   ]
+  },
+  "s2dict": {
+   "kind": "s2dict",
+   "ends": [
+    6.65,
+    5.79
+   ]
+  },
+  "s2intro": {
+   "kind": "s2intro",
+   "ends": [
+    6.87,
+    3.55,
+    13.05,
+    4.31
+   ]
+  },
+  "s2paper": {
+   "kind": "s2paper",
+   "ends": [
+    5.37,
+    4.21,
+    7.82,
+    5.22,
+    5.32
+   ]
+  },
+  "s2recap": {
+   "kind": "s2recap",
+   "ends": [
+    6.82,
+    5.6,
+    5.76
+   ]
+  },
+  "sample": {
+   "kind": "sample",
+   "ends": [
+    4.33,
+    2.2,
+    3.82,
+    7.02,
+    4.25
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "story": null,
+   "style": "Opening of a field report: the chocolate headline with mock delight, then the question.",
+   "beats": [
+    {
+     "say": "يا فندم، تقرير ميداني رقم اتنين في ملف العلم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "سنة ألفين خمستاشر، الجرايد في بلاد كتير كتبت نفس الخبر: دراسة علمية بتقول إن الشوكولاتة بتخسّس.",
+     "show": "board",
+     "board": "s2intro",
+     "step": 0
+    },
+    {
+     "say": "الناس فرحت. المحلات فرحت.",
+     "show": "board",
+     "board": "s2intro",
+     "step": 1
+    },
+    {
+     "say": "وأنا كمان، بصراحة، فرحت.",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "بعدها بكام أسبوع، الراجل اللي عمل الدراسة طلع وقال: أنا عملتها مخصوص علشان أوريكم قد إيه سهل تضحكوا على العالم.",
+     "show": "board",
+     "board": "s2intro",
+     "step": 2,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "فالنهارده هقول لكم البحث العلمي بيتعمل إزاي، مين بيراجعه قبل ما يوصل لكم، وإزاي الشوكولاتة عدّت من كل ده.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "والسؤال المهم: لما تقرا كلمة \"دراسة بتقول\"، تصدّق ولا لأ؟",
+     "show": "board",
+     "board": "s2intro",
+     "step": 3,
+     "emote": "skeptical",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "s2paper",
+   "story": {
+    "n": 1,
+    "tag": "THE PAPER",
+    "icon": "file"
+   },
+   "style": "Clear explanation of how humans publish, with a dry sense of scale.",
+   "beats": [
+    {
+     "say": "أول حاجة: البشر مابيعلنوش اكتشافاتهم في الشارع. بيكتبوها في حاجة اسمها ورقة علمية.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 0
+    },
+    {
+     "say": "ورقة بتقول: كان عندنا سؤال كذا، عملنا كذا بالظبط، ولقينا كذا.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 1
+    },
+    {
+     "say": "وأهم جزء فيها مش النتيجة يا فندم. أهم جزء هو \"عملنا إيه بالظبط\". علشان أي حد تاني يقدر يعمل نفس الحاجة ويشوف هيوصل لنفس الكلام ولا لأ.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 2,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "والبشر بينشروا من الورق ده حوالي تلاتة مليون ورقة في السنة. تلاتة مليون.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 3
+    },
+    {
+     "say": "يعني لو عالم واحد قرا ورقة كل يوم، هيخلّص ورق سنة واحدة بس بعد حوالي تمن آلاف سنة.",
+     "show": "board",
+     "board": "s2paper",
+     "step": 4
+    },
+    {
+     "say": "وعلشان كده، في كل يوم، فيه ورقة في مكان ما بتقول حاجة غريبة. <short pause> والجرايد بتحب الغريب.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "fair",
+   "story": {
+    "n": 2,
+    "tag": "A FAIR TEST",
+    "icon": "eye"
+   },
+   "style": "A kitchen analogy, patient and a little amused; the blindfold line lands dry.",
+   "beats": [
+    {
+     "say": "طب إزاي تعرف إن حاجة معينة هي اللي عملت الفرق؟ خلّيني أشرحها بالمطبخ.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "present"
+    },
+    {
+     "say": "عندك حلّتين شوربة. واحدة حطيت فيها بهار جديد، والتانية لأ.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 0
+    },
+    {
+     "say": "لو الأولى طلعت أحلى، يبقى البهار هو السبب؟ مش أكيد.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 1
+    },
+    {
+     "say": "لازم الحلّتين يكونوا زي بعض في كل حاجة تانية: نفس المية، نفس النار، نفس الوقت.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 2
+    },
+    {
+     "say": "الحلّة اللي من غير البهار دي اسمها المجموعة الضابطة. هي المقياس اللي بتقارن بيه. ومن غيرها، أي نتيجة ملهاش معنى.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 3,
+     "emote": "serious",
+     "host": "right"
+    },
+    {
+     "say": "والبشر عندهم مشكلة غريبة يا فندم: لو قلت لبني آدم إنك إديته حاجة هتفيده، ساعات بيحس بتحسن فعلاً، حتى لو اللي إديته له مية بسكر. بيسمّوها البلاسيبو.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 4
+    },
+    {
+     "say": "فعلشان كده، في التجارب الجد، المجموعتين بياخدوا حاجة شكلها واحد بالظبط، وماحدش فيهم عارف هو في أنهي مجموعة. ودي اسمها تجربة عمياء.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 5
+    },
+    {
+     "say": "وفي التجارب الأجد، حتى اللي بيدّي الحاجة نفسه مايعرفش. علشان مايبانش عليه. ودي اسمها عمياء من الناحيتين.",
+     "show": "board",
+     "board": "fairtest",
+     "step": 6,
+     "emote": "neutral",
+     "host": "left"
+    },
+    {
+     "say": "يعني البشر لازم يغمّوا عينين الكل، <short pause> علشان يشوفوا الحقيقة.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "lind",
+   "story": {
+    "n": 3,
+    "tag": "12 SAILORS",
+    "icon": "ship"
+   },
+   "style": "A sea story told with growing respect, then a dry sting about waiting.",
+   "beats": [
+    {
+     "say": "وأول مرة البشر عملوا الحكاية دي بشكل قريب من كده، كانت على مركب. سنة ألف سبعمية سبعة وأربعين، في البحرية البريطانية.",
+     "show": "board",
+     "board": "lind",
+     "step": 0
+    },
+    {
+     "say": "البحّارة كانوا بيموتوا من مرض اسمه الإسقربوط: اللثة بتنزف، والسنان بتقع، والجسم بيتهد.",
+     "show": "board",
+     "board": "lind",
+     "step": 1,
+     "calm": true
+    },
+    {
+     "say": "وكل واحد عنده علاج: خل، مية بحر، سيدر التفاح.",
+     "show": "board",
+     "board": "lind",
+     "step": 2
+    },
+    {
+     "say": "دكتور على المركب اسمه James Lind، بدل ما يصدّق حد، جاب اتناشر بحّار عيانين، وقسمهم ست اتنينات. كل اتنين خدوا علاج مختلف، وكلهم نفس الأكل ونفس المكان.",
+     "show": "board",
+     "board": "lind",
+     "step": 3
+    },
+    {
+     "say": "بعد أيام، الاتنين اللي خدوا برتقان وليمون قاموا، وواحد منهم رجع الشغل بعد ست أيام. الباقيين لأ.",
+     "show": "board",
+     "board": "lind",
+     "step": 4
+    },
+    {
+     "say": "اتناشر بحّار يا فندم، وعرفنا حاجة الإمبراطورية كلها ماعرفتهاش.",
+     "show": "board",
+     "board": "lind",
+     "step": 5,
+     "emote": "proud",
+     "host": "right"
+    },
+    {
+     "say": "والجزء اللي يكسف: البحرية ماعملتش بيها غير بعد حوالي خمسين سنة.",
+     "show": "board",
+     "board": "lind",
+     "step": 6
+    },
+    {
+     "say": "يعني المشكلة عند البشر ساعات مش إنهم مايعرفوش.. <short pause> المشكلة إنهم يعرفوا، ويستنّوا.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "sample",
+   "story": {
+    "n": 4,
+    "tag": "SAMPLE SIZE",
+    "icon": "coin"
+   },
+   "style": "Coin flips and chance, brisk and clear, ending on a sharp line.",
+   "beats": [
+    {
+     "say": "الحاجة التانية: عدد الناس اللي اتجرّب عليهم.",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "لو رميت عملة تلات مرات، وجت كتابة التلاتة، تقدر تقول إن العملة مضروبة؟",
+     "show": "board",
+     "board": "sample",
+     "step": 0
+    },
+    {
+     "say": "لأ يا فندم. ده بيحصل بالصدفة كل شوية.",
+     "show": "board",
+     "board": "sample",
+     "step": 1,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "بس لو رميتها ألف مرة، وجت كتابة تسعمية مرة.. هنا نتكلم.",
+     "show": "board",
+     "board": "sample",
+     "step": 2
+    },
+    {
+     "say": "التجارب على البشر نفس الحكاية. خمستاشر واحد خسّوا؟ ممكن صدفة. ممكن واحد فيهم كان عيّان. ممكن تلاتة منهم بطّلوا عشا علشان مسافرين.",
+     "show": "board",
+     "board": "sample",
+     "step": 3
+    },
+    {
+     "say": "كل ما العدد يكبر، كل ما الصدفة تصغر. والعدد ده عندهم اسمه العينة.",
+     "show": "board",
+     "board": "sample",
+     "step": 4
+    },
+    {
+     "say": "واللي يقول لك \"دراسة على عشر أشخاص أثبتت\".. هو قال لك حاجة. <short pause> بس ماثبتش حاجة.",
+     "shot": "close",
+     "emote": "deadpan"
+    }
+   ]
+  },
+  {
+   "id": "choco",
+   "story": {
+    "n": 5,
+    "tag": "CHOCOLATE",
+    "icon": "heart"
+   },
+   "style": "The heist explained step by step, amused, then a fair, serious note on the ethics.",
+   "beats": [
+    {
+     "say": "نرجع للشوكولاتة. الصحفي اسمه John Bohannon، ومعاه فريق من التلفزيون الألماني.",
+     "show": "board",
+     "board": "choco",
+     "step": 0
+    },
+    {
+     "say": "جابوا حوالي خمستاشر واحد، وقسموهم تلات مجموعات. مجموعة على ريجيم قليل النشويات. مجموعة على نفس الريجيم، ومعاه قطعة شوكولاتة سودا كل يوم. ومجموعة ماغيرتش حاجة. واحد وعشرين يوم.",
+     "show": "board",
+     "board": "choco",
+     "step": 1
+    },
+    {
+     "say": "لحد هنا، شكلها تجربة محترمة، صح؟ بس هنا الحيلة يا فندم.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "present"
+    },
+    {
+     "say": "هم ماقاسوش حاجة واحدة. قاسوا تمنتاشر حاجة: الوزن، الكوليسترول، النوم، المزاج، وغيرهم.",
+     "show": "board",
+     "board": "choco",
+     "step": 2
+    },
+    {
+     "say": "ومع عدد صغير وقياسات كتير، أكيد حاجة منهم هتطلع مختلفة بالصدفة. زي ما ترمي تمنتاشر سهم على حيطة، وبعدين ترسم الدايرة حوالين السهم اللي لزق.",
+     "show": "board",
+     "board": "choco",
+     "step": 3
+    },
+    {
+     "say": "واللي طلع بالصدفة المرة دي.. الوزن. مجموعة الشوكولاتة خسّت أسرع.",
+     "show": "board",
+     "board": "choco",
+     "step": 4
+    },
+    {
+     "say": "فكتبوا الورقة، وبعتوها لمجلة. والمجلة قبلتها بسرعة، بعد ما دفعوا رسوم حوالي ستمية يورو. ومن غير ما حد يسألهم سؤال جد.",
+     "show": "board",
+     "board": "choco",
+     "step": 5
+    },
+    {
+     "say": "وبعدين بعتوا خبر صحفي. والجرايد عملت الباقي: ولا جرنال اتصل بعالم يسأله العينة كام واحد. نقلوا العنوان زي ما هو، وزوّدوا عليه صورة شوكولاتة.",
+     "show": "board",
+     "board": "choco",
+     "step": 6,
+     "emote": "bored",
+     "host": "right"
+    },
+    {
+     "say": "ولما Bohannon طلع وقال إنها لعبة، ناس كتير زعلوا منه هو، وقالوا إن اللي عمله ماكانش أخلاقي، لأنه ضحك على المشتركين كمان. ويمكن عندهم حق.",
+     "shot": "host",
+     "emote": "serious",
+     "calm": true
+    },
+    {
+     "say": "بس الرسالة وصلت: الطريق من المعمل للجرنال ممكن يبقى من غير ولا حارس.",
+     "shot": "close",
+     "emote": "serious"
+    }
+   ]
+  },
+  {
+   "id": "review",
+   "story": {
+    "n": 6,
+    "tag": "PEER REVIEW",
+    "icon": "shield"
+   },
+   "style": "How the guards work, fair about strengths and limits; the cashier line is deadpan.",
+   "beats": [
+    {
+     "say": "طب فين الحراس؟",
+     "shot": "host",
+     "emote": "skeptical",
+     "gesture": "shrug"
+    },
+    {
+     "say": "عند البشر نظام اسمه مراجعة الأقران. العالم يبعت ورقته لمجلة. المجلة تبعتها لاتنين أو تلاتة علما في نفس التخصص. غالباً من غير ما يعرفوا مين كاتبها، ومن غير فلوس.",
+     "show": "board",
+     "board": "review",
+     "step": 0
+    },
+    {
+     "say": "يقروها، ويسألوا: العينة صغيرة ليه؟ فين المجموعة الضابطة؟ قِست كام حاجة؟ وساعات يرفضوها.",
+     "show": "board",
+     "board": "review",
+     "step": 1
+    },
+    {
+     "say": "والنظام ده بيمسك غلطات كتير يا فندم. بس فيه حاجتين لازم تعرفوهم.",
+     "show": "board",
+     "board": "review",
+     "step": 2,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "الأولانية: المراجعين بيقروا بس، مابيعيدوش التجربة. لو حد كتب أرقام مزوّرة بذكاء، ممكن تعدّي.",
+     "show": "board",
+     "board": "review",
+     "step": 3
+    },
+    {
+     "say": "والتانية: مش كل اللي اسمه مجلة يبقى مجلة. فيه مجلات بتقبل أي حاجة، طالما دفعت.",
+     "show": "board",
+     "board": "review",
+     "step": 4
+    },
+    {
+     "say": "شكلها مجلة، واسمها مجلة، وجواها.. <short pause> كاشير. وده اللي الشوكولاتة عدّت منه.",
+     "show": "board",
+     "board": "review",
+     "step": 5,
+     "emote": "deadpan",
+     "host": "left"
+    }
+   ]
+  },
+  {
+   "id": "repeat",
+   "story": {
+    "n": 7,
+    "tag": "DO IT AGAIN",
+    "icon": "dup"
+   },
+   "style": "Why repeating matters, then the hidden drawer problem, then a teaser.",
+   "beats": [
+    {
+     "say": "طب إيه اللي يخلّي البشر يصدّقوا نتيجة بجد؟ إن حد تاني يعيدها.",
+     "shot": "host",
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "فريق تاني، في بلد تانية، بناس تانيين، يعمل نفس الخطوات اللي في الورقة.. ويوصل لنفس الحاجة. ساعتها بس النتيجة بتبدأ تبقى حقيقة.",
+     "show": "board",
+     "board": "repeat",
+     "step": 0
+    },
+    {
+     "say": "لو ماحدش قدر يعيدها، تفضل نتيجة واحدة. ممكن صح، وممكن صدفة، <short pause> وممكن كابل مش داخل كويس.",
+     "show": "board",
+     "board": "repeat",
+     "step": 1,
+     "emote": "sly",
+     "host": "right"
+    },
+    {
+     "say": "وفيه مشكلة تانية أخبث يا فندم. تخيّل عشرين معمل في العالم جرّبوا نفس الفكرة.",
+     "show": "board",
+     "board": "repeat",
+     "step": 2
+    },
+    {
+     "say": "تسعتاشر منهم مالقوش حاجة، فقالوا: خلاص، مفيش حاجة نكتبها، وحطوا النتيجة في الدرج. وواحد بس، بالصدفة، لقى فرق.",
+     "show": "board",
+     "board": "repeat",
+     "step": 3
+    },
+    {
+     "say": "مين اللي هيتنشر؟ الواحد ده بس. فاللي بيقرا من بره، شايف بحث واحد بيقول \"لقينا\"، ومش شايف التسعتاشر اللي في الدرج. البشر بيسمّوها مشكلة الدرج.",
+     "show": "board",
+     "board": "repeat",
+     "step": 4
+    },
+    {
+     "say": "وعلشان كده، علما كتير دلوقتي بيكتبوا خطة التجربة ويسجّلوها قبل ما يبدأوا، علشان مايقدروش بعدين يقولوا: إحنا أصلاً كنا بندوّر على الوزن.",
+     "show": "board",
+     "board": "repeat",
+     "step": 5
+    },
+    {
+     "say": "وهنا فيه مفاجأة يا فندم، هحكيها لكم في تقرير جاي: لما البشر قعدوا يعيدوا أبحاث قديمة كتير، اكتشفوا حاجة مش مريحة خالص.",
+     "shot": "host",
+     "emote": "worried"
+    }
+   ]
+  },
+  {
+   "id": "headline",
+   "story": {
+    "n": 8,
+    "tag": "6 QUESTIONS",
+    "icon": "eye"
+   },
+   "style": "A practical checklist read briskly, with the mice joke and the doubling trick.",
+   "beats": [
+    {
+     "say": "فجمعت لكم شوية أسئلة، تسألوها لأي خبر بيبدأ بـ\"دراسة بتقول\".",
+     "shot": "host",
+     "emote": "neutral",
+     "gesture": "count"
+    },
+    {
+     "say": "أولاً: الدراسة على كام واحد؟ عشرة ولا عشرة آلاف؟",
+     "show": "board",
+     "board": "headline",
+     "step": 0
+    },
+    {
+     "say": "ثانياً: كان فيه مجموعة يقارنوا بيها، ولا لأ؟",
+     "show": "board",
+     "board": "headline",
+     "step": 1
+    },
+    {
+     "say": "ثالثاً: الدراسة على بشر، ولا على فيران؟ أصل نص الأخبار العظيمة يا فندم بتبقى على فيران.",
+     "show": "board",
+     "board": "headline",
+     "step": 2
+    },
+    {
+     "say": "والفار ده يتشكر، <short pause> بس هو مش أنا ولا انت.",
+     "shot": "close",
+     "emote": "deadpan"
+    },
+    {
+     "say": "رابعاً: حد تاني عمل نفس الدراسة ووصل لنفس النتيجة؟",
+     "show": "board",
+     "board": "headline",
+     "step": 3
+    },
+    {
+     "say": "وخامساً: مين اللي دفع فلوسها؟ مش علشان أي حد دفع يبقى كذاب، بس علشان تبقى عارف.",
+     "show": "board",
+     "board": "headline",
+     "step": 4,
+     "emote": "neutral",
+     "host": "right"
+    },
+    {
+     "say": "وسادساً، ودي أحلى واحدة: الخطر زاد الضعف؟ ضعف كام؟",
+     "show": "board",
+     "board": "headline",
+     "step": 5
+    },
+    {
+     "say": "أصل لو حاجة كانت بتحصل لواحد من كل عشر آلاف، وبقت بتحصل لاتنين من كل عشر آلاف.. ده «الضعف» بالظبط. العنوان هيكتب: الخطر اتضاعف!",
+     "show": "board",
+     "board": "headline",
+     "step": 6
+    },
+    {
+     "say": "والحقيقة إن تسعة آلاف تسعمية تمانية وتسعين واحد ماحصلّهمش حاجة، زي الأول. الرقم صح، والإحساس اللي العنوان عايزك تحسه.. غلط.",
+     "show": "board",
+     "board": "headline",
+     "step": 7,
+     "emote": "skeptical",
+     "host": "right"
+    },
+    {
+     "say": "ولو الخبر عدّى من الست أسئلة دول.. صدّقه. <short pause> بس صدّقه شوية.",
+     "shot": "close",
+     "emote": "sly"
+    }
+   ]
+  },
+  {
+   "id": "dict",
+   "story": {
+    "n": 9,
+    "tag": "WORDS",
+    "icon": "key"
+   },
+   "style": "A quick aside, like reading two entries from a field dictionary.",
+   "beats": [
+    {
+     "say": "قاموس البشر. كلمتين النهارده. عينة: الناس اللي التجربة اتعملت عليهم فعلاً، وكل ما يكتروا، كل ما الصدفة تقل.",
+     "show": "board",
+     "board": "s2dict",
+     "step": 0
+    },
+    {
+     "say": "ومراجعة الأقران: علما بيقروا البحث قبل ما يتنشر ويحاولوا يلاقوا فيه غلط، بس مابيعيدوش التجربة.",
+     "show": "board",
+     "board": "s2dict",
+     "step": 1,
+     "host": "right"
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "story": {
+    "n": 10,
+    "tag": "RECAP",
+    "icon": "rules"
+   },
+   "style": "Summary, one sincere line, the teaser, and the sign-off.",
+   "beats": [
+    {
+     "say": "الخلاصة يا فندم. أولاً: التجربة المحترمة محتاجة مجموعة تقارن بيها، وعدد كبير، وعيون متغمّية.",
+     "show": "board",
+     "board": "s2recap",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "ثانياً: قيس حاجات كتير في ناس قليلين، وهتلاقي \"اكتشاف\" بالصدفة، زي الشوكولاتة.",
+     "show": "board",
+     "board": "s2recap",
+     "step": 1,
+     "host": "right"
+    },
+    {
+     "say": "ثالثاً: المراجعة بتمسك كتير بس مش كل حاجة، والحقيقة بتبان لما حد تاني يعيد التجربة.",
+     "show": "board",
+     "board": "s2recap",
+     "step": 2,
+     "host": "right"
+    },
+    {
+     "say": "وبصراحة، الشوكولاتة ماكانتش هي المشكلة. المشكلة إن البشر بيحبوا يصدّقوا الخبر اللي على مزاجهم.",
+     "shot": "close",
+     "emote": "serious"
+    },
+    {
+     "say": "في التقرير الجاي: ليه العلما بيغيروا كلامهم كل شوية؟ وحكاية دكتور قال لزمايله اغسلوا إيديكم.. فطردوه.",
+     "shot": "host",
+     "emote": "sly",
+     "gesture": "count"
+    },
+    {
+     "say": "ده كان تقرير الأرض. العميل Peek. انتهى الإرسال.",
+     "shot": "wide",
+     "emote": "proud",
+     "gesture": "wave"
+    }
+   ]
+  }
+ ],
+ "youtube": {
+  "titles": [
+   "دراسة بتقول الشوكولاتة بتخسّس.. نصدّق؟ إزاي البحث العلمي بيتعمل | ملف العلم 2/4",
+   "إزاي تعرف إن الدراسة دي تتصدّق؟ اشرحها لكائن فضائي | ملف العلم 2/4",
+   "الشوكولاتة اللي ضحكت على الجرايد: البحث العلمي بيتراجع إزاي | ملف العلم 2/4"
+  ],
+  "description": [
+   "العميل Peek جاسوس فضائي بيبعت لقيادته تقرير عن البشر: سنة 2015 جرايد في بلاد كتير كتبت إن دراسة علمية بتقول الشوكولاتة بتخسّس.. وبعدها صاحب الدراسة قال إنه عملها علشان يوري قد إيه سهل يضحك على العالم.",
+   "",
+   "في التقرير التاني: الورقة العلمية بتتكتب إزاي، يعني إيه تجربة عادلة ومجموعة ضابطة وتجربة عمياء، حكاية James Lind والاتناشر بحّار، ليه العينة الصغيرة مابتثبتش حاجة، الشوكولاتة عدّت إزاي، مراجعة الأقران بتمسك إيه وبيفوتها إيه، ومشكلة الدرج. وفي الآخر: ست أسئلة تسألها لأي خبر بيبدأ بـ«دراسة بتقول».",
+   "",
+   "الشرح بسيط ومناسب لأي حد، حتى لو أول مرة يسمع عن الموضوع."
+  ],
+  "intro": "المقدمة",
+  "outro": "التقرير الجاي",
+  "chaptersTitle": "الفصول",
+  "sourcesTitle": "مصادر",
+  "chapterNames": {
+   "THE PAPER": "الورقة العلمية",
+   "A FAIR TEST": "التجربة العادلة",
+   "12 SAILORS": "البحّارة الاتناشر",
+   "SAMPLE SIZE": "العينة",
+   "CHOCOLATE": "الشوكولاتة",
+   "PEER REVIEW": "المراجعة",
+   "DO IT AGAIN": "التكرار",
+   "6 QUESTIONS": "إزاي تقرا العنوان",
+   "WORDS": "قاموس البشر",
+   "RECAP": "الخلاصة"
+  },
+  "sources": [
+   "دراسة الشوكولاتة والصحفي John Bohannon (2015): https://www.wgbh.org/news/2015-05-29/why-a-journalist-scammed-the-media-into-spreading-bad-chocolate-science",
+   "James Lind والإسقربوط (1747): https://www.bbvaopenmind.com/en/james-lind-and-scurvy-the-first-clinical-trial-in-history/",
+   "عدد الأبحاث المنشورة في السنة: https://revistapesquisa.fapesp.br/en/drop-in-number-of-scientific-articles-published-worldwide/"
+  ],
+  "footer": [
+   "دي حلقة من ملف من أربع تقارير عن العلم. شوفهم بالترتيب من قايمة التشغيل.",
+   "ده شرح عام، مش نصيحة طبية ولا غذائية.",
+   "الشخصية والصوت والرسوم متولّدين بالكمبيوتر. المعلومات من المصادر المذكورة فوق ومن مراجع عامة."
+  ],
+  "hashtags": [
+   "#تقرير_الأرض",
+   "#العلم",
+   "#ملف_العلم"
+  ],
+  "tags": [
+   "تقرير الأرض",
+   "العميل Peek",
+   "ملف العلم",
+   "دراسة الشوكولاتة",
+   "الشوكولاتة بتخسس",
+   "البحث العلمي",
+   "مراجعة الأقران",
+   "المجموعة الضابطة",
+   "البلاسيبو",
+   "تجربة عمياء",
+   "James Lind",
+   "الإسقربوط",
+   "حجم العينة",
+   "الأخبار العلمية",
+   "إزاي تقرا دراسة",
+   "التفكير النقدي",
+   "Earth Report",
+   "تبسيط العلوم"
+  ],
+  "settings": [
+   "Category: Education",
+   "Video language: Arabic. Upload captions.srt as Arabic.",
+   "Audience: not made for kids",
+   "Playlist: ملف العلم | تقرير الأرض (four parts, in order)",
+   "End screen: the last 13 seconds are a card with room for a video on the left and the subscribe button on the right.",
+   "Altered or synthetic content: the host is plainly a cartoon; the voice is machine-generated and the description says so.",
+   "Comments: hold comments with links for review."
+  ],
+  "pinned": "آخر خبر قريته بيبدأ بـ«دراسة بتقول» كان عن إيه؟ جرّب عليه الست أسئلة واكتب لنا النتيجة. القيادة بتقرا التعليقات."
+ }
+}

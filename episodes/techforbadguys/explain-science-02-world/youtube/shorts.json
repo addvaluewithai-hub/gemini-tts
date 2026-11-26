@@ -1,0 +1,251 @@
+{
+ "note": "Shorts for science part 2 (world picture), in Science 1's snail look (owner, 16 Nov): Peek standing small at the side (peekFixed), no captions, no words on screen. `parts` are [from, to] in seconds of the finished episode (cues/explain-science-02-world.json), cut on word boundaries; `end` is the closing card with its own recorded line (shorts/cta-<key>.wav, Vertex AI job techforbadguys-science02-short-cta-<key>; sailors uses take b, techforbadguys-science02-short-cta-sailors-b). https://youtu.be/ffEDfSVAs54 in a description is replaced by the full episode's link at upload. Render with video/short.cjs. From 17 Nov the closing line is the question only (shorts/cta-<key>-q.*, Vertex job techforbadguys-science02-short-cta-<key>-ar-q; lines in shorts/cta-lines-q.json), and the first frame is already drawn.",
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ },
+ "full": "",
+ "boardZoom": 0.85,
+ "shorts": [
+  {
+   "key": "chocolate",
+   "title": "دراسة: الشوكولاتة بتخسّس 🍫 وطلعت لعبة #Shorts",
+   "description": "سنة 2015 الجرايد كتبت إن الشوكولاتة بتخسّس. الحيلة: قاسوا 18 حاجة على حوالي 15 واحد، وأكيد حاجة هتطلع بالصدفة. زي ما ترمي 18 سهم وترسم الدايرة حوالين اللي لزق.\n\nالتقرير كامل: دراسة بتقول الشوكولاتة بتخسّس.. نصدّق؟ إزاي البحث العلمي بيتعمل | ملف العلم 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #الشوكولاتة #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "دراسة الشوكولاتة",
+    "الشوكولاتة بتخسس",
+    "أخبار علمية مضروبة",
+    "John Bohannon"
+   ],
+   "parts": [
+    [
+     16.98,
+     21.04
+    ],
+    [
+     3.82,
+     10.73
+    ],
+    [
+     198.7,
+     214.33
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-chocolate-q.wav",
+    "words": "shorts/cta-chocolate-q.words.json",
+    "card": {
+     "icons": [
+      "heart",
+      "file"
+     ],
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
+    }
+   },
+   "content": 26.6,
+   "en": {
+    "title": "A Study Said Chocolate Makes You Thin 🍫 It Was a Prank #Shorts",
+    "description": "In 2015 newspapers reported that chocolate helps you lose weight. The trick: 18 measurements on about 15 people, so something was bound to come up by chance. Like throwing 18 darts and drawing the target around the one that stuck.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   },
+   "look": "fixed",
+   "captions": false,
+   "video": {
+    "id": "_jphwKJvy1E",
+    "url": "https://youtube.com/shorts/_jphwKJvy1E",
+    "privacy": "private",
+    "publishAt": "2026-11-18T18:00:00Z",
+    "pulled": "2026-11-20"
+   }
+  },
+  {
+   "key": "sailors",
+   "title": "12 بحّار ودكتور واحد.. وأول تجربة عادلة ⛵ #Shorts",
+   "description": "سنة 1747 البحّارة كانوا بيموتوا من الإسقربوط، وكل واحد عنده علاج. James Lind قسم 12 بحّار ست اتنينات وجرّب. اللي خدوا برتقان وليمون قاموا. والبحرية استنت حوالي خمسين سنة.\n\nالتقرير كامل: دراسة بتقول الشوكولاتة بتخسّس.. نصدّق؟ إزاي البحث العلمي بيتعمل | ملف العلم 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #تاريخ_العلم #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "James Lind",
+    "الإسقربوط",
+    "أول تجربة سريرية",
+    "تاريخ العلم"
+   ],
+   "parts": [
+    [
+     114.35,
+     144.65
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-sailors-q.wav",
+    "words": "shorts/cta-sailors-q.words.json",
+    "card": {
+     "icons": [
+      "ship",
+      "cash"
+     ],
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
+    }
+   },
+   "content": 30.3,
+   "en": {
+    "title": "12 Sailors, One Doctor, and the First Fair Test ⛵ #Shorts",
+    "description": "In 1747 sailors were dying of scurvy and everyone had a cure. James Lind split 12 sick sailors into six pairs and tested. The pair given oranges and lemons recovered. The navy waited about fifty years.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   },
+   "look": "fixed",
+   "captions": false,
+   "video": {
+    "id": "4m2NAJJcCKc",
+    "url": "https://youtube.com/shorts/4m2NAJJcCKc",
+    "privacy": "private",
+    "publishAt": "2026-11-18T20:00:00Z",
+    "pulled": "2026-11-20"
+   }
+  },
+  {
+   "key": "placebo",
+   "title": "ليه العلما بيغمّوا عينين الكل؟ 🙈 #Shorts",
+   "description": "لو قلت لحد إنك إديته حاجة هتفيده، ساعات بيحس بتحسن حتى لو كانت مية بسكر. علشان كده في التجارب الجد، ماحدش بيعرف هو في أنهي مجموعة.. ولا حتى اللي بيدّي الحاجة.\n\nالتقرير كامل: دراسة بتقول الشوكولاتة بتخسّس.. نصدّق؟ إزاي البحث العلمي بيتعمل | ملف العلم 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #العلم #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "البلاسيبو",
+    "تجربة عمياء",
+    "التجربة العشوائية",
+    "المنهج العلمي"
+   ],
+   "parts": [
+    [
+     85.91,
+     104.36
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-placebo-q.wav",
+    "words": "shorts/cta-placebo-q.words.json",
+    "card": {
+     "icons": [
+      "eye",
+      "rules"
+     ],
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
+    }
+   },
+   "content": 18.5,
+   "en": {
+    "title": "Why Do Scientists Blindfold Everyone? 🙈 #Shorts",
+    "description": "Tell someone you gave them something helpful and sometimes they feel better, even if it was sugar water. So in serious trials nobody knows which group they're in... not even the person handing it out.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   },
+   "look": "fixed",
+   "captions": false,
+   "video": {
+    "id": "DT_lD4h_M28",
+    "url": "https://youtube.com/shorts/DT_lD4h_M28",
+    "privacy": "private",
+    "publishAt": "2026-11-19T12:00:00Z",
+    "pulled": "2026-11-20"
+   }
+  },
+  {
+   "key": "questions",
+   "title": "6 أسئلة قبل ما تصدّق «دراسة بتقول» 🧐 #Shorts",
+   "description": "على كام واحد؟ فيه مجموعة يقارنوا بيها؟ على بشر ولا فيران؟ حد عادها؟ مين دفع؟ والخطر زاد الضعف.. ضعف كام؟ لو الخبر عدّى من الست أسئلة دول، صدّقه. بس صدّقه شوية.\n\nالتقرير كامل: دراسة بتقول الشوكولاتة بتخسّس.. نصدّق؟ إزاي البحث العلمي بيتعمل | ملف العلم 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nالعميل Peek جاسوس فضائي بيبعت لقيادته تقارير عن حاجات البشر. اشترك وفعّل الجرس.\n\n#Shorts #التفكير_النقدي #تقرير_الأرض",
+   "tags": [
+    "Shorts",
+    "تقرير الأرض",
+    "Earth Report",
+    "العميل Peek",
+    "ملف العلم",
+    "شرح مبسط",
+    "إزاي تقرا دراسة",
+    "أخبار علمية",
+    "التفكير النقدي",
+    "الخطر النسبي"
+   ],
+   "parts": [
+    [
+     351.79,
+     354.05
+    ],
+    [
+     330.84,
+     340.74
+    ],
+    [
+     342.81,
+     350.16
+    ]
+   ],
+   "end": {
+    "audio": "shorts/cta-questions-q.wav",
+    "words": "shorts/cta-questions-q.words.json",
+    "card": {
+     "icons": [
+      "eye",
+      "file"
+     ],
+     "sub": "SCIENCE FILE · 2/4",
+     "look": "sci"
+    }
+   },
+   "content": 19.5,
+   "en": {
+    "title": "6 Questions Before You Believe \"A Study Says\" 🧐 #Shorts",
+    "description": "How many people? A comparison group? Humans or mice? Did anyone repeat it? Who paid? And the risk doubled... from what? If the story passes all six, believe it. A little.\n\nThe full report: A Study Says Chocolate Makes You Thin... Believe It? How Research Works | Science File 2/4\nhttps://youtu.be/ffEDfSVAs54\n\nAgent Peek is an alien spy filing reports to his commanders about humans. Subscribe and turn on the bell.\n\n#Shorts #science #EarthReport",
+    "tags": [
+     "Shorts",
+     "Earth Report",
+     "Agent Peek",
+     "science",
+     "explained simply"
+    ]
+   },
+   "look": "fixed",
+   "captions": false,
+   "video": {
+    "id": "NvQIYAg6EwU",
+    "url": "https://youtube.com/shorts/NvQIYAg6EwU",
+    "privacy": "private",
+    "publishAt": "2026-11-19T18:00:00Z",
+    "pulled": "2026-11-20"
+   }
+  }
+ ]
+}

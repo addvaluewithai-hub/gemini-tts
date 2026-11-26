@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-16T18:25:27.342Z",
+  "duration_ms": 4640,
+  "word_count": 8,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "ومع ذلك في دراسات بتعدي وهي غلط ازاي؟",
+  "source_text": "ومع ذلك فيه دراسات بتعدّي وهي غلط. إزاي؟",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "ومع ذلك فيه دراسات بتعدّي وهي غلط. إزاي؟"
+    }
+  ],
+  "agreement": 0.875,
+  "flagged": false,
+  "missing_words": [
+    "فيه"
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 520,
+      "text": "ومع"
+    },
+    {
+      "start_ms": 520,
+      "end_ms": 1160,
+      "text": "ذلك"
+    },
+    {
+      "start_ms": 1200,
+      "end_ms": 1360,
+      "text": "في"
+    },
+    {
+      "start_ms": 1360,
+      "end_ms": 1760,
+      "text": "دراسات"
+    },
+    {
+      "start_ms": 1760,
+      "end_ms": 2520,
+      "text": "بتعدي"
+    },
+    {
+      "start_ms": 2560,
+      "end_ms": 2880,
+      "text": "وهي"
+    },
+    {
+      "start_ms": 2880,
+      "end_ms": 3520,
+      "text": "غلط"
+    },
+    {
+      "start_ms": 3800,
+      "end_ms": 4440,
+      "text": "ازاي؟"
+    }
+  ]
+}

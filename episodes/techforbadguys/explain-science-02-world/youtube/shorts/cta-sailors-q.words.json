@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "type": "word_timestamps",
+  "alignment_mode": "whole_audio_speech_to_text",
+  "alignment_provider": "google-speech",
+  "alignment_model": "chirp_3",
+  "generated_at": "2026-11-16T18:25:17.159Z",
+  "duration_ms": 4880,
+  "word_count": 9,
+  "diarization": false,
+  "language_codes": [
+    "ar-EG"
+  ],
+  "recognized_text": "ومن ساعتها البشر بقوا بيجربوا بالطريقه دي. ازاي بالضبط؟",
+  "source_text": "ومن ساعتها البشر بقوا بيجرّبوا بالطريقة دي. إزاي بالظبط؟",
+  "source_turns": [
+    {
+      "index": 0,
+      "text": "ومن ساعتها البشر بقوا بيجرّبوا بالطريقة دي. إزاي بالظبط؟"
+    }
+  ],
+  "agreement": 0.8889,
+  "flagged": false,
+  "missing_words": [
+    "بالظبط؟"
+  ],
+  "words": [
+    {
+      "start_ms": 0,
+      "end_ms": 480,
+      "text": "ومن"
+    },
+    {
+      "start_ms": 480,
+      "end_ms": 960,
+      "text": "ساعتها"
+    },
+    {
+      "start_ms": 960,
+      "end_ms": 1480,
+      "text": "البشر"
+    },
+    {
+      "start_ms": 1480,
+      "end_ms": 1720,
+      "text": "بقوا"
+    },
+    {
+      "start_ms": 1720,
+      "end_ms": 2280,
+      "text": "بيجربوا"
+    },
+    {
+      "start_ms": 2280,
+      "end_ms": 2760,
+      "text": "بالطريقه"
+    },
+    {
+      "start_ms": 2760,
+      "end_ms": 2920,
+      "text": "دي."
+    },
+    {
+      "start_ms": 3760,
+      "end_ms": 4120,
+      "text": "ازاي"
+    },
+    {
+      "start_ms": 4120,
+      "end_ms": 4760,
+      "text": "بالضبط؟"
+    }
+  ]
+}
