@@ -17,6 +17,7 @@ import { vanishSet } from "./sets/vanish.js";
 import { dictSet } from "./sets/dict.js";
 import { recapSet } from "./sets/recap.js";
 import { shortEndV } from "./sets/shortend.v.js";
+import { labEnd } from "./sets/labend.js";
 import { eintroSet } from "./sets/eintro.js";
 import { amberSet } from "./sets/amber.js";
 import { sparkSet } from "./sets/spark.js";
@@ -854,6 +855,7 @@ const BOARDS = {
   // The last card of a Short: the channel name, the full report as a video with a play button (two `icons` either side of it, `sub`
   // under it, e.g. "CRYPTO FILE · 1/5"), and at step 1 a ringing bell with SUBSCRIBE. Nothing outside x 340..1580, so it
   // survives the vertical crop (studio.html, boardZoom 0.85).
+  labend: (s, step, age, total) => labEnd(s, step, age, total),   // a standalone Short's sign-off card (shorts lab)
   shortend(s, step, age, total, cfg = {}) {
     if (cfg.vertical) return shortEndV(s, step, age, total);   // a Short: the portrait card in the sets' world (sets/shortend.v.js)
     const ic = s.icons || [], n = ic.length, f = pop(total - 0.15), b = step >= 1 ? age : -1, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0;
