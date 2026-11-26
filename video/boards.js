@@ -34,6 +34,7 @@ import { shadowSet } from "./sets/shadow.js";
 import { workshopSet } from "./sets/workshop.js";
 import { announceSet } from "./sets/announce.js";
 import { shortEndV } from "./sets/shortend.v.js";
+import { skySet } from "./sets/sky.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -859,6 +860,8 @@ const BOARDS = {
   // The host is not in them; give a beat `host: "left"` or `"right"` and he leans in from that side.
   trail: (s, step, age, total, cfg) => bankSet(s, step, age, total, cfg),
   // Crypto part 1, scene by scene, in the world of the bank set (sets/<scene>.js): one wordless shot per beat, `ends` from sets/beats.cjs.
+  // Shorts lab 09: the commander asks (sets/sky.js), drawn for the tall frame
+  sky: (s, step, age, total, cfg) => skySet(s, step, age, total, cfg),
   money: (s, step, age, total, cfg) => moneySet(s, step, age, total, cfg),
   intro: (s, step, age, total, cfg) => introSet(s, step, age, total, cfg),
   middle: (s, step, age, total, cfg) => middleSet(s, step, age, total, cfg),

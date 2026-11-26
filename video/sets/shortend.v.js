@@ -24,6 +24,7 @@ const PROP = {
 export function shortEndV(s, step, age, total) {
   setFrame(1080, 1920);
   if (s.look === "sci") return sciEnd(s, step, age, total);
+  if (s.look === "lab") return labEnd(s, step, age, total);
   try {
     const t = total, b = step >= 1 ? age : -1, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0, c = { x: 540, y: 960, z: 1 + 0.02 * t };
     const town = `<rect width="1080" height="1920" fill="url(#bsky)"/>` + layer(stars(5, 90, -100, 1200, 900, t), c, 0.2)
@@ -64,5 +65,22 @@ function sciEnd(s, step, age, total) {
     const waves = b > 0 ? [1, -1].map((d) => `<path d="M${d * 104} -40Q${d * 128} 0 ${d * 104} 40M${d * 134} -62Q${d * 166} 0 ${d * 134} 62" fill="none" stroke="${P.goldD}" stroke-width="9" stroke-linecap="round" opacity="${clamp(1 - (b % 0.6) / 0.6)}"/>`).join("") : "";
     const sub = b >= 0 ? at(540, 1250, `${at(-290, 0, bell + waves, 1.05)}${two(rr(-160, -66, 520, 132, 66), "#e0302a", "#b0221e", 0, 10)}${text(100, 30, "SUBSCRIBE", 84, "#fff")}`, pop(b)) : "";
     return frame(paper + title + screen + label + sub, P);
+  } finally { setFrame(1920, 1080); }
+}
+
+// The standalone Shorts' sign-off card (spec look: "lab", shorts lab 2026-11-26): the town at dusk, EARTH REPORT on a big
+// sign, and the bell that swings and rings. Nothing else: no full report, no file number, no chapter chip.
+function labEnd(s, step, age, total) {
+  try {
+    const t = total, r = Math.max(0, t - 0.35), swing = 26 * Math.sin(r * 15) * Math.exp(-r * 1.6), c = { x: 540, y: 960, z: 1 + 0.02 * t };
+    const town = `<rect width="1080" height="1920" fill="url(#bsky)"/>` + layer(stars(5, 90, -100, 1200, 900, t), c, 0.2)
+      + layer(rings(540, 1640, 300, "#ffd27a", 0.2, 1.45) + `<circle cx="540" cy="1640" r="200" fill="#ffd98a"/>` + clouds(t, 520, 4, "#ffb199", 0.5), c, 0.3)
+      + layer(skyline(41, -300, 1400, 1760, 120, 300, "#4a2690", P.win) + skyline(47, -300, 1400, 1800, 70, 180, "#2c1a66", P.win), c, 0.6)
+      + `<rect y="1790" width="1080" height="200" fill="${P.ground}"/><rect y="1790" width="1080" height="12" fill="#3a2a7a"/>`;
+    const title = at(540, 560 - 300 * (1 - pop(t)), `${two(rr(-470, -190, 940, 340, 40), P.ink, "#0d0726", 0, 12)}<text x="0" y="-22" text-anchor="middle" font-family="Anton" font-size="150" fill="#eef0ff">EARTH</text><text x="0" y="126" text-anchor="middle" font-family="Anton" font-size="150" fill="${P.pink}">REPORT</text>`);
+    const bell = `<g transform="rotate(${swing.toFixed(2)} 0 -92)"><path d="M-62 44C-62 -46 -40 -82 0 -82C40 -82 62 -46 62 44L80 62H-80Z" fill="${P.gold}"/><path d="M-62 44C-62 -46 -40 -82 0 -82" fill="none" stroke="#fff3b0" stroke-width="10" opacity=".6"/><circle cy="-92" r="14" fill="${P.gold}"/><circle cx="${(swing * 0.9).toFixed(1)}" cy="80" r="20" fill="${P.goldD}"/></g>`;
+    const waves = r > 0 ? [1, -1].map((d) => `<path d="M${d * 104} -40Q${d * 128} 0 ${d * 104} 40M${d * 134} -62Q${d * 166} 0 ${d * 134} 62" fill="none" stroke="${P.gold}" stroke-width="9" stroke-linecap="round" opacity="${clamp(1 - (r % 0.6) / 0.6).toFixed(2)}"/>`).join("") : "";
+    const b = at(540, 1130, rings(0, -10, 210, P.gold, 0.18) + bell + waves, 2.2 * pop(t - 0.25));
+    return frame(town + title + b, P);
   } finally { setFrame(1920, 1080); }
 }
