@@ -1,0 +1,143 @@
+{
+ "title": "تقرير الأرض: عسل الفراعنة (shorts lab 01)",
+ "recorded_for": "shorts-lab",
+ "layout": "explain",
+ "date": "",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "notes": [
+  "Shorts lab, standalone Short (producer D). Script from the writer, words unchanged.",
+  "Sources: https://en.wikipedia.org/wiki/Honey (water 15.5-18%, sugar, acidity, glucose oxidase, absorbs moisture; no edible honey proven from Egyptian tombs)."
+ ],
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0.3,
+  "tail": 2,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "endnext",
+   "title": "",
+   "next": "",
+   "icons": [],
+   "note": ""
+  }
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "lab",
+ "boards": {
+  "honey": {
+   "kind": "honey"
+  },
+  "signoff": {
+   "kind": "shortend",
+   "look": "lab",
+   "dark": false
+  }
+ },
+ "scenes": [
+  {
+   "id": "short",
+   "story": null,
+   "style": "A field report to the commander: curious, a little amused, sure of the science; the tomb story told as a story, not a fact.",
+   "beats": [
+    {
+     "say": "يا فندم، البشر عندهم أكل مالوش تاريخ صلاحية.. <short pause> العسل.",
+     "show": "board",
+     "board": "honey",
+     "step": 0
+    },
+    {
+     "say": "فيه حكاية مشهورة عندهم: علما آثار فتحوا مقبرة مصرية قديمة، لقوا جرّة عسل عمرها آلاف السنين، وداقوها.. ولسه حلوة.",
+     "show": "board",
+     "board": "honey",
+     "step": 1
+    },
+    {
+     "say": "الحكاية دي بتتقال كتير يا فندم، بس أنا دوّرت.. ومالقيتش عليها دليل مؤكد.",
+     "show": "board",
+     "board": "honey",
+     "step": 2
+    },
+    {
+     "say": "الغريب بقى إن العلم بيقول إنها ممكنة.",
+     "show": "board",
+     "board": "honey",
+     "step": 3
+    },
+    {
+     "say": "العسل فيه مية قليلة جداً، أقل من الخُمس، والباقي تقريباً كله سكر.",
+     "show": "board",
+     "board": "honey",
+     "step": 4
+    },
+    {
+     "say": "والسكر ده كتير لدرجة إن أغلب الميكروبات ماتعرفش تعيش فيه.",
+     "show": "board",
+     "board": "honey",
+     "step": 5
+    },
+    {
+     "say": "وكمان العسل حمضي، والنحل بيحط فيه إنزيم بيطلّع مادة مطهّرة.",
+     "show": "board",
+     "board": "honey",
+     "step": 6
+    },
+    {
+     "say": "يعني النحل اخترع حفظ الأكل قبل ما البشر يخترعوا التلاجة.",
+     "show": "board",
+     "board": "honey",
+     "step": 7
+    },
+    {
+     "say": "بس بشرط واحد: البرطمان يفضل مقفول، لإن العسل بيشرب مية من الهوا.. وساعتها يبوظ.",
+     "show": "board",
+     "board": "honey",
+     "step": 8
+    },
+    {
+     "say": "الخلاصة يا فندم: على الكوكب ده.. البرطمان المقفول ممكن يعيش أكتر من اللي قفله.",
+     "show": "board",
+     "board": "honey",
+     "step": 9
+    },
+    {
+     "say": "Peek.. انتهى التقرير يا فندم.",
+     "show": "board",
+     "board": "signoff",
+     "step": 0
+    }
+   ]
+  }
+ ]
+}

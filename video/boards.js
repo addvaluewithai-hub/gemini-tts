@@ -22,6 +22,7 @@ import { sampleSet, chocoSet, reviewSet } from "./sets/part2b.js";
 import { s2introSet, s2paperSet, fairtestSet, lindSet } from "./sets/part2a.js";
 import { s3introSet, vaneSet, semmelSet } from "./sets/part3a.js";
 import { wegenerSet, marshallSet, newtonSet } from "./sets/part3b.js";
+import { honeySet } from "./sets/labhoney.js";
 import { eggsSet, icecreamSet, brickSet, s3dictSet, s3recapSet } from "./sets/part3c.js";
 import { sthumbSet } from "./sets/sthumb.js";
 import { sdictSet, srecapSet } from "./sets/sdict.js";
@@ -887,6 +888,7 @@ const BOARDS = {
   brick: (s, step, age, total, cfg) => brickSet(s, step, age, total, cfg),
   s3dict: (s, step, age, total, cfg) => s3dictSet(s, step, age, total, cfg),
   s3recap: (s, step, age, total, cfg) => s3recapSet(s, step, age, total, cfg),
+  honey: (s, step, age, total, cfg) => honeySet(s, step, age, total, cfg),
   sample: (s, step, age, total, cfg) => sampleSet(s, step, age, total, cfg),
   choco: (s, step, age, total, cfg) => chocoSet(s, step, age, total, cfg),
   review: (s, step, age, total, cfg) => reviewSet(s, step, age, total, cfg),

@@ -1,0 +1,15 @@
+{
+ "shorts": [
+  {
+   "key": "lab-01-honey",
+   "parts": []
+  }
+ ],
+ "note": "Standalone Short (shorts lab): one part, the whole voice; the sign-off card is the last beat.",
+ "boardZoom": 0.85,
+ "captions": false,
+ "peekFixed": {
+  "h": 0.3,
+  "side": "right"
+ }
+}
