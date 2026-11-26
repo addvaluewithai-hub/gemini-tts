@@ -1,1 +1,130 @@
-{"layout":"explain","rtl":true,"face":"pear","boards":{"a":{"kind":"lab02","ends":[]},"sign":{"kind":"shortend","look":"sign"}},"scenes":[]}
+{
+ "recorded_for": "shorts-lab 02 apollo (Writer script, shorts-writer 1f4de73)",
+ "layout": "explain",
+ "rtl": true,
+ "face": "pear",
+ "language": "ar",
+ "size": [
+  1080,
+  1920
+ ],
+ "settings": {
+  "lead": 0.3,
+  "tail": 2.2,
+  "tempo": 1.06,
+  "tighten": {
+   "max": 0.32,
+   "keep": 0.22
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "vertical": true,
+  "portraitSets": true,
+  "boardZoom": 0.85,
+  "peekFixed": {
+   "h": 0.28,
+   "side": "right"
+  },
+  "letterbox": false
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "boards": {
+  "a": {
+   "kind": "lab02",
+   "ends": []
+  },
+  "sign": {
+   "kind": "shortend",
+   "look": "sign"
+  }
+ },
+ "scenes": [
+  {
+   "id": "apollo",
+   "story": null,
+   "beats": [
+    {
+     "say": "يا فندم، التليفون اللي في جيب أي بشري.. ذاكرته قد ذاكرة الكمبيوتر اللي نزّلهم على القمر مليون مرة.",
+     "show": "board",
+     "board": "a",
+     "step": 0,
+     "host": "right"
+    },
+    {
+     "say": "سنة ألف تسعمية تسعة وستين، البشر راحوا القمر بكمبيوتر اسمه Apollo Guidance Computer.. هو اللي كان بيوجّه المركبة.",
+     "show": "board",
+     "board": "a",
+     "step": 1,
+     "host": "right"
+    },
+    {
+     "say": "وزنه اتنين وتلاتين كيلو.",
+     "show": "board",
+     "board": "a",
+     "step": 2,
+     "host": "right"
+    },
+    {
+     "say": "وذاكرته المؤقتة: ألفين وتمانية وأربعين كلمة. يعني حوالي أربعة كيلوبايت.",
+     "show": "board",
+     "board": "a",
+     "step": 3,
+     "host": "right"
+    },
+    {
+     "say": "يعني ماكانش يقدر يشيل صورة واحدة من اللي البشر بيصوّروها لأكلهم.",
+     "show": "board",
+     "board": "a",
+     "step": 4,
+     "host": "right"
+    },
+    {
+     "say": "التليفون العادي النهارده فيه أربعة جيجابايت.",
+     "show": "board",
+     "board": "a",
+     "step": 5,
+     "host": "right"
+    },
+    {
+     "say": "اقسم دي على دي.. مليون وتمانية وأربعين ألف وخمسمية ستة وسبعين مرة.",
+     "show": "board",
+     "board": "a",
+     "step": 6,
+     "host": "right"
+    },
+    {
+     "say": "بأربعة كيلوبايت.. البشر نزلوا على القمر ورجعوا.",
+     "show": "board",
+     "board": "a",
+     "step": 7,
+     "host": "right"
+    },
+    {
+     "say": "وبمليون ضعفها.. بيتفرجوا على قطط.",
+     "show": "board",
+     "board": "a",
+     "step": 8,
+     "host": "right"
+    },
+    {
+     "say": "Peek.. انتهى التقرير يا فندم.",
+     "show": "board",
+     "board": "sign",
+     "step": 0,
+     "host": "right"
+    }
+   ]
+  }
+ ]
+}
