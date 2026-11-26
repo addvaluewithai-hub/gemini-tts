@@ -10,8 +10,8 @@
  ],
  "settings": {
   "lead": 0.3,
-  "tail": 2.2,
-  "tempo": 1.06,
+  "tail": 2.8,
+  "tempo": 1,
   "tighten": {
    "max": 0.32,
    "keep": 0.22
@@ -42,7 +42,17 @@
  "boards": {
   "a": {
    "kind": "lab02",
-   "ends": []
+   "ends": [
+    6.45,
+    6.36,
+    2.22,
+    4.44,
+    3.58,
+    2.87,
+    4.31,
+    3.15,
+    2.51
+   ]
   },
   "sign": {
    "kind": "shortend",

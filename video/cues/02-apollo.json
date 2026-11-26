@@ -1,0 +1,253 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/shorts-lab/02-apollo",
+ "transcript": "../../../../video/cues/02-apollo.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "rtl": true,
+ "layout": "explain",
+ "size": [
+  1080,
+  1920
+ ],
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0.3,
+ "tail": 2.8,
+ "tempo": 1,
+ "tighten": {
+  "max": 0.32,
+  "keep": 0.22
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "vertical": true,
+ "portraitSets": true,
+ "boardZoom": 0.85,
+ "peekFixed": {
+  "h": 0.28,
+  "side": "right"
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.3,
+   "say": "يا فندم، التليفون اللي في جيب أي بشري.. ذاكرته ق",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 0,
+   "host": "right",
+   "story": null,
+   "slide": null,
+   "stepT": -0.3,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 6.15,
+   "say": "سنة ألف تسعمية تسعة وستين، البشر راحوا القمر بكم",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 1,
+   "host": "right",
+   "stepT": 6.15
+  },
+  {
+   "t": 12.51,
+   "say": "وزنه اتنين وتلاتين كيلو.",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 2,
+   "host": "right",
+   "stepT": 12.51
+  },
+  {
+   "t": 14.73,
+   "say": "وذاكرته المؤقتة: ألفين وتمانية وأربعين كلمة. يعن",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 3,
+   "host": "right",
+   "stepT": 14.73
+  },
+  {
+   "t": 19.17,
+   "say": "يعني ماكانش يقدر يشيل صورة واحدة من اللي البشر ب",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 4,
+   "host": "right",
+   "stepT": 19.17
+  },
+  {
+   "t": 22.75,
+   "say": "التليفون العادي النهارده فيه أربعة جيجابايت.",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 5,
+   "host": "right",
+   "stepT": 22.75
+  },
+  {
+   "t": 25.62,
+   "say": "اقسم دي على دي.. مليون وتمانية وأربعين ألف وخمسم",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 6,
+   "host": "right",
+   "stepT": 25.62
+  },
+  {
+   "t": 29.93,
+   "say": "بأربعة كيلوبايت.. البشر نزلوا على القمر ورجعوا.",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 7,
+   "host": "right",
+   "stepT": 29.93
+  },
+  {
+   "t": 33.08,
+   "say": "وبمليون ضعفها.. بيتفرجوا على قطط.",
+   "board": {
+    "kind": "lab02",
+    "ends": [
+     6.45,
+     6.36,
+     2.22,
+     4.44,
+     3.58,
+     2.87,
+     4.31,
+     3.15,
+     2.51
+    ]
+   },
+   "step": 8,
+   "host": "right",
+   "stepT": 33.08
+  },
+  {
+   "t": 35.59,
+   "say": "Peek.. انتهى التقرير يا فندم.",
+   "board": {
+    "kind": "shortend",
+    "look": "sign"
+   },
+   "step": 0,
+   "host": "right",
+   "stepT": 35.59,
+   "shot": "show",
+   "kind": "board"
+  }
+ ]
+}
