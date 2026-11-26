@@ -24,6 +24,7 @@ const PROP = {
 export function shortEndV(s, step, age, total) {
   setFrame(1080, 1920);
   if (s.look === "sci") return sciEnd(s, step, age, total);
+  if (s.look === "lab") return labEnd(s, step, age, total);
   try {
     const t = total, b = step >= 1 ? age : -1, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0, c = { x: 540, y: 960, z: 1 + 0.02 * t };
     const town = `<rect width="1080" height="1920" fill="url(#bsky)"/>` + layer(stars(5, 90, -100, 1200, 900, t), c, 0.2)
@@ -64,5 +65,22 @@ function sciEnd(s, step, age, total) {
     const waves = b > 0 ? [1, -1].map((d) => `<path d="M${d * 104} -40Q${d * 128} 0 ${d * 104} 40M${d * 134} -62Q${d * 166} 0 ${d * 134} 62" fill="none" stroke="${P.goldD}" stroke-width="9" stroke-linecap="round" opacity="${clamp(1 - (b % 0.6) / 0.6)}"/>`).join("") : "";
     const sub = b >= 0 ? at(540, 1250, `${at(-290, 0, bell + waves, 1.05)}${two(rr(-160, -66, 520, 132, 66), "#e0302a", "#b0221e", 0, 10)}${text(100, 30, "SUBSCRIBE", 84, "#fff")}`, pop(b)) : "";
     return frame(paper + title + screen + label + sub, P);
+  } finally { setFrame(1920, 1080); }
+}
+
+// The standalone Shorts' sign-off card (spec look: "lab", from the Shorts lab, Nov 2026): no video, no FULL REPORT, no file
+// number. EARTH REPORT large in the middle and the bell ringing with SUBSCRIBE from 0.6 s on. `dark: true` for a night look.
+function labEnd(s, step, age, total) {
+  const P = PS;
+  try {
+    const t = total, b = t - 0.6, swing = b > 0 ? 22 * Math.sin(b * 16) * Math.exp(-b * 2.2) : 0, dk = !!s.dark;
+    const bg = dk ? `<rect width="1080" height="1920" fill="#10142a"/><path d="${Array.from({ length: 30 }, (_, i) => `M${i * 80} 0V1920M0 ${i * 80 - 40}H1080`).join("")}" stroke="#1c2240" stroke-width="3"/>`
+      : `<rect width="1080" height="1920" fill="${P.sky0}"/><path d="${Array.from({ length: 30 }, (_, i) => `M${i * 80} 0V1920M0 ${i * 80 - 40}H1080`).join("")}" stroke="${P.grid}" stroke-width="3"/><rect y="1790" width="1080" height="200" fill="${P.floor}"/>`;
+    const k = pop(t);
+    const title = at(540, 700, `${two(rr(-470, -190, 940, 380, 40), P.ink, "#15102a", 0, 12)}<text x="0" y="-12" text-anchor="middle" font-family="Anton" font-size="190" fill="#fff8ec">EARTH</text><text x="0" y="160" text-anchor="middle" font-family="Anton" font-size="190" fill="${P.coral}">REPORT</text>`, [k, k]);
+    const bell = `<g transform="rotate(${swing} 0 -92)"><path d="M-62 44C-62 -46 -40 -82 0 -82C40 -82 62 -46 62 44L80 62H-80Z" fill="${P.gold}"/><circle cy="-92" r="14" fill="${P.gold}"/><circle cy="80" r="20" fill="${P.goldD}"/></g>`;
+    const waves = b > 0 ? [1, -1].map((d) => `<path d="M${d * 104} -40Q${d * 128} 0 ${d * 104} 40M${d * 134} -62Q${d * 166} 0 ${d * 134} 62" fill="none" stroke="${P.goldD}" stroke-width="9" stroke-linecap="round" opacity="${clamp(1 - (b % 0.6) / 0.6)}"/>`).join("") : "";
+    const sub = b >= 0 ? at(540, 1120, `${at(-290, 0, bell + waves, 1.15)}${two(rr(-160, -70, 540, 140, 70), "#e0302a", "#b0221e", 0, 10)}${text(110, 32, "SUBSCRIBE", 88, "#fff")}`, pop(b)) : "";
+    return frame(bg + title + sub, P);
   } finally { setFrame(1920, 1080); }
 }
