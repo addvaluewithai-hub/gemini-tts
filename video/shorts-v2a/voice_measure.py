@@ -73,7 +73,7 @@ def measure(wav, tr, req):
         fr = np.array([rms_db(seg[i:i + int(sr * .05)]) for i in range(0, max(1, len(seg) - int(sr * .05)), int(sr * .05))])
         fr = fr[fr > -45]
         st = 12 * np.log2(f / 100) if len(f) else np.array([0.0])
-        res.append(dict(line=li + 1, start=round(s, 2), end=round(e, 2), dur=round(e - s, 2), words=len(ws), heard=len(idx),
+        res.append(dict(widx=idx, script=ws, line=li + 1, start=round(s, 2), end=round(e, 2), dur=round(e - s, 2), words=len(ws), heard=len(idx),
                         wps=round(len(ws) / max(e - s, .01), 2),
                         f0_med=round(float(np.median(f)) if len(f) else 0, 0),
                         f0_range_st=round(float(np.percentile(st, 92) - np.percentile(st, 8)), 1),

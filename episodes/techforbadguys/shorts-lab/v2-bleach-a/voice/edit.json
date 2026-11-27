@@ -1,0 +1,94 @@
+{
+ "level": -19.0,
+ "lead": 0.1,
+ "lines": [
+  {
+   "take": "a2g",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "maxpause": 0.3,
+   "gap": 0.62
+  },
+  {
+   "take": "b1g",
+   "request": "techforbadguys-v2a-bleach-b1.json",
+   "tempo": 1.05,
+   "maxpause": 0.25,
+   "gap": 0.3
+  },
+  {
+   "take": "a1g",
+   "request": "techforbadguys-v2a-bleach-a1.json",
+   "tempo": 1.12,
+   "maxpause": 0.25,
+   "gap": 0.15
+  },
+  {
+   "take": "a2g",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "tempo": 1.08,
+   "maxpause": 0.28,
+   "gap": 0.45
+  },
+  {
+   "take": "a2g",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "tempo": 1.08,
+   "maxpause": 0.25,
+   "gap": 0.25
+  },
+  {
+   "take": "a2g",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "maxpause": 0.26,
+   "gap": 0.2
+  },
+  {
+   "take": "b1g",
+   "request": "techforbadguys-v2a-bleach-b1.json",
+   "tempo": 1.03,
+   "maxpause": 0.32,
+   "gap": 0.3
+  },
+  {
+   "take": "a1g",
+   "request": "techforbadguys-v2a-bleach-a1.json",
+   "pre": 0.5,
+   "gain": 2.5,
+   "gap": 0.2
+  },
+  {
+   "take": "a2g",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "tempo": 1.07,
+   "maxpause": 0.28,
+   "gap": 0.25
+  },
+  {
+   "take": "a2g",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "tempo": 1.07,
+   "maxpause": 0.26,
+   "gap": 0.25
+  },
+  {
+   "take": "a1g",
+   "request": "techforbadguys-v2a-bleach-a1.json",
+   "tempo": 1.1,
+   "maxpause": 0.3,
+   "gap": 0.5
+  },
+  {
+   "take": "a1g",
+   "request": "techforbadguys-v2a-bleach-a1.json",
+   "pre": 0.78,
+   "gain": -1.5,
+   "gap": 0.25
+  },
+  {
+   "take": "a1g",
+   "request": "techforbadguys-v2a-bleach-a1.json",
+   "maxpause": 0.25,
+   "gap": 0.2
+  }
+ ]
+}

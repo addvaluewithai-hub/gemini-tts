@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+"""Cut the chosen take of every line into one voice track and write the word timeline the animation is timed to.
+
+usage: voice_edit.py edit.json takes_dir requests_dir out.wav out_timeline.json
+edit.json: { "lead": s, "lines": [ { "take": "a2g", "request": "…a2.json", "tempo": 1.05, "maxpause": 0.35,
+             "pre": s of sound kept before the first word (a gasp, a sigh), "gain": dB offset, "gap": s of silence after } ] }
+Pauses longer than maxpause inside a line are shortened; tempo is applied with rubberband (pitch kept).
+"""
+import json, sys, os, subprocess, tempfile, wave
+import numpy as np
+sys.path.insert(0, os.path.dirname(__file__))
+from voice_measure import measure, load, rms_db
+
+SR = 48000
+def env_db(x, sr, hop=0.01):
+    H = int(sr * hop); n = len(x) // H
+    return np.array([rms_db(x[i * H:(i + 1) * H]) for i in range(n)]), hop
+
+def write(path, x, sr):
+    with wave.open(path, "w") as f:
+        f.setnchannels(1); f.setsampwidth(2); f.setframerate(sr)
+        f.writeframes((np.clip(x, -1, 1) * 32767).astype(np.int16).tobytes())
+
+def main(cfg_path, takes, reqs, out_wav, out_tl):
+    cfg = json.load(open(cfg_path)); cache = {}
+    t = cfg.get("lead", 0.0); pieces = [np.zeros(int(t * SR), np.float32)]; lines = []
+    for n, L in enumerate(cfg["lines"]):
+        take = L["take"]
+        if take not in cache:
+            res, _ = measure(f"{takes}/{take}.wav", f"{takes}/{take}.json", f"{reqs}/{L['request']}")
+            x, sr = load(f"{takes}/{take}.wav"); cache[take] = (res, x, sr, json.load(open(f"{takes}/{take}.json"))["words"])
+        res, x, sr, words = cache[take]; r = res[n]
+        if r["heard"] != r["words"]: print(f"  ! line {n+1} take {take}: heard {r['heard']} of {r['words']} words")
+        e, hop = env_db(x, sr)
+        # refine the line's bounds on the energy envelope: back to the onset, forward to the release
+        i0 = int(r["start"] / hop); i1 = min(len(e) - 1, int(r["end"] / hop))
+        while i0 > 0 and e[i0] > -42 and r["start"] - i0 * hop < 0.25: i0 -= 1
+        while i0 < i1 and e[i0] < -42: i0 += 1
+        while i1 < len(e) - 1 and e[i1] > -42 and i1 * hop - r["end"] < 0.45: i1 += 1
+        while i1 > i0 and e[i1] < -42: i1 -= 1
+        a = max(0.0, i0 * hop - 0.03 - L.get("pre", 0.0)); b = min(len(x) / sr, (i1 + 1) * hop + 0.06)
+        seg = x[int(a * sr):int(b * sr)].copy(); se = e[int(a / hop):int(b / hop)]
+        # shorten long pauses; keep a map from source time to output time
+        keep = np.ones(len(seg), bool); cuts = []
+        mp = L.get("maxpause")
+        if mp:
+            quiet = se < -38; j = 0
+            while j < len(quiet):
+                if quiet[j]:
+                    k = j
+                    while k < len(quiet) and quiet[k]: k += 1
+                    d = (k - j) * hop
+                    if d > mp and j > 0 and k < len(quiet):
+                        c0 = j * hop + mp / 2; c1 = k * hop - mp / 2
+                        keep[int(c0 * sr):int(c1 * sr)] = False; cuts.append((c0, c1))
+                    j = k
+                else: j += 1
+        seg = seg[keep]
+        fade = int(0.006 * sr); seg[:fade] *= np.linspace(0, 1, fade); seg[-fade:] *= np.linspace(1, 0, fade)
+        tempo = L.get("tempo", 1.0)
+        with tempfile.TemporaryDirectory() as d:
+            write(f"{d}/i.wav", seg, sr)
+            af = (f"rubberband=tempo={tempo}:formant=preserved," if abs(tempo - 1) > 1e-3 else "") + f"aresample={SR}"
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{d}/i.wav", "-af", af, "-ac", "1", f"{d}/o.wav"], check=True)
+            y, _ = load(f"{d}/o.wav")
+        ye, _ = env_db(y, SR, 0.05); act = ye[ye > -40]
+        level = 10 * np.log10(np.mean(10 ** (act / 10))) if len(act) else -30
+        y = y * 10 ** ((cfg.get("level", -19.0) + L.get("gain", 0.0) - level) / 20)
+        def m(ts):  # source seconds -> output seconds on the final timeline
+            u = ts - a
+            for c0, c1 in cuts:
+                if ts - a >= c1: u -= (c1 - c0)
+                elif ts - a > c0: u -= (ts - a - c0)
+            return t + max(0.0, u) / tempo
+        ws = [dict(w=sw, s=round(m(words[j]["start_ms"] / 1000), 3), e=round(m(words[j]["end_ms"] / 1000), 3)) for sw, j in zip(r["script"], r["widx"])]
+        lines.append(dict(n=n + 1, take=take, t0=round(t, 3), t1=round(t + len(y) / SR, 3), speech0=round(m(i0 * hop), 3), words=ws))
+        print(f"line {n+1:2d} {take} src {r['dur']:.2f}s -> {len(y)/SR:.2f}s at {t:6.2f}  cuts {sum(c1-c0 for c0,c1 in cuts):.2f}s tempo {tempo} level {level:.1f}")
+        pieces.append(y); t += len(y) / SR
+        g = L.get("gap", 0.25); pieces.append(np.zeros(int(g * SR), np.float32)); t += int(g * SR) / SR
+    out = np.concatenate(pieces); write(out_wav, out, SR)
+    json.dump(dict(fps=30, voice_end=round(t, 3), lines=lines), open(out_tl, "w"), ensure_ascii=False, indent=1)
+    print(f"voice track {len(out)/SR:.2f}s")
+
+if __name__ == "__main__":
+    main(*sys.argv[1:6])

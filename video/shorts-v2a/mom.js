@@ -1,0 +1,108 @@
+// The co-star: an Egyptian mother on cleaning day. House galabeya, scarf tied for work, long rubber gloves, slippers.
+// mom(p) draws her with her feet at the origin; every part of p can be animated.
+import { clamp, lerp, G, T, n2, elbow, star } from "./kit.js";
+import { C } from "./palette.js";
+
+// Faces. Numbers only, so any two can be blended.
+//  open: eye opening  happy: eyes closed in a smile  bY/bT: brow height / tilt (+ worried, - angry)
+//  mw/mc/mo: mouth half width / curve (+ smile) / opening  red: irritated eyes  tear: streaming tears
+export const FACE = {
+  neutral: { open: 1, happy: 0, bY: 0, bT: 0, mw: 30, mc: 9, mo: 0, red: 0, tear: 0, blush: 0.35, spark: 0, teeth: 0, lookX: 0, lookY: 0 },
+  war: { open: 0.72, happy: 0, bY: 10, bT: -0.85, mw: 28, mc: 4, mo: 0, blush: 0.2 },
+  grin: { open: 1, happy: 0, bY: -4, bT: 0, mw: 40, mc: 16, mo: 14, teeth: 1, blush: 0.5 },
+  dreamy: { open: 1.2, happy: 0, bY: -12, bT: 0.3, mw: 30, mc: 14, mo: 16, spark: 1, blush: 0.7 },
+  shock: { open: 1.3, happy: 0, bY: -16, bT: 0.4, mw: 16, mc: 0, mo: 22, blush: 0.2 },
+  cough: { open: 0.05, happy: 0, bY: 8, bT: -0.5, mw: 22, mc: -2, mo: 30, red: 0.3, blush: 0.6 },
+  burn: { open: 0.42, happy: 0, bY: 2, bT: 0.9, mw: 30, mc: -10, mo: 8, red: 1, tear: 1, blush: 0.5, teeth: 1 },
+  pain: { open: 0.2, happy: 0, bY: 6, bT: 1, mw: 34, mc: -12, mo: 12, red: 0.8, tear: 0.6, teeth: 1, blush: 0.4 },
+  proud: { open: 0.5, happy: 1, bY: -8, bT: 0, mw: 42, mc: 18, mo: 0, red: 0.7, tear: 0.5, blush: 0.8 },
+  sniff: { open: 0, happy: 1, bY: -14, bT: 0.2, mw: 20, mc: 12, mo: 0, red: 0.7, tear: 0.5, blush: 0.8 },
+  worried: { open: 1.1, happy: 0, bY: -6, bT: 0.9, mw: 22, mc: -8, mo: 4, red: 0.6, tear: 0.3, blush: 0.3 },
+  relief: { open: 0, happy: 1, bY: -4, bT: 0.3, mw: 18, mc: 4, mo: 14, red: 0.3, blush: 0.5 },
+  talk: { open: 1, happy: 0, bY: -2, bT: 0.5, mw: 24, mc: 2, mo: 14, red: 0.3, blush: 0.4, teeth: 1 },
+  moved: { open: 1.15, happy: 0, bY: -10, bT: 0.8, mw: 32, mc: 12, mo: 4, spark: 1, tear: 0.25, blush: 0.8 },
+  joy: { open: 0, happy: 1, bY: -12, bT: 0, mw: 26, mc: 4, mo: 30, blush: 0.9 },
+};
+
+const DRESS = "M-118 -600 C-152 -470 -208 -200 -218 -28 Q0 14 218 -28 C208 -200 152 -470 118 -600 Q0 -652 -118 -600 Z";
+
+function eye(x, f, side, tt) {
+  const ry = 31 * clamp(f.open, 0, 1.35), wht = f.red > 0.02 ? `rgb(255,${Math.round(253 - 70 * f.red)},${Math.round(247 - 80 * f.red)})` : C.white;
+  let s;
+  if (f.happy > 0.5) s = `<path d="M${x - 26} 6 Q${x} ${-22} ${x + 26} 6" fill="none" stroke="${C.ink}" stroke-width="9" stroke-linecap="round"/>`;
+  else if (f.open < 0.14) s = `<path d="M${x - 27} 0 Q${x} ${10} ${x + 27} 0" fill="none" stroke="${C.ink}" stroke-width="9" stroke-linecap="round"/><path d="M${x + side * 27} 0 l${side * 12} ${-7}" stroke="${C.ink}" stroke-width="6" stroke-linecap="round"/>`;
+  else {
+    const px = x + clamp(f.lookX, -1, 1) * 9, py = clamp(f.lookY, -1, 1) * 8 + 2, pr = Math.min(14, ry * 0.62);
+    s = `<ellipse cx="${x}" cy="0" rx="27" ry="${n2(ry)}" fill="${wht}"/>
+      <ellipse cx="${n2(px)}" cy="${n2(py)}" rx="${n2(pr)}" ry="${n2(Math.min(pr, ry * 0.9))}" fill="#3A1D10"/><circle cx="${n2(px + 5)}" cy="${n2(py - 5)}" r="${n2(pr * 0.32)}" fill="#fff"/>
+      ${f.spark > 0.3 ? `<path d="${star(11)}" transform="translate(${n2(px - 5)} ${n2(py + 4)}) rotate(${n2(tt * 90)})" fill="#fff"/>` : ""}
+      <path d="M${x - 29} ${n2(-ry * 0.55)} Q${x} ${n2(-ry * 1.25)} ${x + 29} ${n2(-ry * 0.55)}" fill="none" stroke="${C.ink}" stroke-width="8" stroke-linecap="round"/>
+      <path d="M${x + side * 28} ${n2(-ry * 0.55)} l${side * 13} ${-9}" stroke="${C.ink}" stroke-width="6" stroke-linecap="round"/>`;
+  }
+  if (f.tear > 0.05) {
+    for (let k = 0; k < 2; k++) { const ph = (tt * 1.3 + k * 0.5 + (side > 0 ? 0.27 : 0)) % 1, ty = 26 + ph * 120, op = f.tear * (1 - ph) * 0.95;
+      s += `<path d="M0 -13 C9 -2 10 6 0 11 C-10 6 -9 -2 0 -13Z" transform="translate(${n2(x + side * (10 + ph * 8))} ${n2(ty)}) scale(${n2(0.9 + ph * 0.5)})" fill="${C.water}" opacity="${n2(op)}"/>`; }
+  }
+  return s;
+}
+const brow = (x, f, side) => { const y = -52 + f.bY - (f.happy > 0.5 ? 6 : 0), tilt = -f.bT * 15 * side; return `<path d="M${x - 28} ${n2(y + tilt)} Q${x} ${n2(y - 9)} ${x + 28} ${n2(y - tilt)}" fill="none" stroke="#2A130B" stroke-width="11" stroke-linecap="round"/>`; };
+function mouth(f) {
+  const w = f.mw, c = f.mc, o = Math.max(0, f.mo), y = 66;
+  if (o < 2.5) return `<path d="M${-w} ${y} Q0 ${n2(y + c * 1.6)} ${w} ${y}" fill="none" stroke="#5A1230" stroke-width="8" stroke-linecap="round"/>`;
+  const top = y + c * 0.5, bot = y + c * 0.9 + o * 1.6;
+  return `<path d="M${-w} ${y} Q0 ${n2(top)} ${w} ${y} Q0 ${n2(bot + (bot - y) * 0.6)} ${-w} ${y} Z" fill="#5A1230"/>
+    ${f.teeth > 0.5 ? `<path d="M${-w * 0.72} ${n2(y + 2)} Q0 ${n2(top + 4)} ${w * 0.72} ${n2(y + 2)} L${w * 0.6} ${n2(y + 9)} Q0 ${n2(top + 12)} ${-w * 0.6} ${n2(y + 9)} Z" fill="#fff"/>` : ""}
+    <ellipse cx="0" cy="${n2(bot - 2)}" rx="${n2(w * 0.45)}" ry="${n2(Math.min(8, o * 0.35))}" fill="#E8607F"/>
+    <path d="M${-w} ${y} Q0 ${n2(top)} ${w} ${y}" fill="none" stroke="#5A1230" stroke-width="6" stroke-linecap="round"/>`;
+}
+function head(f, p) {
+  const tt = p.tt ?? 0, tails = p.tails ?? 0;      // tails: swing of the scarf ends, degrees
+  return `
+  <g transform="rotate(${n2(18 + tails)} 108 -62)"><path d="M100 -70 C150 -62 176 -22 170 30 C150 14 128 -4 96 -40 Z" fill="${C.scarfLo}"/></g>
+  <g transform="rotate(${n2(-6 + tails * 1.4)} 108 -62)"><path d="M100 -76 C160 -90 204 -64 214 -18 C180 -30 140 -36 98 -48 Z" fill="${C.scarf}"/></g>
+  <rect x="-34" y="92" width="68" height="70" rx="26" fill="${C.skinLo}"/>
+  <ellipse cx="0" cy="0" rx="118" ry="124" fill="url(#mSkin)"/>
+  <path d="M-126 -22 C-150 -150 -70 -176 0 -176 C70 -176 150 -150 126 -22 C104 -74 60 -100 0 -102 C-60 -100 -104 -74 -126 -22 Z" fill="url(#mScarf)"/>
+  <path d="M-96 -112 C-60 -150 30 -160 86 -128" fill="none" stroke="${C.scarfHi}" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+  ${[[-70, -132], [-20, -150], [36, -146], [84, -120], [-100, -94], [108, -86]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="7" fill="${C.cream}" opacity=".85"/>`).join("")}
+  <circle cx="110" cy="-66" r="22" fill="${C.scarfLo}"/><circle cx="106" cy="-70" r="15" fill="${C.scarf}"/>
+  <circle cx="-116" cy="34" r="12" fill="none" stroke="${C.sun}" stroke-width="6"/><circle cx="116" cy="34" r="12" fill="none" stroke="${C.sun}" stroke-width="6"/>
+  <circle cx="-76" cy="44" r="26" fill="${C.pink}" opacity="${n2(0.42 * f.blush)}"/><circle cx="76" cy="44" r="26" fill="${C.pink}" opacity="${n2(0.42 * f.blush)}"/>
+  <g transform="translate(0 -4)">${eye(-46, f, -1, tt)}${eye(46, f, 1, tt)}${brow(-46, f, -1)}${brow(46, f, 1)}</g>
+  <path d="M-7 30 Q2 42 12 30" fill="none" stroke="${C.skinLo}" stroke-width="7" stroke-linecap="round"/>
+  ${mouth(f)}`;
+}
+// One arm: sleeve to the elbow, long rubber glove from the elbow to the hand.
+function arm(S, H, dir, held = "", handRot = 0, back = false, over = false) {
+  const { E, H: Hc } = elbow(S, H, 140, 140, dir), a = Math.atan2(Hc.y - E.y, Hc.x - E.x) * 180 / Math.PI;
+  const cx = lerp(E.x, Hc.x, 0.2), cy = lerp(E.y, Hc.y, 0.2);
+  return `<path d="M${n2(S.x)} ${n2(S.y)} L${n2(E.x)} ${n2(E.y)}" stroke="${back ? "#D98F12" : C.sun}" stroke-width="78" stroke-linecap="round"/>
+    <path d="M${n2(E.x)} ${n2(E.y)} L${n2(Hc.x)} ${n2(Hc.y)}" stroke="${back ? C.gloveLo : C.glove}" stroke-width="56" stroke-linecap="round"/>
+    <g transform="translate(${n2(cx)} ${n2(cy)}) rotate(${n2(a)})"><rect x="-10" y="-33" width="20" height="66" rx="10" fill="${C.gloveLo}"/></g>
+    <g transform="translate(${n2(Hc.x)} ${n2(Hc.y)}) rotate(${n2(a - 90 + handRot)})">${back || over ? "" : held}<circle r="40" fill="${back ? C.gloveLo : C.glove}"/><ellipse cx="${dir * -30}" cy="8" rx="16" ry="24" transform="rotate(${dir * 28})" fill="${back ? C.gloveLo : C.glove}"/><path d="M-16 22 q16 12 32 0" fill="none" stroke="${C.gloveLo}" stroke-width="5" stroke-linecap="round" opacity="${back ? 0 : 0.8}"/>${back || over ? held : ""}</g>`;
+}
+export function mom(p = {}) {
+  const f = { ...FACE.neutral, ...(p.face || {}) };
+  const sq = p.squash ?? 0, lean = p.lean ?? 0, breath = p.breath ?? 0, chest = p.chest ?? 0;      // chest: 0..1 puffed up
+  const hx = p.headX ?? 0, hy = (p.headY ?? 0) - breath * 5 - chest * 14, ht = p.headTilt ?? 0;
+  const SL = { x: -122, y: -492 - breath * 4 - chest * 10 }, SR = { x: 122, y: -492 - breath * 4 - chest * 10 };
+  const HL = p.handL || { x: -215, y: -250 }, HR = p.handR || { x: 215, y: -250 };
+  const dots = [[-60, -470], [50, -430], [-110, -330], [10, -300], [120, -340], [-150, -190], [-40, -170], [80, -200], [160, -150], [-100, -80], [30, -70], [130, -60]];
+  const body = `
+    <ellipse cx="-84" cy="-6" rx="64" ry="22" fill="${C.pinkLo}"/><ellipse cx="84" cy="-6" rx="64" ry="22" fill="${C.pinkLo}"/>
+    <ellipse cx="-84" cy="-12" rx="60" ry="18" fill="${C.pink}"/><ellipse cx="84" cy="-12" rx="60" ry="18" fill="${C.pink}"/>
+    <g transform="scale(${n2(1.1 + chest * 0.05)} 0.86)"><path d="${DRESS}" fill="url(#mDress)"/>
+    <g clip-path="url(#mDressClip)">${dots.map(([x, y], i) => `<g transform="translate(${x} ${y})"><circle r="15" fill="${C.orange}"/><circle r="6" fill="${C.cream}"/></g>`).join("")}
+      <path d="M-240 -70 Q0 -30 240 -70 L240 20 L-240 20Z" fill="${C.orange}"/><path d="M-240 -70 Q0 -30 240 -70" fill="none" stroke="${C.cream}" stroke-width="8" stroke-dasharray="2 22" stroke-linecap="round"/>
+      <ellipse cx="150" cy="-320" rx="90" ry="330" fill="#B8560E" opacity=".22"/></g>
+    <path d="M-62 -622 Q0 -540 62 -622 Q0 -590 -62 -622Z" fill="${C.orange}"/><path d="M-58 -618 Q0 -548 58 -618" fill="none" stroke="${C.cream}" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/></g>`;
+  const hd = G(T(hx, -652 + hy, ht, 1.34), head(f, p));
+  const aL = arm(SL, HL, p.bendL ?? -1, p.heldL || "", p.rotL ?? 0, p.backL ?? false, p.overL ?? false), aR = arm(SR, HR, p.bendR ?? 1, p.heldR || "", p.rotR ?? 0, p.backR ?? false, p.overR ?? false);
+  const inner = `${p.backL ? aL : ""}${p.backR ? aR : ""}${body}${p.headFront === false ? hd : ""}${p.backL ? "" : aL}${p.backR ? "" : aR}${p.headFront === false ? "" : hd}`;
+  return G(`rotate(${n2(lean)}) scale(${n2(1 + sq * 0.5)} ${n2(1 - sq)})`, inner);
+}
+export const momDefs = `
+  <radialGradient id="mSkin" cx=".38" cy=".3" r=".9"><stop offset="0" stop-color="${C.skinHi}"/><stop offset=".6" stop-color="${C.skin}"/><stop offset="1" stop-color="${C.skinLo}"/></radialGradient>
+  <linearGradient id="mScarf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.scarfHi}"/><stop offset=".45" stop-color="${C.scarf}"/><stop offset="1" stop-color="${C.scarfLo}"/></linearGradient>
+  <linearGradient id="mDress" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC84A"/><stop offset=".6" stop-color="${C.sun}"/><stop offset="1" stop-color="#EE9A12"/></linearGradient>
+  <clipPath id="mDressClip"><path d="${DRESS}"/></clipPath>`;
