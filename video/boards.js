@@ -70,6 +70,7 @@ import { c6s8Set } from "./sets/c6s8.js";
 import { c6s9Set } from "./sets/c6s9.js";
 import { lab02Set } from "./sets/lab02.js";
 import { lab06Set } from "./sets/lab06.js";
+import { labBleachSet } from "./sets/labBleach.js";
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const ease = (p) => { p = clamp(p); return p * p * (3 - 2 * p); };
 const lerp = (a, b, p) => a + (b - a) * p;
@@ -956,6 +957,7 @@ const BOARDS = {
   // Shorts lab (standalone Shorts, tall frame only): 02 apollo, 06 bluetooth
   lab02: (s, step, age, total, cfg) => lab02Set(s, step, age, total, { ...cfg, vertical: true }),
   lab06: (s, step, age, total, cfg) => lab06Set(s, step, age, total, { ...cfg, vertical: true }),
+  labBleach: (s, step, age, total, cfg) => labBleachSet(s, step, age, total, { ...cfg, vertical: true }),
 };
 
 // Picks the palette for what is drawn next (boards and icons). `theme` is a name from THEMES, an object of colours, or empty for the default.

@@ -1,0 +1,158 @@
+{
+ "recorded_for": "shorts-lab useful-01-bleach (Writer script, shorts-writer)",
+ "layout": "explain",
+ "rtl": true,
+ "face": "pear",
+ "language": "ar",
+ "size": [
+  1080,
+  1920
+ ],
+ "settings": {
+  "lead": 0.8,
+  "tail": 2.3,
+  "tempo": 1,
+  "tighten": {
+   "max": 0.7,
+   "keep": 0.5
+  },
+  "captionChunk": 3,
+  "bpm": 100,
+  "musicGain": 0.4,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "vertical": true,
+  "portraitSets": true,
+  "boardZoom": 0.85,
+  "letterbox": false,
+  "from": 0.45
+ },
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "boards": {
+  "bl": {
+   "kind": "labBleach",
+   "ends": [
+    0,
+    4.79,
+    1.41,
+    5.21,
+    4.28,
+    0,
+    0,
+    5.97,
+    8.87,
+    0,
+    2.28
+   ]
+  }
+ },
+ "ending": {
+  "card": {
+   "kind": "shortend",
+   "look": "sign"
+  }
+ },
+ "scenes": [
+  {
+   "id": "bleach",
+   "story": null,
+   "beats": [
+    {
+     "say": "يا فندم، البشر بيخلطوا الكلور بمنظف التواليت عشان الحمام ينضف أكتر.. فبيطلع لهم غاز سام.",
+     "show": "board",
+     "board": "bl",
+     "step": 0,
+     "actor": {
+      "x": 540,
+      "y": 1720,
+      "size": 1250
+     },
+     "gesture": "cheer",
+     "emote": "skeptical"
+    },
+    {
+     "say": "المنطق بتاعهم بسيط: منظف قوي، زائد منظف قوي.. يبقى نضافة أقوى.",
+     "show": "board",
+     "board": "bl",
+     "step": 1
+    },
+    {
+     "say": "الكيميا ليها رأي تاني.",
+     "show": "board",
+     "board": "bl",
+     "step": 2
+    },
+    {
+     "say": "الكلور مع أي حمض، زي منظفات التواليت أو الخل، بيطلّع غاز الكلور.",
+     "show": "board",
+     "board": "bl",
+     "step": 3
+    },
+    {
+     "say": "ومع النشادر، اللي في بعض منظفات الإزاز، بيطلّع غاز سام تاني.",
+     "show": "board",
+     "board": "bl",
+     "step": 4
+    },
+    {
+     "say": "والنتيجة: كحة، عين بتحرق، ونَفَس مش طالع.. في حمام مقفول.",
+     "show": "board",
+     "board": "bl",
+     "step": 5
+    },
+    {
+     "say": "وهي كل اللي كانت عايزاه.. إن القاعدة تلمع.",
+     "show": "board",
+     "board": "bl",
+     "step": 6,
+     "actor": {
+      "x": 540,
+      "y": 1720,
+      "size": 1250
+     },
+     "gesture": "pockets",
+     "emote": "smug"
+    },
+    {
+     "say": "لو حصل: اخرج فوراً لهوا نضيف. ولو النَفَس تعبان، اتصل بالإسعاف وقول لهم إنت خلطت إيه.",
+     "show": "board",
+     "board": "bl",
+     "step": 7
+    },
+    {
+     "say": "والقاعدة يا فندم: منظف واحد بس في المرة. تشطف بمية كتير قبل ما تستعمل التاني. والشباك مفتوح. والكلور ماينخلطش بأي منظف.",
+     "show": "board",
+     "board": "bl",
+     "step": 8
+    },
+    {
+     "say": "يعني البشر بيخاطروا بصدرهم.. عشان بقعة.",
+     "show": "board",
+     "board": "bl",
+     "step": 9
+    },
+    {
+     "say": "Peek.. انتهى التقرير يا فندم.",
+     "show": "board",
+     "board": "bl",
+     "step": 10,
+     "actor": {
+      "x": 540,
+      "y": 1720,
+      "size": 1250
+     },
+     "gesture": "pockets",
+     "emote": "proud"
+    }
+   ]
+  }
+ ]
+}

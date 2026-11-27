@@ -1,0 +1,322 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/shorts-lab/useful-01-bleach",
+ "transcript": "../../../../video/cues/useful-01-bleach.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "rtl": true,
+ "layout": "explain",
+ "size": [
+  1080,
+  1920
+ ],
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0.45,
+ "to": null,
+ "lead": 0.8,
+ "tail": 2.3,
+ "tempo": 1,
+ "tighten": {
+  "max": 0.7,
+  "keep": 0.5
+ },
+ "captionChunk": 3,
+ "bpm": 100,
+ "musicGain": 0.4,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "vertical": true,
+ "portraitSets": true,
+ "boardZoom": 0.85,
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": -0.8,
+   "say": "يا فندم، البشر بيخلطوا الكلور بمنظف التواليت عشا",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 0,
+   "actor": {
+    "x": 540,
+    "y": 1720,
+    "size": 1250
+   },
+   "gesture": "cheer",
+   "emote": "skeptical",
+   "story": null,
+   "slide": null,
+   "stepT": -0.8,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 7.04,
+   "say": "المنطق بتاعهم بسيط: منظف قوي، زائد منظف قوي.. يب",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 1,
+   "stepT": 7.04
+  },
+  {
+   "t": 11.83,
+   "say": "الكيميا ليها رأي تاني.",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 2,
+   "stepT": 11.83
+  },
+  {
+   "t": 13.24,
+   "say": "الكلور مع أي حمض، زي منظفات التواليت أو الخل، بي",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 3,
+   "stepT": 13.24
+  },
+  {
+   "t": 18.45,
+   "say": "ومع النشادر، اللي في بعض منظفات الإزاز، بيطلّع غ",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 4,
+   "stepT": 18.45
+  },
+  {
+   "t": 22.73,
+   "say": "والنتيجة: كحة، عين بتحرق، ونَفَس مش طالع.. في حم",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 5,
+   "stepT": 22.73
+  },
+  {
+   "t": 27.81,
+   "say": "وهي كل اللي كانت عايزاه.. إن القاعدة تلمع.",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 6,
+   "actor": {
+    "x": 540,
+    "y": 1720,
+    "size": 1250
+   },
+   "gesture": "pockets",
+   "emote": "smug",
+   "stepT": 27.81
+  },
+  {
+   "t": 30.66,
+   "say": "لو حصل: اخرج فوراً لهوا نضيف. ولو النَفَس تعبان،",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 7,
+   "stepT": 30.66
+  },
+  {
+   "t": 36.63,
+   "say": "والقاعدة يا فندم: منظف واحد بس في المرة. تشطف بم",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 8,
+   "stepT": 36.63
+  },
+  {
+   "t": 45.5,
+   "say": "يعني البشر بيخاطروا بصدرهم.. عشان بقعة.",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 9,
+   "stepT": 45.5
+  },
+  {
+   "t": 48.53,
+   "say": "Peek.. انتهى التقرير يا فندم.",
+   "board": {
+    "kind": "labBleach",
+    "ends": [
+     0,
+     4.79,
+     1.41,
+     5.21,
+     4.28,
+     0,
+     0,
+     5.97,
+     8.87,
+     0,
+     2.28
+    ]
+   },
+   "step": 10,
+   "actor": {
+    "x": 540,
+    "y": 1720,
+    "size": 1250
+   },
+   "gesture": "pockets",
+   "emote": "proud",
+   "stepT": 48.53
+  },
+  {
+   "t": 50.81,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "shortend",
+    "look": "sign"
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
