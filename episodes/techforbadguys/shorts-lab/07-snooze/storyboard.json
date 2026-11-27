@@ -1,0 +1,187 @@
+{
+ "layout": "explain",
+ "language": "ar-EG",
+ "rtl": true,
+ "voice": "Puck",
+ "face": "pear",
+ "theme": "day",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "title": "Shorts lab 07: snooze (humans guide)",
+ "style": "A small alien spy on Earth filing a field report to his commanders back home about something he has observed among humans, in Egyptian Arabic, Cairo street dialect, not Modern Standard Arabic. He calls them يا فندم now and then. He explains what he found clearly and simply, a little amused. Brisk pace, noticeably quicker than ordinary conversation, and no dead air: he goes straight from one sentence into the next. Bright, higher-pitched, slightly nasal voice, never deep or gravelly. Dry, deadpan Egyptian sarcasm; he never laughs at his own jokes. English names are said the English way.",
+ "settings": {
+  "lead": 0,
+  "tail": 0,
+  "tempo": 1,
+  "tighten": {
+   "max": 0.45,
+   "keep": 0.34
+  },
+  "captionChunk": 4,
+  "bpm": 100,
+  "musicGain": 0.45,
+  "sfxGain": 0.25,
+  "voiceGain": 1.35,
+  "captions": false,
+  "whooshGain": 0,
+  "shots": {
+   "host": {
+    "s": 1.18,
+    "y": 470
+   },
+   "close": {
+    "s": 1.42,
+    "y": 410
+   }
+  },
+  "letterbox": false
+ },
+ "ending": {
+  "card": {
+   "kind": "shortend",
+   "look": "lab"
+  }
+ },
+ "boards": {
+  "snooze": {
+   "kind": "snooze",
+   "ends": [
+    7.13,
+    1.9,
+    3.65,
+    3.32,
+    1.12,
+    8.64,
+    2.82,
+    4.46,
+    6.88,
+    2.43
+   ]
+  },
+  "labend": {
+   "kind": "shortend",
+   "look": "lab"
+  }
+ },
+ "notes": [
+  "Shorts lab 07 (standalone Short, 26 Nov 2026). Script: branch shorts-writer, episodes/techforbadguys/shorts-lab/07-snooze/script.md (commit 1f4de73). Peek big in the studio (no portraitSets), props as a card above him (sets/snooze.js), sign-off card look lab. No facts, no sources needed."
+ ],
+ "scenes": [
+  {
+   "id": "snooze",
+   "story": null,
+   "style": "Humans guide: deadpan comedy about one human habit; lines 7 and 10 he quotes a human, flat, never laughing.",
+   "beats": [
+    {
+     "say": "يا فندم، البشر عندهم جهاز وظيفته الوحيدة إنه يصحّيهم..",
+     "show": "board",
+     "board": "snooze",
+     "step": 0,
+     "emote": "serious",
+     "gesture": "present"
+    },
+    {
+     "say": "وكل يوم الصبح بيتخانقوا معاه عشان صحّاهم.",
+     "shot": "close",
+     "emote": "annoyed",
+     "gesture": "shrug"
+    },
+    {
+     "say": "الجهاز اسمه المنبّه.",
+     "show": "board",
+     "board": "snooze",
+     "step": 1,
+     "emote": "neutral",
+     "gesture": "point"
+    },
+    {
+     "say": "بالليل، البشري بيظبطه بنفسه. بإيده. محدش غصبه.",
+     "show": "board",
+     "board": "snooze",
+     "step": 2,
+     "emote": "serious"
+    },
+    {
+     "say": "الساعة ستة الصبح، الجهاز بينفّذ الأمر بالحرف.",
+     "show": "board",
+     "board": "snooze",
+     "step": 3,
+     "emote": "proud",
+     "gesture": "wave"
+    },
+    {
+     "say": "والبشري يضربه.",
+     "show": "board",
+     "board": "snooze",
+     "step": 4,
+     "emote": "annoyed"
+    },
+    {
+     "say": "وعشان مايكسروش، البشر اخترعوا زرار اسمه snooze.",
+     "show": "board",
+     "board": "snooze",
+     "step": 5,
+     "emote": "smug",
+     "gesture": "present"
+    },
+    {
+     "say": "الزرار ده معناه: «أنا عارف إني قلتلك صحّيني..",
+     "shot": "close",
+     "emote": "bored",
+     "gesture": "shrug"
+    },
+    {
+     "say": "بس مش دلوقتي. تعالى كمان شوية.»",
+     "shot": "host",
+     "emote": "blank",
+     "gesture": "wave"
+    },
+    {
+     "say": "الجهاز ييجي كمان شوية. والبشري يضربه تاني.",
+     "show": "board",
+     "board": "snooze",
+     "step": 6,
+     "emote": "annoyed"
+    },
+    {
+     "say": "المفاوضات دي بتتكرر تلات أربع مرات يا فندم.. والجهاز عمره ما كسب.",
+     "show": "board",
+     "board": "snooze",
+     "step": 7,
+     "emote": "smug",
+     "gesture": "count"
+    },
+    {
+     "say": "وفي الآخر البشري يقوم متأخر، يبص للمنبّه ويقوله: «إنت ليه ماصحّيتنيش؟»",
+     "show": "board",
+     "board": "snooze",
+     "step": 8,
+     "emote": "furious",
+     "gesture": "point"
+    },
+    {
+     "say": "توصيتي يا فندم: لو هنغزو الكوكب ده.. <short pause>",
+     "shot": "close",
+     "emote": "sly"
+    },
+    {
+     "say": "نيجي الساعة ستة الصبح. محدش هيقوم.",
+     "show": "board",
+     "board": "snooze",
+     "step": 9,
+     "emote": "deadpan"
+    },
+    {
+     "say": "Peek.. انتهى التقرير يا فندم.",
+     "show": "board",
+     "board": "labend",
+     "step": 0
+    }
+   ]
+  }
+ ]
+}

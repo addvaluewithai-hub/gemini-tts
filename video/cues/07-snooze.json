@@ -1,0 +1,333 @@
+{
+ "note": "Generated from storyboard.json by storyboard.cjs; edit the storyboard, not this file.",
+ "episode": "../../episodes/techforbadguys/shorts-lab/07-snooze",
+ "transcript": "../../../../video/cues/07-snooze.words.json",
+ "slides": "slides.json",
+ "face": "pear",
+ "rtl": true,
+ "layout": "explain",
+ "brand": {
+  "a": "Earth ",
+  "b": "Report",
+  "c": "",
+  "tagline": ""
+ },
+ "theme": "day",
+ "from": 0,
+ "to": null,
+ "lead": 0,
+ "tail": 0,
+ "tempo": 1,
+ "tighten": {
+  "max": 0.45,
+  "keep": 0.34
+ },
+ "captionChunk": 4,
+ "bpm": 100,
+ "musicGain": 0.45,
+ "sfxGain": 0.25,
+ "voiceGain": 1.35,
+ "captions": false,
+ "whooshGain": 0,
+ "shots": {
+  "host": {
+   "s": 1.18,
+   "y": 470
+  },
+  "close": {
+   "s": 1.42,
+   "y": 410
+  }
+ },
+ "letterbox": false,
+ "fix": [],
+ "edit": [
+  {
+   "t": 0,
+   "say": "يا فندم، البشر عندهم جهاز وظيفته الوحيدة إنه يصح",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 0,
+   "emote": "serious",
+   "gesture": "present",
+   "story": null,
+   "slide": null,
+   "stepT": 0,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 4.16,
+   "say": "وكل يوم الصبح بيتخانقوا معاه عشان صحّاهم.",
+   "shot": "close",
+   "emote": "annoyed",
+   "gesture": "shrug"
+  },
+  {
+   "t": 7.13,
+   "say": "الجهاز اسمه المنبّه.",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 1,
+   "emote": "neutral",
+   "gesture": "point",
+   "stepT": 7.13,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 9.03,
+   "say": "بالليل، البشري بيظبطه بنفسه. بإيده. محدش غصبه.",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 2,
+   "emote": "serious",
+   "stepT": 9.03
+  },
+  {
+   "t": 12.68,
+   "say": "الساعة ستة الصبح، الجهاز بينفّذ الأمر بالحرف.",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 3,
+   "emote": "proud",
+   "gesture": "wave",
+   "stepT": 12.68
+  },
+  {
+   "t": 16,
+   "say": "والبشري يضربه.",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 4,
+   "emote": "annoyed",
+   "stepT": 16
+  },
+  {
+   "t": 17.12,
+   "say": "وعشان مايكسروش، البشر اخترعوا زرار اسمه snooze.",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 5,
+   "emote": "smug",
+   "gesture": "present",
+   "stepT": 17.12
+  },
+  {
+   "t": 20.56,
+   "say": "الزرار ده معناه: «أنا عارف إني قلتلك صحّيني..",
+   "shot": "close",
+   "emote": "bored",
+   "gesture": "shrug"
+  },
+  {
+   "t": 23.52,
+   "say": "بس مش دلوقتي. تعالى كمان شوية.»",
+   "shot": "host",
+   "emote": "blank",
+   "gesture": "wave"
+  },
+  {
+   "t": 25.76,
+   "say": "الجهاز ييجي كمان شوية. والبشري يضربه تاني.",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 6,
+   "emote": "annoyed",
+   "stepT": 25.76,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 28.58,
+   "say": "المفاوضات دي بتتكرر تلات أربع مرات يا فندم.. وال",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 7,
+   "emote": "smug",
+   "gesture": "count",
+   "stepT": 28.58
+  },
+  {
+   "t": 33.04,
+   "say": "وفي الآخر البشري يقوم متأخر، يبص للمنبّه ويقوله:",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 8,
+   "emote": "furious",
+   "gesture": "point",
+   "stepT": 33.04
+  },
+  {
+   "t": 37.72,
+   "say": "توصيتي يا فندم: لو هنغزو الكوكب ده..",
+   "shot": "close",
+   "emote": "sly"
+  },
+  {
+   "t": 39.92,
+   "say": "نيجي الساعة ستة الصبح. محدش هيقوم.",
+   "board": {
+    "kind": "snooze",
+    "ends": [
+     7.13,
+     1.9,
+     3.65,
+     3.32,
+     1.12,
+     8.64,
+     2.82,
+     4.46,
+     6.88,
+     2.43
+    ]
+   },
+   "step": 9,
+   "emote": "deadpan",
+   "stepT": 39.92,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 42.35,
+   "say": "Peek.. انتهى التقرير يا فندم.",
+   "board": {
+    "kind": "shortend",
+    "look": "lab"
+   },
+   "step": 0,
+   "stepT": 42.35,
+   "shot": "show",
+   "kind": "board"
+  },
+  {
+   "t": 44.55,
+   "shot": "show",
+   "kind": "board",
+   "board": {
+    "kind": "shortend",
+    "look": "lab"
+   },
+   "step": 0,
+   "story": null,
+   "music": 1
+  }
+ ]
+}
