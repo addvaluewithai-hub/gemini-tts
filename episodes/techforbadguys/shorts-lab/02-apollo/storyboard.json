@@ -129,12 +129,17 @@
     },
     {
      "say": "Peek.. انتهى التقرير يا فندم.",
-     "show": "board",
-     "board": "sign",
-     "step": 0,
-     "host": "right"
+     "host": "right",
+     "shot": "host",
+     "emote": "proud"
     }
    ]
   }
- ]
+ ],
+ "ending": {
+  "card": {
+   "kind": "shortend",
+   "look": "sign"
+  }
+ }
 }

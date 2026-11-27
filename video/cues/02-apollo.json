@@ -239,15 +239,21 @@
   {
    "t": 35.59,
    "say": "Peek.. انتهى التقرير يا فندم.",
+   "host": "right",
+   "shot": "host",
+   "emote": "proud"
+  },
+  {
+   "t": 37.97,
+   "shot": "show",
+   "kind": "board",
    "board": {
     "kind": "shortend",
     "look": "sign"
    },
    "step": 0,
-   "host": "right",
-   "stepT": 35.59,
-   "shot": "show",
-   "kind": "board"
+   "story": null,
+   "music": 1
   }
  ]
 }

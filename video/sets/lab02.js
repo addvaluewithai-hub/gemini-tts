@@ -68,9 +68,9 @@ function s5(a, tot) {
 }
 // ---- 6: 4 GB / 4 KB; the counter spins up to 1,048,576x ----
 function s6(a, tot) {
-  const div = pop(a - 0.1), spin = seg(a, 1.6, 4.4);
+  const div = pop(a - 0.1), spin = seg(a, 1.2, 2.6);
   const g = space(tot, 15) + at(540, 380, `${at(-250, 0, T("4 GB", 150, "#7fd4ff"))}${T("÷", 130, "#fff")}${at(250, 0, T("4 KB", 150, "#fff"))}`, div)
-    + (a > 1.5 ? at(540, 900, bigNum(1048576, spin, { size: 190, suffix: "×" }) + rings(0, -40, 260, P.gold, 0.12 * clamp(spin * 2)), 1) : "");
+    + (a > 1.1 ? at(540, 900, bigNum(1048576, spin, { size: 190, suffix: "×" }) + rings(0, -40, 260, P.gold, 0.12 * clamp(spin * 2)), 1) : "");
   return { g, out: [540, 900], outC: P.gold, outZ: 18 };
 }
 // ---- 7: the lander touches down; a small 4 KB beside it ----
