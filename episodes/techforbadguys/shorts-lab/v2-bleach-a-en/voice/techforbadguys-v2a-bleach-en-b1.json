@@ -1,0 +1,73 @@
+{
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "en-US"
+  ],
+  "write_vtt": true
+ },
+ "turns": [
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: the first line of the film, said straight to the viewer. A low, tense, confidential warning, as if leaking a secret about their own house; stress 'toxic gas'; every word clear.",
+   "text": "A toxic gas is being made in your bathroom."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: weary and flat, a patient correction of someone who always guesses the rude thing. Dry as dust, quick, low.",
+   "text": "<short pause> No. Not that one."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: a nature documentary narrator admiring a fearsome predator, awed, relishing 'declares war', moving along.",
+   "text": "Saturday morning. The American mom declares war on the bathroom."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: a lecturer reciting a doctrine he finds insane: flat quick steps one and two, a sceptical raised 'Three?', then 'The toilet ascends' with grand mock-religious reverence, slow and wide.",
+   "text": "Her doctrine: one cleaner, clean. Two cleaners, cleaner. Three? <short pause> The toilet ascends."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: serious and clear, a scientist giving evidence, each product distinct, the last two words cold and hard.",
+   "text": "But bleach plus toilet bowl cleaner, or vinegar, or some glass cleaners... makes toxic gas."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: a medic reading a chart, grim and fast, each item bitten off.",
+   "text": "Coughing. Burning eyes. Chest pain."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: bone-dry deadpan, quiet, almost admiring the absurdity. 'And Mom?' small and high, 'Proud.' very flat and low, the rest with a tired sigh in the voice.",
+   "text": "And Mom? <short pause> Proud. She thinks that's the smell of clean."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: sharp and forceful, a sergeant barking a warning. Loud, high, fast, hard consonants, 'ALARM' punched.",
+   "text": "<gasp> That's not clean. That's an ALARM!"
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: calm, firm and plain, a safety officer who needs every listener to remember this. Even and clear, 'Ever.' heavy, no dawdling.",
+   "text": "The rule: never mix bleach with any other cleaner. Ever. Rinse well between products. Open a window."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: brisk emergency instructions, clear and steady, stress on 'get to fresh air' and 'Call 911' (said nine-one-one).",
+   "text": "If it happens: get to fresh air, fast. Trouble breathing? Call 911. Tell them what you mixed."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: dry and fond. A shrug on 'Sparkles anyway', then deadpan, and 'like it just made honor roll' underplayed, quiet and perfectly serious, which is what makes it funny.",
+   "text": "The toilet? Sparkles anyway. She'll gaze at it like it just made honor roll."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: a tired sigh first, then a confidential mutter, low, with a knowing little pause before 'That's another report'.",
+   "text": "<sigh> The gas you're thinking of? That's another report."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report on the humans, in natural, casual American English. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face, dry and slightly appalled, and never laughs at his own jokes. Pace: brisk and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. THIS LINE: the last line of the film. Suspicious and teasing, leaning in, slow on 'How many cleaners', the question rising on 'right now?'; then 'Drop the number.' quick and deadpan, an order.",
+   "text": "How many cleaners are in your bathroom right now? <short pause> Drop the number."
+  }
+ ],
+ "metadata": {
+  "channel": "techforbadguys",
+  "job_id": "techforbadguys-v2a-bleach-en-b1",
+  "language": "en-US",
+  "title": "Shorts lab v2 bleach, studio A, English (US), take b1"
+ }
+}

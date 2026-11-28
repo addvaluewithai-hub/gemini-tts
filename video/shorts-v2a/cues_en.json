@@ -1,0 +1,18 @@
+{
+ "about": "English (US) version of the bleach Short. The scenes and the sound were written against the Arabic lines: W(line, word) with Arabic word numbers. This table says, for each of those cues, which word of the English line carries the same action. Keys: Arabic line, then Arabic word index; value: English word index in the same line. Line starts (scene cuts) are read from the English lines directly.",
+ "map": {
+  "1": {"2": 0, "3": 1, "4": 2},
+  "2": {"0": 0, "1": 1},
+  "3": {"0": 0, "2": 3, "3": 4, "4": 5, "5": 6, "6": 7},
+  "4": {"0": 0, "2": 2, "3": 4, "4": 5, "5": 7, "7": 8, "8": 10},
+  "5": {"0": 0, "1": 1, "3": 3, "5": 6, "6": 7, "7": 8, "9": 10, "11": 12, "12": 13, "13": 14},
+  "6": {"0": 0, "1": 1, "3": 3},
+  "7": {"0": 1, "1": 2, "2": 7},
+  "8": {"0": 0, "2": 2, "4": 3, "5": 5},
+  "9": {"0": 0, "1": 1, "2": 3, "4": 6, "5": 7, "7": 9, "8": 10, "14": 14},
+  "10": {"0": 0, "2": 3, "4": 5, "6": 8, "9": 10, "10": 11, "13": 14},
+  "11": {"0": 1, "1": 2, "3": 4, "6": 8, "8": 12, "9": 13},
+  "12": {"0": 0, "3": 2, "5": 5, "6": 6},
+  "13": {"0": 0, "3": 6, "5": 9}
+ }
+}
