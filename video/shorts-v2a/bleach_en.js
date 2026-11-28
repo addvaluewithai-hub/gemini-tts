@@ -39,14 +39,15 @@ function buildCaps() {
     for (let k = mine.length - 1; k > 0; k--) if (mine[k].words.length === 1 && !mine[k - 1].hard && mine[k - 1].words.length <= 4) { mine[k - 1].words.push(mine[k].words[0]); mine[k - 1].hard = mine[k].hard; mine.splice(k, 1); }
     for (const c of mine) CAPS.push({ words: c.words, s: c.words[0].s - 0.05, e: c.words[c.words.length - 1].e + 0.4 });
   }
-  CAPS.sort((a, b) => a.s - b.s); for (let i = 0; i + 1 < CAPS.length; i++) CAPS[i].e = Math.min(CAPS[i].e, CAPS[i + 1].s);
+  CAPS.sort((a, b) => a.s - b.s); if (CAPS.length && CAPS[0].s < 0.3) CAPS[0].s = 0;      // frame one already carries the first words
+  for (let i = 0; i + 1 < CAPS.length; i++) CAPS[i].e = Math.min(CAPS[i].e, CAPS[i + 1].s);
 }
 function captions(t) {
   const c = CAPS.find((q) => t >= q.s && t < q.e); if (!c) return "";
   if (!measure) { const x = document.createElement("canvas").getContext("2d"); measure = (txt, fs) => { x.font = `900 ${fs}px Cairo`; return x.measureText(txt).width; }; }      // Cairo Black's Latin face
   let act = -1; c.words.forEach((w, i) => { if (t >= w.s - 0.03) act = i; });
   const plain = c.words.map((w) => w.txt).join(" "), w0 = measure(plain, 84), fs = Math.min(84, 84 * 880 / w0), wd = w0 * fs / 84;
-  const k = pop(t, c.s, 0.18) * (1 + c.words.reduce((a, w) => a + bump(t, w.s - 0.03, 0.16) * 0.045, 0));
+  const k = (c.s < 0.3 ? 1 : pop(t, c.s, 0.18)) * (1 + c.words.reduce((a, w) => a + bump(t, w.s - 0.03, 0.16) * 0.045, 0));
   const spans = c.words.map((w, i) => `<tspan fill="${i === act ? C.sun : C.cream}" fill-opacity="${i <= act ? 1 : 0.5}">${w.txt}</tspan>`).join(" ");
   // where the words sit: low and clear of faces; under the written rule while it is on; lower when a character stands there
   const y = t >= S.s7 && t < S.rinse - 0.2 ? 612 : t >= S.s3 + 0.2 && t < S.s4 ? 1548 : t >= S.s6 && t < S.s7 ? 1590 : 1480;
@@ -298,9 +299,9 @@ function sPayoff(t) {
   const mx = kf(t, [[a + 0.12, -330], [a + 0.6, 385, E.outBack], [stand, 385], [stand + 0.4, 215, E.outBack]]), wipe = on(t, a + 0.55, stand), wa = t * 15;
   const face = faceAt(t, [[a, { ...FACE.war, bT: -0.4, mc: 10, lookX: 1 }], [stand, { ...FACE.moved, lookX: 1 }, 0.25], [med + 0.2, "joy", 0.14]]);
   const zag = t > med + 0.25, bounce = zag ? Math.abs(Math.sin((t - med) * 11)) * 26 : 0;
-  const hr0 = pt(1, t, [[a, [200, -300]], [a + 0.5, [262, -520], 0.2, E.outBack], [stand, [200, -330], 0.16], [stand + 0.4, [70, -520], 0.3, E.outBack], [med + 0.2, [300, -700], 0.16, E.outBack]]), hl = pt(-1, t, [[stand, [-200, -300]], [stand + 0.4, [10, -500], 0.3, E.outBack], [med + 0.2, [-300, -700], 0.2, E.outBack]]);
+  const hr0 = pt(1, t, [[a, [200, -300]], [a + 0.5, [262, -520], 0.2, E.outBack], [stand, [200, -330], 0.16], [stand + 0.4, [70, -520], 0.3, E.outBack], [med + 0.2, [345, -585], 0.16, E.outBack]]), hl = pt(-1, t, [[stand, [-200, -300]], [stand + 0.4, [10, -500], 0.3, E.outBack], [med + 0.2, [-300, -700], 0.2, E.outBack]]);
   const hr = wipe ? { x: hr0.x + Math.cos(wa) * 46, y: hr0.y + Math.sin(wa) * 70, drag: Math.cos(wa) * 14 } : hr0, rag = `<rect x="-46" y="-6" width="92" height="84" rx="22" fill="${C.pink}"/><path d="M-30 26 h60 M-30 50 h60" stroke="${C.pinkHi}" stroke-width="8"/>`;
-  const m = t > a + 0.1 ? G(T(mx, 1700 - bounce - bump(t, stand, 0.4) * 40, 0, 1.08), mom({ overR: true, heldR: t < stand + 0.1 ? rag : t > med + 0.15 ? held(`<g transform="scale(${n2(1.5 * pop(t, med + 0.15, 0.2))})">${phone}</g>`, 0, 180) : "", face, handL: { ...hl, y: hl.y + (zag ? Math.sin(t * 22) * 30 : 0) }, handR: hr, bendR: 1, lean: (wipe ? 5 + 2 * Math.sin(wa) : 0) + tw(t, stand + 0.3, stand + 0.6, 0, 7) * (zag ? 0.3 : 1), headTilt: zag ? -6 + 3 * Math.sin(t * 22) : tw(t, stand + 0.4, stand + 0.8, 0, 10), tails: (wipe ? 12 * Math.sin(wa) : 0) + wob(t, stand + 0.5, 3, 4, 26) + (zag ? 10 * Math.sin(t * 22) : 0), breath: breathe(t), tt: t, squash: wob(t, stand + 0.5, 4, 6, 0.05) })) : "";
+  const m = t > a + 0.1 ? G(T(mx, 1700 - bounce - bump(t, stand, 0.4) * 40, 0, 1.08), mom({ overR: true, heldR: t < stand + 0.1 ? rag : t > med + 0.15 ? held(`<g transform="scale(${n2(2.1 * pop(t, med + 0.15, 0.2))})">${phone}</g>`, 0, 160) : "", face, handL: { ...hl, y: hl.y + (zag ? Math.sin(t * 22) * 30 : 0) }, handR: hr, bendR: 1, lean: (wipe ? 5 + 2 * Math.sin(wa) : 0) + tw(t, stand + 0.3, stand + 0.6, 0, 7) * (zag ? 0.3 : 1), headTilt: zag ? -6 + 3 * Math.sin(t * 22) : tw(t, stand + 0.4, stand + 0.8, 0, 10), tails: (wipe ? 12 * Math.sin(wa) : 0) + wob(t, stand + 0.5, 3, 4, 26) + (zag ? 10 * Math.sin(t * 22) : 0), breath: breathe(t), tt: t, squash: wob(t, stand + 0.5, 4, 6, 0.05) })) : "";
   // the proud-parent photo: phone up, a flash on the toilet
   const fl = bump(t, snap, 0.22), trill = fl > 0 ? `<path d="${star(260 * fl, 40 * fl, 8)}" transform="translate(${px} ${py - 430})" fill="#fff" opacity="${n2(fl)}"/><rect width="1080" height="1920" fill="#fff" opacity="${n2(0.35 * fl)}"/>` : "";
   let conf = ""; if (t > done) { const cols = [C.pink, C.sun, C.sky, C.orange, "#fff", C.scarfHi]; for (let i = 0; i < 46; i++) { const u = t - done, an = -Math.PI / 2 + (rnd(i * 2.2) - 0.5) * 2.4, v = 700 + rnd(i * 5.1) * 900; const x = px + Math.cos(an) * v * u * (1 - u * 0.25), y = py - 700 + Math.sin(an) * v * u + 900 * u * u;
