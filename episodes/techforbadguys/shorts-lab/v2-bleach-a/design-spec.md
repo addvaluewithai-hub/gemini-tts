@@ -27,7 +27,11 @@ Rule: yellow-green means gas. It appears on frame one and nothing else in the fi
 ## Type
 
 - The rule: Cairo Black, 112 px, cream on a dark ink outline, two short rows, centred, y 330–470. Words appear as
-  they are spoken. This is the only Arabic text on screen.
+  they are spoken. The closing question is written the same way, in a speech bubble.
+- Captions (added at the owner's request, as on most Shorts): the spoken words in groups of one to five, cut at the
+  punctuation, Cairo Black up to 84 px on a dark pill, low in the frame (y 1480) and moved where a face or a prop sits
+  there; the word being said turns yellow, words still to come are dimmed. The rule and the closing question are
+  already written large as they are said, so they are not captioned twice.
 - Digits and Latin: Anton (badges 78 px, EARTH 270 px, REPORT 232 px, Cl on the label).
 
 ## Layout (1080 x 1920)

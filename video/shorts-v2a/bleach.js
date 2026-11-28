@@ -14,6 +14,38 @@ export function setup(data) {
   D = data;
   S = { s2: W(3, 0) - 0.3, s3: W(4, 0) - 0.14, s4: W(5, 0) - 0.1, s5: W(6, 0) - 0.18, s6: LS(8), s7: W(9, 0) - 0.1, rinse: W(9, 8) - 0.16, s8: W(10, 0) - 0.14, s9: W(11, 0) - 0.12, s10: LS(12), end: D.voice_end - 0.14, total: D.total };
   BL = []; for (let i = 0, t = 0.9; t < D.total; i++) { BL.push(t); t += 1.9 + rnd(i * 5.3) * 2.2; }
+  buildCaps();
+}
+// ---------------------------------------------------------------- captions: the spoken words, a few at a time
+// Short groups of words (cut at the punctuation), the word being said lit up. The rule and the closing question are
+// already written large on screen as they are said, so those words are not captioned a second time.
+let CAPS = [], measure = null;
+const BIG = { 9: [1, 6], 13: [0, 4] };
+function buildCaps() {
+  CAPS = [];
+  for (const L of D.lines) {
+    const skip = BIG[L.n]; let cur = [], mine = [];
+    const flush = (hard) => { if (cur.length) { mine.push({ words: cur, hard }); cur = []; } };
+    L.words.forEach((w, i) => { if (skip && i >= skip[0] && i <= skip[1]) { flush(true); return; }
+      cur.push({ s: w.s, e: w.e, txt: w.w.replace(/[.،:]+$/g, "") }); const soft = /(\.\.|[،:])$/.test(w.w), hard = !soft && /[.؟!]$/.test(w.w);
+      if (hard) flush(true); else if (cur.length >= 4 || (soft && cur.length >= 2)) flush(false); });      // a one-word sentence stands alone
+    flush(true);
+    for (let k = mine.length - 1; k > 0; k--) if (mine[k].words.length === 1 && !mine[k - 1].hard && mine[k - 1].words.length <= 4) { mine[k - 1].words.push(mine[k].words[0]); mine[k - 1].hard = mine[k].hard; mine.splice(k, 1); }
+    for (const c of mine) CAPS.push({ words: c.words, s: c.words[0].s - 0.05, e: c.words[c.words.length - 1].e + 0.4 });
+  }
+  CAPS.sort((a, b) => a.s - b.s); for (let i = 0; i + 1 < CAPS.length; i++) CAPS[i].e = Math.min(CAPS[i].e, CAPS[i + 1].s);
+}
+function captions(t) {
+  const c = CAPS.find((q) => t >= q.s && t < q.e); if (!c) return "";
+  if (!measure) { const x = document.createElement("canvas").getContext("2d"); measure = (txt, fs) => { x.font = `900 ${fs}px Cairo`; return x.measureText(txt).width; }; }
+  let act = -1; c.words.forEach((w, i) => { if (t >= w.s - 0.03) act = i; });
+  const plain = c.words.map((w) => w.txt).join(" "), w0 = measure(plain, 84), fs = Math.min(84, 84 * 880 / w0), wd = w0 * fs / 84;
+  const k = pop(t, c.s, 0.18) * (1 + c.words.reduce((a, w) => a + bump(t, w.s - 0.03, 0.16) * 0.045, 0));
+  const spans = c.words.map((w, i) => `<tspan fill="${i === act ? C.sun : C.cream}" fill-opacity="${i <= act ? 1 : 0.5}">${w.txt}</tspan>`).join(" ");
+  // where the words sit: low and clear of faces; under the written rule while it is on; lower when a character stands there
+  const y = t >= S.s7 && t < S.rinse - 0.2 ? 612 : t >= S.s3 + 0.2 && t < S.s4 ? 1548 : t >= S.s6 && t < S.s7 ? 1590 : 1480;
+  return `<g transform="translate(540 ${y}) scale(${n2(k)})"><rect x="${n2(-wd / 2 - 46)}" y="${n2(-fs * 0.86)}" width="${n2(wd + 92)}" height="${n2(fs * 1.5)}" rx="${n2(fs * 0.42)}" fill="${C.ink}" opacity=".72"/>
+    <text y="${n2(fs * 0.2)}" text-anchor="middle" direction="rtl" font-family="Cairo" font-weight="900" font-size="${n2(fs)}">${spans}</text></g>`;
 }
 const DEFS = `<defs>${setDefs}${propDefs}${momDefs}</defs>`;
 const circleClip = (id, x, y, r, inner) => `<clipPath id="${id}"><circle cx="${n2(x)}" cy="${n2(y)}" r="${n2(Math.max(0, r))}"/></clipPath><g clip-path="url(#${id})">${inner}</g>`;
@@ -280,13 +312,13 @@ function sSignoff(t) {
     [fa, { emote: "smug", armR: { x: 742, y: 520 }, look: 0 }, 0.18], [LE(12) - 0.25, { emote: "wink", gesture: "pockets" }, 0.16], [LE(12) + 0.02, { emote: "deadpan", look: 0.95 }, 0.14],
     [q, { emote: "skeptical", armR: { x: 905, y: 610 }, look: 0 }, 0.2], [W(13, 3) - 0.05, { emote: "sly", armR: { x: 915, y: 640 }, look: 0 }, 0.18],
     [write, { emote: "serious", armL: { x: 316, y: 516 }, armR: { x: 905, y: 620 }, look: 0 }, 0.16], [LE(13) + 0.02, { emote: "smug", armL: { x: 316, y: 516 } }, 0.2]];
-  const lean = kf(t, [[ama, 1.5], [ama + 0.3, 1.78, E.outBack], [LE(12) - 0.2, 1.82, E.lin], [q + 0.3, 1.2, E.io3], [write, 1.2], [write + 0.2, 1.27, E.outBack]]);
-  const py = kf(t, [[ama, 960], [ama + 0.3, 990, E.outBack], [LE(12) - 0.2, 995], [q + 0.3, 1262, E.io3]]);
+  const lean = kf(t, [[ama, 1.5], [ama + 0.3, 1.78, E.outBack], [LE(12) - 0.2, 1.82, E.lin], [q + 0.3, 1.04, E.io3], [write, 1.04], [write + 0.2, 1.1, E.outBack]]);
+  const py = kf(t, [[ama, 960], [ama + 0.3, 990, E.outBack], [LE(12) - 0.2, 995], [q + 0.3, 1185, E.io3]]);
   const puff = bump(t, shy, 0.9) * (1 + wob(t, shy, 7, 5, 0.2));
   const bg = hallway(t, { gas: 0, glow: 0, puff: 0 }) + (puff > 0.01 ? gasCloud(880, 1500, 110, t * 2, { seed: 4, n: 6, grow: puff, squashY: 0.7 }) : "");
   const pk = peekAt(t, track, env, { x: kf(t, [[q, 470], [q + 0.3, 540, E.io3]]), y: py, s: lean, rot: tw(t, ama, ama + 0.3, 0, -3) * (t < q ? 1 : tw(t, q, q + 0.2, 1, 0)), blinks: BL });
-  const bub = askBubble(t, 540, 410 + (t > q + 0.5 ? Math.sin(t * 4) * 5 : 0), pop(t, q + 0.05, 0.32), (i) => tw(t, W(13, i) - 0.05, W(13, i) + 0.08, 0, 1), -1);
-  return cam(bg + pk, tw(t, a, S.end, 1.02, 1.08), 540, 1000, 540, 1000) + bub + chips(t, write, 668);
+  const bub = askBubble(t, 540, 385 + (t > q + 0.5 ? Math.sin(t * 4) * 5 : 0), pop(t, q + 0.05, 0.32), (i) => tw(t, W(13, i) - 0.05, W(13, i) + 0.08, 0, 1), -1);
+  return cam(bg + pk, tw(t, a, S.end, 1.02, 1.08), 540, 1000, 540, 1000) + bub + chips(t, write, 640);
 }
 function sEnd(t) {
   const a = S.end + 0.22, bellT = a + 0.05, swing = wob(t, bellT + 0.1, 2.4, 1.6, 26);
@@ -333,6 +365,6 @@ export function frame(t) {
   else if (t < S.end) s = sSignoff(t);
   else if (t < S.end + 0.3) s = sSignoff(t) + `<circle cx="540" cy="900" r="${n2(tw(t, S.end, S.end + 0.3, 0, 1900, E.in2))}" fill="#0C0822"/>`;
   else s = sEnd(t) + `<rect width="1080" height="1920" fill="#0C0822" opacity="${n2(tw(t, S.end + 0.3, S.end + 0.5, 1, 0))}"/>`;
-  return DEFS + s + vignette;
+  return DEFS + s + vignette + captions(t);
 }
 export const scenes = () => S;
