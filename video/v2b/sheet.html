@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(../node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2)}
+@font-face{font-family:Lalezar;src:url(../node_modules/@fontsource/lalezar/files/lalezar-arabic-400-normal.woff2)}
+html,body{margin:0;background:#111}svg{display:block}
+</style></head><body>
+<svg id="s" xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+<script type="module">
+import { host, blend } from "./peek.js";
+import { mama } from "./mama.js";
+import * as P from "./props.js";
+const q = new URLSearchParams(location.search), which = q.get("w") || "chars";
+let out = "";
+if (which === "chars") {
+  out += `<rect width="1080" height="1920" fill="#1B8F8A"/>`;
+  out += host({ x: 280, y: 760, k: 0.62, face: "neutral", t: 1 });
+  out += host({ x: 800, y: 760, k: 0.62, face: "deadpan", t: 1, armR: { x: 880, y: 470 } });
+  out += host({ x: 280, y: 1330, k: 0.5, face: "surprised", t: 1, talk: 0.8, symbol: "!" });
+  out += host({ x: 800, y: 1330, k: 0.5, face: blend("smug", "worried", 0.5), t: 1 });
+  out += mama({ x: 200, y: 1890, s: 0.6 });
+  out += mama({ x: 520, y: 1890, s: 0.6, mouth: { type: "grin", smile: 1, open: 0.3 }, lid: 1, happy: 1, armL: { x: -150, y: -330, bend: -1 }, armR: { x: 150, y: -330, bend: 1 }, blush: 1 });
+  out += mama({ x: 860, y: 1890, s: 0.6, sick: 1, tears: 1, mouth: { type: "cough", open: 1 }, lid: 0.3, squint: 0.8, browTilt: 1, browL: 0.5, browR: 0.5, armR: { x: 20, y: -470, front: true, bend: 1 }, lean: 6, turn: -1 });
+} else out = P.sheet(which);
+document.getElementById("s").innerHTML = out;
+document.fonts.ready.then(() => { window.__ready = true; });
+</script></body></html>
