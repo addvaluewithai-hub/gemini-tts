@@ -147,7 +147,7 @@ function sSymptoms(t) {
 function sAlarm(t) {
   const a = S.s6, shout = W(8, 4) - 0.02, peak = W(8, 5);
   const track = [[a, { emote: "surprised", gesture: "stop" }], [W(8, 0) - 0.08, { emote: "furious", gesture: "stop", loud: 1.2 }, 0.12], [W(8, 2), { emote: "furious", armL: { x: 330, y: 560 }, armR: { x: 880, y: 500 }, loud: 1.2 }, 0.12],
-    [shout, { emote: "surprised", gesture: "cheer", loud: 1.4, mouth: { w: 0.92, smile: -0.3, jaw: 0.7, smirk: 0 } }, 0.1], [peak + 0.3, { emote: "furious", gesture: "stop" }, 0.2]];
+    [shout, { emote: "furious", gesture: "cheer", loud: 1.5, ant: 22 }, 0.1], [peak + 0.3, { emote: "furious", gesture: "stop" }, 0.2]];
   const s = kf(t, [[a, 1.2], [a + 0.22, 1.8, E.outBack], [shout, 1.86, E.lin], [shout + 0.14, 2.1, E.outBack], [S.s7, 2.04]]);
   const sh = (t > peak ? Math.sin(t * 70) * 12 * clamp(1 - (t - peak) / 0.5) : 0) + wob(t, a, 10, 8, 16);
   const pk = peekAt(t, track, env, { x: 540 + sh, y: 1010 + sh * 0.5, s, blinks: [] });
@@ -186,8 +186,8 @@ function sRinse(t) {
   const pouring = on(t, pour + 0.12, winT + 0.1);
   const stream = pouring ? `<path d="M${n2(bx + 190)} ${n2(byy - 110)} Q${TX - 10} ${n2(byy - 190)} ${TX} ${TY - 280 * TS}" fill="none" stroke="${C.water}" stroke-width="44" stroke-linecap="round"/><path d="M${n2(bx + 190)} ${n2(byy - 110)} Q${TX - 10} ${n2(byy - 190)} ${TX} ${TY - 280 * TS}" fill="none" stroke="${C.waterHi}" stroke-width="16" stroke-linecap="round" stroke-dasharray="40 60" stroke-dashoffset="${n2(-t * 700)}"/>` +
     [...Array(8)].map((_, i) => { const u = ((t * 1.8 + i / 8) % 1), an = -Math.PI / 2 + (i - 3.5) * 0.3; return `<circle cx="${n2(TX + Math.cos(an) * u * 220)}" cy="${n2(TY - 290 * TS + Math.sin(an) * u * 240 + u * u * 200)}" r="${n2(15 * (1 - u) + 4)}" fill="${C.waterHi}"/>`; }).join("") : "";
-  const m = G(T(MX, MY, 0, MS), mom({ face, handL: hl, handR: hr, lean: tiltK * 5 - tw(t, winT, winT + 0.3, 0, 5), breath: breathe(t), tt: t, tails: wob(t, pour, 4, 5, 16), headTilt: tw(t, winT, winT + 0.3, 0, -8) }));
-  const bk = G(T(bx, byy, 0, 1.35), bucket(bt));
+  const m = G(T(MX, MY, 0, MS), mom({ face, handL: hl, handR: hr, lean: tiltK * 5 - tw(t, winT, winT + 0.3, 0, 5) + (pouring ? 1.6 * Math.sin(t * 9) : 0), breath: breathe(t), tt: t, tails: wob(t, pour, 4, 5, 16) + (pouring ? 8 * Math.sin(t * 9) : 0), headTilt: tw(t, winT, winT + 0.3, 0, -8) + (pouring ? 3 * Math.sin(t * 4.5) : 0), squash: pouring ? 0.012 * Math.sin(t * 18) : 0 }));
+  const bk = G(T(bx, byy + (t > pour ? 6 * Math.sin(t * 18) : 0), 0, 1.35), bucket(bt + (t > pour && t < winT ? 4 * Math.sin(t * 9) : 0)));
   const tl = G(T(TX + (pouring ? Math.sin(t * 40) * 3 : 0), TY, 0, TS), toilet({ lid: 1, t, squash: pouring ? 0.015 * Math.sin(t * 30) : 0, shine: tw(t, pour + 0.5, pour + 1, 0, 0.8) }));
   const air = win > 0.2 ? [0, 1, 2].map((i) => airSwirl(700 - i * 190, 520 + i * 230, 1.3 - i * 0.15, t, i * 0.33, "#fff", n2(0.8 * clamp(win)))).join("") : "";
   const hz = haze > 0.01 ? `<rect width="1080" height="1920" fill="${C.gas}" opacity="${n2(0.3 * haze)}"/>` + (t > winT ? gasCloud(tw(t, winT, winT + 0.6, 520, 780, E.in2), tw(t, winT, winT + 0.6, 620, 360, E.in2), 150, t, { seed: 5, n: 6, grow: bump(t, winT - 0.1, 0.75) * 0.8 }) : "") : "";
@@ -269,9 +269,9 @@ function sEnd(t) {
 function thumb() {
   const t = 3.3, face = { ...FACE.burn, open: 0.55, mo: 16, mw: 30 };
   const m = G(T(330, 1960, -3, 1.42), mom({ face, handL: { x: -170, y: -700 }, handR: { x: 40, y: -430 }, tt: 0.4, lean: 3, tails: 14 }));
-  const pk = peekAt(100, [[0, { emote: "surprised", armR: { x: 880, y: 470 }, look: -0.5 }]], () => 0.5, { x: 810, y: 1560, s: 1.12, rot: 6, blinks: [] });
-  return cam(bathroom(t, { haze: 1 }), 1.5, 500, 900, 540, 960) + gasCloud(560, 430, 400, 2.2, { seed: 6, n: 12, grow: 1.0, skull: 1 }) + gasCloud(1000, 1150, 240, 1.2, { seed: 3, n: 8 }) + m + pk + gasCloud(80, 1800, 300, 1.2, { seed: 18, n: 8 }) + gasCloud(1010, 1860, 260, 1.2, { seed: 19, n: 8 })
-    + G(T(900, 1010, 12, 1.25), warn(0, 0, 1));
+  const pk = peekAt(100, [[0, { emote: "surprised", armR: { x: 880, y: 470 }, look: 0 }]], () => 0.5, { x: 800, y: 1470, s: 1.12, rot: 6, blinks: [] });
+  return cam(bathroom(t, { haze: 1 }), 1.5, 500, 900, 540, 960) + gasCloud(560, 430, 400, 2.2, { seed: 6, n: 12, grow: 1.0, skull: 1 }) + gasCloud(1000, 1150, 240, 1.2, { seed: 3, n: 8 }) + m + pk + gasCloud(80, 1800, 300, 1.2, { seed: 18, n: 8 }) + gasCloud(1060, 1930, 230, 1.2, { seed: 19, n: 8 })
+    + G(T(935, 840, 12, 1.1), warn(0, 0, 1));
 }
 
 // ---------------------------------------------------------------- the cut

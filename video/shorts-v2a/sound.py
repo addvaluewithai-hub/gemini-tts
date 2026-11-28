@@ -148,11 +148,11 @@ v = load(sys.argv[4] + ".voice.wav"); n = int(TOTAL * SR); voice = np.zeros(n); 
 H = SR // 50; lv = np.array([np.sqrt(np.mean(voice[i:i + H] ** 2)) for i in range(0, n, H)]); talk = (lv > 0.01).astype(float); sm = np.zeros(len(talk)); q = 0.0
 for i in range(len(talk)): q += (talk[i] - q) * (0.3 if talk[i] > q else 0.06); sm[i] = q
 duck = np.repeat(1 - 0.45 * sm, H)[:n]
-mix = voice + fx.x[:n] * float(sys.argv[5] if len(sys.argv) > 5 else 0.5) + mu.x[:n] * duck * float(sys.argv[6] if len(sys.argv) > 6 else 0.17)
+mix = voice + fx.x[:n] * float(sys.argv[5] if len(sys.argv) > 5 else 0.38) + mu.x[:n] * duck * float(sys.argv[6] if len(sys.argv) > 6 else 0.17)
 fade = int(0.25 * SR); mix[-fade:] *= np.linspace(1, 0, fade)
 out = sys.argv[4]; save(out + ".raw.wav", mix * 0.7); save(out + ".fx.wav", fx.x[:n] * 0.5); save(out + ".music.wav", mu.x[:n] * 0.5)
 r = subprocess.run(["ffmpeg", "-hide_banner", "-i", out + ".raw.wav", "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
 I = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r)[-1]); gain = -15.0 - I
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", out + ".raw.wav", "-af", f"volume={gain:.2f}dB,alimiter=limit=0.89:attack=3:release=60:level=disabled", "-ar", "48000", out], check=True)
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", out + ".raw.wav", "-af", f"volume={gain:.2f}dB,alimiter=limit=0.8:attack=3:release=60:level=disabled", "-ar", "48000", out], check=True)
 r = subprocess.run(["ffmpeg", "-hide_banner", "-i", out, "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
 print("integrated", re.findall(r"I:\s+(-?[\d.]+) LUFS", r)[-1], "LUFS, true peak", re.findall(r"Peak:\s+(-?[\d.]+) dBFS", r)[-1], "dBFS, gain applied", round(gain, 2))
