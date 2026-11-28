@@ -3,14 +3,17 @@
  "lead": 0.1,
  "lines": [
   {
-   "take": "b2",
-   "request": "techforbadguys-v2a-bleach-b2.json",
-   "maxpause": 0.3,
-   "gap": 0.62
+   "take": "a3",
+   "request": "techforbadguys-v2a-bleach-a3.json",
+   "turn": 0,
+   "maxpause": 0.36,
+   "gap": 0.55
   },
   {
-   "take": "b2",
-   "request": "techforbadguys-v2a-bleach-b2.json",
+   "take": "a3",
+   "request": "techforbadguys-v2a-bleach-a3.json",
+   "turn": 1,
+   "gain": 1.5,
    "maxpause": 0.25,
    "gap": 0.3
   },
@@ -81,13 +84,14 @@
    "pre": 1.05,
    "gain": -1.0,
    "maxpause": 0.28,
-   "gap": 0.25
+   "gap": 0.4
   },
   {
-   "take": "a1",
-   "request": "techforbadguys-v2a-bleach-a1.json",
-   "maxpause": 0.25,
-   "gap": 0.2
+   "take": "a3",
+   "request": "techforbadguys-v2a-bleach-a3.json",
+   "turn": 2,
+   "maxpause": 0.42,
+   "gap": 0.25
   }
  ]
 }

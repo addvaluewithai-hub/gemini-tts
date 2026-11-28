@@ -57,8 +57,8 @@ def bell(g=1): t = tt(2.2); return sum(a * np.sin(TAU * f * t) * np.exp(-t * r) 
 
 P = fx.put
 P(0.0, noise(2.6, 2500, 9000) * np.linspace(0.5, 1, int(2.6 * SR)) * (0.6 + 0.4 * np.sin(TAU * 7 * tt(2.6))), 0.035)
-P(0.0, whoosh(0.35, True), 0.25); P(W(1, 4) - 0.1, poof(), 0.4); P(W(1, 5), tone(note(-21), 0.9, 3, harm=(1, .5, .3)), 0.22); P(W(1, 5), tone(note(-15), 0.9, 3, harm=(1, .5, .3)), 0.18)
-P(W(2, 0), boing(), 0.0); P(W(2, 3) + 0.05, glide(900, 300, 0.32, 6, (1, .3)), 0.14)
+P(0.0, whoosh(0.35, True), 0.25); P(W(1, 3) - 0.1, poof(), 0.4); P(W(1, 4), tone(note(-21), 0.9, 3, harm=(1, .5, .3)), 0.22); P(W(1, 4), tone(note(-15), 0.9, 3, harm=(1, .5, .3)), 0.18)
+P(W(2, 1) + 0.05, glide(900, 300, 0.32, 6, (1, .3)), 0.14)
 P(S["s2"], whoosh(0.5), 0.35); a = S["s2"]; P(a + 0.6, thud(), 0.5)
 tie = W(3, 2) - 0.05; tug = W(3, 3) + 0.12; glove = W(3, 4) - 0.1; snap = glove + 0.42; war = W(3, 5); lunge = W(3, 6) + 0.02
 P(tie, whoosh(0.2), 0.15); P(tug, hiss(0.12), 0.3); P(tug, click(900), 0.4); P(glove + 0.1, glide(300, 700, 0.28, 3, (1, .4)), 0.12); P(snap, click(3000), 0.9); P(snap, hiss(0.1), 0.4)
@@ -107,9 +107,10 @@ P(done, noise(0.25, 1500, 9000) * np.exp(-tt(0.25) * 18), 0.35); P(med + 0.3, tr
 for k, s_ in enumerate((0, 4, 7, 12)): P(done + k * 0.1, tone(note(s_ + 3), 0.5 if k < 3 else 0.9, 4, harm=(1, .5, .35, .2)), 0.12)
 a10 = S["s10"]; P(a10 - 0.22, whoosh(0.45, False), 0.3); P(a10 + 0.05, whoosh(0.3), 0.2)
 shy = W(12, 6) + 0.1; P(shy, sweepn(0.3, 500, 1200, 0.9), 0.14); P(shy + 0.35, glide(700, 350, 0.25, 7, (1, .3)), 0.07)
-P(W(13, 0) - 0.05, click(1800), 0.35); P(W(13, 0) - 0.12, whoosh(0.18), 0.15)
+P(W(13, 0) - 0.16, whoosh(0.3), 0.22); P(W(13, 0) - 0.02, click(1400), 0.4); P(W(13, 0), ding(4, d=0.5), 0.2)
+for k in range(5): P(W(13, 5) - 0.08 + k * 0.07, ding(7 + 2 * k, d=0.3), 0.14)
 aE = S["end"]; P(aE, whoosh(0.4), 0.35); P(aE + 0.36, bell(), 0.3); P(aE + 0.9, bell(), 0.14); P(aE + 0.34, thud(0.6, 80), 0.3); P(aE + 0.46, thud(0.6, 70), 0.3)
-P(aE + 1.0, whoosh(0.22), 0.25); P(aE + 1.16, click(1400), 0.5); P(aE + 1.18, ding(4, d=0.5), 0.25); P(aE + 1.34, ding(11, d=0.7), 0.22)
+P(aE + 0.62, whoosh(0.22), 0.2); P(aE + 0.8, ding(11, d=0.7), 0.2)
 
 # ---- music: a sneaky plucked bass and marimba that change character with the scenes
 def pluck(semi, d=0.5, g=1): return tone(note(semi - 24), d, 7, 0.003, (1, .5, .25, .12)) * g

@@ -114,3 +114,25 @@ for (const [take, idx, fn] of [["a1", 1, request], ["b1", 2, request], ["a2", 1,
   writeFileSync(new URL(`./${id}.json`, import.meta.url), JSON.stringify(body, null, 1) + "\n");
   console.log(id, body.turns.length, "turns", body.turns.map((t) => t.text).join(" ").replace(/<[^>]+>/g, "").trim().split(/\s+/).length, "words");
 }
+
+// Round 3 (owner's notes): a new opening that speaks to the viewer about their own bathroom, and the film now ends on a
+// question for the comments instead of the sign-off. Three turns per take: hook, the turn of the hook, the question.
+const ROUND3 = [
+  ["في حمّامكم.. بيتصنّع غاز سام.",
+    "THIS LINE: the first line of the film, said straight to the viewer about their own home. Grave and urgent, like breaking news; a short hold after «في حمّامكم», then hit «غاز سام» hard. Clear and not slow.",
+    "THIS LINE: the first line of the film, said straight to the viewer. A low, tense, confidential warning, as if leaking a secret about their own house; stress «غاز سام»; every word clear."],
+  ["لأ.. مش اللي في بالك.",
+    "THIS LINE: a complete change. Quick, flat, dry aside, lower and lighter, as if the listener just guessed something rude. Throwaway.",
+    "THIS LINE: weary and flat, a patient correction of someone who always guesses the rude thing. Dry as dust, quick."],
+  ["كام منظف في حمّامكم دلوقتي؟ <short pause> اكتبوا الرقم.",
+    "THIS LINE: the last line of the film, a challenge thrown at the viewer. Pointed and playful, eyebrow raised, the question rises clearly on «دلوقتي؟»; then «اكتبوا الرقم» short, dry and bossy, like an inspector with a notebook.",
+    "THIS LINE: the last line of the film. Suspicious and teasing, slow on «كام منظف», leaning in, the question rising on «دلوقتي؟»; then «اكتبوا الرقم» quick and deadpan, an order."],
+];
+for (const [take, idx] of [["a3", 1], ["b3", 2]]) {
+  const id = `techforbadguys-v2a-bleach-${take}`;
+  const body = { voice: "Puck", routing: "quality", format: "wav", sample_rate: 24000, temperature: 1, transcript: { language_codes: ["ar-EG"], write_vtt: true },
+    turns: ROUND3.map((l) => ({ style: BASE + BRISK + l[idx], text: l[0] })),
+    metadata: { channel: "techforbadguys", job_id: id, language: "ar-EG", title: `Shorts lab v2 bleach, studio A, take ${take} (new hook and closing question)` } };
+  writeFileSync(new URL(`./${id}.json`, import.meta.url), JSON.stringify(body, null, 1) + "\n");
+  console.log(id, body.turns.length, "turns");
+}

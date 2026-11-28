@@ -1,4 +1,4 @@
-# غاز سام في الحمّام.. لأ، مش اللي في بالك ☠️ #Shorts
+# في حمّامكم بيتصنّع غاز سام.. لأ، مش اللي في بالك ☠️ #Shorts
 
 **Studio A, version 2.** Topic: mixing chlorine bleach with other bathroom cleaners.
 
@@ -17,8 +17,8 @@ back the hook.
 
 | # | Beat | Line | Comic device | Picture |
 |---|---|---|---|---|
-| 1 | Hook | يا فندم.. البشر بيصنّعوا غاز سام في الحمّام. | Absurd but true, said like a state secret | PEEK full screen outside a bathroom door; green gas creeps under it |
-| 2 | Hook, the turn | لأ يا فندم.. مش اللي في بالك. | The double-take: the commander's wrong guess | Peek's flat side-eye; the gas makes a small embarrassed puff and hides |
+| 1 | Hook | في حمّامكم.. بيتصنّع غاز سام. | Absurd but true, said straight to the viewer about their own home (owner's note: the old «يا فندم.. البشر بيصنّعوا غاز سام في الحمّام» did not grab) | PEEK full screen outside a bathroom door; green gas creeps under it |
+| 2 | Hook, the turn | لأ.. مش اللي في بالك. | The double-take: the viewer's wrong guess | Peek's flat side-eye; the gas makes a small embarrassed puff and hides |
 | 3 | The ritual | كل جمعة، الأم المصرية بتعلن الحرب على الحمّام. | Housework as a military campaign | Through the keyhole: the mother ties her scarf, snaps her gloves, brush like a sword, facing the toilet |
 | 4 | The doctrine | وعقيدتها بسيطة: منظف ينضّف.. اتنين ينضّفوا أكتر.. تلاتة؟ الحمّام يتولد من جديد. | Rule of three, the third absurd | One bottle, one sparkle; two, more; three, the toilet rises in a halo |
 | 5 | The chemistry | بس الكلور مع منظف التواليت، أو الخل، أو بعض منظفات الإزاز.. بيطلّع غاز سام. | None. The comedy stops here | The bleach bottle; each of the three others meets it and a yellow-green cloud blooms |
@@ -28,7 +28,7 @@ back the hook.
 | 9 | If it happens | ولو حصل: اخرج فوراً لهوا نضيف. ولو النَفَس صعب، اتصل بالإسعاف وقول لهم خلطت إيه. | None | She is out on the balcony breathing; then the phone, an ambulance, and the two bottles in her speech bubble |
 | 10 | The payoff | والتواليت؟ هيلمع برضه. وهتقف تتفرّج عليه.. كإنه دخل كلية الطب. | The proud Egyptian mother: the toilet as the son who got into medicine | One bottle, open window, gleaming toilet; she wipes a tear; the toilet in a doctor's coat and stethoscope |
 | 11 | Callback | أما الغاز اللي في بالك.. فده تقرير تاني. | Callback to line 2 | PEEK full screen, low and confidential |
-| 12 | Sign-off | Peek.. انتهى التقرير يا فندم. | | Salute, then the end card: EARTH REPORT and the bell |
+| 12 | The question | كام منظف في حمّامكم دلوقتي؟ اكتبوا الرقم. | Ends on a question for the comments, spoken and written, in place of the sign-off (owner's note). It answers the first line: «في حمّامكم» opens and closes the film | PEEK steps back, points at the viewer; the question in a speech bubble, word by word; number chips 1 2 3 4 +; then the end card with the question held under EARTH REPORT |
 
 ## Pacing notes
 

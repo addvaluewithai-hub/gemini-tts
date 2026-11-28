@@ -48,16 +48,16 @@ const airSwirl = (x, y, s, t, ph, color = "#fff", op = 0.8) => `<path d="M-160 2
 
 // ---------------------------------------------------------------- 1. the hook: Peek outside the bathroom door
 function sHook(t) {
-  const puffT = W(1, 4) - 0.1, shy = W(2, 3);
+  const puffT = W(1, 3) - 0.1, shy = W(2, 1);
   const puff = t < shy ? (0.45 + 0.55 * pop(t, puffT, 0.45)) * (1 + 0.06 * Math.sin(t * 5)) : unpop(t, shy + 0.05, 0.4) * (1 + wob(t, shy, 9, 6, 0.12));
-  const skull = t < LS(2) - 0.05 ? tw(t, W(1, 5), W(1, 5) + 0.22, 0, 1) : tw(t, LS(2) - 0.05, LS(2) + 0.15, 1, 0);
+  const skull = t < LS(2) - 0.05 ? tw(t, W(1, 4), W(1, 4) + 0.22, 0, 1) : tw(t, LS(2) - 0.05, LS(2) + 0.15, 1, 0);
   const bg = hallway(t, { gas: tw(t, 0, 2.6, 0.55, 1, E.out3), glow: 1, puff, skull });
   const track = [[0, { emote: "worried", armR: { x: 905, y: 500 }, look: 0.1 }], [W(1, 2) - 0.12, { emote: "serious", armR: { x: 915, y: 470 }, look: 0.75 }, 0.2],
-    [W(1, 4) - 0.1, { emote: "surprised", armR: { x: 900, y: 430 }, look: 0 }, 0.14], [W(1, 6) - 0.05, { emote: "serious", armR: { x: 908, y: 600 }, look: 0 }, 0.25],
+    [W(1, 3) - 0.1, { emote: "surprised", armR: { x: 900, y: 430 }, look: 0 }, 0.14], [W(1, 4) + 0.3, { emote: "serious", armR: { x: 908, y: 600 }, look: 0 }, 0.25],
     [LE(1) + 0.08, { emote: "worried", gesture: "pockets", look: 0.9 }, 0.2], [LS(2) - 0.2, { emote: "deadpan", look: 0 }, 0.16],
-    [W(2, 0) - 0.04, { emote: "deadpan", gesture: "pockets", look: 0 }, 0.18], [W(2, 3) - 0.05, { emote: "skeptical", gesture: "shrug", look: 0.4 }, 0.2], [LE(2), { emote: "eyeroll", gesture: "pockets" }, 0.2]];
+    [W(2, 0) - 0.04, { emote: "deadpan", gesture: "pockets", look: 0 }, 0.18], [W(2, 1) - 0.05, { emote: "skeptical", gesture: "shrug", look: 0.4 }, 0.2], [LE(2), { emote: "eyeroll", gesture: "pockets" }, 0.2]];
   const shake = wob(t, W(2, 0), 4.5, 4, 16);
-  const pk = peekAt(t, track, env, { x: 345 + shake, y: 1060 + bump(t, W(1, 4) - 0.1, 0.3) * -22, s: 1.14, blinks: BL });
+  const pk = peekAt(t, track, env, { x: 345 + shake, y: 1060 + bump(t, W(1, 3) - 0.1, 0.3) * -22, s: 1.14, blinks: BL });
   return cam(bg + pk, tw(t, 0, S.s2, 1.0, 1.07, E.out2), 560, 1000, 560, 1000);
 }
 
@@ -261,33 +261,40 @@ function sPayoff(t) {
   return cam(bathroom(t, { win: 1, day: 1, shelf: ["bleach"] }) + ray + tl + gleam + m + trill + conf + motes(t, 16, "#fff", { seed: 40, speed: 18, size: 5, op: 0.45, h: 1400 }), tw(t, a, S.s10, 1.0, 1.06), 600, 1100, 600, 1100);
 }
 
-// ---------------------------------------------------------------- 10. the callback and the sign-off
+// ---------------------------------------------------------------- 10. the callback, then the question for the comments
+// The film ends on a question, spoken and written: «كام منظف في حمّامكم دلوقتي؟ اكتبوا الرقم.»
+const ASK = ["كام", "منظف", "في", "حمّامكم", "دلوقتي؟"];
+function askBubble(t, x, y, k, show, tail = 1) {
+  if (k <= 0) return "";
+  const wd = (i, fill) => `<tspan fill="${fill}" fill-opacity="${n2(show(i))}">${ASK[i]}</tspan>`;
+  return `<g transform="translate(${n2(x)} ${n2(y)}) scale(${n2(k)})">
+    <path d="M${tail * 120} 150 l${tail * 60} 120 l${-tail * 150} -100Z" fill="${C.cream}"/><rect x="-460" y="-185" width="920" height="360" rx="90" fill="${C.ink}" opacity=".35" transform="translate(10 16)"/><rect x="-460" y="-185" width="920" height="360" rx="90" fill="${C.cream}"/>
+    <text y="-30" text-anchor="middle" direction="rtl" font-family="Cairo" font-weight="900" font-size="124">${wd(0, C.red)} ${wd(1, C.red)}</text>
+    <text y="108" text-anchor="middle" direction="rtl" font-family="Cairo" font-weight="900" font-size="92">${[2, 3, 4].map((i) => wd(i, C.ink)).join(" ")}</text>
+    <g transform="translate(-352 -182)"><rect x="-74" y="-46" width="148" height="92" rx="46" fill="${C.pink}"/>${[0, 1, 2].map((i) => `<circle cx="${-36 + i * 36}" cy="${n2(-8 * Math.max(0, Math.sin(t * 9 - i * 0.9)))}" r="12" fill="#fff"/>`).join("")}</g></g>`;
+}
+const chips = (t, t0, y) => [1, 2, 3, 4, 5].map((n, i) => { const k = pop(t, t0 + i * 0.07, 0.25); return k <= 0 ? "" : `<g transform="translate(${n2(540 + (i - 2) * 150)} ${n2(y - 14 * Math.max(0, Math.sin(t * 7 - i * 0.8)))}) scale(${n2(k)})"><circle r="60" fill="${C.ink}" opacity=".35" transform="translate(5 8)"/><circle r="60" fill="${i === 4 ? C.red : C.pink}"/><text y="30" text-anchor="middle" font-family="Anton" font-size="84" fill="#fff">${i === 4 ? "+" : n}</text></g>`; }).join("");
 function sSignoff(t) {
-  const a = S.s10, ama = W(12, 0) - 0.12, fa = W(12, 5) - 0.12, shy = W(12, 6) + 0.1, pk0 = W(13, 0) - 0.12;
+  const a = S.s10, ama = W(12, 0) - 0.12, fa = W(12, 5) - 0.12, shy = W(12, 6) + 0.1, q = W(13, 0) - 0.16, write = W(13, 5) - 0.08;
   const track = [[a - 0.1, { emote: "bored", bobY: 0 }], [a + 0.25, { emote: "bored", bobY: 16, look: 0 }, 0.3], [ama, { emote: "sly", armR: { x: 742, y: 520 }, look: -0.55 }, 0.22], [W(12, 3), { emote: "sly", armR: { x: 742, y: 520 }, look: 0.6 }, 0.2],
     [fa, { emote: "smug", armR: { x: 742, y: 520 }, look: 0 }, 0.18], [LE(12) - 0.25, { emote: "wink", gesture: "pockets" }, 0.16], [LE(12) + 0.02, { emote: "deadpan", look: 0.95 }, 0.14],
-    [pk0, { emote: "proud", armR: { x: 800, y: 318 }, look: 0 }, 0.18], [W(13, 1), { emote: "grin", armR: { x: 800, y: 318 } }, 0.2], [LE(13) + 0.02, { emote: "wink", armR: { x: 860, y: 420 } }, 0.16]];
-  const lean = kf(t, [[ama, 1.5], [ama + 0.3, 1.78, E.outBack], [LE(12) - 0.2, 1.82, E.lin], [pk0, 1.5, E.io3]]);
+    [q, { emote: "skeptical", armR: { x: 905, y: 610 }, look: 0 }, 0.2], [W(13, 3) - 0.05, { emote: "sly", armR: { x: 915, y: 640 }, look: 0 }, 0.18],
+    [write, { emote: "serious", armL: { x: 316, y: 516 }, armR: { x: 905, y: 620 }, look: 0 }, 0.16], [LE(13) + 0.02, { emote: "smug", armL: { x: 316, y: 516 } }, 0.2]];
+  const lean = kf(t, [[ama, 1.5], [ama + 0.3, 1.78, E.outBack], [LE(12) - 0.2, 1.82, E.lin], [q + 0.3, 1.2, E.io3], [write, 1.2], [write + 0.2, 1.27, E.outBack]]);
+  const py = kf(t, [[ama, 960], [ama + 0.3, 990, E.outBack], [LE(12) - 0.2, 995], [q + 0.3, 1262, E.io3]]);
   const puff = bump(t, shy, 0.9) * (1 + wob(t, shy, 7, 5, 0.2));
   const bg = hallway(t, { gas: 0, glow: 0, puff: 0 }) + (puff > 0.01 ? gasCloud(880, 1500, 110, t * 2, { seed: 4, n: 6, grow: puff, squashY: 0.7 }) : "");
-  const pk = peekAt(t, track, env, { x: 470, y: 960 + (lean - 1.5) * 110, s: lean, rot: tw(t, ama, ama + 0.3, 0, -3) * (t < pk0 ? 1 : tw(t, pk0, pk0 + 0.2, 1, 0)), blinks: BL });
-  return cam(bg + pk, tw(t, a, S.end, 1.02, 1.08), 540, 1000, 540, 1000);
+  const pk = peekAt(t, track, env, { x: kf(t, [[q, 470], [q + 0.3, 540, E.io3]]), y: py, s: lean, rot: tw(t, ama, ama + 0.3, 0, -3) * (t < q ? 1 : tw(t, q, q + 0.2, 1, 0)), blinks: BL });
+  const bub = askBubble(t, 540, 410 + (t > q + 0.5 ? Math.sin(t * 4) * 5 : 0), pop(t, q + 0.05, 0.32), (i) => tw(t, W(13, i) - 0.05, W(13, i) + 0.08, 0, 1), -1);
+  return cam(bg + pk, tw(t, a, S.end, 1.02, 1.08), 540, 1000, 540, 1000) + bub + chips(t, write, 668);
 }
-// The end card: the bell, EARTH REPORT, then the question that sends the viewer to the comments.
-const ASK = ["اعترف..", "مين", "في", "بيتكم", "بيخلط؟"];
 function sEnd(t) {
-  const a = S.end + 0.22, bellT = a + 0.05, swing = wob(t, bellT + 0.1, 2.4, 1.6, 26), q = a + 0.8;
+  const a = S.end + 0.22, bellT = a + 0.05, swing = wob(t, bellT + 0.1, 2.4, 1.6, 26);
   const word = (w, y, t0, size, fill) => { const k = pop(t, t0, 0.32); return `<g transform="translate(540 ${y}) scale(${n2(k)} ${n2(k * (1 + wob(t, t0 + 0.2, 4, 6, 0.08)))})"><text text-anchor="middle" font-family="Anton" font-size="${size}" letter-spacing="6" fill="${C.ink}" opacity=".45" transform="translate(8 12)">${w}</text><text text-anchor="middle" font-family="Anton" font-size="${size}" letter-spacing="6" fill="${fill}">${w}</text></g>`; };
   const bell = G(T(540, 330, 0, 0.82 * pop(t, bellT, 0.35)), `<g transform="rotate(${n2(swing)} 0 -150)"><circle cx="0" cy="-158" r="22" fill="none" stroke="${C.sun}" stroke-width="12"/><path d="M-120 60 C-96 30 -96 -20 -90 -50 C-80 -110 -44 -140 0 -140 C44 -140 80 -110 90 -50 C96 -20 96 30 120 60Z" fill="${C.sun}"/><path d="M-66 -70 C-58 -100 -36 -118 -8 -122" fill="none" stroke="#FFE9A8" stroke-width="14" stroke-linecap="round"/><rect x="-132" y="50" width="264" height="30" rx="15" fill="#E09A12"/><circle cx="${n2(-swing * 1.5)}" cy="92" r="26" fill="${C.pink}"/></g>
     ${[0, 1].map((i) => { const u = ((t - bellT) * 1.6 + i * 0.5) % 1; return t > bellT + 0.1 ? `<path d="M-170 -80 q-40 60 0 120" transform="translate(${n2(-u * 60)} 0)" fill="none" stroke="${C.cream}" stroke-width="12" stroke-linecap="round" opacity="${n2(1 - u)}"/><path d="M170 -80 q40 60 0 120" transform="translate(${n2(u * 60)} 0)" fill="none" stroke="${C.cream}" stroke-width="12" stroke-linecap="round" opacity="${n2(1 - u)}"/>` : ""; }).join("")}`);
-  const wd = (i, fill) => { const o = n2(tw(t, q + 0.16 + i * 0.13, q + 0.28 + i * 0.13, 0, 1)); return `<tspan fill="${fill}" fill-opacity="${o}">${ASK[i]}</tspan>`; };
-  const bk = pop(t, q, 0.34), bob = t > q + 0.4 ? Math.sin((t - q) * 5) * 6 : 0;
-  const bubble = bk <= 0 ? "" : `<g transform="translate(540 ${n2(1235 + bob)}) rotate(${n2(wob(t, q + 0.2, 3, 5, 3))}) scale(${n2(bk)})">
-    <path d="M150 150 l70 110 l-150 -96Z" fill="${C.cream}"/><rect x="-455" y="-185" width="910" height="360" rx="90" fill="${C.ink}" opacity=".35" transform="translate(10 16)"/><rect x="-455" y="-185" width="910" height="360" rx="90" fill="${C.cream}"/>
-    <text y="-36" text-anchor="middle" direction="rtl" font-family="Cairo" font-weight="900" font-size="108">${wd(0, C.red)}</text>
-    <text y="100" text-anchor="middle" direction="rtl" font-family="Cairo" font-weight="900" font-size="80">${[1, 2, 3, 4].map((i) => wd(i, C.ink)).join(" ")}</text>
-    <g transform="translate(-350 -180)"><rect x="-74" y="-46" width="148" height="92" rx="46" fill="${C.pink}"/>${[0, 1, 2].map((i) => `<circle cx="${-36 + i * 36}" cy="${n2(-8 * Math.max(0, Math.sin(t * 9 - i * 0.9)))}" r="12" fill="#fff"/>`).join("")}</g></g>`;
-  return endCard(t) + bell + word("EARTH", 640, a + 0.12, 232, C.cream) + word("REPORT", 850, a + 0.24, 200, C.pink) + bubble;
+  const bub = askBubble(t, 540, 1235 + (t > a + 0.8 ? Math.sin(t * 5) * 6 : 0), pop(t, a + 0.4, 0.34), () => 1);
+  return endCard(t) + bell + word("EARTH", 640, a + 0.12, 232, C.cream) + word("REPORT", 850, a + 0.24, 200, C.pink) + bub;
 }
 
 // ---------------------------------------------------------------- thumbnail (no words)
@@ -324,7 +331,7 @@ export function frame(t) {
   else if (t < S.s10) s = `<rect width="1080" height="1920" fill="${C.ink}"/>` + circleClip("iris5", 740, 900, tw(t, S.s10 - 0.22, S.s10, 1500, 0, E.in3), sPayoff(t));
   else if (t < S.s10 + 0.3) s = `<rect width="1080" height="1920" fill="${C.ink}"/>` + circleClip("iris6", 470, 900, tw(t, S.s10, S.s10 + 0.3, 0, 1600, E.out3), sSignoff(t));
   else if (t < S.end) s = sSignoff(t);
-  else if (t < S.end + 0.3) s = sSignoff(t) + `<circle cx="470" cy="560" r="${n2(tw(t, S.end, S.end + 0.3, 0, 1900, E.in2))}" fill="#0C0822"/>`;
+  else if (t < S.end + 0.3) s = sSignoff(t) + `<circle cx="540" cy="900" r="${n2(tw(t, S.end, S.end + 0.3, 0, 1900, E.in2))}" fill="#0C0822"/>`;
   else s = sEnd(t) + `<rect width="1080" height="1920" fill="#0C0822" opacity="${n2(tw(t, S.end + 0.3, S.end + 0.5, 1, 0))}"/>`;
   return DEFS + s + vignette;
 }

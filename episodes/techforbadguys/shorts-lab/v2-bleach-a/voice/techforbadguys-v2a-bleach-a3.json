@@ -1,0 +1,33 @@
+{
+ "voice": "Puck",
+ "routing": "quality",
+ "format": "wav",
+ "sample_rate": 24000,
+ "temperature": 1,
+ "transcript": {
+  "language_codes": [
+   "ar-EG"
+  ],
+  "write_vtt": true
+ },
+ "turns": [
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report to his commander back home, in Egyptian Arabic, Cairo street dialect, never Modern Standard Arabic. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face and never laughs at his own jokes. English names are said the English way. Pace: fast and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. Cairo pronunciation throughout: تاني not ثاني, اتنين not اثنين, نضيف not نظيف. THIS LINE: the first line of the film, said straight to the viewer about their own home. Grave and urgent, like breaking news; a short hold after «في حمّامكم», then hit «غاز سام» hard. Clear and not slow.",
+   "text": "في حمّامكم.. بيتصنّع غاز سام."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report to his commander back home, in Egyptian Arabic, Cairo street dialect, never Modern Standard Arabic. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face and never laughs at his own jokes. English names are said the English way. Pace: fast and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. Cairo pronunciation throughout: تاني not ثاني, اتنين not اثنين, نضيف not نظيف. THIS LINE: a complete change. Quick, flat, dry aside, lower and lighter, as if the listener just guessed something rude. Throwaway.",
+   "text": "لأ.. مش اللي في بالك."
+  },
+  {
+   "style": "Peek, a small alien spy on Earth, filing a voice report to his commander back home, in Egyptian Arabic, Cairo street dialect, never Modern Standard Arabic. Bright, higher-pitched, slightly nasal cartoon voice, never deep or gravelly. He is an outsider studying humans with a straight face and never laughs at his own jokes. English names are said the English way. Pace: fast and tight, clearly quicker than ordinary conversation, no long silences inside a sentence. Cairo pronunciation throughout: تاني not ثاني, اتنين not اثنين, نضيف not نظيف. THIS LINE: the last line of the film, a challenge thrown at the viewer. Pointed and playful, eyebrow raised, the question rises clearly on «دلوقتي؟»; then «اكتبوا الرقم» short, dry and bossy, like an inspector with a notebook.",
+   "text": "كام منظف في حمّامكم دلوقتي؟ <short pause> اكتبوا الرقم."
+  }
+ ],
+ "metadata": {
+  "channel": "techforbadguys",
+  "job_id": "techforbadguys-v2a-bleach-a3",
+  "language": "ar-EG",
+  "title": "Shorts lab v2 bleach, studio A, take a3 (new hook and closing question)"
+ }
+}

@@ -2,14 +2,15 @@
 """Cut the chosen take of every line into one voice track and write the word timeline the animation is timed to.
 
 usage: voice_edit.py edit.json takes_dir requests_dir out.wav out_timeline.json
-edit.json: { "lead": s, "lines": [ { "take": "a2g", "request": "…a2.json", "tempo": 1.05, "maxpause": 0.35,
+edit.json: { "lead": s, "lines": [ { "take": "a2g", "turn": index of the line inside that take's request when it is not the same as here, "request": "…a2.json", "tempo": 1.05, "maxpause": 0.35,
              "pre": s of sound kept before the first word (a gasp, a sigh), "gain": dB offset, "gap": s of silence after } ] }
 Pauses longer than maxpause inside a line are shortened; tempo is applied with rubberband (pitch kept).
 """
 import json, sys, os, subprocess, tempfile, wave
 import numpy as np
 sys.path.insert(0, os.path.dirname(__file__))
-from voice_measure import measure, load, rms_db
+from voice_measure import measure, load, rms_db, norm
+import difflib
 
 SR = 48000
 def env_db(x, sr, hop=0.01):
@@ -38,6 +39,20 @@ def repair(words):
         else: g = w["end_ms"]; i += 1
     return out, fixed
 
+def map_words(script, heard):
+    """Times for every script word, also when the recogniser merged two words into one or split one in two:
+    matching words keep their own times, the others share the span of the heard words they stand against."""
+    a = [norm(w) for w in script]; b = [norm(h["text"]) for h in heard]; out = [None] * len(script)
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        if tag == "equal":
+            for k in range(i2 - i1): out[i1 + k] = (heard[j1 + k]["start_ms"], heard[j1 + k]["end_ms"])
+        elif i2 > i1:
+            if j2 > j1: s0, e0 = heard[j1]["start_ms"], heard[j2 - 1]["end_ms"]
+            else: s0 = heard[j1 - 1]["end_ms"] if j1 > 0 else heard[0]["start_ms"]; e0 = heard[j1]["start_ms"] if j1 < len(heard) else s0 + 250 * (i2 - i1)
+            tot = sum(len(a[i]) + 1 for i in range(i1, i2)); t = s0
+            for i in range(i1, i2): d = (e0 - s0) * (len(a[i]) + 1) / tot; out[i] = (int(t), int(t + d)); t += d
+    return out
+
 def main(cfg_path, takes, reqs, out_wav, out_tl):
     cfg = json.load(open(cfg_path)); cache = {}
     t = cfg.get("lead", 0.0); pieces = [np.zeros(int(t * SR), np.float32)]; lines = []
@@ -47,8 +62,8 @@ def main(cfg_path, takes, reqs, out_wav, out_tl):
             res, _ = measure(f"{takes}/{take}.wav", f"{takes}/{take}.json", f"{reqs}/{L['request']}")
             x, sr = load(f"{takes}/{take}.wav"); ww, nfix = repair(json.load(open(f"{takes}/{take}.json"))["words"]); cache[take] = (res, x, sr, ww)
             if nfix: print(f"  take {take}: {nfix} word times repaired")
-        res, x, sr, words = cache[take]; r = res[n]
-        if r["heard"] != r["words"]: print(f"  ! line {n+1} take {take}: heard {r['heard']} of {r['words']} words")
+        res, x, sr, words = cache[take]; r = res[L.get("turn", n)]
+        if r["heard"] != r["words"]: print(f"  ! line {n+1} take {take}: heard {r['heard']} of {r['words']} words (times shared out)")
         e, hop = env_db(x, sr)
         # refine the line's bounds on the energy envelope: back to the onset, forward to the release
         i0 = int(r["start"] / hop); i1 = min(len(e) - 1, int(r["end"] / hop))
@@ -90,7 +105,7 @@ def main(cfg_path, takes, reqs, out_wav, out_tl):
                 if ts - a >= c1: u -= (c1 - c0)
                 elif ts - a > c0: u -= (ts - a - c0)
             return t + max(0.0, u) / tempo
-        ws = [dict(w=sw, s=round(m(words[j]["start_ms"] / 1000), 3), e=round(m(words[j]["end_ms"] / 1000), 3)) for sw, j in zip(r["script"], r["widx"])]
+        ws = [dict(w=sw, s=round(m(a0 / 1000), 3), e=round(m(e0 / 1000), 3)) for sw, (a0, e0) in zip(r["script"], map_words(r["script"], [words[j] for j in r["widx"]]))]
         lines.append(dict(n=n + 1, take=take, t0=round(t, 3), t1=round(t + len(y) / SR, 3), speech0=round(m(i0 * hop), 3), words=ws))
         print(f"line {n+1:2d} {take} src {r['dur']:.2f}s -> {len(y)/SR:.2f}s at {t:6.2f}  cuts {sum(c1-c0 for c0,c1 in cuts):.2f}s tempo {tempo} level {level:.1f}")
         pieces.append(y); t += len(y) / SR
