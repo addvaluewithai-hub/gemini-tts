@@ -24,6 +24,7 @@ export const FACE = {
   joy: { open: 0, happy: 1, bY: -12, bT: 0, mw: 26, mc: 4, mo: 30, blush: 0.9 },
 };
 
+const SCOOP = "M-74 -548 C-72 -468 -36 -428 0 -428 C36 -428 72 -468 74 -548";      // the neckline: skin shows in it, the head sits on it
 const DRESS = "M-118 -600 C-152 -470 -208 -200 -218 -28 Q0 14 218 -28 C208 -200 152 -470 118 -600 Q0 -652 -118 -600 Z";
 
 function eye(x, f, side, tt) {
@@ -60,7 +61,6 @@ function head(f, p) {
   return `
   <g transform="rotate(${n2(18 + tails)} 108 -62)"><path d="M100 -70 C150 -62 176 -22 170 30 C150 14 128 -4 96 -40 Z" fill="${C.scarfLo}"/></g>
   <g transform="rotate(${n2(-6 + tails * 1.4)} 108 -62)"><path d="M100 -76 C160 -90 204 -64 214 -18 C180 -30 140 -36 98 -48 Z" fill="${C.scarf}"/></g>
-  <rect x="-34" y="92" width="68" height="70" rx="26" fill="${C.skinLo}"/>
   <ellipse cx="0" cy="0" rx="118" ry="124" fill="url(#mSkin)"/>
   <path d="M-126 -22 C-150 -150 -70 -176 0 -176 C70 -176 150 -150 126 -22 C104 -74 60 -100 0 -102 C-60 -100 -104 -74 -126 -22 Z" fill="url(#mScarf)"/>
   <path d="M-96 -112 C-60 -150 30 -160 86 -128" fill="none" stroke="${C.scarfHi}" stroke-width="10" stroke-linecap="round" opacity=".55"/>
@@ -116,7 +116,10 @@ export function mom(p = {}) {
     <g clip-path="url(#mDressClip)">${dots.map(([x, y], i) => `<g transform="translate(${x} ${y})"><circle r="15" fill="${C.orange}"/><circle r="6" fill="${C.cream}"/></g>`).join("")}
       <path d="M-240 -70 Q0 -30 240 -70 L240 20 L-240 20Z" fill="${C.orange}"/><path d="M-240 -70 Q0 -30 240 -70" fill="none" stroke="${C.cream}" stroke-width="8" stroke-dasharray="2 22" stroke-linecap="round"/>
       <ellipse cx="150" cy="-320" rx="90" ry="330" fill="#B8560E" opacity=".22"/></g>
-    <path d="M-62 -622 Q0 -540 62 -622 Q0 -590 -62 -622Z" fill="${C.orange}"/><path d="M-58 -618 Q0 -548 58 -618" fill="none" stroke="${C.cream}" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/></g>`;
+    </g>
+    <path d="${SCOOP}Z" fill="${C.skin}"/>
+    <g clip-path="url(#mScoopClip)"><ellipse cx="${n2(hx * 0.7)}" cy="${n2(-652 + hy + 150)}" rx="118" ry="64" fill="${C.skinLo}" opacity=".8"/></g>
+    <path d="${SCOOP}" fill="none" stroke="${C.orange}" stroke-width="17" stroke-linecap="round"/><path d="${SCOOP}" fill="none" stroke="${C.cream}" stroke-width="6" stroke-dasharray="2 15" stroke-linecap="round"/>`;
   const hd = G(T(hx, -652 + hy, ht, 1.34), head(f, p));
   const aL = arm(SL, HL, -1, p.heldL || "", p.rotL ?? 0, p.backL ?? false, p.overL ?? false), aR = arm(SR, HR, 1, p.heldR || "", p.rotR ?? 0, p.backR ?? false, p.overR ?? false);
   const inner = `${p.backL ? aL : ""}${p.backR ? aR : ""}${body}${p.headFront === false ? hd : ""}${p.backL ? "" : aL}${p.backR ? "" : aR}${p.headFront === false ? "" : hd}`;
@@ -126,4 +129,4 @@ export const momDefs = `
   <radialGradient id="mSkin" cx=".38" cy=".3" r=".9"><stop offset="0" stop-color="${C.skinHi}"/><stop offset=".6" stop-color="${C.skin}"/><stop offset="1" stop-color="${C.skinLo}"/></radialGradient>
   <linearGradient id="mScarf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.scarfHi}"/><stop offset=".45" stop-color="${C.scarf}"/><stop offset="1" stop-color="${C.scarfLo}"/></linearGradient>
   <linearGradient id="mDress" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC84A"/><stop offset=".6" stop-color="${C.sun}"/><stop offset="1" stop-color="#EE9A12"/></linearGradient>
-  <clipPath id="mDressClip"><path d="${DRESS}"/></clipPath>`;
+  <clipPath id="mDressClip"><path d="${DRESS}"/></clipPath><clipPath id="mScoopClip"><path d="${SCOOP}Z"/></clipPath>`;

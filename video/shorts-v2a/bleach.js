@@ -273,13 +273,21 @@ function sSignoff(t) {
   const pk = peekAt(t, track, env, { x: 470, y: 960 + (lean - 1.5) * 110, s: lean, rot: tw(t, ama, ama + 0.3, 0, -3) * (t < pk0 ? 1 : tw(t, pk0, pk0 + 0.2, 1, 0)), blinks: BL });
   return cam(bg + pk, tw(t, a, S.end, 1.02, 1.08), 540, 1000, 540, 1000);
 }
+// The end card: the bell, EARTH REPORT, then the question that sends the viewer to the comments.
+const ASK = ["اعترف..", "مين", "في", "بيتكم", "بيخلط؟"];
 function sEnd(t) {
-  const a = S.end + 0.22, bellT = a + 0.05, swing = wob(t, bellT + 0.1, 2.4, 1.6, 26);
-  const letters = (word, y, t0) => [...word].map((ch, i) => { const k = pop(t, t0 + i * 0.035, 0.3), n = word.length; return `<text x="${n2((i - (n - 1) / 2) * 138)}" y="0" text-anchor="middle" font-family="Anton" font-size="250" fill="${C.cream}" transform="translate(540 ${y}) translate(${n2((i - (n - 1) / 2) * 0)} 0) scale(${n2(k)})" style="transform-box:fill-box;transform-origin:center">${ch}</text>`; }).join("");
+  const a = S.end + 0.22, bellT = a + 0.05, swing = wob(t, bellT + 0.1, 2.4, 1.6, 26), q = a + 0.8;
   const word = (w, y, t0, size, fill) => { const k = pop(t, t0, 0.32); return `<g transform="translate(540 ${y}) scale(${n2(k)} ${n2(k * (1 + wob(t, t0 + 0.2, 4, 6, 0.08)))})"><text text-anchor="middle" font-family="Anton" font-size="${size}" letter-spacing="6" fill="${C.ink}" opacity=".45" transform="translate(8 12)">${w}</text><text text-anchor="middle" font-family="Anton" font-size="${size}" letter-spacing="6" fill="${fill}">${w}</text></g>`; };
-  const bell = G(T(540, 420, 0, pop(t, bellT, 0.35)), `<g transform="rotate(${n2(swing)} 0 -150)"><circle cx="0" cy="-158" r="22" fill="none" stroke="${C.sun}" stroke-width="12"/><path d="M-120 60 C-96 30 -96 -20 -90 -50 C-80 -110 -44 -140 0 -140 C44 -140 80 -110 90 -50 C96 -20 96 30 120 60Z" fill="${C.sun}"/><path d="M-66 -70 C-58 -100 -36 -118 -8 -122" fill="none" stroke="#FFE9A8" stroke-width="14" stroke-linecap="round"/><rect x="-132" y="50" width="264" height="30" rx="15" fill="#E09A12"/><circle cx="${n2(-swing * 1.5)}" cy="92" r="26" fill="${C.pink}"/></g>
+  const bell = G(T(540, 330, 0, 0.82 * pop(t, bellT, 0.35)), `<g transform="rotate(${n2(swing)} 0 -150)"><circle cx="0" cy="-158" r="22" fill="none" stroke="${C.sun}" stroke-width="12"/><path d="M-120 60 C-96 30 -96 -20 -90 -50 C-80 -110 -44 -140 0 -140 C44 -140 80 -110 90 -50 C96 -20 96 30 120 60Z" fill="${C.sun}"/><path d="M-66 -70 C-58 -100 -36 -118 -8 -122" fill="none" stroke="#FFE9A8" stroke-width="14" stroke-linecap="round"/><rect x="-132" y="50" width="264" height="30" rx="15" fill="#E09A12"/><circle cx="${n2(-swing * 1.5)}" cy="92" r="26" fill="${C.pink}"/></g>
     ${[0, 1].map((i) => { const u = ((t - bellT) * 1.6 + i * 0.5) % 1; return t > bellT + 0.1 ? `<path d="M-170 -80 q-40 60 0 120" transform="translate(${n2(-u * 60)} 0)" fill="none" stroke="${C.cream}" stroke-width="12" stroke-linecap="round" opacity="${n2(1 - u)}"/><path d="M170 -80 q40 60 0 120" transform="translate(${n2(u * 60)} 0)" fill="none" stroke="${C.cream}" stroke-width="12" stroke-linecap="round" opacity="${n2(1 - u)}"/>` : ""; }).join("")}`);
-  return endCard(t) + bell + word("EARTH", 860, a + 0.12, 270, C.cream) + word("REPORT", 1110, a + 0.24, 232, C.pink);
+  const wd = (i, fill) => { const o = n2(tw(t, q + 0.16 + i * 0.13, q + 0.28 + i * 0.13, 0, 1)); return `<tspan fill="${fill}" fill-opacity="${o}">${ASK[i]}</tspan>`; };
+  const bk = pop(t, q, 0.34), bob = t > q + 0.4 ? Math.sin((t - q) * 5) * 6 : 0;
+  const bubble = bk <= 0 ? "" : `<g transform="translate(540 ${n2(1235 + bob)}) rotate(${n2(wob(t, q + 0.2, 3, 5, 3))}) scale(${n2(bk)})">
+    <path d="M150 150 l70 110 l-150 -96Z" fill="${C.cream}"/><rect x="-455" y="-185" width="910" height="360" rx="90" fill="${C.ink}" opacity=".35" transform="translate(10 16)"/><rect x="-455" y="-185" width="910" height="360" rx="90" fill="${C.cream}"/>
+    <text y="-36" text-anchor="middle" direction="rtl" font-family="Cairo" font-weight="900" font-size="108">${wd(0, C.red)}</text>
+    <text y="100" text-anchor="middle" direction="rtl" font-family="Cairo" font-weight="900" font-size="80">${[1, 2, 3, 4].map((i) => wd(i, C.ink)).join(" ")}</text>
+    <g transform="translate(-350 -180)"><rect x="-74" y="-46" width="148" height="92" rx="46" fill="${C.pink}"/>${[0, 1, 2].map((i) => `<circle cx="${-36 + i * 36}" cy="${n2(-8 * Math.max(0, Math.sin(t * 9 - i * 0.9)))}" r="12" fill="#fff"/>`).join("")}</g></g>`;
+  return endCard(t) + bell + word("EARTH", 640, a + 0.12, 232, C.cream) + word("REPORT", 850, a + 0.24, 200, C.pink) + bubble;
 }
 
 // ---------------------------------------------------------------- thumbnail (no words)

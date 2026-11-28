@@ -109,6 +109,7 @@ a10 = S["s10"]; P(a10 - 0.22, whoosh(0.45, False), 0.3); P(a10 + 0.05, whoosh(0.
 shy = W(12, 6) + 0.1; P(shy, sweepn(0.3, 500, 1200, 0.9), 0.14); P(shy + 0.35, glide(700, 350, 0.25, 7, (1, .3)), 0.07)
 P(W(13, 0) - 0.05, click(1800), 0.35); P(W(13, 0) - 0.12, whoosh(0.18), 0.15)
 aE = S["end"]; P(aE, whoosh(0.4), 0.35); P(aE + 0.36, bell(), 0.3); P(aE + 0.9, bell(), 0.14); P(aE + 0.34, thud(0.6, 80), 0.3); P(aE + 0.46, thud(0.6, 70), 0.3)
+P(aE + 1.0, whoosh(0.22), 0.25); P(aE + 1.16, click(1400), 0.5); P(aE + 1.18, ding(4, d=0.5), 0.25); P(aE + 1.34, ding(11, d=0.7), 0.22)
 
 # ---- music: a sneaky plucked bass and marimba that change character with the scenes
 def pluck(semi, d=0.5, g=1): return tone(note(semi - 24), d, 7, 0.003, (1, .5, .25, .12)) * g

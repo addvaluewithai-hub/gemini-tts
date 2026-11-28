@@ -1,6 +1,6 @@
 # Storyboard: bleach Short, studio A, version 2
 
-Portrait 1080 x 1920, 30 fps, 58.5 s (1756 frames). The times in the table are from the first cut and move by up to a second with the final voice; the word cues do not. Follows the video-skill storyboard phase, adapted from 16:9 to
+Portrait 1080 x 1920, 30 fps, 59.9 s (1798 frames). The times in the table are from the first cut and move by up to a second with the final voice; the word cues do not. Follows the video-skill storyboard phase, adapted from 16:9 to
 9:16. Times are seconds in the cut voice track; every action is tied to a word, written here as `L5 «غاز»` (line 5,
 that word). The code reads the same cues from `voice/timeline.json` through `W(line, word)`, so a new take re-times
 the whole film. Key content stays inside y 200–1560 and x 60–960 (clear of the Shorts interface).
@@ -18,7 +18,7 @@ the whole film. Key content stays inside y 200–1560 and x 60–960 (clear of t
 | 8 | 38.8–44.4 | **If it happens.** | Balcony at golden hour: sun, two layers of skyline with lit windows and dishes, clouds, a laundry line in the wind, railing, a plant, gas leaking from the flat on the left | L10 «ولو حصل» she runs out coughing, speed lines. «لهوا نضيف» arms wide, a deep breath, air swirls, the laundry lifts, her eyes clear. «النَفَس صعب» hand on chest, fast shallow breaths. «اتصل بالإسعاف» phone to her ear, a bubble with an ambulance. «خلطت إيه» a second bubble: the two bottles and a plus | The sun grows until it fills the frame |
 | 9 | 44.4–50.2 | **The payoff.** | The bathroom by day: open window, beam, motes, one bottle on the shelf | The glare shrinks into a gleam. L11 «والتواليت؟» the lid flaps twice while she gives it one last wipe. «هيلمع برضه» a gleam sweeps across it, sparkles. «وهتقف تتفرّج عليه» she steps back, clasps her hands, a proud tear. «كإنه» a doctor's coat and stethoscope; «كلية الطب» a graduation cap drops on, confetti, she ululates and bounces | Iris closing on the toilet |
 | 10 | 50.2–55.6 | **Callback and sign-off.** | The hallway again, calm: warm light behind the glass, no gas; Peek full screen | Sigh: his shoulders drop. L12 «أما الغاز اللي في بالك» he leans in to the lens, hand by his mouth, eyes left and right. «فده تقرير تاني» smug, a wink; one small shy puff peeks from under the door and he gives it a flat look. L13 «Peek» salute to the hat brim; «يا فندم» grin | A dark circle grows from his hat |
-| 11 | 55.6–57.7 | **End card.** | Night sky with twinkling stars, the Earth rising | The bell drops in and swings, ring lines; EARTH, then REPORT, pop with overshoot | |
+| 11 | 55.6–57.7 | **End card.** | Night sky with twinkling stars, the Earth rising | The bell drops in and swings, ring lines; EARTH, then REPORT, pop with overshoot. Then a speech bubble with the comment question, word by word: «اعترف.. مين في بيتكم بيخلط؟», with typing dots (added at the owner's request; not spoken yet) | |
 
 ## Asset inventory
 
