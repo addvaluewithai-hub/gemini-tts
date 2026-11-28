@@ -21,7 +21,24 @@ const cam = (inner, s, fx = 540, fy = 960, tx = 540, ty = 960, rot = 0) => `<g t
 const breathe = (t) => 0.5 + 0.5 * Math.sin(t * 2.6);
 const blinkFace = (t, f) => { for (const b of BL) { const d = (t - b - 0.37) * 30; if (d >= 0 && d < 5 && f.happy < 0.5) return { ...f, open: f.open * (d < 2 ? 0.1 : (d - 1) / 4) }; } return f; };
 const faceAt = (t, track) => blinkFace(t, poseAt(t, track.map(([a, f, d, e]) => [a, typeof f === "string" ? FACE[f] : f, d, e]), FACE.neutral));
-const pt = (t, track) => { const p = poseAt(t, track.map(([a, v, d, e]) => [a, { x: v[0], y: v[1] }, d, e])); return { x: p.x, y: p.y }; };
+// A hand's path. Keys are positions, but the hand travels between them in shoulder angle and reach, so it swings in
+// an arc instead of sliding on a straight line; it overshoots a little and settles; the right hand runs a frame
+// behind the left so the two never move as one; and the wrist drags behind the move (returned as `drag`).
+const SHO = { x: 122, y: -492 };
+const polar = (side, v) => { const dx = side * (v[0] - side * SHO.x), dy = v[1] - SHO.y; return { a: Math.atan2(dx, dy) * 180 / Math.PI, r: Math.hypot(dx, dy) }; };
+function handPos(side, t, track) {
+  let cur = polar(side, track[0][1]), extra = 0;
+  for (let i = 1; i < track.length; i++) { const [t0, v, d = 0.25, e = E.io3] = track[i]; if (t <= t0) break; const nx = polar(side, v); let da = nx.a - cur.a; if (da > 200) da -= 360; if (da < -200) da += 360;
+    const k = t >= t0 + d ? 1 : e((t - t0) / d); extra = da * 0.07 * wob(t, t0 + d * 0.8, 3.4, 9, 1) + (nx.r - cur.r) * 0.0005 * 0;
+    cur = { a: cur.a + da * k, r: cur.r + (nx.r - cur.r) * k }; }
+  const a = (cur.a + extra) * Math.PI / 180; return { x: side * (SHO.x + Math.sin(a) * cur.r), y: SHO.y + Math.cos(a) * cur.r };
+}
+function pt(side, t, track) {
+  if (side > 0) t -= 0.04;
+  const p1 = handPos(side, t, track), p0 = handPos(side, t - 0.066, track), ux = p1.x - side * SHO.x, uy = p1.y - SHO.y, ul = Math.hypot(ux, uy) || 1;
+  const c = (p1.x - p0.x) * (-uy / ul) + (p1.y - p0.y) * (ux / ul);
+  return { x: p1.x, y: p1.y, drag: clamp(-c * 0.55, -34, 34) };
+}
 const held = (inner, y = 0, rot = 0) => `<g transform="rotate(${rot}) translate(0 ${y})">${inner}</g>`;
 const warn = (x, y, s, r = 0) => G(T(x, y, r, s), `<path d="M0 -92 L98 72 Q104 86 88 86 H-88 Q-104 86 -98 72Z" fill="${C.sun}" stroke="${C.ink}" stroke-width="14" stroke-linejoin="round"/><rect x="-11" y="-44" width="22" height="70" rx="11" fill="${C.ink}"/><circle cx="0" cy="52" r="13" fill="${C.ink}"/>`);
 const xmark = (x, y, s, r = 0) => G(T(x, y, r, s), `<path d="M-50 -50 L50 50 M50 -50 L-50 50" stroke="#fff" stroke-width="44" stroke-linecap="round"/><path d="M-50 -50 L50 50 M50 -50 L-50 50" stroke="${C.red}" stroke-width="28" stroke-linecap="round"/>`);
@@ -50,8 +67,8 @@ function sWar(t) {
   const a = S.s2, tie = W(3, 2) - 0.05, tug = W(3, 3) + 0.12, glove = W(3, 4) - 0.1, snap = glove + 0.42, war = W(3, 5), lunge = W(3, 6) + 0.02;
   const x = tw(t, a + 0.1, a + 0.62, -320, MX, E.outBack), hopY = -bump(t, a + 0.1, 0.5) * 70;
   const face = faceAt(t, [[a, "grin"], [tie, "war", 0.2], [war - 0.05, { ...FACE.war, mo: 22, mw: 30, teeth: 1 }, 0.1], [war + 0.5, "war", 0.2], [lunge, { ...FACE.war, mo: 12, teeth: 1, lookX: 1 }, 0.12]]);
-  const hl = pt(t, [[a, [-200, -260]], [tie, [-130, -735], 0.22, E.out3], [tug, [-235, -715], 0.08, E.out3], [tug + 0.14, [-140, -730], 0.12], [glove, [60, -415], 0.2], [glove + 0.26, [-30, -360], 0.16, E.out2], [snap, [-190, -330], 0.14, E.out5], [war - 0.12, [-150, -320], 0.12], [lunge, [-250, -420], 0.2]]);
-  const hr = pt(t, [[a, [200, -270]], [tie, [130, -735], 0.22, E.out3], [tug, [235, -715], 0.08, E.out3], [tug + 0.14, [140, -730], 0.12], [glove, [150, -440], 0.2], [snap, [170, -470], 0.06], [snap + 0.1, [150, -430], 0.1], [war - 0.16, [190, -330], 0.12], [war, [215, -905], 0.16, E.outBack], [lunge, [345, -560], 0.16, E.outBack]]);
+  const hl = pt(-1, t, [[a, [-200, -260]], [tie, [-130, -735], 0.22, E.out3], [tug, [-235, -715], 0.08, E.out3], [tug + 0.14, [-140, -730], 0.12], [glove, [60, -415], 0.2], [glove + 0.26, [-30, -360], 0.16, E.out2], [snap, [-190, -330], 0.14, E.out5], [war - 0.12, [-150, -320], 0.12], [lunge, [-250, -420], 0.2]]);
+  const hr = pt(1, t, [[a, [200, -270]], [tie, [130, -735], 0.22, E.out3], [tug, [235, -715], 0.08, E.out3], [tug + 0.14, [140, -730], 0.12], [glove, [150, -440], 0.2], [snap, [170, -470], 0.06], [snap + 0.1, [150, -430], 0.1], [war - 0.16, [190, -330], 0.12], [war, [318, -775], 0.18, E.outBack], [lunge, [372, -560], 0.18, E.outBack]]);
   const sq = wob(t, a + 0.6, 4, 7, 0.07) + kf(t, [[war - 0.22, 0], [war - 0.06, 0.1, E.out2], [war + 0.08, -0.07, E.out3], [war + 0.3, 0, E.outBack]]) + wob(t, lunge, 4, 6, 0.04);
   const showBrush = t > glove + 0.55, brushRot = kf(t, [[war - 0.16, -150], [war, 0, E.outBack], [lunge, 62, E.outBack]]);
   const m = G(T(x, MY + hopY, 0, MS), mom({ face, handL: hl, handR: hr, squash: sq, lean: tw(t, lunge, lunge + 0.18, 0, 9, E.outBack), tails: wob(t, tug, 5, 5, 30) + wob(t, a + 0.6, 3, 5, 14), headTilt: wob(t, tug, 6, 7, 5),
@@ -59,7 +76,7 @@ function sWar(t) {
   const shut = tw(t, war + 0.02, war + 0.12, 1, 0.04, E.in3), shiver = t > lunge ? Math.sin(t * 46) * 7 * clamp(1 - (t - lunge) / 1.2, 0.3, 1) : 0;
   const tl = G(T(TX + shiver + wob(t, war + 0.12, 6, 6, 8), TY, tw(t, lunge, lunge + 0.2, 0, 5, E.outBack)), G(`scale(${TS})`, toilet({ lid: shut, squash: wob(t, war + 0.12, 5, 6, 0.06), t })));
   let rays = ""; const rk = bump(t, war - 0.02, 1.3); if (rk > 0) { for (let i = 0; i < 12; i++) { const an = (i * 30 + t * 30) * Math.PI / 180; rays += `<path d="M0 0 L${n2(Math.cos(an - 0.1) * 1900)} ${n2(Math.sin(an - 0.1) * 1900)} L${n2(Math.cos(an + 0.1) * 1900)} ${n2(Math.sin(an + 0.1) * 1900)}Z"/>`; } rays = `<rect width="1080" height="1920" fill="${C.ink}" opacity="${n2(rk * 0.35)}"/><g transform="translate(${MX} 1000)" fill="${C.sun}" opacity="${n2(rk * 0.4)}">${rays}</g>`; }
-  const glint = t > war ? G(T(x + 215 * MS, MY - 1150 * MS), `<path d="${star(70 * bump(t, war + 0.05, 0.5))}" fill="#fff"/>`) : "";
+  const glint = t > war ? G(T(x + 330 * MS, MY - 1130 * MS), `<path d="${star(70 * bump(t, war + 0.05, 0.5))}" fill="#fff"/>`) : "";
   const snapFx = on(t, snap, snap + 0.2) ? G(T(x + 160 * MS, MY - 440 * MS), [0, 1, 2, 3, 4].map((i) => `<path d="M${n2(Math.cos(i * 1.256) * (30 + (t - snap) * 400))} ${n2(Math.sin(i * 1.256) * (30 + (t - snap) * 400))} l${n2(Math.cos(i * 1.256) * 34)} ${n2(Math.sin(i * 1.256) * 34)}" stroke="#fff" stroke-width="9" stroke-linecap="round"/>`).join("")) : "";
   const sc = bathroom(t, {}) + rays + tl + m + glint + snapFx;
   return cam(sc, tw(t, a, S.s3, 1.0, 1.05, E.out2), 540, 1100, 540 + wob(t, war, 9, 6, 14), 1100 + wob(t, war + 0.02, 11, 6, 10));
@@ -84,8 +101,8 @@ function sDoctrine(t) {
     return G(T(x, y, wob(t, t0 + 0.15, 4, 6, 7), 0.82), G(`scale(${n2(1 + wob(t, t0 + 0.16, 5, 8, 0.12))} ${n2(1 - wob(t, t0 + 0.16, 5, 8, 0.12))})`, bottles[name]()))
       + `<g transform="translate(${x} ${n2(676 - up * glory)}) scale(${n2(pop(t, t0 + 0.3, 0.3))})"><circle r="54" fill="${C.ink}"/><text y="29" text-anchor="middle" font-family="Anton" font-size="78" fill="${C.cream}">${num}</text></g>`; };
   const mface = faceAt(t, [[S.s3, "grin"], [b1 - 0.2, { ...FACE.neutral, lookX: 0.6, lookY: -0.8 }, 0.2], [c2, { ...FACE.grin, lookX: 0.6, lookY: -0.6 }, 0.2], [b3 + 0.1, { ...FACE.shock, lookX: 0.5, lookY: -0.6 }, 0.14], [born + 0.1, "dreamy", 0.3]]);
-  const mr = pt(t, [[S.s3, [215, -250]], [W(4, 0) + 0.05, [120, -760], 0.25, E.outBack], [b1, [300, -640], 0.2], [b2, [315, -720], 0.2], [b3, [330, -760], 0.2], [born + 0.1, [50, -410], 0.3]]);
-  const ml = pt(t, [[S.s3, [-215, -250]], [born + 0.1, [-40, -430], 0.3]]);
+  const mr = pt(1, t, [[S.s3, [215, -250]], [W(4, 0) + 0.05, [120, -760], 0.25, E.outBack], [b1, [300, -640], 0.2], [b2, [315, -720], 0.2], [b3, [330, -760], 0.2], [born + 0.1, [50, -410], 0.3]]);
+  const ml = pt(-1, t, [[S.s3, [-215, -250]], [born + 0.1, [-40, -430], 0.3]]);
   const m = G(T(175, 1800 - bump(t, born + 0.1, 0.4) * 30, 0, 0.74), mom({ face: mface, handL: ml, handR: mr, bendR: t > born ? 1 : -1, lean: tw(t, born, born + 0.4, 4, -3), tails: wob(t, born, 3, 4, 20), breath: breathe(t), tt: t, headTilt: tw(t, born, born + 0.4, 0, -8) }));
   let glow = glory > 0 ? `<circle cx="${tx}" cy="${n2(ty - 330)}" r="${n2(520 * glory)}" fill="#FFF4C2" opacity="${n2(0.28 * glory)}"/>` : "";
   let extra = ""; if (glory > 0) for (let i = 0; i < 16; i++) extra += sparkle(80 + rnd(i * 3.3) * 920, 240 + rnd(i * 8.1) * 1150, 18 + rnd(i) * 26, t, rnd(i * 1.7), i % 3 ? "#fff" : C.sun);
@@ -119,13 +136,13 @@ function sSymptoms(t) {
   const face = faceAt(t, [[S.s5 - 0.3, "worried"], [c1, "cough", 0.07], [c1 + 0.2, { ...FACE.cough, mo: 8 }, 0.08], [c2, "cough", 0.06], [c2 + 0.24, "worried", 0.12], [eyeT, "burn", 0.14], [chestT, "pain", 0.14],
     [she, { ...FACE.worried, open: 1.15, lookX: 0, mo: 0 }, 0.16], [proud, "proud", 0.14], [sniff, "sniff", 0.2], [end - 0.02, "shock", 0.07]]);
   const fan = Math.sin(t * 30) * 34;
-  const hr = pt(t, [[S.s5 - 0.3, [215, -260]], [c1, [36, -585], 0.1, E.out3], [c2 + 0.3, [150, -420], 0.2], [eyeT, [165, -700], 0.16, E.outBack], [chestT, [30, -415], 0.16, E.outBack], [proud - 0.1, [200, -300], 0.12], [proud + 0.04, [158, -315], 0.14, E.outBack]]);
-  const hl = pt(t, [[S.s5 - 0.3, [-215, -260]], [eyeT, [-165, -700], 0.16, E.outBack], [chestT, [-200, -280], 0.2], [proud - 0.1, [-200, -300], 0.12], [proud + 0.04, [-158, -315], 0.14, E.outBack]]);
+  const hr = pt(1, t, [[S.s5 - 0.3, [215, -260]], [c1, [36, -585], 0.1, E.out3], [c2 + 0.3, [150, -420], 0.2], [eyeT, [165, -700], 0.16, E.outBack], [chestT, [30, -415], 0.16, E.outBack], [proud - 0.1, [200, -300], 0.12], [proud + 0.04, [158, -315], 0.14, E.outBack]]);
+  const hl = pt(-1, t, [[S.s5 - 0.3, [-215, -260]], [eyeT, [-165, -700], 0.16, E.outBack], [chestT, [-200, -280], 0.2], [proud - 0.1, [-200, -300], 0.12], [proud + 0.04, [-158, -315], 0.14, E.outBack]]);
   const fanning = on(t, eyeT + 0.16, chestT) ? fan : 0;
   const cough = (c) => bump(t, c, 0.22), ck = cough(c1) + cough(c2) + bump(t, end, 0.2);
   const chest = tw(t, proud, proud + 0.2, 0, 0.7, E.outBack) + tw(t, sniff, LE(7), 0, 0.5, E.io2) * (0.8 + 0.2 * Math.sin(t * 9));
   const sq = kf(t, [[proud - 0.16, 0], [proud - 0.04, 0.07, E.out2], [proud + 0.08, -0.05, E.out3], [proud + 0.3, 0, E.outBack]]) - ck * 0.03;
-  const m = G(T(MX, MY, 0, MS), mom({ face, handL: { x: hl.x, y: hl.y - fanning }, handR: { x: hr.x, y: hr.y + fanning }, bendL: t > proud ? 1 : -1, bendR: t > proud ? -1 : 1, squash: sq, lean: ck * 9 + tw(t, chestT, chestT + 0.2, 0, 6) * (t < she ? 1 : tw(t, she, she + 0.2, 1, 0)),
+  const m = G(T(MX, MY, 0, MS), mom({ face, handL: { ...hl, y: hl.y - fanning }, handR: { ...hr, y: hr.y + fanning }, bendL: t > proud ? 1 : -1, bendR: t > proud ? -1 : 1, squash: sq, lean: ck * 9 + tw(t, chestT, chestT + 0.2, 0, 6) * (t < she ? 1 : tw(t, she, she + 0.2, 1, 0)),
     headY: ck * 22, headTilt: tw(t, proud, proud + 0.2, 0, -7, E.outBack) + tw(t, sniff, sniff + 0.4, 0, -12) + wob(t, end, 8, 6, 5), chest, tails: wob(t, c1, 6, 6, 22) + wob(t, c2, 6, 6, 22) + wob(t, proud, 4, 5, 18), breath: breathe(t * 1.6), tt: t }));
   const mouthX = MX + 60, mouthY = MY - (652 - 80) * MS;
   const spit = [c1, c2, end].map((c, j) => on(t, c, c + 0.45) ? [0, 1, 2, 3, 4].map((i) => { const u = (t - c) / 0.45, an = 0.25 + (i - 2) * 0.22; return `<circle cx="${n2(mouthX + Math.cos(an) * u * 260)}" cy="${n2(mouthY + Math.sin(an) * u * 200 + u * u * 60)}" r="${n2(20 * (1 - u) + 4)}" fill="${C.gasHi}" opacity="${n2(1 - u)}"/>`; }).join("") : "").join("");
@@ -181,7 +198,7 @@ function sRinse(t) {
   const a = S.rinse, pour = W(9, 8) + 0.1, winT = W(9, 14) + 0.02, win = tw(t, winT, winT + 0.4, 0, 1, E.outBack), haze = tw(t, winT, winT + 0.7, 0.55, 0, E.out2);
   const face = faceAt(t, [[a, "grin"], [winT + 0.1, "relief", 0.2]]);
   const tiltK = tw(t, pour - 0.1, pour + 0.2, 0, 1, E.outBack);
-  const hr = pt(t, [[a, [250, -470]], [pour - 0.1, [300, -560], 0.25, E.outBack], [winT, [250, -480], 0.3]]), hl = pt(t, [[a, [120, -400]], [pour - 0.1, [150, -470], 0.25, E.outBack], [winT, [120, -410], 0.3]]);
+  const hr = pt(1, t, [[a, [250, -470]], [pour - 0.1, [300, -560], 0.25, E.outBack], [winT, [250, -480], 0.3]]), hl = pt(-1, t, [[a, [120, -400]], [pour - 0.1, [150, -470], 0.25, E.outBack], [winT, [120, -410], 0.3]]);
   const bx = MX + 215 * MS, byy = MY - 470 * MS - tiltK * 70, bt = tiltK * 78 - tw(t, winT, winT + 0.3, 0, 60);
   const pouring = on(t, pour + 0.12, winT + 0.1);
   const stream = pouring ? `<path d="M${n2(bx + 190)} ${n2(byy - 110)} Q${TX - 10} ${n2(byy - 190)} ${TX} ${TY - 280 * TS}" fill="none" stroke="${C.water}" stroke-width="44" stroke-linecap="round"/><path d="M${n2(bx + 190)} ${n2(byy - 110)} Q${TX - 10} ${n2(byy - 190)} ${TX} ${TY - 280 * TS}" fill="none" stroke="${C.waterHi}" stroke-width="16" stroke-linecap="round" stroke-dasharray="40 60" stroke-dashoffset="${n2(-t * 700)}"/>` +
@@ -211,10 +228,10 @@ function sBalcony(t) {
   const face = faceAt(t, [[a, "cough"], [out, { ...FACE.worried, red: 0.9, tear: 0.5, mo: 10 }, 0.1], [air, { ...FACE.relief, red: 0.5 }, 0.2], [air + 0.5, { ...FACE.relief, red: 0.15, mo: 4 }, 0.3], [hard, { ...FACE.worried, red: 0.4, mo: 12 }, 0.16], [call, { ...FACE.talk, red: 0.3 }, 0.14]]);
   const talking = t > call + 0.25 ? 0.5 + 0.5 * Math.sin(t * 19) : 0, f2 = { ...face, mo: t > call + 0.25 ? 4 + 14 * talking : face.mo };
   const pant = on(t, hard, call) ? 0.5 + 0.5 * Math.sin(t * 17) : 0;
-  const hr = pt(t, [[a, [230, -420]], [out, [200, -300], 0.2], [air, [345, -610], 0.28, E.outBack], [hard, [40, -415], 0.2, E.outBack], [call - 0.12, [210, -330], 0.14], [call + 0.12, [165, -700], 0.2, E.outBack]]);
-  const hl = pt(t, [[a, [-230, -380]], [out, [-200, -300], 0.2], [air, [-345, -610], 0.28, E.outBack], [hard, [-205, -270], 0.25], [what, [-250, -470], 0.2, E.outBack]]);
+  const hr = pt(1, t, [[a, [230, -420]], [out, [200, -300], 0.2], [air, [345, -610], 0.28, E.outBack], [hard, [40, -415], 0.2, E.outBack], [call - 0.12, [210, -330], 0.14], [call + 0.12, [212, -655], 0.24, E.outBack]]);
+  const hl = pt(-1, t, [[a, [-230, -380]], [out, [-200, -300], 0.2], [air, [-345, -610], 0.28, E.outBack], [hard, [-205, -270], 0.25], [what, [-250, -470], 0.2, E.outBack]]);
   const chest = tw(t, air, air + 0.5, 0, 1, E.io2) * (t < hard ? 1 : 0) + pant * 0.6;
-  const m = G(T(x, 1680 - step * 36, running ? 7 : 0, 1.22), mom({ face: f2, handL: { x: hl.x, y: hl.y + (running ? Math.sin(t * 16) * 60 : 0) }, handR: { x: hr.x, y: hr.y - (running ? Math.sin(t * 16) * 60 : 0) }, bendL: -1, headFront: t < call, chest, headTilt: tw(t, air, air + 0.3, 0, -9) * (t < hard ? 1 : tw(t, hard, hard + 0.2, 1, 0)) + (t > call ? 4 : 0),
+  const m = G(T(x, 1680 - step * 36, running ? 7 : 0, 1.22), mom({ face: f2, handL: { ...hl, y: hl.y + (running ? Math.sin(t * 16) * 60 : 0) }, handR: { ...hr, y: hr.y - (running ? Math.sin(t * 16) * 60 : 0) }, bendL: -1, headFront: t < call, chest, headTilt: tw(t, air, air + 0.3, 0, -9) * (t < hard ? 1 : tw(t, hard, hard + 0.2, 1, 0)) + (t > call ? 4 : 0),
     squash: wob(t, out + 0.42, 4, 6, 0.06), tails: (running ? -34 : 0) + wob(t, out + 0.42, 3, 4, 26) + 6 * Math.sin(t * 3), breath: breathe(t * (t > hard && t < call ? 3 : 1)), tt: t, overR: true, heldR: t > call ? held(`<g transform="scale(${n2(1.5 * pop(t, call, 0.2))})">${phone}</g>`, 0, 180) : "" }));
   const lines = running ? [0, 1, 2, 3].map((i) => `<rect x="${n2(x - 330 - i * 50 - ((t * 900) % 120))}" y="${1000 + i * 150}" width="${170 - i * 20}" height="14" rx="7" fill="#fff" opacity=".7"/>`).join("") : "";
   const sw = on(t, air - 0.1, hard + 0.2) ? [0, 1, 2, 3].map((i) => airSwirl(i % 2 ? 860 : 220, 640 + i * 150, (i % 2 ? -1.5 : 1.5), t, i * 0.25, i % 2 ? C.sky : "#fff", n2(0.9 * clamp((t - air + 0.1) * 5) * clamp((hard + 0.2 - t) * 5)))).join("") : "";
@@ -234,9 +251,9 @@ function sPayoff(t) {
   const mx = kf(t, [[a + 0.12, -330], [a + 0.6, 385, E.outBack], [stand, 385], [stand + 0.4, 215, E.outBack]]), wipe = on(t, a + 0.55, stand), wa = t * 15;
   const face = faceAt(t, [[a, { ...FACE.war, bT: -0.4, mc: 10, lookX: 1 }], [stand, { ...FACE.moved, lookX: 1 }, 0.25], [med + 0.2, "joy", 0.14]]);
   const zag = t > med + 0.25, bounce = zag ? Math.abs(Math.sin((t - med) * 11)) * 26 : 0;
-  const hr0 = pt(t, [[a, [200, -300]], [a + 0.5, [262, -520], 0.2, E.outBack], [stand, [200, -330], 0.16], [stand + 0.4, [70, -520], 0.3, E.outBack], [med + 0.2, [70, -590], 0.14, E.outBack]]), hl = pt(t, [[stand, [-200, -300]], [stand + 0.4, [10, -500], 0.3, E.outBack], [med + 0.2, [-300, -700], 0.2, E.outBack]]);
-  const hr = wipe ? { x: hr0.x + Math.cos(wa) * 46, y: hr0.y + Math.sin(wa) * 70 } : hr0, rag = `<rect x="-46" y="-6" width="92" height="84" rx="22" fill="${C.pink}"/><path d="M-30 26 h60 M-30 50 h60" stroke="${C.pinkHi}" stroke-width="8"/>`;
-  const m = t > a + 0.1 ? G(T(mx, 1700 - bounce - bump(t, stand, 0.4) * 40, 0, 1.08), mom({ overR: true, heldR: t < stand + 0.1 ? rag : "", face, handL: { x: hl.x, y: hl.y + (zag ? Math.sin(t * 22) * 30 : 0) }, handR: hr, bendR: 1, lean: (wipe ? 5 + 2 * Math.sin(wa) : 0) + tw(t, stand + 0.3, stand + 0.6, 0, 7) * (zag ? 0.3 : 1), headTilt: zag ? -6 + 3 * Math.sin(t * 22) : tw(t, stand + 0.4, stand + 0.8, 0, 10), tails: (wipe ? 12 * Math.sin(wa) : 0) + wob(t, stand + 0.5, 3, 4, 26) + (zag ? 10 * Math.sin(t * 22) : 0), breath: breathe(t), tt: t, squash: wob(t, stand + 0.5, 4, 6, 0.05) })) : "";
+  const hr0 = pt(1, t, [[a, [200, -300]], [a + 0.5, [262, -520], 0.2, E.outBack], [stand, [200, -330], 0.16], [stand + 0.4, [70, -520], 0.3, E.outBack], [med + 0.2, [70, -590], 0.14, E.outBack]]), hl = pt(-1, t, [[stand, [-200, -300]], [stand + 0.4, [10, -500], 0.3, E.outBack], [med + 0.2, [-300, -700], 0.2, E.outBack]]);
+  const hr = wipe ? { x: hr0.x + Math.cos(wa) * 46, y: hr0.y + Math.sin(wa) * 70, drag: Math.cos(wa) * 14 } : hr0, rag = `<rect x="-46" y="-6" width="92" height="84" rx="22" fill="${C.pink}"/><path d="M-30 26 h60 M-30 50 h60" stroke="${C.pinkHi}" stroke-width="8"/>`;
+  const m = t > a + 0.1 ? G(T(mx, 1700 - bounce - bump(t, stand, 0.4) * 40, 0, 1.08), mom({ overR: true, heldR: t < stand + 0.1 ? rag : "", face, handL: { ...hl, y: hl.y + (zag ? Math.sin(t * 22) * 30 : 0) }, handR: hr, bendR: 1, lean: (wipe ? 5 + 2 * Math.sin(wa) : 0) + tw(t, stand + 0.3, stand + 0.6, 0, 7) * (zag ? 0.3 : 1), headTilt: zag ? -6 + 3 * Math.sin(t * 22) : tw(t, stand + 0.4, stand + 0.8, 0, 10), tails: (wipe ? 12 * Math.sin(wa) : 0) + wob(t, stand + 0.5, 3, 4, 26) + (zag ? 10 * Math.sin(t * 22) : 0), breath: breathe(t), tt: t, squash: wob(t, stand + 0.5, 4, 6, 0.05) })) : "";
   const trill = zag ? [0, 1, 2].map((i) => { const u = ((t - med) * 3 + i / 3) % 1; return `<path d="M${n2(mx + 150 + u * 150)} ${n2(1700 - 720 - u * 120 - bounce)} q16 -22 32 0 q16 22 32 0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity="${n2(1 - u)}"/>`; }).join("") : "";
   let conf = ""; if (t > done) { const cols = [C.pink, C.sun, C.sky, C.gas, "#fff", C.scarfHi]; for (let i = 0; i < 46; i++) { const u = t - done, an = -Math.PI / 2 + (rnd(i * 2.2) - 0.5) * 2.4, v = 700 + rnd(i * 5.1) * 900; const x = px + Math.cos(an) * v * u * (1 - u * 0.25), y = py - 700 + Math.sin(an) * v * u + 900 * u * u;
     conf += `<rect x="-11" y="-18" width="22" height="36" rx="5" transform="translate(${n2(x)} ${n2(y)}) rotate(${n2(u * (300 + rnd(i) * 600) + i * 40)}) scale(1 ${n2(Math.cos(u * 12 + i))})" fill="${cols[i % 6]}"/>`; } }

@@ -44,6 +44,11 @@ Rule: yellow-green means gas. It appears on frame one and nothing else in the fi
   overshoot), `wob` (a decaying wobble for settles and follow-through), `poseAt` (blended pose tracks).
 - Entrances overshoot (`outBack`), drops bounce, impacts squash and stretch, big moves are prepared by a small
   move the other way (the crouch before the brush goes up, the pull before the glove snaps).
+- Arms (third pass, after the owner's note that the hands moved badly): each arm is one curved stroke from shoulder
+  to wrist ("rubber hose"), with no hinge at the elbow; hands travel between poses in shoulder angle and reach, so
+  they swing in arcs instead of sliding on straight lines; the elbow side changes continuously, never with a snap;
+  each move overshoots slightly and settles; the wrist drags behind the move; the right hand runs a frame behind the
+  left; the shoulder lifts with a raised hand; the hand is a mitt with a thumb, or a fist when it holds something.
 - Follow-through: scarf tails, Peek's antennae, the cap's tassel, the laundry.
 - Always alive: blinks, breathing, the gas blobs, motes, the heater light, lamp and charm, clouds, laundry.
 - No linear slides and no hard pops. The one hard cut is on Peek's gasp, on purpose.
@@ -54,7 +59,7 @@ Rule: yellow-green means gas. It appears on frame one and nothing else in the fi
 
 Synthesised in `sound.py` (no samples, nothing licensed): effects on the same word cues as the picture, and a light
 plucked-bass-and-marimba bed that changes with the scenes (sneaky, march, tension, plain for the rule, bright for
-the balcony and the payoff, sneaky again for the callback) and drops out for the alarm. Mixed to about -15 LUFS.
+the balcony and the payoff, sneaky again for the callback) and drops out for the alarm. Mixed to about -15 LUFS. Effects were lowered by about 8 dB in the third pass at the owner's request and now sit well under the voice.
 
 ## Voice
 

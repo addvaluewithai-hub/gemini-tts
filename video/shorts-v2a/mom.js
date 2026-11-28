@@ -1,6 +1,6 @@
 // The co-star: an Egyptian mother on cleaning day. House galabeya, scarf tied for work, long rubber gloves, slippers.
 // mom(p) draws her with her feet at the origin; every part of p can be animated.
-import { clamp, lerp, G, T, n2, elbow, star } from "./kit.js";
+import { clamp, lerp, G, T, n2, star } from "./kit.js";
 import { C } from "./palette.js";
 
 // Faces. Numbers only, so any two can be blended.
@@ -72,21 +72,42 @@ function head(f, p) {
   <path d="M-7 30 Q2 42 12 30" fill="none" stroke="${C.skinLo}" stroke-width="7" stroke-linecap="round"/>
   ${mouth(f)}`;
 }
-// One arm: sleeve to the elbow, long rubber glove from the elbow to the hand.
-function arm(S, H, dir, held = "", handRot = 0, back = false, over = false) {
-  const { E, H: Hc } = elbow(S, H, 140, 140, dir), a = Math.atan2(Hc.y - E.y, Hc.x - E.x) * 180 / Math.PI;
-  const cx = lerp(E.x, Hc.x, 0.2), cy = lerp(E.y, Hc.y, 0.2);
-  return `<path d="M${n2(S.x)} ${n2(S.y)} L${n2(E.x)} ${n2(E.y)}" stroke="${back ? "#D98F12" : C.sun}" stroke-width="78" stroke-linecap="round"/>
-    <path d="M${n2(E.x)} ${n2(E.y)} L${n2(Hc.x)} ${n2(Hc.y)}" stroke="${back ? C.gloveLo : C.glove}" stroke-width="56" stroke-linecap="round"/>
-    <g transform="translate(${n2(cx)} ${n2(cy)}) rotate(${n2(a)})"><rect x="-10" y="-33" width="20" height="66" rx="10" fill="${C.gloveLo}"/></g>
-    <g transform="translate(${n2(Hc.x)} ${n2(Hc.y)}) rotate(${n2(a - 90 + handRot)})">${back || over ? "" : held}<circle r="40" fill="${back ? C.gloveLo : C.glove}"/><ellipse cx="${dir * -30}" cy="8" rx="16" ry="24" transform="rotate(${dir * 28})" fill="${back ? C.gloveLo : C.glove}"/><path d="M-16 22 q16 12 32 0" fill="none" stroke="${C.gloveLo}" stroke-width="5" stroke-linecap="round" opacity="${back ? 0 : 0.8}"/>${back || over ? held : ""}</g>`;
+// One arm, drawn the "rubber hose" way: a single curved stroke from shoulder to wrist, so there is no hinge to see.
+// The elbow is only a control point. Its side is chosen continuously (outward and a little downward), so the arm
+// straightens and re-bends instead of snapping when a pose changes. The hand is a mitt with a thumb, turned by the
+// end of the curve plus a wrist lag (H.drag) that the animation supplies.
+const BONE = 128;
+function arm(S, H, side, held = "", handRot = 0, back = false, over = false) {
+  let dx = H.x - S.x, dy = H.y - S.y, d = Math.hypot(dx, dy) || 1e-3; const max = 2 * BONE * 1.12;
+  if (d > max) { dx *= max / d; dy *= max / d; d = max; }
+  const Hc = { x: S.x + dx, y: S.y + dy }, nx = -dy / d, ny = dx / d;
+  const h = Math.max(Math.min(Math.sqrt(Math.max(0, BONE * BONE - d * d / 4)), 0.42 * d + 14, 96), 0.09 * d);   // a soft bow: never a hairpin, never perfectly straight
+  const bend = clamp((side * nx + 0.6 * ny) * 2.2, -1, 1);
+  const E = { x: S.x + dx / 2 + nx * h * bend, y: S.y + dy / 2 + ny * h * bend };
+  const K = { x: 2 * E.x - (S.x + Hc.x) / 2, y: 2 * E.y - (S.y + Hc.y) / 2 };              // the curve passes through E
+  const path = `M${n2(S.x)} ${n2(S.y)} Q${n2(K.x)} ${n2(K.y)} ${n2(Hc.x)} ${n2(Hc.y)}`;
+  const ang = Math.atan2(Hc.y - K.y, Hc.x - K.x) * 180 / Math.PI - 90 + handRot + (H.drag ?? 0);
+  const gl = back ? C.gloveLo : C.glove, sl = back ? "#D98F12" : C.sun, fist = !!held;
+  const mitt = fist
+    ? `<ellipse cx="0" cy="6" rx="40" ry="38" fill="${gl}"/><ellipse cx="${-side * 22}" cy="20" rx="24" ry="15" transform="rotate(${side * 18} ${-side * 22} 20)" fill="${gl}"/><path d="M-20 34 q10 8 20 0 M2 36 q10 6 18 -4" fill="none" stroke="${C.gloveLo}" stroke-width="5" stroke-linecap="round" opacity="${back ? 0 : 0.8}"/>`
+    : `<path d="M-31 -26 C-37 6 -30 40 -14 50 C-4 56 6 56 16 50 C32 40 37 6 31 -26 C20 -36 -20 -36 -31 -26Z" fill="${gl}"/>
+       <ellipse cx="${-side * 36}" cy="-4" rx="13" ry="25" transform="rotate(${-side * 30} ${-side * 36} -4)" fill="${gl}"/>
+       <path d="M-9 50 v-20 M9 50 v-22" stroke="${C.gloveLo}" stroke-width="5" stroke-linecap="round" opacity="${back ? 0 : 0.75}"/>`;
+  return `<path d="${path}" fill="none" stroke="${gl}" stroke-width="56" stroke-linecap="round"/>
+    <path d="${path}" pathLength="100" fill="none" stroke="${C.gloveLo}" stroke-width="62" stroke-dasharray="0 60 5 100"/>
+    <path d="${path}" pathLength="100" fill="none" stroke="${sl}" stroke-width="78" stroke-linecap="round" stroke-dasharray="47 100"/>
+    <path d="${path}" pathLength="100" fill="none" stroke="${back ? "#C9700F" : C.orange}" stroke-width="80" stroke-dasharray="0 47.5 4 100"/>
+    <g transform="translate(${n2(Hc.x)} ${n2(Hc.y)}) rotate(${n2(ang)})">${back || over ? "" : held}${mitt}${back || over ? held : ""}</g>`;
 }
 export function mom(p = {}) {
   const f = { ...FACE.neutral, ...(p.face || {}) };
   const sq = p.squash ?? 0, lean = p.lean ?? 0, breath = p.breath ?? 0, chest = p.chest ?? 0;      // chest: 0..1 puffed up
   const hx = p.headX ?? 0, hy = (p.headY ?? 0) - breath * 5 - chest * 14, ht = p.headTilt ?? 0;
-  const SL = { x: -122, y: -492 - breath * 4 - chest * 10 }, SR = { x: 122, y: -492 - breath * 4 - chest * 10 };
-  const HL = p.handL || { x: -215, y: -250 }, HR = p.handR || { x: 215, y: -250 };
+  const idle = Math.sin((p.tt ?? 0) * 1.7) * 5;
+  const HL = p.handL || { x: -205 - idle, y: -235 }, HR = p.handR || { x: 205 + idle, y: -235 };
+  // the shoulder lifts and reaches a little when its hand goes up or out
+  const sh = (side, H) => { const up = clamp((-492 - H.y + 40) / 260), out = clamp((side * H.x - 240) / 160); return { x: side * (122 + 8 * out + 4 * up), y: -492 - breath * 4 - chest * 10 - 20 * up }; };
+  const SL = sh(-1, HL), SR = sh(1, HR);
   const dots = [[-60, -470], [50, -430], [-110, -330], [10, -300], [120, -340], [-150, -190], [-40, -170], [80, -200], [160, -150], [-100, -80], [30, -70], [130, -60]];
   const body = `
     <ellipse cx="-84" cy="-6" rx="64" ry="22" fill="${C.pinkLo}"/><ellipse cx="84" cy="-6" rx="64" ry="22" fill="${C.pinkLo}"/>
@@ -97,7 +118,7 @@ export function mom(p = {}) {
       <ellipse cx="150" cy="-320" rx="90" ry="330" fill="#B8560E" opacity=".22"/></g>
     <path d="M-62 -622 Q0 -540 62 -622 Q0 -590 -62 -622Z" fill="${C.orange}"/><path d="M-58 -618 Q0 -548 58 -618" fill="none" stroke="${C.cream}" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round"/></g>`;
   const hd = G(T(hx, -652 + hy, ht, 1.34), head(f, p));
-  const aL = arm(SL, HL, p.bendL ?? -1, p.heldL || "", p.rotL ?? 0, p.backL ?? false, p.overL ?? false), aR = arm(SR, HR, p.bendR ?? 1, p.heldR || "", p.rotR ?? 0, p.backR ?? false, p.overR ?? false);
+  const aL = arm(SL, HL, -1, p.heldL || "", p.rotL ?? 0, p.backL ?? false, p.overL ?? false), aR = arm(SR, HR, 1, p.heldR || "", p.rotR ?? 0, p.backR ?? false, p.overR ?? false);
   const inner = `${p.backL ? aL : ""}${p.backR ? aR : ""}${body}${p.headFront === false ? hd : ""}${p.backL ? "" : aL}${p.backR ? "" : aR}${p.headFront === false ? "" : hd}`;
   return G(`rotate(${n2(lean)}) scale(${n2(1 + sq * 0.5)} ${n2(1 - sq)})`, inner);
 }
