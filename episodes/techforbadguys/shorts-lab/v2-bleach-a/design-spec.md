@@ -61,5 +61,5 @@ the balcony and the payoff, sneaky again for the callback) and drops out for the
 Puck, through Gemini TTS. Thirteen turns, one per beat, each with Peek's base description plus its own direction
 and inline tags; four full takes with two different directions (`voice/build-requests.mjs`), measured line by line
 (`video/shorts-v2a/voice_measure.py`: pace, pitch median and range, loudness), and the cut keeps the take with more
-contrast for each line (`voice/edit.json`). The cut voice: line pitch medians from 109 Hz (the conspiratorial
-callback) to 243 Hz (the alarm), 13.9 semitones apart; pace from 1.6 to 3.9 words a second.
+contrast for each line (`voice/edit.json`). All takes in the film were recorded on the Vertex voice factory. The cut voice: line pitch medians from 99 Hz (the dry aside,
+line 2) to 261 Hz (the alarm, line 8), 16.8 semitones apart; pace from 1.7 to 4.9 words a second.

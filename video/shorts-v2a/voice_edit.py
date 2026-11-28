@@ -21,6 +21,23 @@ def write(path, x, sr):
         f.setnchannels(1); f.setsampwidth(2); f.setframerate(sr)
         f.writeframes((np.clip(x, -1, 1) * 32767).astype(np.int16).tobytes())
 
+def repair(words):
+    """The recogniser sometimes returns a run of words with no usable times (zero length, or starting before the word
+    before them). Spread such a run over the gap it sits in, in proportion to the words' lengths."""
+    out = [dict(w) for w in words]; g = 0; i = 0; fixed = 0
+    while i < len(out):
+        w = out[i]
+        if w["start_ms"] < g - 60 or w["end_ms"] - w["start_ms"] < 20:
+            j = i
+            while j < len(out) and (out[j]["start_ms"] < g - 60 or out[j]["end_ms"] - out[j]["start_ms"] < 20) and not out[j]["end_ms"] > g + 200: j += 1
+            if j < len(out) and out[j]["start_ms"] < g - 60 and out[j]["end_ms"] > g + 200: end = out[j]["end_ms"]; j += 1      # the run's last word kept a true end
+            else: end = out[j]["start_ms"] if j < len(out) else g + 300 * (j - i)
+            run = out[i:j]; tot = sum(len(q["text"]) + 1 for q in run); a = g
+            for q in run: d = (end - g) * (len(q["text"]) + 1) / tot; q["start_ms"] = int(a); q["end_ms"] = int(a + d); a += d
+            fixed += len(run); g = end; i = j
+        else: g = w["end_ms"]; i += 1
+    return out, fixed
+
 def main(cfg_path, takes, reqs, out_wav, out_tl):
     cfg = json.load(open(cfg_path)); cache = {}
     t = cfg.get("lead", 0.0); pieces = [np.zeros(int(t * SR), np.float32)]; lines = []
@@ -28,7 +45,8 @@ def main(cfg_path, takes, reqs, out_wav, out_tl):
         take = L["take"]
         if take not in cache:
             res, _ = measure(f"{takes}/{take}.wav", f"{takes}/{take}.json", f"{reqs}/{L['request']}")
-            x, sr = load(f"{takes}/{take}.wav"); cache[take] = (res, x, sr, json.load(open(f"{takes}/{take}.json"))["words"])
+            x, sr = load(f"{takes}/{take}.wav"); ww, nfix = repair(json.load(open(f"{takes}/{take}.json"))["words"]); cache[take] = (res, x, sr, ww)
+            if nfix: print(f"  take {take}: {nfix} word times repaired")
         res, x, sr, words = cache[take]; r = res[n]
         if r["heard"] != r["words"]: print(f"  ! line {n+1} take {take}: heard {r['heard']} of {r['words']} words")
         e, hop = env_db(x, sr)

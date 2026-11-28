@@ -1,6 +1,6 @@
 # Storyboard: bleach Short, studio A, version 2
 
-Portrait 1080 x 1920, 30 fps, 57.7 s (1730 frames). Follows the video-skill storyboard phase, adapted from 16:9 to
+Portrait 1080 x 1920, 30 fps, 58.5 s (1756 frames). The times in the table are from the first cut and move by up to a second with the final voice; the word cues do not. Follows the video-skill storyboard phase, adapted from 16:9 to
 9:16. Times are seconds in the cut voice track; every action is tied to a word, written here as `L5 «غاز»` (line 5,
 that word). The code reads the same cues from `voice/timeline.json` through `W(line, word)`, so a new take re-times
 the whole film. Key content stays inside y 200–1560 and x 60–960 (clear of the Shorts interface).

@@ -10,7 +10,7 @@ and this studio goes on past the design package and builds the film.
 - [x] Storyboard (`storyboard.md`) and design spec (`design-spec.md`)
 - [x] Build: `video/shorts-v2a/` (own SVG engine drawn in headless Chromium; Peek is the channel's rig, unchanged)
 - [x] Pass 1 render, review, fixes; pass 2 render, review, fixes; final render
-- [ ] Voice re-recorded on the Vertex factory (see the decision log)
+- [x] Voice re-recorded on the Vertex factory and the film re-cut to it (see the decision log)
 
 ## Design review (video-skill quality checklist, on the rendered frames)
 
@@ -39,5 +39,8 @@ and this studio goes on past the design package and builds the film.
 - Voice factory: this session could not attach the Vertex voice repository, and the manager's reply (do not use this
   repository's API-key factory; send the requests to the manager instead) reached this session only after the film
   was finished. The first delivered file therefore uses takes from `gemini-tts`'s own factory (same model family and
-  voice). The same four requests are being recorded on Vertex and the film will be re-cut to those takes; picture and
-  sound re-time themselves from `voice/timeline.json`.
+  voice). The manager then recorded the same four requests on Vertex; the film was re-cut to those takes only
+  (`voice/edit.json`, `voice/timeline.json`; the first cut is kept as `*-apikey-factory.json` for the record) and
+  rendered again: 58.5 s, -15.3 LUFS. Picture and sound re-timed themselves from the word times. Two transcript faults
+  were handled on the way: a run of words with no usable times (now spread over their gap by `voice_edit.py`), and one
+  take of line 5 with an extra heard word, which was not used.

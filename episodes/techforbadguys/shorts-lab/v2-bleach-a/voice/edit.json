@@ -3,89 +3,88 @@
  "lead": 0.1,
  "lines": [
   {
-   "take": "a2g",
-   "request": "techforbadguys-v2a-bleach-a2.json",
+   "take": "b2",
+   "request": "techforbadguys-v2a-bleach-b2.json",
    "maxpause": 0.3,
    "gap": 0.62
   },
   {
-   "take": "b1g",
-   "request": "techforbadguys-v2a-bleach-b1.json",
-   "tempo": 1.05,
+   "take": "b2",
+   "request": "techforbadguys-v2a-bleach-b2.json",
    "maxpause": 0.25,
    "gap": 0.3
   },
   {
-   "take": "a1g",
-   "request": "techforbadguys-v2a-bleach-a1.json",
-   "tempo": 1.12,
+   "take": "a2",
+   "request": "techforbadguys-v2a-bleach-a2.json",
    "maxpause": 0.25,
-   "gap": 0.15
+   "gap": 0.18
   },
   {
-   "take": "a2g",
+   "take": "a2",
    "request": "techforbadguys-v2a-bleach-a2.json",
    "tempo": 1.08,
    "maxpause": 0.28,
-   "gap": 0.45
+   "gap": 0.4
   },
   {
-   "take": "a2g",
+   "take": "a2",
    "request": "techforbadguys-v2a-bleach-a2.json",
    "tempo": 1.08,
    "maxpause": 0.25,
    "gap": 0.25
   },
   {
-   "take": "a2g",
+   "take": "a2",
    "request": "techforbadguys-v2a-bleach-a2.json",
    "maxpause": 0.26,
    "gap": 0.2
   },
   {
-   "take": "b1g",
+   "take": "b1",
    "request": "techforbadguys-v2a-bleach-b1.json",
-   "tempo": 1.03,
-   "maxpause": 0.32,
+   "tempo": 1.05,
+   "maxpause": 0.42,
    "gap": 0.3
   },
   {
-   "take": "a1g",
-   "request": "techforbadguys-v2a-bleach-a1.json",
-   "pre": 0.5,
+   "take": "a2",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "pre": 0.45,
    "gain": 2.5,
    "gap": 0.2
   },
   {
-   "take": "a2g",
-   "request": "techforbadguys-v2a-bleach-a2.json",
+   "take": "b2",
+   "request": "techforbadguys-v2a-bleach-b2.json",
    "tempo": 1.07,
    "maxpause": 0.28,
    "gap": 0.25
   },
   {
-   "take": "a2g",
+   "take": "a2",
    "request": "techforbadguys-v2a-bleach-a2.json",
-   "tempo": 1.07,
+   "tempo": 1.05,
    "maxpause": 0.26,
    "gap": 0.25
   },
   {
-   "take": "a1g",
-   "request": "techforbadguys-v2a-bleach-a1.json",
+   "take": "a2",
+   "request": "techforbadguys-v2a-bleach-a2.json",
    "tempo": 1.1,
    "maxpause": 0.3,
-   "gap": 0.5
+   "gap": 0.45
   },
   {
-   "take": "a1g",
-   "request": "techforbadguys-v2a-bleach-a1.json",
-   "pre": 0.78,
-   "gain": -1.5,
+   "take": "a2",
+   "request": "techforbadguys-v2a-bleach-a2.json",
+   "pre": 1.05,
+   "gain": -1.0,
+   "maxpause": 0.28,
    "gap": 0.25
   },
   {
-   "take": "a1g",
+   "take": "a1",
    "request": "techforbadguys-v2a-bleach-a1.json",
    "maxpause": 0.25,
    "gap": 0.2
